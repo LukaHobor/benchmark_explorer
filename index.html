@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benchmark Explorer</title>
+<meta name="description" content="Search and browse the benchmark description-card corpus.">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='14'>&#128269;</text></svg>">
+</head>
+<body>
+<div class="shell">
+
+  <header class="masthead">
+    <h1>Benchmark Explorer</h1>
+    <p id="corpus-line">Loading corpus&hellip;</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab" id="tab-explore" role="tab" aria-selected="false" aria-controls="panel-explore">Explore</button>
+    <button class="tab" id="tab-stats" role="tab" aria-selected="true" aria-controls="panel-stats">Statistics</button>
+  </nav>
+
+  <!-- ------------------------------ explore ------------------------------ -->
+  <section class="panel" id="panel-explore" role="tabpanel" aria-labelledby="tab-explore" hidden>
+    <div class="searchbar">
+      <input id="q" type="search" autocomplete="off" spellcheck="false"
+             placeholder="Search benchmarks&hellip;" aria-label="Search benchmarks">
+      <kbd>/</kbd>
+    </div>
+    <p class="resultmeta" id="resultmeta"></p>
+
+    <div class="explore">
+      <nav class="results" id="results" aria-label="Search results"></nav>
+      <article class="detail" id="detail">
+        <div class="empty">Select a benchmark to see its card.</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ----------------------------- statistics ---------------------------- -->
+  <section class="panel" id="panel-stats" role="tabpanel" aria-labelledby="tab-stats">
+    <div class="charts">
+
+      <figure class="figure">
+        <div class="fig-head">
+          <h2>Benchmarks by publication year</h2>
+          <button class="linkbtn" data-table="tbl-year" aria-expanded="false">Show table</button>
+        </div>
+        <p class="note" id="note-year"></p>
+        <div class="plot" id="chart-year"></div>
+        <div class="tablewrap" id="tbl-year" hidden></div>
+      </figure>
+      <figure class="figure">
+        <div class="fig-head">
+          <h2>Modality</h2>
+          <button class="linkbtn" data-table="tbl-modality" aria-expanded="false">Show table</button>
+        </div>
+        <p class="note" id="note-modality"></p>
+        <div class="plot" id="chart-modality"></div>
+        <div class="tablewrap" id="tbl-modality" hidden></div>
+      </figure>
+      <figure class="figure">
+        <div class="fig-head">
+          <h2>Capability category</h2>
+          <button class="linkbtn" data-table="tbl-capability" aria-expanded="false">Show table</button>
+        </div>
+        <p class="note" id="note-capability"></p>
+        <div class="plot" id="chart-capability"></div>
+        <div class="tablewrap" id="tbl-capability" hidden></div>
+      </figure>
+      <figure class="figure">
+        <div class="fig-head">
+          <h2>Capability category &times; modality</h2>
+          <button class="linkbtn" data-table="tbl-heat" aria-expanded="false">Show table</button>
+        </div>
+        <p class="note" id="note-heat"></p>
+        <div class="plot" id="chart-heat"></div>
+        <div class="tablewrap" id="tbl-heat" hidden></div>
+      </figure>
+
+    </div>
+    <p class="footnote" id="footnote"></p>
+  </section>
+
+</div>
+
+<script src="vendor/apexcharts.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
