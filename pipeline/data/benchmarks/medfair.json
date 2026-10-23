@@ -1,0 +1,35 @@
+{
+  "name": "MEDFAIR",
+  "description": "A multitude of work has shown that machine learning-based medical diagnosis systems can be biased against certain subgroups of people. This has motivated a growing number of bias mitigation algorithms that aim to address fairness issues in machine learning. However, it is difficult to compare their effectiveness in medical imaging for two reasons. First, there is little consensus on the criteria to assess fairness. Second, existing bias mitigation algorithms are developed under different settings, e.g., datasets, model selection strategies, backbones, and fairness metrics, making a direct comparison and evaluation based on existing results impossible. In this work, we introduce MEDFAIR, a framework to benchmark the fairness of machine learning models for medical imaging. MEDFAIR covers eleven algorithms from various categories, nine datasets from different imaging modalities, and three model selection criteria. Through extensive experiments, we find that the under-studied issue of model selection criterion can have a significant impact on fairness outcomes; while in contrast, state-of-the-art bias mitigation algorithms do not significantly improve fairness outcomes over empirical risk minimization (ERM) in both in-distribution and out-of-distribution settings. We evaluate fairness from various perspectives and make recommendations for different medical application scenarios that require different ethical principles. Our framework provides a reproducible and easy-to-use entry point for the development and evaluation of future bias mitigation algorithms in deep learning. Code is available at https://github.com/ys-zong/MEDFAIR.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "fairness_evaluation",
+    "model_selection_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC and fairness metrics (e.g., group fairness measures such as equalized odds, demographic parity) alongside accuracy",
+  "general_score_metric": "AUC (or accuracy) combined with group fairness metrics (e.g., equalized odds, demographic parity)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2023,
+  "reputation": "Recognized in the medical-imaging fairness research community as a useful reproducible benchmark for comparing bias-mitigation methods, though not yet an industry-wide standard.",
+  "notes": "Benchmark focuses on fairness evaluation across multiple datasets and model-selection criteria; not a single large homogeneous dataset. Results sensitive to model-selection protocol and dataset-specific imbalances; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yongshuo Zong",
+      "Yongxin Yang",
+      "Timothy Hospedales"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2210.01725",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Continual Graph Learning Benchmark for Skeleton-Based Action Recognition",
+  "description": "Continual learning (CL) is the research field that aims to build machine learning models that can accumulate knowledge continuously over different tasks without retraining from scratch. Previous studies have shown that pre-training graph neural networks (GNN) may lead to negative transfer (Hu et al., 2020) after fine-tuning, a setting which is closely related to CL. Thus, we focus on studying GNN in the continual graph learning (CGL) setting. We propose the first continual graph learning benchmark for spatio-temporal graphs and use it to benchmark well-known CGL methods in this novel setting. The benchmark is based on the N-UCLA and NTU-RGB+D datasets for skeleton-based action recognition. Beyond benchmarking for standard performance metrics, we study the class and task-order sensitivity of CGL methods, i.e., the impact of learning order on each class/task's performance, and the architectural sensitivity of CGL methods with backbone GNN at various widths and depths. We reveal that task-order robust methods can still be class-order sensitive and observe results that contradict previous empirical observations on architectural sensitivity in CL.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "continual_learning",
+    "action_recognition",
+    "graph_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "classification accuracy (average incremental / final accuracy) together with continual-learning-specific metrics such as forgetting and backward transfer; per-class/task order sensitivity analysis",
+  "general_score_metric": "average incremental accuracy (final accuracy) and forgetting measure",
+  "year_of_publish": 2024,
+  "reputation": "A recent (2024) and first-of-its-kind benchmark for continual graph learning on spatio-temporal skeleton data that is gaining attention among continual-learning and graph-ML researchers.",
+  "notes": "Built on N-UCLA and NTU-RGB+D (limited dataset sizes relative to large vision corpora); results sensitive to task/class order and architectural choices; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Wei Wei",
+      "Tom De Schepper",
+      "Kevin Mets"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2401.18054",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

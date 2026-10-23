@@ -1,0 +1,35 @@
+{
+  "name": "Biplanar X-ray to 3D Bone Shape Reconstruction Benchmark",
+  "description": "Various deep learning models have been proposed for 3D bone shape reconstruction from two orthogonal (biplanar) X-ray images.\nHowever, it is unclear how these models compare against each other since they are evaluated on different anatomy, cohort and (often privately held) datasets.\nMoreover, the impact of the commonly optimized image-based segmentation metrics such as dice score on the estimation of clinical parameters relevant in 2D-3D bone shape reconstruction is not well known.\nTo move closer toward clinical translation, we propose a benchmarking framework that evaluates tasks relevant to real-world clinical scenarios, including reconstruction of fractured bones, bones with implants, robustness to population shift, and error in estimating clinical parameters.\nOur open-source platform provides reference implementations of 8 models (many of whose implementations were not publicly available), APIs to easily collect and preprocess 6 public datasets, and the implementation of automatic clinical parameter and landmark extraction methods. \nWe present an extensive evaluation of 8 2D-3D models on equal footing using 6 public datasets comprising images for four different anatomies.\nOur results show that attention-based methods that capture global spatial relationships tend to perform better across all anatomies and datasets; performance on clinically relevant subgroups may be overestimated without disaggregated reporting; ribs are substantially more difficult to reconstruct compared to femur, hip and spine; and the dice score improvement does not always bring corresponding improvement in the automatic estimation of clinically relevant parameters.",
+  "category": "vision",
+  "domain": "medical imaging / orthopedics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3D_reconstruction",
+    "segmentation",
+    "landmark_detection",
+    "clinical_parameter_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice score, Chamfer distance, Hausdorff distance and clinical parameter error (e.g., mm) for landmark/metric estimation",
+  "general_score_metric": "Dice score (for segmentation) alongside geometric metrics (Chamfer/Hausdorff) and clinical parameter error",
+  "reputation": "An open-source, well-documented benchmarking framework for biplanar X-ray → 3D bone reconstruction that is gaining traction in medical imaging research for standardized comparisons.",
+  "notes": "Non-LLM medical-imaging benchmark; performance on standard image-based metrics (e.g., Dice) does not always correlate with clinical parameter accuracy; some anatomies and clinical subgroups are underrepresented which may affect generalization.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

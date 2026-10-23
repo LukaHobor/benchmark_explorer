@@ -1,0 +1,39 @@
+{
+  "name": "High-Definition Event Stream SLT Dataset",
+  "description": "Sign Language Translation (SLT) is a core task in the field of AI-assisted disability. Unlike traditional SLT based on visible light videos, which is easily affected by factors such as lighting, rapid hand movements, and privacy breaches, this paper proposes the use of high-definition Event streams for SLT, effectively mitigating the aforementioned issues. This is primarily because Event streams have a high dynamic range and dense temporal signals, which can withstand low illumination and motion blur well. Additionally, due to their sparsity in space, they effectively protect the privacy of the target person. More specifically, we propose a new high-resolution Event stream sign language dataset, termed Event-CSL, which effectively fills the data gap in this area of research. It contains 14,827 videos, 14,821 glosses, and 2,544 Chinese words in the text vocabulary. These samples are collected in a variety of indoor and outdoor scenes, encompassing multiple angles, light intensities, and camera movements. We have benchmarked existing mainstream SLT works to enable fair comparison for future efforts. Based on this dataset and several other large-scale datasets, we propose a novel baseline method that fully leverages the Mamba model's ability to integrate temporal information of CNN features, resulting in improved sign language translation outcomes. Both the benchmark dataset and source code will be released on https://github.com/Event-AHU/OpenESL",
+  "category": "vision",
+  "domain": "vision (event cameras / sign language)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sign_language_translation",
+    "translation",
+    "sequence_to_sequence"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU",
+  "general_score_metric": "BLEU (often reported alongside gloss accuracy)",
+  "year_of_publish": 2024,
+  "reputation": "New preprint dataset introducing event‑camera modality for SLT; promising for event‑camera research but currently has limited adoption until wider release and replication.",
+  "notes": "Large event‑camera dataset (14k+ samples) addressing privacy and motion/lighting robustness. Requires specialized event‑camera processing pipelines; not directly compatible with standard RGB video models without conversion. Domain limited to the provided sign language and Chinese vocabulary; potential reproducibility hardware/software dependencies.",
+  "creators": {
+    "scientists": [
+      "Xiao Wang",
+      "Yao Rong",
+      "Fuling Wang",
+      "Jianing Li",
+      "Lin Zhu",
+      "Bo Jiang",
+      "YaoWei Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2408.10488",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

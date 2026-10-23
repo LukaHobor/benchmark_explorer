@@ -1,0 +1,37 @@
+{
+  "name": "CrowdHuman",
+  "description": "Human detection has witnessed impressive progress in recent years. However,\nthe occlusion issue of detecting human in highly crowded environments is far\nfrom solved. To make matters worse, crowd scenarios are still under-represented\nin current human detection benchmarks. In this paper, we introduce a new\ndataset, called CrowdHuman, to better evaluate detectors in crowd scenarios.\nThe CrowdHuman dataset is large, rich-annotated and contains high diversity.\nThere are a total of $470K$ human instances from the train and validation\nsubsets, and $~22.6$ persons per image, with various kinds of occlusions in the\ndataset. Each human instance is annotated with a head bounding-box, human\nvisible-region bounding-box and human full-body bounding-box. Baseline\nperformance of state-of-the-art detection frameworks on CrowdHuman is\npresented. The cross-dataset generalization results of CrowdHuman dataset\ndemonstrate state-of-the-art performance on previous dataset including\nCaltech-USA, CityPersons, and Brainwash without bells and whistles. We hope our\ndataset will serve as a solid baseline and help promote future research in\nhuman detection tasks.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "bounding_box_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) / AP at IoU thresholds",
+  "general_score_metric": "mAP (AP50 / AP @[.50:.95])",
+  "year_of_publish": 2018,
+  "reputation": "Widely used and well-regarded dataset for evaluating person detection under heavy occlusion and crowding.",
+  "notes": "Non-LLM benchmark focused on crowded scene detection; includes multiple box types (head, visible-region, full-body). Challenging due to heavy occlusion and high instance density; evaluation protocols may vary (mAP vs. miss-rate).",
+  "creators": {
+    "scientists": [
+      "Shuai Shao",
+      "Zijian Zhao",
+      "Boxun Li",
+      "Tete Xiao",
+      "Gang Yu",
+      "Xiangyu Zhang",
+      "Jian Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1805.00123",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

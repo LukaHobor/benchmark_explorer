@@ -1,0 +1,39 @@
+{
+  "name": "CASS",
+  "description": "We introduce CASS, the first large-scale dataset and model suite for cross-architecture GPU code transpilation, targeting both source-level (CUDA <--> HIP) and assembly-level (Nvidia SASS <--> AMD RDNA3) translation. The dataset comprises 70k verified code pairs across host and device, addressing a critical gap in low-level GPU code portability. Leveraging this resource, we train the CASS family of domain-specific language models, achieving 95% source translation accuracy and 37.5% assembly translation accuracy, substantially outperforming commercial baselines such as GPT-4o, Claude, and Hipify. Our generated code matches native performance in over 85% of test cases, preserving runtime and memory behavior. To support rigorous evaluation, we introduce CASS-Bench, a curated benchmark spanning 16 GPU domains with ground-truth execution. All data, models, and evaluation tools are released as open source to foster progress in GPU compiler tooling, binary compatibility, and LLM-guided hardware translation.",
+  "category": "code",
+  "domain": "code",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_translation",
+    "assembly_translation",
+    "performance_preservation_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "exact_match / token-level accuracy for source-level translation; assembly translation accuracy for assembly-level; runtime performance equivalence / task_success_rate for performance-preservation (execution-based) evaluation",
+  "general_score_metric": "translation accuracy (source-level exact-match) with assembly_accuracy and runtime equivalence reported as supplemental primary metrics",
+  "typical_sota_score": "≈95% (source translation accuracy), ≈37.5% (assembly translation accuracy); runtime-equivalence (performance match) ~85%",
+  "year_of_publish": 2025,
+  "reputation": "A recent, domain-specific benchmark and dataset suite for GPU code/assembly transpilation that is gaining attention in compiler and hardware-ML communities but not yet widely adopted outside that niche.",
+  "notes": "Highly domain-specific and requires GPU execution environment for full evaluation; contains low-level and potentially proprietary code patterns—legal/IP considerations possible. Assembly evaluation is substantially harder than source-level; not directly comparable to general code benchmarks and susceptible to dataset/toolchain-specific biases.",
+  "creators": {
+    "scientists": [
+      "Ahmed Heakl",
+      "Sarim Hashmi",
+      "Gustavo Bertolo Stahl",
+      "Seung Hun Eddie Han",
+      "Salman Khan",
+      "Abdulrahman Mahmoud"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2505.16968",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

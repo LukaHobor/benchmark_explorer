@@ -1,0 +1,38 @@
+{
+  "name": "DisastIR",
+  "description": "Effective disaster management requires timely access to accurate and contextually relevant information. Existing Information Retrieval (IR) benchmarks, however, focus primarily on general or specialized domains, such as medicine or finance, neglecting the unique linguistic complexity and diverse information needs encountered in disaster management scenarios. To bridge this gap, we introduce DisastIR, the first comprehensive IR evaluation benchmark specifically tailored for disaster management. DisastIR comprises 9,600 diverse user queries and more than 1.3 million labeled query-passage pairs, covering 48 distinct retrieval tasks derived from six search intents and eight general disaster categories that include 301 specific event types. Our evaluations of 30 state-of-the-art retrieval models demonstrate significant performance variances across tasks, with no single model excelling universally. Furthermore, comparative analyses reveal significant performance gaps between general-domain and disaster management-specific tasks, highlighting the necessity of disaster management-specific benchmarks for guiding IR model selection to support effective decision-making in disaster management scenarios. All source codes and DisastIR are available at https://github.com/KaiYin97/Disaster_IR.",
+  "category": "text",
+  "domain": "disaster management",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "information_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "nDCG@10, MRR, MAP",
+  "general_score_metric": "nDCG@10",
+  "year_of_publish": 2025,
+  "reputation": "New, disaster-management–specific IR benchmark introduced in the research community; recognized in disaster informatics research but not yet widely adopted outside that niche.",
+  "notes": "Large-scale, domain-specific dataset with many fine-grained event types; risk of pretraining contamination for general LLMs, performance varies widely across tasks (no single best model), and some tasks show class imbalance and domain-specific language that challenge general-domain retrievers.",
+  "creators": {
+    "scientists": [
+      "Kai Yin",
+      "Xiangjue Dong",
+      "Chengkai Liu",
+      "Lipai Huang",
+      "Yiming Xiao",
+      "Zhewei Liu",
+      "Ali Mostafavi",
+      "James Caverlee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2505.15856",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

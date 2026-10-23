@@ -1,0 +1,35 @@
+{
+  "name": "Copycat Causal Benchmark",
+  "description": "Machine learning (ML)-based planners have recently gained significant attention. They offer advantages over traditional optimization-based planning algorithms. These advantages include fewer manually selected parameters and faster development. Within ML-based planning, imitation learning (IL) is a common algorithm. It primarily learns driving policies directly from supervised trajectory data. While IL has demonstrated strong performance on many open-loop benchmarks, it remains challenging to determine if the learned policy truly understands fundamental driving principles, rather than simply extrapolating from the ego-vehicle's initial state. Several studies have identified this limitation and proposed algorithms to address it. However, these methods often use original datasets for evaluation. In these datasets, future trajectories are heavily dependent on initial conditions. Furthermore, IL often overfits to the most common scenarios. It struggles to generalize to rare or unseen situations. To address these challenges, this work proposes: 1) a novel closed-loop simulator supporting both imitation and reinforcement learning, 2) a causal benchmark derived from the Waymo Open Dataset to rigorously assess the impact of the copycat problem, and 3) a novel framework integrating imitation learning and reinforcement learning to overcome the limitations of purely imitative approaches. The code for this work will be released soon.",
+  "category": "mixed",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "trajectory_prediction",
+    "imitation_learning",
+    "reinforcement_learning",
+    "policy_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "success_rate (plus collision rate and imitation gap / reward metrics)",
+  "year_of_publish": 2025,
+  "reputation": "A targeted research benchmark derived from Waymo data and a custom closed-loop simulator; primarily of interest to autonomous driving researchers studying causal generalization and robustness.",
+  "notes": "Simulation-based closed-loop benchmark; computationally expensive to evaluate. Derived from Waymo Open Dataset—possible overlap with models trained on Waymo. Focused on causal robustness rather than standard perception-only benchmarks.",
+  "creators": {
+    "scientists": [
+      "Hui Zhou",
+      "Shaoshuai Shi",
+      "Hongsheng Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2504.14709",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "COCO-N & Cityscapes-N",
+  "description": "Obtaining accurate labels for instance segmentation is particularly challenging due to the complex nature of the task. Each image necessitates multiple annotations, encompassing not only the object's class but also its precise spatial boundaries. These requirements elevate the likelihood of errors and inconsistencies in both manual and automated annotation processes. By simulating different noise conditions, we provide a realistic scenario for assessing the robustness and generalization capabilities of instance segmentation models in different segmentation tasks, introducing COCO-N and Cityscapes-N. We also propose a benchmark for weakly annotation noise, dubbed COCO-WAN, which utilizes foundation models and weak annotations to simulate semi-automated annotation tools and their noisy labels. This study sheds light on the quality of segmentation masks produced by various models and challenges the efficacy of popular methods designed to address learning with label noise.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "instance_segmentation",
+    "semantic_segmentation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mask AP (for instance segmentation) and mIoU (for semantic segmentation); robustness measured by degradation under simulated annotation noise",
+  "general_score_metric": "mask AP (instance) and mIoU (semantic) under varying noise conditions",
+  "year_of_publish": 2024,
+  "reputation": "Newer dataset for studying annotation-noise robustness; relevant to research community interested in noisy labels but not yet widely adopted.",
+  "notes": "Constructed by injecting simulated / weak annotation noise into COCO and Cityscapes — may not fully reflect all real annotator error modes; built on standard-sized datasets (COCO/Cityscapes) but focused on noise robustness rather than benchmark saturation.",
+  "creators": {
+    "scientists": [
+      "Eden Grad",
+      "Moshe Kimhi",
+      "Lion Halika",
+      "Chaim Baskin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.10891",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Class-Out-of-Distribution Detection Benchmark for ImageNet",
+  "description": "When deployed for risk-sensitive tasks, deep neural networks must be able to detect instances with labels from outside the distribution for which they were trained. In this paper we present a novel framework to benchmark the ability of image classifiers to detect class-out-of-distribution instances (i.e., instances whose true labels do not appear in the training distribution) at various levels of detection difficulty. We apply this technique to ImageNet, and benchmark 525 pretrained, publicly available, ImageNet-1k classifiers. The code for generating a benchmark for any ImageNet-1k classifier, along with the benchmarks prepared for the above-mentioned 525 models is available at https://github.com/mdabbah/COOD_benchmarking. The usefulness of the proposed framework and its advantage over alternative existing benchmarks is demonstrated by analyzing the results obtained for these models, which reveals numerous novel observations including: (1) knowledge distillation consistently improves",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_classification",
+    "out_of_distribution_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC / detection accuracy",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "85–98%",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "A specialized benchmark from the research literature for evaluating class-out-of-distribution detection on ImageNet, with public code and pretrained-model evaluations but limited broad leaderboard adoption.",
+  "notes": "Non-LLM vision benchmark; performance depends on the chosen OOD difficulty level and detector thresholding, and results are not directly comparable to standard ImageNet top-1 accuracy.",
+  "creators": {
+    "scientists": [
+      "Ido Galil",
+      "Mohammed Dabbah",
+      "Ran El-Yaniv"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2302.11893",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Multi-Page Document Classification Benchmark (Beyond Document Page Classification)",
+  "description": "This paper highlights the need to bring document classification benchmarking closer to real-world applications, both in the nature of data tested ($X$: multi-channel, multi-paged, multi-industry; $Y$: class distributions and label set variety) and in classification tasks considered ($f$: multi-page document, page stream, and document bundle classification, ...). We identify the lack of public multi-page document classification datasets, formalize different classification tasks arising in application scenarios, and motivate the value of targeting efficient multi-page document representations. An experimental study on proposed multi-page document classification datasets demonstrates that current benchmarks have become irrelevant and need to be updated to evaluate complete documents, as they naturally occur in practice. This reality check also calls for more mature evaluation methodologies, covering calibration evaluation, inference complexity (time-memory), and a range of realistic distribution shifts (e.g., born-digital vs. scanning noise, shifting page order). Our study ends on a hopeful note by recommending concrete avenues for future improvements.}",
+  "category": "multimodal",
+  "domain": "document understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "document_classification",
+    "page_stream_classification",
+    "bundle_classification",
+    "multi-page_representation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / F1 (with additional calibration and efficiency metrics considered)",
+  "general_score_metric": "accuracy (primary) supplemented by F1 and calibration/error-rate under distribution shift",
+  "year_of_publish": 2023,
+  "reputation": "A recent (2023) proposal highlighting gaps in existing benchmarks; gaining attention in document understanding research but not yet a de facto standard.",
+  "notes": "Multimodal multi-page tasks that require whole-document reasoning and efficiency evaluation; evaluation should include calibration and inference complexity. Not saturated; realistic distribution-shift and efficiency evaluations can make comparisons dataset- and setup-dependent.",
+  "creators": {
+    "scientists": [
+      "Jordy Van Landeghem",
+      "Sanket Biswas",
+      "Matthew B. Blaschko",
+      "Marie-Francine Moens"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.12896",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "BenchPress",
+  "description": "The exponential increase of hardware-software complexity has made it impossible for compiler engineers to find the right optimization heuristics manually. Predictive models have been shown to find near optimal heuristics with little human effort but they are limited by a severe lack of diverse benchmarks to train on. Generative AI has been used by researchers to synthesize benchmarks into existing datasets. However, the synthetic programs are short, exceedingly simple and lacking diversity in their features. We develop BenchPress, the first ML compiler benchmark generator that can be directed within source code feature representations. BenchPress synthesizes executable functions by infilling code that conditions on the program's left and right context. BenchPress uses active learning to introduce new benchmarks with unseen features into the dataset of Grewe's et al. CPU vs GPU heuristic, improving its acquired performance by 50%. BenchPress targets features that has been impossible for other synthesizers to reach. In 3 feature spaces, we outperform human-written code from GitHub, CLgen, CLSmith and the SRCIROR mutator in targeting the features of Rodinia benchmarks. BenchPress steers generation with beam search over a feature-agnostic language model. We improve this with BenchDirect which utilizes a directed LM that infills programs by jointly observing source code context and the compiler features that are targeted. BenchDirect achieves up to 36% better accuracy in targeting the features of Rodinia benchmarks, it is 1.8x more likely to give an exact match and it speeds up execution time by up to 72% compared to BenchPress. Both our models produce code that is difficult to distinguish from human-written code. We conduct a Turing test which shows our models' synthetic benchmarks are labelled as 'human-written' as often as human-written code from GitHub.",
+  "category": "code",
+  "domain": "compilers / programming",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "code_generation",
+    "program_synthesis",
+    "benchmark_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "feature_targeting_accuracy (ability to generate programs matching target compiler-feature distributions) / exact_match rate",
+  "year_of_publish": 2023,
+  "reputation": "Recognized within the ML-for-compilers research community as a targeted benchmark generator; cited in compiler/benchmark synthesis work but not a mainstream, general-purpose benchmark.",
+  "notes": "Non-LLM benchmark focus (compiler/program features); relies on synthetic program generation which can bias distributions toward targeted features. Risk of dataset bias and limited diversity compared to large-scale human code corpora.",
+  "creators": {
+    "scientists": [
+      "Foivos Tsimpourlas",
+      "Pavlos Petoumenos",
+      "Min Xu",
+      "Chris Cummins",
+      "Kim Hazelwood",
+      "Ajitha Rajan",
+      "Hugh Leather"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2303.01557",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

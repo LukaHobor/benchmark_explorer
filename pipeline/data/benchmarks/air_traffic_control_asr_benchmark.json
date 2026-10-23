@@ -1,0 +1,39 @@
+{
+  "name": "Air Traffic Control ASR Benchmark",
+  "description": "Recent work on self-supervised pre-training focus on leveraging large-scale unlabeled speech data to build robust end-to-end (E2E) acoustic models (AM) that can be later fine-tuned on downstream tasks e.g., automatic speech recognition (ASR). Yet, few works investigated the impact on performance when the data properties substantially differ between the pre-training and fine-tuning phases, termed domain shift. We target this scenario by analyzing the robustness of Wav2Vec 2.0 and XLS-R models on downstream ASR for a completely unseen domain, air traffic control (ATC) communications. We benchmark these two models on several open-source and challenging ATC databases with signal-to-noise ratio between 5 and 20 dB. Relative word error rate (WER) reductions between 20% to 40% are obtained in comparison to hybrid-based ASR baselines by only fine-tuning E2E acoustic models with a smaller fraction of labeled data. We analyze WERs on the low-resource scenario and gender bias carried by one ATC dataset.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "speech_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "WER",
+  "general_score_metric": "WER",
+  "typical_sota_score": "15–30% WER",
+  "year_of_publish": 2022,
+  "reputation": "Used in ASR robustness research for air-traffic communications; recognized in the speech community but relatively specialized.",
+  "notes": "Domain shift from pretraining is a central challenge; datasets are noisy and relatively small, contains observed gender bias; non-LLM (ASR) benchmark.",
+  "creators": {
+    "scientists": [
+      "Juan Zuluaga-Gomez",
+      "Amrutha Prasad",
+      "Iuliia Nigmatulina",
+      "Saeed Sarfjoo",
+      "Petr Motlicek",
+      "Matthias Kleinert",
+      "Hartmut Helmke",
+      "Oliver Ohneiser",
+      "Qingran Zhan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2203.16822",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

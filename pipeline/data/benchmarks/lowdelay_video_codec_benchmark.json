@@ -1,0 +1,38 @@
+{
+  "name": "Low-Delay Video Codec Benchmark",
+  "description": "Recent advances in video compression have seen significant coding performance improvements with the development of new standards and learning-based video codecs. However, most of these works focus on application scenarios that allow a certain amount of system delay (e.g., Random Access mode in MPEG codecs), which is not always acceptable for live delivery. This paper conducts a comparative study of state-of-the-art conventional and learned video coding methods based on a low delay configuration. Specifically, this study includes two MPEG standard codecs (H.266/VVC VTM and JVET ECM), two AOM codecs (AV1 libaom and AVM), and two recent neural video coding models (DCVC-DC and DCVC-FM). To allow a fair and meaningful comparison, the evaluation was performed on test sequences defined in the AOM and MPEG common test conditions in the YCbCr 4:2:0 color space. The evaluation results show that the JVET ECM codecs offer the best overall coding performance among all codecs tested, with a 16.1% (based on PSNR) average BD-rate saving over AOM AVM, and 11.0% over DCVC-FM. We also observed inconsistent performance with the learned video codecs, DCVC-DC and DCVC-FM, for test content with large background motions.",
+  "category": "vision",
+  "domain": "video compression / multimedia",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_compression_evaluation",
+    "rate-distortion_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "BD-rate (Bjontegaard delta rate) and PSNR-based rate-distortion evaluation",
+  "general_score_metric": "BD-rate (%) (and PSNR for visual quality)",
+  "typical_sota_score": "JVET ECM shows ~11–16% BD-rate savings vs selected alternatives (per paper)",
+  "year_of_publish": 2024,
+  "reputation": "A targeted comparative evaluation used by codec researchers to assess low-delay coding performance; relevant within the video compression community.",
+  "notes": "Non-LLM benchmark; results sensitive to chosen test sequences, color space (YCbCr 4:2:0) and test conditions; learned codecs show inconsistent behavior on high-motion content.",
+  "creators": {
+    "scientists": [
+      "Siyue Teng",
+      "YuXuan Jiang",
+      "Ge Gao",
+      "Fan Zhang",
+      "Thomas Davis",
+      "Zoe Liu",
+      "David Bull"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2408.05042",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

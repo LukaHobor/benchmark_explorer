@@ -1,0 +1,43 @@
+{
+  "name": "VideoPipe 2022 Challenge",
+  "description": "Video understanding is an important problem in computer vision. Currently, the well-studied task in this research is human action recognition, where the clips are manually trimmed from the long videos, and a single class of human action is assumed for each clip. However, we may face more complicated scenarios in the industrial applications. For example, in the real-world urban pipe system, anomaly defects are fine-grained, multi-labeled, domain-relevant. To recognize them correctly, we need to understand the detailed video content. For this reason, we propose to advance research areas of video understanding, with a shift from traditional action recognition to industrial anomaly analysis. In particular, we introduce two high-quality video benchmarks, namely QV-Pipe and CCTV-Pipe, for anomaly inspection in the real-world urban pipe systems. Based on these new datasets, we will host two competitions including (1) Video Defect Classification on QV-Pipe and (2) Temporal Defect Localization on CCTV-Pipe. In this report, we describe the details of these benchmarks, the problem definitions of competition tracks, the evaluation metric, and the result summary. We expect that, this competition would bring new opportunities and challenges for video understanding in smart city and beyond. The details of our VideoPipe challenge can be found in https://videopipe.github.io.",
+  "category": "vision",
+  "domain": "industrial inspection",
+  "benchmark_type": "competition",
+  "task_types": [
+    "classification",
+    "temporal_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) for classification; temporal IoU / localization F1 for temporal defect localization",
+  "general_score_metric": "mean_average_precision (mAP)",
+  "year_of_publish": 2022,
+  "reputation": "A specialized industrial video benchmark with interest from research groups working on anomaly inspection and video understanding, but limited mainstream adoption outside that niche.",
+  "notes": "Domain-specific (urban pipe inspection) with fine-grained, multi-label defects and class imbalance. Non-LLM benchmark; evaluations are sensitive to temporal annotation quality and dataset size; real-world deployment may require further domain adaptation.",
+  "creators": {
+    "scientists": [
+      "Yi Liu",
+      "Xuan Zhang",
+      "Ying Li",
+      "Guixin Liang",
+      "Yabing Jiang",
+      "Lixia Qiu",
+      "Haiping Tang",
+      "Fei Xie",
+      "Wei Yao",
+      "Yi Dai",
+      "Yu Qiao",
+      "Yali Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.11158",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

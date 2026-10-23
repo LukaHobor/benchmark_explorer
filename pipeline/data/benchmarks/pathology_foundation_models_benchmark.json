@@ -1,0 +1,40 @@
+{
+  "name": "Pathology Foundation Models Benchmark",
+  "description": "In computational pathology, several foundation models have recently emerged and demonstrated enhanced learning capability for analyzing pathology images. However, adapting these models to various downstream tasks remains challenging, particularly when faced with datasets from different sources and acquisition conditions, as well as limited data availability. In this study, we benchmark four pathology-specific foundation models across 14 datasets and two scenarios-consistency assessment and flexibility assessment-addressing diverse adaptation scenarios and downstream tasks. In the consistency assessment scenario, involving five fine-tuning methods, we found that the parameter-efficient fine-tuning approach was both efficient and effective for adapting pathology-specific foundation models to diverse datasets within the same downstream task. In the flexibility assessment scenario under data-limited environments, utilizing five few-shot learning methods, we observed that the foundation models benefited more from the few-shot learning methods that involve modification during the testing phase only. These findings provide insights that could guide the deployment of pathology-specific foundation models in real clinical settings, potentially improving the accuracy and reliability of pathology image analysis. The code for this study is available at: https://github.com/QuIIL/BenchmarkingPathologyFoundationModels.",
+  "category": "vision",
+  "domain": "pathology / medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "segmentation",
+    "few-shot_adaptation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": [
+    "accuracy (classification)",
+    "Dice / mean IoU (segmentation)",
+    "AUC where appropriate"
+  ],
+  "general_score_metric": "Task-dependent (AUC / accuracy / Dice)",
+  "typical_sota_score": "variable across tasks and datasets; no single consolidated SOTA",
+  "year_of_publish": 2024,
+  "reputation": "A recent, domain-specific benchmark for pathology foundation models that is gaining attention among computational pathology researchers but is not yet widely adopted outside the field.",
+  "notes": "Medical imaging benchmark — subject to domain shift across centers, limited-data regimes, and privacy/consent considerations; non-LLM vision benchmark where performance is sensitive to stain/scan variations and dataset provenance.",
+  "creators": {
+    "scientists": [
+      "Jeaung Lee",
+      "Jeewoo Lim",
+      "Keunho Byeon",
+      "Jin Tae Kwak"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2410.16038",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

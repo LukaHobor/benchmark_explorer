@@ -1,0 +1,46 @@
+{
+  "name": "UI-Vision",
+  "description": "Autonomous agents that navigate Graphical User Interfaces (GUIs) to automate tasks like document editing and file management can greatly enhance computer workflows. While existing research focuses on online settings, desktop environments, critical for many professional and everyday tasks, remain underexplored due to data collection challenges and licensing issues. We introduce UI-Vision, the first comprehensive, license-permissive benchmark for offline, fine-grained evaluation of computer use agents in real-world desktop environments. Unlike online benchmarks, UI-Vision provides: (i) dense, high-quality annotations of human demonstrations, including bounding boxes, UI labels, and action trajectories (clicks, drags, and keyboard inputs) across 83 software applications, and (ii) three fine-to-coarse grained tasks-Element Grounding, Layout Grounding, and Action Prediction-with well-defined metrics to rigorously evaluate agents' performance in desktop environments. Our evaluation reveals critical limitations in state-of-the-art models like UI-TARS-72B, including issues with understanding professional software, spatial reasoning, and complex actions like drag-and-drop. These findings highlight the challenges in developing fully autonomous computer use agents. By releasing UI-Vision as open-source, we aim to advance the development of more capable agents for real-world desktop tasks.",
+  "category": "vision",
+  "domain": "human-computer interaction / desktop GUIs",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "element_grounding",
+    "layout_grounding",
+    "action_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Bounding-box IoU / grounding accuracy for grounding tasks; action prediction measured by action accuracy and task success rate",
+  "general_score_metric": "Task success rate / action prediction accuracy (used as the primary overall agent performance metric)",
+  "typical_sota_score": "≈20–60% (varies by task and model; current state-of-the-art models show substantial failure modes on complex desktop tasks)",
+  "year_of_publish": 2025,
+  "reputation": "New, open-source desktop GUI benchmark with high-quality annotations and potential to become a standard for offline GUI agent evaluation, but adoption is currently limited.",
+  "notes": "License-permissive, offline dataset with dense annotations across many professional applications. Results are highly dependent on OS/software versions and task granularity; not saturated and contains challenging spatial and sequential actions (e.g., drag-and-drop).",
+  "creators": {
+    "scientists": [
+      "Shravan Nayak",
+      "Xiangru Jian",
+      "Kevin Qinghong Lin",
+      "Juan A. Rodriguez",
+      "Montek Kalsi",
+      "Rabiul Awal",
+      "Nicolas Chapados",
+      "M. Tamer Özsu",
+      "Aishwarya Agrawal",
+      "David Vazquez",
+      "Christopher Pal",
+      "Perouz Taslakian",
+      "Spandana Gella",
+      "Sai Rajeswar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2503.15661",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

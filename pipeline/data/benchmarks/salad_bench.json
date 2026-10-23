@@ -1,0 +1,44 @@
+{
+  "name": "SALAD-Bench",
+  "description": "A hierarchical and comprehensive safety benchmark for LLMs with a three-level taxonomy covering diverse harmful categories: forbidden, controversial, and sensitive. Includes both base queries and attack/defense-enhanced variants (with jailbreaks and safety prompts). Introduces MD-Judge, an LLM-based safety evaluator competitive with Llama Guard 2. Contains questions at different challenge levels for systematic safety profiling.",
+  "category": "text",
+  "domain": "general knowledge",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "mixed",
+  "number_of_questions": 30000,
+  "evaluation_method": "safety violation rate; MD-Judge LLM-based scoring",
+  "general_score_metric": "safety violation rate (% responses violating safety policy; lower is better)",
+  "typical_sota_score": "Top safety-aligned models: <5% violation rate on base queries; 15–40% on enhanced attack variants",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at ACL 2024; referenced by Meta's Llama Guard team; active HuggingFace leaderboard; introduces MD-Judge evaluator; hierarchical taxonomy enables fine-grained safety profiling",
+  "notes": "ACL 2024. Three-level taxonomy: 6 top-level domains → 16 mid-level categories → 66 fine-grained sub-categories. Attack-enhanced queries apply 10+ jailbreak techniques. MD-Judge is a fine-tuned safety judge competitive with commercial options and hosted on HuggingFace. Referenced by Meta's Llama Guard development team. Active HuggingFace leaderboard.",
+  "creators": {
+    "scientists": [
+      "Lijun Li",
+      "Bowen Dong",
+      "Ruohui Wang",
+      "Xuhao Hu",
+      "Wangmeng Zuo",
+      "Dahua Lin",
+      "Yu Qiao",
+      "Jing Shao"
+    ],
+    "institutions": [
+      "Shanghai AI Lab",
+      "Shanghai Jiao Tong University",
+      "Harbin Institute of Technology"
+    ],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2402.05044",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

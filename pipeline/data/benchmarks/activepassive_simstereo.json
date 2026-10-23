@@ -1,0 +1,38 @@
+{
+  "name": "Active-Passive SimStereo",
+  "description": "In stereo vision, self-similar or bland regions can make it difficult to match patches between two images. Active stereo-based methods mitigate this problem by projecting a pseudo-random pattern on the scene so that each patch of an image pair can be identified without ambiguity. However, the projected pattern significantly alters the appearance of the image. If this pattern acts as a form of adversarial noise, it could negatively impact the performance of deep learning-based methods, which are now the de-facto standard for dense stereo vision. In this paper, we propose the Active-Passive SimStereo dataset and a corresponding benchmark to evaluate the performance gap between passive and active stereo images for stereo matching algorithms. Using the proposed benchmark and an additional ablation study, we show that the feature extraction and matching modules of a selection of twenty selected deep learning-based stereo matching methods generalize to active stereo without a problem. However, the disparity refinement modules of three of the twenty architectures (ACVNet, CascadeStereo, and StereoNet) are negatively affected by the active stereo patterns due to their reliance on the appearance of the input images.",
+  "category": "vision",
+  "domain": "computer vision / stereo vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "disparity_estimation",
+    "dense_depth_estimation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "end-point error (EPE) and bad-pixel rate (%)",
+  "general_score_metric": "EPE (lower is better) and bad-pixel rate (%)",
+  "typical_sota_score": "EPE ~0.5–2.0 px; bad-pixel rate ~1–15%",
+  "year_of_publish": 2022,
+  "reputation": "A specialized academic benchmark introduced for evaluating active versus passive stereo methods; known within the stereo vision research community but not a mainstream benchmark outside that subfield.",
+  "notes": "Non-LLM benchmark; synthetic/active-projection data can introduce domain shift vs. real passive imagery; relatively specialized / smaller-scale dataset focused on stereo research rather than broad vision tasks.",
+  "creators": {
+    "scientists": [
+      "Laurent Jospin",
+      "Allen Antony",
+      "Lian Xu",
+      "Hamid Laga",
+      "Farid Boussaid",
+      "Mohammed Bennamoun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.08305",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

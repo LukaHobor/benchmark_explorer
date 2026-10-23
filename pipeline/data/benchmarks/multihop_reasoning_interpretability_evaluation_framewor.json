@@ -1,0 +1,39 @@
+{
+  "name": "Multi-hop Reasoning Interpretability Evaluation Framework",
+  "description": "Multi-hop reasoning has been widely studied in recent years to obtain more interpretable link prediction. However, we find in experiments that many paths given by these models are actually unreasonable, while little works have been done on interpretability evaluation for them. In this paper, we propose a unified framework to quantitatively evaluate the interpretability of multi-hop reasoning models so as to advance their development. In specific, we define three metrics including path recall, local interpretability, and global interpretability for evaluation, and design an approximate strategy to calculate them using the interpretability scores of rules. Furthermore, we manually annotate all possible rules and establish a Benchmark to detect the Interpretability of Multi-hop Reasoning (BIMR). In experiments, we run nine baselines on our benchmark. The experimental results show that the interpretability of current multi-hop reasoning models is less satisfactory and is still far from the upper bound given by our benchmark. Moreover, the rule-based models outperform the multi-hop reasoning models in terms of performance and interpretability, which points to a direction for future research, i.e., we should investigate how to better incorporate rule information into the multi-hop reasoning model. Our codes and datasets can be obtained from https://github.com/THU-KEG/BIMR.",
+  "category": "mixed",
+  "domain": "knowledge graphs / reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "interpretability_evaluation",
+    "structured_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Custom interpretability metrics (path recall, local interpretability, global interpretability) computed from rule-based interpretability scores",
+  "general_score_metric": "composite interpretability score (path recall / local interpretability / global interpretability)",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2021,
+  "reputation": "A niche but relevant benchmark within the knowledge-graph and multi-hop reasoning research community focused on interpretability rather than raw predictive performance.",
+  "notes": "Dataset relies on manually annotated rules and measures interpretability rather than pure predictive accuracy; relatively specialized and small-scale compared with large KG benchmarks; not an LLM-centric benchmark.",
+  "creators": {
+    "scientists": [
+      "Xin Lv",
+      "Yixin Cao",
+      "Lei Hou",
+      "Juanzi Li",
+      "Zhiyuan Liu",
+      "Yichi Zhang",
+      "Zelin Dai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2104.06751",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

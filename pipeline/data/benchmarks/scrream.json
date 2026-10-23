@@ -1,0 +1,43 @@
+{
+  "name": "SCRREAM",
+  "description": "Traditionally, 3d indoor datasets have generally prioritized scale over ground-truth accuracy in order to obtain improved generalization. However, using these datasets to evaluate dense geometry tasks, such as depth rendering, can be problematic as the meshes of the dataset are often incomplete and may produce wrong ground truth to evaluate the details. In this paper, we propose SCRREAM, a dataset annotation framework that allows annotation of fully dense meshes of objects in the scene and registers camera poses on the real image sequence, which can produce accurate ground truth for both sparse 3D as well as dense 3D tasks. We show the details of the dataset annotation pipeline and showcase four possible variants of datasets that can be obtained from our framework with example scenes, such as indoor reconstruction and SLAM, scene editing & object removal, human reconstruction and 6d pose estimation. Recent pipelines for indoor reconstruction and SLAM serve as new benchmarks. In contrast to previous indoor dataset, our design allows to evaluate dense geometry tasks on eleven sample scenes against accurately rendered ground truth depth maps.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "depth_estimation",
+    "dense_3d_reconstruction",
+    "slam",
+    "6d_pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "metric_based (e.g., RMSE for depth, IoU for reconstruction, ADD-S for pose)",
+  "general_score_metric": "task-dependent (RMSE / IoU / ADD-S depending on the task)",
+  "year_of_publish": 2024,
+  "reputation": "A specialized recent dataset/annotation framework aimed at high-fidelity dense-geometry evaluation with limited community adoption so far.",
+  "notes": "Small set of high-quality scenes (11 sample scenes) — excellent ground-truth fidelity but limited scale. Intended for dense-geometry evaluation (non-LLM); not a large-scale benchmark and not saturated.",
+  "creators": {
+    "scientists": [
+      "HyunJun Jung",
+      "Weihang Li",
+      "Shun-Cheng Wu",
+      "William Bittner",
+      "Nikolas Brasch",
+      "Jifei Song",
+      "Eduardo Pérez-Pellitero",
+      "Zhensong Zhang",
+      "Arthur Moreau",
+      "Nassir Navab",
+      "Benjamin Busam"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.22715",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

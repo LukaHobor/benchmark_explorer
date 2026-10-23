@@ -1,0 +1,33 @@
+{
+  "name": "Belgian Statutory Article Retrieval Dataset (BSARD)",
+  "description": "Statutory article retrieval is the task of automatically retrieving law articles relevant to a legal question. While recent advances in natural language processing have sparked considerable interest in many legal tasks, statutory article retrieval remains primarily untouched due to the scarcity of large-scale and high-quality annotated datasets. To address this bottleneck, we introduce the Belgian Statutory Article Retrieval Dataset (BSARD), which consists of 1,100+ French native legal questions labeled by experienced jurists with relevant articles from a corpus of 22,600+ Belgian law articles. Using BSARD, we benchmark several state-of-theart retrieval approaches, including lexical and dense architectures, both in zero-shot and supervised setups. We find that fine-tuned dense retrieval models significantly outperform other systems. Our best performing baseline achieves 74.8% R@100, which is promising for the feasibility of the task and indicates there is still room for improvement. By the specificity of the domain and addressed task, BSARD presents a unique challenge problem for future research on legal information retrieval. Our dataset and source code are publicly available.",
+  "category": "text",
+  "domain": "legal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "document_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "recall_at_k (R@k) and MRR",
+  "general_score_metric": "R@100",
+  "typical_sota_score": "≈74.8% R@100 (best reported baseline)",
+  "year_of_publish": 2022,
+  "reputation": "24 citations",
+  "notes": "Relatively small (≈1.1k queries) and domain-specific (French Belgian statutes) dataset; annotations by jurists improve quality but scope is limited to Belgian law. Primary benchmarks report recall@100; models fine-tuned dense retrieval perform best. Potential contamination if models were trained on overlapping legal corpora; not a general-domain benchmark.",
+  "creators": {
+    "scientists": [
+      "Antoine Louis",
+      "Gerasimos Spanakis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://doi.org/10.18653/v1/2022.acl-long.468",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

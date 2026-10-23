@@ -1,0 +1,41 @@
+{
+  "name": "Long Range Graph Benchmark",
+  "description": "Graph Neural Networks (GNNs) that are based on the message passing (MP) paradigm generally exchange information between 1-hop neighbors to build node representations at each layer. In principle, such networks are not able to capture long-range interactions (LRI) that may be desired or necessary for learning a given task on graphs. Recently, there has been an increasing interest in development of Transformer-based methods for graphs that can consider full node connectivity beyond the original sparse structure, thus enabling the modeling of LRI. However, MP-GNNs that simply rely on 1-hop message passing often fare better in several existing graph benchmarks when combined with positional feature representations, among other innovations, hence limiting the perceived utility and ranking of Transformer-like architectures. Here, we present the Long Range Graph Benchmark (LRGB) with 5 graph learning datasets: PascalVOC-SP, COCO-SP, PCQM-Contact, Peptides-func and Peptides-struct that arguably require LRI reasoning to achieve strong performance in a given task. We benchmark both baseline GNNs and Graph Transformer networks to verify that the models which capture long-range dependencies perform significantly better on these tasks. Therefore, these datasets are suitable for benchmarking and exploration of MP-GNNs and Graph Transformer architectures that are intended to capture LRI.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "link_prediction",
+    "graph_classification",
+    "regression",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "dataset-specific metrics (e.g., mean IoU for segmentation/node-labeling, ROC-AUC for contact/link prediction, F1/ROC-AUC for classification, MAE/RMSE for regression)",
+  "general_score_metric": "dataset-specific primary metrics (mIoU, ROC-AUC, F1, MAE depending on split)",
+  "typical_sota_score": "varies by dataset; examples include mIoU ≈ 30–60%, ROC-AUC ≈ 0.70–0.92, F1 ≈ 0.40–0.80",
+  "year_of_publish": 2022,
+  "reputation": "Widely cited in the graph ML community as a targeted benchmark for evaluating long-range interaction modeling and Graph Transformer architectures.",
+  "notes": "Non-LLM benchmark focused on graph models; tasks and metrics vary by sub-dataset, class imbalance and dataset-specific preprocessing matter; not saturated — designed to highlight long-range reasoning gaps.",
+  "creators": {
+    "scientists": [
+      "Vijay Prakash Dwivedi",
+      "Ladislav Rampášek",
+      "Mikhail Galkin",
+      "Ali Parviz",
+      "Guy Wolf",
+      "Anh Tuan Luu",
+      "Dominique Beaini"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2206.08164",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

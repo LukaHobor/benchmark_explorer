@@ -1,0 +1,33 @@
+{
+  "name": "Local Homophily Fairness Benchmarks",
+  "description": "Graph Neural Networks (GNNs) often struggle to generalize when graphs exhibit both homophily (same-class connections) and heterophily (different-class connections). Specifically, GNNs tend to underperform for nodes with local homophily levels that differ significantly from the global homophily level. This issue poses a risk in user-centric applications where underrepresented homophily levels are present. Concurrently, fairness within GNNs has received substantial attention due to the potential amplification of biases via message passing. However, the connection between local homophily and fairness in GNNs remains underexplored. In this work, we move beyond global homophily and explore how local homophily levels can lead to unfair predictions. We begin by formalizing the challenge of fair predictions for underrepresented homophily levels as an out-of-distribution (OOD) problem. We then conduct a theoretical analysis that demonstrates how local homophily levels can alter predictions for differing sensitive attributes. We additionally introduce three new GNN fairness benchmarks, as well as a novel semi-synthetic graph generator, to empirically study the OOD problem. Across extensive analysis we find that two factors can promote unfairness: (a) OOD distance, and (b) heterophilous nodes situated in homophilous graphs. In cases where these two conditions are met, fairness drops by up to 24% on real world datasets, and 30% in semi-synthetic datasets. Together, our theoretical insights, empirical analysis, and algorithmic contributions unveil a previously overlooked source of unfairness rooted in the graph's homophily information.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "fairness_evaluation",
+    "ood_generalization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "standard predictive metrics (accuracy) combined with fairness metrics such as group-wise accuracy gaps, demographic parity difference, equal opportunity difference, and OOD performance drop",
+  "general_score_metric": "group-wise accuracy and fairness gap (e.g., difference in accuracy between homophily groups) alongside overall accuracy",
+  "year_of_publish": 2024,
+  "reputation": "A recent research benchmark aimed at exposing fairness issues tied to local homophily; primarily of interest to the graph-learning fairness research community rather than broad industrial adoption.",
+  "notes": "Non-LLM benchmark; includes semi‑synthetic datasets and a graph generator — potential for synthetic artifacts. Focuses on OOD/fairness evaluation rather than saturating classification performance; sensitive-attribute definitions and distributional shifts can affect comparability across studies.",
+  "creators": {
+    "scientists": [
+      "Donald Loveland",
+      "Danai Koutra"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.04287",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "AerialVG",
+  "description": "Visual grounding (VG) aims to localize target objects in an image based on natural language descriptions. In this paper, we propose AerialVG, a new task focusing on visual grounding from aerial views. Compared to traditional VG, AerialVG poses new challenges, \\emph{e.g.}, appearance-based grounding is insufficient to distinguish among multiple visually similar objects, and positional relations should be emphasized. Besides, existing VG models struggle when applied to aerial imagery, where high-resolution images cause significant difficulties. To address these challenges, we introduce the first AerialVG dataset, consisting of 5K real-world aerial images, 50K manually annotated descriptions, and 103K objects. Particularly, each annotation in AerialVG dataset contains multiple target objects annotated with relative spatial relations, requiring models to perform comprehensive spatial reasoning. Furthermore, we propose an innovative model especially for the AerialVG task, where a Hierarchical Cross-Attention is devised to focus on target regions, and a Relation-Aware Grounding module is designed to infer positional relations. Experimental results validate the effectiveness of our dataset and method, highlighting the importance of spatial reasoning in aerial visual grounding. The code and dataset will be released.",
+  "category": "vision",
+  "domain": "aerial imagery / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_grounding",
+    "referring_expression_grounding",
+    "object_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (IoU>0.5) / Recall@K",
+  "general_score_metric": "accuracy (IoU>0.5)",
+  "year_of_publish": 2025,
+  "reputation": "New dataset for aerial visual grounding with early-stage adoption in remote sensing and grounding research communities.",
+  "notes": "Domain-specific (aerial) dataset with ~5K images and relational annotations; relatively small scale and high-resolution images may increase compute and overfitting risk.",
+  "creators": {
+    "scientists": [
+      "Junli Liu",
+      "Qizhi Chen",
+      "Zhigang Wang",
+      "Yiwen Tang",
+      "Yiting Zhang",
+      "Chi Yan",
+      "Dong Wang",
+      "Xuelong Li",
+      "Bin Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.07836",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

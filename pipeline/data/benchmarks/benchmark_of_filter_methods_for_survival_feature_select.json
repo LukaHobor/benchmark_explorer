@@ -1,0 +1,35 @@
+{
+  "name": "Benchmark of filter methods for survival feature selection",
+  "description": "Abstract\n               Feature selection is crucial for the analysis of high-dimensional data, but benchmark studies for data with a survival outcome are rare. We compare 14 filter methods for feature selection based on 11 high-dimensional gene expression survival data sets. The aim is to provide guidance on the choice of filter methods for other researchers and practitioners. We analyze the accuracy of predictive models that employ the features selected by the filter methods. Also, we consider the run time, the number of selected features for fitting models with high predictive accuracy as well as the feature selection stability. We conclude that the simple variance filter outperforms all other considered filter methods. This filter selects the features with the largest variance and does not take into account the survival outcome. Also, we identify the correlation-adjusted regression scores filter as a more elaborate alternative that allows fitting models with similar predictive accuracy. Additionally, we investigate the filter methods based on feature rankings, finding groups of similar filters.",
+  "category": "mixed",
+  "domain": "bioinformatics / genomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "feature_selection",
+    "survival_prediction",
+    "feature_ranking_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "concordance_index (C-index) / predictive accuracy (e.g., time-dependent AUC)",
+  "general_score_metric": "concordance_index (C-index)",
+  "year_of_publish": 2022,
+  "reputation": "A focused academic benchmark from the bioinformatics literature used by methodological researchers comparing survival feature-selection filters, but not a broadly standardized industry benchmark.",
+  "notes": "Non-LLM benchmark; evaluation based on 11 high-dimensional gene-expression datasets (moderate size); results can be dataset-dependent and not necessarily generalize beyond oncology/gene-expression survival data; includes runtime and stability analyses.",
+  "creators": {
+    "scientists": [
+      "Andrea Bommert",
+      "Thomas Welchowski",
+      "Matthias Schmid",
+      "Jörg Rahnenführer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/bib/bbab354",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

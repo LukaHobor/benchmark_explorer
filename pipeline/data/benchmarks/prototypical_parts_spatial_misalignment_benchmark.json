@@ -1,0 +1,37 @@
+{
+  "name": "Prototypical Parts Spatial Misalignment Benchmark",
+  "description": "Prototypical parts-based networks are becoming increasingly popular due to their faithful self-explanations. However, their similarity maps are calculated in the penultimate network layer. Therefore, the receptive field of the prototype activation region often depends on parts of the image outside this region, which can lead to misleading interpretations. We name this undesired behavior a spatial explanation misalignment and introduce an interpretability benchmark with a set of dedicated metrics for quantifying this phenomenon. In addition, we propose a method for misalignment compensation and apply it to existing state-of-the-art models. We show the expressiveness of our benchmark and the effectiveness of the proposed compensation methodology through extensive empirical studies.",
+  "category": "vision",
+  "domain": "computer vision / interpretability",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "localization",
+    "interpretability_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "custom_alignment_metrics (misalignment score, IoU)",
+  "general_score_metric": "misalignment_score (lower is better)",
+  "year_of_publish": 2023,
+  "reputation": "A targeted research benchmark in the interpretability community that has attracted interest from researchers working on prototype-based explainability but is not yet widely adopted outside that niche.",
+  "notes": "Non-LLM computer-vision interpretability benchmark with custom metrics; requires access to prototype-based models and internal activations; not standardized across many model families, so comparisons can be sensitive to implementation details.",
+  "creators": {
+    "scientists": [
+      "Mikołaj Sacha",
+      "Bartosz Jura",
+      "Dawid Rymarczyk",
+      "Łukasz Struski",
+      "Jacek Tabor",
+      "Bartosz Zieliński"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.08162",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

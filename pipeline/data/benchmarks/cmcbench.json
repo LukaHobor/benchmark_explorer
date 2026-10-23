@@ -1,0 +1,41 @@
+{
+  "name": "CMC-Bench",
+  "description": "Ultra-low bitrate image compression is a challenging and demanding topic. With the development of Large Multimodal Models (LMMs), a Cross Modality Compression (CMC) paradigm of Image-Text-Image has emerged. Compared with traditional codecs, this semantic-level compression can reduce image data size to 0.1\\% or even lower, which has strong potential applications. However, CMC has certain defects in consistency with the original image and perceptual quality. To address this problem, we introduce CMC-Bench, a benchmark of the cooperative performance of Image-to-Text (I2T) and Text-to-Image (T2I) models for image compression. This benchmark covers 18,000 and 40,000 images respectively to verify 6 mainstream I2T and 12 T2I models, including 160,000 subjective preference scores annotated by human experts. At ultra-low bitrates, this paper proves that the combination of some I2T and T2I models has surpassed the most advanced visual signal codecs; meanwhile, it highlights where LMMs can be further optimized toward the compression task. We encourage LMM developers to participate in this test to promote the evolution of visual signal codec protocols.",
+  "category": "multimodal",
+  "domain": "vision / multimodal compression",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_text",
+    "text_to_image",
+    "human_preference"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Human evaluation (subjective preference scores) together with objective image-quality metrics (LPIPS, FID, PSNR)",
+  "general_score_metric": "human preference / subjective score (supported by LPIPS/FID/PSNR as objective metrics)",
+  "year_of_publish": 2024,
+  "reputation": "A new, specialized benchmark for cross-modality semantic compression gaining attention among multimodal and codec researchers.",
+  "notes": "Relies heavily on human subjective scores (annotator bias possible); large-scale but specialized to ultra-low-bitrate semantic compression; objective metrics may not fully correlate with perceptual preference.",
+  "creators": {
+    "scientists": [
+      "Chunyi Li",
+      "Xiele Wu",
+      "HaoNing Wu",
+      "Donghui Feng",
+      "ZiCheng Zhang",
+      "Guo Lu",
+      "Xiongkuo Min",
+      "Xiaohong Liu",
+      "Guangtao Zhai",
+      "Weisi Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.09356",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

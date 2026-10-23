@@ -1,0 +1,36 @@
+{
+  "name": "FinReflectKG - MultiHop",
+  "description": "Multi-hop reasoning over financial disclosures is often a retrieval problem before it becomes a reasoning or generation problem: relevant facts are dispersed across sections, filings, companies, and years, and LLMs often expend excessive tokens navigating noisy context. Without precise Knowledge Graph (KG)-guided selection of relevant context, even strong reasoning models either fail to answer or consume excessive tokens, whereas KG-linked evidence enables models to focus their reasoning on composing already retrieved facts. We present FinReflectKG - MultiHop, a benchmark built on FinReflectKG, a temporally indexed financial KG that links audited triples to source chunks from S&P 100 filings (2022-2024). Mining frequent 2-3 hop subgraph patterns across sectors (via GICS taxonomy), we generate financial analyst style questions with exact supporting evidence from the KG. A two-phase pipeline first creates QA pairs via pattern-specific prompts, followed by a multi-criteria quality control evaluation to ensure QA validity. We then evaluate three controlled retrieval scenarios: (S1) precise KG-linked paths; (S2) text-only page windows centered on relevant text spans; and (S3) relevant page windows with randomizations and distractors. Across both reasoning and non-reasoning models, KG-guided precise retrieval yields substantial gains on the FinReflectKG - MultiHop QA benchmark dataset, boosting correctness scores by approximately 24 percent while reducing token utilization by approximately 84.5 percent compared to the page window setting, which reflects the traditional vector retrieval paradigm. Spanning intra-document, inter-year, and cross-company scopes, our work underscores the pivotal role of knowledge graphs in efficiently connecting evidence for multi-hop financial QA. We also release a curated subset of the benchmark (555 QA Pairs) to catalyze further research.",
+  "category": "text",
+  "domain": "finance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multi_hop_qa",
+    "retrieval"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "Specialized, newly released benchmark with limited but growing adoption in financial NLP and KG-guided retrieval research.",
+  "notes": "Contains a curated subset of 555 QA pairs; domain-specific (S&P 100 filings) so models trained on public filings risk contamination/temporal leakage; emphasizes KG-linked retrieval vs. page-window retrieval and requires access to the KG or equivalent linking; small-scale relative to general QA benchmarks.",
+  "creators": {
+    "scientists": [
+      "Abhinav Arun",
+      "Reetu Raj Harsh",
+      "Bhaskarjit Sarmah",
+      "Stefano Pasquali"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2510.02906",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

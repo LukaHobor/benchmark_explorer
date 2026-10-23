@@ -1,0 +1,44 @@
+{
+  "name": "EditBench",
+  "description": "Text-guided image editing can have a transformative impact in supporting creative applications. A key challenge is to generate edits that are faithful to input text prompts, while consistent with input images. We present Imagen Editor, a cascaded diffusion model built, by fine-tuning Imagen on text-guided image inpainting. Imagen Editor's edits are faithful to the text prompts, which is accomplished by using object detectors to propose inpainting masks during training. In addition, Imagen Editor captures fine details in the input image by conditioning the cascaded pipeline on the original high resolution image. To improve qualitative and quantitative evaluation, we introduce EditBench, a systematic benchmark for text-guided image inpainting. EditBench evaluates inpainting edits on natural and generated images exploring objects, attributes, and scenes. Through extensive human evaluation on EditBench, we find that object-masking during training leads to across-the-board improvements in text-image alignment -- such that Imagen Editor is preferred over DALL-E 2 and Stable Diffusion -- and, as a cohort, these models are better at object-rendering than text-rendering, and handle material/color/size attributes better than count/shape attributes.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text-guided_image_inpainting",
+    "image_editing"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human preference (%)",
+  "year_of_publish": 2022,
+  "reputation": "Introduced alongside Imagen Editor and cited in image-editing research; referenced in the community but not yet a universal standard.",
+  "notes": "Primarily evaluated via human judgments; relatively specialized and image-model focused (non-LLM). Possible dataset bias from generated images and limited coverage of all edit types.",
+  "creators": {
+    "scientists": [
+      "Su Wang",
+      "Chitwan Saharia",
+      "Ceslee Montgomery",
+      "Jordi Pont-Tuset",
+      "Shai Noy",
+      "Stefano Pellegrini",
+      "Yasumasa Onoe",
+      "Sarah Laszlo",
+      "David J. Fleet",
+      "Radu Soricut",
+      "Jason Baldridge",
+      "Mohammad Norouzi",
+      "Peter Anderson",
+      "William Chan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2212.06909",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

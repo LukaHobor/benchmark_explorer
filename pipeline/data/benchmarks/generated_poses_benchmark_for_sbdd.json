@@ -1,0 +1,38 @@
+{
+  "name": "Generated Poses Benchmark for SBDD",
+  "description": "Deep generative models for structure-based drug design (SBDD), where molecule generation is conditioned on a 3D protein pocket, have received considerable interest in recent years. These methods offer the promise of higher-quality molecule generation by explicitly modelling the 3D interaction between a potential drug and a protein receptor. However, previous work has primarily focused on the quality of the generated molecules themselves, with limited evaluation of the 3D molecule \\emph{poses} that these methods produce, with most work simply discarding the generated pose and only reporting a \"corrected\" pose after redocking with traditional methods. Little is known about whether generated molecules satisfy known physical constraints for binding and the extent to which redocking alters the generated interactions. We introduce PoseCheck, an extensive analysis of multiple state-of-the-art methods and find that generated molecules have significantly more physical violations and fewer key interactions compared to baselines, calling into question the implicit assumption that providing rich 3D structure information improves molecule complementarity. We make recommendations for future research tackling identified failure modes and hope our benchmark can serve as a springboard for future SBDD generative modelling work to have a real-world impact.",
+  "category": "mixed",
+  "domain": "structure-based drug design / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "scoring",
+    "regression",
+    "binary_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSD / counts of physical violations / interaction recall (metric-based evaluation)",
+  "general_score_metric": "RMSD and counts of physical violations (plus interaction recall/precision)",
+  "year_of_publish": 2023,
+  "reputation": "A recent, specialized benchmark (PoseCheck) for evaluating generated 3D poses in structure-based drug design; recognized by SBDD researchers but not yet widely adopted across the broader ML community.",
+  "notes": "Not an NLP/LLM benchmark. Evaluation depends on docking/redocking protocols and toolchain choices; metrics are simulation- and software-dependent and can be sensitive to preprocessing. Focuses on physical plausibility and interaction quality rather than molecule-only metrics.",
+  "creators": {
+    "scientists": [
+      "Charles Harris",
+      "Kieran Didi",
+      "Arian R. Jamasb",
+      "Chaitanya K. Joshi",
+      "Simon V. Mathis",
+      "Pietro Lio",
+      "Tom Blundell"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2308.07413",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "SALVE",
+  "description": "Managing chronic wounds is a global challenge that can be alleviated by the adoption of automatic systems for clinical wound assessment from consumer-grade videos. While 2D image analysis approaches are insufficient for handling the 3D features of wounds, existing approaches utilizing 3D reconstruction methods have not been thoroughly evaluated. To address this gap, this paper presents a comprehensive study on 3D wound reconstruction from consumer-grade videos. Specifically, we introduce the SALVE dataset, comprising video recordings of realistic wound phantoms captured with different cameras. Using this dataset, we assess the accuracy and precision of state-of-the-art methods for 3D reconstruction, ranging from traditional photogrammetry pipelines to advanced neural rendering approaches. In our experiments, we observe that photogrammetry approaches do not provide smooth surfaces suitable for precise clinical measurements of wounds. Neural rendering approaches show promise in addressing this issue, advancing the use of this technology in wound care practices.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_reconstruction",
+    "surface_reconstruction",
+    "visual_measurement"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "geometric_error (Chamfer distance / point-to-surface RMSE) and measurement_error (dimension/area deviations)",
+  "general_score_metric": "Chamfer distance / point-to-surface RMSE",
+  "year_of_publish": 2024,
+  "reputation": "New dataset introduced in a recent arXiv paper with limited community adoption so far; primarily of interest to niche medical imaging and 3D reconstruction researchers.",
+  "notes": "Small dataset of wound phantoms (not real patients); focuses on consumer-grade video captures; photogrammetry often yields non-smooth surfaces unsuitable for clinical measurements; neural-rendering approaches are promising; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Remi Chierchia",
+      "Leo Lebrat",
+      "David Ahmedt-Aristizabal",
+      "Olivier Salvado",
+      "Clinton Fookes",
+      "Rodrigo Santa Cruz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.19652",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "The Seeker's Dilemma benchmark",
+  "description": "This work focuses on advancing security research in the hardware design space by formally defining the realistic problem of Hardware Trojan (HT) detection. The goal is to model HT detection more closely to the real world, i.e., describing the problem as \"The Seeker's Dilemma\" (an extension of Hide&Seek on a graph), where a detecting agent is unaware of whether circuits are infected by HTs or not. Using this theoretical problem formulation, we create a benchmark that consists of a mixture of HT-free and HT-infected restructured circuits while preserving their original functionalities. The restructured circuits are randomly infected by HTs, causing a situation where the defender is uncertain if a circuit is infected or not. We believe that our innovative dataset will help the community better judge the detection quality of different methods by comparing their success rates in circuit classification. We use our developed benchmark to evaluate three state-of-the-art HT detection tools to show baseline results for this approach. We use Principal Component Analysis to assess the strength of our benchmark, where we observe that some restructured HT-infected circuits are mapped closely to HT-free circuits, leading to significant label misclassification by detectors.",
+  "category": "mixed",
+  "domain": "hardware security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "A recently proposed, domain-specific benchmark aimed at the hardware-security research community; currently niche with limited broad adoption.",
+  "notes": "Synthetic HT infections and restructured circuits may not fully reflect all real‑world variations; dataset is domain-specific (non-LLM) and may contain circuits that are intrinsically ambiguous, causing label noise and evaluation difficulty.",
+  "creators": {
+    "scientists": [
+      "Amin Sarihi",
+      "Ahmad Patooghy",
+      "Abdel-Hameed A. Badawy",
+      "Peter Jamieson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2402.17918",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

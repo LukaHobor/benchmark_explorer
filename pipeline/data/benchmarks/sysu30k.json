@@ -1,0 +1,40 @@
+{
+  "name": "SYSU-30k",
+  "description": "Person re-identification (Re-ID) benefits greatly from the accurate annotations of existing datasets (e.g., CUHK03 [1] and Market-1501 [2]), which are quite expensive because each image in these datasets has to be assigned with a proper label. In this work, we ease the annotation of Re-ID by replacing the accurate annotation with inaccurate annotation, i.e., we group the images into bags in terms of time and assign a bag-level label for each bag. This greatly reduces the annotation effort and leads to the creation of a large-scale Re-ID benchmark called SYSU-30$k$. The new benchmark contains $30k$ individuals, which is about $20$ times larger than CUHK03 ($1.3k$ individuals) and Market-1501 ($1.5k$ individuals), and $30$ times larger than ImageNet ($1k$ categories). It sums up to 29,606,918 images. Learning a Re-ID model with bag-level annotation is called the weakly supervised Re-ID problem. To solve this problem, we introduce a differentiable graphical model to capture the dependencies from all images in a bag and generate a reliable pseudo label for each person image. The pseudo label is further used to supervise the learning of the Re-ID model. When compared with the fully supervised Re-ID models, our method achieves state-of-the-art performance on SYSU-30$k$ and other datasets. The code, dataset, and pretrained model will be available at \\url{https://github.com/wanggrun/SYSU-30k}.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "classification",
+    "metric_learning",
+    "person_re-identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) and CMC (top-1/top-5) accuracy",
+  "general_score_metric": "mean Average Precision (mAP)",
+  "year_of_publish": 2019,
+  "year_of_last_update": 2022,
+  "reputation": "Moderately well known within the person re-identification community as a large-scale weakly supervised benchmark; cited mainly in weakly-supervised Re-ID research.",
+  "notes": "Non-LLM computer-vision benchmark; extremely large (tens of millions of images) with weak (bag-level) labels, high computational cost to train, potential privacy/bias concerns from large-scale collected imagery.",
+  "creators": {
+    "scientists": [
+      "Guangrun Wang",
+      "Guangcong Wang",
+      "Xujie Zhang",
+      "Jian-Huang Lai",
+      "Zhengtao Yu",
+      "Liang Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1904.03845",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

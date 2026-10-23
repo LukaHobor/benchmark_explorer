@@ -1,0 +1,37 @@
+{
+  "name": "Lung Tumor Segmentation Benchmark",
+  "description": "Accurate lung tumor segmentation is crucial for improving diagnosis, treatment planning, and patient outcomes in oncology. However, the complexity of tumor morphology, size, and location poses significant challenges for automated segmentation. This study presents a comprehensive benchmarking analysis of deep learning-based segmentation models, comparing traditional architectures such as U-Net and DeepLabV3, self-configuring models like nnUNet, and foundation models like MedSAM, and MedSAM~2. Evaluating performance across two lung tumor segmentation datasets, we assess segmentation accuracy and computational efficiency under various learning paradigms, including few-shot learning and fine-tuning. The results reveal that while traditional models struggle with tumor delineation, foundation models, particularly MedSAM~2, outperform them in both accuracy and computational efficiency. These findings underscore the potential of foundation models for lung tumor segmentation, highlighting their applicability in improving clinical workflows and patient outcomes.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "medical_image_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient (mean Dice / DSC), also IoU and Hausdorff distance reported",
+  "general_score_metric": "Dice coefficient (mean DSC)",
+  "typical_sota_score": "75–90%",
+  "year_of_publish": 2025,
+  "reputation": "Emerging benchmark for lung tumor segmentation and foundation-model comparison; of interest to medical imaging researchers but not yet a clinical standard.",
+  "notes": "Medical imaging datasets are often small and heterogeneous; clinical validation and external generalization are limited; segmentation performance varies strongly by tumor size/location; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Elena Mulero Ayllón",
+      "Massimiliano Mantegna",
+      "Linlin Shen",
+      "Paolo Soda",
+      "Valerio Guarrasi",
+      "Matteo Tortora"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.01239",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "YOLO-NAS-Bench",
+  "description": "Neural Architecture Search (NAS) for object detection is severely bottlenecked by high evaluation cost, as fully training each candidate YOLO architecture on COCO demands days of GPU time. Meanwhile, existing NAS benchmarks largely target image classification, leaving the detection community without a comparable benchmark for NAS evaluation. To address this gap, we introduce YOLO-NAS-Bench, the first surrogate benchmark tailored to YOLO-style detectors. YOLO-NAS-Bench defines a search space spanning channel width, block depth, and operator type across both backbone and neck, covering the core modules of YOLOv8 through YOLO12. We sample 1,000 architectures via random, stratified, and Latin Hypercube strategies, train them on COCO-mini, and build a LightGBM surrogate predictor. To sharpen the predictor in the high-performance regime most relevant to NAS, we propose a Self-Evolving Mechanism that progressively aligns the predictor's training distribution with the high-performance frontier, by using the predictor itself to discover and evaluate informative architectures in each iteration. This method grows the pool to 1,500 architectures and raises the ensemble predictor's R2 from 0.770 to 0.815 and Sparse Kendall Tau from 0.694 to 0.752, demonstrating strong predictive accuracy and ranking consistency. Using the final predictor as the fitness function for evolutionary search, we discover architectures that surpass all official YOLOv8-YOLO12 baselines at comparable latency on COCO-mini, confirming the predictor's discriminative power for top-performing detection architectures.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "neural_architecture_search",
+    "object_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AP (COCO mAP)",
+  "general_score_metric": "AP (COCO mAP)",
+  "year_of_publish": 2026,
+  "reputation": "A targeted, research-oriented surrogate benchmark for YOLO-style NAS with growing interest in the detection/NAS community.",
+  "notes": "Surrogate benchmark trained on COCO-mini using a LightGBM predictor — may not reflect full COCO training; limited to YOLO-style search space and to architectures covered in the benchmark; results depend on surrogate fidelity.",
+  "creators": {
+    "scientists": [
+      "Zhe Li",
+      "Xiaoyu Ding",
+      "Jiaxi Zheng",
+      "Yongtao Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2603.09405",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

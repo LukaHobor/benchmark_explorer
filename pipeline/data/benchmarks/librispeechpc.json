@@ -1,0 +1,37 @@
+{
+  "name": "LibriSpeech-PC",
+  "description": "Traditional automatic speech recognition (ASR) models output lower-cased words without punctuation marks, which reduces readability and necessitates a subsequent text processing model to convert ASR transcripts into a proper format. Simultaneously, the development of end-to-end ASR models capable of predicting punctuation and capitalization presents several challenges, primarily due to limited data availability and shortcomings in the existing evaluation methods, such as inadequate assessment of punctuation prediction. In this paper, we introduce a LibriSpeech-PC benchmark designed to assess the punctuation and capitalization prediction capabilities of end-to-end ASR models. The benchmark includes a LibriSpeech-PC dataset with restored punctuation and capitalization, a novel evaluation metric called Punctuation Error Rate (PER) that focuses on punctuation marks, and initial baseline models. All code, data, and models are publicly available.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_labeling",
+    "text_transformation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 (commonly reported for punctuation restoration; capitalization often reported with accuracy)",
+  "general_score_metric": "F1 (for punctuation)",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2023,
+  "reputation": "A practical, widely referenced dataset variant for ASR post-processing research (punctuation/capitalization), though less ubiquitous than core LibriSpeech for ASR acoustic modeling.",
+  "notes": "Derived from LibriSpeech so overlaps with common pretraining corpora are possible; performance depends strongly on upstream ASR errors; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Aleksandr Meister",
+      "Matvei Novikov",
+      "Nikolay Karpov",
+      "Evelina Bakhturina",
+      "Vitaly Lavrukhin",
+      "Boris Ginsburg"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.1109/asru57964.2023.10389666",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

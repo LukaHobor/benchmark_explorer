@@ -1,0 +1,39 @@
+{
+  "name": "AncientDoc",
+  "description": "Chinese ancient documents, invaluable carriers of millennia of Chinese history and culture, hold rich knowledge across diverse fields but face challenges in digitization and understanding, i.e., traditional methods only scan images, while current Vision-Language Models (VLMs) struggle with their visual and linguistic complexity. Existing document benchmarks focus on English printed texts or simplified Chinese, leaving a gap for evaluating VLMs on ancient Chinese documents. To address this, we present AncientDoc, the first benchmark for Chinese ancient documents, designed to assess VLMs from OCR to knowledge reasoning. AncientDoc includes five tasks (page-level OCR, vernacular translation, reasoning-based QA, knowledge-based QA, linguistic variant QA) and covers 14 document types, over 100 books, and about 3,000 pages. Based on AncientDoc, we evaluate mainstream VLMs using multiple metrics, supplemented by a human-aligned large language model for scoring.",
+  "category": "multimodal",
+  "domain": "digital humanities",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "page_level_ocr",
+    "vernacular_translation",
+    "reasoning_qa",
+    "knowledge_qa",
+    "linguistic_variant_qa"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mixed: exact_match/accuracy for OCR and QA tasks, plus human-aligned LLM scoring for open-ended translation and reasoning outputs",
+  "general_score_metric": "task-specific accuracy / exact_match with LLM-assisted scoring",
+  "year_of_publish": 2025,
+  "reputation": "A new niche benchmark that fills an important gap for Chinese ancient-document VLM evaluation, but it is not yet widely adopted.",
+  "notes": "Small benchmark (~3,000 pages) with specialized historical language and layout; results are likely sensitive to OCR quality and LLM-based judging.",
+  "creators": {
+    "scientists": [
+      "Haiyang Yu",
+      "Yuchuan Wu",
+      "Fan Shi",
+      "Lei Liao",
+      "Jinghui Lu",
+      "Xiaodong Ge"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2509.09731",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

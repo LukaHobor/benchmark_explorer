@@ -1,0 +1,35 @@
+{
+  "name": "Zero-Shot Time Series Forecasting Benchmark (System 1 vs. 2)",
+  "description": "Reasoning ability is crucial for solving challenging tasks. With the advancement of foundation models, such as the emergence of large language models (LLMs), a wide range of reasoning strategies has been proposed, including test-time enhancements, such as Chain-ofThought, and post-training optimizations, as used in DeepSeek-R1. While these reasoning strategies have demonstrated effectiveness across various challenging language or vision tasks, their applicability and impact on time-series forecasting (TSF), particularly the challenging zero-shot TSF, remain largely unexplored. In particular, it is unclear whether zero-shot TSF benefits from reasoning and, if so, what types of reasoning strategies are most effective. To bridge this gap, we propose ReC4TS, the first benchmark that systematically evaluates the effectiveness of popular reasoning strategies when applied to zero-shot TSF tasks. ReC4TS conducts comprehensive evaluations across datasets spanning eight domains, covering both unimodal and multimodal with short-term and longterm forecasting tasks. More importantly, ReC4TS provides key insights: (1) Self-consistency emerges as the most effective test-time reasoning strategy; (2) Group-relative policy optimization emerges as a more suitable approach for incentivizing reasoning ability during post-training; (3) Multimodal TSF benefits more from reasoning strategies compared to unimodal TSF. Beyond these insights, ReC4TS establishes two pioneering starting blocks to support future zero-shot TSF reasoning research: (1) A novel dataset, TimeThinking, containing forecasting samples annotated with reasoning trajectories from multiple advanced LLMs, and (2) A new and simple test-time scaling-law validated on foundational TSF models enabled by self-consistency reasoning strategy. All data and code are publicly accessible at: https://github.com/AdityaLab/OpenTimeR",
+  "category": "mixed",
+  "domain": "time series forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "zero-shot_evaluation",
+    "multimodal_forecasting"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE / RMSE (forecast error metrics)",
+  "general_score_metric": "MAE (mean absolute error) as primary aggregated forecasting metric",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed benchmark (ReC4TS) focused on zero-shot reasoning for time-series forecasting; of growing interest in the TSF and LLM-for-TSF communities but not yet widely adopted.",
+  "notes": "Potential contamination risk from LLM pretraining on related time-series/text; heterogeneous datasets and metrics across domains; benchmark maturity is recent so community baselines are limited; results are sensitive to inference-time reasoning strategies (e.g., self-consistency) and model scaling.",
+  "creators": {
+    "scientists": [
+      "Haoxin Liu",
+      "Zhiyuan Zhao",
+      "Shiduo Li",
+      "B. Aditya Prakash"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.01895",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

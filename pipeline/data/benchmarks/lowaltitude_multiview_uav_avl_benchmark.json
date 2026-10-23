@@ -1,0 +1,41 @@
+{
+  "name": "Low-altitude Multi-view UAV AVL Benchmark",
+  "description": "Absolute Visual Localization (AVL) enables Unmanned Aerial Vehicle (UAV) to determine its position in GNSS-denied environments by establishing geometric relationships between UAV images and geo-tagged reference maps. While many previous works have achieved AVL with image retrieval and matching techniques, research in low-altitude multi-view scenarios still remains limited. Low-altitude Multi-view condition presents greater challenges due to extreme viewpoint changes. To explore the best UAV AVL approach in such condition, we proposed this benchmark. Firstly, a large-scale Low-altitude Multi-view dataset called AnyVisLoc was constructed. This dataset includes 18,000 images captured at multiple scenes and altitudes, along with 2.5D reference maps containing aerial photogrammetry maps and historical satellite maps. Secondly, a unified framework was proposed to integrate the state-of-the-art AVL approaches and comprehensively test their performance. The best combined method was chosen as the baseline and the key factors that influencing localization accuracy are thoroughly analyzed based on it. This baseline achieved a 74.1% localization accuracy within 5m under Low-altitude, Multi-view conditions. In addition, a novel retrieval metric called PDM@K was introduced to better align with the characteristics of the UAV AVL task. Overall, this benchmark revealed the challenges of Low-altitude, Multi-view UAV AVL and provided valuable guidance for future research. The dataset and codes are available at https://github.com/UAV-AVL/Benchmark",
+  "category": "vision",
+  "domain": "robotics / UAV localization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "visual_localization",
+    "geo-localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "localization accuracy within distance thresholds (e.g., % of queries localized within 5 m) and retrieval-oriented PDM@K",
+  "general_score_metric": "localization_accuracy@5m (percentage of queries localized within 5 meters) and PDM@K for retrieval performance",
+  "typical_sota_score": "≈74.1% @5m (baseline reported in the paper); SOTA beyond the baseline is currently unknown",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "Recent benchmark (2025) targeting low-altitude, multi-view UAV AVL; relevant to UAV/visual-localization researchers but not yet widely adopted.",
+  "notes": "Non-LLM vision benchmark with 18k images and 2.5D reference maps; challenging due to extreme viewpoint/altitude variation. Uses a novel retrieval metric (PDM@K); requires geo-registered maps and specialized preprocessing.",
+  "creators": {
+    "scientists": [
+      "Yibin Ye",
+      "Xichao Teng",
+      "Shuo Chen",
+      "Zhang Li",
+      "Leqi Liu",
+      "Qifeng Yu",
+      "Tao Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.10692",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

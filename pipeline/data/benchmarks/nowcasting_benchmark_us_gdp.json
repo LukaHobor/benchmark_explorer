@@ -1,0 +1,32 @@
+{
+  "name": "Nowcasting Benchmark (US GDP)",
+  "description": "Nowcasting can play a key role in giving policymakers timelier insight to data published with a significant time lag, such as final GDP figures. Currently, there are a plethora of methodologies and approaches for practitioners to choose from. However, there lacks a comprehensive comparison of these disparate approaches in terms of predictive performance and characteristics. This paper addresses that deficiency by examining the performance of 12 different methodologies in nowcasting US quarterly GDP growth, including all the methods most commonly employed in nowcasting, as well as some of the most popular traditional machine learning approaches. Performance was assessed on three different tumultuous periods in US economic history: the early 1980s recession, the 2008 financial crisis, and the COVID crisis. The two best performing methodologies in the analysis were long short-term memory artificial neural networks (LSTM) and Bayesian vector autoregression (BVAR). To facilitate further application and testing of each of the examined methodologies, an open-source repository containing boilerplate code that can be applied to different datasets is published alongside the paper, available at: github.com/dhopp1/nowcasting_benchmark.",
+  "category": "mixed",
+  "domain": "economics / time series forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE (forecast error metrics)",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2023,
+  "reputation": "A well-regarded academic comparison in the econometrics/time-series community with an open-source implementation used as a reference for method comparisons.",
+  "notes": "Evaluates nowcasts for US quarterly GDP across crisis periods; small number of target series (quarterly GDP) and strong nonstationarity across evaluation windows; not an LLM benchmark; results vary substantially by period and metric.",
+  "creators": {
+    "scientists": [
+      "Daniel Hopp"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2205.03318",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

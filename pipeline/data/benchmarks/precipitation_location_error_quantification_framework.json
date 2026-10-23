@@ -1,0 +1,34 @@
+{
+  "name": "Precipitation Location Error Quantification Framework",
+  "description": "In precipitation nowcasting, it is common to track the motion of precipitation in a sequence of weather radar images and to extrapolate this motion into the future. The total error of such a prediction consists of an error in the predicted location of a precipitation feature and an error in the change of precipitation intensity over lead time. So far, verification measures did not allow isolating the extent of location errors, making it difficult to specifically improve nowcast models with regard to location prediction. In this paper, we introduce a framework to directly quantify the location error. To that end, we detect and track scale-invariant precipitation features (corners) in radar images. We then consider these observed tracks as the true reference in order to evaluate the performance (or, inversely, the error) of any model that aims to predict the future location of a precipitation feature. Hence, the location error of a forecast at any lead time Δt ahead of the forecast time t corresponds to the Euclidean distance between the observed and the predicted feature locations at t + Δt. Based on this framework, we carried out a benchmarking case study using one year worth of weather radar composites of the German Weather Service. We evaluated the performance of four extrapolation models, two of which are based on the linear extrapolation of corner motion from t − 1 to t (LK-Lin1) and t − 4 to t (LK-Lin4) and the other two are based on the Dense Inverse Search (DIS) method: motion vectors obtained from DIS are used to predict feature locations by linear (DIS-Lin1) and Semi-Lagrangian extrapolation (DIS-Rot1). Of those four models, DIS-Lin1 and LK-Lin4 turned out to be the most skillful with regard to the prediction of feature location, while we also found that the model skill dramatically depends on the sinuosity of the observed tracks. The dataset of 376,125 detected feature tracks in 2016 is openly available to foster the improvement of location prediction in extrapolation-based nowcasting models.",
+  "category": "vision",
+  "domain": "climate science",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "regression",
+    "time_series_forecasting",
+    "object_tracking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Euclidean distance between predicted and observed feature locations (location error); aggregated statistics over lead times (e.g., mean distance, distribution of errors)",
+  "general_score_metric": "mean Euclidean location error (e.g., mean distance / RMSE) as a function of lead time",
+  "year_of_publish": 2020,
+  "reputation": "1 citations",
+  "notes": "Large dataset of tracked features (376,125 tracks) but specific to German radar composites and the chosen feature-detection/tracking method; results depend on radar resolution, track sinuosity, and may not generalize geographically or to other radar products.",
+  "creators": {
+    "scientists": [
+      "Arthur Costa Tomaz de Souza",
+      "Georgy Ayzel",
+      "Maik Heistermann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1155/2020/8841913",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

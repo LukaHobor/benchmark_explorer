@@ -1,0 +1,34 @@
+{
+  "name": "Federated Brain Tumor Segmentation Benchmark",
+  "description": "Recently, federated learning has raised increasing interest in the medical image analysis field due to its ability to aggregate multi-center data with privacy-preserving properties. A large amount of federated training schemes have been published, which we categorize into global (one final model), personalized (one model per institution) or hybrid (one model per cluster of institutions) methods. However, their applicability on the recently published Federated Brain Tumor Segmentation 2022 dataset has not been explored yet. We propose an extensive benchmark of federated learning algorithms from all three classes on this task. While standard FedAvg already performs very well, we show that some methods from each category can bring a slight performance improvement and potentially limit the final model(s) bias toward the predominant data distribution of the federation. Moreover, we provide a deeper understanding of the behavior of federated learning on this task through alternative ways of distributing the pooled dataset among institutions, namely an Independent and Identical Distributed (IID) setup, and a limited data setup. Our code is available at (https://github.com/MatthisManthe/Benchmark_FeTS2022).",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "image_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient (F1) / IoU (overlap-based segmentation metrics)",
+  "general_score_metric": "Dice_coefficient",
+  "typical_sota_score": "75–90%",
+  "year_of_publish": 2024,
+  "reputation": "Emerging benchmark in federated medical imaging research with growing interest but not yet a widely adopted community standard.",
+  "notes": "Federated and privacy-sensitive medical imaging benchmark; performance highly dependent on inter-site data heterogeneity and communication/aggregation strategies; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Matthis Manthe",
+      "Stefan Duffner",
+      "Carole Lartizien"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1016/j.media.2024.103270",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

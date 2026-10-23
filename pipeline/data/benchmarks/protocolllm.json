@@ -1,0 +1,36 @@
+{
+  "name": "ProtocolLLM",
+  "description": "Recent advances in Large Language Models (LLMs) have shown promising capabilities in generating code for general-purpose programming languages. In contrast, their applicability for hardware description languages, particularly for generating synthesizable and functionally correct designs, remains significantly underexplored. HDLs such as SystemVerilog are logic-oriented and demand strict adherence to timing semantics, concurrency, and synthesizability constraints. Moreover, HDL-based design flows encompass a broad set of tasks beyond structural code generation, including testbench development, assertion-based verification, timing closure, and protocol-level integration for on-chip communication. The objective of our paper is to analyze the capabilities of state-of-the-art LLMs in generating SystemVerilog implementations of standard communication protocols, a core component of embedded and System-on-Chip (SoC) architectures. This paper introduces the first benchmark suite targeting four widely used protocols: SPI, I2C, UART, and AXI. We define code generation tasks that capture varying levels of design abstraction and prompt specificity. The generated designs are assessed for syntactic correctness, synthesizability, and functional fidelity via waveform simulation and test benches.",
+  "category": "code",
+  "domain": "hardware design / SystemVerilog",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "hardware_synthesis",
+    "functional_verification",
+    "testbench_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (percentage of generated designs that compile/simulate and are synthesizable / pass functional testbenches)",
+  "general_score_metric": "task_success_rate (functional correctness + synthesizability pass rate)",
+  "typical_sota_score": "10–40%",
+  "year_of_publish": 2025,
+  "reputation": "New and specialized benchmark (first suite for SystemVerilog protocol generation); of growing interest to hardware/ML researchers but not yet widely adopted.",
+  "notes": "Small focused suite (four protocols) — risk of dataset-induced overfitting; results depend on simulation/testbench quality and synthesis toolchain; potential for training data contamination from public HDL repos.",
+  "creators": {
+    "scientists": [
+      "Arnav Sheth",
+      "Ivaxi Sheth",
+      "Mario Fritz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2506.07945",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

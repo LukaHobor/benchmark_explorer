@@ -1,0 +1,40 @@
+{
+  "name": "Zero-Shot Biometric Foundation Model Benchmark",
+  "description": "The advent of foundation models, particularly Vision-Language Models (VLMs) and Multi-modal Large Language Models (MLLMs), has redefined the frontiers of artificial intelligence, enabling remarkable generalization across diverse tasks with minimal or no supervision. Yet, their potential in biometric recognition and analysis remains relatively underexplored. In this work, we introduce a comprehensive benchmark that evaluates the zero-shot and few-shot performance of state-of-the-art publicly available VLMs and MLLMs across six biometric tasks spanning the face and iris modalities: face verification, soft biometric attribute prediction (gender and race), iris recognition, presentation attack detection (PAD), and face manipulation detection (morphs and deepfakes). A total of 41 VLMs were used in this evaluation. Experiments show that embeddings from these foundation models can be used for diverse biometric tasks with varying degrees of success. For example, in the case of face verification, a True Match Rate (TMR) of 96.77 percent was obtained at a False Match Rate (FMR) of 1 percent on the Labeled Face in the Wild (LFW) dataset, without any fine-tuning. In the case of iris recognition, the TMR at 1 percent FMR on the IITD-R-Full dataset was 97.55 percent without any fine-tuning. Further, we show that applying a simple classifier head to these embeddings can help perform DeepFake detection for faces, Presentation Attack Detection (PAD) for irides, and extract soft biometric attributes like gender and ethnicity from faces with reasonably high accuracy. This work reiterates the potential of pretrained models in achieving the long-term vision of Artificial General Intelligence.",
+  "category": "multimodal",
+  "domain": "biometrics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "verification",
+    "classification",
+    "detection",
+    "few_shot",
+    "zero_shot"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "TMR@FMR (verification) / accuracy (classification) / AUC and detection error rates (detection tasks)",
+  "general_score_metric": "TMR@1%FMR (for verification) / accuracy (for attribute prediction)",
+  "typical_sota_score": "≈90–98% TMR@1%FMR depending on modality and dataset (e.g., ~96–98% reported on LFW and IITD-R-Full)",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark (arXiv) for evaluating foundation VLMs/MLLMs on biometric tasks; currently nascent and primarily used in academic research.",
+  "notes": "Contains biometric modalities (face, iris) — privacy and data‑contamination risk from pretraining are concerns; performance varies widely by modality; not an LLM text benchmark and some tasks rely on small or specialized test sets.",
+  "creators": {
+    "scientists": [
+      "Redwan Sony",
+      "Parisa Farmanifard",
+      "Hamzeh Alzwairy",
+      "Nitish Shukla",
+      "Arun Ross"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.24214",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

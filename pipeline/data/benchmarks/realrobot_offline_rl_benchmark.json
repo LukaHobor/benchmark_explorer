@@ -1,0 +1,38 @@
+{
+  "name": "Real-Robot Offline RL Benchmark",
+  "description": "Learning policies from previously recorded data is a promising direction for real-world robotics tasks, as online learning is often infeasible. Dexterous manipulation in particular remains an open problem in its general form. The combination of offline reinforcement learning with large diverse datasets, however, has the potential to lead to a breakthrough in this challenging domain analogously to the rapid progress made in supervised learning in recent years. To coordinate the efforts of the research community toward tackling this problem, we propose a benchmark including: i) a large collection of data for offline learning from a dexterous manipulation platform on two tasks, obtained with capable RL agents trained in simulation; ii) the option to execute learned policies on a real-world robotic system and a simulation for efficient debugging. We evaluate prominent open-sourced offline reinforcement learning algorithms on the datasets and provide a reproducible experimental setup for offline reinforcement learning on real systems.",
+  "category": "mixed",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "offline_rl",
+    "policy_learning",
+    "robot_control",
+    "sim-to-real_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate (per-task success % / episode return reported as secondary)",
+  "year_of_publish": 2023,
+  "reputation": "10 citations",
+  "notes": "Robotics benchmark (non-LLM). Sim-to-real gap and limited real-robot evaluation budget; dataset and real execution variability can make scores noisy. Not saturated; risk of simulation contamination when policies are trained in sim.",
+  "creators": {
+    "scientists": [
+      "Nico Gürtler",
+      "Sebastian Blaes",
+      "Pavel Kolev",
+      "Felix Widmaier",
+      "Manuel Wüthrich",
+      "Sebastian Bauer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2307.15690",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

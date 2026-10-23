@@ -1,0 +1,36 @@
+{
+  "name": "PhyloBench",
+  "description": "Abstract Phylogenetic inference based on protein sequence alignment is a widely used procedure. Numerous phylogenetic algorithms have been developed, most of which have many parameters and options. Choosing a program, options, and parameters can be a nontrivial task. No benchmark for comparison of phylogenetic programs on real protein sequences was publicly available. We have developed PhyloBench, a benchmark for evaluating the quality of phylogenetic inference, and used it to test a number of popular phylogenetic programs. PhyloBench is based on natural, not simulated, protein sequences of orthologous evolutionary domains. The measure of accuracy of an inferred tree is its distance to the corresponding species tree. A number of tree-to-tree distance measures were tested. The most reliable results were obtained using the Robinson–Foulds distance. Our results confirmed recent findings that distance methods are more accurate than maximum likelihood (ML) and maximum parsimony. We tested the bayesian program MrBayes on natural protein sequences and found that, on our datasets, it performs better than ML, but worse than distance methods. Of the methods we tested, the Balanced Minimum Evolution method implemented in FastME yielded the best results on our material. Alignments and reference species trees are available at https://mouse.belozersky.msu.ru/tools/phylobench/ together with a web-interface that allows for a semi-automatic comparison of a user’s method with a number of popular programs.",
+  "category": "mixed",
+  "domain": "bioinformatics / phylogenetics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "phylogenetic_inference",
+    "tree_reconstruction",
+    "method_comparison"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Tree-to-tree distance measures, primarily Robinson–Foulds (RF) distance between inferred trees and reference species trees",
+  "general_score_metric": "Robinson–Foulds distance (RF) — lower is better",
+  "year_of_publish": 2024,
+  "reputation": "4 citations",
+  "notes": "Non-LLM benchmark focused on bioinformatics/phylogenetics using real protein alignments. Results depend on the chosen reference species trees and parameter settings of compared programs; not directly comparable to simulated-data benchmarks.",
+  "creators": {
+    "scientists": [
+      "S. Spirin",
+      "Andrey I. Sigorskikh",
+      "A. Efremov",
+      "Dmitry Penzar",
+      "A. Karyagina"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.18699/sbb-2022-094",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

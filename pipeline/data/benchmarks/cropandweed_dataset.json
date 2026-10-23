@@ -1,0 +1,37 @@
+{
+  "name": "CropAndWeed Dataset",
+  "description": "Precision Agriculture and especially the application of automated weed intervention represents an increasingly essential research area, as sustainability and efficiency considerations are becoming more and more relevant. While the potentials of Convolutional Neural Networks for detection, classification and segmentation tasks have successfully been demonstrated in other application areas, this relatively new field currently lacks the required quantity and quality of training data for such a highly data-driven approach. Therefore, we propose a novel large-scale image dataset specializing in the fine-grained identification of 74 relevant crop and weed species with a strong emphasis on data variability. We provide annotations of labeled bounding boxes, semantic masks and stem positions for about 112k instances in more than 8k high-resolution images of both real-world agricultural sites and specifically cultivated outdoor plots of rare weed types. Additionally, each sample is enriched with an extensive set of meta-annotations regarding environmental conditions and recording parameters. We furthermore conduct benchmark experiments for multiple learning tasks on different variants of the dataset to demonstrate its versatility and provide examples of useful mapping schemes for tailoring the annotated data to the requirements of specific applications. In the course of the evaluation, we furthermore demonstrate how incorporating multiple species of weeds into the learning process increases the accuracy of crop detection. Overall, the evaluation clearly demonstrates that our dataset represents an essential step towards overcoming the data gap and promoting further research in the area of Precision Agriculture.",
+  "category": "multimodal",
+  "domain": "agriculture",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "semantic_segmentation",
+    "classification",
+    "keypoint_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP for detection; mean IoU for segmentation; accuracy for classification; PCK/keypoint error for stem localization",
+  "general_score_metric": "mean Average Precision (mAP) for detection tasks",
+  "year_of_publish": 2023,
+  "reputation": "40 citations",
+  "notes": "Large, fine-grained agricultural dataset (74 species) with rich metadata; class imbalance and long-tail species distribution may challenge models; domain shift between cultivated plots and in-field conditions; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Daniel Steininger",
+      "Andreas Trondl",
+      "Gerardus Croonen",
+      "Julia Simon",
+      "Verena Widhalm"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/wacv56688.2023.00372",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

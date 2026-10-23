@@ -1,0 +1,38 @@
+{
+  "name": "FortisAVQA and MAVEN",
+  "description": "Audio-Visual Question Answering (AVQA) is a challenging multimodal reasoning task requiring intelligent systems to answer natural language queries based on paired audio-video inputs accurately. However, existing AVQA approaches often suffer from overfitting to dataset biases, leading to poor robustness. Moreover, current datasets may not effectively diagnose these methods. To address these challenges, we first introduce a novel dataset, FortisAVQA, constructed in two stages: (1) rephrasing questions in the test split of the public MUSIC-AVQA dataset and (2) introducing distribution shifts across questions. The first stage expands the test space with greater diversity, while the second enables a refined robustness evaluation across rare, frequent, and overall question distributions. Second, we introduce a robust Multimodal Audio-Visual Epistemic Network (MAVEN) that leverages a multifaceted cycle collaborative debiasing strategy to mitigate bias learning. Experimental results demonstrate that our architecture achieves state-of-the-art performance on FortisAVQA, with a notable improvement of 7.81\\%. Extensive ablation studies on both datasets validate the effectiveness of our debiasing components. Additionally, our evaluation reveals the limited robustness of existing multimodal QA methods. We also verify the plug-and-play capability of our strategy by integrating it with various baseline models across both datasets. Our dataset and code are available at https://github.com/reml-group/fortisavqa.",
+  "category": "multimodal",
+  "domain": "multimodal (audio-visual reasoning)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A recent multimodal AVQA benchmark and method with limited adoption so far; mainly of interest within audio-visual question answering research.",
+  "notes": "Constructed from MUSIC-AVQA (rephrased test split) so inherits its dataset biases and size limits; evaluates robustness under distribution shift; requires synchronized audio+video processing; limited dataset scale may affect generalization.",
+  "creators": {
+    "scientists": [
+      "Jie Ma",
+      "Zhitao Gao",
+      "Qi Chai",
+      "Jun Liu",
+      "Pinghui Wang",
+      "Jing Tao",
+      "Zhou Su"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.00487",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "causalAssembly",
+  "description": "Algorithms for causal discovery have recently undergone rapid advances and increasingly draw on flexible nonparametric methods to process complex data. With these advances comes a need for adequate empirical validation of the causal relationships learned by different algorithms. However, for most real data sources true causal relations remain unknown. This issue is further compounded by privacy concerns surrounding the release of suitable high-quality data. To help address these challenges, we gather a complex dataset comprising measurements from an assembly line in a manufacturing context. This line consists of numerous physical processes for which we are able to provide ground truth causal relationships on the basis of a detailed study of the underlying physics. We use the assembly line data and associated ground truth information to build a system for generation of semisynthetic manufacturing data that supports benchmarking of causal discovery methods. To accomplish this, we employ distributional random forests in order to flexibly estimate and represent conditional distributions that may be combined into joint distributions that strictly adhere to a causal model over the observed variables. The estimated conditionals and tools for data generation are made available in our Python library $\\texttt{causalAssembly}$. Using the library, we showcase how to benchmark several well-known causal discovery algorithms.",
+  "category": "mixed",
+  "domain": "manufacturing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "causal_discovery",
+    "structure_learning",
+    "synthetic_data_generation",
+    "benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 / precision-recall for edge recovery; Structural Hamming Distance (SHD); area under PR curve",
+  "general_score_metric": "F1 score for recovered causal edges / Structural Hamming Distance (SHD)",
+  "year_of_publish": 2023,
+  "reputation": "A specialized, domain-informed benchmark for causal discovery using semisynthetic manufacturing data; used by a niche community in causal ML and causal discovery research.",
+  "notes": "Semisynthetic data generated from real assembly-line measurements with provided ground-truth graph; domain-specific so results may not generalize to other settings; evaluation sensitive to metric choice; non-LLM benchmark; risk of overfitting to the generation process if methods are tuned on the same generator.",
+  "creators": {
+    "scientists": [
+      "Konstantin Göbler",
+      "Tobias Windisch",
+      "Mathias Drton",
+      "Tim Pychynski",
+      "Steffen Sonntag",
+      "Martin Roth"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2306.10816",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

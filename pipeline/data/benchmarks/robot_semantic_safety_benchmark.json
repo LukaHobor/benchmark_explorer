@@ -1,0 +1,37 @@
+{
+  "name": "Robot Semantic Safety Benchmark",
+  "description": "Until recently, robotics safety research was predominantly about collision avoidance and hazard reduction in the immediate vicinity of a robot. Since the advent of large vision and language models (VLMs), robots are now also capable of higher-level semantic scene understanding and natural language interactions with humans. Despite their known vulnerabilities (e.g. hallucinations or jail-breaking), VLMs are being handed control of robots capable of physical contact with the real world. This can lead to dangerous behaviors, making semantic safety for robots a matter of immediate concern. Our contributions in this paper are two fold: first, to address these emerging risks, we release the ASIMOV Benchmark, a large-scale and comprehensive collection of datasets for evaluating and improving semantic safety of foundation models serving as robot brains. Our data generation recipe is highly scalable: by leveraging text and image generation techniques, we generate undesirable situations from real-world visual scenes and human injury reports from hospitals. Secondly, we develop a framework to automatically generate robot constitutions from real-world data to steer a robot's behavior using Constitutional AI mechanisms. We propose a novel auto-amending process that is able to introduce nuances in written rules of behavior; this can lead to increased alignment with human preferences on behavior desirability and safety. We explore trade-offs between generality and specificity across a diverse set of constitutions of different lengths, and demonstrate that a robot is able to effectively reject unconstitutional actions. We measure a top alignment rate of 84.3% on the ASIMOV Benchmark using generated constitutions, outperforming no-constitution baselines and human-written constitutions. Data is available at asimov-benchmark.github.io",
+  "category": "multimodal",
+  "domain": "robotics (semantic safety for VLM-enabled robots)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "classification",
+    "policy_evaluation",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (alignment rate)",
+  "general_score_metric": "alignment rate (accuracy)",
+  "typical_sota_score": "≈84.3% (reported best with generated constitutions)",
+  "year_of_publish": 2025,
+  "reputation": "Large-scale, recently introduced benchmark for robot semantic safety that is attracting attention but is not yet widely standardized.",
+  "notes": "Contains synthetically generated undesirable scenarios and auto-generated constitutions; potential contamination with LLM training data, biases from synthetic generation, and limited real-world physical validation.",
+  "creators": {
+    "scientists": [
+      "Pierre Sermanet",
+      "Anirudha Majumdar",
+      "Alex Irpan",
+      "Dmitry Kalashnikov",
+      "Vikas Sindhwani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2503.08663",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

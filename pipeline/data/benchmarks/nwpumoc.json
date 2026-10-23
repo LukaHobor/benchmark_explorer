@@ -1,0 +1,34 @@
+{
+  "name": "NWPU-MOC",
+  "description": "Object counting is a hot topic in computer vision, which aims to estimate the number of objects in a given image. However, most methods only count objects of a single category for an image, which cannot be applied to scenes that need to count objects with multiple categories simultaneously, especially in aerial scenes. To this end, this paper introduces a Multi-category Object Counting (MOC) task to estimate the numbers of different objects (cars, buildings, ships, etc.) in an aerial image. Considering the absence of a dataset for this task, a large-scale Dataset (NWPU-MOC) is collected, consisting of 3,416 scenes with a resolution of 1024 $\\times$ 1024 pixels, and well-annotated using 14 fine-grained object categories. Besides, each scene contains RGB and Near Infrared (NIR) images, of which the NIR spectrum can provide richer characterization information compared with only the RGB spectrum. Based on NWPU-MOC, the paper presents a multi-spectrum, multi-category object counting framework, which employs a dual-attention module to fuse the features of RGB and NIR and subsequently regress multi-channel density maps corresponding to each object category. In addition, to modeling the dependency between different channels in the density map with each object category, a spatial contrast loss is designed as a penalty for overlapping predictions at the same spatial position. Experimental results demonstrate that the proposed method achieves state-of-the-art performance compared with some mainstream counting algorithms. The dataset, code and models are publicly available at https://github.com/lyongo/NWPU-MOC.",
+  "category": "vision",
+  "domain": "remote sensing / aerial imagery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "density_map_estimation",
+    "multi-category_counting"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE (Mean Absolute Error) / MSE (Mean Squared Error) on per-category counts and density maps",
+  "general_score_metric": "MAE",
+  "year_of_publish": 2024,
+  "reputation": "A recognized dataset in aerial remote-sensing counting research with moderate adoption for multi-category counting tasks.",
+  "notes": "Includes RGB and NIR channels (multi-spectral); class imbalance across 14 categories and scene variability can challenge models. Non-LLM vision benchmark; evaluation depends on density-map formulation and post-processing.",
+  "creators": {
+    "scientists": [
+      "Junyu Gao",
+      "Liangliang Zhao",
+      "Xuelong Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2401.10530",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

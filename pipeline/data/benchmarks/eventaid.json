@@ -1,0 +1,42 @@
+{
+  "name": "EventAid",
+  "description": "Event cameras are emerging imaging technology that offers advantages over conventional frame-based imaging sensors in dynamic range and sensing speed. Complementing the rich texture and color perception of traditional image frames, the hybrid camera system of event and frame-based cameras enables high-performance imaging. With the assistance of event cameras, high-quality image/video enhancement methods make it possible to break the limits of traditional frame-based cameras, especially exposure time, resolution, dynamic range, and frame rate limits. This paper focuses on five event-aided image and video enhancement tasks (i.e., event-based video reconstruction, event-aided high frame rate video reconstruction, image deblurring, image super-resolution, and high dynamic range image reconstruction), provides an analysis of the effects of different event properties, a real-captured and ground truth labeled benchmark dataset, a unified benchmarking of state-of-the-art methods, and an evaluation for two mainstream event simulators. In detail, this paper collects a real-captured evaluation dataset EventAid for five event-aided image/video enhancement tasks, by using \"Event-RGB\" multi-camera hybrid system, taking into account scene diversity and spatiotemporal synchronization. We further perform quantitative and visual comparisons for state-of-the-art algorithms, provide a controlled experiment to analyze the performance limit of event-aided image deblurring methods, and discuss open problems to inspire future research.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "event-based_video_reconstruction",
+    "high_frame_rate_video_reconstruction",
+    "image_deblurring",
+    "image_super_resolution",
+    "high_dynamic_range_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR/SSIM/LPIPS (image quality metrics)",
+  "general_score_metric": "PSNR (primary), SSIM and LPIPS also reported",
+  "typical_sota_score": "varies by task; e.g., PSNR ~25–35 dB, SSIM ~0.7–0.95",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded within the event-camera research community as a curated real-capture benchmark for multiple event-aided enhancement tasks; niche adoption outside that community.",
+  "notes": "Specialized dataset using event cameras; relatively small and domain-specific. Evaluation relies on low-level image-quality metrics that may not capture all perceptual aspects. Not an LLM benchmark; simulator-to-real gaps are possible for methods trained on simulated event data.",
+  "creators": {
+    "scientists": [
+      "Peiqi Duan",
+      "Boyu Li",
+      "Yixin Yang",
+      "Hanyue Lou",
+      "Minggui Teng",
+      "Yi Ma",
+      "Boxin Shi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.08220",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "name": "PARSE challenge",
+  "description": "Efficient automatic segmentation of multi-level (i.e. main and branch) pulmonary arteries (PA) in CTPA images plays a significant role in clinical applications. However, most existing methods concentrate only on main PA or branch PA segmentation separately and ignore segmentation efficiency. Besides, there is no public large-scale dataset focused on PA segmentation, which makes it highly challenging to compare the different methods. To benchmark multi-level PA segmentation algorithms, we organized the first \\textbf{P}ulmonary \\textbf{AR}tery \\textbf{SE}gmentation (PARSE) challenge. On the one hand, we focus on both the main PA and the branch PA segmentation. On the other hand, for better clinical application, we assign the same score weight to segmentation efficiency (mainly running time and GPU memory consumption during inference) while ensuring PA segmentation accuracy. We present a summary of the top algorithms and offer some suggestions for efficient and accurate multi-level PA automatic segmentation. We provide the PARSE challenge as open-access for the community to benchmark future algorithm developments at \\url{https://parse2022.grand-challenge.org/Parse2022/}.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "competition",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice coefficient (F1) and an efficiency-weighted composite score (accuracy + inference time / memory penalties)",
+  "general_score_metric": "Dice coefficient (with a composite score integrating inference time and GPU memory)",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2023,
+  "reputation": "A recognized community challenge in medical imaging for pulmonary artery segmentation, cited by papers working on vascular segmentation and efficiency-aware methods.",
+  "notes": "Challenge-specific leaderboard; evaluation balances accuracy and efficiency so pure Dice scores may not reflect final ranking; relatively specialized dataset (medical imaging) with potential for overfitting to challenge metrics; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Gongning Luo",
+      "Kuanquan Wang",
+      "Jun Liu",
+      "Shuo Li",
+      "Xinjie Liang",
+      "Xiangyu Li",
+      "Shaowei Gan",
+      "Wei Wang",
+      "Suyu Dong",
+      "Wenyi Wang",
+      "Pengxin Yu",
+      "Enyou Liu",
+      "Hongrong Wei",
+      "Na Wang",
+      "Jia Guo",
+      "Huiqi Li",
+      "Zhao Zhang",
+      "Ziwei Zhao",
+      "Na Gao",
+      "Nan An",
+      "Ashkan Pakzad",
+      "Bojidar Rangelov",
+      "Jiaqi Dou",
+      "Song Tian",
+      "Zeyu Liu",
+      "Yi Wang",
+      "Ampatishan Sivalingam",
+      "Kumaradevan Punithakumar",
+      "Zhaowen Qiu",
+      "Xin Gao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2304.03708",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

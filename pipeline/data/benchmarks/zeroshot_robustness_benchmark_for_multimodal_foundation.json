@@ -1,0 +1,36 @@
+{
+  "name": "Zero-Shot Robustness Benchmark for Multimodal Foundation Models",
+  "description": "Pre-training image representations from the raw text about images enables zero-shot vision transfer to downstream tasks. Through pre-training on millions of samples collected from the internet, multimodal foundation models, such as CLIP, produce state-of-the-art zero-shot results that often reach competitiveness with fully supervised methods without the need for task-specific training. Besides the encouraging performance on classification accuracy, it is reported that these models close the robustness gap by matching the performance of supervised models trained on ImageNet under natural distribution shift. Because robustness is critical to real-world applications, especially safety-critical ones, in this paper, we present a comprehensive evaluation based on a large-scale robustness benchmark covering 7 natural, 3 synthetic distribution shifts, and 11 adversarial attacks. We use CLIP as a pilot study. We show that CLIP leads to a significant robustness drop compared to supervised ImageNet models on our benchmark, especially under synthetic distribution shift and adversarial attacks. Furthermore, data overlap analysis suggests that the observed robustness under natural distribution shifts could be attributed, at least in part, to data overlap. In summary, our evaluation shows a comprehensive evaluation of robustness is necessary; and there is a significant need to improve the robustness of zero-shot multimodal models.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation",
+    "adversarial_robustness"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "12 citations",
+  "notes": "Non-LLM vision benchmark. Risk of data overlap/contamination inflating zero-shot performance (authors note overlap with training data). Evaluates natural, synthetic, and adversarial shifts; robustness performance varies widely by shift and is not saturated.",
+  "creators": {
+    "scientists": [
+      "Chenguang Wang",
+      "Ruoxi Jia",
+      "Xin Liu",
+      "D. Song"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.10499",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Spacecraft Segmentation Benchmark",
+  "description": "Spacecraft deployed in outer space are routinely subjected to various forms of damage due to exposure to hazardous environments. In addition, there are significant risks to the subsequent process of in-space repairs through human extravehicular activity or robotic manipulation, incurring substantial operational costs. Recent developments in image segmentation could enable the development of reliable and cost-effective autonomous inspection systems. While these models often require large amounts of training data to achieve satisfactory results, publicly available annotated spacecraft segmentation data are very scarce. Here, we present a new dataset of nearly 64k annotated spacecraft images that was created using real spacecraft models, superimposed on a mixture of real and synthetic backgrounds generated using NASA's TTALOS pipeline. To mimic camera distortions and noise in real-world image acquisition, we also added different types of noise and distortion to the images. Finally, we finetuned YOLOv8 and YOLOv11 segmentation models to generate performance benchmarks for the dataset under well-defined hardware and inference time constraints to mimic real-world image segmentation challenges for real-time onboard applications in space on NASA's inspector spacecraft. The resulting models, when tested under these constraints, achieved a Dice score of 0.92, Hausdorff distance of 0.69, and an inference time of about 0.5 second. The dataset and models for performance benchmark are available at https://github.com/RiceD2KLab/SWiM.",
+  "category": "vision",
+  "domain": "spacecraft / aerospace",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "Dice (F1)",
+  "typical_sota_score": "≈0.92 Dice",
+  "year_of_publish": 2025,
+  "reputation": "New, publicly released dataset for spacecraft segmentation with growing interest in aerospace and robotics communities but not yet widely standardized.",
+  "notes": "Large (~64k) mixed real/synthetic dataset with added distortions to mimic sensor noise; benchmark results reported under real-time inference constraints; potential domain gap to in-orbit imagery; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jeffrey Joan Sam",
+      "Janhavi Sathe",
+      "Nikhil Chigali",
+      "Naman Gupta",
+      "Radhey Ruparel",
+      "Yicheng Jiang",
+      "Janmajay Singh",
+      "James W. Berck",
+      "Arko Barman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2507.10775",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Continuous AUV Docking Benchmark",
+  "description": "Docking control of an autonomous underwater vehicle (AUV) is a task that is integral to achieving persistent long term autonomy. This work explores the application of state-of-the-art model-free deep reinforcement learning (DRL) approaches to the task of AUV docking in the continuous domain. We provide a detailed formulation of the reward function, utilized to successfully dock the AUV onto a fixed docking platform. A major contribution that distinguishes our work from the previous approaches is the usage of a physics simulator to define and simulate the underwater environment as well as the DeepLeng AUV. We propose a new reward function formulation for the docking task, incorporating several components, that outperforms previous reward formulations. We evaluate proximal policy optimization (PPO), twin delayed deep deterministic policy gradients (TD3) and soft actor-critic (SAC) in combination with our reward function. Our evaluation yielded results that conclusively show the TD3 agent to be most efficient and consistent in terms of docking the AUV, over multiple evaluation runs it achieved a 100% success rate and episode return of 10667.1 +- 688.8. We also show how our reward function formulation improves over the state of the art.",
+  "category": "mixed",
+  "domain": "autonomous underwater vehicles / robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "continuous_control",
+    "robotics_control"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "100% (TD3 reported in simulation)",
+  "year_of_publish": 2021,
+  "reputation": "A niche robotics DRL benchmark used in AUV docking research; cited in specialized communities but not widely adopted outside marine robotics/DRL groups.",
+  "notes": "Simulator-based benchmark with results reported in a single physics simulator and AUV model; small/benchmarked environment scope and risk of overfitting to simulator dynamics limit real-world generalization.",
+  "creators": {
+    "scientists": [
+      "Mihir Patil",
+      "Bilal Wehbe",
+      "Matias Valdenegro-Toro"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2108.02665",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

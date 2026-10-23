@@ -1,0 +1,37 @@
+{
+  "name": "Joint SR-ITM Benchmark",
+  "description": "Joint Super-Resolution and Inverse Tone-Mapping (joint SR-ITM) aims to increase the resolution and dynamic range of low-resolution and standard dynamic range images. Recent networks mainly resort to image decomposition techniques with complex multi-branch architectures. However, the fixed decomposition techniques would largely restricts their power on versatile images. To exploit the potential power of decomposition mechanism, in this paper, we generalize it from the image domain to the broader feature domain. To this end, we propose a lightweight Feature Decomposition Aggregation Network (FDAN). In particular, we design a Feature Decomposition Block (FDB) to achieve learnable separation of detail and base feature maps, and develop a Hierarchical Feature Decomposition Group by cascading FDBs for powerful multi-level feature decomposition. Moreover, to better evaluate the comparison methods, we collect a large-scale dataset for joint SR-ITM, i.e., SRITM-4K, which provides versatile scenarios for robust model training and evaluation. Experimental results on two benchmark datasets demonstrate that our FDAN is efficient and outperforms state-of-the-art methods on joint SR-ITM. The code of our FDAN and the SRITM-4K dataset are available at https://github.com/CS-GangXu/FDAN.",
+  "category": "vision",
+  "domain": "image processing / HDR imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_super_resolution",
+    "inverse_tone_mapping",
+    "image_enhancement"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "PSNR and SSIM as primary fidelity metrics, supplemented by perceptual metrics such as LPIPS and task-specific HDR evaluations",
+  "general_score_metric": "PSNR (commonly reported), typically reported alongside SSIM and LPIPS",
+  "typical_sota_score": "28–38 dB (PSNR, depending on dataset split and upscaling factors)",
+  "year_of_publish": 2022,
+  "reputation": "Relatively new dataset and benchmark for joint SR-ITM tasks (SRITM-4K) with modest adoption in HDR/SR communities.",
+  "notes": "PSNR/SSIM may not reflect perceptual or HDR quality; evaluation results depend strongly on tone-mapping and postprocessing choices; dataset focuses on 4K scenarios; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Gang Xu",
+      "Yu-chen Yang",
+      "Liang Wang",
+      "Xian-Tong Zhen",
+      "Jun Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.03367",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

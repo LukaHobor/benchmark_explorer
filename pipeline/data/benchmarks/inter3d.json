@@ -1,0 +1,40 @@
+{
+  "name": "Inter3D",
+  "description": "Recent advancements in implicit 3D reconstruction methods, e.g., neural rendering fields and Gaussian splatting, have primarily focused on novel view synthesis of static or dynamic objects with continuous motion states. However, these approaches struggle to efficiently model a human-interactive object with n movable parts, requiring 2^n separate models to represent all discrete states. To overcome this limitation, we propose Inter3D, a new benchmark and approach for novel state synthesis of human-interactive objects. We introduce a self-collected dataset featuring commonly encountered interactive objects and a new evaluation pipeline, where only individual part states are observed during training, while part combination states remain unseen. We also propose a strong baseline approach that leverages Space Discrepancy Tensors to efficiently modelling all states of an object. To alleviate the impractical constraints on camera trajectories across training states, we propose a Mutual State Regularization mechanism to enhance the spatial density consistency of movable parts. In addition, we explore two occupancy grid sampling strategies to facilitate training efficiency. We conduct extensive experiments on the proposed benchmark, showcasing the challenges of the task and the superiority of our approach.",
+  "category": "vision",
+  "domain": "3D vision / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "novel_state_synthesis",
+    "novel_view_synthesis",
+    "3D_reconstruction",
+    "state_generalization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "image reconstruction and geometry metrics (PSNR / SSIM / LPIPS for appearance; IoU / Chamfer distance for geometry)",
+  "general_score_metric": "PSNR (visual) with SSIM/LPIPS and IoU/Chamfer reported for geometry",
+  "year_of_publish": 2025,
+  "reputation": "New research benchmark (recently proposed); limited adoption so far but relevant for interactive 3D-object modeling and state combinatorics.",
+  "notes": "Non-LLM benchmark; dataset is self-collected with a limited set of objects and unseen part-combination states (challenging but limited scale); results sensitive to camera coverage and sampling strategy.",
+  "creators": {
+    "scientists": [
+      "Gan Chen",
+      "Ying He",
+      "Mulin Yu",
+      "F. Richard Yu",
+      "Gang Xu",
+      "Fei Ma",
+      "Ming Li",
+      "Guang Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.14004",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

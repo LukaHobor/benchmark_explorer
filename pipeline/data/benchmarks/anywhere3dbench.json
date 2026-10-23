@@ -1,0 +1,40 @@
+{
+  "name": "Anywhere3D-Bench",
+  "description": "3D visual grounding has made notable progress in localizing objects within complex 3D scenes. However, grounding referring expressions beyond objects in 3D scenes remains unexplored. In this paper, we introduce Anywhere3D-Bench, a holistic 3D visual grounding benchmark consisting of 2,632 referring expression-3D bounding box pairs spanning four different grounding levels: human-activity areas, unoccupied space beyond objects, objects in the scene, and fine-grained object parts. We assess a range of state-of-the-art 3D visual grounding methods alongside large language models (LLMs) and multimodal LLMs (MLLMs) on Anywhere3D-Bench. Experimental results reveal that space-level and part-level visual grounding pose the greatest challenges: space-level tasks require a more comprehensive spatial reasoning ability, for example, modeling distances and spatial relations within 3D space, while part-level tasks demand fine-grained perception of object composition. Even the best performance model, OpenAI o4-mini, achieves only 23.57% accuracy on space-level tasks and 33.94% on part-level tasks, significantly lower than its performance on area-level and object-level tasks. These findings underscore a critical gap in current models' capacity to understand and reason about 3D scene beyond object-level semantics.",
+  "category": "multimodal",
+  "domain": "3D vision / visual grounding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_grounding",
+    "localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "23–60% (varies by grounding level; space/part levels near 20–35%)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, specialized benchmark for 3D referring expressions with growing interest in the 3D grounding community but limited adoption outside that niche.",
+  "notes": "Small dataset (2,632 pairs) with class/level imbalance; focuses on 3D bounding-box grounding (not full scene understanding). Results vary widely by grounding level (area/object/space/part). Potential pretraining/data-contamination risks are unclear; benchmark highlights gaps for current multimodal LLMs.",
+  "creators": {
+    "scientists": [
+      "Tianxu Wang",
+      "Zhuofan Zhang",
+      "Ziyu Zhu",
+      "Yue Fan",
+      "Jing Xiong",
+      "Pengxiang Li",
+      "Xiaojian Ma",
+      "Qing Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.04897",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

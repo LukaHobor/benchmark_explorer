@@ -1,0 +1,39 @@
+{
+  "name": "genomics-long-range-benchmark",
+  "description": "## Summary\nThe motivation of the genomics long-range benchmark (LRB) is to compile a set of \nbiologically relevant genomic tasks requiring long-range dependencies which will act as a robust evaluation tool for genomic language models. \nWhile serving as a strong basis of evaluation, the benchmark must also be efficient and user-friendly. \nTo achieve this we strike a balance between task complexity and computational cost through strategic decisions, such as down-sampling or combining datasets.\n\n## Benchmark Tasks\nThe Genomics LRB is a collection of nine tasks which can be loaded by passing in the \ncorresponding `task_name` into the `load_dataset` function. All of the following datasets \nallow the user to specify an arbitrarily long sequence length, giving more context \nto the task, by passing the `sequence_length` kwarg to `load_dataset`. Additional task \nspecific kwargs, if applicable, are mentioned in the sections below.<br>\n*Note that as you increase the context length to very large numbers you may start to reduce the size of the dataset since a large context size may \ncause indexing outside the boundaries of chromosomes.\n\n| Task  | `task_name` | Sample Output                                                                             | ML Task Type            | # Outputs   | # Train Seqs | # Test Seqs | Data Source | \n|-------|-------------|-------------------------------------------------------------------------------------------|-------------------------|-------------|--------------|----------- |----------- |\n| Variant Effect Causal eQTL           | `variant_effect_causal_eqtl`           | {ref sequence, alt sequence, label, tissue, chromosome,position, distance to nearest TSS} | SNP Classification      | 1           | 88717        |     8846    | GTEx (via [Enformer](https://www.nature.com/articles/s41592-021-01252-x)) |\n| Variant Effect Pathogenic ClinVar    | `variant_effect_pathogenic_clinvar`    | {ref sequence, alt sequence, label, chromosome, position}",
+  "category": "text",
+  "domain": "medical",
+  "tags": [
+    "language:en",
+    "license:cc-by-nc-sa-4.0"
+  ],
+  "task_types": [
+    "sequence_classification",
+    "regression",
+    "multi_label_classification",
+    "functional_genomics_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A specialized benchmark used in genomics deep-learning research for evaluating long-range sequence models; adopted by a focused community of computational genomics researchers.",
+  "downloads": 2005,
+  "likes": 11,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "InstaDeepAI"
+    ]
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://huggingface.co/datasets/InstaDeepAI/genomics-long-range-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

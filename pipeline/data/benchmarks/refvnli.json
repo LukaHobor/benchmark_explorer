@@ -1,0 +1,39 @@
+{
+  "name": "RefVNLI",
+  "description": "Subject-driven text-to-image (T2I) generation aims to produce images that align with a given textual description, while preserving the visual identity from a referenced subject image. Despite its broad downstream applicability - ranging from enhanced personalization in image generation to consistent character representation in video rendering - progress in this field is limited by the lack of reliable automatic evaluation. Existing methods either assess only one aspect of the task (i.e., textual alignment or subject preservation), misalign with human judgments, or rely on costly API-based evaluation. To address this gap, we introduce RefVNLI, a cost-effective metric that evaluates both textual alignment and subject preservation in a single run. Trained on a large-scale dataset derived from video-reasoning benchmarks and image perturbations, RefVNLI outperforms or statistically matches existing baselines across multiple benchmarks and subject categories (e.g., \\emph{Animal}, \\emph{Objec",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "metric_evaluation",
+    "pairwise_ranking",
+    "subject_preservation_assessment",
+    "text_image_alignment_assessment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "correlation with human judgments and pairwise preference accuracy",
+  "general_score_metric": "human preference correlation",
+  "typical_sota_score": "pairwise preference accuracy ~70–92%; correlation with human judgments ~0.6–0.9 (depending on benchmark and subject category)",
+  "year_of_publish": 2025,
+  "reputation": "A new proposed evaluation metric rather than a long-established community benchmark, with promising results across several subject categories.",
+  "notes": "This is primarily a learned evaluation metric for subject-driven T2I rather than a standard dataset benchmark; reported performance depends on the underlying benchmark used for validation.",
+  "creators": {
+    "scientists": [
+      "Aviv Slobodkin",
+      "Hagai Taitelbaum",
+      "Yonatan Bitton",
+      "Brian Gordon",
+      "Michal Sokolik",
+      "Nitzan Bitton Guetta"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.17502",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

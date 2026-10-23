@@ -1,0 +1,41 @@
+{
+  "name": "EDBench",
+  "description": "Existing molecular machine learning force fields (MLFFs) generally focus on the learning of atoms, molecules, and simple quantum chemical properties (such as energy and force), but ignore the importance of electron density (ED) $\\rho(r)$ in accurately understanding molecular force fields (MFFs). ED describes the probability of finding electrons at specific locations around atoms or molecules, which uniquely determines all ground state properties (such as energy, molecular structure, etc.) of interactive multi-particle systems according to the Hohenberg-Kohn theorem. However, the calculation of ED relies on the time-consuming first-principles density functional theory (DFT) which leads to the lack of large-scale ED data and limits its application in MLFFs. In this paper, we introduce EDBench, a large-scale, high-quality dataset of ED designed to advance learning-based research at the electronic scale. Built upon the PCQM4Mv2, EDBench provides accurate ED data, covering 3.3 million molecules. To comprehensively evaluate the ability of models to understand and utilize electronic information, we design a suite of ED-centric benchmark tasks spanning prediction, retrieval, and generation. Our evaluation on several state-of-the-art methods demonstrates that learning from EDBench is not only feasible but also achieves high accuracy. Moreover, we show that learning-based method can efficiently calculate ED with comparable precision while significantly reducing the computational cost relative to traditional DFT calculations. All data and benchmarks from EDBench will be freely available, laying a robust foundation for ED-driven drug discovery and materials science.",
+  "category": "mixed",
+  "domain": "molecular modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "retrieval",
+    "generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE / Pearson correlation for density regression; Recall@k for retrieval; L1/L2 and structural similarity for generation",
+  "general_score_metric": "RMSE (root mean squared error) on predicted electron density",
+  "year_of_publish": 2025,
+  "reputation": "A large-scale, recently introduced dataset for electronic density modelling that is gaining traction in the computational chemistry and ML-for-molecules communities but is not yet a long-established standard.",
+  "notes": "Non-LLM benchmark focused on electronic-structure regression; derived from PCQM4Mv2 so overlap with models trained on that base is possible; very large-scale (millions of molecules) but computationally heavy to reproduce DFT labels; not saturated.",
+  "creators": {
+    "scientists": [
+      "Hongxin Xiang",
+      "Ke Li",
+      "Mingquan Liu",
+      "Zhixiang Cheng",
+      "Bin Yao",
+      "Wenjie Du",
+      "Jun Xia",
+      "Li Zeng",
+      "Xin Jin",
+      "Xiangxiang Zeng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2505.09262",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

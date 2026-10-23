@@ -1,0 +1,33 @@
+{
+  "name": "COVID-19 Spike Sequence Robustness Benchmark",
+  "description": "The rapid spread of the COVID-19 pandemic has resulted in an unprecedented amount of sequence data of the SARS-CoV-2 viral genome --- millions of sequences and counting.  This amount of data, while being orders of magnitude beyond the capacity of traditional approaches to understanding the diversity, dynamics and evolution of viruses, is nonetheless a rich resource for machine learning (ML) and deep learning (DL) approaches as alternatives for extracting such important information from these data.  It is of hence utmost importance to design a framework for testing and benchmarking the robustness of these ML and DL approaches.\n\nThis paper the first (to our knowledge) to explore such a framework. In this paper, we introduce several ways to perturb SARS-CoV-2 spike protein sequences in ways that mimic the error profiles of common sequencing platforms such as Illumina and PacBio.  We show from experiments on a wide array of ML approaches from naive Bayes to logistic regression, that DL approaches are more robust (and accurate) to such adverarial attacks to the input sequences, while $k$-mer based feature vector representations are more robust than the baseline one-hot embedding.  Our benchmarking framework may developers of futher ML and DL techniques to properly assess their approaches towards understanding the behaviour of the SARS-CoV-2 virus, or towards avoiding possible future pandemics.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation",
+    "sequence_perturbation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (and robustness measured as accuracy degradation under simulated sequencing perturbations)",
+  "general_score_metric": "accuracy",
+  "reputation": "Academic / research benchmark used in early studies of ML robustness for SARS-CoV-2 spike sequences; limited broader adoption beyond specialized research groups.",
+  "notes": "Focuses only on spike protein sequences and simulated perturbations; may not capture full real-world sequencing error modes; non-LLM benchmark; potential biosecurity/dual-use considerations — care advised when developing methods.",
+  "creators": {
+    "scientists": [
+      "Sarwan Ali",
+      "Bikram Sahoo",
+      "Pin-Yu Chen",
+      "Murray Patterson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

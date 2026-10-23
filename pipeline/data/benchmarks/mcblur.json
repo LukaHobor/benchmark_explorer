@@ -1,0 +1,41 @@
+{
+  "name": "MC-Blur",
+  "description": "Blur artifacts can seriously degrade the visual quality of images, and numerous deblurring methods have been proposed for specific scenarios. However, in most real-world images, blur is caused by different factors, e.g., motion and defocus. In this paper, we address how different deblurring methods perform in the case of multiple types of blur. For in-depth performance evaluation, we construct a new large-scale multi-cause image deblurring dataset (called MC-Blur), including real-world and synthesized blurry images with mixed factors of blurs. The images in the proposed MC-Blur dataset are collected using different techniques: averaging sharp images captured by a 1000-fps high-speed camera, convolving Ultra-High-Definition (UHD) sharp images with large-size kernels, adding defocus to images, and real-world blurry images captured by various camera models. Based on the MC-Blur dataset, we conduct extensive benchmarking studies to compare SOTA methods in different scenarios, analyze their efficiency, and investigate the built dataset's capacity. These benchmarking results provide a comprehensive overview of the advantages and limitations of current deblurring methods, and reveal the advances of our dataset.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_deblurring",
+    "image_restoration",
+    "benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS (numerical image-quality metrics)",
+  "general_score_metric": "PSNR (primary), with SSIM and LPIPS reported",
+  "typical_sota_score": "28–36 dB (PSNR) depending on subset; SSIM ~0.85–0.96",
+  "year_of_publish": 2021,
+  "reputation": "Moderately used by image-deblurring researchers for evaluating multi-cause blur; not as widely adopted as GoPro or RealBlur but cited in recent deblurring work.",
+  "notes": "Large-scale mix of synthetic and real blurred images; evaluation relies on low-level image metrics that may not reflect perceptual quality. Non-LLM benchmark; potential domain shift between synthetic and real captures.",
+  "creators": {
+    "scientists": [
+      "Kaihao Zhang",
+      "Tao Wang",
+      "Wenhan Luo",
+      "Boheng Chen",
+      "Wenqi Ren",
+      "Bjorn Stenger",
+      "Wei Liu",
+      "Hongdong Li",
+      "Ming-Hsuan Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.00234",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

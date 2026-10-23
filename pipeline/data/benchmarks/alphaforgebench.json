@@ -1,0 +1,37 @@
+{
+  "name": "AlphaForgeBench",
+  "description": "The rapid advancement of Large Language Models (LLMs) has led to a surge of financial benchmarks, evolving from static knowledge tests to interactive trading simulations. However, current evaluations of real-time trading performance overlook a critical failure mode: severe behavioral instability in sequential decision-making under uncertainty. We empirically show that LLM-based trading agents exhibit extreme run-to-run variance, inconsistent action sequences even under deterministic decoding, and irrational action flipping across adjacent time steps. These issues stem from stateless autoregressive architectures lacking persistent action memory, as well as sensitivity to continuous-to-discrete action mappings in portfolio allocation. As a result, many existing financial trading benchmarks produce unreliable, non-reproducible, and uninformative evaluations. To address these limitations, we propose AlphaForgeBench, a principled framework that reframes LLMs as quantitative researchers rath",
+  "category": "mixed",
+  "domain": "finance",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "decision_making",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2026,
+  "reputation": "A very recent finance benchmark proposal that is not yet broadly adopted, but it targets an important and under-evaluated failure mode.",
+  "notes": "Trading-style evaluations can be highly unstable and non-reproducible across runs; results may depend strongly on market regime, action discretization, and simulation assumptions.",
+  "creators": {
+    "scientists": [
+      "Wentao Zhang",
+      "Mingxuan Zhao",
+      "Jincheng Gao",
+      "Jieshun You",
+      "Huaiyu Jia",
+      "Yilei Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2602.18481",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

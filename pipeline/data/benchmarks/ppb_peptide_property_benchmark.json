@@ -1,0 +1,37 @@
+{
+  "name": "PPB (Peptide Property Benchmark)",
+  "description": "Abstract\n                \n                  Accurate prediction of peptide physicochemical properties and biological activities is critical for rational peptide design and high-throughput screening. However, current research is often constrained by heterogeneous data sources and inconsistent evaluation standards, which hinder fair comparisons and reliable assessments of model generalization. In this work, we present PPB, a peptide property prediction benchmark designed to evaluate model performance with an emphasis on realistic generalization across both classification and regression tasks. By applying unified biological filtering criteria, we systematically curated and standardized 15 datasets comprising 161,571 unique sequences, spanning a wide range of physicochemical properties and functional activities. We benchmarked seven representative architectures—encompassing traditional machine learning, deep learning, and pre-trained language models—alongside diverse feature encoding schemes. Furthermore, we investigated the impact of random versus homology-based (sequence similarity) data splitting strategies on model robustness. To facilitate community access, we developed the PPB web server (\n                  http://ppb.molmatrix.com/index.html\n                  ), which provides centralized resources for standardized dataset downloads, interactive visualization of benchmark results, and detailed evaluation protocols.\n                \n                \n                  Author summary\n                  Peptides are short amino acid chains essential for biological functions and drug discovery. While AI models have accelerated peptide property prediction, the field lacks a unified standard to fairly compare these methods, often leading to inconsistent results and overoptimistic performance estimates. In this study, we introduce the Peptide Property Benchmark (PPB), a comprehensive framework featuring 15 standardized datasets and over 160,000 sequences. We systematically evaluated diverse AI paradigms, including traditional machine learning and advanced protein language models. Our results demonstrate that large-scale pre-trained models—the biological equivalent of large language models—offer superior accuracy and stability, particularly for small or complex datasets. Crucially, our analysis reveals a “clustering bottleneck”: standard tools used to group proteins based on similarity often fail when applied to short peptides, causing data to fragment excessively. This suggests that traditional strategies for testing model generalization may be less effective for peptides than previously assumed. To facilitate community progress, we provide an online platform for standardized data and evaluation. This work establishes a rigorous foundation for developing more reliable AI tools for the next generation of peptide-based therapeutics.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "property_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC / accuracy for classification tasks; RMSE or MAE (and R²) for regression tasks",
+  "general_score_metric": "AUROC for classification tasks; RMSE/MAE for regression tasks",
+  "typical_sota_score": "task-dependent; classification AUROC often in the ~0.70–0.95 range (varies by dataset), regression errors vary widely",
+  "year_of_publish": 2026,
+  "reputation": "A newly introduced, standardized benchmark for peptide property prediction that is gaining visibility among computational biology and peptide design researchers.",
+  "notes": "Aggregates 15 heterogeneous peptide datasets (161k sequences) with standardized splits; flagged issues include a \"clustering bottleneck\" for short peptides that can distort homology-based splits and risks of data leakage when using large pre-trained protein language models; task-dependent evaluation and no single unified metric.",
+  "creators": {
+    "scientists": [
+      "Dong Xiaoying",
+      "Yang Kaijun",
+      "Wu Tianxiang",
+      "Li Pengyong",
+      "Gao Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.64898/2026.02.09.704773",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

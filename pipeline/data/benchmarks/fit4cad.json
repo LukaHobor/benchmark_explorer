@@ -1,0 +1,36 @@
+{
+  "name": "Fit4CAD",
+  "description": "We propose Fit4CAD, a benchmark for the evaluation and comparison of methods for fitting simple geometric primitives in point clouds representing CAD objects. This benchmark is meant to help both method developers and those who want to identify the best performing tools. The Fit4CAD dataset is composed by 225 high quality point clouds, each of which has been obtained by sampling a CAD object. The way these elements were created by using existing platforms and datasets makes the benchmark easily expandable. The dataset is already split into a training set and a test set. To assess performance and accuracy of the different primitive fitting methods, various measures are defined. To demonstrate the effective use of Fit4CAD, we have tested it on two methods belonging to two different categories of approaches to the primitive fitting problem: a clustering method based on a primitive growing framework and a parametric method based on the Hough transform.",
+  "category": "vision",
+  "domain": "CAD / geometry processing / 3D vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "primitive_fitting",
+    "segmentation",
+    "shape_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "precision/recall and F1 over detected primitives; geometric fitting error (e.g., RMSE / Chamfer distance)",
+  "general_score_metric": "F1 (per-primitive) / geometric fitting error",
+  "year_of_publish": 2021,
+  "reputation": "Niche benchmark in geometry processing and CAD primitive-fitting research; recognized within that community but not widely adopted outside it.",
+  "notes": "Small dataset (225 point clouds); non-LLM benchmark focused on CAD-like shapes. Evaluation combines detection (F1) and geometric error measures, so comparisons require aligning metric choices.",
+  "creators": {
+    "scientists": [
+      "Chiara Romanengo",
+      "Andrea Raffo",
+      "Yifan Qie",
+      "Nabil Anwer",
+      "Bianca Falcidieno"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2105.06858",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

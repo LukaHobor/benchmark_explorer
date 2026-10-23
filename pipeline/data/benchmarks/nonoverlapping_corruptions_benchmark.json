@@ -1,0 +1,33 @@
+{
+  "name": "Non-Overlapping Corruptions Benchmark",
+  "description": "Neural Networks are sensitive to various corruptions that usually occur in real-world applications such as low-lighting conditions, blurs, noises, etc. To estimate the robustness of neural networks to these common corruptions, we generally use a group of modeled corruptions gathered into a benchmark. We argue that corruption benchmarks often have a poor coverage: being robust to them only implies being robust to a narrow range of corruptions. They are also often unbalanced: they give too much importance to some corruptions compared to others. In this paper, we propose to build corruption benchmarks with only non-overlapping corruptions, to improve their coverage and their balance. Two corruptions overlap when the robustnesses of neural networks to these corruptions are correlated. We propose the first metric to measure the overlapping between two corruptions. We provide an algorithm that uses this metric to build benchmarks of Non-Overlapping Corruptions. Using this algorithm, we build from ImageNet a new corruption benchmark called ImageNet-NOC. We show that ImageNet-NOC is balanced and covers several kinds of corruptions that are not covered by ImageNet-C.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "robustness_evaluation",
+    "image_classification",
+    "corruption_benchmarking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (top-1 accuracy under corruptions; related papers also report mean Corruption Error (mCE))",
+  "general_score_metric": "top-1 accuracy (and mean Corruption Error (mCE) in related evaluations)",
+  "typical_sota_score": "varies widely by model and corruption severity; roughly 30–80% top-1 accuracy across corruptions",
+  "reputation": "A research-focused corruption benchmark built from ImageNet; of academic interest for robustness evaluation but not as widely adopted as ImageNet-C.",
+  "notes": "Non-LLM vision benchmark derived from ImageNet; potential pretraining/contamination risk for ImageNet-pretrained models; performance strongly depends on corruption severity; designed to improve coverage/balance by selecting non-overlapping corruptions.",
+  "creators": {
+    "scientists": [
+      "Alfred Laugros",
+      "Alice Caplier",
+      "Matthieu Ospici"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

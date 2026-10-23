@@ -1,0 +1,35 @@
+{
+  "name": "CAPTCHA Detection Benchmark (YOLO)",
+  "description": "This paper provides an analysis and comparison of the YOLOv5, YOLOv8 and YOLOv10 models for webpage CAPTCHAs detection using the datasets collected from the web and darknet as well as synthetized data of webpages. The study examines the nano (n), small (s), and medium (m) variants of YOLO architectures and use metrics such as Precision, Recall, F1 score, mAP@50 and inference speed to determine the real-life utility. Additionally, the possibility of tuning the trained model to detect new CAPTCHA patterns efficiently was examined as it is a crucial part of real-life applications. The image slicing method was proposed as a way to improve the metrics of detection on oversized input images which can be a common scenario in webpages analysis. Models in version nano achieved the best results in terms of speed, while more complexed architectures scored better in terms of other metrics.",
+  "category": "vision",
+  "domain": "computer vision / security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "captcha_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Precision / Recall / F1 and mAP@50 (reported together with inference latency / FPS)",
+  "general_score_metric": "mAP@50 (primary), complemented by Precision/Recall/F1 and inference speed",
+  "year_of_publish": 2025,
+  "reputation": "Recent comparative study focused on YOLO variants for CAPTCHA detection; useful for practitioners but not yet an established community benchmark.",
+  "notes": "Dataset includes web/darknet-collected and synthetic samples — risk of synthetic-real distribution mismatch and potential ethical concerns (facilitating CAPTCHA bypass); results sensitive to image slicing and input resolution; non-LLM, CV-only benchmark.",
+  "creators": {
+    "scientists": [
+      "Mikołaj Wysocki",
+      "Henryk Gierszal",
+      "Piotr Tyczka",
+      "Sophia Karagiorgou",
+      "George Pantelis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.13740",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

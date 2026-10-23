@@ -1,0 +1,34 @@
+{
+  "name": "Procedural Content Generation (PCG) Benchmarks for Transfer RL",
+  "description": "The idea of transfer in reinforcement learning (TRL) is intriguing: being able to transfer knowledge from one problem to another problem without learning everything from scratch. This promises quicker learning and learning more complex methods. To gain an insight into the field and to detect emerging trends, we performed a database search. We note a surprisingly late adoption of deep learning that starts in 2018. The introduction of deep learning has not yet solved the greatest challenge of TRL: generalization. Transfer between different domains works well when domains have strong similarities (e.g. MountainCar to Cartpole), and most TRL publications focus on different tasks within the same domain that have few differences. Most TRL applications we encountered compare their improvements against self-defined baselines, and the field is still missing unified benchmarks. We consider this to be a disappointing situation. For the future, we note that: (1) A clear measure of task similarity is needed. (2) Generalization needs to improve. Promising approaches merge deep learning with planning via MCTS or introduce memory through LSTMs. (3) The lack of benchmarking tools will be remedied to enable meaningful comparison and measure progress. Already Alchemy and Meta-World are emerging as interesting benchmark suites. We note that another development, the increase in procedural content generation (PCG), can improve both benchmarking and generalization in TRL.",
+  "category": "mixed",
+  "domain": "games / reinforcement learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "transfer_learning",
+    "procedural_content_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average cumulative return / transfer performance (e.g., success rate or reward in target tasks)",
+  "general_score_metric": "average episodic return or task success rate when transferring to new environments",
+  "year_of_publish": 2021,
+  "reputation": "Survey/position-style work that highlights gaps and promotes PCG-based benchmarks (e.g., Alchemy, Meta-World); influential in framing problems but no single canonical benchmark emerged from it.",
+  "notes": "Non-LLM, RL-specific; results vary widely by environment and PCG configuration, high variance and compute costs, and reproducibility can be challenging across procedurally generated task distributions.",
+  "creators": {
+    "scientists": [
+      "Matthias Müller-Brockhausen",
+      "Mike Preuss",
+      "Aske Plaat"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2105.14780",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

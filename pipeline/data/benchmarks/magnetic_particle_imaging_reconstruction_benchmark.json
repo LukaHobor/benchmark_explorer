@@ -1,0 +1,35 @@
+{
+  "name": "Magnetic Particle Imaging Reconstruction Benchmark",
+  "description": "Magnetic Particle Imaging (MPI) is an emerging imaging modality based on the magnetic response of superparamagnetic iron oxide nanoparticles to achieve high-resolution and real-time imaging without harmful radiation. One key challenge in the MPI image reconstruction task arises from its underlying noise model, which does not fulfill the implicit Gaussian assumptions that are made when applying traditional reconstruction approaches. To address this challenge, we introduce the Learned Discrepancy Approach, a novel learning-based reconstruction method for inverse problems that includes a learned discrepancy function. It enhances traditional techniques by incorporating an invertible neural network to explicitly model problem-specific noise distributions. This approach does not rely on implicit Gaussian noise assumptions, making it especially suited to handle the sophisticated noise model in MPI and also applicable to other inverse problems. To further advance MPI reconstruction techniques, we introduce the MPI-MNIST dataset - a large collection of simulated MPI measurements derived from the MNIST dataset of handwritten digits. The dataset includes noise-perturbed measurements generated from state-of-the-art model-based system matrices and measurements of a preclinical MPI scanner device. This provides a realistic and flexible environment for algorithm testing. Validated against the MPI-MNIST dataset, our method demonstrates significant improvements in reconstruction quality in terms of structural similarity when compared to classical reconstruction techniques.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_reconstruction",
+    "inverse_problem",
+    "denoising"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "structural_similarity_index (SSIM), PSNR, MSE",
+  "general_score_metric": "SSIM",
+  "year_of_publish": 2025,
+  "reputation": "A recent, specialized benchmark aimed at MPI and inverse-problem researchers; limited adoption outside that community.",
+  "notes": "Non-LLM benchmark based on simulated and limited preclinical scanner measurements; realistic but subject to domain shift between simulated and real measurements and to dataset size limits for real acquisitions.",
+  "creators": {
+    "scientists": [
+      "Meira Iske",
+      "Hannes Albers",
+      "Tobias Knopp",
+      "Tobias Kluth"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2501.05583",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

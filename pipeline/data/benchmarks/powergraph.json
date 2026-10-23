@@ -1,0 +1,38 @@
+{
+  "name": "PowerGraph",
+  "description": "Power grids are critical infrastructures of paramount importance to modern society and, therefore, engineered to operate under diverse conditions and failures. The ongoing energy transition poses new challenges for the decision-makers and system operators. Therefore, developing grid analysis algorithms is important for supporting reliable operations. These key tools include power flow analysis and system security analysis, both needed for effective operational and strategic planning. The literature review shows a growing trend of machine learning (ML) models that perform these analyses effectively. In particular, Graph Neural Networks (GNNs) stand out in such applications because of the graph-based structure of power grids. However, there is a lack of publicly available graph datasets for training and benchmarking ML models in electrical power grid applications. First, we present PowerGraph, which comprises GNN-tailored datasets for i) power flows, ii) optimal power flows, and iii) cascading failure analyses of power grids. Second, we provide ground-truth explanations for the cascading failure analysis. Finally, we perform a complete benchmarking of GNN methods for node-level and graph-level tasks and explainability. Overall, PowerGraph is a multifaceted GNN dataset for diverse tasks that includes power flow and fault scenarios with real-world explanations, providing a valuable resource for developing improved GNN models for node-level, graph-level tasks and explainability methods in power system modeling. The dataset is available at https://figshare.com/articles/dataset/PowerGraph/22820534 and the code at https://github.com/PowerGraph-Datasets.",
+  "category": "mixed",
+  "domain": "power systems / energy grid",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_level_prediction",
+    "graph_level_prediction",
+    "regression",
+    "classification",
+    "explainability"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSE/MSE for regression tasks; accuracy and F1 for classification; specialized explainability metrics for explanations",
+  "general_score_metric": "RMSE (for regression tasks) and accuracy/F1 (for classification tasks)",
+  "year_of_publish": 2024,
+  "reputation": "A domain-specific, newly introduced dataset attracting attention from the power-systems and GNN research communities but not yet widely established as a de facto standard.",
+  "notes": "Domain-specific, non-LLM benchmark requiring power-systems expertise; tasks mix regression and classification; limited prior benchmark results and potential variability across grid scenarios.",
+  "creators": {
+    "scientists": [
+      "Anna Varbella",
+      "Kenza Amara",
+      "Blazhe Gjorgiev",
+      "Mennatallah El-Assady",
+      "Giovanni Sansavini"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2402.02827",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

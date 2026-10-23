@@ -1,0 +1,41 @@
+{
+  "name": "Uni-RLHF",
+  "description": "Reinforcement Learning with Human Feedback (RLHF) has received significant attention for performing tasks without the need for costly manual reward design by aligning human preferences. It is crucial to consider diverse human feedback types and various learning methods in different environments. However, quantifying progress in RLHF with diverse feedback is challenging due to the lack of standardized annotation platforms and widely used unified benchmarks. To bridge this gap, we introduce Uni-RLHF, a comprehensive system implementation tailored for RLHF. It aims to provide a complete workflow from real human feedback, fostering progress in the development of practical problems. Uni-RLHF contains three packages: 1) a universal multi-feedback annotation platform, 2) large-scale crowdsourced feedback datasets, and 3) modular offline RLHF baseline implementations. Uni-RLHF develops a user-friendly annotation interface tailored to various feedback types, compatible with a wide range of mainstream RL environments. We then establish a systematic pipeline of crowdsourced annotations, resulting in large-scale annotated datasets comprising more than 15 million steps across 30+ popular tasks. Through extensive experiments, the results in the collected datasets demonstrate competitive performance compared to those from well-designed manual rewards. We evaluate various design choices and offer insights into their strengths and potential areas of improvement. We wish to build valuable open-source platforms, datasets, and baselines to facilitate the development of more robust and reliable RLHF solutions based on realistic human feedback. The website is available at https://uni-rlhf.github.io/.",
+  "category": "mixed",
+  "domain": "reinforcement learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "preference_ranking",
+    "reward_modeling",
+    "offline_rl",
+    "human_annotation_tasks"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate / reward improvement (environment-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "An emerging open-source system/dataset for RLHF with growing interest for standardized human-feedback benchmarks and baselines.",
+  "notes": "Large crowdsourced dataset (15M+ steps) with multiple feedback modalities; results depend strongly on environment and feedback type. Contains human annotation noise and bias; not a single unified LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yifu Yuan",
+      "Jianye Hao",
+      "Yi Ma",
+      "Zibin Dong",
+      "Hebin Liang",
+      "Jinyi Liu",
+      "Zhixin Feng",
+      "Kai Zhao",
+      "Yan Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2402.02423",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

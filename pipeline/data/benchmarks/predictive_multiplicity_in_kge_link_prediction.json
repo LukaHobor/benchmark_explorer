@@ -1,0 +1,38 @@
+{
+  "name": "predictive multiplicity in KGE link prediction",
+  "description": "Knowledge graph embedding (KGE) models are often used to predict missing links for knowledge graphs (KGs). However, multiple KG embeddings can perform almost equally well for link prediction yet give conflicting predictions for unseen queries. This phenomenon is termed \\textit{predictive multiplicity} in the literature. It poses substantial risks for KGE-based applications in high-stake domains but has been overlooked in KGE research. We define predictive multiplicity in link prediction, introduce evaluation metrics and measure predictive multiplicity for representative KGE methods on commonly used benchmark datasets. Our empirical study reveals significant predictive multiplicity in link prediction, with $8\\%$ to $39\\%$ testing queries exhibiting conflicting predictions. We address this issue by leveraging voting methods from social choice theory, significantly mitigating conflicts by $66\\%$ to $78\\%$ in our experiments.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "link_prediction",
+    "ranking",
+    "consistency_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "predictive multiplicity rate",
+  "typical_sota_score": "8–39% conflicting predictions",
+  "year_of_publish": 2024,
+  "reputation": "A research benchmark-style study in KGE that is not a standard leaderboard but is relevant to the community for exposing instability in link prediction.",
+  "notes": "Non-LLM graph-learning benchmark; measures disagreement across equally performing embeddings, so lower conflict rates are better and results depend on the chosen KGE model and dataset.",
+  "creators": {
+    "scientists": [
+      "Yuqicheng Zhu",
+      "Nico Potyka",
+      "Mojtaba Nayyeri",
+      "Bo Xiong",
+      "Yunjie He",
+      "Evgeny Kharlamov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2408.08226",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

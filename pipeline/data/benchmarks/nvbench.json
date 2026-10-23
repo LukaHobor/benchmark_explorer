@@ -1,0 +1,35 @@
+{
+  "name": "nvBench",
+  "description": "NL2VIS - which translates natural language (NL) queries to corresponding visualizations (VIS) - has attracted more and more attention both in commercial visualization vendors and academic researchers. In the last few years, the advanced deep learning-based models have achieved human-like abilities in many natural language processing (NLP) tasks, which clearly tells us that the deep learning-based technique is a good choice to push the field of NL2VIS. However, a big balk is the lack of benchmarks with lots of (NL, VIS) pairs. We present nvBench, the first large-scale NL2VIS benchmark, containing 25,750 (NL, VIS) pairs from 750 tables over 105 domains, synthesized from (NL, SQL) benchmarks to support cross-domain NL2VIS task. The quality of nvBench has been extensively validated by 23 experts and 300+ crowd workers. Deep learning-based models training using nvBench demonstrate that nvBench can push the field of NL2VIS.",
+  "category": "multimodal",
+  "domain": "data visualization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_visualization",
+    "semantic_parsing",
+    "visualization_spec_generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy of generated visualization specification (exact match / component-level correctness such as chart type, encodings); execution-based/chart-level evaluation is also used",
+  "general_score_metric": "specification accuracy / chart-level accuracy (percentage correct)",
+  "typical_sota_score": "Varies by metric and model; reported ranges often fall in the ~70–90% region on synthesized splits but generalization to real user queries is lower",
+  "year_of_publish": 2021,
+  "reputation": "Recognized as the first large-scale NL2VIS benchmark and adopted by researchers developing text-to-visualization models; widely cited within that subcommunity.",
+  "notes": "Synthesized from NL/SQL datasets so queries may differ from natural user language; validated by experts and crowd workers but may be vulnerable to dataset-specific overfitting or saturation.",
+  "creators": {
+    "scientists": [
+      "Yuyu Luo",
+      "Jiawei Tang",
+      "Guoliang Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2112.12926",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

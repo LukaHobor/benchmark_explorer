@@ -1,0 +1,40 @@
+{
+  "name": "TutorBench",
+  "description": "As students increasingly adopt large language models (LLMs) as learning aids, it is crucial to build models that are adept at handling the nuances of tutoring: they need to identify the core needs of students, be adaptive, provide personalized guidance, and be accurate. To this end, we introduce TutorBench, a dataset and evaluation benchmark designed to rigorously evaluate the core tutoring skills of LLMs. The dataset comprises 1,490 samples curated by human experts, focused on high-school and AP-level curricula. The samples are drawn from three common tutoring tasks: (i) generating adaptive explanations tailored to a student's confusion, (ii) providing actionable feedback on a student's work, and (iii) promoting active learning through effective hint generation. To account for the inherent complexity of tutoring, samples are accompanied by sample-specific rubrics which are used to judge model responses during evaluation. TutorBench uses a reliable and fine-grained automatic evaluation method that uses an LLM-judge and the sample-specific rubrics. We evaluate 16 frontier LLMs on TutorBench and present a detailed analysis of their performance and behavior. Our results show that none of the frontier LLMs achieve a score of greater than $56\\%$, showing a large room for improvement. We find that LLMs fall short in exhibiting the full range of tutoring skills needed to guide, diagnose, and support students effectively, with all the frontier models achieving less than a $60\\%$ pass rate on rubric criteria related to these skills. We also find that different model families exhibit varied strengths and limitations: the Claude models outperform others in supporting active learning, while they lag behind in the other two use cases. By releasing TutorBench, we provide a comprehensive and unsaturated benchmark to guide the development of the next-generation of AI tutors.",
+  "category": "text",
+  "domain": "education",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "explanation_generation",
+    "feedback_generation",
+    "hint_generation",
+    "instruction_following"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "human_eval (automatic LLM-judge using sample-specific rubrics / rubric-based scoring)",
+  "general_score_metric": "composite_score (rubric-based average score / %)",
+  "typical_sota_score": "up to 56%",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Small dataset (1,490 samples); evaluation relies on LLM-based judges with sample-specific rubrics (possible evaluator bias); focused on high-school/AP content so not representative of advanced curricula; unsaturated benchmark with clear headroom.",
+  "creators": {
+    "scientists": [
+      "R. S. Srinivasa",
+      "Zora Che",
+      "Chen Bo Calvin Zhang",
+      "Diego Mares",
+      "Ernesto Hernandez",
+      "Jayeon Park"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2510.02663",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

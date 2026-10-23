@@ -1,0 +1,33 @@
+{
+  "name": "spike-sorting evaluation suite",
+  "description": "We evaluate existing spike sorters and present a new one that resolves many sorting challenges. The new sorter, called “full binary pursuit” or FBP, comprises multiple steps. First, it thresholds and clusters to identify the waveforms of all unique neurons in the recording. Second, it uses greedy binary pursuit to optimally recognize the spike events in the original voltages. Third, it resolves spike events that are described more accurately as the superposition of spikes from two other neurons. Fourth, it resolves situations where the recorded neurons drift in amplitude or across electrode contacts during a long recording session. Comparison with other sorters on real and simulated ground-truth datasets reveals many of the failure modes of spike sorters. We suggest a set of post-sorting analyses that can improve the veracity of neural recordings by minimizing the intrusion of those failure modes into analysis and interpretation of neural data.",
+  "category": "mixed",
+  "domain": "neuroscience",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "signal_processing",
+    "clustering",
+    "time_series_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "sorting accuracy",
+  "year_of_publish": 2021,
+  "reputation": "17 citations",
+  "notes": "Non-LLM neuroscience benchmark centered on spike sorting; performance is typically assessed against ground truth using spike sorting quality metrics rather than a single standardized score.",
+  "creators": {
+    "scientists": [
+      "Nathan J. Hall",
+      "David J. Herzfeld",
+      "S. Lisberger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

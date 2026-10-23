@@ -1,0 +1,35 @@
+{
+  "name": "TabularGenBench",
+  "description": "The ability to train generative models that produce realistic, safe and useful tabular data is essential for data privacy, imputation, oversampling, explainability or simulation. However, generating tabular data is not straightforward due to its heterogeneity, non-smooth distributions, complex dependencies and imbalanced categorical features. Although diverse methods have been proposed in the literature, there is a need for a unified evaluation, under the same conditions, on a variety of datasets. This study addresses this need by fully considering the optimization of: hyperparameters, feature encodings, and architectures. We investigate the impact of dataset-specific tuning on five recent model families for tabular data generation through an extensive benchmark on 16 datasets. These datasets vary in terms of size (an average of 80,000 rows), data types, and domains. We also propose a reduced search space for each model that allows for quick optimization, achieving nearly equivalent performance at a significantly lower cost. Our benchmark demonstrates that, for most models, large-scale dataset-specific tuning substantially improves performance compared to the original configurations. Furthermore, we confirm that diffusion-based models generally outperform other models on tabular data. However, this advantage is not significant when the entire tuning and training process is restricted to the same GPU budget.",
+  "category": "mixed",
+  "domain": "tabular data synthesis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "tabular_data_generation",
+    "imputation",
+    "downstream_model_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2024,
+  "reputation": "An emerging, research-focused benchmark for tabular data synthesis that is gaining attention in the tabular generative modeling community but is not yet a broadly adopted standard.",
+  "notes": "Non-LLM benchmark focused on tabular synthesis; results are sensitive to hyperparameter tuning, feature encoding, and compute budget; comparisons can be affected by dataset-specific tuning and GPU constraints; potential dataset-specific contamination and small-sample effects on some datasets.",
+  "creators": {
+    "scientists": [
+      "G. Charbel N. Kindji",
+      "Lina Maria Rojas-Barahona",
+      "Elisa Fromont",
+      "Tanguy Urvoy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.12945",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

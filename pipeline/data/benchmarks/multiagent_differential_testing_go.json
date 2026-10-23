@@ -1,0 +1,37 @@
+{
+  "name": "Multi-Agent Differential Testing (Go)",
+  "description": "Artificial intelligent (AI) techniques have been successfully applied in various domains, especially in complex games like Go. Indeed, although Go has simple rules, it has countless variations of possible positions, making it an extremely difficult game. Therefore, it has been taken as a benchmark to assess the abilities of AI agents (called Go Agents). However, assessing the performance of the decision-making of a Go agent is challenging; indeed, since Go agents play much better than humans, it is difficult to establish intuitive rules or to rely on human experts to determine whether a Go agent's decision is correct or not. While professional players can do it, they can not evaluate too many moves. To tackle these issues, in this paper we propose a differential testing approach, called Multi-Agent Differential testing For the game of Go (MAD4Go), to identify interesting tests in which a Go agent may perform a non-optimal move. Specifically, we play different Go agents over the same tests and we check whether they agree with each other. In case of disagreement, we assess the level of disagreement. If two agents strongly disagree with each other, it is more likely that at least one agent made a wrong decision. We conducted experiments by evaluating Go agents from Leela Zero, using as tests different Go positions obtained from real Go games of professional players. Results revealed diverse disagreements among agents, showing that MAD4Go can identify valuable tests.",
+  "category": "mixed",
+  "domain": "games",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "pairwise_comparison",
+    "disagreement_detection",
+    "test_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "agent_agreement / disagreement_rate (identify tests with high inter-agent disagreement and quantify disagreement levels)",
+  "general_score_metric": "disagreement_rate (percentage of tests with significant agent disagreement)",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Non-LLM benchmark focused on comparing Go agents; no absolute ground-truth correctness for many moves (relies on cross-agent disagreement). Results depend strongly on which agents are included and on position selection; dataset is drawn from professional games and may be relatively small for broad statistical claims.",
+  "creators": {
+    "scientists": [
+      "Jiaxue Song",
+      "Xiaoyi Zhang",
+      "Paolo Arcaini",
+      "Fuyuki Ishikawa",
+      "Yong Liu",
+      "Bin Du"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

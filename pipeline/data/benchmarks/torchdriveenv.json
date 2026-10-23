@@ -1,0 +1,43 @@
+{
+  "name": "TorchDriveEnv",
+  "description": "The training, testing, and deployment, of autonomous vehicles requires realistic and efficient simulators. Moreover, because of the high variability between different problems presented in different autonomous systems, these simulators need to be easy to use, and easy to modify. To address these problems we introduce TorchDriveSim and its benchmark extension TorchDriveEnv. TorchDriveEnv is a lightweight reinforcement learning benchmark programmed entirely in Python, which can be modified to test a number of different factors in learned vehicle behavior, including the effect of varying kinematic models, agent types, and traffic control patterns. Most importantly unlike many replay based simulation approaches, TorchDriveEnv is fully integrated with a state of the art behavioral simulation API. This allows users to train and evaluate driving models alongside data driven Non-Playable Characters (NPC) whose initializations and driving behavior are reactive, realistic, and diverse. We illustrate the efficiency and simplicity of TorchDriveEnv by evaluating common reinforcement learning baselines in both training and validation environments. Our experiments show that TorchDriveEnv is easy to use, but difficult to solve.",
+  "category": "vision",
+  "domain": "autonomous driving / simulation",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "continuous_control",
+    "simulation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average episodic return and task success rate (plus safety metrics like collisions)",
+  "general_score_metric": "average episodic return (mean reward)",
+  "year_of_publish": 2024,
+  "reputation": "A recent simulation benchmark for RL driving research with limited adoption so far; intended for researchers needing a lightweight, Python-native driving environment.",
+  "notes": "Simulation-only benchmark (non-LLM). Risk of overfitting to simulator specifics and sim-to-real gap; scenarios may be limited in diversity depending on configuration.",
+  "creators": {
+    "scientists": [
+      "Jonathan Wilder Lavington",
+      "Ke Zhang",
+      "Vasileios Lioutas",
+      "Matthew Niedoba",
+      "Yunpeng Liu",
+      "Dylan Green",
+      "Saeid Naderiparizi",
+      "Xiaoxuan Liang",
+      "Setareh Dabiri",
+      "Adam Ścibior",
+      "Berend Zwartsenberg",
+      "Frank Wood"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2405.04491",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "UniIR",
+  "description": "Existing information retrieval (IR) models often assume a homogeneous format, limiting their applicability to diverse user needs, such as searching for images with text descriptions, searching for a news article with a headline image, or finding a similar photo with a query image. To approach such different information-seeking demands, we introduce UniIR, a unified instruction-guided multimodal retriever capable of handling eight distinct retrieval tasks across modalities. UniIR, a single retrieval system jointly trained on ten diverse multimodal-IR datasets, interprets user instructions to execute various retrieval tasks, demonstrating robust performance across existing datasets and zero-shot generalization to new tasks. Our experiments highlight that multi-task training and instruction tuning are keys to UniIR's generalization ability. Additionally, we construct the M-BEIR, a multimodal retrieval benchmark with comprehensive results, to standardize the evaluation of universal multimodal information retrieval.",
+  "category": "multimodal",
+  "domain": "information retrieval / multimodal search",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_retrieval",
+    "image_to_text_retrieval",
+    "text_to_image_retrieval",
+    "caption_based_search",
+    "cross_modal_retrieval",
+    "multimodal_reranking",
+    "instance_search",
+    "instruction_guided_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@k (Recall@1/5/10) and mAP (mean average precision) across datasets",
+  "general_score_metric": "Recall@1 / Recall@k",
+  "typical_sota_score": "varies by dataset; Recall@1 typically ~30–85% depending on modality and dataset",
+  "year_of_publish": 2023,
+  "reputation": "Introduced a unified multimodal retrieval suite (UniIR) and M-BEIR that have attracted attention for standardizing multimodal IR evaluation but are not yet as widely adopted as single-modality IR benchmarks.",
+  "notes": "Evaluation varies widely by dataset and modality; reported scores often depend on dataset-specific splits and retrieval protocol. M-BEIR is newer and heterogeneous in dataset size and difficulty; potential contamination from large pretraining corpora for some models.",
+  "creators": {
+    "scientists": [
+      "Cong Wei",
+      "Yang Chen",
+      "Haonan Chen",
+      "Hexiang Hu",
+      "Ge Zhang",
+      "Jie Fu",
+      "Alan Ritter",
+      "Wenhu Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2311.17136",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

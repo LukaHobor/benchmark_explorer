@@ -1,0 +1,40 @@
+{
+  "name": "MMMG",
+  "description": "In this paper, we introduce knowledge image generation as a new task, alongside the Massive Multi-Discipline Multi-Tier Knowledge-Image Generation Benchmark (MMMG) to probe the reasoning capability of image generation models. Knowledge images have been central to human civilization and to the mechanisms of human learning--a fact underscored by dual-coding theory and the picture-superiority effect. Generating such images is challenging, demanding multimodal reasoning that fuses world knowledge with pixel-level grounding into clear explanatory visuals. To enable comprehensive evaluation, MMMG offers 4,456 expert-validated (knowledge) image-prompt pairs spanning 10 disciplines, 6 educational levels, and diverse knowledge formats such as charts, diagrams, and mind maps. To eliminate confounding complexity during evaluation, we adopt a unified Knowledge Graph (KG) representation. Each KG explicitly delineates a target image's core entities and their dependencies. We further introduce MMMG-Score to evaluate generated knowledge images. This metric combines factual fidelity, measured by graph-edit distance between KGs, with visual clarity assessment. Comprehensive evaluations of 16 state-of-the-art text-to-image generation models expose serious reasoning deficits--low entity fidelity, weak relations, and clutter--with GPT-4o achieving an MMMG-Score of only 50.20, underscoring the benchmark's difficulty. To spur further progress, we release FLUX-Reason (MMMG-Score of 34.45), an effective and open baseline that combines a reasoning LLM with diffusion models and is trained on 16,000 curated knowledge image-prompt pairs.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_generation",
+    "multimodal_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite metric (MMMG-Score combining KG graph-edit distance for factual fidelity and a visual clarity component)",
+  "general_score_metric": "MMMG-Score (composite)",
+  "typical_sota_score": "≈50% (GPT-4o reported MMMG-Score 50.20)",
+  "year_of_publish": 2025,
+  "reputation": "Recently proposed benchmark designed to probe reasoning in image generation; early results show established models struggle, and adoption is currently limited but growing.",
+  "notes": "Relatively small dataset (4,456 expert-validated pairs); composite metric includes a subjective visual-clarity component; moderate risk of contamination from broad pretraining of commercial models; evaluates generation (not purely LLM text tasks).",
+  "creators": {
+    "scientists": [
+      "Yuxuan Luo",
+      "Yuhui Yuan",
+      "Junwen Chen",
+      "Haonan Cai",
+      "Ziyi Yue",
+      "Yuwei Yang",
+      "Fatima Zohra Daha",
+      "Ji Li",
+      "Zhouhui Lian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.10963",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

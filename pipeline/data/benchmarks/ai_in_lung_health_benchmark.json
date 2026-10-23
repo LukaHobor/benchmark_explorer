@@ -1,0 +1,38 @@
+{
+  "name": "AI in Lung Health Benchmark",
+  "description": "Lung cancer's high mortality rate can be mitigated by early detection, increasingly reliant on AI for diagnostic imaging. However, AI model performance depends on training and validation datasets. This study develops and validates AI models for both nodule detection and cancer classification tasks. For detection, two models (DLCSD-mD and LUNA16-mD) were developed using the Duke Lung Cancer Screening Dataset (DLCSD), with over 2,000 CT scans from 1,613 patients and more than 3,000 annotations. These models were evaluated on internal (DLCSD) and external datasets, including LUNA16 (601 patients, 1186 nodules) and NLST (969 patients, 1192 nodules), using FROC analysis and AUC metrics. For classification, five models were developed and tested: a randomly initialized 3D ResNet50, Genesis, MedNet3D, an enhanced ResNet50 using Strategic Warm-Start++ (SWS++), and a linear classifier analyzing features from the Foundation Model for Cancer Biomarkers (FMCB). These models were trained to distinguish between benign and malignant nodules and evaluated using AUC analysis on internal (DLCSD) and external datasets, including LUNA16 (433 patients, 677 nodules) and NLST. The DLCSD-mD model achieved an AUC of 0.93 (95% CI: 0.91-0.94) on the internal DLCSD dataset. External validation results were 0.97 (95% CI: 0.96-0.98) on LUNA16 and 0.75 (95% CI: 0.73-0.76) on NLST. For classification, the ResNet50-SWS++ model recorded AUCs of 0.71 (95% CI: 0.61-0.81) on DLCSD, 0.90 (95% CI: 0.87-0.93) on LUNA16, and 0.81 (95% CI: 0.79-0.82) on NLST. Other models showed varying performance across datasets, underscoring the importance of diverse model approaches. This benchmarking establishes DLCSD as a reliable resource for lung cancer AI research.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "nodule_detection",
+    "nodule_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC (classification) and FROC (detection)",
+  "general_score_metric": "AUC for malignancy classification; FROC for detection performance",
+  "typical_sota_score": "AUC typically ~0.75–0.97 depending on dataset and task (dataset-dependent performance)",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed benchmarking dataset and evaluation suite (DLCSD) with external validation; promising for lung-AI research but not yet a dominant community standard.",
+  "notes": "Clinical/medical-imaging benchmark with dataset shift between internal and external cohorts, class imbalance, and patient-privacy concerns; performance varies substantially across external datasets; non-LLM.",
+  "creators": {
+    "scientists": [
+      "Fakrul Islam Tushar",
+      "Avivah Wang",
+      "Lavsen Dahal",
+      "Michael R. Harowicz",
+      "Kyle J. Lafata",
+      "Tina D. Tailor",
+      "Joseph Y. Lo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2405.04605",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

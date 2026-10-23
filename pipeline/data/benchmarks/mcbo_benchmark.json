@@ -1,0 +1,35 @@
+{
+  "name": "MCBO benchmark",
+  "description": "This paper introduces a modular framework for Mixed-variable and Combinatorial Bayesian Optimization (MCBO) to address the lack of systematic benchmarking and standardized evaluation in the field. Current MCBO papers often introduce non-diverse or non-standard benchmarks to evaluate their methods, impeding the proper assessment of different MCBO primitives and their combinations. Additionally, papers introducing a solution for a single MCBO primitive often omit benchmarking against baselines that utilize the same methods for the remaining primitives. This omission is primarily due to the significant implementation overhead involved, resulting in a lack of controlled assessments and an inability to showcase the merits of a contribution effectively. To overcome these challenges, our proposed framework enables an effortless combination of Bayesian Optimization components, and provides a diverse set of synthetic and real-world benchmarking tasks. Leveraging this flexibility, we implement 47 novel MCBO algorithms and benchmark them against seven existing MCBO solvers and five standard black-box optimization algorithms on ten tasks, conducting over 4000 experiments. Our findings reveal a superior combination of MCBO primitives outperforming existing approaches and illustrate the significance of model fit and the use of a trust region. We make our MCBO library available under the MIT license at \\url{https://github.com/huawei-noah/HEBO/tree/master/MCBO}.",
+  "category": "mixed",
+  "domain": "optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "black_box_optimization",
+    "bayesian_optimization",
+    "combinatorial_optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "simple_regret (best objective value)",
+  "general_score_metric": "simple_regret",
+  "typical_sota_score": "varies by task",
+  "year_of_publish": 2023,
+  "reputation": "A comprehensive, well-engineered recent benchmarking framework (from the HEBO project) that is gaining recognition in the MCBO/BO research community.",
+  "notes": "Non-LLM benchmark; contains synthetic and real-world tasks; computationally intensive and results can be sensitive to implementation details, random seeds, and trust-region settings.",
+  "creators": {
+    "scientists": [
+      "Kamil Dreczkowski",
+      "Antoine Grosnit",
+      "Haitham Bou Ammar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2306.09803",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

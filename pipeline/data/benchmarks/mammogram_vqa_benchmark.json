@@ -1,0 +1,36 @@
+{
+  "name": "Mammogram VQA Benchmark",
+  "description": "Breast cancer remains the most prevalent malignancy in women worldwide. Mammography-based early detection plays a pivotal role in improving patient survival outcomes. While large vision-language models offer transformative potential for mammogram visual question answering, the absence of standardized evaluation benchmarks currently makes it hard to fairly compare different large vision-language models’ performance in mammogram interpretation. In this study, we address this critical gap through three key contributions: (1) We introduce MammoVQA, a mammogram visual question-answering dataset that unifies 15 public datasets, comprising 131,847 images (421K question-answering pairs) for image-level cases and 72,518 exams (476K images, 144K question-answering pairs) for exam-level cases. (2) Systematic evaluation of 12 recent high-performance large vision-language models (6 general, 6 medical) reveals diagnostic performance statistically equivalent to random guessing, highlighting their unreliability for mammogram interpretation. (3) Our domain-optimized LLaVA-Mammo achieves average +19.66% weighted accuracy gains over the best recent high-performance model in internal validation, with average +21.21% weighted accuracy improvements in external validation. Large vision language models hold promise for breast cancer imaging, however, their results can vary. Here, the authors introduce MammoVQA as a mammogram visual question answering benchmark.",
+  "category": "vision",
+  "domain": "medical imaging (breast radiology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "diagnosis_question_answering",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy for VQA tasks; AUC/F1 reported for diagnostic classification where applicable",
+  "general_score_metric": "accuracy (VQA) and AUC (diagnostic classification)",
+  "year_of_publish": 2025,
+  "reputation": "Newer medical-imaging VQA benchmark with potential clinical relevance; adoption limited pending external validation and wider release.",
+  "notes": "Medical dataset with privacy/sensitivity considerations; requires clinical validation before deployment, risk of domain shift and label noise; small-to-moderate scale relative to general VQA benchmarks.",
+  "creators": {
+    "scientists": [
+      "Jiayi Zhu",
+      "Fuxiang Huang",
+      "Qiong Luo",
+      "Hao Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41467-025-66507-z",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

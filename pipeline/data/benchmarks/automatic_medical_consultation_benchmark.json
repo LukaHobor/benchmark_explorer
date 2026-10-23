@@ -1,0 +1,46 @@
+{
+  "name": "Automatic Medical Consultation Benchmark",
+  "description": "In recent years, interest has arisen in using machine learning to improve the efficiency of automatic medical consultation and enhance patient experience. In this article, we propose two frameworks to support automatic medical consultation, namely doctor-patient dialogue understanding and task-oriented interaction. We create a new large medical dialogue dataset with multi-level finegrained annotations and establish five independent tasks, including named entity recognition, dialogue act classification, symptom label inference, medical report generation and diagnosis-oriented dialogue policy. We report a set of benchmark results for each task, which shows the usability of the dataset and sets a baseline for future studies. Both code and data is available from https://github.com/lemuria-wchen/imcs21.",
+  "category": "text",
+  "domain": "medical / healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "classification",
+    "multi_label_classification",
+    "text_generation",
+    "dialogue_policy_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (NER/classification), accuracy (some classification tasks), BLEU/ROUGE (report generation), task_success_rate / policy accuracy (dialogue policy)",
+  "general_score_metric": "task-dependent (F1 for NER/classification; BLEU/ROUGE for generation; task_success_rate for policy)",
+  "typical_sota_score": "varies by task: ~70–90% F1 (NER/classification), generation BLEU/ROUGE typically low-to-moderate (e.g., BLEU ~10–30)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2022,
+  "reputation": "A notable dataset in medical dialogue research that provides multi-level annotations for several medical-consultation tasks and has moderate adoption in the community.",
+  "notes": "Clinical domain — potential privacy/ethical considerations; task-specific metrics vary widely; dataset is domain-specific (medical) and may suffer class imbalance; contamination risk if models are pretrained on medical web data.",
+  "creators": {
+    "scientists": [
+      "Wei Chen",
+      "Zhiwei Li",
+      "Hongyi Fang",
+      "Qianyuan Yao",
+      "Cheng Zhong",
+      "Jianye Hao",
+      "Qi Zhang",
+      "Xuanjing Huang",
+      "Jiajie Peng",
+      "Zhongyu Wei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2204.08997",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

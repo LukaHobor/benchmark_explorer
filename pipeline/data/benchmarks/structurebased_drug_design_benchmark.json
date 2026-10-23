@@ -1,0 +1,40 @@
+{
+  "name": "Structure-based Drug Design Benchmark",
+  "description": "Currently, the field of structure-based drug design is dominated by three main types of algorithms: search-based algorithms, deep generative models, and reinforcement learning. While existing works have typically focused on comparing models within a single algorithmic category, cross-algorithm comparisons remain scarce. In this paper, to fill the gap, we establish a benchmark to evaluate the performance of sixteen models across these different algorithmic foundations by assessing the pharmaceutical properties of the generated molecules and their docking affinities with specified target proteins. We highlight the unique advantages of each algorithmic approach and offer recommendations for the design of future SBDD models. We emphasize that 1D/2D ligand-centric drug design methods can be used in SBDD by treating the docking function as a black-box oracle, which is typically neglected. The empirical results show that 1D/2D methods achieve competitive performance compared with 3D-based methods that use the 3D structure of the target protein explicitly. Also, AutoGrow4, a 2D molecular graph-based genetic algorithm, dominates SBDD in terms of optimization ability. The relevant code is available in https://github.com/zkysfls/2024-sbdd-benchmark.",
+  "category": "mixed",
+  "domain": "drug discovery / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "molecular_generation",
+    "docking_evaluation",
+    "property_prediction",
+    "optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (combining docking affinity/docking score and pharmaceutical property metrics such as QED, SA, novelty/diversity)",
+  "general_score_metric": "composite_score (primary: predicted docking affinity / docking score)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "A recent (2024) cross-algorithm benchmark for structure-based drug design that is gaining attention for enabling direct comparisons across search-based, generative, and RL methods but is not yet a broadly established community standard.",
+  "notes": "Non-LLM benchmark focused on small-molecule generation and docking; results depend heavily on docking oracle choice and parameters (contamination via re-use of docking setups is possible); multiple heterogeneous metrics are reported so single-number comparisons can be misleading.",
+  "creators": {
+    "scientists": [
+      "Kangyu Zheng",
+      "Yingzhou Lu",
+      "Zaixi Zhang",
+      "Zhongwei Wan",
+      "Yao Ma",
+      "Marinka Zitnik",
+      "Tianfan Fu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.03403",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

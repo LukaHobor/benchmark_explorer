@@ -1,0 +1,40 @@
+{
+  "name": "Hi-FSOD (H benchmark)",
+  "description": "Few-shot object detection (FSOD) is to detect objects with a few examples. However, existing FSOD methods do not consider hierarchical fine-grained category structures of objects that exist widely in real life. For example, animals are taxonomically classified into orders, families, genera and species etc. In this paper, we propose and solve a new problem called hierarchical few-shot object detection (Hi-FSOD), which aims to detect objects with hierarchical categories in the FSOD paradigm. To this end, on the one hand, we build the first large-scale and high-quality Hi-FSOD benchmark dataset HiFSOD-Bird, which contains 176,350 wild-bird images falling to 1,432 categories. All the categories are organized into a 4-level taxonomy, consisting of 32 orders, 132 families, 572 genera and 1,432 species. On the other hand, we propose the first Hi-FSOD method HiCLPL, where a hierarchical contrastive learning approach is developed to constrain the feature space so that the feature distribution of objects is consistent with the hierarchical taxonomy and the model's generalization power is strengthened. Meanwhile, a probabilistic loss is designed to enable the child nodes to correct the classification errors of their parent nodes in the taxonomy. Extensive experiments on the benchmark dataset HiFSOD-Bird show that our method HiCLPL outperforms the existing FSOD methods.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "few_shot_learning",
+    "hierarchical_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP)",
+  "general_score_metric": "mAP (often reported at IoU=0.5 or averaged across IoUs)",
+  "year_of_publish": 2022,
+  "reputation": "A specialized, state-of-the-art benchmark for hierarchical few-shot object detection; of growing interest in fine-grained and few-shot detection research but still niche.",
+  "notes": "Very large, fine-grained, long-tailed taxonomy (4 levels, 1,432 species) making the task particularly challenging; computationally intensive to train/evaluate and not applicable to general detection benchmarks without hierarchical protocols.",
+  "creators": {
+    "scientists": [
+      "Lu Zhang",
+      "Yang Wang",
+      "Jiaogen Zhou",
+      "Chenbo Zhang",
+      "Yinglu Zhang",
+      "Jihong Guan",
+      "Yatao Bian",
+      "Shuigeng Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.03940",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

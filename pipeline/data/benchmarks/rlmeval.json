@@ -1,0 +1,36 @@
+{
+  "name": "RLMEval",
+  "description": "Despite impressive results on curated benchmarks, the practical impact of large language models (LLMs) on research-level neural theorem proving and proof autoformalization is still limited. We introduce RLMEval, an evaluation suite for these tasks, focusing on research-level mathematics from real-world Lean formalization projects. RLMEval targets the evaluation of neural theorem proving and proof autoformalization on challenging research-level theorems by leveraging real Lean Blueprint formalization projects. Our evaluation of state-of-the-art models on RLMEval, comprising 613 theorems from 6 Lean projects, reveals a significant gap: progress on existing benchmarks does not readily translate to these more realistic settings, with the best model achieving only a 10.3 % pass rate. RLMEval provides a new, challenging benchmark designed to guide and accelerate progress in automated reasoning for formal mathematics.",
+  "category": "code",
+  "domain": "formal reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "theorem_proving",
+    "proof_generation",
+    "autoformalization",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pass@1 (proof-checker verified proof success rate)",
+  "general_score_metric": "pass@1",
+  "typical_sota_score": "≈10.3%",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Small, specialized benchmark (613 theorems) of research‑level Lean projects; high difficulty and not saturated. Risk of data contamination if models were trained on Lean corpora or the same projects. Evaluation requires formal proof checking rather than heuristic metrics.",
+  "creators": {
+    "scientists": [
+      "Auguste Poiroux",
+      "Antoine Bosselut",
+      "Viktor Kuncak"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2510.25427",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

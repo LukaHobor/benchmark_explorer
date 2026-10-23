@@ -1,0 +1,40 @@
+{
+  "name": "SORRY-Bench",
+  "description": "A systematic framework for evaluating LLM safety refusal behavior using a fine-grained 44-class safety taxonomy with 440 class-balanced unsafe instructions and 20 linguistic mutation strategies (translation, paraphrasing, roleplay framing, etc.). Also introduces a fine-tuned Mistral-7B judge that achieves high accuracy compared to GPT-4, enabling cheap automated safety evaluation.",
+  "category": "text",
+  "domain": "general knowledge",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 440,
+  "evaluation_method": "refusal rate; Attack Success Rate (ASR); fine-tuned LLM judge",
+  "general_score_metric": "Unsafe Instruction Following Rate (UIFR); refusal rate",
+  "typical_sota_score": "10–40% UIFR across mutation types (frontier models; varies significantly by linguistic mutation strategy)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at ICLR 2025; from Princeton/UC Berkeley/UIUC team; fine-grained 44-class taxonomy enables nuanced safety analysis; open-source with leaderboard; enables cheap safety evaluation via Mistral-7B judge",
+  "notes": "ICLR 2025. 44-class taxonomy reveals that safety training is uneven — some classes of unsafe requests are reliably refused while others (especially when mutated via translation or roleplay) bypass safety filters. 20 linguistic mutations test robustness across paraphrases, language switches, hypothetical framing, and more. Fine-tuned Mistral-7B safety judge provides cost-effective automated evaluation competitive with GPT-4.",
+  "creators": {
+    "scientists": [
+      "Jiachen T. Wang",
+      "Ruoxi Jia",
+      "Bo Li",
+      "Dawn Song"
+    ],
+    "institutions": [
+      "Princeton University",
+      "UC Berkeley",
+      "University of Illinois Urbana-Champaign"
+    ],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2408.16163",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

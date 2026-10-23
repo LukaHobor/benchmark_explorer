@@ -1,0 +1,37 @@
+{
+  "name": "DAVIS (Video Object Segmentation Benchmark)",
+  "description": "Over the years, datasets and benchmarks have proven their fundamental importance in computer vision research, enabling targeted progress and objective comparisons in many fields. At the same time, legacy datasets may impend the evolution of a field due to saturated algorithm performance and the lack of contemporary, high quality data. In this work we present a new benchmark dataset and evaluation methodology for the area of video object segmentation. The dataset, named DAVIS (Densely Annotated VIdeo Segmentation), consists of fifty high quality, Full HD video sequences, spanning multiple occurrences of common video object segmentation challenges such as occlusions, motionblur and appearance changes. Each video is accompanied by densely annotated, pixel-accurate and per-frame ground truth segmentation. In addition, we provide a comprehensive analysis of several state-of-the-art segmentation approaches using three complementary metrics that measure the spatial extent of the segmentation, the accuracy of the silhouette contours and the temporal coherence. The results uncover strengths and weaknesses of current approaches, opening up promising directions for future works.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_object_segmentation",
+    "pixel_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Jaccard index (mean IoU) and F-measure (boundary accuracy)",
+  "general_score_metric": "mean Jaccard (mIoU, region similarity J)",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2016,
+  "reputation": "A widely used, standard benchmark for pixel-level video object segmentation with strong community adoption and long-standing use in VOS research and challenges.",
+  "notes": "Non-LLM vision benchmark; relatively small number of video sequences compared to large-scale datasets, so risk of saturation/overfitting and possible overlap with training data in modern large-scale pretraining. Primary metrics are region (J) and boundary (F) measures.",
+  "creators": {
+    "scientists": [
+      "F. Perazzi",
+      "J. Pont-Tuset",
+      "B. McWilliams",
+      "L. Van Gool",
+      "M. Gross",
+      "A. Sorkine-Hornung"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvpr.2016.85",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "IntelliGraphs",
+  "description": "Knowledge Graph Embedding (KGE) models are used to learn continuous representations of entities and relations. A key task in the literature is predicting missing links between entities. However, Knowledge Graphs are not just sets of links but also have semantics underlying their structure. Semantics is crucial in several downstream tasks, such as query answering or reasoning. We introduce the subgraph inference task, where a model has to generate likely and semantically valid subgraphs. We propose IntelliGraphs, a set of five new Knowledge Graph datasets. The IntelliGraphs datasets contain subgraphs with semantics expressed in logical rules for evaluating subgraph inference. We also present the dataset generator that produced the synthetic datasets. We designed four novel baseline models, which include three models based on traditional KGEs. We evaluate their expressiveness and show that these models cannot capture the semantics. We believe this benchmark will encourage the development of machine learning models that emphasize semantic understanding.",
+  "category": "mixed",
+  "domain": "knowledge graphs",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "subgraph_generation",
+    "link_prediction",
+    "logical_rule_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "exact_match and logical-validity/accuracy (measures of whether generated subgraphs satisfy target logical rules), often reported with F1/precision/recall for edges",
+  "general_score_metric": "exact_match / accuracy (semantic validity of generated subgraphs), often supplemented by F1 for edge prediction",
+  "year_of_publish": 2023,
+  "reputation": "A recently proposed synthetic benchmark in the knowledge-graph research community to test semantic/subgraph inference; currently of interest primarily to KGE and KG-reasoning researchers.",
+  "notes": "Datasets are synthetic and generator-driven, which aids controlled evaluation but may limit real-world generalization; non-LLM benchmark focused on semantics beyond standard link prediction.",
+  "creators": {
+    "scientists": [
+      "Thiviyan Thanapalasingam",
+      "Emile van Krieken",
+      "Peter Bloem",
+      "Paul Groth"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.06698",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

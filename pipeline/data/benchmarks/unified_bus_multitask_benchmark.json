@@ -1,0 +1,35 @@
+{
+  "name": "Unified BUS multi-task benchmark",
+  "description": "Breast cancer continues to be a major global health concern for women, necessitating early and effective detection using safe and cost-effective imaging techniques like Ultrasound. The scarcity of homogenous and annotated breast ultrasound (BUS) datasets often limits automated detection using deep learning (DL) techniques. This study aims to conduct a thorough comparative evaluation of DL models for dual tasks of classification and lesion segmentation. A unified dataset was compiled using eight publicly available BUS datasets, underwent comprehensive preprocessing, and an on-the-fly data augmentation. A comparative benchmark was performed on three CNN-based architectures (EfficientNet, ResNet, DenseNet) for classification, and on U-Net variants (EfficientNet and ResNet backbones) and DeepLabV3+ for segmentation. EfficientNet-B5 reported the highest overall performance for the classification, revealing an accuracy of 0.86 and an F1-score of 0.87. For the segmentation, U-Net with EfficientNet-B7 backbone showed promising results, achieving a Dice score of 94.01% and an IoU of 90.35%. The performance of EfficientNet and U-Net architectures corroborates their potential for a robust breast cancer detection, balancing high accuracy and computational efficiency. Therefore, warranting a possibility for an optimal clinical translation of AI-assisted breast cancer diagnosis.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (classification); F1 (classification); Dice / IoU (segmentation)",
+  "general_score_metric": "accuracy (classification) and Dice (segmentation)",
+  "typical_sota_score": "classification: ~86–87%; segmentation (Dice): ~90–94%",
+  "year_of_publish": 2025,
+  "reputation": "A domain-specific benchmark combining eight public BUS datasets that is used in breast ultrasound imaging research but is not widely adopted outside that community.",
+  "notes": "Merged from multiple public BUS datasets — potential for label heterogeneity and domain shift; dataset size and diversity may be limited. Not an LLM benchmark (medical imaging).",
+  "creators": {
+    "scientists": [
+      "Afaf Ridaoui",
+      "Aboubaker Abouelkacim",
+      "Leila Bouchoua",
+      "Loubna El Faquih",
+      "Ghita Zaz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

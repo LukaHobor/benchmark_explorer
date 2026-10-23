@@ -1,0 +1,37 @@
+{
+  "name": "FOS (Future Of Science)",
+  "description": "Interdisciplinary scientific breakthroughs mostly emerge unexpectedly, and forecasting the formation of novel research fields remains a major challenge. We introduce FOS (Future Of Science), a comprehensive time-aware graph-based benchmark that reconstructs annual co-occurrence graphs of 65,027 research sub-fields (spanning 19 general domains) over the period 1827-2024. In these graphs, edges denote the co-occurrence of two fields in a single publication and are timestamped with the corresponding publication year. Nodes are enriched with semantic embeddings, and edges are characterized by temporal and topological descriptors. We formulate the prediction of new field-pair linkages as a temporal link-prediction task, emphasizing the\"first-time\"connections that signify pioneering interdisciplinary directions. Through extensive experiments, we evaluate a suite of state-of-the-art temporal graph architectures under multiple negative-sampling regimes and show that (i) embedding long-form textual descriptions of fields significantly boosts prediction accuracy, and (ii) distinct model classes excel under different evaluation settings. Case analyses show that top-ranked link predictions on FOS align with field pairings that emerge in subsequent years of academic publications. We publicly release FOS, along with its temporal data splits and evaluation code, to establish a reproducible benchmark for advancing research in predicting scientific frontiers.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "temporal_link_prediction",
+    "graph_link_prediction",
+    "node_representation_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "standard link-prediction metrics such as AUC (ROC AUC), Average Precision (AP), and ranking metrics like Precision@k / Recall@k",
+  "general_score_metric": "AUC and Average Precision (AP); Precision@k for top-k prediction analyses",
+  "year_of_publish": 2025,
+  "reputation": "Large, comprehensive temporal-graph benchmark recently released and likely to become influential for temporal link-prediction and scientific-forecasting research.",
+  "notes": "Very large, time-stamped graph spanning almost two centuries; different negative-sampling regimes and temporal-split policies materially affect results (risk of temporal leakage if not enforced); heavy compute and memory requirements; non-LLM.",
+  "creators": {
+    "scientists": [
+      "Kiyan Rezaee",
+      "Morteza Ziabakhsh",
+      "Niloofar Nikfarjam",
+      "Mohammad Ghassemi",
+      "Yazdan Rezaee Jouryabi",
+      "S. Eskandari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2511.18631",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "TAA-Bench",
+  "description": "The robustness of deep learning models against adversarial attacks remains a pivotal concern. This study presents, for the first time, an exhaustive review of the transferability aspect of adversarial attacks. It systematically categorizes and critically evaluates various methodologies developed to augment the transferability of adversarial attacks. This study encompasses a spectrum of techniques, including Generative Structure, Semantic Similarity, Gradient Editing, Target Modification, and Ensemble Approach. Concurrently, this paper introduces a benchmark framework \\textit{TAA-Bench}, integrating ten leading methodologies for adversarial attack transferability, thereby providing a standardized and systematic platform for comparative analysis across diverse model architectures. Through comprehensive scrutiny, we delineate the efficacy and constraints of each method, shedding light on their underlying operational principles and practical utility. This review endeavors to be a quintessential resource for both scholars and practitioners in the field, charting the complex terrain of adversarial transferability and setting a foundation for future explorations in this vital sector. The associated codebase is accessible at: https://github.com/KxPlaug/TAA-Bench",
+  "category": "mixed",
+  "domain": "adversarial ML",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "adversarial_attack_evaluation",
+    "transferability_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack success rate / transferability rate (success on holdout models), reported with perturbation norms (Lp) and sometimes target-specific success",
+  "general_score_metric": "transferability_rate (attack success rate on unseen models)",
+  "typical_sota_score": "varies widely by attack, model family, and perturbation budget; no single consolidated SOTA (task- and setting-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, focused benchmark for studying adversarial transferability; useful to adversarial-ML researchers but not yet a broadly adopted community standard.",
+  "notes": "Non-LLM benchmark; results are highly sensitive to model architectures, preprocessing, seeds, and Lp budgets; comparisons require careful control of attack parameters and evaluation protocols.",
+  "creators": {
+    "scientists": [
+      "Zhibo Jin",
+      "Jiayu Zhang",
+      "Zhiyu Zhu",
+      "Huaming Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2402.00418",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

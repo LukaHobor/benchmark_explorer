@@ -1,0 +1,38 @@
+{
+  "name": "ECG Noise Robustness Benchmark",
+  "description": "Electrocardiography analysis is widely used in various clinical applications and Deep Learning models for classification tasks are currently in the focus of research. Due to their data-driven character, they bear the potential to handle signal noise efficiently, but its influence on the accuracy of these methods is still unclear. Therefore, we benchmark the influence of four types of noise on the accuracy of a Deep Learning-based method for atrial fibrillation detection in 12-lead electrocardiograms. We use a subset of a publicly available dataset (PTBXL) and use the metadata provided by human experts regarding noise for assigning a signal quality to each electrocardiogram. Furthermore, we compute a quantitative signal-to-noise ratio for each electrocardiogram. We analyze the accuracy of the Deep Learning model with respect to both metrics and observe that the method can robustly identify atrial fibrillation, even in cases signals are labelled by human experts as being noisy on multiple leads. False positive and false negative rates are slightly worse for data being labelled as noisy. Interestingly, data annotated as showing baseline drift noise results in an accuracy very similar to data without. We conclude that the issue of processing noisy electrocardiography data can be addressed successfully by Deep Learning methods that might not need preprocessing as many conventional methods do.",
+  "category": "audio",
+  "domain": "medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (with F1 and AUC commonly reported for class imbalance)",
+  "general_score_metric": "accuracy (primary), with F1/AUC for more detailed assessments",
+  "typical_sota_score": "accuracy 90–98% on clean signals; 80–95% on noisy signals (varies by model and noise type)",
+  "year_of_publish": 2023,
+  "reputation": "A specialized research benchmark derived from PTBXL used in studies of ECG model robustness to noise; useful for robustness analyses but not a widely adopted clinical standard.",
+  "notes": "Uses a subset of PTBXL and expert metadata for noise labels; noise annotations can be subjective. Dataset subset and preprocessing choices can affect results; non-LLM benchmark; demographic and device diversity may be limited.",
+  "creators": {
+    "scientists": [
+      "Theresa Bender",
+      "Philip Gemke",
+      "Ennio Idrobo-Avila",
+      "Henning Dathe",
+      "Dagmar Krefting",
+      "Nicolai Spicher"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2303.13915",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

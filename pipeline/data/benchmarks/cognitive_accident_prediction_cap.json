@@ -1,0 +1,37 @@
+{
+  "name": "Cognitive Accident Prediction (CAP)",
+  "description": "Traffic accident prediction in driving videos aims to provide an early warning of the accident occurrence, and supports the decision making of safe driving systems. Previous works usually concentrate on the spatial-temporal correlation of object-level context, while they do not fit the inherent long-tailed data distribution well and are vulnerable to severe environmental change. In this work, we propose a Cognitive Accident Prediction (CAP) method that explicitly leverages human-inspired cognition of text description on the visual observation and the driver attention to facilitate model training. In particular, the text description provides a dense semantic description guidance for the primary context of the traffic scene, while the driver attention provides a traction to focus on the critical region closely correlating with safe driving. CAP is formulated by an attentive text-to-vision shift fusion module, an attentive scene context transfer module, and the driver attention guided accident prediction module. We leverage the attention mechanism in these modules to explore the core semantic cues for accident prediction. In order to train CAP, we extend an existing self-collected DADA-2000 dataset (with annotated driver attention for each frame) with further factual text descriptions for the visual observations before the accidents. Besides, we construct a new large-scale benchmark consisting of 11,727 in-the-wild accident videos with over 2.19 million frames (named as CAP-DATA) together with labeled fact-effect-reason-introspection description and temporal accident frame label. Based on extensive experiments, the superiority of CAP is validated compared with state-of-the-art approaches. The code, CAP-DATA, and all results will be released in \\url{https://github.com/JWFanggit/LOTVS-CAP}.",
+  "category": "multimodal",
+  "domain": "autonomous driving / traffic safety",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "temporal_localization",
+    "video_captioning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC / Average Precision (AP) and time-to-accident measures",
+  "general_score_metric": "AUC",
+  "year_of_publish": 2022,
+  "reputation": "A significant multimodal benchmark in the traffic-accident prediction community, noted for its scale and incorporation of human-like textual descriptions and attention data.",
+  "notes": "Non-LLM, multimodal benchmark; dataset exhibits long-tailed class imbalance and potential label noise in temporal annotations; relatively large but domain-specific, so generalization outside driving scenarios may be limited.",
+  "creators": {
+    "scientists": [
+      "Jianwu Fang",
+      "Lei-Lei Li",
+      "Kuan Yang",
+      "Zhedong Zheng",
+      "Jianru Xue",
+      "Tat-Seng Chua"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2212.09381",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

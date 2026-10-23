@@ -1,0 +1,35 @@
+{
+  "name": "Retinal Blood Vessel Segmentation Benchmark (FIVES)",
+  "description": "Retinal blood vessel segmentation can extract clinically relevant information from fundus images. As manual tracing is cumbersome, algorithms based on Convolution Neural Networks have been developed. Such studies have used small publicly available datasets for training and measuring performance, running the risk of overfitting. Here, we provide a rigorous benchmark for various architectural and training choices commonly used in the literature on the largest dataset published to date. We train and evaluate five published models on the publicly available FIVES fundus image dataset, which exceeds previous ones in size and quality and which contains also images from common ophthalmological conditions (diabetic retinopathy, age-related macular degeneration, glaucoma). We compare the performance of different model architectures across different loss functions, levels of image qualitiy and ophthalmological conditions and assess their ability to perform well in the face of disease-induced domain shifts. Given sufficient training data, basic architectures such as U-Net perform just as well as more advanced ones, and transfer across disease-induced domain shifts typically works well for most architectures. However, we find that image quality is a key factor determining segmentation outcomes. When optimizing for segmentation performance, investing into a well curated dataset to train a standard architecture yields better results than tuning a sophisticated architecture on a smaller dataset or one with lower image quality. We distilled the utility of architectural advances in terms of their clinical relevance therefore providing practical guidance for model choices depending on the circumstances of the clinical setting",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (Dice coefficient) / IoU",
+  "general_score_metric": "F1 (Dice coefficient)",
+  "typical_sota_score": "80–92%",
+  "year_of_publish": 2024,
+  "reputation": "FIVES is a recent, large, well-curated retinal vessel dataset that is gaining adoption in the medical imaging community as a rigorous benchmark for vessel segmentation.",
+  "notes": "Medical imaging benchmark (non-LLM). Large and higher-quality than previous retinal datasets but susceptible to image-quality variation and disease-induced domain shifts; architectural differences produce modest gains when sufficient data available.",
+  "creators": {
+    "scientists": [
+      "Jeremiah Fadugba",
+      "Patrick Köhler",
+      "Lisa Koch",
+      "Petru Manescu",
+      "Philipp Berens"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.14994",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

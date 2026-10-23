@@ -1,0 +1,37 @@
+{
+  "name": "Pathology SSL Benchmark",
+  "description": "Computational pathology can lead to saving human lives, but models are annotation hungry and pathology images are notoriously expensive to annotate. Self-supervised learning has shown to be an effective method for utilizing unlabeled data, and its application to pathology could greatly benefit its downstream tasks. Yet, there are no principled studies that compare SSL methods and discuss how to adapt them for pathology. To address this need, we execute the largest-scale study of SSL pre-training on pathology image data, to date. Our study is conducted using 4 representative SSL methods on diverse downstream tasks. We establish that large-scale domain-aligned pre-training in pathology consistently out-performs ImageNet pre-training in standard SSL settings such as linear and fine-tuning evaluations, as well as in low-label regimes. Moreover, we propose a set of domain-specific techniques that we experimentally show leads to a performance boost. Lastly, for the first time, we apply SSL to the challenging task of nuclei instance segmentation and show large and consistent performance improvements under diverse settings.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "segmentation",
+    "self_supervised_representation_learning",
+    "transfer_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific metrics (classification: accuracy/AUC; segmentation: Dice/F1 or IoU)",
+  "general_score_metric": "task-specific (accuracy for classification; Dice/F1 or IoU for segmentation)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded within computational pathology research for being a large-scale, domain-aligned SSL evaluation suite; moderately adopted in the pathology ML community.",
+  "notes": "Domain-specific medical imaging benchmark (non-LLM). Performance and metrics vary by downstream task; requires domain expertise to evaluate and interpret. Data may have heterogeneous staining/scanners impacting transfer.",
+  "creators": {
+    "scientists": [
+      "Mingu Kang",
+      "Heon Song",
+      "Seonwook Park",
+      "Donggeun Yoo",
+      "Sérgio Pereira"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2212.04690",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

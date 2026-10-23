@@ -1,0 +1,35 @@
+{
+  "name": "Haze Visibility Enhancement Benchmark",
+  "description": "This paper provides a comprehensive survey of methods dealing with visibility\nenhancement of images taken in hazy or foggy scenes. The survey begins with\ndiscussing the optical models of atmospheric scattering media and image\nformation. This is followed by a survey of existing methods, which are grouped\nto multiple image methods, polarizing filters based methods, methods with known\ndepth, and single-image methods. We also provide a benchmark of a number of\nwell known single-image methods, based on a recent dataset provided by Fattal\nand our newly generated scattering media dataset that contains ground truth\nimages for quantitative evaluation. To our knowledge, this is the first\nbenchmark using numerical metrics to evaluate dehazing techniques. This\nbenchmark allows us to objectively compare the results of existing methods and\nto better identify the strengths and limitations of each method.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "image_enhancement"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "PSNR/SSIM (numerical image quality metrics)",
+  "general_score_metric": "PSNR (with SSIM as a secondary metric)",
+  "typical_sota_score": "20–35 dB (PSNR)",
+  "year_of_publish": 2016,
+  "reputation": "One of the earlier and widely cited objective benchmarks for single-image dehazing; commonly used as a baseline comparison in the dehazing literature.",
+  "notes": "Non-LLM benchmark; dataset sizes are modest and mixes synthetic and real scenes, so domain gap may exist. Numerical metrics (PSNR/SSIM) may not fully capture perceptual quality; some methods may overfit dataset-specific priors.",
+  "creators": {
+    "scientists": [
+      "Yu Li",
+      "ShaoDi You",
+      "Michael S. Brown",
+      "Robby T. Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1607.06235",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

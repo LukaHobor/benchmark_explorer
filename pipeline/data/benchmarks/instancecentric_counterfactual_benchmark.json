@@ -1,0 +1,37 @@
+{
+  "name": "Instance-Centric Counterfactual Benchmark",
+  "description": "This study investigates the impact of machine learning models on the generation of counterfactual explanations by conducting a benchmark evaluation over three different types of models: a decision tree (fully transparent, interpretable, white-box model), a random forest (semi-interpretable, grey-box model), and a neural network (fully opaque, black-box model). We tested the counterfactual generation process using four algorithms (DiCE, WatcherCF, prototype, and GrowingSpheresCF) in the literature in 25 different datasets. Our findings indicate that: (1) Different machine learning models have little impact on the generation of counterfactual explanations; (2) Counterfactual algorithms based uniquely on proximity loss functions are not actionable and will not provide meaningful explanations; (3) One cannot have meaningful evaluation results without guaranteeing plausibility in the counterfactual generation. Algorithms that do not consider plausibility in their internal mechanisms will lead to biased and unreliable conclusions if evaluated with the current state-of-the-art metrics; (4) A counterfactual inspection analysis is strongly recommended to ensure a robust examination of counterfactual explanations and the potential identification of biases.",
+  "category": "mixed",
+  "domain": "explainable AI / interpretability",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "counterfactual_generation",
+    "explainability",
+    "model_interpretation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "quantitative metrics including proximity, sparsity, plausibility, and validity (often combined) plus qualitative/inspection analyses",
+  "general_score_metric": "no single metric — typically a composite reporting plausibility and proximity alongside validity/sparsity",
+  "year_of_publish": 2022,
+  "reputation": "Relevant to the XAI community as an empirical study highlighting weaknesses of existing counterfactual metrics; cited in interpretability research but not a universal benchmarking standard.",
+  "notes": "Non-LLM benchmark spanning many datasets and algorithms; demonstrates that proximity-only metrics are insufficient and that plausibility constraints are critical; care needed when comparing methods due to metric choice and dataset heterogeneity.",
+  "creators": {
+    "scientists": [
+      "Catarina Moreira",
+      "Yu-Liang Chou",
+      "Chihcheng Hsieh",
+      "Chun Ouyang",
+      "Joaquim Jorge",
+      "João Madeiras Pereira"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2203.02399",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

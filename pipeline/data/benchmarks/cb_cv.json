@@ -1,0 +1,28 @@
+{
+  "name": "CB-CV",
+  "description": "Out-of-distribution (OOD) detection is crucial for applying machine learning systems in open-world scenarios. However, existing multimodal video OOD benchmarks typically construct in-distribution (ID) and OOD splits via sequential class partitioning, which does not explicitly account for feature-space relationships between categories. This limitation may inadvertently introduce semantic ambiguity when similar classes are assigned to opposite sides of the split. In this paper, we propose Cluster-Based Cross-Validation (CB-CV), an alternative evaluation protocol that organizes classes by feature-space similarity. In CB-CV, class prototypes are derived from a dual-stream backbone, clustered based on inter-class distances, and evaluated via leave-one-cluster-out cross-validation, where each cluster serves as the ID set and the remaining clusters form the OOD set. Across 1,701 pipeline configurations spanning three datasets, CB-CV increases the mean ID–OOD distance by 18.5% compared to sequential partitioning (p < 0.001). This distance is moderately predictive of detection performance overall (r = −0.600 with False Positive Rate at 95% True Positive Rate (FPR95)), but the strength of the relationship varies widely across methods (FPR95 correlations ranging from − 0.73 to − 0.25), indicating method-dependent sensitivity to split structure. By reporting results across multiple folds, CB-CV makes this sensitivity explicit and offers an additional characterization of robustness under structured distributional shifts. Together, these results highlight the importance of structure-aware evaluation and position CB-CV as a complementary benchmark for assessing the robustness of multimodal video OOD detection under alternative distributional structures.",
+  "category": "multimodal",
+  "domain": "video ood detection",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2026,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1145/3805622.3810581",
+  "provenance": {
+    "added_by": "scan-2026q2",
+    "added_at": "2026-08-19",
+    "origin": "cynefin@d486fafa9",
+    "gated": false,
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

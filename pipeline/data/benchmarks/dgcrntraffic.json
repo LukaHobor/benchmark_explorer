@@ -1,0 +1,37 @@
+{
+  "name": "DGCRN-Traffic",
+  "description": "Traffic prediction is the cornerstone of intelligent transportation system. Accurate traffic forecasting is essential for the applications of smart cities, i.e., intelligent traffic management and urban planning. Although various methods are proposed for spatio-temporal modeling, they ignore the dynamic characteristics of correlations among locations on road network. Meanwhile, most Recurrent Neural Network based works are not efficient enough due to their recurrent operations. Additionally, there is a severe lack of fair comparison among different methods on the same datasets. To address the above challenges, in this article, we propose a novel traffic prediction framework, named Dynamic Graph Convolutional Recurrent Network (DGCRN). In DGCRN, hyper-networks are designed to leverage and extract dynamic characteristics from node attributes, while the parameters of dynamic filters are generated at each time step. We filter the node embeddings and then use them to generate dynamic graph, which is integrated with pre-defined static graph. As far as we know, we are first to employ a generation method to model fine topology of dynamic graph at each time step. Furthermore, to enhance efficiency and performance, we employ a training strategy for DGCRN by restricting the iteration number of decoder during forward and backward propagation. Finally, a reproducible standardized benchmark and a brand new representative traffic dataset are opened for fair comparison and further research. Extensive experiments on three datasets demonstrate that our model outperforms 15 baselines consistently. Source codes are available at https://github.com/tsinghua-fib-lab/Traffic-Benchmark .",
+  "category": "mixed",
+  "domain": "traffic forecasting / intelligent transportation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression",
+    "spatio-temporal_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "regression metrics such as MAE, RMSE and sometimes MAPE (reported as primary evaluation for traffic forecasting)",
+  "general_score_metric": "mean Absolute Error (MAE) and Root Mean Square Error (RMSE)",
+  "year_of_publish": 2022,
+  "reputation": "473 citations",
+  "notes": "Provides a reproducible benchmark and a new traffic dataset for fair comparison; non-LLM benchmark. Results are dataset- and horizon-dependent; models can overfit to provided graph priors and preprocessing. Comparison across papers requires care because metrics/horizons vary.",
+  "creators": {
+    "scientists": [
+      "Fuxian Li",
+      "Jie Feng",
+      "Huan Yan",
+      "Guangyin Jin",
+      "Fan Yang",
+      "Funing Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1145/3532611",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

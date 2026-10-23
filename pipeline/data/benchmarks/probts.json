@@ -1,0 +1,37 @@
+{
+  "name": "ProbTS",
+  "description": "Delivering precise point and distributional forecasts across a spectrum of prediction horizons represents a significant and enduring challenge in the application of time-series forecasting within various industries. Prior research on developing deep learning models for time-series forecasting has often concentrated on isolated aspects, such as long-term point forecasting or short-term probabilistic estimations. This narrow focus may result in skewed methodological choices and hinder the adaptability of these models to uncharted scenarios. While there is a rising trend in developing universal forecasting models, a thorough understanding of their advantages and drawbacks, especially regarding essential forecasting needs like point and distributional forecasts across short and long horizons, is still lacking. In this paper, we present ProbTS, a benchmark tool designed as a unified platform to evaluate these fundamental forecasting needs and to conduct a rigorous comparative analysis of numerous cutting-edge studies from recent years. We dissect the distinctive data characteristics arising from disparate forecasting requirements and elucidate how these characteristics can skew methodological preferences in typical research trajectories, which often fail to fully accommodate essential forecasting needs. Building on this, we examine the latest models for universal time-series forecasting and discover that our analyses of methodological strengths and weaknesses are also applicable to these universal models. Finally, we outline the limitations inherent in current research and underscore several avenues for future exploration.",
+  "category": "mixed",
+  "domain": "time-series forecasting / forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "probabilistic_forecasting",
+    "point_forecasting"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "distributional scores (CRPS, quantile loss / pinball loss) and point-error metrics (MAE / MASE) across multiple horizons",
+  "general_score_metric": "CRPS (Continuous Ranked Probability Score) for distributional forecasts; MAE/MASE for point forecasts",
+  "year_of_publish": 2023,
+  "reputation": "A recent research benchmark for unified probabilistic and point time-series forecasting with growing interest among forecasting researchers but not yet ubiquitous.",
+  "notes": "Non-LLM benchmark focused on time series; evaluation is horizon- and scale-sensitive, heterogeneous datasets can make cross-dataset comparisons difficult, and no single scalar metric fully captures performance across point and distributional goals.",
+  "creators": {
+    "scientists": [
+      "Jiawen Zhang",
+      "Xumeng Wen",
+      "Zhenwei Zhang",
+      "Shun Zheng",
+      "Jia Li",
+      "Jiang Bian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2310.07446",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

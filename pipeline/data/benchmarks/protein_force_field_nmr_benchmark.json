@@ -1,0 +1,35 @@
+{
+  "name": "Protein Force Field NMR Benchmark",
+  "description": "Recent hardware and software advances have enabled simulation studies of protein systems on biophysically-relevant timescales, often revealing the need for improved force fields. Although early force field development was limited by the lack of direct comparisons between simulation and experiment, recent work from several labs has demonstrated direct calculation of NMR observables from protein simulations. Here we quantitatively evaluate recent molecular dynamics force fields against a suite of 524 chemical shift and J coupling ((3)JH(N)H(α), (3)JH(N)C(β), (3)JH(α)C', (3)JH(N)C', and (3)JH(α)N) measurements on dipeptides, tripeptides, tetra-alanine, and ubiquitin. Of the force fields examined (ff96, ff99, ff03, ff03*, ff03w, ff99sb*, ff99sb-ildn, ff99sb-ildn-phi, ff99sb-ildn-nmr, CHARMM27, OPLS-AA), two force fields (ff99sb-ildn-phi, ff99sb-ildn-nmr) combining recent side chain and backbone torsion modifications achieve high accuracy in our benchmark. For the two optimal force fields, the calculation error is comparable to the uncertainty in the experimental comparison. This observation suggests that extracting additional force field improvements from NMR data may require increased accuracy in J coupling and chemical shift prediction. To further investigate the limitations of current force fields, we also consider conformational populations of dipeptides, which were recently estimated using vibrational spectroscopy.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "simulation_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSE / RMSD and comparison of calculated vs experimental NMR observables (chemical shifts and J couplings)",
+  "general_score_metric": "RMSE (error between simulated and experimental NMR observables)",
+  "typical_sota_score": "errors comparable to experimental uncertainty (i.e., within experimental error limits)",
+  "year_of_publish": 2012,
+  "reputation": "378 citations",
+  "notes": "Non-LLM, domain-specific benchmark requiring molecular dynamics simulations and expert setup; relatively small, curated experimental dataset; results sensitive to simulation protocol and parameterization choices.",
+  "creators": {
+    "scientists": [
+      "Kyle A. Beauchamp",
+      "Yu‐Shan Lin",
+      "Rhiju Das",
+      "Vijay S. Pande"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1021/ct2007814",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

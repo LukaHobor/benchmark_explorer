@@ -1,0 +1,37 @@
+{
+  "name": "BELO",
+  "description": "Purpose Current benchmarks evaluating large language models (LLMs) in ophthalmology are narrow and disproportionately prioritize accuracy. We introduce BEnchmarking LLMs for Ophthalmology (BELO), a standardized evaluation benchmark developed through multiple rounds of expert checking by 13 ophthalmologists. BEnchmarking LLMs for Ophthalmology assesses ophthalmology-related knowledge and reasoning quality. Subjects This study did not involve human participation. Design Cross-sectional study. Methods Using keyword matching and a fine-tuned PubMed Bidirectional Encoder Representations from Transformers model, we curated ophthalmology-specific multiple-choice questions (MCQs) from diverse medical data sets (Basic and Clinical Science Course [BCSC], Multi-Subject Multi-Choice Dataset for Medical domain [MedMCQA], Medical Question Answering [MedQA], Biomedical Semantic Indexing and Question Answering [BioASQ], and PubMed Question Answering [PubMedQA]). The data set underwent multiple rounds of expert checking. Duplicate and substandard questions were systematically removed. Ten ophthalmologists refined the explanations of each MCQ's correct answer. This was further adjudicated by 3 senior ophthalmologists. To illustrate BELO's utility, we evaluated 8 LLMs (OpenAI o1, o3-mini, GPT-5, GPT-4o, DeepSeek-R1, MedGemma-4B, Llama-3-8B, and Gemini 1.5 Pro). Main Outcome Measures The 8 LLMs were evaluated in terms using accuracy, macro-F1, and 5 text-generation metrics (Recall-Oriented Understudy for Gisting Evaluation, BERTScore, BARTScore, Metric for Evaluation of Translation with Explicit Ordering, and AlignScore). In a further evaluation involving human experts, 2 ophthalmologists qualitatively reviewed 50 randomly selected outputs for accuracy, comprehensiveness, and completeness. Results BEnchmarking LLMs for Ophthalmology consists of 900 high-quality, expert-reviewed questions aggregated from 5 sources: BCSC (260), BioASQ (10), MedMCQA (572), MedQA (40), and PubMedQA (18). To demonstrate BELO's utility, we conducted a series of benchmarking exercises. In the quantitative evaluation, GPT-5 achieved the highest accuracy (0.90, 95% confidence interval [CI]: 0.89–0.92) and macro-F1 score (0.91, 95% CI: 0.89–0.93). On the other hand, the models' performance on text-generation metrics varied and were generally suboptimal, with scores ranging from 20.4 to 72.0 (out of 100, excluding the BARTScore metric), indicating room for improvement in clinical reasoning. In expert evaluations, GPT-4o was rated highest for accuracy and readability, while Gemini 1.5 Pro scored highest for completeness. A public leaderboard has been established to promote transparent evaluation and reporting. Importantly, the BELO data set will remain a hold-out, evaluation-only benchmark to ensure fair and reproducible comparisons of future models. Conclusions BEnchmarking LLMs for Ophthalmology provides a robust clinically relevant benchmark for evaluating both the accuracy and reasoning capabilities of current and emerging LLMs in ophthalmology. Future BELO benchmarking efforts will expand to include vision-based question answering and clinical scenario management tasks. Financial Disclosure(s) The authors have no proprietary or commercial interest in any materials discussed in this article.",
+  "category": "text",
+  "domain": "medical (ophthalmology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "open_ended",
+    "explanation_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy, macro-F1, ROUGE, BERTScore, BARTScore, METEOR, AlignScore, and human_eval (expert qualitative review)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈90% (top models; GPT-5 reported 0.90 accuracy) — top-range ~85–90%",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific benchmark introduced and curated by ophthalmologists; gaining visibility in clinical-AI evaluation but not yet a broadly adopted community standard.",
+  "notes": "Relatively small (900 items) and text-only, risk of pretraining contamination from source corpora despite hold-out policy, focused on MCQs so does not cover vision-based clinical tasks; expert-reviewed which improves quality but may introduce selection bias.",
+  "creators": {
+    "scientists": [
+      "Sahana Srinivasan",
+      "Xuguang Ai",
+      "T. Lo",
+      "Aidan Gilson",
+      "Minjie Zou",
+      "Ke Zou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Semantic Segmentation Robustness Benchmark",
+  "description": "When designing a semantic segmentation module for a practical application, such as autonomous driving, it is crucial to understand the robustness of the module with respect to a wide range of image corruptions. While there are recent robustness studies for full-image classification, we are the first to present an exhaustive study for semantic segmentation, based on the state-of-the-art model DeepLabv3+. To increase the realism of our study, we utilize almost 400,000 images generated from Cityscapes, PASCAL VOC 2012, and ADE20K. Based on the benchmark study, we gain several new insights. Firstly, contrary to full-image classification, model robustness increases with model performance, in most cases. Secondly, some architecture properties affect robustness significantly, such as a Dense Prediction Cell, which was designed to maximize performance on clean data only.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean Intersection over Union (mIoU) across corruption types and severities",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "varies by dataset and corruption (roughly 40–85% mIoU across Cityscapes/PASCAL/ADE20K on clean and corrupted inputs)",
+  "year_of_publish": 2019,
+  "reputation": "A well-cited early and influential study on robustness of semantic segmentation models to image corruptions; moderately adopted in robustness research.",
+  "notes": "Non-LLM benchmark focused on dense prediction; large-scale synthetic corruptions (≈400k images) increase realism. Results vary substantially by dataset and corruption type; not saturated. Low contamination risk but comparisons depend on dataset mix and corruption protocols.",
+  "creators": {
+    "scientists": [
+      "Christoph Kamann",
+      "Carsten Rother"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1908.05005",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

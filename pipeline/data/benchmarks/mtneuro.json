@@ -1,0 +1,44 @@
+{
+  "name": "MTNeuro",
+  "description": "There are multiple scales of abstraction from which we can describe the same image, depending on whether we are focusing on fine-grained details or a more global attribute of the image. In brain mapping, learning to automatically parse images to build representations of both small-scale features (e.g., the presence of cells or blood vessels) and global properties of an image (e.g., which brain region the image comes from) is a crucial and open challenge. However, most existing datasets and benchmarks for neuroanatomy consider only a single downstream task at a time. To bridge this gap, we introduce a new dataset, annotations, and multiple downstream tasks that provide diverse ways to readout information about brain structure and architecture from the same image. Our multi-task neuroimaging benchmark (MTNeuro) is built on volumetric, micrometer-resolution X-ray microtomography images spanning a large thalamocortical section of mouse brain, encompassing multiple cortical and subcortical regions. We generated a number of different prediction challenges and evaluated several supervised and self-supervised models for brain-region prediction and pixel-level semantic segmentation of microstructures. Our experiments not only highlight the rich heterogeneity of this dataset, but also provide insights into how self-supervised approaches can be used to learn representations that capture multiple attributes of a single image and perform well on a variety of downstream tasks. Datasets, code, and pre-trained baseline models are provided at: https://mtneuro.github.io/ .",
+  "category": "vision",
+  "domain": "neuroscience / neuroimaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (classification); mean_IoU / Dice (segmentation)",
+  "general_score_metric": "mean_IoU (segmentation) and accuracy (classification)",
+  "year_of_publish": 2023,
+  "reputation": "A niche, domain-specific neuroimaging benchmark with accompanying baselines, used mainly by the neuroimaging and computational neuroscience community.",
+  "notes": "Domain-specific microscopy dataset (non-LLM); may have class imbalance and limited community-wide adoption; requires specialized preprocessing and expertise to work with volumetric microtomography data.",
+  "creators": {
+    "scientists": [
+      "Jorge Quesada",
+      "Lakshmi Sathidevi",
+      "Ran Liu",
+      "Nauman Ahad",
+      "Joy M. Jackson",
+      "Mehdi Azabou",
+      "Jingyun Xiao",
+      "Christopher Liding",
+      "Matthew Jin",
+      "Carolina Urzay",
+      "William Gray-Roncal",
+      "Erik C. Johnson",
+      "Eva L. Dyer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2301.00345",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

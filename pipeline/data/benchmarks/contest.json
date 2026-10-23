@@ -1,0 +1,32 @@
+{
+  "name": "ConTest",
+  "description": "We introduce CONTEST, a benchmark for NLP-based unit test completion, the task of predicting a test’s assert statements given its setup and focal method, i.e. the method to be tested. ConTest is large-scale (with 365k datapoints). Besides the test code and tested code, it also features context code called by either. We found context to be crucial for accurately predicting assertions. We also introduce baselines based on transformer encoder-decoders, and study the effects of including syntactic information and context. Overall, our models achieve a BLEU score of 38.2, while only generating unparsable code in 1.92% of cases.",
+  "category": "code",
+  "domain": "software engineering / program synthesis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "sequence_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU (primary reported), exact_match and syntactic/compilation rate as auxiliary metrics",
+  "general_score_metric": "BLEU",
+  "typical_sota_score": "≈38% (BLEU reported by baseline models)",
+  "reputation": "A large (365k) dataset for unit-test assertion generation that has been used in program synthesis and code generation research; considered a valuable resource for code-model evaluation.",
+  "notes": "Large-scale code dataset derived from public repositories — risk of pretraining contamination; includes metrics for unparsable/generated-code rate; targeted at code models rather than text-only LLMs.",
+  "creators": {
+    "scientists": [
+      "Johannes Villmow",
+      "Jonas Depoix",
+      "Adrian Ulges"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

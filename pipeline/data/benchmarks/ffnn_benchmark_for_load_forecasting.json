@@ -1,0 +1,32 @@
+{
+  "name": "FFNN benchmark for load forecasting",
+  "description": "For load forecasting, numerous machine learning (ML) approaches have been published. Besides fully connected feedforward neural networks (FFNNs), also called multilayer perceptron, more advanced ML approaches like deep, recurrent or convolutional neural networks or ensemble methods have been applied. However, evaluating the added benefit by novel approaches is difficult. Statistical or rule-based methods constitute a too low benchmark. FFNNs need extensive tuning due to their manifold design choices. To address this issue, a structured, comprehensible five-step FFNN model creation methodology is presented, which constitutes of initial model creation, internal parameter selection, feature engineering, architecture tuning and final model creation. The methodology is then applied to forecast real world heat load data of a hospital in Germany. The forecast constitutes of 192 values (upcoming 48 h in 15 min resolution) and is composed of a multi-model univariate forecasting strategy, with three test models developed at first. As a result, the test models show great similarities which simplifies creation of the remaining models. A performance increase of up to 18% between initial and final models points out the importance of model tuning. As a conclusion, comprehensible model tuning is vital to use FFNN models as benchmark. The effort needed can be reduced by the experience gained through repeated application of the presented methodology.",
+  "category": "mixed",
+  "domain": "time series forecasting / energy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE (common forecasting error metrics)",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2023,
+  "reputation": "An academic, domain-specific benchmark (energy/heat-load forecasting) used in the power/energy forecasting community as a practical baseline but with limited widespread adoption.",
+  "notes": "Non-LLM benchmark; relatively small, domain-specific dataset (hospital heat load) with multi-step (192-step) forecasts; results sensitive to feature engineering and heavy hyperparameter tuning; potential overfitting risk if not cross-validated.",
+  "creators": {
+    "scientists": [
+      "Malte Stienecker",
+      "Anne Hagemeier"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.3390/en16042026",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

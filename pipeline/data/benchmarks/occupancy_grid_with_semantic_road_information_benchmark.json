@@ -1,0 +1,37 @@
+{
+  "name": "Occupancy Grid with Semantic Road Information Benchmark",
+  "description": "In the last decades, autonomous vehicles (AVs) have attracted the interest of industries and researchers to develop and improve the performance of advanced driver assistance systems (ADAS). To this aim, many works focus on extracting semantic information in urban scenarios to increase the autonomy of the vehicles toward safe and more efficient self-driving navigation. Following this research direction, classical grid representations of the world can be extended to semantic occupancy grids, that include richer information by assigning semantic labels to the grid cells. However, the literature lacks a comparison between existing approaches and a study on how semantic mapping may affect the autonomous navigation performance. In our investigation, we consider four state-of-the-art methods and compare the computation times along with the navigation performance, by highlighting the pros and cons of each strategy.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "occupancy_prediction",
+    "semantic_segmentation",
+    "scene_understanding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "IoU (Intersection-over-Union) and mAP (mean Average Precision) for semantic/presence prediction; collision/trajectory metrics for downstream navigation",
+  "general_score_metric": "IoU (primary) and mAP",
+  "year_of_publish": 2024,
+  "reputation": "A recent academic dataset/paper proposing multimodal occupancy+semantic evaluation; currently of interest to autonomous driving researchers but not yet widely adopted in industry benchmarks.",
+  "notes": "Dataset is a non-LLM, perception/navigation benchmark; likely limited in scale and subject to simulation-to-real and sensor-setup differences. Results depend on sensor modalities and downstream planning evaluation; not directly comparable to language-model benchmarks.",
+  "creators": {
+    "scientists": [
+      "Simone Felicioni",
+      "Elena Burani",
+      "Mirko Leomanni",
+      "Mario Luca Fravolini",
+      "Paolo Valigi",
+      "Gabriele Costante"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1109/case59546.2024.10711541",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

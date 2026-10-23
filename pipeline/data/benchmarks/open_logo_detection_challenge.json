@@ -1,0 +1,34 @@
+{
+  "name": "Open Logo Detection Challenge",
+  "description": "Existing logo detection benchmarks consider artificial deployment scenarios\nby assuming that large training data with fine-grained bounding box annotations\nfor each class are available for model training. Such assumptions are often\ninvalid in realistic logo detection scenarios where new logo classes come\nprogressively and require to be detected with little or none budget for\nexhaustively labelling fine-grained training data for every new class. Existing\nbenchmarks are thus unable to evaluate the true performance of a logo detection\nmethod in realistic and open deployments. In this work, we introduce a more\nrealistic and challenging logo detection setting, called Open Logo Detection.\nSpecifically, this new setting assumes fine-grained labelling only on a small\nproportion of logo classes whilst the remaining classes have no labelled\ntraining data to simulate the open deployment. We further create an open logo\ndetection benchmark, called OpenLogo,to promote the investigation of this new\nchallenge. OpenLogo contains 27,083 images from 352 logo classes, built by\naggregating/refining 7 existing datasets and establishing an open logo\ndetection evaluation protocol. To address this challenge, we propose a Context\nAdversarial Learning (CAL) approach to synthesising training data with coherent\nlogo instance appearance against diverse background context for enabling more\neffective optimisation of contemporary deep learning detection models.\nExperiments show the performance advantage of CAL over existing\nstate-of-the-art alternative methods on the more realistic and challenging\nOpenLogo benchmark.",
+  "category": "vision",
+  "domain": "vision (object detection)",
+  "benchmark_type": "competition",
+  "task_types": [
+    "object_detection",
+    "open_set_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP)",
+  "general_score_metric": "mAP (mean Average Precision)",
+  "year_of_publish": 2018,
+  "reputation": "Niche but influential within the logo-detection research community; moderately adopted for open-set logo evaluation.",
+  "notes": "Relatively small benchmark (27k images, 352 classes) focused on open-set/logo-class incremental scenarios; includes synthetic data generation (CAL) which may introduce domain artifacts; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Hang Su",
+      "Xiatian Zhu",
+      "Shaogang Gong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1807.01964",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

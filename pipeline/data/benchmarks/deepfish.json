@@ -1,0 +1,40 @@
+{
+  "name": "DeepFish",
+  "description": "Visual analysis of complex fish habitats is an important step towards sustainable fisheries for human consumption and environmental protection. Deep Learning methods have shown great promise for scene analysis when trained on large-scale datasets. However, current datasets for fish analysis tend to focus on the classification task within constrained, plain environments which do not capture the complexity of underwater fish habitats. To address this limitation, we present DeepFish as a benchmark suite with a large-scale dataset to train and test methods for several computer vision tasks. The dataset consists of approximately 40 thousand images collected underwater from 20 habitats in the marine-environments of tropical Australia. The dataset originally contained only classification labels. Thus, we collected point-level and segmentation labels to have a more comprehensive fish analysis benchmark. These labels enable models to learn to automatically monitor fish count, identify their locations, and estimate their sizes. Our experiments provide an in-depth analysis of the dataset characteristics, and the performance evaluation of several state-of-the-art approaches based on our benchmark. Although models pre-trained on ImageNet have successfully performed on this benchmark, there is still room for improvement. Therefore, this benchmark serves as a testbed to motivate further development in this challenging domain of underwater computer vision.",
+  "category": "vision",
+  "domain": "marine science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "detection",
+    "segmentation",
+    "counting",
+    "size_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / mIoU / mAP (and counting error / MAE for counts)",
+  "general_score_metric": "accuracy (classification); mIoU (segmentation); mAP (detection)",
+  "year_of_publish": 2020,
+  "reputation": "150 citations",
+  "notes": "Non-LLM computer vision benchmark (~40k underwater images). Multi-task labels (classification, point/locational, segmentation) with domain-specific imagery and class imbalance risk. Models pretrained on ImageNet have been used; some tasks (segmentation/detection/counting) remain challenging.",
+  "creators": {
+    "scientists": [
+      "Alzayat Saleh",
+      "Issam H. Laradji",
+      "Dmitry A. Konovalov",
+      "Michael Bradley",
+      "David Vazquez",
+      "Marcus Sheaves"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1038/s41598-020-71639-x",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

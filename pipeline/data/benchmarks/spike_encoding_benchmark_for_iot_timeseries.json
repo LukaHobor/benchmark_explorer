@@ -1,0 +1,35 @@
+{
+  "name": "Spike Encoding Benchmark for IoT Time-Series",
+  "description": "Spiking Neural Networks (SNNs), known for their potential to enable low energy consumption and computational cost, can bring significant advantages to the realm of embedded machine learning for edge applications. However, input coming from standard digital sensors must be encoded into spike trains before it can be elaborated with neuromorphic computing technologies. We present here a detailed comparison of available spike encoding techniques for the translation of time-varying signals into the event-based signal domain, tested on two different datasets both acquired through commercially available digital devices: the Free Spoken Digit dataset (FSD), consisting of 8-kHz audio files, and the WISDM dataset, composed of 20-Hz recordings of human activity through mobile and wearable inertial sensors. We propose a complete pipeline to benchmark these encoding techniques by performing time-dependent signal classification through a Spiking Convolutional Neural Network (sCNN), including a signal preprocessing step consisting of a bank of filters inspired by the human cochlea, feature extraction by production of a sonogram, transfer learning via an equivalent ANN, and model compression schemes aimed at resource optimization. The resulting performance comparison and analysis provides a powerful practical tool, empowering developers to select the most suitable coding method based on the type of data and the desired processing algorithms, and further expands the applicability of neuromorphic computational paradigms to embedded sensor systems widely employed in the IoT and industrial domains.",
+  "category": "audio",
+  "domain": "neuromorphic computing / IoT",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_classification",
+    "signal_encoding_evaluation",
+    "model_comparison"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (classification accuracy) and occasionally F1 for class-imbalanced tasks",
+  "general_score_metric": "classification accuracy",
+  "reputation": "A specialized benchmark within the neuromorphic and IoT research communities for comparing spike-encoding methods; moderate recognition among neuromorphic practitioners.",
+  "notes": "Non-LLM benchmark; evaluations depend strongly on preprocessing (filter bank, sonogram) and downstream sCNN architecture. Uses relatively small, domain-specific datasets (FSD, WISDM) so results may not generalize broadly; careful matching of encoding and model hyperparameters is required.",
+  "creators": {
+    "scientists": [
+      "Evelina Forno",
+      "Vittorio Fra",
+      "Riccardo Pignari",
+      "Enrico Macii",
+      "Gianvito Urgese"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

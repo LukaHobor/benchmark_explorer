@@ -1,0 +1,37 @@
+{
+  "name": "BEIR-PL",
+  "description": "The BEIR dataset is a large, heterogeneous benchmark for Information Retrieval (IR) in zero-shot settings, garnering considerable attention within the research community. However, BEIR and analogous datasets are predominantly restricted to the English language. Our objective is to establish extensive large-scale resources for IR in the Polish language, thereby advancing the research in this NLP area. In this work, inspired by mMARCO and Mr.~TyDi datasets, we translated all accessible open IR datasets into Polish, and we introduced the BEIR-PL benchmark -- a new benchmark which comprises 13 datasets, facilitating further development, training and evaluation of modern Polish language models for IR tasks. We executed an evaluation and comparison of numerous IR models on the newly introduced BEIR-PL benchmark. Furthermore, we publish pre-trained open IR models for Polish language,d marking a pioneering development in this field. Additionally, the evaluation revealed that BM25 achieved significantly lower scores for Polish than for English, which can be attributed to high inflection and intricate morphological structure of the Polish language. Finally, we trained various re-ranking models to enhance the BM25 retrieval, and we compared their performance to identify their unique characteristic features. To ensure accurate model comparisons, it is necessary to scrutinise individual results rather than to average across the entire benchmark. Thus, we thoroughly analysed the outcomes of IR models in relation to each individual data subset encompassed by the BEIR benchmark. The benchmark data is available at URL {\\bf https://huggingface.co/clarin-knext}.",
+  "category": "text",
+  "domain": "information retrieval (Polish)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "information_retrieval",
+    "document_retrieval",
+    "reranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "nDCG@10 / MAP / Recall@k",
+  "general_score_metric": "nDCG@10",
+  "typical_sota_score": "20–60%",
+  "year_of_publish": 2023,
+  "reputation": "A useful, growing resource for Polish IR research that adapts the BEIR suite to the Polish language and has uptake among regional NLP/IR groups.",
+  "notes": "Contains translated IR datasets—translation quality may introduce noise. High morphological complexity of Polish can reduce baseline BM25 performance; results vary substantially by subset, so per-dataset inspection is recommended.",
+  "creators": {
+    "scientists": [
+      "Konrad Wojtasik",
+      "Vadim Shishkin",
+      "Kacper Wołowiec",
+      "Arkadiusz Janz",
+      "Maciej Piasecki"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2305.19840",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

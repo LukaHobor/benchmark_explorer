@@ -1,0 +1,36 @@
+{
+  "name": "Language-based Image Colorization",
+  "description": "Image colorization aims to bring colors back to grayscale images. Automatic image colorization methods, which requires no additional guidance, struggle to generate high-quality images due to color ambiguity, and provides limited user controllability. Thanks to the emergency of cross-modality datasets and models, language-based colorization methods are proposed to fully utilize the efficiency and flexibly of text descriptions to guide colorization. In view of the lack of a comprehensive review of language-based colorization literature, we conduct a thorough analysis and benchmarking. We first briefly summarize existing automatic colorization methods. Then, we focus on language-based methods and point out their core challenge on cross-modal alignment. We further divide these methods into two categories: one attempts to train a cross-modality network from scratch, while the other utilizes the pre-trained cross-modality model to establish the textual-visual correspondence. Based on the analyzed limitations of existing language-based methods, we propose a simple yet effective method based on distilled diffusion model. Extensive experiments demonstrate that our simple baseline can produces better results than previous complex methods with 14 times speed up. To the best of our knowledge, this is the first comprehensive review and benchmark on language-based image colorization field, providing meaningful insights for the community. The code is available at https://github.com/lyf1212/Color-Turbo.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_colorization",
+    "conditional_image_generation",
+    "text_to_image"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval (alongside image quality metrics such as FID/LPIPS)",
+  "general_score_metric": "FID / LPIPS (with human evaluation as primary qualitative assessment)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "An emerging subfield with growing interest; this work provides one of the first comprehensive benchmarks for language-guided colorization but community adoption is still limited.",
+  "notes": "Evaluation relies heavily on human studies and perceptual metrics (FID/LPIPS), making comparisons sensitive to evaluation protocol; potential dataset biases and differences in text–image alignment approaches complicate direct metric comparisons; not a pure LLM benchmark (multimodal/diffusion-based).",
+  "creators": {
+    "scientists": [
+      "YiFan Li",
+      "Shuai Yang",
+      "Jiaying Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.14974",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

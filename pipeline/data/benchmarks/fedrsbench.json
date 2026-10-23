@@ -1,0 +1,36 @@
+{
+  "name": "FedRS-Bench",
+  "description": "Remote sensing (RS) images are usually produced at an unprecedented scale, yet they are geographically and institutionally distributed, making centralized model training challenging due to data-sharing restrictions and privacy concerns. Federated learning (FL) offers a solution by enabling collaborative model training across decentralized RS data sources without exposing raw data. However, there lacks a realistic federated dataset and benchmark in RS. Prior works typically rely on manually partitioned single dataset, which fail to capture the heterogeneity and scale of real-world RS data, and often use inconsistent experimental setups, hindering fair comparison. To address this gap, we propose a realistic federated RS dataset, termed FedRS. FedRS consists of eight datasets that cover various sensors and resolutions and builds 135 clients, which is representative of realistic operational scenarios. Data for each client come from the same source, exhibiting authentic federated properties such as skewed label distributions, imbalanced client data volumes, and domain heterogeneity across clients. These characteristics reflect practical challenges in federated RS and support evaluation of FL methods at scale. Based on FedRS, we implement 10 baseline FL algorithms and evaluation metrics to construct the comprehensive FedRS-Bench. The experimental results demonstrate that FL can consistently improve model performance over training on isolated data silos, while revealing performance trade-offs of different methods under varying client heterogeneity and availability conditions. We hope FedRS-Bench will accelerate research on large-scale, realistic FL in RS by providing a standardized, rich testbed and facilitating fair comparisons across future works. The source codes and dataset are available at https://fedrs-bench.github.io/.",
+  "category": "vision",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "semantic_segmentation",
+    "federated_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "Recent, realistic federated remote sensing benchmark with growing interest in the FL+RS research community but not yet widely standardized.",
+  "notes": "Federated setting with heterogeneous, non-iid client data and varying sensor types—results sensitive to client selection and aggregation protocol. Not an LLM benchmark; may require substantial compute and domain-specific preprocessing.",
+  "creators": {
+    "scientists": [
+      "Haodong Zhao",
+      "Peng Peng",
+      "Chiyu Chen",
+      "Linqing Huang",
+      "Gongshen Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.08325",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

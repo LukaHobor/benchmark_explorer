@@ -1,0 +1,39 @@
+{
+  "name": "SARATR-X",
+  "description": "Despite the remarkable progress in synthetic aperture radar automatic target recognition (SAR ATR), recent efforts have concentrated on detecting and classifying a specific category, e.g., vehicles, ships, airplanes, or buildings. One of the fundamental limitations of the top-performing SAR ATR methods is that the learning paradigm is supervised, task-specific, limited-category, closed-world learning, which depends on massive amounts of accurately annotated samples that are expensively labeled by expert SAR analysts and have limited generalization capability and scalability. In this work, we make the first attempt towards building a foundation model for SAR ATR, termed SARATR-X. SARATR-X learns generalizable representations via self-supervised learning (SSL) and provides a cornerstone for label-efficient model adaptation to generic SAR target detection and classification tasks. Specifically, SARATR-X is trained on 0.18 M unlabelled SAR target samples, which are curated by combining contemporary benchmarks and constitute the largest publicly available dataset till now. Considering the characteristics of SAR images, a backbone tailored for SAR ATR is carefully designed, and a two-step SSL method endowed with multi-scale gradient features was applied to ensure the feature diversity and model scalability of SARATR-X. The capabilities of SARATR-X are evaluated on classification under few-shot and robustness settings and detection across various categories and scenes, and impressive performance is achieved, often competitive with or even superior to prior fully supervised, semi-supervised, or self-supervised algorithms. Our SARATR-X and the curated dataset are released at https://github.com/waterdisappear/SARATR-X to foster research into foundation models for SAR image interpretation.",
+  "category": "vision",
+  "domain": "remote sensing / SAR target recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "object_detection",
+    "few_shot_classification",
+    "representation_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (classification), mean average precision (mAP) (detection); robustness evaluated via corruption/perturbation metrics",
+  "general_score_metric": "accuracy (for classification) / mAP (for detection)",
+  "typical_sota_score": "80–95% (classification); 40–80% mAP (detection) — varies by dataset and setting",
+  "year_of_publish": 2025,
+  "reputation": "64 citations",
+  "notes": "Non-LLM, domain-specific SAR benchmark trained on 0.18M unlabeled SAR samples; curated from existing public sets (potential overlap/contamination with some evaluation splits); performance varies substantially by task, scene, and label-efficiency regime.",
+  "creators": {
+    "scientists": [
+      "Weijie Li",
+      "Wei Yang",
+      "Yuenan Hou",
+      "Li Liu",
+      "Yongxiang Liu",
+      "Xiang Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/tip.2025.3531988",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

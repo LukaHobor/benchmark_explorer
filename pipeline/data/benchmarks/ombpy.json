@@ -1,0 +1,35 @@
+{
+  "name": "OMB-Py",
+  "description": "Python has become a dominant programming language for emerging areas like Machine Learning (ML), Deep Learning (DL), and Data Science (DS). An attractive feature of Python is that it provides easy-to-use programming interface while allowing library developers to enhance performance of their applications by harnessing the computing power offered by High Performance Computing (HPC) platforms. Efficient communication is key to scaling applications on parallel systems, which is typically enabled by the Message Passing Interface (MPI) standard and compliant libraries on HPC hardware. mpi4py is a Python-based communication library that provides an MPI-like interface for Python applications allowing application developers to utilize parallel processing elements including GPUs. However, there is currently no benchmark suite to evaluate communication performance of mpi4py -- and Python MPI codes in general -- on modern HPC systems. In order to bridge this gap, we propose OMB-Py -- Python extensions to the open-source OSU Micro-Benchmark (OMB) suite -- aimed to evaluate communication performance of MPI-based parallel applications in Python. To the best of our knowledge, OMB-Py is the first communication benchmark suite for parallel Python applications. OMB-Py consists of a variety of point-to-point and collective communication benchmark tests that are implemented for a range of popular Python libraries including NumPy, CuPy, Numba, and PyCUDA. Our evaluation reveals that mpi4py introduces a small overhead when compared to native MPI libraries. We plan to publicly release OMB-Py to benefit the Python HPC community.",
+  "category": "code",
+  "domain": "high-performance computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "performance_benchmark",
+    "microbenchmark"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "throughput/latency/bandwidth measurements (quantitative performance metrics)",
+  "general_score_metric": "latency / bandwidth / throughput (quantitative performance metrics)",
+  "year_of_publish": 2021,
+  "reputation": "A domain-specific HPC benchmark (first-of-its-kind for Python MPI) with relevance to the Python HPC community but limited uptake outside that niche.",
+  "notes": "Non-LLM benchmark; hardware- and environment-dependent results. Small/specialized benchmark intended for MPI/python performance evaluation rather than model evaluation; potential reproducibility variability across platforms.",
+  "creators": {
+    "scientists": [
+      "Nawras Alnaasan",
+      "Arpan Jain",
+      "Aamir Shafi",
+      "Hari Subramoni",
+      "Dhabaleswar K Panda"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2110.10659",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

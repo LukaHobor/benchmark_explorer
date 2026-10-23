@@ -1,0 +1,35 @@
+{
+  "name": "SeaDronesSee",
+  "description": "Unmanned Aerial Vehicles (UAVs) are of crucial importance in search and rescue missions in maritime environments due to their flexible and fast operation capabilities. Modern computer vision algorithms are of great interest in aiding such missions. However, they are dependent on large amounts of real-case training data from UAVs, which is only available for traffic scenarios on land. Moreover, current object detection and tracking data sets only provide limited environmental information or none at all, neglecting a valuable source of information. Therefore, this paper introduces a large-scaled visual object detection and tracking benchmark (SeaDronesSee) aiming to bridge the gap from land-based vision systems to sea-based ones. We collect and annotate over 54,000 frames with 400,000 instances captured from various altitudes and viewing angles ranging from 5 to 260 meters and 0 to 90 degrees while providing the respective meta information for altitude, viewing angle and other meta data. We evaluate multiple state-of-the-art computer vision algorithms on this newly established benchmark serving as baselines. We provide an evaluation server where researchers can upload their prediction and compare their results on a central leaderboard",
+  "category": "vision",
+  "domain": "maritime search and rescue (UAV)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "video_object_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) for detection; MOTA/MOTP and IDF1 for tracking",
+  "general_score_metric": "mAP (for detection) / MOTA/IDF1 (for tracking)",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded within UAV/maritime computer-vision research with a public benchmark and leaderboard and moderate community adoption.",
+  "notes": "Large-scale video dataset (54k+ frames) with altitude/angle metadata; realistic maritime conditions cause domain-specific challenges and class imbalance; potential domain shift issues when transferring land-trained models; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Leon Amadeus Varga",
+      "Benjamin Kiefer",
+      "Martin Messmer",
+      "Andreas Zell"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2105.01922",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

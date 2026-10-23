@@ -1,0 +1,35 @@
+{
+  "name": "Facies classification benchmark",
+  "description": "The recent interest in using deep learning for seismic interpretation tasks,\nsuch as facies classification, has been facing a significant obstacle, namely\nthe absence of large publicly available annotated datasets for training and\ntesting models. As a result, researchers have often resorted to annotating\ntheir own training and testing data. However, different researchers may\nannotate different classes, or use different train and test splits. In\naddition, it is common for papers that apply machine learning for facies\nclassification to not contain quantitative results, and rather rely solely on\nvisual inspection of the results. All of these practices have lead to\nsubjective results and have greatly hindered the ability to compare different\nmachine learning models against each other and understand the advantages and\ndisadvantages of each approach.\n  To address these issues, we open-source a fully-annotated 3D geological model\nof the Netherlands F3 Block. This model is based on the study of the 3D seismic\ndata in addition to 26 well logs, and is grounded on the careful study of the\ngeology of the region. Furthermore, we propose two baseline models for facies\nclassification based on a deconvolution network architecture and make their\ncodes publicly available. Finally, we propose a scheme for evaluating different\nmodels on this dataset, and we share the results of our baseline models. In\naddition to making the dataset and the code publicly available, this work helps\nadvance research in this area by creating an objective benchmark for comparing\nthe results of different machine learning approaches for facies classification.",
+  "category": "vision",
+  "domain": "geoscience / seismic interpretation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 / IoU (per-class and mean metrics)",
+  "general_score_metric": "mean IoU",
+  "year_of_publish": 2019,
+  "reputation": "Well-regarded within the seismic interpretation community as a valuable open, geologically grounded benchmark for facies classification, though adoption is limited compared to mainstream vision datasets.",
+  "notes": "Domain-specific dataset with class imbalance and relatively small size compared to common vision benchmarks; results can be sensitive to train/test split and annotation choices; non-LLM benchmark focused on voxel/volume labels.",
+  "creators": {
+    "scientists": [
+      "Yazeed Alaudah",
+      "Patrycja Michalowicz",
+      "Motaz Alfarraj",
+      "Ghassan AlRegib"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1901.07659",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

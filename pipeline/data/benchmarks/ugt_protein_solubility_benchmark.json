@@ -1,0 +1,33 @@
+{
+  "name": "UGT protein solubility benchmark",
+  "description": "Abstract\n                \n                  UDP-dependent glycosyltransferases (UGTs) are enzymes that glycosylate a wide variety of natural products, thereby modifying their physico-chemical properties, i.e. solubility, stability, reactivity, and function. To successfully leverage the UGTs in biocatalytic processes, we need to be able to screen and characterise them\n                  in vitro\n                  , which requires efficient heterologous expression in amenable hosts, preferably\n                  Escherichia coli\n                  . However, many UGTs are insoluble when expressed in standard and attempted optimised\n                  E. coli\n                  conditions, resulting in many unproductive and costly experiments. To overcome this limitation, we have investigated the performance of 11 existing solubility predictors on a dataset of 57 UGTs expressed in\n                  E. coli\n                  . We show that SoluProt outperforms other methods in terms of both threshold-independent and threshold-dependent measures. Among the benchmarked methods, only SoluProt is significantly better than random predictors using both measures. Moreover, we show that SoluProt uses a threshold for separating soluble and insoluble proteins that is optimal for our dataset. Hence, we conclude that using SoluProt to select UGT sequences for\n                  in vitro\n                  investigation will significantly increase the success rate of soluble expression, thereby minimising cost and enabling efficient characterisation efforts for biocatalysis research.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "threshold-independent and threshold-dependent measures (AUROC / ROC-AUC as primary threshold-independent metric; accuracy, precision, recall, MCC for threshold-dependent evaluation)",
+  "general_score_metric": "AUROC (primary reported metric), plus accuracy for thresholded comparisons",
+  "typical_sota_score": "0.65–0.85 (AUROC range reported/typical across evaluated predictors)",
+  "year_of_publish": 2020,
+  "reputation": "Specialized, small-scale benchmark used in bioinformatics/protein-expression research for comparing solubility predictors; moderate recognition but limited adoption due to small size.",
+  "notes": "Very small dataset (57 UGTs) — risk of overfitting and limited statistical power; non-LLM benchmark focused on protein sequence predictors.",
+  "creators": {
+    "scientists": [
+      "Fatemeh Ashari Ghomi",
+      "Tiia Kittilä",
+      "Ditte Hededam Welner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2020.02.28.962894",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

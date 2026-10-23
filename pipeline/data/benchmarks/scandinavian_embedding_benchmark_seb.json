@@ -1,0 +1,39 @@
+{
+  "name": "Scandinavian Embedding Benchmark (SEB)",
+  "description": "The evaluation of English text embeddings has transitioned from evaluating a handful of datasets to broad coverage across many tasks through benchmarks such as MTEB. However, this is not the case for multilingual text embeddings due to a lack of available benchmarks. To address this problem, we introduce the Scandinavian Embedding Benchmark (SEB). SEB is a comprehensive framework that enables text embedding evaluation for Scandinavian languages across 24 tasks, 10 subtasks, and 4 task categories. Building on SEB, we evaluate more than 26 models, uncovering significant performance disparities between public and commercial solutions not previously captured by MTEB. We open-source SEB and integrate it with MTEB, thus bridging the text embedding evaluation gap for Scandinavian languages.",
+  "category": "text",
+  "domain": "multilingual text embeddings",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_search",
+    "classification",
+    "semantic_similarity",
+    "clustering",
+    "cross-lingual_retrieval"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-dependent metrics (e.g., accuracy / classification F1, recall@k for retrieval, Spearman/Pearson for STS) aggregated into a composite/average score",
+  "general_score_metric": "composite mean score across tasks (MTEB-style average over task-specific metrics)",
+  "typical_sota_score": "varies widely by task; top models often score in the ~60–95% range depending on metric and task",
+  "year_of_publish": 2024,
+  "reputation": "New, purpose-built benchmark for Scandinavian languages that has been integrated with MTEB and is gaining attention for evaluating multilingual embeddings in undercovered languages.",
+  "notes": "Multilingual embedding benchmark focused on Scandinavian languages; per-task variability is large. Possible overlap/contamination risk for very large multilingual models; not an LLM-generation benchmark but for embedding quality.",
+  "creators": {
+    "scientists": [
+      "Kenneth Enevoldsen",
+      "Márton Kardos",
+      "Niklas Muennighoff",
+      "Kristoffer Laigaard Nielbo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2406.02396",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

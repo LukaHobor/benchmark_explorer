@@ -1,0 +1,36 @@
+{
+  "name": "FGRN benchmark datasets",
+  "description": "Abstract The inference of gene regulatory networks (GRNs) from gene expression profiles has been a key issue in systems biology, prompting many researchers to develop diverse computational methods. However, most of these methods do not reconstruct directed GRNs with regulatory types because of the lack of benchmark datasets or defects in the computational methods. Here, we collect benchmark datasets and propose a deep learning-based model, DeepFGRN, for reconstructing fine gene regulatory networks (FGRNs) with both regulation types and directions. In addition, the GRNs of real species are always large graphs with direction and high sparsity, which impede the advancement of GRN inference. Therefore, DeepFGRN builds a node bidirectional representation module to capture the directed graph embedding representation of the GRN. Specifically, the source and target generators are designed to learn the low-dimensional dense embedding of the source and target neighbors of a gene, respectively. An adversarial learning strategy is applied to iteratively learn the real neighbors of each gene. In addition, because the expression profiles of genes with regulatory associations are correlative, a correlation analysis module is designed. Specifically, this module not only fully extracts gene expression features, but also captures the correlation between regulators and target genes. Experimental results show that DeepFGRN has a competitive capability for both GRN and FGRN inference. Potential biomarkers and therapeutic drugs for breast cancer, liver cancer, lung cancer and coronavirus disease 2019 are identified based on the candidate FGRNs, providing a possible opportunity to advance our knowledge of disease treatments.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "graph_inference",
+    "link_prediction",
+    "regulatory_interaction_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "area_under_precision_recall (AUPR), area_under_roc_curve (AUROC), F1-score",
+  "general_score_metric": "AUPR and AUROC",
+  "year_of_publish": 2024,
+  "reputation": "18 citations",
+  "notes": "Biology-specific benchmark(s) mixing simulated and real expression data; networks are directed and highly sparse. Evaluation is sensitive to class imbalance, network size, and preprocessing; not applicable to general NLP/LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Zhen Gao",
+      "Yansen Su",
+      "Junfeng Xia",
+      "Ruifen Cao",
+      "Yun Ding",
+      "Chun-Hou Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

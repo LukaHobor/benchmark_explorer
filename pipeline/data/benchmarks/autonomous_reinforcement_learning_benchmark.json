@@ -1,0 +1,38 @@
+{
+  "name": "Autonomous Reinforcement Learning Benchmark",
+  "description": "Reinforcement learning (RL) provides a naturalistic framing for learning through trial and error, which is appealing both because of its simplicity and effectiveness and because of its resemblance to how humans and animals acquire skills through experience. However, real-world embodied learning, such as that performed by humans and animals, is situated in a continual, non-episodic world, whereas common benchmark tasks in RL are episodic, with the environment resetting between trials to provide the agent with multiple attempts. This discrepancy presents a major challenge when attempting to take RL algorithms developed for episodic simulated environments and run them on real-world platforms, such as robots. In this paper, we aim to address this discrepancy by laying out a framework for Autonomous Reinforcement Learning (ARL): reinforcement learning where the agent not only learns through its own experience, but also contends with lack of human supervision to reset between trials. We introduce a simulated benchmark EARL around this framework, containing a set of diverse and challenging simulated tasks reflective of the hurdles introduced to learning when only a minimal reliance on extrinsic intervention can be assumed. We show that standard approaches to episodic RL and existing approaches struggle as interventions are minimized, underscoring the need for developing new algorithms for reinforcement learning with a greater focus on autonomy.",
+  "category": "mixed",
+  "domain": "reinforcement learning / embodied agents",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "continuous_control",
+    "autonomous_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate and cumulative reward measured under minimized interventions (intervention-normalized performance)",
+  "general_score_metric": "task_success_rate (often reported alongside cumulative reward under constrained intervention budgets)",
+  "year_of_publish": 2021,
+  "reputation": "Niche but influential for researchers working on autonomy and RL for real-world/robotic settings; cited for highlighting limits of episodic RL methods under minimal intervention.",
+  "notes": "Non-LLM, simulation benchmark emphasizing autonomy; metrics sensitive to environment/reset protocols and intervention definitions which can hinder direct comparisons and reproducibility.",
+  "creators": {
+    "scientists": [
+      "Archit Sharma",
+      "Kelvin Xu",
+      "Nikhil Sardana",
+      "Abhishek Gupta",
+      "Karol Hausman",
+      "Sergey Levine",
+      "Chelsea Finn"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2112.09605",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

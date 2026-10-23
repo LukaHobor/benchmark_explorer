@@ -1,0 +1,32 @@
+{
+  "name": "AOC Arabic Dialect Identification Benchmark",
+  "description": "The Arabic Online Commentary (AOC) (Zaidan and Callison-Burch, 2011) is a large-scale repos-itory of Arabic dialects with manual labels for4varieties of the language. Existing dialect iden-tification models exploiting the dataset pre-date the recent boost deep learning brought to NLPand hence the data are not benchmarked for use with deep learning, nor is it clear how much neural networks can help tease the categories in the data apart. We treat these two limitations:We (1) benchmark the data, and (2) empirically test6different deep learning methods on thetask, comparing peformance to several classical machine learning models under different condi-tions (i.e., both binary and multi-way classification). Our experimental results show that variantsof (attention-based) bidirectional recurrent neural networks achieve best accuracy (acc) on thetask, significantly outperforming all competitive baselines. On blind test data, our models reach87.65{\\%}acc on the binary task (MSA vs. dialects),87.4{\\%}acc on the 3-way dialect task (Egyptianvs. Gulf vs. Levantine), and82.45{\\%}acc on the 4-way variants task (MSA vs. Egyptian vs. Gulfvs. Levantine). We release our benchmark for future work on the dataset",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_classification",
+    "language_identification",
+    "dialect_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "82–88% (task-dependent: binary/3-way/4-way)",
+  "reputation": "Well-established and widely cited dataset in Arabic dialect identification research since 2011; commonly used as a benchmark for both classical and neural models.",
+  "notes": "Derived from online commentary (domain-specific); may exhibit annotation noise and class imbalance; original splits predate deep-learning era but have been widely re-used; potential contamination risk with modern web-trained LLMs; relatively small compared to modern multilingual corpora.",
+  "creators": {
+    "scientists": [
+      "Mohamed Elaraby",
+      "Muhammad Abdul-Mageed"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

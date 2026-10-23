@@ -1,0 +1,45 @@
+{
+  "name": "DeepTumorVQA",
+  "description": "Vision-Language Models (VLMs) have shown promise in various 2D visual tasks, yet their readiness for 3D clinical diagnosis remains unclear due to stringent demands for recognition precision, reasoning ability, and domain knowledge. To systematically evaluate these dimensions, we present DeepTumorVQA, a diagnostic visual question answering (VQA) benchmark targeting abdominal tumors in CT scans. It comprises 9,262 CT volumes (3.7M slices) from 17 public datasets, with 395K expert-level questions spanning four categories: Recognition, Measurement, Visual Reasoning, and Medical Reasoning. DeepTumorVQA introduces unique challenges, including small tumor detection and clinical reasoning across 3D anatomy. Benchmarking four advanced VLMs (RadFM, M3D, Merlin, CT-CHAT), we find current models perform adequately on measurement tasks but struggle with lesion recognition and reasoning, and are still not meeting clinical needs. Two key insights emerge: (1) large-scale multimodal pretraining plays a crucial role in DeepTumorVQA testing performance, making RadFM stand out among all VLMs. (2) Our dataset exposes critical differences in VLM components, where proper image preprocessing and design of vision modules significantly affect 3D perception. To facilitate medical multimodal research, we have released DeepTumorVQA as a rigorous benchmark: https://github.com/Schuture/DeepTumorVQA.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "open_ended",
+    "medical_question_answering"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": [
+    "accuracy",
+    "MAE_for_measurements"
+  ],
+  "general_score_metric": "accuracy (recognition/reasoning) and MAE or relative error for measurement questions",
+  "typical_sota_score": "Measurement: ~70–90% accuracy; Recognition/Reasoning: ~30–60% accuracy (varies by subtask and model)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "Large, recent benchmark attracting attention in medical VQA and 3D clinical perception research but still early in community adoption.",
+  "notes": "Very large multimodal 3D CT benchmark assembled from public sources; requires careful 3D preprocessing and is clinically sensitive — models are not clinically validated. Performance depends strongly on vision-module design and preprocessing; non-LLM multimodal benchmark.",
+  "creators": {
+    "scientists": [
+      "Yixiong Chen",
+      "Wenjie Xiao",
+      "Pedro R. A. S. Bassi",
+      "Xinze Zhou",
+      "Sezgin Er",
+      "Ibrahim Ethem Hamamci",
+      "Zongwei Zhou",
+      "Alan Yuille"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.18915",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

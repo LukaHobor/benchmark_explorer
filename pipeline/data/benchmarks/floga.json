@@ -1,0 +1,39 @@
+{
+  "name": "FLOGA",
+  "description": "Over the last decade there has been an increasing frequency and intensity of wildfires across the globe, posing significant threats to human and animal lives, ecosystems, and socio-economic stability. Therefore urgent action is required to mitigate their devastating impact and safeguard Earth's natural resources. Robust Machine Learning methods combined with the abundance of high-resolution satellite imagery can provide accurate and timely mappings of the affected area in order to assess the scale of the event, identify the impacted assets and prioritize and allocate resources effectively for the proper restoration of the damaged region. In this work, we create and introduce a machine-learning ready dataset we name FLOGA (Forest wiLdfire Observations for the Greek Area). This dataset is unique as it comprises of satellite imagery acquired before and after a wildfire event, it contains information from Sentinel-2 and MODIS modalities with variable spatial and spectral resolution, and contains a large number of events where the corresponding burnt area ground truth has been annotated by domain experts. FLOGA covers the wider region of Greece, which is characterized by a Mediterranean landscape and climatic conditions. We use FLOGA to provide a thorough comparison of multiple Machine Learning and Deep Learning algorithms for the automatic extraction of burnt areas, approached as a change detection task. We also compare the results to those obtained using standard specialized spectral indices for burnt area mapping. Finally, we propose a novel Deep Learning model, namely BAM-CD. Our benchmark results demonstrate the efficacy of the proposed technique in the automatic extraction of burnt areas, outperforming all other methods in terms of accuracy and robustness. Our dataset and code are publicly available at: https://github.com/Orion-AI-Lab/FLOGA.",
+  "category": "vision",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "change_detection",
+    "semantic_segmentation",
+    "binary_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "IoU (mean Intersection over Union)",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "65–85% mIoU",
+  "year_of_publish": 2023,
+  "reputation": "Publicly released dataset with accompanying code that has started to be used in remote sensing research on burnt-area mapping.",
+  "notes": "Regional dataset (Greece) — limited geographic generalizability. Multimodal data (Sentinel-2 and MODIS) with varying spatial/spectral resolution requires careful preprocessing and co-registration; potential class imbalance and cloud/seasonal artefacts. Non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Maria Sdraka",
+      "Alkinoos Dimakos",
+      "Alexandros Malounis",
+      "Zisoula Ntasiou",
+      "Konstantinos Karantzalos",
+      "Dimitrios Michail",
+      "Ioannis Papoutsis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.03339",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

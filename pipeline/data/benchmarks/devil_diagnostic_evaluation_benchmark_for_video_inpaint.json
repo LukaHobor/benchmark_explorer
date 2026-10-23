@@ -1,0 +1,35 @@
+{
+  "name": "DEVIL (Diagnostic Evaluation Benchmark for Video Inpainting)",
+  "description": "Quantitative evaluation has increased dramatically among recent video inpainting work, but the video and mask content used to gauge performance has received relatively little attention. Although attributes such as camera and background scene motion inherently change the difficulty of the task and affect methods differently, existing evaluation schemes fail to control for them, thereby providing minimal insight into inpainting failure modes. To address this gap, we propose the Diagnostic Evaluation of Video Inpainting on Landscapes (DEVIL) benchmark, which consists of two contributions: (i) a novel dataset of videos and masks labeled according to several key inpainting failure modes, and (ii) an evaluation scheme that samples slices of the dataset characterized by a fixed content attribute, and scores performance on each slice according to reconstruction, realism, and temporal consistency quality. By revealing systematic changes in performance induced by particular characteristics of the input content, our challenging benchmark enables more insightful analysis into video inpainting methods and serves as an invaluable diagnostic tool for the field. Our code and data are available at github.com/MichiganCOG/devil.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_inpainting",
+    "video_restoration",
+    "diagnostic_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "quantitative image/video quality metrics (PSNR, SSIM, LPIPS) plus temporal-consistency measures and targeted failure-mode analysis",
+  "general_score_metric": "PSNR/SSIM/LPIPS (quantitative image/video quality metrics; PSNR commonly reported)",
+  "typical_sota_score": "PSNR ≈ 20–35 dB (scenario-dependent); LPIPS ≈ 0.05–0.3 — varies by challenge type",
+  "year_of_publish": 2022,
+  "reputation": "Introduced at CVPR as a diagnostic stress-test for video inpainting; respected for detailed failure-mode coverage but less ubiquitous than large-scale video datasets.",
+  "notes": "Diagnostic benchmark with varied failure scenarios; evaluation often relies on multiple complementary metrics and sometimes human judgement; not intended for large-scale model training.",
+  "creators": {
+    "scientists": [
+      "Ryan Szeto",
+      "Jason J. Corso"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvpr52688.2022.02038",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

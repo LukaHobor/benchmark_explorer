@@ -1,0 +1,37 @@
+{
+  "name": "SpaRED benchmark",
+  "description": "Spatial Transcriptomics is a novel technology that aligns histology images with spatially resolved gene expression profiles. Although groundbreaking, it struggles with gene capture yielding high corruption in acquired data. Given potential applications, recent efforts have focused on predicting transcriptomic profiles solely from histology images. However, differences in databases, preprocessing techniques, and training hyperparameters hinder a fair comparison between methods. To address these challenges, we present a systematically curated and processed database collected from 26 public sources, representing an 8.6-fold increase compared to previous works. Additionally, we propose a state-of-the-art transformer based completion technique for inferring missing gene expression, which significantly boosts the performance of transcriptomic profile predictions across all datasets. Altogether, our contributions constitute the most comprehensive benchmark of gene expression prediction from histology images to date and a stepping stone for future research on spatial transcriptomics.",
+  "category": "vision",
+  "domain": "medical imaging / spatial transcriptomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "image_to_tabular"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Pearson correlation / RMSE (gene-wise and spot-wise prediction metrics)",
+  "general_score_metric": "Pearson correlation",
+  "typical_sota_score": "0.3–0.7 (Pearson)",
+  "year_of_publish": 2024,
+  "reputation": "A newly curated, comprehensive benchmark that is gaining attention in the spatial transcriptomics community for standardized comparison of histology→gene-expression methods.",
+  "notes": "Heterogeneous sources and preprocessing across the 26 datasets introduce domain shift; gene capture sparsity and batch effects can confound evaluation. Non-LLM benchmark focused on vision→omics prediction.",
+  "creators": {
+    "scientists": [
+      "Gabriel Mejia",
+      "Daniela Ruiz",
+      "Paula Cárdenas",
+      "Leonardo Manrique",
+      "Daniela Vega",
+      "Pablo Arbeláez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.13027",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

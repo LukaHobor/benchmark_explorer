@@ -1,0 +1,33 @@
+{
+  "name": "DxMag Heusler benchmark",
+  "description": "We present a machine learning-accelerated high-throughput (HTP) workflow for the discovery of functional materials. As a test case, quaternary and all-\n d\n Heusler compounds were screened for stable compounds with large magnetocrystalline anisotropy energy (\n E\n aniso\n ). Structure optimization and evaluation of formation energy and energy above the convex hull were performed using the eSEN-30M-OAM interatomic potential, while local magnetic moments, phonon stability, magnetic stability, and\n E\n aniso\n were predicted by eSEN models trained on our DxMag Heusler database. A frozen transfer learning strategy was employed to improve accuracy. Candidate compounds identified by the ML-HTP workflow were validated with density functional theory, confirming high predictive precision. We also benchmark the performance of different uMLIPs, discuss the fidelity of local magnetic moment prediction, and demonstrate generalization to unseen elements via transfer learning from a universal interatomic potential.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ranking",
+    "screening"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "MAE / RMSE and task_success_rate (e.g., precision@k for screening)",
+  "general_score_metric": "MAE (for property regression) and precision@k / task_success_rate (for candidate screening)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, domain-specific benchmark introduced in a 2025 preprint for ML-accelerated materials discovery; valuable to the materials science community but not yet widely adopted outside that field.",
+  "notes": "Non-LLM, domain-specific benchmark. Results depend on DFT validation and transfer-learning protocols; potential dataset bias toward the elements/chemistries present in the DxMag Heusler database. Limited community saturation to date.",
+  "creators": {
+    "scientists": [
+      "Enda Xiao",
+      "T. Tadano"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2508.20556",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

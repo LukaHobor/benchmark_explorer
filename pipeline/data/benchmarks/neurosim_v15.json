@@ -1,0 +1,37 @@
+{
+  "name": "NeuroSim V1.5",
+  "description": "The exponential growth of artificial intelligence (AI) applications has exposed the inefficiency of conventional von Neumann architectures, where frequent data transfers between compute units and memory create significant energy and latency bottlenecks. Analog Computing-in-Memory (ACIM) addresses this challenge by performing multiply-accumulate (MAC) operations directly in the memory arrays, substantially reducing data movement. However, designing robust ACIM accelerators requires accurate modeling of device- and circuit-level non-idealities. In this work, we present NeuroSim V1.5, introducing several key advances: (1) seamless integration with TensorRT's post-training quantization flow enabling support for more neural networks including transformers, (2) a flexible noise injection methodology built on pre-characterized statistical models, making it straightforward to incorporate data from SPICE simulations or silicon measurements, (3) expanded device support including emerging non-volatile capacitive memories, and (4) up to 6.5x faster runtime than NeuroSim V1.4 through optimized behavioral simulation. The combination of these capabilities uniquely enables systematic design space exploration across both accuracy and hardware efficiency metrics. Through multiple case studies, we demonstrate optimization of critical design parameters while maintaining network accuracy. By bridging high-fidelity noise modeling with efficient simulation, NeuroSim V1.5 advances the design and validation of next-generation ACIM accelerators. All NeuroSim versions are available open-source at https://github.com/neurosim/NeuroSim.",
+  "category": "mixed",
+  "domain": "hardware accelerators / compute-in-memory",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "simulation",
+    "hardware_modeling",
+    "performance_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "multi-metric evaluation (model accuracy under device non-idealities, energy efficiency / TOPS/W, latency, area and throughput trade-offs)",
+  "general_score_metric": "combined: accuracy under noise/model non-idealities and hardware efficiency (e.g., accuracy degradation + TOPS/W)",
+  "year_of_publish": 2025,
+  "reputation": "Well-regarded in the analog compute-in-memory and hardware-accelerator research community as an open-source, feature-rich simulator for design-space exploration.",
+  "notes": "Non-LLM benchmark focused on circuit/device-level simulation; results depend strongly on device models and characterization data (simulation vs silicon). Multi-metric comparisons (accuracy vs efficiency) complicate single-number ranking. Not directly comparable to standard ML benchmark scores.",
+  "creators": {
+    "scientists": [
+      "James Read",
+      "Ming-Yen Lee",
+      "Wei-Hsing Huang",
+      "Yuan-Chun Luo",
+      "Anni Lu",
+      "Shimeng Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.02314",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

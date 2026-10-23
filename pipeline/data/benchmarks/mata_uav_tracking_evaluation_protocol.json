@@ -1,0 +1,37 @@
+{
+  "name": "MATA UAV Tracking Evaluation Protocol",
+  "description": "Object tracking from Unmanned Aerial Vehicles (UAVs) is challenged by platform dynamics, camera motion, and limited onboard resources. Existing visual trackers either lack robustness in complex scenarios or are too computationally demanding for real-time embedded use. We propose an Modular Asynchronous Tracking Architecture (MATA) that combines a transformer-based tracker with an Extended Kalman Filter, integrating ego-motion compensation from sparse optical flow and an object trajectory model. We further introduce a hardware-independent, embedded oriented evaluation protocol and a new metric called Normalized time to Failure (NT2F) to quantify how long a tracker can sustain a tracking sequence without external help. Experiments on UAV benchmarks, including an augmented UAV123 dataset with synthetic occlusions, show consistent improvements in Success and NT2F metrics across multiple tracking processing frequency. A ROS 2 implementation on a Nvidia Jetson AGX Orin confirms that the eval",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "tracking",
+    "temporal_localization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "Success / NT2F",
+  "typical_sota_score": "60–80%",
+  "year_of_publish": 2026,
+  "reputation": "A new, specialized benchmark with limited adoption so far, mainly of interest to UAV tracking and embedded vision researchers.",
+  "notes": "Non-LLM vision benchmark for UAV object tracking; includes embedded/real-time constraints and a new NT2F metric, so results are not directly comparable to standard tracking-only benchmarks.",
+  "creators": {
+    "scientists": [
+      "Augustin Borne",
+      "Pierre Notin",
+      "Christophe Hennequin",
+      "Sebastien Changey",
+      "Stephane Bazeille",
+      "Christophe Cudel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2603.03904",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

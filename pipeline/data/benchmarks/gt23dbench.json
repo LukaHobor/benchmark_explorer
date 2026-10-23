@@ -1,0 +1,39 @@
+{
+  "name": "GT23D-Bench",
+  "description": "Recent advances in General Text-to-3D (GT23D) have been significant. However, the lack of a benchmark has hindered systematic evaluation and progress due to issues in datasets and metrics: 1) The largest 3D dataset Objaverse suffers from omitted annotations, disorganization, and low-quality. 2) Existing metrics only evaluate textual-image alignment without considering the 3D-level quality. To this end, we are the first to present a comprehensive benchmark for GT23D called GT23D-Bench consisting of: 1) a 400k high-fidelity and well-organized 3D dataset that curated issues in Objaverse through a systematical annotation-organize-filter pipeline; and 2) comprehensive 3D-aware evaluation metrics which encompass 10 clearly defined metrics thoroughly accounting for multi-dimension of GT23D. Notably, GT23D-Bench features three properties: 1) Multimodal Annotations. Our dataset annotates each 3D object with 64-view depth maps, normal maps, rendered images, and coarse-to-fine captions. 2) Holistic Evaluation Dimensions. Our metrics are dissected into a) Textual-3D Alignment measures textual alignment with multi-granularity visual 3D representations; and b) 3D Visual Quality which considers texture fidelity, multi-view consistency, and geometry correctness. 3) Valuable Insights. We delve into the performance of current GT23D baselines across different evaluation dimensions and provide insightful analysis. Extensive experiments demonstrate that our annotations and metrics are aligned with human preferences.",
+  "category": "multimodal",
+  "domain": "3D / graphics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_3d_generation",
+    "multimodal_evaluation",
+    "rendering_quality_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (suite of 10 3D-aware metrics combining textual-3D alignment and 3D visual quality measures)",
+  "general_score_metric": "composite_score (combined alignment + 3D visual quality metrics)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, comprehensive benchmark introduced to the text-to-3D community that is gaining attention for its large curated dataset and multi-dimensional metrics, though not yet ubiquitous.",
+  "notes": "Large non-LLM benchmark (400k 3D assets) curated from Objaverse; evaluations depend on rendering pipelines and metric design; potential biases/limitations inherited from Objaverse and heavy compute requirements for full evaluation.",
+  "creators": {
+    "scientists": [
+      "Sitong Su",
+      "Xiao Cai",
+      "Lianli Gao",
+      "Pengpeng Zeng",
+      "Qinhong Du",
+      "Mengqi Li",
+      "Heng Tao Shen",
+      "Jingkuan Song"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.09997",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

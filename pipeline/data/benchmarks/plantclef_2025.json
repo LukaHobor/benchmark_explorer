@@ -1,0 +1,36 @@
+{
+  "name": "PlantCLEF 2025",
+  "description": "Recent developments in European environmental legislation, such as Directive (EU) 2024/1203 on environmental protection through criminal law and Regulation (EU) 2023/1115 on imported deforestation, highlight the need for robust and scalable methods to inventory and monitor plant communities. In this context, vegetation quadrats, rectangular ground plots widely used in ecological surveys, are central to biodiversity monitoring strategies, including forensic applications where reliable species-level identification can provide evidence for law enforcement and compliance monitoring.\n Traditional quadrat-based inventories are essential for tracking habitat quality, ecosystem change, and anthropogenic impacts. However, they are labor-intensive, costly, and rely on taxonomic expertise that is not always available at scale. This creates a gap between policy demands and operational monitoring capacity. PlantCLEF 2025 (Martellucci et al. 2025) directly addresses this challenge by introducing a new benchmark task: the automatic identification of all species present in high-resolution quadrat images, framing the problem as a multi-label classification challenge.\n The dataset integrates several complementary components designed to advance automated plant identification in ecological contexts. It includes approximately 1.4 million close-up single-species images covering about 7,800 taxa from Southwestern Europe, providing a strong foundation for species-level recognition. In addition, around 2,100 annotated high-resolution quadrat images capture realistic vegetation plots where multiple species co-occur (Fig. 1), thus supporting the development and evaluation of multi-label models.\n Participants were tasked with predicting all species visible in quadrat images, with evaluation based on a sample-averaged F1 score at the quadrat level. PlantCLEF 2025 goes beyond traditional image classification in biodiversity research by introducing a task that requires models to address multiple challenges simultaneously. The limited availability of labeled quadrat images to ensure model generalization across ecosystems further imposes training the model on citizen-science images, which are typically close-up and organ-centered on single plants, thereby introducing a strong domain shift. The task is further compounded by the presence of numerous, overlapping taxa within the same image, as well as high species diversity, strong visual ambiguities, occlusions, phenological variation, and the presence of small or non-vascular plants.\n The 2025 challenge attracted over 500 participants and 38 research teams worldwide, submitting 659 distinct methods. Despite the difficulty, results show significant progress: the best approaches without metadata achieved a sample-averaged F1 of 0.35, compared to 0.29 in the previous edition. Most top-performing methods relied on the DINOv2 (Goëau et al. 2024) pretrained vision transformer (Goëau et al. 2024), often combined with multi-scale tiling strategies to process high-resolution inputs.\n Additional insights emerged from the challenge. Preprocessing test images proved critical, with performance substantially improved when compression settings and resizing algorithms, such as Lanczos interpolation, were carefully aligned across training and evaluation data.Several approaches were tested to explicitly suppress non-plant regions; while effective in stabilizing results, none were both lightweight and generalizable. Finally, leaderboard analyses revealed partcipants often faced overfitting when fine-tuning an excessive number of hyperparameters.\n By framing quadrat identification as a benchmarked AI challenge, PlantCLEF 2025 provides a controlled testbed for methods directly relevant to forensic biodiversity. It promotes the development of robust, scalable, and explainable models that can support digital evidence pipelines in environmental law, including the EU’s efforts against habitat destruction and imported deforestation.\n The open and collaborative nature of PlantCLEF, hosted on Kaggle and integrated into the CVPR-FGVC workshop and the CLEF conference, ensures reproducibility and fosters cross-disciplinary dialogue between computer scientists, ecologists, and biodiversity monitoring authorities.",
+  "category": "vision",
+  "domain": "ecology",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "multi_label_classification",
+    "image_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "sample-averaged F1",
+  "typical_sota_score": "35%",
+  "year_of_publish": 2025,
+  "reputation": "A well-known PlantCLEF series entry with growing adoption in biodiversity computer-vision and ecological monitoring research.",
+  "notes": "Multi-label quadrat task with strong domain shift from close-up citizen-science images to high-resolution plot images; relatively few labeled quadrats (~2,100), severe class imbalance and label noise; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Giulio Martellucci",
+      "Hervé Goëau",
+      "P. Bonnet",
+      "Fabrice Vinatier",
+      "A. Joly"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

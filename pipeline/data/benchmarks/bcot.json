@@ -1,0 +1,40 @@
+{
+  "name": "BCOT",
+  "description": "Template-based 3D object tracking still lacks a high-precision benchmark of real scenes due to the difficulty of annotating the accurate 3D poses of real moving video objects without using markers. In this paper, we present a multi-view approach to estimate the accurate 3D poses of real moving objects, and then use binocular data to construct a new benchmark for monocular textureless 3D object tracking. The proposed method requires no markers, and the cameras only need to be synchronous, relatively fixed as cross-view and calibrated. Based on our object-centered model, we jointly optimize the object pose by minimizing shape re-projection constraints in all views, which greatly improves the accuracy compared with the single-view approach, and is even more accurate than the depth-based method. Our new benchmark dataset contains 20 textureless objects, 22 scenes, 404 video sequences and 126K images captured in real scenes. The annotation error is guaranteed to be less than 2mm, according to both theoretical analysis and validation experiments. We re-evaluate the state-of-the-art 3D object tracking methods with our dataset, reporting their performance ranking in real scenes. Our BCOT benchmark and code can be found at https://ar3dv.github.io/BCOT-Benchmark/.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_object_tracking",
+    "pose_estimation",
+    "video_sequence_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pose estimation error and tracking accuracy (translation/rotation error, e.g., average translation error in mm and success rate)",
+  "general_score_metric": "average translation error (mm) / tracking success rate",
+  "year_of_publish": 2022,
+  "reputation": "A specialized, high-precision real-scene benchmark valued in 3D object tracking and pose-estimation research for textureless objects; moderate adoption within that subcommunity.",
+  "notes": "Non-LLM, vision-only benchmark; relatively small object set (20 objects) focused on textureless items. High annotation accuracy (<2mm) but domain is narrow (real scenes with synchronous multi-view setup), which may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Jiachen Li",
+      "Bin Wang",
+      "Shiqiang Zhu",
+      "Xin Cao",
+      "Fan Zhong",
+      "Wenxuan Chen",
+      "Te Li",
+      "Jason Gu",
+      "Xueying Qin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2203.13437",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

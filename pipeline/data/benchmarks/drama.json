@@ -1,0 +1,37 @@
+{
+  "name": "DRAMA",
+  "description": "Considering the functionality of situational awareness in safety-critical automation systems, the perception of risk in driving scenes and its explainability is of particular importance for autonomous and cooperative driving. Toward this goal, this paper proposes a new research direction of joint risk localization in driving scenes and its risk explanation as a natural language description. Due to the lack of standard benchmarks, we collected a large-scale dataset, DRAMA (Driving Risk Assessment Mechanism with A captioning module), which consists of 17,785 interactive driving scenarios collected in Tokyo, Japan. Our DRAMA dataset accommodates video- and object-level questions on driving risks with associated important objects to achieve the goal of visual captioning as a free-form language description utilizing closed and open-ended responses for multi-level questions, which can be used to evaluate a range of visual captioning capabilities in driving scenarios. We make this data available to the community for further re-search. Using DRAMA, we explore multiple facets of joint risk localization and captioning in interactive driving scenarios. In particular, we benchmark various multi-task pre-diction architectures and provide a detailed analysis of joint risk localization and risk captioning. The data set is available at https://usa.honda-ri.com/drama",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_captioning",
+    "risk_localization",
+    "video_question_answering",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU/CIDEr/METEOR for captioning; mean Average Precision (mAP) for localization; accuracy for risk classification",
+  "general_score_metric": "BLEU (for captioning) and mAP (for localization)",
+  "year_of_publish": 2023,
+  "reputation": "83 citations",
+  "notes": "Multitask multimodal benchmark (captioning + localization) with moderate scale (17,785 scenarios). Evaluation requires multiple metrics per task; no single unified score. Primarily a dataset-driven, non-LLM benchmark for driving risk understanding; limited risk of contamination but varied annotation granularity across tasks.",
+  "creators": {
+    "scientists": [
+      "Srikanth Malla",
+      "Chiho Choi",
+      "Isht Dwivedi",
+      "Joon Hee Choi",
+      "Jiachen Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1109/wacv56688.2023.00110",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

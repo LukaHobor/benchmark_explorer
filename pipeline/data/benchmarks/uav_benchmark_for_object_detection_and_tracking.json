@@ -1,0 +1,41 @@
+{
+  "name": "UAV Benchmark for Object Detection and Tracking",
+  "description": "With the advantage of high mobility, Unmanned Aerial Vehicles (UAVs) are used\nto fuel numerous important applications in computer vision, delivering more\nefficiency and convenience than surveillance cameras with fixed camera angle,\nscale and view. However, very limited UAV datasets are proposed, and they focus\nonly on a specific task such as visual tracking or object detection in\nrelatively constrained scenarios. Consequently, it is of great importance to\ndevelop an unconstrained UAV benchmark to boost related researches. In this\npaper, we construct a new UAV benchmark focusing on complex scenarios with new\nlevel challenges. Selected from 10 hours raw videos, about 80,000\nrepresentative frames are fully annotated with bounding boxes as well as up to\n14 kinds of attributes (e.g., weather condition, flying altitude, camera view,\nvehicle category, and occlusion) for three fundamental computer vision tasks:\nobject detection, single object tracking, and multiple object tracking. Then, a\ndetailed quantitative study is performed using most recent state-of-the-art\nalgorithms for each task. Experimental results show that the current\nstate-of-the-art methods perform relative worse on our dataset, due to the new\nchallenges appeared in UAV based real scenes, e.g., high density, small object,\nand camera motion. To our knowledge, our work is the first time to explore such\nissues in unconstrained scenes comprehensively.",
+  "category": "vision",
+  "domain": "vision / aerial imagery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "single_object_tracking",
+    "multiple_object_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "detection: mAP; tracking: MOTA / IDF1 (CLEAR metrics)",
+  "general_score_metric": "mAP (for detection) and MOTA/IDF1 (for tracking)",
+  "typical_sota_score": "detection mAP ~30–60%; tracking MOTA/IDF1 often in the ~30–60% range depending on setup",
+  "year_of_publish": 2018,
+  "reputation": "Well-known UAV benchmark (2018) in aerial-vision research for evaluating detection and tracking under challenging UAV conditions; moderately adopted by the UAV vision community.",
+  "notes": "Challenging attributes (small objects, high density, camera motion, varied altitude/view) make results lower than typical ground-level benchmarks; relatively large (~80k frames) but still domain-specific; non‑LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Dawei Du",
+      "Yuankai Qi",
+      "Hongyang Yu",
+      "Yifan Yang",
+      "Kaiwen Duan",
+      "Guorong Li",
+      "Weigang Zhang",
+      "Qingming Huang",
+      "Qi Tian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1804.00518",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

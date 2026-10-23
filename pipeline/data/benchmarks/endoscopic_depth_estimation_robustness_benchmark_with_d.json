@@ -1,0 +1,37 @@
+{
+  "name": "Endoscopic Depth Estimation Robustness Benchmark (with DERS)",
+  "description": "Accurate depth perception is crucial for patient outcomes in endoscopic surgery, yet it is compromised by image distortions common in surgical settings. To tackle this issue, our study presents a benchmark for assessing the robustness of endoscopic depth estimation models. We have compiled a comprehensive dataset that reflects real-world conditions, incorporating a range of synthetically induced corruptions at varying severity levels. To further this effort, we introduce the Depth Estimation Robustness Score (DERS), a novel metric that combines measures of error, accuracy, and robustness to meet the multifaceted requirements of surgical applications. This metric acts as a foundational element for evaluating performance, establishing a new paradigm for the comparative analysis of depth estimation technologies. Additionally, we set forth a benchmark focused on robustness for the evaluation of depth estimation in endoscopic surgery, with the aim of driving progress in model refinement. A thorough analysis of two monocular depth estimation models using our framework reveals crucial information about their reliability under adverse conditions. Our results emphasize the essential need for algorithms that can tolerate data corruption, thereby advancing discussions on improving model robustness. The impact of this research transcends theoretical frameworks, providing concrete gains in surgical precision and patient safety. This study establishes a benchmark for the robustness of depth estimation and serves as a foundation for developing more resilient surgical support technologies. Code is available at https://github.com/lofrienger/EndoDepthBenchmark.",
+  "category": "vision",
+  "domain": "medical imaging / endoscopy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "dense_prediction",
+    "depth_estimation",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "DERS (Depth Estimation Robustness Score; composite metric combining error, accuracy and robustness measures)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "New task-specific benchmark (2024) aimed at the surgical imaging community; limited but growing visibility among medical-vision robustness researchers.",
+  "notes": "Non-LLM benchmark focused on medical endoscopic images; uses synthetically induced corruptions at varying severities. Dataset size and realism of synthetic corruptions may limit generalization to all clinical scenarios.",
+  "creators": {
+    "scientists": [
+      "An Wang",
+      "Haochen Yin",
+      "Beilei Cui",
+      "Mengya Xu",
+      "Hongliang Ren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2409.16063",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

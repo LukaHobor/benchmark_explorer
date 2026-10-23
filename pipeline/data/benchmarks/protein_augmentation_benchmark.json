@@ -1,0 +1,38 @@
+{
+  "name": "Protein Augmentation Benchmark",
+  "description": "Augmentation is an effective alternative to utilize the small amount of labeled protein data. However, most of the existing work focuses on design-ing new architectures or pre-training tasks, and relatively little work has studied data augmentation for proteins. This paper extends data augmentation techniques previously used for images and texts to proteins and then benchmarks these techniques on a variety of protein-related tasks, providing the first comprehensive evaluation of protein augmentation. Furthermore, we propose two novel semantic-level protein augmentation methods, namely Integrated Gradients Substitution and Back Translation Substitution, which enable protein semantic-aware augmentation through saliency detection and biological knowledge. Finally, we integrate extended and proposed augmentations into an augmentation pool and propose a simple but effective framework, namely Automated Protein Augmentation (APA), which can adaptively select the most suitable augmentation combinations for different tasks. Extensive experiments have shown that APA enhances the performance of five protein related tasks by an average of 10.55% across three architectures compared to vanilla implementations without augmentation, highlighting its potential to make a great impact on the field.",
+  "category": "mixed",
+  "domain": "bioinformatics / protein modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_classification",
+    "property_prediction",
+    "representation_learning",
+    "fine_tuning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "ROC-AUC / accuracy / F1 (task-dependent)",
+  "general_score_metric": "ROC-AUC",
+  "typical_sota_score": "varies by task (e.g., roughly 60–95% depending on property and architecture)",
+  "year_of_publish": 2024,
+  "reputation": "A recent (arXiv) contribution that provides the first broad empirical study of protein sequence augmentation methods and is of growing interest in protein ML research.",
+  "notes": "Caveats: results are task- and architecture-dependent; labeled protein data are often limited so reported gains may not generalize; non-LLM benchmark; careful augmentation design needed to avoid biologically implausible sequences or label leakage.",
+  "creators": {
+    "scientists": [
+      "Rui Sun",
+      "Lirong Wu",
+      "Haitao Lin",
+      "Yufei Huang",
+      "Stan Z. Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2403.00875",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

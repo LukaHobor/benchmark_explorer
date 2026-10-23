@@ -1,0 +1,35 @@
+{
+  "name": "STEAM",
+  "description": "Abstract\n                \n                  Motivation\n                  Spatial transcriptomic technologies allow researchers to explore the diversity and specificity of gene expression within their original tissue structure. Accurately identifying regions that are spatially coherent in both gene expression and physical tissue structures is an emerging topic, but challenging due to the lack of ground truth labels which renders complicating validation of clustering consistency and reproducibility. This highlights a need for a computational evaluation framework to rigorously and unbiasedly assess clustering performance.\n                \n                \n                  Results\n                  To address this gap, we propose STEAM (Spatial Transcriptomics Evaluation Algorithm and Metric), a user-friendly computational pipeline designed to evaluate the consistency and reliability of clustering results by leveraging machine learning classification and prediction methods, with the goal of maintaining the spatial proximity and gene expression patterns within clusters. We benchmarked STEAM on various public datasets, spanning multi-cell to single-cell resolution, as well as spatial transcriptomics and proteomics. The results highlighted its robustness and generalizability through comprehensive statistical evaluation metrics, such as Kappa score, F1 score, accuracy, and adjusted rand index. Notably, STEAM supports multi-sample training, enabling cross-replicate clustering consistency assessment. Moreover, STEAM provides practical guidance by comparing clustering results across multiple approaches; here, we evaluated four different methods, including spatial-aware and spatial-ignorant approaches. In summary, we believe that STEAM provides researchers a promising tool for evaluating clustering robustness and benchmarking clustering performance for spatial omics data, offering valuable insights to drive reproducible discoveries in spatial biology.\n                \n                \n                  Availability and implementation\n                  \n                    Source code and the R software tool STEAM are available from\n                    https://github.com/fanzhanglab/STEAM\n                    .",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "clustering_evaluation",
+    "classification",
+    "cross-sample_consistency_assessment"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 / accuracy / adjusted_rand_index (ARI)",
+  "general_score_metric": "adjusted_rand_index",
+  "year_of_publish": 2025,
+  "reputation": "STEAM is a purpose-built evaluation pipeline for spatial transcriptomics clustering with an R implementation on GitHub; it is recognized in the spatial-omics community but adoption is still growing relative to general clustering toolkits.",
+  "notes": "Non-LLM benchmark focused on spatial-omics clustering evaluation; results depend strongly on dataset quality, preprocessing, and batch effects. Uses multiple metrics (Kappa, F1, accuracy, ARI) rather than a single summary score.",
+  "creators": {
+    "scientists": [
+      "Samantha Reynoso",
+      "Courtney Schiebout",
+      "Revanth Krishna",
+      "Fan Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2025.02.17.636505",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

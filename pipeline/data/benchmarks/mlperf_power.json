@@ -1,0 +1,58 @@
+{
+  "name": "MLPerf Power",
+  "description": "Rapid adoption of machine learning (ML) technologies has led to a surge in power consumption across diverse systems, from tiny IoT devices to massive datacenter clusters. Benchmarking the energy efficiency of these systems is crucial for optimization, but presents novel challenges due to the variety of hardware platforms, workload characteristics, and system-level interactions. This paper introduces MLPerf Power, a comprehensive benchmarking methodology with capabilities to evaluate the energy efficiency of ML systems at power levels ranging from microwatts to megawatts. Developed by a consortium of industry professionals from more than 20 organizations, MLPerf Power establishes rules and best practices to ensure comparability across diverse architectures. We use representative workloads from the MLPerf benchmark suite to collect 1,841 reproducible measurements from 60 systems across the entire range of ML deployment scales. Our analysis reveals trade-offs between performance, complexity, and energy efficiency across this wide range of systems, providing actionable insights for designing optimized ML solutions from the smallest edge devices to the largest cloud infrastructures. This work emphasizes the importance of energy efficiency as a key metric in the evaluation and comparison of the ML system, laying the foundation for future research in this critical area. We discuss the implications for developing sustainable AI solutions and standardizing energy efficiency benchmarking for ML systems.",
+  "category": "mixed",
+  "domain": "machine learning systems / hardware energy",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "system_measurement",
+    "benchmarking",
+    "throughput_energy_tradeoff"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "energy- and power-based metrics (joules per inference, watts, and derived energy-per-ISO workload); comparability enforced via standardized workload definitions",
+  "general_score_metric": "energy per inference (Joules/inference) and power consumption (Watts); often reported as joules/sample or joules/query",
+  "typical_sota_score": "varies widely by system class (system-dependent; ranges from µJ–mJ per inference for tiny edge models up to kJ per large datacenter workload) — not a single unified percentage",
+  "year_of_publish": 2024,
+  "reputation": "Widely adopted and respected in the systems and ML-hardware communities as the canonical methodology for measuring ML energy efficiency across scales.",
+  "notes": "Non-LLM, systems-level benchmark with strong emphasis on measurement methodology and reproducibility; results are hardware- and configuration-dependent, sensitive to measurement setup, ambient conditions, and software stack—direct cross-system comparisons require strict adherence to rules.",
+  "creators": {
+    "scientists": [
+      "Arya Tschand",
+      "Arun Tejusve Raghunath Rajan",
+      "Sachin Idgunji",
+      "Anirban Ghosh",
+      "Jeremy Holleman",
+      "Csaba Kiraly",
+      "Pawan Ambalkar",
+      "Ritika Borkar",
+      "Ramesh Chukka",
+      "Trevor Cockrell",
+      "Oliver Curtis",
+      "Grigori Fursin",
+      "Miro Hodak",
+      "Hiwot Kassa",
+      "Anton Lokhmotov",
+      "Dejan Miskovic",
+      "Yuechao Pan",
+      "Manu Prasad Manmathan",
+      "Liz Raymond",
+      "Tom St. John",
+      "Arjun Suresh",
+      "Rowan Taubitz",
+      "Sean Zhan",
+      "Scott Wasson",
+      "David Kanter",
+      "Vijay Janapa Reddi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.12032",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

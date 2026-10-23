@@ -1,0 +1,33 @@
+{
+  "name": "Crafter",
+  "description": "Evaluating the general abilities of intelligent agents requires complex simulation environments. Existing benchmarks typically evaluate only one narrow task per environment, requiring researchers to perform expensive training runs on many different environments. We introduce Crafter, an open world survival game with visual inputs that evaluates a wide range of general abilities within a single environment. Agents either learn from the provided reward signal or through intrinsic objectives and are evaluated by semantically meaningful achievements that can be unlocked during each episode, such as discovering resources and crafting tools. Consistently unlocking all achievements requires strong generalization, deep exploration, and long-term reasoning. We experimentally verify that Crafter is of appropriate difficulty to drive future research and provide baselines scores of reward agents and unsupervised agents. Furthermore, we observe sophisticated behaviors emerging from maximizing the reward signal, such as building tunnel systems, bridges, houses, and plantations. We hope that Crafter will accelerate research progress by quickly evaluating a wide spectrum of abilities.",
+  "category": "vision",
+  "domain": "reinforcement learning / agent evaluation",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "environment_evaluation",
+    "open_ended_task",
+    "exploration_and_long_horizon_planning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "achievement_count / episode_reward (number of semantically meaningful achievements unlocked; often reported as mean per episode)",
+  "general_score_metric": "mean_achievements_unlocked_per_episode (often accompanied by episode reward and sample-efficiency curves)",
+  "year_of_publish": 2021,
+  "reputation": "Widely cited in the RL exploration/generalization literature as a challenging open-world visual benchmark with moderate adoption for research on intrinsic motivation and general agents.",
+  "notes": "Non-LLM benchmark: requires heavy compute and long training; scores are stochastic and sensitive to seeds and training budget; environment-specific engineering can bias comparisons; not saturated.",
+  "creators": {
+    "scientists": [
+      "Danijar Hafner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2109.06780",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

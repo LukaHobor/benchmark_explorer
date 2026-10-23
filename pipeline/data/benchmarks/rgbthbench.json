@@ -1,0 +1,33 @@
+{
+  "name": "RGB-Th-Bench",
+  "description": "We introduce RGB-Th-Bench, the first benchmark designed to evaluate the ability of Vision-Language Models (VLMs) to comprehend RGB-Thermal image pairs. While VLMs have demonstrated remarkable progress in visual reasoning and multimodal understanding, their evaluation has been predominantly limited to RGB-based benchmarks, leaving a critical gap in assessing their capabilities in infrared vision tasks. Existing visible-infrared datasets are either task-specific or lack high-quality annotations necessary for rigorous model evaluation. To address these limitations, RGB-Th-Bench provides a comprehensive evaluation framework covering 14 distinct skill dimensions, with a total of 1,600+ expert-annotated Yes/No questions. The benchmark employs two accuracy metrics: a standard question-level accuracy and a stricter skill-level accuracy, which evaluates model robustness across multiple questions within each skill dimension. This design ensures a thorough assessment of model performance, including resilience to adversarial and hallucinated responses. We conduct extensive evaluations on 19 state-of-the-art VLMs, revealing significant performance gaps in RGB-Thermal understanding. Our results show that even the strongest models struggle with thermal image comprehension, with performance heavily constrained by their RGB-based capabilities. Additionally, the lack of large-scale application-specific and expert-annotated thermal-caption-pair datasets in pre-training is an important reason of the observed performance gap. RGB-Th-Bench highlights the urgent need for further advancements in multimodal learning to bridge the gap between visible and thermal image understanding. The dataset is available through this link, and the evaluation code will also be made publicly available.",
+  "category": "multimodal",
+  "domain": "visual-thermal multimodal understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy — both question-level accuracy and a stricter skill-level accuracy (robustness across multiple questions per skill)",
+  "general_score_metric": "accuracy (question-level) and skill-level accuracy",
+  "year_of_publish": 2025,
+  "reputation": "New benchmark highlighting large gaps in VLM performance on RGB–thermal understanding; gaining attention in multimodal vision research but not yet widely adopted.",
+  "notes": "Relatively small (~1.6k yes/no questions); yes/no format susceptible to guessing; focuses specifically on RGB–thermal pairs (pretraining data for thermal modality is scarce); non-LLM VLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mehdi Moshtaghi",
+      "Siavash H. Khajavi",
+      "Joni Pajarinen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.19654",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

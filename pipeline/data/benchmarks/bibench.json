@@ -1,0 +1,42 @@
+{
+  "name": "BiBench",
+  "description": "Network binarization emerges as one of the most promising compression approaches offering extraordinary computation and memory savings by minimizing the bit-width. However, recent research has shown that applying existing binarization algorithms to diverse tasks, architectures, and hardware in realistic scenarios is still not straightforward. Common challenges of binarization, such as accuracy degradation and efficiency limitation, suggest that its attributes are not fully understood. To close this gap, we present BiBench, a rigorously designed benchmark with in-depth analysis for network binarization. We first carefully scrutinize the requirements of binarization in the actual production and define evaluation tracks and metrics for a comprehensive and fair investigation. Then, we evaluate and analyze a series of milestone binarization algorithms that function at the operator level and with extensive influence. Our benchmark reveals that 1) the binarized operator has a crucial impact on the performance and deployability of binarized networks; 2) the accuracy of binarization varies significantly across different learning tasks and neural architectures; 3) binarization has demonstrated promising efficiency potential on edge devices despite the limited hardware support. The results and analysis also lead to a promising paradigm for accurate and efficient binarization. We believe that BiBench will contribute to the broader adoption of binarization and serve as a foundation for future research. The code for our BiBench is released https://github.com/htqin/BiBench .",
+  "category": "mixed",
+  "domain": "model compression / efficient deep learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "object_detection",
+    "semantic_segmentation",
+    "model_compression",
+    "efficiency_evaluation",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task accuracy (e.g., Top-1/Top-5) combined with efficiency metrics (inference latency, model size, bit-operations)",
+  "general_score_metric": "Top-1 accuracy (for accuracy-focused tracks) together with latency/size/bit-ops for efficiency tracks",
+  "year_of_publish": 2023,
+  "reputation": "A targeted benchmark for the model-compression and binary-network research community with an accompanying GitHub release; respected within its niche but not broadly standardized across all compression work.",
+  "notes": "Non-LLM benchmark; results are highly hardware- and operator-implementation dependent; performance varies substantially across tasks and architectures; reproducibility requires access to the target edge hardware and optimized binarized operators.",
+  "creators": {
+    "scientists": [
+      "Haotong Qin",
+      "Mingyuan Zhang",
+      "Yifu Ding",
+      "Aoyu Li",
+      "Zhongang Cai",
+      "Ziwei Liu",
+      "Fisher Yu",
+      "Xianglong Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2301.11233",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

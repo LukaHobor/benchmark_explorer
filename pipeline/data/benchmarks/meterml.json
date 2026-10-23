@@ -1,0 +1,42 @@
+{
+  "name": "METER-ML",
+  "description": "Reducing methane emissions is essential for mitigating global warming. To attribute methane emissions to their sources, a comprehensive dataset of methane source infrastructure is necessary. Recent advancements with deep learning on remotely sensed imagery have the potential to identify the locations and characteristics of methane sources, but there is a substantial lack of publicly available data to enable machine learning researchers and practitioners to build automated mapping approaches. To help fill this gap, we construct a multi-sensor dataset called METER-ML containing 86,599 georeferenced NAIP, Sentinel-1, and Sentinel-2 images in the U.S. labeled for the presence or absence of methane source facilities including concentrated animal feeding operations, coal mines, landfills, natural gas processing plants, oil refineries and petroleum terminals, and wastewater treatment plants. We experiment with a variety of models that leverage different spatial resolutions, spatial footprints, image products, and spectral bands. We find that our best model achieves an area under the precision recall curve of 0.915 for identifying concentrated animal feeding operations and 0.821 for oil refineries and petroleum terminals on an expert-labeled test set, suggesting the potential for large-scale mapping. We make METER-ML freely available at https://stanfordmlgroup.github.io/projects/meter-ml/ to support future work on automated methane source mapping.",
+  "category": "vision",
+  "domain": "earth observation / climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multi_label_classification",
+    "image_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUPRC (area under the precision–recall curve)",
+  "general_score_metric": "AUPRC",
+  "typical_sota_score": "82–92%",
+  "year_of_publish": 2022,
+  "reputation": "A recent Stanford-released remote sensing dataset gaining attention for methane-source mapping, but with limited widespread adoption so far.",
+  "notes": "Non-LLM vision benchmark; class imbalance across facility types, geographic bias and spatial autocorrelation risks, labels from expert annotation; moderate dataset size (~86k samples).",
+  "creators": {
+    "scientists": [
+      "Bryan Zhu",
+      "Nicholas Lui",
+      "Jeremy Irvin",
+      "Jimmy Le",
+      "Sahil Tadwalkar",
+      "Chenghao Wang",
+      "Zutao Ouyang",
+      "Frankie Y. Liu",
+      "Andrew Y. Ng",
+      "Robert B. Jackson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.11166",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

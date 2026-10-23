@@ -1,0 +1,36 @@
+{
+  "name": "Static Analysis Cryptography Benchmark",
+  "description": "The incorrect use of cryptography is a common source of critical software vulnerabilities. As developers lack knowledge in applied cryptography and support from experts is scarce, this situation is frequently addressed by adopting static code analysis tools to automatically detect cryptography misuse during coding and reviews, even if the effectiveness of such tools is far from being well understood. This paper proposes a method for benchmarking static code analysis tools for the detection of cryptography misuse, and evaluates the method in a case study, with the goal of selecting the most adequate tools for specific development contexts. Our method classifies cryptography misuse in nine categories recognized by developers (weak cryptography, poor key management, bad randomness, etc.) and provides the workload, metrics and procedure needed for a fair assessment and comparison of tools. We found that all evaluated tools together detected only 35% of cryptography misuses in our tests. Furthermore, none of the evaluated tools detected insecure elliptic curves, weak parameters in key agreement, and most insecure configurations for RSA and ECDSA. This suggests cryptography misuse is underestimated by tool builders. Despite that, we show that it is possible to benefit from an adequate tool selection during the development of cryptographic software.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "vulnerability_detection",
+    "static_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision / recall / F1 (detection rate emphasized)",
+  "general_score_metric": "detection_rate (recall) / F1",
+  "typical_sota_score": "30–40%",
+  "year_of_publish": 2017,
+  "reputation": "20 citations",
+  "notes": "Non-LLM, static-analysis-only benchmark; performance highly dependent on corpus coverage and ground-truth labelling by experts; small/targeted case-study datasets may limit generalizability; tools vary greatly by configuration.",
+  "creators": {
+    "scientists": [
+      "Alexandre Braga",
+      "Ricardo Dahab",
+      "Nuno Antunes",
+      "Nuno Laranjeiro",
+      "Marco Vieira"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://doi.org/10.1109/issre.2017.27",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

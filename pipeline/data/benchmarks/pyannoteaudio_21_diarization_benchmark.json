@@ -1,0 +1,33 @@
+{
+  "name": "pyannote.audio 2.1 diarization benchmark",
+  "description": "pyannote.audio is an open-source toolkit written in Python for speaker diarization. Version 2.1 introduces a major overhaul of pyannote.audio default speaker diarization pipeline, made of three main stages: speaker segmentation applied to a short sliding window, neural speaker embedding of each (local) speakers, and (global) ag-glomerative clustering. One of the main objective of the toolkit is to democratize speaker diarization. Therefore, on top of a pretrained speaker diarization pipeline that gives good results out of the box, we also provide a recipe that practitioners can follow to improve its performance on their own (manually annotated) dataset.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "diarization",
+    "segmentation",
+    "speaker_clustering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Diarization Error Rate (DER)",
+  "general_score_metric": "Diarization Error Rate (DER)",
+  "typical_sota_score": "3–8%",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded in the speech community as part of the pyannote toolkit; commonly used for reproducible diarization evaluations.",
+  "notes": "Non-LLM benchmark; DER is sensitive to voice activity detection (VAD) and overlap handling; reported scores vary by dataset and overlap conditions. Reproducible recipe provided but cross-dataset contamination and protocol differences can affect comparisons.",
+  "creators": {
+    "scientists": [
+      "Hervé Bredin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.21437/interspeech.2023-105",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

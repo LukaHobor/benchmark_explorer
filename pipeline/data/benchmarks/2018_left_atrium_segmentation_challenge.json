@@ -1,0 +1,37 @@
+{
+  "name": "2018 Left Atrium Segmentation Challenge",
+  "description": "Segmentation of cardiac images, particularly late gadolinium-enhanced magnetic resonance imaging (LGE-MRI) widely used for visualizing diseased cardiac structures, is a crucial first step for clinical diagnosis and treatment. However, direct segmentation of LGE-MRIs is challenging due to its attenuated contrast. Since most clinical studies have relied on manual and labor-intensive approaches, automatic methods are of high interest, particularly optimized machine learning approaches. To address this, we organized the \"2018 Left Atrium Segmentation Challenge\" using 154 3D LGE-MRIs, currently the world's largest cardiac LGE-MRI dataset, and associated labels of the left atrium segmented by three medical experts, ultimately attracting the participation of 27 international teams. In this paper, extensive analysis of the submitted algorithms using technical and biological metrics was performed by undergoing subgroup analysis and conducting hyper-parameter analysis, offering an overall picture of the major design choices of convolutional neural networks (CNNs) and practical considerations for achieving state-of-the-art left atrium segmentation. Results show the top method achieved a dice score of 93.2% and a mean surface to a surface distance of 0.7 mm, significantly outperforming prior state-of-the-art. Particularly, our analysis demonstrated that double, sequentially used CNNs, in which a first CNN is used for automatic region-of-interest localization and a subsequent CNN is used for refined regional segmentation, achieved far superior results than traditional methods and pipelines containing single CNNs. This large-scale benchmarking study makes a significant step towards much-improved segmentation methods for cardiac LGE-MRIs, and will serve as an important benchmark for evaluating and comparing the future works in the field.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "semantic_segmentation",
+    "3D_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "dice_coefficient (Dice score); supplemented by surface distance metrics (e.g., mean surface distance, Hausdorff distance)",
+  "general_score_metric": "Dice score",
+  "typical_sota_score": "90–95%",
+  "year_of_publish": 2020,
+  "reputation": "13 citations",
+  "notes": "Relatively small dataset (154 3D LGE-MRI volumes); domain-specific (cardiac MRI) with labels from multiple clinical experts; not an LLM benchmark; results can be sensitive to preprocessing and ROI localization approaches.",
+  "creators": {
+    "scientists": [
+      "Zhaohan Xiong",
+      "Qing Xia",
+      "Zhiqiang Hu",
+      "Ning Huang",
+      "Cheng Bian",
+      "Yefeng Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2004.12314",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

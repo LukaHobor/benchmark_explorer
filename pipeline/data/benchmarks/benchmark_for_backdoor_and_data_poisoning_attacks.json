@@ -1,0 +1,35 @@
+{
+  "name": "Benchmark for Backdoor and Data Poisoning Attacks",
+  "description": "Data poisoning and backdoor attacks manipulate training data in order to cause models to fail during inference.  A recent survey of industry practitioners found that data poisoning is the number one concern among threats ranging from model stealing to adversarial attacks. However, we find that the impressive performance evaluations from data poisoning attacks are, in large part, artifacts of inconsistent experimental design. Moreover, we find that existing poisoning methods have been tested in contrived scenarios, and many fail in more realistic settings. In order to promote fair comparison in future work, we develop standardized benchmarks for data poisoning and backdoor attacks.",
+  "category": "mixed",
+  "domain": "machine learning security / robustness",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "attack_generation",
+    "adversarial_evaluation",
+    "backdoor_injection",
+    "defense_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack_success_rate (ASR) and clean_accuracy",
+  "general_score_metric": "attack_success_rate (ASR) alongside clean accuracy",
+  "reputation": "A standardized benchmark proposed to improve rigor in poisoning/backdoor evaluations; used by robustness and security researchers but adoption is mixed while best practices evolve.",
+  "notes": "Results are highly sensitive to experimental design (e.g., trigger design, poisoning ratio, and model/training protocol); careful adherence to the benchmark's standardized protocols is required to avoid misleading comparisons.",
+  "creators": {
+    "scientists": [
+      "Avi Schwarzschild",
+      "Micah Goldblum",
+      "Arjun Gupta",
+      "John P Dickerson",
+      "Tom Goldstein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

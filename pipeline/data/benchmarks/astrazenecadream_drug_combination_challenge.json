@@ -1,0 +1,38 @@
+{
+  "name": "AstraZeneca-DREAM Drug Combination Challenge",
+  "description": "The effectiveness of most cancer targeted therapies is short-lived. Tumors often develop resistance that might be overcome with drug combinations. However, the number of possible combinations is vast, necessitating data-driven approaches to find optimal patient-specific treatments. Here we report AstraZeneca's large drug combination dataset, consisting of 11,576 experiments from 910 combinations across 85 molecularly characterized cancer cell lines, and results of a DREAM Challenge to evaluate computational strategies for predicting synergistic drug pairs and biomarkers. 160 teams participated to provide a comprehensive methodological development and benchmarking. Winning methods incorporate prior knowledge of drug-target interactions. Synergy is predicted with an accuracy matching biological replicates for >60% of combinations. However, 20% of drug combinations are poorly predicted by all methods. Genomic rationale for synergy predictions are identified, including ADAM17 inhibitor antagonism when combined with PIK3CB/D inhibition contrasting to synergy when combined with other PI3K-pathway inhibitors in PIK3CA mutant cells.",
+  "category": "mixed",
+  "domain": "pharmacogenomics / cancer therapeutics",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "regression",
+    "biomarker_prediction",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson correlation between predicted and observed synergy scores (also reported: RMSE/MSE and ranking-based metrics)",
+  "general_score_metric": "Pearson correlation (higher is better)",
+  "typical_sota_score": "top teams report correlations comparable to biological replicates for >60% of combinations; overall Pearson r often in the ~0.4–0.7 range depending on subset",
+  "year_of_publish": 2019,
+  "reputation": "353 citations",
+  "notes": "non-LLM benchmark; moderate-scale experimental dataset (11,576 experiments). Biological noise and experimental variability limit achievable performance; some combinations remain poorly predicted by all methods. Methods benefit from incorporating prior drug–target knowledge; results influenced by dataset heterogeneity and measurement noise.",
+  "creators": {
+    "scientists": [
+      "Michael P. Menden",
+      "Dennis Wang",
+      "Mike J. Mason",
+      "Bence Szalai",
+      "Krishna C. Bulusu",
+      "Yuanfang Guan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41467-019-09799-2",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

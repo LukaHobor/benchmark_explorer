@@ -1,0 +1,40 @@
+{
+  "name": "Cooking Procedural Knowledge Benchmark",
+  "description": "Watching instructional videos are often used to learn about procedures. Video captioning is one way of automatically collecting such knowledge. However, it provides only an indirect, overall evaluation of multimodal models with no finer-grained quantitative measure of what they have learned. We propose instead, a benchmark of structured procedural knowledge extracted from cooking videos. This work is complementary to existing tasks, but requires models to produce interpretable structured knowledge in the form of verb-argument tuples. Our manually annotated open-vocabulary resource includes 356 instructional cooking videos and 15,523 video clip/sentence-level annotations. Our analysis shows that the proposed task is challenging and standard modeling approaches like unsupervised segmentation, semantic role labeling, and visual action detection perform poorly when forced to predict every action of a procedure in a structured form.",
+  "category": "multimodal",
+  "domain": "instructional video understanding / procedural knowledge",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "structured_prediction",
+    "information_extraction",
+    "multimodal_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision/recall/F1 on verb-argument tuples (token/tuple-level), exact_match for full tuple recovery",
+  "general_score_metric": "F1 (tuple-level)",
+  "typical_sota_score": "10–40% (F1)",
+  "year_of_publish": 2020,
+  "reputation": "Niche academic benchmark used in procedural video understanding and multimodal IE research, with limited broader adoption.",
+  "notes": "Small dataset (356 videos, ~15.5k annotations); focuses on structured tuple extraction rather than free-text generation; standard baselines perform poorly; potential annotation ambiguity and class imbalance; non-LLM-focused multimodal benchmark.",
+  "creators": {
+    "scientists": [
+      "Frank F. Xu",
+      "Lei Ji",
+      "Botian Shi",
+      "Junyi Du",
+      "Graham Neubig",
+      "Yonatan Bisk",
+      "Nan Duan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2005.00706",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

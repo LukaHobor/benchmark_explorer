@@ -1,0 +1,38 @@
+{
+  "name": "CHAMMI",
+  "description": "Most neural networks assume that input images have a fixed number of channels (three for RGB images). However, there are many settings where the number of channels may vary, such as microscopy images where the number of channels changes depending on instruments and experimental goals. Yet, there has not been a systemic attempt to create and evaluate neural networks that are invariant to the number and type of channels. As a result, trained models remain specific to individual studies and are hardly reusable for other microscopy settings. In this paper, we present a benchmark for investigating channel-adaptive models in microscopy imaging, which consists of 1) a dataset of varied-channel single-cell images, and 2) a biologically relevant evaluation framework. In addition, we adapted several existing techniques to create channel-adaptive models and compared their performance on this benchmark to fixed-channel, baseline models. We find that channel-adaptive models can generalize better to out-of-domain tasks and can be computationally efficient. We contribute a curated dataset (https://doi.org/10.5281/zenodo.7988357) and an evaluation API (https://github.com/broadinstitute/MorphEm.git) to facilitate objective comparisons in future research and applications.",
+  "category": "vision",
+  "domain": "microscopy imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "representation_learning",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (classification / transfer generalization accuracy)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A recently proposed, domain-specialized benchmark (Broad Institute) with emerging adoption in computational microscopy and bioimage analysis research.",
+  "notes": "Non-LLM benchmark focused on microscopy images; channel-variability specialization limits direct comparability to standard vision benchmarks; potential class imbalance and dataset-specific biological variability; moderate dataset size; limited community adoption so far.",
+  "creators": {
+    "scientists": [
+      "Zitong Chen",
+      "Chau Pham",
+      "Siqi Wang",
+      "Michael Doron",
+      "Nikita Moshkov",
+      "Bryan A. Plummer",
+      "Juan C. Caicedo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2310.19224",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

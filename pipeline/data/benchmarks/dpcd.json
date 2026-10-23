@@ -1,0 +1,37 @@
+{
+  "name": "DPCD",
+  "description": "Recently, the advancements in Virtual/Augmented Reality (VR/AR) have driven the demand for Dynamic Point Clouds (DPC). Unlike static point clouds, DPCs are capable of capturing temporal changes within objects or scenes, offering a more accurate simulation of the real world. While significant progress has been made in the quality assessment research of static point cloud, little study has been done on Dynamic Point Cloud Quality Assessment (DPCQA), which hinders the development of quality-oriented applications, such as interframe compression and transmission in practical scenarios. In this paper, we introduce a large-scale DPCQA database, named DPCD, which includes 15 reference DPCs and 525 distorted DPCs from seven types of lossy compression and noise distortion. By rendering these samples to Processed Video Sequences (PVS), a comprehensive subjective experiment is conducted to obtain Mean Opinion Scores (MOS) from 21 viewers for analysis. The characteristic of contents, impact of various distortions, and accuracy of MOSs are presented to validate the heterogeneity and reliability of the proposed database. Furthermore, we evaluate the performance of several objective metrics on DPCD. The experiment results show that DPCQA is more challenge than that of static point cloud. The DPCD, which serves as a catalyst for new research endeavors on DPCQA, is publicly available at https://huggingface.co/datasets/Olivialyt/DPCD.",
+  "category": "vision",
+  "domain": "vision (dynamic point clouds / VR/AR)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "quality_assessment",
+    "regression",
+    "subjective_rating_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Correlation and error against human MOS (Spearman SRCC, Pearson PLCC, RMSE)",
+  "general_score_metric": "Spearman rank correlation (SRCC) / Pearson linear correlation (PLCC)",
+  "year_of_publish": 2025,
+  "reputation": "Emerging dataset in the dynamic point-cloud quality-assessment community, intended to spur DPCQA research.",
+  "notes": "Rendered to video sequences (PVS), MOS collected from 21 viewers (limited subjective panel); only 15 reference DPCs and 525 distorted samples—useful but relatively small and specific to DPC distortions; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yating Liu",
+      "Yujie Zhang",
+      "Qi Yang",
+      "Yiling Xu",
+      "Zhu Li",
+      "Ye-kui Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.12431",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

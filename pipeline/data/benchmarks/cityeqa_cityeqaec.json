@@ -1,0 +1,43 @@
+{
+  "name": "CityEQA / CityEQA-EC",
+  "description": "Embodied Question Answering (EQA) has primarily focused on indoor environments, leaving the complexities of urban settings - spanning environment, action, and perception - largely unexplored. To bridge this gap, we introduce CityEQA, a new task where an embodied agent answers open-vocabulary questions through active exploration in dynamic city spaces. To support this task, we present CityEQA-EC, the first benchmark dataset featuring 1,412 human-annotated tasks across six categories, grounded in a realistic 3D urban simulator. Moreover, we propose Planner-Manager-Actor (PMA), a novel agent tailored for CityEQA. PMA enables long-horizon planning and hierarchical task execution: the Planner breaks down the question answering into sub-tasks, the Manager maintains an object-centric cognitive map for spatial reasoning during the process control, and the specialized Actors handle navigation, exploration, and collection sub-tasks. Experiments demonstrate that PMA achieves 60.7% of human-level answering accuracy, significantly outperforming frontier-based baselines. While promising, the performance gap compared to humans highlights the need for enhanced visual reasoning in CityEQA. This work paves the way for future advancements in urban spatial intelligence. Dataset and code are available at https://github.com/BiluYong/CityEQA.git.",
+  "category": "multimodal",
+  "domain": "embodied agent evaluation / robotics / simulated urban environments",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "embodied_question_answering",
+    "navigation",
+    "vision_and_language",
+    "open_ended_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "answering_accuracy (primary) plus navigation metrics such as success rate and SPL",
+  "general_score_metric": "answering accuracy (%)",
+  "typical_sota_score": "≈60.7% (reported by PMA agent)",
+  "year_of_publish": 2025,
+  "reputation": "A recent (2025) benchmark introducing urban embodied QA; of growing interest for researchers in embodied AI and urban scene understanding but still early-stage adoption.",
+  "notes": "Simulated embodied benchmark with 1,412 human-annotated tasks; relatively small dataset for deep RL; computationally intensive (long-horizon planning in 3D simulator); non-LLM specialized evaluation and potential sim-to-real gaps.",
+  "creators": {
+    "scientists": [
+      "Yong Zhao",
+      "Kai Xu",
+      "Zhengqiu Zhu",
+      "Yue Hu",
+      "Zhiheng Zheng",
+      "Yingfeng Chen",
+      "Yatai Ji",
+      "Chen Gao",
+      "Yong Li",
+      "Jincai Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2502.12532",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

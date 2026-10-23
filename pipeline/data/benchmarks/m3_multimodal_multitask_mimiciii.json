@@ -1,0 +1,33 @@
+{
+  "name": "M3 (Multi-Modal Multitask MIMIC-III)",
+  "description": "Healthcare represents one of the most promising application areas for machine learning algorithms,  including modern methods based on deep learning.   Modern deep learning algorithms perform best on large datasets and on unstructured modalities such as text or image data; advances in deep learning have often been driven by the availability of such large datasets. Here, we introduce Multi-Modal Multitask MIMIC-III (M3) — a dataset and benchmark for evaluating machine learning algorithms in the healthcare domain.  This dataset contains multi-modal patient data collected from intensive care units — including physiological time series, clinical notes, ECG waveforms, and tabular inputs — and defines six clinical tasks — including predicting mortality, decompensation, readmission, and other outcomes — which serve as benchmarks for comparing algorithms. We introduce new multi-modal and multitask models for this dataset, and show that they outperform previous state-of-the-art results that only rely on a subset of all tasks and modalities. This highlights the potential of multitask and multi-modal learning to improve the performance of algorithms in the healthcare domain. More generally, we envision M3 as a general resource that will help accelerate research in applying machine learning to healthcare.",
+  "category": "multimodal",
+  "domain": "healthcare / clinical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multilabel_classification",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC (with task-specific metrics such as AUPRC, F1 for classification tasks and MAE/MSE for regression)",
+  "general_score_metric": "AUROC (reported per task)",
+  "typical_sota_score": "varies by task; typically ~0.70–0.95 AUROC",
+  "reputation": "Well-regarded as a multimodal extension of MIMIC-III within clinical ML research, though adoption is primarily within the healthcare/academic community.",
+  "notes": "Derived from MIMIC-III (deidentified) — requires appropriate data use agreements; sensitive clinical data and domain-specific evaluation; dataset size and multimodal complexity can be limited for very large models; not a general-purpose LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yong Huang",
+      "Edgar Mariano Marroquin",
+      "Volodymyr Kuleshov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "MMEvalPro",
+  "description": "Large Multimodal Models (LMMs) exhibit impressive cross-modal understanding and reasoning abilities, often assessed through multiple-choice questions (MCQs) that include an image, a question, and several options. However, many benchmarks used for such evaluations suffer from systematic biases. Remarkably, Large Language Models (LLMs) without any visual perception capabilities achieve non-trivial performance, undermining the credibility of these evaluations. To address this issue while maintaining the efficiency of MCQ evaluations, we propose MMEvalPro, a benchmark designed to avoid Type-I errors through a trilogy evaluation pipeline and more rigorous metrics. For each original question from existing benchmarks, human annotators augment it by creating one perception question and one knowledge anchor question through a meticulous annotation process. MMEvalPro comprises $2,138$ question triplets, totaling $6,414$ distinct questions. Two-thirds of these questions are manually labeled by human experts, while the rest are sourced from existing benchmarks (MMMU, ScienceQA, and MathVista). Compared with the existing benchmarks, our experiments with the latest LLMs and LMMs demonstrate that MMEvalPro is more challenging (the best LMM lags behind human performance by $31.73\\%$, compared to an average gap of $8.03\\%$ in previous benchmarks) and more trustworthy (the best LLM trails the best LMM by $23.09\\%$, whereas the gap for previous benchmarks is just $14.64\\%$). Our in-depth analysis explains the reason for the large performance gap and justifies the trustworthiness of evaluation, underscoring its significant potential for advancing future research.",
+  "category": "multimodal",
+  "domain": "multimodal evaluation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark (2024) proposed to address bias in multimodal MCQ evaluation; early interest from multimodal evaluation researchers but not yet widely adopted.",
+  "notes": "Contains 2,138 question triplets (6,414 questions) with two-thirds manually annotated; moderate dataset size may limit coverage and there is potential contamination/overlap with source benchmarks (MMMU, ScienceQA, MathVista).",
+  "creators": {
+    "scientists": [
+      "Jinsheng Huang",
+      "Liang Chen",
+      "Taian Guo",
+      "Fu Zeng",
+      "Yusheng Zhao",
+      "Bohan Wu",
+      "Ye Yuan",
+      "Haozhe Zhao",
+      "Zhihui Guo",
+      "Yichi Zhang",
+      "Jingyang Yuan",
+      "Wei Ju",
+      "Luchen Liu",
+      "Tianyu Liu",
+      "Baobao Chang",
+      "Ming Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.00468",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Physion",
+  "description": "A video-based benchmark for evaluating AI models' ability to predict physical dynamics compared to human performance. Covers 8 physical scenario types (rolling, sliding, falling, collisions, deformable materials, stable stacking, etc.) using ThreeDWorld Unity3D-based physics simulation. The task is Object Contact Prediction: observe the first portion of a video, then predict whether two objects will make contact during the unseen remainder.",
+  "category": "vision",
+  "domain": "physical intuition, physical dynamics prediction",
+  "task_types": [
+    "binary prediction",
+    "object contact prediction",
+    "video understanding"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 1200,
+  "evaluation_method": "binary prediction accuracy compared to human performance baseline",
+  "general_score_metric": "binary contact prediction accuracy",
+  "typical_sota_score": "GNNs with direct physical state access approach human performance; pure vision models fall significantly below human baseline",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2023,
+  "reputation": "NeurIPS 2021 Datasets and Benchmarks track; standard benchmark for physical intuition in vision models; extended by Physion++ (arxiv:2306.15668)",
+  "notes": "~2,000 training + 150 test videos per scenario; ~1,200 total evaluation examples. Extended by Physion++ which tests latent physical properties (mass, friction, elasticity, deformability). GitHub: github.com/cogtoolslab/physics-benchmarking-neurips2021. CC-BY licensed.",
+  "creators": {
+    "scientists": [
+      "Daniel M. Bear",
+      "Elias Wang",
+      "Damian Mrowca"
+    ],
+    "institutions": [
+      "MIT",
+      "Stanford University"
+    ],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2106.08261",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-21",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

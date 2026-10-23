@@ -1,0 +1,40 @@
+{
+  "name": "RoboBEV",
+  "description": "Recent advancements in bird's eye view (BEV) representations have shown remarkable promise for in-vehicle 3D perception. However, while these methods have achieved impressive results on standard benchmarks, their robustness in varied conditions remains insufficiently assessed. In this study, we present RoboBEV, an extensive benchmark suite designed to evaluate the resilience of BEV algorithms. This suite incorporates a diverse set of camera corruption types, each examined over three severity levels. Our benchmarks also consider the impact of complete sensor failures that occur when using multi-modal models. Through RoboBEV, we assess 33 state-of-the-art BEV-based perception models spanning tasks like detection, map segmentation, depth estimation, and occupancy prediction. Our analyses reveal a noticeable correlation between the model's performance on in-distribution datasets and its resilience to out-of-distribution challenges. Our experimental results also underline the efficacy of strategies like pre-training and depth-free BEV transformations in enhancing robustness against out-of-distribution data. Furthermore, we observe that leveraging extensive temporal information significantly improves the model's robustness. Based on our observations, we design an effective robustness enhancement strategy based on the CLIP model. The insights from this study pave the way for the development of future BEV models that seamlessly combine accuracy with real-world robustness.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "detection",
+    "map_segmentation",
+    "depth_estimation",
+    "occupancy_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (detection mAP, segmentation mean IoU, depth error metrics such as Abs Rel/MAE, occupancy IoU)",
+  "general_score_metric": "task-dependent (mAP for detection / mean IoU for segmentation / depth error for depth estimation)",
+  "typical_sota_score": "varies by task (e.g., detection mAP ≈ 40–70%; segmentation mIoU ≈ 60–85%)",
+  "year_of_publish": 2024,
+  "reputation": "Emerging research benchmark for BEV robustness that is gaining attention in the autonomous-driving research community but is not yet an industry-wide standard.",
+  "notes": "Non-LLM benchmark focused on robustness to camera corruptions and sensor dropouts; heterogeneous per-task metrics complicate single-number comparisons; pretrained-model overlap may pose contamination risk for some models.",
+  "creators": {
+    "scientists": [
+      "Shaoyuan Xie",
+      "Lingdong Kong",
+      "Wenwei Zhang",
+      "Jiawei Ren",
+      "Liang Pan",
+      "Kai Chen",
+      "Ziwei Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2405.17426",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

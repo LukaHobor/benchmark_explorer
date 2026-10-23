@@ -1,0 +1,47 @@
+{
+  "name": "Unified Face Attack Detection Benchmark",
+  "description": "Presentation Attack Detection and Face Forgery Detection are designed to protect face data from physical media-based Presentation Attacks and digital editing-based DeepFakes respectively. But separate training of these two models makes them vulnerable to unknown attacks and burdens deployment environments. The lack of a Unified Face Attack Detection model to handle both types of attacks is mainly due to two factors. First, there's a lack of adequate benchmarks for models to explore. Existing UAD datasets have limited attack types and samples, restricting the model's ability to address advanced threats. To address this, we propose UniAttackDataPlus (UniAttackData+), the most extensive and sophisticated collection of forgery techniques to date. It includes 2,875 identities and their 54 kinds of falsified samples, totaling 697,347 videos. Second, there's a lack of a reliable classification criterion. Current methods try to find an arbitrary criterion within the same semantic space, which fails when encountering diverse attacks. So, we present a novel Visual-Language Model-based Hierarchical Prompt Tuning Framework (HiPTune) that adaptively explores multiple classification criteria from different semantic spaces. We build a Visual Prompt Tree to explore various classification rules hierarchically. Then, by adaptively pruning the prompts, the model can select the most suitable prompts to guide the encoder to extract discriminative features at different levels in a coarse-to-fine way. Finally, to help the model understand the classification criteria in visual space, we propose a Dynamically Prompt Integration module to project the visual prompts to the text encoder for more accurate semantics. Experiments on 12 datasets have shown the potential to inspire further innovations in the UAD field.",
+  "category": "vision",
+  "domain": "computer vision / biometrics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_classification",
+    "binary_classification",
+    "multi_class_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "ROC AUC (primary); EER, accuracy and F1 reported as secondary metrics",
+  "general_score_metric": "ROC AUC",
+  "year_of_publish": 2025,
+  "reputation": "New large-scale benchmark (UniAttackData+) proposing a unified face-attack evaluation; currently not yet widely adopted but likely to attract attention in face anti-spoofing and deepfake research.",
+  "notes": "Very large video dataset (697k videos) covering both presentation attacks and digital forgeries; non-LLM benchmark. Multiple metrics are used across prior work (AUC/EER/ACER), risk of domain shift and class imbalance across many attack types, and potential dataset contamination/privacy considerations depending on source of videos.",
+  "creators": {
+    "scientists": [
+      "Ajian Liu",
+      "Haocheng Yuan",
+      "Xiao Guo",
+      "Hui Ma",
+      "Wanyi Zhuang",
+      "Changtao Miao",
+      "Yan Hong",
+      "Chuanbiao Song",
+      "Jun Lan",
+      "Qi Chu",
+      "Tao Gong",
+      "Yanyan Liang",
+      "Weiqiang Wang",
+      "Jun Wan",
+      "Xiaoming Liu",
+      "Zhen Lei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.13327",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

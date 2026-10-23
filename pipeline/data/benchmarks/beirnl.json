@@ -1,0 +1,35 @@
+{
+  "name": "BEIR-NL",
+  "description": "Zero-shot evaluation of information retrieval (IR) models is often performed using BEIR; a large and heterogeneous benchmark composed of multiple datasets, covering different retrieval tasks across various domains. Although BEIR has become a standard benchmark for the zero-shot setup, its exclusively English content reduces its utility for underrepresented languages in IR, including Dutch. To address this limitation and encourage the development of Dutch IR models, we introduce BEIR-NL by automatically translating the publicly accessible BEIR datasets into Dutch. Using BEIR-NL, we evaluated a wide range of multilingual dense ranking and reranking models, as well as the lexical BM25 method. Our experiments show that BM25 remains a competitive baseline, and is only outperformed by the larger dense models trained for retrieval. When combined with reranking models, BM25 achieves performance on par with the best dense ranking models. In addition, we explored the impact of translation on the data by back-translating a selection of datasets to English, and observed a performance drop for both dense and lexical methods, indicating the limitations of translation for creating benchmarks. BEIR-NL is publicly available on the Hugging Face hub.",
+  "category": "text",
+  "domain": "information retrieval (Dutch)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ad_hoc_retrieval",
+    "dense_retrieval",
+    "reranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "nDCG@10 (primary); also report Recall@k and MRR",
+  "general_score_metric": "nDCG@10",
+  "typical_sota_score": "varies by dataset; nDCG@10 typically ~0.20–0.60 across tasks (BM25 often remains competitive)",
+  "year_of_publish": 2024,
+  "reputation": "6 citations",
+  "notes": "Automatically translated from English—translation/back-translation artifacts affect performance; heterogeneous corpus leads to high variance across tasks; zero-shot setting may be affected by pretraining/data contamination.",
+  "creators": {
+    "scientists": [
+      "Nikolay Banar",
+      "Ehsan Lotfi",
+      "Walter Daelemans"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2412.08329",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

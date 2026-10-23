@@ -1,0 +1,37 @@
+{
+  "name": "NAS-Bench-x11",
+  "description": "While early research in neural architecture search (NAS) required extreme computational resources, the recent releases of tabular and surrogate benchmarks have greatly increased the speed and reproducibility of NAS research. However, two of the most popular benchmarks do not provide the full training information for each architecture. As a result, on these benchmarks it is not possible to run many types of multi-fidelity techniques, such as learning curve extrapolation, that require evaluating architectures at arbitrary epochs. In this work, we present a method using singular value decomposition and noise modeling to create surrogate benchmarks, NAS-Bench-111, NAS-Bench-311, and NAS-Bench-NLP11, that output the full training information for each architecture, rather than just the final validation accuracy. We demonstrate the power of using the full training information by introducing a learning curve extrapolation framework to modify single-fidelity algorithms, showing that it leads to improvements over popular single-fidelity algorithms which claimed to be state-of-the-art upon release. Our code and pretrained models are available at https://github.com/automl/nas-bench-x11.",
+  "category": "mixed",
+  "domain": "neural architecture search",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "architecture_performance_prediction",
+    "learning_curve_extrapolation",
+    "architecture_ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (validation/test accuracy over epochs)",
+  "general_score_metric": "validation_accuracy",
+  "typical_sota_score": "95–97%",
+  "year_of_publish": 2021,
+  "reputation": "Widely used in the NAS research community as a reproducible surrogate/tabular benchmark that enables multi-fidelity experiments.",
+  "notes": "Non-LLM benchmark: surrogate/tabular benchmark that provides full training curves. Limited to the specific search spaces modelled (possible search-space bias and saturation); designed for reproducibility and multi-fidelity research.",
+  "creators": {
+    "scientists": [
+      "Shen Yan",
+      "Colin White",
+      "Yash Savani",
+      "Frank Hutter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2111.03602",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

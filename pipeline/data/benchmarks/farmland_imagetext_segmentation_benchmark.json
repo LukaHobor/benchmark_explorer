@@ -1,0 +1,36 @@
+{
+  "name": "Farmland Image-Text Segmentation Benchmark",
+  "description": "The traditional deep learning paradigm that solely relies on labeled data has limitations in representing the spatial relationships between farmland elements and the surrounding environment.It struggles to effectively model the dynamic temporal evolution and spatial heterogeneity of farmland. Language,as a structured knowledge carrier,can explicitly express the spatiotemporal characteristics of farmland, such as its shape, distribution,and surrounding environmental information.Therefore,a language-driven learning paradigm can effectively alleviate the challenges posed by the spatiotemporal heterogeneity of farmland.However,in the field of remote sensing imagery of farmland,there is currently no comprehensive benchmark dataset to support this research direction.To fill this gap,we introduced language based descriptions of farmland and developed FarmSeg-VL dataset,the first fine-grained image-text dataset designed for spatiotemporal farmland segmentation.Firstly, this article proposed a semi-automatic annotation method that can accurately assign caption to each image, ensuring high data quality and semantic richness while improving the efficiency of dataset construction.Secondly,the FarmSeg-VL exhibits significant spatiotemporal characteristics.In terms of the temporal dimension,it covers all four seasons.In terms of the spatial dimension,it covers eight typical agricultural regions across China.In addition, in terms of captions,FarmSeg-VL covers rich spatiotemporal characteristics of farmland,including its inherent properties,phenological characteristics, spatial distribution,topographic and geomorphic features,and the distribution of surrounding environments.Finally,we present a performance analysis of VLMs and the deep learning models that rely solely on labels trained on the FarmSeg-VL,demonstrating its potential as a standard benchmark for farmland segmentation.",
+  "category": "multimodal",
+  "domain": "agriculture / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "vision_language",
+    "visual_grounding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU (mean Intersection over Union) / IoU",
+  "general_score_metric": "mean Intersection over Union (mIoU)",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed multimodal remote-sensing benchmark for fine-grained farmland segmentation with initial adoption in the agricultural remote sensing community.",
+  "notes": "Covers spatial and temporal variability across regions and seasons but currently geographically focused (China); potential class imbalance and annotation noise; relatively new so limited comparative baselines and risk of dataset-specific overfitting.",
+  "creators": {
+    "scientists": [
+      "Chao Tao",
+      "Dandan Zhong",
+      "Weiliang Mu",
+      "Zhuofei Du",
+      "Haiyang Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.23106",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

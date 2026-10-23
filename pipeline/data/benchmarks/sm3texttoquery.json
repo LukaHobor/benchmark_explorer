@@ -1,0 +1,37 @@
+{
+  "name": "SM3-Text-to-Query",
+  "description": "Electronic health records (EHRs) are stored in various database systems with different database models on heterogeneous storage architectures, such as relational databases, document stores, or graph databases. These different database models have a big impact on query complexity and performance. While this has been a known fact in database research, its implications for the growing number of Text-to-Query systems have surprisingly not been investigated so far. In this paper, we present SM3-Text-to-Query, the first multi-model medical Text-to-Query benchmark based on synthetic patient data from Synthea, following the SNOMED-CT taxonomy -- a widely used knowledge graph ontology covering medical terminology. SM3-Text-to-Query provides data representations for relational databases (PostgreSQL), document stores (MongoDB), and graph databases (Neo4j and GraphDB (RDF)), allowing the evaluation across four popular query languages, namely SQL, MQL, Cypher, and SPARQL. We systematically and manually develop 408 template questions, which we augment to construct a benchmark of 10K diverse natural language question/query pairs for these four query languages (40K pairs overall). On our dataset, we evaluate several common in-context-learning (ICL) approaches for a set of representative closed and open-source LLMs. Our evaluation sheds light on the trade-offs between database models and query languages for different ICL strategies and LLMs. Last, SM3-Text-to-Query is easily extendable to additional query languages or real, standard-based patient databases.",
+  "category": "code",
+  "domain": "medical / databases",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_query",
+    "semantic_parsing",
+    "code_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed research benchmark (arXiv) providing the first multi-model medical text-to-query suite; useful to researchers but not yet widely adopted in production.",
+  "notes": "Synthetic Synthea-based data and heavy templating can induce distributional/template bias; exact-match is strict and may undercount semantically equivalent queries; potential (unknown) overlap with LLM training data; currently focused on synthetic medical scenarios and four query languages.",
+  "creators": {
+    "scientists": [
+      "Sithursan Sivasubramaniam",
+      "Cedric Osei-Akoto",
+      "Yi Zhang",
+      "Kurt Stockinger",
+      "Jonathan Fuerst"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2411.05521",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

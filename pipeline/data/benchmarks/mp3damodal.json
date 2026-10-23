@@ -1,0 +1,34 @@
+{
+  "name": "MP3D-Amodal",
+  "description": "This paper studies amodal image segmentation: predicting entire object segmentation masks including both visible and invisible (occluded) parts. In previous work, the amodal segmentation ground truth on real images is usually predicted by manual annotaton and thus is subjective. In contrast, we use 3D data to establish an automatic pipeline to determine authentic ground truth amodal masks for partially occluded objects in real images. This pipeline is used to construct an amodal completion evaluation benchmark, MP3D-Amodal, consisting of a variety of object categories and labels. To better handle the amodal completion task in the wild, we explore two architecture variants: a two-stage model that first infers the occluder, followed by amodal mask completion; and a one-stage model that exploits the representation power of Stable Diffusion for amodal segmentation across many categories. Without bells and whistles, our method achieves a new state-of-the-art performance on Amodal segmentati",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "amodal_segmentation",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "IoU",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2023,
+  "reputation": "A recent amodal segmentation benchmark that is useful for evaluating completion of occluded object masks in real images.",
+  "notes": "Non-LLM vision benchmark; amodal ground truth is derived automatically from 3D data, and results depend on category mix and occlusion difficulty.",
+  "creators": {
+    "scientists": [
+      "Guanqi Zhan",
+      "Chuanxia Zheng",
+      "Weidi Xie",
+      "Andrew Zisserman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.17247",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

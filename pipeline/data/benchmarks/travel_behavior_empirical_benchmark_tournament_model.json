@@ -1,0 +1,35 @@
+{
+  "name": "Travel behavior empirical benchmark (tournament model)",
+  "description": "Numerous studies have compared machine learning (ML) and discrete choice models (DCMs) in predicting travel demand. However, these studies often lack generalizability as they compare models deterministically without considering contextual variations. To address this limitation, our study develops an empirical benchmark by designing a tournament model, thus efficiently summarizing a large number of experiments, quantifying the randomness in model comparisons, and using formal statistical tests to differentiate between the model and contextual effects. This benchmark study compares two large-scale data sources: a database compiled from literature review summarizing 136 experiments from 35 studies, and our own experiment data, encompassing a total of 6,970 experiments from 105 models and 12 model families. This benchmark study yields two key findings. Firstly, many ML models, particularly the ensemble methods and deep learning, statistically outperform the DCM family (i.e., multinomial, nested, and mixed logit models). However, this study also highlights the crucial role of the contextual factors (i.e., data sources, inputs and choice categories), which can explain models' predictive performance more effectively than the differences in model types alone. Model performance varies significantly with data sources, improving with larger sample sizes and lower dimensional alternative sets. After controlling all the model and contextual factors, significant randomness still remains, implying inherent uncertainty in such model comparisons. Overall, we suggest that future researchers shift more focus from context-specific model comparisons towards examining model transferability across contexts and characterizing the inherent uncertainty in ML, thus creating more robust and generalizable next-generation travel demand models.",
+  "category": "mixed",
+  "domain": "transportation / travel demand modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "choice_prediction",
+    "model_comparison"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "predictive_accuracy",
+  "general_score_metric": "predictive_accuracy (often complemented by statistical tests and model-comparison metrics)",
+  "year_of_publish": 2021,
+  "reputation": "A domain-specific, academically-oriented benchmark used in transportation and travel-demand modelling research with moderate recognition within that community.",
+  "notes": "Aggregates many experiments from literature and new data; results are highly context-dependent (data source, sample size, choice set dimensionality) and susceptible to publication and selection biases; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Shenhao Wang",
+      "Baichuan Mo",
+      "Yunhan Zheng",
+      "Stephane Hess",
+      "Jinhua Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2102.01130",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

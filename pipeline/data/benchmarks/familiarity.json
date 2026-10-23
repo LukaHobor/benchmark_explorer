@@ -1,0 +1,36 @@
+{
+  "name": "Familiarity",
+  "description": "Zero-shot named entity recognition (NER) is the task of detecting named entities of specific types (such as 'Person' or 'Medicine') without any training examples. Current research increasingly relies on large synthetic datasets, automatically generated to cover tens of thousands of distinct entity types, to train zero-shot NER models. However, in this paper, we find that these synthetic datasets often contain entity types that are semantically highly similar to (or even the same as) those in standard evaluation benchmarks. Because of this overlap, we argue that reported F1 scores for zero-shot NER overestimate the true capabilities of these approaches. Further, we argue that current evaluation setups provide an incomplete picture of zero-shot abilities since they do not quantify the label shift (i.e., the similarity of labels) between training and evaluation datasets. To address these issues, we propose Familiarity, a novel metric that captures both the semantic similarity between enti",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "named_entity_recognition",
+    "metric_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2024,
+  "reputation": "A recent benchmark/metric proposal that has not yet seen broad community adoption, but addresses an important evaluation flaw in zero-shot NER.",
+  "notes": "Focuses on zero-shot NER and label-semantic overlap; reported F1 can be inflated by training/evaluation label similarity, so Familiarity is intended to complement or replace raw F1.",
+  "creators": {
+    "scientists": [
+      "Jonas Golde",
+      "Patrick Haller",
+      "Max Ploner",
+      "Fabio Barth",
+      "Nicolaas Jedema",
+      "Alan Akbik"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2412.10121",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

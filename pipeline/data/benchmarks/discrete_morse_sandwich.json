@@ -1,0 +1,34 @@
+{
+  "name": "Discrete Morse Sandwich",
+  "description": "This paper introduces an efficient algorithm for persistence diagram computation, given an input piecewise linear scalar field $f$ defined on a $d$-dimensional simplicial complex $K$, with $d \\leq 3$. Our work revisits the seminal algorithm \"PairSimplices\" [31], [103] with discrete Morse theory (DMT) [34], [80], which greatly reduces the number of input simplices to consider. Further, we also extend to DMT and accelerate the stratification strategy described in \"PairSimplices\" for the fast computation of the $0^{th}$ and $(d - 1)^{th}$ diagrams, noted $D_0(f)$ and $D_{d-1}(f)$. Minima-saddle persistence pairs ($D_0(f)$) and saddle-maximum persistence pairs ($D_{d-1}(f)$) are efficiently computed by processing, with a Union-Find, the unstable sets of $1$-saddles and the stable sets of $(d - 1)$-saddles. This fast pre-computation for the dimensions $0$ and $(d - 1)$ enables an aggressive specialization of [4] to the 3D case, which results in a drastic reduction of the number of input simplices for the computation of $D_1(f)$, the intermediate layer of the sandwich. Finally, we document several performance improvements via shared-memory parallelism. We provide an open-source implementation of our algorithm for reproducibility purposes. We also contribute a reproducible benchmark package, which exploits three-dimensional data from a public repository and compares our algorithm to a variety of publicly available implementations. Extensive experiments indicate that our algorithm improves by two orders of magnitude the time performance of the seminal \"PairSimplices\" algorithm it extends. Moreover, it also improves memory footprint and time performance over a selection of 14 competing approaches, with a substantial gain over the fastest available approaches, while producing a strictly identical output.",
+  "category": "mixed",
+  "domain": "computational topology / scientific computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "algorithm_benchmarking",
+    "performance_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "runtime and memory benchmarking plus correctness verification (identical persistence diagrams)",
+  "general_score_metric": "runtime (speedup) and peak memory; correctness (identical output)",
+  "typical_sota_score": "up to ~100x speedup reported vs. the original PairSimplices (commonly 2–50x improvements depending on input)",
+  "year_of_publish": 2022,
+  "reputation": "A specialized, well-regarded academic benchmark and implementation in computational topology/scientific computing communities for comparing persistence-diagram algorithms.",
+  "notes": "Non-LLM benchmark; results are hardware- and implementation-dependent; dataset diversity is domain-specific (3D scientific meshes) and comparisons require identical inputs and correctness checks.",
+  "creators": {
+    "scientists": [
+      "Pierre Guillou",
+      "Jules Vidal",
+      "Julien Tierny"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2206.13932",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

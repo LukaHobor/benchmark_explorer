@@ -1,0 +1,33 @@
+{
+  "name": "Scene Background Initialization Benchmark",
+  "description": "Given a set of images of a scene taken at different times, the availability\nof an initial background model that describes the scene without foreground\nobjects is the prerequisite for a wide range of applications, ranging from\nvideo surveillance to computational photography. Even though several methods\nhave been proposed for scene background initialization, the lack of a common\ngroundtruthed dataset and of a common set of metrics makes it difficult to\ncompare their performance. To move first steps towards an easy and fair\ncomparison of these methods, we assembled a dataset of sequences frequently\nadopted for background initialization, selected or created ground truths for\nquantitative evaluation through a selected suite of metrics, and compared\nresults obtained by some existing methods, making all the material publicly\navailable.",
+  "category": "vision",
+  "domain": "vision (video/background modeling)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "background_estimation",
+    "video_frame_processing"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "pixel-level error metrics (AGE, EPs, pEPs), PSNR, SSIM",
+  "general_score_metric": "pEPs (percentage of error pixels)",
+  "typical_sota_score": "pEPs often <5% on easy sequences, rising to ~20–30% on challenging sequences",
+  "year_of_publish": 2015,
+  "reputation": "Widely used as a standard testbed for background initialization methods in computer vision, though smaller and more specialized than large-scale video benchmarks.",
+  "notes": "Non-LLM benchmark; relatively small/handpicked sequences; evaluation sensitive to chosen metrics and ground-truth selection; results can vary widely across scene difficulty.",
+  "creators": {
+    "scientists": [
+      "Lucia Maddalena",
+      "Alfredo Petrosino"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1506.04051",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

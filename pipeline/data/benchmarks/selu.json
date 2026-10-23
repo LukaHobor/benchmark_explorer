@@ -1,0 +1,35 @@
+{
+  "name": "SELU",
+  "description": "Large Language Models (LLMs) have demonstrated remarkable capabilities in code understanding and generation. However, their effectiveness on non-code Software Engineering (SE) tasks remains underexplored. We present'Software Engineering Language Understanding'(SELU), the first comprehensive benchmark for evaluating LLMs on 22 SE textual artifacts NLU tasks, spanning from identifying whether a requirement is functional or non-functional to estimating the effort required to implement a development task. SELU covers classification, regression, Named Entity Recognition (NER), and Masked Language Modeling (MLM) tasks, with data drawn from diverse sources such as issue tracking systems and developer forums. We fine-tune 22 open-source LLMs, both generalist and domain-adapted; and prompt two proprietary alternatives using zero-shot a 3-shot prompting strategies. Performance is measured using metrics such as F1-macro, SMAPE, F1-micro, and accuracy, and compared via the Bayesian signed-rank test. Our results show that fine-tuned models across various sizes and architectures perform best, exhibiting high mean performance and low across-task variance. Furthermore, domain adaptation via code-focused pre-training does not yield significant improvements and might even be counterproductive for developer communication tasks.",
+  "category": "text",
+  "domain": "software engineering / software analytics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "named_entity_recognition",
+    "masked_language_modeling"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1-macro, F1-micro, SMAPE, accuracy (task-dependent; reported together)",
+  "general_score_metric": "F1-macro",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific benchmark focused on software engineering NLU; currently limited but of growing interest to the SE and ML communities.",
+  "notes": "Potential for pretraining/contamination with code-focused corpora; tasks span diverse SE artifacts so per-task variance and domain-specific annotation biases should be considered.",
+  "creators": {
+    "scientists": [
+      "Fabian C. Peña",
+      "Steffen Herbold"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2506.10833",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

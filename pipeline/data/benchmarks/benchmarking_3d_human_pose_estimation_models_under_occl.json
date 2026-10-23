@@ -1,0 +1,33 @@
+{
+  "name": "Benchmarking 3D Human Pose Estimation Models under Occlusions",
+  "description": "Human Pose Estimation (HPE) involves detecting and localizing keypoints on the human body from visual data. In 3D HPE, occlusions, where parts of the body are not visible in the image, pose a significant challenge for accurate pose reconstruction. This paper presents a benchmark on the robustness of 3D HPE models under realistic occlusion conditions, involving combinations of occluded keypoints commonly observed in real-world scenarios. We evaluate nine state-of-the-art 2D-to-3D HPE models, spanning convolutional, transformer-based, graph-based, and diffusion-based architectures, using the BlendMimic3D dataset, a synthetic dataset with ground-truth 2D/3D annotations and occlusion labels. All models were originally trained on Human3.6M and tested here without retraining to assess their generalization. We introduce a protocol that simulates occlusion by adding noise into 2D keypoints based on real detector behavior, and conduct both global and per-joint sensitivity analyses. Our findings",
+  "category": "vision",
+  "domain": "vision",
+  "task_types": [
+    "3d_pose_estimation",
+    "keypoint_regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mpjpe",
+  "general_score_metric": "MPJPE",
+  "typical_sota_score": "30–60 mm (MPJPE; lower is better; varies substantially with occlusion severity and model family)",
+  "year_of_publish": 2025,
+  "reputation": "A focused robustness benchmark for 3D human pose estimation under occlusion, useful in pose-estimation research but not a mainstream general benchmark.",
+  "notes": "Non-LLM vision benchmark; evaluates generalization under synthetic occlusions and uses models trained on Human3.6M without retraining, so scores are setup-specific.",
+  "creators": {
+    "scientists": [
+      "Filipa Lino",
+      "Carlos Santiago",
+      "Manuel Marques"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.10350",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

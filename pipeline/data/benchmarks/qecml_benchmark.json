@@ -1,0 +1,32 @@
+{
+  "name": "QEC-ML Benchmark",
+  "description": "Quantum Error Correction (QEC) is one of the fundamental problems in quantum computer systems, which aims to detect and correct errors in the data qubits within quantum computers. Due to the presence of unreliable data qubits in existing quantum computers, implementing quantum error correction is a critical step when establishing a stable quantum computer system. Recently, machine learning (ML)-based approaches have been proposed to address this challenge. However, they lack a thorough understanding of quantum error correction. To bridge this research gap, we provide a new perspective to understand machine learning-based QEC in this paper. We find that syndromes in the ancilla qubits result from errors on connected data qubits, and distant ancilla qubits can provide auxiliary information to rule out some incorrect predictions for the data qubits. Therefore, to detect errors in data qubits, we must consider the information present in the long-range ancilla qubits. To the best of our knowledge, machine learning is less explored in the dependency relationship of QEC. To fill the blank, we curate a machine learning benchmark to assess the capacity to capture long-range dependencies for quantum error correction. To provide a comprehensive evaluation, we evaluate seven state-of-the-art deep learning algorithms spanning diverse neural network architectures, such as convolutional neural networks, graph neural networks, and graph transformers. Our exhaustive experiments reveal an enlightening trend: By enlarging the receptive field to exploit information from distant ancilla qubits, the accuracy of QEC significantly improves. For instance, U-Net can improve CNN by a margin of about 50%. Finally, we provide a comprehensive analysis that could inspire future research in this field.",
+  "category": "mixed",
+  "domain": "quantum computing / quantum error correction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structured_prediction",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (per-qubit error-correction accuracy / decoder accuracy)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "New, domain-specific benchmark proposed to study ML approaches for quantum error correction; emerging interest within the quantum ML and QEC research communities but limited adoption so far.",
+  "notes": "Non-LLM benchmark focused on quantum error-correction decoders; performance is sensitive to simulated noise model, lattice/ancilla layout and receptive field; datasets are specialized (simulated) and results may not directly transfer to real hardware.",
+  "creators": {
+    "scientists": [
+      "Yue Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2311.11167",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

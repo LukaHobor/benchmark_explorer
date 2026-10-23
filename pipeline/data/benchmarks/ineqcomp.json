@@ -1,0 +1,39 @@
+{
+  "name": "Ineq-Comp",
+  "description": "LLM-based formal proof assistants (e.g., in Lean) hold great promise for automating mathematical discovery. But beyond syntactic correctness, do these systems truly understand mathematical structure as humans do? We investigate this question in context of mathematical inequalities -- specifically the prover's ability to recognize that the given problem simplifies by applying a known inequality such as AM/GM. Specifically, we are interested in their ability to do this in a compositional setting where multiple inequalities must be applied as part of a solution. We introduce Ineq-Comp, a benchmark built from elementary inequalities through systematic transformations, including variable duplication, algebraic rewriting, and multi-step composition. Although these problems remain easy for humans, we find that most provers -- including Goedel, STP, and Kimina-7B -- struggle significantly. DeepSeek-Prover-V2-7B shows relative robustness, but still suffers a 20% performance drop (pass@32). Even for DeepSeek-Prover-V2-671B model, the gap between compositional variants and seed problems exists, implying that simply scaling up the model size alone does not fully solve the compositional weakness. Strikingly, performance remains poor for all models even when formal proofs of the constituent parts are provided in context, revealing that the source of weakness is indeed in compositional reasoning. Our results expose a persisting gap between the generalization behavior of current AI provers and human mathematical intuition. All data and evaluation code can be found at https://github.com/haoyuzhao123/LeanIneqComp.",
+  "category": "code",
+  "domain": "formal reasoning / mathematics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "theorem_proving",
+    "proof_generation",
+    "formal_verification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pass@k (e.g., pass@32)",
+  "general_score_metric": "pass@k (primary reported: pass@32)",
+  "typical_sota_score": "typically low for compositional variants (many models often <50% pass@32; exact numbers vary by model)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "6 citations",
+  "notes": "Evaluated inside the Lean proof assistant; sensitive to proof assistant/version and sampling settings; potential dataset overlap with formal libraries (contamination risk); requires a formal-proving execution environment rather than plain-text LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Haoyu Zhao",
+      "Yihan Geng",
+      "Shange Tang",
+      "Yong Lin",
+      "Bohan Lyu",
+      "Hongzhou Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2505.12680",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

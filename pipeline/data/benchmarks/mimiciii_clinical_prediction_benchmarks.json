@@ -1,0 +1,38 @@
+{
+  "name": "MIMIC-III Clinical Prediction Benchmarks",
+  "description": "Health care is one of the most exciting frontiers in data mining and machine learning. Successful adoption of electronic health records (EHRs) created an explosion in digital clinical data available for analysis, but progress in machine learning for healthcare research has been difficult to measure because of the absence of publicly available benchmark data sets. To address this problem, we propose four clinical prediction benchmarks using data derived from the publicly available Medical Information Mart for Intensive Care (MIMIC-III) database. These tasks cover a range of clinical problems including modeling risk of mortality, forecasting length of stay, detecting physiologic decline, and phenotype classification. We propose strong linear and neural baselines for all four tasks and evaluate the effect of deep supervision, multitask training and data-specific architectural modifications on the performance of neural models.",
+  "category": "mixed",
+  "domain": "medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "mortality_prediction",
+    "length_of_stay_prediction",
+    "physiologic_decline_prediction",
+    "phenotype_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC, AUPRC, and accuracy depending on task",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "70–90%",
+  "year_of_publish": 2017,
+  "reputation": "A foundational and widely cited benchmark suite for clinical prediction on EHR data, commonly used in healthcare ML research.",
+  "notes": "Non-LLM benchmark based on MIMIC-III; strong risk of dataset-specific overfitting and leakage if preprocessing is not handled carefully, and task definitions vary across papers.",
+  "creators": {
+    "scientists": [
+      "Hrayr Harutyunyan",
+      "Hrant Khachatrian",
+      "David C. Kale",
+      "Greg Ver Steeg",
+      "Aram Galstyan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1703.07771",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "SGA-INTERACT",
+  "description": "Group Activity Understanding is predominantly studied as Group Activity Recognition (GAR) task. However, existing GAR benchmarks suffer from coarse-grained activity vocabularies and the only data form in single-view, which hinder the evaluation of state-of-the-art algorithms. To address these limitations, we introduce SGA-INTERACT, the first 3D skeleton-based benchmark for group activity understanding. It features complex activities inspired by basketball tactics, emphasizing rich spatial interactions and long-term dependencies. SGA-INTERACT introduces Temporal Group Activity Localization (TGAL) task, extending group activity understanding to untrimmed sequences, filling the gap left by GAR as a standalone task. In addition to the benchmark, we propose One2Many, a novel framework that employs a pretrained 3D skeleton backbone for unified individual feature extraction. This framework aligns with the feature extraction paradigm in RGB-based methods, enabling direct evaluation of RGB-based models on skeleton-based benchmarks. We conduct extensive evaluations on SGA-INTERACT using two skeleton-based methods, three RGB-based methods, and a proposed baseline within the One2Many framework. The general low performance of baselines highlights the benchmark's challenges, motivating advancements in group activity understanding.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "temporal_localization",
+    "action_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (for group activity recognition) and mAP / temporal IoU-based metrics (for Temporal Group Activity Localization)",
+  "general_score_metric": "accuracy (GAR) and mAP / temporal IoU (TGAL)",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized benchmark with limited adoption so far but recognized as addressing an important gap in 3D skeleton-based group activity research.",
+  "notes": "Non-LLM, skeleton-based benchmark focused on complex multi-agent interactions; reported baselines show generally low performance, dataset size and domain specificity may limit broad adoption; potential privacy considerations for human motion data.",
+  "creators": {
+    "scientists": [
+      "Yuchen Yang",
+      "Wei Wang",
+      "Yifei Liu",
+      "Linfeng Dong",
+      "Hao Wu",
+      "Mingxin Zhang",
+      "Zhihang Zhong",
+      "Xiao Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.06522",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "NND-based GAN generalization benchmark",
+  "description": "For many evaluation metrics commonly used as benchmarks for unconditional image generation, trivially memorizing the training set attains a better score than models which are considered state-of-the-art; we consider this problematic. We clarify a necessary condition for an evaluation metric not to behave this way: estimating the function must require a large sample from the model. In search of such a metric, we turn to neural network divergences (NNDs), which are defined in terms of a neural network trained to distinguish between distributions. The resulting benchmarks cannot be \"won\" by training set memorization, while still being perceptually correlated and computable only from samples. We survey past work on using NNDs for evaluation and implement an example black-box metric based on these ideas. Through experimental validation we show that it can effectively measure diversity, sample quality, and generalization.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_generation_evaluation",
+    "distributional_divergence_assessment",
+    "generalization_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "divergence_score (neural network divergence computed from samples)",
+  "general_score_metric": "neural network divergence (NND) score",
+  "year_of_publish": 2020,
+  "reputation": "Recognized in research as a principled alternative to metrics that can be gamed by memorization, but not as widely adopted as standard scores like FID/IS.",
+  "notes": "Non-LLM benchmark focused on unconditional image generation; resists training-set memorization but is sensitive to critic architecture and training procedure, requires large sample complexity and extra compute to estimate reliably.",
+  "creators": {
+    "scientists": [
+      "Ishaan Gulrajani",
+      "Colin Raffel",
+      "Luke Metz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2001.03653",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

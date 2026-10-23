@@ -1,0 +1,38 @@
+{
+  "name": "SALOD (SALient Object Detection) benchmark",
+  "description": "In recent years, deep network-based methods have continuously refreshed state-of-the-art performance on Salient Object Detection (SOD) task. However, the performance discrepancy caused by different implementation details may conceal the real progress in this task. Making an impartial comparison is required for future researches. To meet this need, we construct a general SALient Object Detection (SALOD) benchmark to conduct a comprehensive comparison among several representative SOD methods. Specifically, we re-implement 14 representative SOD methods by using consistent settings for training. Moreover, two additional protocols are set up in our benchmark to investigate the robustness of existing methods in some limited conditions. In the first protocol, we enlarge the difference between objectness distributions of train and test sets to evaluate the robustness of these SOD methods. In the second protocol, we build multiple train subsets with different scales to validate whether these methods can extract discriminative features from only a few samples. In the above experiments, we find that existing loss functions usually specialized in some metrics but reported inferior results on the others. Therefore, we propose a novel Edge-Aware (EA) loss that promotes deep networks to learn more discriminative features by integrating both pixel- and image-level supervision signals. Experiments prove that our EA loss reports more robust performances compared to existing losses.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "pixelwise_prediction",
+    "binary_semantic_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F-measure (F_beta), MAE (mean absolute error), S-measure, E-measure",
+  "general_score_metric": "F-measure (F_beta)",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2022,
+  "reputation": "Considered a useful, more impartial benchmark for comparing salient object detection methods due to consistent re-implementations and controlled protocols.",
+  "notes": "Non-LLM computer-vision benchmark; re-implemented methods reduce implementation variance; includes robustness protocols and small-scale/train-subset experiments; potential dataset biases and partial saturation on standard test sets.",
+  "creators": {
+    "scientists": [
+      "Huajun Zhou",
+      "Yang Lin",
+      "Lingxiao Yang",
+      "JianHuang Lai",
+      "Xiaohua Xie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2202.02925",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

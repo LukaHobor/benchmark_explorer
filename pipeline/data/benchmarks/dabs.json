@@ -1,0 +1,40 @@
+{
+  "name": "DABS",
+  "description": "Self-supervised learning algorithms, including BERT and SimCLR, have enabled significant strides in fields like natural language processing, computer vision, and speech processing. However, these algorithms are domain-specific, meaning that new self-supervised learning algorithms must be developed for each new setting, including myriad healthcare, scientific, and multimodal domains. To catalyze progress toward domain-agnostic methods, we introduce DABS: a Domain-Agnostic Benchmark for Self-supervised learning. To perform well on DABS, an algorithm is evaluated on seven diverse domains: natural images, multichannel sensor data, English text, speech recordings, multilingual text, chest x-rays, and images with text descriptions. Each domain contains an unlabeled dataset for pretraining; the model is then is scored based on its downstream performance on a set of labeled tasks in the domain. We also present e-Mix and ShED: two baseline domain-agnostic algorithms; their relatively modest per",
+  "category": "mixed",
+  "domain": "mixed",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "self_supervised_pretraining",
+    "representation_learning",
+    "downstream_classification",
+    "downstream_regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "downstream task performance after self-supervised pretraining",
+  "general_score_metric": "downstream performance",
+  "typical_sota_score": "varies widely by domain and downstream task; no single consolidated SOTA (unknown)",
+  "year_of_publish": 2021,
+  "reputation": "A newer research benchmark with limited adoption, mainly used to study domain-agnostic self-supervised learning across heterogeneous modalities.",
+  "notes": "Non-LLM benchmark spanning seven very different domains; results are not directly comparable across domains and depend on the chosen downstream tasks.",
+  "creators": {
+    "scientists": [
+      "Alex Tamkin",
+      "Vincent Liu",
+      "Rongfei Lu",
+      "Daniel Fein",
+      "Colin Schultz",
+      "Noah Goodman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2111.12062",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

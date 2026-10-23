@@ -1,0 +1,37 @@
+{
+  "name": "CARLA-GeAR",
+  "description": "Adversarial examples represent a serious threat for deep neural networks in several application domains and a huge amount of work has been produced to investigate them and mitigate their effects. Nevertheless, no much work has been devoted to the generation of datasets specifically designed to evaluate the adversarial robustness of neural models. This paper presents CARLA-GeAR, a tool for the automatic generation of photo-realistic synthetic datasets related to driving scenarios that can be used for a systematic evaluation of the adversarial robustness of neural models against physical adversarial patches, as well as for comparing the performance of different adversarial defense/detection methods. The tool is built on the CARLA simulator, using its Python API, and allows the generation of datasets for several vision tasks in the context of autonomous driving. The adversarial patches included in the generated datasets are attached to billboards or the back of a truck and are crafted by using state-of-the-art white-box attack strategies to maximize the prediction error of the model under test. Finally, the paper presents an experimental study to evaluate the performance of some defense methods against such attacks, showing how the datasets generated with CARLA-GeAR might be used in future work as a benchmark for adversarial defense in the real world. All the code and datasets used in this paper are available at <uri xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">https://carlagear.retis.santannapisa.it</uri>.",
+  "category": "vision",
+  "domain": "autonomous driving / vision robustness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "segmentation",
+    "robustness_evaluation",
+    "adversarial_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision) for detection/segmentation and robustness measured as performance drop (∆mAP) under adversarial patches",
+  "general_score_metric": "mAP and robustness (∆mAP under attack)",
+  "year_of_publish": 2024,
+  "reputation": "10 citations",
+  "notes": "Synthetic photorealistic data from CARLA — useful for controlled robustness studies but subject to sim-to-real gap; designed to include adversarial contamination by construction (intended); not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Federico Nesti",
+      "Giulio Rossolini",
+      "Gianluca D’Amico",
+      "Alessandro Biondi",
+      "Giorgio Buttazzo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1109/tits.2024.3412432",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

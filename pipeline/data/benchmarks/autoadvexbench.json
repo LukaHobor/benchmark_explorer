@@ -1,0 +1,35 @@
+{
+  "name": "AutoAdvExBench",
+  "description": "We introduce AutoAdvExBench, a benchmark to evaluate if large language models (LLMs) can autonomously exploit defenses to adversarial examples. Unlike existing security benchmarks that often serve as proxies for real-world tasks, bench directly measures LLMs' success on tasks regularly performed by machine learning security experts. This approach offers a significant advantage: if a LLM could solve the challenges presented in bench, it would immediately present practical utility for adversarial machine learning researchers. We then design a strong agent that is capable of breaking 75% of CTF-like (\"homework exercise\") adversarial example defenses. However, we show that this agent is only able to succeed on 13% of the real-world defenses in our benchmark, indicating the large gap between difficulty in attacking \"real\" code, and CTF-like code. In contrast, a stronger LLM that can attack 21% of real defenses only succeeds on 54% of CTF-like defenses. We make this benchmark available at ht",
+  "category": "mixed",
+  "domain": "ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "21–75% (task-dependent; ~21% on real-world defenses, up to 75% on CTF-like challenges as reported by the authors)",
+  "year_of_publish": 2025,
+  "reputation": "A very recent niche benchmark in ML security that targets realistic adversarial-example exploitation tasks and is mainly of interest to security researchers.",
+  "notes": "Highly specialized and likely small; performance can vary sharply between CTF-like and real-world defenses, and the benchmark is not a standard LLM QA task.",
+  "creators": {
+    "scientists": [
+      "Nicholas Carlini",
+      "Javier Rando",
+      "Edoardo Debenedetti",
+      "Milad Nasr",
+      "Florian Tramèr"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2503.01811",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

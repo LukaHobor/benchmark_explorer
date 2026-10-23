@@ -1,0 +1,35 @@
+{
+  "name": "SMPLy",
+  "description": "Predicting 3D human pose from images has seen great recent improvements. Novel approaches that can even predict both pose and shape from a single input image have been introduced, often relying on a parametric model of the human body such as SMPL. While qualitative results for such methods are often shown for images captured in-the-wild, a proper benchmark in such conditions is still missing, as it is cumbersome to obtain ground-truth 3D poses elsewhere than in a motion capture room. This paper presents a pipeline to easily produce and validate such a dataset with accurate ground-truth, with which we benchmark recent 3D human pose estimation methods in-the-wild. We make use of the recently introduced Mannequin Challenge dataset which contains in-the-wild videos of people frozen in action like statues and leverage the fact that people are static and the camera moving to accurately fit the SMPL model on the sequences. A total of 24,428 frames with registered body models are then selected",
+  "category": "vision",
+  "domain": "vision",
+  "task_types": [
+    "3d_human_pose_estimation",
+    "3d_human_shape_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MPJPE",
+  "general_score_metric": "MPJPE",
+  "typical_sota_score": "40–80 mm (MPJPE)",
+  "year_of_publish": 2020,
+  "reputation": "An influential in-the-wild 3D human pose benchmark that helped fill a gap between controlled mocap datasets and real-world imagery.",
+  "notes": "Smallish benchmark derived from Mannequin Challenge videos with pseudo-ground-truth SMPL fits; labels are accurate but still pipeline-dependent, and the dataset is not as large or standardized as major pose benchmarks.",
+  "creators": {
+    "scientists": [
+      "Vincent Leroy",
+      "Philippe Weinzaepfel",
+      "Romain Brégier",
+      "Hadrien Combaluzier",
+      "Grégory Rogez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2012.02743",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

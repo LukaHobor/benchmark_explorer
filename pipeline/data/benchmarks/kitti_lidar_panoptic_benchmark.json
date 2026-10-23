@@ -1,0 +1,36 @@
+{
+  "name": "KITTI LiDAR Panoptic Benchmark",
+  "description": "Panoptic segmentation is the recently introduced task that tackles semantic segmentation and instance segmentation jointly [18]. In this paper, we present an extension of SemanticKITTI [1], a large-scale dataset providing dense point-wise semantic labels for all sequences of the KITTI Odometry Benchmark [10]. This extension enables training and evaluation of LiDAR-based panoptic segmentation. We provide the data and discuss the processing steps needed to enrich a given semantic annotation with temporally consistent instance information, i.e., instance information that supplements the semantic labels and identifies the same instance over sequences of LiDAR point clouds. Additionally, we present two strong baselines that combine state-of-the-art LiDAR-based semantic segmentation approaches with a state-of-the-art detector enriching the segmentation with instance information and that allow other researchers to compare their approaches against. We believe that our extension of SemanticKITTI with strong baselines enables the creation of novel algorithms for LiDAR-based panoptic segmentation as much as it has for the original semantic segmentation and semantic scene completion tasks. Data, code, and an online evaluation service using a hidden test set are publicly available at http://semantic-kitti.org.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "panoptic_segmentation",
+    "semantic_segmentation",
+    "instance_segmentation",
+    "3d_point_cloud_processing"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "panoptic_quality (PQ), mean_IoU, PQ_th/QC (per-class variants)",
+  "general_score_metric": "panoptic_quality (PQ)",
+  "typical_sota_score": "50–70%",
+  "year_of_publish": 2021,
+  "reputation": "Widely used benchmark in the autonomous-driving research community for LiDAR panoptic segmentation, respected for driving-scene realism and multimodal challenge.",
+  "notes": "Non-LLM benchmark focused on driving LiDAR; dataset is relatively small compared to large modern point-cloud corpora and is specialized to urban driving scenes — results depend heavily on sensor setup and annotation schemes.",
+  "creators": {
+    "scientists": [
+      "Jens Behley",
+      "Andres Milioto",
+      "Cyrill Stachniss"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/icra48506.2021.9561476",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

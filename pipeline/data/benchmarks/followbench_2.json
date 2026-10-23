@@ -1,0 +1,38 @@
+{
+  "name": "Follow-Bench",
+  "description": "Robot person following (RPF) -- mobile robots that follow and assist a specific person -- has emerging applications in personal assistance, security patrols, eldercare, and logistics. To be effective, such robots must follow the target while ensuring safety and comfort for both the target and surrounding people. In this work, we present the first comprehensive study of RPF, which (i) surveys representative scenarios, motion-planning methods, and evaluation metrics with a focus on safety and comfort; (ii) introduces Follow-Bench, a unified benchmark simulating diverse scenarios, including various target trajectory patterns, crowd dynamics, and environmental layouts; and (iii) re-implements six representative RPF planners, ensuring that both safety and comfort are systematically considered. Moreover, we evaluate the two best-performing planners from our benchmark on a differential-drive robot to provide insights into the real-world deployment of RPF planners. Extensive simulation and real-world experiments provide a quantitative study of the safety-comfort trade-offs of existing planners, while revealing open challenges and future research directions.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "robot_navigation",
+    "trajectory_following",
+    "motion_planning",
+    "simulation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task success rate combined with safety and comfort metrics (collision rate, minimum distance to bystanders, time-to-goal, comfort penalties); reported as composite safety–comfort scores and individual metrics",
+  "general_score_metric": "composite safety–comfort score (task success with penalties for collisions and discomfort) plus per-metric measures like collision rate and nDCG-style ranking of planner safety",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Simulation-to-reality transfer risk; multimodal (vision/odometry/pose) non-LLM benchmark; emphasizes safety/comfort trade-offs; results depend on simulator and scenario diversity; hardware evaluation limited to a few planners.",
+  "creators": {
+    "scientists": [
+      "Hanjing Ye",
+      "Weixi Situ",
+      "Jianwei Peng",
+      "Yu Zhan",
+      "Bingyi Xia",
+      "Kuanqi Cai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2509.10796",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

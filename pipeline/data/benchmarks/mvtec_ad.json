@@ -1,0 +1,37 @@
+{
+  "name": "MVTec AD",
+  "description": "The detection of anomalous structures in natural image data is of utmost importance for numerous tasks in the field of computer vision. The development of methods for unsupervised anomaly detection requires data on which to train and evaluate new approaches and ideas. We introduce the MVTec Anomaly Detection (MVTec AD) dataset containing 5354 high-resolution color images of different object and texture categories. It contains normal, i.e., defect-free, images intended for training and images with anomalies intended for testing. The anomalies manifest themselves in the form of over 70 different types of defects such as scratches, dents, contaminations, and various structural changes. In addition, we provide pixel-precise ground truth regions for all anomalies. We also conduct a thorough evaluation of current state-of-the-art unsupervised anomaly detection methods based on deep architectures such as convolutional autoencoders, generative adversarial networks, and feature descriptors using pre-trained convolutional neural networks, as well as classical computer vision methods. This initial benchmark indicates that there is considerable room for improvement. To the best of our knowledge, this is the first comprehensive, multi-object, multi-defect dataset for anomaly detection that provides pixel-accurate ground truth regions and focuses on real-world applications.",
+  "category": "vision",
+  "domain": "computer vision / industrial inspection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "segmentation",
+    "localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Image-level AUROC for detection; pixel-level AUROC / PRO (per-region overlap) and pixel-wise F1/IoU for localization/segmentation",
+  "general_score_metric": "area_under_roc_curve (AUROC) for image-level detection",
+  "typical_sota_score": "90–99% (image-level AUROC); ~80–95% (pixel-level metrics depending on category)",
+  "year_of_publish": 2019,
+  "reputation": "1686 citations",
+  "notes": "Widely used non-LLM benchmark for unsupervised anomaly detection with pixel-precise ground truth. Some saturation on image-level AUROC has been observed for mature methods, while pixel-level localization remains challenging; relatively modest dataset size compared to large-scale vision corpora.",
+  "creators": {
+    "scientists": [
+      "Paul Bergmann",
+      "Michael Fauser",
+      "David Sattlegger",
+      "Carsten Steger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/cvpr.2019.00982",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

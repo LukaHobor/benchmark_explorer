@@ -1,0 +1,39 @@
+{
+  "name": "Meta Omnium",
+  "description": "Meta-learning and other approaches to few-shot learning are widely studied for image recognition, and are increasingly applied to other vision tasks such as pose estimation and dense prediction. This naturally raises the question of whether there is any few-shot meta-learning algorithm capable of generalizing across these diverse task types? To support the community in answering this question, we introduce Meta Omnium, a dataset-of-datasets spanning multiple vision tasks including recognition, keypoint localization, semantic segmentation and regression. We experiment with popular few-shot meta-learning baselines and analyze their ability to generalize across tasks and to transfer knowledge between them. Meta Omnium enables meta-learning researchers to evaluate model generalization to a much wider array of tasks than previously possible, and provides a single framework for evaluating meta-learners across a wide suite of vision applications in a consistent manner.",
+  "category": "mixed",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification",
+    "keypoint_localization",
+    "semantic_segmentation",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific metrics aggregated across datasets, typically accuracy, IoU, PCK, and regression error",
+  "general_score_metric": "composite_score",
+  "typical_sota_score": "Varies widely by task — e.g., ~70–95% for few-shot classification, ~50–80% (IoU/PCK) for dense tasks; no single unified SOTA across all modalities",
+  "year_of_publish": 2023,
+  "reputation": "A well-known meta-learning dataset-of-datasets used to test cross-task generalization in few-shot vision research.",
+  "notes": "Non-LLM benchmark spanning heterogeneous tasks, so scores are not directly comparable across sub-tasks; results are usually reported per task and averaged.",
+  "creators": {
+    "scientists": [
+      "Ondrej Bohdal",
+      "Yinbing Tian",
+      "Yongshuo Zong",
+      "Ruchika Chavhan",
+      "Da Li",
+      "Henry Gouk"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.07625",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

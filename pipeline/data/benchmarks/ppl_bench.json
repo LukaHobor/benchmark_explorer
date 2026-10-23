@@ -1,0 +1,44 @@
+{
+  "name": "PPL Bench",
+  "description": "We introduce PPL Bench, a new benchmark for evaluating Probabilistic Programming Languages (PPLs) on a variety of statistical models. The benchmark includes data generation and evaluation code for a number of models as well as implementations in some common PPLs. All of the benchmark code and PPL implementations are available on Github. We welcome contributions of new models and PPLs and as well as improvements in existing PPL implementations. The purpose of the benchmark is two-fold. First, we want researchers as well as conference reviewers to be able to evaluate improvements in PPLs in a standardized setting. Second, we want end users to be able to pick the PPL that is most suited for their modeling application. In particular, we are interested in evaluating the accuracy and speed of convergence of the inferred posterior. Each PPL only needs to provide posterior samples given a model and observation data. The framework automatically computes and plots growth in predictive log-likelihood on held out data in addition to reporting other common metrics such as effective sample size and $\\hat{r}$.",
+  "category": "code",
+  "domain": "probabilistic programming / statistical modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "posterior_sampling",
+    "probabilistic_inference",
+    "benchmarking_of_PPLs"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "held-out predictive log-likelihood growth (primary), plus sampler diagnostics such as effective sample size (ESS) and R-hat and runtime/throughput",
+  "general_score_metric": "held-out predictive log-likelihood (growth curve) with ESS and R-hat as complementary diagnostics",
+  "typical_sota_score": "varies widely by model, problem and implementation; no single cross-problem SOTA",
+  "year_of_publish": 2020,
+  "reputation": "Recognized within the probabilistic programming research community as a useful standardized suite for comparing PPL inference performance and convergence behavior.",
+  "notes": "Comparisons are highly sensitive to model implementations, inference settings and platform; results depend on sampler tuning and hardware. Designed for PPL evaluation (not an LLM benchmark) and best used by practitioners familiar with MCMC/variational diagnostics.",
+  "creators": {
+    "scientists": [
+      "Sourabh Kulkarni",
+      "Kinjal Divesh Shah",
+      "Nimar Arora",
+      "Xiaoyan Wang",
+      "Yucen Lily Li",
+      "Nazanin Khosravani Tehrani",
+      "Michael Tingley",
+      "David Noursi",
+      "Narjes Torabi",
+      "Sepehr Akhavan Masouleh",
+      "Eric Lippert",
+      "Erik Meijer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2010.08886",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

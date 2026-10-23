@@ -1,0 +1,34 @@
+{
+  "name": "LSTM Benchmark on MNIST and UW3",
+  "description": "LSTM (Long Short-Term Memory) recurrent neural networks have been highly\nsuccessful in a number of application areas. This technical report describes\nthe use of the MNIST and UW3 databases for benchmarking LSTM networks and\nexplores the effect of different architectural and hyperparameter choices on\nperformance. Significant findings include: (1) LSTM performance depends\nsmoothly on learning rates, (2) batching and momentum has no significant effect\non performance, (3) softmax training outperforms least square training, (4)\npeephole units are not useful, (5) the standard non-linearities (tanh and\nsigmoid) perform best, (6) bidirectional training combined with CTC performs\nbetter than other methods.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_classification",
+    "sequence_labeling",
+    "handwritten_text_recognition"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "MNIST: 99–99.9%; UW3 (OCR): ~90–98%",
+  "year_of_publish": 2015,
+  "reputation": "Influential empirical study on RNN/LSTM variants; widely cited for architecture/hyperparameter insights but not a formal leaderboard.",
+  "notes": "MNIST is a small, saturated dataset; UW3 uses OCR metrics that can vary (CER/WER). Non-LLM benchmark; results sensitive to training details and preprocessing, which can affect reproducibility.",
+  "creators": {
+    "scientists": [
+      "Thomas M. Breuel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1508.02774",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Synth4bench",
+  "description": "Motivation\r\nSomatic variant calling algorithms are widely used to detect genomic alterations associated with cancer. Evaluating their performance, even though being crucial, can be challenging due to the lack of high-quality ground truth datasets. To address this issue, we developed a synthetic data generation framework for benchmarking these algorithms, focusing on the TP53 gene, utilizing the NEATv3.3 simulator. We thoroughly evaluated the performance of Mutect2, Freebayes, VarDict, VarScan2 and LoFreq and compared their results with our synthetic ground truth, while observing their behavior. Synth4bench attempts to shed light on the underlying principles of each variant caller by presenting them with data from a given range across the genomics data feature space and inspecting their response.\r\n\r\nResults \r\nUsing synthetic dataset as ground truth provides an excellent approach for evaluating the performance of tumor-only somatic variant calling algorithms. Our findings are supported by an independent statistical analysis that was performed on the same data and output from all callers. Overall, synth4bench leverages the effort of benchmarking algorithms by offering the opportunity to utilize a generated ground truth dataset. This kind of framework is essential in the field of cancer genomics, where precision is an ultimate necessity, especially for variants of low frequency. In this context, our approach makes comparison of various algorithms transparent, straightforward and also enhances their comparability.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "variant_calling",
+    "benchmarking",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1-score",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2024,
+  "reputation": "Niche but useful synthetic benchmarking framework for somatic variant callers, primarily used by researchers developing and evaluating variant-calling tools.",
+  "notes": "Synthetic data focused on TP53; may not capture full biological/tumor complexity. Non-LLM benchmark; results can be optimistic relative to real-world samples; potential annotation/simulation biases.",
+  "creators": {
+    "scientists": [
+      "Styliani-Christina Fragkouli",
+      "Nikos Pechlivanis",
+      "Anastasia Anastasiadou",
+      "Georgios Karakatsoulis",
+      "Aspasia Orfanou",
+      "Panagoula Kollia",
+      "Andreas Agathangelidis",
+      "Fotis Psomopoulos"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

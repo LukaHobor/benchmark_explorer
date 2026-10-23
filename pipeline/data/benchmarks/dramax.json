@@ -1,0 +1,36 @@
+{
+  "name": "DRAMA-X",
+  "description": "Understanding the short-term motion of vulnerable road users (VRUs) like pedestrians and cyclists is critical for safe autonomous driving, especially in urban scenarios with ambiguous or high-risk behaviors. While vision-language models (VLMs) have enabled open-vocabulary perception, their utility for fine-grained intent reasoning remains underexplored. Notably, no existing benchmark evaluates multi-class intent prediction in safety-critical situations, To address this gap, we introduce DRAMA-X, a fine-grained benchmark constructed from the DRAMA dataset via an automated annotation pipeline. DRAMA-X contains 5,686 accident-prone frames labeled with object bounding boxes, a nine-class directional intent taxonomy, binary risk scores, expert-generated action suggestions for the ego vehicle, and descriptive motion summaries. These annotations enable a structured evaluation of four interrelated tasks central to autonomous decision-making: object detection, intent prediction, risk assessment, and action suggestion. As a reference baseline, we propose SGG-Intent, a lightweight, training-free framework that mirrors the ego vehicle's reasoning pipeline. It sequentially generates a scene graph from visual input using VLM-backed detectors, infers intent, assesses risk, and recommends an action using a compositional reasoning stage powered by a large language model. We evaluate a range of recent VLMs, comparing performance across all four DRAMA-X tasks. Our experiments demonstrate that scene-graph-based reasoning enhances intent prediction and risk assessment, especially when contextual cues are explicitly modeled.",
+  "category": "vision",
+  "domain": "autonomous driving / road safety",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "intent_prediction",
+    "risk_assessment",
+    "action_suggestion",
+    "scene_graph_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP for object detection; accuracy/F1 for intent prediction; AUC/F1 or accuracy for risk assessment; accuracy and human evaluation for action suggestion (task-dependent metrics)",
+  "general_score_metric": "intent F1 (task-dependent; detection uses mAP)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, domain-focused benchmark for fine-grained intent and risk reasoning in autonomous driving contexts; relevant to VLM and safety research but currently specialized.",
+  "notes": "Relatively small, safety-focused dataset (≈5.7k frames) with accident-prone selection bias and class imbalance; automated annotation pipeline introduces label noise; evaluation is task-specific and may not generalize broadly.",
+  "creators": {
+    "scientists": [
+      "Mihir Godbole",
+      "Xiangbo Gao",
+      "Zhengzhong Tu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2506.17590",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

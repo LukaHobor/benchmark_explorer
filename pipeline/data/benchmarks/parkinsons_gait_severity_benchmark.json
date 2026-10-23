@@ -1,0 +1,36 @@
+{
+  "name": "Parkinson's Gait Severity Benchmark",
+  "description": "This study investigates the application of general human motion encoders trained on large-scale human motion datasets for analyzing gait patterns in PD patients. Although these models have learned a wealth of human biomechanical knowledge, their effectiveness in analyzing pathological movements, such as parkinsonian gait, has yet to be fully validated. We propose a comparative framework and evaluate six pre-trained state-of-the-art human motion encoder models on their ability to predict the Movement Disorder Society - Unified Parkinson's Disease Rating Scale (MDS-UPDRS-III) gait scores from motion capture data. We compare these against a traditional gait feature-based predictive model in a recently released large public PD dataset, including PD patients on and off medication. The feature-based model currently shows higher weighted average accuracy, precision, recall, and F1-score. Motion encoder models with closely comparable results demonstrate promise for scalability and efficiency in clinical settings. This potential is underscored by the enhanced performance of the encoder model upon fine-tuning on PD training set. Four of the six human motion models examined provided prediction scores that were significantly different between on- and off-medication states. This finding reveals the sensitivity of motion encoder models to nuanced clinical changes. It also underscores the necessity for continued customization of these models to better capture disease-specific features, thereby reducing the reliance on labor-intensive feature engineering. Lastly, we establish a benchmark for the analysis of skeleton-based motion encoder models in clinical settings. To the best of our knowledge, this is the first study to provide a benchmark that enables state-of-the-art models to be tested and compete in a clinical context. Codes and benchmark leaderboard are available at code.",
+  "category": "mixed",
+  "domain": "clinical gait analysis / medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy, precision, recall, F1-score (weighted averages reported)",
+  "general_score_metric": "weighted F1-score",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark introduced by a recent study; limited adoption so far but fills an important gap for clinical gait analysis with motion-encoder models.",
+  "notes": "Non-LLM, skeleton-based motion benchmark; uses a public PD motion-capture dataset with on-/off-medication states. Sensitivity to domain shift (healthy-trained encoders vs pathological gait) and need for fine-tuning; leaderboard/code provided by authors. Not saturated.",
+  "creators": {
+    "scientists": [
+      "Vida Adeli",
+      "Soroush Mehraban",
+      "Irene Ballester",
+      "Yasamin Zarghami",
+      "Andrea Sabo",
+      "Andrea Iaboni",
+      "Babak Taati"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2405.17817",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

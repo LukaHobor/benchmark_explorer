@@ -1,0 +1,34 @@
+{
+  "name": "R4C",
+  "description": "Recent studies have revealed that reading comprehension (RC) systems learn to exploit annotation artifacts and other biases in current datasets. This prevents the community from reliably measuring the progress of RC systems. To address this issue, we introduce R4C, a new task for evaluating RC systems' internal reasoning. R4C requires giving not only answers but also derivations: explanations that justify predicted answers. We present a reliable, crowdsourced framework for scalably annotating RC datasets with derivations. We create and publicly release the R4C dataset, the first, quality-assured dataset consisting of 4.6k questions, each of which is annotated with 3 reference derivations (i.e. 13.8k derivations). Experiments show that our automatic evaluation metrics using multiple reference derivations are reliable, and that R4C assesses different skills from an existing benchmark.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reading_comprehension",
+    "open_ended",
+    "explanation_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "exact_match for answers; BLEU/ROUGE (and related n-gram overlap metrics) with multiple reference derivations for explanations",
+  "general_score_metric": "exact_match (answers) and BLEU (derivations)",
+  "year_of_publish": 2019,
+  "reputation": "Introduced a novel crowdsourced dataset for evaluating RC reasoning and explanations; cited within the RC/explainability community but less widely adopted than standard RC benchmarks.",
+  "notes": "Relatively small dataset (4.6k questions) with multiple reference derivations; evaluation depends on reference-based overlap metrics which can undervalue valid free-form reasoning; not a pure LLM benchmark and risk of annotation artifacts persists.",
+  "creators": {
+    "scientists": [
+      "Naoya Inoue",
+      "Pontus Stenetorp",
+      "Kentaro Inui"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1910.04601",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

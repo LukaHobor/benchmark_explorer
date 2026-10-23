@@ -1,0 +1,33 @@
+{
+  "name": "Group Distribution Shift Benchmark for Hand Grasp Regression",
+  "description": "Understanding hand-object pose with computer vision opens the door to new applications in mixed reality, assisted living or human-robot interaction. Most methods are trained and evaluated on balanced datasets. This is of limited use in real-world applications; how do these methods perform in the wild on unknown objects? We propose a novel benchmark for object group distribution shifts in hand and object pose regression. We then test the hypothesis that meta-learning a baseline pose regression neural network can adapt to these shifts and generalize better to unknown objects. Our results show measurable improvements over the baseline, depending on the amount of prior knowledge. For the task of joint hand-object pose regression, we observe optimization interference for the meta-learner. To address this issue and improve the method further, we provide a comprehensive analysis which should serve as a basis for future work on this benchmark.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "domain_adaptation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pose_error (MPJPE for hand joints; ADD / rotation & translation error for object pose)",
+  "general_score_metric": "MPJPE / ADD (pose error)",
+  "year_of_publish": 2022,
+  "reputation": "Niche academic benchmark for hand+object pose regression under distribution shifts; limited but relevant adoption in robotics/vision research.",
+  "notes": "Non‑LLM computer-vision benchmark focused on group distribution shifts for hand/object pose; dataset and tasks are specialized and not widely standardized. Reported meta-learning approaches can suffer optimization interference (as noted by authors).",
+  "creators": {
+    "scientists": [
+      "Théo Morales",
+      "Gerard Lacey"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2211.00110",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

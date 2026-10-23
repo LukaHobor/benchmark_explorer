@@ -1,0 +1,36 @@
+{
+  "name": "Graph-Mesh Navier-Stokes Benchmark",
+  "description": "Recent progress in \\emph{Geometric Deep Learning} (GDL) has shown its potential to provide powerful data-driven models. This gives momentum to explore new methods for learning physical systems governed by \\emph{Partial Differential Equations} (PDEs) from Graph-Mesh data. However, despite the efforts and recent achievements, several research directions remain unexplored and progress is still far from satisfying the physical requirements of real-world phenomena. One of the major impediments is the absence of benchmarking datasets and common physics evaluation protocols. In this paper, we propose a 2-D graph-mesh dataset to study the airflow over airfoils at high Reynolds regime (from $10^6$ and beyond). We also introduce metrics on the stress forces over the airfoil in order to evaluate GDL models on important physical quantities. Moreover, we provide extensive GDL baselines.",
+  "category": "mixed",
+  "domain": "computational fluid dynamics / PDEs",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "physics_simulation",
+    "structured_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_squared_error / L2_error (and relative error on physical quantities like lift/drag)",
+  "general_score_metric": "mean_squared_error (MSE) on predicted fields and relative error on integrated forces)",
+  "year_of_publish": 2022,
+  "reputation": "Newly introduced in the Geometric Deep Learning / physics-ML community; cited as a useful CFD graph-mesh benchmark but not yet widely adopted.",
+  "notes": "Non-LLM benchmark focused on graph/mesh data from CFD simulations; evaluates physical quantities (forces) as well as field reconstruction. Dataset is simulation-derived (possible limited geometry diversity) and may be prone to overfitting to provided airfoil shapes; contamination risk for general LLM evaluation is low.",
+  "creators": {
+    "scientists": [
+      "Florent Bonnet",
+      "Jocelyn Ahmed Mazari",
+      "Thibaut Munzer",
+      "Pierre Yser",
+      "Patrick Gallinari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2206.14709",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

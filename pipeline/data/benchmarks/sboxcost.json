@@ -1,0 +1,36 @@
+{
+  "name": "SBOX-COST",
+  "description": "Box-constraints limit the domain of decision variables and are common in real-world optimization problems, for example, due to physical, natural or spatial limitations. Consequently, solutions violating a box-constraint may not be evaluable. This assumption is often ignored in the literature, e.g., existing benchmark suites, such as COCO/BBOB, allow the optimizer to evaluate infeasible solutions. This paper presents an initial study on the strict-box-constrained benchmarking suite (SBOX-COST), which is a variant of the well-known BBOB benchmark suite that enforces box-constraints by returning an invalid evaluation value for infeasible solutions. Specifically, we want to understand the performance difference between BBOB and SBOX-COST as a function of two initialization methods and six constraint-handling strategies all tested with modular CMA-ES. We find that, contrary to what may be expected, handling box-constraints by saturation is not always better than not handling them at all. However, across all BBOB functions, saturation is better than not handling, and the difference increases with the number of dimensions. Strictly enforcing box-constraints also has a clear negative effect on the performance of classical CMA-ES (with uniform random initialization and no constraint handling), especially as problem dimensionality increases.",
+  "category": "mixed",
+  "domain": "numerical optimization / evolutionary computation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "continuous_optimization",
+    "black_box_optimization",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "target-based runtime (expected running time, ERT) and best-found objective value / convergence behavior",
+  "general_score_metric": "expected_running_time (ERT) / best_function_value",
+  "year_of_publish": 2023,
+  "reputation": "A specialized follow-up to the BBOB suite proposing strict box-constraint handling; of interest to the numerical optimization community but not widely adopted outside it yet.",
+  "notes": "non-ML benchmark focused on numerical/evolutionary optimization; enforces strict box-constraints (infeasible evaluations returned as invalid), so results depend strongly on constraint-handling and initialization; uses BBOB functions set, so results are sensitive to dimensionality.",
+  "creators": {
+    "scientists": [
+      "Diederick Vermetten",
+      "Manuel López-Ibáñez",
+      "Olaf Mersmann",
+      "Richard Allmendinger",
+      "Anna V. Kononova"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2305.15102",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

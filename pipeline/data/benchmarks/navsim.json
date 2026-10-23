@@ -1,0 +1,44 @@
+{
+  "name": "NAVSIM",
+  "description": "Benchmarking vision-based driving policies is challenging. On one hand, open-loop evaluation with real data is easy, but these results do not reflect closed-loop performance. On the other, closed-loop evaluation is possible in simulation, but is hard to scale due to its significant computational demands. Further, the simulators available today exhibit a large domain gap to real data. This has resulted in an inability to draw clear conclusions from the rapidly growing body of research on end-to-end autonomous driving. In this paper, we present NAVSIM, a middle ground between these evaluation paradigms, where we use large datasets in combination with a non-reactive simulator to enable large-scale real-world benchmarking. Specifically, we gather simulation-based metrics, such as progress and time to collision, by unrolling bird's eye view abstractions of the test scenes for a short simulation horizon. Our simulation is non-reactive, i.e., the evaluated policy and environment do not influence each other. As we demonstrate empirically, this decoupling allows open-loop metric computation while being better aligned with closed-loop evaluations than traditional displacement errors. NAVSIM enabled a new competition held at CVPR 2024, where 143 teams submitted 463 entries, resulting in several new insights. On a large set of challenging scenarios, we observe that simple methods with moderate compute requirements such as TransFuser can match recent large-scale end-to-end driving architectures such as UniAD. Our modular framework can potentially be extended with new datasets, data curation strategies, and metrics, and will be continually maintained to host future challenges. Our code is available at https://github.com/autonomousvision/navsim.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "policy_evaluation",
+    "trajectory_prediction",
+    "scene_simulation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score (aggregated progress, time-to-collision, and infraction metrics)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "Introduced and used as the basis for a large CVPR 2024 competition (143 teams / 463 entries), NAVSIM has gained rapid attention in the autonomous-driving research community as a scalable middle ground between open-loop and closed-loop evaluation.",
+  "notes": "Non-reactive (open-loop) simulator: better aligned with closed-loop metrics than displacement errors but does not model environment policy interactions. Enables large-scale evaluation but cannot fully substitute closed-loop simulation. Non-LLM benchmark; results sensitive to dataset curation and scenario selection.",
+  "creators": {
+    "scientists": [
+      "Daniel Dauner",
+      "Marcel Hallgarten",
+      "Tianyu Li",
+      "Xinshuo Weng",
+      "Zhiyu Huang",
+      "Zetong Yang",
+      "Hongyang Li",
+      "Igor Gilitschenski",
+      "Boris Ivanovic",
+      "Marco Pavone",
+      "Andreas Geiger",
+      "Kashyap Chitta"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2406.15349",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

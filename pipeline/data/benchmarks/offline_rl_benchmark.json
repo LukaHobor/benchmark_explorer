@@ -1,0 +1,37 @@
+{
+  "name": "Offline RL Benchmark",
+  "description": "Recently, Offline Reinforcement Learning (RL) has achieved remarkable progress with the emergence of various algorithms and datasets. However, these methods usually focus on algorithmic advancements, ignoring that many low-level implementation choices considerably influence or even drive the final performance. As a result, it becomes hard to attribute the progress in Offline RL as these choices are not sufficiently discussed and aligned in the literature. In addition, papers focusing on a dataset (e.g., D4RL) often ignore algorithms proposed on another dataset (e.g., RL Unplugged), causing isolation among the algorithms, which might slow down the overall progress. Therefore, this work aims to bridge the gaps caused by low-level choices and datasets. To this end, we empirically investigate 20 implementation choices using three representative algorithms (i.e., CQL, CRR, and IQL) and present a guidebook for choosing implementations. Following the guidebook, we find two variants CRR+ and CQL+ , achieving new state-of-the-art on D4RL. Moreover, we benchmark eight popular offline RL algorithms across datasets under unified training and evaluation framework. The findings are inspiring: the success of a learning paradigm severely depends on the data distribution, and some previous conclusions are biased by the dataset used. Our code is available at https://github.com/sail-sg/offbench.",
+  "category": "mixed",
+  "domain": "reinforcement learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "offline_policy_evaluation",
+    "offline_policy_learning",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "average episode return / normalized cumulative return",
+  "general_score_metric": "normalized cumulative return (average episode return)",
+  "typical_sota_score": "varies by environment and dataset; unknown",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded within the offline RL research community for highlighting implementation and dataset effects; used by researchers studying reproducibility and algorithmic robustness.",
+  "notes": "Results are highly sensitive to low-level implementation choices and dataset distribution; not an LLM benchmark; care needed when comparing across different datasets/environments.",
+  "creators": {
+    "scientists": [
+      "Bingyi Kang",
+      "Xiao Ma",
+      "Yirui Wang",
+      "Yang Yue",
+      "Shuicheng Yan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2306.00972",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

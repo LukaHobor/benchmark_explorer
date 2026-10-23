@@ -1,0 +1,40 @@
+{
+  "name": "Long-Form Medical QA Benchmark",
+  "description": "There is a lack of benchmarks for evaluating large language models (LLMs) in long-form medical question answering (QA). Most existing medical QA evaluation benchmarks focus on automatic metrics and multiple-choice questions. While valuable, these benchmarks fail to fully capture or assess the complexities of real-world clinical applications where LLMs are being deployed. Furthermore, existing studies on evaluating long-form answer generation in medical QA are primarily closed-source, lacking access to human medical expert annotations, which makes it difficult to reproduce results and enhance existing baselines. In this work, we introduce a new publicly available benchmark featuring real-world consumer medical questions with long-form answer evaluations annotated by medical doctors. We performed pairwise comparisons of responses from various open and closed-source medical and general-purpose LLMs based on criteria such as correctness, helpfulness, harmfulness, and bias. Additionally, we performed a comprehensive LLM-as-a-judge analysis to study the alignment between human judgments and LLMs. Our preliminary results highlight the strong potential of open LLMs in medical QA compared to leading closed models. Code&Data: https://github.com/lavita-ai/medical-eval-sphere",
+  "category": "text",
+  "domain": "medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "long_form_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": [
+    "human_eval",
+    "automatic_metrics (ROUGE/BLEU)"
+  ],
+  "general_score_metric": "human preference / pairwise win rate (primary)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "20 citations",
+  "notes": "Evaluation relies on medical-doctor annotations and pairwise human judgements; focuses on long-form answers and real consumer medical questions. Sensitive medical content—models can hallucinate and results are not clinical-grade; reproducibility depends on access to human annotators.",
+  "creators": {
+    "scientists": [
+      "Pedram Hosseini",
+      "Jessica M Sin",
+      "Bing Ren",
+      "Bryceton G. Thomas",
+      "Elnaz Nouri",
+      "A. Farahanchi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2411.09834",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

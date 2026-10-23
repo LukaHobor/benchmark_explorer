@@ -1,0 +1,33 @@
+{
+  "name": "CroCoSum",
+  "description": "Cross-lingual summarization (CLS) has attracted increasing interest in recent years due to the availability of large-scale web-mined datasets and the advancements of multilingual language models. However, given the rareness of naturally occurring CLS resources, the majority of datasets are forced to rely on translation which can contain overly literal artifacts. This restricts our ability to observe naturally occurring CLS pairs that capture organic diction, including instances of code-switching. This alteration between languages in mid-message is a common phenomenon in multilingual settings yet has been largely overlooked in cross-lingual contexts due to data scarcity. To address this gap, we introduce CroCoSum, a dataset of cross-lingual code-switched summarization of technology news. It consists of over 24,000 English source articles and 18,000 human-written Chinese news summaries, with more than 92% of the summaries containing code-switched phrases. For reference, we evaluate the performance of existing approaches including pipeline, end-to-end, and zero-shot methods. We show that leveraging existing CLS resources as a pretraining step does not improve performance on CroCoSum, indicating the limited generalizability of current datasets. Finally, we discuss the challenges of evaluating cross-lingual summarizers on code-switched generation through qualitative error analyses.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "summarization",
+    "cross_lingual_generation",
+    "code_switched_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ROUGE (ROUGE-1/2/L), BLEU and complementary human evaluation",
+  "general_score_metric": "ROUGE (ROUGE-1/2/L)",
+  "year_of_publish": 2023,
+  "reputation": "A recent dataset that has attracted interest for studying naturally occurring code‑switched cross‑lingual summarization; used in academic research on multilingual summarization.",
+  "notes": "Contains code‑switched summaries (English/Chinese) which makes automatic metrics less reliable; domain-specific (technology news) and may not generalize; relatively large but still limited to a specific language pair and register; pretraining on existing CLS corpora does not necessarily transfer well.",
+  "creators": {
+    "scientists": [
+      "Ruochen Zhang",
+      "Carsten Eickhoff"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2303.04092",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

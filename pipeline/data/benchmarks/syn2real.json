@@ -1,0 +1,39 @@
+{
+  "name": "Syn2Real",
+  "description": "Unsupervised transfer of object recognition models from synthetic to real\ndata is an important problem with many potential applications. The challenge is\nhow to \"adapt\" a model trained on simulated images so that it performs well on\nreal-world data without any additional supervision. Unfortunately, current\nbenchmarks for this problem are limited in size and task diversity. In this\npaper, we present a new large-scale benchmark called Syn2Real, which consists\nof a synthetic domain rendered from 3D object models and two real-image domains\ncontaining the same object categories. We define three related tasks on this\nbenchmark: closed-set object classification, open-set object classification,\nand object detection. Our evaluation of multiple state-of-the-art methods\nreveals a large gap in adaptation performance between the easier closed-set\nclassification task and the more difficult open-set and detection tasks. We\nconclude that developing adaptation methods that work well across all three\ntasks presents a significant future challenge for syn2real domain transfer.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "closed_set_classification",
+    "open_set_classification",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (classification), mean Average Precision (mAP) (detection)",
+  "general_score_metric": "accuracy (classification), mAP (detection)",
+  "typical_sota_score": "closed-set classification ~80–95%, open-set classification ~40–70%, object detection mAP ~30–60%",
+  "year_of_publish": 2018,
+  "reputation": "Widely cited and used in the domain-adaptation community as a standard synthetic-to-real transfer benchmark across classification and detection tasks.",
+  "notes": "Non-LLM computer vision benchmark; includes multiple tasks of varying difficulty so scores are task-dependent. Not saturated for open-set and detection tasks; synthetic-to-real domain gap remains a core challenge. Moderate risk of dataset-specific overfitting if methods are tuned on the benchmark.",
+  "creators": {
+    "scientists": [
+      "Xingchao Peng",
+      "Ben Usman",
+      "Kuniaki Saito",
+      "Neela Kaushik",
+      "Judy Hoffman",
+      "Kate Saenko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1806.09755",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

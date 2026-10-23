@@ -1,0 +1,39 @@
+{
+  "name": "reward-bench-binary-classification",
+  "description": "Repurposed allenai/reward-bench dataset for binary classification task, using the following script:\nimport random\n\nimport pandas as pd\nfrom datasets import Dataset, load_dataset\nfrom sklearn.model_selection import GroupKFold\n\ndata_df = load_dataset(\"allenai/reward-bench\", split=\"raw\").to_pandas()\n\nrng = random.Random(43)\n\nexamples = []\nfor idx, row in data_df.iterrows():\n    if rng.random() > 0.5:\n        response_a = row[\"chosen\"]\n        response_b = row[\"rejected\"]\n        label = 0… See the full description on the dataset page: https://huggingface.co/datasets/rbiswasfc/reward-bench-binary-classification.",
+  "category": "text",
+  "domain": "general knowledge",
+  "tags": [
+    "license:odc-by",
+    "size_categories:1K<n<10K",
+    "modality:tabular",
+    "modality:text"
+  ],
+  "task_types": [
+    "binary_classification",
+    "pairwise_comparison"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Niche dataset derived from AllenAI's reward-bench; used mainly in RLHF and preference-modeling research but not a widely adopted mainstream benchmark.",
+  "downloads": 6,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "rbiswasfc"
+    ]
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://huggingface.co/datasets/rbiswasfc/reward-bench-binary-classification",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

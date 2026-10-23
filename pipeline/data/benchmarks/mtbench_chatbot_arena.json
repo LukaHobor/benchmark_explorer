@@ -1,0 +1,39 @@
+{
+  "name": "MT-Bench / Chatbot Arena",
+  "description": "Evaluating large language model (LLM) based chat assistants is challenging due to their broad capabilities and the inadequacy of existing benchmarks in measuring human preferences. To address this, we explore using strong LLMs as judges to evaluate these models on more open-ended questions. We examine the usage and limitations of LLM-as-a-judge, including position, verbosity, and self-enhancement biases, as well as limited reasoning ability, and propose solutions to mitigate some of them. We then verify the agreement between LLM judges and human preferences by introducing two benchmarks: MT-bench, a multi-turn question set; and Chatbot Arena, a crowdsourced battle platform. Our results reveal that strong LLM judges like GPT-4 can match both controlled and crowdsourced human preferences well, achieving over 80% agreement, the same level of agreement between humans. Hence, LLM-as-a-judge is a scalable and explainable way to approximate human preferences, which are otherwise very expensive to obtain. Additionally, we show our benchmark and traditional benchmarks complement each other by evaluating several variants of LLaMA and Vicuna. The MT-bench questions, 3K expert votes, and 30K conversations with human preferences are publicly available at https://github.com/lm-sys/FastChat/tree/main/fastchat/llm_judge.",
+  "category": "text",
+  "domain": "conversational AI",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "pairwise_comparison",
+    "open_ended",
+    "chat_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval / LLM-judge pairwise preference (preference win-rate / agreement with humans)",
+  "general_score_metric": "preference_win_rate (agreement with human preferences)",
+  "typical_sota_score": "varies (top models often show high win-rates; judge-human agreement reported ≈80%+ for strong LLM judges)",
+  "year_of_publish": 2023,
+  "reputation": "430 citations",
+  "notes": "Relies on LLMs as judges and crowdsourced human comparisons; prone to LLM-judge biases and position/verbosity effects; possible contamination if prompts/questions are public; complements rather than replaces task-specific automatic metrics.",
+  "creators": {
+    "scientists": [
+      "Lianmin Zheng",
+      "Wei-Lin Chiang",
+      "Ying Sheng",
+      "Siyuan Zhuang",
+      "Zhanghao Wu",
+      "Yonghao Zhuang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2306.05685",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

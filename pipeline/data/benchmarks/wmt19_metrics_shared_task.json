@@ -1,0 +1,35 @@
+{
+  "name": "WMT19 Metrics Shared Task",
+  "description": "This paper presents the results of the WMT19 Metrics Shared Task. Participants were asked to score the outputs of the translations systems competing in the WMT19 News Translation Task with automatic metrics. 13 research groups submitted 24 metrics, 10 of which are reference-less {``}metrics{''} and constitute submissions to the joint task with WMT19 Quality Estimation Task, {``}QE as a Metric{''}. In addition, we computed 11 baseline metrics, with 8 commonly applied baselines (BLEU, SentBLEU, NIST, WER, PER, TER, CDER, and chrF) and 3 reimplementations (chrF+, sacreBLEU-BLEU, and sacreBLEU-chrF). Metrics were evaluated on the system level, how well a given metric correlates with the WMT19 official manual ranking, and segment level, how well the metric correlates with human judgements of segment quality. This year, we use direct assessment (DA) as our only form of manual evaluation.",
+  "category": "text",
+  "domain": "NLP / machine translation",
+  "benchmark_type": "competition",
+  "task_types": [
+    "correlation",
+    "ranking",
+    "quality_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation (Spearman / Pearson) with human direct assessment (DA)",
+  "general_score_metric": "Spearman/Pearson correlation with human DA scores (segment-level Spearman, system-level Pearson)",
+  "typical_sota_score": "system-level: 0.90–0.99; segment-level: 0.60–0.85",
+  "year_of_publish": 2019,
+  "reputation": "WMT metrics shared tasks are the standard, widely respected benchmark in machine translation for evaluating automatic metrics and quality estimation.",
+  "notes": "Evaluates metric agreement with human DA; results vary by language and domain and can be sensitive to dataset size per language. Possible contamination if metrics were trained on WMT data. Includes both reference-based and reference-less metrics; correlations can saturate at system level.",
+  "creators": {
+    "scientists": [
+      "Qingsong Ma",
+      "Johnny Wei",
+      "Ond{\\v{r}}ej Bojar",
+      "Yvette Graham"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

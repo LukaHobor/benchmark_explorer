@@ -1,0 +1,37 @@
+{
+  "name": "Ultra-Low-Power μNPU Benchmark Suite",
+  "description": "Efficient on-device neural network (NN) inference has various advantages over cloud-based processing, including predictable latency, enhanced privacy, greater reliability, and reduced operating costs for vendors. This has sparked the recent rapid development of microcontroller-scale NN accelerators, often referred to as neural processing units ($\\mu$NPUs), designed specifically for ultra-low-power applications. In this paper we present the first comparative evaluation of a number of commercially-available $\\mu$NPUs, as well as the first independent benchmarks for several of these platforms. We develop and open-source a model compilation framework to enable consistent benchmarking of quantized models across diverse $\\mu$NPU hardware. Our benchmark targets end-to-end performance and includes model inference latency, power consumption, and memory overhead, alongside other factors. The resulting analysis uncovers both expected performance trends as well as surprising disparities between hardware specifications and actual performance, including $\\mu$NPUs exhibiting unexpected scaling behaviors with increasing model complexity. Our framework provides a foundation for further evaluation of $\\mu$NPU platforms alongside valuable insights for both hardware designers and software developers in this rapidly evolving space.",
+  "category": "mixed",
+  "domain": "embedded systems / edge AI / hardware",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "inference_latency",
+    "power_measurement",
+    "memory_overhead",
+    "throughput"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score (primary: inference latency and energy per inference; secondary: memory overhead and throughput)",
+  "year_of_publish": 2025,
+  "reputation": "A niche but influential benchmark in the embedded/edge-AI and hardware-acceleration community as one of the first independent comparative evaluations of commercial microcontroller-scale NN accelerators.",
+  "notes": "Non-LLM hardware benchmark — results highly hardware/toolchain dependent; measurement variability across setups; relatively small set of commercial μNPU devices evaluated; focuses on quantized models and end-to-end inference metrics rather than model accuracy.",
+  "creators": {
+    "scientists": [
+      "Josh Millar",
+      "Yushan Huang",
+      "Sarab Sethi",
+      "Hamed Haddadi",
+      "Anil Madhavapeddy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.22567",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-08-27",
+    "origin": "cynefin@d486fafa9"
+  }
+}

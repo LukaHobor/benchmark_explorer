@@ -1,0 +1,37 @@
+{
+  "name": "VeriDark",
+  "description": "The DarkWeb represents a hotbed for illicit activity, where users communicate on different market forums in order to exchange goods and services. Law enforcement agencies benefit from forensic tools that perform authorship analysis, in order to identify and profile users based on their textual content. However, authorship analysis has been traditionally studied using corpora featuring literary texts such as fragments from novels or fan fiction, which may not be suitable in a cybercrime context. Moreover, the few works that employ authorship analysis tools for cybercrime prevention usually employ ad-hoc experimental setups and datasets. To address these issues, we release VeriDark: a benchmark comprised of three large scale authorship verification datasets and one authorship identification dataset obtained from user activity from either Dark Web related Reddit communities or popular illicit Dark Web market forums. We evaluate competitive NLP baselines on the three datasets and perform an analysis of the predictions to better understand the limitations of such approaches. We make the datasets and baselines publicly available at https://github.com/bit-ml/VeriDark",
+  "category": "text",
+  "domain": "cybercrime forensics / dark web analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "authorship_verification",
+    "authorship_identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC, F1, accuracy (depending on verification vs identification task)",
+  "general_score_metric": "AUC (verification) and F1/accuracy (identification)",
+  "typical_sota_score": "varies by dataset and task split; reported baselines typically in the ~60–85% range depending on scenario",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in forensic NLP and cybercrime-authorship research as a realistic Dark Web benchmark with several baseline evaluations.",
+  "notes": "Contains sensitive/illicit-domain text (Dark Web / forum data) with legal and ethical/privacy considerations and potential for misuse; class imbalance and domain shift are important caveats.",
+  "creators": {
+    "scientists": [
+      "Andrei Manolache",
+      "Florin Brad",
+      "Antonio Barbalau",
+      "Radu Tudor Ionescu",
+      "Marius Popescu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2207.03477",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Antibody-Protein Interaction Benchmark",
+  "description": "BackgroundThe ability to predict antibody binding sites (aka antigenic determinants or B-cell epitopes) for a given protein is a precursor to new vaccine design and diagnostics. Among the various methods of B-cell epitope identification X-ray crystallography is one of the most reliable methods. Using these experimental data computational methods exist for B-cell epitope prediction. As the number of structures of antibody-protein complexes grows, further interest in prediction methods using 3D structure is anticipated. This work aims to establish a benchmark for 3D structure-based epitope prediction methods.ResultsTwo B-cell epitope benchmark datasets inferred from the 3D structures of antibody-protein complexes were defined. The first is a dataset of 62 representative 3D structures of protein antigens with inferred structural epitopes. The second is a dataset of 82 structures of antibody-protein complexes containing different structural epitopes. Using these datasets, eight web-servers developed for antibody and protein binding sites prediction have been evaluated. In no method did performance exceed a 40% precision and 46% recall. The values of the area under the receiver operating characteristic curve for the evaluated methods were about 0.6 for ConSurf, DiscoTope, and PPI-PRED methods and above 0.65 but not exceeding 0.70 for protein-protein docking methods when the best of the top ten models for the bound docking were considered; the remaining methods performed close to random. The benchmark datasets are included as a supplement to this paper.ConclusionIt may be possible to improve epitope prediction methods through training on datasets which include only immune epitopes and through utilizing more features characterizing epitopes, for example, the evolutionary conservation score. Notwithstanding, overall poor performance may reflect the generality of antigenicity and hence the inability to decipher B-cell epitopes as an intrinsic feature of the protein. It is an open question as to whether ultimately discriminatory features can be found.",
+  "category": "mixed",
+  "domain": "bioinformatics / structural biology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "interface_prediction",
+    "docking_evaluation",
+    "binding_site_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC-ROC / precision-recall for classifier tasks; RMSD and docking success metrics for structural predictions; F1/precision/recall for residue-level predictions",
+  "general_score_metric": "AUC-ROC (for binary/interface prediction) and RMSD (for structural docking evaluations)",
+  "year_of_publish": 2007,
+  "reputation": "An early and frequently cited benchmark in structural bioinformatics for evaluating antibody–protein interaction prediction tools, used primarily by specialists in the field.",
+  "notes": "Non-LLM, domain-specific benchmark; relatively small and older dataset (limits modern deep learning scale). Performance is highly sensitive to input structural quality and alignment; potential redundancy with newer, larger structural datasets.",
+  "creators": {
+    "scientists": [
+      "Julia V Ponomarenko",
+      "Philip E Bourne"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1186/1472-6807-7-64",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Unified Image Deraining Benchmark",
+  "description": "Recent years have witnessed significant advances in image deraining due to the kinds of effective image priors and deep learning models. As each deraining approach has individual settings (e.g., training and test datasets, evaluation criteria), how to fairly evaluate existing approaches comprehensively is not a trivial task. Although existing surveys aim to review of image deraining approaches comprehensively, few of them focus on providing unify evaluation settings to examine the deraining capability and practicality evaluation. In this paper, we provide a comprehensive review of existing image deraining method and provide a unify evaluation setting to evaluate the performance of image deraining methods. We construct a new high-quality benchmark named HQ-RAIN to further conduct extensive evaluation, consisting of 5,000 paired high-resolution synthetic images with higher harmony and realism. We also discuss the existing challenges and highlight several future research opportunities worth exploring. To facilitate the reproduction and tracking of the latest deraining technologies for general users, we build an online platform to provide the off-the-shelf toolkit, involving the large-scale performance evaluation. This online platform and the proposed new benchmark are publicly available and will be regularly updated at http://www.deraining.tech/.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "image_to_image"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM (commonly) and perceptual metrics such as LPIPS; evaluation typically uses paired-reference metrics on synthetic test sets",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "25–40 dB (PSNR, depending on dataset and setup)",
+  "year_of_publish": 2023,
+  "reputation": "A focused, recent benchmark (with the HQ-RAIN dataset and an online evaluation platform) aimed at unifying deraining evaluation; gaining traction among image restoration researchers but not yet as ubiquitous as long-established restoration benchmarks.",
+  "notes": "Non-LLM, vision-only benchmark using synthetic paired data (HQ-RAIN); synthetic-versus-real domain gap may limit real-world generalization. Multiple metrics are necessary (PSNR/SSIM for fidelity, LPIPS for perceptual quality). Evaluation results can vary significantly with training data and pre-/post-processing.",
+  "creators": {
+    "scientists": [
+      "Xiang Chen",
+      "Jinshan Pan",
+      "Jiangxin Dong",
+      "Jinhui Tang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.03535",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

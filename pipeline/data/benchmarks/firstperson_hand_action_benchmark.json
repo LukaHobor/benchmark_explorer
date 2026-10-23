@@ -1,0 +1,35 @@
+{
+  "name": "First-Person Hand Action Benchmark",
+  "description": "In this work we study the use of 3D hand poses to recognize first-person\ndynamic hand actions interacting with 3D objects. Towards this goal, we\ncollected RGB-D video sequences comprised of more than 100K frames of 45 daily\nhand action categories, involving 26 different objects in several hand\nconfigurations. To obtain hand pose annotations, we used our own mo-cap system\nthat automatically infers the 3D location of each of the 21 joints of a hand\nmodel via 6 magnetic sensors and inverse kinematics. Additionally, we recorded\nthe 6D object poses and provide 3D object models for a subset of hand-object\ninteraction sequences. To the best of our knowledge, this is the first\nbenchmark that enables the study of first-person hand actions with the use of\n3D hand poses. We present an extensive experimental evaluation of RGB-D and\npose-based action recognition by 18 baselines/state-of-the-art approaches. The\nimpact of using appearance features, poses, and their combinations are\nmeasured, and the different training/testing protocols are evaluated. Finally,\nwe assess how ready the 3D hand pose estimation field is when hands are\nseverely occluded by objects in egocentric views and its influence on action\nrecognition. From the results, we see clear benefits of using hand pose as a\ncue for action recognition compared to other data modalities. Our dataset and\nexperiments can be of interest to communities of 3D hand pose estimation, 6D\nobject pose, and robotics as well as action recognition.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "action_classification",
+    "3D_pose_estimation",
+    "6D_object_pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (for action classification) / mean joint error (mm) or PCK (for 3D pose)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2017,
+  "reputation": "Widely used in the egocentric hand-pose and first-person action recognition community since 2017; considered a standard benchmark for occluded hand-object interaction research.",
+  "notes": "Non-LLM benchmark focused on RGB-D and pose modalities; relatively modest scale (~100K frames) and limited object set; severe occlusions make pose estimation challenging; requires specialized pose labels (mo-cap), so reproducing full annotations can be resource-intensive.",
+  "creators": {
+    "scientists": [
+      "Guillermo Garcia-Hernando",
+      "Shanxin Yuan",
+      "Seungryul Baek",
+      "Tae-Kyun Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1704.02463",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

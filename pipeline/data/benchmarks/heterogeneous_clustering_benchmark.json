@@ -1,0 +1,35 @@
+{
+  "name": "Heterogeneous Clustering Benchmark",
+  "description": "The choice of the most appropriate unsupervised machine-learning method for “heterogeneous” or “mixed” data, i.e. with both continuous and categorical variables, can be challenging. Our aim was to examine the performance of various clustering strategies for mixed data using both simulated and real-life data. We conducted a benchmark analysis of “ready-to-use” tools in R comparing 4 model-based (Kamila algorithm, Latent Class Analysis, Latent Class Model [LCM] and Clustering by Mixture Modeling) and 5 distance/dissimilarity-based (Gower distance or Unsupervised Extra Trees dissimilarity followed by hierarchical clustering or Partitioning Around Medoids, K-prototypes) clustering methods. Clustering performances were assessed by Adjusted Rand Index (ARI) on 1000 generated virtual populations consisting of mixed variables using 7 scenarios with varying population sizes, number of clusters, number of continuous and categorical variables, proportions of relevant (non-noisy) variables and degree of variable relevance (low, mild, high). Clustering methods were then applied on the EPHESUS randomized clinical trial data (a heart failure trial evaluating the effect of eplerenone) allowing to illustrate the differences between different clustering techniques. The simulations revealed the dominance of K-prototypes, Kamila and LCM models over all other methods. Overall, methods using dissimilarity matrices in classical algorithms such as Partitioning Around Medoids and Hierarchical Clustering had a lower ARI compared to model-based methods in all scenarios. When applying clustering methods to a real-life clinical dataset, LCM showed promising results with regard to differences in (1) clinical profiles across clusters, (2) prognostic performance (highest C-index) and (3) identification of patient subgroups with substantial treatment benefit. The present findings suggest key differences in clustering performance between the tested algorithms (limited to tools readily available in R). In most of the tested scenarios, model-based methods (in particular the Kamila and LCM packages) and K-prototypes typically performed best in the setting of heterogeneous data.",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "clustering",
+    "unsupervised"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Adjusted Rand Index (ARI)",
+  "general_score_metric": "Adjusted Rand Index (ARI)",
+  "year_of_publish": 2021,
+  "reputation": "93 citations",
+  "notes": "Non-LLM benchmark focused on unsupervised clustering; evaluates R implementations on synthetic and one real clinical dataset; results depend strongly on scenario design (synthetic settings) and selected R packages, so scores may not generalize beyond tested conditions.",
+  "creators": {
+    "scientists": [
+      "Grégoire Preud'homme",
+      "K. Duarte",
+      "Kevin Dalleau",
+      "Claire Lacomblez",
+      "E. Bresso",
+      "Malika Smaïl-Tabbone"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

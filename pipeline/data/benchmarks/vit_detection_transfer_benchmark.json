@@ -1,0 +1,39 @@
+{
+  "name": "ViT Detection Transfer Benchmark",
+  "description": "Object detection is a central downstream task used to test if pre-trained network parameters confer benefits, such as improved accuracy or training speed. The complexity of object detection methods can make this benchmarking non-trivial when new architectures, such as Vision Transformer (ViT) models, arrive. These difficulties (e.g., architectural incompatibility, slow training, high memory consumption, unknown training formulae, etc.) have prevented recent studies from benchmarking detection transfer learning with standard ViT models. In this paper, we present training techniques that overcome these challenges, enabling the use of standard ViT models as the backbone of Mask R-CNN. These tools facilitate the primary goal of our study: we compare five ViT initializations, including recent state-of-the-art self-supervised learning methods, supervised initialization, and a strong random initialization baseline. Our results show that recent masking-based unsupervised learning methods may, for the first time, provide convincing transfer learning improvements on COCO, increasing box AP up to 4% (absolute) over supervised and prior self-supervised pre-training methods. Moreover, these masking-based initializations scale better, with the improvement growing as model size increases.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation",
+    "transfer_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "COCO-style mean Average Precision (box AP / mask AP)",
+  "general_score_metric": "COCO box AP (mAP) / mask AP",
+  "typical_sota_score": "model-dependent; typical box APs reported in related studies ~40–55 (COCO AP)",
+  "year_of_publish": 2021,
+  "reputation": "Well-cited, influential benchmark for evaluating ViT pretraining transfer to detection (commonly used in self-supervised and transfer-learning studies).",
+  "notes": "Compute- and recipe-sensitive benchmark (results depend strongly on training details); not an LLM benchmark; focused on COCO transfer — may not generalize to other detection datasets.",
+  "creators": {
+    "scientists": [
+      "Yanghao Li",
+      "Saining Xie",
+      "Xinlei Chen",
+      "Piotr Dollar",
+      "Kaiming He",
+      "Ross Girshick"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2111.11429",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

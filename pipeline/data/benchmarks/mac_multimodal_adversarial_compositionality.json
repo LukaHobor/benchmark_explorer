@@ -1,0 +1,35 @@
+{
+  "name": "MAC (Multimodal Adversarial Compositionality)",
+  "description": "While pre-trained multimodal representations (e.g., CLIP) have shown impressive capabilities, they exhibit significant compositional vulnerabilities leading to counterintuitive judgments. We introduce Multimodal Adversarial Compositionality (MAC), a benchmark that leverages large language models (LLMs) to generate deceptive text samples to exploit these vulnerabilities across different modalities and evaluates them through both sample-wise attack success rate and group-wise entropy-based diversity. To improve zero-shot methods, we propose a self-training approach that leverages rejection-sampling fine-tuning with diversity-promoting filtering, which enhances both attack success rate and sample diversity. Using smaller language models like Llama-3.1-8B, our approach demonstrates superior performance in revealing compositional vulnerabilities across various multimodal representations, including images, videos, and audios.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "attack_success_rate (sample-wise) and group-wise entropy for diversity",
+  "general_score_metric": "attack_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "Emerging benchmark in multimodal robustness research, noted for leveraging LLMs to generate adversarial compositional examples.",
+  "notes": "Contains LLM-generated adversarial samples — risk of overlap with model training data; focuses on adversarial vulnerability analysis (not natural distribution); evaluates across images, videos, and audio so modality-specific performance may vary.",
+  "creators": {
+    "scientists": [
+      "Jaewoo Ahn",
+      "Heeseung Yun",
+      "Dayoon Ko",
+      "Gunhee Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2505.22943",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

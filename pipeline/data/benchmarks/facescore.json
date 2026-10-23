@@ -1,0 +1,36 @@
+{
+  "name": "FaceScore",
+  "description": "Diffusion models (DMs) have achieved significant success in generating imaginative images given textual descriptions. However, they are likely to fall short when it comes to real-life scenarios with intricate details. The low-quality, unrealistic human faces in text-to-image generation are one of the most prominent issues, hindering the wide application of DMs in practice. Targeting addressing such an issue, we first assess the face quality of generations from popular pre-trained DMs with the aid of human annotators and then evaluate the alignment between existing metrics with human judgments. Observing that existing metrics can be unsatisfactory for quantifying face quality, we develop a novel metric named FaceScore (FS) by fine-tuning the widely used ImageReward on a dataset of (win, loss) face pairs cheaply crafted by an inpainting pipeline of DMs. Extensive studies reveal FS enjoys a superior alignment with humans. On the other hand, FS opens up the door for enhancing DMs for better face generation. With FS offering image ratings, we can easily perform preference learning algorithms to refine DMs like SDXL. Comprehensive experiments verify the efficacy of our approach for improving face quality. The code is released at https://github.com/OPPO-Mente-Lab/FaceScore.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_scoring",
+    "ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "correlation_with_human_judgments (Spearman / Pearson)",
+  "general_score_metric": "Spearman correlation with human preference labels",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "New metric proposed to better align automated face-quality scores with human judgments; promising results but limited external adoption so far.",
+  "notes": "Metric is specialized to face quality and trained on synthetic inpainting-derived pairs, which may bias evaluations; useful for improving diffusion models but not a general image-quality metric; non-LLM benchmark and potential demographic biases should be considered.",
+  "creators": {
+    "scientists": [
+      "Zhenyi Liao",
+      "Qingsong Xie",
+      "Chen Chen",
+      "Hannan Lu",
+      "Zhijie Deng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.17100",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

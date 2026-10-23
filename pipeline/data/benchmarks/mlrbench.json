@@ -1,0 +1,42 @@
+{
+  "name": "MLR-Bench",
+  "description": "Recent advancements in AI agents have demonstrated their growing potential to drive and support scientific discovery. In this work, we introduce MLR-Bench, a comprehensive benchmark for evaluating AI agents on open-ended machine learning research. MLR-Bench includes three key components: (1) 201 research tasks sourced from NeurIPS, ICLR, and ICML workshops covering diverse ML topics; (2) MLR-Judge, an automated evaluation framework combining LLM-based reviewers with carefully designed review rubrics to assess research quality; and (3) MLR-Agent, a modular agent scaffold capable of completing research tasks through four stages: idea generation, proposal formulation, experimentation, and paper writing. Our framework supports both stepwise assessment across these distinct research stages, and end-to-end evaluation of the final research paper. We then use MLR-Bench to evaluate six frontier LLMs and an advanced coding agent, finding that while LLMs are effective at generating coherent ideas and well-structured papers, current coding agents frequently (e.g., in 80% of the cases) produce fabricated or invalidated experimental results--posing a major barrier to scientific reliability. We validate MLR-Judge through human evaluation, showing high agreement with expert reviewers, supporting its potential as a scalable tool for research evaluation. We open-source MLR-Bench to help the community benchmark, diagnose, and improve AI research agents toward trustworthy and transparent scientific discovery.",
+  "category": "mixed",
+  "domain": "machine learning research / AI agents",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "code_generation",
+    "long_form_writing",
+    "research_planning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval (MLR-Judge automated LLM-based reviewer with rubric) / composite_score",
+  "general_score_metric": "MLR-Judge composite_score (automated rubric-based evaluation combined with human validation)",
+  "year_of_publish": 2025,
+  "reputation": "A newly introduced, research-focused benchmark with growing interest for evaluating end-to-end AI research agents but not yet a broadly established community standard.",
+  "notes": "Open-ended research tasks (201) make automated scoring noisy; evaluation relies on an LLM-based judge which introduces potential bias and contamination; coding agents frequently produce fabricated/invalid experimental results; moderate dataset size for a research benchmark.",
+  "creators": {
+    "scientists": [
+      "Hui Chen",
+      "Miao Xiong",
+      "Yujie Lu",
+      "Wei Han",
+      "Ailin Deng",
+      "Yufei He",
+      "Jiaying Wu",
+      "Yibo Li",
+      "Yue Liu",
+      "Bryan Hooi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2505.19955",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

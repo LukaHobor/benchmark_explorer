@@ -1,0 +1,36 @@
+{
+  "name": "Jetson video anomaly detection benchmark",
+  "description": "Innovative enhancement in embedded system platforms, specifically hardware accelerations, significantly influence the application of deep learning in real-world scenarios. These innovations translate human labor efforts into automated intelligent systems employed in various areas such as autonomous driving, robotics, Internet-of-Things (IoT), and numerous other impactful applications. NVIDIA's Jetson platform is one of the pioneers in offering optimal performance regarding energy efficiency and throughput in the execution of deep learning algorithms. Previously, most benchmarking analysis was based on 2D images with a single deep learning model for each comparison result. In this paper, we implement an end-to-end video-based crime-scene anomaly detection system inputting from surveillance videos and the system is deployed and completely operates on multiple Jetson edge devices (Nano, AGX Xavier, Orin Nano). The comparison analysis includes the integration of Torch-TensorRT as a software developer kit from NVIDIA for the model performance optimisation. The system is built based on the PySlowfast open-source project from Facebook as the coding template. The end-to-end system process comprises the videos from camera, data preprocessing pipeline, feature extractor and the anomaly detection. We provide the experience of an AI-based system deployment on various Jetson Edge devices with Docker technology. Regarding anomaly detectors, a weakly supervised video-based deep learning model called Robust Temporal Feature Magnitude Learning (RTFM) is applied in the system. The approach system reaches 47.56 frames per second (FPS) inference speed on a Jetson edge device with only 3.11 GB RAM usage total. We also discover the promising Jetson device that the AI system achieves 15% better performance than the previous version of Jetson devices while consuming 50% less energy power.",
+  "category": "vision",
+  "domain": "embedded systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "anomaly_detection",
+    "open_ended",
+    "real-time_inference_benchmark"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC (frame-level ROC AUC) for detection; deployment metrics include FPS and energy consumption",
+  "general_score_metric": "frame-level AUC (detection) plus FPS / power consumption for deployment comparison",
+  "year_of_publish": 2023,
+  "reputation": "Paper-specific embedded deployment benchmark demonstrating anomaly detection on NVIDIA Jetson devices; referenced in embedded/edge-AI communities but not a widely standardized benchmark.",
+  "notes": "Focuses on on-device deployment (performance, latency, energy) as much as detection accuracy; results heavily influenced by model optimization (Torch-TensorRT) and hardware generation — not a large standardized public dataset; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Hoang Viet Pham",
+      "Thinh Gia Tran",
+      "Chuong Dinh Le",
+      "An Dinh Le",
+      "Hien Bich Vo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.16834",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

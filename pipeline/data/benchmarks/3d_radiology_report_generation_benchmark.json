@@ -1,0 +1,39 @@
+{
+  "name": "3D Radiology Report Generation Benchmark",
+  "description": "Automatic radiology report generation can significantly benefit the labor-intensive process of report writing by radiologists, especially for 3D radiographs like CT scans, which are crucial for broad clinical diagnostics yet underexplored compared to 2D radiographs. Existing methods often handle 3D volumes either slice-wise or with aggressive downsampling due to current GPU memory limitations, which results in a loss of the inherent 3D nature and critical details. To overcome these issues, we introduce a novel framework that efficiently and effectively generates radiology reports for high-resolution (HR) 3D volumes, based on large language models (LLMs). Specifically, our framework utilizes low-resolution (LR) visual tokens as queries to mine information from HR tokens, preserving detailed HR information while reducing computational costs by only processing HR informed LR visual queries. Further benefiting the field, we curate and release BIMCV-RG, a new dataset with 5,328 HR 3D volumes and paired reports, establishing the first benchmarks for report generation from 3D HR medical images. Our method consistently surpasses existing methods on this benchmark across three different settings: normal-resolution, high-resolution inputs, and zero-shot domain transfer, all at an acceptable computational cost, trainable on a single A100-80G.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "report_generation",
+    "image-to-text",
+    "clinical_finding_extraction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "BLEU / ROUGE / clinical F1 (clinical efficacy metrics)",
+  "general_score_metric": "BLEU / clinical F1",
+  "year_of_publish": 2024,
+  "reputation": "A recent benchmark (BIMCV-RG) introducing high-resolution 3D radiology report generation; of growing interest in medical imaging + LLM research but not yet widely established.",
+  "notes": "Medical dataset with sensitive patient data — privacy considerations; evaluation with n-gram metrics can correlate poorly with clinical usefulness; computationally demanding (3D HR volumes).",
+  "creators": {
+    "scientists": [
+      "Che Liu",
+      "Zhongwei Wan",
+      "Yuqi Wang",
+      "Hui Shen",
+      "Haozhe Wang",
+      "Kangyu Zheng",
+      "Mi Zhang",
+      "Rossella Arcucci"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.07146",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

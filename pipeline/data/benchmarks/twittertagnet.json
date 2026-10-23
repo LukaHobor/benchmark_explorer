@@ -1,0 +1,33 @@
+{
+  "name": "TwitterTagNet",
+  "description": "This study introduces a comprehensive dataset of co-occurring Twitter hashtags, specifically designed to benchmark the performance of graph neural network (GNN) models in node classification tasks, with a focus on hashtag virality. The dataset, collected over 10 days and comprising 4655 nodes and 5901 edges, incorporates a diverse set of 12 features for each hashtag. These features include standard metrics, such as structural characteristics within co-occurrence networks, and novel attributes, including semantic similarity, polarity, subjectivity, and a unique user activity measure based on activity days and tweet volume. A new metric for determining user activity levels on social networks is introduced and used as a feature in the dataset. The dataset is divided into two parts: a feature matrix representing each hashtag’s attributes and a connection matrix detailing the co-occurrence relationships between hashtags. Labels indicating viral or non-viral behavior were assigned during data collection, providing a valuable resource for evaluating the effectiveness of GNN models in classifying hashtag virality. The high F1-scores achieved using these models underscore the significance of integrating structural, content-based, and user-related features, as well as the relationships between hashtags, in accurately classifying hashtag virality on Twitter. This work also demonstrates the significant influence of the selected features and relationships within the dataset, highlighting the importance of a comprehensive graph-based approach in understanding and predicting hashtag virality.",
+  "category": "mixed",
+  "domain": "graph learning / social network analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "binary_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 (reported; typically macro or binary F1)",
+  "general_score_metric": "F1 (macro / binary F1)",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Small graph (4.6k nodes) collected over a short time window (10 days) — temporal and topical drift limit generalization. Potential label noise and class imbalance (viral vs non-viral). Social media data may have privacy/ethical considerations; non-LLM benchmark focused on GNNs.",
+  "creators": {
+    "scientists": [
+      "Sina Firuzbakht",
+      "Mohammad Khansari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "READIN",
+  "description": "For many real-world applications, the user-generated inputs usually contain various noises due to speech recognition errors caused by linguistic variations1 or typographical errors (typos). Thus, it is crucial to test model performance on data with realistic input noises to ensure robustness and fairness. However, little study has been done to construct such benchmarks for Chinese, where various language-specific input noises happen in the real world. In order to fill this important gap, we construct READIN: a Chinese multi-task benchmark with REalistic And Diverse Input Noises. READIN contains four diverse tasks and requests annotators to re-enter the original test data with two commonly used Chinese input methods: Pinyin input and speech input. We designed our annotation pipeline to maximize diversity, for example by instructing the annotators to use diverse input method editors (IMEs) for keyboard noises and recruiting speakers from diverse dialectical groups for speech noises. We experiment with a series of strong pretrained language models as well as robust training methods, we find that these models often suffer significant performance drops on READIN even with robustness methods like data augmentation. As the first large-scale attempt in creating a benchmark with noises geared towards user-generated inputs, we believe that READIN serves as an important complement to existing Chinese NLP benchmarks. The source code and dataset can be obtained from https://github.com/thunlp/READIN.",
+  "category": "text",
+  "domain": "NLP / robustness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "sequence_labeling",
+    "machine_reading_comprehension",
+    "generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-specific (accuracy, F1, exact_match depending on task)",
+  "general_score_metric": "task-specific (primarily accuracy and F1)",
+  "year_of_publish": 2023,
+  "reputation": "Recognized in Chinese NLP as a useful robustness benchmark for realistic input-noise scenarios; cited in robustness-focused work but not yet ubiquitous.",
+  "notes": "Contains realistic user-input noises from Pinyin IMEs and speech input; multi-task and language-specific (Chinese). Potential contamination if models are trained on the same IME/speech corpora; not a single unified metric — evaluation is task-dependent.",
+  "creators": {
+    "scientists": [
+      "Chenglei Si",
+      "Zhengyan Zhang",
+      "Yingfa Chen",
+      "Xiaozhi Wang",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2302.07324",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

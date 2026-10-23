@@ -1,0 +1,34 @@
+{
+  "name": "NIST SP 800-22",
+  "description": "The NIST SP 800-22 test suite serves as the benchmark for Random Number Generator (RNG) evaluation, yet default parameters frequently induce Type I errors due to approximation inaccuracies and Level-1 statistic sensitivity. This paper presents a systematic parameter optimization methodology designed to mitigate structural false rejections in the Frequency, Cumulative Sums, and Non-overlapping Template Matching tests. Analytical pass thresholds for the Frequency and Cumulative Sums tests are derived and aligned with statistically modeled maximum values to identify stable pass regions (<inline-formula> <tex-math notation=\"LaTeX\">$n$ </tex-math></inline-formula>). For the Non-overlapping Template Matching test, a parameter sweep based on sensitivity analysis is employed to determine the optimal (<inline-formula> <tex-math notation=\"LaTeX\">$n, N$ </tex-math></inline-formula>) set, effectively resolving hypersensitivity to strict decision boundaries. Experimental verification using a 28 nm",
+  "category": "text",
+  "domain": "random number generation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "statistical_test",
+    "randomness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "pass/fail rates and p-value-based statistical testing",
+  "general_score_metric": "pass rate / p-value distribution",
+  "typical_sota_score": "varies widely by generator; high-quality cryptographic/non-cryptographic RNGs typically exhibit >95% passing rates across many of the suite's statistical tests",
+  "year_of_publish": 2026,
+  "reputation": "A classic and widely used standard suite for evaluating the statistical randomness of RNGs and bitstreams.",
+  "notes": "Non-LLM benchmark; results are highly sensitive to sample size, parameter settings, and multiple-testing effects, with known Type I error issues in default configurations.",
+  "creators": {
+    "scientists": [
+      "Hyeong-Jun Park",
+      "Chi Trung Ngo",
+      "Myeong-Hun Lee",
+      "Jong-Phil Hong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

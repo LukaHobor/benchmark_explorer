@@ -1,0 +1,35 @@
+{
+  "name": "French ASR Error Severity Benchmark",
+  "description": "Automatic Speech Recognition (ASR) transcription errors are commonly assessed using metrics that compare them with a reference transcription, such as Word Error Rate (WER), which measures spelling deviations from the reference, or semantic score-based metrics. However, these approaches often overlook what is understandable to humans when interpreting transcription errors. To address this limitation, a new evaluation is proposed that categorizes errors into four levels of severity, further divided into subtypes, based on objective linguistic criteria, contextual patterns, and the use of content words as the unit of analysis. This metric is applied to a benchmark of 10 state-of-the-art ASR systems on French language, encompassing both HMM-based and end-to-end models. Our findings reveal the strengths and weaknesses of each system, identifying those that provide the most comfortable reading experience for users.",
+  "category": "audio",
+  "domain": "speech / automatic speech recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "transcription",
+    "error_categorization",
+    "evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "severity-weighted_error_rate (severity-based categorical scoring of transcription errors)",
+  "general_score_metric": "severity_weighted_error_rate (composite severity score)",
+  "year_of_publish": 2025,
+  "reputation": "Newly proposed research benchmark with limited adoption outside the originating paper; not yet widely used in the ASR community.",
+  "notes": "French-only, applied to 10 systems (small-scale); non-LLM, task-specific metric that complements WER by weighting perceptual severity; limited community adoption so far.",
+  "creators": {
+    "scientists": [
+      "Antoine Tholly",
+      "Jane Wottawa",
+      "Mickael Rouvier",
+      "Richard Dufour"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2501.10879",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

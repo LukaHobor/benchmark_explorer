@@ -1,0 +1,37 @@
+{
+  "name": "Deception Robustness Benchmark",
+  "description": "Evaluating model robustness is critical when developing trustworthy models not only to gain deeper understanding of model behavior, strengths, and weaknesses, but also to develop future models that are generalizable and robust across expected environments a model may encounter in deployment. In this paper we present a framework for measuring model robustness for an important but difficult text classification task - deceptive news detection. We evaluate model robustness to out-of-domain data, modality-specific features, and languages other than English. Our investigation focuses on three type of models: LSTM models trained on multiple datasets(Cross-Domain), several fusion LSTM models trained with images and text and evaluated with three state-of-the-art embeddings, BERT ELMo, and GloVe (Cross-Modality), and character-level CNN models trained on multiple languages (Cross-Language). Our analyses reveal a significant drop in performance when testing neural models on out-of-domain data and non-English languages that may be mitigated using diverse training data. We find that with additional image content as input, ELMo embeddings yield significantly fewer errors compared to BERT orGLoVe. Most importantly, this work not only carefully analyzes deception model robustness but also provides a framework of these analyses that can be applied to new models or extended datasets in the future.",
+  "category": "text",
+  "domain": "natural language processing (deceptive news detection)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "cross-domain",
+    "cross-modality",
+    "cross-language"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and F1",
+  "general_score_metric": "F1-score (and accuracy)",
+  "year_of_publish": 2021,
+  "reputation": "Recognized within deceptive-news robustness studies for highlighting cross-domain and cross-language fragility, but not a mainstream general NLP benchmark.",
+  "notes": "Evaluation sensitive to dataset selection and language distribution; label subjectivity in deception; relatively small / heterogeneous datasets and not focused on LLMs; cross-domain results often show large performance drops.",
+  "creators": {
+    "scientists": [
+      "Maria Glenski",
+      "Ellyn Ayton",
+      "Robin Cosbey",
+      "Dustin Arendt",
+      "Svitlana Volkova"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2104.11761",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

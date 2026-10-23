@@ -1,0 +1,31 @@
+{
+  "name": "SatNet",
+  "description": "Satellites provide essential services such as networking and weather tracking, and the number of satellites are expected to grow rapidly in the coming years. Communications with terrestrial ground stations is one of the critical functionalities of any space mission. Satellite scheduling is a problem that has been scientifically investigated since the 1970s. A central aspect of this problem is the need to consider bandwidth resource contention and satellite visibility constraints as they require line of sight. \nDue to the combinatorial nature of the problem, prior solutions such as linear programs and evolutionary algorithms require extensive compute capabilities to output a feasible schedule for each scenario. Machine learning based scheduling can provide an alternative solution by training a model with historical data and generating a schedule quickly with model inference. We present SatNet, a benchmark for satellite scheduling optimization based on historical data from the NASA Deep Space Network. We propose formulation of the satellite scheduling problem as a Markov Decision Process and use reinforcement learning (RL) policies to generate schedules. The nature of constraints imposed by SatNet differ from other combinatorial optimization problems such as vehicle routing studied in prior literature. Our initial results indicate that RL is an alternative optimization approach that can generate candidate solutions of comparable quality to existing state-of-the-practice results. However, we also find that RL policies overfit to the training dataset and do not generalize well to new data, thereby necessitating continued research on reusable and generalizable agents.",
+  "category": "mixed",
+  "domain": "satellite operations / optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reinforcement_learning",
+    "combinatorial_optimization",
+    "scheduling"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate / normalized reward (schedule quality relative to baselines)",
+  "general_score_metric": "Normalized schedule utility / cumulative reward (often reported relative to heuristic or MILP baselines)",
+  "year_of_publish": 2023,
+  "reputation": "A specialized benchmark introduced for RL-based satellite scheduling research; of interest to the operations research and space-ops ML community but not widely adopted outside that domain.",
+  "notes": "Non-LLM benchmark, simulation-based and domain-specific; authors report RL agents can overfit to training instances and generalization is a key challenge. Dataset size and scenario diversity can be limited, so results depend on scenario generation and evaluation protocol.",
+  "creators": {
+    "scientists": [
+      "Anonymous"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

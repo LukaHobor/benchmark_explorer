@@ -1,0 +1,38 @@
+{
+  "name": "PIPAL",
+  "description": "Image quality assessment (IQA) is the key factor for the fast development of image restoration (IR) algorithms. The most recent IR methods based on Generative Adversarial Networks (GANs) have achieved significant improvement in visual performance, but also presented great challenges for quantitative evaluation. Notably, we observe an increasing inconsistency between perceptual quality and the evaluation results. Then we raise two questions: (1) Can existing IQA methods objectively evaluate recent IR algorithms? (2) When focus on beating current benchmarks, are we getting better IR algorithms? To answer these questions and promote the development of IQA methods, we contribute a large-scale IQA dataset, called Perceptual Image Processing Algorithms (PIPAL) dataset. Especially, this dataset includes the results of GAN-based methods, which are missing in previous datasets. We collect more than 1.13 million human judgments to assign subjective scores for PIPAL images using the more reliable \"Elo system\". Based on PIPAL, we present new benchmarks for both IQA and super-resolution methods. Our results indicate that existing IQA methods cannot fairly evaluate GAN-based IR algorithms. While using appropriate evaluation methods is important, IQA methods should also be updated along with the development of IR algorithms. At last, we improve the performance of IQA networks on GAN-based distortions by introducing anti-aliasing pooling. Experiments show the effectiveness of the proposed method.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_quality_assessment",
+    "image_super_resolution",
+    "perceptual_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval (Elo-derived MOS) with objective IQA correlations (SRCC/PLCC) used to evaluate algorithms against human judgments",
+  "general_score_metric": "Correlation with human scores (Spearman rank correlation (SRCC) and Pearson linear correlation (PLCC))",
+  "typical_sota_score": "varies by distortion and method; top objective IQA methods typically report SRCC/PLCC in the ~0.7–0.9 range for many distortions, but performance drops on GAN-based outputs",
+  "year_of_publish": 2020,
+  "reputation": "PIPAL is a well-cited, influential benchmark in the IQA and image-restoration community, particularly noted for including GAN-based distortions and extensive human judgments.",
+  "notes": "Contains >1.13M human judgments and GAN-generated distortions; non-LLM benchmark. Primary ground truth is subjective (Elo/MOS), so reported objective metrics measure correlation with human perception rather than absolute correctness. Some IQA methods may not generalize across distortion types.",
+  "creators": {
+    "scientists": [
+      "Jinjin Gu",
+      "Haoming Cai",
+      "Haoyu Chen",
+      "Xiaoxing Ye",
+      "Jimmy Ren",
+      "Chao Dong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2007.12142",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

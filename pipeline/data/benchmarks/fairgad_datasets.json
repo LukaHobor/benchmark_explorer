@@ -1,0 +1,36 @@
+{
+  "name": "FairGAD datasets",
+  "description": "The Fair Graph Anomaly Detection (FairGAD) problem aims to accurately detect anomalous nodes in an input graph while avoiding biased predictions against individuals from sensitive subgroups. However, the current literature does not comprehensively discuss this problem, nor does it provide realistic datasets that encompass actual graph structures, anomaly labels, and sensitive attributes. To bridge this gap, we introduce a formal definition of the FairGAD problem and present two novel datasets constructed from the social media platforms Reddit and Twitter. These datasets comprise 1.2 million and 400,000 edges associated with 9,000 and 47,000 nodes, respectively, and leverage political leanings as sensitive attributes and misinformation spreaders as anomaly labels. We demonstrate that our FairGAD datasets significantly differ from the synthetic datasets used by the research community. Using our datasets, we investigate the performance-fairness trade-off in nine existing GAD and non- graph AD methods on five state-of-the-art fairness methods. Code and datasets are available at https://github.com/nigelnnk/FairGAD.",
+  "category": "mixed",
+  "domain": "machine learning / graphs",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "node_classification",
+    "fairness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC / precision@k / F1 for anomaly detection combined with fairness metrics (e.g., demographic parity, equalized odds) to evaluate bias",
+  "general_score_metric": "AUC (for anomaly detection) alongside fairness metric scores",
+  "year_of_publish": 2024,
+  "reputation": "2 citations",
+  "notes": "Large, domain-specific graph datasets (social media) with class imbalance and sensitive attributes; results sensitive to preprocessing and choice of fairness definition. Non-LLM benchmark focused on graph methods.",
+  "creators": {
+    "scientists": [
+      "Neng Kai Nigel Neo",
+      "Yeon-Chang Lee",
+      "Yiqiao Jin",
+      "Sang‐Wook Kim",
+      "Srijan Kumar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1145/3627673.3679754",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

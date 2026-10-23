@@ -1,0 +1,36 @@
+{
+  "name": "Civil Comments Toxic Comment Benchmark",
+  "description": "Toxic comment detection on social media has proven to be essential for content moderation. This paper compares a wide set of different models on a highly skewed multi-label hate speech dataset. We consider inference time and several metrics to measure performance and bias in our comparison. We show that all BERTs have similar performance regardless of the size, optimizations or language used to pre-train the models. RNNs are much faster at inference than any of the BERT. BiLSTM remains a good compromise between performance and inference time. RoBERTa with Focal Loss offers the best performance on biases and AUROC. However, DistilBERT combines both good AUROC and a low inference time. All models are affected by the bias of associating identities. BERT, RNN, and XLNet are less sensitive than the CNN and Compact Convolutional Transformers.",
+  "category": "text",
+  "domain": "social media / content moderation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUROC (primary) and F1; also reports inference time and bias metrics",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2023,
+  "reputation": "Built on the well-known Civil Comments dataset; commonly used in research on toxicity detection, bias analysis, and model efficiency but not a single unified leaderboard standard.",
+  "notes": "Highly skewed / imbalanced multi-label dataset with identity-associated bias; models can exploit dataset artifacts; not specific to LLMs and sensitive to thresholding and class imbalance.",
+  "creators": {
+    "scientists": [
+      "Corentin Duchene",
+      "Henri Jamet",
+      "Pierre Guillaume",
+      "Reda Dehak"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2301.11125",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Travel Demand Prediction Benchmark / Collaborative Infrastructure",
+  "description": "This research foregrounds general practices in travel demand research, emphasizing the need to change our ways. A critical barrier preventing travel demand literature from effectively informing policy is the volume of publications without clear, consolidated benchmarks, making it difficult for researchers and policymakers to gather insights and use models to guide decision-making. By emphasizing reproducibility and open collaboration, we aim to enhance the reliability and policy relevance of travel demand research. We present a collaborative infrastructure for transit demand prediction models, focusing on their performance during highly dynamic conditions like the COVID-19 pandemic. Drawing from over 300 published papers, we develop an open-source infrastructure with five common methodologies and assess their performance under stable and dynamic conditions. We found that the prediction error for the LSTM deep learning approach stabilized at a mean arctangent absolute percentage error (MAAPE) of about 0.12 within 1.5 months, whereas other models continued to exhibit higher error rates even a year into the pandemic. If research practices had prioritized reproducibility before the COVID-19 pandemic, transit agencies would have had clearer guidance on the best forecasting methods and quickly identified those best suited for pandemic conditions to inform operations in response to changes in transit demand. The aim of this open-source codebase is to lower the barrier for other researchers to replicate, reproduce models and build upon findings. We encourage researchers to test their own modeling approaches on this benchmarking platform, challenge the analyses conducted in this paper, and develop model specifications that can outperform those evaluated here. Further, collaborative research approaches must be expanded across travel demand modeling if we wish to impact policy and planning.",
+  "category": "mixed",
+  "domain": "transportation / travel demand",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "time_series_forecasting",
+    "regression",
+    "demand_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAAPE (mean arctangent absolute percentage error); also reported: MAPE and RMSE",
+  "general_score_metric": "MAAPE",
+  "typical_sota_score": "≈0.10–0.15 MAAPE (LSTM reported ≈0.12 in the paper)",
+  "year_of_publish": 2023,
+  "reputation": "Emerging, open-source benchmark gaining attention in the transportation research community for reproducible transit demand evaluation under dynamic (COVID-era) conditions.",
+  "notes": "Non-LLM, time-series forecasting benchmark focused on transit demand with pandemic-induced distribution shift; results dependent on region/dataset and model retraining cadence; potential heterogeneity across published datasets and risk of overlapping train/test splits if not carefully partitioned.",
+  "creators": {
+    "scientists": [
+      "Juan D. Caicedo",
+      "Carlos Guirado",
+      "Marta C. González",
+      "Joan L. Walker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2306.06194",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

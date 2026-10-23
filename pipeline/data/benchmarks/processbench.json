@@ -1,0 +1,51 @@
+{
+  "name": "ProcessBench",
+  "description": "A benchmark for identifying erroneous steps in mathematical reasoning chains, containing 3,400 test cases annotated by multiple expert reviewers. Models are given a step-by-step solution and must identify exactly which step first introduces an error. Finds that existing Process Reward Models (PRMs) fail to generalize beyond the GSM8K and MATH datasets they were trained on, highlighting over-reliance on specific problem distributions.",
+  "category": "text",
+  "domain": "math",
+  "task_types": [
+    "multiple_choice"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 3400,
+  "evaluation_method": "accuracy (correct identification of first erroneous step)",
+  "general_score_metric": "step error identification accuracy (%)",
+  "typical_sota_score": "~60–75% (frontier models with reasoning capability; PRMs often below 50% on out-of-distribution problems)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at ACL 2025; from Qwen/Alibaba team; foundational for PRM and scalable oversight research; critical for developing self-correcting 'System 2' reasoning models; multi-expert annotation ensures quality",
+  "notes": "ACL 2025, from the Qwen/Alibaba team. Core finding: PRMs trained on GSM8K and MATH fail dramatically on harder competition problems, suggesting they learn surface-level patterns rather than genuine error detection. Multi-expert annotation across different mathematical backgrounds. Enables evaluation of Process Reward Models used in RLHF and scalable oversight. Four difficulty levels matching GSM8K, MATH, Olympiad, and open-ended competition problems.",
+  "creators": {
+    "scientists": [
+      "Zheng Chujie",
+      "Zhang Zhen",
+      "Fan Wenbo",
+      "Chen Jian",
+      "Qin Yufei",
+      "Lin Tao",
+      "Chen Jiafeng",
+      "Zhou Zhiheng",
+      "Ma Shengjie",
+      "Wang Fei",
+      "Ye Xiaobing",
+      "Zhu Rui",
+      "Ni Yanpeng",
+      "Yang Guoyin",
+      "Liu Zhiyuan",
+      "Huang Minlie"
+    ],
+    "institutions": [
+      "Tsinghua University"
+    ],
+    "companies": [
+      "Alibaba (Qwen Team)"
+    ]
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2412.06559",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

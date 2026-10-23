@@ -1,0 +1,39 @@
+{
+  "name": "RClicks",
+  "description": "The emergence of Segment Anything (SAM) sparked research interest in the field of interactive segmentation, especially in the context of image editing tasks and speeding up data annotation. Unlike common semantic segmentation, interactive segmentation methods allow users to directly influence their output through prompts (e.g. clicks). However, click patterns in real-world interactive segmentation scenarios remain largely unexplored. Most methods rely on the assumption that users would click in the center of the largest erroneous area. Nevertheless, recent studies show that this is not always the case. Thus, methods may have poor performance in real-world deployment despite high metrics in a baseline benchmark. To accurately simulate real-user clicks, we conducted a large crowdsourcing study of click patterns in an interactive segmentation scenario and collected 475K real-user clicks. Drawing on ideas from saliency tasks, we develop a clickability model that enables sampling clicks, which closely resemble actual user inputs. Using our model and dataset, we propose RClicks benchmark for a comprehensive comparison of existing interactive segmentation methods on realistic clicks. Specifically, we evaluate not only the average quality of methods, but also the robustness w.r.t. click patterns. According to our benchmark, in real-world usage interactive segmentation models may perform worse than it has been reported in the baseline benchmark, and most of the methods are not robust. We believe that RClicks is a significant step towards creating interactive segmentation methods that provide the best user experience in real-world cases.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "interactive_segmentation",
+    "robustness_evaluation",
+    "click_simulation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean IoU (mIoU) and clicks-to-success (number of clicks to reach IoU threshold); robustness metrics across click distributions",
+  "general_score_metric": "mean IoU (mIoU) / clicks-to-success",
+  "year_of_publish": 2024,
+  "reputation": "A recent benchmark (arXiv:2410.11722) that introduces a large real-user click dataset and realistic click simulation; gaining attention in interactive segmentation research but not yet widely standardized.",
+  "notes": "Non-LLM, vision-focused benchmark based on crowdsourced clicks (475K). Potential domain bias due to the specific crowd population and image sets; evaluates robustness to realistic click patterns and may not generalize to all application domains.",
+  "creators": {
+    "scientists": [
+      "Anton Antonov",
+      "Andrey Moskalenko",
+      "Denis Shepelev",
+      "Alexander Krapukhin",
+      "Konstantin Soshin",
+      "Anton Konushin",
+      "Vlad Shakhuro"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.11722",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

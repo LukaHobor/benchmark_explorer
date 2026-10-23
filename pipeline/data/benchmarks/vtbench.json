@@ -1,0 +1,40 @@
+{
+  "name": "VTBench",
+  "description": "While virtual try-on has achieved significant progress, evaluating these models towards real-world scenarios remains a challenge. A comprehensive benchmark is essential for three key reasons:(1) Current metrics inadequately reflect human perception, particularly in unpaired try-on settings;(2)Most existing test sets are limited to indoor scenarios, lacking complexity for real-world evaluation; and (3) An ideal system should guide future advancements in virtual try-on generation. To address these needs, we introduce VTBench, a hierarchical benchmark suite that systematically decomposes virtual image try-on into hierarchical, disentangled dimensions, each equipped with tailored test sets and evaluation criteria. VTBench exhibits three key advantages:1) Multi-Dimensional Evaluation Framework: The benchmark encompasses five critical dimensions for virtual try-on generation (e.g., overall image quality, texture preservation, complex background consistency, cross-category size adaptability, and hand-occlusion handling). Granular evaluation metrics of corresponding test sets pinpoint model capabilities and limitations across diverse, challenging scenarios.2) Human Alignment: Human preference annotations are provided for each test set, ensuring the benchmark's alignment with perceptual quality across all evaluation dimensions. (3) Valuable Insights: Beyond standard indoor settings, we analyze model performance variations across dimensions and investigate the disparity between indoor and real-world try-on scenarios. To foster the field of virtual try-on towards challenging real-world scenario, VTBench will be open-sourced, including all test sets, evaluation protocols, generated results, and human annotations.",
+  "category": "vision",
+  "domain": "virtual try-on / fashion",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_generation",
+    "image_quality_assessment",
+    "preference_ranking",
+    "consistency_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval_and_composite_metrics (human preference annotations combined with automated image-quality/consistency metrics such as FID, LPIPS, SSIM)",
+  "general_score_metric": "composite_score (combination of human preference rate and automated image-quality/consistency metrics)",
+  "year_of_publish": 2025,
+  "reputation": "Recent, specialized benchmark with limited but growing adoption in the virtual-try-on and fashion-vision research community.",
+  "notes": "Non-LLM, image-generation benchmark that includes human preference annotations; not yet widely adopted so leaderboards are limited; automated metrics may not fully capture perceptual quality or all real-world variations; potential domain bias toward particular clothing categories/backgrounds.",
+  "creators": {
+    "scientists": [
+      "Hu Xiaobin",
+      "Liang Yujie",
+      "Luo Donghao",
+      "Peng Xu",
+      "Zhang Jiangning",
+      "Zhu Junwei",
+      "Wang Chengjie",
+      "Fu Yanwei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.19571",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

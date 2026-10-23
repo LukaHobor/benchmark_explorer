@@ -1,0 +1,35 @@
+{
+  "name": "ACT-Bench",
+  "description": "World models have emerged as promising neural simulators for autonomous driving, with the potential to supplement scarce real-world data and enable closed-loop evaluations. However, current research primarily evaluates these models based on visual realism or downstream task performance, with limited focus on fidelity to specific action instructions - a crucial property for generating targeted simulation scenes. Although some studies address action fidelity, their evaluations rely on closed-source mechanisms, limiting reproducibility. To address this gap, we develop an open-access evaluation framework, ACT-Bench, for quantifying action fidelity, along with a baseline world model, Terra. Our benchmarking framework includes a large-scale dataset pairing short context videos from nuScenes with corresponding future trajectory data, which provides conditional input for generating future video frames and enables evaluation of action fidelity for executed motions. Furthermore, Terra is trained on multiple large-scale trajectory-annotated datasets to enhance action fidelity. Leveraging this framework, we demonstrate that the state-of-the-art model does not fully adhere to given instructions, while Terra achieves improved action fidelity. All components of our benchmark framework will be made publicly available to support future research.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "conditional_video_prediction",
+    "trajectory_prediction",
+    "open_ended"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate (action fidelity / trajectory adherence metrics such as ADE/FDE)",
+  "general_score_metric": "action_fidelity (quantitative trajectory fidelity metrics, e.g., ADE/FDE)",
+  "year_of_publish": 2024,
+  "reputation": "Open-access framework designed to quantify action fidelity for driving world models; positioned as a reproducible benchmark for research but still new to the community.",
+  "notes": "Built on driving datasets (e.g., nuScenes) for conditional video+trajectory evaluation; open-source and research-oriented; not a language benchmark; metrics sensitive to dataset bias and domain gap between simulation and real-world driving.",
+  "creators": {
+    "scientists": [
+      "Hidehisa Arai",
+      "Keishi Ishihara",
+      "Tsubasa Takahashi",
+      "Yu Yamaguchi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2412.05337",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

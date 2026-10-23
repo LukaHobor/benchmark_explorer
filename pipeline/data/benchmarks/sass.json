@@ -1,0 +1,33 @@
+{
+  "name": "SASS",
+  "description": "Detecting \"toxic\" language in internet content is a pressing social and technical challenge. In this work, we focus on PERSPECTIVE from Jigsaw, a state-of-the-art tool that promises to score the \"toxicity\" of text, with a recent model update that claims impressive results (Lees et al., 2022). We seek to challenge certain normative claims about toxic language by proposing a new benchmark, Selected Adversarial SemanticS, or SASS. We evaluate PERSPECTIVE on SASS, and compare to low-effort alternatives, like zero-shot and few-shot GPT-3 prompt models, in binary classification settings. We find that PERSPECTIVE exhibits troubling shortcomings across a number of our toxicity categories. SASS provides a new tool for evaluating performance on previously undetected toxic language that avoids common normative pitfalls. Our work leads us to emphasize the importance of questioning assumptions made by tools already in deployment for toxicity detection in order to anticipate and prevent disparate harms.",
+  "category": "text",
+  "domain": "content moderation / social NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2023,
+  "reputation": "Proposed in a 2023 research paper as an adversarial audit for deployed toxicity classifiers; useful for stress-testing models but not widely adopted as a standard leaderboard.",
+  "notes": "Adversarial, targeted dataset designed to expose blind spots of toxicity classifiers; relatively small and not representative of natural distribution. Labels are normative and can be subjective; risk of distributional mismatch with production moderation data. Useful for robustness/audit evaluations rather than general-purpose training.",
+  "creators": {
+    "scientists": [
+      "Lorena Piedras",
+      "Lucas Rosenblatt",
+      "Julia Wilkins"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2301.01874",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

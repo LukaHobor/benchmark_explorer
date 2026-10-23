@@ -1,0 +1,35 @@
+{
+  "name": "Thermal Depth Estimation Benchmark",
+  "description": "Achieving robust and accurate spatial perception under adverse weather and lighting conditions is crucial for the high-level autonomy of self-driving vehicles and robots. However, existing perception algorithms relying on the visible spectrum are highly affected by weather and lighting conditions. A long-wave infrared camera (i.e., thermal imaging camera) can be a potential solution to achieve high-level robustness. However, the absence of large-scale datasets and standardized benchmarks remains a significant bottleneck to progress in active research for robust visual perception from thermal images. To this end, this manuscript provides a large-scale Multi-Spectral Stereo (MS$^2$) dataset that consists of stereo RGB, stereo NIR, stereo thermal, stereo LiDAR data, and GNSS/IMU information along with semi-dense depth ground truth. MS$^2$ dataset includes 162K synchronized multi-modal data pairs captured across diverse locations (e.g., urban city, residential area, campus, and high-way road) at different times (e.g., morning, daytime, and nighttime) and under various weather conditions (e.g., clear-sky, cloudy, and rainy). Secondly, we conduct a thorough evaluation of monocular and stereo depth estimation networks across RGB, NIR, and thermal modalities to establish standardized benchmark results on MS$^2$ depth test sets (e.g., day, night, and rainy). Lastly, we provide in-depth analyses and discuss the challenges revealed by the benchmark results, such as the performance variability for each modality under adverse conditions, domain shift between different sensor modalities, and potential research direction for thermal perception. Our dataset and source code are publicly available at https://sites.google.com/view/multi-spectral-stereo-dataset and https://github.com/UkcheolShin/SupDepth4Thermal.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static",
+  "task_types": [
+    "depth_estimation",
+    "thermal_infrared_perception",
+    "stereo_depth_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "depth estimation metrics such as Abs Rel, RMSE, and δ-threshold accuracy",
+  "general_score_metric": "depth estimation error",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "emerging",
+  "notes": "Built to support robust perception research with RGB, NIR, thermal, LiDAR, and GNSS/IMU data; useful for benchmarking thermal-only and multimodal methods.",
+  "creators": {
+    "scientists": [
+      "Ukcheol Shin",
+      "Jinsun Park"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.22060",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

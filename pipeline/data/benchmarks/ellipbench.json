@@ -1,0 +1,37 @@
+{
+  "name": "EllipBench",
+  "description": "Ellipsometry is used to indirectly measure the optical properties and thickness of thin films. However, solving the inverse problem of ellipsometry is time-consuming since it involves human expertise to apply the data fitting techniques. Many studies use traditional machine learning-based methods to model the complex mathematical fitting process. In our work, we approach this problem from a deep learning perspective. First, we introduce a large-scale benchmark dataset to facilitate deep learning methods. The proposed dataset encompasses 98 types of thin film materials and 4 types of substrate materials, including metals, alloys, compounds, and polymers, among others. Additionally, we propose a deep learning framework that leverages residual connections and self-attention mechanisms to learn the massive data points. We also introduce a reconstruction loss to address the common challenge of multiple solutions in thin film thickness prediction. Compared to traditional machine learning methods, our framework achieves state-of-the-art (SOTA) performance on our proposed dataset. The dataset and code will be available upon acceptance.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "inverse_problem",
+    "parameter_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean absolute error (MAE) / root mean squared error (RMSE) and reconstruction loss",
+  "general_score_metric": "MAE (thickness / optical constants)",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed, domain-specific benchmark for deep-learning-based ellipsometry inversion with limited adoption so far pending dataset/code release.",
+  "notes": "Inverse problem is potentially non-unique (multiple valid solutions); dataset covers many materials but may include synthetic or simulated examples; released with code upon paper acceptance — risk of limited external validation until widely used.",
+  "creators": {
+    "scientists": [
+      "Yiming Ma",
+      "Xinjie Li",
+      "Xin Sun",
+      "Zhiyong Wang",
+      "Lionel Z. Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2407.17869",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

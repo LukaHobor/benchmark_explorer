@@ -1,0 +1,36 @@
+{
+  "name": "OJN-Pass-EPV",
+  "description": "This paper introduces the first Expected Possession Value (EPV) benchmark and a new and improved EPV model for football. Through the introduction of the OJN-Pass-EPV benchmark, we present a novel method to quantitatively assess the quality of EPV models by using pairs of game states with given relative EPVs. Next, we attempt to replicate the results of Fern\\'andez et al. (2021) using a dataset containing Dutch Eredivisie and World Cup matches. Following our failure to do so, we propose a new architecture based on U-net-type convolutional neural networks, achieving good results in model loss and Expected Calibration Error. Finally, we present an improved pass model that incorporates ball height and contains a new dual-component pass value model that analyzes reward and risk. The resulting EPV model correctly identifies the higher value state in 78% of the game state pairs in the OJN-Pass-EPV benchmark, demonstrating its ability to accurately assess goal-scoring potential. Our findings can help assess the quality of EPV models, improve EPV predictions, help assess potential reward and risk of passing decisions, and improve player and team performance.",
+  "category": "mixed",
+  "domain": "sports analytics (football)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_ranking",
+    "regression",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈78% (reported best in the introducing paper)",
+  "year_of_publish": 2025,
+  "reputation": "New, paper-introduced benchmark with niche but growing interest in the sports-analytics (football) research community.",
+  "notes": "Domain-specific, non-LLM benchmark; evaluated on Dutch Eredivisie and World Cup matches so may have limited geographic/competition generalization; focuses on pairwise ranking of states (may not fully capture calibration or absolute EPV errors).",
+  "creators": {
+    "scientists": [
+      "Thijs Overmeer",
+      "Tim Janssen",
+      "Wim P. M. Nuijten"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2502.02565",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

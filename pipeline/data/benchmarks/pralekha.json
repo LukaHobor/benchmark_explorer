@@ -1,0 +1,37 @@
+{
+  "name": "Pralekha",
+  "description": "Mining parallel document pairs poses a significant challenge because existing sentence embedding models often have limited context windows, preventing them from effectively capturing document-level information. Another overlooked issue is the lack of concrete evaluation benchmarks comprising high-quality parallel document pairs for assessing document-level mining approaches, particularly for Indic languages. In this study, we introduce Pralekha, a large-scale benchmark for document-level alignment evaluation. Pralekha includes over 2 million documents, with a 1:2 ratio of unaligned to aligned pairs, covering 11 Indic languages and English. Using Pralekha, we evaluate various document-level mining approaches across three dimensions: the embedding models, the granularity levels, and the alignment algorithm. To address the challenge of aligning documents using sentence and chunk-level alignments, we propose a novel scoring method, Document Alignment Coefficient (DAC). DAC demonstrates substantial improvements over baseline pooling approaches, particularly in noisy scenarios, achieving average gains of 20-30% in precision and 15-20% in F1 score. These results highlight DAC's effectiveness in parallel document mining for Indic languages.",
+  "category": "text",
+  "domain": "multilingual NLP / document alignment",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "document_alignment",
+    "pair_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Precision / Recall / F1 (document-level alignment metrics)",
+  "general_score_metric": "F1",
+  "year_of_publish": 2024,
+  "reputation": "New, domain-focused benchmark with particular relevance for Indic-language parallel-document mining; gaining attention in multilingual NLP and MT communities working on under-represented languages.",
+  "notes": "Large-scale, document-level benchmark covering 11 Indic languages and English; contains noisy and unaligned pairs (1:2 ratio unaligned:aligned) which can challenge sentence-embedding approaches. Potential contamination risk with broadly pretrained multilingual models; alignment quality may vary by language pair and domain. Primarily suited for retrieval/alignment systems rather than purely token-level LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Sanjay Suryanarayanan",
+      "Haiyue Song",
+      "Mohammed Safi Ur Rahman Khan",
+      "Anoop Kunchukuttan",
+      "Mitesh M. Khapra",
+      "Raj Dabre"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2411.19096",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

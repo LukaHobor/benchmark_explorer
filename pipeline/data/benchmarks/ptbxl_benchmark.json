@@ -1,0 +1,38 @@
+{
+  "name": "PTB-XL benchmark",
+  "description": "Electrocardiography is a very common, non-invasive diagnostic procedure and its interpretation is increasingly supported by automatic interpretation algorithms. The progress in the field of automatic ECG interpretation has up to now been hampered by a lack of appropriate datasets for training as well as a lack of well-defined evaluation procedures to ensure comparability of different algorithms. To alleviate these issues, we put forward first benchmarking results for the recently published, freely accessible PTB-XL dataset, covering a variety of tasks from different ECG statement prediction tasks over age and gender prediction to signal quality assessment. We find that convolutional neural networks, in particular resnet- and inception-based architectures, show the strongest performance across all tasks outperforming feature-based algorithms by a large margin. These results are complemented by deeper insights into the classification algorithm in terms of hidden stratification, model uncertainty and an exploratory interpretability analysis. We also put forward benchmarking results for the ICBEB2018 challenge ECG dataset and discuss prospects of transfer learning using classifiers pretrained on PTB-XL. With this resource, we aim to establish the PTB-XL dataset as a resource for structured benchmarking of ECG analysis algorithms and encourage other researchers in the field to join these efforts.",
+  "category": "mixed",
+  "domain": "medical (cardiology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "classification",
+    "regression",
+    "time_series_classification",
+    "signal_quality_assessment"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 (macro/micro), accuracy and AUROC depending on task",
+  "general_score_metric": "F1 (macro/micro)",
+  "typical_sota_score": "70–90%",
+  "year_of_publish": 2020,
+  "reputation": "Widely used public benchmark in ECG analysis research for training and evaluating deep learning models.",
+  "notes": "Large, clinically sourced dataset with class imbalance and label noise; hidden stratification across clinical labels; non-LLM biomedical benchmark requiring clinical validation for deployment.",
+  "creators": {
+    "scientists": [
+      "Nils Strodthoff",
+      "Patrick Wagner",
+      "Tobias Schaeffter",
+      "Wojciech Samek"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2004.13701",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

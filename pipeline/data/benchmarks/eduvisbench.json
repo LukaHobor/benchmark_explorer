@@ -1,0 +1,41 @@
+{
+  "name": "EduVisBench",
+  "description": "While foundation models (FMs), such as diffusion models and large vision-language models (LVLMs), have been widely applied in educational contexts, their ability to generate pedagogically effective visual explanations remains limited. Most existing approaches focus primarily on textual reasoning, overlooking the critical role of structured and interpretable visualizations in supporting conceptual understanding. To better assess the visual reasoning capabilities of FMs in educational settings, we introduce EduVisBench, a multi-domain, multi-level benchmark. EduVisBench features diverse STEM problem sets requiring visually grounded solutions, along with a fine-grained evaluation rubric informed by pedagogical theory. Our empirical analysis reveals that existing models frequently struggle with the inherent challenge of decomposing complex reasoning and translating it into visual representations aligned with human cognitive processes. To address these limitations, we propose EduVisAgent, a multi-agent collaborative framework that coordinates specialized agents for instructional planning, reasoning decomposition, metacognitive prompting, and visualization design. Experimental results show that EduVisAgent substantially outperforms all baselines, achieving a 40.2% improvement and delivering more educationally aligned visualizations. EduVisBench and EduVisAgent are available at https://github.com/aiming-lab/EduVisBench and https://github.com/aiming-lab/EduVisAgent.",
+  "category": "multimodal",
+  "domain": "education / pedagogical visualization",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "open_ended",
+    "visual_generation",
+    "diagram_design",
+    "reasoning_decomposition",
+    "instruction_following"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "human_eval with rubric (composite_score combining pedagogical rubric ratings and visual alignment metrics)",
+  "general_score_metric": "composite_score (rubric-based pedagogical score)",
+  "year_of_publish": 2025,
+  "reputation": "Newly introduced benchmark from Aiming Lab with growing interest in educational-ML and visualization communities but limited broad adoption so far.",
+  "notes": "Relies heavily on human evaluation (labor-intensive); moderate dataset scale; potential for contamination from public training data; results depend on subjective rubric alignment to pedagogical goals.",
+  "creators": {
+    "scientists": [
+      "Haonian Ji",
+      "Shi Qiu",
+      "Siyang Xin",
+      "Siwei Han",
+      "Zhaorun Chen",
+      "Hongyi Wang",
+      "Dake Zhang",
+      "Huaxiu Yao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.16832",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

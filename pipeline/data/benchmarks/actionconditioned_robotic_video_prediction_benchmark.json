@@ -1,0 +1,36 @@
+{
+  "name": "Action-conditioned robotic video prediction benchmark",
+  "description": "A defining characteristic of intelligent systems is the ability to make action decisions based on the anticipated outcomes. Video prediction systems have been demonstrated as a solution for predicting how the future will unfold visually, and thus, many models have been proposed that are capable of predicting future frames based on a history of observed frames~(and sometimes robot actions). However, a comprehensive method for determining the fitness of different video prediction models at guiding the selection of actions is yet to be developed. Current metrics assess video prediction models based on human perception of frame quality. In contrast, we argue that if these systems are to be used to guide action, necessarily, the actions the robot performs should be encoded in the predicted frames. In this paper, we are proposing a new metric to compare different video prediction models based on this argument. More specifically, we propose an action inference system and quantitatively rank different models based on how well we can infer the robot actions from the predicted frames. Our extensive experiments show that models with high perceptual scores can perform poorly in the proposed action inference tests and thus, may not be suitable options to be used in robot planning systems.",
+  "category": "vision",
+  "domain": "robotics / computer vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "video_prediction",
+    "action_inference",
+    "action-conditioned_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (action inference accuracy from predicted frames)",
+  "general_score_metric": "action inference accuracy (percentage)",
+  "year_of_publish": 2019,
+  "reputation": "A niche academic benchmark/metric used in video-prediction and robotics planning research to evaluate action encoding in predictions.",
+  "notes": "Non-LLM benchmark focused on whether predicted frames encode actions; may not correlate with perceptual video metrics; dataset/models often small and research-oriented.",
+  "creators": {
+    "scientists": [
+      "Manuel Serra Nunes",
+      "Atabak Dehban",
+      "Plinio Moreno",
+      "José Santos-Victor"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1910.02564",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

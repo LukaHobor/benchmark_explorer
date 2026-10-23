@@ -1,0 +1,34 @@
+{
+  "name": "Neural Structured Prediction Inference Benchmark",
+  "description": "Exact structured inference with neural network scoring functions is computationally challenging but several methods have been proposed for approximating inference. One approach is to perform gradient descent with respect to the output structure directly (Belanger and McCallum, 2016). Another approach, proposed recently, is to train a neural network (an \"inference network\") to perform inference (Tu and Gimpel, 2018). In this paper, we compare these two families of inference methods on three sequence labeling datasets. We choose sequence labeling because it permits us to use exact inference as a benchmark in terms of speed, accuracy, and search error. Across datasets, we demonstrate that inference networks achieve a better speed/accuracy/search error trade-off than gradient descent, while also being faster than exact inference at similar accuracy levels. We find further benefit by combining inference networks and gradient descent, using the former to provide a warm start for the latter.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_labeling",
+    "structured_prediction",
+    "inference_algorithm_benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 (primary for sequence labeling) and inference speed/search error comparisons",
+  "general_score_metric": "F1",
+  "year_of_publish": 2019,
+  "reputation": "Cited within the structured prediction research community and used to compare inference-network vs. gradient-based inference methods, but relatively niche outside that area.",
+  "notes": "Small-scale sequence-labeling datasets used; focused on comparing inference speed/accuracy trade-offs rather than large-scale model evaluation; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Lifu Tu",
+      "Kevin Gimpel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/1904.01138",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

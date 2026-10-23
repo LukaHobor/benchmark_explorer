@@ -1,0 +1,35 @@
+{
+  "name": "RetroScore",
+  "description": "Molecular generation is a critical method in drug design, but its practical application is often limited by the difficulty of synthesizing the generated molecules. To address this challenge, we present RetroScore, a synthetic accessibility evaluation framework guided by multistep retrosynthesis. Our methodology integrates the semi-template model Graph2Edits with the multistep retrosynthesis planning algorithm Retro*, forming the Graph2Edits-Retro*d system. By incorporating the green chemistry metric of graph edit distance into the reaction cost function and a multistage screening protocol, this system identifies optimal routes while balancing reliability, synthetic efficiency, and economic feasibility. Benchmark evaluations demonstrate a 97.37% planning success rate with balanced optimization across route length, confidence score, and graph edit distance. In the molecular generation task, the RetroScore outperforms six of the seven synthetic accessibility metrics, yielding molecules with enhanced synthetic accessibility profiles across heterogeneous evaluation frameworks. To facilitate practical implementation, we developed an open-access web platform for automated retrosynthesis route prediction and RetroScore calculation, providing researchers with rapid synthetic accessibility assessments. The RetroScore web server is publicly accessible at http://aidd.bioai-global.com/RetroScore/, and the source code is available at https://github.com/Snowgao320/RetroScore. In this study, we present RetroScore, a novel multistep retrosynthesis planning-guided framework for evaluating molecular synthetic accessibility. The framework introduces a novel scoring function that incorporates graph edit distance to explicitly optimize for atom economy (a green chemistry estimator) in addition to route reliability and length, marking a significant advance over prior synthetic accessibility (SA) metrics focused on molecular complexity or fragment-based approaches. To systematically identify optimal synthesis routes, a multistage screening protocol is employed that concurrently balances reliability (confidence score), synthetic efficiency (route length), and economic feasibility (graph edit distance), thereby addressing a critical limitation of single-objective retrosynthesis planning algorithms. In the experiments, RetroScore achieved a 97.37% success rate in multistep retrosynthesis planning while successfully optimizing across these competing objectives. In subsequent molecular generation tasks, it outperformed six of seven established SA metrics, indicating its effectiveness in producing novel molecules with superior synthetic profiles.",
+  "category": "mixed",
+  "domain": "chemistry",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "regression",
+    "scoring",
+    "route_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (multistep retrosynthesis planning) and a composite score combining route length, confidence score, and graph edit distance",
+  "general_score_metric": "planning_success_rate (multistep retrosynthesis) and a composite synthetic-accessibility score",
+  "typical_sota_score": "≈97% (multistep retrosynthesis planning success rate reported)",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed metric with limited but growing visibility in computational chemistry/cheminformatics; promising for retrosynthesis-guided SA evaluation but not yet widely adopted.",
+  "notes": "Non-LLM, cheminformatics benchmark that depends heavily on the underlying retrosynthesis planner (Graph2Edits + Retro*) and cost function; results may vary with underlying reaction databases, templates, and economic assumptions; reported on authors' splits and may not be standardized across other datasets.",
+  "creators": {
+    "scientists": [
+      "Sinuo Gao",
+      "Xiaofei Zhou",
+      "L. Liang",
+      "Jianping Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

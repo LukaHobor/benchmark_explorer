@@ -1,0 +1,38 @@
+{
+  "name": "VocBench",
+  "description": "Neural vocoders, used for converting the spectral representations of an audio signal to the waveforms, are a commonly used component in speech synthesis pipelines. It focuses on synthesizing waveforms from low-dimensional representation, such as Mel-Spectrograms. In recent years, different approaches have been introduced to develop such vocoders. However, it becomes more challenging to assess these new vocoders and compare their performance to previous ones. To address this problem, we present VocBench, a framework that benchmark the performance of state-of-the art neural vocoders. VocBench uses a systematic study to evaluate different neural vocoders in a shared environment that enables a fair comparison between them. In our experiments, we use the same setup for datasets, training pipeline, and evaluation metrics for all neural vocoders. We perform a subjective and objective evaluation to compare the performance of each vocoder along a different axis. Our results demonstrate that the framework is capable of showing the competitive efficacy and the quality of the synthesized samples for each vocoder. VocBench framework is available at https://github.com/facebookresearch/vocoder-benchmark.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "audio_synthesis",
+    "waveform_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Subjective MOS (human evaluation) plus objective metrics such as MCD, PESQ, STOI",
+  "general_score_metric": "Mean Opinion Score (MOS) is the primary reported metric",
+  "typical_sota_score": "≈ 3.5–4.5 / 5 (MOS, depending on dataset and vocoder)",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2025,
+  "reputation": "Well-regarded within the speech-synthesis community as a comparative benchmark for neural vocoders; used in academic evaluations.",
+  "notes": "Human MOS evaluations are costly and subject to rater variability and small sample sizes; objective metrics do not always correlate perfectly with perceived quality; benchmark is non-LLM and focused on waveform synthesis.",
+  "creators": {
+    "scientists": [
+      "Ehab A. AlBadawy",
+      "Andrew Gibiansky",
+      "Qing He",
+      "JiLong Wu",
+      "Ming-Ching Chang",
+      "Siwei Lyu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2112.03099",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

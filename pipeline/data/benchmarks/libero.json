@@ -1,0 +1,37 @@
+{
+  "name": "LIBERO",
+  "description": "Lifelong learning offers a promising paradigm of building a generalist agent that learns and adapts over its lifespan. Unlike traditional lifelong learning problems in image and text domains, which primarily involve the transfer of declarative knowledge of entities and concepts, lifelong learning in decision-making (LLDM) also necessitates the transfer of procedural knowledge, such as actions and behaviors. To advance research in LLDM, we introduce LIBERO, a novel benchmark of lifelong learning for robot manipulation. Specifically, LIBERO highlights five key research topics in LLDM: 1) how to efficiently transfer declarative knowledge, procedural knowledge, or the mixture of both; 2) how to design effective policy architectures and 3) effective algorithms for LLDM; 4) the robustness of a lifelong learner with respect to task ordering; and 5) the effect of model pretraining for LLDM. We develop an extendible procedural generation pipeline that can in principle generate infinitely many tasks. For benchmarking purpose, we create four task suites (130 tasks in total) that we use to investigate the above-mentioned research topics. To support sample-efficient learning, we provide high-quality human-teleoperated demonstration data for all tasks. Our extensive experiments present several insightful or even unexpected discoveries: sequential finetuning outperforms existing lifelong learning methods in forward transfer, no single visual encoder architecture excels at all types of knowledge transfer, and naive supervised pretraining can hinder agents' performance in the subsequent LLDM. Check the website at https://libero-project.github.io for the code and the datasets.",
+  "category": "multimodal",
+  "domain": "robotics / robot manipulation",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "robot_manipulation",
+    "lifelong_learning",
+    "imitation_learning",
+    "reinforcement_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (per-task and averaged) plus lifelong-transfer metrics (forward/backward transfer, catastrophic forgetting measures) and sample-efficiency comparisons",
+  "general_score_metric": "average task_success_rate across tasks and transfer metrics (forward/backward transfer)",
+  "year_of_publish": 2023,
+  "reputation": "A notable recent benchmark for lifelong learning in robot manipulation with growing interest from robotics and lifelong-learning researchers.",
+  "notes": "Multimodal, non-LLM benchmark; procedurally generated tasks (can be extended) but may differ from real-world robot dynamics (sim-to-real gap); performance sensitive to task ordering and pretraining; uses human teleoperated demonstration data.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2306.03310",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

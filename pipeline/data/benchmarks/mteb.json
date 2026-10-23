@@ -1,0 +1,41 @@
+{
+  "name": "MTEB",
+  "description": "Text embeddings are commonly evaluated on a small set of datasets from a single task not covering their possible applications to other tasks. It is unclear whether state-of-the-art embeddings on semantic textual similarity (STS) can be equally well applied to other tasks like clustering or reranking. This makes progress in the field difficult to track, as various models are constantly being proposed without proper evaluation. To solve this problem, we introduce the Massive Text Embedding Benchmark (MTEB). MTEB spans 8 embedding tasks covering a total of 58 datasets and 112 languages. Through the benchmarking of 33 models on MTEB, we establish the most comprehensive benchmark of text embeddings todate. We find that no particular text embedding method dominates across all tasks. This suggests that the field has yet to converge on a universal text embedding method and scale it up sufficiently to provide state-of-theart results on all embedding tasks. MTEB comes with open-source code and a public leaderboard at https://github.com/embeddings-benchmark/mteb.",
+  "category": "text",
+  "domain": "Information retrieval / NLP embeddings",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_similarity",
+    "classification",
+    "clustering",
+    "reranking",
+    "information_retrieval",
+    "pair_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (e.g., accuracy for classification, nDCG/MRR for retrieval, Spearman/Pearson for STS, clustering F1/ARI)",
+  "general_score_metric": "composite_score (average across tasks / MTEB score)",
+  "typical_sota_score": "70–90%",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "330 citations",
+  "notes": "Covers many tasks and languages so aggregate scores can mask task-specific strengths; not an LLM-only benchmark; active public leaderboard; results depend heavily on downstream use case and evaluation metric chosen.",
+  "creators": {
+    "scientists": [
+      "Niklas Muennighoff",
+      "Nouamane Tazi",
+      "Loïc Magne",
+      "Nils Reimers"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://doi.org/10.18653/v1/2023.eacl-main.148",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

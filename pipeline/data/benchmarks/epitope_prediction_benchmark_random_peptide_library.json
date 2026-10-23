@@ -1,0 +1,38 @@
+{
+  "name": "Epitope prediction benchmark (random peptide library)",
+  "description": "Epitope prediction based on random peptide library screening has become a focus as a promising method in immunoinformatics research. Some novel software and web-based servers have been proposed in recent years and have succeeded in given test cases. However, since the number of available mimotopes with the relevant structure of template-target complex is limited, a systematic evaluation of these methods is still absent. In this study, a new benchmark dataset was defined. Using this benchmark dataset and a representative dataset, five examples of the most popular epitope prediction software products which are based on random peptide library screening have been evaluated. Using the benchmark dataset, in no method did performance exceed a 0.42 precision and 0.37 sensitivity, and the MCC scores suggest that the epitope prediction results of these software programs are greater than random prediction about 0.09–0.13; while using the representative dataset, most of the values of these performance measures are slightly improved, but the overall performance is still not satisfactory. Many test cases in the benchmark dataset cannot be applied to these pieces of software due to software limitations. Moreover chances are that these software products are overfitted to the small dataset and will fail in other cases. Therefore finding the correlation between mimotopes and genuine epitope residues is still far from resolved and much larger dataset for mimotope-based epitope prediction is desirable.",
+  "category": "mixed",
+  "domain": "medical informatics / immunoinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "epitope_prediction",
+    "binary_classification",
+    "sequence_labeling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision / sensitivity (recall) / Matthews correlation coefficient (MCC)",
+  "general_score_metric": "MCC (reported alongside precision and sensitivity)",
+  "typical_sota_score": "precision ≈ 30–42%, sensitivity ≈ 25–37%, MCC ≈ 0.09–0.13",
+  "year_of_publish": 2011,
+  "reputation": "A focused, domain-specific benchmark cited in immunoinformatics literature but limited in adoption due to small size and coverage.",
+  "notes": "Small dataset and many test cases incompatible with some tools; risk of overfitting and limited generalization. Non-LLM benchmark focused on classical bioinformatics methods; dated relative to modern high-throughput datasets.",
+  "creators": {
+    "scientists": [
+      "Pingping Sun",
+      "Wenhan Chen",
+      "Yanxin Huang",
+      "Hongyan Wang",
+      "Zhiqiang Ma",
+      "Yinghua Lv"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.3390/molecules16064971",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

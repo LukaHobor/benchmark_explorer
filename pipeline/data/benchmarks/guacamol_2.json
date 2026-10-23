@@ -1,0 +1,38 @@
+{
+  "name": "GuacaMol",
+  "description": "De novo design seeks to generate molecules with required property profiles by\nvirtual design-make-test cycles. With the emergence of deep learning and neural\ngenerative models in many application areas, models for molecular design based\non neural networks appeared recently and show promising results. However, the\nnew models have not been profiled on consistent tasks, and comparative studies\nto well-established algorithms have only seldom been performed.\n  To standardize the assessment of both classical and neural models for de novo\nmolecular design, we propose an evaluation framework, GuacaMol, based on a\nsuite of standardized benchmarks. The benchmark tasks encompass measuring the\nfidelity of the models to reproduce the property distribution of the training\nsets, the ability to generate novel molecules, the exploration and exploitation\nof chemical space, and a variety of single and multi-objective optimization\ntasks. The benchmarking open-source Python code, and a leaderboard can be found\non https://benevolent.ai/guacamol",
+  "category": "mixed",
+  "domain": "cheminformatics / molecular design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "distribution_learning",
+    "novelty_generation",
+    "molecular_optimization",
+    "multiobjective_optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score: validity/uniqueness/novelty, distributional metrics (KL, Fréchet ChemNet Distance), and task-specific objective scores for optimization tasks",
+  "general_score_metric": "task-specific composite metrics (e.g., validity/novelty/uniqueness and FCD/KL for distribution tasks; property objective scores for optimization tasks)",
+  "typical_sota_score": "varies by task; distribution-learning metrics often >90% (validity/uniqueness), optimization task scores are task-dependent",
+  "year_of_publish": 2018,
+  "reputation": "Widely used in the molecular generation community as a standard benchmark suite and leaderboard for comparing generative and optimization methods.",
+  "notes": "Non-LLM benchmark; contains common cheminformatics training splits (e.g., ChEMBL) so model training contamination is possible; some distribution metrics can saturate, and optimization tasks remain highly task-specific.",
+  "creators": {
+    "scientists": [
+      "Nathan Brown",
+      "Marco Fiscato",
+      "Marwin H. S. Segler",
+      "Alain C. Vaucher"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1811.09621",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

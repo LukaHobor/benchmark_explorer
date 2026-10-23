@@ -1,0 +1,38 @@
+{
+  "name": "VPS_benchmark",
+  "description": "Advances in multimodal pre-training have propelled object-level foundation models, such as Grounding DINO and Florence-2, in tasks like visual grounding and object detection. However, interpreting these models' decisions has grown increasingly challenging. Existing interpretable attribution methods for object-level task interpretation have notable limitations: (1) gradient-based methods lack precise localization due to visual-textual fusion in foundation models, and (2) perturbation-based methods produce noisy saliency maps, limiting fine-grained interpretability. To address these, we propose a Visual Precision Search method that generates accurate attribution maps with fewer regions. Our method bypasses internal model parameters to overcome attribution issues from multimodal fusion, dividing inputs into sparse sub-regions and using consistency and collaboration scores to accurately identify critical decision-making regions. We also conducted a theoretical analysis of the boundary guarantees and scope of applicability of our method. Experiments on RefCOCO, MS COCO, and LVIS show our approach enhances object-level task interpretability over SOTA for Grounding DINO and Florence-2 across various evaluation metrics, with faithfulness gains of 23.7%, 31.6%, and 20.1% on MS COCO, LVIS, and RefCOCO for Grounding DINO, and 102.9% and 66.9% on MS COCO and RefCOCO for Florence-2. Additionally, our method can interpret failures in visual grounding and object detection tasks, surpassing existing methods across multiple evaluation metrics. The code will be released at https://github.com/RuoyuChen10/VPS.",
+  "category": "vision",
+  "domain": "vision",
+  "tags": [
+    "task_categories:object-detection",
+    "license:apache-2.0"
+  ],
+  "task_types": [
+    "visual_search",
+    "object_detection",
+    "benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "precision@k / mAP / recall (retrieval-style and detection metrics)",
+  "general_score_metric": "precision@k",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Research dataset/tool released with the authors' paper and code; limited adoption outside the authors' group so far.",
+  "downloads": 25,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "RuoyuChen"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://huggingface.co/datasets/RuoyuChen/VPS_benchmark",
+  "paper_url": "https://arxiv.org/abs/2411.16198",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "UNSW-NB15 dataset",
+  "description": "Over the last three decades, Network Intrusion Detection Systems (NIDSs), particularly, Anomaly Detection Systems (ADSs), have become more significant in detecting novel attacks than Signature Detection Systems (SDSs). Evaluating NIDSs using the existing benchmark data sets of KDD99 and NSLKDD does not reflect satisfactory results, due to three major issues: (1) their lack of modern low footprint attack styles, (2) their lack of modern normal traffic scenarios, and (3) a different distribution of training and testing sets. To address these issues, the UNSW-NB15 data set has recently been generated. This data set has nine types of the modern attacks fashions and new patterns of normal traffic, and it contains 49 attributes that comprise the flow based between hosts and the network packets inspection to discriminate between the observations, either normal or abnormal. In this paper, we demonstrate the complexity of the UNSW-NB15 data set in three aspects. First, the statistical analysis of the observations and the attributes are explained. Second, the examination of feature correlations is provided. Third, five existing classifiers are used to evaluate the complexity in terms of accuracy and false alarm rates (FARs) and then, the results are compared with the KDD99 data set. The experimental results show that UNSW-NB15 is more complex than KDD99 and is considered as a new benchmark data set for evaluating NIDSs.",
+  "category": "mixed",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "binary_classification",
+    "multiclass_classification",
+    "network_traffic_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Classification metrics: accuracy, precision/recall, F1 score, and false alarm rate (FAR); AUC is also commonly reported for imbalanced settings",
+  "general_score_metric": "accuracy and F1 (often reported alongside false alarm rate / FAR)",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2016,
+  "reputation": "1022 citations",
+  "notes": "Non-LLM benchmark; class imbalance and distributional differences between training and test sets are known issues; feature engineering and protocol-specific preprocessing strongly affect results; results can be dataset- and metric-sensitive (high accuracy may coincide with high false alarm rate).",
+  "creators": {
+    "scientists": [
+      "Nour Moustafa",
+      "Jill Slay"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1080/19393555.2015.1125974",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

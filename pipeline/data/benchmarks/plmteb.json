@@ -1,0 +1,39 @@
+{
+  "name": "PL-MTEB",
+  "description": "In this paper, we introduce the Polish Massive Text Embedding Benchmark (PL-MTEB), a comprehensive benchmark for text embeddings in Polish. The PL-MTEB consists of 28 diverse NLP tasks from 5 task types. We adapted the tasks based on previously used datasets by the Polish NLP community. In addition, we created a new PLSC (Polish Library of Science Corpus) dataset consisting of titles and abstracts of scientific publications in Polish, which was used as the basis for two novel clustering tasks. We evaluated 15 publicly available models for text embedding, including Polish and multilingual ones, and collected detailed results for individual tasks and aggregated results for each task type and the entire benchmark. PL-MTEB comes with open-source code at https://github.com/rafalposwiata/pl-mteb.",
+  "category": "text",
+  "domain": "NLP / text embeddings",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "clustering",
+    "semantic_similarity",
+    "retrieval",
+    "pair_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-specific metrics (accuracy / F1 for classification, ARI/AMI for clustering, nDCG/MRR for retrieval, Spearman/Pearson for similarity); results are reported per task and aggregated by macro-average",
+  "general_score_metric": "macro-averaged task-specific metric (aggregate of each task's primary metric)",
+  "typical_sota_score": "varies by task; ~70–95% on classification/STS tasks, typically lower on clustering and retrieval (~40–80%)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "A recent, community-driven benchmark focused on Polish text embeddings with growing adoption in the Polish NLP community but limited international adoption so far.",
+  "notes": "Polish-language benchmark with diverse tasks including a newly created PLSC dataset; varying metrics per task make cross-task comparisons approximate; potential pretraining/contamination risk for multilingual models; not saturated.",
+  "creators": {
+    "scientists": [
+      "Rafał Poświata",
+      "Sławomir Dadas",
+      "Michał Perełkiewicz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2405.10138",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

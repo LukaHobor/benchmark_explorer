@@ -1,0 +1,37 @@
+{
+  "name": "Robotic Priors Robustness Benchmark",
+  "description": "Our understanding of the world depends highly on our capacity to produce\nintuitive and simplified representations which can be easily used to solve\nproblems. We reproduce this simplification process using a neural network to\nbuild a low dimensional state representation of the world from images acquired\nby a robot. As in Jonschkowski et al. 2015, we learn in an unsupervised way\nusing prior knowledge about the world as loss functions called robotic priors\nand extend this approach to high dimension richer images to learn a 3D\nrepresentation of the hand position of a robot from RGB images. We propose a\nquantitative evaluation of the learned representation using nearest neighbors\nin the state space that allows to assess its quality and show both the\npotential and limitations of robotic priors in realistic environments. We\naugment image size, add distractors and domain randomization, all crucial\ncomponents to achieve transfer learning to real robots. Finally, we also\ncontribute a new prior to improve the robustness of the representation. The\napplications of such low dimensional state representation range from easing\nreinforcement learning (RL) and knowledge transfer across tasks, to\nfacilitating learning from raw data with more efficient and compact high level\nrepresentations. The results show that the robotic prior approach is able to\nextract high level representation as the 3D position of an arm and organize it\ninto a compact and coherent space of states in a challenging dataset.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "representation_learning",
+    "unsupervised_learning",
+    "regression",
+    "representation_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "nearest_neighbor_retrieval_accuracy (KNN in learned state space)",
+  "general_score_metric": "KNN/nearest-neighbor accuracy (representation retrieval score); secondary metrics include regression error to ground-truth 3D positions",
+  "year_of_publish": 2017,
+  "reputation": "A niche research benchmark used in representation-learning-for-robotics work with limited but meaningful adoption in the academic robotics community.",
+  "notes": "Non-LLM benchmark focused on learned state representations from images; small/specialized dataset and task; evaluation depends on nearest-neighbor setup and choice of distance metric; some sim-to-real transfer experiments included.",
+  "creators": {
+    "scientists": [
+      "Timothée Lesort",
+      "Mathieu Seurin",
+      "Xinrui Li",
+      "Natalia Díaz Rodríguez",
+      "David Filliat"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1709.05185",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

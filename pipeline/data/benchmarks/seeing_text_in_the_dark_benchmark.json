@@ -1,0 +1,41 @@
+{
+  "name": "Seeing Text in the Dark Benchmark",
+  "description": "Localizing text in low-light environments is challenging due to visual degradations. Although a straightforward solution involves a two-stage pipeline with low-light image enhancement (LLE) as the initial step followed by detector, LLE is primarily designed for human vision instead of machine and can accumulate errors. In this work, we propose an efficient and effective single-stage approach for localizing text in dark that circumvents the need for LLE. We introduce a constrained learning module as an auxiliary mechanism during the training stage of the text detector. This module is designed to guide the text detector in preserving textual spatial features amidst feature map resizing, thus minimizing the loss of spatial information in texts under low-light visual degradations. Specifically, we incorporate spatial reconstruction and spatial semantic constraints within this module to ensure the text detector acquires essential positional and contextual range knowledge. Our approach enhances the original text detector's ability to identify text's local topological features using a dynamic snake feature pyramid network and adopts a bottom-up contour shaping strategy with a novel rectangular accumulation technique for accurate delineation of streamlined text features. In addition, we present a comprehensive low-light dataset for arbitrary-shaped text, encompassing diverse scenes and languages. Notably, our method achieves state-of-the-art results on this low-light dataset and exhibits comparable performance on standard normal light datasets. The code and dataset will be released.",
+  "category": "vision",
+  "domain": "computer vision (scene text detection)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_detection",
+    "instance_segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (precision/recall-based F-measure on detected text regions/polygons)",
+  "general_score_metric": "F1",
+  "year_of_publish": 2024,
+  "reputation": "A recent (2024) specialized benchmark and dataset for low-light scene-text detection; currently of interest to scene-text researchers but has limited community adoption to date.",
+  "notes": "Non-LLM computer-vision benchmark focused on low-light arbitrary-shaped text. Evaluation uses region/polygon-level detection metrics (precision/recall/F1). Dataset is specialized (low-light) and relatively new, so adoption and saturation are limited.",
+  "creators": {
+    "scientists": [
+      "Chengpei Xu",
+      "Hao Fu",
+      "Long Ma",
+      "Wenjing Jia",
+      "Chengqi Zhang",
+      "Feng Xia",
+      "Xiaoyu Ai",
+      "Binghao Li",
+      "Wenjie Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.08965",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

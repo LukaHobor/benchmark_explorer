@@ -1,0 +1,32 @@
+{
+  "name": "Liubai Aesthetic Metrics / Ink‑wash Textile Benchmark",
+  "description": "This paper presents a computational framework for quantifying aesthetics of Chinese ink wash and applying them to generative models. We define differentiable metrics for the three core elements: the compositional balance of “Liubai” (negative space), the calligraphic quality of “Bichu” (brushstroke), and the tonal diffusion of “Moyun” (ink wash). Using these metrics, we benchmark unpaired image-to-image systems—CycleGAN, MUNIT, ChipGAN, and diffusion pipelines with controllable methods (Style LoRA, ControlNet-Tile, IP-Adapter)—on photo-to-ink transfer. Results show a trade-off: diffusion excels at “Moyun” texture fidelity, while ChipGAN with explicit aesthetic losses better preserves “Liubai” and “Bichu” structure. The study also highlights limitations of generic image-quality metrics (e.g., FID) for artistic evaluation. We further validate implications for phygital textile design via seamless-tiling tests and small-scale physical samples. Finally, we outline a unified, material-aware scheme embedding fabric diffusion physics (Fick’s law) into a Physics-Informed GAN objective to jointly optimize aesthetic fidelity and printability.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_translation",
+    "aesthetic_evaluation",
+    "image_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "metric-based (differentiable aesthetic metrics: Liubai/Bichu/Moyun composite) + human_eval for artistic quality and printability",
+  "general_score_metric": "composite_aesthetic_score (Liubai, Bichu, Moyun components)",
+  "year_of_publish": 2025,
+  "reputation": "Niche, research-oriented benchmark focused on Chinese ink‑wash aesthetics; limited adoption beyond the authors' community and related artistic ML research.",
+  "notes": "Small/specialized dataset focused on specific artistic style; aesthetic judgments are subjective and require domain expertise; includes phygital printability checks but physical validation is limited; not a general-purpose vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Changkui Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

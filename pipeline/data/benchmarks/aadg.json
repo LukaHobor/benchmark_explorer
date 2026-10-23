@@ -1,0 +1,42 @@
+{
+  "name": "AADG",
+  "description": "We introduce a novel, general-purpose audio generation framework specifically designed for anomaly detection and localization. Unlike existing datasets that predominantly focus on industrial and machine-related sounds, our framework focuses a broader range of environments, particularly useful in real-world scenarios where only audio data are available, such as in video-derived or telephonic audio. To generate such data, we propose a new method inspired by the LLM-Modulo framework, which leverages large language models(LLMs) as world models to simulate such real-world scenarios. This tool is modular allowing a plug-and-play approach. It operates by first using LLMs to predict plausible real-world scenarios. An LLM further extracts the constituent sounds, the order and the way in which these should be merged to create coherent wholes. Much like the LLM-Modulo framework, we include rigorous verification of each output stage, ensuring the reliability of the generated data. The data produced using the framework serves as a benchmark for anomaly detection applications, potentially enhancing the performance of models trained on audio data, particularly in handling out-of-distribution cases. Our contributions thus fill a critical void in audio anomaly detection resources and provide a scalable tool for generating diverse, realistic audio data.",
+  "category": "audio",
+  "domain": "audio (anomaly detection)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "anomaly_localization",
+    "synthetic_data_generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": [
+    "AUC",
+    "F1",
+    "localization_accuracy"
+  ],
+  "general_score_metric": "AUC (detection) / localization accuracy (for localization)",
+  "year_of_publish": 2024,
+  "reputation": "New, research-oriented framework — emerging but not yet widely adopted as a standard benchmark.",
+  "notes": "Framework produces synthetic audio via LLM-based world models; potential sim-to-real gap and biases introduced by LLM generation; reliability depends on LLM fidelity; useful for expanding anomaly scenarios but may not fully reflect real-world distribution.",
+  "creators": {
+    "scientists": [
+      "Ksheeraja Raghavan",
+      "Samiran Gode",
+      "Ankit Shah",
+      "Surabhi Raghavan",
+      "Wolfram Burgard",
+      "Bhiksha Raj",
+      "Rita Singh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.03904",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

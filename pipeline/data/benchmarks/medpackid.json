@@ -1,0 +1,36 @@
+{
+  "name": "MedPackID",
+  "description": "Reliable image-based medicine recognition remains challenging due to substantial variability in packaging layouts, pill attributes, and pharmaceutical text, particularly in real-world environments. Existing public datasets insufficiently capture this complexity and are predominantly centered on Western markets, limiting generalization to regions such as Southeast Asia. MedPackID is introduced as a publicly available dataset comprising 1,444 high-resolution images of medicine packaging and pills collected in Indonesia under unconstrained conditions. The dataset reflects variations in illumination, viewpoints, background clutter, occlusions, and multilingual labeling. All images are manually annotated with bounding boxes for two object categories packaging and pills, supporting object detection and downstream recognition tasks. A conditional decision framework integrates detection with task-specific processing, routing packaging to OCR-based text extraction and pills to metadata-driven identification using ResNet-18 feature embeddings. Baseline evaluations with YOLOv8 and Faster R-CNN achieve mAP@0.5 above 0.94 for packaging detection, establishing a reproducible benchmark for automated medicine recognition research.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "ocr",
+    "image_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean average precision (mAP), commonly reported as mAP@0.5 for detection; OCR evaluated by text extraction accuracy / character error rate where applicable",
+  "general_score_metric": "mAP@0.5 (for object detection)",
+  "typical_sota_score": "≈94–98% mAP@0.5 for packaging detection (reported baselines); pills detection performance is lower and more variable",
+  "year_of_publish": 2026,
+  "reputation": "Niche, region-focused dataset gaining attention for medicine-packaging recognition work in Southeast Asia but not yet widely adopted globally.",
+  "notes": "Small dataset (1,444 images) and region-specific (Indonesia) with only two annotated classes; useful for OCR+detection pipelines but limited class diversity and potential for overfitting; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Qory Hidayati",
+      "Hendra Kusuma",
+      "Muhammad Attamimi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.2139/ssrn.6235868",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

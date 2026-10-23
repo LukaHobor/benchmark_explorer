@@ -1,0 +1,43 @@
+{
+  "name": "WildScenes",
+  "description": "Recent progress in semantic scene understanding has primarily been enabled by the availability of semantically annotated bi-modal (camera and LiDAR) datasets in urban environments. However, such annotated datasets are also needed for natural, unstructured environments to enable semantic perception for applications, including conservation, search and rescue, environment monitoring, and agricultural automation. Therefore, we introduce $WildScenes$, a bi-modal benchmark dataset consisting of multiple large-scale, sequential traversals in natural environments, including semantic annotations in high-resolution 2D images and dense 3D LiDAR point clouds, and accurate 6-DoF pose information. The data is (1) trajectory-centric with accurate localization and globally aligned point clouds, (2) calibrated and synchronized to support bi-modal training and inference, and (3) containing different natural environments over 6 months to support research on domain adaptation. Our 3D semantic labels are obtained via an efficient, automated process that transfers the human-annotated 2D labels from multiple views into 3D point cloud sequences, thus circumventing the need for expensive and time-consuming human annotation in 3D. We introduce benchmarks on 2D and 3D semantic segmentation and evaluate a variety of recent deep-learning techniques to demonstrate the challenges in semantic segmentation in natural environments. We propose train-val-test splits for standard benchmarks as well as domain adaptation benchmarks and utilize an automated split generation technique to ensure the balance of class label distributions. The $WildScenes$ benchmark webpage is https://csiro-robotics.github.io/WildScenes, and the data is publicly available at https://data.csiro.au/collection/csiro:61541 .",
+  "category": "multimodal",
+  "domain": "environmental perception / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "2D_semantic_segmentation",
+    "3D_semantic_segmentation",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection-over-Union (mIoU)",
+  "general_score_metric": "mean Intersection-over-Union (mIoU)",
+  "typical_sota_score": "30–60% mIoU",
+  "year_of_publish": 2023,
+  "reputation": "Moderate adoption in robotics and environmental-vision research; cited by groups working on natural-scene perception but not yet a widespread standard benchmark.",
+  "notes": "Multimodal non-LLM benchmark. Labels are generated via automated 2D→3D transfer, which can introduce annotation noise; significant domain shift across environments/seasons and class imbalance; dataset is trajectory-centric and designed for domain-adaptation research (not saturated).",
+  "creators": {
+    "scientists": [
+      "Kavisha Vidanapathirana",
+      "Joshua Knights",
+      "Stephen Hausler",
+      "Mark Cox",
+      "Milad Ramezani",
+      "Jason Jooste",
+      "Ethan Griffiths",
+      "Shaheer Mohamed",
+      "Sridha Sridharan",
+      "Clinton Fookes",
+      "Peyman Moghadam"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.15364",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Cross-domain Text-to-SQL Benchmarks",
+  "description": "Text-to-SQL benchmarks play a crucial role in evaluating the progress made in the field and the ranking of different models. However, accurately matching a model-generated SQL query to a reference SQL query in a benchmark fails for various reasons, such as underspecified natural language queries, inherent assumptions in both model-generated and reference queries, and the non-deterministic nature of SQL output under certain conditions. In this paper, we conduct an extensive study of several prominent cross-domain text-to-SQL benchmarks and re-evaluate some of the top-performing models within these benchmarks, by both manually evaluating the SQL queries and rewriting them in equivalent expressions. Our evaluation reveals that attaining a perfect performance on these benchmarks is unfeasible due to the multiple interpretations that can be derived from the provided samples. Furthermore, we find that the true performance of the models is underestimated and their relative performance changes",
+  "category": "text",
+  "domain": "code",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_sql",
+    "semantic_parsing",
+    "query_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match",
+  "typical_sota_score": "75–85%",
+  "year_of_publish": 2023,
+  "reputation": "Cross-domain text-to-SQL benchmarks such as Spider are widely used and highly influential, though this work highlights that exact-match scoring can underestimate true model quality.",
+  "notes": "Exact-match evaluation is imperfect because many SQL queries are semantically equivalent; contamination risk exists for popular benchmarks, and manual/equivalence-based re-evaluation can change rankings.",
+  "creators": {
+    "scientists": [
+      "Mohammadreza Pourreza",
+      "Davood Rafiei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2310.18538",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

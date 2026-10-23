@@ -1,0 +1,44 @@
+{
+  "name": "MJ-BENCH-VIDEO",
+  "description": "Recent advancements in video generation have significantly improved the ability to synthesize videos from text instructions. However, existing models still struggle with key challenges such as instruction misalignment, content hallucination, safety concerns, and bias. Addressing these limitations, we introduce MJ-BENCH-VIDEO, a large-scale video preference benchmark designed to evaluate video generation across five critical aspects: Alignment, Safety, Fineness, Coherence & Consistency, and Bias & Fairness. This benchmark incorporates 28 fine-grained criteria to provide a comprehensive evaluation of video preference. Building upon this dataset, we propose MJ-VIDEO, a Mixture-of-Experts (MoE)-based video reward model designed to deliver fine-grained reward. MJ-VIDEO can dynamically select relevant experts to accurately judge the preference based on the input text-video pair. This architecture enables more precise and adaptable preference judgments. Through extensive benchmarking on MJ-BENCH-VIDEO, we analyze the limitations of existing video reward models and demonstrate the superior performance of MJ-VIDEO in video preference assessment, achieving 17.58% and 15.87% improvements in overall and fine-grained preference judgments, respectively. Additionally, introducing MJ-VIDEO for preference tuning in video generation enhances the alignment performance.",
+  "category": "vision",
+  "domain": "vision (video generation)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_comparison",
+    "preference_ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "pairwise preference accuracy (human agreement / preference score)",
+  "year_of_publish": 2025,
+  "reputation": "A recent and influential benchmark in video-generation evaluation with growing attention from the video-modeling and reward-modeling communities.",
+  "notes": "Evaluation relies on subjective human preference judgments and many fine-grained criteria; susceptible to annotator bias and cultural / safety biases; intended for multimodal video models rather than text-only LLMs.",
+  "creators": {
+    "scientists": [
+      "Haibo Tong",
+      "Zhaoyang Wang",
+      "Zhaorun Chen",
+      "Haonian Ji",
+      "Shi Qiu",
+      "Siwei Han",
+      "Kexin Geng",
+      "Zhongkai Xue",
+      "Yiyang Zhou",
+      "Peng Xia",
+      "Mingyu Ding",
+      "Rafael Rafailov",
+      "Chelsea Finn",
+      "Huaxiu Yao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.01719",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

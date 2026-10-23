@@ -1,0 +1,39 @@
+{
+  "name": "STAB",
+  "description": "Representing speech as discrete tokens provides a framework for transforming speech into a format that closely resembles text, thus enabling the use of speech as an input to the widely successful large language models (LLMs). Currently, while several speech tokenizers have been proposed, there is ambiguity regarding the properties that are desired from a tokenizer for specific downstream tasks and its overall generalizability. Evaluating the performance of tokenizers across different downstream tasks is a computationally intensive effort that poses challenges for scalability. To circumvent this requirement, we present STAB (Speech Tokenizer Assessment Benchmark), a systematic evaluation framework designed to assess speech tokenizers comprehensively and shed light on their inherent characteristics. This framework provides a deeper understanding of the underlying mechanisms of speech tokenization, thereby offering a valuable resource for expediting the advancement of future tokenizer models and enabling comparative analysis using a standardized benchmark. We evaluate the STAB metrics and correlate this with downstream task performance across a range of speech tasks and tokenizer choices.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "intrinsic_evaluation",
+    "correlation_with_downstream_tasks"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite intrinsic tokenizer metrics (e.g., reconstruction error, bitrate) and correlation with downstream task performance (e.g., WER, classification accuracy); reported as metric values and correlation coefficients",
+  "general_score_metric": "composite intrinsic tokenizer score combined with correlation coefficient to downstream task performance",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed, research-focused benchmark (2024) for systematically assessing speech tokenizers; of growing interest among speech/tokenization researchers but not yet widely standardized.",
+  "notes": "Not an end-to-end LLM benchmark—focused on tokenizer properties; results depend on downstream task selection and dataset choices and can be hardware- and implementation-sensitive; evaluating full downstream correlations can be computationally intensive.",
+  "creators": {
+    "scientists": [
+      "Shikhar Vashishth",
+      "Harman Singh",
+      "Shikhar Bharadwaj",
+      "Sriram Ganapathy",
+      "Chulayuth Asawaroengchai",
+      "Kartik Audhkhasi",
+      "Andrew Rosenberg",
+      "Ankur Bapna",
+      "Bhuvana Ramabhadran"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2409.02384",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

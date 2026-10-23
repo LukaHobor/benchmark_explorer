@@ -1,0 +1,37 @@
+{
+  "name": "XSafety",
+  "description": "Safety lies at the core of developing and deploying large language models (LLMs). However, previous safety benchmarks only concern the safety in one language, e.g. the majority language in the pretraining data such as English. In this work, we build the first multilingual safety benchmark for LLMs, XSafety, in response to the global deployment of LLMs in practice. XSafety covers 14 kinds of commonly used safety issues across 10 languages that span several language families. We utilize XSafety to empirically study the multilingual safety for 4 widely-used LLMs, including both close-API and open-source models. Experimental results show that all LLMs produce significantly more unsafe responses for non-English queries than English ones, indicating the necessity of developing safety alignment for non-English languages. In addition, we propose several simple and effective prompting methods to improve the multilingual safety of ChatGPT by evoking safety knowledge and improving cross-lingual g",
+  "category": "text",
+  "domain": "multilingual NLP safety",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "safety_classification",
+    "open_ended",
+    "response_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "unsafe response rate",
+  "year_of_publish": 2023,
+  "reputation": "An early multilingual safety benchmark that is cited for highlighting cross-lingual safety gaps in LLMs, though it is still relatively specialized.",
+  "notes": "Benchmarking LLM safety across 10 languages; results can vary substantially by language and prompting strategy, and contamination is less of a concern than prompt sensitivity and policy subjectivity.",
+  "creators": {
+    "scientists": [
+      "Wenxuan Wang",
+      "Zhaopeng Tu",
+      "Chang Chen",
+      "Youliang Yuan",
+      "Jen-tse Huang",
+      "Wenxiang Jiao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2310.00905",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

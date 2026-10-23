@@ -1,0 +1,35 @@
+{
+  "name": "GeoNet",
+  "description": "In recent years, several efforts have been aimed at improving the robustness of vision models to domains and environments unseen during training. An important practical problem pertains to models deployed in a new geography that is under-represented in the training dataset, posing a direct challenge to fair and inclusive computer vision. In this paper, we study the problem of geographic robustness and make three main contributions. First, we introduce a large-scale dataset GeoNet for geographic adaptation containing benchmarks across diverse tasks like scene recognition (GeoPlaces), image classification (GeoImNet) and universal adaptation (GeoUniDA). Second, we investigate the nature of distribution shifts typical to the problem of geographic adaptation and hypothesize that the major source of domain shifts arise from significant variations in scene context (context shift), object design (design shift) and label distribution (prior shift) across geographies. Third, we conduct an extensive evaluation of several state-of-the-art unsupervised domain adaptation algorithms and architectures on GeoNet, showing that they do not suffice for geographical adaptation, and that large-scale pre-training using large vision models also does not lead to geographic robustness. Our dataset is publicly available at https://tarun005.github.io/GeoNet.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "scene_recognition",
+    "image_classification",
+    "unsupervised_domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (for classification/scene tasks); ranking metrics (MRR / hits@k) for KGC-style evaluations; domain adaptation typically reported with accuracy on target domains",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "varies by task and region; commonly in the ~40–80% accuracy range depending on task and geographic shift",
+  "year_of_publish": 2023,
+  "reputation": "New (2023) dataset that has attracted interest for geographic robustness research but is not yet a widely-adopted standard.",
+  "notes": "Non-LLM vision benchmark; demonstrates strong geographic class/prior shift and context/design shifts; some regional class imbalance and limited samples for under-represented geographies; not saturated.",
+  "creators": {
+    "scientists": [
+      "Tarun Kalluri",
+      "Wangdong Xu",
+      "Manmohan Chandraker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2303.15443",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

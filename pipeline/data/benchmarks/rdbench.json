@@ -1,0 +1,36 @@
+{
+  "name": "RDBench",
+  "description": "Benefiting from high-quality datasets and standardized evaluation metrics, machine learning (ML) has achieved sustained progress and widespread applications. However, while applying machine learning to relational databases (RDBs), the absence of a well-established benchmark remains a significant obstacle to the development of ML. To address this issue, we introduce ML Benchmark For Relational Databases (RDBench), a standardized benchmark that aims to promote reproducible ML research on RDBs that include multiple tables. RDBench offers diverse RDB datasets of varying scales, domains, and relational structures, organized into 4 levels. Notably, to simplify the adoption of RDBench for diverse ML domains, for any given database, RDBench exposes three types of interfaces including tabular data, homogeneous graphs, and heterogeneous graphs, sharing the same underlying task definition. For the first time, RDBench enables meaningful comparisons between ML methods from diverse domains, ranging from XGBoost to Graph Neural Networks, under RDB prediction tasks. We design multiple classification and regression tasks for each RDB dataset and report averaged results over the same dataset, further enhancing the robustness of the experimental findings. RDBench is implemented with DBGym, a user-friendly platform for ML research and application on databases, enabling benchmarking new ML methods with RDBench at ease.",
+  "category": "mixed",
+  "domain": "relational databases",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-dependent metrics (accuracy for classification; RMSE / R^2 for regression)",
+  "general_score_metric": "accuracy (classification) / RMSE or R^2 (regression)",
+  "year_of_publish": 2023,
+  "reputation": "Newly proposed (arXiv 2310.16837) benchmark intended for reproducible ML research on relational databases; adoption is emerging among DB/ML researchers but not yet widespread.",
+  "notes": "Non-LLM benchmark focused on ML over multi-table relational databases; provides tabular, homogeneous-graph, and heterogeneous-graph interfaces. Dataset sizes and domains vary across levels; potential caveats include heterogeneity of tasks (makes single aggregate comparisons difficult) and varying dataset scale which can affect method comparisons.",
+  "creators": {
+    "scientists": [
+      "Zizhao Zhang",
+      "Yi Yang",
+      "Lutong Zou",
+      "He Wen",
+      "Tao Feng",
+      "Jiaxuan You"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2310.16837",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

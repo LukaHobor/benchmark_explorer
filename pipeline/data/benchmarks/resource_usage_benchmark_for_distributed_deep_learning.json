@@ -1,0 +1,40 @@
+{
+  "name": "Resource Usage Benchmark for Distributed Deep Learning",
+  "description": "Deep learning (DL) workflows demand an ever-increasing budget of compute and energy in order to achieve outsized gains. Neural architecture searches, hyperparameter sweeps, and rapid prototyping consume immense resources that can prevent resource-constrained researchers from experimenting with large models and carry considerable environmental impact. As such, it becomes essential to understand how different deep neural networks (DNNs) and training leverage increasing compute and energy resources -- especially specialized computationally-intensive models across different domains and applications. In this paper, we conduct over 3,400 experiments training an array of deep networks representing various domains/tasks -- natural language processing, computer vision, and chemistry -- on up to 424 graphics processing units (GPUs). During training, our experiments systematically vary compute resource characteristics and energy-saving mechanisms such as power utilization and GPU clock rate limits to capture and illustrate the different trade-offs and scaling behaviors each representative model exhibits under various resource and energy-constrained regimes. We fit power law models that describe how training time scales with available compute resources and energy constraints. We anticipate that these findings will help inform and guide high-performance computing providers in optimizing resource utilization, by selectively reducing energy consumption for different deep learning tasks/workflows with minimal impact on training.",
+  "category": "mixed",
+  "domain": "systems / distributed deep learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "training_time_measurement",
+    "energy_consumption",
+    "scalability_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "wall_clock_time (training time) and energy consumption (Joules); scaling behavior fit (power-law exponent)",
+  "general_score_metric": "training time (wall-clock) and energy consumption (Joules); fitted scaling exponent",
+  "year_of_publish": 2022,
+  "reputation": "A well-cited systems study in distributed deep learning used to characterize scaling and energy trade-offs, but not a widely adopted standard benchmark suite.",
+  "notes": "Non-LLM systems benchmark reporting hardware-dependent metrics (time, power, energy); results are sensitive to GPU generation, cluster configuration, and workload specifics, so cross-hardware comparisons require careful normalization.",
+  "creators": {
+    "scientists": [
+      "Nathan C. Frey",
+      "Baolin Li",
+      "Joseph McDonald",
+      "Dan Zhao",
+      "Michael Jones",
+      "David Bestor",
+      "Devesh Tiwari",
+      "Vijay Gadepally",
+      "Siddharth Samsi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2201.12423",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "GLEMOS",
+  "description": "The choice of a graph learning (GL) model (i.e., a GL algorithm and its hyperparameter settings) has a significant impact on the performance of downstream tasks. However, selecting the right GL model becomes increasingly difficult and time consuming as more and more GL models are developed. Accordingly, it is of great significance and practical value to equip users of GL with the ability to perform a near-instantaneous selection of an effective GL model without manual intervention. Despite the recent attempts to tackle this important problem, there has been no comprehensive benchmark environment to evaluate the performance of GL model selection methods. To bridge this gap, we present GLEMOS in this work, a comprehensive benchmark for instantaneous GL model selection that makes the following contributions. (i) GLEMOS provides extensive benchmark data for fundamental GL tasks, i.e., link prediction and node classification, including the performances of 366 models on 457 graphs on these tasks. (ii) GLEMOS designs multiple evaluation settings, and assesses how effectively representative model selection techniques perform in these different settings. (iii) GLEMOS is designed to be easily extended with new models, new graphs, and new performance records. (iv) Based on the experimental results, we discuss the limitations of existing approaches and highlight future research directions. To promote research on this significant problem, we make the benchmark data and code publicly available at https://github.com/facebookresearch/glemos.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "model_selection",
+    "ranking",
+    "performance_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "selection accuracy / top-k selection accuracy and normalized regret, supplemented by rank-correlation metrics (e.g., Spearman)",
+  "general_score_metric": "selection accuracy (ability to pick a high-performing model) / normalized regret",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A well-scoped benchmark from Facebook Research offering comprehensive records for graph-learning model selection; useful and gaining attention among researchers working on automated model selection for graph tasks.",
+  "notes": "Contains performance records over 457 graphs and 366 models — useful but may be biased toward included model families and graph types; not an LLM benchmark and results depend on the representativeness of stored performance records.",
+  "creators": {
+    "scientists": [
+      "Namyong Park",
+      "Ryan Rossi",
+      "Xing Wang",
+      "Antoine Simoulin",
+      "Nesreen Ahmed",
+      "Christos Faloutsos"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2404.01578",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

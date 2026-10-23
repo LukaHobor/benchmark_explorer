@@ -1,0 +1,38 @@
+{
+  "name": "Synthetic Multimodal Drone Delivery Dataset",
+  "description": "Street delivery faces significant challenges due to outdated road infrastructure, which was not designed to handle current vehicle volumes, leading to congestion and inefficiencies, especially in last-mile delivery. Integrating drones into the delivery system offers a promising solution by bypassing congested roads, thereby enhancing delivery speed and reducing infrastructure strain. However, optimizing this multimodal delivery system is complex and data-driven, with real-world data often being costly and restricted. To address this, we propose a synthetic dataset generator that creates diverse and realistic delivery scenarios, incorporating environmental variables, customer profiles, and vehicle characteristics. The key contribution of our work is the development of a dynamic generator for multiple optimization problems with diverse complexities or even combinations of optimization problems. This generator allows for the incorporation of real-world factors such as traffic congestion and synthetically generated factors such as wind conditions and communication constraints, as well as others. The primary objective is to establish a foundation for creating benchmark scenarios that enable the comparison of existing and new approaches. We evaluate the generated dataset by applying it to three optimization problems, including facility location, vehicle routing, and path planning, using different techniques to demonstrate the dataset’s effectiveness and operational viability.",
+  "category": "multimodal",
+  "domain": "logistics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "facility_location_optimization",
+    "vehicle_routing",
+    "path_planning",
+    "scheduling",
+    "simulation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "optimization metrics (solution cost / objective value, optimality gap relative to best-known/optimal, runtime), plus feasibility / task_success_rate for planning tasks",
+  "general_score_metric": "average solution cost / optimality gap (often reported alongside runtime and feasibility rate)",
+  "year_of_publish": 2024,
+  "reputation": "5 citations",
+  "notes": "synthetic-data benchmark — useful for algorithm development but may not fully capture real-world noise or operational constraints (simulation-to-real gap); performance depends strongly on solver/configuration; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Diyar Altinses",
+      "David Orlando Salazar Torres",
+      "Asrat Mekonnen Gobachew",
+      "Stefan Lier",
+      "Andreas Schwung"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.3390/drones8120724",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

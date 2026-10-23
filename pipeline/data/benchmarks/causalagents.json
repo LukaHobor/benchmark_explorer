@@ -1,0 +1,38 @@
+{
+  "name": "CausalAgents",
+  "description": "As machine learning models become increasingly prevalent in motion forecasting for autonomous vehicles (AVs), it is critical to ensure that model predictions are safe and reliable. However, exhaustively collecting and labeling the data necessary to fully test the long tail of rare and challenging scenarios is difficult and expensive. In this work, we construct a new benchmark for evaluating and improving model robustness by applying perturbations to existing data. Specifically, we conduct an extensive labeling effort to identify causal agents, or agents whose presence influences human drivers' behavior in any format, in the Waymo Open Motion Dataset (WOMD), and we use these labels to perturb the data by deleting non-causal agents from the scene. We evaluate a diverse set of state-of-the-art deep-learning model architectures on our proposed benchmark and find that all models exhibit large shifts under even non-causal perturbation: we observe a 25-38% relative change in minADE as compared to the original. We also investigate techniques to improve model robustness, including increasing the training dataset size and using targeted data augmentations that randomly drop non-causal agents throughout training. Finally, we release the causal agent labels (at https://github.com/google-research/causal-agents) as an additional attribute to WOMD and the robustness benchmarks to aid the community in building more reliable and safe deep-learning models for motion forecasting.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "trajectory_prediction",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "minADE / minFDE (average / final displacement error) and related trajectory error metrics",
+  "general_score_metric": "minADE (primary reported metric)",
+  "typical_sota_score": "0.5–1.5 (meters, approximate minADE range for modern models)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded within the autonomous-driving motion-forecasting community as a targeted robustness benchmark built on Waymo Open Motion Dataset; used to study sensitivity to non-causal agent perturbations.",
+  "notes": "Non-LLM benchmark built on Waymo Open Motion Dataset; provides additional causal-agent labels and perturbed scenes. Useful for robustness studies but not a full closed-loop driving evaluation; potential dataset biases remain from WOMD and perturbation protocol. Metric sensitivity and varying label coverage across scenes should be considered when comparing models.",
+  "creators": {
+    "scientists": [
+      "Rebecca Roelofs",
+      "Liting Sun",
+      "Ben Caine",
+      "Khaled S. Refaat",
+      "Ben Sapp",
+      "Scott Ettinger",
+      "Wei Chai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2207.03586",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "UAV-VLN Benchmark",
+  "description": "Developing agents capable of navigating to a target location based on language instructions and visual information, known as vision-language navigation (VLN), has attracted widespread interest. Most research has focused on ground-based agents, while UAV-based VLN remains relatively underexplored. Recent efforts in UAV vision-language navigation predominantly adopt ground-based VLN settings, relying on predefined discrete action spaces and neglecting the inherent disparities in agent movement dynamics and the complexity of navigation tasks between ground and aerial environments. To address these disparities and challenges, we propose solutions from three perspectives: platform, benchmark, and methodology. To enable realistic UAV trajectory simulation in VLN tasks, we propose the OpenUAV platform, which features diverse environments, realistic flight control, and extensive algorithmic support. We further construct a target-oriented VLN dataset consisting of approximately 12k trajectories on this platform, serving as the first dataset specifically designed for realistic UAV VLN tasks. To tackle the challenges posed by complex aerial environments, we propose an assistant-guided UAV object search benchmark called UAV-Need-Help, which provides varying levels of guidance information to help UAVs better accomplish realistic VLN tasks. We also propose a UAV navigation LLM that, given multi-view images, task descriptions, and assistant instructions, leverages the multimodal understanding capabilities of the MLLM to jointly process visual and textual information, and performs hierarchical trajectory generation. The evaluation results of our method significantly outperform the baseline models, while there remains a considerable gap between our results and those achieved by human operators, underscoring the challenge presented by the UAV-Need-Help task.",
+  "category": "multimodal",
+  "domain": "robotics (UAVs)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "navigation",
+    "instruction_following",
+    "trajectory_prediction",
+    "visual_grounding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (SR) and SPL",
+  "general_score_metric": "Success Rate (SR)",
+  "typical_sota_score": "25–45%",
+  "year_of_publish": 2024,
+  "reputation": "66 citations",
+  "notes": "Simulated UAV platform with ~12k trajectories; realistic flight dynamics but potential sim-to-real gap and simulator/bias effects. Benchmark focuses on multimodal VLN and may be sensitive to environment distribution; limited risk of data contamination but non-trivial dataset-specific biases.",
+  "creators": {
+    "scientists": [
+      "Xiangyu Wang",
+      "Donglin Yang",
+      "Ziqin Wang",
+      "Hohin Kwan",
+      "Jinyu Chen",
+      "Wenjun Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2410.07087",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

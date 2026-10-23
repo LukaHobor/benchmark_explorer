@@ -1,0 +1,35 @@
+{
+  "name": "Image2Text2Image",
+  "description": "Evaluating the quality of automatically generated image descriptions is a complex task that requires metrics capturing various dimensions, such as grammaticality, coverage, accuracy, and truthfulness. Although human evaluation provides valuable insights, its cost and time-consuming nature pose limitations. Existing automated metrics like BLEU, ROUGE, METEOR, and CIDEr attempt to fill this gap, but they often exhibit weak correlations with human judgment. To address this challenge, we propose a novel evaluation framework called Image2Text2Image, which leverages diffusion models, such as Stable Diffusion or DALL-E, for text-to-image generation. In the Image2Text2Image framework, an input image is first processed by a selected image captioning model, chosen for evaluation, to generate a textual description. Using this generated description, a diffusion model then creates a new image. By comparing features extracted from the original and generated images, we measure their similarity using",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_caption_evaluation",
+    "image_similarity"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "similarity",
+  "general_score_metric": "image similarity",
+  "year_of_publish": 2024,
+  "reputation": "A novel proposed evaluation framework for caption quality that is not yet a standard community benchmark.",
+  "notes": "Uses a caption-then-regenerate pipeline with diffusion models, so results depend on the captioning model, the generative model, and the chosen similarity backbone; not a direct task benchmark.",
+  "creators": {
+    "scientists": [
+      "Jia-Hong Huang",
+      "Hongyi Zhu",
+      "Yixian Shen",
+      "Stevan Rudinac",
+      "Evangelos Kanoulas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.05706",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

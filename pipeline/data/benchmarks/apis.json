@@ -1,0 +1,37 @@
+{
+  "name": "APIS",
+  "description": "Stroke, the second leading cause of mortality globally, predominantly results from ischemic conditions. Immediate attention and diagnosis, related to the characterization of brain lesions, play a crucial role in patient prognosis. Standard stroke protocols include an initial evaluation from a non-contrast CT to discriminate between hemorrhage and ischemia. However, non-contrast CTs lack sensitivity in detecting subtle ischemic changes in this phase. Alternatively, diffusion-weighted MRI studies provide enhanced capabilities, yet are constrained by limited availability and higher costs. Hence, we idealize new approaches that integrate ADC stroke lesion findings into CT, to enhance the analysis and accelerate stroke patient management. This study details a public challenge where scientists applied top computational strategies to delineate stroke lesions on CT scans, utilizing paired ADC information. Also, it constitutes the first effort to build a paired dataset with NCCT and ADC studies of acute ischemic stroke patients. Submitted algorithms were validated with respect to the references of two expert radiologists. The best achieved Dice score was 0.2 over a test study with 36 patient studies. Despite all the teams employing specialized deep learning tools, results reveal limitations of computational approaches to support the segmentation of small lesions with heterogeneous density.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_segmentation",
+    "medical_image_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice coefficient (Dice score) for lesion segmentation; may also report sensitivity/recall and volumetric overlap",
+  "general_score_metric": "Dice score",
+  "typical_sota_score": "≈0.20 (Dice) reported for top submissions on the test set",
+  "year_of_publish": 2023,
+  "reputation": "15 citations",
+  "notes": "Small test cohort (36 patients) and heterogeneous, often small lesions make the task very challenging; clinical imaging variability and inter-rater differences limit generalization. Non-LLM benchmark focused on medical imaging.",
+  "creators": {
+    "scientists": [
+      "Santiago Gómez",
+      "Daniela S. Mantilla",
+      "G. Garz'on",
+      "Edgar Rangel",
+      "Andres Ortiz",
+      "Franklin Sierra-Jerez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2309.15243",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

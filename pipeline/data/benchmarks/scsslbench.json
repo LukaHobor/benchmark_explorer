@@ -1,0 +1,40 @@
+{
+  "name": "scSSL-Bench",
+  "description": "Self-supervised learning (SSL) has proven to be a powerful approach for extracting biologically meaningful representations from single-cell data. To advance our understanding of SSL methods applied to single-cell data, we present scSSL-Bench, a comprehensive benchmark that evaluates nineteen SSL methods. Our evaluation spans nine datasets and focuses on three common downstream tasks: batch correction, cell type annotation, and missing modality prediction. Furthermore, we systematically assess various data augmentation strategies. Our analysis reveals task-specific trade-offs: the specialized single-cell frameworks, scVI, CLAIRE, and the finetuned scGPT excel at uni-modal batch correction, while generic SSL methods, such as VICReg and SimCLR, demonstrate superior performance in cell typing and multi-modal data integration. Random masking emerges as the most effective augmentation technique across all tasks, surpassing domain-specific augmentations. Notably, our results indicate the need for a specialized single-cell multi-modal data integration framework. scSSL-Bench provides a standardized evaluation platform and concrete recommendations for applying SSL to single-cell analysis, advancing the convergence of deep learning and single-cell genomics.",
+  "category": "mixed",
+  "domain": "bioinformatics / single-cell genomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "batch_correction",
+    "cell_type_annotation",
+    "missing_modality_prediction",
+    "representation_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (classification accuracy/F1 for cell typing; batch-correction metrics such as kBET/ASW; reconstruction MSE/correlation for modality prediction)",
+  "general_score_metric": "task-specific composite (accuracy/F1 for cell typing; kBET/ASW for batch correction; MSE/correlation for modality prediction)",
+  "typical_sota_score": "varies by task; top methods commonly achieve ~80–95% on cell-typing accuracy metrics but performance is highly task- and dataset-dependent",
+  "year_of_publish": 2025,
+  "reputation": "An emerging standardized benchmark for evaluating SSL methods on single-cell data, increasingly cited in single-cell representation learning work.",
+  "notes": "Non-LLM benchmark; sensitive to preprocessing and batch effects; performance and rankings are task-dependent and can be affected by dataset size and modality heterogeneity.",
+  "creators": {
+    "scientists": [
+      "Olga Ovcharenko",
+      "Florian Barkmann",
+      "Philip Toma",
+      "Imant Daunhawer",
+      "Julia Vogt",
+      "Sebastian Schelter",
+      "Valentina Boeva"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.10031",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

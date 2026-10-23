@@ -1,0 +1,37 @@
+{
+  "name": "MF-ID",
+  "description": "With the development of computer vision, the task of vision-based intrusion detection has been widely applied to various important fields such as intelligent monitoring, autonomous driving, and security. Previous vision-based intrusion detection tasks aim at detecting whether pedestrians invade a restricted Area-of-Interest (AoI) from a static or dynamic view. However, for real application scenarios, we need to detect whether various types of intrusion objects, not just pedestrians, intrude into the AoI of dynamic view, and the fine-grained categories of intrusion objects need to be accurately given, such a dynamic-view multi-category fine-grained intrusion detection (namely MF-ID) task is important but not yet explored. In this paper, we propose a new benchmark and approach to address this task. Firstly, due to the current lack of relevant benchmark, we develop a new publicly available dataset Cityintrusion-Multicategory, conduct statistical analysis on this dataset, and design three evaluation metrics. Secondly, we propose an end-to-end framework MF-YOLOV5, with five improvements: (1) We modify YOLOV5 to make it more suitable for our task, with a lower branch for object detection and an upper branch for segmenting AoI. (2) A new multi-category fine-grained loss (MFLoss) is designed to improve the fine-grained classification capability. (3) We improve the YOLOV5 C3 modules by enhancing the ability of cross-channel interaction. (4) A detection layer for the tiny objects is integrated into the network to improve its ability of detecting tiny objects. (5) A lightweight module with bottleneck transformer is introduced to reduce the network parameters. Finally, comprehensive experiments and comparisons demonstrate the validity of the proposed approach, and MF-YOLOV5 can reach the level of current SOTA, with 97.46% Miou, 55.29% Map@.5 and 42.97% MF-ID Acc. The relevant datasets and codes are available at https://ieee-dataport.org/documents/mf-id-1. Note to Practitioners—The motivation of this paper is to address the pitfall of the dynamic-view intrusion detection system. The existing methods mainly focus on pedestrian intrusion detection in dynamic view, ignoring the more practical and valuable task of multi-category fine-grained intrusion detection (MF-ID). Based on this, we propose a new benchmark and an advanced approach to meet the requirement of MF-ID task in dynamic view. Extensive experiments show that the proposed approach can not only reach promising performance but also maintain a high real-time intrusion detection speed. The proposed approach can be deployed in realistic scenes, e.g., autonomous driving, intelligent monitoring, security, and intelligent transportation management. In future research, we will explore a more comprehensive benchmark and more efficient approach for intrusion detection.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "semantic_segmentation",
+    "fine-grained_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU / mAP@0.5 / MF-ID accuracy (task-specific metrics reported)",
+  "general_score_metric": "MF-ID Accuracy (task-specific; mIoU and mAP@0.5 also reported)",
+  "typical_sota_score": "Miou ~97.5%, mAP@0.5 ~55.3%, MF-ID Acc ~43.0% (as reported for the proposed method)",
+  "year_of_publish": 2025,
+  "reputation": "7 citations",
+  "notes": "Domain-specific (dynamic-view intrusion detection); non-LLM benchmark; metrics sensitive to class imbalance and AoI segmentation quality; dataset and code available but scenario-specific, which may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Fujun Han",
+      "Peng Ye",
+      "Ke Li",
+      "Shukai Duan",
+      "Lidan Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Calcium imaging spike inference benchmark",
+  "description": "Calcium imaging is a powerful method to record the activity of neural populations in many species, but inferring spike times from calcium signals is a challenging problem. We compared multiple approaches using multiple datasets with ground truth electrophysiology and found that simple non-negative deconvolution (NND) outperformed all other algorithms on out-of-sample test data. We introduce a novel benchmark applicable to recordings without electrophysiological ground truth, based on the correlation of responses to two stimulus repeats, and used this to show that unconstrained NND also outperformed the other algorithms when run on \"zoomed out\" datasets of ∼10,000 cell recordings from the visual cortex of mice of either sex. Finally, we show that NND-based methods match the performance of a supervised method based on convolutional neural networks while avoiding some of the biases of such methods, and at much faster running times. We therefore recommend that spikes be inferred from calcium traces using simple NND because of its simplicity, efficiency, and accuracy.<b>SIGNIFICANCE STATEMENT</b> The experimental method that currently allows for recordings of the largest numbers of cells simultaneously is two-photon calcium imaging. However, use of this powerful method requires that neuronal firing times be inferred correctly from the large resulting datasets. Previous studies have claimed that complex supervised learning algorithms outperform simple deconvolution methods at this task. Unfortunately, these studies suffered from several problems and biases. When we repeated the analysis, using the same data and correcting these problems, we found that simpler spike inference methods perform better. Even more importantly, we found that supervised learning methods can introduce artifactual structure into spike trains, which can in turn lead to erroneous scientific conclusions. Of the algorithms we evaluated, we found that an extremely simple method performed best in all circumstances tested, was much faster to run, and was insensitive to parameter choices, making incorrect scientific conclusions much less likely.",
+  "category": "mixed",
+  "domain": "neuroscience",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "time_series",
+    "spike_inference"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation between inferred and ground-truth spike rates (Pearson correlation) and spike detection metrics (F1, AUC) for event-level accuracy",
+  "general_score_metric": "Pearson correlation between inferred and ground-truth spike rates (primary); F1 for spike timing detection also commonly reported",
+  "typical_sota_score": "varies by dataset; Pearson correlation typically reported in the ~0.4–0.8 range depending on conditions",
+  "year_of_publish": 2018,
+  "reputation": "207 citations",
+  "notes": "Non-LLM neuroscience benchmark; ground-truth electrophysiology is limited in scale and diversity; supervised methods can overfit or introduce artefacts, and performance can vary strongly with imaging conditions and preprocessing.",
+  "creators": {
+    "scientists": [
+      "Marius Pachitariu",
+      "Carsen Stringer",
+      "Kenneth D. Harris"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://doi.org/10.1523/jneurosci.3339-17.2018",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

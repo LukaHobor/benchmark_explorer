@@ -1,0 +1,36 @@
+{
+  "name": "RobustMQ",
+  "description": "Quantization has emerged as an essential technique for deploying deep neural networks (DNNs) on devices with limited resources. However, quantized models exhibit vulnerabilities when exposed to various noises in real-world applications. Despite the importance of evaluating the impact of quantization on robustness, existing research on this topic is limited and often disregards established principles of robustness evaluation, resulting in incomplete and inconclusive findings. To address this gap, we thoroughly evaluated the robustness of quantized models against various noises (adversarial attacks, natural corruptions, and systematic noises) on ImageNet. The comprehensive evaluation results empirically provide valuable insights into the robustness of quantized models in various scenarios, for example: (1) quantized models exhibit higher adversarial robustness than their floating-point counterparts, but are more vulnerable to natural corruptions and systematic noises; (2) in general, increasing the quantization bit-width results in a decrease in adversarial robustness, an increase in natural robustness, and an increase in systematic robustness; (3) among corruption methods, \\textit{impulse noise} and \\textit{glass blur} are the most harmful to quantized models, while \\textit{brightness} has the least impact; (4) among systematic noises, the \\textit{nearest neighbor interpolation} has the highest impact, while bilinear interpolation, cubic interpolation, and area interpolation are the three least harmful. Our research contributes to advancing the robust quantization of models and their deployment in real-world scenarios.",
+  "category": "mixed",
+  "domain": "model robustness / deployment",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (top-1 under corruptions/adversarial attacks)",
+  "general_score_metric": "Top-1 accuracy under specified corruptions/attacks",
+  "year_of_publish": 2023,
+  "reputation": "Recent research benchmark focused on quantized-model robustness; of interest to robustness and deployment researchers but not yet widely adopted as a standard.",
+  "notes": "Non-LLM benchmark built on ImageNet/corruption protocols; results sensitive to quantization settings and attack implementations; useful for robustness studies but reproducibility requires careful methodological control.",
+  "creators": {
+    "scientists": [
+      "Yisong Xiao",
+      "Aishan Liu",
+      "Tianyuan Zhang",
+      "Haotong Qin",
+      "Jinyang Guo",
+      "Xianglong Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2308.02350",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

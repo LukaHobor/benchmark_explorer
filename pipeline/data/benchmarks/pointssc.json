@@ -1,0 +1,38 @@
+{
+  "name": "PointSSC",
+  "description": "Semantic Scene Completion (SSC) aims to jointly generate space occupancies and semantic labels for complex 3D scenes. Most existing SSC models focus on volumetric representations, which are memory-inefficient for large outdoor spaces. Point clouds provide a lightweight alternative but existing benchmarks lack outdoor point cloud scenes with semantic labels. To address this, we introduce PointSSC, the first cooperative vehicle-infrastructure point cloud benchmark for semantic scene completion. These scenes exhibit long-range perception and minimal occlusion. We develop an automated annotation pipeline leveraging Semantic Segment Anything to efficiently assign semantics. To benchmark progress, we propose a LiDAR-based model with a Spatial-Aware Transformer for global and local feature extraction and a Completion and Segmentation Cooperative Module for joint completion and segmentation. PointSSC provides a challenging testbed to drive advances in semantic point cloud completion for real-world navigation. The code and datasets are available at https://github.com/yyxssm/PointSSC.",
+  "category": "vision",
+  "domain": "autonomous driving / 3D perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "scene_completion",
+    "3D_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean IoU (mIoU) for semantic labels and Chamfer Distance / completion-IoU for geometry completion",
+  "general_score_metric": "mean IoU (mIoU)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "New research benchmark (from 2023) with niche adoption in the 3D perception and autonomous driving research community; promising but not yet widely adopted.",
+  "notes": "Outdoor cooperative vehicle–infrastructure point clouds with automated annotations (possible label noise from automated segmentation). Dataset is specialized and moderate in size; designed for non-LLM 3D perception tasks and may have cross-scene generalization challenges.",
+  "creators": {
+    "scientists": [
+      "Yuxiang Yan",
+      "Boda Liu",
+      "Jianfei Ai",
+      "Qinbu Li",
+      "Ru Wan",
+      "Jian Pu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2309.12708",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

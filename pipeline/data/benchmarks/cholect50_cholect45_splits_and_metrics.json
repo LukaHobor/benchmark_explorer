@@ -1,0 +1,34 @@
+{
+  "name": "CholecT50 / CholecT45 splits and metrics",
+  "description": "In addition to generating data and annotations, devising sensible data splitting strategies and evaluation metrics is essential for the creation of a benchmark dataset. This practice ensures consensus on the usage of the data, homogeneous assessment, and uniform comparison of research methods on the dataset. This study focuses on CholecT50, which is a 50 video surgical dataset that formalizes surgical activities as triplets of <instrument, verb, target>. In this paper, we introduce the standard splits for the CholecT50 and CholecT45 datasets and show how they compare with existing use of the dataset. CholecT45 is the first public release of 45 videos of CholecT50 dataset. We also develop a metrics library, ivtmetrics, for model evaluation on surgical triplets. Furthermore, we conduct a benchmark study by reproducing baseline methods in the most predominantly used deep learning frameworks (PyTorch and TensorFlow) to evaluate them using the proposed data splits and metrics and release them publicly to support future research. The proposed data splits and evaluation metrics will enable global tracking of research progress on the dataset and facilitate optimal model selection for further deployment.",
+  "category": "vision",
+  "domain": "medical / surgical video",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_action_detection",
+    "multi_label_classification",
+    "temporal_action_recognition"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean Average Precision (mAP) and F1 for triplet classification",
+  "general_score_metric": "mAP (triplet detection) / F1",
+  "year_of_publish": 2022,
+  "reputation": "Recognized within surgical video analysis research as a standard split/metric proposal for CholecT datasets; used by groups working on surgical activity recognition.",
+  "notes": "Small, specialized dataset (45–50 videos) with high annotation cost; domain-specific (surgical) so models require domain adaptation; evaluation focuses on triplet <instrument, verb, target> detection rather than generic video benchmarks.",
+  "creators": {
+    "scientists": [
+      "Chinedu Innocent Nwoye",
+      "Nicolas Padoy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2204.05235",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

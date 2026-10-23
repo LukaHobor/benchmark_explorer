@@ -1,0 +1,39 @@
+{
+  "name": "McQueen (McQR)",
+  "description": "The task of query rewrite aims to convert an in-context query to its fully-specified version where ellipsis and coreference are completed and referred-back according to the history context. Although much progress has been made, less efforts have been paid to real scenario conversations that involve drawing information from more than one modalities. In this paper, we propose the task of multimodal conversational query rewrite (McQR), which performs query rewrite under the multimodal visual conversation setting. We collect a large-scale dataset named McQueen based on manual annotation, which contains 15k visual conversations and over 80k queries where each one is associated with a fully-specified rewrite version. In addition, for entities appearing in the rewrite, we provide the corresponding image box annotation. We then use the McQueen dataset to benchmark a state-of-the-art method for effectively tackling the McQR task, which is based on a multimodal pre-trained model with pointer generator. Extensive experiments are performed to demonstrate the effectiveness of our model on this task\\footnote{The dataset and code of this paper are both available in \\url{https://github.com/yfyuan01/MQR}",
+  "category": "multimodal",
+  "domain": "multimodal (visual conversation)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "sequence_generation",
+    "multimodal_coreference_resolution"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "BLEU",
+  "general_score_metric": "BLEU",
+  "year_of_publish": 2022,
+  "reputation": "A research dataset for multimodal conversational query rewrite with public code and data; modest adoption within the multimodal/NLP research community.",
+  "notes": "Moderate size (≈15k conversations); requires image box annotations for entities, so evaluation is multimodal; token-level metrics (BLEU/ROUGE) may not fully capture rewrite correctness—exact-match and human evaluation are often complementary.",
+  "creators": {
+    "scientists": [
+      "Yifei Yuan",
+      "Chen Shi",
+      "Runze Wang",
+      "Liyi Chen",
+      "Feijun Jiang",
+      "Yuan You",
+      "Wai Lam"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.12775",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

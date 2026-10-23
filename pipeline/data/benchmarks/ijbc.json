@@ -1,0 +1,39 @@
+{
+  "name": "IJB-C",
+  "description": "Although considerable work has been done in recent years to drive the state of the art in facial recognition towards operation on fully unconstrained imagery, research has always been restricted by a lack of datasets in the public domain. In addition, traditional biometrics experiments such as single image verification and closed set recognition do not adequately evaluate the ways in which unconstrained face recognition systems are used in practice. The IARPA Janus Benchmark-C (IJB-C) face dataset advances the goal of robust unconstrained face recognition, improving upon the previous public domain IJB-B dataset, by increasing dataset size and variability, and by introducing end-to-end protocols that more closely model operational face recognition use cases. IJB-C adds 1,661 new subjects to the 1,870 subjects released in IJB-B, with increased emphasis on occlusion and diversity of subject occupation and geographic origin with the goal of improving representation of the global population. Annotations on IJB-C imagery have been expanded to allow for further covariate analysis, including a spatial occlusion grid to standardize analysis of occlusion. Due to these enhancements, the IJB-C dataset is significantly more challenging than other datasets in the public domain and will advance the state of the art in unconstrained face recognition.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "verification",
+    "identification",
+    "face_detection",
+    "open_set_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "TAR@FAR (true accept rate at fixed false accept rate) for verification; CMC / Rank-N for identification; ROC curves",
+  "general_score_metric": "TAR@FAR (primary) / Rank-1 identification",
+  "typical_sota_score": "≈90–99% (varies by protocol, FAR threshold, and model)",
+  "year_of_publish": 2018,
+  "reputation": "639 citations",
+  "notes": "Vision benchmark (non-LLM). Privacy and consent concerns for facial data; demographic and geographic bias potential. Many modern face models are trained on overlapping public datasets (contamination risk). Multiple protocols (verification/identification) with different reported metrics—compare like-for-like.",
+  "creators": {
+    "scientists": [
+      "Brianna Maze",
+      "Jocelyn Adams",
+      "James A. Duncan",
+      "Nathan D. Kalka",
+      "Tim Miller",
+      "Charles Otto"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/icb2018.2018.00033",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

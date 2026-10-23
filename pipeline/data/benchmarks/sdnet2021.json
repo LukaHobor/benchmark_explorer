@@ -1,0 +1,34 @@
+{
+  "name": "SDNET2021",
+  "description": "SDNET2021 is a uniquely validated annotated dataset for evaluating the condition of concrete bridge decks and benchmarking advanced deep learning models for defects (delamination, cracks, rebar corrosion) detection and bridge deck evaluation. Common structural defects, such as cracks, delamination, spalling, rebar corrosion, etc. are commonly detected using traditional hands-on inspections (visual, destructive, chain dragging, and sounding). These methods are accompanied with limitations such as disruption and closure of traffic, laborious, costly, time consuming and possible inconsistencies and likelihood of errors in field data collection and interpretation. Usually there exists dataset for surface defects from laboratory specimens, but rare validated datasets for sub-surface defects of several NDE techniques exists. SDNET2021 contains 1,936 annotated IE signals, over 663,102 annotated GPR signals and five (5) mosaic annotated IRT images containing about 4,580,680 annotated pixels collected during 2020 summer from five (5) in-service bridge decks in Grand forks, ND, USA. These datasets were annotated with a set of ground truth maps representing the class of delamination at each point of the decks after defected concrete was removed based on chain-dragging, i.e. ground truth data. They were also validated with conventional image processing, Fast Fourier Transform (FFT) maximum frequency, B-scan techniques, and locations of exposed corroded rebar. The ground truth maps also show the GPS coordinates and size of each class of removal for the delaminated portions of the bridge decks under investigation. This ground truth was developed on site prior to commencement of repair to show sound concrete Class 1 (No Delamination); Class 2 Delamination (delamination above top bar mat), and Class 3 Delamination (delamination below top bar mat). The IRT, GPR and IE data has been annotated and validated with the ground truth data collected during the investigation. SDNET2021 will be highly significant in further studies related to the development of algorithms based on AI models for classification and delamination/defects detection, which is a major frontline subject for continued research in the field of advanced NDE and structural health monitoring. SDNET2021 is freely available at https://doi.org/10.31356/data019 This version has been revised and updated with further data validation and stands to be the current and most up-to-date dataset.",
+  "category": "vision",
+  "domain": "civil engineering (structural inspection)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "classification",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_IoU (primary for segmentation); pixel-wise accuracy and F1/precision-recall for defect detection tasks",
+  "general_score_metric": "mean_IoU",
+  "year_of_publish": 2021,
+  "reputation": "6 citations",
+  "notes": "Non-LLM, domain-specific vision benchmark. Data comes from only five in-service bridge decks (potential geographic/site bias); multimodal NDE signals (GPR, IRT, IE) require domain expertise. Large pixel counts but class imbalance and potential overfitting to limited sites.",
+  "creators": {
+    "scientists": [
+      "Eberichi Ichi",
+      "Sattar Dorafshan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.31356/data019",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

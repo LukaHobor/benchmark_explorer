@@ -1,0 +1,35 @@
+{
+  "name": "CausalRivers",
+  "description": "Causal discovery, or identifying causal relationships from observational data, is a notoriously challenging task, with numerous methods proposed to tackle it. Despite this, in-the-wild evaluation of these methods is still lacking, as works frequently rely on synthetic data evaluation and sparse real-world examples under critical theoretical assumptions. Real-world causal structures, however, are often complex, making it hard to decide on a proper causal discovery strategy. To bridge this gap, we introduce CausalRivers, the largest in-the-wild causal discovery benchmarking kit for time-series data to date. CausalRivers features an extensive dataset on river discharge that covers the eastern German territory (666 measurement stations) and the state of Bavaria (494 measurement stations). It spans the years 2019 to 2023 with a 15-minute temporal resolution. Further, we provide additional data from a flood around the Elbe River, as an event with a pronounced distributional shift. Leveraging multiple sources of information and time-series meta-data, we constructed two distinct causal ground truth graphs (Bavaria and eastern Germany). These graphs can be sampled to generate thousands of subgraphs to benchmark causal discovery across diverse and challenging settings. To demonstrate the utility of CausalRivers, we evaluate several causal discovery approaches through a set of experiments to identify areas for improvement. CausalRivers has the potential to facilitate robust evaluations and comparisons of causal discovery methods. Besides this primary purpose, we also expect that this dataset will be relevant for connected areas of research, such as time-series forecasting and anomaly detection. Based on this, we hope to push benchmark-driven method development that fosters advanced techniques for causal discovery, as is the case for many other areas of machine learning.",
+  "category": "mixed",
+  "domain": "causal discovery / time-series",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "graph_recovery",
+    "time_series"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "structural metrics for causal graphs (Structural Hamming Distance, precision/recall, F1) and AUROC for edge detection",
+  "general_score_metric": "Structural Hamming Distance (SHD)",
+  "year_of_publish": 2025,
+  "reputation": "A novel, large-scale in-the-wild benchmark attracting interest from the causal discovery community but still early in adoption.",
+  "notes": "Ground-truth causal graphs are assembled from multiple sources and therefore approximate; dataset includes distributional shift events (flood) that complicate evaluation; large-scale time-series but not an LLM benchmark; results are sensitive to preprocessing, subgraph sampling, and unobserved confounders.",
+  "creators": {
+    "scientists": [
+      "Gideon Stein",
+      "Maha Shadaydeh",
+      "Jan Blunk",
+      "Niklas Penzel",
+      "Joachim Denzler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.17452",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

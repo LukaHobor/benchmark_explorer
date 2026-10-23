@@ -1,0 +1,36 @@
+{
+  "name": "Lightning Network GNN Benchmark",
+  "description": "The Bitcoin Lightning Network is a layer 2 protocol designed to facilitate fast and inexpensive Bitcoin transactions. It operates by establishing channels between users, where Bitcoin is locked and transactions are conducted off-chain until the channels are closed, with only the initial and final transactions recorded on the blockchain. Routing transactions through intermediary nodes is crucial for users without direct channels, allowing these routing nodes to collect fees for their services. Nodes announce their channels to the network, forming a graph with channels as edges. In this paper, we analyze the graph structure of the Lightning Network and investigate the statistical relationships between node properties using machine learning, particularly Graph Neural Networks (GNNs). We formulate a series of tasks to explore these relationships and provide benchmarks for GNN architectures, demonstrating how topological and neighbor information enhances performance. Our evaluation of several models reveals the effectiveness of GNNs in these tasks and highlights the insights gained from their application.",
+  "category": "mixed",
+  "domain": "finance / cryptocurrency networks",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_property_regression",
+    "node_classification",
+    "link_prediction",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Task-dependent metrics (accuracy/AUC for classification and link prediction, MSE for regression; also precision/recall for anomaly detection)",
+  "general_score_metric": "AUC / accuracy (task-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "Emerging, targeted benchmark for research at the intersection of GNNs and cryptocurrency network analysis; of interest to specialists in financial/crypto graph ML.",
+  "notes": "Non-LLM graph benchmark; results sensitive to snapshot timing (network is dynamic), class imbalance and sparsity are common; relatively specialized domain (Lightning Network) so external generalization may be limited.",
+  "creators": {
+    "scientists": [
+      "Rainer Feichtinger",
+      "Florian Grötschla",
+      "Lioba Heimbach",
+      "Roger Wattenhofer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2407.07916",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

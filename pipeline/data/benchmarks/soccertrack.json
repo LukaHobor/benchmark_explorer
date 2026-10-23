@@ -1,0 +1,39 @@
+{
+  "name": "SoccerTrack",
+  "description": "Tracking devices that can track both players and balls are critical to the performance of sports teams. Recently, significant effort has been focused on building larger broadcast sports video datasets. However, broadcast videos do not show the entire pitch and only provides partial information about the game. On the other hand, other camera perspectives can capture the whole field in a single frame, such as fish-eye and bird-eye view (drone) cameras. Unfortunately, there has not been a dataset where such data has been publicly shared until now. This paper proposes SoccerTrack, a dataset set consisting of GNSS and bounding box tracking data annotated on video captured with a 8K-resolution fish-eye camera and a 4K-resolution drone camera. In addition to a benchmark tracking algorithm, we include code for camera calibration and other preprocessing. Finally, we evaluate the tracking accuracy among a GNSS, fish-eye camera and drone camera data. SoccerTrack is expected to provide a more robust foundation for designing MOT algorithms that are less reliant on visual cues and more reliant on motion analysis. The dataset and related project code is available at https://github.com/AtomScott/SoccerTrack <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup> <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">2</sup> .",
+  "category": "vision",
+  "domain": "sports analytics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_object_tracking",
+    "object_detection",
+    "camera_calibration",
+    "trajectory_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-dependent (MOTA / IDF1 / MOTP for tracking; position/GNSS error for localization)",
+  "general_score_metric": "MOTA / IDF1 (for tracking)",
+  "year_of_publish": 2022,
+  "reputation": "46 citations",
+  "notes": "Non-LLM vision benchmark focused on sports analytics; includes high-resolution fish-eye and drone video with GNSS ground truth which is valuable but domain-specific; dataset size and diversity are limited to provided matches/scenes and calibration/synchronization can be challenging.",
+  "creators": {
+    "scientists": [
+      "Atom Scott",
+      "Ikuma Uchida",
+      "Masaki Onishi",
+      "Yoshinari Kameda",
+      "Kazuhiro Fukui",
+      "Keisuke Fujii"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvprw56347.2022.00401",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

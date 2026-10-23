@@ -1,0 +1,40 @@
+{
+  "name": "HOI4D",
+  "description": "We present HOI4D, a large-scale 4D egocentric dataset with rich annotations, to catalyze the research of category-level human-object interaction. HOI4D consists of 2.4M RGB-D egocentric video frames over 4000 sequences col-lected by 9 participants interacting with 800 different ob-ject instances from 16 categories over 610 different indoor rooms. Frame-wise annotations for panoptic segmentation, motion segmentation, 3D hand pose, category-level object pose and hand action have also been provided, together with reconstructed object meshes and scene point clouds. With HOI4D, we establish three benchmarking tasks to pro-mote category-level HOI from 4D visual signals including semantic segmentation of 4D dynamic point cloud se-quences, category-level object pose tracking, and egocen-tric action segmentation with diverse interaction targets. In-depth analysis shows HOI4D poses great challenges to existing methods and produces huge research opportunities.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "panoptic_segmentation",
+    "category_level_pose_tracking",
+    "action_segmentation",
+    "3d_hand_pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_iou / ADD-S / F1 / mAP (task-dependent)",
+  "general_score_metric": "mean_iou for segmentation; ADD(-S) or rotation/translation error for pose tracking; F1 for action segmentation",
+  "typical_sota_score": "varies widely by task; e.g., segmentation mIoU often in the 30–70% range (task- and setup-dependent)",
+  "year_of_publish": 2022,
+  "reputation": "113 citations",
+  "notes": "Large-scale egocentric 4D dataset (non-LLM). Challenging due to severe occlusions, dense temporal sequences, and multi-task evaluation; metrics and SOTA vary widely by the subtask.",
+  "creators": {
+    "scientists": [
+      "Yunze Liu",
+      "Yun Liu",
+      "Che Jiang",
+      "Kangbo Lyu",
+      "Weikang Wan",
+      "Hao Shen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvpr52688.2022.02034",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "X-AIGD",
+  "description": "Current AI-Generated Image (AIGI) detection approaches predominantly rely on binary classification to distinguish real from synthetic images, often lacking interpretable or convincing evidence to substantiate their decisions. This limitation stems from existing AIGI detection benchmarks, which, despite featuring a broad collection of synthetic images, remain restricted in their coverage of artifact diversity and lack detailed, localized annotations. To bridge this gap, we introduce a fine-grained benchmark towards eXplainable AI-Generated image Detection, named X-AIGD, which provides pixel-level, categorized annotations of perceptual artifacts, spanning low-level distortions, high-level semantics, and cognitive-level counterfactuals. These comprehensive annotations facilitate fine-grained interpretability evaluation and deeper insight into model decision-making processes. Our extensive investigation using X-AIGD provides several key insights: (1) Existing AIGI detectors demonstrate negligible reliance on perceptual artifacts, even at the most basic distortion level. (2) While AIGI detectors can be trained to identify specific artifacts, they still substantially base their judgment on uninterpretable features. (3) Explicitly aligning model attention with artifact regions can increase the interpretability and generalization of detectors. The data and code are available at: https://github.com/Coxy7/X-AIGD.",
+  "category": "vision",
+  "domain": "archaeology / cultural heritage (image forensics)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "artifact_localization",
+    "interpretability_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy, IoU (localization), AUC",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "Newly introduced (arXiv 2026) dataset focused on explainable AIGI detection; currently limited community adoption but relevant for image-forensics and interpretability research.",
+  "notes": "Non-LLM benchmark; provides pixel-level, categorized artifact annotations. Coverage of generative model types and artifact diversity may still be incomplete; risk of models overfitting to annotated artifact categories; requires localization metrics in addition to classification. New dataset with limited adoption and potential dataset biases.",
+  "creators": {
+    "scientists": [
+      "Yao Xiao",
+      "Weiyan Chen",
+      "Jiahao Chen",
+      "Zijie Cao",
+      "Weijian Deng",
+      "Binbin Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2601.19430",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

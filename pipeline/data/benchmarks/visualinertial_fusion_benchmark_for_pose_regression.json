@@ -1,0 +1,39 @@
+{
+  "name": "Visual-Inertial Fusion Benchmark for Pose Regression",
+  "description": "Visual-inertial localization is a key problem in computer vision and robotics applications such as virtual reality, self-driving cars, and aerial vehicles. The goal is to estimate an accurate pose of an object when either the environment or the dynamics are known. Absolute pose regression (APR) techniques directly regress the absolute pose from an image input in a known scene using convolutional and spatio-temporal networks. Odometry methods perform relative pose regression (RPR) that predicts the relative pose from a known object dynamic (visual or inertial inputs). The localization task can be improved by retrieving information from both data sources for a cross-modal setup, which is a challenging problem due to contradictory tasks. In this work, we conduct a benchmark to evaluate deep multimodal fusion based on pose graph optimization and attention networks. Auxiliary and Bayesian learning are utilized for the APR task. We show accuracy improvements for the APR-RPR task and for the RPR-RPR task for aerial vehicles and hand-held devices. We conduct experiments on the EuRoC MAV and PennCOSYVIO datasets and record and evaluate a novel industry dataset.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "pose_estimation",
+    "odometry_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pose error metrics (median/RMSE translation and rotation error)",
+  "general_score_metric": "median translational and rotational error (meters / degrees)",
+  "typical_sota_score": "translation error ~0.01–0.5 m; rotation error ~0.1–5°",
+  "year_of_publish": 2022,
+  "reputation": "Used within the visual-inertial and robotics research community for multimodal pose estimation comparisons; recognized but specialized.",
+  "notes": "Non-LLM benchmark; evaluated on relatively small, domain-specific datasets (EuRoC, PennCOSYVIO and an industry set); sensitive to sensor calibration and synchronization; results vary substantially by motion profile and sensor quality.",
+  "creators": {
+    "scientists": [
+      "Felix Ott",
+      "Nisha Lakshmana Raichur",
+      "David Rügamer",
+      "Tobias Feigl",
+      "Heiko Neumann",
+      "Bernd Bischl",
+      "Christopher Mutschler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2208.00919",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

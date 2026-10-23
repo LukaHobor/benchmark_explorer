@@ -1,0 +1,38 @@
+{
+  "name": "SATBench",
+  "description": "The core of everyday tasks like reading and driving is active object recognition. Attempts to model such tasks are currently stymied by the inability to incorporate time. People show a flexible tradeoff between speed and accuracy and this tradeoff is a crucial human skill. Deep neural networks have emerged as promising candidates for predicting peak human object recognition performance and neural activity. However, modeling the temporal dimension i.e., the speed-accuracy tradeoff (SAT), is essential for them to serve as useful computational models for how humans recognize objects. To this end, we here present the first large-scale (148 observers, 4 neural networks, 8 tasks) dataset of the speed-accuracy tradeoff (SAT) in recognizing ImageNet images. In each human trial, a beep, indicating the desired reaction time, sounds at a fixed delay after the image is presented, and observer's response counts only if it occurs near the time of the beep. In a series of blocks, we test many beep latencies, i.e., reaction times. We observe that human accuracy increases with reaction time and proceed to compare its characteristics with the behavior of several dynamic neural networks that are capable of inference-time adaptive computation. Using FLOPs as an analog for reaction time, we compare networks with humans on curve-fit error, category-wise correlation, and curve steepness, and conclude that cascaded dynamic neural networks are a promising model of human reaction time in object recognition tasks.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_classification",
+    "speed-accuracy_tradeoff",
+    "human_vs_model_comparison"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "curve-fit error, category-wise correlation, and curve steepness (comparing model FLOPs-derived curves to human RT accuracy curves)",
+  "general_score_metric": "curve-fit error (with category-wise correlation and curve steepness as complementary metrics)",
+  "year_of_publish": 2022,
+  "reputation": "A focused research benchmark used in cognitive-vision and model-comparison studies; moderate niche adoption for SAT modeling.",
+  "notes": "Non-LLM vision benchmark requiring mapping of model computation (FLOPs) to reaction time; specialized metrics make cross-benchmark comparisons difficult. Dataset is ImageNet-based with human RTs from 148 observers.",
+  "creators": {
+    "scientists": [
+      "Ajay Subramanian",
+      "Sara Price",
+      "Omkar Kumbhar",
+      "Elena Sizikova",
+      "Najib J. Majaj",
+      "Denis G. Pelli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.08427",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-23",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

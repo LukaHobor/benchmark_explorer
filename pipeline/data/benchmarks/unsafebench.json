@@ -1,0 +1,39 @@
+{
+  "name": "UnsafeBench",
+  "description": "With the advent of text-to-image models and concerns about their misuse, developers are increasingly relying on image safety classifiers to moderate their generated unsafe images. Yet, the performance of current image safety classifiers remains unknown for both real-world and AI-generated images. In this work, we propose UnsafeBench, a benchmarking framework that evaluates the effectiveness and robustness of image safety classifiers, with a particular focus on the impact of AI-generated images on their performance. First, we curate a large dataset of 10K real-world and AI-generated images that are annotated as safe or unsafe based on a set of 11 unsafe categories of images (sexual, violent, hateful, etc.). Then, we evaluate the effectiveness and robustness of five popular image safety classifiers, as well as three classifiers that are powered by general-purpose visual language models. Our assessment indicates that existing image safety classifiers are not comprehensive and effective enough to mitigate the multifaceted problem of unsafe images. Also, there exists a distribution shift between real-world and AI-generated images in image qualities, styles, and layouts, leading to degraded effectiveness and robustness. Motivated by these findings, we build a comprehensive image moderation tool called PerspectiveVision, which addresses the main drawbacks of existing classifiers with improved effectiveness and robustness, especially on AI-generated images. UnsafeBench and PerspectiveVision can aid the research community in better understanding the landscape of image safety classification in the era of generative AI.",
+  "category": "vision",
+  "domain": "vision / image safety",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "image_classification",
+    "safety_moderation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "60–85%",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) benchmark for image-safety classification with initial community attention but not yet widely adopted.",
+  "notes": "Non-LLM image-safety benchmark (vision). Relatively small (≈10K) dataset; class imbalance and distribution shift between real-world and AI-generated images noted; potential contamination risks if used with large-scale pretraining data; reported metrics vary by category (sexual, violent, hateful, etc.).",
+  "creators": {
+    "scientists": [
+      "Yiting Qu",
+      "Xinyue Shen",
+      "Yixin Wu",
+      "Michael Backes",
+      "Savvas Zannettou",
+      "Yang Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2405.03486",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

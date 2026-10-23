@@ -1,0 +1,37 @@
+{
+  "name": "BN-HTRd",
+  "description": "We introduce a new dataset for offline Handwritten Text Recognition (HTR) from images of Bangla scripts comprising words, lines, and document-level annotations. The BN-HTRd dataset is based on the BBC Bangla News corpus, meant to act as ground truth texts. These texts were subsequently used to generate the annotations that were filled out by people with their handwriting. Our dataset includes 788 images of handwritten pages produced by approximately 150 different writers. It can be adopted as a basis for various handwriting classification tasks such as end-to-end document recognition, word-spotting, word or line segmentation, and so on. We also propose a scheme to segment Bangla handwritten document images into corresponding lines in an unsupervised manner. Our line segmentation approach takes care of the variability involved in different writing styles, accurately segmenting complex handwritten text lines of curvilinear nature. Along with a bunch of pre-processing and morphological operations, both Hough line and circle transforms were employed to distinguish different linear components. In order to arrange those components into their corresponding lines, we followed an unsupervised clustering approach. The average success rate of our segmentation technique is 81.57% in terms of FM metrics (similar to F-measure) with a mean Average Precision (mAP) of 0.547.",
+  "category": "vision",
+  "domain": "handwritten document recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "handwritten_text_recognition",
+    "line_segmentation",
+    "word_spotting",
+    "document_layout_analysis"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 / mAP for segmentation; character error rate (CER) and word accuracy for recognition tasks",
+  "general_score_metric": "F-measure (FM) and mAP for segmentation (paper reports FM ≈ 81.57% and mAP ≈ 0.547); recognition typically reported via CER/word accuracy",
+  "year_of_publish": 2022,
+  "reputation": "A focused dataset for Bangla handwritten text research with modest adoption in regional HTR and document analysis work.",
+  "notes": "Relatively small dataset (788 page images, ~150 writers) — risk of overfitting and limited diversity; segmentation baselines reported in the paper; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Md. Ataur Rahman",
+      "Nazifa Tabassum",
+      "Mitu Paul",
+      "Riya Pal",
+      "Mohammad Khairul Islam"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.08977",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

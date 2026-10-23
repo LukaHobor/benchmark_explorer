@@ -1,0 +1,39 @@
+{
+  "name": "Chinese CLIP dataset",
+  "description": "The tremendous success of CLIP (Radford et al., 2021) has promoted the research and application of contrastive learning for vision-language pretraining. In this work, we construct a large-scale dataset of image-text pairs in Chinese, where most data are retrieved from publicly available datasets, and we pretrain Chinese CLIP models on the new dataset. We develop 5 Chinese CLIP models of multiple sizes, spanning from 77 to 958 million parameters. Furthermore, we propose a two-stage pretraining method, where the model is first trained with the image encoder frozen and then trained with all parameters being optimized, to achieve enhanced model performance. Our comprehensive experiments demonstrate that Chinese CLIP can achieve the state-of-the-art performance on MUGE, Flickr30K-CN, and COCO-CN in the setups of zero-shot learning and finetuning, and it is able to achieve competitive performance in zero-shot image classification based on the evaluation on the ELEVATER benchmark (Li et al., 2022). We have released our codes, models, and demos in https://github.com/OFA-Sys/Chinese-CLIP",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_text_retrieval",
+    "zero_shot_classification",
+    "image_captioning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "recall@k",
+  "general_score_metric": "recall@1",
+  "typical_sota_score": "50–90%",
+  "year_of_publish": 2022,
+  "reputation": "51 citations",
+  "notes": "Built from publicly available Chinese image-text sources; risks include dataset overlap/contamination with pretraining data, licensing heterogeneity, and biases specific to Chinese-language web data.",
+  "creators": {
+    "scientists": [
+      "Yang An",
+      "Junshu Pan",
+      "Junyang Lin",
+      "Rui Men",
+      "Yichang Zhang",
+      "Jingren Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2211.01335",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

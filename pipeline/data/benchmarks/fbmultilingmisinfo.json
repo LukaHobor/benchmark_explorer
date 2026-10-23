@@ -1,0 +1,39 @@
+{
+  "name": "FbMultiLingMisinfo",
+  "description": "According to recent research, geometric deep learning allows to reach unprecedented accuracy for online misinformation detection. By fully leveraging the news social context, URL propagation paths in social networks are first represented as graphs and then classified using Graph Neural Network (GNN) models. Despite these remarkable efforts, researchers are still hampered by the scarcity of high-quality benchmark datasets, and as a result, the efficacy of state-of-the-art approaches could be overestimated. So far, in order to obtain a decent number of third-party fact-checked URLs, researchers have either sampled news from notoriously reliable and unreliable sources using distant supervision, or they have gathered pre-labeled URLs from third-party fact-checking websites. In the former case, resulting datasets can be quite large, but also noisy and biased since pieces of news are labeled as true or false according to their source label, and not individually fact-checked. In the latter case, assigned labels are more reliable, but the included news articles are usually in a single language and they may reflect unknown editorial decisions. As a result, datasets of the latter type are typically small, homogeneous, and thus unrealistically easy for automatic fake news detection models. In this work, we present FbMultiLingMisinfo, a new multilingual benchmark dataset, aimed at a more realistic evaluation of state-of-the-art misinformation detection models. URLs in our dataset come from the Facebook Privacy-Protected Full URLs Data Set, which we augmented with their propagation paths on Twitter. Our experimental results show that, when GNN-based models are tested on FbMultiLingMisinfo, recent misinformation detection results are only partially confirmed. We further show that a sharp reduction in the training size significantly reduces the model accuracy on FbMultiLingMisinfo, but not on two other widely used benchmark datasets for fake news detection.",
+  "category": "text",
+  "domain": "social computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multilabel_classification",
+    "multilingual_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1 (typically macro or micro F1)",
+  "typical_sota_score": "60–85%",
+  "year_of_publish": 2022,
+  "reputation": "A moderately cited, research-oriented multilingual misinformation dataset from Facebook researchers; used in academic work on cross-lingual misinformation detection.",
+  "notes": "Language and label imbalance across languages, platform-specific biases, annotation noise, and risk of topical/time leakage; not originally designed for generative LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Giorgio Barnabo",
+      "Federico Siciliano",
+      "Carlos Castillo",
+      "Stefano Leonardi",
+      "Preslav Nakov",
+      "Giovanni Da San Martino"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://doi.org/10.1109/ijcnn55064.2022.9892739",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

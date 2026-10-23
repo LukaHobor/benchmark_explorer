@@ -1,0 +1,33 @@
+{
+  "name": "Radar Drone Classification Benchmark",
+  "description": "Abstract\n                Reliable radar-based classification of small unmanned aerial vehicles (UAVs, drones) is hampered by low signal-to-noise ratio (SNR), non-Gaussian clutter, and site-specific shifts. This motivates interest in Quantum Machine Learning (QML) as a potentially more noise-resilient alternative to classical methods, yet reproducible advantages over strong classical baselines remain unclear. This study presents a controlled, like-for-like comparison between feed-forward neural networks and pure QML models without a preceding classical dimensionality-reduction encoder. All models operate on the same binned Fourier features. The QML variants span two data encodings (angle, amplitude), two variational circuit families, and an optional Quantum Fourier Transform, and are trained either with Adam or the gradient-free Asexual Reproduction Optimization (ARO) under matched evaluation budgets.Across three regimes (noiseless, additive white Gaussian noise (AWGN), and colored AR(1) complex Gaussian noise (cAR(1)-GN)), QML achieves competitive accuracy with only tens of parameters and, in two settings (noiseless and AWGN), slightly exceeds the best classical baselines, although these differences are not statistically significant. Under temporally correlated cAR(1) Gaussian noise, the tuned classical network significantly outperforms the best QML configuration. Overall, QML provides parameter-efficient performance parity in two of three conditions but no definitive advantage. The results highlight a strong dependence on the noise regime and point to angle-encoded, ARO-trained circuits as the most promising QML candidates for noisy radar-based drone classification.",
+  "category": "audio",
+  "domain": "radar / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2026,
+  "reputation": "A niche research benchmark used in radar/QML communities for controlled comparisons between classical and quantum models; limited broader adoption.",
+  "notes": "Non-LLM benchmark focused on radar signals; performance is highly dependent on noise regime (noiseless, AWGN, colored noise). Small/controlled dataset and comparisons include specialized quantum models; results sensitive to experimental setup and training budget.",
+  "creators": {
+    "scientists": [
+      "Stefan Klug",
+      "Stefan Pickl",
+      "Maximilian Moll"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.21203/rs.3.rs-8437365/v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "EarthObsNet",
+  "description": "Remote Sensing imagery serves as an important data source for Earth surface monitoring and surface processes studies. It is highly likely that RS imagery will become more and more indispensable in the future due to its high scalability and compatibility with data-driven models and ever-evolving software and hardware that become increasingly good at processing large datasets. Although its promising future, the usage of Earth surface observation imagery, such as Landsat, Sentinel-2, and Sentinel-1 images, has been largely limited to retrospective studies, where those images serve mainly as documentations of past events. Recently, there are attempts to expand the current usage of RS Earth surface observation images to forward-looking applications to support decision-making and fast response against future natural hazards. Unlike many well-defined and well-studied topics such as change detection and semantic segmentation for which many benchmark datasets are openly available, so far, there are limited public datasets for Earth surface observation image synthesis tasks for fast prototyping and comparison. To close this gap, we introduced a comprehensive dataset containing previous Earth surface observations, precipitation, soil moisture, land cover, Height Above Nearest Drainage (HAND), DEM, and slope collected during the catastrophic 2019 Central US Flooding events that lasted more than two seasons in Mississippi and Missouri River tributaries. We also incorporated reference labels to allow further investigation of the usefulness of the synthesized images in downstream applications, such as flood inundation mapping. We hope to provide an essential dataset for Earth observation image synthesis studies, with the goal of attracting more attention and inspiring more efforts to broaden the usage of Earth surface observation images into forward-looking applications.",
+  "category": "vision",
+  "domain": "earth observation / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_synthesis",
+    "image_translation",
+    "conditional_generation",
+    "downstream_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "FID / PSNR / SSIM for synthesized image quality; IoU / pixel-wise metrics for downstream flood inundation mapping",
+  "general_score_metric": "FID",
+  "year_of_publish": 2024,
+  "reputation": "A niche but useful dataset within the remote sensing community for research on Earth-surface image synthesis and downstream flood mapping, with limited broad adoption so far.",
+  "notes": "Non-LLM benchmark focused on remote sensing; limited public baselines for image synthesis on this specific event; geographic and temporal bias toward the 2019 Central US floods; downstream labels provided but class imbalance and annotation noise may affect evaluations.",
+  "creators": {
+    "scientists": [
+      "Zhouyayan Li",
+      "Muhammed Sermet",
+      "Ibrahim Demir"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.31223/x5gd7j",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

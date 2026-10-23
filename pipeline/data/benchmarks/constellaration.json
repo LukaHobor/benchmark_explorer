@@ -1,0 +1,43 @@
+{
+  "name": "ConStellaration",
+  "description": "Stellarators are magnetic confinement devices under active development to deliver steady-state carbon-free fusion energy. Their design involves a high-dimensional, constrained optimization problem that requires expensive physics simulations and significant domain expertise. Recent advances in plasma physics and open-source tools have made stellarator optimization more accessible. However, broader community progress is currently bottlenecked by the lack of standardized optimization problems with strong baselines and datasets that enable data-driven approaches, particularly for quasi-isodynamic (QI) stellarator configurations, considered as a promising path to commercial fusion due to their inherent resilience to current-driven disruptions. Here, we release an open dataset of diverse QI-like stellarator plasma boundary shapes, paired with their ideal magnetohydrodynamic (MHD) equilibria and performance metrics. We generated this dataset by sampling a variety of QI fields and optimizing corresponding stellarator plasma boundaries. We introduce three optimization benchmarks of increasing complexity: (1) a single-objective geometric optimization problem, (2) a \"simple-to-build\" QI stellarator, and (3) a multi-objective ideal-MHD stable QI stellarator that investigates trade-offs between compactness and coil simplicity. For every benchmark, we provide reference code, evaluation scripts, and strong baselines based on classical optimization techniques. Finally, we show how learned models trained on our dataset can efficiently generate novel, feasible configurations without querying expensive physics oracles. By openly releasing the dataset along with benchmark problems and baselines, we aim to lower the entry barrier for optimization and machine learning researchers to engage in stellarator design and to accelerate cross-disciplinary progress toward bringing fusion energy to the grid.",
+  "category": "mixed",
+  "domain": "fusion energy / plasma physics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "single_objective_optimization",
+    "multi_objective_optimization",
+    "design_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "objective_score (e.g., reported MHD performance metrics), constraint_violation_rate, and Pareto-front quality for multi-objective cases",
+  "general_score_metric": "objective_score (MHD performance metrics / compactness / coil complexity) and Pareto-front quality",
+  "year_of_publish": 2025,
+  "reputation": "A recently proposed, domain-specialized benchmark that is gaining interest in the fusion/plasma physics and optimization ML communities but remains niche outside those fields.",
+  "notes": "Non-LLM benchmark in a specialized physics domain; uses expensive physics oracles (simulations) for evaluation, so dataset size and oracle cost can limit large-scale experimentation. Results depend on simulation fidelity; potential for domain-specific biases and limited community-wide adoption to date.",
+  "creators": {
+    "scientists": [
+      "Santiago A. Cadena",
+      "Andrea Merlo",
+      "Emanuel Laude",
+      "Alexander Bauer",
+      "Atul Agrawal",
+      "Maria Pascu",
+      "Marija Savtchouk",
+      "Enrico Guiraud",
+      "Lukas Bonauer",
+      "Stuart Hudson",
+      "Markus Kaiser"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2506.19583",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

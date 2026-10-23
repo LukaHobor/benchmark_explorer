@@ -1,0 +1,39 @@
+{
+  "name": "WCEbleedGen",
+  "description": "Computer-based analysis of Wireless Capsule Endoscopy (WCE) is crucial. However, a medically annotated WCE dataset for training and evaluation of automatic classification, detection, and segmentation of bleeding and non-bleeding frames is currently lacking. The present work focused on development of a medically annotated WCE dataset called WCEbleedGen for automatic classification, detection, and segmentation of bleeding and non-bleeding frames. It comprises 2,618 WCE bleeding and non-bleeding frames which were collected from various internet resources and existing WCE datasets. A comprehensive benchmarking and evaluation of the developed dataset was done using nine classification-based, three detection-based, and three segmentation-based deep learning models. The dataset is of high-quality, is class-balanced and contains single and multiple bleeding sites. Overall, our standard benchmark results show that Visual Geometric Group (VGG) 19, You Only Look Once version 8 nano (YOLOv8n), and Link network (Linknet) performed best in automatic classification, detection, and segmentation-based evaluations, respectively. Automatic bleeding diagnosis is crucial for WCE video interpretations. This diverse dataset will aid in developing of real-time, multi-task learning-based innovative solutions for automatic bleeding diagnosis in WCE. The dataset and code are publicly available at https://zenodo.org/records/10156571 and https://github.com/misahub2023/Benchmarking-Codes-of-the-WCEBleedGen-dataset.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "object_detection",
+    "segmentation",
+    "multi_task"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "classification accuracy; mAP for detection; IoU / Dice (segmentation)",
+  "general_score_metric": "accuracy (classification) / mAP (detection) / IoU or Dice (segmentation)",
+  "year_of_publish": 2024,
+  "reputation": "Recently released medical imaging dataset with initial benchmarks; useful for WCE bleeding research but currently limited adoption.",
+  "notes": "Relatively small dataset (2,618 frames) collected from mixed internet and existing sources — risk of dataset bias and limited diversity; frame-level data (not full videos) may limit temporal context; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Palak Handa",
+      "Manas Dhir",
+      "Amirreza Mahbod",
+      "Florian Schwarzhans",
+      "Ramona Woitek",
+      "Nidhi Goel",
+      "Deepak Gunjan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2408.12466",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

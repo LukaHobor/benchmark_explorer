@@ -1,0 +1,37 @@
+{
+  "name": "HypoBench",
+  "description": "There is growing interest in hypothesis generation with large language models (LLMs). However, fundamental questions remain: what makes a good hypothesis, and how can we systematically evaluate methods for hypothesis generation? To address this, we introduce HypoBench, a novel benchmark designed to evaluate LLMs and hypothesis generation methods across multiple aspects, including practical utility, generalizability, and hypothesis discovery rate. HypoBench includes 7 real-world tasks and 5 synthetic tasks with 194 distinct datasets. We evaluate four state-of-the-art LLMs combined with six existing hypothesis-generation methods. Overall, our results suggest that existing methods are capable of discovering valid and novel patterns in the data. However, the results from synthetic datasets indicate that there is still significant room for improvement, as current hypothesis generation methods do not fully uncover all relevant or meaningful patterns. Specifically, in synthetic settings, as task difficulty increases, performance significantly drops, with best models and methods only recovering 38.8% of the ground-truth hypotheses. These findings highlight challenges in hypothesis generation and demonstrate that HypoBench serves as a valuable resource for improving AI systems designed to assist scientific discovery.",
+  "category": "text",
+  "domain": "science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "generation",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "hypothesis_recovery_rate",
+  "general_score_metric": "hypothesis_recovery_rate",
+  "typical_sota_score": "≈38.8% (on hardest synthetic tasks; varies by task)",
+  "year_of_publish": 2025,
+  "reputation": "19 citations",
+  "notes": "Contains both synthetic and real-world datasets; potential contamination if models were trained on similar scientific corpora. Metrics measure recovery of predefined hypotheses and novelty/utility assessments but do not equate to experimental validation.",
+  "creators": {
+    "scientists": [
+      "Haokun Liu",
+      "Sicong Huang",
+      "Jingyu Hu",
+      "Yangqiaoyu Zhou",
+      "Chenhao Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2504.11524",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Semi-Synthetic Embryomics Validation Benchmark",
+  "description": "Systematic validation is an essential part of algorithm development. The\nenormous dataset sizes and the complexity observed in many recent time-resolved\n3D fluorescence microscopy imaging experiments, however, prohibit a\ncomprehensive manual ground truth generation. Moreover, existing simulated\nbenchmarks in this field are often too simple or too specialized to\nsufficiently validate the observed image analysis problems. We present a new\nsemi-synthetic approach to generate realistic 3D+t benchmarks that combines\nchallenging cellular movement dynamics of real embryos with simulated\nfluorescent nuclei and artificial image distortions including various\nparametrizable options like cell numbers, acquisition deficiencies or multiview\nsimulations. We successfully applied the approach to simulate the development\nof a zebrafish embryo with thousands of cells over 14 hours of its early\nexistence.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_segmentation",
+    "nuclei_detection",
+    "cell_tracking",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 / IoU for detection/segmentation and tracking accuracy (TRA) for tracking tasks",
+  "general_score_metric": "F1-score (for detection/segmentation) and tracking accuracy (TRA) for tracking",
+  "year_of_publish": 2016,
+  "reputation": "Recognized in the bioimage informatics community as a useful semi-synthetic benchmark for testing large-scale 3D+t analysis algorithms.",
+  "notes": "Semi-synthetic: combines real movement dynamics with simulated fluorescence—good ground truth but potential simulation bias; domain-specific (embryo imaging), non-LLM.",
+  "creators": {
+    "scientists": [
+      "Johannes Stegmaier",
+      "Julian Arz",
+      "Benjamin Schott",
+      "Jens C. Otte",
+      "Andrei Kobitski",
+      "G. Ulrich Nienhaus",
+      "Uwe Strähle",
+      "Peter Sanders",
+      "Ralf Mikut"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1604.04906",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

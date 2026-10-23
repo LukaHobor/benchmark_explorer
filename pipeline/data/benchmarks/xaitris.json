@@ -1,0 +1,35 @@
+{
+  "name": "XAI-TRIS",
+  "description": "The field of 'explainable' artificial intelligence (XAI) has produced highly cited methods that seek to make the decisions of complex machine learning (ML) methods 'understandable' to humans, for example by attributing 'importance' scores to input features. Yet, a lack of formal underpinning leaves it unclear as to what conclusions can safely be drawn from the results of a given XAI method and has also so far hindered the theoretical verification and empirical validation of XAI methods. This means that challenging non-linear problems, typically solved by deep neural networks, presently lack appropriate remedies. Here, we craft benchmark datasets for three different non-linear classification scenarios, in which the important class-conditional features are known by design, serving as ground truth explanations. Using novel quantitative metrics, we benchmark the explanation performance of a wide set of XAI methods across three deep learning model architectures. We show that popular XAI methods are often unable to significantly outperform random performance baselines and edge detection methods. Moreover, we demonstrate that explanations derived from different model architectures can be vastly different; thus, prone to misinterpretation even under controlled conditions.",
+  "category": "vision",
+  "domain": "computer vision / explainable AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "explanation",
+    "classification",
+    "feature_attribution"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "explanation_fidelity_metrics (e.g., IoU / AUC / correlation against ground-truth masks)",
+  "general_score_metric": "mean explanation fidelity (IoU/AUC)",
+  "typical_sota_score": "30–60%",
+  "year_of_publish": 2023,
+  "reputation": "Well-cited within the XAI community for providing controlled, ground-truth benchmarks for attribution methods; regarded as influential for probing limits of popular XAI methods.",
+  "notes": "Small, synthetic datasets with designed ground-truth explanations; results may not generalize to natural images. Explanations strongly depend on model architecture; not an LLM benchmark. Useful for controlled diagnostic evaluation but may underrepresent real-world complexity.",
+  "creators": {
+    "scientists": [
+      "Benedict Clark",
+      "Rick Wilming",
+      "Stefan Haufe"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2306.12816",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

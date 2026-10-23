@@ -1,0 +1,42 @@
+{
+  "name": "MedVLC-Bench",
+  "description": "We perform a comprehensive benchmarking of contrastive frameworks for learning multimodal representations in the medical domain. Through this study, we aim to answer the following research questions: (i) How transferable are general-domain representations to the medical domain? (ii) Is multimodal contrastive training sufficient, or does it benefit from unimodal training as well? (iii) What is the impact of feature granularity on the effectiveness of multimodal medical representation learning? To answer these questions, we investigate eight contrastive learning approaches under identical training setups, and train them on 2.8 million image-text pairs from four datasets, and evaluate them on 25 downstream tasks, including classification (zero-shot and linear probing), image-to-text and text-to-image retrieval, and visual question-answering. Our findings suggest a positive answer to the first question, a negative answer to the second question, and the benefit of learning fine-grained features. Finally, we make our code publicly available.",
+  "category": "multimodal",
+  "domain": "medical imaging / multimodal medical data",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "retrieval",
+    "visual_question_answering",
+    "zero_shot",
+    "linear_probing"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (classification), Recall@k / retrieval metrics (retrieval), VQA accuracy (VQA)",
+  "general_score_metric": "task-specific metrics (accuracy for classification/VQA; Recall@k for retrieval)",
+  "year_of_publish": 2024,
+  "reputation": "An emerging and relevant benchmark for multimodal medical representation learning with interest from the medical-ML research community.",
+  "notes": "Large-scale training (millions of image-text pairs) reduces small-sample issues but raises potential pretraining overlap/contamination concerns; task suite is heterogeneous so results are task-dependent and require multiple metrics.",
+  "creators": {
+    "scientists": [
+      "Shuvendu Roy",
+      "Yasaman Parhizkar",
+      "Franklin Ogidi",
+      "Vahid Reza Khazaie",
+      "Michael Colacci",
+      "Ali Etemad",
+      "Elham Dolatabadi",
+      "Arash Afkanpour"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.07450",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

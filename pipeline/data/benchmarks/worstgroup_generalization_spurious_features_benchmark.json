@@ -1,0 +1,38 @@
+{
+  "name": "Worst-Group Generalization / Spurious Features Benchmark",
+  "description": "Deep neural networks often exploit *spurious* features that are present in the majority of examples within a class during training. This leads to *poor worst-group test accuracy*, i.e., poor accuracy for minority groups that lack these spurious features. Despite the growing body of recent efforts to address spurious correlations (SC), several challenging settings remain unexplored.In this work, we propose studying methods to mitigate SC in settings with: 1) spurious features that are learned more slowly, 2) a larger number of classes, and 3) a larger number of groups. We introduce two new datasets, Animals and SUN, to facilitate this study and conduct a systematic benchmarking of 8 state-of-the-art (SOTA) methods across a total of 5 vision datasets, training over 5,000 models. Through this, we highlight how existing group inference methods struggle in the presence of spurious features that are learned later in training. Additionally, we demonstrate how all existing methods struggle in settings with more groups and/or classes. Finally, we show the importance of careful model selection (hyperparameter tuning) in extracting optimal performance, especially in the more challenging settings we introduced, and propose more cost-efficient strategies for model selection. Overall, through extensive and systematic experiments, this work uncovers a suite of new challenges and opportunities for improving worst-group generalization in the presence of spurious features. Our datasets, methods and scripts available at https://github.com/BigML-CS-UCLA/SpuCo.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation",
+    "group_fairness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy, with emphasis on worst-group test accuracy (worst-group accuracy as the primary metric)",
+  "general_score_metric": "worst-group accuracy (in addition to overall accuracy)",
+  "typical_sota_score": "varies widely by dataset and method (commonly reported worst-group accuracies range from ~30% to >85% depending on setting)",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded in the robustness/fairness research community for studying spurious correlations and worst-group performance; used as a research benchmark rather than a large public leaderboard.",
+  "notes": "Requires group labels or group inference, sensitive to model selection and hyperparameter tuning, computationally intensive (many models trained in the original study). Introduces new datasets (Animals, SUN) emphasizing late-learned spurious features; not an LLM benchmark and not saturated.",
+  "creators": {
+    "scientists": [
+      "Siddharth Joshi",
+      "Yu Yang",
+      "Yihao Xue",
+      "Wenhan Yang",
+      "Baharan Mirzasoleiman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.11957",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

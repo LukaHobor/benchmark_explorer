@@ -1,0 +1,38 @@
+{
+  "name": "LiDAR-Camera Fusion Robustness Benchmark",
+  "description": "To achieve autonomous driving, developing 3D detection fusion methods, which aim to fuse the camera and LiDAR information, has draw great research interest in recent years. As a common practice, people rely on large-scale datasets to fairly compare the performance of different methods. While these datasets have been carefully cleaned to ideally minimize any potential noise, we observe that they cannot truly reflect the data seen on a real autonomous vehicle, whose data tends to be noisy due to various reasons. This hinders the ability to simply estimate the robust performance under realistic noisy settings. To this end, we collect a series of real-world cases with noisy data distribution, and systematically formulate a robustness benchmark toolkit. It can simulate these cases on any clean dataset, which has the camera and LiDAR input modality. We showcase the effectiveness of our toolkit by establishing two novel robustness benchmarks on widely-adopted datasets, nuScenes and Waymo, then holistically evaluate the state-of-the-art fusion methods. We discover that: i) most fusion methods, when solely developed on these data, tend to fail inevitably when there is a disruption to the LiDAR input; ii) the improvement of the camera input is significantly inferior to the LiDAR one. We publish the robust fusion dataset, benchmark, detailed documents and instructions on https://anonymous-benchmark.github.io/robust-benchmark-website.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_object_detection",
+    "robustness_evaluation",
+    "sensor_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) / average_precision under robustness scenarios",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "40–70%",
+  "year_of_publish": 2023,
+  "reputation": "61 citations",
+  "notes": "non-LLM benchmark; focuses on LiDAR–camera fusion robustness using simulated real-world noise on nuScenes and Waymo; results sensitive to sensor calibration and types of simulated corruption; limited to scenarios covered by the toolkit.",
+  "creators": {
+    "scientists": [
+      "Kaicheng Yu",
+      "Tao Tang",
+      "Hongwei Xie",
+      "Zhiwei Lin",
+      "Tingting Liang",
+      "Bing Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1109/cvprw59228.2023.00321",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

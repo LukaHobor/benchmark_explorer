@@ -1,0 +1,36 @@
+{
+  "name": "RETA",
+  "description": "Topological and geometrical analysis of retinal blood vessel is a cost-effective way for early detection of many common diseases. Meanwhile, automated vessel segmentation and vascular tree analysis are still lacking in terms of generalization capability. In this work, we construct a novel benchmark RETA with 81 labeled vessel masks aiming to facilitate retinal vessel analysis. A semi-automated coarse-to-fine workflow is proposed to annotating vessel pixels. During dataset construction, we strived to control inter-annotator variability and intra-annotator variability by performing multi-stage annotation and label disambiguation on self-developed dedicated software. In addition to binary vessel masks, we obtained vessel annotations containing artery/vein masks, vascular skeletons, bifurcations, trees and abnormalities during vessel labelling. Both subjective and objective quality validation of labeled vessel masks have demonstrated significant improved quality over other publicly datasets. The annotation software is also made publicly available for vessel annotation visualization. Users could develop vessel segmentation algorithms or evaluate vessel segmentation performance with our dataset. Moreover, our dataset might be a good research source for cross-modality tubular structure segmentation.",
+  "category": "vision",
+  "domain": "medical imaging (retinal imaging/ophthalmology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "vessel_segmentation",
+    "artery_vein_classification",
+    "skeleton_extraction",
+    "bifurcation_detection",
+    "vascular_tree_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice coefficient (F1) / Intersection-over-Union (IoU) and pixel-wise segmentation metrics; topology-aware metrics for skeleton/tree analyses",
+  "general_score_metric": "Dice coefficient (F1) / IoU",
+  "year_of_publish": 2021,
+  "reputation": "A niche, high-quality benchmark valued for detailed vessel and artery/vein annotations but limited in adoption due to small size.",
+  "notes": "Very small dataset (81 masks) — high-quality annotations but prone to overfitting and limited generalization; useful for vessel-specific research and cross-modality tubular-structure tasks; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xingzheng Lyu",
+      "Li Cheng",
+      "Sanyuan Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2111.11658",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

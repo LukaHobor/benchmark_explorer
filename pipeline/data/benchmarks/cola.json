@@ -1,0 +1,38 @@
+{
+  "name": "Cola",
+  "description": "Compositional reasoning is a hallmark of human visual intelligence; yet despite the size of large vision-language models, they struggle to represent simple compositions by combining objects with their attributes. To measure this lack of compositional capability, we design Cola, a text-to-image retrieval benchmark to Compose Objects Localized with Attributes. To solve Cola, a model must retrieve images with the correct configuration of attributes and objects, and avoid choosing a distractor image with the same objects and attributes but in the wrong configuration. Cola contains about 1.2k composed queries of 168 objects and 197 attributes on around 30K images. Our human evaluation finds that Cola is 83.33% accurate, similar to contemporary compositionality benchmarks. Using Cola as a testbed, we explore empirical modeling designs to adapt pre-trained vision-language models to reason compositionally. We explore 6 adaptation strategies on 2 seminal vision-language models, using compositionality-centric test benchmarks - Cola and CREPE. We find the optimal adaptation strategy is to train a multimodal attention layer that jointly attends over the frozen pre-trained image and language features. Surprisingly, training multimodal layers on CLIP performs better than tuning a larger FLAVA model with already pre-trained multimodal layers. Furthermore, our adaptation strategy improves CLIP and FLAVA to comparable levels, suggesting that training multimodal layers using contrastive attribute-object data is key, as opposed to using them pre-trained. Lastly, we show that Cola is harder than a closely related contemporary benchmark, CREPE, since simpler fine-tuning strategies without multimodal layers suffice on CREPE, but not on Cola. However, we still see a significant gap between our best adaptation and human accuracy, suggesting considerable room for further research.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "text_to_image_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k",
+  "general_score_metric": "Recall@K (R@1 / R@5)",
+  "typical_sota_score": "30–70%",
+  "year_of_publish": 2023,
+  "reputation": "A specialized compositional text-to-image retrieval benchmark cited in vision-language retrieval research; moderately recognized for testing compositional generalization.",
+  "notes": "Focused on compositional queries; dataset size and specialized composition-focused queries mean results may not generalize to broad captioning/retrieval tasks. Non-LLM/vision-language benchmark.",
+  "creators": {
+    "scientists": [
+      "Abhimanyu Dubey",
+      "Ranjay Krishna",
+      "Bryan Plummer",
+      "Filip Radenovic",
+      "Arijit Ray",
+      "Kate Saenko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.52202/075280-2014",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

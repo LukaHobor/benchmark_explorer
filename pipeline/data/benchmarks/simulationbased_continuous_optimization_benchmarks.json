@@ -1,0 +1,33 @@
+{
+  "name": "Simulation-based Continuous Optimization Benchmarks",
+  "description": "Benchmark experiments are required to test, compare, tune, and understand optimization algorithms. Ideally, benchmark problems closely reflect real-world problem behavior. Yet, real-world problems are not always readily available for benchmarking. For example, evaluation costs may be too high, or resources are unavailable (e.g., software or equipment). As a solution, data from previous evaluations can be used to train surrogate models which are then used for benchmarking. The goal is to generate test functions on which the performance of an algorithm is similar to that on the real-world objective function. However, predictions from data-driven models tend to be smoother than the ground-truth from which the training data is derived. This is especially problematic when the training data becomes sparse. The resulting benchmarks may not reflect the landscape features of the ground-truth, are too easy, and may lead to biased conclusions. To resolve this, we use simulation of Gaussian processes instead of estimation (or prediction). This retains the covariance properties estimated during model training. While previous research suggested a decomposition-based approach for a small-scale, discrete problem, we show that the spectral simulation method enables simulation for continuous optimization problems. In a set of experiments with an artificial ground-truth, we demonstrate that this yields more accurate benchmarks than simply predicting with the Gaussian process model.",
+  "category": "mixed",
+  "domain": "continuous optimization / numerical optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "function_optimization",
+    "benchmarking",
+    "surrogate_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "simple_regret / best_found_objective (convergence curves and budget-limited performance)",
+  "general_score_metric": "simple_regret (best-found objective value over a fixed budget)",
+  "year_of_publish": 2020,
+  "reputation": "A niche but respected methodology in the surrogate-benchmarking community for producing more realistic simulation-based test functions; cited by researchers studying surrogate-based optimization evaluation.",
+  "notes": "Non-LLM benchmark; results depend heavily on surrogate covariance estimation and chosen ground-truth; benchmarks reflect simulation randomness (requires seeds); comparability across different surrogate setups can be limited.",
+  "creators": {
+    "scientists": [
+      "Martin Zaefferer",
+      "Frederik Rehbach"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2008.06249",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

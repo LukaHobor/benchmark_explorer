@@ -1,0 +1,39 @@
+{
+  "name": "Swell Noise Dataset",
+  "description": "The recent development of deep learning (DL) methods for computer vision has been driven by the creation of open benchmark datasets on which new algorithms can be tested and compared with reproducible results. Although DL methods have many applications in geophysics, few real seismic datasets are available for benchmarking DL models, especially for denoising real data, which is one of the main problems in seismic data processing scenarios in the oil and gas industry. This article presents a benchmark dataset composed of synthetic seismic data corrupted with noise extracted from a filtering process implemented on real data. In this work, a comparison between two well-known DL-based denoising models is conducted on this dataset, which is proposed as a benchmark for accelerating the development of new solutions for seismic data denoising. This work also introduces a new evaluation metric that can capture small variations in model results. The results show that DL models are effective at denoising seismic data, but some issues remain to be solved.",
+  "category": "mixed",
+  "domain": "geophysics / seismic",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "denoising",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "signal-to-noise ratio (SNR), mean_squared_error (MSE), and a paper-proposed custom metric sensitive to small variations",
+  "general_score_metric": "Signal-to-noise ratio (SNR) (paper also reports MSE and a custom sensitive metric)",
+  "year_of_publish": 2024,
+  "reputation": "A niche, domain-specific benchmark proposed for seismic denoising research with limited but relevant adoption in geophysics DL work.",
+  "notes": "Synthetic seismic signals are corrupted using noise extracted from real filtering processes; dataset size and fidelity to all field conditions may be limited. Not an LLM benchmark and may not generalize to all real-world seismic noise scenarios.",
+  "creators": {
+    "scientists": [
+      "Pablo M. Barros",
+      "Roosevelt de L. Sardinha",
+      "Giovanny A. M. Arboleda",
+      "Lessandro de S. S. Valente",
+      "Isabelle R. V. de Melo",
+      "Albino Aveleda",
+      "André Bulcão",
+      "Sergio L. Netto",
+      "Alexandre G. Evsukoff"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.08231",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

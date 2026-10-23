@@ -1,0 +1,37 @@
+{
+  "name": "Remote Sensing Robustness Benchmark",
+  "description": "Deep neural networks (DNNs) have found widespread applications in interpreting remote sensing (RS) imagery. However, it has been demonstrated in previous works that DNNs are vulnerable to different types of noises, particularly adversarial noises. Surprisingly, there has been a lack of comprehensive studies on the robustness of RS tasks, prompting us to undertake a thorough survey and benchmark on the robustness of image classification and object detection in RS. To our best knowledge, this study represents the first comprehensive examination of both natural robustness and adversarial robustness in RS tasks. Specifically, we have curated and made publicly available datasets that contain natural and adversarial noises. These datasets serve as valuable resources for evaluating the robustness of DNNs-based models. To provide a comprehensive assessment of model robustness, we conducted meticulous experiments with numerous different classifiers and detectors, encompassing a wide range of mainstream methods. Through rigorous evaluation, we have uncovered insightful and intriguing findings, which shed light on the relationship between adversarial noise crafting and model training, yielding a deeper understanding of the susceptibility and limitations of various models, and providing guidance for the development of more resilient and robust models",
+  "category": "vision",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "object_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (classification); mean Average Precision (mAP) (detection); robustness degradation (accuracy/mAP drop under noise/adversary)",
+  "general_score_metric": "accuracy for classification; mAP for detection (with robustness degradation reported)",
+  "year_of_publish": 2023,
+  "reputation": "A niche but important benchmark in remote sensing robustness research; cited as the first comprehensive study of natural and adversarial robustness in RS imagery (since 2023).",
+  "notes": "Non-LLM vision benchmark focused on natural and adversarial noises; dataset sizes are moderate and results are sensitive to attack type and model training; potential dataset bias and domain-specificity to remote sensing imagery.",
+  "creators": {
+    "scientists": [
+      "Shaohui Mei",
+      "Jiawei Lian",
+      "Xiaofei Wang",
+      "Yuru Su",
+      "Mingyang Ma",
+      "Lap-Pui Chau"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.12111",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

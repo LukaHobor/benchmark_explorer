@@ -1,0 +1,38 @@
+{
+  "name": "COVID-19 EHR ICU Predictive Modeling Benchmark",
+  "description": "The COVID-19 pandemic has posed a heavy burden to the healthcare system worldwide and caused huge social disruption and economic loss. Many deep learning models have been proposed to conduct clinical predictive tasks such as mortality prediction for COVID-19 patients in intensive care units using Electronic Health Record (EHR) data. Despite their initial success in certain clinical applications, there is currently a lack of benchmarking results to achieve a fair comparison so that we can select the optimal model for clinical use. Furthermore, there is a discrepancy between the formulation of traditional prediction tasks and real-world clinical practice in intensive care. To fill these gaps, we propose two clinical prediction tasks, Outcome-specific length-of-stay prediction and Early mortality prediction for COVID-19 patients in intensive care units. The two tasks are adapted from the naive length-of-stay and mortality prediction tasks to accommodate the clinical practice for COVID-19 patients. We propose fair, detailed, open-source data-preprocessing pipelines and evaluate 17 state-of-the-art predictive models on two tasks, including 5 machine learning models, 6 basic deep learning models and 6 deep learning predictive models specifically designed for EHR data. We provide benchmarking results using data from two real-world COVID-19 EHR datasets. One dataset is publicly available without needing any inquiry and another dataset can be accessed on request. We provide fair, reproducible benchmarking results for two tasks. We deploy all experiment results and models on an online platform. We also allow clinicians and researchers to upload their data to the platform and get quick prediction results using our trained models. We hope our efforts can further facilitate deep learning and machine learning research for COVID-19 predictive modeling.",
+  "category": "mixed",
+  "domain": "medical / healthcare (EHR)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC for mortality classification; MAE/RMSE for length-of-stay regression",
+  "general_score_metric": "AUROC (mortality) and MAE/RMSE (length-of-stay)",
+  "typical_sota_score": "AUROC ~0.75–0.90 on reported datasets; regression errors vary strongly by dataset and task",
+  "year_of_publish": 2022,
+  "reputation": "Provides open-source preprocessing pipelines and a reproducible comparison of many EHR models for COVID-19 ICU tasks; cited in clinical ML work but adoption is mainly within COVID-19 research.",
+  "notes": "Non-LLM benchmark using sensitive EHR data — potential temporal leakage and dataset shift risks; varying data availability across sites; limited generalizability beyond COVID-19 cohorts without revalidation.",
+  "creators": {
+    "scientists": [
+      "Junyi Gao",
+      "Yinghao Zhu",
+      "Wenqing Wang",
+      "Yasha Wang",
+      "Wen Tang",
+      "Ewen M. Harrison",
+      "Liantao Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2209.07805",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

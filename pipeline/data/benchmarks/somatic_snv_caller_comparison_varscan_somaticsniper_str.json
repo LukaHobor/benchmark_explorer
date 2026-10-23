@@ -1,0 +1,37 @@
+{
+  "name": "Somatic SNV caller comparison (Varscan, SomaticSniper, Strelka, MuTect2)",
+  "description": "Four popular somatic single nucleotide variant (SNV) calling methods (Varscan, SomaticSniper, Strelka and MuTect2) were carefully evaluated on the real whole exome sequencing (WES, depth of ~50X) and ultra-deep targeted sequencing (UDT-Seq, depth of ~370X) data. The four tools returned poor consensus on candidates (only 20% of calls were with multiple hits by the callers). For both WES and UDT-Seq, MuTect2 and Strelka obtained the largest proportion of COSMIC entries as well as the lowest rate of dbSNP presence and high-alternative-alleles-in-control calls, demonstrating their superior sensitivity and accuracy. Combining different callers does increase reliability of candidates, but narrows the list down to very limited range of tumor read depth and variant allele frequency. Calling SNV on UDT-Seq data, which were of much higher read-depth, discovered additional true-positive variations, despite an even more tremendous growth in false positive predictions. Our findings not only provide valuable benchmark for state-of-the-art SNV calling methods, but also shed light on the access to more accurate SNV identification in the future.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "variant_calling",
+    "binary_classification",
+    "detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (precision/recall) with sensitivity and false positive rate reported",
+  "general_score_metric": "F1 score (with precision and recall reported)",
+  "typical_sota_score": "varies widely (often 60–95% depending on sequencing depth, caller and filtering)",
+  "year_of_publish": 2016,
+  "reputation": "124 citations",
+  "notes": "Non-LLM benchmark on real WES and ultra-deep targeted sequencing; small/limited cohorts and strong dependence on sequencing depth and filtering. High false-positive growth at very high depth; poor caller consensus — combining callers increases precision but narrows detectable VAF/read-depth range.",
+  "creators": {
+    "scientists": [
+      "Lei Cai",
+      "Wei Yuan",
+      "Zhou Zhang",
+      "Lin He",
+      "Kuo‐Chen Chou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/srep36540",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Aneumo",
+  "description": "Intracranial aneurysms (IAs) are serious cerebrovascular lesions found in approximately 5\\% of the general population. Their rupture may lead to high mortality. Current methods for assessing IA risk focus on morphological and patient-specific factors, but the hemodynamic influences on IA development and rupture remain unclear. While accurate for hemodynamic studies, conventional computational fluid dynamics (CFD) methods are computationally intensive, hindering their deployment in large-scale or real-time clinical applications. To address this challenge, we curated a large-scale, high-fidelity aneurysm CFD dataset to facilitate the development of efficient machine learning algorithms for such applications. Based on 427 real aneurysm geometries, we synthesized 10,660 3D shapes via controlled deformation to simulate aneurysm evolution. The authenticity of these synthetic shapes was confirmed by neurosurgeons. CFD computations were performed on each shape under eight steady-state mass flow conditions, generating a total of 85,280 blood flow dynamics data covering key parameters. Furthermore, the dataset includes segmentation masks, which can support tasks that use images, point clouds or other multimodal data as input. Additionally, we introduced a benchmark for estimating flow parameters to assess current modeling methods. This dataset aims to advance aneurysm research and promote data-driven approaches in biofluids, biomedical engineering, and clinical risk assessment. The code and dataset are available at: https://github.com/Xigui-Li/Aneumo.",
+  "category": "multimodal",
+  "domain": "medical imaging / computational hemodynamics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "segmentation",
+    "surrogate_modeling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "MAE / RMSE for flow-parameter regression; IoU / Dice for segmentation tasks",
+  "general_score_metric": "MAE (mean absolute error) for primary flow-parameter estimation benchmark",
+  "year_of_publish": 2025,
+  "reputation": "A recently released, high-fidelity CFD dataset for aneurysm research that is gaining interest in biofluids and medical-imaging communities but is not yet widely adopted.",
+  "notes": "Multimodal, non-LLM benchmark combining geometry, segmentation masks and CFD outputs; many examples are synthetically generated from 427 real geometries (possible domain-shift vs. wholly real data). Requires CFD expertise/HPC to reproduce full simulations; potential risk of models overfitting synthetic deformation patterns.",
+  "creators": {
+    "scientists": [
+      "Xigui Li",
+      "Yuanye Zhou",
+      "Feiyang Xiao",
+      "Xin Guo",
+      "Chen Jiang",
+      "Tan Pan",
+      "Xingmeng Zhang",
+      "Cenyu Liu",
+      "Zeyun Miao",
+      "Jianchao Ge",
+      "Xiansheng Wang",
+      "Qimeng Wang",
+      "Yichi Zhang",
+      "Wenbo Zhang",
+      "Fengping Zhu",
+      "Limei Han",
+      "Yuan Qi",
+      "Chensen Lin",
+      "Yuan Cheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.14717",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

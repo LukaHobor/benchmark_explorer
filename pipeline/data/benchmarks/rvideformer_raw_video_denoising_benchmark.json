@@ -1,0 +1,37 @@
+{
+  "name": "RViDeformer Raw Video Denoising Benchmark",
+  "description": "In recent years, raw video denoising has garnered increased attention due to the consistency with the imaging process and well-studied noise modeling in the raw domain. However, two problems still hinder the denoising performance. Firstly, there is no large dataset with realistic motions for supervised raw video denoising, as capturing noisy and clean frames for real dynamic scenes is difficult. To address this, we propose recapturing existing high-resolution videos displayed on a 4K screen with high-low ISO settings to construct noisy-clean paired frames. In this way, we construct a video denoising dataset (named as ReCRVD) with 120 groups of noisy-clean videos, whose ISO values ranging from 1600 to 25600. Secondly, while non-local temporal-spatial attention is beneficial for denoising, it often leads to heavy computation costs. We propose an efficient raw video denoising transformer network (RViDeformer) that explores both short and long-distance correlations. Specifically, we propose multi-branch spatial and temporal attention modules, which explore the patch correlations from local window, local low-resolution window, global downsampled window, and neighbor-involved window, and then they are fused together. We employ reparameterization to reduce computation costs. Our network is trained in both supervised and unsupervised manners, achieving the best performance compared with state-of-the-art methods. Additionally, the model trained with our proposed dataset (ReCRVD) outperforms the model trained with previous benchmark dataset (CRVD) when evaluated on the real-world outdoor noisy videos. Our code and dataset will be released after the acceptance of this work.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_denoising",
+    "supervised_learning",
+    "unsupervised_learning",
+    "image_restoration"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM (image quality metrics); sometimes perceptual metrics and visual inspection",
+  "general_score_metric": "PSNR (primary), SSIM (secondary)",
+  "typical_sota_score": "≈32–40 dB (PSNR) on reported test sets (varies by noise level and method)",
+  "year_of_publish": 2023,
+  "reputation": "A recent, domain-specific benchmark/dataset for raw video denoising with a novel recapture protocol; recognized within low-level vision and computational photography communities but not yet widely adopted outside that niche.",
+  "notes": "Non-LLM benchmark; relatively small dataset (120 video groups) built via screen recapture; realistic motion and ISO diversity but potential domain gaps to arbitrary real-world captures; evaluation sensitive to exact raw processing pipeline and ISP; possible saturation on PSNR for very similar methods.",
+  "creators": {
+    "scientists": [
+      "Huanjing Yue",
+      "Cong Cao",
+      "Lei Liao",
+      "Jingyu Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.00767",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

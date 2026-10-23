@@ -1,0 +1,34 @@
+{
+  "name": "RawMal-TF",
+  "description": "This work addresses the challenge of malware classification using machine learning by developing a novel dataset labeled at both the malware type and family levels. Raw binaries were collected from sources such as VirusShare, VX Underground, and MalwareBazaar, and subsequently labeled with family information parsed from binary names and type-level labels integrated from ClarAVy. The dataset includes 14 malware types and 17 malware families, and was processed using a unified feature extraction pipeline based on static analysis, particularly extracting features from Portable Executable headers, to support advanced classification tasks. The evaluation was focused on three key classification tasks. In the binary classification of malware versus benign samples, Random Forest and XGBoost achieved high accuracy on the full datasets, reaching 98.5% for type-based detection and 98.98% for family-based detection. When using truncated datasets of 1,000 samples to assess performance under limited",
+  "category": "mixed",
+  "domain": "ml security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multi_class_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "98–99%",
+  "year_of_publish": 2025,
+  "reputation": "A recent malware classification dataset/benchmark that is useful for security research but has not yet established broad community standard status.",
+  "notes": "Non-LLM benchmark based on static PE features; results may be sensitive to dataset construction and potential label leakage from family/type naming.",
+  "creators": {
+    "scientists": [
+      "David Bálik",
+      "Martin Jureček",
+      "Mark Stamp"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2506.23909",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

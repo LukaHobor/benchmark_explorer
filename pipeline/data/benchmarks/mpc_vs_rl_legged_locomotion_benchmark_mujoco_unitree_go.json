@@ -1,0 +1,33 @@
+{
+  "name": "MPC vs RL Legged Locomotion Benchmark (MuJoCo, Unitree Go1)",
+  "description": "Model Predictive Control (MPC) and Reinforcement Learning (RL) are two prominent strategies for controlling legged robots. RL learns control policies through system interaction, adapting to various scenarios, whereas MPC relies on a predefined mathematical model to solve optimization problems in real-time. Despite their widespread use, there is a lack of direct comparative analysis under standardized conditions. This work addresses this gap by benchmarking MPC and RL controllers on a Unitree Go1 quadruped robot within the MuJoCo simulation environment, focusing on a standardized task, straight walking at a constant velocity. Performance is evaluated based on disturbance rejection, energy efficiency, and terrain adaptability. The results show that RL excels in handling disturbances and maintaining energy efficiency but struggles with generalization to new terrains due to its dependence on learned policies tailored to specific environments. In contrast, MPC shows enhanced recovery capabilities from larger perturbations by leveraging its optimization-based approach, allowing for a balanced distribution of control efforts across the robot’s joints. The results present the advantages and limitations of both RL and MPC, offering insights into selecting an appropriate control strategy for legged robotic applications.",
+  "category": "mixed",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "trajectory_tracking",
+    "robustness_evaluation",
+    "energy_efficiency_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate combined with quantitative continuous metrics (energy consumption, disturbance-recovery time, stability measures)",
+  "general_score_metric": "composite_score (combined task success and continuous performance metrics)",
+  "year_of_publish": 2025,
+  "reputation": "9 citations",
+  "notes": "Simulation-only (MuJoCo) results may not transfer to real hardware; benchmark is specific to Unitree Go1 and standardized conditions, limiting generality; reproducibility depends on simulation and controller implementation details.",
+  "creators": {
+    "scientists": [
+      "Shivayogi Akki",
+      "Tan Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2501.16590",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

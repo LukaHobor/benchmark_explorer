@@ -1,0 +1,36 @@
+{
+  "name": "APBench",
+  "description": "The efficacy of availability poisoning, a method of poisoning data by injecting imperceptible perturbations to prevent its use in model training, has been a hot subject of investigation. Previous research suggested that it was difficult to effectively counteract such poisoning attacks. However, the introduction of various defense methods has challenged this notion. Due to the rapid progress in this field, the performance of different novel methods cannot be accurately validated due to variations in experimental setups. To further evaluate the attack and defense capabilities of these poisoning methods, we have developed a benchmark -- APBench for assessing the efficacy of adversarial poisoning. APBench consists of 9 state-of-the-art availability poisoning attacks, 8 defense algorithms, and 4 conventional data augmentation techniques. We also have set up experiments with varying different poisoning ratios, and evaluated the attacks on multiple datasets and their transferability across model architectures. We further conducted a comprehensive evaluation of 2 additional attacks specifically targeting unsupervised models. Our results reveal the glaring inadequacy of existing attacks in safeguarding individual privacy. APBench is open source and available to the deep learning community: https://github.com/lafeat/apbench.",
+  "category": "mixed",
+  "domain": "machine learning security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "adversarial_attack_evaluation",
+    "defense_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack_success_rate / accuracy_drop",
+  "general_score_metric": "attack_success_rate",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "An emerging, research-focused benchmark consolidating many availability poisoning attacks and defenses; increasingly cited in the data-poisoning literature but not yet a universal standard.",
+  "notes": "Mixed benchmark across multiple datasets and architectures; outcomes are sensitive to experimental setup and implementation details. Not an LLM benchmark; care required to match protocols when comparing methods.",
+  "creators": {
+    "scientists": [
+      "Tianrui Qin",
+      "Xitong Gao",
+      "Juanjuan Zhao",
+      "Kejiang Ye",
+      "Cheng-Zhong Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2308.03258",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

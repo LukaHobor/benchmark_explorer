@@ -1,0 +1,38 @@
+{
+  "name": "Text-to-Video Retrieval Benchmark Assessment (FIRE)",
+  "description": "Searching troves of videos with textual descriptions is a core multimodal retrieval task. Owing to the lack of a purpose-built dataset for text-to-video retrieval, video captioning datasets have been re-purposed to evaluate models by (1) treating captions as positive matches to their respective videos and (2) assuming all other videos to be negatives. However, this methodology leads to a fundamental flaw during evaluation: since captions are marked as relevant only to their original video, many alternate videos also match the caption, which introduces false-negative caption-video pairs. We show that when these false negatives are corrected, a recent state-of-the-art model gains 25\\% recall points -- a difference that threatens the validity of the benchmark itself. To diagnose and mitigate this issue, we annotate and release 683K additional caption-video pairs. Using these, we recompute effectiveness scores for three models on two standard benchmarks (MSR-VTT and MSVD). We find that (1) the recomputed metrics are up to 25\\% recall points higher for the best models, (2) these benchmarks are nearing saturation for Recall@10, (3) caption length (generality) is related to the number of positives, and (4) annotation costs can be mitigated through sampling. We recommend retiring these benchmarks in their current form, and we make recommendations for future text-to-video retrieval benchmarks.",
+  "category": "multimodal",
+  "domain": "vision / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Recall@K (e.g., Recall@1/5/10)",
+  "general_score_metric": "Recall@K (commonly Recall@10)",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2022,
+  "reputation": "Influential diagnostic paper/dataset in the video-retrieval community that revealed pervasive false negatives and influenced re-evaluation of standard benchmarks.",
+  "notes": "Contains corrected positive caption-video annotations to address false negatives; shows saturation for Recall@10 on MSR-VTT/MSVD. Caveats: original benchmarks had false negatives, risk of overestimating model progress if not using corrected labels; not an LLM-specific benchmark.",
+  "creators": {
+    "scientists": [
+      "Pedro Rodriguez",
+      "Mahmoud Azab",
+      "Becka Silvert",
+      "Renato Sanchez",
+      "Linzy Labson",
+      "Hardik Shah",
+      "Seungwhan Moon"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.05038",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

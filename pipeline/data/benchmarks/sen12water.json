@@ -1,0 +1,36 @@
+{
+  "name": "SEN12-WATER",
+  "description": "Climate change and increasing droughts pose significant challenges to water resource management around the world. These problems lead to severe water shortages that threaten ecosystems, agriculture, and human communities. To advance the fight against these challenges, we present a new dataset, SEN12-WATER, along with a benchmark using a novel end-to-end Deep Learning (DL) framework for proactive drought-related analysis. The dataset, identified as a spatiotemporal datacube, integrates SAR polarization, elevation, slope, and multispectral optical bands. Our DL framework enables the analysis and estimation of water losses over time in reservoirs of interest, revealing significant insights into water dynamics for drought analysis by examining temporal changes in physical quantities such as water volume. Our methodology takes advantage of the multitemporal and multimodal characteristics of the proposed dataset, enabling robust generalization and advancing understanding of drought, contributing to climate change resilience and sustainable water resource management. The proposed framework involves, among the several components, speckle noise removal from SAR data, a water body segmentation through a U-Net architecture, the time series analysis, and the predictive capability of a Time-Distributed-Convolutional Neural Network (TD-CNN). Results are validated through ground truth data acquired on-ground via dedicated sensors and (tailored) metrics, such as Precision, Recall, Intersection over Union, Mean Squared Error, Structural Similarity Index Measure and Peak Signal-to-Noise Ratio.",
+  "category": "vision",
+  "domain": "climate science / hydrology / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Intersection over Union (IoU) for segmentation; Mean Squared Error (MSE) for volume/time-series prediction (other reported metrics include Precision, Recall, SSIM, PSNR)",
+  "general_score_metric": "IoU for segmentation; MSE for regression/time-series prediction",
+  "year_of_publish": 2024,
+  "reputation": "New and specialized dataset for multimodal spatiotemporal water analysis that is of growing interest in remote sensing and hydrology research communities.",
+  "notes": "Non-LLM, vision-focused benchmark combining SAR, multispectral and elevation data. Contains speckle/noise issues in SAR requiring preprocessing; ground-truth sensor data may be limited geographically, so generalization across regions can be challenging.",
+  "creators": {
+    "scientists": [
+      "Luigi Russo",
+      "Francesco Mauro",
+      "Alessandro Sebastianelli",
+      "Paolo Gamba",
+      "Silvia Liberata Ullo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.17087",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

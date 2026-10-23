@@ -1,0 +1,36 @@
+{
+  "name": "torch_ecg",
+  "description": "In recent years, deep learning has witnessed its blossom in the field of Electrocardiography (ECG) processing, outperforming traditional signal processing methods in various tasks, for example, classification, QRS detection, wave delineation. Although many neural architectures have been proposed in the literature, there is a lack of systematic studies and open-source libraries for ECG deep learning. In this paper, we propose a deep learning framework, named \\texttt{torch\\_ecg}, which gathers a large number of neural networks, both from literature and novel, for various ECG processing tasks. It establishes a convenient and modular way for automatic building and flexible scaling of the networks, as well as a neat and uniform way of organizing the preprocessing procedures and augmentation techniques for preparing the input data for the models. Besides, \\texttt{torch\\_ecg} provides benchmark studies using the latest databases, illustrating the principles and pipelines for solving ECG processing tasks and reproducing results from the literature. \\texttt{torch\\_ecg} offers the ECG research community a powerful tool meeting the growing demand for the application of deep learning techniques.",
+  "category": "audio",
+  "domain": "electrocardiography / medical signal processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "QRS_detection",
+    "wave_delineation",
+    "segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (accuracy and F1 for classification/detection; sensitivity/PPV for QRS; mean error/MAE for delineation; IoU/F1 for segmentation)",
+  "general_score_metric": "task-dependent (F1/accuracy for classification and detection; MAE/mean error for delineation)",
+  "typical_sota_score": "varies by task and dataset; reported model performance commonly ranges from ~80% to >95% depending on task and dataset",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded open-source PyTorch library and benchmark suite in the ECG research community for reproducible experiments and model development.",
+  "notes": "Non-LLM benchmark using multiple public ECG datasets with varying licenses and sizes; results are dataset-dependent and require clinical validation; class imbalance and domain shift across datasets are common caveats.",
+  "creators": {
+    "scientists": [
+      "Wen Hao",
+      "Kang Jingsu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2204.04420",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

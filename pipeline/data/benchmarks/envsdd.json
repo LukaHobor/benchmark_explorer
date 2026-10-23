@@ -1,0 +1,36 @@
+{
+  "name": "EnvSDD",
+  "description": "Audio generation systems now create very realistic soundscapes that can enhance media production, but also pose potential risks. Several studies have examined deepfakes in speech or singing voice. However, environmental sounds have different characteristics, which may make methods for detecting speech and singing deepfakes less effective for real-world sounds. In addition, existing datasets for environmental sound deepfake detection are limited in scale and audio types. To address this gap, we introduce EnvSDD, the first large-scale curated dataset designed for this task, consisting of 45.25 hours of real and 316.74 hours of fake audio. The test set includes diverse conditions to evaluate the generalizability, such as unseen generation models and unseen datasets. We also propose an audio deepfake detection system, based on a pre-trained audio foundation model. Results on EnvSDD show that our proposed system outperforms the state-of-the-art systems from speech and singing domains.",
+  "category": "audio",
+  "domain": "environmental audio / acoustic forensics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC-ROC",
+  "general_score_metric": "AUC-ROC",
+  "year_of_publish": 2025,
+  "reputation": "A newly introduced, large-scale benchmark for environmental sound deepfake detection; promising but with limited adoption so far outside the introducing authors' work.",
+  "notes": "Class imbalance between real (45.25 h) and fake (316.74 h) audio; test set contains unseen generation models and datasets to test generalization; intended for audio forensic use (non-LLM benchmark); potential risk of overlapping generators between train/val/test if synthetic sources are reused.",
+  "creators": {
+    "scientists": [
+      "Han Yin",
+      "Yang Xiao",
+      "Rohan Kumar Das",
+      "Jisheng Bai",
+      "Haohe Liu",
+      "Wenwu Wang",
+      "Mark D Plumbley"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2505.19203",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

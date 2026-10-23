@@ -1,0 +1,36 @@
+{
+  "name": "Small-Bench NLP",
+  "description": "Recent progress in the Natural Language Processing domain has given us several State-of-the-Art (SOTA) pretrained models which can be finetuned for specific tasks. These large models with billions of parameters trained on numerous GPUs/TPUs over weeks are leading in the benchmark leaderboards. In this paper, we discuss the need for a benchmark for cost and time effective smaller models trained on a single GPU. This will enable researchers with resource constraints experiment with novel and innovative ideas on tokenization, pretraining tasks, architecture, fine tuning methods etc. We set up Small-Bench NLP, a benchmark for small efficient neural language models trained on a single GPU. Small-Bench NLP benchmark comprises of eight NLP tasks on the publicly available GLUE datasets and a leaderboard to track the progress of the community. Our ELECTRA-DeBERTa (15M parameters) small model architecture achieves an average score of 81.53 which is comparable to that of BERT-Base's 82.20 (110M parameters). Our models, code and leaderboard are available at https://github.com/smallbenchnlp",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "natural_language_inference",
+    "regression",
+    "sentence_similarity"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score (GLUE average; task-specific accuracy/F1/Pearson as applicable)",
+  "general_score_metric": "average GLUE score",
+  "typical_sota_score": "80–83%",
+  "year_of_publish": 2021,
+  "reputation": "Targeted benchmark for small, single‑GPU models; recognized by researchers focused on efficient models but less prominent than GLUE/SuperGLUE.",
+  "notes": "Designed for small models trained on a single GPU and focuses on a subset of GLUE tasks; not representative of large LLM capabilities and emphasizes parameter/resource efficiency.",
+  "creators": {
+    "scientists": [
+      "Kamal raj Kanakarajan",
+      "Bhuvana Kundumani",
+      "Malaikannan Sankarasubbu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2109.10847",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

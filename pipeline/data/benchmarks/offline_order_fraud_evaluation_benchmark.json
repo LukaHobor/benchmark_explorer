@@ -1,0 +1,33 @@
+{
+  "name": "Offline Order Fraud Evaluation Benchmark",
+  "description": "Amazon and other e-commerce sites must employ mechanisms to protect their millions of customers from fraud, such as unauthorized use of credit cards. One such mechanism is order fraud evaluation, where systems evaluate orders for fraud risk, and either \"pass\" the order, or take an action to mitigate high risk. Order fraud evaluation systems typically use binary classification models that distinguish fraudulent and legitimate orders, to assess risk and take action. We seek to devise a system that considers both financial losses of fraud and long-term customer satisfaction, which may be impaired when incorrect actions are applied to legitimate customers. We propose that taking actions to optimize long-term impact can be formulated as a Reinforcement Learning (RL) problem. Standard RL methods require online interaction with an environment to learn, but this is not desirable in high-stakes applications like order fraud evaluation. Offline RL algorithms learn from logged data collected from the environment, without the need for online interaction, making them suitable for our use case. We show that offline RL methods outperform traditional binary classification solutions in SimStore, a simplified e-commerce simulation that incorporates order fraud risk. We also propose a novel approach to training offline RL policies that adds a new loss term during training, to better align policy exploration with taking correct actions.",
+  "category": "mixed",
+  "domain": "e-commerce / fraud detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "offline_reinforcement_learning",
+    "sequential_decision_making",
+    "binary_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "expected_return (normalized cumulative reward / policy value)",
+  "general_score_metric": "normalized_cumulative_reward (policy expected return)",
+  "year_of_publish": 2022,
+  "reputation": "A research benchmark introduced by the authors of SimStore to study offline RL for fraud mitigation; recognized within offline-RL and applied ML communities but not a mainstream industry standard.",
+  "notes": "Simulated environment (SimStore) rather than real-world deployment; results can be sensitive to reward design and logging policy; distribution shift and offline-data biases are key caveats.",
+  "creators": {
+    "scientists": [
+      "Soysal Degirmenci",
+      "Chris Jones"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2212.02620",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

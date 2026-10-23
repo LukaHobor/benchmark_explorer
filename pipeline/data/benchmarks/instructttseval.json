@@ -1,0 +1,40 @@
+{
+  "name": "InstructTTSEval",
+  "description": "In modern speech synthesis, paralinguistic information--such as a speaker's vocal timbre, emotional state, and dynamic prosody--plays a critical role in conveying nuance beyond mere semantics. Traditional Text-to-Speech (TTS) systems rely on fixed style labels or inserting a speech prompt to control these cues, which severely limits flexibility. Recent attempts seek to employ natural-language instructions to modulate paralinguistic features, substantially improving the generalization of instruction-driven TTS models. Although many TTS systems now support customized synthesis via textual description, their actual ability to interpret and execute complex instructions remains largely unexplored. In addition, there is still a shortage of high-quality benchmarks and automated evaluation metrics specifically designed for instruction-based TTS, which hinders accurate assessment and iterative optimization of these models. To address these limitations, we introduce InstructTTSEval, a benchmark for measuring the capability of complex natural-language style control. We introduce three tasks, namely Acoustic-Parameter Specification, Descriptive-Style Directive, and Role-Play, including English and Chinese subsets, each with 1k test cases (6k in total) paired with reference audio. We leverage Gemini as an automatic judge to assess their instruction-following abilities. Our evaluation of accessible instruction-following TTS systems highlights substantial room for further improvement. We anticipate that InstructTTSEval will drive progress toward more powerful, flexible, and accurate instruction-following TTS.",
+  "category": "audio",
+  "domain": "speech / text-to-speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "acoustic-parameter_specification",
+    "descriptive-style_directive",
+    "role-play"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "LLM-based automatic judging (Gemini) supplemented by human evaluation; reported as instruction-following score / judgment",
+  "general_score_metric": "instruction-following score (automated judge) / human preference",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed benchmark for instruction-driven TTS with limited early adoption; intended to stimulate evaluation of natural-language style control in TTS.",
+  "notes": "Contains paired reference audio (6k examples); primary automatic evaluation uses an LLM judge (Gemini) which may introduce bias; human evaluation is still required for subjective quality aspects; not an LLM-only benchmark.",
+  "creators": {
+    "scientists": [
+      "Kexin Huang",
+      "Qian Tu",
+      "Liwei Fan",
+      "Chenchen Yang",
+      "Dong Zhang",
+      "ShiMin Li",
+      "Zhaoye Fei",
+      "Qinyuan Cheng",
+      "Xipeng Qiu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2506.16381",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

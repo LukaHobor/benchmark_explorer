@@ -1,0 +1,35 @@
+{
+  "name": "OODRobustBench",
+  "description": "Existing works have made great progress in improving adversarial robustness, but typically test their method only on data from the same distribution as the training data, i.e. in-distribution (ID) testing. As a result, it is unclear how such robustness generalizes under input distribution shifts, i.e. out-of-distribution (OOD) testing. This omission is concerning as such distribution shifts are unavoidable when methods are deployed in the wild. To address this issue we propose a benchmark named OODRobustBench to comprehensively assess OOD adversarial robustness using 23 dataset-wise shifts (i.e. naturalistic shifts in input distribution) and 6 threat-wise shifts (i.e., unforeseen adversarial threat models). OODRobustBench is used to assess 706 robust models using 60.7K adversarial evaluations. This large-scale analysis shows that: 1) adversarial robustness suffers from a severe OOD generalization issue; 2) ID robustness correlates strongly with OOD robustness in a positive linear way. The latter enables the prediction of OOD robustness from ID robustness. We then predict and verify that existing methods are unlikely to achieve high OOD robustness. Novel methods are therefore required to achieve OOD robustness beyond our prediction. To facilitate the development of these methods, we investigate a wide range of techniques and identify several promising directions. Code and models are available at: https://github.com/OODRobustBench/OODRobustBench.",
+  "category": "vision",
+  "domain": "computer vision / robustness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "robust_accuracy (accuracy under adversarial attacks across multiple out-of-distribution shifts)",
+  "general_score_metric": "robust accuracy (aggregated adversarial accuracy across dataset-wise and threat-wise shifts)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Well-regarded within the adversarial-robustness community as a large-scale, systematic evaluation of OOD adversarial robustness across many models and shifts.",
+  "notes": "Non-LLM, computer-vision robustness benchmark; large-scale evaluation across many pretrained models and shifts. Not saturated; demonstrates severe OOD generalization issues. Users should be aware of potential dataset overlap/contamination when reusing pretrained models and of the dependence on chosen adversarial attack protocols.",
+  "creators": {
+    "scientists": [
+      "Lin Li",
+      "Yifei Wang",
+      "Chawin Sitawarin",
+      "Michael Spratling"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.12793",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Babel-ImageNet",
+  "description": "Vision-and-language (VL) models with separate encoders for each modality (e.g., CLIP) have become the go-to models for zero-shot image classification and image-text retrieval. They are, however, mostly evaluated in English as multilingual benchmarks are limited in availability. We introduce Babel-ImageNet, a massively multilingual benchmark that offers (partial) translations of ImageNet labels to 100 languages, built without machine translation or manual annotation. We instead automatically obtain reliable translations by linking them -- via shared WordNet synsets -- to BabelNet, a massively multilingual lexico-semantic network. We evaluate 11 public multilingual CLIP models on zero-shot image classification (ZS-IC) on our benchmark, demonstrating a significant gap between English ImageNet performance and that of high-resource languages (e.g., German or Chinese), and an even bigger gap for low-resource languages (e.g., Sinhala or Lao). Crucially, we show that the models' ZS-IC performance highly correlates with their performance in image-text retrieval, validating the use of Babel-ImageNet to evaluate multilingual models for the vast majority of languages without gold image-text data. Finally, we show that the performance of multilingual CLIP can be drastically improved for low-resource languages with parameter-efficient language-specific training. We make our code and data publicly available: \\url{https://github.com/gregor-ge/Babel-ImageNet}",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "closed_set_classification",
+    "image_text_retrieval"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "top-1 accuracy",
+  "typical_sota_score": "English ~70–80% (varies by model); many low-resource languages often <40%",
+  "year_of_publish": 2023,
+  "reputation": "6 citations",
+  "notes": "Translations are produced via synset linking to BabelNet (not manual translation) so label quality varies by language and synset coverage; benchmark focuses on label-level multilingual evaluation (no gold image-text pairs for many languages); not an LLM benchmark and not saturated for low-resource languages.",
+  "creators": {
+    "scientists": [
+      "Gregor Geigle",
+      "R. Timofte",
+      "Goran Glavas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2306.08658",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

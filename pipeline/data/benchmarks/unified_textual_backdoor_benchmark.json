@@ -1,0 +1,38 @@
+{
+  "name": "Unified Textual Backdoor Benchmark",
+  "description": "Textual backdoor attacks are a kind of practical threat to NLP systems. By injecting a backdoor in the training phase, the adversary could control model predictions via predefined triggers. As various attack and defense models have been proposed, it is of great significance to perform rigorous evaluations. However, we highlight two issues in previous backdoor learning evaluations: (1) The differences between real-world scenarios (e.g. releasing poisoned datasets or models) are neglected, and we argue that each scenario has its own constraints and concerns, thus requires specific evaluation protocols; (2) The evaluation metrics only consider whether the attacks could flip the models' predictions on poisoned samples and retain performances on benign samples, but ignore that poisoned samples should also be stealthy and semantic-preserving. To address these issues, we categorize existing works into three practical scenarios in which attackers release datasets, pre-trained models, and fine-tuned models respectively, then discuss their unique evaluation methodologies. On metrics, to completely evaluate poisoned samples, we use grammar error increase and perplexity difference for stealthiness, along with text similarity for validity. After formalizing the frameworks, we develop an open-source toolkit OpenBackdoor to foster the implementations and evaluations of textual backdoor learning. With this toolkit, we perform extensive experiments to benchmark attack and defense models under the suggested paradigm. To facilitate the underexplored defenses against poisoned datasets, we further propose CUBE, a simple yet strong clustering-based defense baseline. We hope that our frameworks and benchmarks could serve as the cornerstones for future model development and evaluations.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_classification",
+    "poisoning_evaluation",
+    "attack_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "attack_success_rate (ASR) along with benign accuracy and stealthiness metrics (perplexity difference, grammar error increase, text similarity)",
+  "general_score_metric": "attack_success_rate (ASR) paired with benign accuracy (dual-metric)",
+  "typical_sota_score": "80–100% ASR (varies by attack and scenario)",
+  "year_of_publish": 2022,
+  "reputation": "Provides a widely-cited, systematic evaluation framework and an open-source toolkit (OpenBackdoor); increasingly used for comparing textual backdoor attacks and defenses.",
+  "notes": "Focuses on poisoning/backdoor scenarios for NLP models (not LLM-specific); includes stealthiness metrics; evaluations depend strongly on target model and trigger design; contamination risk inherent to poisoned-dataset scenario.",
+  "creators": {
+    "scientists": [
+      "Ganqu Cui",
+      "Lifan Yuan",
+      "Bingxiang He",
+      "Yangyi Chen",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2206.08514",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

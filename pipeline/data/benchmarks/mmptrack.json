@@ -1,0 +1,39 @@
+{
+  "name": "MMPTRACK",
+  "description": "Multi-camera tracking systems are gaining popularity in applications that demand high-quality tracking results, such as frictionless checkout because monocular multi-object tracking (MOT) systems often fail in cluttered and crowded environments due to occlusion. Multiple highly overlapped cameras can significantly alleviate the problem by recovering partial 3D information. However, the cost of creating a high-quality multi-camera tracking dataset with diverse camera settings and backgrounds has limited the dataset scale in this domain. In this paper, we provide a large-scale densely-labeled multi-camera tracking dataset in five different environments with the help of an auto-annotation system. The system uses overlapped and calibrated depth and RGB cameras to build a high-performance 3D tracker that automatically generates the 3D tracking results. The 3D tracking results are projected to each RGB camera view using camera parameters to create 2D tracking results. Then, we manually check and correct the 3D tracking results to ensure the label quality, which is much cheaper than fully manual annotation. We have conducted extensive experiments using two real-time multi-camera trackers and a person re-identification (ReID) model with different settings. This dataset provides a more reliable benchmark of multi-camera, multi-object tracking systems in cluttered and crowded environments. Also, our results demonstrate that adapting the trackers and ReID models on this dataset significantly improves their performance. Our dataset will be publicly released upon the acceptance of this work.",
+  "category": "vision",
+  "domain": "computer vision / multi-camera tracking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "re_identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "standard multi-object tracking metrics (MOTA, IDF1, ID switches, precision/recall)",
+  "general_score_metric": "MOTA / IDF1 (primary reported tracking metrics)",
+  "year_of_publish": 2021,
+  "reputation": "Moderately regarded in the multi-camera tracking community as a useful, larger-scale multi-view dataset, though not as widely used as established monocular MOT benchmarks.",
+  "notes": "Non-LLM benchmark. Dataset spans five environments and uses auto-annotation with manual correction—efficient but may retain some label noise; not extremely large in scene diversity; evaluation focuses on tracking metrics rather than detection-only scores.",
+  "creators": {
+    "scientists": [
+      "Xiaotian Han",
+      "Quanzeng You",
+      "Chunyu Wang",
+      "Zhizheng Zhang",
+      "Peng Chu",
+      "Houdong Hu",
+      "Jiang Wang",
+      "Zicheng Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2111.15157",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

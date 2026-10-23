@@ -1,0 +1,35 @@
+{
+  "name": "MedLFQA",
+  "description": "In the medical domain, numerous scenarios necessitate the long-form generation ability of large language models (LLMs). Specifically, when addressing patients' questions, it is essential that the model's response conveys factual claims, highlighting the need for an automated method to evaluate those claims. Thus, we introduce MedLFQA, a benchmark dataset reconstructed using long-form question-answering datasets related to the biomedical domain. We use MedLFQA to facilitate a cost-effective automatic evaluations of factuality. We also propose OLAPH, a simple and novel framework that utilizes cost-effective and multifaceted automatic evaluation to construct a synthetic preference set and answers questions in our preferred manner. Our framework leads us to train LLMs step-by-step to reduce hallucinations and include crucial medical claims. We highlight that, even on evaluation metrics not used during training, LLMs trained with our OLAPH framework demonstrate significant performance improvement in factuality. Our findings reveal that a 7B LLM trained with our OLAPH framework can provide long answers comparable to the medical experts' answers in terms of factuality. We believe that our work could shed light on gauging the long-text generation ability of LLMs in the medical domain. Our code and datasets are available.",
+  "category": "text",
+  "domain": "medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "long_form_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "automatic factuality metrics (entailment/consistency-based) combined with human evaluation / preference-based assessment",
+  "general_score_metric": "factuality score (automatic factuality metrics, supplemented by human_eval)",
+  "year_of_publish": 2024,
+  "reputation": "21 citations",
+  "notes": "Medical-domain benchmark with high-stakes implications; dataset reconstructed from existing corpora (possible overlap with model pretraining) and automatic factuality metrics may not fully capture real-world clinical correctness—expert review required.",
+  "creators": {
+    "scientists": [
+      "Minbyul Jeong",
+      "Hyeon Hwang",
+      "Chanwoong Yoon",
+      "Taewhoo Lee",
+      "Jaewoo Kang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2405.12701",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

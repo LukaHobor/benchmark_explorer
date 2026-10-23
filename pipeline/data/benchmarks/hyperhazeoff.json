@@ -1,0 +1,37 @@
+{
+  "name": "HyperHazeOff",
+  "description": "Hyperspectral remote sensing images (HSIs) provide invaluable information for environmental and agricultural monitoring, yet they are often degraded by atmospheric haze, which distorts spatial and spectral content and hinders downstream analysis. Progress in hyperspectral dehazing has been limited by the absence of paired real-haze benchmarks; most prior studies rely on synthetic haze or unpaired data, restricting fair evaluation and generalization. We present HyperHazeOff, the first comprehensive benchmark for hyperspectral dehazing that unifies data, tasks, and evaluation protocols. It comprises (i) RRealHyperPDID, 110 scenes with paired real-haze and haze-free HSIs (plus RGB images), and (ii) RSyntHyperPDID, 2616 paired samples generated using a physically grounded haze formation model. The benchmark also provides agricultural field delineation and land classification annotations for downstream task quality assessment, standardized train/validation/test splits, preprocessing pipelin",
+  "category": "vision",
+  "domain": "geospatial",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "dehazing",
+    "segmentation",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR/SSIM for dehazing quality, plus downstream task performance on delineation/classification",
+  "general_score_metric": "PSNR",
+  "year_of_publish": 2025,
+  "reputation": "A new benchmark that is notable for being the first comprehensive real-haze hyperspectral dehazing benchmark, but it is still early-stage and not yet widely adopted.",
+  "notes": "Non-LLM vision benchmark; includes both real paired and synthetic data, with downstream agricultural annotations. Results may vary across preprocessing and split protocols.",
+  "creators": {
+    "scientists": [
+      "Artem V. Nikonorov",
+      "Dmitry Sidorchuk",
+      "Nikita Odinets",
+      "V. Volkov",
+      "A. Sarycheva",
+      "Ekaterina Dudenko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "LidarGait",
+  "description": "Video-based gait recognition has achieved impressive results in constrained scenarios. However, visual cameras neglect human 3D structure information, which limits the feasibility of gait recognition in the 3D wild world. Instead of extracting gait features from images, this work explores precise 3D gait features from point clouds and proposes a simple yet efficient 3D gait recognition framework, termed LidarGait. Our proposed approach projects sparse point clouds into depth maps to learn the representations with 3D geometry information, which outperforms existing point-wise and camera-based methods by a significant margin. Due to the lack of point cloud datasets, we built the first large-scale LiDAR-based gait recognition dataset, SUSTech1K, collected by a LiDAR sensor and an RGB camera. The dataset contains 25,239 sequences from 1,050 subjects and covers many variations, including visibility, views, occlusions, clothing, carrying, and scenes. Extensive experiments show that (1) 3D structure information serves as a significant feature for gait recognition. (2) LidarGait outperforms existing point-based and silhouette-based methods by a significant margin, while it also offers stable cross-view results. (3) The LiDAR sensor is superior to the RGB camera for gait recognition in the outdoor environment. The source code and dataset have been made available at https://lidargait.github.io.",
+  "category": "vision",
+  "domain": "biometrics / gait recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "identification (closed-set recognition)",
+    "verification (pairwise matching)",
+    "retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Rank-1 accuracy / CMC (cumulative matching characteristic) and rank-n accuracy",
+  "general_score_metric": "Rank-1 accuracy",
+  "year_of_publish": 2022,
+  "reputation": "New, notable dataset for LiDAR-based gait research with growing use by specialists in biometric recognition.",
+  "notes": "Sensor- and environment-specific (LiDAR) data; strong domain shift vs. camera-based datasets; privacy considerations; relatively recent so external replication/adoption is still increasing.",
+  "creators": {
+    "scientists": [
+      "Chuanfu Shen",
+      "Chao Fan",
+      "Wei Wu",
+      "Rui Wang",
+      "George Q. Huang",
+      "Shiqi Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2211.10598",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

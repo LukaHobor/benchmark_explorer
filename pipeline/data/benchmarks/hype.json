@@ -1,0 +1,36 @@
+{
+  "name": "HYPE",
+  "description": "Generative models often use human evaluations to measure the perceived quality of their outputs. Automated metrics are noisy indirect proxies, because they rely on heuristics or pretrained embeddings. However, up until now, direct human evaluation strategies have been ad-hoc, neither standardized nor validated. Our work establishes a gold standard human benchmark for generative realism. We construct Human eYe Perceptual Evaluation (HYPE) a human benchmark that is (1) grounded in psychophysics research in perception, (2) reliable across different sets of randomly sampled outputs from a model, (3) able to produce separable model performances, and (4) efficient in cost and time. We introduce two variants: one that measures visual perception under adaptive time constraints to determine the threshold at which a model's outputs appear real (e.g. 250ms), and the other a less expensive variant that measures human error rate on fake and real images sans time constraints. We test HYPE across six state-of-the-art generative adversarial networks and two sampling techniques on conditional and unconditional image generation using four datasets: CelebA, FFHQ, CIFAR-10, and ImageNet. We find that HYPE can track model improvements across training epochs, and we confirm via bootstrap sampling that HYPE rankings are consistent and replicable.",
+  "category": "vision",
+  "domain": "generative model evaluation / vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "human_eval",
+    "perceptual_threshold_test"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "perceptual realism (percent judged real) / human error rate",
+  "year_of_publish": 2019,
+  "reputation": "Regarded as a rigorous, psychophysics-grounded human evaluation protocol for image realism and cited as a strong standard for perceptual realism assessments.",
+  "notes": "Requires paid human raters and controlled experimental setup (time-constrained and unconstrained variants); limited scalability and higher cost than automated metrics; primarily for image GAN evaluation (non-LLM); subject to cultural and demographic biases in human judgments.",
+  "creators": {
+    "scientists": [
+      "Sharon Zhou",
+      "Mitchell L. Gordon",
+      "Ranjay Krishna",
+      "Austin Narcomey",
+      "Li Fei-Fei",
+      "Michael S. Bernstein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1904.01121",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

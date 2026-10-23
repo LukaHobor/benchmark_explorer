@@ -1,0 +1,35 @@
+{
+  "name": "Slope-unit landslide susceptibility dataset",
+  "description": "In the presented study, we investigate the possibilities of performing tasks related to landslide susceptibility assessment (LSA) on the provided benchmark dataset. The slope unit-based dataset consists of aggregated predisposing factors and two label sets. Although initially introduced as a dataset for binary classification tasks, it is also suitable for zoning and regression analysis in combination with the underlying landslide inventory. Zoning ranks slope units to delineate the study area in susceptibility zones. In the regression analysis, we try to predict a numeric target value (e.g., &amp;#160;landslide count) by the slope unit's attributes.We explored the benchmark dataset using bivariate and multivariate statistical visualization techniques to understand the data relations better. We found the dataset at this stage insufficient for achieving a well-explainable high-performance classification using linear models. Most attributes are not specific to linearly separate the given labels. The chosen central tendency statistics (mean and standard deviation) may not characterize the parameter distributions inside the slope unit sufficiently.We propose a theoretical concept for zonation analysis to assess the best possible performance on the given discrete dataset using the success rate curve as the model evaluation metric. Because any applied algorithm cannot modify the geometry of the discrete slope units, the evaluation metric only depends on the relative ranking of slope units. The best performance is obtainable without computing a predictive model. For frequency-related models (weighting of factors with landslide count statistics), a simple direct computation of conditional probabilities or frequency ratio on the slope units as a ranking factor provides the best possible ranking. Combining the label and slope unit's area provides the best slope unit ranking for binary labels.We conducted a regression and classification analysis with artificial neural networks (ANN) testing different combinations of parameters (sensitivity analysis) architectures allowing for modeling nonlinear relations. In both analyses, initial results show that a complex net architecture can boost the model fit on the training dataset by losing predictive performance on test data. Also, the dataset pre-exploration corresponds well with the sensitivity analysis with ANN. The number of parameters is reducible to few effective predictors without losing much accuracy in classification, which is poor-to-moderate depending on the utilized label set.While slope units as an aggregation for geomorphological analyses remain undisputed, the proposed aggregation of predisposing factors in slope units at the analysis's entry point needs further discussion. Aggregating the results of a raster-based LSA to overcome deviances in landslide susceptibility patterns caused by data uncertainties or different methods could be more suitable at this point. Slope units should be analyzed with regression analysis in LSA to consider their different spatial extents during the calculation.We provide our scripts, visualizations, and results as a Jupyter Notebook on our GitHub: https://github.com/BGR-EGHA/EGU23_GM3.3_ls_benchmark.",
+  "category": "mixed",
+  "domain": "geology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "zoning",
+    "regression",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "success_rate_curve",
+  "general_score_metric": "success_rate_curve",
+  "year_of_publish": 2023,
+  "reputation": "Niche academic dataset used in landslide susceptibility research with limited but recognized use in the geomorphology community.",
+  "notes": "Small/aggregated slope-unit dataset with limited feature separability; prone to overfitting on complex models; evaluation is ranking-based (success rate curve) rather than standard classification only; not a benchmark for LLMs; potential label noise and sensitivity to slope-unit aggregation choices.",
+  "creators": {
+    "scientists": [
+      "Jewgenij Torizin",
+      "Nick Schüßler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.5194/egusphere-egu23-13362",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

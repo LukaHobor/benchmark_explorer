@@ -1,0 +1,36 @@
+{
+  "name": "TurkColBERT",
+  "description": "Neural information retrieval systems excel in high-resource languages but remain underexplored for morphologically rich, lower-resource languages such as Turkish. Dense bi-encoders currently dominate Turkish IR, yet late-interaction models -- which retain token-level representations for fine-grained matching -- have not been systematically evaluated. We introduce TurkColBERT, the first comprehensive benchmark comparing dense encoders and late-interaction models for Turkish retrieval. Our two-stage adaptation pipeline fine-tunes English and multilingual encoders on Turkish NLI/STS tasks, then converts them into ColBERT-style retrievers using PyLate trained on MS MARCO-TR. We evaluate 10 models across five Turkish BEIR datasets covering scientific, financial, and argumentative domains. Results show strong parameter efficiency: the 1.0M-parameter colbert-hash-nano-tr is 600$\\times$ smaller than the 600M turkish-e5-large dense encoder while preserving over 71\\% of its average mAP. Late-int",
+  "category": "text",
+  "domain": "information retrieval",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "document_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2025,
+  "reputation": "A recent, specialized benchmark for Turkish retrieval that is useful for comparing dense and late-interaction retrievers, but it is not yet widely adopted outside the Turkish IR community.",
+  "notes": "Non-LLM benchmark focused on Turkish IR; results are domain- and model-family-specific, and the benchmark is relatively new with limited community-wide standardization.",
+  "creators": {
+    "scientists": [
+      "Özay Ezerceli",
+      "Mahmoud El Hussieni",
+      "Selva Taş",
+      "Reyhan Bayraktar",
+      "Fatma Betül Terzioğlu",
+      "Yusuf Çelebi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2511.16528",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

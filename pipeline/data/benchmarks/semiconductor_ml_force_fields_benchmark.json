@@ -1,0 +1,35 @@
+{
+  "name": "Semiconductor ML Force Fields Benchmark",
+  "description": "As semiconductor devices become miniaturized and their structures become more complex, there is a growing need for large-scale atomic-level simulations as a less costly alternative to the trial-and-error approach during development.\nAlthough machine learning force fields (MLFFs) can meet the accuracy and scale requirements for such simulations, there are no open-access benchmarks for semiconductor materials.\nHence, this study presents a comprehensive benchmark suite that consists of two semiconductor material datasets and ten MLFF models with six evaluation metrics. \nWe select two important semiconductor thin-film materials silicon nitride and hafnium oxide, and generate their datasets using computationally expensive density functional theory simulations under various scenarios at a cost of 2.6k GPU days.\nAdditionally, we provide a variety of architectures as baselines: descriptor-based fully connected neural networks and graph neural networks with rotational invariant or equivariant features.\nWe assess not only the accuracy of energy and force predictions but also five additional simulation indicators to determine the practical applicability of MLFF models in molecular dynamics simulations.\nTo facilitate further research, our benchmark suite is available at https://github.com/SAITPublic/MLFF-Framework.",
+  "category": "mixed",
+  "domain": "materials science / semiconductor simulations",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "energy_regression",
+    "force_regression",
+    "molecular_dynamics_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "MAE/RMSE for energies and forces; simulation-level metrics (energy drift, stability); structural metrics (radial distribution, phonon prediction where applicable)",
+  "general_score_metric": "MAE (energy) and MAE (forces); supplemented by simulation stability metrics",
+  "year_of_publish": 2023,
+  "reputation": "Emerging, domain-specific benchmark gaining attention among ML force-field and materials simulation researchers.",
+  "notes": "Non-LLM benchmark derived from costly DFT simulations (computationally expensive); focuses on specific semiconductor materials (e.g., SiN, HfO2) so may not generalize across all chemistries.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

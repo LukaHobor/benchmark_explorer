@@ -1,0 +1,39 @@
+{
+  "name": "PEVData",
+  "description": "Existing Grammatical Error Correction (GEC) systems suffer from limited reference diversity, leading to underestimated evaluation and restricted model generalization. To address this issue, we introduce the Judge of Edit-Level Validity (JELV), an automated framework to validate correction edits from grammaticality, faithfulness, and fluency. Using our proposed human-annotated Pair-wise Edit-level Validity Dataset (PEVData) as benchmark, JELV offers two implementations: a multi-turn LLM-as-Judges pipeline achieving 90% agreement with human annotators, and a distilled DeBERTa classifier with 85% precision on valid edits. We then apply JELV to reclassify misjudged false positives in evaluation and derive a comprehensive evaluation metric by integrating false positive decoupling and fluency scoring, resulting in state-of-the-art correlation with human judgments. We also apply JELV to filter LLM-generated correction candidates, expanding the BEA19's single-reference dataset containing 38,69",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "edit_validation",
+    "grammatical_error_correction",
+    "pairwise_judgment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "85–90%",
+  "year_of_publish": 2025,
+  "reputation": "A very recent benchmark tied to a new GEC evaluation framework, with limited adoption so far but potentially useful for reference-diversity analysis.",
+  "notes": "Benchmark is closely coupled to the JELV evaluation framework and focuses on edit-level validity rather than standard end-task GEC metrics. Likely small and specialized, with results sensitive to annotation and judge calibration.",
+  "creators": {
+    "scientists": [
+      "Yuhao Zhan",
+      "Yuqing Zhang",
+      "Jing Yuan",
+      "Qixiang Ma",
+      "Zhiqi Yang",
+      "Yu Gu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2511.21700",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

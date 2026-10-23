@@ -1,0 +1,39 @@
+{
+  "name": "Oxford Day-and-Night",
+  "description": "We introduce Oxford Day-and-Night, a large-scale, egocentric dataset for novel view synthesis (NVS) and visual relocalisation under challenging lighting conditions. Existing datasets often lack crucial combinations of features such as ground-truth 3D geometry, wide-ranging lighting variation, and full 6DoF motion. Oxford Day-and-Night addresses these gaps by leveraging Meta ARIA glasses to capture egocentric video and applying multi-session SLAM to estimate camera poses, reconstruct 3D point clouds, and align sequences captured under varying lighting conditions, including both day and night. The dataset spans over 30 $\\mathrm{km}$ of recorded trajectories and covers an area of 40,000 $\\mathrm{m}^2$, offering a rich foundation for egocentric 3D vision research. It supports two core benchmarks, NVS and relocalisation, providing a unique platform for evaluating models in realistic and diverse environments.",
+  "category": "vision",
+  "domain": "egocentric 3D vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "novel_view_synthesis",
+    "visual_relocalisation",
+    "pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "For NVS: PSNR / SSIM / LPIPS (perceptual and pixel metrics). For relocalisation: median translation and rotation error (cm / degrees) and recall within distance/angle thresholds.",
+  "general_score_metric": "LPIPS (for NVS) and median pose error (translation in cm, rotation in degrees) for relocalisation",
+  "typical_sota_score": "LPIPS ~0.05–0.30; pose error ~0.1–1.5 m and 1–10° (varies by scene and method)",
+  "year_of_publish": 2025,
+  "reputation": "A specialized, well-cited dataset for egocentric NVS and relocalisation research since its 2024 release, with moderate adoption in 3D-vision and robotics communities.",
+  "notes": "Non-LLM benchmark; contains egocentric (privacy-sensitive) video with varying lighting which can introduce alignment/noise issues; multi-metric evaluation (perceptual and geometric); not saturated.",
+  "creators": {
+    "scientists": [
+      "ZiRui Wang",
+      "Wenjing Bian",
+      "Xinghui Li",
+      "Yifu Tao",
+      "Jianeng Wang",
+      "Maurice Fallon",
+      "Victor Adrian Prisacariu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.04224",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

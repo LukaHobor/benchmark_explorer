@@ -1,0 +1,38 @@
+{
+  "name": "Evolving Storytelling",
+  "description": "Diffusion-based models for story visualization have shown promise in generating content-coherent images for storytelling tasks. However, how to effectively integrate new characters into existing narratives while maintaining character consistency remains an open problem, particularly with limited data. Two major limitations hinder the progress: (1) the absence of a suitable benchmark due to potential character leakage and inconsistent text labeling, and (2) the challenge of distinguishing between new and old characters, leading to ambiguous results. To address these challenges, we introduce the NewEpisode benchmark, comprising refined datasets designed to evaluate generative models' adaptability in generating new stories with fresh characters using just a single example story. The refined dataset involves refined text prompts and eliminates character leakage. Additionally, to mitigate the character confusion of generated results, we propose EpicEvo, a method that customizes a diffusion-based visual story generation model with a single story featuring the new characters seamlessly integrating them into established character dynamics. EpicEvo introduces a novel adversarial character alignment module to align the generated images progressively in the diffusive process, with exemplar images of new characters, while applying knowledge distillation to prevent forgetting of characters and background details. Our evaluation quantitatively demonstrates that EpicEvo outperforms existing baselines on the NewEpisode benchmark, and qualitative studies confirm its superior customization of visual story generation in diffusion models. In summary, EpicEvo provides an effective way to incorporate new characters using only one example story, unlocking new possibilities for applications such as serialized cartoons.",
+  "category": "vision",
+  "domain": "story visualization / generative vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_generation",
+    "conditional_generation",
+    "few_shot_customization",
+    "story_visualization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval; FID; CLIP score (automated perceptual consistency metrics)",
+  "general_score_metric": "human preference rate (primary) and FID (automated)",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed (2024) benchmark aimed at the story-visualization community; promising but currently limited adoption outside specialized generative-vision researchers.",
+  "notes": "Small, curated benchmark focused on single-example character customization; evaluations rely on subjective human judgments in addition to automated metrics (FID/CLIP). Designed to avoid character leakage, but risk of overfitting to exemplar-driven methods and limited community-wide adoption so far.",
+  "creators": {
+    "scientists": [
+      "Xiyu Wang",
+      "YuFei Wang",
+      "Satoshi Tsutsui",
+      "Weisi Lin",
+      "Bihan Wen",
+      "Alex C. Kot"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.11852",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

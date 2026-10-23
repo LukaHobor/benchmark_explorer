@@ -1,0 +1,38 @@
+{
+  "name": "Pedestrian Anomaly Behavior (PAB) benchmark",
+  "description": "Text-based person search aims to retrieve specific individuals across camera networks using natural language descriptions. However, current benchmarks often exhibit biases towards common actions like walking or standing, neglecting the critical need for identifying abnormal behaviors in real-world scenarios. To meet such demands, we propose a new task, text-based person anomaly search, locating pedestrians engaged in both routine or anomalous activities via text. To enable the training and evaluation of this new task, we construct a large-scale image-text Pedestrian Anomaly Behavior (PAB) benchmark, featuring a broad spectrum of actions, e.g., running, performing, playing soccer, and the corresponding anomalies, e.g., lying, being hit, and falling of the same identity. The training set of PAB comprises 1,013,605 synthesized image-text pairs of both normalities and anomalies, while the test set includes 1,978 real-world image-text pairs. To validate the potential of PAB, we introduce a cross-modal pose-aware framework, which integrates human pose patterns with identity-based hard negative pair sampling. Extensive experiments on the proposed benchmark show that synthetic training data facilitates the fine-grained behavior retrieval, and the proposed pose-aware method arrives at 84.93% recall@1 accuracy, surpassing other competitive methods. The dataset, model, and code are available at https://github.com/Shuyu-XJTU/CMP.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_retrieval",
+    "cross_modal_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "recall@k (e.g., recall@1/5/10)",
+  "general_score_metric": "recall@1",
+  "typical_sota_score": "≈84.9% (recall@1, reported best)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "Newly proposed benchmark focused on anomalous pedestrian behavior; limited adoption so far but of interest to cross-modal retrieval and surveillance research communities.",
+  "notes": "Large synthetic training set (1,013,605 pairs) but a relatively small real-world test set (1,978 pairs); domain gap between synthetic train and real test; specializes in anomaly retrieval (non-LLM benchmark); potential class imbalance and dataset bias toward activities represented in synthesis.",
+  "creators": {
+    "scientists": [
+      "Shuyu Yang",
+      "Yaxiong Wang",
+      "Li Zhu",
+      "Zhedong Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2411.17776",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Graph Alignment Benchmark",
+  "description": "We propose a novel benchmarking methodology for graph neural networks (GNNs) based on the graph alignment problem, a combinatorial optimization task that generalizes graph isomorphism by aligning two unlabeled graphs to maximize overlapping edges. We frame this problem as a self-supervised learning task and present several methods to generate graph alignment datasets using synthetic random graphs and real-world graph datasets from multiple domains. For a given graph dataset, we generate a family of graph alignment datasets with increasing difficulty, allowing us to rank the performance of various architectures. Our experiments indicate that anisotropic graph neural networks outperform standard convolutional architectures. To further demonstrate the utility of the graph alignment task, we show its effectiveness for unsupervised GNN pre-training, where the learned node embeddings outperform other positional encodings on three molecular regression tasks and achieve state-of-the-art results on the PCQM4Mv2 dataset with significantly fewer parameters. To support reproducibility and further research, we provide an open-source Python package to generate graph alignment datasets and benchmark new GNN architectures.",
+  "category": "mixed",
+  "domain": "graph machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "graph_alignment",
+    "self_supervised_learning",
+    "node_representation_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "alignment accuracy",
+  "general_score_metric": "alignment accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark gaining attention in the graph ML community for its open-source dataset generation tools and for evaluating GNN pretraining and positional encodings.",
+  "notes": "Non-LLM benchmark for GNNs; datasets generated from synthetic and real graphs with tunable difficulty (potential domain gap); evaluation focuses on matching accuracy and downstream embedding utility; not saturated.",
+  "creators": {
+    "scientists": [
+      "Adrien Lagesse",
+      "Marc Lelarge"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.13087",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

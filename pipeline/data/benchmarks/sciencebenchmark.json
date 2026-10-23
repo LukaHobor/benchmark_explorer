@@ -1,0 +1,37 @@
+{
+  "name": "ScienceBenchmark",
+  "description": "Natural Language to SQL systems (NL-to-SQL) have recently shown a significant increase in accuracy for natural language to SQL query translation. This improvement is due to the emergence of transformer-based language models, and the popularity of the Spider benchmark - the de-facto standard for evaluating NL-to-SQL systems. The top NL-to-SQL systems reach accuracies of up to 85\\%. However, Spider mainly contains simple databases with few tables, columns, and entries, which does not reflect a realistic setting. Moreover, complex real-world databases with domain-specific content have little to no training data available in the form of NL/SQL-pairs leading to poor performance of existing NL-to-SQL systems. In this paper, we introduce ScienceBenchmark, a new complex NL-to-SQL benchmark for three real-world, highly domain-specific databases. For this new benchmark, SQL experts and domain experts created high-quality NL/SQL-pairs for each domain. To garner more data, we extended the small amount of human-generated data with synthetic data generated using GPT-3. We show that our benchmark is highly challenging, as the top performing systems on Spider achieve a very low performance on our benchmark. Thus, the challenge is many-fold: creating NL-to-SQL systems for highly complex domains with a small amount of hand-made training data augmented with synthetic data. To our knowledge, ScienceBenchmark is the first NL-to-SQL benchmark designed with complex real-world scientific databases, containing challenging training and test data carefully validated by domain experts.",
+  "category": "text",
+  "domain": "science databases",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_parsing",
+    "text_to_sql"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "exact_match (set-based SQL match) and execution accuracy",
+  "general_score_metric": "exact_match",
+  "year_of_publish": 2023,
+  "reputation": "A niche but relevant benchmark introduced in 2023 for domain-specific NL-to-SQL; limited adoption outside the NL-to-SQL research community.",
+  "notes": "Small human-annotated splits augmented with GPT-3 synthetic data; domain-specific schemas increase difficulty; potential contamination from synthetic examples and schema overlap; not saturated.",
+  "creators": {
+    "scientists": [
+      "Yi Zhang",
+      "Jan Deriu",
+      "George Katsogiannis-Meimarakis",
+      "Catherine Kosten",
+      "Georgia Koutrika",
+      "Kurt Stockinger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2306.04743",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

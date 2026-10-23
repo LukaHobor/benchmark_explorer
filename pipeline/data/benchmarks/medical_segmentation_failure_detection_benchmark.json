@@ -1,0 +1,37 @@
+{
+  "name": "Medical Segmentation Failure Detection Benchmark",
+  "description": "Semantic segmentation is an essential component of medical image analysis research, with recent deep learning algorithms offering out-of-the-box applicability across diverse datasets. Despite these advancements, segmentation failures remain a significant concern for real-world clinical applications, necessitating reliable detection mechanisms. This paper introduces a comprehensive benchmarking framework aimed at evaluating failure detection methodologies within medical image segmentation. Through our analysis, we identify the strengths and limitations of current failure detection metrics, advocating for the risk-coverage analysis as a holistic evaluation approach. Utilizing a collective dataset comprising five public 3D medical image collections, we assess the efficacy of various failure detection strategies under realistic test-time distribution shifts. Our findings highlight the importance of pixel confidence aggregation and we observe superior performance of the pairwise Dice score (Roy et al., 2019) between ensemble predictions, positioning it as a simple and robust baseline for failure detection in medical image segmentation. To promote ongoing research, we make the benchmarking framework available to the community.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "risk-coverage",
+  "general_score_metric": "risk-coverage",
+  "year_of_publish": 2024,
+  "reputation": "Relevant and timely benchmark in medical imaging robustness/safety that is gaining interest among researchers focused on failure detection, but still emerging in adoption.",
+  "notes": "Non-LLM medical imaging benchmark built from five public 3D datasets; sensitive patient data and privacy considerations, evaluated under realistic distribution shifts; recommended evaluation emphasizes risk-coverage and ensemble-based baselines (e.g., pairwise Dice); dataset sizes are moderate and domain-specific.",
+  "creators": {
+    "scientists": [
+      "Maximilian Zenk",
+      "David Zimmerer",
+      "Fabian Isensee",
+      "Jeremias Traub",
+      "Tobias Norajitra",
+      "Paul F. Jäger",
+      "Klaus Maier-Hein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.03323",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "emg2pose",
+  "description": "Hands are the primary means through which humans interact with the world. Reliable and always-available hand pose inference could yield new and intuitive control schemes for human-computer interactions, particularly in virtual and augmented reality. Computer vision is effective but requires one or multiple cameras and can struggle with occlusions, limited field of view, and poor lighting. Wearable wrist-based surface electromyography (sEMG) presents a promising alternative as an always-available modality sensing muscle activities that drive hand motion. However, sEMG signals are strongly dependent on user anatomy and sensor placement, and existing sEMG models have required hundreds of users and device placements to effectively generalize. To facilitate progress on sEMG pose inference, we introduce the emg2pose benchmark, the largest publicly available dataset of high-quality hand pose labels and wrist sEMG recordings. emg2pose contains 2kHz, 16 channel sEMG and pose labels from a 26-camera motion capture rig for 193 users, 370 hours, and 29 stages with diverse gestures - a scale comparable to vision-based hand pose datasets. We provide competitive baselines and challenging tasks evaluating real-world generalization scenarios: held-out users, sensor placements, and stages. emg2pose provides the machine learning community a platform for exploring complex generalization problems, holding potential to significantly enhance the development of sEMG-based human-computer interactions.",
+  "category": "mixed",
+  "domain": "human-computer interaction / wearable sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "pose_estimation",
+    "cross_subject_generalization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean per-joint position error (MPJPE) and cross-subject generalization metrics on held-out users/placements",
+  "general_score_metric": "MPJPE (mm)",
+  "year_of_publish": 2024,
+  "reputation": "Largest publicly released wrist sEMG→hand-pose dataset to date with growing interest in wearable sensing and HCI research.",
+  "notes": "Strong subject- and sensor-placement dependence (personalization often required); large-scale but sensitive human data (privacy considerations); challenging real-world generalization tasks.",
+  "creators": {
+    "scientists": [
+      "Sasha Salter",
+      "Richard Warren",
+      "Collin Schlager",
+      "Adrian Spurr",
+      "Shangchen Han",
+      "Rohin Bhasin",
+      "Yujun Cai",
+      "Peter Walkington",
+      "Anuoluwapo Bolarinwa",
+      "Robert Wang",
+      "Nathan Danielson",
+      "Josh Merel",
+      "Eftychios Pnevmatikakis",
+      "Jesse Marshall"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.02725",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

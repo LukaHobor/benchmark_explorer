@@ -1,0 +1,37 @@
+{
+  "name": "CodeSearchNet",
+  "description": "Semantic code search is the task of retrieving relevant code given a natural language query. While related to other information retrieval tasks, it requires bridging the gap between the language used in code (often abbreviated and highly technical) and natural language more suitable to describe vague concepts and ideas. To enable evaluation of progress on code search, we are releasing the CodeSearchNet Corpus and are presenting the CodeSearchNet Challenge, which consists of 99 natural language queries with about 4k expert relevance annotations of likely results from CodeSearchNet Corpus. The corpus contains about 6 million functions from open-source code spanning six programming languages (Go, Java, JavaScript, PHP, Python, and Ruby). The CodeSearchNet Corpus also contains automatically generated query-like natural language for 2 million functions, obtained from mechanically scraping and preprocessing associated function documentation. In this article, we describe the methodology used to obtain the corpus and expert labels, as well as a number of simple baseline solutions for the task. We hope that CodeSearchNet Challenge encourages researchers and practitioners to study this interesting task further and will host a competition and leaderboard to track the progress on the challenge. We are also keen on extending CodeSearchNet Challenge to more queries and programming languages in the future.",
+  "category": "code",
+  "domain": "software engineering",
+  "benchmark_type": "competition",
+  "task_types": [
+    "code_search",
+    "information_retrieval",
+    "semantic_matching"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "MRR / Recall@k (also reported: MAP)",
+  "general_score_metric": "MRR (Mean Reciprocal Rank)",
+  "typical_sota_score": "50–80%",
+  "year_of_publish": 2019,
+  "reputation": "Widely used benchmark and challenge in the code-search community with public leaderboard and broad adoption for evaluating code–text retrieval.",
+  "notes": "Contains automatically generated natural language from code documentation which can be noisy; potential for training/test contamination from public code repositories (models pretrained on GitHub).",
+  "creators": {
+    "scientists": [
+      "Hamel Husain",
+      "Ho-Hsiang Wu",
+      "Tiferet Gazit",
+      "Miltiadis Allamanis",
+      "Marc Brockschmidt"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/1909.09436",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

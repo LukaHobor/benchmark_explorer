@@ -1,0 +1,42 @@
+{
+  "name": "UNIAA-Bench",
+  "description": "As an alternative to expensive expert evaluation, Image Aesthetic Assessment (IAA) stands out as a crucial task in computer vision. However, traditional IAA methods are typically constrained to a single data source or task, restricting the universality and broader application. In this work, to better align with human aesthetics, we propose a Unified Multi-modal Image Aesthetic Assessment (UNIAA) framework, including a Multi-modal Large Language Model (MLLM) named UNIAA-LLaVA and a comprehensive benchmark named UNIAA-Bench. We choose MLLMs with both visual perception and language ability for IAA and establish a low-cost paradigm for transforming the existing datasets into unified and high-quality visual instruction tuning data, from which the UNIAA-LLaVA is trained. To further evaluate the IAA capability of MLLMs, we construct the UNIAA-Bench, which consists of three aesthetic levels: Perception, Description, and Assessment. Extensive experiments validate the effectiveness and rationality of UNIAA. UNIAA-LLaVA achieves competitive performance on all levels of UNIAA-Bench, compared with existing MLLMs. Specifically, our model performs better than GPT-4V in aesthetic perception and even approaches the junior-level human. We find MLLMs have great potential in IAA, yet there remains plenty of room for further improvement. The UNIAA-LLaVA and UNIAA-Bench will be released.",
+  "category": "multimodal",
+  "domain": "vision (image aesthetics)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "captioning",
+    "regression",
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "level-specific: accuracy for perception, BLEU/CIDEr (or similar) and human_eval for description, regression metrics / correlation (Spearman/Pearson) and human_eval for assessment",
+  "general_score_metric": "level-specific composite (accuracy for perception; BLEU/CIDEr for description; Spearman/Pearson or MSE for assessment)",
+  "year_of_publish": 2024,
+  "reputation": "Newly introduced benchmark from the UNIAA authors; limited external adoption so far but expected to be referenced in multimodal aesthetic assessment work.",
+  "notes": "Subjective labels and reliance on human judgment; multi-metric evaluation complicates single-number comparisons; possible overlap/contamination with existing aesthetic datasets used in pretraining; not yet widely adopted or saturated.",
+  "creators": {
+    "scientists": [
+      "Zhaokun Zhou",
+      "Qiulin Wang",
+      "Bin Lin",
+      "Yiwei Su",
+      "Rui Chen",
+      "Xin Tao",
+      "Amin Zheng",
+      "Li Yuan",
+      "Pengfei Wan",
+      "Di Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.09619",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

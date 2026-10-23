@@ -1,0 +1,36 @@
+{
+  "name": "ProteinInvBench (ProteinBench)",
+  "description": "Protein inverse folding has attracted increasing attention in recent years. However, we observe that current methods are usually limited to the CATH dataset and the recovery metric. The lack of a unified framework for ensembling and comparing different methods hinders the comprehensive investigation. In this paper, we propose ProteinBench, a new benchmark for protein design, which comprises extended protein design tasks, integrated models, and diverse evaluation metrics. We broaden the application of methods originally designed for single-chain protein design to new scenarios of multi-chain and \\textit{de novo} protein design. Recent impressive methods, including GraphTrans, StructGNN, GVP, GCA, AlphaDesign, ProteinMPNN, PiFold and KWDesign are integrated into our framework. In addition to the recovery, we also evaluate the confidence, diversity, sc-TM, efficiency, and robustness to thoroughly revisit current protein design approaches and inspire future work. As a result, we establish the first comprehensive benchmark for protein design, which is publicly available at \\url{https://github.com/A4Bio/OpenCPD}.",
+  "category": "mixed",
+  "domain": "bioinformatics / protein design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "sequence_generation",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (sequence recovery) and composite metrics including TM-score (structure similarity), diversity and confidence",
+  "general_score_metric": "recovery (sequence recovery accuracy)",
+  "typical_sota_score": "40–65% (sequence recovery; varies by dataset/task and model)",
+  "year_of_publish": 2023,
+  "reputation": "A newly introduced, comprehensive benchmark for protein design that is gaining attention in the computational protein‑design community but is not yet a widely established standard.",
+  "notes": "Non‑LLM benchmark focused on protein sequence design; integrates multiple metrics beyond sequence recovery (structural TM‑score, diversity, confidence). Potential risk of training/test leakage from public structure databases; multi‑chain and de‑novo tasks are harder and less saturated.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "A4Bio / OpenCPD contributors"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

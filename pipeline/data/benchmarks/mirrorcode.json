@@ -1,0 +1,40 @@
+{
+  "name": "MirrorCode",
+  "description": "A long-horizon coding benchmark that evaluates AI agents' ability to autonomously reimplement existing CLI programs without access to source code. Agents receive only execute-only access to reference programs and visible test cases, requiring complete architectural reimplementation across C, Python, and Rust. Target programs range from simple Unix utilities (~1,000 LoC) to full programming language interpreters (~61,000 LoC).",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "code_generation",
+    "long_horizon_agentic",
+    "software_reimplementation"
+  ],
+  "difficulty_level": "expert",
+  "number_of_questions": 24,
+  "evaluation_method": "test_pass_rate",
+  "general_score_metric": "test_pass_rate",
+  "typical_sota_score": "Claude Opus 4.6: 100% on choose/cal, 99.95% on gotree (16k LoC), 35% on Pkl (61k LoC); smaller programs largely solved, largest task unsolved",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "Early-stage benchmark from a high-credibility Epoch AI and METR collaboration; preliminary results released April 2026 with full release forthcoming.",
+  "notes": "Contamination risk: models likely encountered source code during training; memorization screens applied but not fully eliminative. Tasks require precise executable specifications uncommon in real development. Domain coverage is selective (excludes networking, graphics, databases, OS-level code). Maximum inference budget ~1B tokens per task (~$550). Only 4 of 24 programs analyzed in preliminary release. Human baseline for gotree reimplementation estimated at 2–17 weeks for skilled engineers.",
+  "creators": {
+    "scientists": [
+      "Tom Adamczewski",
+      "David Rein"
+    ],
+    "institutions": [
+      "METR"
+    ],
+    "companies": [
+      "Epoch AI"
+    ]
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://epoch.ai/blog/mirrorcode-preliminary-results/",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-04-12",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

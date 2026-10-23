@@ -1,0 +1,32 @@
+{
+  "name": "MSVD-Indonesian",
+  "description": "Multimodal learning on video and text data has been receiving growing attention from many researchers in various research tasks, including text-to-video retrieval, video-to-text retrieval, and video captioning. Although many algorithms have been proposed for those challenging tasks, most of them are developed on English language datasets. Despite Indonesian being one of the most spoken languages in the world, the research progress on the multimodal video-text with Indonesian sentences is still under-explored, likely due to the absence of the public benchmark dataset. To address this issue, we construct the first public Indonesian video-text dataset by translating English sentences from the MSVD dataset to Indonesian sentences. Using our dataset, we then train neural network models which were developed for the English video-text dataset on three tasks, i.e., text-to-video retrieval, video-to-text retrieval, and video captioning. The recent neural network-based approaches to video-text tasks often utilized a feature extractor that is primarily pretrained on an English vision-language dataset. Since the availability of the pretraining resources with Indonesian sentences is relatively limited, the applicability of those approaches to our dataset is still questionable. To overcome the lack of pretraining resources, we apply cross-lingual transfer learning by utilizing the feature extractors pretrained on the English dataset, and we then fine-tune the models on our Indonesian dataset. Our experimental results show that this approach can help to improve the performance for the three tasks on all metrics. Finally, we discuss potential future works using our dataset, inspiring further research in the Indonesian multimodal video-text tasks. We believe that our dataset and our experimental results could provide valuable contributions to the community. Our dataset is available on GitHub.",
+  "category": "multimodal",
+  "domain": "multimodal video-text / regional language NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_video_retrieval",
+    "video_to_text_retrieval",
+    "video_captioning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "recall@k / BLEU / METEOR / CIDEr",
+  "general_score_metric": "Recall@k (retrieval) and CIDEr / BLEU / METEOR (captioning)",
+  "year_of_publish": 2023,
+  "reputation": "A valuable first public Indonesian video–text benchmark; adoption is currently limited but growing in regional multimodal NLP research.",
+  "notes": "Small dataset created by translating MSVD English captions to Indonesian — may contain translation artifacts and domain mismatch; limited pretraining resources for Indonesian can affect transfer performance.",
+  "creators": {
+    "scientists": [
+      "Willy Fitra Hendria"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.11341",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

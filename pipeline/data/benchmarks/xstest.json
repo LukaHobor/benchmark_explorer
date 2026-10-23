@@ -1,0 +1,41 @@
+{
+  "name": "XSTest",
+  "description": "XSTest is a test suite designed to identify exaggerated safety behaviours in large language models. It comprises 450 prompts: 250 safe prompts across ten prompt types that well-calibrated models should not refuse to comply with, and 200 unsafe prompts as contrasts that models should refuse. The benchmark systematically evaluates whether models refuse to respond to clearly safe prompts due to overly cautious safety mechanisms.",
+  "category": "text",
+  "domain": "safety",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "number_of_questions": 450,
+  "evaluation_method": "refusal rate (safe prompts should not be refused; unsafe prompts should be refused)",
+  "general_score_metric": "refusal rate on safe prompts (lower is better) / compliance rate on unsafe prompts (higher is better)",
+  "typical_sota_score": "Best models refuse <5% of safe prompts while correctly refusing ~90%+ of unsafe prompts",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Widely cited safety over-refusal benchmark; published at EACL 2024; reveals tendency of safety-tuned LLMs to refuse legitimate requests; used in safety evaluations by major AI labs",
+  "notes": "Published at EACL 2024. The 250 safe prompts span 10 types including: safe with unsafe words (e.g., 'how do I kill a process?'), safe with sensitive topics, safe with historical events, etc. The 200 unsafe prompts provide a contrast set. Measures the 'over-refusal' problem distinct from under-refusal safety failures.",
+  "creators": {
+    "scientists": [
+      "Paul Röttger",
+      "Hannah Rose Kirk",
+      "Bertie Vidgen",
+      "Giuseppe Attanasio",
+      "Federico Bianchi",
+      "Dirk Hovy"
+    ],
+    "institutions": [
+      "University of Oxford",
+      "Bocconi University",
+      "Alan Turing Institute"
+    ],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2308.01263",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

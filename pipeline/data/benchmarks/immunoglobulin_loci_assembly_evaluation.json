@@ -1,0 +1,37 @@
+{
+  "name": "Immunoglobulin Loci Assembly Evaluation",
+  "description": "Long-read sequencing technologies have revolutionized genome assembly producing near-complete chromosome assemblies for numerous organisms, which are invaluable to research in many fields. However, regions with complex repetitive structure continue to represent a challenge for genome assembly algorithms, particularly in areas with high heterozygosity. Robust and comprehensive solutions for the assessment of assembly accuracy and completeness in these regions do not exist. In this study we focus on the assembly of biomedically important antibody-encoding immunoglobulin (IG) loci, which are characterized by complex duplications and repeat structures. High-quality full-length assemblies for these loci are critical for resolving haplotype-level annotations of IG genes, without which, functional and evolutionary studies of antibody immunity across vertebrates are not tractable. To address these challenges, we developed a pipeline, \"CloseRead\", that generates multiple assembly verification metrics for analysis and visualization. These metrics expand upon those of existing quality assessment tools and specifically target complex and highly heterozygous regions. Using CloseRead, we systematically assessed the accuracy and completeness of IG loci in publicly available assemblies of 74 vertebrate species, identifying problematic regions. We also demonstrated that inspecting assembly graphs for problematic regions can both identify the root cause of assembly errors and illuminate solutions for improving erroneous assemblies. For a subset of species, we were able to correct assembly errors through targeted reassembly. Together, our analysis demonstrated the utility of assembly assessment in improving the completeness and accuracy of IG loci across species.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "assembly_evaluation",
+    "locus_completeness_assessment",
+    "assembly_graph_inspection",
+    "error_correction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "assembly-quality and locus-specific metrics: base-level error rate, NGA50/contiguity, misassembly counts, locus recall/precision, plus graph-based diagnostics and visual inspection",
+  "general_score_metric": "locus-specific completeness/accuracy (recall/precision) and NGA50/contiguity",
+  "year_of_publish": 2024,
+  "reputation": "A specialized, recent pipeline aimed at immunoglobulin loci; valuable to antibody/immune-genomics researchers but currently niche.",
+  "notes": "Specialized, non-LLM benchmark that requires long-read assemblies, access to raw reads and assembly graphs, and substantial compute; focuses on highly heterozygous, repetitive loci so results do not generalize to whole-genome assembly benchmarks.",
+  "creators": {
+    "scientists": [
+      "Yixin Zhu",
+      "Corey T. Watson",
+      "Yana Safonova",
+      "Matt Pennell",
+      "Anton Bankevich"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2024.07.19.604360",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Safety Monitor Benchmark for Image Classifiers",
+  "description": "High-accurate machine learning (ML) image classifiers cannot guarantee that they will not fail at operation. Thus, their deployment in safety-critical applications such as autonomous vehicles is still an open issue. The use of fault tolerance mechanisms such as safety monitors is a promising direction to keep the system in a safe state despite errors of the ML classifier. As the prediction from the ML is the core information directly impacting safety, many works are focusing on monitoring the ML model itself. Checking the efficiency of such monitors in the context of safety-critical applications is thus a significant challenge. Therefore, this paper aims at establishing a baseline framework for benchmarking monitors for ML image classifiers. Furthermore, we propose a framework covering the entire pipeline, from data generation to evaluation. Our approach measures monitor performance with a broader set of metrics than usually proposed in the literature. Moreover, we benchmark three different monitor approaches in 79 benchmark datasets containing five categories of out-of-distribution data for image classifiers: class novelty, noise, anomalies, distributional shifts, and adversarial attacks. Our results indicate that these monitors are no more accurate than a random monitor. We also release the code of all experiments for reproducibility.",
+  "category": "vision",
+  "domain": "safety / autonomous systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "anomaly_detection",
+    "monitoring"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC / AUPR / FPR@TPR (detection metrics)",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "around chance (≈50% AUROC for many evaluated monitors, per the paper)",
+  "year_of_publish": 2021,
+  "reputation": "A research-stage benchmark (arXiv 2110.01232) that has drawn attention in ML safety and robustness communities but is not a widely standardized industry benchmark.",
+  "notes": "non-LLM benchmark focused on image-classifier monitors; evaluates 79 datasets spanning class novelty, noise, anomalies, distribution shifts, and adversarial attacks; authors release code for reproducibility; reported monitors perform close to random on many tasks.",
+  "creators": {
+    "scientists": [
+      "Raul Sena Ferreira",
+      "Jean Arlat",
+      "Jeremie Guiochet",
+      "Hélène Waeselynck"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2110.01232",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

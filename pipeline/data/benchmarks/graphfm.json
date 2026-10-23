@@ -1,0 +1,40 @@
+{
+  "name": "GraphFM",
+  "description": "Foundation Models (FMs) serve as a general class for the development of artificial intelligence systems, offering broad potential for generalization across a spectrum of downstream tasks. Despite extensive research into self-supervised learning as the cornerstone of FMs, several outstanding issues persist in Graph Foundation Models that rely on graph self-supervised learning, namely: 1) Homogenization. The extent of generalization capability on downstream tasks remains unclear. 2) Scalability. It is unknown how effectively these models can scale to large datasets. 3) Efficiency. The training time and memory usage of these models require evaluation. 4) Training Stop Criteria. Determining the optimal stopping strategy for pre-training across multiple tasks to maximize performance on downstream tasks. To address these questions, we have constructed a rigorous benchmark that thoroughly analyzes and studies the generalization and scalability of self-supervised Graph Neural Network (GNN) models. Regarding generalization, we have implemented and compared the performance of various self-supervised GNN models, trained to generate node representations, across tasks such as node classification, link prediction, and node clustering. For scalability, we have compared the performance of various models after training using full-batch and mini-batch strategies. Additionally, we have assessed the training efficiency of these models by conducting experiments to test their GPU memory usage and throughput. Through these experiments, we aim to provide insights to motivate future research. The code for this benchmark is publicly available at https://github.com/NYUSHCS/GraphFM.",
+  "category": "mixed",
+  "domain": "graph machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "link_prediction",
+    "node_clustering",
+    "representation_learning",
+    "scalability_benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (accuracy/F1 for classification, AUC for link prediction, NMI/ARI for clustering) plus efficiency metrics (throughput, GPU memory)",
+  "general_score_metric": "task-specific (accuracy / AUC / NMI) and efficiency metrics (throughput, memory)",
+  "year_of_publish": 2024,
+  "reputation": "Research-oriented benchmark with growing recognition in the graph ML community for evaluating self-supervised GNN generalization and scalability.",
+  "notes": "Non-LLM benchmark; reports multiple task-specific and efficiency metrics rather than a single aggregate score; results vary by dataset scale and training strategy (full-batch vs mini-batch); scalability/efficiency outcomes are hardware-dependent.",
+  "creators": {
+    "scientists": [
+      "Yuhao Xu",
+      "Xinqi Liu",
+      "Keyu Duan",
+      "Yi Fang",
+      "Yu-Neng Chuang",
+      "Daochen Zha",
+      "Qiaoyu Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.08310",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

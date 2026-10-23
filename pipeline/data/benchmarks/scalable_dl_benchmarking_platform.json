@@ -1,0 +1,35 @@
+{
+  "name": "Scalable DL Benchmarking Platform",
+  "description": "The current Deep Learning (DL) landscape is fast-paced and is rife with non-uniform models, hardware/software (HW/SW) stacks, but lacks a DL benchmarking platform to facilitate evaluation and comparison of DL innovations, be it models, frameworks, libraries, or hardware. Due to the lack of a benchmarking platform, the current practice of evaluating the benefits of proposed DL innovations is both arduous and error-prone - stifling the adoption of the innovations. In this work, we first identify $10$ design features which are desirable within a DL benchmarking platform. These features include: performing the evaluation in a consistent, reproducible, and scalable manner, being framework and hardware agnostic, supporting real-world benchmarking workloads, providing in-depth model execution inspection across the HW/SW stack levels, etc. We then propose MLModelScope, a DL benchmarking platform design that realizes the $10$ objectives. MLModelScope proposes a specification to define DL model evaluations and techniques to provision the evaluation workflow using the user-specified HW/SW stack. MLModelScope defines abstractions for frameworks and supports board range of DL models and evaluation scenarios. We implement MLModelScope as an open-source project with support for all major frameworks and hardware architectures. Through MLModelScope's evaluation and automated analysis workflows, we performed case-study analyses of $37$ models across $4$ systems and show how model, hardware, and framework selection affects model accuracy and performance under different benchmarking scenarios. We further demonstrated how MLModelScope's tracing capability gives a holistic view of model execution and helps pinpoint bottlenecks.",
+  "category": "mixed",
+  "domain": "deep learning systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "benchmarking_platform",
+    "system_evaluation",
+    "performance_profiling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "system and model performance metrics (throughput, latency, resource utilization) combined with model accuracy where applicable",
+  "general_score_metric": "composite of performance metrics (throughput/latency/resource usage) and model accuracy depending on the evaluation scenario",
+  "year_of_publish": 2019,
+  "reputation": "MLModelScope is an open-source platform designed for reproducible DL benchmarking and system-level analysis; used in systems and ML research communities for multi-framework, multi-hardware evaluations.",
+  "notes": "Not a single-task ML benchmark — focuses on system-level reproducible evaluation across HW/SW stacks; results depend heavily on hardware/software configuration and workload selection.",
+  "creators": {
+    "scientists": [
+      "Cheng Li",
+      "Abdul Dakkak",
+      "JinJun Xiong",
+      "Wen-mei Hwu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1911.08031",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

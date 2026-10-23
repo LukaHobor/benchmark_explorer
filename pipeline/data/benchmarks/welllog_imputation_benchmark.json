@@ -1,0 +1,35 @@
+{
+  "name": "Well-Log Imputation Benchmark",
+  "description": "Well-log datasets commonly contain missing values due to acquisition issues, operational constraints, and economic limitations, which complicate quantitative subsurface analysis and useful extraction of information in geothermal and more largely subsurface characterisation. Imputation is therefore a key preprocessing step, yet many existing approaches primarily focus on within-well continuity and treat the problem as a depth-wise or time-series task, often overlooking spatial redundancy between neighbouring wells.In this contribution, we compare three complementary modeling paradigms for well-log imputation: tabular machine-learning methods, sequential deep-learning models, and spatially informed graph-based approaches. The comparison is conducted within a unified and reproducible experimental framework based on cross-well validation and realistic missingness scenarios, including isolated gaps as well as extended block-wise and complete log-wise gaps.Results highlight clear differences in behaviour across modeling families. Tabular methods exhibit limited robustness when missing values become structured, while sequential models improve depth-wise continuity but remain sensitive to large gaps and absent logs. In contrast, spatially informed graph-based models show increased stability by exploiting inter-well relationships, leading to more coherent reconstructions at the field scale.These results suggest that evaluating imputation quality solely through local error metrics is insufficient for realistic subsurface applications. By emphasizing the importance of spatial coherence and inter-well information, this study supports the use of spatially aware formulations as a valuable alternative to purely depth-wise approaches for geothermal and broader subsurface characterization workflows.",
+  "category": "mixed",
+  "domain": "geoscience / subsurface characterization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "imputation",
+    "regression",
+    "time_series"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2026,
+  "reputation": "A domain-specific benchmark used in geoscience and subsurface research for comparing imputation methods; adoption is growing within the subsurface modelling community but limited outside it.",
+  "notes": "Domain-specific (non-LLM) benchmark; performance strongly depends on missingness patterns (isolated vs block gaps) and spatial coverage; small number of fields/wells can limit generalization; potential contamination risk if cross-well splits are not strictly enforced.",
+  "creators": {
+    "scientists": [
+      "Wendinkonté Fabrice Cédric Sawadogo",
+      "Romain Chassagne",
+      "Olivier Atteia"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.5194/egusphere-egu26-11579",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

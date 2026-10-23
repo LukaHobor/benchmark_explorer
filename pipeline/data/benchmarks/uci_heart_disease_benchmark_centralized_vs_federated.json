@@ -1,0 +1,35 @@
+{
+  "name": "UCI Heart Disease Benchmark (Centralized vs Federated)",
+  "description": "Cardiovascular disease (CVD) is a leading cause of global mortality, highlighting the need for accurate diagnostic methods. This study benchmarks centralized and federated learning (FL) algorithms for heart disease binary classification using the UCI dataset, which includes 920 patient records from four hospitals in the USA, Hungary, and Switzerland. Our benchmark is supported by Shapley-value as well as Local Interpretable Model-agnostic Explanations (LIME) interpretability analyses to quantify feature importance for classification. In the centralized setup, various classification algorithms are trained on pooled data, with the Naive Bayes classifier achieving the highest test accuracy of $\\mathbf{8 1. 1 \\%}$. Further, FL algorithms with four clients (hospitals) and various aggregation mechanisms are explored, leveraging the dataset's natural partition to enhance privacy without compromising accuracy. Federating logistic regression achieves a top test accuracy of $\\mathbf{7 8. 2 \\%}$. Our interpretability analysis aligns with existing medical knowledge of heart disease indicators. Overall, this study establishes a benchmark for efficient and interpretable prescreening tools of heart disease while maintaining patients' privacy.",
+  "category": "mixed",
+  "domain": "medical / healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "interpretability",
+    "federated_learning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "75–90%",
+  "year_of_publish": 2025,
+  "reputation": "A commonly used baseline in medical ML and federated-learning research for heart disease; valued for interpretability comparisons but limited by its small, well-studied UCI data.",
+  "notes": "Small, classical UCI dataset with class imbalance and limited sample size; risk of dataset leakage and overfitting; not an LLM benchmark and results may not generalize to larger clinical populations.",
+  "creators": {
+    "scientists": [
+      "Mario Padilla Rodriguez",
+      "Eyiara Oladipo",
+      "Mohamed Nafea"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1109/evolution65010.2025.11044926",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "LSASRD (Large-Scale Anime Style Recognition Dataset)",
+  "description": "Given two images of different anime roles, anime style recognition (ASR) aims to learn abstract painting style to determine whether the two images are from the same work, which is an interesting but challenging problem. Unlike biometric recognition, such as face recognition, iris recognition, and person re-identification, ASR suffers from a much larger semantic gap but receives less attention. In this paper, we propose a challenging ASR benchmark. Firstly, we collect a large-scale ASR dataset (LSASRD), which contains 20,937 images of 190 anime works and each work at least has ten different roles. In addition to the large-scale, LSASRD contains a list of challenging factors, such as complex illuminations, various poses, theatrical colors and exaggerated compositions. Secondly, we design a cross-role protocol to evaluate ASR performance, in which query and gallery images must come from different roles to validate an ASR model is to learn abstract painting style rather than learn discriminative features of roles. Finally, we apply two powerful person re-identification methods, namely, AGW and TransReID, to construct the baseline performance on LSASRD. Surprisingly, the recent transformer model (i.e., TransReID) only acquires a 42.24% mAP on LSASRD. Therefore, we believe that the ASR task of a huge semantic gap deserves deep and long-term research. We will open our dataset and code at https://github.com/nkjcqvcpi/ASR.",
+  "category": "vision",
+  "domain": "computer vision / artwork analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_verification",
+    "image_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP / Rank-1 accuracy",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "42–60% mAP",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2025,
+  "reputation": "A targeted, well-constructed benchmark in the anime/artwork recognition niche; attracts interest from researchers in style recognition and re-identification but not yet widely adopted beyond that community.",
+  "notes": "Domain-specific (anime) dataset with modest size (~21k images); includes a challenging cross-role protocol to avoid role-based shortcuts. Baselines show relatively low performance, indicating task difficulty. Possible class imbalance and copyright/usage caveats; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Haotang Li",
+      "Shengtao Guo",
+      "Kailin Lyu",
+      "Xiao Yang",
+      "Tianchen Chen",
+      "Jianqing Zhu",
+      "Huanqiang Zeng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2204.14034",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

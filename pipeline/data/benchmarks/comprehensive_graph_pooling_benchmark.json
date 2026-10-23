@@ -1,0 +1,41 @@
+{
+  "name": "Comprehensive Graph Pooling Benchmark",
+  "description": "Graph pooling has gained attention for its ability to obtain effective node and graph representations for various downstream tasks. Despite the recent surge in graph pooling approaches, there is a lack of standardized experimental settings and fair benchmarks to evaluate their performance. To address this issue, we have constructed a comprehensive benchmark that includes 17 graph pooling methods and 28 different graph datasets. This benchmark systematically assesses the performance of graph pooling methods in three dimensions, i.e., effectiveness, robustness, and generalizability. We first evaluate the performance of these graph pooling approaches across different tasks including graph classification, graph regression and node classification. Then, we investigate their performance under potential noise attacks and out-of-distribution shifts in real-world scenarios. We also involve detailed efficiency analysis, backbone analysis, parameter analysis and visualization to provide more evidence. Extensive experiments validate the strong capability and applicability of graph pooling approaches in various scenarios, which can provide valuable insights and guidance for deep geometric learning research. The source code of our benchmark is available at https://github.com/goose315/Graph_Pooling_Benchmark.",
+  "category": "mixed",
+  "domain": "graph representation learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "graph_classification",
+    "graph_regression",
+    "node_classification",
+    "robustness_evaluation",
+    "efficiency_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Task-specific metrics: accuracy (graph/node classification), RMSE/MAE (regression), F1 (node classification), plus robustness metrics (attack success rate) and efficiency measures (runtime, memory)",
+  "general_score_metric": "Task-specific metrics (accuracy for classification; RMSE/MAE for regression)",
+  "typical_sota_score": "dataset-dependent; classification accuracies often range widely (roughly 70–95% depending on dataset and task)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A well-engineered, recent benchmark that is gaining recognition in the graph representation learning community for providing a broad, systematic comparison of pooling methods, though not yet a single universal standard.",
+  "notes": "Non-LLM benchmark focused on geometric deep learning; results are highly dataset- and task-dependent, some datasets are small which can cause overfitting, and there is no single aggregated metric—comparisons require per-task interpretation.",
+  "creators": {
+    "scientists": [
+      "Pengyun Wang",
+      "Junyu Luo",
+      "Yanxin Shen",
+      "Ming Zhang",
+      "Siyu Heng",
+      "Xiao Luo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.09031",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

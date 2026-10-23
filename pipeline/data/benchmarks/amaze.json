@@ -1,0 +1,35 @@
+{
+  "name": "AMaze",
+  "description": "Traditional approaches to training agents have generally involved a single, deterministic environment of minimal complexity to solve various tasks such as robot locomotion or computer vision. However, agents trained in static environments lack generalization capabilities, limiting their potential in broader scenarios. Thus, recent benchmarks frequently rely on multiple environments, for instance, by providing stochastic noise, simple permutations, or altogether different settings. In practice, such collections result mainly from costly human-designed processes or the liberal use of random number generators. In this work, we introduce AMaze, a novel benchmark generator in which embodied agents must navigate a maze by interpreting visual signs of arbitrary complexities and deceptiveness. This generator promotes human interaction through the easy generation of feature-specific mazes and an intuitive understanding of the resulting agents' strategies. As a proof-of-concept, we demonstrate the capabilities of the generator in a simple, fully discrete case with limited deceptiveness. Agents were trained under three different regimes (one-shot, scaffolding, interactive), and the results showed that the latter two cases outperform direct training in terms of generalization capabilities. Indeed, depending on the combination of generalization metric, training regime, and algorithm, the median gain ranged from 50% to 100% and maximal performance was achieved through interactive training, thereby demonstrating the benefits of a controllable human-in-the-loop benchmark generator.",
+  "category": "mixed",
+  "domain": "games / reinforcement learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "navigation",
+    "generalization_evaluation",
+    "human-in-the-loop_training"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task_success_rate / episodic_return (generalization gap and success on held-out mazes)",
+  "general_score_metric": "task_success_rate (generalization gain compared to training performance)",
+  "year_of_publish": 2024,
+  "reputation": "Novel research benchmark introduced in a recent paper with limited adoption so far; primarily used in academic exploration of generalization and interactive training.",
+  "notes": "Non-LLM benchmark; proof-of-concept implementation uses synthetic mazes with limited deceptiveness in initial experiments. Results can depend strongly on generator settings and human interaction protocol.",
+  "creators": {
+    "scientists": [
+      "Kevin Godin-Dubois",
+      "Karine Miras",
+      "Anna V. Kononova"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2411.13072",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

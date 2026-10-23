@@ -1,0 +1,36 @@
+{
+  "name": "EDIN (Unknown Entity Discovery and Indexing)",
+  "description": "Existing work on Entity Linking mostly assumes that the reference knowledge base is complete, and therefore all mentions can be linked. In practice this is hardly ever the case, as knowledge bases are incomplete and because novel concepts arise constantly. This paper created the Unknown Entity Discovery and Indexing (EDIN) benchmark where unknown entities, that is entities without a description in the knowledge base and labeled mentions, have to be integrated into an existing entity linking system. By contrasting EDIN with zero-shot entity linking, we provide insight on the additional challenges it poses. Building on dense-retrieval based entity linking, we introduce the end-to-end EDIN pipeline that detects, clusters, and indexes mentions of unknown entities in context. Experiments show that indexing a single embedding per entity unifying the information of multiple mentions works better than indexing mentions independently.",
+  "category": "text",
+  "domain": "natural language / knowledge bases",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "entity_discovery",
+    "clustering",
+    "entity_linking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2022,
+  "reputation": "A research benchmark introduced in a 2022 paper that is cited within the entity linking community but is not a broadly adopted industrial standard.",
+  "notes": "Research-scale dataset; focuses on unknown-entity detection and indexing. Potential contamination risk if models were trained on the same KB; evaluates clustering/retrieval components as well as linking, and is not a large, fully standardized LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Nora Kassner",
+      "Fabio Petroni",
+      "Mikhail Plekhanov",
+      "Sebastian Riedel",
+      "Nicola Cancedda"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2205.12570",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

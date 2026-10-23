@@ -1,0 +1,34 @@
+{
+  "name": "Longitudinal Dispersion ML Benchmark",
+  "description": "Longitudinal Dispersion(LD) is the dominant process of scalar transport in natural streams. An accurate prediction on LD coefficient(Dl) can produce a performance leap in related simulation. The emerging machine learning(ML) techniques provide a self-adaptive tool for this problem. However, most of the existing studies utilize an unproved quaternion feature set, obtained through simple theoretical deduction. Few studies have put attention on its reliability and rationality. Besides, due to the lack of comparative comparison, the proper choice of ML models in different scenarios still remains unknown. In this study, the Feature Gradient selector was first adopted to distill the local optimal feature sets directly from multivariable data. Then, a global optimal feature set (the channel width, the flow velocity, the channel slope and the cross sectional area) was proposed through numerical comparison of the distilled local optimums in performance with representative ML models. The channel slope is identified to be the key parameter for the prediction of LDC. Further, we designed a weighted evaluation metric which enables comprehensive model comparison. With the simple linear model as the baseline, a benchmark of single and ensemble learning models was provided. Advantages and disadvantages of the methods involved were also discussed. Results show that the support vector machine has significantly better performance than other models. Decision tree is not suitable for this problem due to poor generalization ability. Notably, simple models show superiority over complicated model on this low-dimensional problem, for their better balance between regression and generalization.",
+  "category": "mixed",
+  "domain": "hydrology / environmental engineering",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE",
+  "general_score_metric": "weighted evaluation metric (author-proposed composite combining MAE and relative error)",
+  "year_of_publish": 2021,
+  "reputation": "Limited — dataset and benchmark were introduced in a single paper and have seen only modest adoption outside that work.",
+  "notes": "Small, low-dimensional regression dataset (risk of overfitting); custom weighted metric used by authors; non-LLM benchmark; limited external replication/validation.",
+  "creators": {
+    "scientists": [
+      "Yifeng Zhao",
+      "Pei Zhang",
+      "S. A. Galindo-Torres",
+      "Stan Z. Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2107.12970",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Representation Bias Benchmark for Action Recognition",
+  "description": "Deep learning models have achieved excellent recognition results on large-scale video benchmarks. However, they perform poorly when applied to videos with rare scenes or objects, primarily due to the bias of existing video datasets. We tackle this problem from two different angles: algorithm and dataset. From the perspective of algorithms, we propose Spatial-aware Multi-Aspect Debiasing (SMAD), which incorporates both explicit debiasing with multi-aspect adversarial training and implicit debiasing with the spatial actionness reweighting module, to learn a more generic representation invariant to non-action aspects. To neutralize the intrinsic dataset bias, we propose OmniDebias to leverage web data for joint training selectively, which can achieve higher performance with far fewer web data. To verify the effectiveness, we establish evaluation protocols and perform extensive experiments on both re-distributed splits of existing datasets and a new evaluation dataset focusing on the action with rare scenes. We also show that the debiased representation can generalize better when transferred to other datasets and tasks.",
+  "category": "vision",
+  "domain": "computer vision / video action recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "action_classification",
+    "robustness_evaluation",
+    "transfer_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "top-1 accuracy",
+  "year_of_publish": 2022,
+  "reputation": "A niche but influential benchmark in research on debiasing and robustness for video action recognition, used mainly in academic studies.",
+  "notes": "Focuses on rare-scene/action scenarios with a relatively small targeted evaluation set; not an LLM benchmark; using web data (OmniDebias) carries potential contamination and domain-shift concerns.",
+  "creators": {
+    "scientists": [
+      "Haodong Duan",
+      "Yue Zhao",
+      "Kai Chen",
+      "Yuanjun Xiong",
+      "Dahua Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.09393",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

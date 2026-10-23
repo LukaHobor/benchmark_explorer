@@ -1,0 +1,36 @@
+{
+  "name": "WHU-Stereo",
+  "description": "Stereo matching of high-resolution satellite images (HRSI) is still a fundamental but challenging task in the field of photogrammetry and remote sensing. Recently, deep learning (DL) methods, especially convolutional neural networks (CNNs), have demonstrated tremendous potential for stereo matching on public benchmark datasets. However, datasets for stereo matching of satellite images are scarce. To facilitate further research, this paper creates and publishes a challenging dataset, termed WHU-Stereo, for stereo matching DL network training and testing. This dataset is created by using airborne LiDAR point clouds and high-resolution stereo imageries taken from the Chinese GaoFen-7 satellite (GF-7). The WHU-Stereo dataset contains more than 1700 epipolar rectified image pairs, which cover six areas in China and includes various kinds of landscapes. We have assessed the accuracy of ground-truth disparity maps, and it is proved that our dataset achieves comparable precision compared with existing state-of-the-art stereo matching datasets. To verify its feasibility, in experiments, the hand-crafted SGM stereo matching algorithm and recent deep learning networks have been tested on the WHU-Stereo dataset. Experimental results show that deep learning networks can be well trained and achieves higher performance than hand-crafted SGM algorithm, and the dataset has great potential in remote sensing application. The WHU-Stereo dataset can serve as a challenging benchmark for stereo matching of high-resolution satellite images, and performance evaluation of deep learning models. Our dataset is available at https://github.com/Sheng029/WHU-Stereo",
+  "category": "vision",
+  "domain": "remote sensing / photogrammetry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "stereo_matching",
+    "disparity_estimation",
+    "dense_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "endpoint error (EPE) and error-rate (percent bad pixels / thresholded disparity error); also RMSE/MAE on disparity maps",
+  "general_score_metric": "endpoint error (EPE)",
+  "year_of_publish": 2022,
+  "reputation": "Valued in the remote-sensing/photogrammetry community as a challenging high-resolution satellite stereo benchmark, though less ubiquitous than some mainstream synthetic/indoor stereo datasets.",
+  "notes": "Domain-specific (high-resolution satellite imagery) with ~1.7k image pairs; ground-truth derived from LiDAR (good fidelity) but limited geographic/scene diversity relative to large-scale benchmarks; high compute/memory requirements for HRSI.",
+  "creators": {
+    "scientists": [
+      "Shenhong Li",
+      "Sheng He",
+      "San Jiang",
+      "Wanshou Jiang",
+      "Lin Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.02342",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

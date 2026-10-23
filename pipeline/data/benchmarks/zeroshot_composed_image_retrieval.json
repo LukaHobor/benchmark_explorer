@@ -1,0 +1,35 @@
+{
+  "name": "Zero-shot Composed Image Retrieval",
+  "description": "Composed Image Retrieval (CIR) aims to find a target image that aligns with user intent, expressed through a reference image and a modification text. While Zero-shot CIR (ZS-CIR) methods sidestep the need for labeled training data by leveraging pretrained vision-language models, they often rely on a single fused query that merges all descriptive cues of what the user wants, tending to dilute key information and failing to account for what they wish to avoid. Moreover, current CIR benchmarks assume a single correct target per query, overlooking the ambiguity in modification texts. To address these challenges, we propose Soft Filtering with Textual constraints (SoFT), a training-free, plug-and-play filtering module for ZS-CIR. SoFT leverages multimodal large language models (LLMs) to extract two complementary constraints from the reference-modification pair: prescriptive (must-have) and proscriptive (must-avoid) constraints. These serve as semantic filters that reward or penalize candida",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "composed_image_retrieval",
+    "open_vocabulary_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k",
+  "general_score_metric": "Recall@K",
+  "year_of_publish": 2025,
+  "reputation": "An active but specialized benchmark area in vision-language retrieval, especially for zero-shot composed retrieval methods.",
+  "notes": "Benchmarking is sensitive to dataset ambiguity and multiple-valid-target issues; zero-shot setting and retrieval metrics make results hard to compare across datasets.",
+  "creators": {
+    "scientists": [
+      "Youjin Jung",
+      "Seongwoo Cho",
+      "Hyun-seok Min",
+      "Sungchul Choi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2512.20781",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Unsupervised Object Representation Video Benchmark",
+  "description": "Perceiving the world in terms of objects and tracking them through time is a crucial prerequisite for reasoning and scene understanding. Recently, several methods have been proposed for unsupervised learning of object-centric representations. However, since these models were evaluated on different downstream tasks, it remains unclear how they compare in terms of basic perceptual abilities such as detection, figure-ground segmentation and tracking of objects. To close this gap, we design a benchmark with four data sets of varying complexity and seven additional test sets featuring challenging tracking scenarios relevant for natural videos. Using this benchmark, we compare the perceptual abilities of four object-centric approaches: ViMON, a video-extension of MONet, based on recurrent spatial attention, OP3, which exploits clustering via spatial mixture models, as well as TBA and SCALOR, which use explicit factorization via spatial transformers. Our results suggest that the architectures with unconstrained latent representations learn more powerful representations in terms of object detection, segmentation and tracking than the spatial transformer based architectures. We also observe that none of the methods are able to gracefully handle the most challenging tracking scenarios despite their synthetic nature, suggesting that our benchmark may provide fruitful guidance towards learning more robust object-centric video representations.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation",
+    "object_tracking",
+    "unsupervised_representation_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ARI / IoU / F1 for segmentation and detection; tracking metrics (e.g., MOTA) for tracking",
+  "general_score_metric": "ARI (adjusted Rand index) for segmentation",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded within the unsupervised object-centric representation community as a targeted benchmark for video-based perceptual abilities, though adoption is more specialized than mainstream vision benchmarks.",
+  "notes": "Synthetic and curated video datasets with multiple specialized test sets; non-LLM benchmark. Uses several distinct metrics (segmentation, detection, tracking), has limited scale compared to large natural-video corpora, and may exhibit domain gap to real-world videos.",
+  "creators": {
+    "scientists": [
+      "Marissa A. Weis",
+      "Kashyap Chitta",
+      "Yash Sharma",
+      "Wieland Brendel",
+      "Matthias Bethge",
+      "Andreas Geiger",
+      "Alexander S. Ecker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2006.07034",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

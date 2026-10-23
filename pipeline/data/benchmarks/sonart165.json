@@ -1,0 +1,37 @@
+{
+  "name": "SonarT165",
+  "description": "Underwater observation systems typically integrate optical cameras and imaging sonar systems. When underwater visibility is insufficient, only sonar systems can provide stable data, which necessitates exploration of the underwater acoustic object tracking (UAOT) task. Previous studies have explored traditional methods and Siamese networks for UAOT. However, the absence of a unified evaluation benchmark has significantly constrained the value of these methods. To alleviate this limitation, we propose the first large-scale UAOT benchmark, SonarT165, comprising 165 square sequences, 165 fan sequences, and 205K high-quality annotations. Experimental results demonstrate that SonarT165 reveals limitations in current state-of-the-art SOT trackers. To address these limitations, we propose STFTrack, an efficient framework for acoustic object tracking. It includes two novel modules, a multi-view template fusion module (MTFM) and an optimal trajectory correction module (OTCM). The MTFM module integrates multi-view feature of both the original image and the binary image of the dynamic template, and introduces a cross-attention-like layer to fuse the spatio-temporal target representations. The OTCM module introduces the acoustic-response-equivalent pixel property and proposes normalized pixel brightness response scores, thereby suppressing suboptimal matches caused by inaccurate Kalman filter prediction boxes. To further improve the model feature, STFTrack introduces a acoustic image enhancement method and a Frequency Enhancement Module (FEM) into its tracking pipeline. Comprehensive experiments show the proposed STFTrack achieves state-of-the-art performance on the proposed benchmark. The code is available at https://github.com/LiYunfengLYF/SonarT165.",
+  "category": "audio",
+  "domain": "underwater sensing / acoustic tracking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_tracking",
+    "single_object_tracking",
+    "acoustic_object_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "success (IoU)-based tracking success rate and precision (tracking AUC / precision at threshold)",
+  "general_score_metric": "Success rate (area under success curve / AUC of IoU) and precision",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific benchmark (2024); limited adoption so far but useful within underwater sonar-tracking research.",
+  "notes": "Non-LLM benchmark specialized to sonar/acoustic imagery; large (205K annotations) but domain-specific so generalization to optical tracking is limited; potential class/scene imbalance and specialized preprocessing required.",
+  "creators": {
+    "scientists": [
+      "Yunfeng Li",
+      "Bo wang",
+      "Jiahao Wan",
+      "Xueyi Wu",
+      "Ye Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.15609",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

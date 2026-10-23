@@ -1,0 +1,42 @@
+{
+  "name": "Paired RWSI–H&E prostate WSI dataset / computational H&E benchmark",
+  "description": "Histopathological diagnoses of tumors in tissue biopsy after Hematoxylin and Eosin (H&E) staining is the gold standard for oncology care. H&E staining is slow and uses dyes, reagents and precious tissue samples that cannot be reused. Thousands of native nonstained RGB Whole Slide Image (RWSI) patches of prostate core tissue biopsies were registered with their H&E stained versions. Conditional Generative Adversarial Neural Networks (cGANs) that automate conversion of native nonstained RWSI to computational H&E stained images were then trained. High similarities between computational and H&E dye stained images with Structural Similarity Index (SSIM) 0.902, Pearsons Correlation Coefficient (CC) 0.962 and Peak Signal to Noise Ratio (PSNR) 22.821 dB were calculated. A second cGAN performed accurate computational destaining of H&E dye stained images back to their native nonstained form with SSIM 0.9, CC 0.963 and PSNR 25.646 dB. A single-blind study computed more than 95% pixel-by-pixel overlap between prostate tumor annotations on computationally stained images, provided by five-board certified MD pathologists, with those on H&E dye stained counterparts. We report the first visualization and explanation of neural network kernel activation maps during H&E staining and destaining of RGB images by cGANs. High similarities between kernel activation maps of computational and H&E stained images (Mean-Squared Errors <0.0005) provide additional mathematical and mechanistic validation of the staining system. Our neural network framework thus is automated, explainable and performs high precision H&E staining and destaining of low cost native RGB images, and is computer vision and physician authenticated for rapid and accurate tumor diagnoses.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_translation",
+    "segmentation",
+    "image_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "SSIM / PSNR / Pearson_correlation / pixel_overlap (IoU/Dice) between computationally stained and dye-stained images",
+  "general_score_metric": "SSIM",
+  "typical_sota_score": "SSIM ≈0.90; PSNR ≈22–26 dB; pixel-wise annotation overlap >95%",
+  "year_of_publish": 2019,
+  "reputation": "Specialized medical-imaging dataset introduced in a research paper; primarily used in computational pathology research with limited broader community adoption.",
+  "notes": "Domain-specific, research-grade dataset of paired whole-slide image patches; relatively small and specialized, not an LLM benchmark. Potential caveats include limited diversity, potential overfitting to the original scanner/protocol, and patient-data governance considerations.",
+  "creators": {
+    "scientists": [
+      "Aman Rana",
+      "Alarice Lowe",
+      "Marie Lithgow",
+      "Katharine Horback",
+      "Tyler Janovitz",
+      "Annacarolina Da Silva",
+      "Harrison Tsai",
+      "Vignesh Shanmugam",
+      "Hyung-Jin Yoon",
+      "Pratik Shah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1908.01593",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

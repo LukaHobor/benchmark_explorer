@@ -1,0 +1,35 @@
+{
+  "name": "Rotation-Equivariance U-Net Segmentation Benchmark",
+  "description": "Numerous studies have recently focused on incorporating different variations of equivariance in Convolutional Neural Networks (CNNs). In particular, rotation-equivariance has gathered significant attention due to its relevance in many applications related to medical imaging, microscopic imaging, satellite imaging, industrial tasks, etc. While prior research has primarily focused on enhancing classification tasks with rotation equivariant CNNs, their impact on more complex architectures, such as U-Net for image segmentation, remains scarcely explored. Indeed, previous work interested in integrating rotation-equivariance into U-Net architecture have focused on solving specific applications with a limited scope. In contrast, this paper aims to provide a more exhaustive evaluation of rotation equivariant U-Net for image segmentation across a broader range of tasks. We benchmark their effectiveness against standard U-Net architectures, assessing improvements in terms of performance and sustainability (i.e., computational cost). Our evaluation focuses on datasets whose orientation of objects of interest is arbitrary in the image (e.g., Kvasir-SEG), but also on more standard segmentation datasets (such as COCO-Stuff) as to explore the wider applicability of rotation equivariance beyond tasks undoubtedly concerned by rotation equivariance. The main contribution of this work is to provide insights into the trade-offs and advantages of integrating rotation equivariance for segmentation tasks.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "image_segmentation",
+    "benchmarking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean Intersection over Union (mIoU) / Dice coefficient",
+  "general_score_metric": "mean Intersection over Union (mIoU)",
+  "year_of_publish": 2024,
+  "reputation": "A targeted research benchmark exploring rotation-equivariant U-Net variants; of interest to the equivariance and segmentation research community but not yet widely adopted as a standard.",
+  "notes": "Non-LLM vision benchmark; results vary widely by dataset (medical vs. natural images). Dataset sizes and orientation distributions differ across tasks, so cross-dataset comparisons should be made cautiously. Evaluates both accuracy and computational/sustainability trade-offs.",
+  "creators": {
+    "scientists": [
+      "Robin Ghyselinck",
+      "Valentin Delchevalerie",
+      "Bruno Dumas",
+      "Benoît Frénay"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2412.09182",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

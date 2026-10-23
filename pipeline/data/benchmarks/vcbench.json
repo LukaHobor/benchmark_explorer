@@ -1,0 +1,38 @@
+{
+  "name": "VCBench",
+  "description": "Recent advancements in Large Video-Language Models (LVLMs) have driven the development of benchmarks designed to assess cognitive abilities in video-based tasks. However, most existing benchmarks heavily rely on web-collected videos paired with human annotations or model-generated questions, which limit control over the video content and fall short in evaluating advanced cognitive abilities involving symbolic elements and abstract concepts. To address these limitations, we introduce VCBench, a controllable benchmark to assess LVLMs' cognitive abilities, involving symbolic and abstract concepts at varying difficulty levels. By generating video data with the Python-based engine, VCBench allows for precise control over the video content, creating dynamic, task-oriented videos that feature complex scenes and abstract concepts. Each task pairs with tailored question templates that target specific cognitive challenges, providing a rigorous evaluation test. Our evaluation reveals that even state-of-the-art (SOTA) models, such as Qwen2-VL-72B, struggle with simple video cognition tasks involving abstract concepts, with performance sharply dropping by 19% as video complexity rises. These findings reveal the current limitations of LVLMs in advanced cognitive tasks and highlight the critical role of VCBench in driving research toward more robust LVLMs for complex video cognition challenges.",
+  "category": "multimodal",
+  "domain": "video cognition / video-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_question_answering",
+    "video_reasoning",
+    "cognitive_video_tasks",
+    "multiple_choice"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Accuracy (task-specific, e.g., top-1 accuracy over question sets)",
+  "general_score_metric": "Accuracy (per-task and aggregated by difficulty level)",
+  "typical_sota_score": "varies by task difficulty; reported SOTA roughly ~60–80% on simple tasks, substantially lower on complex/abstract tasks (large drop on harder settings)",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed controllable synthetic video benchmark for LVLM cognition tasks; promising but not yet widely adopted in the broader community.",
+  "notes": "Uses synthetic/engineered videos (good control but domain gap to real-world video); question templates may enable overfitting; useful for targeted cognitive probes but not a full substitute for natural video benchmarks.",
+  "creators": {
+    "scientists": [
+      "Chenglin Li",
+      "Qianglong Chen",
+      "Zhi Li",
+      "Feng Tao",
+      "Yin Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.09105",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

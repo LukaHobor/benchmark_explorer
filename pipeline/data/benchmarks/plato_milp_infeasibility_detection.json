@@ -1,0 +1,35 @@
+{
+  "name": "PLATO MILP Infeasibility Detection Benchmark",
+  "description": "Evaluates MIP solvers on detecting infeasibility for 32 'easy' infeasible instances drawn from MIPLIB2017. Rather than finding an optimal solution, solvers must prove that no feasible integer solution exists. The benchmark assesses how efficiently different solvers detect infeasibility through presolving, cutting planes, and branch-and-bound.",
+  "category": "mixed",
+  "domain": "optimization, mixed-integer programming, operations research",
+  "task_types": [
+    "feasibility_detection",
+    "integer_programming"
+  ],
+  "difficulty_level": "expert",
+  "number_of_questions": 32,
+  "evaluation_method": "wall_clock_time",
+  "general_score_metric": "wall_clock_time",
+  "typical_sota_score": "COPT (30/32 solved, scaled mean 1.0); XOPT (30/32, 6.32x slower); SCIP with CPLEX (27/32). 1-hour time limit.",
+  "year_of_publish": 2017,
+  "year_of_last_update": 2026,
+  "reputation": "Targeted benchmark for a specific and often underemphasised solver capability; maintained by Hans Mittelmann.",
+  "notes": "Not an LLM benchmark. Instances are 'easy' infeasible cases but solvers still vary significantly in detection speed. Hardware: Intel i7-11700K, 8 cores.",
+  "creators": {
+    "scientists": [
+      "Hans Mittelmann"
+    ],
+    "institutions": [
+      "Arizona State University"
+    ],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://plato.asu.edu/ftp/infeas.html",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

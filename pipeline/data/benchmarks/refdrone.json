@@ -1,0 +1,41 @@
+{
+  "name": "RefDrone",
+  "description": "Drones have become prevalent robotic platforms with diverse applications, showing significant potential in Embodied Artificial Intelligence (Embodied AI). Referring Expression Comprehension (REC) enables drones to locate objects based on natural language expressions, a crucial capability for Embodied AI. Despite advances in REC for ground-level scenes, aerial views introduce unique challenges including varying viewpoints, occlusions and scale variations. To address this gap, we introduce RefDrone, a REC benchmark for drone scenes. RefDrone reveals three key challenges in REC: 1) multi-scale and small-scale target detection; 2) multi-target and no-target samples; 3) complex environment with rich contextual expressions. To efficiently construct this dataset, we develop RDAgent (referring drone annotation framework with multi-agent system), a semi-automated annotation tool for REC tasks. RDAgent ensures high-quality contextual expressions and reduces annotation cost. Furthermore, we propose Number GroundingDINO (NGDINO), a novel method designed to handle multi-target and no-target cases. NGDINO explicitly learns and utilizes the number of objects referred to in the expression. Comprehensive experiments with state-of-the-art REC methods demonstrate that NGDINO achieves superior performance on both the proposed RefDrone and the existing gRefCOCO datasets. The dataset and code are be publicly at https://github.com/sunzc-sunny/refdrone.",
+  "category": "vision",
+  "domain": "robotics / drone vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "referring_expression_comprehension",
+    "object_localization",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "IoU-based localization metrics (precision@IoU0.5) and mAP / localization accuracy",
+  "general_score_metric": "precision@0.5 (IoU) / mAP",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "A recent dataset focused on aerial/drone referring-expression comprehension; of early interest within drone vision and embodied-vision communities.",
+  "notes": "Aerial domain introduces multi-scale, small-object, multi-target and no-target cases; domain gap with ground-level datasets and potential limited dataset scale relative to major detection corpora.",
+  "creators": {
+    "scientists": [
+      "Zhichao Sun",
+      "Yepeng Liu",
+      "Huachao Zhu",
+      "Yuliang Gu",
+      "Yuda Zou",
+      "Zelong Liu",
+      "Gui-Song Xia",
+      "Bo Du",
+      "Yongchao Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.00392",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

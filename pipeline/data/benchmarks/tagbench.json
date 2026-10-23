@@ -1,0 +1,38 @@
+{
+  "name": "TAGBench",
+  "description": "Text-attributed graphs (TAGs) are prevalent in various real-world scenarios, where each node is associated with a text description. The cornerstone of representation learning on TAGs lies in the seamless integration of textual semantics within individual nodes and the topological connections across nodes. Recent advancements in pre-trained language models (PLMs) and graph neural networks (GNNs) have facilitated effective learning on TAGs, garnering increased research interest. However, the absence of meaningful benchmark datasets and standardized evaluation procedures for TAGs has impeded progress in this field. In this paper, we propose CS-TAG, a comprehensive and diverse collection of challenging benchmark datasets for TAGs. The CS-TAG datasets are notably large in scale and encompass a wide range of domains, spanning from citation networks to purchase graphs. In addition to building the datasets,  we conduct extensive benchmark experiments over CS-TAG with various learning paradigms, including PLMs, GNNs, PLM-GNN co-training methods, and the proposed novel topological pre-training of language models. In a nutshell, we provide an overview of the CS-TAG datasets, standardized evaluation procedures, and present baseline experiments. The entire CS-TAG project is publicly accessible at \\url{https://github.com/sktsherlock/TAG-Benchmark}.Submission Number: 748",
+  "category": "mixed",
+  "domain": "text-attributed graphs / networked NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "link_prediction",
+    "node_retrieval",
+    "graph_classification",
+    "text_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy, F1, Recall@k (task-dependent)",
+  "general_score_metric": "accuracy / F1 (task-dependent; primary reported metrics are accuracy for classification and Recall@k for retrieval)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2024,
+  "reputation": "A recent, research-focused benchmark introduced with the CS-TAG release; growing interest in the TAG research community but not yet widely standardized across the broader ML community.",
+  "notes": "Mix of large-scale datasets across domains; tasks are not saturated. Potential contamination risk from PLM pretraining on web text. Evaluation is task-dependent (classification vs. retrieval), so comparisons across models require care.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

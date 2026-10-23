@@ -1,0 +1,34 @@
+{
+  "name": "Cross-Platform AI Deployment Benchmark (WebAssembly / ONNX Runtime / TVM)",
+  "description": "Cross‑platform deployment of machine‑learning inference now spans browser tabs, handheld applications, and resource‑constrained sensors, yet the performance landscape remains fragmented by heterogeneous runtimes. This study conducts the first holistic benchmark that positions WebAssembly, ONNX Runtime, and Apache TVM side‑by‑side under a unified test harness across Web, mobile, and IoT devices. A theoretical foundation distinguishes compilation from interpretation, ahead‑of‑time from just‑in‑time pipelines, and outlines how hardware‑abstraction layers mediate latency, throughput, memory, and energy trade‑offs. Empirical evaluations draw on a curated model zoo and cold‑start vs. steady‑state runs to expose four‑dimensional performance frontiers. Results show that TVM’s auto‑tuned kernels deliver up to a 42 % latency reduction on ARM microcontrollers, whereas WebAssembly narrows browser‑native overheads to within 1.4× of device‑bound baselines when SIMD extensions are available. ONNX Runtime provides the broadest portability, though execution‑provider selection must be coupled with quantization to remain within sub‑100 ms response budgets on mid‑tier smartphones. Integrating telemetry pipelines through OpenTelemetry and Delta Lake permits real‑time drift detection, AIOps‑driven auto‑rollback, and carbon‑aware scheduling that lowers energy use by 18 % without SLA violations. Security analysis contrasts browser sandboxes with enclave‑based protection for mobile and IoT, while risk‑management blueprints extend chaos‑engineering to runtime drift and compatibility faults. Case studies spanning a browser‑side image classifier, a mobile augmented‑reality pose estimator, and an IoT anomaly detector validate the decision matrix that maps workload characteristics to optimal runtime choice. The findings synthesise technical insights into actionable deployment playbooks, offering researchers and practitioners a reproducible framework for balancing performance, sustainability, and resilience in real‑time edge AI.",
+  "category": "mixed",
+  "domain": "machine learning / systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "inference_benchmarking",
+    "performance_evaluation",
+    "energy_measurement",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (latency, throughput, energy and memory trade-off aggregated) / per-metric reporting",
+  "general_score_metric": "latency (ms) / throughput (inferences/s) / energy (J) reported as primary metrics",
+  "typical_sota_score": "variable; reported improvements up to 42% latency reduction (TVM) and WebAssembly within ~1.4× of native in favorable cases",
+  "year_of_publish": 2025,
+  "reputation": "A specialized systems benchmark aimed at runtime and edge-AI researchers and practitioners; useful but niche compared with mainstream ML benchmarks.",
+  "notes": "Non-LLM systems benchmark; scores are highly hardware- and configuration-dependent; cross-device reproducibility can be challenging; includes energy telemetry and security trade-offs.",
+  "creators": {
+    "scientists": [
+      "Aravind Chinna Raju",
+      "Aravind Chinnaraju"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

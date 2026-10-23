@@ -1,0 +1,36 @@
+{
+  "name": "Spatial Consistency Benchmark for Memory-Aided World Models",
+  "description": "The ability to simulate the world in a spatially consistent manner is a crucial requirements for effective world models. Such a model enables high-quality visual generation, and also ensures the reliability of world models for downstream tasks such as simulation and planning. Designing a memory module is a crucial component for addressing spatial consistency: such a model must not only retain long-horizon observational information, but also enables the construction of explicit or implicit internal spatial representations. However, there are no dataset designed to promote the development of memory modules by explicitly enforcing spatial consistency constraints. Furthermore, most existing benchmarks primarily emphasize visual coherence or generation quality, neglecting the requirement of long-range spatial consistency. To bridge this gap, we construct a dataset and corresponding benchmark by sampling 150 distinct locations within the open-world environment of Minecraft, collecting about 250 hours (20 million frames) of loop-based navigation videos with actions. Our dataset follows a curriculum design of sequence lengths, allowing models to learn spatial consistency on increasingly complex navigation trajectories. Furthermore, our data collection pipeline is easily extensible to new Minecraft environments and modules. Four representative world model baselines are evaluated on our benchmark. Dataset, benchmark, and code are open-sourced to support future research.",
+  "category": "vision",
+  "domain": "robotics / world modeling / simulation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_prediction",
+    "sequence_prediction",
+    "spatial_consistency_evaluation",
+    "memory_modeling"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "prediction/reconstruction metrics (PSNR, SSIM) and spatial-consistency/trajectory alignment scores",
+  "general_score_metric": "spatial-consistency score (plus PSNR/SSIM for visual prediction)",
+  "year_of_publish": 2025,
+  "reputation": "New large-scale Minecraft-based benchmark; promising for memory and spatial-consistency research but not yet widely adopted outside the authors' area.",
+  "notes": "Synthetic (Minecraft) domain — may not transfer to real-world robotics; very large dataset (computationally heavy to train/evaluate); emphasizes long-horizon/looped trajectories which may bias methods toward simulator-specific priors; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Kewei Lian",
+      "Shaofei Cai",
+      "Yilun Du",
+      "Yitao Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2505.22976",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "XFlow",
+  "description": "The occurrence of diffusion on a graph is a prevalent and significant phenomenon, as evidenced by the spread of rumors, influenza-like viruses, smart grid failures, and similar events. Comprehending the behaviors of flow is a formidable task, due to the intricate interplay between the distribution of seeds that initiate flow propagation, the propagation model, and the topology of the graph. The study of networks encompasses a diverse range of academic disciplines, including mathematics, physics, social science, and computer science. This interdisciplinary nature of network research is characterized by a high degree of specialization and compartmentalization, and the cooperation facilitated by them is inadequate. From a machine learning standpoint, there is a deficiency in a cohesive platform for assessing algorithms across various domains. One of the primary obstacles to current research in this field is the absence of a comprehensive curated benchmark suite to study the flow behaviors under network scenarios. To address this disparity, we propose the implementation of a novel benchmark suite that encompasses a variety of tasks, baseline models, graph datasets, and evaluation tools. In addition, we present a comprehensive analytical framework that offers a generalized approach to numerous flow-related tasks across diverse domains, serving as a blueprint and roadmap. Drawing upon the outcomes of our empirical investigation, we analyze the advantages and disadvantages of current foundational models, and we underscore potential avenues for further study. The datasets, code, and baseline models have been made available for the public at: https://github.com/XGraphing/XFlow",
+  "category": "mixed",
+  "domain": "network science / graph diffusion",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "diffusion_prediction",
+    "cascade_prediction",
+    "influence_maximization",
+    "node-level_prediction",
+    "graph-level_regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Task-dependent metrics: AUC / ROC and F1 for classification tasks, MAE/MSE for regression/forecasting, precision@k and recall@k for ranking/influence tasks",
+  "general_score_metric": "task-dependent (commonly AUC/F1 for classification tasks and MAE/MSE for continuous prediction tasks)",
+  "year_of_publish": 2023,
+  "reputation": "A recent comprehensive benchmark suite for graph diffusion with publicly released datasets and code; adoption is growing within the network diffusion/graph ML research community but is not yet mainstream.",
+  "notes": "Multi-task, multi-metric benchmark (not LLM-focused); heterogenous tasks and datasets make cross-task comparison difficult; results sensitive to graph topology, seed distributions, and diffusion model assumptions; reproducibility can depend on simulation/random seeds and preprocessing.",
+  "creators": {
+    "scientists": [
+      "Zijian Zhang",
+      "Zonghan Zhang",
+      "Zhiqian Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2308.03819",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

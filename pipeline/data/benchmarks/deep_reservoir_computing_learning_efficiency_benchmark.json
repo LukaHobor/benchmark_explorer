@@ -1,0 +1,36 @@
+{
+  "name": "Deep Reservoir Computing Learning Efficiency Benchmark",
+  "description": "It is common to evaluate the performance of a machine learning model by measuring its predictive power on a test dataset. This approach favors complicated models that can smoothly fit complex functions and generalize well from training data points. Although essential components of intelligence, speed and data efficiency of this learning process are rarely reported or compared between different candidate models. In this paper, we introduce a benchmark of increasingly difficult tasks together with a data efficiency metric to measure how quickly machine learning models learn from training data. We compare the learning speed of some established sequential supervised models, such as RNNs, LSTMs, or Transformers, with relatively less known alternative models based on reservoir computing. The proposed tasks require a wide range of computational primitives, such as memory or the ability to compute Boolean functions, to be effectively solved. Surprisingly, we observe that reservoir computing systems that rely on dynamically evolving feature maps learn faster than fully supervised methods trained with stochastic gradient optimization while achieving comparable accuracy scores. The code, benchmark, trained models, and results to reproduce our experiments are available at https://github.com/hugcis/benchmark_learning_efficiency/ .",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_prediction",
+    "temporal_sequence_classification",
+    "regression",
+    "memory_tasks",
+    "learning_efficiency_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy together with a data-efficiency metric (samples-to-threshold / learning curve analysis)",
+  "general_score_metric": "accuracy (primary) and samples-to-accuracy / data-efficiency as the key secondary metric",
+  "year_of_publish": 2022,
+  "reputation": "Niche research benchmark from the reservoir-computing community; useful for comparing learning speed but has limited broad adoption.",
+  "notes": "Non-LLM benchmark focused on reservoir computing and sequential tasks; emphasizes learning speed (data efficiency) rather than final peak accuracy. Tasks are synthetic and varied in difficulty; results depend strongly on hyperparameters and training regimes.",
+  "creators": {
+    "scientists": [
+      "Hugo Cisneros",
+      "Josef Sivic",
+      "Tomas Mikolov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2210.02549",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

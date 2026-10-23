@@ -1,0 +1,38 @@
+{
+  "name": "PCDS",
+  "description": "Vision-based automatic counting of people has widespread applications in\nintelligent transportation systems, security, and logistics. However, there is\ncurrently no large-scale public dataset for benchmarking approaches on this\nproblem. This work fills this gap by introducing the first real-world RGB-D\nPeople Counting DataSet (PCDS) containing over 4,500 videos recorded at the\nentrance doors of buses in normal and cluttered conditions. It also proposes an\nefficient method for counting people in real-world cluttered scenes related to\npublic transportations using depth videos. The proposed method computes a point\ncloud from the depth video frame and re-projects it onto the ground plane to\nnormalize the depth information. The resulting depth image is analyzed for\nidentifying potential human heads. The human head proposals are meticulously\nrefined using a 3D human model. The proposals in each frame of the continuous\nvideo stream are tracked to trace their trajectories. The trajectories are\nagain refined to ascertain reliable counting. People are eventually counted by\naccumulating the head trajectories leaving the scene. To enable effective head\nand trajectory identification, we also propose two different compound features.\nA thorough evaluation on PCDS demonstrates that our technique is able to count\npeople in cluttered scenes with high accuracy at 45 fps on a 1.7 GHz processor,\nand hence it can be deployed for effective real-time people counting for\nintelligent transportation systems.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "crowd_counting",
+    "object_detection",
+    "tracking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Mean Absolute Error (MAE) and Root Mean Squared Error (RMSE) for counting; detection/tracking use standard accuracy/IoU and tracking metrics where applicable",
+  "general_score_metric": "MAE (primary) and RMSE for counting performance",
+  "year_of_publish": 2018,
+  "reputation": "A niche, domain-specific RGB-D people counting dataset used in the public-transportation/counting community but far less widely adopted than large 2D crowd-counting benchmarks.",
+  "notes": "RGB-D, real-world entrance videos (moderate size ~4.5k videos); domain-specific and somewhat limited diversity; not an LLM benchmark; potential privacy considerations due to surveillance footage.",
+  "creators": {
+    "scientists": [
+      "Shi-Jie Sun",
+      "Naveed Akhtar",
+      "HuanSheng Song",
+      "Chaoyang Zhang",
+      "Jian-Xin Li",
+      "Ajmal Mian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1804.04339",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

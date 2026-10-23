@@ -1,0 +1,35 @@
+{
+  "name": "Embodied Agent Real-time Adaptation Benchmark",
+  "description": "Advancements in Large Language Models (LLMs) have opened transformative possibilities for human-robot interaction, especially in collaborative environments. However, Real-time human-AI collaboration requires agents to adapt to unseen human behaviors while maintaining effective communication dynamically. Existing benchmarks fall short in evaluating such adaptability for embodied agents, focusing mostly on the task performance of the agent itself. To address this gap, we propose a novel benchmark that assesses agents' reactive adaptability and instantaneous communication capabilities at every step. Based on this benchmark, we propose a Monitor-then-Adapt framework (MonTA), combining strong adaptability and communication with real-time execution. MonTA contains three key LLM modules, a lightweight \\textit{Monitor} for monitoring the need for adaptation in high frequency, and two proficient \\textit{Adapters} for subtask and path adaptation reasoning in low frequency. Our results demonstrate that MonTA outperforms other baseline agents on our proposed benchmark. Further user studies confirm the high reasonability adaptation plan and consistent language instruction provided by our framework.",
+  "category": "multimodal",
+  "domain": "embodied AI / robotics / human-robot interaction",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "interactive_decision_making",
+    "real_time_adaptation",
+    "instruction_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (per-step adaptation success) supplemented by human_eval for communication quality",
+  "general_score_metric": "task_success_rate (instantaneous/stepwise adaptation success)",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark proposed for embodied-agent real-time adaptation with early interest in HRI/embodied-AI communities but limited wider adoption so far.",
+  "notes": "Multimodal/embodied benchmark requiring simulated (or real) human-agent interactions and human evaluation; emphasizes per-step adaptability and communication—results can depend on human study setup and LLM backbone used.",
+  "creators": {
+    "scientists": [
+      "Shipeng Liu",
+      "Boshen Zhang",
+      "Zhehui Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2412.00435",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

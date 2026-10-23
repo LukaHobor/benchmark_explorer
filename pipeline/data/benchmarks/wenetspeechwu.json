@@ -1,0 +1,40 @@
+{
+  "name": "WenetSpeech-Wu",
+  "description": "Speech processing for low-resource dialects remains a fundamental challenge in developing inclusive and robust speech technologies. Despite its linguistic significance and large speaker population, the Wu dialect of Chinese has long been hindered by the lack of large-scale speech data, standardized evaluation benchmarks, and publicly available models. In this work, we present WenetSpeech-Wu, the first large-scale, multi-dimensionally annotated open-source speech corpus for the Wu dialect, comprising approximately 8,000 hours of diverse speech data. Building upon this dataset, we introduce WenetSpeech-Wu-Bench, the first standardized and publicly accessible benchmark for systematic evaluation of Wu dialect speech processing, covering automatic speech recognition (ASR), Wu-to-Mandarin translation, speaker attribute prediction, speech emotion recognition, text-to-speech (TTS) synthesis, and instruction-following TTS (instruct TTS). Furthermore, we release a suite of strong open-source models trained on WenetSpeech-Wu, establishing competitive performance across multiple tasks and empirically validating the effectiveness of the proposed dataset. Together, these contributions lay the foundation for a comprehensive Wu dialect speech processing ecosystem, and we open-source proposed datasets, benchmarks, and models to support future research on dialectal speech intelligence.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "automatic_speech_recognition",
+    "translation",
+    "speaker_attribute_prediction",
+    "speech_emotion_recognition",
+    "text_to_speech",
+    "instruction_following_tts"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific (WER for ASR; BLEU/chrF for Wu→Mandarin translation; accuracy/F1 for speaker attribute and emotion classification; MOS / human_eval for TTS and instruct-TTS; instruction-following measured with task_success_rate / human_eval)",
+  "general_score_metric": "WER (for ASR; other tasks use task-specific metrics)",
+  "year_of_publish": 2026,
+  "reputation": "1 citations",
+  "notes": "Large, multi-task open-source corpus for a low-resource dialect (≈8,000 hours). Non-LLM benchmark with task-specific metrics. Possible dataset contamination risk if sourced from web; dialect-specific distribution limits direct comparison to standard Mandarin benchmarks.",
+  "creators": {
+    "scientists": [
+      "Chengyou Wang",
+      "Mingchen Shao",
+      "Jingbin Hu",
+      "Zeyu Zhu",
+      "Hongfei Xue",
+      "Bingshen Mu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2601.11027",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

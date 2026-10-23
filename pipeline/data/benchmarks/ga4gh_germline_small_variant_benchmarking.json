@@ -1,0 +1,38 @@
+{
+  "name": "GA4GH germline small variant benchmarking",
+  "description": "Abstract Assessing accuracy of NGS variant calling is immensely facilitated by a robust benchmarking strategy and tools to carry it out in a standard way. Benchmarking variant calls requires careful attention to definitions of performance metrics, sophisticated comparison approaches, and stratification by variant type and genome context. The Global Alliance for Genomics and Health (GA4GH) Benchmarking Team has developed standardized performance metrics and tools for benchmarking germline small variant calls. This team includes representatives from sequencing technology developers, government agencies, academic bioinformatics researchers, clinical laboratories, and commercial technology and bioinformatics developers for whom benchmarking variant calls is essential to their work. Benchmarking variant calls is a challenging problem for many reasons: Evaluating variant calls requires complex matching algorithms and standardized counting because the same variant may be represented differently in truth and query callsets. Defining and interpreting resulting metrics such as precision (aka positive predictive value = TP/(TP+FP)) and recall (aka sensitivity = TP/(TP+FN)) requires standardization to draw robust conclusions about comparative performance for different variant calling methods. Performance of NGS methods can vary depending on variant types and genome context; and as a result understanding performance requires meaningful stratification. High-confidence variant calls and regions that can be used as “truth” to accurately identify false positives and negatives are difficult to define, and reliable calls for the most challenging regions and variants remain out of reach. We have made significant progress on standardizing comparison methods, metric definitions and reporting, as well as developing and using truth sets. Our methods are publicly available on GitHub ( https://github.com/ga4gh/benchmarking-tools ) and in a web-based app on precisionFDA, which allow users to compare their variant calls against truth sets and to obtain a standardized report on their variant calling performance. Our methods have been piloted in the precisionFDA variant calling challenges to identify the best-in-class variant calling methods within high-confidence regions. Finally, we recommend a set of best practices for using our tools and critically evaluating the results.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "variant_call_evaluation",
+    "stratified_performance_metrics"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision/recall/F1 (primary: precision and recall)",
+  "general_score_metric": "precision and recall (TP/(TP+FP), TP/(TP+FN))",
+  "typical_sota_score": "95–99% (varies by variant type and genome context)",
+  "year_of_publish": 2018,
+  "year_of_last_update": 2021,
+  "reputation": "58 citations",
+  "notes": "Non-LLM bioinformatics benchmarking framework; requires high-quality truth sets and high-confidence regions. Results vary substantially by variant class (SNP vs indel) and genomic context; care needed for representation differences between truth and query sets.",
+  "creators": {
+    "scientists": [
+      "Peter Krusche",
+      "Len Trigg",
+      "Paul C. Boutros",
+      "Christopher E. Mason",
+      "Francisco M. De La Vega",
+      "Benjamin L. Moore"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/270157",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

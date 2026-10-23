@@ -1,0 +1,35 @@
+{
+  "name": "Speech-Driven 3D Facial Motion Benchmark",
+  "description": "We consider the task of animating 3D facial geometry from speech signal. Existing works are primarily deterministic focusing on learning a one-to-one mapping from speech signal to 3D face meshes on small datasets with limited speakers. While these models can achieve high-quality lip articulation for speakers in the training set they are unable to capture the full and diverse distribution of 3D facial motions that accompany speech in the real world. Importantly the relationship between speech and facial motion is one-to-many containing both inter-speaker and intra-speaker variations and necessitating a probabilistic approach. In this paper we identify and address key challenges that have so far limited the development of probabilistic models: lack of datasets and metrics that are suitable for training and evaluating them as well as the difficulty of designing a model that generates diverse results while remaining faithful to a strong conditioning signal as speech. We first propose large-scale benchmark datasets and metrics suitable for probabilistic modeling. Then we demonstrate a probabilistic model that achieves both diversity and fidelity to speech outperforming other methods across the proposed benchmarks. Finally we showcase useful applications of probabilistic models trained on these large-scale datasets: we can generate diverse speech-driven 3D facial motion that matches unseen speaker styles extracted from reference clips; and our synthetic meshes can be used to improve the performance of downstream audio-visual models.",
+  "category": "audio",
+  "domain": "computer graphics / facial animation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "speech_to_3D_animation",
+    "probabilistic_generation",
+    "multimodal_regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "reconstruction error (e.g., L2) combined with diversity metrics and human perceptual evaluation",
+  "general_score_metric": "reconstruction_error (L2) and diversity score (plus human_eval for perceptual quality)",
+  "year_of_publish": 2023,
+  "reputation": "A recent benchmark aimed at the speech-driven facial animation and graphics communities; gaining attention for probabilistic modeling of 3D facial motion.",
+  "notes": "Multimodal non-LLM benchmark; metrics (numerical vs perceptual) can disagree and are dataset- and speaker-dependent. Benchmark emphasizes probabilistic diversity as well as fidelity to speech.",
+  "creators": {
+    "scientists": [
+      "Karren D. Yang",
+      "Anurag Ranjan",
+      "Jen-Hao Rick Chang",
+      "Raviteja Vemulapalli",
+      "Oncel Tuzel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

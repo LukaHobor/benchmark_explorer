@@ -1,0 +1,36 @@
+{
+  "name": "MDBench",
+  "description": "Natural language processing evaluation has made significant progress, largely driven by the proliferation of powerful large language mod-els (LLMs). New evaluation benchmarks are of increasing priority as the reasoning capabilities of LLMs are expanding at a rapid pace. In particular, while multi-document (MD) reasoning is an area of extreme relevance given LLM capabilities in handling longer-context inputs, few benchmarks exist to rigorously examine model behavior in this setting. Moreover, the multi-document setting is historically challenging for benchmark creation due to the expensive cost of annotating long inputs. In this work, we introduce MDBench, a new dataset for evaluating LLMs on the task of multi-document reasoning. Notably, MDBench is created through a novel synthetic generation process, allowing us to controllably and efficiently generate challenging document sets and the corresponding question-answer (QA) examples. Our novel technique operates on condensed structured seed knowledge, modifying it through LLM-assisted edits to induce MD-specific reasoning challenges. We then convert this structured knowledge into a natural text surface form, generating a document set and corresponding QA example. We analyze the behavior of popular LLMs and prompting techniques, finding that MDBENCH poses significant challenges for all methods, even with relatively short document sets. We also see our knowledge-guided generation technique (1) allows us to readily perform targeted analysis of MD-specific reasoning capabilities and (2) can be adapted quickly to account for new challenges and future modeling improvements.",
+  "category": "text",
+  "domain": "legal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multi_document_qa",
+    "reading_comprehension"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match",
+  "year_of_publish": 2025,
+  "reputation": "Newly proposed (2025) benchmark with limited adoption so far but notable for introducing a controllable synthetic generation pipeline for multi-document reasoning.",
+  "notes": "Synthetic, LLM-assisted generation may cause distributional mismatch with real-world multi-document corpora and potential contamination from models used during data creation; focused on legal-style content and relatively small/targeted document sets.",
+  "creators": {
+    "scientists": [
+      "Joseph Peper",
+      "Wenzhao Qiu",
+      "Ali Payani",
+      "Lu Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2506.14927",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

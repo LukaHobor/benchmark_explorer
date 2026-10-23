@@ -1,0 +1,35 @@
+{
+  "name": "HSROSS",
+  "description": "Feature matching underpins critical satellite photogrammetric workflows, yet high spatial resolution (HSR) optical satellite imagery (0.3–2.6 m GSD) presents persistent challenges through complex radiometric-geometric variations across diverse acquisition conditions. Current research suffers from two fundamental gaps: the absence of authentic benchmarks capturing real-world satellite imaging complexities, and limited systematic evaluation of modern algorithms under operational constraints. This study introduces the HSR optical satellite stereo dataset, comprising imagery from five operational satellites under six challenging conditions, including seasonal variations, wide baselines, radiometric inconsistencies, multiscale discrepancies, spectral differences, and cross-sensor heterogeneity, establishing a comprehensive real-world validation benchmark. We systematically evaluate 15 advanced algorithms across classical, detector-based, and detector-free paradigms using six comprehensive quantitative metrics, revealing critical performance-efficiency tradeoffs. Our analysis yields a practical algorithm selection framework aligned with mission priorities and operational constraints, identifying optimal solutions for robustness-critical applications, geometric precision tasks, dense reconstruction workflows, and resource-constrained onboard processing. This work ultimately provides essential insights for algorithm selection and system design of robust feature matching capabilities in Earth observation applications, while bridging the gap between theoretical advances and practical deployment requirements.",
+  "category": "vision",
+  "domain": "earth sciences",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "feature_matching",
+    "stereo_matching",
+    "image_registration"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Matching precision/recall and inlier ratio; geometric registration error (e.g., RMSE or homography/pose error)",
+  "general_score_metric": "Matching precision / inlier ratio (geometric inlier rate)",
+  "typical_sota_score": "60–90% matching precision on easier conditions; much lower (≈20–50%) on the most challenging cross-sensor/wide-baseline cases",
+  "year_of_publish": 2025,
+  "reputation": "A recently introduced, practical high-resolution satellite stereo benchmark gaining attention in remote sensing and photogrammetry for real-world algorithm evaluation.",
+  "notes": "Real-world high-resolution satellite imagery (large files) with diverse challenging conditions; computationally and memory intensive; useful for evaluating practical tradeoffs but may require careful preprocessing and significant compute; not a language model benchmark.",
+  "creators": {
+    "scientists": [
+      "Qiyan Luo",
+      "Jidan Zhang",
+      "Mi Wang",
+      "Zhongli Fan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

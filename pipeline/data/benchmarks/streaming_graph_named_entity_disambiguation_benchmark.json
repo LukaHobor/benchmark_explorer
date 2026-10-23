@@ -1,0 +1,32 @@
+{
+  "name": "Streaming Graph Named Entity Disambiguation Benchmark",
+  "description": "Named Entity Disambiaguation (NED) is a central task for applications dealing\nwith natural language text. Assume that we have a graph based knowledge base\n(subsequently referred as Knowledge Graph) where nodes represent various real\nworld entities such as people, location, organization and concepts. Given data\nsources such as social media streams and web pages Entity Linking is the task\nof mapping named entities that are extracted from the data to those present in\nthe Knowledge Graph. This is an inherently difficult task due to several\nreasons. Almost all these data sources are generated without any formal\nontology; the unstructured nature of the input, limited context and the\nambiguity involved when multiple entities are mapped to the same name make this\na hard task. This report looks at two state of the art systems employing two\ndistinctive approaches: graph based Accurate Online Disambiguation of Entities\n(AIDA) and Mined Evidence Named Entity Disambiguation (MENED), which employs a\nstatistical inference approach. We compare both approaches using the data set\nand queries provided by the Knowledge Base Population (KBP) track at 2011 NIST\nText Analytics Conference (TAC). This report begins with an overview of the\nrespective approaches, followed by detailed description of the experimental\nsetup. It concludes with our findings from the benchmarking exercise.",
+  "category": "text",
+  "domain": "knowledge graphs / NLP",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "entity_linking",
+    "streaming_entity_disambiguation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision / recall / F1 (entity linking metrics), accuracy for resolved links",
+  "general_score_metric": "F1",
+  "year_of_publish": 2014,
+  "reputation": "Based on TAC KBP data and referenced in academic work on online/graph-based NED; historically influential but superseded by newer large-scale EL datasets for some tasks.",
+  "notes": "Older KBP/TAC-based benchmark (2011) — limited size and domain coverage compared to modern web-scale EL datasets; evaluation depends on KBP-specific scoring (NIL handling); not an LLM-native benchmark.",
+  "creators": {
+    "scientists": [
+      "Sutanay Choudhury",
+      "Chase Dowling"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1407.3751",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

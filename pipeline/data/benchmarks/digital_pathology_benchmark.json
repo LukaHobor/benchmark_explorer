@@ -1,0 +1,35 @@
+{
+  "name": "Digital Pathology Benchmark",
+  "description": "NLP-based computer vision models, particularly vision transformers, have been shown to outperform CNN models in many imaging tasks. However, most digital pathology artificial-intelligence models are based on CNN architectures, probably owing to a lack of data regarding NLP models for pathology images. In this study, we developed digital pathology pipelines to benchmark the five most recently proposed NLP models (vision transformer (ViT), Swin Transformer, MobileViT, CMT, and Sequencer2D) and four popular CNN models (ResNet18, ResNet50, MobileNetV2, and EfficientNet) to predict biomarkers in colorectal cancer (microsatellite instability, CpG island methylator phenotype, and BRAF mutation). Hematoxylin and eosin-stained whole-slide images from Molecular and Cellular Oncology and The Cancer Genome Atlas were used as training and external validation datasets, respectively. Cross-study external validations revealed that the NLP-based models significantly outperformed the CNN-based models in biomarker prediction tasks, improving the overall prediction and precision up to approximately 10% and 26%, respectively. Notably, compared with existing models in the current literature using large training datasets, our NLP models achieved state-of-the-art predictions for all three biomarkers using a relatively small training dataset, suggesting that large training datasets are not a prerequisite for NLP models or transformers, and NLP may be more suitable for clinical studies in which small training datasets are commonly collected. The superior performance of Sequencer2D suggests that further research and innovation on both transformer and bidirectional long short-term memory architectures are warranted in the field of digital pathology. NLP models can replace classic CNN architectures and become the new workhorse backbone in the field of digital pathology.",
+  "category": "vision",
+  "domain": "medical imaging / digital pathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy / precision / AUROC",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A domain-specific benchmark reported in the digital pathology literature; influential for pathology researchers but not a broad community benchmark like Imagenet.",
+  "notes": "Non-LLM computer-vision benchmark with relatively small training data; potential dataset size and cross-study variability caveats; not prone to typical LLM contamination issues.",
+  "creators": {
+    "scientists": [
+      "Min Cen",
+      "Xingyu Li",
+      "Bangwei Guo",
+      "Jitendra Jonnagaddala",
+      "Hong Zhang",
+      "Xu Steven Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2302.10406",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

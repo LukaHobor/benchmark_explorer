@@ -1,0 +1,38 @@
+{
+  "name": "Continual Learning for Sensor-based HAR Benchmark",
+  "description": "Sensor-based human activity recognition (HAR), i.e., the ability to discover human daily activity patterns from wearable or embedded sensors, is a key enabler for many real-world applications in smart homes, personal healthcare, and urban planning. However, with an increasing number of applications being deployed, an important question arises: how can a HAR system autonomously learn new activities over a long period of time without being re-engineered from scratch? This problem is known as continual learning and has been particularly popular in the domain of computer vision, where several techniques to attack it have been developed. This paper aims to assess to what extent such continual learning techniques can be applied to the HAR domain. To this end, we propose a general framework to evaluate the performance of such techniques on various types of commonly used HAR datasets. We then present a comprehensive empirical analysis of their computational cost and effectiveness of tackling HAR-specific challenges (i.e., sensor noise and labels' scarcity). The presented results uncover useful insights on their applicability and suggest future research directions for HAR systems. Our code, models and data are available at https://github.com/srvCodes/continual-learning-benchmark.",
+  "category": "mixed",
+  "domain": "human activity recognition / sensor networks",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "classification",
+    "continual_learning",
+    "time_series_analysis"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (class-wise) and continual-learning metrics such as forgetting and retention; F1 often reported for imbalanced classes",
+  "general_score_metric": "accuracy (and continual-learning metrics like average accuracy and forgetting)",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2023,
+  "reputation": "A niche academic benchmark used by researchers in continual learning and wearable/HAR communities for empirical comparisons of incremental learning methods.",
+  "notes": "Non‑LLM benchmark based on sensor datasets; datasets can be small and suffer class imbalance and concept drift. Risk of dataset overlap/contamination across continual splits if not carefully managed.",
+  "creators": {
+    "scientists": [
+      "Saurav Jha",
+      "Martin Schiemer",
+      "Franco Zambonelli",
+      "Juan Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://doi.org/10.1016/j.ins.2021.04.062",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

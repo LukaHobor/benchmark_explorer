@@ -1,0 +1,33 @@
+{
+  "name": "SIDBench",
+  "description": "The generative AI technology offers an increasing variety of tools for generating entirely synthetic images that are increasingly indistinguishable from real ones. Unlike methods that alter portions of an image, the creation of completely synthetic images presents a unique challenge and several Synthetic Image Detection (SID) methods have recently appeared to tackle it. Yet, there is often a large gap between experimental results on benchmark datasets and the performance of methods in the wild. To better address the evaluation needs of SID and help close this gap, this paper introduces a benchmarking framework that integrates several state-of-the-art SID models. Our selection of integrated models was based on the utilization of varied input features, and different network architectures, aiming to encompass a broad spectrum of techniques. The framework leverages recent datasets with a diverse set of generative models, high level of photo-realism and resolution, reflecting the rapid improvements in image synthesis technology. Additionally, the framework enables the study of how image transformations, common in assets shared online, such as JPEG compression, affect detection performance. SIDBench is available on https://github.com/mever-team/sidbench and is designed in a modular manner to enable easy inclusion of new datasets and SID models.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "binary_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2024,
+  "reputation": "A recent academic benchmark and modular framework for synthetic image detection that is gaining attention among researchers studying detection robustness against high-quality generative models.",
+  "notes": "Non-LLM, vision-only benchmark; performance often drops substantially under common image transformations (e.g., JPEG compression). Results can vary widely by generative model and post-processing, so cross-dataset generalization is a known challenge.",
+  "creators": {
+    "scientists": [
+      "Manos Schinas",
+      "Symeon Papadopoulos"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.18552",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

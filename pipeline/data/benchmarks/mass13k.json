@@ -1,0 +1,36 @@
+{
+  "name": "MaSS13K",
+  "description": "High-resolution semantic segmentation is essential for applications such as image editing, bokeh imaging, AR/VR, etc. Unfortunately, existing datasets often have limited resolution and lack precise mask details and boundaries. In this work, we build a large-scale, matting-level semantic segmentation dataset, named MaSS13K, which consists of 13,348 real-world images, all at 4K resolution. MaSS13K provides high-quality mask annotations of a number of objects, which are categorized into seven categories: human, vegetation, ground, sky, water, building, and others. MaSS13K features precise masks, with an average mask complexity 20-50 times higher than existing semantic segmentation datasets. We consequently present a method specifically designed for high-resolution semantic segmentation, namely MaSSFormer, which employs an efficient pixel decoder that aggregates high-level semantic features and low-level texture features across three stages, aiming to produce high-resolution masks with minimal computational cost. Finally, we propose a new learning paradigm, which integrates the high-quality masks of the seven given categories with pseudo labels from new classes, enabling MaSSFormer to transfer its accurate segmentation capability to other classes of objects. Our proposed MaSSFormer is comprehensively evaluated on the MaSS13K benchmark together with 14 representative segmentation models. We expect that our meticulously annotated MaSS13K dataset and the MaSSFormer model can facilitate the research of high-resolution and high-quality semantic segmentation. Datasets and codes can be found at https://github.com/xiechenxi99/MaSS13K.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU (mean Intersection over Union); also per-class IoU and boundary metrics",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "75–90%",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A recent high-resolution semantic segmentation dataset aimed at researchers working on high-quality masks; adoption is emerging but not yet widespread.",
+  "notes": "4K-resolution images with detailed masks; relatively modest dataset size (13k) for high-res tasks; high compute requirements; non‑LLM benchmark; possible class imbalance and domain-specific bias.",
+  "creators": {
+    "scientists": [
+      "Chenxi Xie",
+      "Minghan Li",
+      "Hui Zeng",
+      "Jun Luo",
+      "Lei Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.18364",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

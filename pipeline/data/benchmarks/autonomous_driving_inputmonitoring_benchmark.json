@@ -1,0 +1,38 @@
+{
+  "name": "Autonomous Driving Input-Monitoring Benchmark",
+  "description": "Deep neural networks (DNNs) remain challenged by distribution shifts in complex open-world domains like automated driving (AD): Absolute robustness against yet unknown novel objects (semantic shift) or styles like lighting conditions (covariate shift) cannot be guaranteed. Hence, reliable operation-time monitors for identification of out-of-training-data-distribution (OOD) scenarios are imperative. Current approaches for OOD classification are untested for complex domains like AD, are limited in the kinds of shifts they detect, or even require supervision with OOD samples. To prepare for unanticipated shifts, we instead establish a framework around a principled, unsupervised, and model-agnostic method that unifies detection of all kinds of shifts: Find a full model of the training data's feature distribution, to then use its density at new points as in-distribution (ID) score. To implement this, we propose to combine the newly available Vision Foundation Models (VFM) as feature extractors with one of four alternative density modeling techniques. In an extensive benchmark of 4 VFMs against 20 baselines, we show the superior performance of VFM feature encodings compared to shift-specific OOD monitors. Additionally, we find that sophisticated architectures outperform larger latent space dimensionality; and our method identifies samples with higher risk of errors on downstream tasks, despite being model-agnostic. This suggests that VFMs are promising to realize model-agnostic, unsupervised, reliable safety monitors in complex vision tasks.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ood_detection",
+    "anomaly_detection",
+    "uncertainty_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (with FPR@95 and related detection metrics)",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark demonstrating the utility of Vision Foundation Models for unsupervised input monitoring; of growing interest in the AD safety community.",
+  "notes": "Benchmark performance depends heavily on chosen feature extractor and density model; not an LLM benchmark; results sensitive to dataset-specific shifts and evaluation thresholds.",
+  "creators": {
+    "scientists": [
+      "Mert Keser",
+      "Halil Ibrahim Orhan",
+      "Niki Amini-Naieni",
+      "Gesina Schwalbe",
+      "Alois Knoll",
+      "Matthias Rottmann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.08083",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

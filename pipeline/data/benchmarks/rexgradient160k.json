@@ -1,0 +1,36 @@
+{
+  "name": "ReXGradient-160K",
+  "description": "We present ReXGradient-160K, representing the largest publicly available chest X-ray dataset to date in terms of the number of patients. This dataset contains 160,000 chest X-ray studies with paired radiological reports from 109,487 unique patients across 3 U.S. health systems (79 medical sites). This comprehensive dataset includes multiple images per study and detailed radiology reports, making it particularly valuable for the development and evaluation of AI systems for medical imaging and automated report generation models. The dataset is divided into training (140,000 studies), validation (10,000 studies), and public test (10,000 studies) sets, with an additional private test set (10,000 studies) reserved for model evaluation on the ReXrank benchmark. By providing this extensive dataset, we aim to accelerate research in medical imaging AI and advance the state-of-the-art in automated radiological analysis. Our dataset will be open-sourced at https://huggingface.co/datasets/rajpurkarlab/ReXGradient-160K.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_text",
+    "report_generation",
+    "radiology_findings_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "automatic language metrics (BLEU/ROUGE) and clinical/diagnostic metrics (AUC/F1/clinical consistency)",
+  "general_score_metric": "BLEU (for report generation) and clinical-label AUC/F1 (for diagnostic tasks)",
+  "year_of_publish": 2025,
+  "reputation": "A recent large-scale chest X‑ray dataset expected to gain attention due to its size and paired reports; likely to see growing adoption in medical imaging and report-generation research.",
+  "notes": "Medical dataset — potential privacy, de-identification and labeling noise concerns; multimodal (image+report); performance should be validated with clinical evaluation beyond automated NLG metrics; possible dataset/site bias and contamination risk if used for pretraining.",
+  "creators": {
+    "scientists": [
+      "Xiaoman Zhang",
+      "Julián N. Acosta",
+      "Josh Miller",
+      "Ouwen Huang",
+      "Pranav Rajpurkar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.00228",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

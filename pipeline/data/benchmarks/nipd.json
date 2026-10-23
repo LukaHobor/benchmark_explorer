@@ -1,0 +1,39 @@
+{
+  "name": "NIPD",
+  "description": "Federated learning (FL), a privacy-preserving distributed machine learning, has been rapidly applied in wireless communication networks. FL enables Internet of Things (IoT) clients to obtain well-trained models while preventing privacy leakage. Person detection can be deployed on edge devices with limited computing power if combined with FL to process the video data directly at the edge. However, due to the different hardware and deployment scenarios of different cameras, the data collected by the camera present non-independent and identically distributed (non-IID), and the global model derived from FL aggregation is less effective. Meanwhile, existing research lacks public data set for real-world FL object detection, which is not conducive to studying the non-IID problem on IoT cameras. Therefore, we open source a non-IID IoT person detection (NIPD) data set, which is collected from five different cameras. To our knowledge, this is the first true device-based non-IID person detection data set. Based on this data set, we explain how to establish a FL experimental platform and provide a benchmark for non-IID person detection. NIPD is expected to promote the application of FL and the security of smart city.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "federated_learning",
+    "person_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) at standard IoU thresholds (e.g., mAP@0.5)",
+  "general_score_metric": "mAP@0.5",
+  "year_of_publish": 2023,
+  "reputation": "New, task-focused dataset (2023) with niche adoption in federated learning for IoT camera person detection; used in early non-IID FL studies but not yet widely adopted.",
+  "notes": "Small real-device non-IID dataset (five cameras) — limited diversity and potential class imbalance. Not an LLM benchmark; privacy considerations for video data. Results are sensitive to FL aggregation, local compute limits, and per-device data heterogeneity.",
+  "creators": {
+    "scientists": [
+      "Kangning Yin",
+      "Zhen Ding",
+      "Zhihua Dong",
+      "Dongsheng Chen",
+      "Jie Fu",
+      "Xinhui Ji",
+      "Guangqiang Yin",
+      "Zhiguo Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2306.15932",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

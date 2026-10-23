@@ -1,0 +1,36 @@
+{
+  "name": "DeepProtein benchmark",
+  "description": "Abstract\n                  \n                    Motivation\n                    Deep learning has deeply influenced protein science, enabling breakthroughs in predicting protein properties, higher-order structures, and molecular interactions.\n                  \n                  \n                    Results\n                    This article introduces DeepProtein, a comprehensive and user-friendly deep learning library tailored for protein-related tasks. It enables researchers to seamlessly address protein data with cutting-edge deep learning models. To assess model performance, we establish a benchmark that evaluates different deep learning architectures across multiple protein-related tasks, including protein function prediction, subcellular localization prediction, protein–protein interaction prediction, and protein structure prediction. Furthermore, we introduce DeepProt-T5, a series of fine-tuned Prot-T5-based models that achieve state-of-the-art performance on four benchmark tasks, while demonstrating competitive results on six of others. Comprehensive documentation and tutorials are available which could ensure accessibility and support reproducibility.\n                  \n                  \n                    Availability and implementation\n                    Built upon the widely used drug discovery library DeepPurpose, DeepProtein is publicly available at https://github.com/jiaqingxie/DeepProtein.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "protein_function_prediction",
+    "subcellular_localization",
+    "protein_protein_interaction",
+    "protein_structure_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-dependent (F1 / accuracy / AUROC for classification/interaction tasks; RMSD/TM-score for structure prediction)",
+  "general_score_metric": "F1 (primary for classification tasks; structure tasks report RMSD/TM-score)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "Published in Bioinformatics and used by protein-ML researchers; gaining attention but not an established community-wide standard.",
+  "notes": "Benchmarks are task- and dataset-dependent; homology/sequence-similarity contamination can inflate scores if not properly split. Multi-task and non-LLM focus; varying dataset sizes and metrics across tasks.",
+  "creators": {
+    "scientists": [
+      "Jiaqing Xie",
+      "Yuqiang Li",
+      "Tianfan Fu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/bioinformatics/btaf165",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

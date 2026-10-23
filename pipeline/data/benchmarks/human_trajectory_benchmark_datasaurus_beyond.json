@@ -1,0 +1,38 @@
+{
+  "name": "Human Trajectory Benchmark (Datasaurus Beyond)",
+  "description": "Human trajectory data, which plays a crucial role in various applications such as crowd management and epidemic prevention, is challenging to obtain due to practical constraints and privacy concerns. In this context, synthetic human trajectory data is generated to simulate as close as possible to real-world human trajectories, often under summary statistics and distributional similarities. However, these similarities oversimplify complex human mobility patterns (a.k.a. ``Datasaurus''), resulting in intrinsic biases in both generative model design and benchmarks of the generated trajectories. Against this background, we propose MIRAGE, a huMan-Imitative tRAjectory GenErative model designed as a neural Temporal Point Process integrating an Exploration and Preferential Return model. It imitates the human decision-making process in trajectory generation, rather than fitting any specific statistical distributions as traditional methods do, thus avoiding the Datasaurus issue. We also propose a comprehensive task-based evaluation protocol beyond Datasaurus to systematically benchmark trajectory generative models on four typical downstream tasks, integrating multiple techniques and evaluation metrics for each task, to assess the ultimate utility of the generated trajectories. We conduct a thorough evaluation of MIRAGE on three real-world user trajectory datasets against a sizeable collection of baselines. Results show that compared to the best baselines, MIRAGE-generated trajectory data not only achieves the best statistical and distributional similarities with 59.0-67.7% improvement, but also yields the best performance in the task-based evaluation with 10.9-33.4% improvement. A series of ablation studies also validate the key design choices of MIRAGE.",
+  "category": "mixed",
+  "domain": "human mobility / crowd modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "trajectory_generation",
+    "trajectory_simulation",
+    "downstream_task_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (combining distributional/statistical similarity metrics and downstream task performance/task_success_rate)",
+  "general_score_metric": "composite_score (statistical similarity + downstream task performance)",
+  "typical_sota_score": "varies; paper reports 59.0–67.7% improvement on distributional metrics and 10.9–33.4% improvement on task-based evaluations versus baselines",
+  "year_of_publish": 2024,
+  "reputation": "A recent research benchmark proposing a comprehensive, task-based protocol for evaluating synthetic human trajectory generators; currently new and mainly of interest within the mobility modeling community.",
+  "notes": "Focuses on synthetic trajectory generation (not an LLM benchmark); evaluation depends on chosen downstream tasks and metrics; potential issues include dataset-specific bias and limited generalization across different mobility contexts.",
+  "creators": {
+    "scientists": [
+      "Bangchao Deng",
+      "Xin Jing",
+      "Tianyue Yang",
+      "Bingqing Qu",
+      "Dingqi Yang",
+      "Philippe Cudre-Mauroux"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2409.13790",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

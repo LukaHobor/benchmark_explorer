@@ -1,0 +1,39 @@
+{
+  "name": "VBR",
+  "description": "This paper presents a vision and perception research dataset collected in Rome, featuring RGB data, 3D point clouds, IMU, and GPS data. We introduce a new benchmark targeting visual odometry and SLAM, to advance the research in autonomous robotics and computer vision. This work complements existing datasets by simultaneously addressing several issues, such as environment diversity, motion patterns, and sensor frequency. It uses up-to-date devices and presents effective procedures to accurately calibrate the intrinsic and extrinsic of the sensors while addressing temporal synchronization. During recording, we cover multi-floor buildings, gardens, urban and highway scenarios. Combining handheld and car-based data collections, our setup can simulate any robot (quadrupeds, quadrotors, autonomous vehicles). The dataset includes an accurate 6-dof ground truth based on a novel methodology that refines the RTK-GPS estimate with LiDAR point clouds through Bundle Adjustment. All sequences divided in training and testing are accessible through our website.",
+  "category": "vision",
+  "domain": "autonomous robotics / SLAM",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_odometry",
+    "SLAM",
+    "pose_estimation",
+    "mapping"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "absolute_trajectory_error (ATE) and relative_pose_error (RPE)",
+  "general_score_metric": "ATE (m) and RPE (m / deg)",
+  "year_of_publish": 2024,
+  "reputation": "Newer dataset targeting SLAM/VO research; promising due to multi-sensor setup and refined ground truth but not yet as widely used as long-standing benchmarks.",
+  "notes": "Non-LLM benchmark. Caveats include potential dataset-size limitations for certain tasks, sim-to-real/generalization considerations, and dependence on sensor calibration quality; performance is sequence- and sensor-dependent.",
+  "creators": {
+    "scientists": [
+      "Leonardo Brizi",
+      "Emanuele Giacomini",
+      "Luca Di Giammarino",
+      "Simone Ferrari",
+      "Omar Salem",
+      "Lorenzo De Rebotti",
+      "Giorgio Grisetti"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.11322",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

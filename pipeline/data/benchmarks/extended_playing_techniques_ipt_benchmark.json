@@ -1,0 +1,35 @@
+{
+  "name": "Extended Playing Techniques (IPT) benchmark",
+  "description": "The expressive variability in producing a musical note conveys information essential to the modeling of orchestration and style. As such, it plays a crucial role in computer-assisted browsing of massive digital music corpora. Yet, although the automatic recognition of a musical instrument from the recording of a single \"ordinary\" note is considered a solved problem, automatic identification of instrumental playing technique (IPT) remains largely underdeveloped. We benchmark machine listening systems for query-by-example browsing among 143 extended IPTs for 16 instruments, amounting to 469 triplets of instrument, mute, and technique. We identify and discuss three necessary conditions for significantly outperforming the traditional mel-frequency cepstral coefficient (MFCC) baseline: the addition of second-order scattering coefficients to account for amplitude modulation, the incorporation of long-range temporal dependencies, and metric learning using large-margin nearest neighbors (LMNN) to reduce intra-class variability. Evaluating on the Studio On Line (SOL) dataset, we obtain a precision at rank 5 of 99.7% for instrument recognition (baseline at 89.0%) and of 61.0% for IPT recognition (baseline at 44.5%). We interpret this gain through a qualitative assessment of practical usability and visualization using nonlinear dimensionality reduction.",
+  "category": "audio",
+  "domain": "music / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "query_by_example",
+    "retrieval",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision_at_k (P@5)",
+  "general_score_metric": "precision@5 (P@5)",
+  "typical_sota_score": "61% (IPT recognition) / 99.7% (instrument recognition) (reported in paper)",
+  "year_of_publish": 2018,
+  "reputation": "7 citations",
+  "notes": "Evaluated on the Studio On Line (SOL) dataset — limited domain and dataset size; high inter-class variability and class imbalance; non-LLM audio/music benchmark focusing on metric learning and long-range temporal features.",
+  "creators": {
+    "scientists": [
+      "Vincent Lostanlen",
+      "Joakim Andén",
+      "Mathieu Lagrange"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/1808.09730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

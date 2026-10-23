@@ -1,0 +1,33 @@
+{
+  "name": "Frugality RAG Evaluation",
+  "description": "Medical question answering (QA) systems and conversational agents have attracted growing interest as tools that can assist clinicians, support medical students, and help patients navigate complex information sources. However, existing evaluations of retrieval strategies largely overlook the cost–benefit balance—here referred to as frugality, under realistic computational constraints. This work introduces a frugality-based evaluation framework that jointly assesses accuracy improvements and computational cost to determine when retrieval-augmented generation is beneficial in medical question answering, rather than evaluating retrieval effectiveness through accuracy alone. This study addresses these gaps through a systematic comparative framework that evaluates retrieval relevance, computational efficiency, and knowledge base composition across multiple biomedical QA tasks. We employ open-source LLMs (LlaMA-3-8B-Instruct, Mistral-7B-Instruct-v0.3, and DeepSeek-7B-Chat) across three benchmark medical QA datasets, including MedMCQA, MedQA-USMLE, and PubMedQA. In addition to that, we evaluate a dataset with larger contexts to simulate model distraction across the CliniQG4QA dataset using additional models (Meditron-7B, Qwen2.5-7B-Medical, Medgemma-4B, Phi-3-mini-4k-Instruct, and GPT4o-Mini). We examine how retrieval design choices alter the accuracy–latency trade-off, examining how relevance, corpus design, and hardware constraints interact in medical retrieval-augmented generation (RAG) systems. Our comprehensive results demonstrate when retrieval is genuinely beneficial versus when it imposes unnecessary computational costs, highlighting interactions between relevance and corpus designs in QA.",
+  "category": "text",
+  "domain": "medical NLP",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy (paired with computational cost / latency as a secondary composite)",
+  "typical_sota_score": "40–90%",
+  "year_of_publish": 2026,
+  "reputation": "A recent research-focused evaluation that has attracted moderate interest from the medical NLP and retrieval-augmented generation communities for its cost-aware perspective.",
+  "notes": "Evaluates accuracy–latency/cost trade-offs; results are hardware- and retrieval-design-dependent. Datasets include potentially overlapping training data (contamination risk). Performance comparisons can be sensitive to corpus composition and expensive to reproduce at scale.",
+  "creators": {
+    "scientists": [
+      "Richard Coric",
+      "Ebenezer F. Oloyede",
+      "H. Cuayáhuitl"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

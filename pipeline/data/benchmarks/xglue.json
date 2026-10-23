@@ -1,0 +1,57 @@
+{
+  "name": "XGLUE",
+  "description": "In this paper, we introduce XGLUE, a new benchmark dataset to train large-scale cross-lingual pre-trained models using multilingual and bilingual corpora, and evaluate their performance across a diverse set of cross-lingual tasks. Comparing to GLUE (Wang et al.,2019), which is labeled in English and includes natural language understanding tasks only, XGLUE has three main advantages: (1) it provides two corpora with different sizes for cross-lingual pre-training; (2) it provides 11 diversified tasks that cover both natural language understanding and generation scenarios; (3) for each task, it provides labeled data in multiple languages. We extend a recent cross-lingual pre-trained model Unicoder (Huang et al., 2019) to cover both understanding and generation tasks, which is evaluated on XGLUE as a strong baseline. We also evaluate the base versions (12-layer) of Multilingual BERT, XLM and XLM-R for comparison.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "sequence_labeling",
+    "question_answering",
+    "generation",
+    "translation",
+    "sentence_similarity"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (accuracy / F1 / BLEU / EM depending on the task)",
+  "general_score_metric": "task-specific composite (accuracy / F1 / BLEU depending on the subtask)",
+  "year_of_publish": 2020,
+  "reputation": "A recognized multi-task, multi-language benchmark used for evaluating cross-lingual pretraining and transfer; adopted in research on multilingual models.",
+  "notes": "Contains diverse tasks and languages so performance varies widely by task and language; some tasks are small or have limited language coverage. Risk of overlap/contamination with large multilingual pretraining corpora for modern models; evaluation is not captured by a single metric.",
+  "creators": {
+    "scientists": [
+      "Yaobo Liang",
+      "Nan Duan",
+      "Yeyun Gong",
+      "Ning Wu",
+      "Fenfei Guo",
+      "Weizhen Qi",
+      "Ming Gong",
+      "Linjun Shou",
+      "Daxin Jiang",
+      "Guihong Cao",
+      "Xiaodong Fan",
+      "Ruofei Zhang",
+      "Rahul Agrawal",
+      "Edward Cui",
+      "Sining Wei",
+      "Taroon Bharti",
+      "Ying Qiao",
+      "Jiun-Hung Chen",
+      "Winnie Wu",
+      "Shuguang Liu",
+      "Fan Yang",
+      "Daniel Campos",
+      "Rangan Majumder",
+      "Ming Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

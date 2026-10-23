@@ -1,0 +1,37 @@
+{
+  "name": "SMAFIRA-c",
+  "description": "Abstract\n        Background The engineering of elaborate and innovative tools to navigate the ever growing biomedical knowledge base, instanced in PubMed/Medline, must be guided by genuine case studies addressing `real world´ user needs. Furthermore, algorithm-based predictions regarding `similarity´, `relatedness´ or `relevance´ of pieces of information (e.g. relevance ranking) should be transparent and comprehensible to users. Results We here present a corpus of abstracts (n = 300) annotated on document level representing three case studies in the experimental biomedical domain. The SMAFIRA corpus mirrors `real-world´ information retrieval needs, i.e. the identification of potential alternatives to given animal experiments that support `equivalent´ scientific purposes while using basically different experimental methodology. Since in most cases not even the authors of `relevant´ research papers are aware of such a possible implication of their experimental approaches, our case studies actually illustrate knowledge discovery. Annotation of abstracts (regarding `equivalence´) was conducted by one researcher with broad domain knowledge (in one case study supported by a second opinion from a domain expert) and was informed by a newly created model describing distinguishable stages in experimental biomedicine. Furthermore, such stages were linked to generic scientific purposes. This perspective thus may share some commonalities with topic modelling approaches. Annotation of `relevance´ (i.e. `equivalence´ of scientific purpose plus alternative methodology) relied on expert knowledge in the domain of animal use alternatives. The case studies were used for an evaluation of rankings which were provided by the `similar articles´ algorithm employed in PubMed. Conclusions Building on approved techniques utilized in the domain of intellectual property, we have adapted the concept of `equivalence´ to support a transparent, reproducible and stringent comparison of biomedical textual documents with regards to the implied scientific objectives. This concept may allow for text mining with improved resolution and may aid the retrieval of appropriate animal use alternatives. Computer science researchers in the field of biomedical knowledge discovery may also use our corpus, which is designed to grow essentially in the near future, as a reliable and informative benchmark for the evaluation of algorithms supporting such a goal. Annotations are available from GitHub.",
+  "category": "text",
+  "domain": "biomedical information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "document_ranking",
+    "relevance_classification",
+    "information_retrieval_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "MAP, NDCG, precision@k, F1",
+  "general_score_metric": "Mean Average Precision (MAP) and NDCG",
+  "year_of_publish": 2020,
+  "reputation": "Niche, domain-specific corpus used by biomedical IR researchers studying alternatives to animal experiments; limited broad adoption.",
+  "notes": "Small dataset (n=300 abstracts) with most annotations by a single expert (limited inter-annotator validation), potential annotation bias, and domain-specific scope—unsuitable for large-scale pretraining; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Daniel Butzke",
+      "Nadine Dulisch",
+      "Sebastian Dunst",
+      "Matthias Steinfath",
+      "Mariana Neves",
+      "Brigitte Mathiak"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://doi.org/10.21203/rs.3.rs-16454/v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

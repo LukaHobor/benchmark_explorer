@@ -1,0 +1,35 @@
+{
+  "name": "PRGFlow Benchmark",
+  "description": "Odometry on aerial robots has to be of low latency and high robustness whilst also respecting the Size, Weight, Area and Power (SWAP) constraints as demanded by the size of the robot. A combination of visual sensors coupled with Inertial Measurement Units (IMUs) has proven to be the best combination to obtain robust and low latency odometry on resource-constrained aerial robots. Recently, deep learning approaches for Visual Inertial fusion have gained momentum due to their high accuracy and robustness. However, the remarkable advantages of these techniques are their inherent scalability (adaptation to different sized aerial robots) and unification (same method works on different sized aerial robots) by utilizing compression methods and hardware acceleration, which have been lacking from previous approaches. To this end, we present a deep learning approach for visual translation estimation and loosely fuse it with an Inertial sensor for full 6DoF odometry estimation. We also present a detailed benchmark comparing different architectures, loss functions and compression methods to enable scalability. We evaluate our network on the MSCOCO dataset and evaluate the VI fusion on multiple real-flight trajectories.",
+  "category": "multimodal",
+  "domain": "robotics / visual-inertial odometry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pose_estimation",
+    "trajectory_estimation",
+    "visual-inertial_odometry"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "absolute trajectory error (ATE) and relative pose error (RPE), typically reported as RMSE",
+  "general_score_metric": "ATE / RPE (RMSE)",
+  "year_of_publish": 2020,
+  "reputation": "Proposed in 2020 as a deep-learning based VI odometry benchmark focusing on SWAP-constrained aerial robots; useful for comparisons of compact architectures but not as widely adopted as EuRoC/KITTI.",
+  "notes": "Multimodal (vision+IMU) robotics benchmark; evaluation sensitive to hardware, compression and fusion choices; includes MSCOCO for visual training but real-flight VI evaluation uses limited trajectory data; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Nitin J. Sanket",
+      "Chahat Deep Singh",
+      "Cornelia Fermüller",
+      "Yiannis Aloimonos"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2006.06753",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

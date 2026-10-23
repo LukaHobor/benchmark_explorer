@@ -1,0 +1,39 @@
+{
+  "name": "Medical Vision-Language Benchmark",
+  "description": "With the availability of large-scale, comprehensive, and general-purpose vision-language (VL) datasets such as MSCOCO, vision-language pre-training (VLP) has become an active area of research and proven to be effective for various VL tasks such as visual-question answering. However, studies on VLP in the medical domain have so far been scanty. To provide a comprehensive perspective on VLP for medical VL tasks, we conduct a thorough experimental analysis to study key factors that may affect the performance of VLP with a unified vision-language Transformer. To allow making sound and quick pre-training decisions, we propose RadioGraphy Captions (RGC), a high-quality, multi-modality radiographic dataset containing 18,434 image-caption pairs collected from an open-access online database MedPix. RGC can be used as a pre-training dataset or a new benchmark for medical report generation and medical image-text retrieval. By utilizing RGC and other available datasets for pre-training, we develop several key insights that can guide future medical VLP research and new strong baselines for various medical VL tasks.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "report_generation",
+    "image_captioning",
+    "image_text_retrieval",
+    "visual_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU / ROUGE / CIDEr for generation; Recall@K (retrieval) and retrieval MRR for retrieval; common to report multiple metrics per task",
+  "general_score_metric": "BLEU (for report generation) and Recall@K / MRR (for retrieval)",
+  "typical_sota_score": "BLEU: ~10–30; Recall@1: ~20–60% (varies by model and pretraining data)",
+  "year_of_publish": 2023,
+  "reputation": "A recent (2023) domain-specific benchmark and pre-training dataset (RGC) that has gained moderate attention as a radiography VL baseline in medical VLP research.",
+  "notes": "Relatively small domain-specific dataset (18k images) compared with general VL corpora; risk of domain shift and limited diagnostic labels; evaluation mixes generation and retrieval metrics; potential contamination from models pretrained on overlapping medical corpora.",
+  "creators": {
+    "scientists": [
+      "Li Xu",
+      "Bo Liu",
+      "Ameer Hamza Khan",
+      "Lu Fan",
+      "Xiao-Ming Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.06494",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

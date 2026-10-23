@@ -1,0 +1,41 @@
+{
+  "name": "OIBench",
+  "description": "As models become increasingly sophisticated, conventional algorithm benchmarks are increasingly saturated, underscoring the need for more challenging benchmarks to guide future improvements in algorithmic reasoning. This paper introduces OIBench, a high-quality, private, and challenging olympiad-level informatics dataset comprising 250 carefully curated original problems. We detail the construction methodology of the benchmark, ensuring a comprehensive assessment across various programming paradigms and complexities, and we demonstrate its contamination-resistant properties via experiments. We propose Time/Space Completion Curves for finer-grained efficiency analysis and enable direct human-model comparisons through high-level participant evaluations. Our experiments reveal that while open-source models lag behind closed-source counterparts, current SOTA models already outperform most human participants in both correctness and efficiency, while still being suboptimal compared to the canonical solutions. By releasing OIBench as a fully open-source resource (https://huggingface.co/datasets/AGI-Eval/OIBench), we hope this benchmark will contribute to advancing code reasoning capabilities for future LLMs.",
+  "category": "code",
+  "domain": "algorithmic reasoning / programming contests",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "problem_solving"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (correctness on hidden testcases) and efficiency measured via time/space completion curves",
+  "general_score_metric": "task_success_rate (percentage of problems solved) augmented by Time/Space Completion Curves",
+  "year_of_publish": 2025,
+  "reputation": "A newly released, high-quality olympiad-level code benchmark gaining attention for evaluating advanced algorithmic reasoning and efficiency; adoption is growing among code-evaluation researchers.",
+  "notes": "Small but high-quality set (250 problems) of original olympiad-style tasks; authors report contamination-resistant construction, but problems require execution infrastructure and are computationally demanding to evaluate.",
+  "creators": {
+    "scientists": [
+      "Yaoming Zhu",
+      "junxin Wang",
+      "Yiyang Li",
+      "Lin Qiu",
+      "ZongYu Wang",
+      "Jun Xu",
+      "Xuezhi Cao",
+      "Yuhuai Wei",
+      "Mingshi Wang",
+      "Xunliang Cai",
+      "Rong Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2506.10481",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

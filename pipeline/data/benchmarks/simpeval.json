@@ -1,0 +1,37 @@
+{
+  "name": "SimpEval",
+  "description": "Training learnable metrics using modern language models has recently emerged as a promising method for the automatic evaluation of machine translation. However, existing human evaluation datasets for text simplification have limited annotations that are based on unitary or outdated models, making them unsuitable for this approach. To address these issues, we introduce the SimpEval corpus that contains: SimpEval_past, comprising 12K human ratings on 2.4K simplifications of 24 past systems, and SimpEval_2022, a challenging simplification benchmark consisting of over 1K human ratings of 360 simplifications including GPT-3.5 generated text. Training on SimpEval, we present LENS, a Learnable Evaluation Metric for Text Simplification. Extensive empirical results show that LENS correlates much better with human judgment than existing metrics, paving the way for future progress in the evaluation of text simplification. We also introduce Rank & Rate, a human evaluation framework that rates simplifications from several models in a list-wise manner using an interactive interface, which ensures both consistency and accuracy in the evaluation process and is used to create the SimpEval datasets.",
+  "category": "text",
+  "domain": "text simplification / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "human_eval",
+    "rating_prediction",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval (correlation with human ratings; e.g., Spearman/Pearson/Kendall tau)",
+  "general_score_metric": "Spearman correlation with human judgments",
+  "typical_sota_score": "0.6–0.8",
+  "year_of_publish": 2023,
+  "reputation": "18 citations",
+  "notes": "Dataset size is moderate (12K+ and 1K+ human ratings) and includes modern system outputs (e.g., GPT-3.5); useful for training learnable metrics but carries some contamination risk if models were trained on overlapping corpora; evaluation focuses on correlation with human ratings rather than simple exact-match metrics.",
+  "creators": {
+    "scientists": [
+      "Mounica Maddela",
+      "Yao Dou",
+      "David J. Heineman",
+      "Wei Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://doi.org/10.18653/v1/2023.acl-long.905",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

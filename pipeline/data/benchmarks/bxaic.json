@@ -1,0 +1,34 @@
+{
+  "name": "B-XAIC",
+  "description": "Understanding the reasoning behind deep learning model predictions is crucial in cheminformatics and drug discovery, where molecular design determines their properties. However, current evaluation frameworks for Explainable AI (XAI) in this domain often rely on artificial datasets or simplified tasks, employing data-derived metrics that fail to capture the complexity of real-world scenarios and lack a direct link to explanation faithfulness. To address this, we introduce B-XAIC, a novel benchmark constructed from real-world molecular data and diverse tasks with known ground-truth rationales for assigned labels. Through a comprehensive evaluation using B-XAIC, we reveal limitations of existing XAI methods for Graph Neural Networks (GNNs) in the molecular domain. This benchmark provides a valuable resource for gaining deeper insights into the faithfulness of XAI, facilitating the development of more reliable and interpretable models.",
+  "category": "mixed",
+  "domain": "cheminformatics / molecular machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "explanation_evaluation",
+    "feature_attribution",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 / AUPRC for rationale recovery; accuracy for label prediction; additional faithfulness metrics may be used",
+  "general_score_metric": "F1 (rationale recovery)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, domain-specific benchmark gaining attention among researchers working on XAI for molecular GNNs but not yet mainstream.",
+  "notes": "Built from real-world molecular data with ground-truth rationales; focused on GNN explainability (non-LLM). Ground-truth rationales are useful but may not capture full causal mechanisms; dataset size is moderate and domain-specific.",
+  "creators": {
+    "scientists": [
+      "Magdalena Proszewska",
+      "Tomasz Danel",
+      "Dawid Rymarczyk"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2505.22252",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

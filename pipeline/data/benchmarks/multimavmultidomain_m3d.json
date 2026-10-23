@@ -1,0 +1,36 @@
+{
+  "name": "Multi-MAV-Multi-Domain (M3D)",
+  "description": "Visual detection of Micro Air Vehicles (MAVs) has attracted increasing attention in recent years due to its important application in various tasks. The existing methods for MAV detection assume that the training set and testing set have the same distribution. As a result, when deployed in new domains, the detectors would have a significant performance degradation due to domain discrepancy. In this paper, we study the problem of cross-domain MAV detection. The contributions of this paper are threefold. 1) We propose a Multi-MAV-Multi-Domain (M3D) dataset consisting of both simulation and realistic images. Compared to other existing datasets, the proposed one is more comprehensive in the sense that it covers rich scenes, diverse MAV types, and various viewing angles. A new benchmark for cross-domain MAV detection is proposed based on the proposed dataset. 2) We propose a Noise Suppression Network (NSN) based on the framework of pseudo-labeling and a large-to-small training procedure. To reduce the challenging pseudo-label noises, two novel modules are designed in this network. The first is a prior-based curriculum learning module for allocating adaptive thresholds for pseudo labels with different difficulties. The second is a masked copy-paste augmentation module for pasting truly-labeled MAVs on unlabeled target images and thus decreasing pseudo-label noises. 3) Extensive experimental results verify the superior performance of the proposed method compared to the state-of-the-art ones. In particular, it achieves mAP of 46.9%(+5.8%), 50.5%(+3.7%), and 61.5%(+11.3%) on the tasks of simulation-to-real adaptation, cross-scene adaptation, and cross-camera adaptation, respectively.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP)",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "45–62%",
+  "year_of_publish": 2024,
+  "reputation": "Specialized dataset for MAV detection and cross-domain adaptation research with limited but growing use in the domain-adaptation and aerial-vision communities.",
+  "notes": "Domain-specific, relatively small dataset covering simulation and real images; useful for cross-domain adaptation research. Non-LLM benchmark; contains simulated-to-real distribution shifts and class/scene imbalance risks.",
+  "creators": {
+    "scientists": [
+      "Yin Zhang",
+      "Jinhong Deng",
+      "Peidong Liu",
+      "Wen Li",
+      "Shiyu Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.16669",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

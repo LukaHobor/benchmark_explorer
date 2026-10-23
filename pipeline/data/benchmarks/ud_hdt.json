@@ -1,0 +1,39 @@
+{
+  "name": "ud-hdt",
+  "description": "UD German-HDT: Tokenized Sentences\n\t\n\nThis datasets hosts a sentence-tokenized version of the Universal Dependencies German-HDT dataset.\n\n\t\n\t\t\n\t\tCreation\n\t\n\nThe following script can be used to reproduce the creation of the dataset:\nimport json\n\nfrom flair.datasets import UD_GERMAN_HDT\n\ncorpus = UD_GERMAN_HDT()\n\nwith open(\"./train.jsonl\", \"wt\") as f_out:\n    for sentence in corpus.train:\n        current_example = {\n            \"text\": sentence.to_tokenized_string()\n        }… See the full description on the dataset page: https://huggingface.co/datasets/german-tokenizer-benchmark/ud-hdt.",
+  "category": "text",
+  "domain": "natural_language_processing",
+  "tags": [
+    "language:de",
+    "license:cc-by-4.0",
+    "size_categories:100K<n<1M",
+    "modality:text"
+  ],
+  "task_types": [
+    "tokenization",
+    "text_corpus"
+  ],
+  "difficulty_level": "easy",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "tokenization_accuracy",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Derived from the Universal Dependencies German-HDT corpus, it is a straightforward, commonly used resource for tokenization and preprocessing experiments in German NLP.",
+  "downloads": 16,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "german-tokenizer-benchmark"
+    ]
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://huggingface.co/datasets/german-tokenizer-benchmark/ud-hdt",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

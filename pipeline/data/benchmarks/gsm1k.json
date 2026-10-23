@@ -1,0 +1,35 @@
+{
+  "name": "GSM1k",
+  "description": "A contamination-aware replication of GSM8K containing 1,000 grade-school math problems constructed to mirror the style, complexity, and human solve rates of GSM8K while consisting entirely of novel problems. Designed to measure the 'memorization gap' — whether high GSM8K scores reflect genuine reasoning or training data contamination. Reveals accuracy drops up to 8% in some model families with a positive correlation (r²=0.36) between contamination probability and performance gap.",
+  "category": "text",
+  "domain": "math",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "easy",
+  "number_of_questions": 1000,
+  "evaluation_method": "accuracy (exact numerical match)",
+  "general_score_metric": "accuracy (%)",
+  "typical_sota_score": "Frontier models (GPT-4, Claude): <1% drop; some model families (Phi, Mistral): up to 8% accuracy drop vs. GSM8K",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at NeurIPS 2024; key contamination detection benchmark; widely cited in contamination research; validated that frontier model generalization claims need verification; provides clean GSM8K equivalent for ongoing evaluation",
+  "notes": "NeurIPS 2024. Positive correlation (Spearman r²=0.36) between a model's probability of generating GSM8K examples verbatim and its performance gap on GSM1k — direct evidence of contamination. Frontier models (GPT-4, Claude) show minimal drops, validating their generalization. Some mid-tier models show drops up to 8%, suggesting memorization was inflating their apparent capabilities. GSM8K-Platinum (2025) is a separately cleaned variant addressing answer label errors.",
+  "creators": {
+    "scientists": [
+      "Ulyana Piterbarg",
+      "Lerrel Pinto",
+      "Rob Fergus"
+    ],
+    "institutions": [
+      "New York University"
+    ],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

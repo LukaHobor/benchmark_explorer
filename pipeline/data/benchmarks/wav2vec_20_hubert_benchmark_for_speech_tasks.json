@@ -1,0 +1,35 @@
+{
+  "name": "Wav2vec 2.0 / HuBERT Benchmark for Speech Tasks",
+  "description": "Speech self-supervised models such as wav2vec 2.0 and HuBERT are making revolutionary progress in Automatic Speech Recognition (ASR). However, they have not been totally proven to produce better performance on tasks other than ASR. In this work, we explored partial fine-tuning and entire fine-tuning on wav2vec 2.0 and HuBERT pre-trained models for three non-ASR speech tasks: Speech Emotion Recognition, Speaker Verification and Spoken Language Understanding. With simple proposed downstream frameworks, the best scores reached 79.58% weighted accuracy on speaker-dependent setting and 73.01% weighted accuracy on speaker-independent setting for Speech Emotion Recognition on IEMOCAP, 2.36% equal error rate for Speaker Verification on VoxCeleb1, 89.38% accuracy for Intent Classification and 78.92% F1 for Slot Filling on SLURP, showing the strength of fine-tuned wav2vec 2.0 and HuBERT on learning prosodic, voice-print and semantic representations.",
+  "category": "audio",
+  "domain": "speech / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "verification",
+    "sequence_labeling"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific (accuracy / weighted accuracy, F1 for slot filling, equal_error_rate for speaker verification)",
+  "general_score_metric": "task-specific (weighted accuracy for emotion/intent, F1 for slot filling, EER for speaker verification)",
+  "typical_sota_score": "accuracy: ~70–90%; F1: ~70–80%; EER: ~2–5%",
+  "year_of_publish": 2021,
+  "reputation": "Used in speech research to evaluate non‑ASR capabilities of wav2vec2.0/HuBERT; moderate adoption for multi‑task speech evaluation.",
+  "notes": "Non‑LLM benchmark focused on speech/audio. Uses relatively small public datasets (IEMOCAP, VoxCeleb1, SLURP) so results can vary by data split; potential domain mismatch between pretraining data and downstream sets.",
+  "creators": {
+    "scientists": [
+      "Yingzhi Wang",
+      "Abdelmoumene Boumadane",
+      "Abdelwahab Heba"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2111.02735",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

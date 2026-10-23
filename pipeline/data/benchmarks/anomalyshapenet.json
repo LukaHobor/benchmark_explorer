@@ -1,0 +1,39 @@
+{
+  "name": "Anomaly-ShapeNet",
+  "description": "Recently, 3D anomaly detection, a crucial problem involving fine-grained geometry discrimination, is getting more attention. However, the lack of abundant real 3D anomaly data limits the scalability of current models. To enable scalable anomaly data collection, we propose a 3D anomaly synthesis pipeline to adapt existing large-scale 3Dmodels for 3D anomaly detection. Specifically, we construct a synthetic dataset, i.e., Anomaly-ShapeNet, basedon ShapeNet. Anomaly-ShapeNet consists of 1600 point cloud samples under 40 categories, which provides a rich and varied collection of data, enabling efficient training and enhancing adaptability to industrial scenarios. Meanwhile,to enable scalable representation learning for 3D anomaly localization, we propose a self-supervised method, i.e., Iterative Mask Reconstruction Network (IMRNet). During training, we propose a geometry-aware sample module to preserve potentially anomalous local regions during point cloud down-sampling. Then, we randomly mask out point patches and sent the visible patches to a transformer for reconstruction-based self-supervision. During testing, the point cloud repeatedly goes through the Mask Reconstruction Network, with each iteration's output becoming the next input. By merging and contrasting the final reconstructed point cloud with the initial input, our method successfully locates anomalies. Experiments show that IMRNet outperforms previous state-of-the-art methods, achieving 66.1% in I-AUC on Anomaly-ShapeNet dataset and 72.5% in I-AUC on Real3D-AD dataset. Our dataset will be released at https://github.com/Chopper-233/Anomaly-ShapeNet",
+  "category": "vision",
+  "domain": "3D vision / manufacturing inspection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "anomaly_localization",
+    "point_cloud_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "I-AUC (Image/Instance-wise Area Under Curve) as reported by the authors",
+  "general_score_metric": "I-AUC",
+  "typical_sota_score": "≈66% I-AUC on Anomaly-ShapeNet (IMRNet reported); ≈72.5% I-AUC on Real3D-AD (for comparison)",
+  "year_of_publish": 2023,
+  "reputation": "New synthetic 3D anomaly dataset designed to augment ShapeNet; adoption is currently limited but relevant to 3D anomaly/localization research.",
+  "notes": "Synthetic dataset derived from ShapeNet (1600 samples across 40 categories) — useful for scalable research but has domain gap to real-world industrial anomalies; relatively small and class-limited; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Wenqiao Li",
+      "Xiaohao Xu",
+      "Yao Gu",
+      "Bozhong Zheng",
+      "Shenghua Gao",
+      "Yingna Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.14897",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

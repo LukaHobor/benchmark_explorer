@@ -1,0 +1,38 @@
+{
+  "name": "Visual Sim-to-Real Manipulation Benchmark",
+  "description": "Learning visuomotor policies in simulation is much safer and cheaper than in the real world. However, due to discrepancies between the simulated and real data, simulator-trained policies often fail when transferred to real robots. One common approach to bridge the visual sim-to-real domain gap is domain randomization (DR). While previous work mainly evaluates DR for disembodied tasks, such as pose estimation and object detection, here we systematically explore visual domain randomization methods and benchmark them on a rich set of challenging robotic manipulation tasks. In particular, we propose an offline proxy task of cube localization to select DR parameters for texture randomization, lighting randomization, variations of object colors and camera parameters. Notably, we demonstrate that DR parameters have similar impact on our offline proxy task and online policies. We, hence, use offline optimized DR parameters to train visuomotor policies in simulation and directly apply such policies to a real robot. Our approach achieves 93% success rate on average when tested on a diverse set of challenging manipulation tasks. Moreover, we evaluate the robustness of policies to visual variations in real scenes and show that our simulator-trained policies outperform policies learned using real but limited data. Code, simulation environment, real robot datasets and trained models are available at https://www.di.ens.fr/willow/research/robust_s2r/.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "policy_learning",
+    "sim-to-real_transfer",
+    "robotic_manipulation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "93%",
+  "year_of_publish": 2023,
+  "reputation": "5 citations",
+  "notes": "Non-LLM benchmark focused on a specific set of manipulation tasks and a cube-localization proxy; high reported success reflects tuned domain-randomization parameters and may not generalize to broader task distributions or unseen real-world variations.",
+  "creators": {
+    "scientists": [
+      "Ricardo García",
+      "Robin Strudel",
+      "Shizhe Chen",
+      "Etienne Arlaud",
+      "Ivan Laptev",
+      "Cordelia Schmid"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1109/iros55552.2023.10342471",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

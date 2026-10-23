@@ -1,0 +1,35 @@
+{
+  "name": "PowerMamba",
+  "description": "The electricity sector is undergoing substantial transformations due to the rising electrification of demand, enhanced integration of renewable energy resources, and the emergence of new technologies. These changes are rendering the electric grid more volatile and unpredictable, making it difficult to maintain reliable operations. In order to address these issues, advanced time series prediction models are needed for closing the gap between the forecasted and actual grid outcomes. In this paper, we introduce a multivariate time series prediction model that combines traditional state space models with deep learning methods to simultaneously capture and predict the underlying dynamics of multiple time series. Additionally, we design a time series processing module that incorporates high-resolution external forecasts into sequence-to-sequence prediction models, achieving this with negligible increases in size and no loss of accuracy. We also release an extended dataset spanning five years of load, electricity price, ancillary service price, and renewable generation. To complement this dataset, we provide an open-access toolbox that includes our proposed model, the dataset itself, and several state-of-the-art prediction models, thereby creating a unified framework for benchmarking advanced machine learning approaches. Our findings indicate that the proposed model outperforms existing models across various prediction tasks, improving state-of-the-art prediction error by an average of 7% and decreasing model parameters by 43%.",
+  "category": "mixed",
+  "domain": "electric power systems / energy forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "multivariate_regression",
+    "sequence_to_sequence_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE (Mean Absolute Error)",
+  "general_score_metric": "Mean Absolute Error (MAE)",
+  "year_of_publish": 2024,
+  "reputation": "Newly released energy forecasting benchmark with an accompanying toolbox; gaining interest in power-systems ML research but not yet widely adopted outside that community.",
+  "notes": "Non-LLM benchmark focused on multivariate time series forecasting in the energy domain; dataset spans five years (moderate size); risk of temporal leakage if train/test splits not time-aware; domain-specific data may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Ali Menati",
+      "Fatemeh Doudi",
+      "Dileep Kalathil",
+      "Le Xie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2412.06112",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

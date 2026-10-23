@@ -1,0 +1,36 @@
+{
+  "name": "E-Commerce Image Embeddings Benchmark",
+  "description": "We benchmark foundation models image embeddings for classification and retrieval in e-Commerce, evaluating their suitability for real-world applications. Our study spans embeddings from pre-trained convolutional and transformer models trained via supervised, self-supervised, and text-image contrastive learning. We assess full fine-tuning and transfer learning (top-tuning) on six diverse e-Commerce datasets: fashion, consumer goods, cars, food, and retail. Results show full fine-tuning consistently performs well, while text-image and self-supervised embeddings can match its performance with less training. While supervised embeddings remain stable across architectures, SSL and contrastive embeddings vary significantly, often benefiting from top-tuning. Top-tuning emerges as an efficient alternative to full fine-tuning, reducing computational costs. We also explore cross-tuning, noting its impact depends on dataset characteristics. Our findings offer practical guidelines for embedding selection and fine-tuning strategies, balancing efficiency and performance.",
+  "category": "vision",
+  "domain": "e-commerce",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "image_retrieval",
+    "embedding_similarity"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "classification accuracy and retrieval metrics (Recall@K, mAP)",
+  "general_score_metric": "accuracy (classification) / Recall@K (retrieval)",
+  "typical_sota_score": "varies by dataset; often ranges from ~70% to >90% depending on task and tuning",
+  "year_of_publish": 2025,
+  "reputation": "Research-oriented benchmark for e-commerce embedding evaluation; useful in academic/prototyping settings but not yet an industry-wide standard.",
+  "notes": "Covers multiple e-commerce subdomains (fashion, goods, cars, food, retail); results sensitive to fine-tuning strategy (full fine-tune vs top-tune); dataset biases toward product photography styles and potential label noise; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Urszula Czerwinska",
+      "Cenk Bircanoglu",
+      "Jeremy Chamoux"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.07567",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

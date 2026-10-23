@@ -1,0 +1,35 @@
+{
+  "name": "Incremental Shift OOD (IS-OOD)",
+  "description": "Most existing out-of-distribution (OOD) detection benchmarks classify samples with novel labels as the OOD data. However, some marginal OOD samples actually have close semantic contents to the in-distribution (ID) sample, which makes determining the OOD sample a Sorites Paradox. In this paper, we construct a benchmark named Incremental Shift OOD (IS-OOD) to address the issue, in which we divide the test samples into subsets with different semantic and covariate shift degrees relative to the ID dataset. The data division is achieved through a shift measuring method based on our proposed Language Aligned Image feature Decomposition (LAID). Moreover, we construct a Synthetic Incremental Shift (Syn-IS) dataset that contains high-quality generated images with more diverse covariate contents to complement the IS-OOD benchmark. We evaluate current OOD detection methods on our benchmark and find several important insights: (1) The performance of most OOD detection methods significantly improve",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "image_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2024,
+  "reputation": "A recent OOD detection benchmark proposal that is promising for nuanced shift evaluation, but not yet a widely standardized benchmark.",
+  "notes": "Non-LLM vision benchmark; results depend on the chosen ID/OOD split and shift severity, so scores are not directly comparable to classic binary OOD setups.",
+  "creators": {
+    "scientists": [
+      "Xingming Long",
+      "Jie Zhang",
+      "Shiguang Shan",
+      "Xilin Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.09867",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

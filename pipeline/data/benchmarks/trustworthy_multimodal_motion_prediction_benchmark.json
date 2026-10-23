@@ -1,0 +1,39 @@
+{
+  "name": "Trustworthy Multi-Modal Motion Prediction Benchmark",
+  "description": "Abstract Predicting the motion of other road agents enables autonomous vehicles to perform safe and efficient path planning. This task is very complex, as the behaviour of road agents depends on many factors and the number of possible future trajectories can be considerable (multi‐modal). Most prior approaches proposed to address multi‐modal motion prediction are based on complex machine learning systems that have limited interpretability. Moreover, the metrics used in current benchmarks do not evaluate all aspects of the problem, such as the diversity and admissibility of the output. The authors aim to advance towards the design of trustworthy motion prediction systems, based on some of the requirements for the design of Trustworthy Artificial Intelligence. The focus is on evaluation criteria, robustness, and interpretability of outputs. First, the evaluation metrics are comprehensively analysed, the main gaps of current benchmarks are identified, and a new holistic evaluation framework is proposed. Then, a method for the assessment of spatial and temporal robustness is introduced by simulating noise in the perception system. To enhance the interpretability of the outputs and generate more balanced results in the proposed evaluation framework, an intent prediction layer that can be attached to multi‐modal motion prediction models is proposed. The effectiveness of this approach is assessed through a survey that explores different elements in the visualisation of the multi‐modal trajectories and intentions. The proposed approach and findings make a significant contribution to the development of trustworthy motion prediction systems for autonomous vehicles, advancing the field towards greater safety and reliability.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "trajectory_prediction",
+    "multi_modal_prediction",
+    "robustness_evaluation",
+    "interpretability_evaluation",
+    "intent_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score (includes minADE / minFDE, miss_rate, diversity and admissibility metrics)",
+  "general_score_metric": "composite_score (minADE/minFDE + diversity/admissibility components)",
+  "year_of_publish": 2023,
+  "reputation": "13 citations",
+  "notes": "non-LLM benchmark focused on autonomous driving; evaluation is multi-objective (not a single scalar), includes simulated perception noise for robustness; not saturated and designed to surface diversity/admissibility gaps.",
+  "creators": {
+    "scientists": [
+      "Sandra Carrasco Limeros",
+      "Sylwia Majchrowska",
+      "Joakim Johnander",
+      "Christoffer Petersson",
+      "Miguel Ángel Sotelo",
+      "David Fernández Llorca"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1049/cit2.12244",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

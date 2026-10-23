@@ -1,0 +1,38 @@
+{
+  "name": "Medical Image-Report Retrieval Robustness (Occlusion Retrieval Task)",
+  "description": "Medical images and reports offer invaluable insights into patient health. The heterogeneity and complexity of these data hinder effective analysis. To bridge this gap, we investigate contrastive learning models for cross-domain retrieval, which associates medical images with their corresponding clinical reports. This study benchmarks the robustness of four state-of-the-art contrastive learning models: CLIP, CXR-RePaiR, MedCLIP, and CXR-CLIP. We introduce an occlusion retrieval task to evaluate model performance under varying levels of image corruption. Our findings reveal that all evaluated models are highly sensitive to out-of-distribution data, as evidenced by the proportional decrease in performance with increasing occlusion levels. While MedCLIP exhibits slightly more robustness, its overall performance remains significantly behind CXR-CLIP and CXR-RePaiR. CLIP, trained on a general-purpose dataset, struggles with medical image-report retrieval, highlighting the importance of domain-specific training data. The evaluation of this work suggests that more effort needs to be spent on improving the robustness of these models. By addressing these limitations, we can develop more reliable cross-domain retrieval models for medical applications.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "cross_modal_retrieval",
+    "image_to_text_retrieval",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "recall@k",
+  "general_score_metric": "Recall@1 (also reports Recall@5 and Recall@10)",
+  "typical_sota_score": "10–50% (Recall@1)",
+  "year_of_publish": 2025,
+  "reputation": "A niche medical imaging retrieval robustness benchmark cited by specialists in medical vision; useful for domain-specific contrastive model evaluation but not widely adopted outside the field.",
+  "notes": "Non-LLM benchmark focused on chest X-ray image–report retrieval; uses synthetic occlusions to simulate OOD corruption; results are sensitive to dataset domain and model pretraining (domain-specific pretraining matters); dataset size and split specifics can limit generalization.",
+  "creators": {
+    "scientists": [
+      "Demetrio Deanda",
+      "Yuktha Priya Masupalli",
+      "Jeong Yang",
+      "Young Lee",
+      "Zechun Cao",
+      "Gongbo Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2501.09134",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

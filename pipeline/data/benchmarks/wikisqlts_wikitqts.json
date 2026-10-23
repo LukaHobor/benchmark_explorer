@@ -1,0 +1,36 @@
+{
+  "name": "WikiSQL-TS / WikiTQ-TS",
+  "description": "Weakly-supervised table question-answering(TableQA) models have achieved state-of-art performance by using pre-trained BERT transformer to jointly encoding a question and a table to produce structured query for the question. However, in practical settings TableQA systems are deployed over table corpora having topic and word distributions quite distinct from BERT's pretraining corpus. In this work we simulate the practical topic shift scenario by designing novel challenge benchmarks WikiSQL-TS and WikiTQ-TS, consisting of train-dev-test splits in five distinct topic groups, based on the popular WikiSQL and WikiTableQuestions datasets. We empirically show that, despite pre-training on large open-domain text, performance of models degrades significantly when they are evaluated on unseen topics. In response, we propose T3QA (Topic Transferable Table Question Answering) a pragmatic adaptation framework for TableQA comprising of: (1) topic-specific vocabulary injection into BERT, (2) a novel",
+  "category": "text",
+  "domain": "information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "question_answering",
+    "table_question_answering"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2021,
+  "reputation": "A targeted benchmark for topic-shift robustness in TableQA that is cited in work on domain adaptation, but it is not a mainstream leaderboard benchmark.",
+  "notes": "Non-LLM benchmark; evaluates generalization to unseen topics rather than standard in-domain performance, so scores are typically lower than on original WikiSQL/WikiTableQuestions splits.",
+  "creators": {
+    "scientists": [
+      "Saneem Ahmed Chemmengath",
+      "Vishwajeet Kumar",
+      "Samarth Bharadwaj",
+      "Jaydeep Sen",
+      "Mustafa Canim",
+      "Soumen Chakrabarti"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2109.07377",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

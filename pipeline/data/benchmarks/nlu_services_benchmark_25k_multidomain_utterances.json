@@ -1,0 +1,37 @@
+{
+  "name": "NLU Services Benchmark (25K multi-domain utterances)",
+  "description": "We have recently seen the emergence of several publicly available Natural\nLanguage Understanding (NLU) toolkits, which map user utterances to structured,\nbut more abstract, Dialogue Act (DA) or Intent specifications, while making\nthis process accessible to the lay developer. In this paper, we present the\nfirst wide coverage evaluation and comparison of some of the most popular NLU\nservices, on a large, multi-domain (21 domains) dataset of 25K user utterances\nthat we have collected and annotated with Intent and Entity Type specifications\nand which will be released as part of this submission. The results show that on\nIntent classification Watson significantly outperforms the other platforms,\nnamely, Dialogflow, LUIS and Rasa; though these also perform well.\nInterestingly, on Entity Type recognition, Watson performs significantly worse\ndue to its low Precision. Again, Dialogflow, LUIS and Rasa perform well on this\ntask.",
+  "category": "text",
+  "domain": "conversational agents / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "intent_classification",
+    "entity_recognition",
+    "sequence_labeling",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "intent_accuracy / F1 (for entities)",
+  "general_score_metric": "intent_accuracy and entity_F1",
+  "typical_sota_score": "Intent accuracy ~85–95%; entity F1 ~60–85%",
+  "year_of_publish": 2019,
+  "reputation": "Well-cited comparative evaluation of commercial NLU services (Dialogflow, LUIS, Watson, Rasa) used as a reference for multi-domain NLU performance.",
+  "notes": "Non-LLM benchmark comparing commercial closed-source NLU services; 25K utterances across 21 domains, so domain coverage is broad but models/services have evolved since release; potential annotation biases and service-specific behavior.",
+  "creators": {
+    "scientists": [
+      "Xingkun Liu",
+      "Arash Eshghi",
+      "Pawel Swietojanski",
+      "Verena Rieser"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1903.05566",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

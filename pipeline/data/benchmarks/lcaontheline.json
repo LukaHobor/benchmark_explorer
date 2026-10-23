@@ -1,0 +1,41 @@
+{
+  "name": "LCA-on-the-Line",
+  "description": "We tackle the challenge of predicting models' Out-of-Distribution (OOD) performance using in-distribution (ID) measurements without requiring OOD data. Existing evaluations with \"Effective Robustness\", which use ID accuracy as an indicator of OOD accuracy, encounter limitations when models are trained with diverse supervision and distributions, such as class labels (Vision Models, VMs, on ImageNet) and textual descriptions (Visual-Language Models, VLMs, on LAION). VLMs often generalize better to OOD data than VMs despite having similar or lower ID performance. To improve the prediction of models' OOD performance from ID measurements, we introduce the Lowest Common Ancestor (LCA)-on-the-Line framework. This approach revisits the established concept of LCA distance, which measures the hierarchical distance between labels and predictions within a predefined class hierarchy, such as WordNet. We assess 75 models using ImageNet as the ID dataset and five significantly shifted OOD variants, uncovering a strong linear correlation between ID LCA distance and OOD top-1 accuracy. Our method provides a compelling alternative for understanding why VLMs tend to generalize better. Additionally, we propose a technique to construct a taxonomic hierarchy on any dataset using K-means clustering, demonstrating that LCA distance is robust to the constructed taxonomic hierarchy. Moreover, we demonstrate that aligning model predictions with class taxonomies, through soft labels or prompt engineering, can enhance model generalization. Open source code in our Project Page: https://elvishelvis.github.io/papers/lca/.",
+  "category": "vision",
+  "domain": "vision / out-of-distribution generalization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "performance_prediction",
+    "analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation metrics (Pearson / Spearman) between predicted and actual OOD accuracies, plus RMSE",
+  "general_score_metric": "Pearson correlation (between ID LCA distance-based prediction and OOD top-1 accuracy)",
+  "typical_sota_score": "≈0.7–0.95 (Pearson r) reported in evaluations across ImageNet models and several OOD variants",
+  "year_of_publish": 2024,
+  "reputation": "A new research contribution (2024) proposing a promising metric (LCA-on-the-Line) for OOD performance prediction; of growing interest in robustness/evaluation circles but not yet standard.",
+  "notes": "Non-LLM benchmark; method depends on label taxonomy (WordNet or constructed hierarchies) though authors show robustness; evaluated primarily on ImageNet and a limited set of OOD shifts — generality to other domains is unproven.",
+  "creators": {
+    "scientists": [
+      "Jia Shi",
+      "Gautam Gare",
+      "Jinjin Tian",
+      "Siqi Chai",
+      "Zhiqiu Lin",
+      "Arun Vasudevan",
+      "Di Feng",
+      "Francesco Ferroni",
+      "Shu Kong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.16067",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

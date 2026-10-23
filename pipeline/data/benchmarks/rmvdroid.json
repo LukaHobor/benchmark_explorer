@@ -1,0 +1,36 @@
+{
+  "name": "RmvDroid",
+  "description": "A large number of research studies have been focused on detecting Android malware in recent years. As a result, a reliable and large-scale malware dataset is essential to build effective malware classifiers and evaluate the performance of different detection techniques. Although several Android malware benchmarks have been widely used in our research community, these benchmarks face several major limitations. First, most of the existing datasets are outdated and cannot reflect current malware evolution trends. Second, most of them only rely on VirusTotal to label the ground truth of malware, while some anti-virus engines on VirusTotal may not always report reliable results. Third, all of them only contain the apps themselves (apks), while other important app information (e.g., app description, user rating, and app installs) is missing, which greatly limits the usage scenarios of these datasets. In this paper, we have created a reliable Android malware dataset based on Google Play's app maintenance results over several years. We first created four snapshots of Google Play in 2014, 2015, 2017 and 2018 respectively. Then we use VirusTotal to label apps with possible sensitive behaviors, and monitor these apps on Google Play to see whether Google has removed them or not. Based on this approach, we have created a malware dataset containing 9,133 samples that belong to 56 malware families with high confidence. We believe this dataset will boost a series of research studies including Android malware detection and classification, mining apps for anomalies, and app store mining, etc.",
+  "category": "mixed",
+  "domain": "cybersecurity (Android malware)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multiclass_classification",
+    "malware_family_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2019,
+  "reputation": "69 citations",
+  "notes": "Contains temporal snapshots and metadata beyond APKs; potential label noise from VirusTotal and Google Play removals, class imbalance, and dataset age issues; non-LLM benchmark focused on classical ML/security methods.",
+  "creators": {
+    "scientists": [
+      "Haoyu Wang",
+      "Junjun Si",
+      "Hao Li",
+      "Yao Guo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/msr.2019.00067",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

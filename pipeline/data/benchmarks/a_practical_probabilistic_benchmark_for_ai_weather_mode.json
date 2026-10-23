@@ -1,0 +1,36 @@
+{
+  "name": "A Practical Probabilistic Benchmark for AI Weather Models",
+  "description": "Since the weather is chaotic, forecasts aim to predict the distribution of future states rather than make a single prediction. Recently, multiple data driven weather models have emerged claiming breakthroughs in skill. However, these have mostly been benchmarked using deterministic skill scores, and little is known about their probabilistic skill. Unfortunately, it is hard to fairly compare AI weather models in a probabilistic sense, since variations in choice of ensemble initialization, definition of state, and noise injection methodology become confounding. Moreover, even obtaining ensemble forecast baselines is a substantial engineering challenge given the data volumes involved. We sidestep both problems by applying a decades-old idea -- lagged ensembles -- whereby an ensemble can be constructed from a moderately-sized library of deterministic forecasts. This allows the first parameter-free intercomparison of leading AI weather models' probabilistic skill against an operational base",
+  "category": "mixed",
+  "domain": "weather prediction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "forecasting",
+    "probabilistic_forecasting"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "CRPS",
+  "general_score_metric": "CRPS",
+  "year_of_publish": 2024,
+  "reputation": "A notable recent benchmark for evaluating probabilistic skill of AI weather models, especially because it addresses a gap left by deterministic leaderboards.",
+  "notes": "Benchmarking probabilistic forecasts is sensitive to ensemble construction choices; results are not directly comparable to deterministic weather scores.",
+  "creators": {
+    "scientists": [
+      "Noah D. Brenowitz",
+      "Yair Cohen",
+      "Jaideep Pathak",
+      "Ankur Mahesh",
+      "Boris Bonev",
+      "Thorsten Kurth"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2401.15305",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

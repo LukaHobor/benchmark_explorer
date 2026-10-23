@@ -1,0 +1,39 @@
+{
+  "name": "DLUE",
+  "description": "Understanding documents is central to many real-world tasks but remains a challenging topic. Unfortunately, there is no well-established consensus on how to comprehensively evaluate document understanding abilities, which significantly hinders the fair comparison and measuring the progress of the field. To benchmark document understanding researches, this paper summarizes four representative abilities, i.e., document classification, document structural analysis, document information extraction, and document transcription. Under the new evaluation framework, we propose \\textbf{Document Language Understanding Evaluation} -- \\textbf{DLUE}, a new task suite which covers a wide-range of tasks in various forms, domains and document genres. We also systematically evaluate six well-established transformer models on DLUE, and find that due to the lengthy content, complicated underlying structure and dispersed knowledge, document understanding is still far from being solved, and currently there is no neural architecture that dominates all tasks, raising requirements for a universal document understanding architecture.",
+  "category": "multimodal",
+  "domain": "document understanding / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "information_extraction",
+    "sequence_labeling",
+    "transcription",
+    "layout_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Task-specific metrics (e.g., accuracy for classification, F1/exact_match for extraction/labeling, edit-distance or CER/WER for transcription)",
+  "general_score_metric": "task-specific composite (accuracy / F1 / exact_match / edit-distance depending on subtask)",
+  "year_of_publish": 2023,
+  "reputation": "Proposed as a comprehensive unified suite for document understanding; recognized by the document-AI community but not yet a de facto standard across all subareas.",
+  "notes": "Multimodal and heterogeneous (varied document types and layouts); often requires OCR/layout OCR preprocessing; performance varies widely across subtasks — no single model dominates; may be compute- and data-intensive.",
+  "creators": {
+    "scientists": [
+      "Ruoxi Xu",
+      "Hongyu Lin",
+      "Xinyan Guan",
+      "Xianpei Han",
+      "Yingfei Sun",
+      "Le Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.09520",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

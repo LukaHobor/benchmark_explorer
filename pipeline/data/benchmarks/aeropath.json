@@ -1,0 +1,39 @@
+{
+  "name": "AeroPath",
+  "description": "To improve the prognosis of patients suffering from pulmonary diseases, such as lung cancer, early diagnosis and treatment are crucial. The analysis of CT images is invaluable for diagnosis, whereas high quality segmentation of the airway tree are required for intervention planning and live guidance during bronchoscopy. Recently, the Multi-domain Airway Tree Modeling (ATM'22) challenge released a large dataset, both enabling training of deep-learning based models and bringing substantial improvement of the state-of-the-art for the airway segmentation task. However, the ATM'22 dataset includes few patients with severe pathologies affecting the airway tree anatomy. In this study, we introduce a new public benchmark dataset (AeroPath), consisting of 27 CT images from patients with pathologies ranging from emphysema to large tumors, with corresponding trachea and bronchi annotations. Second, we present a multiscale fusion design for automatic airway segmentation. Models were trained on the ATM'22 dataset, tested on the AeroPath dataset, and further evaluated against competitive open-source methods. The same performance metrics as used in the ATM'22 challenge were used to benchmark the different considered approaches. Lastly, an open web application is developed, to easily test the proposed model on new data. The results demonstrated that our proposed architecture predicted topologically correct segmentations for all the patients included in the AeroPath dataset. The proposed method is robust and able to handle various anomalies, down to at least the fifth airway generation. In addition, the AeroPath dataset, featuring patients with challenging pathologies, will contribute to development of new state-of-the-art methods. The AeroPath dataset and the web application are made openly available.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static",
+  "task_types": [
+    "medical_image_segmentation",
+    "ct_segmentation",
+    "airway_tree_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Segmentation quality measured with overlap and boundary metrics such as Dice coefficient, IoU, sensitivity, and sometimes centerline- or branch-based airway-specific metrics.",
+  "general_score_metric": "Dice coefficient",
+  "typical_sota_score": "70–85% Dice",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "emerging",
+  "notes": "Pathological anatomy can break assumptions from cleaner airway datasets, so methods that perform well on standard cases may degrade substantially here.",
+  "creators": {
+    "scientists": [
+      "Karen-Helene Støverud",
+      "David Bouget",
+      "Andre Pedersen",
+      "Håkon Olav Leira",
+      "Thomas Langø",
+      "Erlend Fagertun Hofstad"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2311.01138",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

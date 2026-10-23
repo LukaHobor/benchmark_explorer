@@ -1,0 +1,37 @@
+{
+  "name": "GenBench3D",
+  "description": "Three-dimensional (3D) deep molecular generative models offer the advantage of goal-directed generation based on 3D-dependent properties, such as binding affinity for structure-based design within binding pockets. Traditional benchmarks created to evaluate SMILES or molecular graphs generators, such as GuacaMol or MOSES, are limited to evaluate 3D generators as they do not assess the quality of the generated molecular conformation. In this work, we hence developed GenBench3D, which implements a new benchmark for models producing molecules within a binding pocket. Our main contribution is the Validity3D metric, evaluating the conformation quality using the likelihood of bond lengths and valence angles based on reference values observed in the Cambridge Structural Database. The LiGAN, 3D-SBDD, Pocket2Mol, TargetDiff, DiffSBDD and ResGen models were benchmarked. We show that only between 0% and 11% of generated molecules have valid conformations. Performing local relaxation of generated molecules in the pocket considerably improved the Validity3D for all models by a minimum increase of 40%. For LiGAN, 3D-SBDD, or TargetDiff, the set of valid relaxed molecules shows on average higher Vina score (i.e. worse) than the set of raw generated molecules, indicating that the binding affinity of raw generated molecules might be overestimated. Using the other scoring functions, that give higher importance to ligand strain, only yield improved scores when using valid relaxed molecules. Using valid relaxed molecules, TargetDiff and Pocket2Mol show better median Vina, Glide and Gold PLP scores than other models. We have publicly released GenBench3D on GitHub for broader use: https://github.com/bbaillif/genbench3d",
+  "category": "mixed",
+  "domain": "drug discovery / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "molecular_generation",
+    "open_ended",
+    "docking_scoring"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "Validity3D (conformation validity) plus docking scores (Vina, Glide, Gold PLP)",
+  "typical_sota_score": "0–11% (raw Validity3D); +~40 percentage points or more after local relaxation (varies by model)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "New 2024 benchmark focused on 3D molecular generative models; useful for structure-based design evaluation but not yet widely adopted outside the structural generative modelling community.",
+  "notes": "Non-LLM benchmark for 3D molecular generators; small-number-of-models evaluation in the paper; docking scores can be biased by strained conformations and often overestimate raw generated binding; requires local relaxation to assess realistic conformations.",
+  "creators": {
+    "scientists": [
+      "Benoit Baillif",
+      "Jason Cole",
+      "Patrick McCabe",
+      "Andreas Bender"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.04424",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

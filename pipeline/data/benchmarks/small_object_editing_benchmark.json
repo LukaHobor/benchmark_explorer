@@ -1,0 +1,38 @@
+{
+  "name": "Small Object Editing Benchmark",
+  "description": "A plethora of text-guided image editing methods has recently been developed by leveraging the impressive capabilities of large-scale diffusion-based generative models especially Stable Diffusion. Despite the success of diffusion models in producing high-quality images, their application to small object generation has been limited due to difficulties in aligning cross-modal attention maps between text and these objects. Our approach offers a training-free method that significantly mitigates this alignment issue with local and global attention guidance , enhancing the model's ability to accurately render small objects in accordance with textual descriptions. We detail the methodology in our approach, emphasizing its divergence from traditional generation techniques and highlighting its advantages. What's more important is that we also provide~\\textit{SOEBench} (Small Object Editing), a standardized benchmark for quantitatively evaluating text-based small object generation collected from \\textit{MSCOCO} and \\textit{OpenImage}. Preliminary results demonstrate the effectiveness of our method, showing marked improvements in the fidelity and accuracy of small object generation compared to existing models. This advancement not only contributes to the field of AI and computer vision but also opens up new possibilities for applications in various industries where precise image generation is critical. We will release our dataset on our project page: \\href{https://soebench.github.io/}{https://soebench.github.io/}.",
+  "category": "multimodal",
+  "domain": "image editing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_editing",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "mean IoU for small objects and CLIP similarity (reported alongside human evaluation)",
+  "year_of_publish": 2024,
+  "reputation": "New academic benchmark (SOEBench) introduced with limited adoption so far, primarily cited within the image-editing research community.",
+  "notes": "Non-LLM, vision-only benchmark built from MSCOCO and OpenImages small-object subsets (so effective dataset size for target cases is limited); evaluations rely on a mix of proxy metrics (e.g., CLIP) and human judgments, which can be noisy; potential dataset biases in object selection.",
+  "creators": {
+    "scientists": [
+      "Qihe Pan",
+      "Zhen Zhao",
+      "Zicheng Wang",
+      "Sifan Long",
+      "Yiming Wu",
+      "Wei Ji",
+      "Haoran Liang",
+      "Ronghua Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.01545",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

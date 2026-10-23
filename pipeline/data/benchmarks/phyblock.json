@@ -1,0 +1,49 @@
+{
+  "name": "PhyBlock",
+  "description": "While vision-language models (VLMs) have demonstrated promising capabilities in reasoning and planning for embodied agents, their ability to comprehend physical phenomena, particularly within structured 3D environments, remains severely limited. To close this gap, we introduce PhyBlock, a progressive benchmark designed to assess VLMs on physical understanding and planning through robotic 3D block assembly tasks. PhyBlock integrates a novel four-level cognitive hierarchy assembly task alongside targeted Visual Question Answering (VQA) samples, collectively aimed at evaluating progressive spatial reasoning and fundamental physical comprehension, including object properties, spatial relationships, and holistic scene understanding. PhyBlock includes 2600 block tasks (400 assembly tasks, 2200 VQA tasks) and evaluates models across three key dimensions: partial completion, failure diagnosis, and planning robustness. We benchmark 21 state-of-the-art VLMs, highlighting their strengths and limitations in physically grounded, multi-step planning. Our empirical findings indicate that the performance of VLMs exhibits pronounced limitations in high-level planning and reasoning capabilities, leading to a notable decline in performance for the growing complexity of the tasks. Error analysis reveals persistent difficulties in spatial orientation and dependency reasoning. Surprisingly, chain-of-thought prompting offers minimal improvements, suggesting spatial tasks heavily rely on intuitive model comprehension. We position PhyBlock as a unified testbed to advance embodied reasoning, bridging vision-language understanding and real-world physical problem-solving.",
+  "category": "multimodal",
+  "domain": "robotics / physical reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "multi_step_planning",
+    "assembly_task",
+    "failure_diagnosis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and task_success_rate (per-dimension evaluations for partial completion, failure diagnosis, and planning robustness)",
+  "general_score_metric": "task_success_rate (primary for assembly/planning) with accuracy reported for VQA items",
+  "typical_sota_score": "Varies by task complexity; many state-of-the-art VLMs perform poorly on high-level planning (often below 50% task success on harder levels)",
+  "year_of_publish": 2025,
+  "reputation": "Recent benchmark (arXiv) receiving attention in the embodied VLM and robotics research community but not yet a broadly established standard.",
+  "notes": "Multimodal (VLM) benchmark with a modest-sized synthetic/simulated suite (≈2600 tasks); focuses on block-assembly scenarios so transfer to real-world robotics may be limited; chain-of-thought yields limited gains per authors; not an LLM-only benchmark.",
+  "creators": {
+    "scientists": [
+      "Liang Ma",
+      "Jiajun Wen",
+      "Min Lin",
+      "Rongtao Xu",
+      "Xiwen Liang",
+      "Bingqian Lin",
+      "Jun Ma",
+      "Yongxin Wang",
+      "Ziming Wei",
+      "Haokun Lin",
+      "Mingfei Han",
+      "Meng Cao",
+      "Bokui Chen",
+      "Ivan Laptev",
+      "Xiaodan Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.08708",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

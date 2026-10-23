@@ -1,0 +1,32 @@
+{
+  "name": "EntQA",
+  "description": "Abstract\n                \n                  Objective\n                  Develop a metric for evaluating the clinical alignment and informativeness of large language model (LLM)-generated responses in medical question-answering (QA) tasks.\n                \n                \n                  Materials and methods\n                  We propose EntQA, an entity-centric metric that extracts biomedical entities from patient backgrounds, diagnostic questions and LLM responses using a biomedical named entity recognition model, followed by de-duplication and semantic/lexical matching with thresholds. We computed recall-style coverage scores to quantify entity retention and detect omissions without external resources. We evaluated EntQA on five benchmarks using seven Qwen 2.5 Instruct models (0.5B–72B parameters), comparing it to baselines via Spearman/Kendall correlations with model accuracy at group level, point-biserial correlations at case level, and Spearman correlations with model scaling.\n                \n                \n                  Results\n                  EntQA demonstrated consistent positive alignments with accuracy (group-level Spearman up to 0.9286; case-level point-biserial up to 0.0926) and model scaling (Spearman up to 0.252), outperforming baselines which often showed negative or inconsistent correlations (e.g., BERTScore Spearman -0.9286 with accuracy).\n                \n                \n                  Conclusion\n                  EntQA offers a scalable, interpretable evaluation for LLM medical QA, outperforming traditional metrics in capturing clinical fidelity and supporting trustworthy healthcare AI through applications in fact-checking and model refinement.",
+  "category": "text",
+  "domain": "medical NLP",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "entity-coverage recall (with correlation to accuracy / clinical alignment)",
+  "general_score_metric": "entity_coverage_recall (EntQA score) and correlation with accuracy",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized metric proposed in a recent preprint; currently limited adoption but relevant to medical QA evaluation research.",
+  "notes": "Relies on the quality of biomedical NER and matching thresholds; sensitive to NER errors and vocabulary/ontology coverage. Developed for medical QA—may not transfer to other domains; potential dataset/model contamination unknown.",
+  "creators": {
+    "scientists": [
+      "Yi Liu",
+      "Vijaya B. Kolachalama"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2025.11.12.25340106",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

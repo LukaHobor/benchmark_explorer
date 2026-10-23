@@ -1,0 +1,35 @@
+{
+  "name": "DoFaiR",
+  "description": "Prompt-based \"diversity interventions\" are commonly adopted to improve the diversity of Text-to-Image (T2I) models depicting individuals with various racial or gender traits. However, will this strategy result in nonfactual demographic distribution, especially when generating real historical figures. In this work, we propose DemOgraphic FActualIty Representation (DoFaiR), a benchmark to systematically quantify the trade-off between using diversity interventions and preserving demographic factuality in T2I models. DoFaiR consists of 756 meticulously fact-checked test instances to reveal the factuality tax of various diversity prompts through an automated evidence-supported evaluation pipeline. Experiments on DoFaiR unveil that diversity-oriented instructions increase the number of different gender and racial groups in DALLE-3's generations at the cost of historically inaccurate demographic distributions. To resolve this issue, we propose Fact-Augmented Intervention (FAI), which instructs a Large Language Model (LLM) to reflect on verbalized or retrieved factual information about gender and racial compositions of generation subjects in history, and incorporate it into the generation context of T2I models. By orienting model generations using the reflected historical truths, FAI significantly improves the demographic factuality under diversity interventions while preserving diversity.",
+  "category": "vision",
+  "domain": "text-to-image generation / fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_generation",
+    "factuality_evaluation",
+    "demographic_distribution_assessment"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (demographic factuality) plus diversity metrics (group-count / diversity-change); automated evidence-supported scoring with optional human evaluation",
+  "general_score_metric": "demographic_factuality_accuracy",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark (2024 preprint) gaining attention in fairness and text-to-image communities for quantifying the factuality/diversity trade-off.",
+  "notes": "Small, curated set (756 instances); focuses on historical figures so there is contamination and retrieval/verifiability caveats; automated evidence matching can introduce noise.",
+  "creators": {
+    "scientists": [
+      "Yixin Wan",
+      "Di wu",
+      "Haoran Wang",
+      "Kai-Wei Chang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.00377",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "CURE4Rec",
+  "description": "With increasing privacy concerns in artificial intelligence, regulations have mandated the right to be forgotten, granting individuals the right to withdraw their data from models. Machine unlearning has emerged as a potential solution to enable selective forgetting in models, particularly in recommender systems where historical data contains sensitive user information. Despite recent advances in recommendation unlearning, evaluating unlearning methods comprehensively remains challenging due to the absence of a unified evaluation framework and overlooked aspects of deeper influence, e.g., fairness. To address these gaps, we propose CURE4Rec, the first comprehensive benchmark for recommendation unlearning evaluation. CURE4Rec covers four aspects, i.e., unlearning Completeness, recommendation Utility, unleaRning efficiency, and recommendation fairnEss, under three data selection strategies, i.e., core data, edge data, and random data. Specifically, we consider the deeper influence of unlearning on recommendation fairness and robustness towards data with varying impact levels. We construct multiple datasets with CURE4Rec evaluation and conduct extensive experiments on existing recommendation unlearning methods. Our code is released at https://github.com/xiye7lai/CURE4Rec.",
+  "category": "mixed",
+  "domain": "recommendation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "recommendation",
+    "model_unlearning",
+    "fairness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Multi-aspect evaluation: unlearning completeness (membership-inference / residual influence), recommendation utility (NDCG, HR), unlearning efficiency (time/memory), and fairness (group parity / disparity metrics)",
+  "general_score_metric": "composite (reported per-aspect: membership-inference success / completeness, NDCG/HR for utility, time/memory for efficiency, and fairness disparity metrics)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "New and specialized benchmark focused on recommendation unlearning; emerging adoption in the recommendation and privacy research communities.",
+  "notes": "non-LLM benchmark. Comprehensive multi-faceted evaluation covering completeness, utility, efficiency, and fairness; results depend strongly on unlearning selection strategy (core/edge/random). Relatively new — not yet saturated; reproducibility depends on implementation details and chosen recommendation models.",
+  "creators": {
+    "scientists": [
+      "Chaochao Chen",
+      "Jiaming Zhang",
+      "Yizhao Zhang",
+      "Li Zhang",
+      "Lingjuan Lyu",
+      "Yuyuan Li",
+      "Biao Gong",
+      "Chenggang Yan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2408.14393",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

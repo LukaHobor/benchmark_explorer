@@ -1,0 +1,37 @@
+{
+  "name": "UHDSR4K / UHDSR8K",
+  "description": "Increasingly, modern mobile devices allow capturing images at Ultra-High-Definition (UHD) resolution, which includes 4K and 8K images. However, current single image super-resolution (SISR) methods focus on super-resolving images to ones with resolution up to high definition (HD) and ignore higher-resolution UHD images. To explore their performance on UHD images, in this paper, we first introduce two large-scale image datasets, UHDSR4K and UHDSR8K, to benchmark existing SISR methods. With 70,000 V100 GPU hours of training, we benchmark these methods on 4K and 8K resolution images under seven different settings to provide a set of baseline models. Moreover, we propose a baseline model, called Mesh Attention Network (MANet) for SISR. The MANet applies the attention mechanism in both different depths (horizontal) and different levels of receptive field (vertical). In this way, correlations among feature maps are learned, enabling the network to focus on more important features.",
+  "category": "vision",
+  "domain": "computer vision / image super-resolution",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_super_resolution",
+    "image_restoration"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "PSNR ~28–36 dB (varies by scale and dataset split)",
+  "reputation": "A recently introduced large-scale UHD SISR benchmark that has attracted attention for evaluating 4K/8K super-resolution methods; moderate adoption as a reference for high-resolution SR research.",
+  "notes": "Non-LLM benchmark; very large and compute-intensive baselines (high training cost reported). Common pixel-wise metrics (PSNR/SSIM) may not correlate well with perceptual quality; potential domain/collection bias and unknown overlap with common pretraining sets.",
+  "creators": {
+    "scientists": [
+      "Kaihao Zhang",
+      "Dongxu Li",
+      "Wenhan Luo",
+      "Wenqi Ren",
+      "Bjorn Stenger",
+      "Wei Liu",
+      "Hongdong Li",
+      "Ming-Hsuan Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

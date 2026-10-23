@@ -1,0 +1,37 @@
+{
+  "name": "NeRF-- benchmark",
+  "description": "Considering the problem of novel view synthesis (NVS) from only a set of 2D images, we simplify the training process of Neural Radiance Field (NeRF) on forward-facing scenes by removing the requirement of known or pre-computed camera parameters, including both intrinsics and 6DoF poses. To this end, we propose NeRF$--$, with three contributions: First, we show that the camera parameters can be jointly optimised as learnable parameters with NeRF training, through a photometric reconstruction; Second, to benchmark the camera parameter estimation and the quality of novel view renderings, we introduce a new dataset of path-traced synthetic scenes, termed as Blender Forward-Facing Dataset (BLEFF); Third, we conduct extensive analyses to understand the training behaviours under various camera motions, and show that in most scenarios, the joint optimisation pipeline can recover accurate camera parameters and achieve comparable novel view synthesis quality as those trained with COLMAP pre-comp",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "novel_view_synthesis",
+    "camera_pose_estimation",
+    "scene_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS and pose error",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "PSNR ≈ 28–36 dB; SSIM ≈ 0.88–0.98; LPIPS ≈ 0.01–0.06; pose error typically small (on the order of 0–5° rotation / <0.1 translation units, depending on dataset)",
+  "year_of_publish": 2021,
+  "reputation": "A well-known NeRF variant benchmark used in the neural rendering community to study joint camera optimization and novel view synthesis.",
+  "notes": "Non-LLM computer vision benchmark; results depend on scene type and camera motion, and comparisons can be sensitive to training setup.",
+  "creators": {
+    "scientists": [
+      "Zirui Wang",
+      "Shangzhe Wu",
+      "Weidi Xie",
+      "Min Chen",
+      "Victor Adrian Prisacariu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2102.07064",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

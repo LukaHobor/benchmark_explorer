@@ -1,0 +1,39 @@
+{
+  "name": "Reeds",
+  "description": "This paper presents a dataset, called Reeds, for research on robot perception algorithms. The dataset aims to provide demanding benchmark opportunities for algorithms, rather than providing an environment for testing application-specific solutions. A boat was selected as a logging platform in order to provide highly dynamic kinematics. The sensor package includes six high-performance vision sensors, two long-range lidars, radar, as well as GNSS and an IMU. The spatiotemporal resolution of sensors were maximized in order to provide large variations and flexibility in the data, offering evaluation at a large number of different resolution presets based on the resolution found in other datasets. Reeds also provides means of a fair and reproducible comparison of algorithms, by running all evaluations on a common server backend. As the dataset contains massive-scale data, the evaluation principle also serves as a way to avoid moving data unnecessarily. It was also found that naive evaluation of algorithms, where each evaluation is computed sequentially, was not practical as the fetch and decode task of each frame would not scale well. Instead, each frame is only decoded once and then fed to all algorithms in parallel, including for GPU-based algorithms.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "semantic_segmentation",
+    "depth_estimation",
+    "sensor_fusion",
+    "tracking",
+    "localization",
+    "odometry",
+    "motion_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_specific (e.g., mean Average Precision (mAP) for detection, IoU for segmentation, RMSE/APE/ATE for depth/odometry)",
+  "general_score_metric": "mean Average Precision (mAP) / IoU (task-dependent)",
+  "year_of_publish": 2021,
+  "reputation": "A niche but valuable multimodal marine robotics dataset with limited adoption compared to mainstream autonomous driving benchmarks (e.g., KITTI, Waymo) but recognized for its high-fidelity, multi-sensor recordings.",
+  "notes": "Non-LLM benchmark; very large-scale multi-sensor data with an evaluation server to avoid dataset movement; task-dependent metrics and evaluation; potential preprocessing/decoding bottlenecks noted by authors.",
+  "creators": {
+    "scientists": [
+      "Ola Benderius",
+      "Christian Berger",
+      "Krister Blanch"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2109.08250",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Streaming ASR Benchmark (LF-MMI/CTC/RNN-T)",
+  "description": "In this work, to measure the accuracy and efficiency for a latency-controlled streaming automatic speech recognition (ASR) application, we perform comprehensive evaluations on three popular training criteria: LF-MMI, CTC and RNN-T. In transcribing social media videos of 7 languages with training data 3K-14K hours, we conduct large-scale controlled experimentation across each criterion using identical datasets and encoder model architecture. We find that RNN-T has consistent wins in ASR accuracy, while CTC models excel at inference efficiency. Moreover, we selectively examine various modeling strategies for different training criteria, including modeling units, encoder architectures, pre-training, etc. Given such large-scale real-world streaming ASR application, to our best knowledge, we present the first comprehensive benchmark on these three widely used training criteria across a great many languages.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "speech_recognition",
+    "streaming_asr",
+    "latency_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "WER (word error rate), with latency and real-time factor measurements",
+  "general_score_metric": "WER (primary), plus latency/efficiency metrics",
+  "typical_sota_score": "varies by language and domain (roughly 5–30% WER depending on language/noise)",
+  "year_of_publish": 2020,
+  "reputation": "Influential for comparative evaluation of LF-MMI, CTC, and RNN-T in latency-controlled streaming ASR across many languages; cited in speech systems work.",
+  "notes": "Large-scale real-world data (3K–14K hours) — high compute/data requirements; results are domain- and language-dependent; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xiaohui Zhang",
+      "Frank Zhang",
+      "Chunxi Liu",
+      "Kjell Schubert",
+      "Julian Chan",
+      "Pradyot Prakash",
+      "Jun Liu",
+      "Ching-Feng Yeh",
+      "Fuchun Peng",
+      "Yatharth Saraf",
+      "Geoffrey Zweig"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2011.04785",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

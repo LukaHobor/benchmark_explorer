@@ -1,0 +1,35 @@
+{
+  "name": "B-Pref",
+  "description": "Reinforcement learning (RL) requires access to a reward function that incentivizes the right behavior, but these are notoriously hard to specify for complex tasks. Preference-based RL provides an alternative: learning policies using a teacher's preferences without pre-defined rewards, thus overcoming concerns associated with reward engineering. However, it is difficult to quantify the progress in preference-based RL due to the lack of a commonly adopted benchmark. In this paper, we introduce B-Pref: a benchmark specially designed for preference-based RL. A key challenge with such a benchmark is providing the ability to evaluate candidate algorithms quickly, which makes relying on real human input for evaluation prohibitive. At the same time, simulating human input as giving perfect preferences for the ground truth reward function is unrealistic. B-Pref alleviates this by simulating teachers with a wide array of irrationalities, and proposes metrics not solely for performance but also for robustness to these potential irrationalities. We showcase the utility of B-Pref by using it to analyze algorithmic design choices, such as selecting informative queries, for state-of-the-art preference-based RL algorithms. We hope that B-Pref can serve as a common starting point to study preference-based RL more systematically. Source code is available at https://github.com/rll-research/B-Pref.",
+  "category": "mixed",
+  "domain": "reinforcement learning / preference-based learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "preference_learning",
+    "reinforcement_learning",
+    "policy_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate / normalized return (policy performance vs. ground-truth reward); robustness metrics (e.g., agreement with simulated teacher preferences, regret)",
+  "general_score_metric": "normalized_return (policy performance under ground-truth reward) plus robustness statistics (e.g., preference agreement / regret)",
+  "year_of_publish": 2021,
+  "reputation": "Introduced in 2021 for preference-based RL research; cited and used by a small but growing set of RL papers but not yet a widely adopted community standard.",
+  "notes": "Evaluation relies on simulated teachers with injected irrationalities (no real human labels), so results reflect simulator assumptions; designed for RL (non-LLM) and emphasizes robustness rather than single-number saturation.",
+  "creators": {
+    "scientists": [
+      "Kimin Lee",
+      "Laura Smith",
+      "Anca Dragan",
+      "Pieter Abbeel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2111.03026",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

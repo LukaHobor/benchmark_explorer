@@ -1,0 +1,36 @@
+{
+  "name": "GATK4 Spark workstation benchmark",
+  "description": "Abstract\n                \n                  Background\n                  Rapid and practical DNA-sequencing processing has become essential for modern biomedical laboratories, especially in the field of cancer, pathology and genetics. While sequencing turn-over time has been, and still is, a bottleneck in research and diagnostics, the field of bioinformatics is moving at a rapid pace – both in terms of hardware and software development. Here, we benchmarked the local performance of three of the most important Spark-enabled Genome analysis toolkit 4 (GATK4) tools in a targeted sequencing workflow: Duplicate marking, base quality score recalibration (BQSR) and variant calling on targeted DNA sequencing using a modest hyperthreading 12-core single CPU and a high-speed PCI express solid-state drive.\n                \n                \n                  Results\n                  Compared to the previous GATK version the performance of Spark-enabled BQSR and HaplotypeCaller is shifted towards a more efficient usage of the available cores on CPU and outperforms the earlier GATK3.8 version with an order of magnitude reduction in processing time to analysis ready variants, whereas MarkDuplicateSpark was found to be thrice as fast. Furthermore, HaploTypeCallerSpark and BQSRPipelineSpark were significantly faster than the equivalent GATK4 standard tools with a combined ∼86% reduction in execution time, reaching a median rate of ten million processed bases per second, and duplicate marking was reduced ∼42%. The called variants were found to be in close agreement between the Spark and non-Spark versions, with an overall concordance of 98%. In this setup, the tools were also highly efficient when compared execution on a small 72 virtual CPU/18-node Google Cloud cluster.\n                \n                \n                  Conclusion\n                  In conclusion, GATK4 offers practical parallelization possibilities for DNA sequence processing, and the Spark-enabled tools optimize performance and utilization of local CPUs. Spark utilizing GATK variant calling is several times faster than previous GATK3.8 multithreading with the same multi-core, single CPU, configuration. The improved opportunities for parallel computations not only hold implications for high-performance cluster, but also for modest laboratory or research workstations for targeted sequencing analysis, such as exome, panel or amplicon sequencing.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "performance_benchmarking",
+    "throughput_measurement",
+    "software_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "execution time / throughput (bases per second) / CPU utilization",
+  "general_score_metric": "execution-time reduction (%) and throughput (bases/sec)",
+  "typical_sota_score": "≈86% reduction in execution time reported (vs. non‑Spark tools); median throughput ~10,000,000 bases/sec in the reported setup",
+  "year_of_publish": 2020,
+  "reputation": "Practical, well-documented case study of GATK4 Spark performance on local workstations; useful to labs but not a standardized community-wide benchmark.",
+  "notes": "Hardware- and configuration-dependent (tested on a 12-core hyperthreaded CPU with NVMe SSD). Small-scale, single-machine evaluation; focuses on speed/resource utilization rather than algorithmic accuracy. Reproducibility requires similar hardware and datasets.",
+  "creators": {
+    "scientists": [
+      "Marcus H. Hansen",
+      "Anita T. Simonsen",
+      "Hans B. Ommen",
+      "Charlotte G. Nyvold"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2020.05.17.101105",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

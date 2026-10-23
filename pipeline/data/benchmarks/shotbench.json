@@ -1,0 +1,48 @@
+{
+  "name": "ShotBench",
+  "description": "Cinematography, the fundamental visual language of film, is essential for conveying narrative, emotion, and aesthetic quality. While recent Vision-Language Models (VLMs) demonstrate strong general visual understanding, their proficiency in comprehending the nuanced cinematic grammar embedded within individual shots remains largely unexplored and lacks robust evaluation. This critical gap limits both fine-grained visual comprehension and the precision of AI-assisted video generation. To address this, we introduce \\textbf{ShotBench}, a comprehensive benchmark specifically designed for cinematic language understanding. It features over 3.5k expert-annotated QA pairs from images and video clips, meticulously curated from over 200 acclaimed (predominantly Oscar-nominated) films and spanning eight key cinematography dimensions. Our evaluation of 24 leading VLMs on ShotBench reveals their substantial limitations: even the top-performing model achieves less than 60\\% average accuracy, particularly struggling with fine-grained visual cues and complex spatial reasoning. To catalyze advancement in this domain, we construct \\textbf{ShotQA}, a large-scale multimodal dataset comprising approximately 70k cinematic QA pairs. Leveraging ShotQA, we develop \\textbf{ShotVL} through supervised fine-tuning and Group Relative Policy Optimization. ShotVL significantly outperforms all existing open-source and proprietary models on ShotBench, establishing new \\textbf{state-of-the-art} performance. We open-source our models, data, and code to foster rapid progress in this crucial area of AI-driven cinematic understanding and generation.",
+  "category": "multimodal",
+  "domain": "games / film & video",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "open_ended",
+    "visual_reasoning",
+    "spatial_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "50–60%",
+  "year_of_publish": 2025,
+  "reputation": "Emerging, specialized benchmark for cinematic visual understanding; gaining attention in VLM research but not yet broadly adopted outside the film/vision community.",
+  "notes": "Small benchmark size (~3.5k expert QA pairs) and domain-specific (predominantly Oscar-nominated films) introduce potential bias; risk of contamination if models were pretrained on film data or subtitles; larger auxiliary dataset (ShotQA, ~70k) may be used for fine-tuning, which can confound zero-shot evaluations.",
+  "creators": {
+    "scientists": [
+      "Hongbo Liu",
+      "Jingwen He",
+      "Yi Jin",
+      "Dian Zheng",
+      "Yuhao Dong",
+      "Fan Zhang",
+      "Ziqi Huang",
+      "Yinan He",
+      "Yangguang Li",
+      "WeiChao Chen",
+      "Yu Qiao",
+      "Wanli Ouyang",
+      "Shengjie Zhao",
+      "Ziwei Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.21356",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

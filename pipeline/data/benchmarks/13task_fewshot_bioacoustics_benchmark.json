@@ -1,0 +1,39 @@
+{
+  "name": "13-task few-shot bioacoustics benchmark",
+  "description": "We propose a methodology for training foundation models that enhances their in-context learning capabilities within the domain of bioacoustic signal processing. We use synthetically generated training data, introducing a domain-randomization-based pipeline that constructs diverse acoustic scenes with temporally strong labels. We generate over 8.8 thousand hours of strongly-labeled audio and train a query-by-example, transformer-based model to perform few-shot bioacoustic sound event detection. Our second contribution is a public benchmark of 13 diverse few-shot bioacoustics tasks. Our model outperforms previously published methods, and improves relative to other training-free methods by $64\\%$. We demonstrate that this is due to increase in model size and data scale, as well as algorithmic improvements. We make our trained model available via an API, to provide ecologists and ethologists with a training-free tool for bioacoustic sound event detection.",
+  "category": "audio",
+  "domain": "bioacoustics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification",
+    "few_shot_detection",
+    "query_by_example",
+    "sound_event_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "event-based F1, frame/event-level F1 and mean average precision (mAP) for detection tasks",
+  "general_score_metric": "event-based F1",
+  "typical_sota_score": "60–90%",
+  "year_of_publish": 2025,
+  "reputation": "3 citations",
+  "notes": "Benchmark is few-shot and domain-specific (bioacoustics) using large amounts of synthetically generated training data; potential domain shift to real-world recordings, class imbalance across species/events, and not focused on text/LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Benjamin Hoffman",
+      "David Robinson",
+      "Marius Miron",
+      "V. Baglione",
+      "D. Canestrari",
+      "D. Elias"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2503.00296",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

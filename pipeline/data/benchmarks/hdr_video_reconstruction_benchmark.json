@@ -1,0 +1,38 @@
+{
+  "name": "HDR Video Reconstruction Benchmark",
+  "description": "High dynamic range (HDR) video reconstruction from sequences captured with alternating exposures is a very challenging problem. Existing methods often align low dynamic range (LDR) input sequence in the image space using optical flow, and then merge the aligned images to produce HDR output. However, accurate alignment and fusion in the image space are difficult due to the missing details in the over-exposed regions and noise in the under-exposed regions, resulting in unpleasing ghosting artifacts. To enable more accurate alignment and HDR fusion, we introduce a coarse-to-fine deep learning framework for HDR video reconstruction. Firstly, we perform coarse alignment and pixel blending in the image space to estimate the coarse HDR video. Secondly, we conduct more sophisticated alignment and temporal fusion in the feature space of the coarse HDR video to produce better reconstruction. Considering the fact that there is no publicly available dataset for quantitative and comprehensive evaluation of HDR video reconstruction methods, we collect such a benchmark dataset, which contains $97$ sequences of static scenes and 184 testing pairs of dynamic scenes. Extensive experiments show that our method outperforms previous state-of-the-art methods. Our dataset, code and model will be made publicly available.",
+  "category": "vision",
+  "domain": "computational imaging — HDR video",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "hdr_reconstruction",
+    "video_restoration",
+    "image_alignment",
+    "multi_frame_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / HDR-VDP (quantitative image quality metrics)",
+  "general_score_metric": "PSNR (reported alongside SSIM and HDR‑VDP)",
+  "year_of_publish": 2021,
+  "reputation": "A niche but valuable dataset introduced alongside a novel HDR video reconstruction method; moderately adopted within HDR/video-fusion research.",
+  "notes": "Relatively small dataset (97 static sequences, 184 dynamic testing pairs) with limited diversity; non-LLM benchmark. Evaluation often performed on tone-mapped outputs and is sensitive to alignment/artifacts.",
+  "creators": {
+    "scientists": [
+      "GuanYing Chen",
+      "Chaofeng Chen",
+      "Shi Guo",
+      "Zhetong Liang",
+      "Kwan-Yee K. Wong",
+      "Lei Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2103.14943",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

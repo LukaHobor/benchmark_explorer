@@ -1,0 +1,38 @@
+{
+  "name": "ONT R10.4 vs R9.4.1 Benchmark",
+  "description": "Third-generation sequencing can be used in human cancer genomics and epigenomic research. Oxford Nanopore Technologies (ONT) recently released R10.4 flow cell, which claimed an improved read accuracy compared to R9.4.1 flow cell. To evaluate the benefits and defects of R10.4 flow cell for cancer cell profiling on MinION devices, we used the human non-small-cell lung-carcinoma cell line HCC78 to construct libraries for both single-cell whole-genome amplification (scWGA) and whole-genome shotgun sequencing. The R10.4 and R9.4.1 reads were benchmarked in terms of read accuracy, variant detection, modification calling, genome recovery rate and compared with the next generation sequencing (NGS) reads. The results highlighted that the R10.4 outperforms R9.4.1 reads, achieving a higher modal read accuracy of over 99.1%, superior variation detection, lower false-discovery rate (FDR) in methylation calling, and comparable genome recovery rate. To achieve high yields scWGA sequencing in the ONT platform as NGS, we recommended multiple displacement amplification with a modified T7 endonuclease Ⅰ cutting procedure as a promising method. In addition, we provided a possible solution to filter the likely false positive sites among the whole genome region with R10.4 by using scWGA sequencing result as a negative control. Our study is the first benchmark of whole genome single-cell sequencing using ONT R10.4 and R9.4.1 MinION flow cells by clarifying the capacity of genomic and epigenomic profiling within a single flow cell. A promising method for scWGA sequencing together with the methylation calling results can benefit researchers who work on cancer cell genomic and epigenomic profiling using third-generation sequencing.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "read_accuracy_evaluation",
+    "variant_detection",
+    "methylation/modification_calling",
+    "genome_recovery_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "read accuracy; precision/recall/F1 for variant calling; false discovery rate (FDR) for methylation; genome recovery rate",
+  "general_score_metric": "modal read accuracy (primary), supplemented by precision/recall/F1 and FDR for specific tasks",
+  "typical_sota_score": "over 99% modal read accuracy (R10.4 reported >99.1%)",
+  "year_of_publish": 2023,
+  "reputation": "193 citations",
+  "notes": "Technology- and protocol-specific benchmark with limited biological replicates (single cell line); subject to scWGA biases and potential contamination. Metrics vary by subtask (read accuracy vs variant/methylation calling). Non-LLM benchmark focused on sequencing platform comparison; results may not generalize across sample types or library preparations.",
+  "creators": {
+    "scientists": [
+      "Ying Ni",
+      "Xudong Liu",
+      "Zemenu Mengistie Simeneh",
+      "Mengsu Yang",
+      "Runsheng Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1016/j.csbj.2023.03.038",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

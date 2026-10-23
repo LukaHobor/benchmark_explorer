@@ -1,0 +1,36 @@
+{
+  "name": "HanDyVQA",
+  "description": "Hand-object interaction (HOI) inherently involves dynamics where human manipulations produce distinct spatio-temporal effects on objects. However, existing semantic HOI benchmarks focused either on manipulation or on the resulting effects at a coarse level, lacking fine-grained spatio-temporal reasoning to capture the underlying dynamics in HOI. We introduce HanDyVQA, a fine-grained video question-answering benchmark that comprehensively covers both the manipulation and effect aspects of HOI. HanDyVQA comprises six complementary question types (Action, Process, Objects, Location, State Change, and Object Parts), totalling 11.1K multiple-choice QA pairs. Collected QA pairs recognizing manipulation styles, hand/object motions, and part-level state changes. HanDyVQA also includes 10.3K segmentation masks for Objects and Object Parts questions, enabling the evaluation of object/part-level reasoning in video object segmentation. We evaluated recent video foundation models on our benchmark and found that even the best-performing model, Gemini-2.5-Pro, reached only 73% average accuracy, which is far from human performance (97%). Further analysis shows the remaining challenges in spatial relationship, motion, and part-level geometric understanding. We also found that integrating explicit HOI-related cues into visual features improves performance, offering insights for developing future models with a deeper understanding of HOI dynamics.",
+  "category": "multimodal",
+  "domain": "vision / human-object interaction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "visual_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "average accuracy",
+  "typical_sota_score": "70–75%",
+  "year_of_publish": 2025,
+  "reputation": "A recent, specialized benchmark for fine-grained hand-object interaction video VQA; gaining attention in the HOI and video-VQA research communities but not yet widely saturated.",
+  "notes": "Moderate-size dataset (11.1K QA pairs, 10.3K segmentation masks); focused on fine-grained spatio-temporal and part-level reasoning. Not an LLM-only benchmark; evaluation may be sensitive to visual pretraining data (contamination risk) and is not saturated.",
+  "creators": {
+    "scientists": [
+      "Masatoshi Tateno",
+      "Gido Kato",
+      "Hirokatsu Kataoka",
+      "Yoichi Sato",
+      "Takuma Yagi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2512.00885",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

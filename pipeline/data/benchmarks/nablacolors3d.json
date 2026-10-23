@@ -1,0 +1,38 @@
+{
+  "name": "nablaColors-3D",
+  "description": "Abstract\n                Accurately predicting optical spectra of molecules is essential for creating better OLED emitters,\nsolar-cell dyes, and fluorescent probes. Traditional methods, such as time-dependent density-\nfunctional theory, are computationally expensive and often inaccurate. Current Graph Neural\nNetwork (GNN) approaches for optical properties prediction are faster and offer better perfor-\nmance. Still, they operate on 2D graphs and ignore the 3D geometrical features that control\nexcited-state behavior. We present ∇Colors-3D, a rigorously curated dataset for the prediction of\noptical properties consisting of 26 369 chromophore-solvent pairs with three conformations opti-\nmized at different levels of quantum theory. Based on this dataset, we establish a scaffold-split\nbenchmark for 3D GNNs and systematically quantify how the fidelity of geometry optimization\naffects accuracy. Furthermore, we propose a solvent-aware modification for pretrained SE(3)-\ninvariant architectures. Our best model, built on UniMol+, achieves MAE of 17.7 nm on a\nheld-out test set, improving the previous state of the art by nearly 25%.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "molecular_property_prediction",
+    "graph_representation_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean_absolute_error (MAE)",
+  "general_score_metric": "MAE (nm)",
+  "typical_sota_score": "17–25 nm",
+  "year_of_publish": 2025,
+  "reputation": "A recent, domain-specific dataset gaining interest in molecular/materials ML for optical property prediction but not yet widely adopted outside that community.",
+  "notes": "Non-LLM benchmark focused on quantum-chemistry-derived 3D conformations (26k pairs); moderate size, scaffold split provided. Results sensitive to geometry optimization fidelity; domain-specific (chromophores + solvents) so limited generalization beyond similar chemistries.",
+  "creators": {
+    "scientists": [
+      "Denis Potapov",
+      "Sergei Rogovoi",
+      "Kuzma Khrabrov",
+      "Konstantin Ushenin",
+      "Alexey Korovin",
+      "Anton Ber"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.21203/rs.3.rs-7398508/v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "FishPhenoKey",
+  "description": "Accurate phenotypic analysis in aquaculture breeding necessitates the quantification of subtle morphological phenotypes. Existing datasets suffer from limitations such as small scale, limited species coverage, and inadequate annotation of keypoints for measuring refined and complex morphological phenotypes of fish body parts. To address this gap, we introduce FishPhenoKey, a comprehensive dataset comprising 23,331 high-resolution images spanning six fish species. Notably, FishPhenoKey includes 22 phenotype-oriented annotations, enabling the capture of intricate morphological phenotypes. Motivated by the nuanced evaluation of these subtle morphologies, we also propose a new evaluation metric, Percentage of Measured Phenotype (PMP). It is designed to assess the accuracy of individual keypoint positions and is highly sensitive to the phenotypes measured using the corresponding keypoints. To enhance keypoint detection accuracy, we further propose a novel loss, Anatomically-Calibrated Regularization (ACR), that can be integrated into keypoint detection models, leveraging biological insights to refine keypoint localization. Our contributions set a new benchmark in fish phenotype analysis, addressing the challenges of precise morphological quantification and opening new avenues for research in sustainable aquaculture and genetic studies. Our dataset and code are available at https://github.com/WeizhenLiuBioinform/Fish-Phenotype-Detect.",
+  "category": "vision",
+  "domain": "aquaculture / phenotypic analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "keypoint_detection",
+    "pose_estimation",
+    "phenotype_measurement",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PMP (Percentage of Measured Phenotype); also standard keypoint metrics (PCK, MPJPE)",
+  "general_score_metric": "PMP (Percentage of Measured Phenotype)",
+  "year_of_publish": 2024,
+  "reputation": "Newly published dataset gaining attention in aquaculture and computational biology communities but not yet widely adopted.",
+  "notes": "Non-LLM vision benchmark; moderate-scale (23,331 images) across six species; relies on fine-grained manual keypoint annotations so results are sensitive to annotation quality and species bias; PMP is task-specific and not yet standardized across the field.",
+  "creators": {
+    "scientists": [
+      "Weizhen Liu",
+      "Jiayu Tan",
+      "Guangyu Lan",
+      "Ao Li",
+      "Dongye Li",
+      "Le Zhao",
+      "Xiaohui Yuan",
+      "Nanqing Dong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.12476",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

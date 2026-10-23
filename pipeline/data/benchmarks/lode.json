@@ -1,0 +1,41 @@
+{
+  "name": "LODE",
+  "description": "While recent deep deblurring algorithms have achieved remarkable progress, most existing methods focus on the global deblurring problem, where the image blur mostly arises from severe camera shake. We argue that the local blur, which is mostly derived from moving objects with a relatively static background, is prevalent but remains under-explored. In this paper, we first lay the data foundation for local deblurring by constructing, for the first time, a LOcal-DEblur (LODE) dataset consisting of 3,700 real-world captured locally blurred images and their corresponding ground-truth. Then, we propose a novel framework, termed BLur-Aware DEblurring network (BladeNet), which contains three components: the Local Blur Synthesis module generates locally blurred training pairs, the Local Blur Perception module automatically captures the locally blurred region and the Blur-guided Spatial Attention module guides the deblurring network with spatial attention. This framework is flexible such that it can be combined with many existing SotA algorithms. We carry out extensive experiments on REDS and LODE datasets showing that BladeNet improves PSNR by 2.5dB over SotAs for local deblurring while keeping comparable performance for global deblurring. We will publish the dataset and codes.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_deblurring",
+    "image_restoration",
+    "supervised_learning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "PSNR and SSIM",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "25–35 dB (PSNR)",
+  "year_of_publish": 2021,
+  "reputation": "New, task-specific benchmark for local deblurring with moderate adoption in the image-deblurring research community.",
+  "notes": "Small, focused dataset (3,700 images) for local (object) blur rather than global camera shake; non-LLM benchmark; primary metrics are PSNR/SSIM and results can vary by dataset split and synthetic vs. real blur synthesis.",
+  "creators": {
+    "scientists": [
+      "Zerun Wang",
+      "Liuyu Xiang",
+      "Fan Yang",
+      "Jinzhao Qian",
+      "Jie Hu",
+      "Haidong Huang",
+      "Jungong Han",
+      "Yuchen Guo",
+      "Guiguang Ding"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2109.09149",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

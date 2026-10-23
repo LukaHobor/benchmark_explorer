@@ -1,0 +1,36 @@
+{
+  "name": "PINNs Shock Fronts Benchmarking Study",
+  "description": "Solving partial differential equations (PDEs) with discontinuous solutions , such as shock waves in multiphase viscous flow in porous media , is critical for a wide range of scientific and engineering applications, as they represent sudden changes in physical quantities. Physics-Informed Neural Networks (PINNs), an approach proposed for solving PDEs, encounter significant challenges when applied to such systems. Accurately solving PDEs with discontinuities using PINNs requires specialized techniques to ensure effective solution accuracy and numerical stability. A benchmarking study was conducted on two multiphase flow problems in porous media: the classic Buckley-Leverett (BL) problem and a fully coupled system of equations involving shock waves but with varying levels of solution complexity. The findings show that PM and LM approaches can provide accurate solutions for the BL problem by effectively addressing the infinite gradients associated with shock occurrences. In contrast, AM methods failed to effectively resolve the shock waves. When applied to fully coupled PDEs (with more complex loss landscape), the generalization error in the solutions quickly increased, highlighting the need for ongoing innovation. This study provides a comprehensive review of existing techniques for managing PDE discontinuities using PINNs, offering information on their strengths and limitations. The results underscore the necessity for further research to improve PINNs ability to handle complex discontinuities, particularly in more challenging problems with complex loss landscapes. This includes problems involving higher dimensions or multiphysics systems, where current methods often struggle to maintain accuracy and efficiency.",
+  "category": "mixed",
+  "domain": "computational physics / fluid dynamics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pde_solving",
+    "regression",
+    "scientific_simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "L2_error / relative_L2_error (also L_inf and shock-location error reported)",
+  "general_score_metric": "relative L2 error (solution norm)",
+  "year_of_publish": 2025,
+  "reputation": "Niche research benchmark from the PINNs community (arXiv); cited in studies on PINN limitations for discontinuous PDEs but not a widely adopted standard.",
+  "notes": "Non-LLM benchmark focused on specialized PDE problems; small / problem-specific test cases, results sensitive to architecture, weighting and hyperparameters; comparisons often use different error definitions making cross-paper aggregation difficult.",
+  "creators": {
+    "scientists": [
+      "Jassem Abbasi",
+      "Ameya D. Jagtap",
+      "Ben Moseley",
+      "Aksel Hiorth",
+      "Pål Østebø Andersen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2503.17379",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

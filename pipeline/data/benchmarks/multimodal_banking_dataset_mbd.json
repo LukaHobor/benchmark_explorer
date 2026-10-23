@@ -1,0 +1,39 @@
+{
+  "name": "Multimodal Banking Dataset (MBD)",
+  "description": "Financial organizations collect a huge amount of data about clients that typically has a temporal (sequential) structure and is collected from various sources (modalities). Due to privacy issues, there are no large-scale open-source multimodal datasets of event sequences, which significantly limits the research in this area. In this paper, we present the industrial-scale publicly available multimodal banking dataset, MBD, that contains more than 1.5M corporate clients with several modalities: 950M bank transactions, 1B geo position events, 5M embeddings of dialogues with technical support and monthly aggregated purchases of four bank's products. All entries are properly anonymized from real proprietary bank data. Using this dataset, we introduce a novel benchmark with two business tasks: campaigning (purchase prediction in the next month) and matching of clients. We provide numerical results that demonstrate the superiority of our multi-modal baselines over single-modal techniques for each task. As a result, the proposed dataset can open new perspectives and facilitate the future development of practically important large-scale multimodal algorithms for event sequences. HuggingFace Link: https://huggingface.co/datasets/ai-lab/MBD Github Link: https://github.com/Dzhambo/MBD",
+  "category": "multimodal",
+  "domain": "finance / banking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "matching",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC/ROC and precision/recall for classification (campaigning); ranking metrics (MAP, recall@k, precision@k) for matching",
+  "general_score_metric": "AUC (campaigning task); recall@k / MAP (matching task)",
+  "year_of_publish": 2024,
+  "reputation": "Large-scale, industry-grade multimodal dataset gaining interest for research on multimodal event-sequence modelling in finance; used primarily in academic and industrial research on banking applications.",
+  "notes": "Anonymized industrial data (non-LLM); extremely large and resource‑intensive to train on; class imbalance and temporal drift are expected; strong privacy considerations and domain specificity may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Mollaev Dzhambulat",
+      "Alexander Kostin",
+      "Postnova Maria",
+      "Ivan Karpukhin",
+      "Ivan A Kireev",
+      "Gleb Gusev",
+      "Andrey Savchenko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2409.17587",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

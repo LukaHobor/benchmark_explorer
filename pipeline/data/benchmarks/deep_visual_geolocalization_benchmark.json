@@ -1,0 +1,40 @@
+{
+  "name": "Deep Visual Geo-localization Benchmark",
+  "description": "In this paper, we propose a new open-source benchmarking framework for Visual Geo-localization (VG) that allows to build, train, and test a wide range of commonly used architectures, with the flexibility to change individual components of a geo-localization pipeline. The purpose of this framework is twofold: i) gaining insights into how different components and design choices in a VG pipeline impact the final results, both in terms of performance (recall@N metric) and system requirements (such as execution time and memory consumption); ii) establish a systematic evaluation protocol for comparing different methods. Using the proposed framework, we perform a large suite of experiments which provide criteria for choosing backbone, aggregation and negative mining depending on the use-case and requirements. We also assess the impact of engineering techniques like pre/post-processing, data augmentation and image resizing, showing that better performance can be obtained through somewhat simple procedures: for example, downscaling the images' resolution to 80% can lead to similar results with a 36% savings in extraction time and dataset storage requirement. Code and trained models are available at https://deep-vg-bench.herokuapp.com/.",
+  "category": "vision",
+  "domain": "vision / geo-localization",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "image_retrieval",
+    "place_recognition",
+    "geo-localization",
+    "instance_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@N (primary), with evaluation of speed and memory trade-offs",
+  "general_score_metric": "Recall@1 (and Recall@5 / Recall@10) reported as primary performance metrics",
+  "typical_sota_score": "Dataset-dependent; Recall@1 typically ranges from ~40% to ~90% depending on dataset and conditions",
+  "year_of_publish": 2022,
+  "reputation": "A practical, open-source benchmarking framework used by researchers to systematically compare visual geo-localization pipelines and engineering choices.",
+  "notes": "Performance highly dependent on dataset, preprocessing, and engineering choices (image resizing, augmentation, negative mining); not an end-to-end real-world geolocation evaluation and results can vary greatly across locales and conditions.",
+  "creators": {
+    "scientists": [
+      "Gabriele Berton",
+      "Riccardo Mereu",
+      "Gabriele Trivigno",
+      "Carlo Masone",
+      "Gabriela Csurka",
+      "Torsten Sattler",
+      "Barbara Caputo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2204.03444",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

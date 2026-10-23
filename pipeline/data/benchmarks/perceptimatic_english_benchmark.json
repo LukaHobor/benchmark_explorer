@@ -1,0 +1,32 @@
+{
+  "name": "Perceptimatic English Benchmark",
+  "description": "We present the Perceptimatic English Benchmark, an open experimental benchmark for evaluating quantitative models of speech perception in English. The benchmark consists of ABX stimuli along with the responses of 91 American English-speaking listeners. The stimuli test discrimination of a large number of English and French phonemic contrasts. They are extracted directly from corpora of read speech, making them appropriate for evaluating statistical acoustic models (such as those used in automatic speech recognition) trained on typical speech data sets. We show that phone discrimination is correlated with several types of models, and give recommendations for researchers seeking easily calculated norms of acoustic distance on experimental stimuli. We show that DeepSpeech, a standard English speech recognizer, is more specialized on English phoneme discrimination than English listeners, and is poorly correlated with their behaviour, even though it yields a low error on the decision task given to humans.",
+  "category": "audio",
+  "domain": "speech perception / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "ABX_discrimination"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (ABX percent correct) / correlation_with_human_responses",
+  "general_score_metric": "accuracy (ABX percent correct)",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded within speech-perception and cognitive auditory research as a behavioral ground truth for model comparisons, but niche outside that community.",
+  "notes": "Behavioral benchmark (human responses from 91 listeners) for phoneme discrimination; small and specialized dataset focused on perceptual discrimination rather than transcription. Non-LLM, audio-only; comparisons often use correlation with human responses rather than raw accuracy alone. Potential domain mismatch for ASR systems trained on different corpora.",
+  "creators": {
+    "scientists": [
+      "Juliette Millet",
+      "Ewan Dunbar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2005.03418",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

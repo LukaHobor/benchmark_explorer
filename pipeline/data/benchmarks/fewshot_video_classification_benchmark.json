@@ -1,0 +1,36 @@
+{
+  "name": "Few-Shot Video Classification Benchmark",
+  "description": "The existing few-shot video classification methods often employ a meta-learning paradigm by designing customized temporal alignment module for similarity calculation. While significant progress has been made, these methods fail to focus on learning effective representations, and heavily rely on the ImageNet pre-training, which might be unreasonable for the few-shot recognition setting due to semantics overlap. In this paper, we aim to present an in-depth study on few-shot video classification by making three contributions. First, we perform a consistent comparative study on the existing metric-based methods to figure out their limitations in representation learning. Accordingly, we propose a simple classifier-based baseline without any temporal alignment that surprisingly outperforms the state-of-the-art meta-learning based methods. Second, we discover that there is a high correlation between the novel action class and the ImageNet object class, which is problematic in the few-shot recognition setting. Our results show that the performance of training from scratch drops significantly, which implies that the existing benchmarks cannot provide enough base data. Finally, we present a new benchmark with more base data to facilitate future few-shot video classification without pre-training. The code will be made available at https://github.com/MCG-NJU/FSL-Video.",
+  "category": "vision",
+  "domain": "vision (ecology / wildlife video)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (few-shot average top-1 accuracy across episodes)",
+  "general_score_metric": "top-1 few-shot accuracy (averaged across episodes)",
+  "typical_sota_score": "40–75%",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2021,
+  "reputation": "A domain-specific benchmark cited in ecological and wildlife vision research for measuring few-shot generalization on real-world videos.",
+  "notes": "Non-LLM vision benchmark; episodic few-shot evaluation. Potential caveats include small/imbalanced classes, ecological domain-specific biases, and contamination risk if evaluation videos overlap pretraining sources.",
+  "creators": {
+    "scientists": [
+      "Zhenxi Zhu",
+      "Limin Wang",
+      "Sheng Guo",
+      "Gangshan Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.5244/c.35.50",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

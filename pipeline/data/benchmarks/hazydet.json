@@ -1,0 +1,41 @@
+{
+  "name": "HazyDet",
+  "description": "Drone-based object detection in adverse weather conditions is crucial for enhancing drones' environmental perception, yet it remains largely unexplored due to the lack of relevant benchmarks. To bridge this gap, we introduce HazyDet, a large-scale dataset tailored for drone-based object detection in hazy scenes. It encompasses 383,000 real-world instances, collected from both naturally hazy environments and normal scenes with synthetically imposed haze effects to simulate adverse weather conditions. By observing the significant variations in object scale and clarity under different depth and haze conditions, we designed a Depth Conditioned Detector (DeCoDet) to incorporate this prior knowledge. DeCoDet features a Multi-scale Depth-aware Detection Head that seamlessly integrates depth perception, with the resulting depth cues harnessed by a dynamic Depth Condition Kernel module. Furthermore, we propose a Scale Invariant Refurbishment Loss to facilitate the learning of robust depth cues from pseudo-labels. Extensive evaluations on the HazyDet dataset demonstrate the flexibility and effectiveness of our method, yielding significant performance improvements. Our dataset and toolkit are available at https://github.com/GrokCV/HazyDet.",
+  "category": "vision",
+  "domain": "aerial/drone vision / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "aerial_detection",
+    "robust_detection_under_weather"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) at standard IoU thresholds (e.g., AP@0.5, AP@[.5:.95])",
+  "general_score_metric": "mAP (mean Average Precision, often reported as AP@0.5 and AP@[.5:.95])",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) domain-specific dataset for drone-based detection in hazy conditions; primarily of interest to aerial-vision researchers and not yet widely adopted beyond that community.",
+  "notes": "Large-scale, domain-specific benchmark combining real hazy scenes and synthetic haze; synthetic augmentation may introduce bias; non-LLM vision benchmark focused on robustness to haze and scale variation.",
+  "creators": {
+    "scientists": [
+      "Changfeng Feng",
+      "Zhenyuan Chen",
+      "Renke Kou",
+      "Guangwei Gao",
+      "Chunping Wang",
+      "Xiang Li",
+      "Xiangbo Shu",
+      "Yimian Dai",
+      "Qiang Fu",
+      "Jian Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.19833",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

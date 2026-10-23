@@ -1,0 +1,35 @@
+{
+  "name": "Aligned TSR Benchmarks",
+  "description": "Benchmark datasets for table structure recognition (TSR) must be carefully processed to ensure they are annotated consistently. However, even if a dataset's annotations are self-consistent, there may be significant inconsistency across datasets, which can harm the performance of models trained and evaluated on them. In this work, we show that aligning these benchmarks$\\unicode{x2014}$removing both errors and inconsistency between them$\\unicode{x2014}$improves model performance significantly. We demonstrate this through a data-centric approach where we adopt one model architecture, the Table Transformer (TATR), that we hold fixed throughout. Baseline exact match accuracy for TATR evaluated on the ICDAR-2013 benchmark is 65% when trained on PubTables-1M, 42% when trained on FinTabNet, and 69% combined. After reducing annotation mistakes and inter-dataset inconsistency, performance of TATR evaluated on ICDAR-2013 increases substantially to 75% when trained on PubTables-1M, 65% when trained on FinTabNet, and 81% combined. We show through ablations over the modification steps that canonicalization of the table annotations has a significantly positive effect on performance, while other choices balance necessary trade-offs that arise when deciding a benchmark dataset's final composition. Overall we believe our work has significant implications for benchmark design for TSR and potentially other tasks as well. Dataset processing and training code will be released at https://github.com/microsoft/table-transformer.",
+  "category": "vision",
+  "domain": "vision (document layout / table recognition)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "table_structure_recognition",
+    "structured_prediction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match_accuracy",
+  "typical_sota_score": "75–85%",
+  "year_of_publish": 2023,
+  "reputation": "A recent, research-focused benchmark used in the document-understanding / table recognition community, particularly associated with work on the Table Transformer (TATR).",
+  "notes": "Non-LLM, vision/document-layout benchmark; main contribution is annotation alignment and reduction of inter-dataset inconsistency — prior versions suffered annotation errors and inter-dataset inconsistency; reasonably large-scale; results sensitive to canonicalization decisions.",
+  "creators": {
+    "scientists": [
+      "Brandon Smock",
+      "Rohith Pesala",
+      "Robin Abraham"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2303.00716",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

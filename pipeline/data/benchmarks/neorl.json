@@ -1,0 +1,37 @@
+{
+  "name": "NeoRL",
+  "description": "Offline reinforcement learning (RL) aims at learning a good policy from a batch of collected data, without extra interactions with the environment during training. However, current offline RL benchmarks commonly have a large reality gap, because they involve large datasets collected by highly exploratory policies, and the trained policy is directly evaluated in the environment. In real-world situations, running a highly exploratory policy is prohibited to ensure system safety, the data is commonly very limited, and a trained policy should be well validated before deployment. In this paper, we present a near real-world offline RL benchmark, named NeoRL, which contains datasets from various domains with controlled sizes, and extra test datasets for policy validation. We evaluate existing offline RL algorithms on NeoRL and argue that the performance of a policy should also be compared with the deterministic version of the behavior policy, instead of the dataset reward. The empirical results demonstrate that the tested offline RL algorithms become less competitive to the deterministic policy on many datasets, and the offline policy evaluation hardly helps. The NeoRL suit can be found at this http URL. We hope this work will shed some light on future research and draw more attention when deploying RL in real-world systems.",
+  "category": "mixed",
+  "domain": "reinforcement learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "offline_reinforcement_learning",
+    "policy_evaluation",
+    "policy_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "normalized episode return (and task success rate where applicable)",
+  "general_score_metric": "normalized return",
+  "year_of_publish": 2022,
+  "reputation": "Emerging near-real-world offline RL benchmark aimed at robustness/generalization; attracting interest but not yet a standard in the community.",
+  "notes": "Designed to mimic real-world control datasets—contains distributional shift and partial coverage typical of offline RL; sensitive to hyperparameters and evaluation protocols; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xiong-Hui Chen",
+      "Songyi Gao",
+      "Zewen Li",
+      "Rong-Jun Qin",
+      "Yang Yu",
+      "Weinan Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://doi.org/10.52202/068431-1795",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

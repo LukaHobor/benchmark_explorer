@@ -1,0 +1,37 @@
+{
+  "name": "Camera Auto-Exposure Evaluation Benchmark (emulator-based)",
+  "description": "Standard datasets often present limitations, particularly due to the fixed nature of input data sensors, which makes it difficult to compare methods that actively adjust sensor parameters to suit environmental conditions. This is the case with Automatic-Exposure (AE) methods, which rely on environmental factors to influence the image acquisition process. As a result, AE methods have traditionally been benchmarked in an online manner, rendering experiments non-reproducible. Building on our prior work, we propose a methodology that utilizes an emulator capable of generating images at any exposure time. This approach leverages BorealHDR, a unique multi-exposure stereo dataset, along with its new extension, in which data was acquired along a repeated trajectory at different times of the day to assess the impact of changing illumination. In total, BorealHDR covers 13.4 km over 59 trajectories in challenging lighting conditions. The dataset also includes lidar-inertial-odometry-based maps with pose estimation for each image frame, as well as Global Navigation Satellite System (GNSS) data for comparison. We demonstrate that by using images acquired at various exposure times, we can emulate realistic images with a Root-Mean-Square Error (RMSE) below 1.78% compared to ground truth images. Using this offline approach, we benchmarked eight AE methods, concluding that the classical AE method remains the field's best performer. To further support reproducibility, we provide in-depth details on the development of our backpack acquisition platform, including hardware, electrical components, and performance specifications. Additionally, we share valuable lessons learned from deploying the backpack over more than 25 km across various environments. Our code and dataset are available online at this link: https://github.com/norlab-ulaval/TFR24 BorealHDR",
+  "category": "vision",
+  "domain": "computer vision / imaging systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_quality_assessment",
+    "parameter_tuning",
+    "algorithm_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "image similarity metrics (primarily RMSE, supplemented by SSIM/PSNR)",
+  "general_score_metric": "RMSE (image-level reconstruction error)",
+  "typical_sota_score": "around 1–2% RMSE (best classical methods reported ≈1.78%)",
+  "year_of_publish": 2025,
+  "reputation": "A reproducible, emulator-based evaluation dataset valued in the imaging and auto-exposure research community for controlled comparisons of AE algorithms.",
+  "notes": "Non-LLM benchmark; emulator produces synthetic exposures from multi-exposure captures—high reproducibility but may not capture all real sensor idiosyncrasies; primary metric is image-similarity RMSE; includes GNSS/pose metadata.",
+  "creators": {
+    "scientists": [
+      "Olivier Gamache",
+      "Jean-Michel Fortin",
+      "Matěj Boxan",
+      "François Pomerleau",
+      "Philippe Giguère"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.18844",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

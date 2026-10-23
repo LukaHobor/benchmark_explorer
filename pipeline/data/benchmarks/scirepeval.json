@@ -1,0 +1,38 @@
+{
+  "name": "SciRepEval",
+  "description": "Learned representations of scientific documents can serve as valuable input features for downstream tasks without further fine-tuning. However, existing benchmarks for evaluating these representations fail to capture the diversity of relevant tasks. In response, we introduce SciRepEval, the first comprehensive benchmark for training and evaluating scientific document representations. It includes 24 challenging and realistic tasks, 8 of which are new, across four formats: classification, regression, ranking and search. We then use this benchmark to study and improve the generalization ability of scientific document representation models. We show how state-of-the-art models like SPECTER and SciNCL struggle to generalize across the task formats, and that simple multi-task training fails to improve them. However, a new approach that learns multiple embeddings per document, each tailored to a different format, can improve performance. We experiment with task-format-specific control codes and adapters and find they outperform the existing single-embedding state-of-the-art by over 2 points absolute. We release the resulting family of multi-format models, called SPECTER2, for the community to use and build on.",
+  "category": "text",
+  "domain": "scientific literature / research documents",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "ranking",
+    "search"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score (task-specific metrics aggregated across tasks)",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2022,
+  "reputation": "Adopted within the scientific-document-embedding community as a more comprehensive benchmark for representation quality, though adoption is still growing compared to older single-task suites.",
+  "notes": "Contains 24 heterogeneous tasks with task-specific metrics (so direct comparisons require aggregation); potential contamination from pretraining corpora of scientific papers; not an LLM-specific benchmark (focused on document embeddings); performance can vary widely by format, making single-number summaries lossy.",
+  "creators": {
+    "scientists": [
+      "Amanpreet Singh",
+      "Mike D'Arcy",
+      "Arman Cohan",
+      "Doug Downey",
+      "Sergey Feldman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2211.13308",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

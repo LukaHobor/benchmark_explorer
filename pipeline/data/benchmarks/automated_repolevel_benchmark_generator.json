@@ -1,0 +1,34 @@
+{
+  "name": "Automated Repo-Level Benchmark Generator",
+  "description": "Code Agent development is an extremely active research area, where a reliable performance metric is critical for tracking progress and guiding new developments. This demand is underscored by the meteoric rise in popularity of SWE-Bench. This benchmark challenges code agents to generate patches addressing GitHub issues given the full repository as context. The correctness of generated patches is then evaluated by executing a human-written test suite extracted from the repository after the issue's resolution. However, constructing benchmarks like SWE-Bench requires substantial manual effort to set up historically accurate execution environments for testing. Crucially, this severely limits the number of considered repositories, e.g., just 12 for SWE-Bench. Considering so few repositories, selected for their popularity runs the risk of leading to a distributional mismatch, i.e., the measured performance may not be representative of real-world scenarios potentially misguiding development efforts. In this work, we address this challenge and introduce SetUpAgent, a fully automated system capable of historically accurate dependency setup, test execution, and result parsing. Using SetUpAgent, we generate two new datasets: (i) SWEE-Bench an extended version of SWE-Bench encompassing hundreds of repositories, and (ii) SWA-Bench a benchmark focusing on applications rather than libraries. Comparing these datasets to SWE-Bench with respect to their characteristics and code agent performance, we find significant distributional differences, including lower issue description quality and detail level, higher fix complexity, and most importantly up to 40% lower agent success rates.",
+  "category": "code",
+  "domain": "code",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "code_generation",
+    "patch_generation",
+    "program_repair"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (test-suite pass rate)",
+  "general_score_metric": "test-suite pass rate (task success rate)",
+  "year_of_publish": 2025,
+  "reputation": "Newer, research-focused benchmark and tooling that extends SWE-Bench; gaining attention for enabling larger-scale, historically accurate repo-level evaluations but not yet an established community standard.",
+  "notes": "Automated historical environment setup reduces manual effort but results remain sensitive to reconstructed environments and test-suite quality. Repository heterogeneity can introduce distributional shifts; selecting popular versus typical repos affects representativeness; potential contamination if models were trained on target repos.",
+  "creators": {
+    "scientists": [
+      "Konstantinos Vergopoulos",
+      "Mark Niklas Müller",
+      "Martin Vechev"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2503.07701",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

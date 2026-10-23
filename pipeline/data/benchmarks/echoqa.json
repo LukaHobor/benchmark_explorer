@@ -1,0 +1,36 @@
+{
+  "name": "EchoQA",
+  "description": "We introduce a novel question-answering (QA) dataset using echocardiogram reports sourced from the Medical Information Mart for Intensive Care database. This dataset is specifically designed to enhance QA systems in cardiology, consisting of 771,244 QA pairs addressing a wide array of cardiac abnormalities and their severity. We compare large language models (LLMs), including open-source and biomedical-specific models for zero-shot evaluation, and closed-source models for zero-shot and three-shot evaluation. Our results show that fine-tuning LLMs improves performance across various QA metrics, validating the value of our dataset. Clinicians also qualitatively evaluate the best-performing model to assess the LLM responses for correctness. Further, we conduct fine-grained fairness audits to assess the bias-performance trade-off of LLMs across various social determinants of health. Our objective is to propel the field forward by establishing a benchmark for LLM AI agents aimed at supporting clinicians with cardiac differential diagnoses, thereby reducing the documentation burden that contributes to clinician burnout and enabling healthcare professionals to focus more on patient care.",
+  "category": "text",
+  "domain": "medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "question_answering",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 / exact_match (automatic) + human_eval (clinician assessment)",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Large-scale clinical QA from MIMIC-derived echocardiogram reports; potential label noise and annotation variability; clinician human evaluation included; possible contamination if LLM pretraining corpora include MIMIC; fairness audits reported; domain-specific (cardiology) — not broadly generalizable.",
+  "creators": {
+    "scientists": [
+      "Lama Moukheiber",
+      "M. Moukheiber",
+      "Dana Moukheiiber",
+      "Jae-Woo Ju",
+      "Hyung-Chul Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2503.02365",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

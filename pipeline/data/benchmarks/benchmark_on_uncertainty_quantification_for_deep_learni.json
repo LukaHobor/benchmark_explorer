@@ -1,0 +1,36 @@
+{
+  "name": "Benchmark on Uncertainty Quantification for Deep Learning Prognostics (RUL UQ Benchmark)",
+  "description": "Reliable uncertainty quantification on RUL prediction is crucial for informative decision-making in predictive maintenance. In this context, we assess some of the latest developments in the field of uncertainty quantification for prognostics deep learning. This includes the state-of-the-art variational inference algorithms for Bayesian neural networks (BNN) as well as popular alternatives such as Monte Carlo Dropout (MCD), deep ensembles (DE) and heteroscedastic neural networks (HNN). All the inference techniques share the same inception deep learning architecture as a functional model. We performed hyperparameter search to optimize the main variational and learning parameters of the algorithms. The performance of the methods is evaluated on a subset of the large NASA NCMAPSS dataset for aircraft engines. The assessment includes RUL prediction accuracy, the quality of predictive uncertainty, and the possibility to break down the total predictive uncertainty into its aleatoric and epistemic parts. The results show no method clearly outperforms the others in all the situations. Although all methods are close in terms of accuracy, we find differences in the way they estimate uncertainty. Thus, DE and MCD generally provide more conservative predictive uncertainty than BNN. Surprisingly, HNN can achieve strong results without the added training complexity and extra parameters of the BNN. For tasks like active learning where a separation of epistemic and aleatoric uncertainty is required, radial BNN and MCD seem the best options.",
+  "category": "mixed",
+  "domain": "prognostics / predictive maintenance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "time_series_prediction",
+    "uncertainty_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE for RUL accuracy; negative log-likelihood (NLL) and calibration/error decomposition (e.g., ECE, CRPS) for uncertainty quality",
+  "general_score_metric": "RMSE (for RUL) and negative log-likelihood (NLL) / calibration metrics (for uncertainty)",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded within the prognostics and predictive maintenance research community as a comparative benchmark for UQ methods on a subset of the NASA N-CMAPSS dataset.",
+  "notes": "Non-LLM benchmark using time-series deep learning models; evaluates both point prediction and uncertainty quality. Uses a subset of the large NASA N-CMAPSS dataset (limited size) which may limit generalization; multiple metrics reported (no single unified score).",
+  "creators": {
+    "scientists": [
+      "Luis Basora",
+      "Arthur Viens",
+      "Manuel Arias Chao",
+      "Xavier Olive"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2302.04730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

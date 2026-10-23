@@ -1,0 +1,38 @@
+{
+  "name": "FedAds",
+  "description": "Conversion rate (CVR) estimation aims to predict the probability of conversion event after a user has clicked an ad. Typically, online publisher has user browsing interests and click feedbacks, while demand-side advertising platform collects users' post-click behaviors such as dwell time and conversion decisions. To estimate CVR accurately and protect data privacy better, vertical federated learning (vFL) is a natural solution to combine two sides' advantages for training models, without exchanging raw data. Both CVR estimation and applied vFL algorithms have attracted increasing research attentions. However, standardized and systematical evaluations are missing: due to the lack of standardized datasets, existing studies adopt public datasets to simulate a vFL setting via hand-crafted feature partition, which brings challenges to fair comparison. We introduce FedAds, the first benchmark for CVR estimation with vFL, to facilitate standardized and systematical evaluations for vFL algorithms. It contains a large-scale real world dataset collected from Alibaba's advertising platform, as well as systematical evaluations for both effectiveness and privacy aspects of various vFL algorithms. Besides, we also explore to incorporate unaligned data in vFL to improve effectiveness, and develop perturbation operations to protect privacy well. We hope that future research work in vFL and CVR estimation benefits from the FedAds benchmark.",
+  "category": "mixed",
+  "domain": "online advertising / recommender systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "probability_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC / logloss (ROC AUC and negative log-likelihood)",
+  "general_score_metric": "AUC (ROC AUC)",
+  "year_of_publish": 2023,
+  "reputation": "An industry-grade, Alibaba-sourced benchmark that is referenced in vertical federated learning and CVR research but has limited public replication outside industry.",
+  "notes": "Real-world industrial dataset for vFL; privacy-sensitive and may require access restrictions; non-LLM benchmark; potential class imbalance and domain-specific biases.",
+  "creators": {
+    "scientists": [
+      "Penghui Wei",
+      "Hongjian Dou",
+      "Shaoguo Liu",
+      "Rongjun Tang",
+      "Li Liu",
+      "Liang Wang",
+      "Bo Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2305.08328",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "IndieFake Dataset",
+  "description": "Advancements in audio deepfake technology offers benefits like AI assistants, better accessibility for speech impairments, and enhanced entertainment. However, it also poses significant risks to security, privacy, and trust in digital communications. Detecting and mitigating these threats requires comprehensive datasets. Existing datasets lack diverse ethnic accents, making them inadequate for many real-world scenarios. Consequently, models trained on these datasets struggle to detect audio deepfakes in diverse linguistic and cultural contexts such as in South-Asian countries. Ironically, there is a stark lack of South-Asian speaker samples in the existing datasets despite constituting a quarter of the worlds population. This work introduces the IndieFake Dataset (IFD), featuring 27.17 hours of bonafide and deepfake audio from 50 English speaking Indian speakers. IFD offers balanced data distribution and includes speaker-level characterization, absent in datasets like ASVspoof21 (DF). We evaluated various baselines on IFD against existing ASVspoof21 (DF) and In-The-Wild (ITW) datasets. IFD outperforms ASVspoof21 (DF) and proves to be more challenging compared to benchmark ITW dataset. The complete dataset, along with documentation and sample reference clips, is publicly accessible for research use on project website.",
+  "category": "audio",
+  "domain": "speech / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "audio_deepfake_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Equal Error Rate (EER) and min-tDCF (common in ASV/spoofing benchmarks); AUC sometimes reported",
+  "general_score_metric": "Equal Error Rate (EER)",
+  "typical_sota_score": "EER ≈5–20% depending on model and evaluation setup",
+  "year_of_publish": 2025,
+  "reputation": "Newly released dataset that fills a gap in South-Asian / Indian-English deepfake detection research; gaining interest but not yet widely adopted.",
+  "notes": "Moderate size (27.17 hours, 50 speakers) and balanced per speaker; focuses on Indian English so results may not generalize to other languages/accents; non-LLM audio benchmark; publicly available with documentation and sample clips.",
+  "creators": {
+    "scientists": [
+      "Abhay Kumar",
+      "Kunal Verma",
+      "Omkar More"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2506.19014",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "EyecareGPT",
+  "description": "Medical Large Vision-Language Models (Med-LVLMs) demonstrate significant potential in healthcare, but their reliance on general medical data and coarse-grained global visual understanding limits them in intelligent ophthalmic diagnosis. Currently, intelligent ophthalmic diagnosis faces three major challenges: (i) Data. The lack of deeply annotated, high-quality, multi-modal ophthalmic visual instruction data; (ii) Benchmark. The absence of a comprehensive and systematic benchmark for evaluating diagnostic performance; (iii) Model. The difficulty of adapting holistic visual architectures to fine-grained, region-specific ophthalmic lesion identification. In this paper, we propose the Eyecare Kit, which systematically tackles the aforementioned three key challenges with the tailored dataset, benchmark and model: First, we construct a multi-agent data engine with real-life ophthalmology data to produce Eyecare-100K, a high-quality ophthalmic visual instruction dataset. Subsequently, we design Eyecare-Bench, a benchmark that comprehensively evaluates the overall performance of LVLMs on intelligent ophthalmic diagnosis tasks across multiple dimensions. Finally, we develop the EyecareGPT, optimized for fine-grained ophthalmic visual understanding thoroughly, which incorporates an adaptive resolution mechanism and a layer-wise dense connector. Extensive experimental results indicate that the EyecareGPT achieves state-of-the-art performance in a range of ophthalmic tasks, underscoring its significant potential for the advancement of open research in intelligent ophthalmic diagnosis. Our project is available at https://github.com/DCDmllm/EyecareGPT.",
+  "category": "multimodal",
+  "domain": "ophthalmology / medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "visual_question_answering",
+    "segmentation",
+    "report_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-dependent metrics (accuracy/AUC/F1/mAP for classification/detection/segmentation; BLEU or ROUGE for report generation)",
+  "general_score_metric": "task-dependent composite score (classification AUC / detection mAP / BLEU for generation)",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific benchmark and dataset (Eyecare-100K) with growing interest in ophthalmic ML research but not yet widely adopted beyond the originating group.",
+  "notes": "Medical dataset requiring clinical validation and careful privacy/ethics review; domain-specific biases and the need for external clinical evaluation limit direct clinical deployment. Contains high-quality, multi-modal ophthalmic annotations but may still require broader geographic and device diversity.",
+  "creators": {
+    "scientists": [
+      "Sijing Li",
+      "Tianwei Lin",
+      "Lingshuai Lin",
+      "Wenqiao Zhang",
+      "Jiang Liu",
+      "Xiaoda Yang",
+      "Juncheng Li",
+      "Yucheng He",
+      "Xiaohui Song",
+      "Jun Xiao",
+      "Yueting Zhuang",
+      "Beng Chin Ooi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2504.13650",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

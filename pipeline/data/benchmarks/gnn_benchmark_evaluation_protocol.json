@@ -1,0 +1,37 @@
+{
+  "name": "GNN Benchmark Evaluation Protocol",
+  "description": "Graph classification benchmarks, vital for assessing and developing graph neural networks (GNNs), have recently been scrutinized, as simple methods like MLPs have demonstrated comparable performance. This leads to an important question: Do these benchmarks effectively distinguish the advancements of GNNs over other methodologies? If so, how do we quantitatively measure this effectiveness? In response, we first propose an empirical protocol based on a fair benchmarking framework to investigate the performance discrepancy between simple methods and GNNs. We further propose a novel metric to quantify the dataset effectiveness by considering both dataset complexity and model performance. To the best of our knowledge, our work is the first to thoroughly study and provide an explicit definition for dataset effectiveness in the graph learning area. Through testing across 16 real-world datasets, we found our metric to align with existing studies and intuitive assumptions. Finally, we explore the causes behind the low effectiveness of certain datasets by investigating the correlation between intrinsic graph properties and class labels, and we developed a novel technique supporting the correlation-controllable synthetic dataset generation. Our findings shed light on the current understanding of benchmark datasets, and our new platform could fuel the future evolution of graph classification benchmarks.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "graph_classification",
+    "benchmarking_protocol",
+    "dataset_effectiveness_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (for graph classification tasks) and proposed dataset-effectiveness metric (composite metric combining performance and dataset complexity)",
+  "general_score_metric": "accuracy (for downstream graph classification) and the paper's dataset-effectiveness composite metric",
+  "typical_sota_score": "not_applicable",
+  "year_of_publish": 2024,
+  "reputation": "A recent methodological contribution that critiques existing graph benchmarks and proposes a protocol and metric; of interest to researchers working on GNN evaluation and benchmark design but not a standard dataset itself.",
+  "notes": "Not a conventional dataset — a protocol and metric for evaluating benchmark effectiveness. Meant for meta-analysis of graph datasets; results depend on chosen downstream models and splits. Useful for diagnosing dataset weaknesses but not a drop-in task dataset.",
+  "creators": {
+    "scientists": [
+      "Zhengdao Li",
+      "Yong Cao",
+      "Kefan Shuai",
+      "Yiming Miao",
+      "Kai Hwang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2407.04999",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

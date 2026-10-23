@@ -1,0 +1,35 @@
+{
+  "name": "ConeQuest",
+  "description": "Over the years, space scientists have collected terabytes of Mars data from satellites and rovers. One important set of features identified in Mars orbital images is pitted cones, which are interpreted to be mud volcanoes believed to form in regions that were once saturated in water (i.e., a lake or ocean). Identifying pitted cones globally on Mars would be of great importance, but expert geologists are unable to sort through the massive orbital image archives to identify all examples. However, this task is well suited for computer vision. Although several computer vision datasets exist for various Mars-related tasks, there is currently no open-source dataset available for cone detection/segmentation. Furthermore, previous studies trained models using data from a single region, which limits their applicability for global detection and mapping. Motivated by this, we introduce ConeQuest, the first expert-annotated public dataset to identify cones on Mars. ConeQuest consists of >13k samples from 3 different regions of Mars. We propose two benchmark tasks using ConeQuest: (i) Spatial Generalization and (ii) Cone-size Generalization. We finetune and evaluate widely-used segmentation models on both benchmark tasks. Results indicate that cone segmentation is a challenging open problem not solved by existing segmentation models, which achieve an average IoU of 52.52% and 42.55% on in-distribution data for tasks (i) and (ii), respectively. We believe this new benchmark dataset will facilitate the development of more accurate and robust models for cone segmentation. Data and code are available at https://github.com/kerner-lab/ConeQuest.",
+  "category": "vision",
+  "domain": "planetary science / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_IoU (mIoU) / IoU (and standard segmentation metrics such as AP where applicable)",
+  "general_score_metric": "mIoU (mean Intersection over Union)",
+  "typical_sota_score": "≈42–53% mIoU (reported baselines: 42.55%–52.52% on in‑distribution splits)",
+  "year_of_publish": 2023,
+  "reputation": "A new, domain‑specific public dataset for Mars cone segmentation that has attracted interest in planetary science and remote‑sensing vision communities but is not yet widely adopted outside those fields.",
+  "notes": "Domain-specific Mars imagery (three regions) — risk of regional bias and limited geographic coverage; moderate dataset size (~13k samples); challenging segmentation task (existing models underperform); non-LLM benchmark focused on remote sensing/vision.",
+  "creators": {
+    "scientists": [
+      "Mirali Purohit",
+      "Jacob Adler",
+      "Hannah Kerner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.08657",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

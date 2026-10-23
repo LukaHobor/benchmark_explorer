@@ -1,0 +1,41 @@
+{
+  "name": "CRUXEval",
+  "description": "Code Reasoning, Understanding, and Execution benchmark with 800 short Python functions testing two orthogonal capabilities: input prediction (given a function and output, predict the input) and output prediction (given a function and input, predict the output). Reveals that models scoring highly on HumanEval code generation show no improvement on CRUXEval, proving that code generation ability is dissociated from code understanding.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "number_of_questions": 800,
+  "evaluation_method": "pass@1 (exact match on predicted input/output)",
+  "general_score_metric": "pass@1 (input prediction); pass@1 (output prediction)",
+  "typical_sota_score": "~75–85% output prediction; ~60–75% input prediction (GPT-4 with CoT at ICML 2024: 75%/81%)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at ICML 2024; widely cited in DeepSeek, Llama, and Mistral technical reports; demonstrated that generation ≠ understanding; foundational for code reasoning evaluation",
+  "notes": "ICML 2024. Core insight: code generation and code understanding are decoupled capabilities. Models that generate correct code cannot necessarily trace through execution mentally. Input prediction (given output, infer input) is harder than output prediction for most models. Referenced extensively in major model technical reports (DeepSeek, Llama, Mistral). 800 functions are hand-verified to be short, readable, and non-trivial.",
+  "creators": {
+    "scientists": [
+      "Alex Gu",
+      "Baptiste Roziere",
+      "Hugh Leather",
+      "Armando Solar-Lezama",
+      "Gabriel Synnaeve",
+      "Sida I. Wang"
+    ],
+    "institutions": [
+      "MIT"
+    ],
+    "companies": [
+      "Meta AI Research"
+    ]
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2401.03065",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

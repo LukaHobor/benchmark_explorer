@@ -1,0 +1,43 @@
+{
+  "name": "Embodied SLAM Robustness Benchmark",
+  "description": "Embodied agents require robust navigation systems to operate in unstructured environments, making the robustness of Simultaneous Localization and Mapping (SLAM) models critical to embodied agent autonomy. While real-world datasets are invaluable, simulation-based benchmarks offer a scalable approach for robustness evaluations. However, the creation of a challenging and controllable noisy world with diverse perturbations remains under-explored. To this end, we propose a novel, customizable pipeline for noisy data synthesis, aimed at assessing the resilience of multi-modal SLAM models against various perturbations. The pipeline comprises a comprehensive taxonomy of sensor and motion perturbations for embodied multi-modal (specifically RGB-D) sensing, categorized by their sources and propagation order, allowing for procedural composition. We also provide a toolbox for synthesizing these perturbations, enabling the transformation of clean environments into challenging noisy simulations. Utilizing the pipeline, we instantiate the large-scale Noisy-Replica benchmark, which includes diverse perturbation types, to evaluate the risk tolerance of existing advanced RGB-D SLAM models. Our extensive analysis uncovers the susceptibilities of both neural (NeRF and Gaussian Splatting -based) and non-neural SLAM models to disturbances, despite their demonstrated accuracy in standard benchmarks. Our code is publicly available at https://github.com/Xiaohao-Xu/SLAM-under-Perturbation.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "localization",
+    "mapping",
+    "odometry",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "error_metrics (Absolute Trajectory Error / Relative Pose Error) and task_success_rate under perturbations",
+  "general_score_metric": "Absolute Trajectory Error (ATE)",
+  "typical_sota_score": "0.05–0.5 m ATE on clean scenes; performance degrades substantially under noisy perturbations",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "Emerging research benchmark (2024) with growing interest in SLAM robustness studies but not yet widely adopted.",
+  "notes": "Simulation-based RGB-D SLAM robustness benchmark (non-LLM). Has potential sim-to-real gap; evaluates many perturbation types so scores vary widely by scenario; relatively new so limited leaderboard saturation.",
+  "creators": {
+    "scientists": [
+      "Xiaohao Xu",
+      "Tianyi Zhang",
+      "Sibo Wang",
+      "Xiang Li",
+      "Yongqi Chen",
+      "Ye Li",
+      "Bhiksha Raj",
+      "Matthew Johnson-Roberson",
+      "Xiaonan Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2406.16850",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

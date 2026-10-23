@@ -1,0 +1,33 @@
+{
+  "name": "Text-to-SQL Generator-Discriminator Evaluation",
+  "description": "Large Language Models (LLM) with reasoning capabilities offer a promising path for improving candidate evaluation in planning frameworks, but their relative performance against traditional non-reasoning models remains largely underexplored. In this study, we benchmark a distilled 1.5B parameter reasoning model (DeepSeek-R1) against several state-of-the-art non-reasoning LLMs within a generator-discriminator LLM planning framework for the text-to-SQL task. For this, we introduce a novel method for extracting soft scores from the chain-of-thought (CoT) outputs from reasoning that enables fine-grained ranking of candidates. Our central hypothesis is that reasoning models are more effective discriminators than non-reasoning LLMs. Our results show that distilled DeepSeek-R1-1.5B achieves up to $87\\%$ higher F1 and $3.7\\%$ better discrimination accuracy than CodeLlama-7B, as well as $3.7\\%$ higher execution accuracy than CodeLlama-13B, despite having significantly fewer parameters. Furthermo",
+  "category": "text",
+  "domain": "code",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "text_to_sql",
+    "candidate_ranking",
+    "discrimination"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "execution_accuracy/F1/discrimination_accuracy",
+  "general_score_metric": "execution accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A niche evaluation setup for text-to-SQL candidate selection that is more of a research method than a widely adopted benchmark.",
+  "notes": "Focuses on generator-discriminator evaluation rather than standard end-to-end text-to-SQL alone; reported gains are relative to specific baselines and may not transfer across datasets.",
+  "creators": {
+    "scientists": [
+      "Md Fahim Anjum"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2505.03786",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

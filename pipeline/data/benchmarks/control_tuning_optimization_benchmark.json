@@ -1,0 +1,34 @@
+{
+  "name": "Control Tuning Optimization Benchmark",
+  "description": "Controller tuning based on black-box optimization allows to automatically tune performance-critical parameters w.r.t. mostly arbitrary high-level closed-loop control objectives. However, a comprehensive benchmark of different black-box optimizers for control engineering problems has not yet been conducted. Therefore, in this contribution, 11 different versions of Bayesian optimization (BO) are compared with seven metaheuristics and other baselines on a set of ten deterministic simulative single-objective tuning problems in control. Results indicate that deterministic noise, low multimodality, and substantial areas with infeasible parametrizations (crash constraints) characterize control engineering tuning problems. Therefore, a flexible method to handle crash constraints with BO is presented. A resulting increase in sample efficiency is shown in comparison to standard BO. Furthermore, benchmark results indicate that pattern search (PS) performs best on a budget of 25 d objective function evaluations and a problem dimensionality d of d = 2. Bayesian adaptive direct search, a combination of BO and PS, is shown to be most sample efficient for 3 <= d <= 5. Using these optimizers instead of random search increases controller performance by on average 6.6% and up to 16.1%.",
+  "category": "mixed",
+  "domain": "control engineering",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "black_box_optimization",
+    "continuous_optimization",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "controller objective value and sample efficiency (best objective reached within a fixed evaluation budget); comparisons of final objective and percent improvement over random baseline",
+  "general_score_metric": "best objective value within a fixed evaluation budget (and sample-efficiency measured as objective vs. function evaluations)",
+  "typical_sota_score": "improvements over random search reported on average ~6.6% and up to ~16.1% depending on problem and optimizer; absolute values are task-dependent",
+  "year_of_publish": 2022,
+  "reputation": "A specialized benchmark and empirical comparison introduced in control-engineering and BO circles (2022); cited in niche control/optimization research but not a broadly adopted community standard.",
+  "notes": "Small, deterministic set of 10 simulated single-objective tuning problems; includes crash constraints and low multimodality — results sensitive to budget and dimensionality; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "David Stenger",
+      "Dirk Abel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2211.02571",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "SynthCal",
+  "description": "Accurate camera calibration is crucial for various computer vision applications. However, measuring calibration accuracy in the real world is challenging due to the lack of datasets with ground truth to evaluate them. In this paper, we present SynthCal, a synthetic camera calibration benchmarking pipeline that generates images of calibration patterns to measure and enable accurate quantification of calibration algorithm performance in camera parameter estimation. We present a SynthCal generated calibration dataset with four common patterns, two camera types, and two environments with varying view, distortion, lighting, and noise levels for both monocular and multi-camera systems. The dataset evaluates both single and multi-view calibration algorithms by measuring re-projection and root-mean-square errors for identical patterns and camera settings. Additionally, we analyze the significance of different patterns using different calibration configurations. The experimental results demonstrate the effectiveness of SynthCal in evaluating various calibration algorithms and patterns.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "camera_calibration",
+    "parameter_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "reprojection_error (pixels) / RMSE of parameters",
+  "general_score_metric": "reprojection_error (pixels) / RMSE",
+  "typical_sota_score": "reprojection_error typically ~0.1–1.0 pixels on synthetic data (method- and setting-dependent)",
+  "year_of_publish": 2023,
+  "reputation": "Academic synthetic benchmark (from 2023) used in calibration-method comparisons; useful for controlled evaluation but not yet a universal standard in all vision communities.",
+  "notes": "Synthetic data enables precise ground truth but may not capture real-world sensor imperfections (sim-to-real gap); non-LLM benchmark focused on geometric accuracy.",
+  "creators": {
+    "scientists": [
+      "Lala Shakti Swarup Ray",
+      "Bo Zhou",
+      "Lars Krupp",
+      "Sungho Suh",
+      "Paul Lukowicz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2307.01013",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

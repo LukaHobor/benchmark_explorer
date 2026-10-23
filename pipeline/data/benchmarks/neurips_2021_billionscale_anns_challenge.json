@@ -1,0 +1,44 @@
+{
+  "name": "NeurIPS 2021 Billion-Scale ANNS Challenge",
+  "description": "Despite the broad range of algorithms for Approximate Nearest Neighbor Search, most empirical evaluations of algorithms have focused on smaller datasets, typically of 1 million points~\\citep{Benchmark}. However, deploying recent advances in embedding based techniques for search, recommendation and ranking at scale require ANNS indices at billion, trillion or larger scale. Barring a few recent papers, there is limited consensus on which algorithms are effective at this scale vis-\\`a-vis their hardware cost. This competition compares ANNS algorithms at billion-scale by hardware cost, accuracy and performance. We set up an open source evaluation framework and leaderboards for both standardized and specialized hardware. The competition involves three tracks. The standard hardware track T1 evaluates algorithms on an Azure VM with limited DRAM, often the bottleneck in serving billion-scale indices, where the embedding data can be hundreds of GigaBytes in size. It uses FAISS~\\citep{Faiss17} as the baseline. The standard hardware track T2 additional allows inexpensive SSDs in addition to the limited DRAM and uses DiskANN~\\citep{DiskANN19} as the baseline. The specialized hardware track T3 allows any hardware configuration, and again uses FAISS as the baseline. We compiled six diverse billion-scale datasets, four newly released for this competition, that span a variety of modalities, data types, dimensions, deep learning models, distance functions and sources. The outcome of the competition was ranked leaderboards of algorithms in each track based on recall at a query throughput threshold. Additionally, for track T3, separate leaderboards were created based on recall as well as cost-normalized and power-normalized query throughput.",
+  "category": "mixed",
+  "domain": "approximate nearest neighbor search / information retrieval",
+  "benchmark_type": "competition",
+  "task_types": [
+    "nearest_neighbor_search",
+    "retrieval",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "recall@k at a throughput threshold (and cost/power-normalized throughput for specialized tracks)",
+  "general_score_metric": "recall@k (measured at specified throughput thresholds); throughput and cost-normalized throughput for some tracks",
+  "typical_sota_score": "varies by dataset/track; roughly 70–99% depending on k and dataset",
+  "year_of_publish": 2022,
+  "reputation": "A well-regarded, community-recognized competition from NeurIPS 2021 that set standard large-scale ANNS evaluation protocols and leaderboards used by researchers and practitioners in large-scale retrieval.",
+  "notes": "Non-LLM benchmark focused on billion-scale indices; results are hardware- and implementation-dependent (DRAM/SSD/specialized hardware), making direct comparisons sensitive to resource differences.",
+  "creators": {
+    "scientists": [
+      "Harsha Vardhan Simhadri",
+      "George Williams",
+      "Martin Aumüller",
+      "Matthijs Douze",
+      "Artem Babenko",
+      "Dmitry Baranchuk",
+      "Qi Chen",
+      "Lucas Hosseini",
+      "Ravishankar Krishnaswamy",
+      "Gopal Srinivasa",
+      "Suhas Jayaram Subramanya",
+      "Jingdong Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2205.03763",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "KILT",
+  "description": "Challenging problems such as open-domain question answering, fact checking, slot filling and entity linking require access to large, external knowledge sources. While some models do well on individual tasks, developing general models is difficult as each task might require computationally expensive indexing of custom knowledge sources, in addition to dedicated infrastructure. To catalyze research on models that condition on specific information in large textual resources, we present a benchmark for knowledge-intensive language tasks (KILT). All tasks in KILT are grounded in the same snapshot of Wikipedia, reducing engineering turnaround through the re-use of components, as well as accelerating research into task-agnostic memory architectures. We test both task-specific and general baselines, evaluating downstream performance in addition to the ability of the models to provide provenance. We find that a shared dense vector index coupled with a seq2seq model is a strong baseline, outperforming more tailor-made approaches for fact checking, open-domain question answering and dialogue, and yielding competitive results on entity linking and slot filling, by generating disambiguated text. KILT data and code are available at https://github.com/facebookresearch/KILT.",
+  "category": "text",
+  "domain": "knowledge-intensive NLP",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "open_domain_qa",
+    "fact_checking",
+    "slot_filling",
+    "entity_linking",
+    "dialogue_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific (accuracy, F1, exact_match) with provenance evaluation",
+  "general_score_metric": "composite_score (KILT-style task-specific scoring combining answer correctness and provenance)",
+  "typical_sota_score": "varies by task; roughly 60–90% depending on task and metric",
+  "year_of_publish": 2020,
+  "reputation": "Widely used benchmark suite for knowledge‑intensive NLP that standardized many retrieval-augmented tasks on a single Wikipedia snapshot and is common in retrieval+generation research.",
+  "notes": "Multiple heterogeneous tasks grounded in a single Wikipedia snapshot — risk of pretraining contamination, task-specific evaluation makes cross-task comparisons hard; not saturated for all tasks.",
+  "creators": {
+    "scientists": [
+      "Fabio Petroni",
+      "Aleksandra Piktus",
+      "Angela Fan",
+      "Patrick Lewis",
+      "Majid Yazdani",
+      "Nicola De Cao",
+      "James Thorne",
+      "Yacine Jernite",
+      "Vladimir Karpukhin",
+      "Jean Maillard",
+      "Vassilis Plachouras",
+      "Tim Rocktäschel",
+      "Sebastian Riedel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2009.02252",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Omni3D",
+  "description": "Recognizing scenes and objects in 3D from a single image is a longstanding goal of computer vision with applications in robotics and AR/VR. For 2D recognition, large datasets and scalable solutions have led to unprecedented advances. In 3D, existing benchmarks are small in size and approaches specialize in few object categories and specific domains, e.g. urban driving scenes. Motivated by the success of 2D recognition, we revisit the task of 3D object detection by introducing a large benchmark, called Omni3D. Omni3D re-purposes and combines existing datasets resulting in 234k images annotated with more than 3 million instances and 98 categories. 3D detection at such scale is challenging due to variations in camera intrinsics and the rich diversity of scene and object types. We propose a model, called Cube R-CNN, designed to generalize across camera and scene types with a unified approach. We show that Cube R-CNN outperforms prior works on the larger Omni3D and existing benchmarks. Finally, we prove that Omni3D is a powerful dataset for 3D object recognition and show that it improves single-dataset performance and can accelerate learning on new smaller datasets via pre-training.",
+  "category": "vision",
+  "domain": "computer vision (3D object detection)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_object_detection",
+    "3d_bbox_estimation",
+    "instance_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "3D mean Average Precision (mAP) / AP at IoU thresholds",
+  "general_score_metric": "mAP (3D average precision)",
+  "year_of_publish": 2022,
+  "reputation": "A large, influential benchmark for monocular 3D object detection that attracted interest for its scale and diversity and is used for pretraining and cross-dataset evaluation.",
+  "notes": "Constructed by repurposing multiple datasets—offers scale and diversity but introduces label/schema inconsistencies, camera-intrinsics variability, and domain biases; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Garrick Brazil",
+      "Abhinav Kumar",
+      "Julian Straub",
+      "Nikhila Ravi",
+      "Justin Johnson",
+      "Georgia Gkioxari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.10660",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Commands For Autonomous Vehicles (C4AV) / Talk2Car baseline",
+  "description": "The Commands For Autonomous Vehicles (C4AV) challenge requires participants to solve an object referral task in a real-world setting. More specifically, we consider a scenario where a passenger can pass free-form natural language commands to a self-driving car. This problem is particularly challenging, as the language is much less constrained compared to existing benchmarks, and object references are often implicit. The challenge is based on the recent \\texttt{Talk2Car} dataset. This document provides a technical overview of a model that we released to help participants get started in the competition. The code can be found at https://github.com/talk2car/Talk2Car.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "competition",
+  "task_types": [
+    "referring_expression_resolution",
+    "visual_grounding",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "localization accuracy measured via IoU-based criteria (commonly IoU>0.5) / task success rate for grounding the referred object",
+  "general_score_metric": "localization accuracy (IoU@0.5)",
+  "typical_sota_score": "30–60%",
+  "year_of_publish": 2020,
+  "reputation": "Talk2Car / C4AV is a recognized benchmark in multimodal visual grounding for autonomous driving, used by several research groups as a realistic, in-vehicle instruction testbed.",
+  "notes": "Multimodal, real-world driving scenes with free-form language; not an LLM benchmark; grounding is sensitive to annotation ambiguity and dataset-specific object distributions.",
+  "creators": {
+    "scientists": [
+      "Simon Vandenhende",
+      "Thierry Deruyttere",
+      "Dusan Grujicic"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2004.13822",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

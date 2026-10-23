@@ -1,0 +1,35 @@
+{
+  "name": "SenseShift6D",
+  "description": "Recent advances on 6D object-pose estimation has achieved high performance on representative benchmarks such as LM-O, YCB-V, and T-Less. However, these datasets were captured under fixed illumination and camera settings, leaving the impact of real-world variations in illumination, exposure, gain or depth-sensor mode - and the potential of test-time sensor control to mitigate such variations - largely unexplored. To bridge this gap, we introduce SenseShift6D, the first RGB-D dataset that physically sweeps 13 RGB exposures, 9 RGB gains, auto-exposure, 4 depth-capture modes, and 5 illumination levels. For three common household objects (spray, pringles, and tincase), we acquire 101.9k RGB and 10k depth images, which can provide 1,380 unique sensor-lighting permutations per object pose. Experiments with state-of-the-art models on our dataset show that applying sensor control during test-time induces greater performance improvement over digital data augmentation, achieving performance comparable to or better than costly increases in real-world training data quantity and diversity. Adapting either RGB or depth sensors individually is effective, while jointly adapting multimodal RGB-D configurations yields even greater improvements. SenseShift6D extends the 6D-pose evaluation paradigm from data-centered to sensor-aware robustness, laying a foundation for adaptive, self-tuning perception systems capable of operating robustly in uncertain real-world environments. Our dataset is available at: huggingface.co/datasets/Yegyu/SenseShift6D Associated scripts can be found at: github.com/yegyu-han/SenseShift6D",
+  "category": "vision",
+  "domain": "robotics / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_pose_estimation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pose_error metrics (ADD / ADI / ADD-S) and recall-based thresholds",
+  "general_score_metric": "ADD(-S) / pose error (mm / degrees)",
+  "year_of_publish": 2025,
+  "reputation": "A recent dataset focused on sensor- and lighting-robust 6D pose evaluation; gaining interest in robotics and vision robustness research but not yet widely adopted.",
+  "notes": "Non-LLM benchmark; small number of object categories (three household objects) which may limit generality; explicitly probes sensor/illumination variation (useful for sensor-control research); collected in controlled lab conditions which may not capture all real-world scene diversity.",
+  "creators": {
+    "scientists": [
+      "Yegyu Han",
+      "Taegyoon Yoon",
+      "Dayeon Woo",
+      "Sojeong Kim",
+      "Hyung-Sin Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2507.05751",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "EgoMe",
+  "description": "In human imitation learning, the imitator typically take the egocentric view as a benchmark, naturally transferring behaviors observed from an exocentric view to their owns, which provides inspiration for researching how robots can more effectively imitate human behavior. However, current research primarily focuses on the basic alignment issues of ego-exo data from different cameras, rather than collecting data from the imitator's perspective, which is inconsistent with the high-level cognitive process. To advance this research, we introduce a novel large-scale egocentric dataset, called EgoMe, which towards following the process of human imitation learning via the imitator's egocentric view in the real world. Our dataset includes 7902 paired exo-ego videos (totaling15804 videos) spanning diverse daily behaviors in various real-world scenarios. For each video pair, one video captures an exocentric view of the imitator observing the demonstrator's actions, while the other captures an egocentric view of the imitator subsequently following those actions. Notably, EgoMe uniquely incorporates exo-ego eye gaze, other multi-modal sensor IMU data and different-level annotations for assisting in establishing correlations between observing and imitating process. We further provide a suit of challenging benchmarks for fully leveraging this data resource and promoting the robot imitation learning research. Extensive analysis demonstrates significant advantages over existing datasets. Our EgoMe dataset and benchmarks are available at https://huggingface.co/datasets/HeqianQiu/EgoMe.",
+  "category": "vision",
+  "domain": "robotics / egocentric vision",
+  "benchmark_type": "competition",
+  "task_types": [
+    "imitation_learning",
+    "action_recognition",
+    "gaze_prediction",
+    "trajectory_prediction",
+    "video_alignment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "A newly released, large-scale multi-modal egocentric dataset that is attracting interest for robot imitation and egocentric-vision research but is not yet widely adopted.",
+  "notes": "Large, multi-modal and paired exo-ego videos; tasks often require robot execution or simulation (sim2real gap). Not saturated; potential for dataset-specific domain gaps and limited existing SOTA baselines. Contains eye-gaze and IMU which may require specialized preprocessing.",
+  "creators": {
+    "scientists": [
+      "Heqian Qiu",
+      "Zhaofeng Shi",
+      "Lanxiao Wang",
+      "Huiyu Xiong",
+      "Xiang Li",
+      "Hongliang Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2501.19061",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

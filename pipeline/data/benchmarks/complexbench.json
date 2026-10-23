@@ -1,0 +1,33 @@
+{
+  "name": "ComplexBench",
+  "description": "Evaluates compositional instruction-following using a hierarchical taxonomy of 4 constraint types, 19 dimensions, and 4 composition types: And, Chain, Selection, and combined structures. Uses LLM-augmented rule-based evaluation to assess whether models can simultaneously satisfy complex, multi-part, compositionally structured instructions beyond the capabilities tested by IFEval.",
+  "category": "text",
+  "domain": "general knowledge",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "LLM-augmented rule-based evaluation (compositional satisfaction rate)",
+  "general_score_metric": "compositional constraint satisfaction rate",
+  "typical_sota_score": "~50–70% (frontier models on complex And/Chain compositions; drops significantly on nested structures)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at NeurIPS 2024; provides deeper insight than IFEval into compositional constraint satisfaction; systematic taxonomy across 4 composition types and 19 dimensions",
+  "notes": "NeurIPS 2024. Extends IFEval-style evaluation by modeling compositionality explicitly — instructions can chain requirements (Chain), require all to be satisfied (And), or offer alternatives (Selection). Reveals that models performing well on isolated constraints fail dramatically on their compositions. Taxonomy of 19 constraint dimensions provides diagnostic value for identifying specific weaknesses.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2506.12830",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

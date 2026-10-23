@@ -1,0 +1,35 @@
+{
+  "name": "EDDA (Mozambique post-disaster building damage dataset)",
+  "description": "Natural disasters demand swift and accurate impact assessment, yet traditional field-based methods remain prohibitively slow. While semi-automatic techniques leveraging remote sensing and drone imagery have accelerated evaluations, existing datasets predominantly emphasize Western infrastructure, offering limited representation of African contexts. The EDDA dataset (a Mozambique post-disaster building damage dataset developed under the Efficient Humanitarian Aid Through Intelligent Image Analysis project), addresses this critical gap by capturing rural and urban damage patterns in Mozambique following Cyclone Idai. Despite encouraging early results, significant challenges persist due to task complexity, severe class imbalance, and substantial architectural diversity across regions. Building upon EDDA, this study introduces a two-stage building damage assessment pipeline that decouples localization from classification. We employ lightweight You Only Look Once (YOLO)-based detectors—RTMDet, YOLOv7, and YOLOv8—for building localization, followed by dedicated damage severity classification using state-of-the-art architectures including Compact Convolutional Transformers, EfficientNet, and ResNet. This approach tests whether separating feature extraction tasks—assigning detectors solely to localization and specialized classifiers to damage assessment—yields superior performance compared to multi-class detection models that jointly learn both objectives. Comprehensive evaluation across 640+ model combinations demonstrates that our two-stage pipeline achieves competitive performance (mAP 0.478) with enhanced modularity compared to multi-class detection baselines (mAP 0.455), offering improved robustness across diverse building types and imbalanced damage classes.",
+  "category": "vision",
+  "domain": "civil engineering",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "image_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "45–48%",
+  "year_of_publish": 2025,
+  "reputation": "Specialized remote-sensing dataset focused on Mozambique with growing adoption in humanitarian impact-assessment research.",
+  "notes": "Small, geographically specific dataset with severe class imbalance; non-LLM vision benchmark. Performance is sensitive to localization quality and domain shift across regions.",
+  "creators": {
+    "scientists": [
+      "Damjan Hatić",
+      "Vladyslav Polushko",
+      "Markus Rauhut",
+      "Hans Hagen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.3390/rs17243957",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

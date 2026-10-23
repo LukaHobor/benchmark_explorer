@@ -1,0 +1,38 @@
+{
+  "name": "EnvBench",
+  "description": "Recent advances in Large Language Models (LLMs) have enabled researchers to focus on practical repository-level tasks in software engineering domain. In this work, we consider a cornerstone task for automating work with software repositories-environment setup, i.e., a task of configuring a repository-specific development environment on a system. Existing studies on environment setup introduce innovative agentic strategies, but their evaluation is often based on small datasets that may not capture the full range of configuration challenges encountered in practice. To address this gap, we introduce a comprehensive environment setup benchmark EnvBench. It encompasses 329 Python and 665 JVM-based (Java, Kotlin) repositories, with a focus on repositories that present genuine configuration challenges, excluding projects that can be fully configured by simple deterministic scripts. To enable further benchmark extension and usage for model tuning, we implement two automatic metrics: a static analysis check for missing imports in Python and a compilation check for JVM languages. We demonstrate the applicability of our benchmark by evaluating three environment setup approaches, including a simple zero-shot baseline and two agentic workflows, that we test with two powerful LLM backbones, GPT-4o and GPT-4o-mini. The best approach manages to successfully configure 6.69% repositories for Python and 29.47% repositories for JVM, suggesting that EnvBench remains challenging for current approaches. Our benchmark suite is publicly available at https://github.com/JetBrains-Research/EnvBench. The dataset and experiment trajectories are available at https://jb.gg/envbench.",
+  "category": "code",
+  "domain": "software engineering / devops",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "environment_setup",
+    "automation",
+    "program_synthesis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (percentage of repositories successfully configured), plus language-specific automated checks (missing-imports check for Python; compilation check for JVM)",
+  "general_score_metric": "task_success_rate (percentage of repositories that boot/compile or pass the static checks after automated setup)",
+  "typical_sota_score": "Python: ~6.69% (best reported); JVM: ~29.47% (best reported)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A practical, realistic benchmark released by JetBrains Research to evaluate environment-setup automation; relevant to both ML-for-code and software-engineering communities but still new.",
+  "notes": "Real-repo benchmark with substantial variance; automated metrics (static import checks / compilation) can miss runtime issues; potential overlap with LLM pretraining corpora (repository content) and reproducibility depends on host environment and toolchain versions.",
+  "creators": {
+    "scientists": [
+      "Aleksandra Eliseeva",
+      "Alexander Kovrigin",
+      "Ilia Kholkin",
+      "Egor Bogomolov",
+      "Yaroslav Zharov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2503.14443",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

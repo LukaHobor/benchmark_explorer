@@ -1,0 +1,38 @@
+{
+  "name": "Concept-Residual Disentanglement Benchmark",
+  "description": "Concept bottleneck models (CBMs) are interpretable models that first predict a set of semantically meaningful features, i.e., concepts, from observations that are subsequently used to condition a downstream task. However, the model's performance strongly depends on the engineered features and can severely suffer from incomplete sets of concepts. Prior works have proposed a side channel -- a residual -- that allows for unconstrained information flow to the downstream task, thus improving model performance but simultaneously introducing information leakage, which is undesirable for interpretability. This work proposes three novel approaches to mitigate information leakage by disentangling concepts and residuals, investigating the critical balance between model performance and interpretability. Through extensive empirical analysis on the CUB, OAI, and CIFAR 100 datasets, we assess the performance of each disentanglement method and provide insights into when they work best. Further, we show how each method impacts the ability to intervene over the concepts and their subsequent impact on task performance.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "concept_prediction",
+    "classification",
+    "disentanglement_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and disentanglement metrics (e.g., intervention effect, mutual information)",
+  "general_score_metric": "accuracy (downstream) with disentanglement-specific metrics",
+  "year_of_publish": 2023,
+  "reputation": "A recent research benchmark used in concept-bottleneck and interpretability literature with limited wider adoption so far.",
+  "notes": "Evaluated on CUB, OAI, and CIFAR-100; small-to-moderate dataset sizes; not an LLM benchmark; sensitive to concept set design and residual information leakage.",
+  "creators": {
+    "scientists": [
+      "Renos Zabounidis",
+      "Ini Oguntola",
+      "Konghao Zhao",
+      "Joseph Campbell",
+      "Simon Stepputtis",
+      "Katia Sycara"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2312.00192",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

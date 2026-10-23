@@ -1,0 +1,33 @@
+{
+  "name": "InverseNet",
+  "description": "State-of-the-art EfficientSCI loses 20.58 dB when its assumed forward operator deviates from physical reality in just eight parameters, yet no existing benchmark quantifies operator mismatch, the default condition in deployed compressive imaging systems. We introduce InverseNet, the first cross-modality benchmark for operator mismatch, spanning CASSI, CACTI, and single-pixel cameras. Evaluating 12 methods under a four-scenario protocol (ideal, mismatched, oracle-corrected, blind calibration) across 27 simulated scenes and 9 real hardware captures, we find: (1) deep learning methods lose 10-21 dB under mismatch, eliminating their advantage over classical baselines; (2) performance and robustness are inversely correlated across modalities (Spearman r_s = -0.71, p < 0.01); (3) mask-oblivious architectures recover 0% of mismatch losses regardless of calibration quality, while operator-conditioned methods recover 41-90%; (4) blind grid-search calibration recovers 85-100% of the oracle bound",
+  "category": "vision",
+  "domain": "computational imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_reconstruction",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "psnr",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "varies by modality and scenario; roughly ~20–45 dB PSNR across methods and setups (scenario-dependent)",
+  "year_of_publish": 2026,
+  "reputation": "A very recent and specialized benchmark that is likely to be used by computational imaging researchers studying operator mismatch and robustness.",
+  "notes": "Non-LLM benchmark; new and likely small-scale, with results depending heavily on simulation settings, modality, and calibration protocol.",
+  "creators": {
+    "scientists": [
+      "Chengshuai Yang",
+      "Xin Yuan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2603.04538",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

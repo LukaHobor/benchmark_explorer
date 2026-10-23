@@ -1,0 +1,39 @@
+{
+  "name": "LLMBar",
+  "description": "LLMBar is a meta-evaluation benchmark for testing LLM-based evaluators' ability to assess instruction following. It contains 419 manually curated pairs of model outputs, where one follows the instruction and one deviates in ways that can mislead evaluators (e.g., being more engaging or detailed but failing the actual instruction). Tests evaluator reliability.",
+  "category": "text",
+  "domain": "LLM evaluation",
+  "task_types": [
+    "meta_evaluation",
+    "pairwise_comparison",
+    "instruction_following_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 419,
+  "evaluation_method": "correlation with human preference judgments",
+  "general_score_metric": "agreement rate with human judgments",
+  "typical_sota_score": "~85-90% agreement (GPT-4 based evaluators)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "Introduced meta-evaluation perspective on LLM-as-judge systems; highlights biases in automated evaluators; useful for evaluating evaluators",
+  "notes": "Published at ICLR 2024. Contains 419 output pairs across a natural set and adversarial set with four subsets designed to probe different failure modes of LLM evaluators. Reveals that most LLM evaluators exhibit systematic biases toward verbosity and style over actual instruction adherence. Important for understanding reliability of LLM-as-judge evaluation pipelines.",
+  "creators": {
+    "scientists": [
+      "Mingyang Zhong",
+      "Zheng Chen",
+      "Yao Fu",
+      "Penghao Zhao",
+      "Ling Liu"
+    ],
+    "institutions": [
+      "Georgia Institute of Technology"
+    ],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9"
+  }
+}

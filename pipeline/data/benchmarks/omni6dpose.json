@@ -1,0 +1,39 @@
+{
+  "name": "Omni6DPose",
+  "description": "6D Object Pose Estimation is a crucial yet challenging task in computer vision, suffering from a significant lack of large-scale datasets. This scarcity impedes comprehensive evaluation of model performance, limiting research advancements. Furthermore, the restricted number of available instances or categories curtails its applications. To address these issues, this paper introduces Omni6DPose, a substantial dataset characterized by its diversity in object categories, large scale, and variety in object materials. Omni6DPose is divided into three main components: ROPE (Real 6D Object Pose Estimation Dataset), which includes 332K images annotated with over 1.5M annotations across 581 instances in 149 categories; SOPE(Simulated 6D Object Pose Estimation Dataset), consisting of 475K images created in a mixed reality setting with depth simulation, annotated with over 5M annotations across 4162 instances in the same 149 categories; and the manually aligned real scanned objects used in both ROPE and SOPE. Omni6DPose is inherently challenging due to the substantial variations and ambiguities. To address this challenge, we introduce GenPose++, an enhanced version of the SOTA category-level pose estimation framework, incorporating two pivotal improvements: Semantic-aware feature extraction and Clustering-based aggregation. Moreover, we provide a comprehensive benchmarking analysis to evaluate the performance of previous methods on this large-scale dataset in the realms of 6D object pose estimation and pose tracking.",
+  "category": "vision",
+  "domain": "vision / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pose_estimation",
+    "pose_tracking",
+    "6d_pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ADD / ADD-S (average distance) and rotation/translation error metrics",
+  "general_score_metric": "ADD / ADD-S (pose accuracy) and pose rotation/translation error",
+  "year_of_publish": 2024,
+  "reputation": "New large-scale benchmark for 6D object pose estimation with both real and simulated components; expected to gain adoption for large-scale category-level pose evaluation.",
+  "notes": "Very large and diverse (real + simulated) dataset; useful for category-level pose and tracking research; potential domain gap between simulated and real splits and annotation/alignment noise in large-scale scans.",
+  "creators": {
+    "scientists": [
+      "Jiyao Zhang",
+      "Weiyao Huang",
+      "Bo Peng",
+      "Mingdong Wu",
+      "Fei Hu",
+      "Zijian Chen",
+      "Bo Zhao",
+      "Hao Dong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.04316",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

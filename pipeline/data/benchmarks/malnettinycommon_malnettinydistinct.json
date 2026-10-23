@@ -1,0 +1,36 @@
+{
+  "name": "MalNet-Tiny-Common / MalNet-Tiny-Distinct",
+  "description": "While graph-based Android malware classifiers achieve over 94% accuracy on standard benchmarks, they exhibit a significant generalization gap under distribution shift, suffering up to 45% performance degradation when encountering unseen malware variants from known families. This work systematically investigates this critical yet overlooked challenge for real-world deployment by introducing a benchmarking suite designed to simulate two prevalent scenarios: MalNet-Tiny-Common for covariate shift, and MalNet-Tiny-Distinct for domain shift. Furthermore, we identify an inherent limitation in existing benchmarks where the inputs are structure-only function call graphs, which fails to capture the latent semantic patterns necessary for robust generalization. To verify this, we construct a semantic enrichment framework that augments the original topology with function-level attributes, including lightweight metadata and LLM-based code embeddings. By providing this expanded feature set, we aim t",
+  "category": "mixed",
+  "domain": "ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "graph_classification",
+    "domain_generalization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "MalNet-Tiny-Common: ~94–96% (accuracy); MalNet-Tiny-Distinct: ~50–70% (accuracy, substantially lower under domain shift)",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark focused on malware graph generalization under distribution shift, with emerging but still limited adoption in ML security work.",
+  "notes": "Benchmark targets covariate and domain shift on Android malware graphs; structure-only inputs may underrepresent semantic information, and reported performance can drop substantially under shift.",
+  "creators": {
+    "scientists": [
+      "Ngoc N. Tran",
+      "Anwar Said",
+      "Waseem Abbas",
+      "Tyler Derr",
+      "Xenofon D. Koutsoukos"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2508.06734",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

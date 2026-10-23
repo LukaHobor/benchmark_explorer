@@ -1,0 +1,33 @@
+{
+  "name": "AlphaFold3 protein-protein complex evaluation (on SKEMPI 2.0)",
+  "description": "AlphaFold 3 (AF3), the latest version of protein structure prediction software, goes beyond its predecessors by predicting protein-protein complexes. It could revolutionize drug discovery and protein engineering, marking a major step towards comprehensive, automated protein structure prediction. However, independent validation of AF3's predictions is necessary. Evaluated using the SKEMPI 2.0 database which involves 317 protein-protein complexes and 8338 mutations, AF3 complex structures give rise to a very good Pearson correlation coefficient of 0.86 for predicting protein-protein binding free energy changes upon mutation, slightly less than the 0.88 achieved earlier with the Protein Data Bank (PDB) structures. Nonetheless, AF3 complex structures led to a 8.6% increase in the prediction RMSE compared to original PDB complex structures. Additionally, some of AF3's complex structures have large errors, which were not captured in its ipTM performance metric. Finally, it is found that AF3's complex structures are not reliable for intrinsically flexible regions or domains.",
+  "category": "mixed",
+  "domain": "bioinformatics / structural biology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "protein_complex_structure_prediction",
+    "binding_affinity_regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson_correlation_and_RMSE (correlation between predicted and experimental ΔΔG plus RMSE)",
+  "general_score_metric": "Pearson_correlation_coefficient (for ΔΔG prediction)",
+  "typical_sota_score": "Pearson r ≈ 0.86 on AF3-predicted complexes (≈0.88 using experimental PDB complexes); RMSE increased ≈8.6% vs PDB structures",
+  "year_of_publish": 2024,
+  "reputation": "Widely discussed and influential evaluation highlighting AlphaFold3's strengths and remaining limitations for complex prediction and affinity estimation.",
+  "notes": "Small, specialized benchmark (317 complexes) with many mutations; AF3 was trained on PDB-derived data so training-data leakage is possible; AF3 predictions are less reliable for intrinsically disordered/flexible regions and some large errors are not captured by ipTM.",
+  "creators": {
+    "scientists": [
+      "JunJie Wee",
+      "Guo-Wei Wei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.03979",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

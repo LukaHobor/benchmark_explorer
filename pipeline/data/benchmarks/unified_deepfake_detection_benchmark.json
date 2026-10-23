@@ -1,0 +1,38 @@
+{
+  "name": "Unified Deepfake Detection Benchmark",
+  "description": "Deepfakes have rapidly emerged as a serious threat to society due to their ease of creation and dissemination, triggering the accelerated development of detection technologies. However, many existing detectors rely on labgenerated datasets for validation, which may not prepare them for novel, real-world deepfakes. This paper extensively reviews and analyzes state-of-the-art deepfake detectors, evaluating them against several critical criteria. These criteria categorize detectors into 4 high-level groups and 13 finegrained sub-groups, aligned with a unified conceptual framework we propose. This classification offers practical insights into the factors affecting detector efficacy. We evaluate the generalizability of 16 leading detectors across comprehensive attack scenarios, including black-box, white-box, and graybox settings. Our systematized analysis and experiments provide a deeper understanding of deepfake detectors and their generalizability, paving the way for future research and the development of more proactive defenses against deepfakes.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "robustness_evaluation",
+    "cross-domain_generalization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC (ROC) and accuracy (reported alongside F1 for imbalanced settings)",
+  "general_score_metric": "AUC (area under ROC) as the primary metric",
+  "typical_sota_score": "varies widely by scenario (approximately 70–99% AUC depending on dataset and attack; substantially lower under cross-domain/black-box conditions)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, comprehensive 2024 benchmark and taxonomy for deepfake detection that is gaining attention in the detection community for its focus on generalizability.",
+  "notes": "Highlights real-world/generalization gaps — many detectors perform well on lab datasets but fail under novel attacks; dataset and detector bias, domain shift, and adversarial/real-world contamination are significant issues.",
+  "creators": {
+    "scientists": [
+      "Binh M. Le",
+      "Jiwon Kim",
+      "Simon S. Woo",
+      "Kristen Moore",
+      "Alsharif Abuadbba",
+      "Shahroz Tariq"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2401.04364",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

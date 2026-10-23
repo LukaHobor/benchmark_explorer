@@ -1,0 +1,38 @@
+{
+  "name": "EEGdenoiseNet",
+  "description": "<i>Objective.</i>Deep learning (DL) networks are increasingly attracting attention across various fields, including electroencephalography (EEG) signal processing. These models provide comparable performance to that of traditional techniques. At present, however, there is a lack of well-structured and standardized datasets with specific benchmark limit the development of DL solutions for EEG denoising.<i>Approach.</i>Here, we present EEGdenoiseNet, a benchmark EEG dataset that is suited for training and testing DL-based denoising models, as well as for performance comparisons across models. EEGdenoiseNet contains 4514 clean EEG segments, 3400 ocular artifact segments and 5598 muscular artifact segments, allowing users to synthesize contaminated EEG segments with the ground-truth clean EEG.<i>Main results.</i>We used EEGdenoiseNet to evaluate denoising performance of four classical networks (a fully-connected network, a simple and a complex convolution network, and a recurrent neural network). Our results suggested that DL methods have great potential for EEG denoising even under high noise contamination.<i>Significance.</i>Through EEGdenoiseNet, we hope to accelerate the development of the emerging field of DL-based EEG denoising. The dataset and code are available athttps://github.com/ncclabsustech/EEGdenoiseNet.",
+  "category": "audio",
+  "domain": "signal processing / biomedical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "denoising",
+    "signal_restoration"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "SNR_improvement / MSE (signal reconstruction metrics such as SNR, RMSE, correlation)",
+  "general_score_metric": "SNR improvement (dB)",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2023,
+  "reputation": "13 citations",
+  "notes": "Non-LLM benchmark for EEG denoising; relatively small labeled corpus (4.5k clean segments) and synthetic contamination which may not capture all real-world artifact variability; risk of overfitting to dataset-specific artifact characteristics.",
+  "creators": {
+    "scientists": [
+      "Haoming Zhang",
+      "Mingqi Zhao",
+      "Wei Chen",
+      "Dante Mantini",
+      "Zherui Li",
+      "Quanying Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1088/1741-2552/ac2bf8",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "ESB",
+  "description": "Speech recognition applications cover a range of different audio and text distributions, with different speaking styles, background noise, transcription punctuation and character casing. However, many speech recognition systems require dataset-specific tuning (audio filtering, punctuation removal and normalisation of casing), therefore assuming a-priori knowledge of both the audio and text distributions. This tuning requirement can lead to systems failing to generalise to other datasets and domains. To promote the development of multi-domain speech systems, we introduce the End-to-end Speech Benchmark (ESB) for evaluating the performance of a single automatic speech recognition (ASR) system across a broad set of speech datasets. Benchmarked systems must use the same data pre- and post-processing algorithm across datasets - assuming the audio and text data distributions are a-priori unknown. We compare a series of state-of-the-art (SoTA) end-to-end (E2E) systems on this benchmark, demonstrating how a single speech system can be applied and evaluated on a wide range of data distributions. We find E2E systems to be effective across datasets: in a fair comparison, E2E systems achieve within 2.6% of SoTA systems tuned to a specific dataset. Our analysis reveals that transcription artefacts, such as punctuation and casing, pose difficulties for ASR systems and should be included in evaluation. We believe E2E benchmarking over a range of datasets promotes the research of multi-domain speech recognition systems. ESB is available at https://huggingface.co/esb.",
+  "category": "audio",
+  "domain": "speech recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "speech_recognition",
+    "transcription"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "word_error_rate",
+  "general_score_metric": "word_error_rate (WER)",
+  "typical_sota_score": "varies by dataset (roughly ~5–30% WER across included corpora)",
+  "year_of_publish": 2022,
+  "reputation": "Moderately recognized in the ASR community for multi-domain evaluation; hosted on Hugging Face and used in research on domain-robust end-to-end ASR.",
+  "notes": "Non-LLM benchmark covering many heterogeneous speech datasets; requires identical pre/post-processing across datasets. Scores vary widely by domain, speaker and noise conditions; includes punctuation/casing which can complicate comparisons.",
+  "creators": {
+    "scientists": [
+      "Sanchit Gandhi",
+      "Patrick von Platen",
+      "Alexander M. Rush"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2210.13352",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Chaotic World",
+  "description": "Understanding and analyzing human behaviors (actions and interactions of people), voices, and sounds in chaotic events is crucial in many applications, e.g., crowd management, emergency response services. Different from human behaviors in daily life, human behaviors in chaotic events are generally different in how they behave and influence others, and hence are often much more complex. However, currently there is lack of a large video dataset for analyzing human behaviors in chaotic situations. To this end, we create the first large and challenging multi-modal dataset, Chaotic World, that simultaneously provides different levels of fine-grained and dense spatio-temporal annotations of sounds, individual actions and group interaction graphs, and even text descriptions for each scene in each video, thereby enabling a thorough analysis of complicated behaviors in crowds and chaos. Our dataset consists of a total of 299,923 annotated instances for detecting human behaviors for Spatiotemporal Action Localization in chaotic events, 224,275 instances for identifying interactions between people for Behavior Graph Analysis in chaotic events, 336,390 instances for localizing relevant scenes of interest in long videos for Spatiotemporal Event Grounding, and 378,093 instances for triangulating the source of sound for Event Sound Source Localization. Given the practical complexity and challenges in chaotic events (e.g., large crowds, serious occlusions, complicated interaction patterns), our dataset shall be able to facilitate the community to develop, adapt, and evaluate various types of advanced models for analyzing human behaviors in chaotic events. We also design a simple yet effective IntelliCare model with a Dynamic Knowledge Pathfinder module that intelligently learns from multiple tasks and can analyze various aspects of a chaotic scene in a unified architecture. This method achieves promising results in experiments. Dataset and code can be found at https://github.com/sutdcv/Chaotic-World",
+  "category": "multimodal",
+  "domain": "public safety / crowd analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "spatiotemporal_action_localization",
+    "behavior_graph_analysis",
+    "event_grounding",
+    "sound_source_localization",
+    "multimodal_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) for detection/localization, F1 for interaction recognition, IoU/temporal IoU and localization error metrics for grounding and sound source tasks",
+  "general_score_metric": "mAP (for action and event localization)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Large, recently released multimodal benchmark that is gaining interest among researchers working on crowd analysis, public-safety applications, and multimodal event understanding.",
+  "notes": "Very large and multi-task; annotations may include noise and class imbalance typical of complex real-world chaotic events. Multi-modal and multi-task nature increases evaluation complexity; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Kian Eng Ong",
+      "Xun Long Ng",
+      "Yanchao Li",
+      "Wenjie Ai",
+      "Kuangyi Zhao",
+      "Si Yong Yeo",
+      "Jun Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

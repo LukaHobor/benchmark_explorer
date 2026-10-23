@@ -1,0 +1,38 @@
+{
+  "name": "CADTalk",
+  "description": "CAD programs are a popular way to compactly encode shapes as a sequence of operations that are easy to parametrically modify. However, without sufficient semantic comments and structure, such programs can be challenging to understand, let alone modify. We introduce the problem of semantic commenting CAD programs, wherein the goal is to segment the input program into code blocks corresponding to semantically meaningful shape parts and assign a semantic label to each block. We solve the problem by combining program parsing with visual-semantic analysis afforded by recent advances in foundational language and vision models. Specifically, by executing the input programs, we create shapes, which we use to generate conditional photorealistic images to make use of semantic annotators for such images. We then distill the information across the images and link back to the original programs to semantically comment on them. Additionally, we collected and annotated a benchmark dataset, CADTalk, consisting of 5,288 machine-made programs and 45 human-made programs with ground truth semantic comments. We extensively evaluated our approach, compared it to a GPT-based baseline, and an open-set shape segmentation baseline, and reported an 83.24% accuracy on the new CADTalk dataset. Code and data: https://enigma-li.github.io/CADTalk/.",
+  "category": "multimodal",
+  "domain": "computer-aided design / 3D modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "sequence_labeling",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈83% (reported best 83.24%)",
+  "year_of_publish": 2023,
+  "reputation": "Recent academic dataset introduced in the corresponding paper; limited but growing adoption in CAD/program-understanding research.",
+  "notes": "Small, domain-specific dataset (5,288 machine-made programs + 45 human-made); requires executing programs and rendering images for annotation. Limited adoption, potential overfitting/saturation risk, and not a general-purpose LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Haocheng Yuan",
+      "Jing Xu",
+      "Hao Pan",
+      "Adrien Bousseau",
+      "Niloy J. Mitra",
+      "Changjian Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.16703",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

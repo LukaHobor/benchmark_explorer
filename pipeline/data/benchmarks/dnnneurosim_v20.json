@@ -1,0 +1,36 @@
+{
+  "name": "DNN+NeuroSim V2.0",
+  "description": "DNN+NeuroSim is an integrated framework to benchmark compute-in-memory (CIM) accelerators for deep neural networks, with hierarchical design options from device-level, to circuit-level and up to algorithm-level. A python wrapper is developed to interface NeuroSim with a popular machine learning platform: Pytorch, to support flexible network structures. The framework provides automatic algorithm-to-hardware mapping, and evaluates chip-level area, energy efficiency and throughput for training or inference, as well as training/inference accuracy with hardware constraints. Our prior work (DNN+NeuroSim V1.1) was developed to estimate the impact of reliability in synaptic devices, and analog-to-digital converter (ADC) quantization loss on the accuracy and hardware performance of inference engines. In this work, we further investigated the impact of the analog emerging non-volatile memory non-ideal device properties for on-chip training. By introducing the nonlinearity, asymmetry, device-to-device and cycle-to-cycle variation of weight update into the python wrapper, and peripheral circuits for error/weight gradient computation in NeuroSim core, we benchmarked CIM accelerators based on state-of-the-art SRAM and eNVM devices for VGG-8 on CIFAR-10 dataset, revealing the crucial specs of synaptic devices for on-chip training. The proposed DNN+NeuroSim V2.0 framework is available on GitHub.",
+  "category": "mixed",
+  "domain": "hardware accelerators / compute-in-memory",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "simulation",
+    "hardware_benchmarking",
+    "performance_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "multi-metric (energy, area, throughput, and inference/training accuracy)",
+  "general_score_metric": "multi-metric (energy-efficiency, throughput, area, accuracy)",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded and cited within the compute-in-memory and hardware-accelerator research communities for design-space exploration and performance estimation.",
+  "notes": "Simulation-based framework (not a conventional dataset); results are highly sensitive to device models and parameter choices, which can affect reproducibility. Not an LLM benchmark; intended for CIM accelerator design and algorithm–hardware co-evaluation.",
+  "creators": {
+    "scientists": [
+      "Xiaochen Peng",
+      "Shanshi Huang",
+      "Hongwu Jiang",
+      "Anni Lu",
+      "Shimeng Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2003.06471",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

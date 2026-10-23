@@ -1,0 +1,35 @@
+{
+  "name": "Ego-HOIBench",
+  "description": "Understanding the interaction between humans and objects has gained much attention in recent years. Existing human-object interaction (HOI) detection methods mainly focus on the third-person perspectives, overlooking a more intuitive way from the egocentric view of HOI, namely Ego-HOI. This paper introduces an Ego-HOIBench, a new dataset to promote the benchmarking and development of Ego-HOI detection. Our Ego-HOIBench comprises more than 27K egocentric images with high-quality hand-verb-object triplet annotations across 123 fine-grained interaction categories and locations, covering a rich diversity of scenarios, object types, and hand configurations in daily activities. In addition, we explore and adapt third-person HOI detection methods to Ego-HOIBench and illustrate the challenges of hand-occluded objects and the complexity of single- and two-hand interactions. To build a new baseline, we propose a Hand Geometry and Interactivity Refinement (HGIR) scheme, which leverages hand pose and geometric information as valuable cues for interpreting interactions. Specifically, the HGIR scheme explicitly extracts global hand geometric features from the estimated hand pose proposals and refines the interaction-specific features using pose-interaction attention. This scheme enables the model to obtain a robust and powerful interaction representation, significantly improving the Ego-HOI detection capability. Our approach is lightweight and effective, and it can be easily applied to HOI baselines in a plug-and-play manner to achieve state-of-the-art results on Ego-HOIBench. Our project is available at: https://dengkunyuan.github.io/EgoHOIBench/",
+  "category": "vision",
+  "domain": "vision (egocentric human-object interaction)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "egocentric_hoi_detection",
+    "interaction_classification",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) on hand-verb-object triplets",
+  "general_score_metric": "mean Average Precision (mAP)",
+  "year_of_publish": 2025,
+  "reputation": "New dataset with growing adoption in egocentric HOI research, used as a benchmark for hand-centric interaction detection methods.",
+  "notes": "Non-LLM vision benchmark; moderate size (~27K images); challenges include heavy hand occlusion, two-hand interactions and fine-grained categories; potential class imbalance and privacy considerations inherent to egocentric data.",
+  "creators": {
+    "scientists": [
+      "Kunyuan Deng",
+      "Yi Wang",
+      "Lap-Pui Chau"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.14189",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

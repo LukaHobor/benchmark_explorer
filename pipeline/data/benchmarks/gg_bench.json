@@ -1,0 +1,42 @@
+{
+  "name": "GGBench (gg-bench)",
+  "description": "GGBench is a collection of 126 synthetically generated two-player game environments (filtered from 1,000) designed to evaluate general reasoning and strategic decision-making in LLMs. Models are prompted with a novel game's natural-language rules, the current board state, and the list of valid moves, then must select an action; they are scored by win rate against reinforcement learning agents trained via self-play (PPO) on each game. Because the benchmark is a data-generating process rather than a fixed dataset, new games can be produced on demand, making it structurally resistant to contamination. Reasoning models (o1, o3-mini, DeepSeek-R1) achieve ~31–36% win rate, while standard instruction-tuned models score only 7–9%, revealing a sharp capability gap.",
+  "category": "text",
+  "domain": "reasoning|game_playing|strategic_planning|general_intelligence",
+  "task_types": [
+    "game_playing",
+    "strategic_decision_making",
+    "long_horizon_planning",
+    "rule_following"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 126,
+  "evaluation_method": "win_rate against PPO-trained RL agents (30 games per environment)",
+  "general_score_metric": "average win rate across all 126 games",
+  "typical_sota_score": "~36% win rate (o1); ~32% (DeepSeek-R1); ~31% (o3-mini); ~9% (Claude 3.7 Sonnet, GPT-4o)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "May 2025 preprint from UC Berkeley; notable for exposing a 4× gap between reasoning and non-reasoning frontier models and for being a contamination-resistant generative benchmark.",
+  "notes": "126 games survived multi-stage filtering from an initial pool of 1,000 generated games. Five categories: number games (36.7%), board games (27.6%), card games (14.6%), chance games (11.7%), combat games (9.4%). Generation pipeline cost ~$1,162 using OpenAI o1. Each model plays 30 games per environment (win rates reported with 95% CIs). GitHub: github.com/vivek3141/gg-bench. arXiv: 2505.07215. License: MIT.",
+  "creators": {
+    "scientists": [
+      "Vivek Verma",
+      "David Huang",
+      "William Chen",
+      "Dan Klein",
+      "Nicholas Tomlin"
+    ],
+    "institutions": [
+      "UC Berkeley"
+    ],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2505.07215",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-05-05",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

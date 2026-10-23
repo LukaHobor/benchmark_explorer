@@ -1,0 +1,42 @@
+{
+  "name": "RM-Bench Safety",
+  "description": "The safety domain split of RM-Bench, evaluating reward models on their ability to handle safety-sensitive content correctly. Contains 441 instances split into two sub-categories: Safety-Should-Respond (157 instances — benign prompts that look risky but should receive detailed, helpful responses) and Safety-Should-Refuse (284 instances — genuinely harmful prompts requiring refusal). Tests whether reward models can distinguish genuine harm from superficial risk signals.",
+  "category": "text",
+  "domain": "safety",
+  "task_types": [
+    "pairwise_comparison"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 441,
+  "evaluation_method": "reward model accuracy on preference pairs within safety domain; sensitivity to subtle quality differences; robustness to style perturbations",
+  "general_score_metric": "reward model accuracy on safety preference pairs",
+  "typical_sota_score": "Strong RMs achieve ~70–80% accuracy; many models struggle to distinguish benign-but-risky from genuinely harmful prompts",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "ICLR 2025 Oral; part of THU-KEG/RM-Bench; critical sub-split for evaluating safety calibration of reward models used in RLHF; reveals whether RMs correctly assign lower reward to refusals on benign prompts",
+  "notes": "ICLR 2025 Oral. Safety split of RM-Bench (THU-KEG/RM-Bench, arXiv:2410.16184). Two sub-categories capture complementary failure modes: over-refusal (refusing benign requests) and under-refusal (rewarding harmful responses). Each sample includes prompt plus 3 chosen responses (concise, detailed plain, detailed markdown) and 3 rejected responses across style variations. Full benchmark: 1,381 total instances across chat (183), code (228), math (529), safety (441).",
+  "creators": {
+    "scientists": [
+      "Weiwen Xu",
+      "Deng Cai",
+      "Ruifeng Yuan",
+      "Shuang Xu",
+      "Zhongwei Wan",
+      "Wei Wang",
+      "Wenhu Chen"
+    ],
+    "institutions": [
+      "Tsinghua University (KEG — Knowledge Engineering Group)",
+      "University of Waterloo"
+    ],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2410.16184",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-05-05",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

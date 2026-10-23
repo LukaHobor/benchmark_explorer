@@ -1,0 +1,38 @@
+{
+  "name": "JL1-CD",
+  "description": "Change detection (CD) in remote sensing images plays a vital role in Earth observation. However, the scarcity of high-resolution, comprehensive open-source datasets and the difficulty in achieving robust performance across varying change types remain major challenges. To address these issues, we introduce JL1-CD, a large-scale, sub-meter CD dataset consisting of 5,000 image pairs. We further propose a novel Origin-Partition (O-P) strategy and integrate it into a Multi-Teacher Knowledge Distillation (MTKD) framework to enhance CD performance. The O-P strategy partitions the training set by Change Area Ratio (CAR) and trains specialized teacher models on each subset. The MTKD framework then distills complementary knowledge from these teachers into a single student model, enabling improved detection results across diverse CAR scenarios without additional inference cost. Our MTKD approach demonstrated strong performance in the 2024 \"Jilin-1'' Cup challenge, ranking first in the preliminary and second in the final rounds. Extensive experiments on the JL1-CD and SYSU-CD datasets show that the MTKD framework consistently improves the performance of CD models with various network architectures and parameter sizes, establishing new state-of-the-art results. Code and dataset are available at https://anonymous.4open.science/r/MTKD-A-84B8.",
+  "category": "vision",
+  "domain": "remote sensing / Earth observation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "change_detection",
+    "binary_segmentation",
+    "pixelwise_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (pixel-level) / IoU (mIoU)",
+  "general_score_metric": "F1 score (pixel-level)",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2025,
+  "reputation": "New (2024) large-scale remote sensing change-detection dataset with competitive results in the Jilin-1 Cup; gaining attention in the Earth observation CD community but not yet widely adopted.",
+  "notes": "Non-LLM benchmark; moderate-sized (5,000 image pairs). Potential class imbalance (many small-change areas) and annotation noise; methods tuned on Change Area Ratio (CAR) may not generalize to other regions/datasets.",
+  "creators": {
+    "scientists": [
+      "Ziyuan Liu",
+      "Ruifei Zhu",
+      "Long Gao",
+      "Yuanxiu Zhou",
+      "JingYu Ma",
+      "Yuantao Gu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.13407",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

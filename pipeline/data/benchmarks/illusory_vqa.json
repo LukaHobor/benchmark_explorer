@@ -1,0 +1,35 @@
+{
+  "name": "Illusory VQA",
+  "description": "In recent years, Visual Question Answering (VQA) has made significant strides, particularly with the advent of multimodal models that integrate vision and language understanding. However, existing VQA datasets often overlook the complexities introduced by image illusions, which pose unique challenges for both human perception and model interpretation. In this study, we introduce a novel task called Illusory VQA, along with four specialized datasets: IllusionMNIST, IllusionFashionMNIST, IllusionAnimals, and IllusionChar. These datasets are designed to evaluate the performance of state-of-the-art multimodal models in recognizing and interpreting visual illusions. We assess the zero-shot performance of various models, fine-tune selected models on our datasets, and propose a simple yet effective solution for illusion detection using Gaussian and blur low-pass filters. We show that this method increases the performance of models significantly and in the case of BLIP-2 on IllusionAnimals without any fine-tuning, it outperforms humans. Our findings highlight the disparity between human and model perception of illusions and demonstrate that fine-tuning and specific preprocessing techniques can significantly enhance model robustness. This work contributes to the development of more human-like visual understanding in multimodal models and suggests future directions for adapting filters using learnable parameters.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (per-question correctness; comparisons to human baselines reported)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "A recent specialized multimodal benchmark exploring visual illusions; of interest to robustness and multimodal perception researchers but not yet broadly adopted.",
+  "notes": "Small, specialized subsets (four illusion datasets); potential domain shift relative to natural images; fine-tuning and preprocessing (filters) can substantially change results; not a pure text/LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mohammadmostafa Rostamkhani",
+      "Baktash Ansari",
+      "Hoorieh Sabzevari",
+      "Farzan Rahmani",
+      "Sauleh Eetemadi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.08169",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

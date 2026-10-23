@@ -1,0 +1,38 @@
+{
+  "name": "SceneKnowledge-VG",
+  "description": "Visual grounding (VG) aims to establish fine-grained alignment between vision and language. Ideally, it can be a testbed for vision-and-language models to evaluate their understanding of the images and texts and their reasoning abilities over their joint space. However, most existing VG datasets are constructed using simple description texts, which do not require sufficient reasoning over the images and texts. This has been demonstrated in a recent study~\\cite{luo2022goes}, where a simple LSTM-based text encoder without pretraining can achieve state-of-the-art performance on mainstream VG datasets. Therefore, in this paper, we propose a novel benchmark of \\underline{S}cene \\underline{K}nowledge-guided \\underline{V}isual \\underline{G}rounding (SK-VG), where the image content and referring expressions are not sufficient to ground the target objects, forcing the models to have a reasoning ability on the long-form scene knowledge. To perform this task, we propose two approaches to accept the triple-type input, where the former embeds knowledge into the image features before the image-query interaction; the latter leverages linguistic structure to assist in computing the image-text matching. We conduct extensive experiments to analyze the above methods and show that the proposed approaches achieve promising results but still leave room for improvement, including performance and interpretability. The dataset and code are available at \\url{https://github.com/zhjohnchan/SK-VG}.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_grounding",
+    "referring_expression_resolution",
+    "multimodal_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (IoU-based grounding accuracy, e.g., IoU>=0.5)",
+  "general_score_metric": "accuracy (IoU-based)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "A recent academic benchmark (SK-VG) proposing scene-knowledge-driven visual grounding that has attracted interest in vision-and-language research but is not yet widely adopted.",
+  "notes": "Relies on external/long-form scene knowledge — may be limited in dataset size and subject to annotation biases; not an LLM benchmark (focused on vision+language models).",
+  "creators": {
+    "scientists": [
+      "Zhihong Chen",
+      "Ruifei Zhang",
+      "Yibing Song",
+      "Xiang Wan",
+      "Guanbin Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2307.11558",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

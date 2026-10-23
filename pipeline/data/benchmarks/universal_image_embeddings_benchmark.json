@@ -1,0 +1,42 @@
+{
+  "name": "Universal Image Embeddings Benchmark",
+  "description": "Fine-grained and instance-level recognition methods are commonly trained and evaluated on specific domains, in a model per domain scenario. Such an approach, however, is impractical in real large-scale applications. In this work, we address the problem of universal image embedding, where a single universal model is trained and used in multiple domains. First, we leverage existing domain-specific datasets to carefully construct a new large-scale public benchmark for the evaluation of universal image embeddings, with 241k query images, 1.4M index images and 2.8M training images across 8 different domains and 349k classes. We define suitable metrics, training and evaluation protocols to foster future research in this area. Second, we provide a comprehensive experimental evaluation on the new dataset, demonstrating that existing approaches and simplistic extensions lead to worse performance than an assembly of models trained for each domain separately. Finally, we conducted a public research competition on this topic, leveraging industrial datasets, which attracted the participation of more than 1k teams worldwide. This exercise generated many interesting research ideas and findings which we present in detail. Project webpage: https://cmp.felk.cvut.cz/univ_emb/",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "metric_learning",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Retrieval metrics (Recall@k, mean Average Precision (mAP)); task-specific classification metrics where applicable",
+  "general_score_metric": "Recall@k (notably Recall@1) and mAP",
+  "typical_sota_score": "Varies strongly by domain: Recall@1 roughly 40–85% across domains in reported leaderboards; mAP ranges similarly depending on domain and task",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded public benchmark that attracted a large public competition (>1k teams) and is used to evaluate universal embedding approaches across multiple domains.",
+  "notes": "Large-scale, multi-domain benchmark (millions of images) — computationally intensive to train/benchmark. Domain imbalance and many classes make single-number comparisons difficult; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Nikolaos-Antonios Ypsilantis",
+      "KaiFeng Chen",
+      "Bingyi Cao",
+      "Mário Lipovský",
+      "Pelin Dogan-Schönberger",
+      "Grzegorz Makosa",
+      "Boris Bluntschli",
+      "Mojtaba Seyedhosseini",
+      "Ondřej Chum",
+      "André Araujo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2309.01858",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

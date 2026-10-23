@@ -1,0 +1,41 @@
+{
+  "name": "DeepFaceGen",
+  "description": "With the rapid development of AI-generated content (AIGC) technology, the production of realistic fake facial images and videos that deceive human visual perception has become possible. Consequently, various face forgery detection techniques have been proposed to identify such fake facial content. However, evaluating the effectiveness and generalizability of these detection techniques remains a significant challenge. To address this, we have constructed a large-scale evaluation benchmark called DeepFaceGen, aimed at quantitatively assessing the effectiveness of face forgery detection and facilitating the iterative development of forgery detection technology. DeepFaceGen consists of 776,990 real face image/video samples and 773,812 face forgery image/video samples, generated using 34 mainstream face generation techniques. During the construction process, we carefully consider important factors such as content diversity, fairness across ethnicities, and availability of comprehensive labels, in order to ensure the versatility and convenience of DeepFaceGen. Subsequently, DeepFaceGen is employed in this study to evaluate and analyze the performance of 13 mainstream face forgery detection techniques from various perspectives. Through extensive experimental analysis, we derive significant findings and propose potential directions for future research. The code and dataset for DeepFaceGen are available at https://github.com/HengruiLou/DeepFaceGen.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multi_class_classification",
+    "forgery_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC (ROC), accuracy, F1 (commonly reported: AUC/accuracy/F1; EER sometimes used for threshold analysis)",
+  "general_score_metric": "AUC (ROC)",
+  "typical_sota_score": "In-domain AUC typically 85–99%; cross-domain/generalization AUC often lower (~60–85%)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "New (2024) large-scale face-forgery benchmark that has attracted initial attention for cross-method evaluation but is not yet broadly adopted across all deepfake-detection work.",
+  "notes": "Non-LLM benchmark; large and diverse but potential contamination risk if synthetic generators overlap with model pretraining data; evaluation varies widely between in-domain and cross-domain splits; privacy/ethical concerns for face data; authors attempted ethnicity balance but demographic biases may remain.",
+  "creators": {
+    "scientists": [
+      "Yijun Bei",
+      "Hengrui Lou",
+      "Jinsong Geng",
+      "Erteng Liu",
+      "Lechao Cheng",
+      "Jie Song",
+      "Mingli Song",
+      "Zunlei Feng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.09181",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

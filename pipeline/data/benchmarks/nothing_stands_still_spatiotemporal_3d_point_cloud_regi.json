@@ -1,0 +1,39 @@
+{
+  "name": "Nothing Stands Still (Spatiotemporal 3D Point Cloud Registration Benchmark)",
+  "description": "Building 3D geometric maps of man-made spaces is a well-established and active field that is fundamental to computer vision and robotics. However, considering the evolving nature of built environments, it is essential to question the capabilities of current mapping efforts in handling temporal changes. In addition, spatiotemporal mapping holds significant potential for achieving sustainability and circularity goals. Existing mapping approaches focus on small changes, such as object relocation or self-driving car operation; in all cases where the main structure of the scene remains fixed. Consequently, these approaches fail to address more radical changes in the structure of the built environment, such as geometry and topology. To this end, we introduce the Nothing Stands Still (NSS) benchmark, which focuses on the spatiotemporal registration of 3D scenes undergoing large spatial and temporal change, ultimately creating one coherent spatiotemporal map. Specifically, the benchmark involves registering two or more partial 3D point clouds (fragments) from the same scene but captured from different spatiotemporal views. In addition to the standard pairwise registration, we assess the multi-way registration of multiple fragments that belong to any temporal stage. As part of NSS, we introduce a dataset of 3D point clouds recurrently captured in large-scale building indoor environments that are under construction or renovation. The NSS benchmark presents three scenarios of increasing difficulty, to quantify the generalization ability of point cloud registration methods over space (within one building and across buildings) and time. We conduct extensive evaluations of state-of-the-art methods on NSS. The results demonstrate the necessity for novel methods specifically designed to handle large spatiotemporal changes. The homepage of our benchmark is at http://nothing-stands-still.com.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "point_cloud_registration",
+    "pairwise_registration",
+    "multi_way_registration",
+    "robust_alignment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "registration error metrics (rotation/translation error) and recall at predefined thresholds (e.g., recall @ 5cm/5°)",
+  "general_score_metric": "registration recall at tolerance thresholds and RTE/RRE (translation and rotation error)",
+  "year_of_publish": 2023,
+  "reputation": "A recent, challenging benchmark attracting attention in the 3D registration and robotics community for evaluating robustness to large spatiotemporal changes.",
+  "notes": "Non-LLM benchmark; focuses on large structural and temporal scene changes (construction/renovation) so many standard registration methods perform poorly; dataset domain-specific and may have limited scene diversity.",
+  "creators": {
+    "scientists": [
+      "Tao Sun",
+      "Yan Hao",
+      "Shengyu Huang",
+      "Silvio Savarese",
+      "Konrad Schindler",
+      "Marc Pollefeys",
+      "Iro Armeni"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.09346",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

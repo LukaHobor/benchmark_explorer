@@ -1,0 +1,38 @@
+{
+  "name": "SIRI-Bench",
+  "description": "Large Language Models (LLMs) are experiencing rapid advancements in complex reasoning, exhibiting remarkable generalization in mathematics and programming. In contrast, while spatial intelligence is fundamental for Vision-Language Models (VLMs) in real-world interaction, the systematic evaluation of their complex reasoning ability within spatial contexts remains underexplored. To bridge this gap, we introduce SIRI-Bench, a benchmark designed to evaluate VLMs' spatial intelligence through video-based reasoning tasks. SIRI-Bench comprises nearly 1K video-question-answer triplets, where each problem is embedded in a realistic 3D scene and captured by video. By carefully designing questions and corresponding 3D scenes, our benchmark ensures that solving the questions requires both spatial comprehension for extracting information and high-level reasoning for deriving solutions, making it a challenging benchmark for evaluating VLMs. To facilitate large-scale data synthesis, we develop an Automatic Scene Creation Engine. This engine, leveraging multiple specialized LLM agents, can generate realistic 3D scenes from abstract math problems, ensuring faithfulness to the original descriptions. Experimental results reveal that state-of-the-art VLMs struggle significantly on SIRI-Bench, underscoring the challenge of spatial reasoning. We hope that our study will bring researchers' attention to spatially grounded reasoning and advance VLMs in visual problem-solving.",
+  "category": "multimodal",
+  "domain": "vision-language / spatial reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_qa",
+    "spatial_reasoning",
+    "open_ended",
+    "multi-step_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A recently proposed benchmark for spatial/video reasoning in VLMs with limited adoption so far but notable for highlighting VLM weaknesses.",
+  "notes": "Relatively small (~1K) synthetic/3D-scene video QA dataset; solutions often require precise spatial reasoning and multi-step inference; potential simulation bias and limited scale for large-model training/finetuning.",
+  "creators": {
+    "scientists": [
+      "Zijian Song",
+      "Xiaoxin Lin",
+      "Qiuming Huang",
+      "Guangrun Wang",
+      "Liang Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.14512",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

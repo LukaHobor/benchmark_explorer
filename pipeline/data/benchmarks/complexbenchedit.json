@@ -1,0 +1,38 @@
+{
+  "name": "ComplexBench-Edit",
+  "description": "Text-driven image editing has achieved remarkable success in following single instructions. However, real-world scenarios often involve complex, multi-step instructions, particularly ``chain'' instructions where operations are interdependent. Current models struggle with these intricate directives, and existing benchmarks inadequately evaluate such capabilities. Specifically, they often overlook multi-instruction and chain-instruction complexities, and common consistency metrics are flawed. To address this, we introduce ComplexBench-Edit, a novel benchmark designed to systematically assess model performance on complex, multi-instruction, and chain-dependent image editing tasks. ComplexBench-Edit also features a new vision consistency evaluation method that accurately assesses non-modified regions by excluding edited areas. Furthermore, we propose a simple yet powerful Chain-of-Thought (CoT)-based approach that significantly enhances the ability of existing models to follow complex instructions. Our extensive experiments demonstrate ComplexBench-Edit's efficacy in differentiating model capabilities and highlight the superior performance of our CoT-based method in handling complex edits. The data and code are released at https://github.com/llllly26/ComplexBench-Edit.",
+  "category": "multimodal",
+  "domain": "vision (image editing)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "instruction_following",
+    "image_editing"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (automated edit consistency + human_eval for fidelity)",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "30–60%",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Emerging research benchmark (recent, limited but growing adoption in image-editing and multimodal evaluation communities).",
+  "notes": "Focuses specifically on multi-step and chain-dependent image edits; evaluation includes an edit-excluded visual consistency measure. Potential contamination if models were trained on overlapping image sources; not saturated and often requires human evaluation for fine-grained fidelity.",
+  "creators": {
+    "scientists": [
+      "Chenglin Wang",
+      "Yucheng Zhou",
+      "Qianning Wang",
+      "Zhe Wang",
+      "Kai Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.12830",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

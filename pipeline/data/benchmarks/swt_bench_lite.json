@@ -1,0 +1,42 @@
+{
+  "name": "SWT-Bench Lite",
+  "description": "A focused 276-instance subset of SWT-Bench for fast evaluation of test-generation agents. Models must generate unit tests that reproduce real GitHub bugs — failing before the canonical patch, passing after — across 12 popular Python repositories. Mirrors the design of SWE-bench Lite as a cost-efficient evaluation split.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "code_generation",
+    "unit_test_generation",
+    "bug_reproduction"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 276,
+  "evaluation_method": "success rate (tests fail before patch, pass after); coverage increase (ΔC) on resolving patch",
+  "general_score_metric": "success rate 𝒮 (% of issues reproduced); coverage increase ΔC",
+  "typical_sota_score": "~89% (DevstralTestGen by Mistral AI, reproduction script mode, 2025); ~56% unit-test mode (ReProAgent); ~18.5% (SWE-Agent+)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "NeurIPS 2024; standard fast-eval split of SWT-Bench; mirrors SWE-bench Lite in scope and usage; leaderboard at swtbench.com",
+  "notes": "276-instance subset of SWT-Bench Full. BM25 retrieval provides 27k-token context (cl100k_base). Two prompt formats hosted on HuggingFace: eth-sri/SWT-bench_Lite_bm25_27k_zsb and eth-sri/SWT-bench_Lite_bm25_27k_zsp. Mirrors the SWE-bench Lite philosophy of balancing evaluation speed with representativeness. arXiv: 2406.12952.",
+  "creators": {
+    "scientists": [
+      "Niels Mündler",
+      "Mark Niklas Müller",
+      "Jingxuan He",
+      "Martin Vechev"
+    ],
+    "institutions": [
+      "ETH Zurich (SRI Lab — Secure, Reliable, and Intelligent Systems Lab)"
+    ],
+    "companies": [
+      "LogicStar AI"
+    ]
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2406.12952",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-05-05",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

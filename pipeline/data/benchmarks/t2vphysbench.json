@@ -1,0 +1,37 @@
+{
+  "name": "T2VPhysBench",
+  "description": "Text-to-video generative models have made significant strides in recent years, producing high-quality videos that excel in both aesthetic appeal and accurate instruction following, and have become central to digital art creation and user engagement online. Yet, despite these advancements, their ability to respect fundamental physical laws remains largely untested: many outputs still violate basic constraints such as rigid-body collisions, energy conservation, and gravitational dynamics, resulting in unrealistic or even misleading content. Existing physical-evaluation benchmarks typically rely on automatic, pixel-level metrics applied to simplistic, life-scenario prompts, and thus overlook both human judgment and first-principles physics. To fill this gap, we introduce \\textbf{T2VPhysBench}, a first-principled benchmark that systematically evaluates whether state-of-the-art text-to-video systems, both open-source and commercial, obey twelve core physical laws including Newtonian mechanics, conservation principles, and phenomenological effects. Our benchmark employs a rigorous human evaluation protocol and includes three targeted studies: (1) an overall compliance assessment showing that all models score below 0.60 on average in each law category; (2) a prompt-hint ablation revealing that even detailed, law-specific hints fail to remedy physics violations; and (3) a counterfactual robustness test demonstrating that models often generate videos that explicitly break physical rules when so instructed. The results expose persistent limitations in current architectures and offer concrete insights for guiding future research toward truly physics-aware video generation.",
+  "category": "multimodal",
+  "domain": "video generation / physics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "human_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "mean_compliance_score",
+  "typical_sota_score": "≤60%",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized benchmark focusing on physical-law compliance for text-to-video models; limited but growing attention in video-generation research.",
+  "notes": "Relies on human raters and a predefined set of twelve physics laws — results sensitive to rater instructions and prompt selection. Focused on physics compliance rather than visual quality; limited prompt diversity and potential proprietary-model evaluation constraints.",
+  "creators": {
+    "scientists": [
+      "Xuyang Guo",
+      "Jiayan Huo",
+      "Zhenmei Shi",
+      "Zhao Song",
+      "Jiahao Zhang",
+      "Jiale Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.00337",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "SurGE",
+  "description": "The rapid growth of academic literature makes the manual creation of scientific surveys increasingly infeasible. While large language models show promise for automating this process, progress in this area is hindered by the absence of standardized benchmarks and evaluation protocols. To bridge this critical gap, we introduce SurGE (Survey Generation Evaluation), a new benchmark for scientific survey generation in computer science. SurGE consists of (1) a collection of test instances, each including a topic description, an expert-written survey, and its full set of cited references, and (2) a large-scale academic corpus of over one million papers. In addition, we propose an automated evaluation framework that measures the quality of generated surveys across four dimensions: comprehensiveness, citation accuracy, structural organization, and content quality. Our evaluation of diverse LLM-based methods demonstrates a significant performance gap, revealing that even advanced agentic frameworks struggle with the complexities of survey generation and highlighting the need for future research in this area. We have open-sourced all the code, data, and models at: https://github.com/oneal2000/SurGE",
+  "category": "text",
+  "domain": "computer science / science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "long_form_generation",
+    "citation_generation",
+    "reference_retrieval"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (automated metrics across comprehensiveness, citation accuracy, structure, content quality; supplemented by human_eval)",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2025,
+  "reputation": "3 citations",
+  "notes": "Large-scale corpus and topic overlap create contamination risk with pretrained LLMs; automated metrics for long-form surveys remain imperfect and should be complemented by human evaluation; not saturated.",
+  "creators": {
+    "scientists": [
+      "Weihang Su",
+      "Anzhe Xie",
+      "Qingyao Ai",
+      "Jianming Long",
+      "Xuanyi Chen",
+      "Jiaxin Mao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2508.15658",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

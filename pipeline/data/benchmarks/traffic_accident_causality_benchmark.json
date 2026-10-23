@@ -1,0 +1,33 @@
+{
+  "name": "Traffic Accident Causality Benchmark",
+  "description": "We propose a brand new benchmark for analyzing causality in traffic accident videos by decomposing an accident into a pair of events, cause and effect. We collect videos containing traffic accident scenes and annotate cause and effect events for each accident with their temporal intervals and semantic labels; such annotations are not available in existing datasets for accident anticipation task. Our dataset has the following two advantages over the existing ones, which would facilitate practical research for causality analysis. First, the decomposition of an accident into cause and effect events provides atomic cues for reasoning on a complex environment and planning future actions. Second, the prediction of cause and effect in an accident makes a system more interpretable to humans, which mitigates the ambiguity of legal liabilities among agents engaged in the accident. Using the proposed dataset, we analyze accidents by localizing the temporal intervals of their causes and effects and classifying the semantic labels of the accidents. The dataset as well as the implementations of baseline models are available in the code repository.",
+  "category": "vision",
+  "domain": "autonomous driving / traffic safety",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "temporal_localization",
+    "event_detection",
+    "classification",
+    "video_understanding",
+    "cause_effect_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 / mAP (temporal localization) and accuracy (semantic label classification)",
+  "general_score_metric": "temporal mAP / F1 for localization and classification accuracy for semantic labels",
+  "reputation": "A specialized academic dataset for causal analysis in traffic accidents with limited but growing use among researchers in autonomous driving safety.",
+  "notes": "Video-based, non-LLM benchmark; annotations can be subjective (cause/effect boundaries); potential privacy concerns in accident videos; dataset size and class balance may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Tackgeun You",
+      "Bohyung Han"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

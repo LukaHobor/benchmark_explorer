@@ -1,0 +1,36 @@
+{
+  "name": "ARTeFACT",
+  "description": "Accurately detecting and classifying damage in analogue media such as paintings, photographs, textiles, mosaics, and frescoes is essential for cultural heritage preservation. While machine learning models excel in correcting degradation if the damage operator is known a priori, we show that they fail to robustly predict where the damage is even after supervised training; thus, reliable damage detection remains a challenge. Motivated by this, we introduce ARTeFACT, a dataset for damage detection in diverse types analogue media, with over 11,000 annotations covering 15 kinds of damage across various subjects, media, and historical provenance. Furthermore, we contribute human-verified text prompts describing the semantic contents of the images, and derive additional textual descriptions of the annotated damage. We evaluate CNN, Transformer, diffusion-based segmentation models, and foundation vision models in zero-shot, supervised, unsupervised and text-guided settings, revealing their limitations in generalising across media types. Our dataset is available at $\\href{https://daniela997.github.io/ARTeFACT/}{https://daniela997.github.io/ARTeFACT/}$ as the first-of-its-kind benchmark for analogue media damage detection and restoration.",
+  "category": "vision",
+  "domain": "cultural heritage / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "object_detection",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection-over-Union (mIoU) for segmentation; mean Average Precision (mAP) / AP at IoU thresholds for detection; per-class F1 / precision / recall for classification",
+  "general_score_metric": "mIoU (for segmentation tasks)",
+  "year_of_publish": 2024,
+  "reputation": "New, domain-specific dataset with limited but growing adoption in cultural-heritage imaging and restoration research.",
+  "notes": "First-of-its-kind benchmark for analogue media damage detection; moderate number of annotations (~11k) but strong class imbalance and high domain heterogeneity across media types. Non-LLM vision benchmark; evaluation can be fragmented across detection/segmentation metrics and subject to domain shift when models are trained on photographic imagery.",
+  "creators": {
+    "scientists": [
+      "Daniela Ivanova",
+      "Marco Aversa",
+      "Paul Henderson",
+      "John Williamson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.04580",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

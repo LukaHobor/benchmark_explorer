@@ -1,0 +1,37 @@
+{
+  "name": "URUR (Ultra-High Resolution) dataset",
+  "description": "With the increasing interest and rapid development of methods for Ultra-High Resolution (UHR) segmentation, a large-scale benchmark covering a wide range of scenes with full fine-grained dense annotations is urgently needed to facilitate the field. To this end, the URUR dataset is introduced, in the meaning of Ultra-High Resolution dataset with Ultra-Rich Context. As the name suggests, URUR contains amounts of images with high enough resolution (3,008 images of size 5,120x5,120), a wide range of complex scenes (from 63 cities), rich-enough context (1 million instances with 8 categories) and fine-grained annotations (about 80 billion manually annotated pixels), which is far superior to all the existing UHR datasets including DeepGlobe, Inria Aerial, UDD, etc.. Moreover, we also propose WSDNet, a more efficient and effective framework for UHR segmentation especially with ultra-rich context. Specifically, multi-level Discrete Wavelet Transform (DWT) is naturally integrated to release computation burden while preserve more spatial details, along with a Wavelet Smooth Loss (WSL) to reconstruct original structured context and texture with a smooth constrain. Experiments on several UHR datasets demonstrate its state-of-the-art performance. The dataset is available at https://github.com/jankyee/URUR.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "dense_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection over Union (mIoU); pixel accuracy is also commonly reported",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2023,
+  "reputation": "Recognized in the ultra-high-resolution segmentation research community as a large, challenging benchmark; adoption is growing among specialized segmentation works.",
+  "notes": "Non-LLM vision benchmark with extremely large images (5,120×5,120) that require substantial compute and memory; risk of class imbalance and long training times. Useful for evaluating UHR methods but may be prohibitive for smaller labs due to compute/storage requirements.",
+  "creators": {
+    "scientists": [
+      "Deyi Ji",
+      "Feng Zhao",
+      "Hongtao Lu",
+      "Mingyuan Tao",
+      "Jieping Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.10899",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

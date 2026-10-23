@@ -1,0 +1,35 @@
+{
+  "name": "Geometric Stability Framework",
+  "description": "The evaluation of Large Language Models (LLMs) in complex reasoning domains typically relies on performance alignment with ground-truth oracles. In the domain of chess, this standard manifests as accuracy benchmarks against strong engines like Stockfish. However, high scalar accuracy does not necessarily imply robust conceptual understanding. This paper argues that standard accuracy metrics fail to distinguish between genuine geometric reasoning and the superficial memorization of canonical board states. To address this gap, we propose a Geometric Stability Framework, a novel evaluation methodology that rigorously tests model consistency under invariant transformations-including board rotation, mirror symmetry, color inversion, and format conversion. We applied this framework to a comparative analysis of six state-of-the-art LLMs including GPT-5.1, Claude Sonnet 4.5, and Kimi K2 Turbo, utilizing a dataset of approximately 3,000 positions. Our results reveal a significant Accuracy-Stability Paradox. While models such as GPT-5.1 achieve near-optimal accuracy on standard positions, they exhibit catastrophic degradation under geometric perturbation, specifically in rotation tasks where error rates surge by over 600%. This disparity suggests a reliance on pattern matching over abstract spatial logic. Conversely, Claude Sonnet 4.5 and Kimi K2 Turbo demonstrate superior dual robustness, maintaining high consistency across all transformation axes. Furthermore, we analyze the trade-off between helpfulness and safety, identifying Gemini 2.5 Flash as the leader in illegal state rejection (96.0%). We conclude that geometric stability provides an orthogonal and essential metric for AI evaluation, offering a necessary proxy for disentangling reasoning capabilities from data contamination and overfitting in large-scale models.",
+  "category": "text",
+  "domain": "games (chess)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "move_prediction",
+    "position_classification",
+    "consistency_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy combined with stability/consistency under geometric transformations (rotation/mirror/color inversion)",
+  "general_score_metric": "accuracy and stability (consistency) score — e.g., percent agreement across transformed variants",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Relatively small dataset (~3,000 positions); sensitive to dataset contamination from model training data (canonical positions); evaluates an orthogonal stability metric rather than only raw accuracy.",
+  "creators": {
+    "scientists": [
+      "Xidan Song",
+      "Weiqi Wang",
+      "Rui Cao",
+      "Qingya Hu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2512.15033",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Synthesized Masked Face Dataset",
+  "description": "As we have been seriously hit by the COVID-19 pandemic, wearing a facial mask is a crucial action that we can take for our protection. This paper reports a comprehensive study on the recognition of masked faces. By using facial landmarks, we synthesize the facial mask for each face in several benchmark databases with different challenging factors. The IJB-B and IJB-C databases are selected for evaluating the performance against the variation across pose, illumination and expression (PIE). The FG-Net database is selected for evaluating the performance across age. The SCface is chosen for evaluating the performance on low-resolution images. The MS-1MV2 is exploited as the base training set. We use the ResNet-100 as the feature embedding network connected to state-of-the-art loss functions designed for tackling face recognition. The loss functions considered include the Center Loss, the Marginal Loss, the Angular Softmax Loss, the Large Margin Cosine Loss and the Additive Angular Margin Loss. Both verification and identification are conducted in our evaluation. The performances for recognizing faces with and without the synthetic masks are all evaluated for a complete comparison. The network with the best loss function for recognizing synthetic masked faces is then assessed on a real masked face database, the cleaned RMFRD (c-RMFRD) dataset. Compared with a human user test on the c-RMFRD, the network trained on the synthetic masked faces outperforms human vision for a large gap. Our contributions are fourfold. The first is a comprehensive study for tackling masked face recognition by using state-of-the-art loss functions against various compounding factors. For comparison purpose, the second is another comprehensive study on the recognition of faces without masks by using the same loss functions against the same challenging factors. The third is the verification of the network trained on synthetic masked faces for tackling the real masked face recognition with performance better than human inspectors. The fourth is the highlight on the challenges of masked face recognition and the directions for future research. Our code, trained models and dataset are available via the project GitHub site.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "face_verification",
+    "face_identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (verification accuracy, rank-1 identification accuracy; reported also as TAR@FAR in some evaluations)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2022,
+  "reputation": "23 citations",
+  "notes": "Vision benchmark (non-LLM). Uses synthetically applied masks on existing face datasets — risk of domain gap between synthetic and real masked faces. Training set (MS-1MV2) overlap/contamination with evaluation identities should be checked when reusing models. Provides verification and identification results; metrics can include TAR@FAR and rank-1 accuracy.",
+  "creators": {
+    "scientists": [
+      "Gee-Sern Hsu",
+      "Hung‐Yi Wu",
+      "Chun-Hung Tsai",
+      "Svetlana Yanushkevich",
+      "Marina L. Gavrilova"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/access.2022.3160828",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

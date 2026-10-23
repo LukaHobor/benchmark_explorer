@@ -1,0 +1,36 @@
+{
+  "name": "HULK",
+  "description": "Computation-intensive pretrained models have been taking the lead of many natural language processing benchmarks such as GLUE. However, energy efficiency in the process of model training and inference becomes a critical bottleneck. We introduce HULK, a multi-task energy efficiency benchmarking platform for responsible natural language processing. With HULK, we compare pretrained models' energy efficiency from the perspectives of time and cost. Baseline benchmarking results are provided for further analysis. The fine-tuning efficiency of different pretrained models can differ a lot among different tasks and fewer parameter number does not necessarily imply better efficiency. We analyzed such phenomenon and demonstrate the method of comparing the multi-task efficiency of pretrained models. Our platform is available at https://sites.engineering.ucsb.edu/~xiyou/hulk/.",
+  "category": "text",
+  "domain": "natural language processing / model efficiency",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "text_classification",
+    "sequence_labeling",
+    "question_answering",
+    "fine_tuning_efficiency"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "energy_consumption (Joules), time-to-train, and monetary_cost, reported alongside task performance metrics (accuracy/F1) to assess efficiency",
+  "general_score_metric": "energy_consumption_per_task (Joules) and a composite efficiency score combining time, energy, cost, and task performance",
+  "year_of_publish": 2020,
+  "reputation": "A niche benchmarking platform referenced in research on energy-efficient NLP and responsible ML; useful for comparative studies though not broadly adopted as an industry standard.",
+  "notes": "Hardware-, instrumentation- and setup-dependent (high variance across machines); reproducibility and cross-hardware comparisons are challenging; focuses on energy/time/cost trade-offs rather than pure task accuracy; not vulnerable to data contamination in the LLM sense but results depend heavily on measurement methodology.",
+  "creators": {
+    "scientists": [
+      "Xiyou Zhou",
+      "Zhiyu Chen",
+      "Xiaoyong Jin",
+      "William Yang Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2002.05829",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Quantum neural network MNIST benchmark",
+  "description": "We implement a quantum generalization of a neural network on trapped-ion and IBM superconducting quantum computers to classify MNIST images, a common benchmark in computer vision. The network feedforward involves qubit rotations whose angles depend on the results of measurements in the previous layer. The network is trained via simulation, but inference is performed experimentally on quantum hardware. The classical-to-quantum correspondence is controlled by an interpolation parameter, $a$, which is zero in the classical limit. Increasing $a$ introduces quantum uncertainty into the measurements, which is shown to improve network performance at moderate values of the interpolation parameter. We then focus on particular images that fail to be classified by a classical neural network but are detected correctly in the quantum network. For such borderline cases, we observe strong deviations from the simulated behavior. We attribute this to physical noise, which causes the output to fluctuate",
+  "category": "multimodal",
+  "domain": "quantum computing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "classification accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A niche experimental benchmark in quantum machine learning, mainly of interest to researchers studying quantum hardware and hybrid quantum-classical models.",
+  "notes": "Non-LLM benchmark on MNIST with quantum hardware inference; results depend heavily on hardware noise, circuit design, and interpolation settings, so comparisons are not standardized.",
+  "creators": {
+    "scientists": [
+      "Djamil Lakhdar-Hamina",
+      "Xingxin Liu",
+      "Richard Barney",
+      "Sarah H. Miller",
+      "Alaina M. Green",
+      "Norbert M. Linke"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2507.21222",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

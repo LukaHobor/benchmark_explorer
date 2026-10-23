@@ -1,0 +1,41 @@
+{
+  "name": "L2I (Language-to-Interaction) / NLD Simulation Benchmark",
+  "description": "We advocate the idea of the natural-language-driven(NLD) simulation to efficiently produce the object interactions between multiple objects in the virtual road scenes, for teaching and testing the autonomous driving systems that should take quick action to avoid collision with obstacles with unpredictable motions. The NLD simulation allows the brief natural-language description to control the object interactions, significantly reducing the human efforts for creating a large amount of interaction data. To facilitate the research of NLD simulation, we collect the Language-to-Interaction(L2I) benchmark dataset with 120,000 natural-language descriptions of object interactions in 6 common types of road topologies. Each description is associated with the programming code, which the graphic render can use to visually reconstruct the object interactions in the virtual scenes. As a methodology contribution, we design SimCopilot to translate the interaction descriptions to the renderable code. We use the L2I dataset to evaluate SimCopilot's abilities to control the object motions, generate complex interactions, and generalize interactions across road topologies. The L2I dataset and the evaluation results motivate the relevant research of the NLD simulation.",
+  "category": "multimodal",
+  "domain": "autonomous driving / virtual road scenes",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "code_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "simulation-based task_success_rate (does generated code reproduce described interaction), supplemented by code-similarity metrics such as BLEU or exact_match on code",
+  "general_score_metric": "task_success_rate (simulation fidelity)",
+  "year_of_publish": 2023,
+  "reputation": "A recent (2023) dataset that has attracted interest in autonomous-driving simulation and language-to-code communities but is not yet widely adopted.",
+  "notes": "Synthetic dataset of 120k examples paired with renderable code; evaluation relies on simulation rendering (can hide partial failures); potential contamination if models trained on similar code templates; not a pure NLP-only benchmark (requires simulator to measure success).",
+  "creators": {
+    "scientists": [
+      "Kairui Yang",
+      "Zihao Guo",
+      "Gengjie Lin",
+      "Haotian Dong",
+      "Die Zuo",
+      "Jibin Peng",
+      "Zhao Huang",
+      "Zhecheng Xu",
+      "Fupeng Li",
+      "Ziyun Bai",
+      "Di Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2312.04008",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Multimodal AutoML Tabular Benchmark",
+  "description": "We consider the use of automated supervised learning systems for data tables that not only contain numeric/categorical columns, but one or more text fields as well. Here we assemble 18 multimodal data tables that each contain some text fields and stem from a real business application. Our publicly-available benchmark enables researchers to comprehensively evaluate their own methods for supervised learning with numeric, categorical, and text features. To ensure that any single modeling strategy which performs well over all 18 datasets will serve as a practical foundation for multimodal text/tabular AutoML, the diverse datasets in our benchmark vary greatly in: sample size, problem types (a mix of classification and regression tasks), number of features (with the number of text columns ranging from 1 to 28 between datasets), as well as how the predictive signal is decomposed between text vs. numeric/categorical features (and predictive interactions thereof). Over this benchmark, we evaluate various straightforward pipelines to model such data, including standard two-stage approaches where NLP is used to featurize the text such that AutoML for tabular data can then be applied. Compared with human data science teams, the fully automated methodology that performed best on our benchmark (stack ensembling a multimodal Transformer with various tree models) also manages to rank 1st place when fit to the raw text/tabular data in two MachineHack prediction competitions and 2nd place (out of 2380 teams) in Kaggle's Mercari Price Suggestion Challenge.",
+  "category": "multimodal",
+  "domain": "tabular / business",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "multimodal_tabular_learning",
+    "AutoML_benchmark"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Task-dependent: classification tasks use accuracy (or AUC), regression tasks use RMSE/MSE/MAE",
+  "general_score_metric": "task-dependent (accuracy for classification; RMSE/MSE for regression)",
+  "typical_sota_score": "varies widely by dataset and task; not summarized by a single number",
+  "year_of_publish": 2021,
+  "reputation": "A practical, well-constructed suite used in AutoML/multimodal tabular research; respected by researchers working on automated modeling for mixed text/tabular data but not a universal standard.",
+  "notes": "Relatively small collection (18 heterogeneous datasets) — useful for targeted AutoML research but not exhaustive; performance comparisons must account for mixed task types; non-LLM benchmark and business-domain bias.",
+  "creators": {
+    "scientists": [
+      "Xingjian Shi",
+      "Jonas Mueller",
+      "Nick Erickson",
+      "Mu Li",
+      "Alexander J. Smola"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2111.02705",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

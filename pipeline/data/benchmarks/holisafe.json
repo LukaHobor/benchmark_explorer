@@ -1,0 +1,40 @@
+{
+  "name": "HoliSafe",
+  "description": "Despite emerging efforts to enhance the safety of Vision-Language Models (VLMs), current approaches face two main shortcomings. 1) Existing safety-tuning datasets and benchmarks only partially consider how image-text interactions can yield harmful content, often overlooking contextually unsafe outcomes from seemingly benign pairs. This narrow coverage leaves VLMs vulnerable to jailbreak attacks in unseen configurations. 2) Prior methods rely primarily on data-centric tuning, with limited architectural innovations to intrinsically strengthen safety. We address these gaps by introducing a holistic safety dataset and benchmark, HoliSafe, that spans all five safe/unsafe image-text combinations, providing a more robust basis for both training and evaluation. We further propose SafeLLaVA, a novel VLM augmented with a learnable safety meta token and a dedicated safety head. The meta token encodes harmful visual cues during training, intrinsically guiding the language model toward safer responses, while the safety head offers interpretable harmfulness classification aligned with refusal rationales. Experiments show that SafeLLaVA, trained on HoliSafe, achieves state-of-the-art safety performance across multiple VLM benchmarks. Additionally, the HoliSafe benchmark itself reveals critical vulnerabilities in existing models. We hope that HoliSafe and SafeLLaVA will spur further research into robust and interpretable VLM safety, expanding future avenues for multimodal alignment.",
+  "category": "multimodal",
+  "domain": "vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multimodal_classification",
+    "generation_refusal_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Accuracy / F1 for harmfulness classification; human_eval for refusal quality and safety alignment",
+  "general_score_metric": "Accuracy / F1 (classification) and human_eval (refusal/generation quality)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, high-visibility benchmark (and dataset) designed to broaden safety evaluation for VLMs; gaining attention in multimodal safety research.",
+  "notes": "Covers five image-text safety combination types but may not exhaust all harmful scenarios; annotation bias and potential overlap with model training data are possible; includes jailbreak-style tests that may evolve over time.",
+  "creators": {
+    "scientists": [
+      "Youngwan Lee",
+      "Kangsan Kim",
+      "KwanYong Park",
+      "Ilcahe Jung",
+      "Soojin Jang",
+      "Seanie Lee",
+      "Yong-Ju Lee",
+      "Sung Ju Hwang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2506.04704",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

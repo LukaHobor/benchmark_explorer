@@ -1,0 +1,35 @@
+{
+  "name": "Tunable PINN ODE Benchmarks",
+  "description": "In this work, we assess the ability of physics-informed neural networks (PINNs) to solve increasingly-complex coupled ordinary differential equations (ODEs). We focus on a pair of benchmarks: discretized partial differential equations and harmonic oscillators, each of which has a tunable parameter that controls its complexity. Even by varying network architecture and applying a state-of-the-art training method that accounts for \"difficult\" training regions, we show that PINNs eventually fail to produce correct solutions to these benchmarks as their complexity -- the number of equations and the size of time domain -- increases. We identify several reasons why this may be the case, including insufficient network capacity, poor conditioning of the ODEs, and high local curvature, as measured by the Laplacian of the PINN loss.",
+  "category": "mixed",
+  "domain": "scientific computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "numerical_simulation",
+    "ODE_solving"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "L2 error / mean squared error (MSE) and relative L2 error comparing model solution to ground-truth numerical solution",
+  "general_score_metric": "Relative L2 error (or MSE) of predicted solution trajectories",
+  "year_of_publish": 2022,
+  "reputation": "Cited within the PINN and scientific machine-learning research community as a useful stress test for PINN scalability, but not widely used outside that niche.",
+  "notes": "Non-LLM benchmark; synthetic and tunable ODE/PDE problems with small, controlled datasets. Results are sensitive to network architecture, optimizer/hyperparameters and numerical conditioning; risk of saturation/instability as complexity increases.",
+  "creators": {
+    "scientists": [
+      "Alexander New",
+      "Benjamin Eng",
+      "Andrea C. Timm",
+      "Andrew S. Gearhart"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2210.07880",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

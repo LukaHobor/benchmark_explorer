@@ -1,0 +1,43 @@
+{
+  "name": "HIMO",
+  "description": "Generating human-object interactions (HOIs) is critical with the tremendous advances of digital avatars. Existing datasets are typically limited to humans interacting with a single object while neglecting the ubiquitous manipulation of multiple objects. Thus, we propose HIMO, a large-scale MoCap dataset of full-body human interacting with multiple objects, containing 3.3K 4D HOI sequences and 4.08M 3D HOI frames. We also annotate HIMO with detailed textual descriptions and temporal segments, benchmarking two novel tasks of HOI synthesis conditioned on either the whole text prompt or the segmented text prompts as fine-grained timeline control. To address these novel tasks, we propose a dual-branch conditional diffusion model with a mutual interaction module for HOI synthesis. Besides, an auto-regressive generation pipeline is also designed to obtain smooth transitions between HOI segments. Experimental results demonstrate the generalization ability to unseen object geometries and temporal compositions.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "conditional_generation",
+    "temporal_segmentation",
+    "sequence_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MPJPE; FID; human_eval",
+  "general_score_metric": "MPJPE (mean per-joint position error)",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized MoCap benchmark gaining interest in HOI synthesis and avatar-generation research communities.",
+  "notes": "Non-LLM benchmark focused on motion-capture HOI synthesis; evaluation relies on motion-specific quantitative metrics and human studies. Moderate dataset size (3.3K sequences, 4.08M frames); potential domain gap to in-the-wild scenes.",
+  "creators": {
+    "scientists": [
+      "Xintao Lv",
+      "Liang Xu",
+      "Yichao Yan",
+      "Xin Jin",
+      "Congsheng Xu",
+      "Shuwen Wu",
+      "Yifan Liu",
+      "Lincheng Li",
+      "Mengxiao Bi",
+      "Wenjun Zeng",
+      "Xiaokang Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.12371",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

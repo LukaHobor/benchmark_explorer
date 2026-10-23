@@ -1,0 +1,33 @@
+{
+  "name": "fMRI GNN Benchmark",
+  "description": "Graph Neural Networks (GNNs) have emerged as a powerful tool to learn from graph-structured data. A paramount example of such data is the brain, which operates as a network, from the micro-scale of neurons, to the macro-scale of regions. This organization deemed GNNs a natural tool of choice to model brain activity, and have consequently attracted a lot of attention in the neuroimaging community. Yet, the advantage of adopting these models over conventional methods has not yet been assessed in a systematic way to gauge if GNNs are capable of leveraging the underlying structure of the data to improve learning. In this work, we study and evaluate the performance of five popular GNN architectures in diagnosing major depression disorder and autism spectrum disorder in two multi-site clinical datasets, and sex classification on the UKBioBank, from functional brain scans under a general uniform framework. Our results show that GNNs fail to outperform kernel-based and structure-agnostic deep learning models, in which 1D CNNs outperform the other methods in all scenarios. We highlight that creating optimal graph structures for functional brain data is a major bottleneck hindering the performance of GNNs, where existing works use arbitrary measures to define the edges resulting in noisy graphs. We therefore propose to integrate graph diffusion into existing architectures and show that it can alleviate this problem and improve their performance. Our results call for increased moderation and rigorous validation when evaluating graph methods and advocate for more data-centeric approaches in developing GNNs for functional neuroimaging applications.",
+  "category": "vision",
+  "domain": "neuroimaging / brain imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "60–85%",
+  "year_of_publish": 2022,
+  "reputation": "Academic benchmark used in neuroimaging research to evaluate GNNs versus conventional methods; moderate recognition within the neuroimaging ML community.",
+  "notes": "Non-LLM benchmark; multi-site heterogeneity and noisy graph-construction are major caveats that hinder GNN performance; dataset sizes and graph definitions limit generalization.",
+  "creators": {
+    "scientists": [
+      "Ahmed ElGazzar",
+      "Rajat Thomas",
+      "Guido van Wingen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2211.08927",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

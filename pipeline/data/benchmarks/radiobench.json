@@ -1,0 +1,35 @@
+{
+  "name": "RadioBench",
+  "description": "Deploying radio frequency (RF) localisation systems invariably entails non-trivial effort, particularly for the latest learning-based breeds. There has been little prior work on characterising and comparing how learnt localiser networks can be deployed in the field under real-world RF distribution shifts. In this paper, we present RadioBench: a suite of 8 learnt localiser nets from the state-of-the-art to study and benchmark their real-world deployability, utilising five novel industry-grade datasets. We train 10k models to analyse the inner workings of these learnt localiser nets and uncover their differing behaviours across three performance axes: (i) learning, (ii) proneness to distribution shift, and (iii) localisation. We use insights gained from this analysis to recommend best practices for the deployability of learning-based RF localisation under practical constraints.",
+  "category": "mixed",
+  "domain": "wireless localization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "localization",
+    "regression",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "median localization error / RMSE and accuracy within distance thresholds (localisation error metrics)",
+  "general_score_metric": "median localization error (meters)",
+  "typical_sota_score": "varies (sub-meter to several meters depending on dataset and environment)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in the RF localisation research community for studying deployability and distribution-shift behaviour, though mainly used by specialists rather than broadly adopted outside the field.",
+  "notes": "Uses industry-grade datasets and large-scale model training (10k models); results are highly dataset- and environment-dependent. Some datasets may not be fully public; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Maximilian Arnold",
+      "Mohammed Alloulah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2210.01930",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

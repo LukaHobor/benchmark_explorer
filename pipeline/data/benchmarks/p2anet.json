@@ -1,0 +1,38 @@
+{
+  "name": "P2ANet",
+  "description": "While deep learning has been widely used for video analytics, such as video classification and action detection, dense action detection with fast-moving subjects from sports videos is still challenging. In this work, we release yet another sports video benchmark P 2 ANet for P ing P ong- A ction detection, which consists of 2,721 video clips collected from the broadcasting videos of professional table tennis matches in World Table Tennis Championships and Olympiads. We work with a crew of table tennis professionals and referees on a specially designed annotation toolbox to obtain fine-grained action labels (in 14 classes) for every ping-pong action that appeared in the dataset, and formulate two sets of action detection problems— action localization and action recognition . We evaluate a number of commonly seen action recognition (e.g., TSM, TSN, Video SwinTransformer, and Slowfast) and action localization models (e.g., BSN, BSN++, BMN, TCANet), using P 2 ANet for both problems, under various settings. These models can only achieve 48% area under the AR-AN curve for localization and 82% top-one accuracy for recognition since the ping-pong actions are dense with fast-moving subjects but broadcasting videos are with only 25 FPS. The results confirm that P 2 ANet is still a challenging task and can be used as a special benchmark for dense action detection from videos. We invite readers to examine our dataset by visiting the following link: https://github.com/Fred1991/P2ANET .",
+  "category": "vision",
+  "domain": "sports analytics (vision)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "action_recognition",
+    "action_localization",
+    "video_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "top-1 accuracy (recognition); AUC under AR-AN curve (localization)",
+  "general_score_metric": "top-1 accuracy (recognition)",
+  "typical_sota_score": "recognition ~82% (top-1); localization AUC ~48%",
+  "year_of_publish": 2023,
+  "reputation": "19 citations",
+  "notes": "Relatively small, domain-specific dataset (2,721 clips) with low FPS and dense fast-moving actions; challenging for existing video models; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jiang Bian",
+      "Xuhong Li",
+      "Tao Wang",
+      "Qingzhong Wang",
+      "Jun Huang",
+      "Chen Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1145/3633516",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

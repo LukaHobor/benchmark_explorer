@@ -1,0 +1,32 @@
+{
+  "name": "KGE Runtime Benchmark",
+  "description": "This paper wants to focus on providing a characterization of the runtime performances of state-of-the-art implementations of KGE alghoritms, in terms of memory footprint and execution time. Despite the rapidly growing interest in KGE methods, so far little attention has been devoted to their comparison and evaluation; in particular, previous work mainly focused on performance in terms of accuracy in specific tasks, such as link prediction. To this extent, a framework is proposed for evaluating available KGE implementations against graphs with different properties, with a particular focus on the effectiveness of the adopted optimization strategies. Graphs and models have been trained leveraging different architectures, in order to enlighten features and properties of both models and the architectures they have been trained on. Some results enlightened with experiments in this document are the fact that multithreading is efficient, but benefit deacreases as the number of threads grows in case of CPU. GPU proves to be the best architecture for the given task, even if CPU with some vectorized instructions still behaves well. Finally, RAM utilization for the loading of the graph never changes between different architectures and depends only on the type of graph, not on the model.",
+  "category": "mixed",
+  "domain": "knowledge graphs / graph representation learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "benchmarking",
+    "performance_evaluation",
+    "runtime_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "execution_time_and_memory",
+  "general_score_metric": "execution_time_seconds_and_peak_memory_MB",
+  "year_of_publish": 2020,
+  "reputation": "A specialized academic benchmark used within the knowledge-graph and systems communities to compare implementation performance rather than predictive quality.",
+  "notes": "Non-LLM benchmark focused on runtime and memory; results are highly hardware- and graph-dependent and do not measure predictive accuracy. Variability across implementations and optimizations can be large.",
+  "creators": {
+    "scientists": [
+      "Angelica Sofia Valeriani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2011.04275",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

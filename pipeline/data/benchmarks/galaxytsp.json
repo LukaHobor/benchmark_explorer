@@ -1,0 +1,36 @@
+{
+  "name": "GalaxyTSP",
+  "description": "We approximate a Traveling Salesman Problem (TSP) three orders of magnitude larger than the largest known benchmark, increasing the number of nodes from millions to billions. Previously, the World TSP dataset served as the largest benchmark for TSP approximation with 1.9 million cities. The dataset we use is currently the largest catalog of stars in the Milky Way, which we call Galaxy TSP, consisting of 1.69 billion stars. We use a divide and conquer approach for approximating the TSP by splitting the problem into tiles, approximating each tile, and merging the approximations. We learn to split tiles for efficient computation. We demonstrate our approach on optimization of space telescope target scheduling.",
+  "category": "mixed",
+  "domain": "combinatorial optimization / TSP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimization",
+    "route_planning",
+    "scalability_benchmark"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "approximation_ratio (tour length relative to best-known) and runtime/memory",
+  "general_score_metric": "approximation_ratio (tour length vs best-known)",
+  "reputation": "A novel, extreme-scale TSP dataset (1.69B nodes) introduced for research in large-scale approximation; adoption is limited due to very high compute and data‑handling requirements.",
+  "notes": "Non-LLM benchmark; extremely large dataset (1.69 billion nodes) requiring distributed computation and specialized algorithms; evaluation focuses on approximation quality and scaling rather than exact optimality; practical reproducibility is constrained by compute and data storage requirements.",
+  "creators": {
+    "scientists": [
+      "Iddo Drori",
+      "Brandon J Kates",
+      "William R. Sickinger",
+      "Anant Girish Kharkar",
+      "Brenda Dietrich",
+      "Avi Shporer",
+      "Madeleine Udell"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

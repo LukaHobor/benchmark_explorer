@@ -1,0 +1,35 @@
+{
+  "name": "Laryngeal Cancer Voice Classification Benchmark",
+  "description": "Cases of laryngeal cancer are predicted to rise significantly in the coming years. Current diagnostic pathways are inefficient, putting undue stress on both patients and the medical system. Artificial intelligence offers a promising solution by enabling non-invasive detection of laryngeal cancer from patient voice, which could help prioritise referrals more effectively. A major barrier in this field is the lack of reproducible methods. Our work addresses this challenge by introducing a benchmark suite comprising 36 models trained and evaluated on open-source datasets. These models classify patients with benign and malignant voice pathologies. All models are accessible in a public repository, providing a foundation for future research. We evaluate three algorithms and three audio feature sets, including both audio-only inputs and multimodal inputs incorporating demographic and symptom data. Our best model achieves a balanced accuracy of 83.7%, sensitivity of 84.0%, specificity of 83.3%, and AUROC of 91.8%.",
+  "category": "audio",
+  "domain": "medical diagnostics (speech)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "audio_classification",
+    "multimodal_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "balanced_accuracy",
+  "general_score_metric": "balanced_accuracy (primary), with AUROC reported as a complementary metric",
+  "typical_sota_score": "≈83.7% balanced accuracy (best reported); AUROC ≈91.8%",
+  "year_of_publish": 2024,
+  "reputation": "Open-source, reproducible benchmark suite with publicly released models and code; gaining traction in the laryngeal-cancer-from-voice research community but not yet widely adopted clinically.",
+  "notes": "Non-LLM audio/medical benchmark; composed from open-source datasets—potential demographic and recording-condition biases, possible small-class/sample-size effects, and need for external clinical validation before deployment; privacy and patient-overlap checks recommended.",
+  "creators": {
+    "scientists": [
+      "Mary Paterson",
+      "James Moor",
+      "Luisa Cutillo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2412.16267",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "UAL-Bench",
+  "description": "Localizing unusual activities, such as human errors or surveillance incidents, in videos holds practical significance. However, current video understanding models struggle with localizing these unusual events likely because of their insufficient representation in models' pretraining datasets. To explore foundation models' capability in localizing unusual activity, we introduce UAL-Bench, a comprehensive benchmark for unusual activity localization, featuring three video datasets: UAG-OOPS, UAG-SSBD, UAG-FunQA, and an instruction-tune dataset: OOPS-UAG-Instruct, to improve model capabilities. UAL-Bench evaluates three approaches: Video-Language Models (Vid-LLMs), instruction-tuned Vid-LLMs, and a novel integration of Vision-Language Models and Large Language Models (VLM-LLM). Our results show the VLM-LLM approach excels in localizing short-span unusual events and predicting their onset (start time) more accurately than Vid-LLMs. We also propose a new metric, R@1, TD <= p, to address limitations in existing evaluation methods. Our findings highlight the challenges posed by long-duration videos, particularly in autism diagnosis scenarios, and the need for further advancements in localization techniques. Our work not only provides a benchmark for unusual activity localization but also outlines the key challenges for existing foundation models, suggesting future research directions on this important task.",
+  "category": "vision",
+  "domain": "vision (video understanding)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "temporal_localization",
+    "anomaly_detection",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k (R@1 with temporal discrepancy threshold TD<=p)",
+  "general_score_metric": "R@1 (with TD<=p)",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) benchmark aimed at unusual-activity localization in video; early adoption in video-understanding and safety research communities.",
+  "notes": "Contains rare/unusual events so datasets are class-imbalanced and relatively small for some scenarios; new custom metric (R@1, TD<=p) so cross-benchmark comparisons are limited; long-duration videos present additional localization challenges.",
+  "creators": {
+    "scientists": [
+      "Hasnat Md Abdullah",
+      "Tian Liu",
+      "Kangda Wei",
+      "Shu Kong",
+      "Ruihong Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.01180",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

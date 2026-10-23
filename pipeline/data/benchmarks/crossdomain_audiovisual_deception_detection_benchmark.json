@@ -1,0 +1,40 @@
+{
+  "name": "Cross-Domain Audio-Visual Deception Detection Benchmark",
+  "description": "Automated deception detection is crucial for assisting humans in accurately assessing truthfulness and identifying deceptive behavior. Conventional contact-based techniques, like polygraph devices, rely on physiological signals to determine the authenticity of an individual's statements. Nevertheless, recent developments in automated deception detection have demonstrated that multimodal features derived from both audio and video modalities may outperform human observers on publicly available datasets. Despite these positive findings, the generalizability of existing audio-visual deception detection approaches across different scenarios remains largely unexplored. To close this gap, we present the first cross-domain audio-visual deception detection benchmark, that enables us to assess how well these methods generalize for use in real-world scenarios. We used widely adopted audio and visual features and different architectures for benchmarking, comparing single-to-single and multi-to-single domain generalization performance. To further exploit the impacts using data from multiple source domains for training, we investigate three types of domain sampling strategies, including domain-simultaneous, domain-alternating, and domain-by-domain for multi-to-single domain generalization evaluation. We also propose an algorithm to enhance the generalization performance by maximizing the gradient inner products between modality encoders, named ``MM-IDGM\". Furthermore, we proposed the Attention-Mixer fusion method to improve performance, and we believe that this new cross-domain benchmark will facilitate future research in audio-visual deception detection.",
+  "category": "multimodal",
+  "domain": "behavioral analysis / deception detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multimodal_classification",
+    "domain_generalization",
+    "cross-domain_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and F1 (often reported alongside AUC for imbalanced settings)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "60–80% (accuracy, varies by domain split)",
+  "year_of_publish": 2024,
+  "reputation": "A recent (2024) specialized benchmark for cross-domain audio-visual deception detection with limited community adoption but useful for robustness/generalization research.",
+  "notes": "Small and potentially biased datasets; ethical and privacy concerns for deception labels; cross-domain splits can be unstable; not focused on LLMs.",
+  "creators": {
+    "scientists": [
+      "Xiaobao Guo",
+      "Zitong Yu",
+      "Nithish Muthuchamy Selvaraj",
+      "Bingquan Shen",
+      "Adams Wai-Kin Kong",
+      "Alex C. Kot"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2405.06995",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

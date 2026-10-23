@@ -1,0 +1,37 @@
+{
+  "name": "Eterna100 (redesigned for Vienna2)",
+  "description": "Abstract The rational design of RNA is becoming important for rapidly developing technologies in medicine and biochemistry, spurring development of numerous RNA secondary structure design algorithms and benchmarks to evaluate their performance. However, the problem of RNA design is dependent upon the reverse problem of RNA structure prediction through “folding engines” that predict structure from sequence. We hypothesized that differences in RNA folding engines could impact design algorithms, and recruited an online community of RNA design experts to modify the widely-used RNA secondary structure design benchmark, Eterna100, to address unsolvability of some cases when changing the folding engine used (Vienna 1.8 updated to Vienna 2.6). We tested this new Eterna100-V2 benchmark with five RNA design algorithms, and found that while overall rankings remained similar, the performance of RNA design algorithms that depended on folding engines in their training did indeed depend on which underlying parameter set was used in training. This work demonstrates that the design “difficulty” of RNA structures is intrinsically linked to thermodynamic models, and suggests that future RNA design algorithms that are agnostic to thermodynamic models will result in optimal performance and development. Eterna100-V1 and Eterna100-V2 benchmarks and example solutions are freely available at https://github.com/eternagame/eterna100-benchmarking . Author Summary Designing RNA molecules that fold to a desired target structure is an algorithmic problem gathering increasing attention due to the emergence of RNA-based therapies and the need for rational design of RNAs. The Eterna100 dataset, a collection of target structures with increasing design difficulty, designed and selected by players of the crowdsourced RNA game Eterna, has been widely used to benchmark RNA design algorithms. However, these puzzles were originally developed using the now-deprecated version 1 of the ViennaRNA folding engine. In this manuscript, we introduce an updated benchmark, called the Eterna100-V2 . We found that nineteen puzzles using Vienna 1 were unsolvable in Vienna 2, but that Eterna participants were able to re-design the puzzles with minimal modifications to make them solvable in Vienna 2. We confirmed that the rankings of 5 RNA design algorithms remained consistent between Eterna100-V1 and -V2. However, discrepancies in performance from algorithms that relied on thermodynamic models in their training suggest that algorithms will benefit from being agnostic to thermodynamic models as these models continue to improve.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_design",
+    "inverse_folding"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2026,
+  "reputation": "19 citations",
+  "notes": "Small benchmark (100 puzzles) and therefore limited statistical breadth; results depend on the underlying folding engine (thermodynamic model) used, so algorithms tuned to a specific engine may not generalize; non-LLM benchmark focused on algorithmic RNA design rather than language models.",
+  "creators": {
+    "scientists": [
+      "Rohan V. Koodli",
+      "Boris Rudolfs",
+      "Hannah K. Wayment-Steele",
+      "Rhiju Das",
+      "William A. Dunlap",
+      "Eterna Participants"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2021.08.26.457839",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

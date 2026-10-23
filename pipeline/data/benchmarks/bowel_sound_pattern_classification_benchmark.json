@@ -1,0 +1,38 @@
+{
+  "name": "Bowel Sound Pattern Classification Benchmark",
+  "description": "The development of electronic stethoscopes and wearable recording sensors opened the door to the automated analysis of bowel sound (BS) signals. This enables a data-driven analysis of bowel sound patterns, their interrelations, and their correlation to different pathologies. This work leverages a BS dataset collected from 16 healthy subjects that was annotated according to four established BS patterns. This dataset is used to evaluate the performance of machine learning models to detect and/or classify BS patterns. The selection of considered models covers models using tabular features, convolutional neural networks based on spectrograms and models pre-trained on large audio datasets. The results highlight the clear superiority of pre-trained models, particularly in detecting classes with few samples, achieving an AUC of 0.89 in distinguishing BS from non-BS using a HuBERT model and an AUC of 0.89 in differentiating bowel sound patterns using a Wav2Vec 2.0 model. These results pave the way for an improved understanding of bowel sounds in general and future machine-learning-driven diagnostic applications for gastrointestinal examinations",
+  "category": "audio",
+  "domain": "medical (auscultation / biomedical audio)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "audio_classification",
+    "binary_classification",
+    "multi_class_classification",
+    "detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC (ROC); secondary: accuracy, F1 for class-wise evaluation",
+  "general_score_metric": "AUC (ROC)",
+  "typical_sota_score": "≈0.89 AUC (reported best: 0.89 for both BS vs non-BS and pattern differentiation using pre-trained audio models)",
+  "year_of_publish": 2025,
+  "reputation": "Niche research benchmark in biomedical audio with limited but growing adoption among biomedical signal-processing researchers.",
+  "notes": "Very small dataset (16 subjects) with class imbalance and few samples per class; non-LLM benchmark; results sensitive to pretraining on large audio corpora; limited generalizability to varied clinical conditions and recording devices.",
+  "creators": {
+    "scientists": [
+      "Zahra Mansour",
+      "Verena Uslar",
+      "Dirk Weyhe",
+      "Danilo Hollosi",
+      "Nils Strodthoff"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2502.15607",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

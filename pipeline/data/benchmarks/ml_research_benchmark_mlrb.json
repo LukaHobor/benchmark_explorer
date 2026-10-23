@@ -1,0 +1,34 @@
+{
+  "name": "ML Research Benchmark (MLRB)",
+  "description": "Artificial intelligence agents are increasingly capable of performing complex tasks across various domains. As these agents advance, there is a growing need to accurately measure and benchmark their capabilities, particularly in accelerating AI research and development. Current benchmarks focus on general machine learning tasks, but lack comprehensive evaluation methods for assessing AI agents' abilities in tackling research-level problems and competition-level challenges in the field of AI. We present the ML Research Benchmark (MLRB), comprising 7 competition-level tasks derived from recent machine learning conference tracks. These tasks span activities typically undertaken by AI researchers, including model training efficiency, pretraining on limited data, domain specific fine-tuning, and model compression. This paper introduces a novel benchmark and evaluates it using agent scaffolds powered by frontier models, including Claude-3 and GPT-4o. The results indicate that the Claude-3.5 Sonnet agent performs best across our benchmark, excelling in planning and developing machine learning models. However, both tested agents struggled to perform non-trivial research iterations. We observed significant performance variations across tasks, highlighting the complexity of AI development and the challenges in creating versatile agent scaffolds. While current AI agents can successfully navigate complex instructions and produce baseline results, they fall short of the capabilities required for advanced AI research. The ML Research Benchmark provides a valuable framework for assessing and comparing AI agents on tasks mirroring real-world AI research challenges.",
+  "category": "mixed",
+  "domain": "machine learning / AI research",
+  "benchmark_type": "competition",
+  "task_types": [
+    "open_ended_research_tasks",
+    "code_generation",
+    "experimental_design",
+    "model_training_planning",
+    "model_compression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval plus task_success_rate and task‑specific quantitative measures (composite scoring across subtasks)",
+  "general_score_metric": "composite_score (combines task success, quality of solution, and evaluation by human raters)",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark aimed at agent-level ML research evaluation; currently limited adoption but of interest to agent and meta‑research communities.",
+  "notes": "Small set of seven competition‑style tasks; performance depends heavily on agent scaffolding and tool access; results are non‑deterministic and sensitive to model/toolchain, so comparisons require careful standardization.",
+  "creators": {
+    "scientists": [
+      "Matthew Kenney"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2410.22553",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

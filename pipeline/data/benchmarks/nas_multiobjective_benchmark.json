@@ -1,0 +1,38 @@
+{
+  "name": "NAS Multiobjective Benchmark",
+  "description": "The ongoing advancements in network architecture design have led to remarkable achievements in deep learning across various challenging computer vision tasks. Meanwhile, the development of neural architecture search (NAS) has provided promising approaches to automating the design of network architectures for lower prediction error. Recently, the emerging application scenarios of deep learning have raised higher demands for network architectures considering multiple design criteria: number of parameters/floating-point operations, and inference latency, among others. From an optimization point of view, the NAS tasks involving multiple design criteria are intrinsically multiobjective optimization problems; hence, it is reasonable to adopt evolutionary multiobjective optimization (EMO) algorithms for tackling them. Nonetheless, there is still a clear gap confining the related research along this pathway: on the one hand, there is a lack of a general problem formulation of NAS tasks from an optimization point of view; on the other hand, there are challenges in conducting benchmark assessments of EMO algorithms on NAS tasks. To bridge the gap: (i) we formulate NAS tasks into general multi-objective optimization problems and analyze the complex characteristics from an optimization point of view; (ii) we present an end-to-end pipeline, dubbed $\\texttt{EvoXBench}$, to generate benchmark test problems for EMO algorithms to run efficiently -- without the requirement of GPUs or Pytorch/Tensorflow; (iii) we instantiate two test suites comprehensively covering two datasets, seven search spaces, and three hardware devices, involving up to eight objectives. Based on the above, we validate the proposed test suites using six representative EMO algorithms and provide some empirical analyses. The code of $\\texttt{EvoXBench}$ is available from $\\href{https://github.com/EMI-Group/EvoXBench}{\\rm{here}}$.",
+  "category": "vision",
+  "domain": "computer vision / AutoML",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "neural_architecture_search",
+    "multiobjective_optimization",
+    "surrogate_benchmark"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Multi-objective metrics (primary: Pareto-front quality e.g., hypervolume) plus per-objective measures such as validation accuracy, latency, FLOPs",
+  "general_score_metric": "Hypervolume (primary multiobjective quality); secondary: validation accuracy, latency, FLOPs",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2026,
+  "reputation": "Adopted by researchers in NAS and evolutionary multi-objective optimization as a lightweight, reproducible testbed for multiobjective NAS evaluations.",
+  "notes": "Surrogate-based benchmark enabling runs without GPUs (faster evaluations) — may not fully reflect real training behaviour; designed for EMO algorithm comparison rather than single-number 'accuracy' saturation; supports many objectives and search spaces.",
+  "creators": {
+    "scientists": [
+      "Zhichao Lu",
+      "Ran Cheng",
+      "Yaochu Jin",
+      "Kay Chen Tan",
+      "Kalyanmoy Deb"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2208.04321",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "RoboScript",
+  "description": "Rapid progress in high-level task planning and code generation for open-world robot manipulation has been witnessed in Embodied AI. However, previous studies put much effort into general common sense reasoning and task planning capabilities of large-scale language or multi-modal models, relatively little effort on ensuring the deployability of generated code on real robots, and other fundamental components of autonomous robot systems including robot perception, motion planning, and control. To bridge this ``ideal-to-real'' gap, this paper presents \\textbf{RobotScript}, a platform for 1) a deployable robot manipulation pipeline powered by code generation; and 2) a code generation benchmark for robot manipulation tasks in free-form natural language. The RobotScript platform addresses this gap by emphasizing the unified interface with both simulation and real robots, based on abstraction from the Robot Operating System (ROS), ensuring syntax compliance and simulation validation with Gazebo. We demonstrate the adaptability of our code generation framework across multiple robot embodiments, including the Franka and UR5 robot arms, and multiple grippers. Additionally, our benchmark assesses reasoning abilities for physical space and constraints, highlighting the differences between GPT-3.5, GPT-4, and Gemini in handling complex physical interactions. Finally, we present a thorough evaluation on the whole system, exploring how each module in the pipeline: code generation, perception, motion planning, and even object geometric properties, impact the overall performance of the system.",
+  "category": "code",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "code_generation",
+    "open_ended",
+    "robotic_task_execution"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "varies by task and robot; reported top models achieve roughly 30–70% end-to-end success (task-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "3 citations",
+  "notes": "End-to-end system benchmark (code generation + perception + planning); results depend on simulator/robot embodiment and perception modules; not a pure LLM/text-only benchmark and susceptible to environment-specific biases and hardware differences.",
+  "creators": {
+    "scientists": [
+      "Junting Chen",
+      "Yao Mu",
+      "Qiaojun Yu",
+      "Tianming Wei",
+      "Silang Wu",
+      "Zhecheng Yuan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2402.14623",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

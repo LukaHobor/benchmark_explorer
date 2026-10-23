@@ -1,0 +1,50 @@
+{
+  "name": "ToolBench2",
+  "description": "Despite the advancements of open-source large language models (LLMs), e.g., LLaMA, they remain significantly limited in tool-use capabilities, i.e., using external tools (APIs) to fulfill human instructions. The reason is that current instruction tuning largely focuses on basic language tasks but ignores the tool-use domain. This is in contrast to the excellent tool-use capabilities of state-of-the-art (SOTA) closed-source LLMs, e.g., ChatGPT. To bridge this gap, we introduce ToolLLM, a general tool-use framework encompassing data construction, model training, and evaluation. We first present ToolBench, an instruction-tuning dataset for tool use, which is constructed automatically using ChatGPT. Specifically, the construction can be divided into three stages: (i) API collection: we collect 16,464 real-world RESTful APIs spanning 49 categories from RapidAPI Hub; (ii) instruction generation: we prompt ChatGPT to generate diverse instructions involving these APIs, covering both single-tool and multi-tool scenarios; (iii) solution path annotation: we use ChatGPT to search for a valid solution path (chain of API calls) for each instruction. To enhance the reasoning capabilities of LLMs, we develop a novel depth-first search-based decision tree algorithm. It enables LLMs to evaluate multiple reasoning traces and expand the search space. Moreover, to evaluate the tool-use capabilities of LLMs, we develop an automatic evaluator: ToolEval. Based on ToolBench, we fine-tune LLaMA to obtain an LLM ToolLLaMA, and equip it with a neural API retriever to recommend appropriate APIs for each instruction. Experiments show that ToolLLaMA demonstrates a remarkable ability to execute complex instructions and generalize to unseen APIs, and exhibits comparable performance to ChatGPT. Our ToolLLaMA also demonstrates strong zero-shot generalization ability in an out-of-distribution tool-use dataset: APIBench.",
+  "category": "mixed",
+  "domain": "multidisciplinary",
+  "task_types": [
+    "tool_use",
+    "instruction_following",
+    "multi_step_reasoning"
+  ],
+  "difficulty_level": "graduate",
+  "number_of_questions": 126486,
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2023,
+  "reputation": "A well-known early benchmark/dataset for LLM tool use that has been widely cited in tool-augmented agent research.",
+  "notes": "An instruction-tuning dataset for tool use, which is constructed automatically using ChatGPT.",
+  "creators": {
+    "scientists": [
+      "Yujia Qin",
+      "Shihao Liang",
+      "Yining Ye",
+      "Kunlun Zhu",
+      "Lan Yan",
+      "Yaxi Lu",
+      "Yankai Lin",
+      "Xin Cong",
+      "Xiangru Tang",
+      "Bill Qian",
+      "Sihan Zhao",
+      "Lauren Hong",
+      "Runchu Tian",
+      "Ruobing Xie",
+      "Jie Zhou",
+      "Mark Gerstein",
+      "Dahai Li",
+      "Zhiyuan Liu",
+      "Maosong Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2307.16789v2",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-23",
+    "origin": "cynefin@d486fafa9"
+  }
+}

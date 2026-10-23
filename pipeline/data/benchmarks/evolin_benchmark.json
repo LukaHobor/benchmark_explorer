@@ -1,0 +1,35 @@
+{
+  "name": "EVOLIN Benchmark",
+  "description": "Lines are interesting geometrical features commonly seen in indoor and urban environments. There is missing a complete benchmark where one can evaluate lines from a sequential stream of images in all its stages: Line detection, Line Association and Pose error. To do so, we present a complete and exhaustive benchmark for visual lines in a SLAM front-end, both for RGB and RGBD, by providing a plethora of complementary metrics. We have also labelled data from well-known SLAM datasets in order to have all in one poses and accurately annotated lines. In particular, we have evaluated 17 line detection algorithms, 5 line associations methods and the resultant pose error for aligning a pair of frames with several combinations of detector-association. We have packaged all methods and evaluations metrics and made them publicly available on web-page https://prime-slam.github.io/evolin/.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "line_detection",
+    "line_association",
+    "pose_estimation",
+    "benchmark_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision/recall/F1 for line detection and association; pose error (rotation/translation/reprojection error) for pose alignment",
+  "general_score_metric": "F1 (for line detection/association) and pose_error (rotation/translation RMSE)",
+  "year_of_publish": 2023,
+  "reputation": "A focused benchmark for line-based SLAM and geometry research with moderate adoption in the SLAM/visual-geomet ry community.",
+  "notes": "Non-LLM benchmark; specifically targets line features and SLAM front-ends. Uses labeled sequences from existing SLAM datasets so diversity may be limited; evaluates both detection and geometric alignment metrics.",
+  "creators": {
+    "scientists": [
+      "Kirill Ivanov",
+      "Gonzalo Ferrer",
+      "Anastasiia Kornilova"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2303.05162",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

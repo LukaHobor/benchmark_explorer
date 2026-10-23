@@ -1,0 +1,35 @@
+{
+  "name": "Historical documents OCR/NER benchmark",
+  "description": "We explore how multimodal Large Language Models (mLLMs) can help researchers transcribe historical documents, extract relevant historical information, and construct datasets from historical sources. Specifically, we investigate the capabilities of mLLMs in performing (1) Optical Character Recognition (OCR), (2) OCR Post-Correction, and (3) Named Entity Recognition (NER) tasks on a set of city directories published in German between 1754 and 1870. First, we benchmark the off-the-shelf transcription accuracy of both mLLMs and conventional OCR models. We find that the best-performing mLLM model significantly outperforms conventional state-of-the-art OCR models and other frontier mLLMs. Second, we are the first to introduce multimodal post-correction of OCR output using mLLMs. We find that this novel approach leads to a drastic improvement in transcription accuracy and consistently produces highly accurate transcriptions (<1% CER), without any image pre-processing or model fine-tuning. Thi",
+  "category": "multimodal",
+  "domain": "digital humanities",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ocr",
+    "ocr_post_correction",
+    "named_entity_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "character_error_rate",
+  "general_score_metric": "CER",
+  "typical_sota_score": "<1% CER for post-corrected transcriptions; OCR-only performance is substantially worse",
+  "year_of_publish": 2025,
+  "reputation": "A recent niche benchmark in digital humanities that is notable for combining OCR, post-correction, and NER on historical German city directories.",
+  "notes": "Small, specialized historical-document dataset; includes multimodal OCR and post-correction settings rather than a broad general-purpose benchmark.",
+  "creators": {
+    "scientists": [
+      "Gavin Greif",
+      "Niclas Griesshaber",
+      "Robin Greif"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.00414",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

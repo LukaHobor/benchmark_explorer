@@ -1,0 +1,33 @@
+{
+  "name": "STRING",
+  "description": "Functional links between proteins can often be inferred from genomic associations between the genes that encode them: groups of genes that are required for the same function tend to show similar species coverage, are often located in close proximity on the genome (in prokaryotes), and tend to be involved in gene-fusion events. The database STRING is a precomputed global resource for the exploration and analysis of these associations. Since the three types of evidence differ conceptually, and the number of predicted interactions is very large, it is essential to be able to assess and compare the significance of individual predictions. Thus, STRING contains a unique scoring-framework based on benchmarks of the different types of associations against a common reference set, integrated in a single confidence score per prediction. The graphical representation of the network of inferred, weighted protein interactions provides a high-level view of functional linkage, facilitating the analysis of modularity in biological processes. STRING is updated continuously, and currently contains 261 033 orthologs in 89 fully sequenced genomes. The database predicts functional interactions at an expected level of accuracy of at least 80% for more than half of the genes; it is online at http://www.bork.embl-heidelberg.de/STRING/.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "edge_scoring",
+    "functional_association_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision/recall and ROC-AUC (precision@k often reported); benchmarking vs. curated reference associations",
+  "general_score_metric": "integrated confidence score (benchmarked using precision/recall and ROC-AUC)",
+  "typical_sota_score": "≥80% for >50% of genes (as reported by the authors); varies widely by organism and evidence type",
+  "year_of_publish": 2003,
+  "reputation": "3026 citations",
+  "notes": "Non-LLM bioinformatics resource; continuously updated database. Evaluation depends on external reference annotations (reference bias) and can be affected by annotation noise, redundancy across species, and varying genome coverage.",
+  "creators": {
+    "scientists": [
+      "Christian von Mering"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/nar/gkg034",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

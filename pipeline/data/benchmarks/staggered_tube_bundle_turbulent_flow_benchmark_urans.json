@@ -1,0 +1,33 @@
+{
+  "name": "Staggered tube bundle turbulent flow benchmark (URANS)",
+  "description": "In Part II, we described the unsteady flow simulation and proposed a modification of a traditional turbulence flow model. Computational fluid dynamics (CFD) simulations of an isothermal, fully periodic flow across a tube bundle using unsteady Reynolds averaged Navier-Stokes (URANS) equations, with turbulence models such as the Reynolds stress model (RSM) were investigated at a Reynolds number of 1.8 × 104, based on the tube diameter and inlet velocity. As noted in Part I, CFD simulation and experimental results were compared at five positions along (x; y) coordinates. The steady RANS simulation showed that four diverse turbulence models were efficient for predicting the Reynolds stresses, and generally, SRANS results were marginal to poor, using a consistent evaluation terminology. In the URANS simulation, we modeled the turbulent flow field in a manner similar to the approach used for large eddy simulation (LES). The time-dependent URANS results showed that the simulation reproduces the dynamic stability as characterized by transverse oscillatory flow structures in the near-wake region. In particular, the inclusion of terms accounting for the time scales associated with the production range and dissipation rate of turbulence generates unsteady statistics of the mean and fluctuation flow. In spite of this, the model implemented produces better agreement with a benchmark data set and is thus recommended.",
+  "category": "mixed",
+  "domain": "reactor engineering / computational fluid dynamics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "numerical_simulation",
+    "model_evaluation",
+    "flow_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "error_norms (RMSE/MAE) and qualitative comparison to experimental flow statistics",
+  "general_score_metric": "RMSE of velocity/Reynolds-stress profiles and agreement of unsteady flow statistics (e.g., fluctuation amplitudes, PSD)",
+  "year_of_publish": 2008,
+  "reputation": "16 citations",
+  "notes": "Non-ML CFD benchmark primarily for turbulence model validation. Limited dataset tied to specific experimental setup; results sensitive to numerical methods, mesh/resolution, and boundary conditions, which can affect reproducibility. Not intended as a large-scale ML training dataset.",
+  "creators": {
+    "scientists": [
+      "Artit Ridluan",
+      "Akira Tokuhiro"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1080/18811248.2008.9711918",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

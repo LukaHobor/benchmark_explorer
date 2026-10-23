@@ -1,0 +1,45 @@
+{
+  "name": "SLAMBench",
+  "description": "Real-time dense computer vision and SLAM offer great potential for a new\nlevel of scene modelling, tracking and real environmental interaction for many\ntypes of robot, but their high computational requirements mean that use on mass\nmarket embedded platforms is challenging. Meanwhile, trends in low-cost,\nlow-power processing are towards massive parallelism and heterogeneity, making\nit difficult for robotics and vision researchers to implement their algorithms\nin a performance-portable way. In this paper we introduce SLAMBench, a\npublicly-available software framework which represents a starting point for\nquantitative, comparable and validatable experimental research to investigate\ntrade-offs in performance, accuracy and energy consumption of a dense RGB-D\nSLAM system. SLAMBench provides a KinectFusion implementation in C++, OpenMP,\nOpenCL and CUDA, and harnesses the ICL-NUIM dataset of synthetic RGB-D\nsequences with trajectory and scene ground truth for reliable accuracy\ncomparison of different implementation and algorithms. We present an analysis\nand breakdown of the constituent algorithmic elements of KinectFusion, and\nexperimentally investigate their execution time on a variety of multicore and\nGPUaccelerated platforms. For a popular embedded platform, we also present an\nanalysis of energy efficiency for different configuration alternatives.",
+  "category": "vision",
+  "domain": "robotics / vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "visual_slam",
+    "runtime_benchmarking",
+    "energy_evaluation",
+    "trajectory_accuracy"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "absolute_trajectory_error (ATE), runtime (execution time) and energy_consumption (joules)",
+  "general_score_metric": "absolute_trajectory_error (ATE) and runtime/energy metrics",
+  "typical_sota_score": "varies widely by sequence and implementation; not a single percentage (ATE often ranges from millimeters to decimeters)",
+  "year_of_publish": 2014,
+  "reputation": "Well-regarded in robotics and computer-vision communities for quantifying performance, accuracy and energy trade-offs of dense RGB‑D SLAM implementations.",
+  "notes": "Non-LLM benchmark; results are highly hardware- and implementation-dependent. Uses the synthetic ICL-NUIM sequences (possible domain gap to real-world data). Useful for runtime and energy comparisons but small in scope compared to modern real-world SLAM datasets.",
+  "creators": {
+    "scientists": [
+      "Luigi Nardi",
+      "Bruno Bodin",
+      "M. Zeeshan Zia",
+      "John Mawer",
+      "Andy Nisbet",
+      "Paul H. J. Kelly",
+      "Andrew J. Davison",
+      "Mikel Luján",
+      "Michael F. P. O'Boyle",
+      "Graham Riley",
+      "Nigel Topham",
+      "Steve Furber"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1410.2167",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

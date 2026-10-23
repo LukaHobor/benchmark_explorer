@@ -1,0 +1,35 @@
+{
+  "name": "Unsupervised Object Segmentation Benchmark",
+  "description": "In this paper, we study the problem of unsupervised object segmentation from single images. We do not introduce a new algorithm, but systematically investigate the effectiveness of existing unsupervised models on challenging real-world images. We first introduce seven complexity factors to quantitatively measure the distributions of background and foreground object biases in appearance and geometry for datasets with human annotations. With the aid of these factors, we empirically find that, not surprisingly, existing unsupervised models fail to segment generic objects in real-world images, although they can easily achieve excellent performance on numerous simple synthetic datasets, due to the vast gap in objectness biases between synthetic and real images. By conducting extensive experiments on multiple groups of ablated real-world datasets, we ultimately find that the key factors underlying the failure of existing unsupervised models on real-world images are the challenging distributions of background and foreground object biases in appearance and geometry. Because of this, the inductive biases introduced in existing unsupervised models can hardly capture the diverse object distributions. Our research results suggest that future work should exploit more explicit objectness biases in the network design.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "unsupervised_segmentation",
+    "object_segmentation",
+    "image_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection-over-Union (mIoU) / CorLoc and other segmentation overlap metrics",
+  "general_score_metric": "mIoU (mean Intersection-over-Union)",
+  "typical_sota_score": "typically low on challenging real-world sets (often <50% mIoU; commonly in the ~10–40% range depending on dataset complexity)",
+  "year_of_publish": 2023,
+  "reputation": "An analysis-oriented benchmark highlighting limitations of current unsupervised segmentation methods on real-world images; used as a diagnostic dataset rather than a widely adopted standard.",
+  "notes": "Non-LLM benchmark; emphasizes gap between synthetic and real images—small/ablated real subsets used for diagnosis; not saturated; useful for studying inductive-bias failures and generalization rather than leaderboard-style comparisons.",
+  "creators": {
+    "scientists": [
+      "Yafei Yang",
+      "Bo Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.04947",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

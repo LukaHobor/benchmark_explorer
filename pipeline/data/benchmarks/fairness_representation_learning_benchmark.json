@@ -1,0 +1,35 @@
+{
+  "name": "Fairness Representation Learning Benchmark",
+  "description": "With the recent expanding attention of machine learning researchers and practitioners to fairness, there is a void of a common framework to analyze and compare the capabilities of proposed models in deep representation learning. In this paper, we evaluate different fairness methods trained with deep neural networks on a common synthetic dataset and a real-world dataset to obtain a better insight into the working of these methods. In particular, we train about 3000 different models in various setups, including imbalanced and correlated data configurations, to verify the limits of the current models and better understand in which setups they are subject to failure. Our results show that the bias of models increase as datasets become more imbalanced or datasets attributes become more correlated, the level of dominance of correlated sensitive dataset features impact bias, and the sensitive information remains in the latent representation even when bias-mitigation algorithms are applied. Overall, we present a dataset, propose various challenging evaluation setups, and rigorously evaluate recent promising bias-mitigation algorithms in a common framework and publicly release this benchmark, hoping the research community would take it as a common entry point for fair deep learning.",
+  "category": "mixed",
+  "domain": "machine learning / fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "representation_learning",
+    "fairness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and fairness_metrics (e.g., demographic parity, equalized odds, mutual information)",
+  "general_score_metric": "accuracy and task-specific fairness metrics (demographic parity gap, equalized odds gap)",
+  "typical_sota_score": "60–95% (accuracy; fairness metric values vary widely by setup)",
+  "reputation": "Adopted in fairness and representation-learning research as a common experimental framework, though adoption is moderate compared with mainstream vision/text benchmarks.",
+  "notes": "Includes both synthetic and real-world splits; benchmark emphasizes trade-offs between accuracy and fairness and can expose leakage of sensitive attributes; results are sensitive to dataset imbalance and correlated attributes; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Charan Reddy",
+      "Soroush Mehri",
+      "Deepak Sharma",
+      "Samira Shabanian",
+      "Sina Honari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

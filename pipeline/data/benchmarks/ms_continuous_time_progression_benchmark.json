@@ -1,0 +1,37 @@
+{
+  "name": "MS Continuous Time Progression Benchmark",
+  "description": "Multiple sclerosis is a disease that affects the brain and spinal cord, it can lead to severe disability and has no known cure. The majority of prior work in machine learning for multiple sclerosis has been centered around using Magnetic Resonance Imaging scans or laboratory tests; these modalities are both expensive to acquire and can be unreliable. In a recent paper it was shown that disease progression can be predicted effectively using performance outcome measures and demographic data. In our work we build on this to investigate the modeling side, using continuous time models to predict progression. We benchmark four continuous time models using a publicly available multiple sclerosis dataset. We find that the best continuous model is often able to outperform the best benchmarked discrete time model. We also carry out an extensive ablation to discover the sources of performance gains, we find that standardizing existing features leads to a larger performance increase than interpolating missing features.",
+  "category": "mixed",
+  "domain": "medical / clinical prognostics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression",
+    "prognosis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "MAE / RMSE (regression metrics); optionally concordance/index-style metrics for time-to-event-style outcomes",
+  "general_score_metric": "MAE",
+  "year_of_publish": 2023,
+  "reputation": "Niche academic benchmark used in research on MS progression and continuous‑time models with limited adoption outside the clinical ML community.",
+  "notes": "Relatively small clinical dataset with irregular sampling and censoring; non‑LLM benchmark; risk of overfitting and limited external validation across populations.",
+  "creators": {
+    "scientists": [
+      "Alexander Norcliffe",
+      "Lev Proleev",
+      "Diana Mincu",
+      "Fletcher Lee Hartsell",
+      "Katherine Heller",
+      "Subhrajit Roy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2302.07854",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

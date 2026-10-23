@@ -1,0 +1,38 @@
+{
+  "name": "UrbanBIS",
+  "description": "We present the UrbanBIS benchmark for large-scale 3D urban understanding, supporting practical urban-level semantic and building-level instance segmentation. UrbanBIS comprises six real urban scenes, with 2.5 billion points, covering a vast area of 10.78 square kilometers and 3,370 buildings, captured by 113,346 views of aerial photogrammetry. Particularly, UrbanBIS provides not only semantic-level annotations on a rich set of urban objects, including buildings, vehicles, vegetation, roads, and bridges, but also instance-level annotations on the buildings. Further, UrbanBIS is the first 3D dataset that introduces fine-grained building sub-categories, considering a wide variety of shapes for different building types. Besides, we propose B-Seg, a building instance segmentation method to establish UrbanBIS. B-Seg adopts an end-to-end framework with a simple yet effective strategy for handling large-scale point clouds. Compared with mainstream methods, B-Seg achieves better accuracy with faster inference speed on UrbanBIS. In addition to the carefully-annotated point clouds, UrbanBIS provides high-resolution aerial-acquisition photos and high-quality large-scale 3D reconstruction models, which shall facilitate a wide range of studies such as multi-view stereo, urban LOD generation, aerial path planning, autonomous navigation, road network extraction, and so on, thus serving as an important platform for many intelligent city applications.",
+  "category": "vision",
+  "domain": "urban remote sensing / 3D urban understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "building_classification",
+    "multiview_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection-over-Union (mIoU) for semantic tasks; Average Precision (AP / mAP) for instance segmentation; other metrics (e.g., IoU per class) reported as needed",
+  "general_score_metric": "mIoU (semantic) / Average Precision (AP) (instance)",
+  "year_of_publish": 2023,
+  "reputation": "A recent, large-scale 3D urban dataset (2023) with growing attention in the 3D remote-sensing and urban-scene segmentation communities but not yet widely saturated.",
+  "notes": "Large-scale non-LLM benchmark requiring heavy compute and memory for training/inference; strong class imbalance (many small classes); risk of geographic/data bias; provides auxiliary aerial imagery and reconstructions; not saturated.",
+  "creators": {
+    "scientists": [
+      "Guoqing Yang",
+      "Fuyou Xue",
+      "Qi Zhang",
+      "Ke Xie",
+      "Chi-Wing Fu",
+      "Hui Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.02627",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

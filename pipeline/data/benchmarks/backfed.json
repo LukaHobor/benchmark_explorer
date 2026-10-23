@@ -1,0 +1,35 @@
+{
+  "name": "BackFed",
+  "description": "Research on backdoor attacks in Federated Learning (FL) has accelerated in recent years, with new attacks and defenses continually proposed in an escalating arms race. However, the evaluation of these methods remains neither standardized nor reliable. First, there are severe inconsistencies in the evaluation settings across studies, and many rely on unrealistic threat models. Second, our code review uncovers semantic bugs in the official codebases of several attacks that artificially inflate their reported performance. These issues raise fundamental questions about whether current methods are truly effective or simply overfitted to narrow experimental setups. We introduce \\textbf{BackFed}, a benchmark designed to standardize and stress-test FL backdoor evaluation by unifying attacks and defenses under a common evaluation framework that mirrors realistic FL deployments. Our benchmark on three representative datasets with three distinct architectures reveals critical limitations of exist",
+  "category": "mixed",
+  "domain": "ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "backdoor_attack_evaluation",
+    "defense_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "attack success rate",
+  "typical_sota_score": "30–95%",
+  "year_of_publish": 2025,
+  "reputation": "A very recent benchmark aimed at standardizing federated-learning backdoor evaluation, so it is not yet broadly established in the community.",
+  "notes": "Non-LLM security benchmark; results are highly sensitive to threat model, dataset, architecture, and implementation details, and prior work may contain code bugs that inflate scores.",
+  "creators": {
+    "scientists": [
+      "Thinh Dao",
+      "Dung Thuy Nguyen",
+      "Khoa D Doan",
+      "Kok-Seng Wong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2507.04903",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

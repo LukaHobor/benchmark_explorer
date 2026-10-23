@@ -1,0 +1,32 @@
+{
+  "name": "Satellite stereo matching evaluation",
+  "description": "Abstract. Stereo image analysis plays a critical role in geospatial domains, enabling the generation of high-resolution disparity maps from satellite imagery, and these maps are essential for producing accurate 3D surface models used in applications such as terrain modeling, urban planning, and environmental monitoring. This study conducts an evaluation of traditional scanline aggregation stereo matching methods, including Semi-Global Matching (SGM) and More Global Matching (MGM), with a deep learning-based approach, i.e., RAFTStereo. For satellite images, traditional stereo matching methods are still popular due to their balance of efficiency and robustness, and SGM / MGM could provide reliable disparity maps. However, the maturity of deep learning and availability of high-quality benchmark datasets have been steadily shifting the process toward fully automatic, accurate, and scalable solutions. In this study, the performance of SGM, MGM and RAFTStereo methods were investigated for disparity estimation using stereo images of Gaofen-7 satellite using the WHU-Stereo satellite dataset. Experimental evaluations indicate that MGM consistently achieves the lowest numerical errors (≈ 3-5 pixels), while RAFTStereo produces more visually coherent disparity maps with reduced noise and improved surface continuity. Traditional methods such as SGM and MGM remain robust and require no training, yet deep learning-based approach RAFTStereo demonstrate superior performance in radiometrically and geometrically complex scenes.",
+  "category": "vision",
+  "domain": "earth sciences",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "disparity_estimation",
+    "dense_regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "End-Point Error (EPE) / mean absolute disparity error (pixels); percentage of bad pixels",
+  "general_score_metric": "End-Point Error (EPE) in pixels (mean absolute disparity error)",
+  "typical_sota_score": "≈1–5 pixels",
+  "year_of_publish": 2026,
+  "reputation": "1 citations",
+  "notes": "Domain-specific (satellite) and non-LLM benchmark; performance sensitive to radiometric/geometric variability and ground-truth quality. Dataset sizes may be limited compared to general vision benchmarks.",
+  "creators": {
+    "scientists": [
+      "Yazgı Nur Sayın",
+      "Ali Özgün Ok"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Evaluation of single-cell classifiers benchmark",
+  "description": "Single-cell RNA sequencing (scRNA-seq) has been rapidly developing and widely applied in biological and medical research. Identification of cell types in scRNA-seq data sets is an essential step before in-depth investigations of their functional and pathological roles. However, the conventional workflow based on clustering and marker genes is not scalable for an increasingly large number of scRNA-seq data sets due to complicated procedures and manual annotation. Therefore, a number of tools have been developed recently to predict cell types in new data sets using reference data sets. These methods have not been generally adapted due to a lack of tool benchmarking and user guidance. In this article, we performed a comprehensive and impartial evaluation of nine classification software tools specifically designed for scRNA-seq data sets. Results showed that Seurat based on random forest, SingleR based on correlation analysis and CaSTLe based on XGBoost performed better than others. A simple ensemble voting of all tools can improve the predictive accuracy. Under nonideal situations, such as small-sized and class-imbalanced reference data sets, tools based on cluster-level similarities have superior performance. However, even with the function of assigning 'unassigned' labels, it is still challenging to catch novel cell types by solely using any of the single-cell classifiers. This article provides a guideline for researchers to select and apply suitable classification tools in their analysis workflows and sheds some lights on potential direction of future improvement on classification tools.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "cell_type_classification",
+    "novelty_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and F1 (often macro-F1 / per-class measures)",
+  "general_score_metric": "accuracy (primary) with F1 used for imbalanced classes",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2019,
+  "reputation": "104 citations",
+  "notes": "Bioinformatics benchmark (non-LLM); performance varies widely with reference dataset size and class imbalance; detecting novel/unseen cell types remains challenging and limits direct comparability across tools.",
+  "creators": {
+    "scientists": [
+      "Xinlei Zhao",
+      "Shuang Wu",
+      "Nan Fang",
+      "Xiao Sun",
+      "Jue Fan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/bib/bbz096",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Shadow Removal Adversarial Robustness Benchmark",
+  "description": "Shadow removal is a task aimed at erasing regional shadows present in images and reinstating visually pleasing natural scenes with consistent illumination. While recent deep learning techniques have demonstrated impressive performance in image shadow removal, their robustness against adversarial attacks remains largely unexplored. Furthermore, many existing attack frameworks typically allocate a uniform budget for perturbations across the entire input image, which may not be suitable for attacking shadow images. This is primarily due to the unique characteristic of spatially varying illumination within shadow images. In this paper, we propose a novel approach, called shadow-adaptive adversarial attack. Different from standard adversarial attacks, our attack budget is adjusted based on the pixel intensity in different regions of shadow images. Consequently, the optimized adversarial noise in the shadowed regions becomes visually less perceptible while permitting a greater tolerance for perturbations in non-shadow regions. The proposed shadow-adaptive attacks naturally align with the varying illumination distribution in shadow images, resulting in perturbations that are less conspicuous. Building on this, we conduct a comprehensive empirical evaluation of existing shadow removal methods, subjecting them to various levels of attack on publicly available datasets.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_to_image",
+    "robustness_evaluation",
+    "adversarial_attack"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR, SSIM, LPIPS and robustness measured as relative degradation of these image-quality metrics under adversarial perturbations",
+  "general_score_metric": "PSNR / SSIM (primary reported metrics)",
+  "typical_sota_score": "PSNR 30–40 dB; SSIM 0.80–0.95",
+  "year_of_publish": 2024,
+  "reputation": "A recent, research-focused benchmark exploring adversarial robustness for shadow removal; primarily cited in adversarial-vision and image-restoration research but not yet widely adopted.",
+  "notes": "Adversarial-focused vision benchmark (non-LLM); evaluation depends on image-quality metrics that may not fully reflect perceptual quality; attacks are shadow-adaptive so results can vary substantially by attack budget and region; limited public adoption to date.",
+  "creators": {
+    "scientists": [
+      "Chong Wang",
+      "Yi Yu",
+      "Lanqing Guo",
+      "Bihan Wen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2403.10076",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

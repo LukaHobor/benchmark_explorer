@@ -1,0 +1,37 @@
+{
+  "name": "Speech Intelligibility Toolkit (SITool)",
+  "description": "Speech intelligibility assessment is essential for evaluating neural speech codecs, yet most evaluation efforts focus on overall quality rather than intelligibility. Only a few publicly available tools exist for conducting standardized intelligibility tests, like the Diagnostic Rhyme Test (DRT) and Modified Rhyme Test (MRT). We introduce the Speech Intelligibility Toolkit for Subjective Evaluation (SITool), a Flask-based web application for conducting DRT and MRT in laboratory and crowdsourcing settings. We use SITool to benchmark 13 neural and traditional speech codecs, analyzing phoneme-level degradations and comparing subjective DRT results with objective intelligibility metrics. Our findings show that, while neural speech codecs can outperform traditional ones in subjective intelligibility, only STOI and ESTOI - not WER - significantly correlate with subjective results, although they struggle to capture gender and wordlist-specific variations observed in subjective evaluations.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "human_evaluation",
+    "subjective_test"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "intelligibility_score (percent correct in DRT/MRT)",
+  "year_of_publish": 2025,
+  "reputation": "Research-oriented toolkit used by speech codec researchers for standardized subjective intelligibility testing; modest but respected uptake in the speech community.",
+  "notes": "Subjective (human) evaluations are primary; dataset/tool is non-LLM and can have small-sample variability and crowd/lab administration differences. Objective metrics (STOI/ESTOI) correlate imperfectly with subjective scores.",
+  "creators": {
+    "scientists": [
+      "Anna Leschanowsky",
+      "Kishor Kayyar Lakshminarayana",
+      "Anjana Rajasekhar",
+      "Lyonel Behringer",
+      "Ibrahim Kilinc",
+      "Guillaume Fuchs",
+      "Emanuël A. P. Habets"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2506.01731",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

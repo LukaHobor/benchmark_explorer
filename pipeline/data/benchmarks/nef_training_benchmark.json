@@ -1,0 +1,38 @@
+{
+  "name": "NeF Training Benchmark",
+  "description": "Neural fields (NeFs) have recently emerged as a versatile method for modeling signals of various modalities, including images, shapes, and scenes. Subsequently, a number of works have explored the use of NeFs as representations for downstream tasks, e.g. classifying an image based on the parameters of a NeF that has been fit to it. However, the impact of the NeF hyperparameters on their quality as downstream representation is scarcely understood and remains largely unexplored. This is in part caused by the large amount of time required to fit datasets of neural fields. In this work, we propose a JAX-based library that leverages parallelization to enable fast optimization of large-scale NeF datasets, resulting in a significant speed-up. With this library, we perform a comprehensive study that investigates the effects of different hyperparameters on fitting NeFs for downstream tasks. In particular, we explore the use of a shared initialization, the effects of overtraining, and the expressiveness of the network architectures used. Our study provides valuable insights on how to train NeFs and offers guidance for optimizing their effectiveness in downstream applications. Finally, based on the proposed library and our analysis, we propose Neural Field Arena, a benchmark consisting of neural field variants of popular vision datasets, including MNIST, CIFAR, variants of ImageNet, and ShapeNetv2. Our library and the Neural Field Arena will be open-sourced to introduce standardized benchmarking and promote further research on neural fields.",
+  "category": "vision",
+  "domain": "computer vision / 3D representation learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "representation_learning",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy (for downstream classification) / reconstruction error for fit quality",
+  "year_of_publish": 2023,
+  "reputation": "A specialized research benchmark and toolkit for neural fields (NeFs) intended for the representation-learning and 3D/vision research community; adoption is emerging among NeF researchers.",
+  "notes": "Non-LLM benchmark focused on neural-field fitting and downstream use; computationally expensive (requires per-instance NeF optimization); offers a JAX-based fast training library and variants of common vision datasets; results sensitive to hyperparameters and training budgets.",
+  "creators": {
+    "scientists": [
+      "Samuele Papa",
+      "Riccardo Valperga",
+      "David Knigge",
+      "Miltiadis Kofinas",
+      "Phillip Lippe",
+      "Jan-Jakob Sonke",
+      "Efstratios Gavves"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.10531",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

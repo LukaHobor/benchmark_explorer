@@ -1,0 +1,35 @@
+{
+  "name": "Satellite Dense Matching Benchmark",
+  "description": "Accurate dense matching is fundamental to high-precision 3D reconstruction from sub-meter satellite imagery. Traditional methods (e.g., SGM) often struggle in weakly-textured or occluded regions, whereas deep learning methods demonstrate both high accuracy and strong robustness in such challenging areas. Therefore, deep learning-based dense matching algorithms combined with high-resolution satellite imagery have broad prospects in fields such as smart cities and disaster monitoring. In this study, we benchmark five deep learning models (IGEV-Stereo, PSM-Net, HMSM-Net, Stereo-Net and S3Net) on the Urban Semantic 3D (US3D) dataset, covering three typical scene types: dense urban environments, complex natural terrain and roads/bridges. The results show that HMSM-Net and S3Net can perform high-precision reconstruction of complex scenes such as urban buildings, enabling city-level 3D visualization and monitoring of urban operations. Meanwhile, IGEV-Stereo has the shortest inference time and provides a good balance between accuracy and speed, making it particularly suitable for time-sensitive applications such as disaster monitoring.",
+  "category": "vision",
+  "domain": "earth sciences",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "stereo_matching",
+    "dense_depth_estimation",
+    "3D_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "endpoint_error / disparity_error_percentage (D1) / RMSE",
+  "general_score_metric": "endpoint_error (EPE) and disparity error percentage (D1)",
+  "year_of_publish": 2025,
+  "reputation": "Academic benchmark used in remote sensing and computer vision research for evaluating dense matching models on high-resolution satellite imagery (US3D).",
+  "notes": "Domain-specific, non-LLM benchmark tied to the US3D dataset; evaluation uses multiple numeric metrics and models trade off accuracy vs inference time. Risk of overfitting to the US3D scenes and metric heterogeneity across papers.",
+  "creators": {
+    "scientists": [
+      "Yilong Han",
+      "Shuhao Feng",
+      "Yakun Wang",
+      "Zhanquan Liu",
+      "D. Gong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "MTLFace (AIFR + Face Age Synthesis) Benchmark",
+  "description": "To minimize the impact of age variation on face recognition, age-invariant face recognition (AIFR) extracts identity-related discriminative features by minimizing the correlation between identity- and age-related features while face age synthesis (FAS) eliminates age variation by converting the faces in different age groups to the same group. However, AIFR lacks visual results for model interpretation and FAS compromises downstream recognition due to artifacts. Therefore, we propose a unified, multi-task framework to jointly handle these two tasks, termed MTLFace, which can learn the age-invariant identity-related representation for face recognition while achieving pleasing face synthesis for model interpretation. Specifically, we propose an attention-based feature decomposition to decompose the mixed face features into two uncorrelated components -- identity- and age-related features -- in a spatially constrained way. Unlike the conventional one-hot encoding that achieves group-level FAS, we propose a novel identity conditional module to achieve identity-level FAS, which can improve the age smoothness of synthesized faces through a weight-sharing strategy. Benefiting from the proposed multi-task framework, we then leverage those high-quality synthesized faces from FAS to further boost AIFR via a novel selective fine-tuning strategy. Furthermore, to advance both AIFR and FAS, we collect and release a large cross-age face dataset with age and gender annotations, and a new benchmark specifically designed for tracing long-missing children. Extensive experimental results on five benchmark cross-age datasets demonstrate that MTLFace yields superior performance for both AIFR and FAS. We further validate MTLFace on two popular general face recognition datasets, obtaining competitive performance on face recognition in the wild. Code is available at http://hzzone.github.io/MTLFace.",
+  "category": "vision",
+  "domain": "computer vision / face recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "face_verification",
+    "face_identification",
+    "face_age_synthesis",
+    "image_to_image_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "verification/identification accuracy (e.g., TAR@FAR, rank-1) for AIFR; FID and identity-preservation metrics for face age synthesis",
+  "general_score_metric": "verification accuracy (TAR@FAR / rank-1) for recognition; FID and identity-consistency for synthesis",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2022,
+  "reputation": "A recent research dataset/framework in the face-recognition community that attracted attention for jointly addressing age-invariant recognition and synthesis, but not yet a broad standardized benchmark.",
+  "notes": "Non-LLM benchmark focused on face images; faces are sensitive personal data (privacy/ethical considerations). Evaluation mixes recognition and generative metrics; synthesized images may introduce artifacts that affect downstream metrics.",
+  "creators": {
+    "scientists": [
+      "Zhizhong Huang",
+      "Junping Zhang",
+      "Hongming Shan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.09835",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

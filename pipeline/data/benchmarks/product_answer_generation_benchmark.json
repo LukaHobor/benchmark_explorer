@@ -1,0 +1,34 @@
+{
+  "name": "Product Answer Generation Benchmark",
+  "description": "It is of great value to answer product questions based on heterogeneous information sources available on web product pages, e.g., semi-structured attributes, text descriptions, user-provided contents, etc. However, these sources have different structures and writing styles, which poses challenges for (1) evidence ranking, (2) source selection, and (3) answer generation. In this paper, we build a benchmark with annotations for both evidence selection and answer generation covering 6 information sources. Based on this benchmark, we conduct a comprehensive study and present a set of best practices. We show that all sources are important and contribute to answering questions. Handling all sources within one single model can produce comparable confidence scores across sources and combining multiple sources for training always helps, even for sources with totally different structures. We further propose a novel data augmentation method to iteratively create training samples for answer generation, which achieves close-to-human performance with only a few thousandannotations. Finally, we perform an in-depth error analysis of model predictions and highlight the challenges for future research.",
+  "category": "text",
+  "domain": "e-commerce / product QA",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "evidence_selection",
+    "answer_generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "BLEU/ROUGE for generated answer quality; F1 and/or accuracy for evidence/source selection; supplemented by human_eval for final answer usefulness",
+  "general_score_metric": "BLEU (for generation quality) and F1 (for evidence selection)",
+  "reputation": "Research benchmark for product QA cited in literature on multi-source product question answering; moderate adoption in academic settings.",
+  "notes": "Heterogeneous sources (attributes, descriptions, reviews, etc.) make generalization challenging; annotated at the scale of a few thousand examples, so data-scarcity and domain-specificity can limit transfer. Evaluation combines automatic metrics and human judgments.",
+  "creators": {
+    "scientists": [
+      "Xiaoyu Shen",
+      "Gianni Barlacchi",
+      "Marco del Tredici",
+      "Weiwei Cheng",
+      "Bill Byrne",
+      "Adrià Gispert"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

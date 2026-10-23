@@ -1,0 +1,40 @@
+{
+  "name": "VidDiffBench",
+  "description": "How do two individuals differ when performing the same action? In this work, we introduce Video Action Differencing (VidDiff), the novel task of identifying subtle differences between videos of the same action, which has many applications, such as coaching and skill learning. To enable development on this new task, we first create VidDiffBench, a benchmark dataset containing 549 video pairs, with human annotations of 4,469 fine-grained action differences and 2,075 localization timestamps indicating where these differences occur. Our experiments demonstrate that VidDiffBench poses a significant challenge for state-of-the-art large multimodal models (LMMs), such as GPT-4o and Qwen2-VL. By analyzing failure cases of LMMs on VidDiffBench, we highlight two key challenges for this task: localizing relevant sub-actions over two videos and fine-grained frame comparison. To overcome these, we propose the VidDiff method, an agentic workflow that breaks the task into three stages: action difference proposal, keyframe localization, and frame differencing, each stage utilizing specialized foundation models. To encourage future research in this new task, we release the benchmark at https://huggingface.co/datasets/jmhb/VidDiffBench and code at http://jmhb0.github.io/viddiff.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "temporal_localization",
+    "video_difference_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_specific (precision/recall/F1 for difference detection; localization_accuracy for timestamps; BLEU/other text metrics for descriptions)",
+  "general_score_metric": "F1 (difference detection) and localization_accuracy (timestamp localization)",
+  "typical_sota_score": "low (e.g., ~10–40% F1 for current LMMs)",
+  "year_of_publish": 2025,
+  "reputation": "New and specialized benchmark for fine-grained video comparison; gaining interest in multimodal and video-understanding communities but not yet mainstream.",
+  "notes": "Small dataset (549 video pairs) with fine-grained annotations — challenging for large multimodal models; limited scale may constrain training, and results emphasize localization and fine-grained comparison failure modes.",
+  "creators": {
+    "scientists": [
+      "James Burgess",
+      "Xiaohan Wang",
+      "Yuhui Zhang",
+      "Anita Rau",
+      "Alejandro Lozano",
+      "Lisa Dunlap",
+      "Trevor Darrell",
+      "Serena Yeung-Levy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.07860",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

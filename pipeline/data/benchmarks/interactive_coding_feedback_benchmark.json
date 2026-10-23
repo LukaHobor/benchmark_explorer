@@ -1,0 +1,37 @@
+{
+  "name": "Interactive Coding Feedback Benchmark",
+  "description": "Programming is a fundamentally interactive process, yet coding assistants are often evaluated using static benchmarks that fail to measure how well models collaborate with users. We introduce an interactive evaluation pipeline to examine how LLMs incorporate different types of feedback in a collaborative setting. Specifically, we perturb static coding benchmarks so that the code model must interact with a simulated user to retrieve key information about the problem. We find that interaction significantly affects model performance, as the relative rankings of 10 models across 3 datasets often vary between static and interactive settings, despite models being fairly robust to feedback that contains errors. We also observe that even when different feedback types are equally effective with respect to performance, they can impact model behaviors such as (1) how models respond to higher- vs. lower-quality feedback and (2) whether models prioritize aesthetic vs. functional edits. Our work aim",
+  "category": "code",
+  "domain": "code",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "interactive_code_completion",
+    "bug_fixing",
+    "code_editing"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark with emerging interest for evaluating interactive coding assistants, but not yet a widely established community standard.",
+  "notes": "Interactive setup makes results less directly comparable to static coding benchmarks; likely small and research-oriented, with performance depending on the simulated user protocol.",
+  "creators": {
+    "scientists": [
+      "Jane Pan",
+      "Ryan Shar",
+      "Jacob Pfau",
+      "Ameet Talwalkar",
+      "He He",
+      "Valerie Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2502.18413",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "DeepFurniture",
+  "description": "Understanding interior scenes has attracted enormous interest in computer vision community. However, few works focus on the understanding of furniture within the scenes and a large-scale dataset is also lacked to advance the field. In this paper, we first fill the gap by presenting DeepFurniture, a richly annotated large indoor scene dataset, including 24k indoor images, 170k furniture instances and 20k unique furniture identities. On the dataset, we introduce a new benchmark, named furniture set retrieval. Given an indoor photo as input, the task requires to detect all the furniture instances and search a matched set of furniture identities. To address this challenging task, we propose a feature and context embedding based framework. It contains 3 major contributions: (1) An improved Mask-RCNN model with an additional mask-based classifier is introduced for better utilizing the mask information to relieve the occlusion problems in furniture detection context. (2) A multi-task style Siamese network is proposed to train the feature embedding model for retrieval, which is composed of a classification subnet supervised by self-clustered pseudo attributes and a verification subnet to estimate whether the input pair is matched. (3) In order to model the relationship of the furniture entities in an interior design, a context embedding model is employed to re-rank the retrieval results. Extensive experiments demonstrate the effectiveness of each module and the overall system.",
+  "category": "vision",
+  "domain": "indoor scene understanding / furniture retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation",
+    "image_retrieval",
+    "retrieval_ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP for detection/segmentation and Recall@K (top-k retrieval) for furniture set retrieval",
+  "general_score_metric": "mAP / Recall@K",
+  "year_of_publish": 2019,
+  "reputation": "A specialized academic dataset that has been used in research on furniture-aware indoor scene understanding and retrieval but is not a mainstream benchmark outside this niche.",
+  "notes": "Non-LLM vision benchmark; moderate dataset size (~24k images) with many fine-grained furniture identities; potential class imbalance and domain-specific biases; evaluation combines detection and set-level retrieval metrics.",
+  "creators": {
+    "scientists": [
+      "Bingyuan Liu",
+      "Jiantao Zhang",
+      "Xiaoting Zhang",
+      "Wei zhang",
+      "Chuanhui Yu",
+      "Yuan Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/1911.09299",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

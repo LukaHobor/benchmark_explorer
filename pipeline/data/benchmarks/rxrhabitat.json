@@ -1,0 +1,38 @@
+{
+  "name": "RxR-Habitat",
+  "description": "This report presents the methods of the winning entry of the RxR-Habitat Competition in CVPR 2022. The competition addresses the problem of Vision-and-Language Navigation in Continuous Environments (VLN-CE), which requires an agent to follow step-by-step natural language instructions to reach a target. We present a modular plan-and-control approach for the task. Our model consists of three modules: the candidate waypoints predictor (CWP), the history enhanced planner and the tryout controller. In each decision loop, CWP first predicts a set of candidate waypoints based on depth observations from multiple views. It can reduce the complexity of the action space and facilitate planning. Then, a history-enhanced planner is adopted to select one of the candidate waypoints as the subgoal. The planner additionally encodes historical memory to track the navigation progress, which is especially effective for long-horizon navigation. Finally, we propose a non-parametric heuristic controller name",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "vision_language_navigation",
+    "trajectory_prediction",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "success rate",
+  "typical_sota_score": "30–50%",
+  "year_of_publish": 2022,
+  "reputation": "A well-known VLN-CE competition benchmark from CVPR 2022 that has been used to compare modular navigation agents in continuous environments.",
+  "notes": "Non-LLM embodied navigation benchmark; results are sensitive to simulator setup, sensor inputs, and route length.",
+  "creators": {
+    "scientists": [
+      "Dong An",
+      "Zun Wang",
+      "Yangguang Li",
+      "Yi Wang",
+      "Yicong Hong",
+      "Yan Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2206.11610",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

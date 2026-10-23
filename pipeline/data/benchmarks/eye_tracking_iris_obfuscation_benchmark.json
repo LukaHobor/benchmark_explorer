@@ -1,0 +1,35 @@
+{
+  "name": "Eye Tracking Iris Obfuscation Benchmark",
+  "description": "Recent developments in hardware, computer graphics, and AI may soon enable AR/VR head-mounted displays (HMDs) to become everyday devices like smartphones and tablets. Eye trackers within HMDs provide a special opportunity for such setups as it is possible to facilitate gaze-based research and interaction. However, estimating users' gaze information often requires raw eye images and videos that contain iris textures, which are considered a gold standard biometric for user authentication, and this raises privacy concerns. Previous research in the eye-tracking community focused on obfuscating iris textures while keeping utility tasks such as gaze estimation accurate. Despite these attempts, there is no comprehensive benchmark that evaluates state-of-the-art approaches. Considering all, in this paper, we benchmark blurring, noising, downsampling, rubber sheet model, and iris style transfer to obfuscate user identity, and compare their impact on image quality, privacy, utility, and risk of imposter attack on two datasets. We use eye segmentation and gaze estimation as utility tasks, and reduction in iris recognition accuracy as a measure of privacy protection, and false acceptance rate to estimate risk of attack. Our experiments show that canonical image processing methods like blurring and noising cause a marginal impact on deep learning-based tasks. While downsampling, rubber sheet model, and iris style transfer are effective in hiding user identifiers, iris style transfer, with higher computation cost, outperforms others in both utility tasks, and is more resilient against spoof attacks. Our analyses indicate that there is no universal optimal approach to balance privacy, utility, and computation burden. Therefore, we recommend practitioners consider the strengths and weaknesses of each approach, and possible combinations of those to reach an optimal privacy-utility trade-off.",
+  "category": "vision",
+  "domain": "vision (AR/VR eye tracking)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_segmentation",
+    "gaze_estimation",
+    "privacy_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite (gaze-estimation error e.g. MAE, image-quality metrics such as SSIM/PSNR, reduction in iris-recognition accuracy, and false acceptance rate to estimate attack risk)",
+  "general_score_metric": "composite reporting of gaze-estimation MAE and reduction in iris-recognition accuracy (with FAR for attack risk)",
+  "year_of_publish": 2025,
+  "reputation": "New, research-oriented benchmark introduced in the referenced paper with limited adoption so far, targeted to the AR/VR and biometric-privacy communities.",
+  "notes": "Non-LLM, vision-focused benchmark; evaluation depends on specific iris matcher implementations and datasets, small/controlled datasets, and methods (e.g., style transfer) can be computationally expensive; privacy results may not generalize across different recognition systems.",
+  "creators": {
+    "scientists": [
+      "Mengdi Wang",
+      "Efe Bozkir",
+      "Enkelejda Kasneci"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.10267",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

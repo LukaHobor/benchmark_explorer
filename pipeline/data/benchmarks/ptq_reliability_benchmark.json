@@ -1,0 +1,40 @@
+{
+  "name": "PTQ Reliability Benchmark",
+  "description": "Post-training quantization (PTQ) is a popular method for compressing deep neural networks (DNNs) without modifying their original architecture or training procedures. Despite its effectiveness and convenience, the reliability of PTQ methods in the presence of some extrem cases such as distribution shift and data noise remains largely unexplored. This paper first investigates this problem on various commonly-used PTQ methods. We aim to answer several research questions related to the influence of calibration set distribution variations, calibration paradigm selection, and data augmentation or sampling strategies on PTQ reliability. A systematic evaluation process is conducted across a wide range of tasks and commonly-used PTQ paradigms. The results show that most existing PTQ methods are not reliable enough in term of the worst-case group performance, highlighting the need for more robust methods. Our findings provide insights for developing PTQ methods that can effectively handle distribution shift scenarios and enable the deployment of quantized DNNs in real-world applications.",
+  "category": "mixed",
+  "domain": "model compression",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "model_quantization_evaluation",
+    "robustness_testing",
+    "distribution_shift_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (including worst-group / worst-case group performance)",
+  "general_score_metric": "worst-group accuracy (and overall accuracy degradation after PTQ)",
+  "year_of_publish": 2023,
+  "reputation": "Recognized within the model-compression and quantization research community for highlighting reliability issues under distribution shift; moderate adoption.",
+  "notes": "Non-LLM benchmark focused on PTQ for DNNs; results are sensitive to calibration-set selection and distribution shifts; evaluates worst-case group performance and may not cover all model architectures or real-world deployment scenarios.",
+  "creators": {
+    "scientists": [
+      "Zhihang Yuan",
+      "Jiawei Liu",
+      "Jiaxiang Wu",
+      "Dawei Yang",
+      "Qiang Wu",
+      "Guangyu Sun",
+      "Wenyu Liu",
+      "Xinggang Wang",
+      "Bingzhe Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2303.13003",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

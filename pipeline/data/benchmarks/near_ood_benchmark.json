@@ -1,0 +1,37 @@
+{
+  "name": "Near OoD benchmark",
+  "description": "In image classification, a lot of development has happened in detecting out-of-distribution (OoD) data. However, most OoD detection methods are evaluated on a standard set of datasets, arbitrarily different from training data. There is no clear definition of what forms a ``good\" OoD dataset. Furthermore, the state-of-the-art OoD detection methods already achieve near perfect results on these standard benchmarks. In this paper, we define 2 categories of OoD data using the subtly different concepts of perceptual/visual and semantic similarity to in-distribution (iD) data. We define Near OoD samples as perceptually similar but semantically different from iD samples, and Shifted samples as points which are visually different but semantically akin to iD data. We then propose a GAN based framework for generating OoD samples from each of these 2 categories, given an iD dataset. Through extensive experiments on MNIST, CIFAR-10/100 and ImageNet, we show that a) state-of-the-art OoD detection me",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "image_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "near 100% on standard far-OOD settings; substantially lower on near-OOD settings",
+  "year_of_publish": 2022,
+  "reputation": "An influential OOD detection benchmark that helped motivate more realistic near-OOD evaluation beyond standard far-OOD datasets.",
+  "notes": "Non-LLM vision benchmark; standard OOD benchmarks are often saturated, and this work highlights that near-OOD is much harder than conventional far-OOD evaluation.",
+  "creators": {
+    "scientists": [
+      "Jishnu Mukhoti",
+      "Tsung-Yu Lin",
+      "Bor-Chun Chen",
+      "Ashish Shah",
+      "Philip H. S. Torr",
+      "Puneet K. Dokania"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.11960",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "GOAT-Bench",
+  "description": "The Embodied AI community has made significant strides in visual navigation tasks, exploring targets from 3D coordinates, objects, language descriptions, and images. However, these navigation models often handle only a single input modality as the target. With the progress achieved so far, it is time to move towards universal navigation models capable of handling various goal types, enabling more effective user interaction with robots. To facilitate this goal, we propose GOAT-Bench, a benchmark for the universal navigation task referred to as GO to AnyThing (GOAT). In this task, the agent is directed to navigate to a sequence of targets specified by the category name, language description, or image in an open-vocabulary fashion. We benchmark monolithic RL and modular methods on the GOAT task, analyzing their performance across modalities, the role of explicit and implicit scene memories, their robustness to noise in goal specifications, and the impact of memory in lifelong scenarios.",
+  "category": "multimodal",
+  "domain": "robotics / embodied AI / navigation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "goal_conditioned_navigation",
+    "embodied_navigation",
+    "multimodal_target_specification",
+    "sequential_goal_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Task success rate (SR) and SPL (success weighted by path length); also robustness measures to noisy goal specs",
+  "general_score_metric": "Success Rate (SR) and SPL",
+  "typical_sota_score": "varies by modality and scenario; early results report low-to-moderate SR (e.g., on the order of ~10–50% depending on task and noise)",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) benchmark for universal/multimodal navigation; promising for the embodied-AI community but with limited adoption as of 2024.",
+  "notes": "Simulation-based embodied navigation benchmark with multimodal goal specifications; evaluates robustness and lifelong-memory scenarios. Transfer to real robots not guaranteed; scores are environment- and goal-modality-dependent.",
+  "creators": {
+    "scientists": [
+      "Mukul Khanna",
+      "Ram Ramrakhya",
+      "Gunjan Chhablani",
+      "Sriram Yenamandra",
+      "Theophile Gervet",
+      "Matthew Chang",
+      "Zsolt Kira",
+      "Devendra Singh Chaplot",
+      "Dhruv Batra",
+      "Roozbeh Mottaghi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2404.06609",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

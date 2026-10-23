@@ -1,0 +1,37 @@
+{
+  "name": "PINN Benchmark Problems",
+  "description": "The potential of learned models for fundamental scientific research and discovery is drawing increasing attention worldwide. Physics-informed neural networks (PINNs), where the loss function directly embeds governing equations of scientific phenomena, is one of the key techniques at the forefront of recent advances. PINNs are typically trained using stochastic gradient descent methods, akin to their deep learning counterparts. However, analysis in this paper shows that PINNs' unique loss formulations lead to a high degree of complexity and ruggedness that may not be conducive for gradient descent. Unlike in standard deep learning, PINN training requires globally optimum parameter values that satisfy physical laws as closely as possible. Spurious local optimum, indicative of erroneous physics, must be avoided. Hence, neuroevolution algorithms, with their superior global search capacity, may be a better choice for PINNs relative to gradient descent methods. Here, we propose a set of five benchmark problems, with open-source codes, spanning diverse physical phenomena for novel neuroevolution algorithm development. Using this, we compare two neuroevolution algorithms against the commonly used stochastic gradient descent, and our baseline results support the claim that neuroevolution can surpass gradient descent, ensuring better physics compliance in the predicted outputs. %Furthermore, implementing neuroevolution with JAX leads to orders of magnitude speedup relative to standard implementations.",
+  "category": "mixed",
+  "domain": "computational physics / scientific computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "physics residual (PDE residual) and L2 prediction error against ground-truth solution; computational cost is also reported",
+  "general_score_metric": "physics residual (PDE residual) and L2 error",
+  "year_of_publish": 2022,
+  "reputation": "Niche benchmark aimed at PINN and neuroevolution researchers; recognized within the scientific ML community but not a broad, de facto standard.",
+  "notes": "Small suite (five problems) of synthetic/academic physics tasks; results are sensitive to initialization, hyperparameters, and solver choices; non-LLM benchmark focused on classical scientific computing.",
+  "creators": {
+    "scientists": [
+      "Nicholas Sung Wei Yong",
+      "Jian Cheng Wong",
+      "Pao-Hsiung Chiu",
+      "Abhishek Gupta",
+      "Chinchun Ooi",
+      "Yew-Soon Ong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2212.07624",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

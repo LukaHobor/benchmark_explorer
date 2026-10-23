@@ -1,0 +1,36 @@
+{
+  "name": "MobQA",
+  "description": "This paper presents MobQA, a benchmark dataset designed to evaluate the semantic understanding capabilities of large language models (LLMs) for human mobility data through natural language question answering. While existing models excel at predicting human movement patterns, it remains unobvious how much they can interpret the underlying reasons or semantic meaning of those patterns. MobQA provides a comprehensive evaluation framework for LLMs to answer questions about diverse human GPS trajectories spanning daily to weekly granularities. It comprises 5,800 high-quality question-answer pairs across three complementary question types: factual retrieval (precise data extraction), multiple-choice reasoning (semantic inference), and free-form explanation (interpretive description), which all require spatial, temporal, and semantic reasoning. Our evaluation of major LLMs reveals strong performance on factual retrieval but significant limitations in semantic reasoning and explanation question answering, with trajectory length substantially impacting model effectiveness. These findings demonstrate the achievements and limitations of state-of-the-art LLMs for semantic mobility understanding.\\footnote{MobQA dataset is available at https://github.com/CyberAgentAILab/mobqa.}",
+  "category": "text",
+  "domain": "human mobility",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "extractive_qa",
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific: accuracy for multiple-choice, exact_match/F1 for factual retrieval (extractive), and human_eval or rubric-based scoring for free-form explanations",
+  "general_score_metric": "task-specific metrics (accuracy / exact_match / F1 / human_eval for explanations)",
+  "typical_sota_score": "factual retrieval: 80–95%; reasoning/explanation: 30–60%",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Relatively small dataset (~5.8k QA pairs) with heterogeneous question types; results are sensitive to trajectory length and spatio-temporal complexity. Risk of training-set contamination exists if mobility datasets overlap with model pretraining; explanations require human evaluation and are not fully captured by automatic metrics.",
+  "creators": {
+    "scientists": [
+      "Hikaru Asano",
+      "Hiroki Ouchi",
+      "Akira Kasuga",
+      "Ryo Yonetani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2508.11163",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "UAV Visual Detection and Tracking Benchmark",
+  "description": "Unmanned Aerial Vehicles (UAV) can pose a major risk for aviation safety, due to both negligent and malicious use. For this reason, the automated detection and tracking of UAV is a fundamental task in aerial security systems. Common technologies for UAV detection include visible-band and thermal infrared imaging, radio frequency and radar. Recent advances in deep neural networks (DNNs) for image-based object detection open the possibility to use visual information for this detection and tracking task. Furthermore, these detection architectures can be implemented as backbones for visual tracking systems, thereby enabling persistent tracking of UAV incursions. To date, no comprehensive performance benchmark exists that applies DNNs to visible-band imagery for UAV detection and tracking. To this end, three datasets with varied environmental conditions for UAV detection and tracking, comprising a total of 241 videos (331,486 images), are assessed using four detection architectures and three tracking frameworks. The best performing detector architecture obtains an mAP of 98.6% and the best performing tracking framework obtains a MOTA of 96.3%. Cross-modality evaluation is carried out between visible and infrared spectrums, achieving a maximal 82.8% mAP on visible images when training in the infrared modality. These results provide the first public multi-approach benchmark for state-of-the-art deep learning-based methods and give insight into which detection and tracking architectures are effective in the UAV domain.",
+  "category": "vision",
+  "domain": "aerial surveillance / UAV detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "visual_tracking",
+    "multi_object_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision) for detection; MOTA (Multiple Object Tracking Accuracy) for tracking",
+  "general_score_metric": "mAP for detection; MOTA for tracking",
+  "typical_sota_score": "mAP ~82–99% (varies by modality and setup); MOTA ~96%",
+  "year_of_publish": 2021,
+  "reputation": "Recognized in the UAV detection/tracking research community as a useful domain-specific benchmark, though adoption is mostly within aerial surveillance research.",
+  "notes": "Non-LLM vision benchmark; moderate-sized dataset (241 videos, ~331k images). Results can show ceiling effects on constrained scenarios; cross-modality (visible vs infrared) performance differs substantially. Domain-specific, potential for overfitting to acquisition conditions.",
+  "creators": {
+    "scientists": [
+      "Brian K. S. Isaac-Medina",
+      "Matt Poyser",
+      "Daniel Organisciak",
+      "Chris G. Willcocks",
+      "Toby P. Breckon",
+      "Hubert P. H. Shum"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2103.13933",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

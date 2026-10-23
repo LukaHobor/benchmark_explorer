@@ -1,0 +1,37 @@
+{
+  "name": "HMDB51-P; UCF101-P; Kinetics400-P; SSv2-P",
+  "description": "We have seen a great progress in video action recognition in recent years. There are several models based on convolutional neural network (CNN) and some recent transformer based approaches which provide top performance on existing benchmarks. In this work, we perform a large-scale robustness analysis of these existing models for video action recognition. We focus on robustness against real-world distribution shift perturbations instead of adversarial perturbations. We propose four different benchmark datasets, HMDB51-P, UCF101-P, Kinetics400-P, and SSv2-P to perform this analysis. We study robustness of six state-of-the-art action recognition models against 90 different perturbations. The study reveals some interesting findings, 1) transformer based models are consistently more robust compared to CNN based models, 2) Pretraining improves robustness for Transformer based models more than CNN based models, and 3) All of the studied models are robust to temporal perturbations for all datasets but SSv2; suggesting the importance of temporal information for action recognition varies based on the dataset and activities. Next, we study the role of augmentations in model robustness and present a real-world dataset, UCF101-DS, which contains realistic distribution shifts, to further validate some of these findings. We believe this study will serve as a benchmark for future research in robust video action recognition 11More details available at bit.1y/3TJLMUF..",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy (top-1)",
+  "typical_sota_score": "varies by dataset and perturbation severity; roughly 60–85%",
+  "year_of_publish": 2022,
+  "reputation": "39 citations",
+  "notes": "Non-LLM benchmark focused on robustness to real-world distribution shifts (90 perturbations). Results vary widely by model architecture, dataset, and perturbation type; transformer models typically more robust than CNNs. Not an adversarial benchmark; contains many synthetic/realistic corruptions.",
+  "creators": {
+    "scientists": [
+      "Madeline Chantry Schiappa",
+      "Naman Biyani",
+      "Shruti Vyas",
+      "Hamid Palangi",
+      "Vibhav Vineet",
+      "Y. Rawat"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.01398",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

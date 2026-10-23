@@ -1,0 +1,33 @@
+{
+  "name": "Virus-MNIST",
+  "description": "The short note presents an image classification dataset consisting of 10 executable code varieties and approximately 50,000 virus examples. The malicious classes include 9 families of computer viruses and one benign set. The image formatting for the first 1024 bytes of the Portable Executable (PE) mirrors the familiar MNIST handwriting dataset, such that most of the previously explored algorithmic methods can transfer with minor modifications. The designation of 9 virus families for malware derives from unsupervised learning of class labels; we discover the families with KMeans clustering that excludes the non-malicious examples. As a benchmark using deep learning methods (MobileNetV2), we find an overall 80% accuracy for virus identification by families when beneware is included. We also find that once a positive malware detection occurs (by signature or heuristics), the projection of the first 1024 bytes into a thumbnail image can classify with 87% accuracy the type of virus. The wor",
+  "category": "vision",
+  "domain": "ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "80–87%",
+  "year_of_publish": 2021,
+  "reputation": "A niche malware-image classification benchmark used mainly in academic ML security research rather than as a widely adopted community benchmark.",
+  "notes": "Non-LLM benchmark; derived from PE-file byte images and may be sensitive to dataset construction and family-label clustering. Likely limited external adoption and potential contamination if malware families overlap with training corpora.",
+  "creators": {
+    "scientists": [
+      "David Noever",
+      "Samantha E. Miller Noever"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2103.00602",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

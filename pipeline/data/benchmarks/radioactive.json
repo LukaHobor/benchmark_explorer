@@ -1,0 +1,37 @@
+{
+  "name": "RadioActive",
+  "description": "Effortless and precise segmentation with minimal clinician effort could greatly streamline clinical workflows. Recent interactive segmentation models, inspired by METAs Segment Anything, have made significant progress but face critical limitations in 3D radiology. These include impractical human interaction requirements such as slice-by-slice operations for 2D models on 3D data and a lack of iterative refinement. Prior studies have been hindered by inadequate evaluation protocols, resulting in unreliable performance assessments and inconsistent findings across studies. The RadioActive benchmark addresses these challenges by providing a rigorous and reproducible evaluation framework for interactive segmentation methods in clinically relevant scenarios. It features diverse datasets, a wide range of target structures, and the most impactful 2D and 3D interactive segmentation methods, all within a flexible and extensible codebase. We also introduce advanced prompting techniques that reduce interaction steps, enabling fair comparisons between 2D and 3D models. Surprisingly, SAM2 outperforms all specialized medical 2D and 3D models in a setting requiring only a few interactions to generate prompts for a 3D volume. This challenges prevailing assumptions and demonstrates that general-purpose models surpass specialized medical approaches. By open-sourcing RadioActive, we invite researchers to integrate their models and prompting techniques, ensuring continuous and transparent evaluation of 3D medical interactive models.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "interactive_segmentation",
+    "3D_segmentation",
+    "prompting"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice_score (with interaction-efficiency measures such as interactions-per-volume)",
+  "general_score_metric": "mean Dice",
+  "year_of_publish": 2024,
+  "reputation": "2 citations",
+  "notes": "Non-LLM benchmark focused on interactive 2D/3D medical segmentation; evaluates both segmentation quality (Dice/IoU) and interaction efficiency. Results can be sensitive to prompting/interaction protocol and dataset selection; includes a reproducible codebase but may not fully reflect all real-world clinical deployment constraints.",
+  "creators": {
+    "scientists": [
+      "Constantin Ulrich",
+      "Tassilo Wald",
+      "Emily Tempus",
+      "Maximilian Rokuss",
+      "P. Jaeger",
+      "Klaus H. Maier-Hein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2411.07885",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

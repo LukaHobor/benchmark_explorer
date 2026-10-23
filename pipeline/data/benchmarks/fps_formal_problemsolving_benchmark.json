@@ -1,0 +1,38 @@
+{
+  "name": "FPS (Formal Problem-Solving) benchmark",
+  "description": "As a seemingly self-explanatory task, problem-solving has been a significant component of science and engineering. However, a general yet concrete formulation of problem-solving itself is missing. With the recent development of AI-based problem-solving agents, the demand for process-level verifiability is rapidly increasing yet underexplored. To fill these gaps, we present a principled formulation of problem-solving as a deterministic Markov decision process; a novel framework, FPS (Formal Problem-Solving), which utilizes existing FTP (formal theorem proving) environments to perform process-verified problem-solving; and D-FPS (Deductive FPS), decoupling solving and answer verification for better human-alignment. The expressiveness, soundness and completeness of the frameworks are proven. We construct three benchmarks on problem-solving: FormalMath500, a formalization of a subset of the MATH500 benchmark; MiniF2F-Solving and PutnamBench-Solving, adaptations of FTP benchmarks MiniF2F and PutnamBench. For faithful, interpretable, and human-aligned evaluation, we propose RPE (Restricted Propositional Equivalence), a symbolic approach to determine the correctness of answers by formal verification. We evaluate four prevalent FTP models and two prompting methods as baselines, solving at most 23.77% of FormalMath500, 27.47% of MiniF2F-Solving, and 0.31% of PutnamBench-Solving.",
+  "category": "code",
+  "domain": "formal methods / theorem proving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "proof_generation",
+    "formal_verification",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (formally verified correctness via RPE / symbolic verification)",
+  "general_score_metric": "task_success_rate (percentage of problems formally verified as solved)",
+  "typical_sota_score": "0.3–27%",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, principled benchmark in the formal theorem-proving community that attracts interest for process-verifiable problem-solving but is still early-stage.",
+  "notes": "Adaptations of existing FTP benchmarks (MiniF2F, PutnamBench, MATH500) — risk of training-data contamination if models have seen those corpora; requires theorem-prover infrastructure; very low baseline scores on hardest splits (Putnam), and relatively small problem counts in some subsets.",
+  "creators": {
+    "scientists": [
+      "Qi Liu",
+      "Xinhao Zheng",
+      "Renqiu Xia",
+      "Xingzhi Qi",
+      "Qinxiang Cao",
+      "Junchi Yan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2505.04528",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

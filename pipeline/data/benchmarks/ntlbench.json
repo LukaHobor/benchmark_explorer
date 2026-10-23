@@ -1,0 +1,34 @@
+{
+  "name": "NTLBench",
+  "description": "Over the past decades, researchers have primarily focused on improving the generalization abilities of models, with limited attention given to regulating such generalization. However, the ability of models to generalize to unintended data (e.g., harmful or unauthorized data) can be exploited by malicious adversaries in unforeseen ways, potentially resulting in violations of model ethics. Non-transferable learning (NTL), a task aimed at reshaping the generalization abilities of deep learning models, was proposed to address these challenges. While numerous methods have been proposed in this field, a comprehensive review of existing progress and a thorough analysis of current limitations remain lacking. In this paper, we bridge this gap by presenting the first comprehensive survey on NTL and introducing NTLBench, the first benchmark to evaluate NTL performance and robustness within a unified framework. Specifically, we first introduce the task settings, general framework, and criteria of NTL, followed by a summary of NTL approaches. Furthermore, we emphasize the often-overlooked issue of robustness against various attacks that can destroy the non-transferable mechanism established by NTL. Experiments conducted via NTLBench verify the limitations of existing NTL methods in robustness. Finally, we discuss the practical applications of NTL, along with its future directions and associated challenges.",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "robustness_evaluation",
+    "transferability_reduction",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_accuracy + transferability_rate (measuring reduction in transferability) and robustness under adversarial/attack scenarios",
+  "general_score_metric": "reduction in transferability (or transferability_rate) combined with task accuracy under attacks",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed benchmark (from the NTL survey/paper) that is early-stage and mainly referenced within the niche research community studying non-transferable learning.",
+  "notes": "Early-stage, research-focused benchmark; evaluates adversarial robustness of non-transferable mechanisms; limited adoption so far and results depend heavily on chosen attack models and datasets; non-LLM.",
+  "creators": {
+    "scientists": [
+      "Ziming Hong",
+      "Yongli Xiang",
+      "Tongliang Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2502.13593",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

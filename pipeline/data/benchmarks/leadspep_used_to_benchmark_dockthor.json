@@ -1,0 +1,36 @@
+{
+  "name": "LEADS-PEP (used to benchmark DockThor)",
+  "description": "Protein-peptide interactions play a crucial role in many cellular and biological functions, which justify the increasing interest in the development of peptide-based drugs. However, predicting experimental binding modes and affinities in protein-peptide docking remains a great challenge for most docking programs due to some particularities of this class of ligands, such as the high degree of flexibility. In this paper, we present the performance of the DockThor program on the LEADS-PEP data set, a benchmarking set composed of 53 diverse protein-peptide complexes with peptides ranging from 3 to 12 residues and with up to 51 rotatable bonds. The DockThor performance for pose prediction on redocking studies was compared with some state-of-the-art docking programs that were also evaluated on the LEADS-PEP data set, AutoDock, AutoDock Vina, Surflex, GOLD, Glide, rDock, and DINC, as well as with the task-specific docking protocol HPepDock. Our results indicate that DockThor could dock 40% of the cases with an overall backbone RMSD below 2.5 Å when the top-scored docking pose was considered, exhibiting similar results to Glide and outperforming other protein-ligand docking programs, whereas rDock and HPepDock achieved superior results. Assessing the docking poses closest to the crystal structure (i.e., best-RMSD pose), DockThor achieved a success rate of 60% in pose prediction. Due to the great overall performance of handling peptidic compounds, the DockThor program can be considered as suitable for docking highly flexible and challenging ligands, with up to 40 rotatable bonds. DockThor is freely available as a virtual screening Web server at https://www.dockthor.lncc.br/ .",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "docking",
+    "pose_prediction",
+    "affinity_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (percentage of cases within an RMSD threshold, e.g., backbone RMSD < 2.5 Å)",
+  "general_score_metric": "success_rate_at_RMSD_threshold (e.g., % of complexes with backbone RMSD < 2.5 Å)",
+  "typical_sota_score": "40–70% (≈40% top‑scored pose success reported for DockThor at 2.5 Å; best‑RMSD poses up to ~60%; specialized methods can be higher)",
+  "year_of_publish": 2020,
+  "reputation": "269 citations",
+  "notes": "Small, specialized non‑LLM benchmark (53 complexes). Evaluations are structural (RMSD) rather than clinical/thermodynamic; high ligand flexibility makes the set challenging. Results depend strongly on chosen RMSD threshold and pose scoring; limited for generalization to other protein–peptide families.",
+  "creators": {
+    "scientists": [
+      "Karina B. Santos",
+      "Isabella Alvim Guedes",
+      "Ana L. M. Karl",
+      "Laurent E. Dardenne"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1021/acs.jcim.9b00905",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

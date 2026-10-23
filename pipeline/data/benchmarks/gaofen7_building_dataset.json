@@ -1,0 +1,38 @@
+{
+  "name": "GaoFen-7 Building dataset",
+  "description": "AbstractAccurate building extraction is crucial for urban understanding, but it often requires a substantial number of building samples. While some building datasets are available for model training, there remains a lack of high-quality building datasets covering urban and rural areas in China. To fill this gap, this study creates a high-resolution GaoFen-7 (GF-7) Building dataset utilizing the Chinese GF-7 imagery from six Chinese cities. The dataset comprises 5,175 pairs of 512 × 512 image tiles, covering 573.17 km2. It contains 170,015 buildings, with 84.8% of the buildings in urban areas and 15.2% in rural areas. The usability of the GF-7 Building dataset has been proved with seven convolutional neural networks, all achieving an overall accuracy (OA) exceeding 93%. Experiments have shown that the GF-7 building dataset can be used for building extraction in urban and rural scenarios. The proposed dataset boasts high quality and high diversity. It supplements existing building datasets and will contribute to promoting new algorithms for building extraction, as well as facilitating intelligent building interpretation in China.",
+  "category": "vision",
+  "domain": "geospatial / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Intersection over Union (IoU) / mean IoU and Overall Accuracy (OA); F1 can also be reported for building masks",
+  "general_score_metric": "Overall Accuracy (OA) (often reported alongside mIoU)",
+  "typical_sota_score": "93–99% (OA)",
+  "year_of_publish": 2024,
+  "reputation": "A high-quality, recently published remote-sensing building dataset (GF-7) with growing interest in the China-focused geospatial community.",
+  "notes": "Geographic bias toward six Chinese cities (urban-heavy); moderate dataset size (5,175 tiles) — may not generalize to other sensors/regions; class imbalance (majority urban); suitable primarily for high-resolution GF-7 imagery.",
+  "creators": {
+    "scientists": [
+      "Peimin Chen",
+      "Huabing Huang",
+      "Feng Ye",
+      "Jinying Liu",
+      "Weijia Li",
+      "Jie Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1038/s41597-024-03009-5",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

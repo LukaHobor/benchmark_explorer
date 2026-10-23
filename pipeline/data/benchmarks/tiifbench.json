@@ -1,0 +1,37 @@
+{
+  "name": "TIIF-Bench",
+  "description": "The rapid advancements of Text-to-Image (T2I) models have ushered in a new phase of AI-generated content, marked by their growing ability to interpret and follow user instructions. However, existing T2I model evaluation benchmarks fall short in limited prompt diversity and complexity, as well as coarse evaluation metrics, making it difficult to evaluate the fine-grained alignment performance between textual instructions and generated images. In this paper, we present TIIF-Bench (Text-to-Image Instruction Following Benchmark), aiming to systematically assess T2I models' ability in interpreting and following intricate textual instructions. TIIF-Bench comprises a set of 5000 prompts organized along multiple dimensions, which are categorized into three levels of difficulties and complexities. To rigorously evaluate model robustness to varying prompt lengths, we provide a short and a long version for each prompt with identical core semantics. Two critical attributes, i.e., text rendering and style control, are introduced to evaluate the precision of text synthesis and the aesthetic coherence of T2I models. In addition, we collect 100 high-quality designer level prompts that encompass various scenarios to comprehensively assess model performance. Leveraging the world knowledge encoded in large vision language models, we propose a novel computable framework to discern subtle variations in T2I model outputs. Through meticulous benchmarking of mainstream T2I models on TIIF-Bench, we analyze the pros and cons of current T2I models and reveal the limitations of current T2I benchmarks. Project Page: https://a113n-w3i.github.io/TIIF_Bench/.",
+  "category": "multimodal",
+  "domain": "text-to-image / generative vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "human_eval",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite (automated alignment score computed by VLMs/LLMs + targeted human evaluation)",
+  "general_score_metric": "composite_alignment_score",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed, actively discussed benchmark in the text-to-image alignment community with growing interest but not yet widely adopted as a standard.",
+  "notes": "Contains 5,000 prompts (plus 100 designer-level prompts); evaluation relies on model-based judges (VLMs/LLMs) so results can reflect judge-model biases. Moderate dataset size; careful design reduces but does not eliminate contamination and evaluator-bias risks.",
+  "creators": {
+    "scientists": [
+      "Xinyu Wei",
+      "Jinrui Zhang",
+      "Zeqing Wang",
+      "Hongyang Wei",
+      "Zhen Guo",
+      "Lei Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.02161",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

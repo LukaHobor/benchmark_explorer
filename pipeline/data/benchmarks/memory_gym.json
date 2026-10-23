@@ -1,0 +1,35 @@
+{
+  "name": "Memory Gym",
+  "description": "Memory Gym presents a suite of 2D partially observable environments, namely Mortar Mayhem, Mystery Path, and Searing Spotlights, designed to benchmark memory capabilities in decision-making agents. These environments, originally with finite tasks, are expanded into innovative, endless formats, mirroring the escalating challenges of cumulative memory games such as \"I packed my bag\". This progression in task design shifts the focus from merely assessing sample efficiency to also probing the levels of memory effectiveness in dynamic, prolonged scenarios. To address the gap in available memory-based Deep Reinforcement Learning baselines, we introduce an implementation within the open-source CleanRL library that integrates Transformer-XL (TrXL) with Proximal Policy Optimization. This approach utilizes TrXL as a form of episodic memory, employing a sliding window technique. Our comparative study between the Gated Recurrent Unit (GRU) and TrXL reveals varied performances across our finite and endless tasks. TrXL, on the finite environments, demonstrates superior effectiveness over GRU, but only when utilizing an auxiliary loss to reconstruct observations. Notably, GRU makes a remarkable resurgence in all endless tasks, consistently outperforming TrXL by significant margins. Website and Source Code: https://marcometer.github.io/jmlr_2024.github.io/",
+  "category": "mixed",
+  "domain": "reinforcement learning / agent memory",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "memory_benchmark",
+    "online_control"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average episodic return (learning curves) and sample-efficiency comparisons (e.g., return vs steps)",
+  "general_score_metric": "average episodic return",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded within the RL-memory research niche (JMLR/2024); provides an open-source suite and baselines that have begun to be adopted by memory-focused RL work.",
+  "notes": "Simulated 2D partially-observable environments (non-LLM benchmark); results sensitive to implementation details, seeds, and auxiliary losses; limited set of tasks so may not capture all forms of memory.",
+  "creators": {
+    "scientists": [
+      "Marco Pleines",
+      "Matthias Pallasch",
+      "Frank Zimmer",
+      "Mike Preuss"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2309.17207",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

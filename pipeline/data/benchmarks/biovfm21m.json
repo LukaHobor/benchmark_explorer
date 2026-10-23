@@ -1,0 +1,41 @@
+{
+  "name": "BioVFM-21M",
+  "description": "Scaling up model and data size have demonstrated impressive performance improvement over a wide range of tasks. Despite extensive studies on scaling behaviors for general-purpose tasks, medical images exhibit substantial differences from natural data. It remains unclear the key factors in developing medical vision foundation models at scale due to the absence of an extensive understanding of scaling behavior in the medical domain. In this paper, we explored the scaling behavior across model sizes, training algorithms, data sizes, and imaging modalities in developing scalable medical vision foundation models by self-supervised learning. To support scalable pretraining, we introduce BioVFM-21M, a large-scale biomedical image dataset encompassing a wide range of biomedical image modalities and anatomies. We observed that scaling up does provide benefits but varies across tasks. Additional analysis reveals several factors correlated with scaling benefits. Finally, we propose BioVFM, a large-scale medical vision foundation model pretrained on 21 million biomedical images, which outperforms the previous state-of-the-art foundation models across 12 medical benchmarks. Our results highlight that while scaling up is beneficial for pursuing better performance, task characteristics, data diversity, pretraining methods, and computational efficiency remain critical considerations for developing scalable medical foundation models.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "semantic_segmentation",
+    "object_detection",
+    "representation_learning",
+    "few_shot"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-dependent (AUROC / accuracy / Dice / mAP)",
+  "general_score_metric": "task-dependent aggregate (AUROC / accuracy / Dice / mAP)",
+  "year_of_publish": 2025,
+  "reputation": "A recent large-scale medical vision foundation model and dataset that is gaining attention in the medical imaging pretraining community but is not yet a universal standard.",
+  "notes": "Very large (21M images) and multi-modality dataset; potential modality imbalance and domain shift across tasks; substantial compute required for pretraining; possible overlap/contamination with downstream benchmarks not fully audited.",
+  "creators": {
+    "scientists": [
+      "Jiarun Liu",
+      "Hong-Yu Zhou",
+      "Weijian Huang",
+      "Hao Yang",
+      "Dongning Song",
+      "Tao Tan",
+      "Yong Liang",
+      "Shanshan Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.09329",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

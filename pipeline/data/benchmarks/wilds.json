@@ -1,0 +1,56 @@
+{
+  "name": "WILDS",
+  "description": "Distribution shifts -- where the training distribution differs from the test distribution -- can substantially degrade the accuracy of machine learning (ML) systems deployed in the wild. Despite their ubiquity in the real-world deployments, these distribution shifts are under-represented in the datasets widely used in the ML community today. To address this gap, we present WILDS, a curated benchmark of 10 datasets reflecting a diverse range of distribution shifts that naturally arise in real-world applications, such as shifts across hospitals for tumor identification; across camera traps for wildlife monitoring; and across time and location in satellite imaging and poverty mapping. On each dataset, we show that standard training yields substantially lower out-of-distribution than in-distribution performance. This gap remains even with models trained by existing methods for tackling distribution shifts, underscoring the need for new methods for training models that are more robust to the types of distribution shifts that arise in practice. To facilitate method development, we provide an open-source package that automates dataset loading, contains default model architectures and hyperparameters, and standardizes evaluations. Code and leaderboards are available at https://wilds.stanford.edu.",
+  "category": "mixed",
+  "domain": "mixed / multiple real-world domains",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "domain_generalization",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "dataset-specific (accuracy for classification; MAE/RMSE for regression); primary emphasis on OOD robustness / drop in performance relative to IID",
+  "general_score_metric": "dataset-specific (accuracy for classification; MAE/RMSE for regression); OOD performance gap commonly reported",
+  "typical_sota_score": "varies widely across datasets; no single SOTA range (dataset-dependent)",
+  "year_of_publish": 2020,
+  "reputation": "Widely used and respected as a canonical suite for studying real-world distribution shifts and OOD robustness across multiple domains.",
+  "notes": "Multi-dataset, multi-task benchmark; scores and best methods are highly dataset-dependent. Not an LLM benchmark. Care required to use provided splits and evaluation protocols; some constituent datasets are small or domain-specific.",
+  "creators": {
+    "scientists": [
+      "Pang Wei Koh",
+      "Shiori Sagawa",
+      "Henrik Marklund",
+      "Sang Michael Xie",
+      "Marvin Zhang",
+      "Akshay Balsubramani",
+      "Weihua Hu",
+      "Michihiro Yasunaga",
+      "Richard Lanas Phillips",
+      "Irena Gao",
+      "Tony Lee",
+      "Etienne David",
+      "Ian Stavness",
+      "Wei Guo",
+      "Berton A. Earnshaw",
+      "Imran S. Haque",
+      "Sara Beery",
+      "Jure Leskovec",
+      "Anshul Kundaje",
+      "Emma Pierson",
+      "Sergey Levine",
+      "Chelsea Finn",
+      "Percy Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2012.07421",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

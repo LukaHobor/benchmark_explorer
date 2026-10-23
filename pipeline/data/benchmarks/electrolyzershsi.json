@@ -1,0 +1,40 @@
+{
+  "name": "Electrolyzers-HSI",
+  "description": "The global challenge of sustainable recycling demands automated, fast, and accurate, state-of-the-art (SOTA) material detection systems that act as a bedrock for a circular economy. Democratizing access to these cutting-edge solutions that enable real-time waste analysis is essential for scaling up recycling efforts and fostering the Green Deal. In response, we introduce \\textbf{Electrolyzers-HSI}, a novel multimodal benchmark dataset designed to accelerate the recovery of critical raw materials through accurate electrolyzer materials classification. The dataset comprises 55 co-registered high-resolution RGB images and hyperspectral imaging (HSI) data cubes spanning the 400--2500 nm spectral range, yielding over 4.2 million pixel vectors and 424,169 labeled ones. This enables non-invasive spectral analysis of shredded electrolyzer samples, supporting quantitative and qualitative material classification and spectral properties investigation. We evaluate a suite of baseline machine learning (ML) methods alongside SOTA transformer-based deep learning (DL) architectures, including Vision Transformer, SpectralFormer, and the Multimodal Fusion Transformer, to investigate architectural bottlenecks for further efficiency optimisation when deploying transformers in material identification. We implement zero-shot detection techniques and majority voting across pixel-level predictions to establish object-level classification robustness. In adherence to the FAIR data principles, the electrolyzers-HSI dataset and accompanying codebase are openly available at https://github.com/hifexplo/Electrolyzers-HSI and https://rodare.hzdr.de/record/3668, supporting reproducible research and facilitating the broader adoption of smart and sustainable e-waste recycling solutions.",
+  "category": "vision",
+  "domain": "materials science / recycling (hyperspectral imaging)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pixel_classification",
+    "object_classification",
+    "semantic_segmentation",
+    "multimodal_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "75–92%",
+  "year_of_publish": 2025,
+  "reputation": "A recent, domain-specific hyperspectral benchmark for electrolyzer material classification; of primary interest to the materials-science and remote-sensing communities but not yet widely adopted outside those areas.",
+  "notes": "Small number of co-registered scenes (55 images) and imbalanced labeled pixels can encourage overfitting; HSI calibration differences and limited geographic/sample diversity may reduce generalization; object-level labels derived by majority voting can mask pixel-level label noise.",
+  "creators": {
+    "scientists": [
+      "Elias Arbash",
+      "Ahmed Jamal Afifi",
+      "Ymane Belahsen",
+      "Margret Fuchs",
+      "Pedram Ghamisi",
+      "Paul Scheunders",
+      "Richard Gloaguen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.20507",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

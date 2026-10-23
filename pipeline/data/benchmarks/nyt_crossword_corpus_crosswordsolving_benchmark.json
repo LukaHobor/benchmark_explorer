@@ -1,0 +1,33 @@
+{
+  "name": "NYT Crossword Corpus / Crossword-solving benchmark",
+  "description": "Solving crossword puzzles requires diverse reasoning capabilities, access to a vast amount of knowledge about language and the world, and the ability to satisfy the constraints imposed by the structure of the puzzle. In this work, we introduce solving crossword puzzles as a new natural language understanding task. We release the specification of a corpus of crossword puzzles collected from the New York Times daily crossword spanning 25 years and comprised of a total of around nine thousand puzzles. These puzzles include a diverse set of clues: historic, factual, word meaning, synonyms/antonyms, fill-in-the-blank, abbreviations, prefixes/suffixes, wordplay, and cross-lingual, as well as clues that depend on the answers to other clues. We separately release the clue-answer pairs from these puzzles as an open-domain question answering dataset containing over half a million unique clue-answer pairs. For the question answering task, our baselines include several sequence-to-sequence and retrieval-based generative models. We also introduce a non-parametric constraint satisfaction baseline for solving the entire crossword puzzle. Finally, we propose an evaluation framework which consists of several complementary performance metrics.",
+  "category": "text",
+  "domain": "games",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match (clue-level) and puzzle-level solve rate (full-grid task_success_rate)",
+  "general_score_metric": "clue exact_match accuracy (primary) and full-puzzle solve rate (secondary)",
+  "year_of_publish": 2022,
+  "reputation": "Well-cited and notable dataset for research on crossword-solving and constrained language understanding, used by several follow-up works but not ubiquitous.",
+  "notes": "Contains 25 years of NYT puzzles (~9k); high risk of contamination in large LLMs (puzzles likely in training data); puzzle-level evaluation is strict (full-grid exactness) and may understate partial understanding.",
+  "creators": {
+    "scientists": [
+      "Saurabh Kulshreshtha",
+      "Olga Kovaleva",
+      "Namrata Shivagunde",
+      "Anna Rumshisky"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2205.10442",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Relief-Based Feature Selection Benchmark",
+  "description": "Modern biomedical data mining requires feature selection methods that can (1)\nbe applied to large scale feature spaces (e.g. `omics' data), (2) function in\nnoisy problems, (3) detect complex patterns of association (e.g. gene-gene\ninteractions), (4) be flexibly adapted to various problem domains and data\ntypes (e.g. genetic variants, gene expression, and clinical data) and (5) are\ncomputationally tractable. To that end, this work examines a set of\nfilter-style feature selection algorithms inspired by the `Relief' algorithm,\ni.e. Relief-Based algorithms (RBAs). We implement and expand these RBAs in an\nopen source framework called ReBATE (Relief-Based Algorithm Training\nEnvironment). We apply a comprehensive genetic simulation study comparing\nexisting RBAs, a proposed RBA called MultiSURF, and other established feature\nselection methods, over a variety of problems. The results of this study (1)\nsupport the assertion that RBAs are particularly flexible, efficient, and\npowerful feature selection methods that differentiate relevant features having\nunivariate, multivariate, epistatic, or heterogeneous associations, (2) confirm\nthe efficacy of expansions for classification vs. regression, discrete vs.\ncontinuous features, missing data, multiple classes, or class imbalance, (3)\nidentify previously unknown limitations of specific RBAs, and (4) suggest that\nwhile MultiSURF* performs best for explicitly identifying pure 2-way\ninteractions, MultiSURF yields the most reliable feature selection performance\nacross a wide range of problem types.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "feature_selection",
+    "feature_ranking",
+    "simulation_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "recall / detection power (true positive rate), often reported alongside precision and false positive rate",
+  "general_score_metric": "true_positive_rate (detection power) / recall",
+  "typical_sota_score": "varies widely by simulation; often reported in the 70–95% range for detection of relevant features depending on signal strength and noise",
+  "year_of_publish": 2017,
+  "reputation": "Well-regarded within the bioinformatics / feature-selection community for systematic comparisons of Relief-based algorithms and provided as the ReBATE implementation.",
+  "notes": "Non-LLM benchmark based on simulated and biomedical datasets; results depend heavily on simulation settings (effect sizes, noise, epistasis), potential sensitivity to class imbalance and feature dimensionality; designed to evaluate feature selection power rather than end-to-end predictive performance.",
+  "creators": {
+    "scientists": [
+      "Ryan J. Urbanowicz",
+      "Randal S. Olson",
+      "Peter Schmitt",
+      "Melissa Meeker",
+      "Jason H. Moore"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1711.08477",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

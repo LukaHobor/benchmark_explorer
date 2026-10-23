@@ -1,0 +1,41 @@
+{
+  "name": "Calcium imaging spike detection benchmark",
+  "description": "A fundamental challenge in calcium imaging has been to infer the timing of\naction potentials from the measured noisy calcium fluorescence traces. We\nsystematically evaluate a range of spike inference algorithms on a large\nbenchmark dataset recorded from varying neural tissue (V1 and retina) using\ndifferent calcium indicators (OGB-1 and GCamp6). We show that a new algorithm\nbased on supervised learning in flexible probabilistic models outperforms all\npreviously published techniques, setting a new standard for spike inference\nfrom calcium signals. Importantly, it performs better than other algorithms\neven on datasets not seen during training. Future data acquired in new\nexperimental conditions can easily be used to further improve its spike\nprediction accuracy and generalization performance. Finally, we show that\ncomparing algorithms on artificial data is not informative about performance on\nreal population imaging data, suggesting that a benchmark dataset may greatly\nfacilitate future algorithmic developments.",
+  "category": "vision",
+  "domain": "neuroscience / biomedical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_prediction",
+    "event_detection",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Multiple metrics: Pearson correlation between inferred and true spike rates, AUC (ROC) for event detection, information gain; F1 or precision/recall often reported for spike timing",
+  "general_score_metric": "Pearson correlation (predicted vs. true spike rate) is the primary reported metric",
+  "typical_sota_score": "Pearson r ≈ 0.5–0.8 (dataset- and indicator-dependent); AUC often ≈ 0.8–0.95",
+  "year_of_publish": 2015,
+  "reputation": "Well-cited within neuroscience for providing a standardized real-data benchmark for spike inference algorithms (Theis et al.), used to compare many methods.",
+  "notes": "Non-LLM neuroscience benchmark based on limited recorded datasets (V1 and retina) and specific indicators (OGB‑1, GCaMP6); results on artificial/simulated data do not reliably predict real-data performance.",
+  "creators": {
+    "scientists": [
+      "Lucas Theis",
+      "Philipp Berens",
+      "Emmanouil Froudarakis",
+      "Jacob Reimer",
+      "Miroslav Román Rosón",
+      "Tom Baden",
+      "Thomas Euler",
+      "Andreas Tolias",
+      "Matthias Bethge"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1503.00135",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

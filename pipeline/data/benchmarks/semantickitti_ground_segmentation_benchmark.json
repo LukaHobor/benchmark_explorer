@@ -1,0 +1,34 @@
+{
+  "name": "SemanticKITTI ground segmentation benchmark",
+  "description": "In this study, we propose a novel parallel processing method for point cloud ground segmentation, aimed at the technology evolution from mechanical to solid-state Lidar (SSL). We first benchmark point-based, grid-based, and range image-based ground segmentation algorithms using the SemanticKITTI dataset. Our results indicate that the range image-based method offers superior performance and robustness, particularly in resilience to frame slicing. Implementing the proposed algorithm on an FPGA demonstrates significant improvements in processing speed and scalability of resource usage. Additionally, we develop a custom dataset using camera-SSL equipment on our test vehicle to validate the effectiveness of the parallel processing approach for SSL frames in real world, achieving processing rates up to 30.9 times faster than CPU implementations. These findings underscore the potential of parallel processing strategies to enhance Lidar technologies for advanced perception tasks in autonomous",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "task_types": [
+    "ground_segmentation",
+    "point_cloud_segmentation",
+    "lidar_perception"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "segmentation accuracy / IoU-style ground segmentation metrics",
+  "general_score_metric": "IoU",
+  "year_of_publish": 2024,
+  "reputation": "SemanticKITTI is a widely used autonomous driving benchmark, and its ground-segmentation subset is a common reference for LiDAR perception research.",
+  "notes": "Non-LLM vision benchmark; ground-segmentation results are sensitive to sensor setup, preprocessing, and frame slicing, and the paper emphasizes benchmarking rather than a single canonical leaderboard.",
+  "creators": {
+    "scientists": [
+      "Xiao Zhang",
+      "Zhanhong Huang",
+      "Garcia Gonzalez Antony",
+      "Xinming Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2408.10404",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

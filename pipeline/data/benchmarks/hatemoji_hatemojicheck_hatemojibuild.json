@@ -1,0 +1,37 @@
+{
+  "name": "Hatemoji (HatemojiCheck / HatemojiBuild)",
+  "description": "Detecting online hate is a complex task, and low-performing models have harmful consequences when used for sensitive applications such as content moderation. Emoji-based hate is an emerging challenge for automated detection. We present HatemojiCheck, a test suite of 3,930 short-form statements that allows us to evaluate performance on hateful language expressed with emoji. Using the test suite, we expose weaknesses in existing hate detection models. To address these weaknesses, we create the HatemojiBuild dataset using a human-and-model-in-the-loop approach. Models built with these 5,912 adversarial examples perform substantially better at detecting emoji-based hate, while retaining strong performance on text-only hate. Both HatemojiCheck and HatemojiBuild are made publicly available. See our Github Repository (https://github.com/HannahKirk/Hatemoji). HatemojiCheck, HatemojiBuild, and the final Hatemoji Model are also available on HuggingFace (https://huggingface.co/datasets/HannahRoseKirk/).",
+  "category": "text",
+  "domain": "social media / hate speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "adversarial_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 (precision/recall), often reporting macro-F1 for imbalanced classes",
+  "general_score_metric": "F1 (macro-F1)",
+  "typical_sota_score": "≈70–85% (model- and setting-dependent)",
+  "year_of_publish": 2021,
+  "reputation": "Relatively new, publicly released dataset with growing adoption for research into emoji-based hate detection; datasets and models are available on GitHub and Hugging Face.",
+  "notes": "Small/moderate-sized dataset with adversarially constructed examples; specifically targets emoji-based hateful content so may not generalize to broader hate-speech distributions. Potential label bias and class imbalance; primarily intended for text-classification models rather than generative LLM benchmarking.",
+  "creators": {
+    "scientists": [
+      "Hannah Rose Kirk",
+      "Bertram Vidgen",
+      "Paul Röttger",
+      "Tristan Thrush",
+      "Scott A. Hale"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2108.05921",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

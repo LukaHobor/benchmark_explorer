@@ -1,0 +1,37 @@
+{
+  "name": "AllClear",
+  "description": "Clouds in satellite imagery pose a significant challenge for downstream applications. A major challenge in current cloud removal research is the absence of a comprehensive benchmark and a sufficiently large and diverse training dataset. To address this problem, we introduce the largest public dataset -- $\\textit{AllClear}$ for cloud removal, featuring 23,742 globally distributed regions of interest (ROIs) with diverse land-use patterns, comprising 4 million images in total. Each ROI includes complete temporal captures from the year 2022, with (1) multi-spectral optical imagery from Sentinel-2 and Landsat 8/9, (2) synthetic aperture radar (SAR) imagery from Sentinel-1, and (3) auxiliary remote sensing products such as cloud masks and land cover maps. We validate the effectiveness of our dataset by benchmarking performance, demonstrating the scaling law -- the PSNR rises from $28.47$ to $33.87$ with $30\\times$ more data, and conducting ablation studies on the temporal length and the impo",
+  "category": "vision",
+  "domain": "geospatial",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_translation",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR/SSIM-based scoring",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "33–34 dB",
+  "year_of_publish": 2024,
+  "reputation": "A recent large-scale remote sensing benchmark that is gaining attention for cloud removal and multimodal Earth observation research.",
+  "notes": "Non-LLM vision benchmark; cloud removal is challenging due to temporal alignment, multimodal fusion, and diverse global scenes. Metrics are usually PSNR and SSIM, with potential sensitivity to dataset splits and temporal leakage.",
+  "creators": {
+    "scientists": [
+      "Hangyu Zhou",
+      "Chia-Hsiang Kao",
+      "Cheng Perng Phoo",
+      "Utkarsh Mall",
+      "Bharath Hariharan",
+      "Kavita Bala"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.23891",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

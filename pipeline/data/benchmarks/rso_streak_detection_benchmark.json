@@ -1,0 +1,36 @@
+{
+  "name": "RSO Streak Detection Benchmark",
+  "description": "Detecting Resident Space Objects (RSOs) and preventing collisions with other satellites is crucial. Recently, deep convolutional neural networks (DCNNs) have shown superior performance in object detection when large-scale datasets are available. However, collecting rich data of RSOs is difficult due to very few occurrences in the space images. Without sufficient data, it is challenging to comprehensively train DCNN detectors and make them effective for detecting RSOs in space images, let alone to estimate whether a detector is sufficiently robust. The lack of meaningful evaluation of different detectors could further affect the design and application of detection methods. To tackle this issue, we propose that the space images containing RSOs can be simulated to complement the shortage of raw data for better benchmarking. Accordingly, we introduce a novel simulation-augmented benchmarking framework for RSO detection (SAB-RSOD). In our framework, by making the best use of the hardware parameters of the sensor that captures real-world space images, we first develop a high-fidelity RSO simulator that can generate various realistic space images. Then, we use this simulator to generate images that contain diversified RSOs in space and annotate them automatically. Later, we mix the synthetic images with the real-world images, obtaining around 500 images for training with only the real-world images for evaluation. Under SAB-RSOD, we can train different popular object detectors like Yolo and Faster RCNN effectively, enabling us to evaluate their performance thoroughly. The evaluation results have shown that the amount of available data and image resolution are two key factors for robust RSO detection. Moreover, if using a lower resolution for higher efficiency, we demonstrated that a simple UNet-based detection method can already access high detection accuracy.",
+  "category": "vision",
+  "domain": "space / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation",
+    "synthetic-to-real_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) / detection precision & recall",
+  "general_score_metric": "mean Average Precision (mAP)",
+  "year_of_publish": 2023,
+  "reputation": "A niche, domain-specific benchmark from a 2023 paper for space/remote-sensing RSO detection; valued in the satellite/space-imagery community but not broadly adopted outside that field.",
+  "notes": "Small real-world evaluation set (~only a few hundred images) augmented with simulated images; risk of synthetic-to-real gap and class imbalance; non-LLM computer-vision benchmark focused on rare-object detection.",
+  "creators": {
+    "scientists": [
+      "Zhe Chen",
+      "Yang Yang",
+      "Anne Bettens",
+      "Youngho Eun",
+      "Xiaofeng Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.00412",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "SpokenWOZ",
+  "description": "Task-oriented dialogue (TOD) models have made significant progress in recent years. However, previous studies primarily focus on datasets written by annotators, which has resulted in a gap between academic research and real-world spoken conversation scenarios. While several small-scale spoken TOD datasets are proposed to address robustness issues such as ASR errors, they ignore the unique challenges in spoken conversation. To tackle the limitations, we introduce SpokenWOZ, a large-scale speech-text dataset for spoken TOD, containing 8 domains, 203k turns, 5.7k dialogues and 249 hours of audios from human-to-human spoken conversations. SpokenWOZ further incorporates common spoken characteristics such as word-by-word processing and reasoning in spoken language. Based on these characteristics, we present cross-turn slot and reasoning slot detection as new challenges. We conduct experiments on various baselines, including text-modal models, newly proposed dual-modal models, and LLMs, e.g., ChatGPT. The results show that the current models still have substantial room for improvement in spoken conversation, where the most advanced dialogue state tracker only achieves 25.65% in joint goal accuracy and the SOTA end-to-end model only correctly completes the user request in 52.1% of dialogues. The dataset, code, and leaderboard are available: https://spokenwoz.github.io/.",
+  "category": "multimodal",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "dialogue_state_tracking",
+    "slot_detection",
+    "response_generation",
+    "end_to_end_dialogue"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "joint_goal_accuracy (for DST) and task_success_rate (for end-to-end)",
+  "general_score_metric": "joint goal accuracy (for DST) and task success rate (for end-to-end)",
+  "typical_sota_score": "≈25.65% (DST joint goal accuracy) and 52.1% (end-to-end task success rate)",
+  "year_of_publish": 2023,
+  "reputation": "New large-scale spoken TOD benchmark with a public leaderboard that is rapidly gaining attention in the spoken-dialogue and speech-processing research community.",
+  "notes": "Contains real human-to-human speech with ASR errors and spoken-language phenomena; large-scale but specialized to spoken TOD. Models show substantial room for improvement; potential privacy/consent considerations for audio data.",
+  "creators": {
+    "scientists": [
+      "Shuzheng Si",
+      "Wentao Ma",
+      "Haoyu Gao",
+      "Yuchuan Wu",
+      "Ting-En Lin",
+      "Yinpei Dai",
+      "Hangyu Li",
+      "Rui Yan",
+      "Fei Huang",
+      "Yongbin Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2305.13040",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

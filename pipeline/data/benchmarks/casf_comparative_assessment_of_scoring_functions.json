@@ -1,0 +1,37 @@
+{
+  "name": "CASF (Comparative Assessment of Scoring Functions)",
+  "description": "Our comparative assessment of scoring functions (CASF) benchmark is created to provide an objective evaluation of current scoring functions. The key idea of CASF is to compare the general performance of scoring functions on a diverse set of protein-ligand complexes. In order to avoid testing scoring functions in the context of molecular docking, the scoring process is separated from the docking (or sampling) process by using ensembles of ligand binding poses that are generated in prior. Here, we describe the technical methods and evaluation results of the latest CASF-2013 study. The PDBbind core set (version 2013) was employed as the primary test set in this study, which consists of 195 protein-ligand complexes with high-quality three-dimensional structures and reliable binding constants. A panel of 20 scoring functions, most of which are implemented in main-stream commercial software, were evaluated in terms of \"scoring power\" (binding affinity prediction), \"ranking power\" (relative ranking prediction), \"docking power\" (binding pose prediction), and \"screening power\" (discrimination of true binders from random molecules). Our results reveal that the performance of these scoring functions is generally more promising in the docking/screening power tests than in the scoring/ranking power tests. Top-ranked scoring functions in the scoring power test, such as X-Score(HM), ChemScore@SYBYL, ChemPLP@GOLD, and PLP@DS, are also top-ranked in the ranking power test. Top-ranked scoring functions in the docking power test, such as ChemPLP@GOLD, Chemscore@GOLD, GlidScore-SP, LigScore@DS, and PLP@DS, are also top-ranked in the screening power test. Our results obtained on the entire test set and its subsets suggest that the real challenge in protein-ligand binding affinity prediction lies in polar interactions and associated desolvation effect. Nonadditive features observed among high-affinity protein-ligand complexes also need attention.",
+  "category": "mixed",
+  "domain": "computational chemistry / bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ranking",
+    "docking",
+    "virtual_screening"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson_correlation / RMSE (scoring power) ; Spearman_rank_correlation (ranking) ; docking_success_rate (pose prediction) ; enrichment_factor / ROC-AUC (screening)",
+  "general_score_metric": "Pearson_correlation_coefficient (Rp) for scoring power",
+  "typical_sota_score": "0.5–0.7 (Pearson Rp range for top scoring functions on CASF-2013)",
+  "year_of_publish": 2014,
+  "reputation": "393 citations",
+  "notes": "Non-LLM benchmark focused on protein–ligand scoring; small test set (195 complexes) drawn from PDBbind core set; multiple heterogeneous metrics (correlation, RMSE, docking success, enrichment) are reported; risk of overlap/contamination if models were trained on PDBbind or related structures.",
+  "creators": {
+    "scientists": [
+      "Yan Li",
+      "Li Han",
+      "Zhihai Liu",
+      "Renxiao Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1021/ci500081m",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

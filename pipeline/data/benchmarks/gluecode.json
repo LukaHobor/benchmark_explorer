@@ -1,0 +1,34 @@
+{
+  "name": "GLUECode",
+  "description": "A multitude of machine learning models for source code have been proposed in the recent years capturing various aspects of the inherent rich structure and semantics of code. However, these models are commonly designed to perform well on a single task, failing to capture code's  multifaceted nature. To address this, we present GLUECode, Global and Local Understanding Evaluation of Code, a benchmark of diverse tasks to evaluate machine learning models of source code.  \n\nCrucially, GLUECode accounts for the distinct characteristics of source code: (1) source code is highly structured and (2) source code is often composed of multiple interacting entities. Existing tasks incentivize researchers to create models and code representations that perform well on a single task - commonly focusing on local reasoning. GLUECode aims to allow researchers to experiment with multiple local and global source code representations, and evaluate these models on their ability to capture the diverse characteristics of source code, thus driving the community towards building robust source code models incorporating global reasoning. \n\nWe present results for several baselines. The GLUECode tasks are challenging for the evaluated baselines; no model achieves convincing performance across all tasks. This indicates that there is ample room for progress on GLUECode.",
+  "category": "code",
+  "domain": "software / code",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "code_generation",
+    "code_retrieval",
+    "sequence_labeling"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "varied per task (accuracy, F1, BLEU, MRR, exact_match); aggregated as a composite score for overall ranking",
+  "general_score_metric": "composite_score",
+  "reputation": "Introduced to encourage global and local understanding of source code; recognized by researchers focused on code representation but less widely adopted than larger suites like CodeXGLUE.",
+  "notes": "Benchmark is multi-task with heterogeneous metrics per task (makes single-number comparison difficult); built from public code so contamination/overlap with pretraining corpora is a risk; no single model excels across all tasks per original results.",
+  "creators": {
+    "scientists": [
+      "Anjan Karmakar",
+      "Julian Aron Prenner",
+      "Miltiadis Allamanis",
+      "Romain Robbes"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Urban Sound Propagation",
+  "description": "Data-driven modeling of complex physical systems is receiving a growing amount of attention in the simulation and machine learning communities. Since most physical simulations are based on compute-intensive, iterative implementations of differential equation systems, a (partial) replacement with learned, 1-step inference models has the potential for significant speedups in a wide range of application areas. In this context, we present a novel benchmark for the evaluation of 1-step generative learning models in terms of speed and physical correctness. Our Urban Sound Propagation benchmark is based on the physically complex and practically relevant, yet intuitively easy to grasp task of modeling the 2d propagation of waves from a sound source in an urban environment. We provide a dataset with 100k samples, where each sample consists of pairs of real 2d building maps drawn from OpenStreetmap, a parameterized sound source, and a simulated ground truth sound propagation for the given scene. The dataset provides four different simulation tasks with increasing complexity regarding reflection, diffraction and source variance. A first baseline evaluation of common generative U-Net, GAN and Diffusion models shows, that while these models are very well capable of modeling sound propagations in simple cases, the approximation of sub-systems represented by higher order equations systematically fails. Information about the dataset, download instructions and source codes are provided on our website: https://www.urban-sound-data.org.",
+  "category": "audio",
+  "domain": "physics simulation / acoustics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "conditional_generation",
+    "regression",
+    "image_to_image"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MSE / L2 (pixel-wise), structural similarity (SSIM), PSNR, and task-specific physical-consistency metrics",
+  "general_score_metric": "Mean squared error (MSE) / L2 error (primary reported metric)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, specialized research benchmark with growing interest in the physics-informed generative modeling and simulation communities but limited general adoption so far.",
+  "notes": "Non-LLM benchmark focused on 2D wave propagation; dataset of ~100k samples. Models are evaluated for both accuracy and inference speed. Challenges include complex boundary interactions (diffraction/reflection) and systematic failure on higher-order physics; not saturated and requires specialized architectures and compute.",
+  "creators": {
+    "scientists": [
+      "Martin Spitznagel",
+      "Janis Keuper"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2403.10904",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

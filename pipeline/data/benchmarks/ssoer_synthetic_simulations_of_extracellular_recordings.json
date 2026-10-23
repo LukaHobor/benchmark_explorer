@@ -1,0 +1,37 @@
+{
+  "name": "SSOER (Synthetic Simulations Of Extracellular Recordings)",
+  "description": "Spike sorting algorithms are used to separate extracellular recordings of neuronal populations into single-unit spike activities. The development of customized hardware implementing spike sorting algorithms is burgeoning. However, there is a lack of a systematic approach and a set of standardized evaluation criteria to facilitate direct comparison of both software and hardware implementations. In this paper, we formalize a set of standardized criteria and a publicly available synthetic dataset entitled Synthetic Simulations Of Extracellular Recordings (SSOER), which was constructed by aggregating existing synthetic datasets with varying Signal-To-Noise Ratios (SNRs). Furthermore, we present a benchmark for future comparison, and use our criteria to evaluate a simulated Resistive Random-Access Memory (RRAM) In-Memory Computing (IMC) system using the Discrete Wavelet Transform (DWT) for feature extraction. Our system consumes approximately (per channel) 10.72mW and occupies an area of 0.66mm2 in a 22nm FDSOI Complementary Metal–Oxide–Semiconductor (CMOS) process.",
+  "category": "mixed",
+  "domain": "neuroscience",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "spike_sorting",
+    "unit_detection",
+    "neural_signal_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 score and clustering metrics (e.g., Adjusted Rand Index)",
+  "general_score_metric": "F1",
+  "year_of_publish": 2022,
+  "reputation": "2 citations",
+  "notes": "Non-LLM benchmark; synthetic dataset aggregated across SNRs so may not fully match real recordings; hardware-specific evaluations (power/area) reported — results can depend on simulator fidelity; potential for optimistic performance due to synthetic data.",
+  "creators": {
+    "scientists": [
+      "Tim Zhang",
+      "C. Lammie",
+      "M. Azghadi",
+      "A. Amirsoleimani",
+      "M. Ahmadi",
+      "R. Genov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2205.06514",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

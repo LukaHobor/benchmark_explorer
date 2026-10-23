@@ -1,0 +1,41 @@
+{
+  "name": "MultiMedBench",
+  "description": "BackgroundMedicine is inherently multimodal, requiring the simultaneous interpretation and integration of insights between many data modalities spanning text, imaging, genomics, and more. Generalist biomedical artificial intelligence systems that flexibly encode, integrate, and interpret these data might better enable impactful applications ranging from scientific discovery to care delivery.MethodsTo catalyze development of these models, we curated MultiMedBench, a new multimodal biomedical benchmark. MultiMedBench encompasses 14 diverse tasks, such as medical question answering, mammography and dermatology image interpretation, radiology report generation and summarization, and genomic variant calling. We then introduced Med-PaLM Multimodal (Med-PaLM M), our proof of concept for a generalist biomedical AI system that flexibly encodes and interprets biomedical data including clinical language, imaging, and genomics with the same set of model weights. To further probe the capabilities and limitations of Med-PaLM M, we conducted a radiologist evaluation of model-generated (and human) chest x-ray reports.ResultsWe observed encouraging performance across model scales. Med-PaLM M reached performance competitive with or exceeding the state of the art on all MultiMedBench tasks, often surpassing specialist models by a wide margin. In a side-by-side ranking on 246 retrospective chest x-rays, clinicians expressed a pairwise preference for Med-PaLM Multimodal reports over those produced by radiologists in up to 40.50% of cases, suggesting potential clinical utility.ConclusionsAlthough considerable work is needed to validate these models in real-world cases and understand if cross-modality generalization is possible, our results represent a milestone toward the development of generalist biomedical artificial intelligence systems. (Funded by Alphabet Inc. and/or a subsidiary thereof.)",
+  "category": "multimodal",
+  "domain": "biomedical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "open_ended",
+    "image_classification",
+    "image_captioning",
+    "sequence_labeling",
+    "variant_calling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific metrics (accuracy/AUC for classification, BLEU/ROUGE for report generation, ECE/calibration for QA, variant-call precision/recall, and clinician preference/human_eval for radiology reports)",
+  "general_score_metric": "composite_score (task-specific metrics aggregated / task-wise reporting)",
+  "year_of_publish": 2024,
+  "reputation": "326 citations",
+  "notes": "MultiMedBench aggregates heterogeneous biomedical tasks with task-specific metrics and clinician evaluations. Risks include potential pretraining/contamination from public medical corpora, varying task difficulty and label quality across modalities, and not being a turnkey proxy for clinical safety or deployment without extensive validation.",
+  "creators": {
+    "scientists": [
+      "Tao Tu",
+      "Shekoofeh Azizi",
+      "Danny Driess",
+      "Mike Schaekermann",
+      "Mohamed Amin",
+      "Pi-Chuan Chang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1056/aioa2300138",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

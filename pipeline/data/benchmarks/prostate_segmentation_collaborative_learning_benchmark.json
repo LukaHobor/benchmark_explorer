@@ -1,0 +1,38 @@
+{
+  "name": "Prostate Segmentation Collaborative Learning Benchmark",
+  "description": "Healthcare data is often split into medium/small-sized collections across multiple hospitals and access to it is encumbered by privacy regulations. This brings difficulties to use them for the development of machine learning and deep learning models, which are known to be data-hungry. One way to overcome this limitation is to use collaborative learning (CL) methods, which allow hospitals to work collaboratively to solve a task, without the need to explicitly share local data. In this paper, we address a prostate segmentation problem from MRI in a collaborative scenario by comparing two different approaches: federated learning (FL) and consensus-based methods (CBM). To the best of our knowledge, this is the first work in which CBM, such as label fusion techniques, are used to solve a problem of collaborative learning. In this setting, CBM combine predictions from locally trained models to obtain a federated strong learner with ideally improved robustness and predictive variance properties. Our experiments show that, in the considered practical scenario, CBMs provide equal or better results than FL, while being highly cost-effective. Our results demonstrate that the consensus paradigm may represent a valid alternative to FL for typical training tasks in medical imaging.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Dice coefficient (F1) / IoU",
+  "general_score_metric": "Dice coefficient",
+  "typical_sota_score": "80–92%",
+  "year_of_publish": 2023,
+  "reputation": "Academic benchmark introduced in 2023 for collaborative prostate MRI segmentation; used in research on federated and consensus-based learning but not widely adopted in large-scale public leaderboards.",
+  "notes": "Non-LLM medical-imaging benchmark; small-to-moderate dataset sizes and multi-site/privacy constraints; results sensitive to annotation variability and class imbalance; evaluates collaborative training paradigms (FL vs consensus).",
+  "creators": {
+    "scientists": [
+      "Lucia Innocenti",
+      "Michela Antonelli",
+      "Francesco Cremonesi",
+      "Kenaan Sarhan",
+      "Alejandro Granados",
+      "Vicky Goh",
+      "Sebastien Ourselin",
+      "Marco Lorenzi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2309.17097",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

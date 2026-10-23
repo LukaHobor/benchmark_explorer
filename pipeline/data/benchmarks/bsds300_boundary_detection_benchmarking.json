@@ -1,0 +1,32 @@
+{
+  "name": "BSDS300 / Boundary Detection Benchmarking",
+  "description": "For an ill-posed problem like boundary detection, human labeled datasets play a critical role. Compared with the active research on finding a better boundary detector to refresh the performance record, there is surprisingly little discussion on the boundary detection benchmark itself. The goal of this paper is to identify the potential pitfalls of today's most popular boundary benchmark, BSDS 300. In the paper, we first introduce a psychophysical experiment to show that many of the \"weak\" boundary labels are unreliable and may contaminate the benchmark. Then we analyze the computation of f-measure and point out that the current benchmarking protocol encourages an algorithm to bias towards those problematic \"weak\" boundary labels. With this evidence, we focus on a new problem of detecting strong boundaries as one alternative. Finally, we assess the performances of 9 major algorithms on different ways of utilizing the dataset, suggesting new directions for improvements.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "boundary_detection",
+    "edge_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 (boundary F-measure, e.g., ODS/OIS)",
+  "general_score_metric": "Boundary F-measure (ODS/OIS)",
+  "typical_sota_score": "0.75–0.86",
+  "reputation": "A classic and widely cited benchmark for boundary/edge detection in computer vision, but known to be small, noisy and partially saturated by modern methods.",
+  "notes": "Small dataset with label noise and weak/ambiguous boundary annotations; benchmark can encourage bias toward weak labels and may be partially saturated for current deep-learning detectors.",
+  "creators": {
+    "scientists": [
+      "Xiaodi Hou",
+      "Alan Yuille",
+      "Christof Koch"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

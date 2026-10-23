@@ -1,0 +1,37 @@
+{
+  "name": "Multi-intersection Traffic Optimisation Benchmark",
+  "description": "The control of traffic signals is fundamental and critical to alleviate traffic congestion in urban areas. However, it is challenging since traffic dynamics are complicated in real-world scenarios. Because of the high complexity of the optimisation problem for modelling the traffic, experimental settings of existing works are often inconsistent. Moreover, it is not trivial to control multiple intersections properly in real complex traffic scenarios due to its vast state and action space. Failing to take intersection topology relations into account also results in inferior solutions. To address these issues, in this work we carefully design our settings and propose a new dataset including both synthetic and real traffic data in more complex scenarios. Additionally, we propose a novel baseline model with strong performance. It is based on deep reinforcement learning with an encoder-decoder structure: an edge-weighted graph convolutional encoder to excavate multi-intersection relations; and an unified structure decoder to jointly model multiple junctions in a comprehensive manner, which significantly reduces the number of the model parameters. By doing so, the proposed model is able to effectively deal with the multi-intersection traffic optimisation problem. Models are trained/tested on both synthetic and real maps and traffic data with the Simulation of Urban Mobility (SUMO) simulator. Experimental results show that the proposed model surpasses multiple competitive methods.",
+  "category": "mixed",
+  "domain": "traffic / autonomous driving / transportation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reinforcement_learning",
+    "traffic_signal_control",
+    "optimization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average travel time / cumulative reward (simulation metrics)",
+  "general_score_metric": "average travel time (lower is better) / cumulative reward",
+  "year_of_publish": 2021,
+  "reputation": "A well-designed simulation benchmark for multi-intersection traffic signal control used in traffic-RL research; moderately cited in the traffic optimization literature.",
+  "notes": "Simulation-based (SUMO) benchmark — results can be sensitive to simulator settings and map/traffic configuration; potential sim-to-real gap; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Hu Wang",
+      "Hao Chen",
+      "Qi Wu",
+      "Congbo Ma",
+      "Yidong Li",
+      "Chunhua Shen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2101.09640",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "VTUAV",
+  "description": "With the popularity of multi-modal sensors, visible-thermal (RGB-T) object tracking is to achieve robust performance and wider application scenarios with the guidance of objects' temperature information. However, the lack of paired training samples is the main bottleneck for unlocking the power of RGB-T tracking. Since it is laborious to collect high-quality RGB-T sequences, recent benchmarks only provide test sequences. In this paper, we construct a large-scale benchmark with high diversity for visible-thermal UAV tracking (VTUAV), including 500 sequences with 1.7 million high-resolution (1920 $\\times$ 1080 pixels) frame pairs. In addition, comprehensive applications (short-term tracking, long-term tracking and segmentation mask prediction) with diverse categories and scenes are considered for exhaustive evaluation. Moreover, we provide a coarse-to-fine attribute annotation, where frame-level attributes are provided to exploit the potential of challenge-specific trackers. In addition, we design a new RGB-T baseline, named Hierarchical Multi-modal Fusion Tracker (HMFT), which fuses RGB-T data in various levels. Numerous experiments on several datasets are conducted to reveal the effectiveness of HMFT and the complement of different fusion types. The project is available at here.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "short_term_tracking",
+    "long_term_tracking",
+    "segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "success_rate (IoU/AUC), precision, and mIoU for segmentation",
+  "general_score_metric": "success_rate (AUC of overlap)",
+  "year_of_publish": 2022,
+  "reputation": "A well-sized, high-resolution RGB-T UAV tracking benchmark that is respected in the RGB-T tracking community and used in multiple follow-up tracking studies.",
+  "notes": "Non-LLM computer-vision benchmark; very large high-resolution paired RGB-T sequences; potential modality-alignment and annotation caveats; requires substantial compute for training/experiments.",
+  "creators": {
+    "scientists": [
+      "Pengyu Zhang",
+      "Jie Zhao",
+      "Dong Wang",
+      "Huchuan Lu",
+      "Xiang Ruan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2204.04120",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

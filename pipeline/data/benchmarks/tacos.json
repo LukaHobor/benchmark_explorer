@@ -1,0 +1,33 @@
+{
+  "name": "TACOS",
+  "description": "Learning to associate audio with textual descriptions is valuable for a range of tasks, including pretraining, zero-shot classification, audio retrieval, audio captioning, and text-conditioned audio generation. Existing contrastive language-audio pretrained models are typically trained using global, clip-level descriptions, which provide only weak temporal supervision. We hypothesize that CLAP-like language-audio models - particularly, if they are expected to produce frame-level embeddings - can benefit from a stronger temporal supervision. To confirm our hypothesis, we curate a novel dataset of approximately 12,000 audio recordings from Freesound, each annotated with single-sentence free-text descriptions linked to a specific temporal segment in an audio recording. We use large language models to clean these annotations by removing references to non-audible events, transcribed speech, typos, and annotator language bias. We further propose a frame-wise contrastive training strategy tha",
+  "category": "audio",
+  "domain": "audio",
+  "task_types": [
+    "audio_retrieval",
+    "audio_text_matching",
+    "frame_level_alignment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k",
+  "general_score_metric": "recall@10",
+  "year_of_publish": 2025,
+  "reputation": "A recent specialized audio-text benchmark focused on temporally localized descriptions, useful for training and evaluating fine-grained audio-language alignment.",
+  "notes": "Small-to-medium curated dataset (~12k clips) with temporal segment annotations; more of a training/evaluation resource for audio-language models than a saturated leaderboard benchmark.",
+  "creators": {
+    "scientists": [
+      "Paul Primus",
+      "Florian Schmid",
+      "Gerhard Widmer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2505.07609",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

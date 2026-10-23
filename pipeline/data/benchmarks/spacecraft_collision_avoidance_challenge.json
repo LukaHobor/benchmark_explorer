@@ -1,0 +1,40 @@
+{
+  "name": "Spacecraft Collision Avoidance Challenge",
+  "description": "Spacecraft collision avoidance procedures have become an essential part of satellite operations. Complex and constantly updated estimates of the collision risk between orbiting objects inform the various operators who can then plan risk mitigation measures. Such measures could be aided by the development of suitable machine learning models predicting, for example, the evolution of the collision risk in time. In an attempt to study this opportunity, the European Space Agency released, in October 2019, a large curated dataset containing information about close approach events, in the form of Conjunction Data Messages (CDMs), collected from 2015 to 2019. This dataset was used in the Spacecraft Collision Avoidance Challenge, a machine learning competition where participants had to build models to predict the final collision risk between orbiting objects. This paper describes the design and results of the competition and discusses the challenges and lessons learned when applying machine learning methods to this problem domain.",
+  "category": "mixed",
+  "domain": "space / aerospace",
+  "benchmark_type": "competition",
+  "task_types": [
+    "regression",
+    "time_series_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Brier score / mean squared error on predicted collision probability",
+  "general_score_metric": "Brier score (MSE on predicted probability)",
+  "year_of_publish": 2020,
+  "reputation": "A domain-specific ESA competition dataset valued in the aerospace community for research on collision-risk prediction; referenced in academic work but largely used within the specialized field.",
+  "notes": "Non-LLM benchmark; curated Conjunction Data Message (CDM) records covering 2015–2019. Contains class imbalance (very few high-risk events) and temporal dependencies—careful time-based splitting is required to avoid leakage. Domain expertise often needed for feature engineering.",
+  "creators": {
+    "scientists": [
+      "Thomas Uriot",
+      "Dario Izzo",
+      "Luís F. Sim{õ}es",
+      "Rasit Abay",
+      "Nils Einecke",
+      "Sven Rebhan",
+      "Jose Martinez-Heras",
+      "Francesca Letizia",
+      "Jan Siminski",
+      "Klaus Merz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2008.03069",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

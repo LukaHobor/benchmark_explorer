@@ -1,0 +1,41 @@
+{
+  "name": "OpenStereo",
+  "description": "Stereo matching aims to estimate the disparity between matching pixels in a stereo image pair, which is important to robotics, autonomous driving, and other computer vision tasks. Despite the development of numerous impressive methods in recent years, determining the most suitable architecture for practical application remains challenging. Addressing this gap, our paper introduces a comprehensive benchmark focusing on practical applicability rather than solely on individual models for optimized performance. Specifically, we develop a flexible and efficient stereo matching codebase, called OpenStereo. OpenStereo includes training and inference codes of more than 10 network models, making it, to our knowledge, the most complete stereo matching toolbox available. Based on OpenStereo, we conducted experiments and have achieved or surpassed the performance metrics reported in the original paper. Additionally, we conduct an exhaustive analysis and deconstruction of recent developments in stereo matching through comprehensive ablative experiments. These investigations inspired the creation of StereoBase, a strong baseline model. Our StereoBase ranks 1st on SceneFlow, KITTI 2015, 2012 (Reflective) among published methods and achieves the best performance across all metrics. In addition, StereoBase has strong cross-dataset generalization. Code is available at \\url{https://github.com/XiandaGuo/OpenStereo}.",
+  "category": "vision",
+  "domain": "autonomous driving / robotics / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "stereo_matching",
+    "disparity_estimation",
+    "depth_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "error-based metrics (end-point error, EPE) and KITTI-style percentage of bad pixels (D1 / D1-all)",
+  "general_score_metric": "end-point error (EPE) and D1-all (percentage of bad pixels)",
+  "typical_sota_score": "D1-all: ~1–3% (KITTI); EPE (SceneFlow): ~0.5–2.0 px",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "An actively used open-source stereo matching toolbox and benchmark in the stereo/depth community; recognized for providing a comprehensive collection of implementations and strong baseline results.",
+  "notes": "Non-LLM computer-vision benchmark; relies on synthetic (SceneFlow) and real driving (KITTI) datasets — results can be sensitive to dataset choice and pretraining; compute- and data-intensive models; potential for dataset-specific overfitting when comparing methods.",
+  "creators": {
+    "scientists": [
+      "Xianda Guo",
+      "Chenming Zhang",
+      "Juntao Lu",
+      "Yiqun Duan",
+      "Yiqi Wang",
+      "Tian Yang",
+      "Zheng Zhu",
+      "Long Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2312.00343",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Digital Pathology Anomaly Detection Benchmark",
+  "description": "Anomaly detection has been widely studied in the context of industrial defect inspection, with numerous methods developed to tackle a range of challenges. In digital pathology, anomaly detection holds significant potential for applications such as rare disease identification, artifact detection, and biomarker discovery. However, the unique characteristics of pathology images, such as their large size, multi-scale structures, stain variability, and repetitive patterns, introduce new challenges that current anomaly detection algorithms struggle to address. In this quantitative study, we benchmark over 20 classical and prevalent anomaly detection methods through extensive experiments. We curated five digital pathology datasets, both real and synthetic, to systematically evaluate these approaches. Our experiments investigate the influence of image scale, anomaly pattern types, and training epoch selection strategies on detection performance. The results provide a detailed comparison of each method's strengths and limitations, establishing a comprehensive benchmark to guide future research in anomaly detection for digital pathology images.",
+  "category": "vision",
+  "domain": "medical imaging / digital pathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "unsupervised_detection",
+    "localization",
+    "pixel_level_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC / AUPR / F1 (image- and pixel-level)",
+  "general_score_metric": "AUC (ROC) / AUPR",
+  "typical_sota_score": "75–95%",
+  "year_of_publish": 2025,
+  "reputation": "A specialized, well-executed benchmark gaining traction in the digital pathology research community but not yet a broad cross-domain standard.",
+  "notes": "Non-LLM vision benchmark; datasets include both real and synthetic slides and vary in scale and size; evaluations mix image-level and pixel-level metrics; potential contamination if models were pretrained on similar pathology corpora; high-resolution / multi-scale nature increases computational cost.",
+  "creators": {
+    "scientists": [
+      "Can Cui",
+      "Xindong Zheng",
+      "Ruining Deng",
+      "Quan Liu",
+      "Tianyuan Yao",
+      "Keith T Wilson",
+      "Lori A Coburn",
+      "Bennett A Landman",
+      "Haichun Yang",
+      "Yaohong Wang",
+      "Yuankai Huo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.19234",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

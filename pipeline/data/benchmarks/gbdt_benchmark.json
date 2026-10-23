@@ -1,0 +1,38 @@
+{
+  "name": "GBDT Benchmark",
+  "description": "Gradient boosting decision trees (GBDTs) have seen widespread adoption in\nacademia, industry and competitive data science due to their state-of-the-art\nperformance in many machine learning tasks. One relative downside to these\nmodels is the large number of hyper-parameters that they expose to the\nend-user. To maximize the predictive power of GBDT models, one must either\nmanually tune the hyper-parameters, or utilize automated techniques such as\nthose based on Bayesian optimization. Both of these approaches are\ntime-consuming since they involve repeatably training the model for different\nsets of hyper-parameters. A number of software GBDT packages have started to\noffer GPU acceleration which can help to alleviate this problem. In this paper,\nwe consider three such packages: XGBoost, LightGBM and Catboost. Firstly, we\nevaluate the performance of the GPU acceleration provided by these packages\nusing large-scale datasets with varying shapes, sparsities and learning tasks.\nThen, we compare the packages in the context of hyper-parameter optimization,\nboth in terms of how quickly each package converges to a good validation score,\nand in terms of generalization performance.",
+  "category": "mixed",
+  "domain": "machine learning / data science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "ranking",
+    "hyperparameter_optimization"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-dependent validation metrics (e.g., AUC/logloss for classification, RMSE for regression) and time-to-convergence for HPO",
+  "general_score_metric": "validation score (task-dependent; e.g., AUC for classification, RMSE for regression) and time-to-convergence",
+  "year_of_publish": 2018,
+  "reputation": "A practical, well-cited empirical comparison used to assess GPU-accelerated GBDT implementations; influential in applied ML and data-science tool selection.",
+  "notes": "Non-LLM benchmark; results are highly task- and hyperparameter-dependent and sensitive to hardware/GPU implementation; evaluates both predictive performance and training speed.",
+  "creators": {
+    "scientists": [
+      "Andreea Anghel",
+      "Nikolaos Papandreou",
+      "Thomas Parnell",
+      "Alessandro De Palma",
+      "Haralampos Pozidis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1809.04559",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

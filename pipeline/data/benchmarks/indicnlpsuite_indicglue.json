@@ -1,0 +1,42 @@
+{
+  "name": "IndicNLPSuite / IndicGLUE",
+  "description": "In this paper, we introduce NLP resources for 11 major Indian languages from two major language families. These resources include: (a) large-scale sentence-level monolingual corpora, (b) pre-trained word embeddings, (c) pre-trained language models, and (d) multiple NLU evaluation datasets (IndicGLUE benchmark). The monolingual corpora contains a total of 8.8 billion tokens across all 11 languages and Indian English, primarily sourced from news crawls. The word embeddings are based on FastText, hence suitable for handling morphological complexity of Indian languages. The pre-trained language models are based on the compact ALBERT model. Lastly, we compile the IndicGLUE benchmark for Indian language NLU. To this end, we create datasets for the following tasks: Article Genre Classification, Headline Prediction, Wikipedia Section-Title Prediction, Cloze-style Multiple choice QA, Winograd NLI and COPA. We also include publicly available datasets for some Indic languages for tasks like Named Entity Recognition, Cross-lingual Sentence Retrieval, Paraphrase detection, etc. Our embeddings are competitive or better than existing pre-trained embeddings on multiple tasks. We hope that the availability of the dataset will accelerate Indic NLP research which has the potential to impact more than a billion people. It can also help the community in evaluating advances in NLP over a more diverse pool of languages. The data and models are available at https: //indicnlp.ai4bharat.org.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "multiple_choice",
+    "cloze",
+    "sequence_labeling",
+    "natural_language_inference",
+    "paraphrase_detection",
+    "sentence_retrieval"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "task-specific metrics (primarily accuracy; F1 for sequence labeling/NER)",
+  "general_score_metric": "accuracy (with F1 for NER/sequence-labeling tasks)",
+  "typical_sota_score": "60–90% (varies widely by task and language)",
+  "year_of_publish": 2020,
+  "reputation": "387 citations",
+  "notes": "Skews toward news-domain data; uneven data sizes and quality across the 11 languages; some tasks/datasets are relatively small; potential for pretraining contamination for large multilingual models.",
+  "creators": {
+    "scientists": [
+      "Divyanshu Kakwani",
+      "Anoop Kunchukuttan",
+      "Satish Golla",
+      "Gokul Narayanan C",
+      "Avik Bhattacharyya",
+      "Mitesh M. Khapra"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://doi.org/10.18653/v1/2020.findings-emnlp.445",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

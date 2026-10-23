@@ -1,0 +1,37 @@
+{
+  "name": "Maritime USV Tracking Benchmark",
+  "description": "Vision-based target tracking is crucial for unmanned surface vehicles (USVs) to perform tasks such as inspection, monitoring, and surveillance. However, real-time tracking in complex maritime environments is challenging due to dynamic camera movement, low visibility, and scale variation. Typically, object detection methods combined with filtering techniques are commonly used for tracking, but they often lack robustness, particularly in the presence of camera motion and missed detections. Although advanced tracking methods have been proposed recently, their application in maritime scenarios is limited. To address this gap, this study proposes a vision-guided object-tracking framework for USVs, integrating state-of-the-art tracking algorithms with low-level control systems to enable precise tracking in dynamic maritime environments. We benchmarked the performance of seven distinct trackers, developed using advanced deep learning techniques such as Siamese Networks and Transformers, by evaluating them on both simulated and real-world maritime datasets. In addition, we evaluated the robustness of various control algorithms in conjunction with these tracking systems. The proposed framework was validated through simulations and real-world sea experiments, demonstrating its effectiveness in handling dynamic maritime conditions. The results show that SeqTrack, a Transformer-based tracker, performed best in adverse conditions, such as dust storms. Among the control algorithms evaluated, the linear quadratic regulator controller (LQR) demonstrated the most robust and smooth control, allowing for stable tracking of the USV.",
+  "category": "vision",
+  "domain": "autonomous surface vehicles / maritime",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "single_object_tracking",
+    "multi_object_tracking",
+    "visual_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "success_rate / precision / IoU (tracking metrics such as AUC and precision)",
+  "general_score_metric": "success_rate (AUC) and precision / IoU",
+  "year_of_publish": 2024,
+  "reputation": "A domain-specific maritime tracking benchmark with limited community adoption so far; used primarily in maritime/autonomy research.",
+  "notes": "Non-LLM vision benchmark; evaluated on both simulated and real-world maritime sequences. Likely limited dataset size and domain specificity may reduce generalizability outside maritime scenarios.",
+  "creators": {
+    "scientists": [
+      "Muhayy ud Din",
+      "Ahsan B. Bakht",
+      "Waseem Akram",
+      "Yihao Dong",
+      "Lakmal Seneviratne",
+      "Irfan Hussain"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.07392",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

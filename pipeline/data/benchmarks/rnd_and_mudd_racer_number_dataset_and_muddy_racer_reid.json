@@ -1,0 +1,38 @@
+{
+  "name": "RND and MUDD (Racer Number Dataset and Muddy Racer re-ID Dataset)",
+  "description": "Despite significant progress in optical character recognition (OCR) and computer vision systems, robustly recognizing text and identifying people in images taken in unconstrained \\emph{in-the-wild} environments remain an ongoing challenge. However, such obstacles must be overcome in practical applications of vision systems, such as identifying racers in photos taken during off-road racing events. To this end, we introduce two new challenging real-world datasets - the off-road motorcycle Racer Number Dataset (RND) and the Muddy Racer re-iDentification Dataset (MUDD) - to highlight the shortcomings of current methods and drive advances in OCR and person re-identification (ReID) under extreme conditions. These two datasets feature over 6,300 images taken during off-road competitions which exhibit a variety of factors that undermine even modern vision systems, namely mud, complex poses, and motion blur. We establish benchmark performance on both datasets using state-of-the-art models. Off-the-shelf models transfer poorly, reaching only 15% end-to-end (E2E) F1 score on text spotting, and 33% rank-1 accuracy on ReID. Fine-tuning yields major improvements, bringing model performance to 53% F1 score for E2E text spotting and 79% rank-1 accuracy on ReID, but still falls short of good performance. Our analysis exposes open problems in real-world OCR and ReID that necessitate domain-targeted techniques. With these datasets and analysis of model limitations, we aim to foster innovations in handling real-world conditions like mud and complex poses to drive progress in robust computer vision. All data was sourced from PerformancePhoto.co, a website used by professional motorsports photographers, racers, and fans. The top-performing text spotting and ReID models are deployed on this platform to power real-time race photo search.",
+  "category": "vision",
+  "domain": "computer vision (off-road racing)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_spotting",
+    "ocr",
+    "person_reidentification",
+    "image_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "End-to-end F1 for text spotting (OCR); rank-1 accuracy and mAP for person re-identification",
+  "general_score_metric": "E2E F1 (text spotting); rank-1 accuracy / mAP (ReID)",
+  "typical_sota_score": "≈53% E2E F1 (text spotting after fine-tuning); ≈79% rank-1 accuracy (ReID after fine-tuning)",
+  "year_of_publish": 2024,
+  "reputation": "A niche, high-challenge dataset valued by researchers working on robust OCR and re-identification under extreme outdoor conditions, but not widely used outside that community.",
+  "notes": "Relatively small (~6.3k images) and domain-specific (off‑road racing). Challenging conditions (mud, motion blur, complex poses). Non-LLM benchmark; potential licensing/photographer-rights considerations from source (PerformancePhoto.co).",
+  "creators": {
+    "scientists": [
+      "Jacob Tyo",
+      "Motolani Olarinre",
+      "Youngseog Chung",
+      "Zachary C. Lipton"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2402.08025",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

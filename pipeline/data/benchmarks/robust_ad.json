@@ -1,0 +1,36 @@
+{
+  "name": "Robust AD",
+  "description": "Successful deployment of anomaly detection algorithms in real-world industrial settings, particularly for defect detection tasks, is often hampered by performance degradation due to discrepancies between the training environment and deployment conditions. These discrepancies, known as domain shifts, can encompass variations in lighting, object pose, background clutter, and other factors. Existing benchmarks for measuring robustness of anomaly detection [4] rely on synthetic transformations that often fail to capture the complexities of real-world variations. We address this gap by proposing a novel benchmark, RobustAD, specifically designed to evaluate the robustness of anomaly detection models in real-world scenarios. RobustAD features a curated dataset of defect detection images with meticulously controlled distribution shifts across multiple dimensions relevant to practical applications and more closely mirrors real-world deployment scenarios. Furthermore, we introduce a novel metric, “Average Relative Drop,” which measures the relative performance drop in target domains with domain shifts, compared to the training domain. This practitioner-centric metric provides a more meaningful evaluation of a model's robustness in real-world scenarios. By leveraging RobustAD and the Average Relative Drop metric, researchers can evaluate their model against real-world domain shifts, under diverse real-world conditions, providing a more accurate assessment of model's suitability for practical deployment. We evaluate state-of-the-art models on RobustAD across a spectrum of tasks establishing a comprehensive benchmark for assessing real-world robustness in industrial anomaly detection. The dataset is available at https://huggingface.co/datasets/AmazonScience/RobustAD",
+  "category": "vision",
+  "domain": "industrial inspection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "segmentation",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "75–95%",
+  "year_of_publish": 2025,
+  "reputation": "New but increasingly cited in industrial anomaly-detection research for evaluating robustness across real-world production variations.",
+  "notes": "Non-LLM computer-vision benchmark; may exhibit class imbalance and small/rare-defect classes; potential for data leakage if pretraining includes similar industrial images; reported metrics often include AUPR and F1 in addition to AUROC.",
+  "creators": {
+    "scientists": [
+      "Latha Pemula",
+      "Dongqing Zhang",
+      "Onkar Dabeer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/cvprw67362.2025.00389",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

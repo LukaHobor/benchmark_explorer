@@ -1,0 +1,38 @@
+{
+  "name": "Salient Object Detection Benchmark",
+  "description": "We extensively compare, qualitatively and quantitatively, 40 state-of-the-art\nmodels (28 salient object detection, 10 fixation prediction, 1 objectness, and\n1 baseline) over 6 challenging datasets for the purpose of benchmarking salient\nobject detection and segmentation methods. From the results obtained so far,\nour evaluation shows a consistent rapid progress over the last few years in\nterms of both accuracy and running time. The top contenders in this benchmark\nsignificantly outperform the models identified as the best in the previous\nbenchmark conducted just two years ago. We find that the models designed\nspecifically for salient object detection generally work better than models in\nclosely related areas, which in turn provides a precise definition and suggests\nan appropriate treatment of this problem that distinguishes it from other\nproblems. In particular, we analyze the influences of center bias and scene\ncomplexity in model performance, which, along with the hard cases for\nstate-of-the-art models, provide useful hints towards constructing more\nchallenging large scale datasets and better saliency models. Finally, we\npropose probable solutions for tackling several open problems such as\nevaluation scores and dataset bias, which also suggest future research\ndirections in the rapidly-growing field of salient object detection.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "salient_object_detection",
+    "saliency_map_prediction",
+    "fixation_prediction",
+    "segmentation",
+    "objectness_estimation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F-measure (F_beta), MAE, Precision-Recall, AUC",
+  "general_score_metric": "F-measure (F_beta)",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2015,
+  "reputation": "Widely cited early benchmark for salient object detection that was influential in the community, though newer and larger datasets have since appeared.",
+  "notes": "Contains center-bias and dataset bias; mixes fixation-prediction and salient-object tasks; metrics can saturate on small/older datasets; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Ali Borji",
+      "Ming-Ming Cheng",
+      "Huaizu Jiang",
+      "Jia Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1501.02741",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "welm-benchmark",
+  "description": "模型性能评测\n\t\n\n\n\t\n\t\t\n\t\t注意\n\t\n\n\n请求数据prompt进行了脱敏，但prompt token长度等信息与真实数据保持一致；\n由于prompt是随机生成的，会导致prefix cache无效；\n不要设置stop token，直接生成到max tokens。\n\n\n\t\n\t\t\n\t\t测试步骤\n\t\n\n\n启动模型服务，默认模型服务提供了openai compatible http server, 以vllm为例：\n\npython -m vllm.entrypoints.openai.api_server \\\n  --served-model-name ./model \\\n  --model ./model \\\n  --port 8081 \\\n  --host 0.0.0.0 \\\n  --trust-remote-code \\\n  --tensor-parallel-size 2\n\n\n启动relayer，回放请求数据：cat tape1.jsonl | go run replay.go --endpoint… See the full description on the dataset page: https://huggingface.co/datasets/Chenyuwen/welm-benchmark.",
+  "category": "text",
+  "domain": "general knowledge",
+  "tags": [
+    "size_categories:1K<n<10K",
+    "modality:text"
+  ],
+  "task_types": [
+    "open_ended",
+    "text_generation",
+    "response_quality",
+    "latency/throughput_benchmark"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "throughput (requests/sec)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A practical replay-based benchmark used by practitioners to evaluate deployed LLM services and throughput; regionally used in the Chinese tooling community.",
+  "downloads": 5,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "Chenyuwen"
+    ]
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://huggingface.co/datasets/Chenyuwen/welm-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

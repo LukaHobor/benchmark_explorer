@@ -1,0 +1,38 @@
+{
+  "name": "NVS Human Perception Benchmark",
+  "description": "Gaussian Splatting (GS) and Neural Radiance Fields (NeRF) are two groundbreaking technologies that have revolutionized the field of Novel View Synthesis (NVS), enabling immersive photorealistic rendering and user experiences by synthesizing multiple viewpoints from a set of images of sparse views. The potential applications of NVS, such as high-quality virtual and augmented reality, detailed 3D modeling, and realistic medical organ imaging, underscore the importance of quality assessment of NVS methods from the perspective of human perception. Although some previous studies have explored subjective quality assessments for NVS technology, they still face several challenges, especially in NVS methods selection, scenario coverage, and evaluation methodology. To address these challenges, we conducted two subjective experiments for the quality assessment of NVS technologies containing both GS-based and NeRF-based methods, focusing on dynamic and real-world scenes. This study covers 360{\\deg}, front-facing, and single-viewpoint videos while providing a richer and greater number of real scenes. Meanwhile, it's the first time to explore the impact of NVS methods in dynamic scenes with moving objects. The two types of subjective experiments help to fully comprehend the influences of different viewing paths from a human perception perspective and pave the way for future development of full-reference and no-reference quality metrics. In addition, we established a comprehensive benchmark of various state-of-the-art objective metrics on the proposed database, highlighting that existing methods still struggle to accurately capture subjective quality. The results give us some insights into the limitations of existing NVS methods and may promote the development of new NVS methods.",
+  "category": "vision",
+  "domain": "vision (novel view synthesis)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "human_quality_rating",
+    "objective_metric_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval (Mean Opinion Score) with objective metric correlation (SRCC/PLCC)",
+  "general_score_metric": "Mean Opinion Score (MOS) and correlation coefficients (SRCC/PLCC) against MOS",
+  "typical_sota_score": "low correlation — objective metrics typically show SRCC/PLCC < 0.6 on this dataset",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, specialized benchmark for subjective quality assessment in novel view synthesis research, cited by studies comparing GS and NeRF approaches.",
+  "notes": "Subjective human study (MOS) based; includes dynamic and varied scenes but limited by human-subject variability and potential selection biases; highlights that existing objective metrics struggle to match perceived quality.",
+  "creators": {
+    "scientists": [
+      "Yuhang Zhang",
+      "Joshua Maraval",
+      "Zhengyu Zhang",
+      "Nicolas Ramin",
+      "Shishun Tian",
+      "Lu Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.08072",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

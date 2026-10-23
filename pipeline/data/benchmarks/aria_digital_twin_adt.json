@@ -1,0 +1,39 @@
+{
+  "name": "Aria Digital Twin (ADT)",
+  "description": "We introduce the Aria Digital Twin (ADT) <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup> - an egocentric dataset captured using Aria glasses with extensive object, environment, and human level ground truth. This ADT release contains 200 sequences of real-world activities conducted by Aria wearers in two real indoor scenes with 398 object instances (344 stationary and 74 dynamic). Each sequence consists of: a) raw data of two monochrome camera streams, one RGB camera stream, two IMU streams; b) complete sensor calibration; c) ground truth data including continuous 6-degree-of-freedom (6DoF) poses of the Aria devices, object 6DoF poses, 3D eye gaze vectors, 3D human poses, 2D image segmentations, image depth maps; and d) photo-realistic synthetic renderings. To the best of our knowledge, there is no existing egocentric dataset with a level of accuracy, photo-realism and comprehensiveness comparable to ADT. By contributing ADT to the research community, our mission is to set a new standard for evaluation in the egocentric machine perception domain, which includes very challenging research problems such as 3D object detection and tracking, scene reconstruction and understanding, sim-to-real learning, human pose prediction - while also inspiring new machine perception tasks for augmented reality (AR) applications. To kick start exploration of the ADT research use cases, we evaluated several existing state-of-the-art methods for object detection, segmentation and image translation tasks that demonstrate the usefulness of ADT as a benchmarking dataset.",
+  "category": "multimodal",
+  "domain": "vision / egocentric 3D perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "segmentation",
+    "pose_estimation",
+    "3D_reconstruction",
+    "sim2real_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-dependent (mAP for detection; IoU for segmentation; MPJPE/pose error for human/object pose; depth/photometric error for reconstruction)",
+  "general_score_metric": "task-dependent (mAP / IoU / MPJPE / depth error)",
+  "year_of_publish": 2023,
+  "reputation": "33 citations",
+  "notes": "Non-LLM, multimodal dataset with high-quality ground truth; relatively small (200 sequences) which can limit large-scale training and may present sim-to-real gaps; contains human subjects so privacy/consent and licensing considerations apply.",
+  "creators": {
+    "scientists": [
+      "Xiaqing Pan",
+      "Nicholas E. Charron",
+      "Yongqian Yang",
+      "Scott J. Peters",
+      "Thomas J. Whelan",
+      "Kong Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/iccv51070.2023.01842",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Benchmark of DNN Model Search",
+  "description": "Deep learning has become the most popular direction in machine learning and artificial intelligence. However, the preparation of training data, as well as model training, are often time-consuming and become the bottleneck of the end-to-end machine learning lifecycle. Reusing models for inferring a dataset can avoid the costs of retraining. However, when there are multiple candidate models, it is challenging to discover the right model for reuse. Although there exist a number of model sharing platforms such as ModelDB, TensorFlow Hub, PyTorch Hub, and DLHub, most of these systems require model uploaders to manually specify the details of each model and model downloaders to screen keyword search results for selecting a model. We are lacking a highly productive model search tool that selects models for deployment without the need for any manual inspection and/or labeled data from the target domain. This paper proposes multiple model search strategies including various similarity-based approaches and non-similarity-based approaches. We design, implement, and evaluate these approaches on multiple model inference scenarios, including activity recognition, image recognition, text classification, natural language processing, and entity matching. The experimental evaluation showed that our proposed asymmetric similarity-based measurement, adaptivity, outperformed symmetric similarity-based measurements and non-similarity-based measurements in most of the workloads.",
+  "category": "mixed",
+  "domain": "machine learning systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "model_retrieval",
+    "ranking",
+    "transfer_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "precision@k (top-k accuracy) / retrieval success rate",
+  "general_score_metric": "precision@k (primary)",
+  "year_of_publish": 2022,
+  "reputation": "A niche research benchmark introduced by the paper with limited uptake beyond model-search / ML-systems researchers.",
+  "notes": "Non-LLM benchmark spanning heterogeneous tasks (vision, text, activity recognition); metrics vary by workload and are not standardized across tasks; relatively small / task-specific splits in some scenarios.",
+  "creators": {
+    "scientists": [
+      "Lixi Zhou",
+      "Arindam Jain",
+      "Zijie Wang",
+      "Amitabh Das",
+      "Yingzhen Yang",
+      "Jia Zou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2206.00188",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

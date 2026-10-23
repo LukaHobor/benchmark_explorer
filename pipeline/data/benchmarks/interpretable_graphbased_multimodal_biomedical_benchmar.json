@@ -1,0 +1,39 @@
+{
+  "name": "Interpretable Graph-based Multimodal Biomedical Benchmark",
+  "description": "Integrating heterogeneous biomedical data including imaging, omics, and clinical records supports accurate diagnosis and personalised care. Graph-based models fuse such non-Euclidean data by capturing spatial and relational structure, yet clinical uptake requires regulator-ready interpretability. We present the first technical survey of interpretable graph based models for multimodal biomedical data, covering 26 studies published between Jan 2019 and Sep 2024. Most target disease classification, notably cancer and rely on static graphs from simple similarity measures, while graph-native explainers are rare; post-hoc methods adapted from non-graph domains such as gradient saliency, and SHAP predominate. We group existing approaches into four interpretability families, outline trends such as graph-in-graph hierarchies, knowledge-graph edges, and dynamic topology learning, and perform a practical benchmark. Using an Alzheimer disease cohort, we compare Sensitivity Analysis, Gradient Saliency, SHAP and Graph Masking. SHAP and Sensitivity Analysis recover the broadest set of known AD pathways and Gene-Ontology terms, whereas Gradient Saliency and Graph Masking surface complementary metabolic and transport signatures. Permutation tests show all four beat random gene sets, but with distinct trade-offs: SHAP and Graph Masking offer deeper biology at higher compute cost, while Gradient Saliency and Sensitivity Analysis are quicker though coarser. We also provide a step-by-step flowchart covering graph construction, explainer choice and resource budgeting to help researchers balance transparency and performance. This review synthesises the state of interpretable graph learning for multimodal medicine, benchmarks leading techniques, and charts future directions, from advanced XAI tools to under-studied diseases, serving as a concise reference for method developers and translational scientists.",
+  "category": "multimodal",
+  "domain": "biomedical / medical data integration",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "explainability",
+    "biomarker_discovery",
+    "interpretability_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Combination of classification metrics (AUC/accuracy) for predictive tasks plus explanation-quality assessments via pathway/gene-set enrichment (overlap/recovery rate, p-values) and permutation testing; compute/time cost reported for explainers",
+  "general_score_metric": "AUC for classification tasks and enrichment/recovery statistics (e.g., pathway enrichment p-values, recovery rate) for explainability",
+  "typical_sota_score": "AUC ~0.75–0.95 (task- and dataset-dependent); explanation recovery varies widely by method",
+  "year_of_publish": 2025,
+  "reputation": "A focused, well-documented survey-plus-benchmark that is gaining attention among graph-ML and translational biomedical researchers interested in interpretable multimodal models.",
+  "notes": "Limited to the reviewed studies and the Alzheimer cohort used for the practical benchmark; results can be sensitive to graph construction and cohort size. Some explainers (SHAP, Graph Masking) incur high compute cost; biological validation is limited and may require external replication.",
+  "creators": {
+    "scientists": [
+      "Alireza Sadeghi",
+      "Farshid Hajati",
+      "Ahmadreza Argha",
+      "Nigel H Lovell",
+      "Min Yang",
+      "Hamid Alinejad-Rokny"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.01696",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

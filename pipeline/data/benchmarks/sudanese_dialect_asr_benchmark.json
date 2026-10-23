@@ -1,0 +1,32 @@
+{
+  "name": "Sudanese Dialect ASR Benchmark",
+  "description": "Although many Automatic Speech Recognition (ASR) systems have been developed for Modern Standard Arabic (MSA) and Dialectal Arabic (DA), few studies have focused on dialect-specific implementations, particularly for low-resource Arabic dialects such as Sudanese. This paper presents a comprehensive study of data augmentation techniques for fine-tuning OpenAI Whisper models and establishes the first benchmark for the Sudanese dialect. Two augmentation strategies are investigated: (1) self-training with pseudo-labels generated from unlabeled speech, and (2) TTS-based augmentation using synthetic speech from the Klaam TTS system. The best-performing model, Whisper-Medium fine-tuned with combined self-training and TTS augmentation (28.4 hours), achieves a Word Error Rate (WER) of 57.1% on the evaluation set and 51.6% on an out-of-domain holdout set substantially outperforming zero-shot multilingual Whisper (78.8% WER) and MSA-specialized Arabic models (73.8-123% WER). All experiments used low-cost resources (Kaggle free tier and Lightning.ai trial), demonstrating that strategic data augmentation can overcome resource limitations for low-resource dialects and provide a practical roadmap for developing ASR systems for low-resource Arabic dialects and other marginalized language varieties. The models, evaluation benchmarks, and reproducible training pipelines are publicly released to facilitate future research on low-resource Arabic ASR.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "automatic_speech_recognition",
+    "speech_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "WER",
+  "general_score_metric": "WER",
+  "typical_sota_score": "≈51–57% WER (best reported: 51.6% out-of-domain, 57.1% eval)",
+  "year_of_publish": 2026,
+  "reputation": "First benchmark specifically for Sudanese Arabic ASR; publicly released but currently limited adoption outside targeted research.",
+  "notes": "Low-resource benchmark with limited hours of labeled data; reported results rely heavily on augmentation (self-training, TTS) which can bias models; high WERs reflect difficulty; non-LLM audio benchmark.",
+  "creators": {
+    "scientists": [
+      "Ayman Mansour"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2601.06802",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

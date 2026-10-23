@@ -1,0 +1,35 @@
+{
+  "name": "Graph XAI Benchmark(s)",
+  "description": "While Graph Neural Networks (GNNs) have become the de facto model for learning from structured data, their decisional process remains opaque to the end user, undermining their deployment in safety-critical applications. In the case of graph classification, Explainable Artificial Intelligence (XAI) techniques address this major issue by identifying sub-graph motifs that explain predictions. However, advancements in this field are hindered by a chronic scarcity of benchmark datasets with known ground-truth motifs to assess the explanations' quality. Current graph XAI benchmarks are limited to synthetic data or a handful of real-world tasks hand-curated by domain experts. In this paper, we propose a general method to automate the construction of XAI benchmarks for graph classification from real-world datasets. We provide both 15 ready-made benchmarks, as well as the code to generate more than 2000 additional XAI benchmarks with our method. As a use case, we employ our benchmarks to assess the effectiveness of some popular graph explainers.",
+  "category": "mixed",
+  "domain": "graph machine learning / explainable AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "graph_classification",
+    "explainability",
+    "motif_localization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Ground-truth motif recovery metrics (precision / recall / F1), explanation fidelity, plus downstream classification accuracy",
+  "general_score_metric": "Explanation F1 (motif recovery F1) and classification accuracy",
+  "year_of_publish": 2025,
+  "reputation": "Provides 15 ready-made and code to generate thousands of graph-XAI benchmarks; promising and useful for research but still emerging in community adoption.",
+  "notes": "Benchmark generation process defines ground-truth motifs, so results can depend strongly on synthetic construction choices; wide variability across generated sub-benchmarks; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Michele Fontanesi",
+      "Alessio Micheli",
+      "Marco Podda",
+      "Domenico Tortorella"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.12437",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

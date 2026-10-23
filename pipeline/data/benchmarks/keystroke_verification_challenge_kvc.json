@@ -1,0 +1,39 @@
+{
+  "name": "Keystroke Verification Challenge (KVC)",
+  "description": "Analyzing keystroke dynamics (KD) for biometric verification has several advantages: it is among the most discriminative behavioral traits; keyboards are among the most common human-computer interfaces, being the primary means for users to enter textual data; its acquisition does not require additional hardware, and its processing is relatively lightweight; and it allows for transparently recognizing subjects. However, the heterogeneity of experimental protocols and metrics, and the limited size of the databases adopted in the literature impede direct comparisons between different systems, thus representing an obstacle in the advancement of keystroke biometrics. To alleviate this aspect, we present a new experimental framework to benchmark KD-based biometric verification performance and fairness based on tweet -long sequences of variable transcript text from over 185,000 subjects, acquired through desktop and mobile keyboards, extracted from the Aalto Keystroke Databases. The framework runs on CodaLab in the form of the Keystroke Verification Challenge (KVC). Moreover, we also introduce a novel fairness metric, the Skewed Impostor Ratio (SIR), to capture inter - and intra -demographic group bias patterns in the verification scores. We demonstrate the usefulness of the proposed framework by employing two state-of-the-art keystroke verification systems, TypeNet and TypeFormer, to compare different sets of input features, achieving a less privacy-invasive system, by discarding the analysis of text content (ASCII codes of the keys pressed) in favor of extended features in the time domain. Our experiments show that this approach allows to maintain satisfactory performance.",
+  "category": "text",
+  "domain": "biometrics / fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "verification",
+    "biometric_authentication",
+    "fairness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "authentication metrics (Equal Error Rate, FAR/FAR at thresholds) plus fairness metric Skewed Impostor Ratio (SIR)",
+  "general_score_metric": "Equal Error Rate (EER); fairness assessed via SIR",
+  "typical_sota_score": "2–15% EER (varies by model, features, and device)",
+  "year_of_publish": 2023,
+  "reputation": "11 citations",
+  "notes": "Non-LLM benchmark; large-scale real-world keystroke data with variable transcripts—privacy considerations apply; heterogeneity across devices and demographics can drive bias, which the benchmark explicitly measures via SIR.",
+  "creators": {
+    "scientists": [
+      "Giuseppe Stragapede",
+      "R. Vera-Rodríguez",
+      "Rubén Tolosana",
+      "A. Morales",
+      "Naser Damer",
+      "Julian Fiérrez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2311.06000",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

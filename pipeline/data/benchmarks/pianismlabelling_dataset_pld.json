@@ -1,0 +1,35 @@
+{
+  "name": "Pianism-Labelling Dataset (PLD)",
+  "description": "Our study investigates an approach for understanding musical performances through the lens of audio encoding models, focusing on the domain of solo Western classical piano music. Compared to composition-level attribute understanding such as key or genre, we identify a knowledge gap in performance-level music understanding, and address three critical tasks: expertise ranking, difficulty estimation, and piano technique detection, introducing a comprehensive Pianism-Labelling Dataset (PLD) for this purpose. We leverage pre-trained audio encoders, specifically Jukebox, Audio-MAE, MERT, and DAC, demonstrating varied capabilities in tackling downstream tasks, to explore whether domain-specific fine-tuning enhances capability in capturing performance nuances. Our best approach achieved 93.6\\% accuracy in expertise ranking, 33.7\\% in difficulty estimation, and 46.7\\% in technique detection, with Audio-MAE as the overall most effective encoder. Finally, we conducted a case study on Chopin Piano Competition data using trained models for expertise ranking, which highlights the challenge of accurately assessing top-tier performances.",
+  "category": "audio",
+  "domain": "music performance / music information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ranking",
+    "classification",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (expertise ranking, difficulty estimation) and F1 for multi-label technique detection",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "33.7–93.6%",
+  "year_of_publish": 2024,
+  "reputation": "A recent dataset aimed at the music-information-retrieval community; promising initial results but still limited adoption outside specialist MIR researchers.",
+  "notes": "Domain-specific, non-LLM audio benchmark; class imbalance and subjective labels (e.g., difficulty, expertise) can limit reliability; dataset size may be moderate/small for some tasks and metrics differ by task (use F1 for multi-label detection).",
+  "creators": {
+    "scientists": [
+      "huan zhang",
+      "Jinhua Liang",
+      "Simon Dixon"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2407.04518",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

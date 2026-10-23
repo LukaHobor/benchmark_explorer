@@ -1,0 +1,49 @@
+{
+  "name": "Visual Task Adaptation Benchmark (VTAB)",
+  "description": "Representation learning promises to unlock deep learning for the long tail of vision tasks without expensive labelled datasets. Yet, the absence of a unified evaluation for general visual representations hinders progress. Popular protocols are often too constrained (linear classification), limited in diversity (ImageNet, CIFAR, Pascal-VOC), or only weakly related to representation quality (ELBO, reconstruction error). We present the Visual Task Adaptation Benchmark (VTAB), which defines good representations as those that adapt to diverse, unseen tasks with few examples. With VTAB, we conduct a large-scale study of many popular publicly-available representation learning algorithms. We carefully control confounders such as architecture and tuning budget. We address questions like: How effective are ImageNet representations beyond standard natural datasets? How do representations trained via generative and discriminative models compare? To what extent can self-supervision replace labels? And, how close are we to general visual representations?",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "few_shot",
+    "transfer_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "classification accuracy (mean accuracy averaged across VTAB tasks/groups)",
+  "general_score_metric": "mean classification accuracy (averaged over tasks/groups)",
+  "typical_sota_score": "65–90%",
+  "year_of_publish": 2019,
+  "reputation": "Widely used and respected as a standard benchmark for evaluating general visual representations and transfer/few-shot performance.",
+  "notes": "Non-LLM vision benchmark covering diverse tasks; results can be affected by pretraining data overlap (ImageNet contamination) and by tuning budget/architecture; designed for few-shot adaptation rather than end-to-end fine-tuning at scale.",
+  "creators": {
+    "scientists": [
+      "Xiaohua Zhai",
+      "Joan Puigcerver",
+      "Alexander Kolesnikov",
+      "Pierre Ruyssen",
+      "Carlos Riquelme",
+      "Mario Lucic",
+      "Josip Djolonga",
+      "Andre Susano Pinto",
+      "Maxim Neumann",
+      "Alexey Dosovitskiy",
+      "Lucas Beyer",
+      "Olivier Bachem",
+      "Michael Tschannen",
+      "Marcin Michalski",
+      "Olivier Bousquet",
+      "Sylvain Gelly",
+      "Neil Houlsby"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1910.04867",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "SOFIE Inference Benchmark",
+  "description": "SOFIE is a fast Machine Learning inference engine developed at CERN, capable of translating trained deep learning models—provided in ONNX, Keras, or PyTorch formats—into C++ code for efficient inference. The generated code has minimal dependencies, making it easily integrable into the data processing and analysis workflows of high-energy physics (HEP) experiments.\nThis study presents a comprehensive benchmark analysis of SOFIE against leading machine learning frameworks for model evaluation, including PyTorch, TensorFlow XLA, and ONNX Runtime. We focus on evaluating their performance in HEP applications, particularly for typical models such as Graph Neural Networks for jet tagging, and Variational Autoencoders and Generative Adversarial Networks for fast simulation. Our assessment considers key factors such as computational speed, memory usage, scalability, and ease of integration with existing HEP software ecosystems. Through this comparative study, we aim to provide insights that help the HEP community select the most suitable framework for their specific needs.",
+  "category": "mixed",
+  "domain": "high-energy physics / scientific computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "inference_performance",
+    "throughput_latency_benchmarking",
+    "memory_efficiency"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "throughput (inferences/sec), latency (ms) and memory footprint (MB)",
+  "general_score_metric": "throughput (inferences/sec)",
+  "typical_sota_score": "varies widely depending on model and hardware; often reported as up to several× speedup for compiled C++ inference vs. interpreted runtimes",
+  "year_of_publish": 2025,
+  "reputation": "Targeted and well-regarded within the high-energy physics (HEP) community for integrating ML inference into HEP workflows, but not widely used outside scientific computing contexts.",
+  "notes": "Non-LLM benchmark focused on runtime/resource metrics; results are hardware- and model-conversion dependent, may favor minimal-dependency C++ builds; limited set of representative models in reported comparisons.",
+  "creators": {
+    "scientists": [
+      "Lorenzo Moneta",
+      "Sanjiban Sengupta",
+      "Ioanna-Maria Panagou",
+      "N. Shah",
+      "Paul Wollenhaupt"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "360 Monocular Depth Shift Benchmark",
+  "description": "In this work we contribute a distribution shift benchmark for a computer vision task; monocular depth estimation. Our differentiation is the decomposition of the wider distribution shift of uncontrolled testing on in-the-wild data, to three distinct distribution shifts. Specifically, we generate data via synthesis and analyze them to produce covariate (color input), prior (depth output) and concept (their relationship) distribution shifts. We also synthesize combinations and show how each one is indeed a different challenge to address, as stacking them produces increased performance drops and cannot be addressed horizontally using standard approaches.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "depth_estimation",
+    "dense_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "RMSE / AbsRel / δ accuracy (thresholded accuracy)",
+  "general_score_metric": "RMSE (lower is better) and Abs Rel (lower is better)",
+  "year_of_publish": 2021,
+  "reputation": "Niche academic benchmark (arXiv 2021) used within monocular depth estimation research but with limited wider adoption.",
+  "notes": "Non-LLM computer vision benchmark using synthetic data to simulate covariate/prior/concept distribution shifts; evaluated with standard depth metrics (RMSE, AbsRel, δ). Dataset is controlled/synthetic and may be small relative to large-scale in‑the‑wild collections; not saturated.",
+  "creators": {
+    "scientists": [
+      "Georgios Albanis",
+      "Nikolaos Zioulis",
+      "Petros Drakoulis",
+      "Federico Alvarez",
+      "Dimitrios Zarpalas",
+      "Petros Daras"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.00432",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

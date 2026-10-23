@@ -1,0 +1,35 @@
+{
+  "name": "Classical Simulation Benchmark for Quantum Circuits",
+  "description": "Google's  quantum supremacy announcement has received broad questions from academia and industry due to the debatable estimate of 10,000 years' running time for the classical simulation task on the Summit supercomputer. Has quantum supremacy already come? Or will it come in one or two decades later? To avoid hasty advertisements of  quantum supremacy by tech giants or quantum startups and eliminate the cost of dedicating a team to the classical simulation task, we advocate an open-source approach to maintain a trustable benchmark performance.  In this paper, we take a reinforcement learning approach for the classical simulation of quantum circuits and demonstrate its great potential by reporting an estimated simulation time of less than 4 days, a speedup of 5.40x over the state-of-the-art method.  Specifically, we formulate the classical simulation task as a tensor network contraction ordering problem using the K-spin Ising model and employ a novel Hamiltonina-based reinforcement learning algorithm. Then, we establish standard criteria to evaluate the performance of classical simulation of quantum circuits.  We develop a dozen of massively parallel environments to simulate quantum circuits.  We open-source our parallel gym environments and benchmarks. We hope the AI/ML community and quantum physics community will collaborate to maintain reference curves for validating an unequivocal first demonstration of empirical quantum supremacy.",
+  "category": "code",
+  "domain": "quantum computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimization",
+    "reinforcement_learning",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "runtime- and resource-based metrics (wall-clock simulation time, speedup relative to baseline, memory and compute utilization) and task-success/quality of contraction ordering",
+  "general_score_metric": "wall-clock simulation time and reported speedup relative to state-of-the-art",
+  "year_of_publish": 2023,
+  "reputation": "A niche research benchmark aimed at the quantum-simulation and ML-for-physics communities; limited adoption outside specialized groups.",
+  "notes": "Hardware- and implementation-dependent benchmark (results vary with parallelism and machine topology). Not an LLM benchmark; reproducibility depends on environment and optimized libraries. Potential for overfitting methods to specific circuit families; careful cross-platform validation recommended.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

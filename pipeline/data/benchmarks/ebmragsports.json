@@ -1,0 +1,37 @@
+{
+  "name": "EBM-RAG-Sports",
+  "description": "In medicine, large language models (LLMs) increasingly rely on retrieval-augmented generation (RAG) to ground outputs in up-to-date external evidence. However, current RAG approaches focus primarily on performance improvements while overlooking evidence-based medicine (EBM) principles. This study addresses two key gaps: (1) the lack of PICO alignment between queries and retrieved evidence, and (2) the absence of evidence hierarchy considerations during reranking. We present a generalizable strategy for adapting EBM to graph-based RAG, integrating the PICO framework into knowledge graph construction and retrieval, and proposing a Bayesian-inspired reranking algorithm to calibrate ranking scores by evidence grade without introducing predefined weights. We validated this framework in sports rehabilitation, a literature-rich domain currently lacking RAG systems and benchmarks. We released a knowledge graph (357,844 nodes and 371,226 edges) and a reusable benchmark of 1,637 QA pairs. The system achieved 0.830 nugget coverage, 0.819 answer faithfulness, 0.882 semantic similarity, and 0.788 PICOT match accuracy. In a 5-point Likert evaluation, five expert clinicians rated the system 4.66-4.84 across factual accuracy, faithfulness, relevance, safety, and PICO alignment. These findings demonstrate that the proposed EBM adaptation strategy improves retrieval and answer quality and is transferable to other clinical domains. The released resources also help address the scarcity of RAG datasets in sports rehabilitation.",
+  "category": "text",
+  "domain": "medical information retrieval / sports rehabilitation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "question_answering"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mixed (nugget coverage, answer faithfulness, semantic similarity, PICOT match accuracy, and human Likert ratings)",
+  "general_score_metric": "nugget coverage (primary reported retrieval metric)",
+  "typical_sota_score": "around 0.83 nugget coverage (reported system); other reported metrics range ~0.78–0.88",
+  "year_of_publish": 2026,
+  "reputation": "New, domain-specific benchmark introduced by the authors for sports rehabilitation RAG; useful for EBM-focused RAG research but not yet widely adopted outside the study.",
+  "notes": "Domain-specific (sports rehabilitation) and RAG-focused; requires the released knowledge graph to reproduce. Evaluation mixes automatic and expert human scoring; potential contamination risk if models are pre-trained on the same literature sources. Not a general-purpose LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jinning Zhang",
+      "Jie Song",
+      "Wenhui Tu",
+      "Zecheng Li",
+      "Jingxuan Li",
+      "Jin Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2601.00216",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

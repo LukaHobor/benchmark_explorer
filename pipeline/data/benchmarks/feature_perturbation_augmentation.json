@@ -1,0 +1,32 @@
+{
+  "name": "Feature Perturbation Augmentation",
+  "description": "Post-hoc explanation methods attempt to make the inner workings of deep neural networks more interpretable. However, since a ground truth is in general lacking, local post-hoc interpretability methods, which assign importance scores to input features, are challenging to evaluate. One of the most popular evaluation frameworks is to perturb features deemed important by an interpretability method and to measure the change in prediction accuracy. Intuitively, a large decrease in prediction accuracy would indicate that the explanation has correctly quantified the importance of features with respect to the prediction outcome (e.g., logits). However, the change in the prediction outcome may stem from perturbation artifacts, since perturbed samples in the test dataset are out of distribution (OOD) compared to the training dataset and can therefore potentially disturb the model in an unexpected manner. To overcome this challenge, we propose feature perturbation augmentation (FPA) which creates",
+  "category": "mixed",
+  "domain": "interpretability",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "feature_importance_evaluation",
+    "perturbation_based_explanation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A specialized interpretability benchmark/method paper that is cited within post-hoc explanation evaluation research, but it is not a broadly adopted standard benchmark.",
+  "notes": "Non-LLM benchmark focused on evaluating feature-importance explanations via perturbation; results can be sensitive to OOD artifacts and perturbation design.",
+  "creators": {
+    "scientists": [
+      "Lennart Brocki",
+      "Neo Christopher Chung"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2303.01538",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

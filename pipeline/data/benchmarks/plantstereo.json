@@ -1,0 +1,38 @@
+{
+  "name": "PlantStereo",
+  "description": "Stereo matching is an important task in computer vision which has drawn tremendous research attention for decades. While in terms of disparity accuracy, density and data size, public stereo datasets are difficult to meet the requirements of models. In this paper, we aim to address the issue between datasets and models and propose a large scale stereo dataset with high accuracy disparity ground truth named PlantStereo. We used a semi-automatic way to construct the dataset: after camera calibration and image registration, high accuracy disparity images can be obtained from the depth images. In total, PlantStereo contains 812 image pairs covering a diverse set of plants: spinach, tomato, pepper and pumpkin. We firstly evaluated our PlantStereo dataset on four different stereo matching methods. Extensive experiments on different models and plants show that compared with ground truth in integer accuracy, high accuracy disparity images provided by PlantStereo can remarkably improve the training effect of deep learning models. This paper provided a feasible and reliable method to realize plant surface dense reconstruction. The PlantStereo dataset and relative code are available at: https://www.github.com/wangqingyu985/PlantStereo",
+  "category": "vision",
+  "domain": "agriculture / plant phenotyping",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "stereo_matching",
+    "depth_estimation",
+    "dense_disparity_prediction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "end-point error (EPE) / RMSE and bad-pixel percentage (e.g., >1px, >3px) for disparity accuracy",
+  "general_score_metric": "End-Point Error (EPE) / RMSE (disparity)",
+  "year_of_publish": 2021,
+  "reputation": "A niche, domain-specific stereo dataset for plant phenotyping; useful for researchers working on plant surface reconstruction but not broadly adopted outside that subfield.",
+  "notes": "Relatively small (812 pairs) and domain-specific (plants: spinach, tomato, pepper, pumpkin); provides high-precision disparity ground truth but may risk overfitting and limited diversity. Non-LLM, focused on classical/vision deep-learning evaluation.",
+  "creators": {
+    "scientists": [
+      "Qingyu Wang",
+      "Baojian Ma",
+      "Wei Liu",
+      "Mingzhao Lou",
+      "Mingchuan Zhou",
+      "Huanyu Jiang",
+      "Yibin Ying"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2111.15192",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

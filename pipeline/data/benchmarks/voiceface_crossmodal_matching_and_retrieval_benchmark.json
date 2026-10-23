@@ -1,0 +1,37 @@
+{
+  "name": "Voice-Face Cross-modal Matching and Retrieval Benchmark",
+  "description": "Cross-modal associations between voice and face from a person can be learnt algorithmically, which can benefit a lot of applications. The problem can be defined as voice-face matching and retrieval tasks. Much research attention has been paid on these tasks recently. However, this research is still in the early stage. Test schemes based on random tuple mining tend to have low test confidence. Generalization ability of models can not be evaluated by small scale datasets. Performance metrics on various tasks are scarce. A benchmark for this problem needs to be established. In this paper, first, a framework based on comprehensive studies is proposed for voice-face matching and retrieval. It achieves state-of-the-art performance with various performance metrics on different tasks and with high test confidence on large scale datasets, which can be taken as a baseline for the follow-up research. In this framework, a voice anchored L2-Norm constrained metric space is proposed, and cross-modal embeddings are learned with CNN-based networks and triplet loss in the metric space. The embedding learning process can be more effective and efficient with this strategy. Different network structures of the framework and the cross language transfer abilities of the model are also analyzed. Second, a voice-face dataset (with 1.15M face data and 0.29M audio data) from Chinese speakers is constructed, and a convenient and quality controllable dataset collection tool is developed. The dataset and source code of the paper will be published together with this paper.",
+  "category": "multimodal",
+  "domain": "multimodal (vision + audio)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "voice-face_matching",
+    "voice-face_retrieval",
+    "verification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "identification accuracy / Recall@k (e.g., Recall@1) and verification metrics such as EER",
+  "general_score_metric": "Recall@1 (identification accuracy) and EER",
+  "typical_sota_score": "60–90%",
+  "year_of_publish": 2019,
+  "reputation": "Large-scale, early benchmark (Chinese-speaker dataset) providing strong baselines for voice–face cross-modal research; moderately cited within the niche community but not a broad mainstream benchmark.",
+  "notes": "non-LLM benchmark; large-scale but primarily Chinese speakers (potential demographic/language bias); privacy considerations for face/voice data; strong baseline code released.",
+  "creators": {
+    "scientists": [
+      "Chuyuan Xiong",
+      "Deyuan Zhang",
+      "Tao Liu",
+      "Xiaoyong Du"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/1911.09338",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

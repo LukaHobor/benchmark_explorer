@@ -1,0 +1,39 @@
+{
+  "name": "Safety2Drive",
+  "description": "Autonomous Driving (AD) systems demand the high levels of safety assurance. Despite significant advancements in AD demonstrated on open-source benchmarks like Longest6 and Bench2Drive, existing datasets still lack regulatory-compliant scenario libraries for closed-loop testing to comprehensively evaluate the functional safety of AD. Meanwhile, real-world AD accidents are underrepresented in current driving datasets. This scarcity leads to inadequate evaluation of AD performance, posing risks to safety validation and practical deployment. To address these challenges, we propose Safety2Drive, a safety-critical scenario library designed to evaluate AD systems. Safety2Drive offers three key contributions. (1) Safety2Drive comprehensively covers the test items required by standard regulations and contains 70 AD function test items. (2) Safety2Drive supports the safety-critical scenario generalization. It has the ability to inject safety threats such as natural environment corruptions and adversarial attacks cross camera and LiDAR sensors. (3) Safety2Drive supports multi-dimensional evaluation. In addition to the evaluation of AD systems, it also supports the evaluation of various perception tasks, such as object detection and lane detection. Safety2Drive provides a paradigm from scenario construction to validation, establishing a standardized test framework for the safe deployment of AD.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "scenario_evaluation",
+    "object_detection",
+    "lane_detection",
+    "closed_loop_safety_testing"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate / scenario pass rate (and task-specific metrics such as mAP for detection)",
+  "general_score_metric": "scenario pass rate / task success rate (with task-specific metrics like detection mAP)",
+  "year_of_publish": 2025,
+  "reputation": "A recently proposed safety-critical scenario library intended for regulatory-compliant closed-loop testing; early adoption in AD safety research.",
+  "notes": "Multimodal and scenario-based; focuses on safety-critical and adversarial/environmental corruptions. May include synthetic or augmented scenarios and have domain gaps relative to naturalistic driving datasets.",
+  "creators": {
+    "scientists": [
+      "Jingzheng Li",
+      "Tiancheng Wang",
+      "Xingyu Peng",
+      "Jiacheng Chen",
+      "Zhijun Chen",
+      "Bing Li",
+      "Xianglong Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2505.13872",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

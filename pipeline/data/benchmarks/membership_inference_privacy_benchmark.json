@@ -1,0 +1,32 @@
+{
+  "name": "Membership Inference Privacy Benchmark",
+  "description": "Machine learning models are prone to memorizing sensitive data, making them vulnerable to membership inference attacks in which an adversary aims to guess if an input sample was used to train the model. In this paper, we show that prior work on membership inference attacks may severely underestimate the privacy risks by relying solely on training custom neural network classifiers to perform attacks and focusing only on the aggregate results over data samples, such as the attack accuracy. To overcome these limitations, we first propose to benchmark membership inference privacy risks by improving existing non-neural network based inference attacks and proposing a new inference attack method based on a modification of prediction entropy. We also propose benchmarks for defense mechanisms by accounting for adaptive adversaries with knowledge of the defense and also accounting for the trade-off between model accuracy and privacy risks. Using our benchmark attacks, we demonstrate that existing defense approaches are not as effective as previously reported. Next, we introduce a new approach for fine-grained privacy analysis by formulating and deriving a new metric called the privacy risk score. Our privacy risk score metric measures an individual sample's likelihood of being a training member, which allows an adversary to identify samples with high privacy risks and perform attacks with high confidence. We experimentally validate the effectiveness of the privacy risk score and demonstrate that the distribution of privacy risk score across individual samples is heterogeneous. Finally, we perform an in-depth investigation for understanding why certain samples have high privacy risks, including correlations with model sensitivity, generalization error, and feature embeddings. Our work emphasizes the importance of a systematic and rigorous evaluation of privacy risks of machine learning models.",
+  "category": "mixed",
+  "domain": "ML security / privacy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "attack_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack accuracy / AUC (measuring success of membership inference attacks); also uses a per-sample privacy risk score",
+  "general_score_metric": "attack accuracy (and privacy risk score for per-sample risk)",
+  "year_of_publish": 2020,
+  "reputation": "84 citations",
+  "notes": "Non-LLM privacy benchmark; results are model- and dataset-dependent, sensitive to evaluation protocol and contamination, and vulnerable to overfitting of attacks. The benchmark emphasizes adaptive adversaries and trade-offs between model utility and privacy.",
+  "creators": {
+    "scientists": [
+      "Liwei Song",
+      "Prateek Mittal"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2003.10595",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

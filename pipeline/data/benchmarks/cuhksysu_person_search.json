@@ -1,0 +1,36 @@
+{
+  "name": "CUHK-SYSU Person Search",
+  "description": "Existing person re-identification (re-id) benchmarks and algorithms mainly focus on matching cropped pedestrian images between queries and candidates. However, it is different from real-world scenarios where the annotations of pedestrian bounding boxes are unavailable and the target person needs to be found from whole images. To close the gap, we investigate how to localize and match query persons from the scene images without relying on the annotations of candidate boxes. Instead of breaking it down into two separate tasks—pedestrian detection and person re-id, we propose an end-to-end deep learning framework to jointly handle both tasks. A random sampling softmax loss is proposed to effectively train the model under the supervision of sparse and unbalanced labels. On the other hand, existing benchmarks are small in scale and the samples are collected from a few fixed camera views with low scene diversities. To address this issue, we collect a largescale and scene-diversified person search dataset, which contains 18,184 images, 8,432 persons, and 99,809 annotated bounding boxes1. We evaluate our approach and other baselines on the proposed dataset, and study the influence of various factors. Experiments show that our method achieves the best result.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "detection",
+    "re-identification",
+    "retrieval (person search)"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) and CMC/top-1 accuracy",
+  "general_score_metric": "mAP (primary) / top-1 accuracy",
+  "typical_sota_score": "≈90–98% (top recent models on standard splits; varies by protocol)",
+  "year_of_publish": 2016,
+  "reputation": "156 citations",
+  "notes": "Non-LLM vision benchmark combining detection and re-id (end-to-end person search); can be sensitive to evaluation protocol (gallery size, distractors); moderate dataset size but widely used in person-search literature.",
+  "creators": {
+    "scientists": [
+      "Tong Xiao",
+      "Shuang Li",
+      "Bochao Wang",
+      "Liang Lin",
+      "Xiaogang Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

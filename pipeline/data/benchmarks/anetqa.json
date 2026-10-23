@@ -1,0 +1,38 @@
+{
+  "name": "ANetQA",
+  "description": "Building benchmarks to systemically analyze different capabilities of video question answering (VideoQA) models is challenging yet crucial. Existing benchmarks often use non-compositional simple questions and suffer from language biases, making it difficult to diagnose model weaknesses incisively. A recent benchmark AGQA poses a promising paradigm to generate QA pairs automatically from pre-annotated scene graphs, enabling it to measure diverse reasoning abilities with granular control. However, its questions have limitations in reasoning about the fine-grained semantics in videos as such information is absent in its scene graphs. To this end, we present ANetQA, a large-scale benchmark that supports fine-grained compositional reasoning over the challenging untrimmed videos from ActivityNet. Similar to AGQA, the QA pairs in ANetQA are automatically generated from annotated video scene graphs. The fine-grained properties of ANetQA are reflected in the following: (i) untrimmed videos with fine-grained semantics; (ii) spatio-temporal scene graphs with fine-grained taxonomies; and (iii) diverse questions generated from fine-grained templates. ANetQA attains 1.4 billion unbalanced and 13.4 million balanced QA pairs, which is an order of magnitude larger than AGQA with a similar number of videos. Comprehensive experiments are performed for state-of-the-art methods. The best model achieves 44.5% accuracy while human performance tops out at 84.5%, leaving sufficient room for improvement.",
+  "category": "multimodal",
+  "domain": "video / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈40–45%",
+  "year_of_publish": 2023,
+  "reputation": "A well-known, large-scale VideoQA benchmark (successor/companion to AGQA) used in the video understanding community to probe compositional and fine-grained reasoning.",
+  "notes": "Extremely large, automatically generated QA pairs (millions) which enable large-scale training but can include synthetic biases and noise; provides both balanced/unbalanced splits and is computationally heavy to train on.",
+  "creators": {
+    "scientists": [
+      "Zhou Yu",
+      "Lixiang Zheng",
+      "Zhou Zhao",
+      "Fei Wu",
+      "Jianping Fan",
+      "Kui Ren",
+      "Jun Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.02519",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

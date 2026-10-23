@@ -1,0 +1,36 @@
+{
+  "name": "Deep-RL Benchmark for Maximum Coverage / Influence Maximization",
+  "description": "Recent years have witnessed a growing trend toward employing deep reinforcement learning (Deep-RL) to derive heuristics for combinatorial optimization (CO) problems on graphs. Maximum Coverage Problem (MCP) and its probabilistic variant on social networks, Influence Maximization (IM), have been particularly prominent in this line of research. In this paper, we present a comprehensive benchmark study that thoroughly investigates the effectiveness and efficiency of five recent Deep-RL methods for MCP and IM. These methods were published in top data science venues, namely S2V-DQN, Geometric-QN, GCOMB, RL4IM, and LeNSE. Our findings reveal that, across various scenarios, the Lazy Greedy algorithm consistently outperforms all Deep-RL methods for MCP. In the case of IM, theoretically sound algorithms like IMM and OPIM demonstrate superior performance compared to Deep-RL methods in most scenarios. Notably, we observe an abnormal phenomenon in IM problem where Deep-RL methods slightly outperform IMM and OPIM when the influence spread nearly does not increase as the budget increases. Furthermore, our experimental results highlight common issues when applying Deep-RL methods to MCP and IM in practical settings. Finally, we discuss potential avenues for improving Deep-RL methods. Our benchmark study sheds light on potential challenges in current deep reinforcement learning research for solving combinatorial optimization problems.",
+  "category": "mixed",
+  "domain": "combinatorial optimization (graphs)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "influence_maximization",
+    "maximum_coverage",
+    "combinatorial_optimization_on_graphs"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "solution_quality (coverage / expected influence spread), approximation_ratio, and runtime/efficiency comparisons",
+  "general_score_metric": "influence spread / coverage (often reported alongside approximation ratio vs. optimal or greedy baselines)",
+  "year_of_publish": 2024,
+  "reputation": "A recent comparative benchmark paper that is informative for researchers evaluating Deep-RL heuristics for graph CO problems but not yet a standardized community-wide benchmark.",
+  "notes": "Non-LLM benchmark focused on graph combinatorial optimization; results depend strongly on graph distribution and budget regimes; classical algorithms (e.g., Lazy Greedy, IMM/OPIM) often outperform Deep-RL methods; reproducibility and generalization across graph families can be challenging.",
+  "creators": {
+    "scientists": [
+      "Zhicheng Liang",
+      "Yu Yang",
+      "Xiangyu Ke",
+      "Xiaokui Xiao",
+      "Yunjun Gao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2406.14697",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

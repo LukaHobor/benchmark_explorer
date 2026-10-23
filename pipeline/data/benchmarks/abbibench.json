@@ -1,0 +1,42 @@
+{
+  "name": "AbBiBench",
+  "description": "We introduce AbBiBench (Antibody Binding Benchmarking), a benchmarking framework for antibody binding affinity maturation and design. Unlike existing antibody evaluation strategies that rely on antibody alone and its similarity to natural ones (e.g., amino acid identity rate, structural RMSD), AbBiBench considers an antibody-antigen (Ab-Ag) complex as a functional unit and evaluates the potential of an antibody design binding to given antigen by measuring protein model's likelihood on the Ab-Ag complex. We first curate, standardize, and share 9 datasets containing 9 antigens (involving influenza, anti-lysozyme, HER2, VEGF, integrin, and SARS-CoV-2) and 155,853 heavy chain mutated antibodies. Using these datasets, we systematically compare 14 protein models including masked language models, autoregressive language models, inverse folding models, diffusion-based generative models, and geometric graph models. The correlation between model likelihood and experimental affinity values is used to evaluate model performance. Additionally, in a case study to increase binding affinity of antibody F045-092 to antigen influenza H1N1, we evaluate the generative power of the top-performing models by sampling a set of new antibodies binding to the antigen and ranking them based on structural integrity and biophysical properties of the Ab-Ag complex. As a result, structure-conditioned inverse folding models outperform others in both affinity correlation and generation tasks. Overall, AbBiBench provides a unified, biologically grounded evaluation framework to facilitate the development of more effective, function-aware antibody design models.",
+  "category": "mixed",
+  "domain": "bioinformatics / protein design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ranking",
+    "generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Spearman/Pearson correlation for affinity prediction and ranking; generation evaluated with pass@k plus structural/biophysical scoring and downstream affinity correlation",
+  "general_score_metric": "Spearman correlation (affinity prediction)",
+  "year_of_publish": 2025,
+  "reputation": "Newly introduced benchmark in the antibody design community; gaining attention among protein-design researchers but not yet widely adopted outside that niche.",
+  "notes": "Covers 9 antigens and ~155k mutated heavy chains (limited antigen diversity); experimental affinity labels can be noisy; focuses on protein models (non-LLM); risk of dataset-model overlap if models were trained on similar Ab‑Ag complexes; generation evaluation relies on structural/biophysical proxies rather than wet‑lab validation.",
+  "creators": {
+    "scientists": [
+      "Xinyan Zhao",
+      "Yi-Ching Tang",
+      "Akshita Singh",
+      "Victor J Cantu",
+      "KwanHo An",
+      "Junseok Lee",
+      "Adam E Stogsdill",
+      "Ashwin Kumar Ramesh",
+      "Zhiqiang An",
+      "Xiaoqian Jiang",
+      "Yejin Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.04235",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

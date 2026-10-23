@@ -1,0 +1,37 @@
+{
+  "name": "TrafficSal",
+  "description": "Traffic surveillance videos are crucial for the devel-opment of intelligent transportation systems. The huge number of these videos has introduced significant challenges for storage and transmission, etc. Therefore, efficient and accurate video saliency prediction (VSP) can benefit a wide range of video processing techniques for traffic scenes, such as video compression, smart navigation, and traffic event detection. However, currently there are no VSP approaches or eye-tracking datasets dedicated to traffic surveillance videos. In this paper, we establish a large-scale eye-tracking dataset, dubbed traffic surveillance videos 1K (TSV1K). TSV1K contains 1000 high-quality traffic surveil-lance videos, with eye-tracking annotations from 30 subjects. Based on our dataset, we conduct thorough analysis on the correlations between human attention and traffic scenes, e.g., vehicle distribution and scene complexity. Accordingly, we pro-pose a multi-task traffic saliency prediction network (MTTS-Net), which leverages the task of traffic salient object detection (TSOD) to promote the performance of the VSP task. In order to better learn these tasks, a two-stage training strategy is developed to progressively train the MTTS- Net. Experimental results demonstrate that our proposed approach outperforms the state-of-the-art approaches in both tasks of TSOD and VSP on traffic surveillance videos. Our dataset and code are available on https://github.com/giteec/TSV1K.",
+  "category": "vision",
+  "domain": "intelligent transportation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_saliency_prediction",
+    "salient_object_detection",
+    "video_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-dependent: AUC / NSS / CC for saliency prediction; F-measure and mIoU for salient object detection/segmentation",
+  "general_score_metric": "AUC and NSS (primary for saliency prediction); mIoU / F-measure for detection",
+  "year_of_publish": 2024,
+  "reputation": "2 citations",
+  "notes": "Domain-specific (traffic surveillance) dataset with 1,000 videos and eye-tracking from 30 subjects — good for traffic scenes but limited generalization to other domains. Non-LLM vision benchmark; potential scene bias and limited diversity in camera viewpoints.",
+  "creators": {
+    "scientists": [
+      "Wei Duan",
+      "Minglang Qiao",
+      "Lai Jiang",
+      "Mai Xu",
+      "Xin Deng",
+      "Shijie Wen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

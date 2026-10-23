@@ -1,0 +1,36 @@
+{
+  "name": "MIMIC-III clinical time series benchmarks",
+  "description": "Health care is one of the most exciting frontiers in data mining and machine learning. Successful adoption of electronic health records (EHRs) created an explosion in digital clinical data available for analysis, but progress in machine learning for healthcare research has been difficult to measure because of the absence of publicly available benchmark data sets. To address this problem, we propose four clinical prediction benchmarks using data derived from the publicly available Medical Information Mart for Intensive Care (MIMIC-III) database. These tasks cover a range of clinical problems including modeling risk of mortality, forecasting length of stay, detecting physiologic decline, and phenotype classification. We propose strong linear and neural baselines for all four tasks and evaluate the effect of deep supervision, multitask training and data-specific architectural modifications on the performance of neural models.",
+  "category": "mixed",
+  "domain": "healthcare / clinical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "regression",
+    "multilabel_classification",
+    "time_series_anomaly_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (classification tasks) / MAE (regression tasks) / F1 (multilabel)",
+  "general_score_metric": "AUROC (primary for mortality and phenotype classification tasks)",
+  "typical_sota_score": "AUROC ~0.80–0.95 (varies by task and label set)",
+  "reputation": "One of the most widely used public ICU datasets and benchmark suites in clinical machine learning research.",
+  "notes": "Single-centre ICU data (MIMIC-III) with potential covariate shift and limited generalizability; risk of temporal leakage and label noise; not an LLM-specific benchmark.",
+  "creators": {
+    "scientists": [
+      "Hrayr Harutyunyan",
+      "Hrant Khachatrian",
+      "David C. Kale",
+      "Greg Ver Steeg",
+      "Aram Galstyan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

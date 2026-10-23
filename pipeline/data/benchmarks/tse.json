@@ -1,0 +1,36 @@
+{
+  "name": "TSE",
+  "description": "Large-scale pre-trained self-supervised learning (SSL) models have shown remarkable advancements in speech-related tasks. However, the utilization of these models in complex multi-talker scenarios, such as extracting a target speaker in a mixture, is yet to be fully evaluated. In this paper, we introduce target speech extraction (TSE) as a novel downstream task to evaluate the feature extraction capabilities of pre-trained SSL models. TSE uniquely requires both speaker identification and speech separation, distinguishing it from other tasks in the Speech processing Universal PERformance Benchmark (SUPERB) evaluation. Specifically, we propose a TSE downstream model composed of two lightweight task-oriented modules based on the same frozen SSL model. One module functions as a speaker encoder to obtain target speaker information from an enrollment speech, while the other estimates the target speaker's mask to extract its speech from the mixture. Experimental results on the Libri2mix datas",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "speech_separation",
+    "speaker_extraction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "si-snr",
+  "general_score_metric": "SI-SNR",
+  "year_of_publish": 2024,
+  "reputation": "A newer SUPERB-style downstream task proposal that extends SSL speech evaluation to target speaker extraction.",
+  "notes": "Task is evaluated on mixtures with enrollment speech and is sensitive to speaker overlap, mixture conditions, and downstream model design; not yet a widely standardized standalone benchmark.",
+  "creators": {
+    "scientists": [
+      "Junyi Peng",
+      "Marc Delcroix",
+      "Tsubasa Ochiai",
+      "Oldrich Plchot",
+      "Takanori Ashihara",
+      "Shoko Araki"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2402.13200",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

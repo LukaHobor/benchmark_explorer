@@ -1,0 +1,37 @@
+{
+  "name": "ERUS-10K",
+  "description": "Endorectal ultrasound (ERUS) is an important imaging modality that provides high reliability for diagnosing the depth and boundary of invasion in colorectal cancer. However, the lack of a large-scale ERUS dataset with high-quality annotations hinders the development of automatic ultrasound diagnostics. In this paper, we collected and annotated the first benchmark dataset that covers diverse ERUS scenarios, i.e. colorectal cancer segmentation, detection, and infiltration depth staging. Our ERUS-10K dataset comprises 77 videos and 10,000 high-resolution annotated frames. Based on this dataset, we further introduce a benchmark model for colorectal cancer segmentation, named the Adaptive Sparse-context TRansformer (ASTR). ASTR is designed based on three considerations: scanning mode discrepancy, temporal information, and low computational complexity. For generalizing to different scanning modes, the adaptive scanning-mode augmentation is proposed to convert between raw sector images and li",
+  "category": "vision",
+  "domain": "medical imaging",
+  "task_types": [
+    "segmentation",
+    "object_detection",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice/IoU for segmentation, detection metrics such as mAP, and classification accuracy for infiltration depth staging",
+  "general_score_metric": "composite_score",
+  "typical_sota_score": "segmentation Dice: 80–95%; detection mAP: 60–90%; classification accuracy: 75–95%",
+  "year_of_publish": 2024,
+  "reputation": "A recent specialized medical imaging benchmark that is notable for being the first large-scale ERUS dataset with dense annotations.",
+  "notes": "Small, domain-specific benchmark with only 77 videos; performance is usually reported across multiple subtasks rather than a single unified metric.",
+  "creators": {
+    "scientists": [
+      "Yuncheng Jiang",
+      "Yiwen Hu",
+      "Zixun Zhang",
+      "Jun Wei",
+      "Chun-Mei Feng",
+      "Xuemei Tang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2408.10067",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

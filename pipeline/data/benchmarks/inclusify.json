@@ -1,0 +1,33 @@
+{
+  "name": "INCLUSIFY",
+  "description": "Gender-inclusive language is important for achieving gender equality in languages with gender inflections, such as German. While stirring some controversy, it is increasingly adopted by companies and political institutions. A handful of tools have been developed to help people use gender-inclusive language by identifying instances of the generic masculine and providing suggestions for more inclusive reformulations. In this report, we define the underlying tasks in terms of natural language processing, and present a dataset and measures for benchmarking them. We also present a model that implements these tasks, by combining an inclusive language database with an elaborate sequence of processing steps via standard pre-trained models. Our model achieves a recall of 0.89 and a precision of 0.82 in our benchmark for identifying exclusive language; and one of its top five suggestions is chosen in real-world texts in 44% of cases. We sketch how the area could be further advanced by training end-to-end models and using large language models; and we urge the community to include more gender-inclusive texts in their training data in order to not present an obstacle to the adoption of gender-inclusive language. Through these efforts, we hope to contribute to restoring justice in language and, to a small extent, in reality.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "span_detection",
+    "binary_classification",
+    "suggestion_ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "precision / recall (detection); top-k suggestion accuracy (ranking; top-5 selection rate)",
+  "general_score_metric": "precision and recall (for detection); top-k suggestion selection rate (for suggestions)",
+  "typical_sota_score": "precision ≈82%, recall ≈89%; top-5 suggestion selection ≈44%",
+  "year_of_publish": 2022,
+  "reputation": "Niche academic benchmark with growing adoption in gender-inclusive NLP research, primarily used in German-language inclusion work.",
+  "notes": "Language- and culture-specific (German); relatively small and specialized dataset; suggestions depend on curated inclusive-language database; potential annotation bias; not saturated and amenable to LLM approaches.",
+  "creators": {
+    "scientists": [
+      "David Pomerenke"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2212.02564",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

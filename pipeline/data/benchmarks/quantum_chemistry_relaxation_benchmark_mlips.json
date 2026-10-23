@@ -1,0 +1,38 @@
+{
+  "name": "Quantum chemistry relaxation benchmark (MLIPs)",
+  "description": "An evaluation dataset and protocol for testing machine learning interatomic potentials on geometry relaxations and energy predictions in quantum chemistry.",
+  "category": "mixed",
+  "domain": "materials science / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "geometry_optimization",
+    "energy_prediction",
+    "force_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Energy and force MAE/RMSE (e.g., MAE in eV/atom and eV/Å), and geometry-relaxation success/convergence rate (task_success_rate for relaxations)",
+  "general_score_metric": "Energy MAE (eV/atom) and force MAE (eV/Å), plus relaxation success rate",
+  "typical_sota_score": "energy MAE ≈ 0.001–0.01 eV/atom; force MAE ≈ 0.01–0.1 eV/Å (ranges depend on system complexity and reference DFT settings)",
+  "year_of_publish": 2025,
+  "reputation": "Well-regarded within the machine-learning interatomic potential (MLIP) community as a realistic benchmark for relaxation and energy/force prediction performance.",
+  "notes": "Non-LLM benchmark focused on regression/physics tasks. Results are sensitive to the reference electronic-structure method, training data coverage, and convergence criteria. Potential for contamination if models were trained on the same DFT data; dataset size and chemical diversity vary across releases.",
+  "creators": {
+    "scientists": [
+      "Fu C",
+      "Lin Y",
+      "Krueger Z",
+      "Yu W",
+      "Qian X",
+      "Yoon BJ"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

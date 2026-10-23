@@ -1,0 +1,27 @@
+{
+  "name": "EventGlucose",
+  "description": "Glucose forecasting is critical for diabetes management. Continuous glucose monitoring (CGM) provides real-time readings, but glucose values alone do not capture the behavioral events (meals, exercise, medication) that clinicians and patients use to make daily decisions. In spite of advances in time series foundation models and large language models (LLMs), systematic study of event-aware glucose forecasting remains limited, and how behavioral event context helps different model families remains unclear. We introduce EventGlucose, a benchmark where every task pairs glucose time series with behavioral event context; every task requires event context for accurate prediction. EventGlucose provides 60 task instances spanning demographics, event types, and 5 context conditions, from no context to detailed event descriptions. We evaluate 18 model configurations zero-shot, covering LLM-based forecasters, multimodal architectures, time series foundation models, and statistical baselines. We report Clarke Error Grid-weighted CRPS metrics that emphasize clinical risk zones. Our experiments reveal a Context Integration Gap : richer context can help, but most current models fail to use it. Only GPT-4o-mini improves with more context, gaining 9% from NoCtx to StandardEventInfo. Ten of twelve context-aware models degrade with detailed descriptions, by up to 78% in ct-CRPS. Context effects are also asymmetric: meal tasks benefit in 4 of 6 demographic subgroups, while exercise tasks benefit in none, suggesting failures depend on event type rather than on context generally. Larger models also tend to degrade more than smaller ones within each model family. Despite EventGlucose's balanced design, Type 1 diabetes and middle-aged patients remain harder to predict than other subgroups. EventGlucose is the first benchmark to evaluate time series foundation models and LLMs on event-aware glucose forecasting, and it shows where current models break down when behavioral context is available. The benchmark is available at https://github.com/JHU-CDHAI/EventGlucoseBench.",
+  "category": "multimodal",
+  "domain": "continuous glucose monitoring",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2026,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1145/3770855.3817572",
+  "provenance": {
+    "added_by": "scan-2026q2",
+    "added_at": "2026-08-19",
+    "origin": "cynefin@d486fafa9",
+    "gated": false,
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

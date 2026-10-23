@@ -1,0 +1,35 @@
+{
+  "name": "Metagenomic binning benchmark",
+  "description": "Metagenomic binning is a culture-free approach that facilitates the recovery of metagenome-assembled genomes by grouping genomic fragments. However, there remains a lack of a comprehensive benchmark to evaluate the performance of metagenomic binning tools across various combinations of data types and binning modes. In this study, we benchmark 13 metagenomic binning tools using short-read, long-read, and hybrid data under co-assembly, single-sample, and multi-sample binning, respectively. The benchmark results demonstrate that multi-sample binning exhibits optimal performance across short-read, long-read, and hybrid data. Moreover, multi-sample binning outperforms other binning modes in identifying potential antibiotic resistance gene hosts and near-complete strains containing potential biosynthetic gene clusters across diverse data types. This study also recommends three efficient binners across all data-binning combinations, as well as high-performance binners for each combination.",
+  "category": "text",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "clustering",
+    "genome_binning",
+    "assignment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 / completeness and contamination (precision/recall), ARI and number of near-complete genomes recovered",
+  "general_score_metric": "F1 (bin-level; completeness/contamination reported as secondary metrics)",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2025,
+  "reputation": "14 citations",
+  "notes": "Non-LLM bioinformatics benchmark; results depend strongly on dataset composition (simulated vs. real), assembly quality, and contamination; computationally intensive and sensitive to parameter tuning.",
+  "creators": {
+    "scientists": [
+      "Haitao Han",
+      "Ziye Wang",
+      "Shanfeng Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41467-025-57957-6",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

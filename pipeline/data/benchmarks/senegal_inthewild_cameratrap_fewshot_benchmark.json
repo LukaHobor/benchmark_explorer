@@ -1,0 +1,34 @@
+{
+  "name": "Senegal in-the-wild camera-trap few-shot benchmark",
+  "description": "Few shot learning (FSL) describes the challenge of learning to classify when there are only a few labeled examples. The goal is to adapt to a new classification task using a minimum amount of new data. However, when applying FSL to real-world problems, there exist a number of constraints and challenges that are not addressed in benchmark datasets. In this paper, we consider a realistic problem that fits perfectly with the narratives of FSL: to classify animal species that appear in our in-the-wild camera traps located in Senegal, when these species have yet to appear in popular animal datasets. Using the philosophy of FSL, we would train a FSL network to learn to separate animal species, using large public datasets, and then implement the network with our data where there are fewer labeled images. To explore this framework, we construct two separate testing datasets using our data, to reflect 1) challenges due to our unique imagery properties and environments, and 2) assumptions made in benchmark datasets that do not hold in real-world scenarios. We then conduct a comparison between FSL models, which illustrates the drastic difference between testing in benchmark settings and potential implementation on real data.",
+  "category": "vision",
+  "domain": "ecology / wildlife monitoring",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification",
+    "image_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (few-shot episode/top-1 accuracy)",
+  "general_score_metric": "top-1 accuracy (few-shot episodes)",
+  "typical_sota_score": "30–60% top-1 accuracy",
+  "year_of_publish": 2023,
+  "reputation": "1 citations",
+  "notes": "Real-world domain shift from public datasets, class imbalance, small per-class sample counts, environmental/occlusion variability; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Haoyu Chen",
+      "S. Lindshield",
+      "A. Reibman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

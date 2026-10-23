@@ -1,0 +1,38 @@
+{
+  "name": "OpenAD",
+  "description": "Open-world autonomous driving encompasses domain generalization and open-vocabulary. Domain generalization refers to the capabilities of autonomous driving systems across different scenarios and sensor parameter configurations. Open vocabulary pertains to the ability to recognize various semantic categories not encountered during training. In this paper, we introduce OpenAD, the first real-world open-world autonomous driving benchmark for 3D object detection. OpenAD is built on a corner case discovery and annotation pipeline integrating with a multimodal large language model (MLLM). The proposed pipeline annotates corner case objects in a unified format for five autonomous driving perception datasets with 2000 scenarios. In addition, we devise evaluation methodologies and evaluate various 2D and 3D open-world and specialized models. Moreover, we propose a vision-centric 3D open-world object detection baseline and further introduce an ensemble method by fusing general and specialized models to address the issue of lower precision in existing open-world methods for the OpenAD benchmark. Data, toolkit codes, and evaluation codes are released at https://github.com/VDIGPKU/OpenAD.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_object_detection",
+    "open_world_detection",
+    "open_vocabulary_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision for 3D detection (mAP) and open-world specific metrics (e.g., unknown-class detection / open-set metrics)",
+  "general_score_metric": "3D mAP (with complementary open-world metrics)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "New, curated benchmark (OpenAD) from an established research group that is attracting interest for open-world 3D detection research but is not yet widely standardized.",
+  "notes": "Focused on corner cases (≈2000 scenarios) and uses MLLM-assisted annotation — useful for open-world evaluation but annotation noise and limited scenario count can affect generalization; domain-specific (autonomous driving) and not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Zhongyu Xia",
+      "Jishuo Li",
+      "Zhiwei Lin",
+      "Xinhao Wang",
+      "Yongtao Wang",
+      "Ming-Hsuan Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.32388/j2781i",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

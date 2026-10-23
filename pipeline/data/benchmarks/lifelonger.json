@@ -1,0 +1,38 @@
+{
+  "name": "LifeLonger",
+  "description": "Deep learning models have shown a great effectiveness in recognition of findings in medical images. However, they cannot handle the ever-changing clinical environment, bringing newly annotated medical data from different sources. To exploit the incoming streams of data, these models would benefit largely from sequentially learning from new samples, without forgetting the previously obtained knowledge. In this paper we introduce LifeLonger, a benchmark for continual disease classification on the MedMNIST collection, by applying existing state-of-the-art continual learning methods. In particular, we consider three continual learning scenarios, namely, task and class incremental learning and the newly defined cross-domain incremental learning. Task and class incremental learning of diseases address the issue of classifying new samples without re-training the models from scratch, while cross-domain incremental learning addresses the issue of dealing with datasets originating from different institutions while retaining the previously obtained knowledge. We perform a thorough analysis of the performance and examine how the well-known challenges of continual learning, such as the catastrophic forgetting exhibit themselves in this setting. The encouraging results demonstrate that continual learning has a major potential to advance disease classification and to produce a more robust and efficient learning framework for clinical settings. The code repository, data partitions and baseline results for the complete benchmark will be made publicly available.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "continual_learning",
+    "classification",
+    "incremental_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "classification accuracy (average incremental accuracy) and forgetting measures",
+  "general_score_metric": "average incremental classification accuracy",
+  "year_of_publish": 2022,
+  "reputation": "Built on MedMNIST and of interest to the continual learning and medical imaging communities; moderate attention but not a mainstream benchmark in clinical deployment.",
+  "notes": "Based on low-resolution MedMNIST images — limited clinical realism. Small dataset sizes and domain shifts across sources can amplify catastrophic forgetting; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mohammad Mahdi Derakhshani",
+      "Ivona Najdenkoska",
+      "Tom van Sonsbeek",
+      "XianTong Zhen",
+      "Dwarikanath Mahapatra",
+      "Marcel Worring",
+      "Cees G. M. Snoek"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2204.05737",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

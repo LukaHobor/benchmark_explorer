@@ -1,0 +1,43 @@
+{
+  "name": "Anti-UAV",
+  "description": "Unmanned Aerial Vehicle (UAV) offers lots of applications in both commerce and recreation. With this, monitoring the operation status of UAVs is crucially important. In this work, we consider the task of tracking UAVs, providing rich information such as location and trajectory. To facilitate research on this topic, we propose a dataset, Anti-UAV, with more than 300 video pairs containing over 580k manually annotated bounding boxes. The releasing of such a large-scale dataset could be a useful initial step in research of tracking UAVs. Furthermore, the advancement of addressing research challenges in Anti-UAV can help the design of anti-UAV systems, leading to better surveillance of UAVs. Besides, a novel approach named dual-flow semantic consistency (DFSC) is proposed for UAV tracking. Modulated by the semantic flow across video sequences, the tracker learns more robust class-level semantic information and obtains more discriminative instance-level features. Experimental results demonstrate that Anti-UAV is very challenging, and the proposed method can effectively improve the tracker's performance. The Anti-UAV benchmark and the code of the proposed approach will be publicly available at https://github.com/ucas-vg/Anti-UAV.",
+  "category": "multimodal",
+  "domain": "aerial surveillance / UAV tracking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "single_object_tracking",
+    "video_object_detection",
+    "trajectory_estimation",
+    "object_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "IoU-based success (AUC) and precision (distance/center-error) — task uses tracking success (AUC) and precision metrics",
+  "general_score_metric": "AUC (success rate) of IoU",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2022,
+  "reputation": "A well-cited, domain-specific benchmark in UAV and aerial-tracking research with moderate adoption among visual-tracking researchers.",
+  "notes": "Non-LLM computer-vision benchmark focused on small, fast-moving aerial targets; challenging due to scale, occlusion, and background clutter. Large annotation set (~580k boxes) but domain-specific (UAVs) so models may not generalize to generic tracking. Low contamination risk for LLMs.",
+  "creators": {
+    "scientists": [
+      "Nan Jiang",
+      "Kuiran Wang",
+      "Xiaoke Peng",
+      "Xuehui Yu",
+      "Qiang Wang",
+      "Junliang Xing",
+      "Guorong Li",
+      "Jian Zhao",
+      "Guodong Guo",
+      "Zhenjun Han"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2101.08466",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

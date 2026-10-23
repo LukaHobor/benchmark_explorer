@@ -1,0 +1,42 @@
+{
+  "name": "CodeCommentEval",
+  "description": "Pre-trained code models rely heavily on high-quality pre-training data, particularly human-written reference comments that bridge code and natural language. However, these comments often become outdated as software evolves, degrading model performance. Large language models (LLMs) excel at generating high-quality code comments. We investigate whether replacing human-written comments with LLM-generated ones improves pre-training datasets. Since standard metrics cannot assess reference comment quality, we propose two novel reference-free evaluation tasks: code-comment inconsistency detection and semantic code search. Results show that LLM-generated comments are more semantically consistent with code than human-written ones, as confirmed by manual evaluation. Leveraging this finding, we rebuild the CodeSearchNet dataset with LLM-generated comments and re-pre-train CodeT5. Evaluations demonstrate that models trained on LLM-enhanced data outperform those using original human comments in code summarization, generation, and translation tasks. This work validates rebuilding pre-training datasets with LLMs to advance code intelligence, challenging the traditional reliance on human reference comments.",
+  "category": "code",
+  "domain": "code / software engineering",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "retrieval",
+    "generation",
+    "semantic_search"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 (inconsistency detection) / MRR / Recall@k (semantic code search); downstream metrics (BLEU/Exact Match) for code tasks",
+  "general_score_metric": "task-dependent (F1 for inconsistency detection; MRR/Recall@k for semantic search)",
+  "year_of_publish": 2025,
+  "reputation": "Recent research dataset introduced for evaluating LLM-enhanced code comments; adopted in targeted academic work but not yet a broadly established benchmark.",
+  "notes": "Contains LLM-generated comments—high risk of training/evaluation contamination if evaluated models were pretrained on similar synthetic comments; improvements may reflect dataset alignment with LLM style rather than objective ground-truth superiority.",
+  "creators": {
+    "scientists": [
+      "Kang Yang",
+      "XinJun Mao",
+      "Shangwen Wang",
+      "Yanlin Wang",
+      "Tanghaoran Zhang",
+      "Bo Lin",
+      "Yihao Qin",
+      "Zhang Zhang",
+      "Yao Lu",
+      "Kamal Al-Sabahi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2504.19444",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

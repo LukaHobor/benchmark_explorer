@@ -1,0 +1,37 @@
+{
+  "name": "KidSat",
+  "description": "Satellite imagery has emerged as an important tool to analyse demographic, health, and development indicators. While various deep learning models have been built for these tasks, each is specific to a particular problem, with few standard benchmarks available. We propose a new dataset pairing satellite imagery and high-quality survey data on child poverty to benchmark satellite feature representations. Our dataset consists of 33,608 images, each 10 km $\\times$ 10 km, from 19 countries in Eastern and Southern Africa in the time period 1997-2022. As defined by UNICEF, multidimensional child poverty covers six dimensions and it can be calculated from the face-to-face Demographic and Health Surveys (DHS) Program . As part of the benchmark, we test spatial as well as temporal generalization, by testing on unseen locations, and on data after the training years. Using our dataset we benchmark multiple models, from low-level satellite imagery models such as MOSAIKS , to deep learning foundatio",
+  "category": "vision",
+  "domain": "geospatial",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "spatiotemporal_generalization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "regression metrics (e.g. R^2, MAE, RMSE) and out-of-distribution/generalization evaluation across space and time",
+  "general_score_metric": "R^2",
+  "typical_sota_score": "R^2 ≈ 0.2–0.6 (varies by country/task; reported performance is modest and task-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "A recent specialized benchmark for satellite-based child poverty estimation that is useful for geospatial representation learning, but it is still new and not yet widely adopted.",
+  "notes": "Non-LLM geospatial regression benchmark; evaluates both spatial and temporal generalization, so scores are not directly comparable to in-distribution settings.",
+  "creators": {
+    "scientists": [
+      "Makkunda Sharma",
+      "Fan Yang",
+      "Duy-Nhat Vo",
+      "Esra Suel",
+      "Swapnil Mishra",
+      "Samir Bhatt"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.05986",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

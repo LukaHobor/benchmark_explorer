@@ -1,0 +1,38 @@
+{
+  "name": "nnOOD",
+  "description": "The wide variety of in-distribution and out-of-distribution data in medical imaging makes universal anomaly detection a challenging task. Recently a number of self-supervised methods have been developed that train end-to-end models on healthy data augmented with synthetic anomalies. However, it is difficult to compare these methods as it is not clear whether gains in performance are from the task itself or the training pipeline around it. It is also difficult to assess whether a task generalises well for universal anomaly detection, as they are often only tested on a limited range of anomalies. To assist with this we have developed nnOOD, a framework that adapts nnU-Net to allow for comparison of self-supervised anomaly localisation methods. By isolating the synthetic, self-supervised task from the rest of the training process we perform a more faithful comparison of the tasks, whilst also making the workflow for evaluating over a given dataset quick and easy. Using this we have implemented the current state-of-the-art tasks and evaluated them on a challenging X-ray dataset.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "segmentation",
+    "localization",
+    "self_supervised_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC (image-level) and pixel-level segmentation metrics (Dice/IoU, AUPR)",
+  "general_score_metric": "AUROC (primary for image-level detection); Dice/IoU for pixel-level localisation",
+  "typical_sota_score": "70–95% (AUROC; varies by dataset, anomaly type, and metric)",
+  "year_of_publish": 2022,
+  "reputation": "A research-focused benchmarking framework used by the medical imaging anomaly-detection community to compare self-supervised localization tasks; moderate niche adoption.",
+  "notes": "Non-LLM benchmark; relies on synthetic anomalies for self-supervision (domain gap risk); performance varies strongly by anomaly type and evaluation metric; comparisons isolate task vs pipeline but dataset/anomaly coverage can be limited.",
+  "creators": {
+    "scientists": [
+      "Matthew Baugh",
+      "Jeremy Tan",
+      "Athanasios Vlontzos",
+      "Johanna P. Müller",
+      "Bernhard Kainz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2209.01124",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

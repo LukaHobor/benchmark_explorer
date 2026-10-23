@@ -1,0 +1,37 @@
+{
+  "name": "Active Space Selection VQE Benchmark",
+  "description": "Quantum computers promise scalable treatments of electronic structure, yet applying variational quantum eigensolvers (VQE) on realistic drug-like molecules remains constrained by the performance limitations of near-term quantum hardwares. A key strategy for addressing this challenge which effectively leverages current Noisy Intermediate-Scale Quantum (NISQ) hardwares yet remains under-benchmarked is active space selection. We introduce a benchmark that heuristically proposes criteria based on chemically grounded metrics to classify the suitability of a molecule for using quantum computing and then quantifies the impact of active space choices across the VQE pipeline for quantum drug discovery. The suite covers several representative drug-like molecules (e.g., lovastatin, oseltamivir, morphine) and uses chemically motivated active spaces. Our VQE evaluations employ both simulation and quantum processing unit (QPU) execution using unitary coupled-cluster with singles and doubles (UCCSD)",
+  "category": "mixed",
+  "domain": "quantum computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "energy_error",
+  "general_score_metric": "energy_error",
+  "typical_sota_score": "≈1e-4–1e-2 Hartree energy error (around chemical accuracy ≈1.6e-3 Hartree for many target tasks)",
+  "year_of_publish": 2025,
+  "reputation": "A very recent, specialized benchmark proposal for quantum chemistry/VQE workflows, with limited community adoption so far.",
+  "notes": "Non-LLM benchmark; results depend on molecule, active space, simulator vs QPU execution, and noise levels, making comparisons difficult.",
+  "creators": {
+    "scientists": [
+      "Zhi Yin",
+      "Xiaoran Li",
+      "Zhupeng Han",
+      "Shengyu Zhang",
+      "Xin Li",
+      "Zhihong Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2512.18203",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

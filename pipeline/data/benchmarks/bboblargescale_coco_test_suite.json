@@ -1,0 +1,38 @@
+{
+  "name": "bbob-largescale (COCO) test suite",
+  "description": "The bbob-largescale test suite, containing 24 single-objective functions in\ncontinuous domain, extends the well-known single-objective noiseless bbob test\nsuite, which has been used since 2009 in the BBOB workshop series, to large\ndimension. The core idea is to make the rotational transformations R, Q in\nsearch space that appear in the bbob test suite computationally cheaper while\nretaining some desired properties. This documentation presents an approach that\nreplaces a full rotational transformation with a combination of a\nblock-diagonal matrix and two permutation matrices in order to construct test\nfunctions whose computational and memory costs scale linearly in the dimension\nof the problem.",
+  "category": "mixed",
+  "domain": "continuous optimization / benchmarking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "continuous_optimization",
+    "black_box_optimization",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "expected running time (ERT) / number of function evaluations to reach target(s); success rate over runs",
+  "general_score_metric": "Expected Running Time (ERT) / function evaluations to reach predefined target values",
+  "year_of_publish": 2019,
+  "reputation": "Long-standing, widely used benchmark in the continuous optimization community (BBOB workshop series) for comparing black-box optimizers at large scale.",
+  "notes": "Non-LLM benchmark consisting of synthetic test functions scalable to high dimension; evaluation depends on chosen targets and budgets; computationally expensive at large dimensions but reproducible; not saturated.",
+  "creators": {
+    "scientists": [
+      "Ouassim Elhara",
+      "Konstantinos Varelas",
+      "Duc Nguyen",
+      "Tea Tusar",
+      "Dimo Brockhoff",
+      "Nikolaus Hansen",
+      "Anne Auger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1903.06396",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Six-CD",
+  "description": "Text-to-image (T2I) diffusion models have shown exceptional capabilities in generating images that closely correspond to textual prompts. However, the advancement of T2I diffusion models presents significant risks, as the models could be exploited for malicious purposes, such as generating images with violence or nudity, or creating unauthorized portraits of public figures in inappropriate contexts. To mitigate these risks, concept removal methods have been proposed. These methods aim to modify diffusion models to prevent the generation of malicious and unwanted concepts. Despite these efforts, existing research faces several challenges: (1) a lack of consistent comparisons on a comprehensive dataset, (2) ineffective prompts in harmful and nudity concepts, (3) overlooked evaluation of the ability to generate the benign part within prompts containing malicious concepts. To address these gaps, we propose to benchmark the concept removal methods by introducing a new dataset, Six-CD, along with a novel evaluation metric. In this benchmark, we conduct a thorough evaluation of concept removals, with the experimental observations and discussions offering valuable insights in the field.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_generation",
+    "safety_evaluation",
+    "concept_removal_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "automatic concept suppression rate combined with image-fidelity metrics (e.g., CLIP similarity, FID) and human evaluation",
+  "general_score_metric": "concept suppression rate (primary) with CLIP similarity / FID (secondary)",
+  "year_of_publish": 2024,
+  "reputation": "New research benchmark focused on concept removal for T2I models; not yet widely adopted.",
+  "notes": "Primarily a research dataset; evaluation relies on both automated proxies and subjective human judgments. Possible small-scale or specialized splits and risk of metric saturation depending on chosen automatic measures.",
+  "creators": {
+    "scientists": [
+      "Jie Ren",
+      "Kangrui Chen",
+      "Yingqian Cui",
+      "Shenglai Zeng",
+      "Hui Liu",
+      "Yue Xing",
+      "Jiliang Tang",
+      "Lingjuan Lyu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.14855",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

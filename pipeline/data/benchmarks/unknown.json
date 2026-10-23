@@ -1,0 +1,36 @@
+{
+  "name": "unknown",
+  "description": "Despite significant progress in generative AI, comprehensive evaluation remains challenging because of the lack of effective metrics and standardized benchmarks. For instance, the widely-used CLIPScore measures the alignment between a (generated) image and text prompt, but it fails to produce reliable scores for complex prompts involving compositions of objects, attributes, and relations. One reason is that text encoders of CLIP can notoriously act as a \"bag of words\", conflating prompts such as \"the horse is eating the grass\" with \"the grass is eating the horse\". To address this, we introduce the VQAScore, which uses a visual-question-answering (VQA) model to produce an alignment score by computing the probability of a \"Yes\" answer to a simple \"Does this figure show '{text}'?\" question. Though simpler than prior art, VQAScore computed with off-the-shelf models produces state-of-the-art results across many (8) image-text alignment benchmarks. We also compute VQAScore with an in-house m",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_text_alignment",
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "correlation",
+  "general_score_metric": "correlation",
+  "year_of_publish": 2024,
+  "reputation": "A newer multimodal alignment metric that has gained attention for outperforming CLIPScore on several image-text alignment benchmarks, but is not yet a long-established standard.",
+  "notes": "This is primarily an evaluation metric rather than a fixed benchmark; reported results are usually correlations with human judgments across multiple datasets.",
+  "creators": {
+    "scientists": [
+      "Zhiqiu Lin",
+      "Deepak Pathak",
+      "Baiqi Li",
+      "Jiayao Li",
+      "Xide Xia",
+      "Graham Neubig"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.01291",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

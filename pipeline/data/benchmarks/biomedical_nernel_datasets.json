@@ -1,0 +1,39 @@
+{
+  "name": "Biomedical NER/NEL datasets",
+  "description": "Natural language processing (NLP) is widely applied in biological domains to retrieve information from publications. Systems to address numerous applications exist, such as biomedical named entity recognition (BNER), named entity normalization (NEN) and protein-protein interaction extraction (PPIE). High-quality datasets can assist the development of robust and reliable systems; however, due to the endless applications and evolving techniques, the annotations of benchmark datasets may become outdated and inappropriate. In this study, we first review commonlyused BNER datasets and their potential annotation problems such as inconsistency and low portability. Then, we introduce a revised version of the JNLPBA dataset that solves potential problems in the original and use state-of-the-art named entity recognition systems to evaluate its portability to different kinds of biomedical literature, including protein-protein interaction and biology events. Lastly, we introduce an ensembled biomedical entity dataset (EBED) by extending the revised JNLPBA dataset with PubMed Central full-text paragraphs, figure captions and patent abstracts. This EBED is a multi-task dataset that covers annotations including gene, disease and chemical entities. In total, it contains 85000 entity mentions, 25000 entity mentions with database identifiers and 5000 attribute tags. To demonstrate the usage of the EBED, we review the BNER track from the AI CUP Biomedical Paper Analysis challenge. Availability: The revised JNLPBA dataset is available at https://iasl-btm.iis.sinica.edu.tw/BNER/Content/Re vised_JNLPBA.zip. The EBED dataset is available at https://iasl-btm.iis.sinica.edu.tw/BNER/Content/AICUP _EBED_dataset.rar. Contact: Email: thtsai@g.ncu.edu.tw, Tel. 886-3-4227151 ext. 35203, Fax: 886-3-422-2681 Email: hsu@iis.sinica.edu.tw, Tel. 886-2-2788-3799 ext. 2211, Fax: 886-2-2782-4814 Supplementary information: Supplementary data are available at Briefings in Bioinformatics online.",
+  "category": "text",
+  "domain": "biomedical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "entity_normalization",
+    "entity_linking",
+    "multi_task"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "80–90%",
+  "year_of_publish": 2020,
+  "reputation": "52 citations",
+  "notes": "Contains multiple biomedical sources (abstracts, full-text, captions, patents). The authors note annotation inconsistencies and portability issues; some original annotations may be outdated. Domain-specific distribution can cause domain-shift for newer literature. Not primarily an LLM benchmark; licensing and identifier mapping vary by subdataset.",
+  "creators": {
+    "scientists": [
+      "Ming-Siang Huang",
+      "Po-Ting Lai",
+      "Pei-Yen Lin",
+      "Yu-Ting You",
+      "Richard Tzong‐Han Tsai",
+      "Wen-Lian Hsu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://doi.org/10.1093/bib/bbaa054",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

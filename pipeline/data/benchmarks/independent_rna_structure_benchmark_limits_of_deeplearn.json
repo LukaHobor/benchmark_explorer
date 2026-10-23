@@ -1,0 +1,33 @@
+{
+  "name": "Independent RNA structure benchmark (Limits of deep-learning-based RNA prediction)",
+  "description": "In recent years, tremendous advances have been made in predicting protein structures and protein-protein interactions. However, progress in predicting RNA structure, either alone or in complex with other macromolecules, has been less prominent, though some recent developments have been reported. It remains unclear whether the improved prediction accuracy is sustained for novel RNA structures. Here, we use an independent benchmark to evaluate the performance of the latest methods. First, we show that state-of-the-art methods can sometimes predict the structure of single-chain RNA strands, with accurate models observed for RNAs with well-defined or regular secondary structures. Next, our evaluation was extended to RNA complexes, where prediction accuracy was notably higher for those involving extensive canonical base pairing. Additionally, a structural similarity analysis revealed that prediction success strongly correlates with resemblance to known structures, indicating that current methods recognise recurring motifs rather than generalising to novel folds. Finally, we also noted that the accuracy estimates for RNA models are far from accurate. Therefore, it is not possible to reliably identify the correctly predicted models with today’s methods. Graphical Abstract",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structure_prediction",
+    "complex_structure_prediction",
+    "model_ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSD / INF / TM-score (structural similarity and base-pairing accuracy)",
+  "general_score_metric": "RMSD",
+  "typical_sota_score": "variable — successful cases often RMSD ~2–8 Å; overall performance highly variable",
+  "year_of_publish": 2026,
+  "reputation": "6 citations",
+  "notes": "Non-LLM benchmark; evaluation depends on structural-similarity metrics; models tend to succeed when target resembles known structures (risk of training-data similarity/contamination); current model-quality estimates are unreliable; small/heterogeneous benchmark subsets for complexes.",
+  "creators": {
+    "scientists": [
+      "Marko Ludaic",
+      "A. Elofsson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

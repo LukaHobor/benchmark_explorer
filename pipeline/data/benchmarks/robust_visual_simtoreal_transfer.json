@@ -1,0 +1,36 @@
+{
+  "name": "Robust Visual Sim-to-Real Transfer",
+  "description": "Learning visuomotor policies in simulation is much safer and cheaper than in the real world. However, due to discrepancies between the simulated and real data, simulator-trained policies often fail when transferred to real robots. One common approach to bridge the visual sim-to-real domain gap is domain randomization (DR). While previous work mainly evaluates DR for disembodied tasks, such as pose estimation and object detection, here we systematically explore visual domain randomization methods and benchmark them on a rich set of challenging robotic manipulation tasks. In particular, we propose an off-line proxy task of cube localization to select DR parameters for texture randomization, lighting randomization, variations of object colors and camera parameters. Notably, we demonstrate that DR parameters have similar impact on our off-line proxy task and on-line policies. We, hence, use off-line optimized DR parameters to train visuomotor policies in simulation and directly apply such",
+  "category": "vision",
+  "domain": "robotics",
+  "task_types": [
+    "robotic_manipulation",
+    "sim_to_real_transfer",
+    "offline_proxy_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2023,
+  "reputation": "A well-known robotics sim-to-real study in the domain randomization literature, often cited for connecting offline proxy tuning with real-robot transfer.",
+  "notes": "Non-LLM robotics benchmark; results are highly sensitive to simulator fidelity, task setup, and hardware specifics, and there is no single standardized score across tasks.",
+  "creators": {
+    "scientists": [
+      "Ricardo Garcia",
+      "Robin Strudel",
+      "Shizhe Chen",
+      "Etienne Arlaud",
+      "Ivan Laptev",
+      "Cordelia Schmid"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2307.15320",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

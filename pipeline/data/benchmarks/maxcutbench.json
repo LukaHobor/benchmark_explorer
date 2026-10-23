@@ -1,0 +1,33 @@
+{
+  "name": "MaxCut-Bench",
+  "description": "Recently, there has been much work on the design of general heuristics for graph-based, combinatorial optimization problems via the incorporation of Graph Neural Networks (GNNs) to learn distribution-specific solution structures.However, there is a lack of consistency in the evaluation of these heuristics, in terms of the baselines and instances chosen, which makes it difficult to assess the relative performance of the algorithms. In this paper, we propose an open-source benchmark suite MaxCut-Bench dedicated to the NP-hard Maximum Cut problem in both its weighted and unweighted variants, based on a careful selection of instances curated from diverse graph datasets. The suite offers a unified interface to various heuristics, both traditional and machine learning-based. Next, we use the benchmark in an attempt to systematically corroborate or reproduce the results of several, popular learning-based approaches, including S2V-DQN [31], ECO-DQN [4], among others, in terms of three dimensions: objective value, generalization, and scalability. Our empirical results show that several of the learned heuristics fail to outperform a naive greedy algorithm, and that only one of them consistently outperforms Tabu Search, a simple, general heuristic based upon local search. Furthermore, we find that the performance of ECO-DQN remains the same or is improved if the GNN is replaced by a simple linear regression on a subset of the features that are related to Tabu Search. Code, data, and pretrained models are available at: \\url{https://github.com/ankurnath/MaxCut-Bench}.",
+  "category": "mixed",
+  "domain": "combinatorial optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "combinatorial_optimization",
+    "graph_optimization",
+    "heuristic_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "objective_value",
+  "general_score_metric": "objective_value (cut value) / approximation ratio",
+  "year_of_publish": 2024,
+  "reputation": "An open-source, curated suite for MaxCut evaluation that is respected for standardizing comparisons in ML-for-combinatorial-optimization, with steadily growing community use.",
+  "notes": "Non-LLM benchmark; performance highly sensitive to instance distribution and graph family; evaluation should consider runtime and scalability; several learned heuristics struggle to generalize or outperform classical heuristics on some instance sets.",
+  "creators": {
+    "scientists": [
+      "Ankur Nath",
+      "Alan Kuhnle"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.11897",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

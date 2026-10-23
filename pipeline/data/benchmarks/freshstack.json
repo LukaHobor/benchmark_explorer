@@ -1,0 +1,38 @@
+{
+  "name": "FreshStack",
+  "description": "We introduce FreshStack, a reusable framework for automatically building information retrieval (IR) evaluation benchmarks from community-asked questions and answers. FreshStack conducts the following steps: (1) automatic corpus collection from code and technical documentation, (2) nugget generation from community-asked questions and answers, and (3) nugget-level support, retrieving documents using a fusion of retrieval techniques and hybrid architectures. We use FreshStack to build five datasets on fast-growing, recent, and niche topics to ensure the tasks are sufficiently challenging. On FreshStack, existing retrieval models, when applied out-of-the-box, significantly underperform oracle approaches on all five topics, denoting plenty of headroom to improve IR quality. In addition, we identify cases where rerankers do not clearly improve first-stage retrieval accuracy (two out of five topics). We hope that FreshStack will facilitate future work toward constructing realistic, scalable, and uncontaminated IR and RAG evaluation benchmarks. FreshStack datasets are available at: https://fresh-stack.github.io.",
+  "category": "text",
+  "domain": "software engineering / technical documentation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "information_retrieval",
+    "document_retrieval",
+    "passage_ranking",
+    "reranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k / nDCG@k",
+  "general_score_metric": "nDCG@10",
+  "year_of_publish": 2025,
+  "reputation": "A recent IR evaluation framework aimed at realistic, niche technical domains; gaining attention in retrieval/RAG research but not yet widely adopted.",
+  "notes": "Built from community Q&A and recent documentation to reduce contamination risk; nugget-level evaluation and small number (five) topic datasets mean task-specific variability; not an LLM benchmark per se (focused on IR/retrieval).",
+  "creators": {
+    "scientists": [
+      "Nandan Thakur",
+      "Jimmy Lin",
+      "Sam Havens",
+      "Michael Carbin",
+      "Omar Khattab",
+      "Andrew Drozdov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2504.13128",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "BLVD",
+  "description": "In autonomous driving community, numerous benchmarks have been established to\nassist the tasks of 3D/2D object detection, stereo vision, semantic/instance\nsegmentation. However, the more meaningful dynamic evolution of the surrounding\nobjects of ego-vehicle is rarely exploited, and lacks a large-scale dataset\nplatform. To address this, we introduce BLVD, a large-scale 5D semantics\nbenchmark which does not concentrate on the static detection or\nsemantic/instance segmentation tasks tackled adequately before. Instead, BLVD\naims to provide a platform for the tasks of dynamic 4D (3D+temporal) tracking,\n5D (4D+interactive) interactive event recognition and intention prediction.\nThis benchmark will boost the deeper understanding of traffic scenes than ever\nbefore. We totally yield 249,129 3D annotations, 4,902 independent individuals\nfor tracking with the length of overall 214,922 points, 6,004 valid fragments\nfor 5D interactive event recognition, and 4,900 individuals for 5D intention\nprediction. These tasks are contained in four kinds of scenarios depending on\nthe object density (low and high) and light conditions (daytime and nighttime).\nThe benchmark can be downloaded from our project site\nhttps://github.com/VCCIV/BLVD/.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_detection",
+    "tracking",
+    "event_recognition",
+    "intention_prediction",
+    "trajectory_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific (mAP for detection, MOTA/IDF1 for tracking, accuracy/F1 for event recognition, ADE/FDE for trajectory/intention)",
+  "general_score_metric": "task-specific composite (mAP / MOTA / ADE-FDE depending on task)",
+  "year_of_publish": 2019,
+  "year_of_last_update": 2020,
+  "reputation": "Moderately known in the autonomous driving community for its focus on dynamic/interactive (5D) annotations, but less widely used than larger benchmarks like KITTI or nuScenes.",
+  "notes": "Non-LLM benchmark; relatively smaller and more specialized than large autonomous-driving datasets; contains daytime/nighttime and density-based scenario splits; evaluation and reported metrics vary by task, so direct cross-task comparisons require care.",
+  "creators": {
+    "scientists": [
+      "Jianru Xue",
+      "Jianwu Fang",
+      "Tao Li",
+      "Bohua Zhang",
+      "Pu Zhang",
+      "Zhen Ye",
+      "Jian Dou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1903.06405",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

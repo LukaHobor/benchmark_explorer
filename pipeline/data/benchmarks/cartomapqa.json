@@ -1,0 +1,39 @@
+{
+  "name": "CartoMapQA",
+  "description": "The rise of Large Visual-Language Models (LVLMs) has unlocked new possibilities for seamlessly integrating visual and textual information. However, their ability to interpret cartographic maps remains largely unexplored. In this paper, we introduce CartoMapQA, a benchmark specifically designed to evaluate LVLMs' understanding of cartographic maps through question-answering tasks. The dataset includes over 2000 samples, each composed of a cartographic map, a question (with open-ended or multiple-choice answers), and a ground-truth answer. These tasks span key low-, mid- and high-level map interpretation skills, including symbol recognition, embedded information extraction, scale interpretation, and route-based reasoning. Our evaluation of both open-source and proprietary LVLMs reveals persistent challenges: models frequently struggle with map-specific semantics, exhibit limited geospatial reasoning, and are prone to Optical Character Recognition (OCR)-related errors. By isolating these weaknesses, CartoMapQA offers a valuable tool for guiding future improvements in LVLM architectures. Ultimately, it supports the development of models better equipped for real-world applications that depend on robust and reliable map understanding, such as navigation, geographic search, and urban planning. Our source code and data are openly available to the research community at: https://github.com/ungquanghuy-kddi/CartoMapQA.git",
+  "category": "multimodal",
+  "domain": "cartography / geospatial vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "open_ended",
+    "visual_question_answering",
+    "geospatial_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (for multiple-choice), exact_match / F1 (for open-ended answers); aggregated per-task accuracy reported",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "1 citations",
+  "notes": "Relatively small dataset (~2k samples), multimodal (map images + text) so OCR errors and map-specific symbol semantics are common failure modes. Results can be sensitive to geographic/domain shift and to the LVLM's OCR and spatial reasoning capabilities.",
+  "creators": {
+    "scientists": [
+      "H. Ung",
+      "Guillaume Habault",
+      "Yasutaka Nishimura",
+      "Hao Niu",
+      "Roberto Legaspi",
+      "Tomoki Oya"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2512.03558",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

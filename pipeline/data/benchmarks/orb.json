@@ -1,0 +1,38 @@
+{
+  "name": "ORB",
+  "description": "Reading comprehension is one of the crucial tasks for furthering research in natural language understanding. A lot of diverse reading comprehension datasets have recently been introduced to study various phenomena in natural language, ranging from simple paraphrase matching and entity typing to entity tracking and understanding the implications of the context. Given the availability of many such datasets, comprehensive and reliable evaluation is tedious and time-consuming for researchers working on this problem. We present an evaluation server, ORB, that reports performance on seven diverse reading comprehension datasets, encouraging and facilitating testing a single model's capability in understanding a wide variety of reading phenomena. The evaluation server places no restrictions on how models are trained, so it is a suitable test bed for exploring training paradigms and representation learning for general reading facility. As more suitable datasets are released, they will be added to the evaluation server. We also collect and include synthetic augmentations for these datasets, testing how well models can handle out-of-domain questions.",
+  "category": "text",
+  "domain": "natural language understanding",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "extractive_qa",
+    "multiple_choice",
+    "abstractive_qa",
+    "span_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match_and_F1 (per-dataset EM and F1, aggregated into composite scores)",
+  "general_score_metric": "composite_score (aggregate of per-dataset EM and F1 metrics)",
+  "typical_sota_score": "Varies widely by subtask and dataset; per-dataset SOTA commonly ranges from ~70% to >90% on easier sets and lower on harder/adversarial splits",
+  "year_of_publish": 2019,
+  "reputation": "Moderately used evaluation server for multi-dataset reading-comprehension benchmarking; less ubiquitous than GLUE/SQuAD but useful for diverse RC evaluation.",
+  "notes": "Includes synthetic augmentations and heterogeneous datasets; potential for training-data overlap/contamination with large pretraining corpora; server contents and datasets may evolve over time.",
+  "creators": {
+    "scientists": [
+      "Dheeru Dua",
+      "Ananth Gottumukkala",
+      "Alon Talmor",
+      "Sameer Singh",
+      "Matt Gardner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1912.12598",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

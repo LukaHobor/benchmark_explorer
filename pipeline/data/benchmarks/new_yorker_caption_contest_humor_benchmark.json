@@ -1,0 +1,40 @@
+{
+  "name": "New Yorker Caption Contest Humor Benchmark",
+  "description": "Large neural networks can now generate jokes, but do they really \"understand\" humor? We challenge AI models with three tasks derived from the New Yorker Cartoon Caption Contest: matching a joke to a cartoon, identifying a winning caption, and explaining why a winning caption is funny. These tasks encapsulate progressively more sophisticated aspects of \"understanding\" a cartoon; key elements are the complex, often surprising relationships between images and captions and the frequent inclusion of indirect and playful allusions to human experience and culture. We investigate both multimodal and language-only models: the former are challenged with the cartoon images directly, while the latter are given multifaceted descriptions of the visual scene to simulate human-level visual understanding. We find that both types of models struggle at all three tasks. For example, our best multimodal models fall 30 accuracy points behind human performance on the matching task, and, even when provided ground-truth visual scene descriptors, human-authored explanations are preferred head-to-head over the best machine-authored ones (few-shot GPT-4) in more than 2/3 of cases. We release models, code, leaderboard, and corpus, which includes newly-gathered annotations describing the image's locations/entities, what's unusual in the scene, and an explanation of the joke.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "ranking",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and human_eval",
+  "general_score_metric": "accuracy (matching/ranking) and human preference (explanations)",
+  "typical_sota_score": "50–70%",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in research on computational humor and multimodal understanding, used by a modest research community interested in pragmatics and creativity evaluation.",
+  "notes": "Subjective task with human-evaluation required for explanations; dataset is relatively small and culturally specific (humor/NY-centric), raising contamination risk from web-pretrained models and limiting reproducibility across cultures.",
+  "creators": {
+    "scientists": [
+      "Jack Hessel",
+      "Ana Marasović",
+      "Jena D. Hwang",
+      "Lillian Lee",
+      "Jeff Da",
+      "Rowan Zellers",
+      "Robert Mankoff",
+      "Yejin Choi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.06293",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

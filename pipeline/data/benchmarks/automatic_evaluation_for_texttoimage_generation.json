@@ -1,0 +1,37 @@
+{
+  "name": "Automatic Evaluation for Text-to-image Generation",
+  "description": "Driven by the remarkable progress in diffusion models, text-to-image generation has made significant strides, creating a pressing demand for automatic quality evaluation of generated images. Current state-of-the-art automatic evaluation methods heavily rely on Multi-modal Large Language Models (MLLMs), particularly powerful commercial models like GPT-4o. While these models are highly effective, their substantial costs limit scalability in large-scale evaluations. Adopting open-source MLLMs is an alternative; however, their performance falls short due to significant limitations in processing multi-modal data compared to commercial MLLMs. To tackle these problems, we first propose a task decomposition evaluation framework based on GPT-4o to automatically construct a new training dataset, where the complex evaluation task is decoupled into simpler sub-tasks, effectively reducing the learning complexity. Based on this dataset, we design innovative training strategies to effectively distill",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_ranking",
+    "open_ended_judgment",
+    "quality_assessment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "LLM-based automatic scoring of generated images via decomposed sub-tasks and composite quality judgment",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2024,
+  "reputation": "An emerging automatic evaluation benchmark/method for text-to-image generation, but not yet broadly established as a standard benchmark.",
+  "notes": "Evaluation depends heavily on GPT-4o-derived supervision and distilled MLLMs; results may vary with prompt design and evaluator model, and contamination is possible if used for training/evaluation loops.",
+  "creators": {
+    "scientists": [
+      "Rong-Cheng Tu",
+      "Zi-Ao Ma",
+      "Tian Lan",
+      "Yuehao Zhao",
+      "Heyan Huang",
+      "Xian-Ling Mao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.15488",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

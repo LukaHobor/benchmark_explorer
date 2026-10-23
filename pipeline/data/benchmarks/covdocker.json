@@ -1,0 +1,38 @@
+{
+  "name": "CovDocker",
+  "description": "Molecular docking plays a crucial role in predicting the binding mode of ligands to target proteins, and covalent interactions, which involve the formation of a covalent bond between the ligand and the target, are particularly valuable due to their strong, enduring binding nature. However, most existing docking methods and deep learning approaches hardly account for the formation of covalent bonds and the associated structural changes. To address this gap, we introduce a comprehensive benchmark for covalent docking, CovDocker, which is designed to better capture the complexities of covalent binding. We decompose the covalent docking process into three main tasks: reactive location prediction, covalent reaction prediction, and covalent docking. By adapting state-of-the-art models, such as Uni-Mol and Chemformer, we establish baseline performances and demonstrate the effectiveness of the benchmark in accurately predicting interaction sites and modeling the molecular transformations involved in covalent binding. These results confirm the role of the benchmark as a rigorous framework for advancing research in covalent drug design. It underscores the potential of data-driven approaches to accelerate the discovery of selective covalent inhibitors and addresses critical challenges in therapeutic development.",
+  "category": "mixed",
+  "domain": "computational drug design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reactive_location_prediction",
+    "covalent_reaction_prediction",
+    "covalent_docking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "top-k accuracy / exact match for site/reaction prediction; RMSD and docking success rate thresholds for covalent docking (pose-based metrics)",
+  "general_score_metric": "Combination of top-k accuracy (for site/reaction prediction) and RMSD / docking success rate (for docking evaluation)",
+  "year_of_publish": 2025,
+  "reputation": "A specialized benchmark targeting covalent docking research; valuable for the covalent-inhibitor community but currently niche relative to general docking benchmarks.",
+  "notes": "Focuses on covalent-binding scenarios (not general docking); evaluation mixes classification and geometric pose metrics; dataset size and domain specificity may limit generalization; non-LLM benchmark with specialized chemical/structural requirements.",
+  "creators": {
+    "scientists": [
+      "Yangzhe Peng",
+      "Kaiyuan Gao",
+      "Liang He",
+      "Yuheng Cong",
+      "Haiguang Liu",
+      "Kun He",
+      "Lijun Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.21085",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

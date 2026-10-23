@@ -1,0 +1,33 @@
+{
+  "name": "SherLIiC",
+  "description": "We present SherLIiC, a testbed for lexical inference in context (LIiC), consisting of 3985 manually annotated inference rule candidates (InfCands), accompanied by (i) ~960k unlabeled InfCands, and (ii) ~190k typed textual relations between Freebase entities extracted from the large entity-linked corpus ClueWeb09. Each InfCand consists of one of these relations, expressed as a lemmatized dependency path, and two argument placeholders, each linked to one or more Freebase types. Due to our candidate selection process based on strong distributional evidence, SherLIiC is much harder than existing testbeds because distributional evidence is of little utility in the classification of InfCands. We also show that, due to its construction, many of SherLIiC's correct InfCands are novel and missing from existing rule bases. We evaluate a number of strong baselines on SherLIiC, ranging from semantic vector space models to state of the art neural models of natural language inference (NLI). We show that SherLIiC poses a tough challenge to existing NLI systems.",
+  "category": "text",
+  "domain": "natural language inference / lexical semantics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "entailment_detection",
+    "rule_discovery_support"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and F1 (binary classification metrics); precision/recall often reported for positive entailment class",
+  "general_score_metric": "F1 (for the positive/inference class)",
+  "year_of_publish": 2019,
+  "reputation": "Well-regarded in the lexical inference / rule induction community as a challenging testbed for inference-in-context and lexical rule extraction methods, but relatively niche compared to general NLI datasets.",
+  "notes": "Designed to be adversarial to distributional cues (reduces usefulness of co-occurrence signals); contains a small manually annotated testset (~4k) plus large unlabeled pools; challenging for standard NLI systems.",
+  "creators": {
+    "scientists": [
+      "Martin Schmitt",
+      "Hinrich Schütze"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1906.01393",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

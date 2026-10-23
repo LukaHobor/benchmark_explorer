@@ -1,0 +1,36 @@
+{
+  "name": "Motion State (MOT) Benchmark",
+  "description": "In the realm of video analysis, the field of multiple object tracking (MOT) assumes paramount importance, with the motion state of objects-whether static or dynamic relative to the ground-holding practical significance across diverse scenarios. However, the extant literature exhibits a notable dearth in the exploration of this aspect. Deep learning methodologies encounter challenges in accurately discerning object motion states, while conventional approaches reliant on comprehensive mathematical modeling may yield suboptimal tracking accuracy. To address these challenges, we introduce a Model-Data-Driven Motion State Judgment Object Tracking Method (MoD2T). This innovative architecture adeptly amalgamates traditional mathematical modeling with deep learning-based multi-object tracking frameworks. The integration of mathematical modeling and deep learning within MoD2T enhances the precision of object motion state determination, thereby elevating tracking accuracy. Our empirical investigations comprehensively validate the efficacy of MoD2T across varied scenarios, encompassing unmanned aerial vehicle surveillance and street-level tracking. Furthermore, to gauge the method's adeptness in discerning object motion states, we introduce the Motion State Validation F1 (MVF1) metric. This novel performance metric aims to quantitatively assess the accuracy of motion state classification, furnishing a comprehensive evaluation of MoD2T's performance. Elaborate experimental validations corroborate the rationality of MVF1. In order to holistically appraise MoD2T's performance, we meticulously annotate several renowned datasets and subject MoD2T to stringent testing. Remarkably, under conditions characterized by minimal or moderate camera motion, the achieved MVF1 values are particularly noteworthy, with exemplars including 0.774 for the KITTI dataset, 0.521 for MOT17, and 0.827 for UAVDT.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_object_tracking",
+    "motion_state_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (MVF1 - Motion State Validation F1)",
+  "general_score_metric": "MVF1 (Motion State Validation F1)",
+  "typical_sota_score": "≈0.52–0.83 (dataset-dependent; e.g., 0.774 on KITTI, 0.521 on MOT17, 0.827 on UAVDT reported by authors)",
+  "year_of_publish": 2023,
+  "reputation": "New academic benchmark introduced in a single paper (arXiv); limited adoption so far beyond the MOT research community.",
+  "notes": "Non-LLM benchmark focused on video/MOT; introduces a novel MVF1 metric and uses annotated existing datasets; performance is sensitive to camera motion and dataset annotation choices; limited community benchmarking to date.",
+  "creators": {
+    "scientists": [
+      "Yang Feng",
+      "Liao Pan",
+      "Wu Di",
+      "Liu Bo",
+      "Zhang Xingle"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.17641",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

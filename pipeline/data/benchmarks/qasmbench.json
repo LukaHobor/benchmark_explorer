@@ -1,0 +1,37 @@
+{
+  "name": "QASMBench",
+  "description": "The rapid development of quantum computing (QC) in the NISQ era urgently demands a low-level benchmark suite and insightful evaluation metrics for characterizing the properties of prototype NISQ devices, the efficiency of QC programming compilers, schedulers and assemblers, and the capability of quantum system simulators in a classical computer. In this work, we fill this gap by proposing a low-level, easy-to-use benchmark suite called QASMBench based on the OpenQASM assembly representation. It consolidates commonly used quantum routines and kernels from a variety of domains including chemistry, simulation, linear algebra, searching, optimization, arithmetic, machine learning, fault tolerance, cryptography, and so on, trading-off between generality and usability. To analyze these kernels in terms of NISQ device execution, in addition to circuit width and depth, we propose four circuit metrics including gate density, retention lifespan, measurement density, and entanglement variance, to extract more insights about the execution efficiency, the susceptibility to NISQ error, and the potential gain from machine-specific optimizations. Applications in QASMBench can be launched and verified on several NISQ platforms, including IBM-Q, Rigetti, IonQ and Quantinuum. For evaluation, we measure the execution fidelity of a subset of QASMBench applications on 12 IBM-Q machines through density matrix state tomography, comprising 25K circuit evaluations. We also compare the fidelity of executions among the IBM-Q machines, the IonQ QPU and the Rigetti Aspen M-1 system. QASMBench is released at: http://github.com/pnnl/QASMBench .",
+  "category": "code",
+  "domain": "quantum computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "circuit_execution",
+    "fidelity_measurement",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "execution fidelity measured via density-matrix/ state-tomography and circuit-level metrics (gate density, depth, entanglement variance)",
+  "general_score_metric": "execution fidelity (%)",
+  "typical_sota_score": "varies widely (≈50–99% depending on circuit size, depth, and device)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2025,
+  "reputation": "146 citations",
+  "notes": "Hardware- and calibration-dependent (NISQ devices); fidelity results can change across runs and devices. Benchmarks focus on low-level circuit properties and are not an LLM benchmark; some kernels are small/trivial and may not reflect large-scale workloads.",
+  "creators": {
+    "scientists": [
+      "Ang Li",
+      "Samuel Stein",
+      "Sriram Krishnamoorthy",
+      "James Ang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1145/3550488",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Analog and RF Circuit Design Benchmark",
+  "description": "Automating analog and radio-frequency (RF) circuit design using machine learning (ML) significantly reduces the time and effort required for parameter optimization. This study explores supervised ML-based approaches for designing circuit parameters from performance specifications across various circuit types, including homogeneous and heterogeneous designs. By evaluating diverse ML models, from neural networks like transformers to traditional methods like random forests, we identify the best-performing models for each circuit. Our results show that simpler circuits, such as low-noise amplifiers, achieve exceptional accuracy with mean relative errors as low as 0.3% due to their linear parameter-performance relationships. In contrast, complex circuits, like power amplifiers and voltage-controlled oscillators, present challenges due to their non-linear interactions and larger design spaces. For heterogeneous circuits, our approach achieves an 88% reduction in errors with increased training data, with the receiver achieving a mean relative error as low as 0.23%, showcasing the scalability and accuracy of the proposed methodology. Additionally, we provide insights into model strengths, with transformers excelling in capturing non-linear mappings and k-nearest neighbors performing robustly in moderately linear parameter spaces, especially in heterogeneous circuits with larger datasets. This work establishes a foundation for extending ML-driven design automation, enabling more efficient and scalable circuit design workflows.",
+  "category": "mixed",
+  "domain": "electronic / analog and RF circuit design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "parameter_prediction",
+    "design_optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_relative_error (primary); MSE/RMSE and task-specific performance-margin checks also reported",
+  "general_score_metric": "mean relative error (MRE)",
+  "typical_sota_score": "0.23%–~20% (very low MRE ~0.2–0.5% for simple circuits; substantially higher MRE for complex circuits)",
+  "year_of_publish": 2025,
+  "reputation": "A niche, domain-specific benchmark used primarily by researchers in ML-driven analog/RF CAD; limited adoption outside the analog/RF design community.",
+  "notes": "Non‑LLM benchmark focused on regression of circuit parameters from specs; per-circuit dataset sizes can be small, performance varies widely by circuit complexity, and results are sensitive to simulator-to-hardware gap and train/test splits.",
+  "creators": {
+    "scientists": [
+      "Asal Mehradfar",
+      "Xuzhe Zhao",
+      "Yue Niu",
+      "Sara Babakniya",
+      "Mahdi Alesheikh",
+      "Hamidreza Aghasi",
+      "Salman Avestimehr"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2501.11839",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

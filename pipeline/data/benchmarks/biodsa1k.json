@@ -1,0 +1,36 @@
+{
+  "name": "BioDSA-1K",
+  "description": "Validating scientific hypotheses is a central challenge in biomedical research, and remains difficult for artificial intelligence (AI) agents due to the complexity of real-world data analysis and evidence interpretation. In this work, we present BioDSA-1K, a benchmark designed to evaluate AI agents on realistic, data-driven biomedical hypothesis validation tasks. BioDSA-1K consists of 1,029 hypothesis-centric tasks paired with 1,177 analysis plans, curated from over 300 published biomedical studies to reflect the structure and reasoning found in authentic research workflows. Each task includes a structured hypothesis derived from the original study's conclusions, expressed in the affirmative to reflect the language of scientific reporting, and one or more pieces of supporting evidence grounded in empirical data tables. While these hypotheses mirror published claims, they remain testable using standard statistical or machine learning methods. The benchmark enables evaluation along four axes: (1) hypothesis decision accuracy, (2) alignment between evidence and conclusion, (3) correctness of the reasoning process, and (4) executability of the AI-generated analysis code. Importantly, BioDSA-1K includes non-verifiable hypotheses: cases where the available data are insufficient to support or refute a claim, reflecting a common yet underexplored scenario in real-world science. We propose BioDSA-1K as a foundation for building and evaluating generalizable, trustworthy AI agents for biomedical discovery.",
+  "category": "mixed",
+  "domain": "biomedical research",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "open_ended",
+    "code_generation",
+    "reasoning_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite (decision accuracy + human_eval of reasoning + code executability / task_success_rate)",
+  "general_score_metric": "accuracy (hypothesis decision) as primary reported metric",
+  "year_of_publish": 2025,
+  "reputation": "An emerging benchmark aimed at realistic, data-driven biomedical hypothesis validation that is gaining attention for evaluating end-to-end scientific reasoning and code-execution abilities.",
+  "notes": "Requires data access and code execution to fully evaluate; includes non-verifiable cases; not a pure text/LLM benchmark and emphasizes domain expertise.",
+  "creators": {
+    "scientists": [
+      "Zifeng Wang",
+      "Benjamin Danek",
+      "Jimeng Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2505.16100",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

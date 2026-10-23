@@ -1,0 +1,36 @@
+{
+  "name": "Portrait250K",
+  "description": "We propose a task we name Portrait Interpretation and construct a dataset named Portrait250K for it. Current researches on portraits such as human attribute recognition and person re-identification have achieved many successes, but generally, they: 1) may lack mining the interrelationship between various tasks and the possible benefits it may bring; 2) design deep models specifically for each task, which is inefficient; 3) may be unable to cope with the needs of a unified model and comprehensive perception in actual scenes. In this paper, the proposed portrait interpretation recognizes the perception of humans from a new systematic perspective. We divide the perception of portraits into three aspects, namely Appearance, Posture, and Emotion, and design corresponding sub-tasks for each aspect. Based on the framework of multi-task learning, portrait interpretation requires a comprehensive description of static attributes and dynamic states of portraits. To invigorate research on this new task, we construct a new dataset that contains 250,000 images labeled with identity, gender, age, physique, height, expression, and posture of the whole body and arms. Our dataset is collected from 51 movies, hence covering extensive diversity. Furthermore, we focus on representation learning for portrait interpretation and propose a baseline that reflects our systematic perspective. We also propose an appropriate metric for this task. Our experimental results demonstrate that combining the tasks related to portrait interpretation can yield benefits. Code and dataset will be made public.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "re-identification",
+    "attribute_prediction",
+    "multi_task_learning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy for classification tasks; mAP / CMC for re-identification",
+  "general_score_metric": "accuracy for attribute classification; mean Average Precision (mAP) / Cumulative Matching Characteristic (CMC) for re-identification",
+  "year_of_publish": 2022,
+  "reputation": "Published dataset (Portrait250K) with moderate visibility in computer-vision research on person analysis and multi-task learning, but not as widely adopted as generic face/person datasets.",
+  "notes": "Collected from movies—possible domain bias and privacy/copyright concerns; large-scale (250K) but distribution may not reflect real-world demographics; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Yixuan Fan",
+      "Zhaopeng Dou",
+      "YaLi Li",
+      "Shengjin Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.13315",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Benchmarking Neural Network Training Algorithms",
+  "description": "Training algorithms, broadly construed, are an essential part of every deep learning pipeline. Training algorithm improvements that speed up training across a wide variety of workloads (e.g., better update rules, tuning protocols, learning rate schedules, or data selection schemes) could save time, save computational resources, and lead to better, more accurate, models. Unfortunately, as a community, we are currently unable to reliably identify training algorithm improvements, or even determine the state-of-the-art training algorithm. In this work, using concrete experiments, we argue that real progress in speeding up training requires new benchmarks that resolve three basic challenges faced by empirical comparisons of training algorithms: (1) how to decide when training is complete and precisely measure training time, (2) how to handle the sensitivity of measurements to exact workload details, and (3) how to fairly compare algorithms that require hyperparameter tuning. In order to address these challenges, we introduce a new, competitive, time-to-result benchmark using multiple workloads running on fixed hardware, the AlgoPerf: Training Algorithms benchmark. Our benchmark includes a set of workload variants that make it possible to detect benchmark submissions that are more robust to workload changes than current widely-used methods. Finally, we evaluate baseline submissions constructed using various optimizers that represent current practice, as well as other optimizers that have recently received attention in the literature. These baseline results collectively demonstrate the feasibility of our benchmark, show that non-trivial gaps between methods exist, and set a provisional state-of-the-art for future benchmark submissions to try and surpass.",
+  "category": "mixed",
+  "domain": "machine learning / deep learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "time_to_result",
+    "training_speed_comparison"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "time_to_result",
+  "general_score_metric": "time_to_result (wall-clock time to reach target performance)",
+  "typical_sota_score": "varies",
+  "year_of_publish": 2023,
+  "reputation": "A well-regarded research benchmark proposal (AlgoPerf) for comparing training algorithms' speed and robustness; gaining traction among researchers focused on optimizer and training-protocol evaluation.",
+  "notes": "Hardware- and workload-dependent; sensitive to implementation details and hyperparameter tuning; not an LLM-generation benchmark and may be challenging to reproduce across different compute setups.",
+  "creators": {
+    "scientists": [
+      "George E. Dahl",
+      "Frank Schneider",
+      "Zachary Nado",
+      "Naman Agarwal",
+      "Chandramouli Shama Sastry",
+      "Philipp Hennig",
+      "Sourabh Medapati",
+      "Runa Eschenhagen",
+      "Priya Kasimbeg",
+      "Daniel Suo",
+      "Juhan Bae",
+      "Justin Gilmer",
+      "Abel L. Peirson",
+      "Bilal Khan",
+      "Rohan Anil",
+      "Mike Rabbat",
+      "Shankar Krishnan",
+      "Daniel Snider",
+      "Ehsan Amid",
+      "Kongtao Chen",
+      "Chris J. Maddison",
+      "Rakshith Vasudev",
+      "Michal Badura",
+      "Ankush Garg",
+      "Peter Mattson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2306.07179",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

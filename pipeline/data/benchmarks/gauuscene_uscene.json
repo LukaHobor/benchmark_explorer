@@ -1,0 +1,35 @@
+{
+  "name": "GauU-Scene / U-Scene",
+  "description": "We introduce a novel large-scale scene reconstruction benchmark using the newly developed 3D representation approach, Gaussian Splatting, on our expansive U-Scene dataset. U-Scene encompasses over one and a half square kilometres, featuring a comprehensive RGB dataset coupled with LiDAR ground truth. For data acquisition, we employed the Matrix 300 drone equipped with the high-accuracy Zenmuse L1 LiDAR, enabling precise rooftop data collection. This dataset, offers a unique blend of urban and academic environments for advanced spatial analysis convers more than 1.5 km$^2$. Our evaluation of U-Scene with Gaussian Splatting includes a detailed analysis across various novel viewpoints. We also juxtapose these results with those derived from our accurate point cloud dataset, highlighting significant differences that underscore the importance of combine multi-modal information",
+  "category": "multimodal",
+  "domain": "3D reconstruction / mapping",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_reconstruction",
+    "novel_view_synthesis",
+    "depth/geometry_evaluation",
+    "registration"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "PSNR / SSIM / LPIPS for image-based novel-view synthesis; Chamfer distance / point-to-point and point-to-plane errors for geometry; IoU/coverage for reconstruction completeness",
+  "general_score_metric": "multi-metric (PSNR for rendering quality and Chamfer distance for geometric accuracy)",
+  "year_of_publish": 2024,
+  "reputation": "New large-scale multi-modal dataset introduced with Gaussian Splatting evaluation; promising for urban-scale reconstruction but currently has limited external adoption.",
+  "notes": "Very large-scale, multi-modal (RGB + LiDAR) dataset tailored for 3D reconstruction—non-LLM; evaluation uses multiple heterogeneous metrics; potential high computational cost to train/evaluate; dataset licensing/collection specifics may restrict some uses.",
+  "creators": {
+    "scientists": [
+      "Butian Xiong",
+      "Zhuo Li",
+      "Zhen Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2401.14032",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

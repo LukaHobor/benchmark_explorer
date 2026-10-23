@@ -1,0 +1,40 @@
+{
+  "name": "GIE-Bench",
+  "description": "Editing images using natural language instructions has become a natural and expressive way to modify visual content; yet, evaluating the performance of such models remains challenging. Existing evaluation approaches often rely on image-text similarity metrics like CLIP, which lack precision. In this work, we introduce a new benchmark designed to evaluate text-guided image editing models in a more grounded manner, along two critical dimensions: (i) functional correctness, assessed via automatically generated multiple-choice questions that verify whether the intended change was successfully applied; and (ii) image content preservation, which ensures that non-targeted regions of the image remain visually consistent using an object-aware masking technique and preservation scoring. The benchmark includes over 1000 high-quality editing examples across 20 diverse content categories, each annotated with detailed editing instructions, evaluation questions, and spatial object masks. We conduct a large-scale study comparing GPT-Image-1, the latest flagship in the text-guided image editing space, against several state-of-the-art editing models, and validate our automatic metrics against human ratings. Results show that GPT-Image-1 leads in instruction-following accuracy, but often over-modifies irrelevant image regions, highlighting a key trade-off in the current model behavior. GIE-Bench provides a scalable, reproducible framework for advancing more accurate evaluation of text-guided image editing.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "image_editing",
+    "functional_verification",
+    "preservation_scoring"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (instruction-following) + preservation score (image consistency)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "New multimodal benchmark (2025) with growing interest for more grounded evaluation of text-guided image editing; used in comparisons against leading editing models.",
+  "notes": "Relatively small (≈1k) curated dataset; automatic multiple-choice generation and mask-based preservation scoring improve scalability but can introduce biases. Possible contamination risk from large pretrained multimodal models; not saturated yet. Contains human validation but still limited diversity in some content categories.",
+  "creators": {
+    "scientists": [
+      "Yusu Qian",
+      "Jiasen Lu",
+      "Tsu-Jui Fu",
+      "Xinze Wang",
+      "Chen Chen",
+      "Yinfei Yang",
+      "Wenze Hu",
+      "Zhe Gan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.11493",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

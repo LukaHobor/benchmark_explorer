@@ -1,0 +1,39 @@
+{
+  "name": "EgoHumans",
+  "description": "We present EgoHumans, a new multi-view multi-human video benchmark to advance the state-of-the-art of egocentric human 3D pose estimation and tracking. Existing egocentric benchmarks either capture single subject or indoor-only scenarios, which limit the generalization of computer vision algorithms for real-world applications. We propose a novel 3D capture setup to construct a comprehensive egocentric multi-human benchmark in the wild with annotations to support diverse tasks such as human detection, tracking, 2D/3D pose estimation, and mesh recovery. We leverage consumer-grade wearable camera-equipped glasses for the egocentric view, which enables us to capture dynamic activities like playing tennis, fencing, volleyball, etc. Furthermore, our multi-view setup generates accurate 3D ground truth even under severe or complete occlusion. The dataset consists of more than 125k egocentric images, spanning diverse scenes with a particular focus on challenging and unchoreographed multi-human activities and fast-moving egocentric views. We rigorously evaluate existing state-of-the-art methods and highlight their limitations in the egocentric scenario, specifically on multi-human tracking.  To address such limitations, we propose EgoFormer, a novel approach with a multi-stream transformer architecture and explicit 3D spatial reasoning to estimate and track the human pose. EgoFormer significantly outperforms prior art by 13.6% IDF1 on the EgoHumans dataset.",
+  "category": "vision",
+  "domain": "computer vision / human pose estimation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "2d_pose_estimation",
+    "3d_pose_estimation",
+    "mesh_recovery"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (e.g., mAP for detection, IDF1 for tracking, MPJPE / PCK for 3D/2D pose)",
+  "general_score_metric": "IDF1 (for tracking); MPJPE / PCK (for pose estimation)",
+  "year_of_publish": 2023,
+  "reputation": "A recent, high-quality egocentric multi-human benchmark that has attracted attention in the egocentric pose and tracking research community but is not yet a widespread standard.",
+  "notes": "Non-LLM vision benchmark with ~125k egocentric images; focuses on challenging in-the-wild multi-human and fast-motion scenarios, potential privacy concerns from wearable cameras, and significant occlusion making tasks difficult.",
+  "creators": {
+    "scientists": [
+      "Rawal Khirodkar",
+      "Aayush Bansal",
+      "Lingni Ma",
+      "Richard Newcombe",
+      "Minh Vo",
+      "Kris Kitani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.16487",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

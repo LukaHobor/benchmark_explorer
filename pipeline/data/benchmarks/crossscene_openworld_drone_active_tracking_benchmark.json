@@ -1,0 +1,41 @@
+{
+  "name": "Cross-Scene Open-World Drone Active Tracking Benchmark",
+  "description": "Drone Visual Active Tracking aims to autonomously follow a target object by controlling the motion system based on visual observations, providing a more practical solution for effective tracking in dynamic environments. However, accurate Drone Visual Active Tracking using reinforcement learning remains challenging due to the absence of a unified benchmark, the complexity of open-world environments with frequent interference, and the diverse motion behavior of dynamic targets. To address these issues, we propose a unified cross-scene cross-domain benchmark for open-world drone active tracking called DAT. The DAT benchmark provides 24 visually complex environments to assess the algorithms' cross-scene and cross-domain generalization abilities, and high-fidelity modeling of realistic robot dynamics. Additionally, we propose a reinforcement learning-based drone tracking method called R-VAT, which aims to improve the performance of drone tracking targets in complex scenarios. Specifically, inspired by curriculum learning, we introduce a Curriculum-Based Training strategy that progressively enhances the agent tracking performance in vast environments with complex interference. We design a goal-centered reward function to provide precise feedback to the drone agent, preventing targets farther from the center of view from receiving higher rewards than closer ones. This allows the drone to adapt to the diverse motion behavior of open-world targets. Experiments demonstrate that the R-VAT has about 400% improvement over the SOTA method in terms of the cumulative reward metric.",
+  "category": "vision",
+  "domain": "robotics / drones",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "online_visual_tracking",
+    "control"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "cumulative_reward",
+  "general_score_metric": "cumulative_reward",
+  "typical_sota_score": "unknown (paper reports ~400% relative improvement of their method over prior baseline in cumulative reward)",
+  "year_of_publish": 2024,
+  "reputation": "New academic benchmark (arXiv 2024) focused on open-world drone RL and tracking; gaining interest in the robotics/RL community but not yet widely adopted.",
+  "notes": "Non-LLM benchmark using simulated high-fidelity drone environments (24 scenes). Potential sim-to-real gap, limited number of environments, and results depend strongly on environment/configuration; primary metric is cumulative reward (often reported together with tracking success rates).",
+  "creators": {
+    "scientists": [
+      "Haowei Sun",
+      "Jinwu Hu",
+      "Zhirui Zhang",
+      "Haoyuan Tian",
+      "Xinze Xie",
+      "Yufeng Wang",
+      "Zhuliang Yu",
+      "Xiaohua Xie",
+      "Mingkui Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2412.00744",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

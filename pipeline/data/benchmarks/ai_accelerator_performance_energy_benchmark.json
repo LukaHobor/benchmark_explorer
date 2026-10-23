@@ -1,0 +1,39 @@
+{
+  "name": "AI Accelerator Performance & Energy Benchmark",
+  "description": "Deep learning has become widely used in complex AI applications. Yet, training a deep neural network (DNNs) model requires a considerable amount of calculations, long running time, and much energy. Nowadays, many-core AI accelerators (e.g., GPUs and TPUs) are designed to improve the performance of AI training. However, processors from different vendors perform dissimilarly in terms of performance and energy consumption. To investigate the differences among several popular off-the-shelf processors (i.e., Intel CPU, NVIDIA GPU, AMD GPU, and Google TPU) in training DNNs, we carry out a comprehensive empirical study on the performance and energy efficiency of these processors by benchmarking a representative set of deep learning workloads, including computation-intensive operations, classical convolutional neural networks (CNNs), recurrent neural networks (LSTM), Deep Speech 2, and Transformer. Different from the existing end-to-end benchmarks which only present the training time, We try to investigate the impact of hardware, vendor's software library, and deep learning framework on the performance and energy consumption of AI training. Our evaluation methods and results not only provide an informative guide for end-users to select proper AI accelerators, but also expose some opportunities for the hardware vendors to improve their software library.",
+  "category": "mixed",
+  "domain": "computer systems / hardware for AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "performance_benchmarking",
+    "energy_efficiency_evaluation",
+    "training_workload_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Throughput (samples/sec) and energy consumption (Joules) / time-to-train per workload",
+  "general_score_metric": "Throughput (samples/sec) and energy consumed (Joules) per workload",
+  "typical_sota_score": "varies widely by hardware and workload; no single SOTA",
+  "year_of_publish": 2019,
+  "reputation": "A thorough academic empirical study comparing off-the-shelf accelerators; informative but less widely adopted than standardized suites like MLPerf.",
+  "notes": "Non-ML (non-LLM) hardware benchmark; results are highly dependent on specific hardware, driver and framework versions, and measurement methodology; results can become quickly outdated as new accelerators and software releases appear.",
+  "creators": {
+    "scientists": [
+      "Yuxin Wang",
+      "Qiang Wang",
+      "Shaohuai Shi",
+      "Xin He",
+      "Zhenheng Tang",
+      "Kaiyong Zhao",
+      "Xiaowen Chu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1909.06842",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

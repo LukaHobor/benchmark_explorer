@@ -1,0 +1,36 @@
+{
+  "name": "SzCORE",
+  "description": "Reliable automatic seizure detection from long-term EEG remains a challenge, as current machine learning models often fail to generalize across patients or clinical settings. Manual EEG review remains the clinical standard, underscoring the need for robust models and standardized evaluation. To rigorously assess algorithm performance, we organized a challenge using a private dataset of continuous EEG recordings from 65 subjects (4,360 hours). Expert neurophysiologists annotated the data, providing ground truth for seizure events. Participants were required to detect seizure onset and duration, with evaluation based on event-based metrics, including sensitivity, precision, F1-score, and false positives per day. The SzCORE framework ensured standardized evaluation. The primary ranking criterion was the event-based F1-score, reflecting clinical relevance by balancing sensitivity and false positives. The challenge received 30 submissions from 19 teams, with 28 algorithms evaluated. Results revealed wide variability in performance, with a top F1-score of 43% (sensitivity 37%, precision 45%), highlighting the ongoing difficulty of seizure detection. The challenge also revealed a gap between reported performance and real-world evaluation, emphasizing the importance of rigorous benchmarking. Compared to previous challenges and commercial systems, the best-performing algorithm in this contest showed improved performance. Importantly, the challenge platform now supports continuous benchmarking, enabling reproducible research, integration of new datasets, and clinical evaluation of seizure detection algorithms using a standardized framework.",
+  "category": "mixed",
+  "domain": "neurology / EEG",
+  "benchmark_type": "competition",
+  "task_types": [
+    "event_detection",
+    "temporal_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (event-based)",
+  "general_score_metric": "event-based F1-score",
+  "typical_sota_score": "≈40–45% (top challenge submission 43%)",
+  "year_of_publish": 2025,
+  "reputation": "Specialized clinical EEG seizure-detection benchmark with moderate recognition in the neurophysiology/ML research community, used mainly by challenge participants and clinical-research groups.",
+  "notes": "Private/clinical dataset (65 subjects, 4,360 hours) with class imbalance (rare seizure events); event-based evaluation required (onset/duration); limited generalizability across centers; non-LLM, continuous benchmarking supported.",
+  "creators": {
+    "scientists": [
+      "Jonathan Dan",
+      "Amirhossein Shahbazinia",
+      "Christodoulos Kechris",
+      "David Atienza"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.18191",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

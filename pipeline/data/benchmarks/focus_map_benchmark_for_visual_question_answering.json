@@ -1,0 +1,34 @@
+{
+  "name": "Focus Map Benchmark for Visual Question Answering",
+  "description": "Inferring and Executing Programs for Visual Reasoning proposes a model for\nvisual reasoning that consists of a program generator and an execution engine\nto avoid end-to-end models. To show that the model actually learns which\nobjects to focus on to answer the questions, the authors give a visualization\nof the norm of the gradient of the sum of the predicted answer scores with\nrespect to the final feature map. However, the authors do not evaluate the\nefficiency of focus map. This paper purposed a method for evaluating it. We\ngenerate several kinds of questions to test different keywords. We infer focus\nmaps from the model by asking these questions and evaluate them by comparing\nwith the segmentation graph. Furthermore, this method can be applied to any\nmodel if focus maps can be inferred from it. By evaluating focus map of\ndifferent models on the CLEVR dataset, we will show that CLEVR-iep model has\nlearned where to focus more than end-to-end models.",
+  "category": "multimodal",
+  "domain": "vision+language (visual reasoning / VQA)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "explainability_evaluation",
+    "focus_map_comparison"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "IoU / precision-recall of inferred focus maps against ground-truth segmentation (plus standard VQA accuracy for answer correctness)",
+  "general_score_metric": "IoU / precision@k for focus-map alignment (VQA accuracy reported separately)",
+  "year_of_publish": 2018,
+  "reputation": "A niche, well-cited explainability evaluation on CLEVR models used to assess attention/focus-map fidelity rather than broad VQA benchmarking.",
+  "notes": "Synthetic (CLEVR) dataset; focused on attention/focus-map evaluation rather than general VQA performance. Small-domain and not representative of real-world images; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Wenda Qiu",
+      "Yueyang Xianzang",
+      "Zhekai Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1801.05302",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

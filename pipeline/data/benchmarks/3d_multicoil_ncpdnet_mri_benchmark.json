@@ -1,0 +1,37 @@
+{
+  "name": "3D multi-coil NC-PDNet MRI Benchmark",
+  "description": "Deep learning has shown great promise for MRI reconstruction from undersampled data, yet there is a lack of research on validating its performance in 3D parallel imaging acquisitions with non-Cartesian undersampling. In addition, the artifacts and the resulting image quality depend on the under-sampling pattern. To address this uncharted territory, we extend the Non-Cartesian Primal-Dual Network (NC-PDNet), a state-of-the-art unrolled neural network, to a 3D multi-coil setting. We evaluated the impact of channel-specific versus channel-agnostic training configurations and examined the effect of coil compression. Finally, we benchmark four distinct non-Cartesian undersampling patterns, with an acceleration factor of six, using the publicly available Calgary-Campinas dataset. Our results show that NC-PDNet trained on compressed data with varying input channel numbers achieves an average PSNR of 42.98 dB for 1 mm isotropic 32 channel whole-brain 3D reconstruction. With an inference time of 4.95sec and a GPU memory usage of 5.49 GB, our approach demonstrates significant potential for clinical research application.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_reconstruction",
+    "super_resolution",
+    "denoising"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "PSNR / SSIM (peak signal-to-noise ratio, structural similarity index)",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "≈43 dB (PSNR)",
+  "year_of_publish": 2024,
+  "reputation": "Specialized research benchmark for 3D non-Cartesian multi-coil MRI reconstruction with limited but growing adoption in the medical imaging research community.",
+  "notes": "Non-LLM medical-imaging benchmark using the Calgary–Campinas dataset; relatively small/ specialized dataset, results sensitive to undersampling pattern and coil compression; compute- and memory-intensive.",
+  "creators": {
+    "scientists": [
+      "Asma Tanabene",
+      "Chaithya Giliyar Radhakrishna",
+      "Aurélien Massire",
+      "Mariappan S. Nadar",
+      "Philippe Ciuciu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2411.05883",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

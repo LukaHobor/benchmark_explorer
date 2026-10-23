@@ -1,0 +1,35 @@
+{
+  "name": "On-chain Fairness Evaluation Protocol",
+  "description": "Large language models (LLMs) are increasingly deployed in realworld applications, yet concerns about their fairness persist especially in highstakes domains like criminal justice, education, healthcare, and finance. This paper introduces transparent evaluation protocol for benchmarking the fairness of opensource LLMs using smart contracts on the Internet Computer Protocol (ICP) blockchain (Foundation, 2023). Our method ensures verifiable, immutable, and reproducible evaluations by executing onchain HTTP requests to hosted Hugging Face endpoints and storing datasets, prompts, and metrics directly onchain. We benchmark the Llama, DeepSeek, and Mistral models on the PISA dataset for academic performance prediction (OECD, 2018), a dataset suitable for fairness evaluation using statistical parity and equal opportunity metrics (Hardt et al., 2016). We also evaluate structured Context Association Metrics derived from the StereoSet dataset (Nadeem et al., 2020) to measure social bias in contextual associations. We further extend our analysis with a multilingual evaluation across English, Spanish, and Portuguese using the Kaleidoscope benchmark (Salazar et al., 2025), revealing cross-linguistic disparities. All code and results are open source, enabling community audits and longitudinal fairness tracking across model versions.",
+  "category": "text",
+  "domain": "fairness",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "fairness_evaluation",
+    "bias_audit",
+    "classification/regression_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "statistical_parity / equal_opportunity / contextual association (bias) metrics",
+  "general_score_metric": "statistical_parity_difference (and equal_opportunity_difference)",
+  "year_of_publish": 2025,
+  "reputation": "Novel, transparency-focused on-chain evaluation protocol that is reproducible but not yet widely adopted.",
+  "notes": "On-chain storage/requests improve verifiability and reproducibility but introduce cost/latency and require hosted endpoints; results are dataset- and metric-dependent and may have limited scalability or coverage.",
+  "creators": {
+    "scientists": [
+      "Hugo Massaroli",
+      "Leonardo Iara",
+      "Emmanuel Iarussi",
+      "Viviana Siless"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2508.09993",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

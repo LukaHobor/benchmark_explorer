@@ -1,0 +1,37 @@
+{
+  "name": "GPU-accelerated Large-scale Transportation Simulator",
+  "description": "With the development of artificial intelligence techniques, transportation system optimization is evolving from traditional methods relying on expert experience to simulation and learning-based decision and optimization methods. Learning-based optimization methods require extensive interactions with highly realistic microscopic traffic simulators. However, existing microscopic traffic simulators are inefficient in large-scale scenarios and thus fail to support the adoption of these methods in large-scale transportation system optimization scenarios. In addition, the optimization scenarios supported by existing simulators are limited, mainly focusing on the traffic signal control. To address these challenges, we propose the first open-source GPU-accelerated large-scale microscopic simulator for transportation system simulation and optimization. The simulator can iterate at 84.09Hz, which achieves 88.92 times computational acceleration in the large-scale scenario with 2,464,950 vehicles compared to the best baseline CityFlow. Besides, it achieves a more realistic average road speeds simulated on real datasets by adopting the IDM model as the car-following model and the randomized MOBIL model as the lane-changing model. Based on it, we implement a set of microscopic and macroscopic controllable objects and metrics provided by Python API to support typical transportation system optimization scenarios. We choose five representative scenarios and benchmark classical rule-based algorithms, reinforcement learning algorithms, and black-box optimization algorithms in four cities. These experiments effectively demonstrate the usability of the simulator for large-scale traffic system optimization. The code of the simulator is available at https://github.com/tsinghua-fib-lab/moss. We build an open-registration web platform available at https://moss.fiblab.net to support no-code trials.",
+  "category": "mixed",
+  "domain": "transportation systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "microscopic_simulation",
+    "reinforcement_learning",
+    "traffic_optimization",
+    "macroscopic_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate / performance measured via traffic metrics (e.g., average travel time, throughput, average road speed); benchmarking typically reports improvements in these traffic-performance metrics",
+  "general_score_metric": "average_travel_time (primary operational performance metric reported; throughput and average speed also commonly used)",
+  "year_of_publish": 2024,
+  "reputation": "New open-source simulator (MOSS) with strong performance and scalability claims; growing interest from transportation-research and traffic-optimization groups but adoption is still emerging.",
+  "notes": "Non‑LLM benchmark; results are hardware- and GPU-dependent (performance claims tied to GPU acceleration); outcomes sensitive to scenario setup, random seeds and simulator parameters; potential simulator-to-real-world gap and reproducibility caveats across different compute environments.",
+  "creators": {
+    "scientists": [
+      "Jun Zhang",
+      "Wenxuan Ao",
+      "Junbo Yan",
+      "Depeng Jin",
+      "Yong Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2406.10661",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

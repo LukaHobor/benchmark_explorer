@@ -1,0 +1,37 @@
+{
+  "name": "Synthetic XAI Benchmarks",
+  "description": "As machine learning models grow more complex and their applications become more high-stakes, tools for explaining model predictions have become increasingly important. This has spurred a flurry of research in model explainability and has given rise to feature attribution methods such as LIME and SHAP. Despite their widespread use, evaluating and comparing different feature attribution methods remains challenging: evaluations ideally require human studies, and empirical evaluation metrics are often data-intensive or computationally prohibitive on real-world datasets. In this work, we address this issue by releasing XAI-Bench: a suite of synthetic datasets along with a library for benchmarking feature attribution algorithms. Unlike real-world datasets, synthetic datasets allow the efficient computation of conditional expected values that are needed to evaluate ground-truth Shapley values and other metrics. The synthetic datasets we release offer a wide variety of parameters that can be configured to simulate real-world data. We demonstrate the power of our library by benchmarking popular explainability techniques across several evaluation metrics and across a variety of settings. The versatility and efficiency of our library will help researchers bring their explainability methods from development to deployment. Our code is available at https://github.com/abacusai/xai-bench.",
+  "category": "mixed",
+  "domain": "machine learning / explainable AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "feature_attribution",
+    "ranking",
+    "benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "attribution_similarity (e.g., correlation to ground-truth Shapley values / AUPRC)",
+  "general_score_metric": "Spearman rank correlation / correlation to ground-truth Shapley values",
+  "typical_sota_score": "varies widely depending on setting (e.g., ~0.5–0.95 correlation)",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2023,
+  "reputation": "Moderately cited in XAI research as a convenient synthetic suite for method development and controlled evaluation, but less used for final real-world validation.",
+  "notes": "Synthetic benchmark — efficient computation of ground-truth Shapley values; not a real-world dataset so results may not transfer directly to production data; non-LLM benchmark focused on feature-attribution methods.",
+  "creators": {
+    "scientists": [
+      "Yang Liu",
+      "Sujay Khandagale",
+      "Colin White",
+      "Willie Neiswanger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2106.12543",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

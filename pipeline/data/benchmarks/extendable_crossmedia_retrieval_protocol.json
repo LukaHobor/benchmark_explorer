@@ -1,0 +1,37 @@
+{
+  "name": "Extendable Cross-media Retrieval Protocol",
+  "description": "This paper proposes a new evaluation protocol for cross-media retrieval which\nbetter fits the real-word applications. Both image-text and text-image\nretrieval modes are considered. Traditionally, class labels in the training and\ntesting sets are identical. That is, it is usually assumed that the query falls\ninto some pre-defined classes. However, in practice, the content of a query\nimage/text may vary extensively, and the retrieval system does not necessarily\nknow in advance the class label of a query. Considering the inconsistency\nbetween the real-world applications and laboratory assumptions, we think that\nthe existing protocol that works under identical train/test classes can be\nmodified and improved.\n  This work is dedicated to addressing this problem by considering the protocol\nunder an extendable scenario, \\ie, the training and testing classes do not\noverlap. We provide extensive benchmarking results obtained by the existing\nprotocol and the proposed new protocol on several commonly used datasets. We\ndemonstrate a noticeable performance drop when the testing classes are unseen\nduring training. Additionally, a trivial solution, \\ie, directly using the\npredicted class label for cross-media retrieval, is tested. We show that the\ntrivial solution is very competitive in traditional non-extendable retrieval,\nbut becomes less so under the new settings. The train/test split, evaluation\ncode, and benchmarking results are publicly available on our website.",
+  "category": "multimodal",
+  "domain": "multimodal (image-text retrieval)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_to_text_retrieval",
+    "text_to_image_retrieval",
+    "zero-shot_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@K (e.g., R@1, R@5, R@10)",
+  "general_score_metric": "Recall@K",
+  "typical_sota_score": "20–60% R@1 (dataset- and split-dependent; extendable splits typically lower than closed-set)",
+  "year_of_publish": 2017,
+  "reputation": "A well-cited protocol for evaluating extendable (unseen-class) cross-media retrieval that highlighted the gap between closed-set and extendable retrieval performance.",
+  "notes": "Emphasizes non-overlapping train/test classes (extendable/zero-shot setting); can cause large performance drops compared to standard splits; reported results depend strongly on dataset and split; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Ruoyu Liu",
+      "Yao Zhao",
+      "Liang Zheng",
+      "Shikui Wei",
+      "Yi Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1703.03567",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

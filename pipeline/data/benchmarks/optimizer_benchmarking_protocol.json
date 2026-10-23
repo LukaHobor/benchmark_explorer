@@ -1,0 +1,38 @@
+{
+  "name": "Optimizer benchmarking protocol",
+  "description": "Many optimizers have been proposed for training deep neural networks, and they often have multiple hyperparameters, which make it tricky to benchmark their performance. In this work, we propose a new benchmarking protocol to evaluate both end-to-end efficiency (training a model from scratch without knowing the best hyperparameter) and data-addition training efficiency (the previously selected hyperparameters are used for periodically re-training the model with newly collected data). For end-to-end efficiency, unlike previous work that assumes random hyperparameter tuning, which over-emphasizes the tuning time, we propose to evaluate with a bandit hyperparameter tuning strategy. A human study is conducted to show that our evaluation protocol matches human tuning behavior better than the random search. For data-addition training, we propose a new protocol for assessing the hyperparameter sensitivity to data shift. We then apply the proposed benchmarking framework to 7 optimizers and various tasks, including computer vision, natural language processing, reinforcement learning, and graph mining. Our results show that there is no clear winner across all the tasks.",
+  "category": "mixed",
+  "domain": "machine learning / optimization",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "training_efficiency",
+    "hyperparameter_tuning",
+    "data_addition_retraining"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "time-to-accuracy (steps or wall-clock) and final accuracy",
+  "general_score_metric": "time-to-accuracy (primary) and final accuracy (secondary)",
+  "year_of_publish": 2020,
+  "reputation": "Provides a principled protocol for comparing optimizers and hyperparameter strategies; cited in optimizer research but not a universally adopted community standard.",
+  "notes": "Non-LLM benchmark focused on optimizer performance across CV, NLP, RL and graph tasks; sensitive to hyperparameter search budget, implementation details, and compute; evaluates both end-to-end (bandit tuning) and data-addition retraining rather than a single saturation metric.",
+  "creators": {
+    "scientists": [
+      "Yuanhao Xiong",
+      "Xuanqing Liu",
+      "Li-Cheng Lan",
+      "Yang You",
+      "Si Si",
+      "Cho-Jui Hsieh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2010.09889",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

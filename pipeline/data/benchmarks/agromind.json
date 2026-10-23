@@ -1,0 +1,54 @@
+{
+  "name": "AgroMind",
+  "description": "Large Multimodal Models (LMMs) has demonstrated capabilities across various domains, but comprehensive benchmarks for agricultural remote sensing (RS) remain scarce. Existing benchmarks designed for agricultural RS scenarios exhibit notable limitations, primarily in terms of insufficient scene diversity in the dataset and oversimplified task design. To bridge this gap, we introduce AgroMind, a comprehensive agricultural remote sensing benchmark covering four task dimensions: spatial perception, object understanding, scene understanding, and scene reasoning, with a total of 13 task types, ranging from crop identification and health monitoring to environmental analysis. We curate a high-quality evaluation set by integrating eight public datasets and one private farmland plot dataset, containing 25,026 QA pairs and 15,556 images. The pipeline begins with multi-source data preprocessing, including collection, format standardization, and annotation refinement. We then generate a diverse set of agriculturally relevant questions through the systematic definition of tasks. Finally, we employ LMMs for inference, generating responses, and performing detailed examinations. We evaluated 18 open-source LMMs and 3 closed-source models on AgroMind. Experiments reveal significant performance gaps, particularly in spatial reasoning and fine-grained recognition, it is notable that human performance lags behind several leading LMMs. By establishing a standardized evaluation framework for agricultural RS, AgroMind reveals the limitations of LMMs in domain knowledge and highlights critical challenges for future work. Data and code can be accessed at https://rssysu.github.io/AgroMind/.",
+  "category": "vision",
+  "domain": "agricultural remote sensing / earth observation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "object_detection",
+    "instance_segmentation",
+    "semantic_segmentation",
+    "visual_question_answering",
+    "captioning",
+    "change_detection",
+    "counting",
+    "spatial_reasoning",
+    "crop_health_assessment",
+    "scene_classification",
+    "fine_grained_recognition",
+    "open_ended_reasoning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific metrics (accuracy for classification, mAP for detection, IoU/mIoU for segmentation, F1/precision/recall for QA/classification, exact_match for some QA tasks) -- aggregated into per-task and overall composite scores",
+  "general_score_metric": "composite_score (aggregation of task-specific metrics)",
+  "year_of_publish": 2025,
+  "reputation": "Emerging benchmark specifically targeted at agricultural remote sensing and multimodal models; gaining attention in the remote sensing / LMM evaluation community but not yet widely adopted outside that niche.",
+  "notes": "Mixed public and private sources — potential for train/test overlap with publicly seen imagery; highly heterogeneous tasks require careful per-task evaluation and prevent a single metric from fully capturing performance; not an LLM-only benchmark (multimodal remote sensing); spatial reasoning and fine-grained recognition remain challenging and under-saturated.",
+  "creators": {
+    "scientists": [
+      "Qingmei Li",
+      "Yang Zhang",
+      "Zurong Mai",
+      "Yuhang Chen",
+      "Shuohong Lou",
+      "Henglian Huang",
+      "Jiarui Zhang",
+      "Zhiwei Zhang",
+      "Yibin Wen",
+      "Weijia Li",
+      "Haohuan Fu",
+      "Jianxi Huang",
+      "Juepeng Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.12207",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

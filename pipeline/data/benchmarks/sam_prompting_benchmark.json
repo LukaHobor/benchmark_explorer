@@ -1,0 +1,37 @@
+{
+  "name": "SAM prompting benchmark",
+  "description": "The remarkable capabilities of the Segment Anything Model (SAM) for tackling image segmentation tasks in an intuitive and interactive manner has sparked interest in the design of effective visual prompts. Such interest has led to the creation of automated point prompt selection strategies, typically motivated from a feature extraction perspective. However, there is still very little understanding of how appropriate these automated visual prompting strategies are, particularly when compared to humans, across diverse image domains. Additionally, the performance benefits of including such automated visual prompting strategies within the finetuning process of SAM also remains unexplored, as does the effect of interpretable factors like distance between the prompt points on segmentation performance. To bridge these gaps, we leverage a recently released visual prompting dataset, PointPrompt, and introduce a number of benchmarking tasks that provide an array of opportunities to improve the understanding of the way human prompts differ from automated ones and what underlying factors make for effective visual prompts. We demonstrate that the resulting segmentation scores obtained by humans are approximately 29% higher than those given by automated strategies and identify potential features that are indicative of prompting performance with $R^2$ scores over 0.5. Additionally, we demonstrate that performance when using automated methods can be improved by up to 68% via a finetuning approach. Overall, our experiments not only showcase the existing gap between human prompts and automated methods, but also highlight potential avenues through which this gap can be leveraged to improve effective visual prompt design. Further details along with the dataset links and codes are available at https://github.com/olivesgatech/PointPrompt",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_segmentation",
+    "open_ended",
+    "comparative"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "IoU / mIoU (mean Intersection-over-Union); additional regression metrics (R^2) used for feature importance analyses",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2024,
+  "reputation": "A focused academic benchmark (PointPrompt / SAM prompting) gaining attention in the vision research community for studying visual prompting, but not a widely adopted industry standard.",
+  "notes": "Non-LLM vision benchmark based on the PointPrompt dataset; results vary by domain and prompt strategy. Potential dataset bias and limited diversity in some domains; evaluation emphasizes human vs automated prompting gap and benefits from finetuning.",
+  "creators": {
+    "scientists": [
+      "Jorge Quesada",
+      "Zoe Fowler",
+      "Mohammad Alotaibi",
+      "Mohit Prabhushankar",
+      "Ghassan AlRegib"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.22048",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

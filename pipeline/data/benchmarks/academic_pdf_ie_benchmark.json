@@ -1,0 +1,39 @@
+{
+  "name": "Academic PDF IE Benchmark",
+  "description": "Extracting information from academic PDF documents is crucial for numerous indexing, retrieval, and analysis use cases. Choosing the best tool to extract specific content elements is difficult because many, technically diverse tools are available, but recent performance benchmarks are rare. Moreover, such benchmarks typically cover only a few content elements like header metadata or bibliographic references and use smaller datasets from specific academic disciplines. We provide a large and diverse evaluation framework that supports more extraction tasks than most related datasets. Our framework builds upon DocBank, a multi-domain dataset of 1.5M annotated content elements extracted from 500K pages of research papers on arXiv. Using the new framework, we benchmark ten freely available tools in extracting document metadata, bibliographic references, tables, and other content elements from academic PDF documents. GROBID achieves the best metadata and reference extraction results, followed by CERMINE and Science Parse. For table extraction, Adobe Extract outperforms other tools, even though the performance is much lower than for other content elements. All tools struggle to extract lists, footers, and equations. We conclude that more research on improving and combining tools is necessary to achieve satisfactory extraction quality for most content elements. Evaluation datasets and frameworks like the one we present support this line of research. We make our data and code publicly available to contribute toward this goal.",
+  "category": "text",
+  "domain": "document understanding / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "information_extraction",
+    "metadata_extraction",
+    "reference_extraction",
+    "table_extraction",
+    "structure_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision, recall, F1 (task-dependent; some table tasks use IoU/structure matching)",
+  "general_score_metric": "F1",
+  "typical_sota_score": "metadata/reference extraction ~85–95%; table extraction much lower (~30–60%), varies strongly by element",
+  "year_of_publish": 2023,
+  "reputation": "31 citations",
+  "notes": "Built on DocBank (large, multi-domain) so relatively comprehensive; not an LLM benchmark (evaluates extraction tools); performance varies widely by element (lists/footers/equations are particularly weak); domain bias toward arXiv-style scientific PDFs; evaluation sensitive to annotation granularity.",
+  "creators": {
+    "scientists": [
+      "Norman Meuschke",
+      "Apurva Jagdale",
+      "Timo Spinde",
+      "Jelena Mitrović",
+      "Bela Gipp"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2303.09957",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

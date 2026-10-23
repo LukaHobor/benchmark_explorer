@@ -1,0 +1,36 @@
+{
+  "name": "knowledge graph completion benchmark",
+  "description": "Knowledge graph embedding (KGE) models are extensively studied for knowledge graph completion, yet their evaluation remains constrained by unrealistic benchmarks. Standard evaluation metrics rely on the closed-world assumption, which penalizes models for correctly predicting missing triples, contradicting the fundamental goals of link prediction. These metrics often compress accuracy assessment into a single value, obscuring models' specific strengths and weaknesses. The prevailing evaluation protocol, link prediction, operates under the unrealistic assumption that an entity's properties, for which values are to be predicted, are known in advance. While alternative protocols such as property prediction, entity-pair ranking, and triple classification address some of these limitations, they remain underutilized. Moreover, commonly used datasets are either faulty or too small to reflect real-world data. Few studies examine the role of mediator nodes, which are essential for modeling n-ary",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "link_prediction",
+    "triple_classification",
+    "entity_ranking",
+    "property_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MRR",
+  "general_score_metric": "MRR",
+  "typical_sota_score": "MRR ~0.3–0.7 (highly dataset-dependent; small/clean benchmarks often report >0.7 while realistic/large KGs typically yield lower MRRs)",
+  "year_of_publish": 2025,
+  "reputation": "Knowledge graph completion is a long-standing core benchmark area in graph learning, though this work emphasizes that standard protocols are often unrealistic.",
+  "notes": "Benchmarking is protocol-sensitive and often affected by flawed or small datasets, closed-world evaluation issues, and inconsistent handling of missing facts and mediator nodes.",
+  "creators": {
+    "scientists": [
+      "Nasim Shirvani-Mahdavi",
+      "Farahnaz Akrami",
+      "Chengkai Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2504.08970",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

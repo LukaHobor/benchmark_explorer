@@ -1,0 +1,42 @@
+{
+  "name": "μ-Bench",
+  "description": "Recent advances in microscopy have enabled the rapid generation of terabytes of image data in cell biology and biomedical research. Vision-language models (VLMs) offer a promising solution for large-scale biological image analysis, enhancing researchers' efficiency, identifying new image biomarkers, and accelerating hypothesis generation and scientific discovery. However, there is a lack of standardized, diverse, and large-scale vision-language benchmarks to evaluate VLMs' perception and cognition capabilities in biological image understanding. To address this gap, we introduce {\\mu}-Bench, an expert-curated benchmark encompassing 22 biomedical tasks across various scientific disciplines (biology, pathology), microscopy modalities (electron, fluorescence, light), scales (subcellular, cellular, tissue), and organisms in both normal and abnormal states. We evaluate state-of-the-art biomedical, pathology, and general VLMs on {\\mu}-Bench and find that: i) current models struggle on all categories, even for basic tasks such as distinguishing microscopy modalities; ii) current specialist models fine-tuned on biomedical data often perform worse than generalist models; iii) fine-tuning in specific microscopy domains can cause catastrophic forgetting, eroding prior biomedical knowledge encoded in their base model. iv) weight interpolation between fine-tuned and pre-trained models offers one solution to forgetting and improves general performance across biomedical tasks. We release {\\mu}-Bench under a permissive license to accelerate the research and development of microscopy foundation models.",
+  "category": "multimodal",
+  "domain": "microscopy / biomedical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_captioning",
+    "visual_question_answering",
+    "classification",
+    "retrieval",
+    "detection",
+    "segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (accuracy/F1 for classification and VQA; BLEU/CIDEr for captioning; mAP/IoU for detection/segmentation)",
+  "general_score_metric": "task-specific (accuracy / F1 / BLEU / CIDEr / mAP depending on task)",
+  "year_of_publish": 2024,
+  "reputation": "Newly released domain-specific benchmark intended for biomedical microscopy VLMs with growing interest among biomedical vision-language researchers.",
+  "notes": "Large, diverse microscopy benchmark spanning many modalities and scales; multimodal (vision+language); potential data-contamination risk for models pretrained on biomedical images; authors report current models perform poorly and fine-tuning can cause catastrophic forgetting.",
+  "creators": {
+    "scientists": [
+      "Alejandro Lozano",
+      "Jeffrey Nirschl",
+      "James Burgess",
+      "Sanket Rajan Gupte",
+      "Yuhui Zhang",
+      "Alyssa Unell",
+      "Serena Yeung-Levy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.01791",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-08-27",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

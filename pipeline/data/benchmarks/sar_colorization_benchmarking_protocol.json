@@ -1,0 +1,36 @@
+{
+  "name": "SAR Colorization Benchmarking Protocol",
+  "description": "Synthetic aperture radar (SAR) images are widely used in remote sensing. Interpreting SAR images can be challenging due to their intrinsic speckle noise and grayscale nature. To address this issue, SAR colorization has emerged as a research direction to colorize gray scale SAR images while preserving the original spatial information and radiometric information. However, this research field is still in its early stages, and many limitations can be highlighted. In this paper, we propose a full research line for supervised learning-based approaches to SAR colorization. Our approach includes a protocol for generating synthetic color SAR images, several baselines, and an effective method based on the conditional generative adversarial network (cGAN) for SAR colorization. We also propose numerical assessment metrics for the problem at hand. To our knowledge, this is the first attempt to propose a research line for SAR colorization that includes a protocol, a benchmark, and a complete performance evaluation. Our extensive tests demonstrate the effectiveness of our proposed cGAN-based network for SAR colorization. The code will be made publicly available.",
+  "category": "vision",
+  "domain": "remote sensing / SAR imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_colorization",
+    "image-to-image_translation",
+    "supervised_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Fidelity and perceptual image metrics (PSNR, SSIM) plus perceptual similarity (LPIPS); sometimes task-specific radiometric agreement metrics",
+  "general_score_metric": "PSNR (primary reported), accompanied by SSIM and LPIPS",
+  "year_of_publish": 2023,
+  "reputation": "A niche, early-stage benchmark (2023 preprint) introducing a formal protocol for SAR colorization; limited adoption so far but useful as the first standardized proposal for this task.",
+  "notes": "Non-LLM, image-to-image benchmark; uses synthetic color SAR generation (domain gap to real SAR); small/early dataset and metrics may not fully capture semantic correctness; low contamination risk but limited community uptake.",
+  "creators": {
+    "scientists": [
+      "Kangqing Shen",
+      "Gemine Vivone",
+      "Xiaoyuan Yang",
+      "Simone Lolli",
+      "Michael Schmitt"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.08705",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

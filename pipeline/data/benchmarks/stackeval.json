@@ -1,0 +1,34 @@
+{
+  "name": "StackEval",
+  "description": "A coding assistance benchmark built from real Stack Overflow questions, plus StackUnseen — a post-training-cutoff component covering emerging technologies — to test generalization beyond memorized content. Includes the first comprehensive study on LLMs-as-judges for coding tasks, examining self-preference bias and cross-model evaluation reliability. Tests real-world programming assistance scenarios across diverse languages and frameworks.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "open_ended",
+    "code_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy; LLM-as-judge evaluation (with self-preference bias analysis)",
+  "general_score_metric": "coding accuracy score (LLM-judged)",
+  "typical_sota_score": "~60–75% on StackUnseen (frontier models; lower than main StackEval due to knowledge cutoff)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at NeurIPS 2024; addresses data leakage with post-cutoff StackUnseen component; includes methodological contribution on LLM-judge bias in coding evaluation",
+  "notes": "NeurIPS 2024. StackUnseen (questions about technologies released after model training cutoffs) provides contamination-free evaluation. LLM-as-judge analysis reveals significant self-preference bias: models tend to rate their own outputs higher than outputs from other models. First systematic study of this bias in coding-specific evaluation. Real Stack Overflow questions ensure ecological validity.",
+  "creators": {
+    "scientists": [
+      "Jiawei Liu",
+      "Linghan Zhang",
+      "Yangfeng Ji"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2412.05288",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

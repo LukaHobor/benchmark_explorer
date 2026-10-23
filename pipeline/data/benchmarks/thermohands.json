@@ -1,0 +1,36 @@
+{
+  "name": "ThermoHands",
+  "description": "Designing egocentric 3D hand pose estimation systems that can perform reliably in complex, real-world scenarios is crucial for downstream applications. Previous approaches using RGB or NIR imagery struggle in challenging conditions: RGB methods are susceptible to lighting variations and obstructions like handwear, while NIR techniques can be disrupted by sunlight or interference from other NIR-equipped devices. To address these limitations, we present ThermoHands, the first benchmark focused on thermal image-based egocentric 3D hand pose estimation, demonstrating the potential of thermal imaging to achieve robust performance under these conditions. The benchmark includes a multi-view and multi-spectral dataset collected from 28 subjects performing hand-object and hand-virtual interactions under diverse scenarios, accurately annotated with 3D hand poses through an automated process. We introduce a new baseline method, TherFormer, utilizing dual transformer modules for effective egocentric 3D hand pose estimation in thermal imagery. Our experimental results highlight TherFormer's leading performance and affirm thermal imaging's effectiveness in enabling robust 3D hand pose estimation in adverse conditions.",
+  "category": "vision",
+  "domain": "vision / thermal imaging / 3D hand pose estimation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "keypoint_detection",
+    "3d_pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean per-joint position error (MPJPE, in mm) and PCK (percentage of correct keypoints)",
+  "general_score_metric": "MPJPE (mean per-joint position error, mm)",
+  "typical_sota_score": "15–35 mm (reported ranges vary by scenario and baseline)",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed thermal egocentric 3D hand-pose benchmark with limited adoption to date but promising for robust hand-pose research.",
+  "notes": "Non-LLM, vision-only benchmark; relatively small subject pool (28 subjects) and specialized thermal sensor modality may limit generalization; evaluation sensitive to calibration and annotation pipeline.",
+  "creators": {
+    "scientists": [
+      "Fangqiang Ding",
+      "Yunzhou Zhu",
+      "Xiangyu Wen",
+      "Gaowen Liu",
+      "Chris Xiaoxuan Lu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.09871",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

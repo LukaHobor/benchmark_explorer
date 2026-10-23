@@ -1,0 +1,45 @@
+{
+  "name": "Dynamic Sensorium",
+  "description": "Understanding how biological visual systems process information is challenging due to the complex nonlinear relationship between neuronal responses and high-dimensional visual input. Artificial neural networks have already improved our understanding of this system by allowing computational neuroscientists to create predictive models and bridge biological and machine vision. During the Sensorium 2022, we introduced benchmarks for vision models with static input. However, animals operate and excel in dynamic environments, making it crucial to study and understand how the brain functions under these conditions. Moreover, many biological theories, such as predictive coding, suggest that previous input is crucial for current input processing. Currently, there is no standardized benchmark to identify state-of-the-art dynamic models of the mouse visual system. To address this gap, we propose the Sensorium 2023 Benchmark Competition with dynamic input. It includes the collection of a new large-scale dataset from the primary visual cortex of ten mice, containing responses from over 78,000 neurons to over 2 hours of dynamic stimuli per neuron. Participants in the main benchmark track will compete to identify the best predictive models of neuronal responses for dynamic input. We will also host a bonus track in which submission performance will be evaluated on out-of-domain input, using withheld neuronal responses to dynamic input stimuli whose statistics differ from the training set. Both tracks will offer behavioral data along with video stimuli. As before, we will provide code, tutorials, and strong pre-trained baseline models to encourage participation. We hope this competition will continue to strengthen the accompanying Sensorium benchmarks collection as a standard tool to measure progress in large-scale neural system identification models of the entire mouse visual hierarchy and beyond.",
+  "category": "vision",
+  "domain": "computational neuroscience / vision",
+  "benchmark_type": "competition",
+  "task_types": [
+    "neural_response_prediction",
+    "time_series_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "correlation / explained_variance (noise-corrected); fraction_of_explainable_variance_explained (FEV)",
+  "general_score_metric": "single-trial correlation and fraction_of_explainable_variance_explained (FEV)",
+  "typical_sota_score": "correlation 0.2–0.6; FEV 30–70%",
+  "year_of_publish": 2023,
+  "reputation": "Regarded as a high-quality, large-scale benchmark in computational neuroscience for evaluating dynamic visual-response prediction models.",
+  "notes": "Large-scale neural dataset from mouse V1; risk of overfitting to stimulus statistics or individual animals, and results are specific to mouse visual system dynamics (i.e., domain shift to other species or modalities).",
+  "creators": {
+    "scientists": [
+      "Polina Turishcheva",
+      "Paul G. Fahey",
+      "Laura Hansel",
+      "Rachel Froebe",
+      "Kayla Ponder",
+      "Michaela Vystrčilová",
+      "Konstantin F. Willeke",
+      "Mohammad Bashiri",
+      "Eric Wang",
+      "Zhiwei Ding",
+      "Andreas S. Tolias",
+      "Fabian H. Sinz",
+      "Alexander S. Ecker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.19654",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

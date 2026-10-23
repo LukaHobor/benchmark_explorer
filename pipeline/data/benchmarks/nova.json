@@ -1,0 +1,47 @@
+{
+  "name": "NOVA",
+  "description": "In many real-world applications, deployed models encounter inputs that differ from the data seen during training. Out-of-distribution detection identifies whether an input stems from an unseen distribution, while open-world recognition flags such inputs to ensure the system remains robust as ever-emerging, previously $unknown$ categories appear and must be addressed without retraining. Foundation and vision-language models are pre-trained on large and diverse datasets with the expectation of broad generalization across domains, including medical imaging. However, benchmarking these models on test sets with only a few common outlier types silently collapses the evaluation back to a closed-set problem, masking failures on rare or truly novel conditions encountered in clinical use. We therefore present $NOVA$, a challenging, real-life $evaluation-only$ benchmark of $\\sim$900 brain MRI scans that span 281 rare pathologies and heterogeneous acquisition protocols. Each case includes rich clinical narratives and double-blinded expert bounding-box annotations. Together, these enable joint assessment of anomaly localisation, visual captioning, and diagnostic reasoning. Because NOVA is never used for training, it serves as an $extreme$ stress-test of out-of-distribution generalisation: models must bridge a distribution gap both in sample appearance and in semantic space. Baseline results with leading vision-language models (GPT-4o, Gemini 2.0 Flash, and Qwen2.5-VL-72B) reveal substantial performance drops across all tasks, establishing NOVA as a rigorous testbed for advancing models that can detect, localize, and reason about truly unknown anomalies.",
+  "category": "vision",
+  "domain": "brain MRI / medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_localization",
+    "visual_captioning",
+    "diagnostic_reasoning",
+    "out_of_distribution_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Task-specific metrics: localization (IoU / mAP), captioning (BLEU / CIDEr), reasoning (accuracy / F1)",
+  "general_score_metric": "Task-specific composite (IoU/mAP for localization; BLEU/CIDEr for captioning; accuracy/F1 for reasoning)",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, rigorous medical imaging stress-test adopted by researchers evaluating V‑L and OOD performance on rare clinical anomalies.",
+  "notes": "Small evaluation-only dataset (~900 scans) with many rare pathologies; not intended for training. Sensitive medical data and annotation biases possible; performance varies widely across tasks and cases.",
+  "creators": {
+    "scientists": [
+      "Cosmin I. Bercea",
+      "Jun Li",
+      "Philipp Raffler",
+      "Evamaria O. Riedel",
+      "Lena Schmitzer",
+      "Angela Kurz",
+      "Felix Bitzer",
+      "Paula Roßmüller",
+      "Julian Canisius",
+      "Mirjam L. Beyrle",
+      "Che Liu",
+      "Wenjia Bai",
+      "Bernhard Kainz",
+      "Julia A. Schnabel",
+      "Benedikt Wiestler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.14064",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "TartanAir",
+  "description": "We present a challenging dataset, the TartanAir, for robot navigation tasks and more. The data is collected in photo-realistic simulation environments with the presence of moving objects, changing light and various weather conditions. By collecting data in simulations, we are able to obtain multi-modal sensor data and precise ground truth labels such as the stereo RGB image, depth image, segmentation, optical flow, camera poses, and LiDAR point cloud. We set up large numbers of environments with various styles and scenes, covering challenging viewpoints and diverse motion patterns that are difficult to achieve by using physical data collection platforms. In order to enable data collection at such a large scale, we develop an automatic pipeline, including mapping, trajectory sampling, data processing, and data verification. We evaluate the impact of various factors on visual SLAM algorithms using our data. The results of state-of-the-art algorithms reveal that the visual SLAM problem is far from solved. Methods that show good performance on established datasets such as KITTI do not perform well in more difficult scenarios. Although we use the simulation, our goal is to push the limits of Visual SLAM algorithms in the real world by providing a challenging benchmark for testing new methods, while also using a large diverse training data for learning-based methods. Our dataset is available at http://theairlab.org/tartanair-dataset.",
+  "category": "multimodal",
+  "domain": "autonomous driving / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_odometry",
+    "SLAM",
+    "depth_estimation",
+    "segmentation",
+    "optical_flow",
+    "localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (e.g., ATE/RPE for SLAM/odometry, IoU for segmentation, EPE for optical flow)",
+  "general_score_metric": "task-specific (e.g., ATE for SLAM, IoU for segmentation)",
+  "year_of_publish": 2020,
+  "reputation": "339 citations",
+  "notes": "Non-LLM benchmark based on photorealistic simulation; caution: simulation-to-real domain gap, possible dataset shifts relative to real-world deployments, and large dataset size. Intended primarily for robotics/vision research.",
+  "creators": {
+    "scientists": [
+      "Wenshan Wang",
+      "Delong Zhu",
+      "Xiangwei Wang",
+      "Yaoyu Hu",
+      "Yuheng Qiu",
+      "Chen Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/iros45743.2020.9341801",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

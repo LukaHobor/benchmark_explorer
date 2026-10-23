@@ -1,0 +1,40 @@
+{
+  "name": "AlgoTune",
+  "description": "AlgoTune is a benchmark of 154–155 widely used math, physics, and computer-science functions, paired with a framework for validating and timing LM-synthesized solution code against reference implementations from popular open-source packages (SciPy, scikit-learn, CVXPY, etc.). For each function, the model must produce code that is faster than the reference while matching its outputs on a held-out test set. The accompanying AlgoTuner agent achieves an average 1.72× speedup over reference solvers, and analyses show current models predominantly perform library-level substitutions and code refactoring rather than discovering new algorithmic constructs.",
+  "category": "code",
+  "domain": "numerical optimization / scientific computing",
+  "task_types": [
+    "code_generation",
+    "optimization",
+    "interactive_programming"
+  ],
+  "difficulty_level": "expert",
+  "number_of_questions": 155,
+  "evaluation_method": "speedup ratio between candidate and reference solver on held-out inputs, gated on output equivalence",
+  "general_score_metric": "geometric mean speedup over reference implementations (held-out inputs)",
+  "typical_sota_score": "AlgoTuner agent ~1.72× average speedup; surface-level optimizations dominate over genuine algorithmic discovery",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "NeurIPS 2025 paper; cited by Epoch AI as a key non-saturating optimization benchmark where humans set a baseline but the metric continues past parity.",
+  "notes": "154 coding tasks collected from domain experts plus a validation/timing harness. Reference implementations are drawn from popular open-source numerical packages. Designed to stay informative even after human-baseline parity, since the speedup metric has no natural ceiling. Failure analysis indicates current LMs rarely produce true algorithmic innovations.",
+  "creators": {
+    "scientists": [
+      "Ofir Press",
+      "Anson Ho",
+      "Greg Burnham",
+      "et al."
+    ],
+    "institutions": [
+      "Princeton",
+      "Epoch AI"
+    ],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2507.15887",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-05-06",
+    "origin": "cynefin@d486fafa9"
+  }
+}

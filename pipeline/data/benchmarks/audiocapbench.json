@@ -1,0 +1,35 @@
+{
+  "name": "AudioCapBench",
+  "description": "We introduce AudioCapBench, a benchmark for evaluating audio captioning capabilities of large multimodal models. \\method covers three distinct audio domains, including environmental sound, music, and speech, with 1,000 curated evaluation samples drawn from established datasets. We evaluate 13 models across two providers (OpenAI, Google Gemini) using both reference-based metrics (METEOR, BLEU, ROUGE-L) and an LLM-as-Judge framework that scores predictions on three orthogonal dimensions: \\textit{accuracy} (semantic correctness), \\textit{completeness} (coverage of reference content), and \\textit{hallucination} (absence of fabricated content). Our results reveal that Gemini models generally outperform OpenAI models on overall captioning quality, with Gemini~3~Pro achieving the highest overall score (6.00/10), while OpenAI models exhibit lower hallucination rates. All models perform best on speech captioning and worst on music captioning. We release the benchmark as well as evaluation code",
+  "category": "multimodal",
+  "domain": "audio",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval|automatic_metrics",
+  "general_score_metric": "composite_score",
+  "typical_sota_score": "around 6.0/10 overall for the best reported model",
+  "year_of_publish": 2026,
+  "reputation": "A recent benchmark for audio captioning that evaluates both reference-based metrics and LLM-as-judge quality dimensions across multiple audio domains.",
+  "notes": "Small benchmark with 1,000 samples; includes both automatic metrics and LLM-as-judge scoring, and results may vary by audio domain.",
+  "creators": {
+    "scientists": [
+      "Jielin Qiu",
+      "Jianguo Zhang",
+      "Zixiang Chen",
+      "Liangwei Yang",
+      "Ming Zhu",
+      "Juntao Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2602.23649",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

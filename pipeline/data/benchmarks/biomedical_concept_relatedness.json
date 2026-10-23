@@ -1,0 +1,36 @@
+{
+  "name": "Biomedical Concept Relatedness",
+  "description": "A promising application of AI to healthcare is the retrieval of information from electronic health records (EHRs), e.g. to aid clinicians in finding relevant information for a consultation or to recruit suitable patients for a study. This requires search capabilities far beyond simple string matching, including the retrieval of concepts (diagnoses, symptoms, medications, etc.) related to the one in question. The suitability of AI methods for such applications is tested by predicting the relatedness of concepts with known relatedness scores. However, all existing biomedical concept relatedness datasets are notoriously small and consist of hand-picked concept pairs. We open-source a novel concept relatedness benchmark overcoming these issues: it is six times larger than existing datasets and concept pairs are chosen based on co-occurrence in EHRs, ensuring their relevance for the application of interest. We present an in-depth analysis of our new dataset and compare it to existing ones, highlighting that it is not only larger but also complements existing datasets in terms of the types of concepts included. Initial experiments with state-of-the-art embedding methods show that our dataset is a challenging new benchmark for testing concept relatedness models.",
+  "category": "text",
+  "domain": "medical / healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_similarity",
+    "regression",
+    "information_retrieval"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Correlation-based evaluation (Spearman / Pearson) between predicted relatedness scores and ground truth",
+  "general_score_metric": "Spearman correlation",
+  "year_of_publish": 2020,
+  "reputation": "A larger, recently introduced benchmark intended for research on biomedical concept embeddings and retrieval; useful but not yet a widespread standard.",
+  "notes": "Constructed from EHR co-occurrence which biases pairs toward frequently co-occurring concepts (application-specific); still domain-specific vocabulary and potential privacy/de-identification constraints; non-LLM benchmark but susceptible to contamination if models are trained on similar EHR corpora.",
+  "creators": {
+    "scientists": [
+      "Claudia Schulz",
+      "Josh Levy-Kramer",
+      "Camille Van Assel",
+      "Miklos Kepes",
+      "Nils Hammerla"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2010.16218",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

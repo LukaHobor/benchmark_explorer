@@ -1,0 +1,39 @@
+{
+  "name": "CARE",
+  "description": "Rectal cancer segmentation of CT image plays a crucial role in timely clinical diagnosis, radiotherapy treatment, and follow-up. Although current segmentation methods have shown promise in delineating cancerous tissues, they still encounter challenges in achieving high segmentation precision. These obstacles arise from the intricate anatomical structures of the rectum and the difficulties in performing differential diagnosis of rectal cancer. Additionally, a major obstacle is the lack of a large-scale, finely annotated CT image dataset for rectal cancer segmentation. To address these issues, this work introduces a novel large scale rectal cancer CT image dataset CARE with pixel-level annotations for both normal and cancerous rectum, which serves as a valuable resource for algorithm research and clinical application development. Moreover, we propose a novel medical cancer lesion segmentation benchmark model named U-SAM. The model is specifically designed to tackle the challenges posed by the intricate anatomical structures of abdominal organs by incorporating prompt information. U-SAM contains three key components: promptable information (e.g., points) to aid in target area localization, a convolution module for capturing low-level lesion details, and skip-connections to preserve and recover spatial information during the encoding-decoding process. To evaluate the effectiveness of U-SAM, we systematically compare its performance with several popular segmentation methods on the CARE dataset. The generalization of the model is further verified on the WORD dataset. Extensive experiments demonstrate that the proposed U-SAM outperforms state-of-the-art methods on these two datasets. These experiments can serve as the baseline for future research and clinical application development.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "pixel_classification",
+    "medical_image_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice coefficient (DSC) / Intersection over Union (IoU) — standard segmentation metrics",
+  "general_score_metric": "Dice coefficient (DSC)",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2023,
+  "reputation": "A recently introduced, domain-specific medical imaging dataset with growing interest among researchers working on medical segmentation and promptable segmentation models.",
+  "notes": "Non-LLM benchmark focused on medical imaging; potential class imbalance and limited dataset size relative to natural-image benchmarks; clinical validation and privacy/consent considerations may apply.",
+  "creators": {
+    "scientists": [
+      "Hantao Zhang",
+      "Weidong Guo",
+      "Chenyang Qiu",
+      "Shouhong Wan",
+      "Bingbing Zou",
+      "Wanqin Wang",
+      "Peiquan Jin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2308.08283",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

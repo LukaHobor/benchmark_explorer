@@ -1,0 +1,39 @@
+{
+  "name": "Social Media Disaster Image Datasets (Disaster Response Benchmarks)",
+  "description": "During a disaster event, images shared on social media helps crisis managers gain situational awareness and assess incurred damages, among other response tasks. Recent advances in computer vision and deep neural networks have enabled the development of models for real-time image classification for a number of tasks, including detecting crisis incidents, filtering irrelevant images, classifying images into specific humanitarian categories, and assessing the severity of damage. Despite several efforts, past works mainly suffer from limited resources (i.e., labeled images) available to train more robust deep learning models. In this study, we propose new datasets for disaster type detection, and informativeness classification, and damage severity assessment. Moreover, we relabel existing publicly available datasets for new tasks. We identify exact- and near-duplicates to form non-overlapping data splits, and finally consolidate them to create larger datasets. In our extensive experiments, we benchmark several state-of-the-art deep learning models and achieve promising results. We release our datasets and models publicly, aiming to provide proper baselines as well as to spur further research in the crisis informatics community.",
+  "category": "vision",
+  "domain": "disaster response / crisis informatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "binary_classification",
+    "multi-label_classification",
+    "ordinal_regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1-score (macro/micro) and AUC for certain tasks; accuracy reported for some simpler splits",
+  "general_score_metric": "F1-score (macro) is the primary reported metric",
+  "typical_sota_score": "Informativeness classification F1 ≈ 80–90%; damage-severity classification F1 ≈ 60–75% (task-dependent)",
+  "year_of_publish": 2020,
+  "reputation": "Widely used within the crisis informatics community as a standard set of benchmarks for social-media disaster image classification tasks.",
+  "notes": "Imbalanced and noisy social-media data with limited labeled samples; labels can be subjective; authors deduplicated to reduce leakage, but domain shift and ethical/privacy concerns remain; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Firoj Alam",
+      "Ferda Ofli",
+      "Muhammad Imran",
+      "Tanvirul Alam",
+      "Umair Qazi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2011.08916",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

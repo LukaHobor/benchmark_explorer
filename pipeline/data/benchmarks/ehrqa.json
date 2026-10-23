@@ -1,0 +1,35 @@
+{
+  "name": "EHRNoteQA",
+  "description": "Discharge summaries in Electronic Health Records (EHRs) are crucial for clinical decision-making, but their length and complexity make information extraction challenging, especially when dealing with accumulated summaries across multiple patient admissions. Large Language Models (LLMs) show promise in addressing this challenge by efficiently analyzing vast and complex data. Existing benchmarks, however, fall short in properly evaluating LLMs' capabilities in this context, as they typically focus on single-note information or limited topics, failing to reflect the real-world inquiries required by clinicians. To bridge this gap, we introduce EHRNoteQA, a novel benchmark built on the MIMIC-IV EHR, comprising 962 different QA pairs each linked to distinct patients' discharge summaries. Every QA pair is initially generated using GPT-4 and then manually reviewed and refined by three clinicians to ensure clinical relevance. EHRNoteQA includes questions that require information across multiple discharge summaries and covers eight diverse topics, mirroring the complexity and diversity of real clinical inquiries. We offer EHRNoteQA in two formats: open-ended and multi-choice question answering, and propose a reliable evaluation method for each. We evaluate 27 LLMs using EHRNoteQA and examine various factors affecting the model performance (e.g., the length and number of discharge summaries). Furthermore, to validate EHRNoteQA as a reliable proxy for expert evaluations in clinical practice, we measure the correlation between the LLM performance on EHRNoteQA, and the LLM performance manually evaluated by clinicians. Results show that LLM performance on EHRNoteQA have higher correlation with clinician-evaluated performance (Spearman: 0.78, Kendall: 0.62) compared to other benchmarks, demonstrating its practical relevance in evaluating LLMs in clinical settings.",
+  "category": "text",
+  "domain": "medical",
+  "task_types": [
+    "clinical_qa",
+    "ehr_understanding"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 2500,
+  "evaluation_method": "accuracy, F1 score",
+  "general_score_metric": "F1 score",
+  "typical_sota_score": "~70-80%",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "Important benchmark for clinical note understanding and medical QA",
+  "notes": "Uses real de-identified EHR data. Tests understanding of clinical documentation and medical information extraction.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2402.16040",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "BAGEL",
+  "description": "The problem of interpreting the decisions of machine learning is a well-researched and important. We are interested in a specific type of machine learning model that deals with graph data called graph neural networks. Evaluating interpretability approaches for graph neural networks (GNN) specifically are known to be challenging due to the lack of a commonly accepted benchmark. Given a GNN model, several interpretability approaches exist to explain GNN models with diverse (sometimes conflicting) evaluation methodologies. In this paper, we propose a benchmark for evaluating the explainability approaches for GNNs called Bagel. In Bagel, we firstly propose four diverse GNN explanation evaluation regimes -- 1) faithfulness, 2) sparsity, 3) correctness. and 4) plausibility. We reconcile multiple evaluation metrics in the existing literature and cover diverse notions for a holistic evaluation. Our graph datasets range from citation networks, document graphs, to graphs from molecules and proteins. We conduct an extensive empirical study on four GNN models and nine post-hoc explanation approaches for node and graph classification tasks. We open both the benchmarks and reference implementations and make them available at https://github.com/Mandeep-Rathee/Bagel-benchmark.",
+  "category": "mixed",
+  "domain": "graph machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "graph_classification",
+    "explainability"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite of specialized metrics (faithfulness measures such as deletion/insertion AUC, sparsity scores, correctness metrics like F1/IoU against ground-truth explanations, and human plausibility judgements)",
+  "general_score_metric": "composite_score (aggregated across faithfulness AUC, sparsity, and correctness F1 depending on task)",
+  "typical_sota_score": "varies by metric and dataset; no single consolidated SOTA (metric-specific ranges reported in the paper)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2024,
+  "reputation": "A purpose-built benchmark for GNN explainability with growing visibility in the graph-ML community; used in recent research but not yet a broadly standardized leaderboard.",
+  "notes": "Non-LLM benchmark focused on GNN explainability; evaluates multiple heterogeneous metrics so results are not directly comparable as a single scalar; datasets vary in size and domain (citation, document, molecular, protein) and explanation plausibility can be subjective.",
+  "creators": {
+    "scientists": [
+      "Mandeep Rathee",
+      "Thorben Funke",
+      "Avishek Anand",
+      "Megha Khosla"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2206.13983",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

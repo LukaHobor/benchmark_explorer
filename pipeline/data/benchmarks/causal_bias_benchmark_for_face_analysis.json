@@ -1,0 +1,34 @@
+{
+  "name": "Causal Bias Benchmark for Face Analysis",
+  "description": "Measuring algorithmic bias is crucial both to assess algorithmic fairness, and to guide the improvement of algorithms. Current methods to measure algorithmic bias in computer vision, which are based on observational datasets, are inadequate for this task because they conflate algorithmic bias with dataset bias. To address this problem we develop an experimental method for measuring algorithmic bias of face analysis algorithms, which manipulates directly the attributes of interest, e.g., gender and skin tone, in order to reveal causal links between attribute variation and performance change. Our proposed method is based on generating synthetic ``transects'' of matched sample images that are designed to differ along specific attributes while leaving other attributes constant. A crucial aspect of our approach is relying on the perception of human observers, both to guide manipulations, and to measure algorithmic bias. Besides allowing the measurement of algorithmic bias, synthetic transects have other advantages with respect to observational datasets: they sample attributes more evenly allowing for more straightforward bias analysis on minority and intersectional groups, they enable prediction of bias in new scenarios, they greatly reduce ethical and legal challenges, and they are economical and fast to obtain, helping make bias testing affordable and widely available. We validate our method by comparing it to a study that employs the traditional observational method for analyzing bias in gender classification algorithms. The two methods reach different conclusions. While the observational method reports gender and skin color biases, the experimental method reveals biases due to gender, hair length, age, and facial hair.",
+  "category": "vision",
+  "domain": "computer vision / algorithmic fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "bias_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy and group performance gap (bias metrics)",
+  "general_score_metric": "accuracy and disparity/gap metrics (e.g., accuracy gap between groups)",
+  "year_of_publish": 2020,
+  "reputation": "Well-cited method for controlled causal analysis of bias in face analysis; influential in fairness and algorithmic-bias research.",
+  "notes": "Synthetic, non-LLM vision benchmark that enables causal interventions; may not reflect natural data distributions and is focused on face attributes.",
+  "creators": {
+    "scientists": [
+      "Guha Balakrishnan",
+      "Yuanjun Xiong",
+      "Wei Xia",
+      "Pietro Perona"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2007.06570",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

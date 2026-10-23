@@ -1,0 +1,36 @@
+{
+  "name": "NightReID",
+  "description": "Person re-identification (Re-ID) is crucial for intelligent surveillance systems, facilitating the identification of individuals across multiple camera views. While significant advancements have been made for daytime scenarios, ensuring reliable Re-ID performance during nighttime remains a significant challenge. Given the cost and limited accessibility of infrared cameras, we investigate a critical question: Can RGB cameras be effectively utilized for accurate Re-ID during nighttime? To address this, we introduce NightReID, a large-scale RGB Re-ID dataset collected from a real-world nighttime surveillance system. NightReID includes 1,500 identities and over 53,000 images, capturing diverse scenes with complex lighting and adverse weather conditions. This rich dataset provides a valuable benchmark for advancing nighttime Re-ID research. Moreover, we propose the Enhancement, Denoising, and Alignment (EDA) framework with two novel modules to enhance nighttime Re-ID performance. First, an unsupervised Image Enhancement and Denoising (IED) method is designed to improve the quality of nighttime images, preserving critical details while removing noise without requiring paired ground truth. Second, we introduce Data Distribution Alignment (DDA) through statistical priors, aligning the distributions between pre-training data and nighttime data to mitigate domain shift. Extensive experiments on multiple nighttime Re-ID datasets demonstrate the significance of NightReID and validate the efficacy, flexibility, and applicability of the EDA framework.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "person_re-identification",
+    "image_enhancement",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP and Rank-1 accuracy",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "60–80% (Rank-1); 40–60% (mAP)",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, specialized benchmark for nighttime RGB Re-ID with growing attention in the surveillance and Re-ID research community.",
+  "notes": "Non-LLM benchmark. Focuses on nighttime RGB surveillance so substantial domain shift from daytime datasets; moderate-sized (1,500 IDs) with potential class imbalance and some label/noise risk.",
+  "creators": {
+    "scientists": [
+      "Yuxuan Zhao",
+      "Weijian Ruan",
+      "He Li",
+      "Mang Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1609/aaai.v39i10.33142",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

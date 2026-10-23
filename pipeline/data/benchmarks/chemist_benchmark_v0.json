@@ -1,0 +1,37 @@
+{
+  "name": "chemist_benchmark_v0",
+  "description": "Combination of hERG-Blocker, Absorption-pgp and Metabolism-CYP_P450_2C19 questions from the TD-Commons datasets that could not been solved by Qwen3-4B after n=10 generations and therefore considered hard.\nDatasets were generated with Qwen3-4B (unsloth/Qwen3-4B-bnb-4bit).\nhERG-Blocker data:\n\nAbsorption data:\n\nMetabolism data:\n\nScript to generate the data:\nfrom datasets import load_dataset, concatenate_datasets, Dataset\nfrom transformers import AutoModelForCausalLM, AutoTokenizer\nfrom peft… See the full description on the dataset page: https://huggingface.co/datasets/Sebasdi/chemist_benchmark_v0.",
+  "category": "text",
+  "domain": "chemistry",
+  "tags": [
+    "size_categories:n<1K",
+    "modality:text"
+  ],
+  "task_types": [
+    "binary_classification",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Niche benchmark derived from TD‑Commons used to stress-test LLM chemical reasoning; limited broad adoption but useful for hard-case evaluation.",
+  "downloads": 8,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "Sebasdi"
+    ]
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://huggingface.co/datasets/Sebasdi/chemist_benchmark_v0",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

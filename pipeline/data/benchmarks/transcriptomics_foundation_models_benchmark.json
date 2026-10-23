@@ -1,0 +1,38 @@
+{
+  "name": "Transcriptomics Foundation Models Benchmark",
+  "description": "Understanding the relationships among genes, compounds, and their interactions in living organisms remains limited due to technological constraints and the complexity of biological data. Deep learning has shown promise in exploring these relationships using various data types. However, transcriptomics, which provides detailed insights into cellular states, is still underused due to its high noise levels and limited data availability. Recent advancements in transcriptomics sequencing provide new opportunities to uncover valuable insights, especially with the rise of many new foundation models for transcriptomics, yet no benchmark has been made to robustly evaluate the effectiveness of these rising models for perturbation analysis. This article presents a novel biologically motivated evaluation framework and a hierarchy of perturbation analysis tasks for comparing the performance of pretrained foundation models to each other and to more classical techniques of learning from transcriptomics data. We compile diverse public datasets from different sequencing techniques and cell lines to assess models performance. Our approach identifies scVI and PCA to be far better suited models for understanding biological perturbations in comparison to existing foundation models, especially in their application in real-world scenarios.",
+  "category": "mixed",
+  "domain": "bioinformatics / transcriptomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "perturbation_analysis",
+    "representation_quality",
+    "transfer_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "predictive performance metrics (R^2 for continuous perturbation prediction, Pearson/Spearman correlation for rank agreement, AUROC for classification-style tasks)",
+  "general_score_metric": "Pearson correlation / predictive R^2 (depending on task)",
+  "year_of_publish": 2024,
+  "reputation": "New domain-specific benchmark (preprint) targeted at the transcriptomics and computational biology community; not yet widely adopted but relevant to researchers developing foundation models for single-cell and bulk transcriptomics.",
+  "notes": "Uses heterogeneous public transcriptomics datasets with high technical noise and batch effects; results can be sensitive to dataset size, preprocessing, and sequencing modality. Not an NLP/LLM benchmark; comparisons may favor simpler, well-tuned classical methods (e.g., scVI, PCA) on some tasks.",
+  "creators": {
+    "scientists": [
+      "Ihab Bendidi",
+      "Shawn Whitfield",
+      "Kian Kenyon-Dean",
+      "Hanene Ben Yedder",
+      "Yassir El Mesbahi",
+      "Emmanuel Noutahi",
+      "Alisandra K. Denton"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2410.13956",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

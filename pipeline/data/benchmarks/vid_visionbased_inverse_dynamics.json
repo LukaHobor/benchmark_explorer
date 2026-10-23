@@ -1,0 +1,34 @@
+{
+  "name": "VID (Vision-based Inverse Dynamics)",
+  "description": "A\n                  bstract\n                \n                \n                  Human inverse dynamics is an important technique for analyzing human motion. Previous studies have typically estimated joint torques from joint pose images, marker coordinates, or EMG signals, which severely limit their applicability in real-world scenarios. In this work, we aim to directly predict joint torques during human movements from real human images. To address this gap, we present the vision-based inverse dynamics dataset (VID), the first dataset tailored for the joint torque prediction from real human images. VID comprises 63,369 frames of synchronized monocular images, kinematic data, and dynamic data of real human subjects. All data are carefully synchronized, refined, and manually validated to ensure high quality. In addition, we introduce a comprehensive benchmark for the vision-based inverse dynamics of real human images, consisting of a new baseline method and a new evaluation criteria with three levels of difficulty: (i) overall joint torque estimation, (ii) joint-specific analysis, and (iii) action-specific prediction. We further compare the baseline result of our VID-Network with other representative approaches, our baseline method achieves the state-of-the-art performance on almost all the evaluation criteria. By releasing VID and the accompanying evaluation protocol, we aim to establish a foundation for advancing biomechanics from real human images and to facilitate the exploration of new approaches for human inverse dynamics in unconstrained environments. The project website is\n                  https://github.com/MedVisionKitchen/VID-Benchmark\n                  .",
+  "category": "vision",
+  "domain": "vision / biomechanics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "pose_estimation",
+    "time_series_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean_absolute_error (MAE) / root_mean_squared_error (RMSE)",
+  "general_score_metric": "MAE (Nm) per joint",
+  "year_of_publish": 2025,
+  "reputation": "New (2025) dataset with limited adoption so far; valued by biomechanics and vision researchers for studying inverse dynamics from real images.",
+  "notes": "Non-LLM benchmark; moderate size (63k frames); careful synchronization/manual validation but potential subject/diversity limitations; evaluation includes per-joint and per-action metrics.",
+  "creators": {
+    "scientists": [
+      "Chen Chen",
+      "Weifeng Su"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1101/2025.10.03.679772",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

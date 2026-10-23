@@ -1,0 +1,33 @@
+{
+  "name": "S3Simulator",
+  "description": "Acoustic sonar imaging systems are widely used for underwater surveillance in both civilian and military sectors. However, acquiring high-quality sonar datasets for training Artificial Intelligence (AI) models confronts challenges such as limited data availability, financial constraints, and data confidentiality. To overcome these challenges, we propose a novel benchmark dataset of Simulated Side-Scan Sonar images, which we term as 'S3Simulator dataset'. Our dataset creation utilizes advanced simulation techniques to accurately replicate underwater conditions and produce diverse synthetic sonar imaging. In particular, the cutting-edge AI segmentation tool i.e. Segment Anything Model (SAM) is leveraged for optimally isolating and segmenting the object images, such as ships and planes, from real scenes. Further, advanced Computer-Aided Design tools i.e. SelfCAD and simulation software such as Gazebo are employed to create the 3D model and to optimally visualize within realistic environments, respectively. Further, a range of computational imaging techniques are employed to improve the quality of the data, enabling the AI models for the analysis of the sonar images. Extensive analyses are carried out on S3simulator as well as real sonar datasets to validate the performance of AI models for underwater object classification. Our experimental results highlight that the S3Simulator dataset will be a promising benchmark dataset for research on underwater image analysis. https://github.com/bashakamal/S3Simulator.",
+  "category": "vision",
+  "domain": "underwater imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "segmentation",
+    "detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy for classification; mIoU for segmentation; mAP for detection",
+  "general_score_metric": "accuracy (for classification tasks); mIoU (for segmentation)",
+  "year_of_publish": 2024,
+  "reputation": "New, simulation-driven dataset for sonar imagery with limited community adoption so far; intended for research on sim-to-real and underwater object analysis.",
+  "notes": "Synthetic / simulated dataset — potential sim-to-real gap when applied to real sonar; uses SAM and CAD tools for generation; may be small-to-moderate scale and specialized to underwater sonar imagery.",
+  "creators": {
+    "scientists": [
+      "Kamal Basha S",
+      "Athira Nambiar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2408.12833",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

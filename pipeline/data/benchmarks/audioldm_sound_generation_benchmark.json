@@ -1,0 +1,37 @@
+{
+  "name": "AudioLDM Sound Generation Benchmark",
+  "description": "Deep neural networks have recently achieved breakthroughs in sound generation. Despite the outstanding sample quality, current sound generation models face issues on small-scale datasets (e.g., overfitting), significantly limiting performance. In this paper, we make the first attempt to investigate the benefits of pre-training on sound generation with AudioLDM, the cutting-edge model for audio generation, as the backbone. Our study demonstrates the advantages of the pre-trained AudioLDM, especially in data-scarcity scenarios. In addition, the baselines and evaluation protocol for sound generation systems are not consistent enough to compare different studies directly. Aiming to facilitate further study on sound generation tasks, we benchmark the sound generation task on various frequently-used datasets. We hope our results on transfer learning and benchmarks can provide references for further research on conditional sound generation.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "audio_generation",
+    "conditional_generation",
+    "sound_synthesis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval (MOS) combined with objective audio metrics such as Fréchet Audio Distance (FAD) and reconstruction losses",
+  "general_score_metric": "FAD and MOS (human listening scores) used jointly",
+  "year_of_publish": 2023,
+  "reputation": "AudioLDM is a widely cited model in the audio-generation community; the benchmark is gaining traction as a practical evaluation suite for conditional sound generation.",
+  "notes": "Many target datasets are small which risks overfitting; evaluation protocols across papers have varied (hence the paper's focus on standardization); not an LLM benchmark; perceptual evaluation needed in addition to objective metrics.",
+  "creators": {
+    "scientists": [
+      "Yi Yuan",
+      "Haohe Liu",
+      "Jinhua Liang",
+      "Xubo Liu",
+      "Mark D. Plumbley",
+      "Wenwu Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2303.03857",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

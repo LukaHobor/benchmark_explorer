@@ -1,0 +1,36 @@
+{
+  "name": "GenImage",
+  "description": "The extraordinary ability of generative models to generate photographic images has intensified concerns about the spread of disinformation, thereby leading to the demand for detectors capable of distinguishing between AI-generated fake images and real images. However, the lack of large datasets containing images from the most advanced image generators poses an obstacle to the development of such detectors. In this paper, we introduce the GenImage dataset, which has the following advantages: 1) Plenty of Images, including over one million pairs of AI-generated fake images and collected real images. 2) Rich Image Content, encompassing a broad range of image classes. 3) State-of-the-art Generators, synthesizing images with advanced diffusion models and GANs. The aforementioned advantages allow the detectors trained on GenImage to undergo a thorough evaluation and demonstrate strong applicability to diverse images. We conduct a comprehensive analysis of the dataset and propose two tasks for evaluating the detection method in resembling real-world scenarios. The cross-generator image classification task measures the performance of a detector trained on one generator when tested on the others. The degraded image classification task assesses the capability of the detectors in handling degraded images such as low-resolution, blurred, and compressed images. With the GenImage dataset, researchers can effectively expedite the development and evaluation of superior AI-generated image detectors in comparison to prevailing methodologies.",
+  "category": "vision",
+  "domain": "computer vision / deepfake detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "binary_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Accuracy and AUROC (AUC); also precision/recall/F1 for detection tasks",
+  "general_score_metric": "accuracy (and AUROC)",
+  "typical_sota_score": "80–98%",
+  "year_of_publish": 2023,
+  "reputation": "Large, recent dataset (1M+ pairs) that has gained attention for deepfake-image detection research; adoption is growing but not yet universal.",
+  "notes": "Non-LLM benchmark; very large scale but detectors can overfit generator-specific artifacts; cross-generator generalization and degraded-image robustness remain challenging; potential for dataset contamination if generators or real sources overlap with other corpora.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

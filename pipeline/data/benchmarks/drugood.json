@@ -1,0 +1,51 @@
+{
+  "name": "DrugOOD",
+  "description": "AI-aided drug discovery (AIDD) is gaining increasing popularity due to its promise of making the search for new pharmaceuticals quicker, cheaper and more efficient. In spite of its extensive use in many fields, such as ADMET prediction, virtual screening, protein folding and generative chemistry, little has been explored in terms of the out-of-distribution (OOD) learning problem with \\emph{noise}, which is inevitable in real world AIDD applications. In this work, we present DrugOOD, a systematic OOD dataset curator and benchmark for AI-aided drug discovery, which comes with an open-source Python package that fully automates the data curation and OOD benchmarking processes. We focus on one of the most crucial problems in AIDD: drug target binding affinity prediction, which involves both macromolecule (protein target) and small-molecule (drug compound). In contrast to only providing fixed datasets, DrugOOD offers automated dataset curator with user-friendly customization scripts, rich domain annotations aligned with biochemistry knowledge, realistic noise annotations and rigorous benchmarking of state-of-the-art OOD algorithms. Since the molecular data is often modeled as irregular graphs using graph neural network (GNN) backbones, DrugOOD also serves as a valuable testbed for \\emph{graph OOD learning} problems. Extensive empirical studies have shown a significant performance gap between in-distribution and out-of-distribution experiments, which highlights the need to develop better schemes that can allow for OOD generalization under noise for AIDD.",
+  "category": "mixed",
+  "domain": "drug discovery / bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ood_generalization",
+    "graph_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Regression metrics (RMSE / MAE / R²) for affinity prediction; OOD performance measured as metric degradation on domain-shift splits (e.g., MAE/RMSE on OOD test sets) and related domain generalization statistics",
+  "general_score_metric": "RMSE (primary; also reports MAE and R²)",
+  "year_of_publish": 2022,
+  "reputation": "Recognized in the molecular ML and AIDD community as a useful systematic benchmark and data curator for studying OOD generalization under realistic noise, with growing but still specialized adoption.",
+  "notes": "Provides automated dataset curation with many customizable splits; contains realistic label noise and multiple dataset variants, so reported numbers depend strongly on chosen tasks/splits. Focused on graph/GNN models (non-LLM). Potential for data-version mismatch and dataset-size variability across tasks.",
+  "creators": {
+    "scientists": [
+      "Yuanfeng Ji",
+      "Lu Zhang",
+      "Jiaxiang Wu",
+      "Bingzhe Wu",
+      "Long-Kai Huang",
+      "Tingyang Xu",
+      "Yu Rong",
+      "Lanqing Li",
+      "Jie Ren",
+      "Ding Xue",
+      "Houtim Lai",
+      "Shaoyong Xu",
+      "Jing Feng",
+      "Wei Liu",
+      "Ping Luo",
+      "Shuigeng Zhou",
+      "Junzhou Huang",
+      "Peilin Zhao",
+      "Yatao Bian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2201.09637",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

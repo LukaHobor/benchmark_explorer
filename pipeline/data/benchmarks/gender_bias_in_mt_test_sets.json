@@ -1,0 +1,35 @@
+{
+  "name": "Gender Bias in MT test sets",
+  "description": "This paper studies gender bias in machine translation through the lens of Large Language Models (LLMs). Four widely-used test sets are employed to benchmark various base LLMs, comparing their translation quality and gender bias against state-of-the-art Neural Machine Translation (NMT) models for English to Catalan (En $\\rightarrow$ Ca) and English to Spanish (En $\\rightarrow$ Es) translation directions. Our findings reveal pervasive gender bias across all models, with base LLMs exhibiting a higher degree of bias compared to NMT models. To combat this bias, we explore prompting engineering techniques applied to an instruction-tuned LLM. We identify a prompt structure that significantly reduces gender bias by up to 12% on the WinoMT evaluation dataset compared to more straightforward prompts. These results significantly reduce the gender bias accuracy gap between LLMs and traditional NMT systems.",
+  "category": "text",
+  "domain": "machine translation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "translation",
+    "bias_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "gender_bias_accuracy_gap",
+  "year_of_publish": 2024,
+  "reputation": "Uses widely known MT gender-bias test sets such as WinoMT, which are commonly referenced in MT bias studies but are not a single unified benchmark standard.",
+  "notes": "Benchmarking focuses on bias rather than only translation quality; results depend strongly on prompting and model family, and may not be directly comparable across test sets.",
+  "creators": {
+    "scientists": [
+      "Aleix Sant",
+      "Carlos Escolano",
+      "Audrey Mash",
+      "Francesca De Luca Fornaciari",
+      "Maite Melero"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2407.18786",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

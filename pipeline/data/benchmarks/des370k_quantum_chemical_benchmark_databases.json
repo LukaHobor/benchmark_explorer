@@ -1,0 +1,38 @@
+{
+  "name": "DES370K (quantum chemical benchmark databases)",
+  "description": "Advances in computational chemistry create an ongoing need for larger and higher-quality datasets that characterize noncovalent molecular interactions. We present three benchmark collections of quantum mechanical data, covering approximately 3,700 distinct types of interacting molecule pairs. The first collection, which we refer to as DES370K, contains interaction energies for more than 370,000 dimer geometries. These were computed using the coupled-cluster method with single, double, and perturbative triple excitations [CCSD(T)], which is widely regarded as the gold-standard method in electronic structure theory. Our second benchmark collection, a core representative subset of DES370K called DES15K, is intended for more computationally demanding applications of the data. Finally, DES5M, our third collection, comprises interaction energies for nearly 5,000,000 dimer geometries; these were calculated using SNS-MP2, a machine learning approach that provides results with accuracy comparable to that of our coupled-cluster training data. These datasets may prove useful in the development of density functionals, empirically corrected wavefunction-based approaches, semi-empirical methods, force fields, and models trained using machine learning methods.",
+  "category": "mixed",
+  "domain": "materials science / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "interaction_energy_prediction",
+    "force-field_training",
+    "benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE / RMSE (regression error, typically reported in kcal/mol)",
+  "general_score_metric": "MAE (kcal/mol)",
+  "year_of_publish": 2021,
+  "reputation": "104 citations",
+  "notes": "Non-LLM benchmark focused on quantum-chemical interaction energies (high-quality CCSD(T) references for DES370K; DES5M uses SNS-MP2 approximations). Large dataset (hundreds of thousands to millions of dimers), suitable for ML potentials and density-functional correction work. Caveats: specialized domain knowledge required, chemical space coverage may be biased toward certain molecule types and distances, units in kcal/mol, not a classification benchmark.",
+  "creators": {
+    "scientists": [
+      "Alexander Donchev",
+      "Andrew G. Taube",
+      "Elizabeth Decolvenaere",
+      "Cory Hargus",
+      "Robert T. McGibbon",
+      "Ka-Hei Law"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1038/s41597-021-00833-x",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Dyport",
+  "description": "This paper presents a novel benchmarking framework Dyport for evaluating biomedical hypothesis generation systems. Utilizing curated datasets, our approach tests these systems under realistic conditions, enhancing the relevance of our evaluations. We integrate knowledge from the curated databases into a dynamic graph, accompanied by a method to quantify discovery importance. This not only assesses hypothesis accuracy but also their potential impact in biomedical research which significantly extends traditional link prediction benchmarks. Applicability of our benchmarking process is demonstrated on several link prediction systems applied on biomedical semantic knowledge graphs. Being flexible, our benchmarking system is designed for broad application in hypothesis generation quality verification, aiming to expand the scope of scientific discovery within the biomedical research community. Availability and implementation: Dyport framework is fully open-source. All code and datasets are available at: https://github.com/IlyaTyagin/Dyport",
+  "category": "text",
+  "domain": "biomedical",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "hypothesis_ranking",
+    "literature_retrieval",
+    "open_ended_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision@k / recall@k and ranking metrics (e.g., MAP); complemented by human_eval for novelty/usefulness",
+  "general_score_metric": "precision@k (primary reported ranking metric) with human evaluation for scientific relevance",
+  "year_of_publish": 2024,
+  "reputation": "A methodological benchmark for biomedical hypothesis generation introduced in 2023; of interest to literature-based discovery researchers but not yet a community standard.",
+  "notes": "Evaluation relies heavily on human judgment; substantial contamination risk because LMs are often pretrained on biomedical literature; task is inherently open-ended and dataset dynamics evolve with new publications.",
+  "creators": {
+    "scientists": [
+      "Tyagin I",
+      "Safro I"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2312.03303",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

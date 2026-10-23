@@ -1,0 +1,35 @@
+{
+  "name": "RSVG",
+  "description": "In this article, we introduce the task of visual grounding for remote sensing data (RSVG). RSVG aims to localize the referred objects in remote sensing (RS) images with the guidance of natural language. To retrieve rich information from RS imagery using natural language, many research tasks, such as RS image visual question answering, RS image captioning, and RS image–text retrieval, have been investigated a lot. However, the object-level visual grounding on RS images is still underexplored. Thus, in this work, we propose to construct the dataset and explore deep learning models for the RSVG task. Specifically, our contributions can be summarized as follows. First, we build the new large-scale benchmark of RSVG based on detection in optical remote sensing (DIOR) dataset, termed DIOR-RSVG, to fully advance the research of RSVG. This new dataset includes image/expression/box triplets for training and evaluating visual grounding models. Second, we benchmark extensive state-of-the-art (SOTA) natural image visual grounding methods on the constructed DIOR-RSVG dataset, and some insightful analyses are provided based on the results. Third, a novel transformer-based multigranularity visual language fusion (MGVLF) module is proposed. Remotely sensed images are usually with large-scale variations and cluttered backgrounds. To deal with the scale-variation problem, the MGVLF module takes advantage of multiscale visual features and multigranularity textual embeddings to learn more discriminative representations. To cope with the cluttered background problem, MGVLF adaptively filters irrelevant noise and enhances salient features. In this way, our proposed model can incorporate more effective multilevel and multimodal features to boost performance. This work can provide useful insights for developing better RSVG models.",
+  "category": "multimodal",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_grounding",
+    "object_localization",
+    "referring_expression_comprehension"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Bounding-box IoU / Precision@IoU-threshold (e.g., P@0.5) and related localization metrics",
+  "general_score_metric": "Precision@0.5 (IoU >= 0.5)",
+  "typical_sota_score": "45–70%",
+  "year_of_publish": 2023,
+  "reputation": "129 citations",
+  "notes": "Non-LLM multimodal benchmark on remote sensing imagery; built from DIOR so subject to class imbalance and large object-scale variation and cluttered backgrounds; evaluation relies on bounding-box overlap (IoU); domain-specific (remote sensing) differences mean natural-image grounding methods may not transfer well.",
+  "creators": {
+    "scientists": [
+      "Yang Zhan",
+      "Zhitong Xiong",
+      "Yuan Yuan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/tgrs.2023.3250471",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

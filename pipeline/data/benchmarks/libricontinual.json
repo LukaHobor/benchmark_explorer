@@ -1,0 +1,38 @@
+{
+  "name": "LibriContinual",
+  "description": "Automatic speech recognition research focuses on training and evaluating on static datasets. Yet, as speech models are increasingly deployed on personal devices, such models encounter user-specific distributional shifts. To simulate this real-world scenario, we introduce LibriContinual, a continual learning benchmark for speaker-specific domain adaptation derived from LibriVox audiobooks, with data corresponding to 118 individual speakers and 6 train splits per speaker of different sizes. Additionally, current speech recognition models and continual learning algorithms are not optimized to be compute-efficient. We adapt a general-purpose training algorithm NetAug for ASR and create a novel Conformer variant called the DisConformer (Disentangled Conformer). This algorithm produces ASR models consisting of a frozen ‘core’ network for general-purpose use and several tunable ‘augment’ networks for speaker-specific tuning. Using such models, we propose a novel compute-efficient continual learning algorithm called DisentangledCL. Our experiments show that the DisConformer models significantly outperform base-lines on general ASR i.e. LibriSpeech (15.58% rel. WER on test-other). On speaker-specific LibriContinual they significantly outper-form trainable-parameter-matched baselines (by 20.65% rel. WER on test) and even match fully finetuned baselines in some settings.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "speech_recognition",
+    "continual_learning",
+    "speaker_adaptation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Word Error Rate (WER) as the primary metric, with relative WER reduction and compute/parameter-efficiency measurements reported",
+  "general_score_metric": "Word Error Rate (WER)",
+  "typical_sota_score": "varies by model and split; WERs typically span single-digit to low double-digit percentages depending on setup",
+  "year_of_publish": 2023,
+  "reputation": "5 citations",
+  "notes": "Derived from LibriVox (per-speaker splits for continual adaptation); relatively small per-speaker data with speaker imbalance. Focuses on compute-efficient continual learning rather than large-scale pretraining; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Anuj Diwan",
+      "Ching-Feng Yeh",
+      "Wei-Ning Hsu",
+      "Paden Tomasello",
+      "Eunsol Choi",
+      "David Harwath"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.1109/icassp49357.2023.10095484",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

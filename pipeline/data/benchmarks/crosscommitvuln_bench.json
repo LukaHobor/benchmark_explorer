@@ -1,0 +1,28 @@
+{
+  "name": "CrossCommitVuln-Bench",
+  "description": "We present CrossCommitVuln-Bench, a curated benchmark of 30 real-world Python vulnerabilities (CVEs) in which the exploitable condition was introduced across multiple commits—each individually benign to per-commit static analysis—but collectively critical. We manually annotate each CVE with its contributing commit chain, a structured rationale for why each commit evades per-commit analysis, and baseline evaluations using Semgrep and Bandit in both per-commit and cumulative scanning modes. Our central finding: the per-commit detection rate (CCDR) is 7% across all 30 vulnerabilities — 93% of chains are invisible to per-commit SAST. Critically, both per-commit detections are qualitatively poor: one occurs on commits framed as security fixes (where developers suppress the alert), and the other detects only the minor hardcoded-key component while completely missing the primary vulnerability (200+ unprotected API endpoints). Even in cumulative mode (full codebase present), the detection rate is only 13%, confirming that snapshot-based SAST tools systematically miss vulnerabilities whose introduction spans multiple commits. The dataset, annotation schema, evaluation scripts, and reproducible baselines are released under open-source licenses to support research on cross-commit vulnerability detection.",
+  "category": "code",
+  "domain": "software vulnerability detection",
+  "task_types": [
+    "classification",
+    "retrieval"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2026,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://doi.org/10.1145/3805760.3814928",
+  "provenance": {
+    "added_by": "scan-2026q2",
+    "added_at": "2026-08-19",
+    "origin": "cynefin@d486fafa9",
+    "gated": false,
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "VinDr-Mammo",
+  "description": "Mammography, or breast X-ray, is the most widely used imaging modality to detect cancer and other breast diseases. Recent studies have shown that deep learning-based computer-assisted detection and diagnosis (CADe or CADx) tools have been developed to support physicians and improve the accuracy of interpreting mammography. However, most published datasets of mammography are either limited on sample size or digitalized from screen-film mammography (SFM), hindering the development of CADe and CADx tools which are developed based on full-field digital mammography (FFDM). To overcome this challenge, we introduce VinDr-Mammo - a new benchmark dataset of FFDM for detecting and diagnosing breast cancer and other diseases in mammography. The dataset consists of 5,000 mammography exams, each of which has four standard views and is double read with disagreement (if any) being resolved by arbitration. It is created for the assessment of Breast Imaging Reporting and Data System (BI-RADS) and density at the breast level. In addition, the dataset also provides the category, location, and BI-RADS assessment of non-benign findings. We make VinDr-Mammo publicly available on PhysioNet as a new imaging resource to promote advances in developing CADe and CADx tools for breast cancer screening.",
+  "category": "vision",
+  "domain": "medical imaging (mammography)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "object_detection",
+    "localization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC / mean Average Precision (mAP)",
+  "general_score_metric": "AUC (for BI-RADS classification) and mAP (for lesion detection)",
+  "typical_sota_score": "0.80–0.95 (AUC)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in medical imaging research as a high-quality FFDM dataset (5,000 exams) used to develop and evaluate CADe/CADx models.",
+  "notes": "Moderate dataset size with class imbalance (low prevalence of malignancy); requires medical-domain expertise to interpret; DICOM images and privacy/usage constraints; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Hieu T. Nguyen",
+      "Ha Q. Nguyen",
+      "Hieu H. Pham",
+      "Khanh Lam",
+      "Linh T. Le",
+      "Minh Dao",
+      "Van Vu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2203.11205",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

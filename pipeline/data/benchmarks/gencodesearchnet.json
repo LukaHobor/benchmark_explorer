@@ -1,0 +1,37 @@
+{
+  "name": "GenCodeSearchNet",
+  "description": "Language models can serve as a valuable tool for software developers to increase productivity. Large generative models can be used for code generation and code completion, while smaller encoder-only models are capable of performing code search tasks using natural language queries.These capabilities are heavily influenced by the quality and diversity of the available training data. Source code datasets used for training usually focus on the most popular languages and testing is mostly conducted on the same distributions, often overlooking low-resource programming languages. Motivated by the NLP generalization taxonomy proposed by Hupkes et.\\,al., we propose a new benchmark dataset called GenCodeSearchNet (GeCS) which builds upon existing natural language code search datasets to systemically evaluate the programming language understanding generalization capabilities of language models. As part of the full dataset, we introduce a new, manually curated subset StatCodeSearch that focuses on R, a popular but so far underrepresented programming language that is often used by researchers outside the field of computer science. For evaluation and comparison, we collect several baseline results using fine-tuned BERT-style models and GPT-style large language models in a zero-shot setting.",
+  "category": "code",
+  "domain": "programming languages / code search",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_search",
+    "retrieval",
+    "cross-lingual_generalization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MRR (Mean Reciprocal Rank) and Recall@k (R@1, R@5, R@10)",
+  "general_score_metric": "MRR",
+  "year_of_publish": 2023,
+  "reputation": "Recognized research dataset for evaluating code-search generalization, especially for underrepresented languages (moderate adoption in academic code-search work).",
+  "notes": "Contains language imbalance (low-resource languages like R in small curated subsets); potential contamination with public code repositories; benchmark focuses on retrieval rather than generation correctness.",
+  "creators": {
+    "scientists": [
+      "Andor Diera",
+      "Abdelhalim Dahou",
+      "Lukas Galke",
+      "Fabian Karl",
+      "Florian Sihler",
+      "Ansgar Scherp"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2311.09707",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "UrbanSARFloods",
+  "description": "Due to its cloud-penetrating capability and independence from solar illumination, satellite Synthetic Aperture Radar (SAR) is the preferred data source for large-scale flood mapping, providing global coverage and including various land cover classes. However, most studies on large-scale SAR-derived flood mapping using deep learning algorithms have primarily focused on flooded open areas, utilizing available open-access datasets (e.g., Sen1Floods11) and with limited attention to urban floods. To address this gap, we introduce UrbanSARFloods, a floodwater dataset featuring pre-processed Sentinel-1 intensity data and interferometric coherence imagery acquired before and during flood events. It contains 8,879 512×512 chips covering 807,500 km2 across 20 land cover classes and 5 continents, spanning 18 flood events. We used UrbanSARFloods to benchmark existing state-of-the-art convolutional neural networks (CNNs) for segmenting open and urban flood areas. Our findings indicate that prevalent approaches, including the Weighted Cross-Entropy (WCE) loss and the application of transfer learning with pretrained models, fall short in overcoming the obstacles posed by imbalanced data and the constraints of a small training dataset. Urban flood detection remains challenging. Future research should explore strategies for addressing imbalanced data challenges and investigate transfer learning’s potential for SAR-based large-scale flood mapping. Besides, expanding this dataset to include additional flood events holds promise for enhancing its utility and contributing to advancements in flood mapping techniques. The UrbanSARFloods dataset, including training, validation data, and raw data, can be found at https://github.com/jie666-6/UrbanSARFloods.",
+  "category": "vision",
+  "domain": "geospatial / flood mapping",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "binary_segmentation",
+    "flood_mapping",
+    "change_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean IoU (mIoU) and F1 / Dice coefficient (often reported together); IoU for water class and overall mIoU",
+  "general_score_metric": "mean IoU (mIoU)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "21 citations",
+  "notes": "Non-LLM remote-sensing benchmark using SAR data. Challenges include severe class imbalance (urban flood vs. background), relatively small labeled training set for deep learning, SAR-specific preprocessing considerations, and potential geographic/domain shifts across events.",
+  "creators": {
+    "scientists": [
+      "Jie Zhao",
+      "Zhitong Xiong",
+      "Xiao Xiang Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.04111",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

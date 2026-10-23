@@ -1,0 +1,38 @@
+{
+  "name": "PhenoCam Phenology Dataset",
+  "description": "Vegetation phenology controls the seasonality of many ecosystem processes, as well as numerous biosphere-atmosphere feedbacks. Phenology is also highly sensitive to climate change and variability. Here we present a series of datasets, together consisting of almost 750 years of observations, characterizing vegetation phenology in diverse ecosystems across North America. Our data are derived from conventional, visible-wavelength, automated digital camera imagery collected through the PhenoCam network. For each archived image, we extracted RGB (red, green, blue) colour channel information, with means and other statistics calculated across a region-of-interest (ROI) delineating a specific vegetation type. From the high-frequency (typically, 30 min) imagery, we derived time series characterizing vegetation colour, including \"canopy greenness\", processed to 1- and 3-day intervals. For ecosystems with one or more annual cycles of vegetation activity, we provide estimates, with uncertainties, for the start of the \"greenness rising\" and end of the \"greenness falling\" stages. The database can be used for phenological model validation and development, evaluation of satellite remote sensing data products, benchmarking earth system models, and studies of climate change impacts on terrestrial ecosystems.",
+  "category": "vision",
+  "domain": "earth sciences / ecology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_regression",
+    "phenological_event_detection",
+    "change_point_detection",
+    "image_time_series_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE / RMSE for phenological date estimates (days), correlation metrics for time-series agreement, and F1 for event detection",
+  "general_score_metric": "MAE (days) for phenological date estimates",
+  "year_of_publish": 2018,
+  "reputation": "526 citations",
+  "notes": "Camera/site-specific biases and variable sampling frequency; ROI definitions and camera view changes can confound models; dataset is observational (non-LLM) and spatially/temporally heterogeneous — not a saturated benchmark.",
+  "creators": {
+    "scientists": [
+      "Andrew D. Richardson",
+      "Koen Hufkens",
+      "Tom Milliman",
+      "Donald M. Aubrecht",
+      "Min Chen",
+      "Josh Gray"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1038/sdata.2018.28",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

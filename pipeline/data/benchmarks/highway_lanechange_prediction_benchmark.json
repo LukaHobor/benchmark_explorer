@@ -1,0 +1,34 @@
+{
+  "name": "Highway lane-change prediction benchmark",
+  "description": "Understanding and predicting highway lane-change maneuvers is essential for driving modeling and its automation. The development of data-based lane-changing decision-making algorithms is nowadays in full expansion. We compare empirically in this article different machine and ensemble learning classification techniques to the MOBIL rule-based model using trajectory data of European two-lane highways. The analysis relies on instantaneous measurements of up to twenty-four spatial-temporal variables with the four neighboring vehicles on current and adjacent lanes. Preliminary descriptive investigations by principal component and logistic analyses allow identifying main variables intending a driver to change lanes. We predict two types of discretionary lane-change maneuvers: overtaking (from the slow to the fast lane) and fold-down (from the fast to the slow lane). The prediction accuracy is quantified using total, lane-changing and lane-keeping errors and associated receiver operating characteristic curves. The benchmark analysis includes logistic model, linear discriminant, decision tree, na\\\"ive Bayes classifier, support vector machine, neural network machine learning algorithms, and up to ten bagging and stacking ensemble learning meta-heuristics. If the rule-based model provides limited predicting accuracy, the data-based algorithms, devoid of modeling bias, allow significant prediction improvements. Cross validations show that selected neural networks and stacking algorithms allow predicting from a single observation both fold-down and overtaking maneuvers up to four seconds in advance with high accuracy.",
+  "category": "mixed",
+  "domain": "autonomous driving / traffic modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "time_series_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy and ROC AUC (also reporting lane-changing vs. lane-keeping error rates and related confusion metrics)",
+  "general_score_metric": "accuracy (with ROC AUC and per-class error rates commonly reported)",
+  "typical_sota_score": "75–95% (accuracy, depending on prediction horizon and model)",
+  "year_of_publish": 2022,
+  "reputation": "A well-cited dataset/benchmark in the lane-change prediction and traffic modelling literature, used to compare classical ML and ensemble methods with rule-based models.",
+  "notes": "Derived from European two-lane highway trajectories; may suffer from class imbalance (fewer lane-change events), scenario specificity (geography/road type), and limited diversity compared to large-scale driving datasets. Non-LLM benchmark focused on classical supervised/time-series methods.",
+  "creators": {
+    "scientists": [
+      "Basma Khelfa",
+      "Ibrahima Ba",
+      "Antoine Tordeux"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2204.10807",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

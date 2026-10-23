@@ -1,0 +1,36 @@
+{
+  "name": "ADaPTION",
+  "description": "Deep Neural Networks (DNNs) and Convolutional Neural Networks (CNNs) are\nuseful for many practical tasks in machine learning. Synaptic weights, as well\nas neuron activation functions within the deep network are typically stored\nwith high-precision formats, e.g. 32 bit floating point. However, since storage\ncapacity is limited and each memory access consumes power, both storage\ncapacity and memory access are two crucial factors in these networks. Here we\npresent a method and present the ADaPTION toolbox to extend the popular deep\nlearning library Caffe to support training of deep CNNs with reduced numerical\nprecision of weights and activations using fixed point notation. ADaPTION\nincludes tools to measure the dynamic range of weights and activations. Using\nthe ADaPTION tools, we quantized several CNNs including VGG16 down to 16-bit\nweights and activations with only 0.8% drop in Top-1 accuracy. The\nquantization, especially of the activations, leads to increase of up to 50% of\nsparsity especially in early and intermediate layers, which we exploit to skip\nmultiplications with zero, thus performing faster and computationally cheaper\ninference.",
+  "category": "vision",
+  "domain": "vision / deep learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "model_quantization",
+    "performance_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Top-1 accuracy",
+  "general_score_metric": "Top-1 accuracy",
+  "year_of_publish": 2017,
+  "reputation": "A well-cited early toolbox/paper for fixed-point quantization in Caffe; influential for practitioners working on quantization but less central in modern PyTorch/TensorFlow workflows.",
+  "notes": "Non-LLM benchmark/toolbox focused on fixed-point quantization for CNNs in Caffe; results are model- and dataset-specific, and the codebase/patterns may be dated compared to current frameworks. Reported improvements relate to 16-bit quantization and sparsity increases; risk of obsolescence and limited cross-framework reproducibility.",
+  "creators": {
+    "scientists": [
+      "Moritz B. Milde",
+      "Daniel Neil",
+      "Alessandro Aimar",
+      "Tobi Delbruck",
+      "Giacomo Indiveri"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1711.04713",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "UHDRR (UHDRR4K & UHDRR8K)",
+  "description": "Deep learning based methods have achieved significant success in the task of single image reflection removal (SIRR). However, the majority of these methods are focused on High-Definition/Standard-Definition (HD/SD) images, while ignoring higher resolution images such as Ultra-High-Definition (UHD) images. With the increasing prevalence of UHD images captured by modern devices, in this paper, we aim to address the problem of UHD SIRR. Specifically, we first synthesize two large-scale UHD datasets, UHDRR4K and UHDRR8K. The UHDRR4K dataset consists of $2,999$ and $168$ quadruplets of images for training and testing respectively, and the UHDRR8K dataset contains $1,014$ and $105$ quadruplets. To the best of our knowledge, these two datasets are the first largest-scale UHD datasets for SIRR. Then, we conduct a comprehensive evaluation of six state-of-the-art SIRR methods using the proposed datasets. Based on the results, we provide detailed discussions regarding the strengths and limitations of these methods when applied to UHD images. Finally, we present a transformer-based architecture named RRFormer for reflection removal. RRFormer comprises three modules, namely the Prepossessing Embedding Module, Self-attention Feature Extraction Module, and Multi-scale Spatial Feature Extraction Module. These modules extract hypercolumn features, global and partial attention features, and multi-scale spatial features, respectively. To ensure effective training, we utilize three terms in our loss function: pixel loss, feature loss, and adversarial loss. We demonstrate through experimental results that RRFormer achieves state-of-the-art performance on both the non-UHD dataset and our proposed UHDRR datasets. The code and datasets are publicly available at https://github.com/Liar-zzy/Benchmarking-Ultra-High-Definition-Single-Image-Reflection-Removal.",
+  "category": "vision",
+  "domain": "computer vision / image processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_translation",
+    "image_restoration",
+    "reflection_removal"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "PSNR and SSIM (pixel- and perceptual-level quality metrics)",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "~30–40 dB (PSNR) on reported test sets for top methods",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "A recent (2023) benchmark/dataset for ultra-high-definition single-image reflection removal that has drawn interest for evaluating high-resolution restoration methods but has limited adoption outside the subfield.",
+  "notes": "Datasets are synthetically generated UHD quadruplets with relatively small test splits (168 and 105 images); potential domain gap to real-world reflections; high computational cost for training/evaluation due to UHD resolution; not intended for LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Zhenyuan Zhang",
+      "Zhenbo Song",
+      "Kaihao Zhang",
+      "Zhaoxin Fan",
+      "Jianfeng Lu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.00265",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

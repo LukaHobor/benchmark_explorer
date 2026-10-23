@@ -1,0 +1,34 @@
+{
+  "name": "WildDash",
+  "description": "Test datasets should contain many different challenging aspects so that the robustness and real-world applicability of algorithms can be assessed. In this work, we present a new test dataset for semantic and instance segmentation for the automotive domain. We have conducted a thorough risk analysis to identify situations and aspects that can reduce the output performance for these tasks. Based on this analysis we have designed our new dataset. Meta-information is supplied to mark which individual visual hazards are present in each test case. Furthermore, a new benchmark evaluation method is presented that uses the meta-information to calculate the robustness of a given algorithm with respect to the individual hazards. We show how this new approach allows for a more expressive characterization of algorithm robustness by comparing three baseline algorithms.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_IoU (mIoU) and instance-level metrics (e.g., PQ); includes robustness-weighted evaluation",
+  "general_score_metric": "mean Intersection over Union (mIoU) / robustness-weighted score",
+  "typical_sota_score": "60–75%",
+  "reputation": "Respected robustness-focused benchmark in the autonomous-driving vision community for testing segmentation under diverse visual hazards.",
+  "notes": "Non-LLM computer vision benchmark; relatively small but hazard-rich test set; includes meta-information for per-case hazards which enables robustness analyses; potential domain-shift compared with other driving datasets.",
+  "creators": {
+    "scientists": [
+      "Oliver Zendel",
+      "Katrin Honauer",
+      "Markus Murschitz",
+      "Daniel Steininger",
+      "Gustavo Fernandez Dominguez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

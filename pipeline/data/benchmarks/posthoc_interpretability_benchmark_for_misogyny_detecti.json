@@ -1,0 +1,35 @@
+{
+  "name": "Post-hoc Interpretability Benchmark for Misogyny Detection",
+  "description": "Transformer-based Natural Language Processing models have become the standard for hate speech detection. However, the unconscious use of these techniques for such a critical task comes with negative consequences. Various works have demonstrated that hate speech classifiers are biased. These findings have prompted efforts to explain classifiers, mainly using attribution methods. In this paper, we provide the first benchmark study of interpretability approaches for hate speech detection. We cover four post-hoc token attribution approaches to explain the predictions of Transformer-based misogyny classifiers in English and Italian. Further, we compare generated attributions to attention analysis. We find that only two algorithms provide faithful explanations aligned with human expectations. Gradient-based methods and attention, however, show inconsistent outputs, making their value for explanations questionable for hate speech detection tasks.",
+  "category": "text",
+  "domain": "hate speech / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "post-hoc_explanation",
+    "token_attribution"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval / attribution-faithfulness metrics (e.g., human agreement, AOPC-type faithfulness)",
+  "general_score_metric": "faithfulness_score (human alignment / attribution faithfulness)",
+  "year_of_publish": 2022,
+  "reputation": "Research-focused benchmark with limited but growing citation in interpretability and hate-speech analysis; not broadly adopted as a community standard.",
+  "notes": "Small, task-specific dataset (English and Italian); explanations are subjective and require human annotations; not an LLM benchmark per se; results sensitive to evaluation choice (faithfulness vs. plausibility).",
+  "creators": {
+    "scientists": [
+      "Giuseppe Attanasio",
+      "Debora Nozza",
+      "Eliana Pastor",
+      "Dirk Hovy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

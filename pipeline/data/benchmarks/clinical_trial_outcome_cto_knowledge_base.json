@@ -1,0 +1,36 @@
+{
+  "name": "Clinical Trial Outcome (CTO) knowledge base",
+  "description": "Background: The global cost of drug discovery and development exceeds $200 billion annually, with clinical trial outcomes playing a critical role in the regulatory approval of new drugs and impacting patient outcomes. Despite their significance, large-scale, high-quality clinical trial outcome data are not readily available to the public, limiting advances in trial outcome predictive modeling. Methods: We introduce the Clinical Trial Outcome (CTO) knowledge base, a fully reproducible, large-scale (around 125K drug and biologics trials), open-source of clinical trial information including large language model (LLM) interpretations of publications, matched trials over phases, sentiment analysis from news, stock prices of trial sponsors, and other trial-related metrics. From this knowledge base, we additionally performed manual annotation of a set of recent clinical trials from 2020-2024. Results: We evaluated the quality of our knowledge base by generating high-quality trial outcome labels that demonstrate strong agreement with previously published expert annotations, achieving an F1 score of 94 for Phase 3 trials and 91 across all phases. Additionally, we benchmarked a suite of standard machine learning models on our manually annotated set, highlighting the distribution shift of recent trials and the need for continuously updated labeling methods. Conclusions: By analyzing CTO's performance on recent trials, we showed a need for recent, high-quality trial outcome labels. We release our knowledge base and labels to the public at https://chufangao.github.io/CTOD, which will also be regularly updated to support ongoing research in clinical trial outcomes, offering insights that could optimize the drug development process.",
+  "category": "text",
+  "domain": "medical / clinical trials",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "text_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "91–94%",
+  "year_of_publish": 2024,
+  "reputation": "A recent, open-source large-scale clinical trial outcome knowledge base that is gaining attention for research in trial outcome prediction and analysis but is not yet an established community standard.",
+  "notes": "Caveats include potential label contamination, distribution shift for recent trials, reliance on manually annotated subsets for evaluation, and the dataset being a knowledge-base resource (not a standard LLM benchmark); requires ongoing updates to remain current.",
+  "creators": {
+    "scientists": [
+      "Chufan Gao",
+      "Jathurshan Pradeepkumar",
+      "Trisha Das",
+      "Shivashankar Thati",
+      "Jimeng Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.10292",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

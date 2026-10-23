@@ -1,0 +1,36 @@
+{
+  "name": "Cross-source Cross-language Toponym Matching Benchmark",
+  "description": "The writings of one ancient civilization often overlap in time and space with others. Many of these sources comprise unstructured text in ancient languages, causing scholars studying these civilizations to be siloed, often relying on sources in specific languages. Most recent efforts to extract structured information from historical scripts into place (toponym) and people databases (prospographies) have followed this pattern, focusing on one civilization and selected sources. The path to creating a common database runs through aligning names or toponyms between sources from disparate languages utilizing different scripts. Existing multi-lingual orthographic (string-based) comparison often relies on transliteration to a common script (Latin/English). Transliteration often creates multiple options and even more confusion. However, when integrating sources that overlap in space and time, the languages often share a common phonetic background. This commonality may prove beneficial. In this work, we present a benchmark for comparing toponyms from two linguistically and culturally related languages, namely Hebrew and Arabic. We provide a benchmark comprised of a set of dataset pairs created from historical sources written in Medieval variants of these languages, later historical Gazetteers and a modern dataset curated from Wikidata. We empirically evaluate several toponym comparison approaches over the benchmark: transliteration to a common script, direct transliteration, and phonetic comparison using a common phonetic representation. We discuss the results and the limitations of the various methods and outline future work.",
+  "category": "text",
+  "domain": "linguistics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "entity_linking",
+    "string_matching",
+    "record_linkage"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision / recall / F1 (entity matching metrics)",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Domain-specific and multilingual (Hebrew/Arabic) benchmark with limited size; sensitive to transliteration choices and orthographic variation. Not an LLM-native benchmark; results can be highly dependent on preprocessing (transliteration/phonetic encoding) and may not generalize beyond the languages and historical variants included.",
+  "creators": {
+    "scientists": [
+      "Tomer Sagi",
+      "Moran Zaga",
+      "Sinai Rusinek",
+      "Marcell Richard Fekete",
+      "Johannes Bjerva",
+      "Katja Hose"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

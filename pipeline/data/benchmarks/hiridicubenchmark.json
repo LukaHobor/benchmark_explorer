@@ -1,0 +1,42 @@
+{
+  "name": "HiRID-ICU-Benchmark",
+  "description": "The recent success of machine learning methods applied to time series collected from Intensive Care Units (ICU) exposes the lack of standardized machine learning benchmarks for developing and comparing such methods. While raw datasets, such as MIMIC-IV or eICU, can be freely accessed on Physionet, the choice of tasks and pre-processing is often chosen ad-hoc for each publication, limiting comparability across publications. In this work, we aim to improve this situation by providing a benchmark covering a large spectrum of ICU-related tasks. Using the HiRID dataset, we define multiple clinically relevant tasks in collaboration with clinicians. In addition, we provide a reproducible end-to-end pipeline to construct both data and labels. Finally, we provide an in-depth analysis of current state-of-the-art sequence modeling methods, highlighting some limitations of deep learning approaches for this type of data. With this benchmark, we hope to give the research community the possibility of a fair comparison of their work.",
+  "category": "mixed",
+  "domain": "medical / clinical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "binary_classification",
+    "multi_label_classification",
+    "sequence_prediction",
+    "survival_prediction",
+    "imputation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC and AUPRC for classification tasks; MAE/MSE for regression/forecasting; calibration/Brier score and time-to-event metrics for survival tasks",
+  "general_score_metric": "AUROC (with AUPRC reported for imbalanced tasks)",
+  "typical_sota_score": "0.75–0.95 AUROC (highly task- and label-dependent)",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded within clinical time-series ML for providing a standardized, clinician-informed suite of ICU tasks and a reproducible preprocessing pipeline; moderate adoption in clinical ML research.",
+  "notes": "Non-LLM benchmark; derived from a single hospital’s HiRID data—risk of distribution shift/generalization issues; preprocessing choices and label construction can cause leakage if not followed exactly; class imbalance common across tasks.",
+  "creators": {
+    "scientists": [
+      "Hugo Yèche",
+      "Rita Kuznetsova",
+      "Marc Zimmermann",
+      "Matthias Hüser",
+      "Xinrui Lyu",
+      "Martin Faltys",
+      "Gunnar Rätsch"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2111.08536",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

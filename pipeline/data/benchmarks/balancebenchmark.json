@@ -1,0 +1,39 @@
+{
+  "name": "BalanceBenchmark",
+  "description": "Multimodal learning has gained attention for its capacity to integrate information from different modalities. However, it is often hindered by the multimodal imbalance problem, where certain modality dominates while others remain underutilized. Although recent studies have proposed various methods to alleviate this problem, they lack comprehensive and fair comparisons. In this paper, we systematically categorize various mainstream multimodal imbalance algorithms into four groups based on the strategies they employ to mitigate imbalance. To facilitate a comprehensive evaluation of these methods, we introduce BalanceBenchmark, a benchmark including multiple widely used multidimensional datasets and evaluation metrics from three perspectives: performance, imbalance degree, and complexity. To ensure fair comparisons, we have developed a modular and extensible toolkit that standardizes the experimental workflow across different methods. Based on the experiments using BalanceBenchmark, we have identified several key insights into the characteristics and advantages of different method groups in terms of performance, balance degree and computational complexity. We expect such analysis could inspire more efficient approaches to address the imbalance problem in the future, as well as foundation models. The code of the toolkit is available at https://github.com/GeWu-Lab/BalanceBenchmark.",
+  "category": "multimodal",
+  "domain": "multimodal machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "multilabel_classification",
+    "benchmark_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy / F1 / imbalance-specific metrics (e.g., imbalance ratio, G-mean) and complexity/performance trade-off measures",
+  "general_score_metric": "accuracy and imbalance-degree metrics (composite score combining performance and balance degree)",
+  "typical_sota_score": "varies substantially by dataset (no single SOTA; accuracy commonly ranges ~60–95% across included datasets)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Recently proposed benchmark and toolkit (arXiv 2502.10816) for systematic comparison of multimodal imbalance methods; useful for researchers but adoption is still emerging.",
+  "notes": "Aggregate benchmark spanning multiple datasets and metrics — results are dataset-dependent. Toolkit standardizes experiments but comparisons can be sensitive to dataset choice and preprocessing; not an LLM-only benchmark.",
+  "creators": {
+    "scientists": [
+      "Shaoxuan Xu",
+      "Menglu Cui",
+      "Chengxiang Huang",
+      "Hongfa Wang",
+      "DiHu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2502.10816",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

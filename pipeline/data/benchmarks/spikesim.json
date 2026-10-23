@@ -1,0 +1,37 @@
+{
+  "name": "SpikeSim",
+  "description": "SNNs are an active research domain towards energy efficient machine intelligence. Compared to conventional ANNs, SNNs use temporal spike data and bio-plausible neuronal activation functions such as Leaky-Integrate Fire/Integrate Fire (LIF/IF) for data processing. However, SNNs incur significant dot-product operations causing high memory and computation overhead in standard von-Neumann computing platforms. Today, In-Memory Computing (IMC) architectures have been proposed to alleviate the \"memory-wall bottleneck\" prevalent in von-Neumann architectures. Although recent works have proposed IMC-based SNN hardware accelerators, the following have been overlooked- 1) the adverse effects of crossbar non-ideality on SNN performance due to repeated analog dot-product operations over multiple time-steps, 2) hardware overheads of essential SNN-specific components such as the LIF/IF and data communication modules. To this end, we propose SpikeSim, a tool that can perform realistic performance, energy, latency and area evaluation of IMC-mapped SNNs. SpikeSim consists of a practical monolithic IMC architecture called SpikeFlow for mapping SNNs. Additionally, the non-ideality computation engine (NICE) and energy-latency-area (ELA) engine performs hardware-realistic evaluation of SpikeFlow-mapped SNNs. Based on 65nm CMOS implementation and experiments on CIFAR10, CIFAR100 and TinyImagenet datasets, we find that the LIF/IF neuronal module has significant area contribution (>11% of the total hardware area). We propose SNN topological modifications leading to 1.24x and 10x reduction in the neuronal module's area and the overall energy-delay-product value, respectively. Furthermore, in this work, we perform a holistic comparison between IMC implemented ANN and SNNs and conclude that lower number of time-steps are the key to achieve higher throughput and energy-efficiency for SNNs compared to 4-bit ANNs.",
+  "category": "mixed",
+  "domain": "neuromorphic computing / hardware",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "hardware_simulation",
+    "energy_latency_area_analysis",
+    "throughput_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "energy-delay-product (EDP), throughput, area, latency and classification accuracy",
+  "general_score_metric": "energy-delay-product (EDP) and classification accuracy",
+  "year_of_publish": 2022,
+  "reputation": "A specialized research tool (arXiv 2022) used in neuromorphic/IMC hardware evaluation with limited but growing use in hardware research.",
+  "notes": "Non-LLM, simulation-based hardware evaluation tool; results depend on IMC non-idealities and implementation assumptions. Not a standard ML dataset — focused on hardware metrics (area/energy/latency) and SNN accuracy comparisons.",
+  "creators": {
+    "scientists": [
+      "Abhishek Moitra",
+      "Abhiroop Bhattacharjee",
+      "Runcong Kuang",
+      "Gokul Krishnan",
+      "Yu Cao",
+      "Priyadarshini Panda"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2210.12899",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

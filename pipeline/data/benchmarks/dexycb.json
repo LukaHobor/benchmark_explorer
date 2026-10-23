@@ -1,0 +1,40 @@
+{
+  "name": "DexYCB",
+  "description": "We introduce DexYCB, a new dataset for capturing hand grasping of objects. We first compare DexYCB with a related one through cross-dataset evaluation. We then present a thorough benchmark of state-of-the-art approaches on three relevant tasks: 2D object and keypoint detection, 6D object pose estimation, and 3D hand pose estimation. Finally, we evaluate a new robotics-relevant task: generating safe robot grasps in human-to-robot object handover. <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup>",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "keypoint_detection",
+    "6d_pose_estimation",
+    "3d_hand_pose_estimation",
+    "grasp_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (detection), ADD / pose error (6D pose), MPJPE (3D hand pose), and task success rate for grasp generation",
+  "general_score_metric": "task-specific metrics (mAP, ADD/pose error, MPJPE, grasp success rate)",
+  "typical_sota_score": "varies by task; e.g., detection mAP ~60–90%, 6D pose often reported as ADD <50 mm, MPJPE ~10–30 mm",
+  "year_of_publish": 2021,
+  "reputation": "230 citations",
+  "notes": "Non-LLM, multi-task vision/robotics benchmark; moderate dataset size; robotics relevance (human-to-robot handover). Results sensitive to sensor calibration, occlusion and domain shift; not saturated.",
+  "creators": {
+    "scientists": [
+      "Yu-Wei Chao",
+      "Wei Yang",
+      "Xiang Yu",
+      "Pavlo Molchanov",
+      "Ankur Handa",
+      "Jonathan Tremblay"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvpr46437.2021.00893",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

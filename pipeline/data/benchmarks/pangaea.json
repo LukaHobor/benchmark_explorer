@@ -1,0 +1,48 @@
+{
+  "name": "PANGAEA",
+  "description": "Geospatial Foundation Models (GFMs) have emerged as powerful tools for extracting representations from Earth observation data, but their evaluation remains inconsistent and narrow. Existing works often evaluate on suboptimal downstream datasets and tasks, that are often too easy or too narrow, limiting the usefulness of the evaluations to assess the real-world applicability of GFMs. Additionally, there is a distinct lack of diversity in current evaluation protocols, which fail to account for the multiplicity of image resolutions, sensor types, and temporalities, which further complicates the assessment of GFM performance. In particular, most existing benchmarks are geographically biased towards North America and Europe, questioning the global applicability of GFMs. To overcome these challenges, we introduce PANGAEA, a standardized evaluation protocol that covers a diverse set of datasets, tasks, resolutions, sensor modalities, and temporalities. It establishes a robust and widely applicable benchmark for GFMs. We evaluate the most popular GFMs openly available on this benchmark and analyze their performance across several domains. In particular, we compare these models to supervised baselines (e.g. UNet and vanilla ViT), and assess their effectiveness when faced with limited labeled data. Our findings highlight the limitations of GFMs, under different scenarios, showing that they do not consistently outperform supervised models. PANGAEA is designed to be highly extensible, allowing for the seamless inclusion of new datasets, models, and tasks in future research. By releasing the evaluation code and benchmark, we aim to enable other researchers to replicate our experiments and build upon our work, fostering a more principled evaluation protocol for large pre-trained geospatial models. The code is available at https://github.com/VMarsocci/pangaea-bench.",
+  "category": "multimodal",
+  "domain": "geospatial / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "classification",
+    "object_detection",
+    "change_detection",
+    "few_shot_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (mIoU for segmentation, accuracy for classification, mAP for detection; F1/precision/recall where applicable)",
+  "general_score_metric": "task-specific primary metrics (mIoU for segmentation; accuracy for classification; mAP for detection)",
+  "year_of_publish": 2024,
+  "reputation": "New, emerging benchmark for geospatial foundation models with growing interest in the remote‑sensing community but not yet widely adopted.",
+  "notes": "Multimodal, non-LLM benchmark spanning many tasks and resolutions; risk of pretraining/benchmark contamination for models pretrained on similar satellite imagery; geographically diverse but historical geographic biases in remote-sensing datasets remain relevant; designed to be extensible so scores may shift as more datasets are added.",
+  "creators": {
+    "scientists": [
+      "Valerio Marsocci",
+      "Yuru Jia",
+      "Georges Le Bellier",
+      "David Kerekes",
+      "Liang Zeng",
+      "Sebastian Hafner",
+      "Sebastian Gerard",
+      "Eric Brune",
+      "Ritu Yadav",
+      "Ali Shibli",
+      "Heng Fang",
+      "Yifang Ban",
+      "Maarten Vergauwen",
+      "Nicolas Audebert",
+      "Andrea Nascetti"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.04204",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

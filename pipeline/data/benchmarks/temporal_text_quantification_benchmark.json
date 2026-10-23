@@ -1,0 +1,30 @@
+{
+  "name": "Temporal Text Quantification Benchmark",
+  "description": "Text quantification is a supervised learning task estimating the relative frequency of each class for a collection of uncategorized text documents. Quantification learning has an increasing number of applications in practice and presents unique challenges that are often overlooked in classification problems, such as dealing with distribution shift. Many studies on quantification use artificially re-sampled test sets to evaluate models under varying target label distributions. Despite being a convenient solution, label-based biased sampling changes the underlying test data distribution and makes it hard to rely on the results to deploy models in practice. This paper introduces a text quantification benchmark consisting of 8 datasets across sentiment analysis, document categorization, and toxicity classification. We compare popular quantification baselines on the benchmark and show that there is no model consistently outperforming others. Therefore, we believe the benchmark should enable new community research to tackle text quantification under temporal distribution shift and develop reliable models in real-world applications.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "quantification",
+    "classification",
+    "distribution_shift_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_absolute_error (MAE) / Kullback-Leibler divergence (KLD)",
+  "general_score_metric": "MAE",
+  "reputation": "Niche benchmark in the quantification research community focused on realistic temporal distribution shift; useful but not yet widely adopted.",
+  "notes": "Small collection (8 datasets); explicitly measures temporal distribution shift using real time splits (no artificially re-sampled test sets); non-LLM benchmark; no consistent single SOTA across tasks.",
+  "creators": {
+    "scientists": [
+      "Anonymous"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "RASPNet",
+  "description": "We present a large-scale dataset for radar adaptive signal processing (RASP) applications to support the development of data-driven models within the adaptive radar community. The dataset, RASPNet, exceeds 16 TB in size and comprises 100 realistic scenarios compiled over a variety of topographies and land types from across the contiguous United States. For each scenario, RASPNet consists of 10,000 clutter realizations from an airborne radar setting, which can be used to benchmark radar and complex-valued learning algorithms. RASPNet intends to fill a prominent gap in the availability of a large-scale, realistic dataset that standardizes the evaluation of adaptive radar processing techniques and complex-valued neural networks. We outline its construction, organization, and several applications, including a transfer learning example to demonstrate how RASPNet can be used for realistic adaptive radar processing scenarios.",
+  "category": "audio",
+  "domain": "radar / signal processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "detection",
+    "clutter_suppression",
+    "regression",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-dependent (detection: AUC/precision-recall/accuracy; regression: MSE; adaptive-processing metrics such as SNR/improvement)",
+  "general_score_metric": "task-dependent (AUC for detection tasks; MSE for regression; SNR improvement for adaptive processing tasks)",
+  "year_of_publish": 2024,
+  "reputation": "A large, domain-specific radar dataset aimed at the adaptive radar and signal-processing community; likely to be valuable but niche due to size and domain specialization.",
+  "notes": "Very large (≈16 TB) and domain-specific — heavy storage and compute requirements; non-LLM benchmark; supports multiple tasks so metrics vary by task; likely limited contamination risk but may require specialized preprocessing and tooling.",
+  "creators": {
+    "scientists": [
+      "Shyam Venkatasubramanian",
+      "Bosung Kang",
+      "Ali Pezeshki",
+      "Muralidhar Rangaswamy",
+      "Vahid Tarokh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.09638",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

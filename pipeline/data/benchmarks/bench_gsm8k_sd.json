@@ -1,0 +1,39 @@
+{
+  "name": "bench_gsm8k-sd",
+  "description": "Evaluate using GPT4.1\nfrom collections import defaultdict\n\nscore_keys = [\n    \"accuracy_score\",\n    \"reasoning_score\",\n    \"clarity_score\",\n    \"completeness_score\",\n    \"math_soundness_score\",\n    \"overall_assessment\"\n]\n\nscore_sums = {\n    \"eval_1\": defaultdict(float),\n    \"eval_2\": defaultdict(float)\n}\n\nnum_samples = len(ds)\n\nfor example in ds:\n    for eval_name in [\"eval_1\", \"eval_2\"]:\n        eval_scores = example.get(eval_name, {})\n        for key in score_keys:… See the full description on the dataset page: https://huggingface.co/datasets/beyoru/bench_gsm8k-sd.",
+  "category": "text",
+  "domain": "math",
+  "tags": [
+    "size_categories:n<1K",
+    "modality:tabular",
+    "modality:text"
+  ],
+  "task_types": [
+    "open_ended",
+    "numeric_answer"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval (multi-criteria: accuracy_score, reasoning_score, clarity_score, completeness_score, math_soundness_score) with accuracy for final-answer correctness",
+  "general_score_metric": "accuracy_score (human-evaluated); supplementary multi-criteria scores reported",
+  "typical_sota_score": "≈90–98% (varies by model, prompting, and chain-of-thought usage)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Derivative/human-eval variant of the well-known GSM8K benchmark hosted on Hugging Face; niche usage compared to the original GSM8K but useful for qualitative multi-criteria evaluation.",
+  "downloads": 6,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "beyoru"
+    ]
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://huggingface.co/datasets/beyoru/bench_gsm8k-sd",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "GazeSeg",
+  "description": "Following the gaze of other people and analyzing the target they are looking at can help us understand what they are thinking, and doing, and predict the actions that may follow. Existing methods for gaze following struggle to perform well in natural scenes with diverse objects, and focus on gaze points rather than objects, making it difficult to deliver clear semantics and accurate scope of the targets. To address this shortcoming, we propose a novel gaze target prediction solution named GazeSeg, that can fully utilize the spatial visual field of the person as guiding information and lead to a progressively coarse-to-fine gaze target segmentation and recognition process. Specifically, a prompt-based visual foundation model serves as the encoder, working in conjunction with three distinct decoding modules (e.g. FoV perception, heatmap generation, and segmentation) to form the framework for gaze target prediction. Then, with the head bounding box performed as an initial prompt, GazeSeg obtains the FoV map, heatmap, and segmentation map progressively, leading to a unified framework for multiple tasks (e.g. direction estimation, gaze target segmentation, and recognition). In particular, to facilitate this research, we construct and release a new dataset, comprising 72k images with pixel-level annotations and 270 categories of gaze targets, built upon the GazeFollow dataset. The quantitative evaluation shows that our approach achieves the Dice of 0.325 in gaze target segmentation and 71.7% top-5 recognition. Meanwhile, our approach also outperforms previous state-of-the-art methods, achieving 0.953 in AUC on the gaze-following task. The dataset and code will be released.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "gaze_target_segmentation",
+    "gaze_following",
+    "direction_estimation",
+    "gaze_target_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice / AUC / top-k accuracy",
+  "general_score_metric": "Dice (segmentation) — primary reported metric",
+  "typical_sota_score": "Dice: 0.325; AUC (gaze-following): 0.953; Top-5 recognition: 71.7%",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) dataset built on GazeFollow; promising for gaze-target segmentation research but not yet widely adopted.",
+  "notes": "Large-scale (72k) pixel-annotated dataset with 270 categories; non-LLM benchmark. Potential class imbalance across categories; built on GazeFollow annotations, which may carry original dataset biases.",
+  "creators": {
+    "scientists": [
+      "Feiyang Liu",
+      "Dan Guo",
+      "Jingyuan Xu",
+      "Zihao He",
+      "Shengeng Tang",
+      "Kun Li",
+      "Meng Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.00309",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

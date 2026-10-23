@@ -1,0 +1,34 @@
+{
+  "name": "CLEVR-BT-DB",
+  "description": "Deep learning-based machine reasoning and visual question answering models achieve a near-human performance on their respective datasets; however, their performance dramatically drops under domain shift suggesting that models fail to generalize to the level of human-like reasoning. In this paper we present a new CLEVR-like dataset consisting of images-question pairs to evaluate the visual reasoning capability of deep models. The objects in the images are arranged in a way that the first half of the question is ambiguous and multiple answers seem to be correct up to this point; however, the second half of the question clarifies the situation and makes the whole visual question-answering (VQA) task unambiguous, and a unique answer can be reported. Therefore, deep models during their reasoning process need to handle ambiguousness in their neurons. They can handle this either via graph (or tree) traversing in the search space with using back-tracking technique or via refining a candidate set of possibly correct answers by iteratively eliminating incorrect ones upon some reasoning calculations. We call this data-set CLEVR with Back-Tracking Database, CLEVR-BT-DB. It consists of 2,500 images and 10,000 questions in the same format as the standard CLEVR, and it is available at https://huggingface.co/datasets/Aborevsky01/CLEVR-BT-DB site. The code to generate additional data is available at https://github.com/AFigaro/CLEVR_BT_DB site. We tested MDETR method, a recent deep model for VQA from Meta Research, it achieved an accuracy of 99.7 % on the Standard CLEVR dataset; however, it achieves an accuracy of 28.01 % on our CLEVR-BT-DB dataset.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "visual_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "90–99%",
+  "year_of_publish": 2024,
+  "reputation": "CLEVR-style datasets are well-known in the vision community for probing compositional visual reasoning; this specific variant is synthetic and used mainly in research rather than broad industrial benchmarks.",
+  "notes": "Synthetic, highly structured data (risk of saturation for specialized models); not representative of natural images; many strong task-specific models achieve near-perfect scores, while general multimodal LLMs typically perform worse.",
+  "creators": {
+    "scientists": [
+      "Insan-Aleksandr Latipov",
+      "Andrey Borevskiy",
+      "Attila Kertesz-Farkas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1117/12.3027602",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

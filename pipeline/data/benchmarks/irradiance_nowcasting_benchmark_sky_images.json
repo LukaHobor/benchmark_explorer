@@ -1,0 +1,33 @@
+{
+  "name": "Irradiance Nowcasting Benchmark (Sky Images)",
+  "description": "To address the high levels of uncertainty associated with photovoltaic energy, an increasing number of studies focusing on short-term solar forecasting have been published. Most of these studies use deep learning-based models to directly forecast a solar irradiance or photovoltaic power value given an input of sky image sequences. Recently, however, advances in generative modeling have led to approaches that divide the forecasting problem into two sub-problems: 1) future event prediction, i.e. generating future sky images; and 2) solar irradiance or photovoltaic power nowcasting, i.e. predicting the concurrent value from a single image. One such approach is the SkyGPT model, where they show that the potential for improvement is much larger for the nowcasting model than for the generative model. Thus, in this paper, we focus on the solar irradiance nowcasting problem and conduct an extensive benchmark of deep learning architectures across the widely-used Folsom, SIRTA and NREL datasets. Moreover, we perform ablation experiments on different training configurations and data processing techniques, including the choice of the target variable used for training and adjustments of the timestamp alignment between images and irradiance measurements. In particular, we draw attention to a potential error associated with the sky image timestamps in the Folsom dataset and a possible fix is discussed. All our results are reported in terms of both the root mean squared error and the mean absolute error and, by leveraging the three datasets, we demonstrate that our findings are consistent across different solar stations.",
+  "category": "vision",
+  "domain": "renewable energy / solar forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "image_regression",
+    "time_series_forecasting"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE and MAE",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2025,
+  "reputation": "Moderately adopted within the solar forecasting research community for model comparisons across a few public stations, but not a broadly standardized benchmark outside this niche.",
+  "notes": "Non-LLM benchmark; dataset-specific issues (notably timestamp misalignment in the Folsom dataset); limited station diversity (Folsom, SIRTA, NREL); results reported as RMSE/MAE which are dataset- and scale-dependent.",
+  "creators": {
+    "scientists": [
+      "Lorenzo F. C. Varaschin",
+      "Danilo Silva"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.21966",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

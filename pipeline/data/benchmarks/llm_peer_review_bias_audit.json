@@ -1,0 +1,37 @@
+{
+  "name": "LLM peer review bias audit",
+  "description": "Large language models (LLMs) are playing an increasingly integral, though largely informal, role in scholarly peer review. Yet it remains unclear whether LLMs reproduce the biases observed in human decision-making. We adapt a resume-style audit to scientific publishing, developing a multi-role LLM simulation (editor/reviewer) that evaluates a representative set of high-quality manuscripts across the physical, biological, and social sciences under randomized author identities (institutional prestige, gender, race). The audit reveals a strong and consistent institutional-prestige bias: identical papers attributed to low-prestige affiliations face a significantly higher risk of rejection, despite only modest differences in LLM-assessed quality. To probe mechanisms, we generate synthetic CVs for the same author profiles; these encode large prestige-linked disparities and an inverted prestige-tenure gradient relative to national benchmarks. The results suggest that both domain norms and pre",
+  "category": "text",
+  "domain": "political science",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "bias_audit",
+    "classification",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "rejection rate / preference rate comparison",
+  "general_score_metric": "bias gap",
+  "typical_sota_score": "not applicable",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "This is an audit-style benchmark rather than a standard predictive task; results depend on randomized author identities and simulated reviewer/editor roles, so scores are not directly comparable to conventional accuracy benchmarks.",
+  "creators": {
+    "scientists": [
+      "Anthony Howell",
+      "Jieshu Wang",
+      "Luyu Du",
+      "J. Melkers",
+      "Varshil Shah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2509.15122",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

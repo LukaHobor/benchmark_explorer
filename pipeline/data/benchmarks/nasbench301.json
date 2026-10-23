@@ -1,0 +1,38 @@
+{
+  "name": "NAS-Bench-301",
+  "description": "The most significant barrier to the advancement of Neural Architecture Search (NAS) is its demand for large computational resources, which hinders scientifically sound empirical evaluations. As a remedy, several tabular NAS benchmarks were proposed to simulate runs of NAS methods in seconds. However, all existing tabular NAS benchmarks are limited to extremely small architectural spaces since they rely on exhaustive evaluations of the space. This leads to unrealistic results that do not transfer to larger search spaces. To overcome this fundamental limitation, we propose NAS-Bench-301, the first surrogate NAS benchmark, using a search space containing 1018 architectures, many orders of magnitude larger than any previous tabular NAS benchmark. After motivating the benefits of a surrogate benchmark over a tabular one, we fit various regression models on our dataset, which consists of ∼60k architecture evaluations, and build surrogates via deep ensembles to model uncertainty. We benchmark a wide range of NAS algorithms using NAS-Bench-301 and obtain comparable results to the true benchmark at a fraction of the real cost. Finally, we show how NAS-Bench-301 can be used to generate new scientific insights.",
+  "category": "vision",
+  "domain": "machine learning (neural architecture search)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "neural_architecture_search",
+    "surrogate_benchmark",
+    "performance_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (predicted/empirical top-1 accuracy)",
+  "general_score_metric": "top-1 accuracy (validation/test)",
+  "typical_sota_score": "95–97%",
+  "year_of_publish": 2021,
+  "reputation": "81 citations",
+  "notes": "Surrogate (not exhaustive) benchmark built from ~60k evaluations over a ~10^18 search space; surrogate bias/approximation risk; models predict architecture performance and uncertainty; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Julien Siems",
+      "Lucas Zimmer",
+      "Arber Zela",
+      "Jovita Lukasik",
+      "Margret Keuper",
+      "Frank Hutter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

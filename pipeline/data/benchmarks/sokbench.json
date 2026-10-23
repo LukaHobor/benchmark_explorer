@@ -1,0 +1,40 @@
+{
+  "name": "SOK-Bench",
+  "description": "Learning commonsense reasoning from visual contexts and scenes in real-world is a crucial step toward advanced artificial intelligence. However, existing video reasoning benchmarks are still inadequate since they were mainly designed for factual or situated reasoning and rarely involve broader knowledge in the real world. Our work aims to delve deeper into reasoning evaluations, specifically within dynamic, open-world, and structured context knowledge. We propose a new benchmark (SOK-Bench), consisting of 44K questions and 10K situations with instance-level annotations depicted in the videos. The reasoning process is required to understand and apply situated knowledge and general knowledge for problem-solving. To create such a dataset, we propose an automatic and scalable generation method to generate question-answer pairs, knowledge graphs, and rationales by instructing the combinations of LLMs and MLLMs. Concretely, we first extract observable situated entities, relations, and processes from videos for situated knowledge and then extend to open-world knowledge beyond the visible content. The task generation is facilitated through multiple dialogues as iterations and subsequently corrected and refined by our designed self-promptings and demonstrations. With a corpus of both explicit situated facts and implicit commonsense, we generate associated question-answer pairs and reasoning processes, finally followed by manual reviews for quality assurance. We evaluated recent mainstream large vision-language models on the benchmark and found several insightful conclusions. For more information, please refer to our benchmark at www.bobbywu.com/SOKBench.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multiple_choice",
+    "multimodal_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "A recent (2024) multimodal commonsense reasoning benchmark that is promising but still early-stage in community adoption.",
+  "notes": "Large-scale (44K QA) but question generation uses LLMs/MLLMs with human review—risk of contamination from model-generated content; multimodal and reasoning-focused, so not saturated.",
+  "creators": {
+    "scientists": [
+      "Andong Wang",
+      "Bo Wu",
+      "Sunli Chen",
+      "Zhenfang Chen",
+      "Haotian Guan",
+      "Wei-Ning Lee",
+      "Li Erran Li",
+      "Chuang Gan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.09713",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

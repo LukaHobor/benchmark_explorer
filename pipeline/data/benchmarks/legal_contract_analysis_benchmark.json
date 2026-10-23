@@ -1,0 +1,38 @@
+{
+  "name": "Legal Contract Analysis Benchmark",
+  "description": "This comprehensive experimental study evaluates the performance, reliability, and practical applicability of AI-based legal decision-making systems in contract analysis and risk detection. Utilizing a corpus of 5,247 contracts with expert-validated annotations from 12 legal professionals, we benchmark four classes of AI systems—rule-based, supervised machine learning (XGBoost), fine-tuned transformer models (Legal-BERT), and large language models (GPT-4, Claude 3)—across multiple dimensions critical to legal practice. The Key Findings of this research : a) Performance Variability: Fine-tuned Legal-BERT achieved the highest overall clause classification F1-score (0.923, 95% CI [0.917, 0.929]), but exhibited significant degradation in cross-jurisdictional applications (28.4% performance drop from US to UK contracts). b) Risk Detection Gaps: All systems demonstrated decreasing recall with increasing risk severity. GPT-4 missed 18.2% of high-severity risks (severity ≥4), while Legal-BERT missed 12.3% of total risk severity weight (FNRP metric). c)Decision Inconsistency: LLMs showed substantial inconsistency, with GPT-4 achieving only 0.81 intra-model Jaccard similarity across identical inputs and 14.7% decision variation on identical clause phrasings. d)Domain-Specific Performance: Rule-based systems performed adequately on standardized agreements (NDA: F1=0.812) but failed catastrophically on complex contracts (M&amp;A: F1=0.432). e) Cost-Effectiveness: Local fine-tuned models provided 92.3% of GPT-4's performance at 3.5% of the cost ($0.0087 vs $0.2478 per document).We introduce two novel legal-specific metrics—False-Negative Risk Penalty (FNRP) and Severity-Weighted F1 (SwF1)—that better capture the asymmetric cost structure of legal errors. Based on our empirical findings, we propose a three-tier human-in-the-loop deployment framework that reduces attorney review time by 64% while maintaining 99.7% risk coverage. The study establishes evidence-based performance thresholds for safe deployment, recommending against autonomous use of any system with FNRP &gt; 0.15 or cross-jurisdiction performance degradation &gt; 25%. Our findings challenge optimistic claims of AI autonomy in legal decision-making and provide a rigorous, reproducible framework for evaluating legal AI systems in practice.",
+  "category": "text",
+  "domain": "legal / contract analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "clause_classification",
+    "risk_detection",
+    "information_extraction",
+    "document_classification",
+    "severity_scoring"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (primary), plus domain-specific metrics FNRP and Severity-Weighted F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "≈92% (Legal-BERT reported F1 = 0.923)",
+  "year_of_publish": 2025,
+  "reputation": "3 citations",
+  "notes": "Relatively small, expert-annotated corpus (5,247 contracts) with known jurisdictional bias; potential for overlap with public training data of large LLMs; includes novel asymmetric risk metrics (FNRP, SwF1) that should be used alongside standard F1 for deployment decisions.",
+  "creators": {
+    "scientists": [
+      "Tatiana Suplicy Barbosa",
+      "Douglas de Castro",
+      "Anand Kumar Singh",
+      "Salvatore Vitale"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://doi.org/10.48161/qtj.v5n1a81",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

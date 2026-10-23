@@ -1,0 +1,36 @@
+{
+  "name": "LLaVA-CoT-100k",
+  "description": "Large language models have demonstrated substantial advancements in reasoning capabilities. However, current Vision-Language Models (VLMs) often struggle to perform systematic and structured reasoning, especially when handling complex visual question-answering tasks. In this work, we introduce LLaVA-CoT, a large VLM designed to conduct autonomous multistage reasoning. Unlike chain-of-thought prompting, LLaVA-CoT independently engages in sequential stages of summarization, visual interpretation, logical reasoning, and conclusion generation. This structured approach enables LLaVA-CoT to achieve marked improvements on reasoning-intensive tasks. To accomplish this, we construct the LLaVA-CoT-100k dataset, integrating samples from various visual question answering sources and providing structured reasoning annotations. Besides, we propose a test-time stage-wise retracing search method (SWIRES), which enables effective and efficient test-time scaling. Remarkably, with only 100k training samples and test-time scaling, LLaVA-CoT not only outperforms its base model by 9.4% on a wide range of multimodal reasoning benchmarks, but also surpasses the performance of larger and even closed-source models, such as Gemini-1.5-pro, GPT-4o-mini, and Llama-3.2-90B-Vision-Instruct. The code, dataset, and pre-trained weights are publicly available at https://github.com/PKU-YuanGroup/LLaVA-CoT.",
+  "category": "multimodal",
+  "domain": "reasoning",
+  "task_types": [
+    "visual_question_answering",
+    "structured_reasoning",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 100000,
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "A recent multimodal reasoning dataset that is gaining attention in vision-language research, but it is not yet a widely established benchmark.",
+  "notes": "Includes test-time stage-wise retracing search method (SWIRES) for scaling; publicly released code, dataset, and pre-trained weights.",
+  "creators": {
+    "scientists": [
+      "Guowei Xu",
+      "Peng Jin",
+      "Hao Li",
+      "Yibing Song",
+      "Lichao Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.10440",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9"
+  }
+}

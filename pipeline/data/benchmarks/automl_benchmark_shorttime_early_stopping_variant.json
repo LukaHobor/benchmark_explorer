@@ -1,0 +1,33 @@
+{
+  "name": "AutoML Benchmark (short-time / early stopping variant)",
+  "description": "Automated Machine Learning (AutoML) automatically builds machine learning (ML) models on data. The de facto standard for evaluating new AutoML frameworks for tabular data is the AutoML Benchmark (AMLB). AMLB proposed to evaluate AutoML frameworks using 1- and 4-hour time budgets across 104 tasks. We argue that shorter time constraints should be considered for the benchmark because of their practical value, such as when models need to be retrained with high frequency, and to make AMLB more accessible. This work considers two ways in which to reduce the overall computation used in the benchmark: smaller time constraints and the use of early stopping. We conduct evaluations of 11 AutoML frameworks on 104 tasks with different time constraints and find the relative ranking of AutoML frameworks is fairly consistent across time constraints, but that using early-stopping leads to a greater variety in model performance.",
+  "category": "mixed",
+  "domain": "machine learning / AutoML",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score (aggregated per-dataset performance: accuracy/AUC for classification, RMSE for regression)",
+  "year_of_publish": 2025,
+  "reputation": "Widely used de facto standard benchmark for comparing AutoML systems on tabular data; commonly cited and used in AutoML research.",
+  "notes": "Non-LLM benchmark focused on tabular supervised tasks; results are sensitive to time budget and early-stopping settings; heterogeneous per-task metrics are aggregated into a composite ranking; designed to evaluate practical runtime-constrained AutoML performance.",
+  "creators": {
+    "scientists": [
+      "Israel Campero Jurado",
+      "Pieter Gijsbers",
+      "Joaquin Vanschoren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2504.01222",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

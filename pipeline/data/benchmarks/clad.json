@@ -1,0 +1,41 @@
+{
+  "name": "CLAD",
+  "description": "In this paper we describe the design and the ideas motivating a new Continual Learning benchmark for Autonomous Driving (CLAD), that focuses on the problems of object classification and object detection. The benchmark utilises SODA10M, a recently released large-scale dataset that concerns autonomous driving related problems. First, we review and discuss existing continual learning benchmarks, how they are related, and show that most are extreme cases of continual learning. To this end, we survey the benchmarks used in continual learning papers at three highly ranked computer vision conferences. Next, we introduce CLAD-C, an online classification benchmark realised through a chronological data stream that poses both class and domain incremental challenges; and CLAD-D, a domain incremental continual object detection benchmark. We examine the inherent difficulties and challenges posed by the benchmark, through a survey of the techniques and methods used by the top-3 participants in a CLAD-challenge workshop at ICCV 2021. We conclude with possible pathways to improve the current continual learning state of the art, and which directions we deem promising for future research.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "object_detection",
+    "continual_learning",
+    "online_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (for CLAD-C classification) and mean Average Precision (mAP) for CLAD-D object detection; continual-learning-specific metrics (e.g., average incremental accuracy, forgetting) are also used",
+  "general_score_metric": "accuracy (classification) / mAP (detection); continual-learning aggregates such as average incremental accuracy",
+  "typical_sota_score": "task-dependent; classification tasks often reach ~70–90% accuracy, detection mAP typically in the ~40–70% range depending on split and continual setup",
+  "year_of_publish": 2022,
+  "reputation": "Introduced alongside an ICCV 2021 challenge; moderately known within the continual-learning and autonomous-driving evaluation community, especially among participants of the CLAD challenge.",
+  "notes": "Non-LLM benchmark focused on vision and continual learning; large-scale (SODA10M) so pretraining/contamination is possible; evaluation is multi-faceted (classification, detection, and continual-learning forgetting measures); class imbalance and chronological/domain shifts are central challenges.",
+  "creators": {
+    "scientists": [
+      "Eli Verwimp",
+      "Kuo Yang",
+      "Sarah Parisot",
+      "Hong Lanqing",
+      "Steven McDonagh",
+      "Eduardo Pérez-Pellitero",
+      "Matthias De Lange",
+      "Tinne Tuytelaars"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2210.03482",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

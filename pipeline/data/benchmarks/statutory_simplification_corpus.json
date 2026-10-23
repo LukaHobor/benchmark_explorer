@@ -1,0 +1,33 @@
+{
+  "name": "Statutory Simplification Corpus",
+  "description": "One of the emerging use cases of AI in law is for code simplification: streamlining, distilling, and simplifying complex statutory or regulatory language. One U.S. state has claimed to eliminate one third of its state code using AI. Yet we lack systematic evaluations of the accuracy, reliability, and risks of such approaches. We introduce LaborBench, a question-and-answer benchmark dataset designed to evaluate AI capabilities in this domain. We leverage a unique data source to create LaborBench: a dataset updated annually by teams of lawyers at the U.S. Department of Labor, who compile differences in unemployment insurance laws across 50 states for over 101 dimensions in a six-month process, culminating in a 200-page publication of tables. Inspired by our collaboration with one U.S. state to explore using large language models (LLMs) to simplify codes in this domain, where complexity is particularly acute, we transform the DOL publication into LaborBench. This provides a unique benchmark for AI capacity to conduct, distill, and extract realistic statutory and regulatory information. To assess the performance of retrieval augmented generation (RAG) approaches, we also compile StateCodes, a novel and comprehensive state statute and regulatory corpus of 8.7 GB, enabling much more systematic research into state codes. We then benchmark the performance of information retrieval and state-of-the-art large LLMs on this data and show that while these models are helpful as preliminary research for code simplification, the overall accuracy is far below the touted promises for LLMs as end-to-end pipelines for regulatory simplification.1",
+  "category": "text",
+  "domain": "legal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_simplification",
+    "paraphrase_generation",
+    "legal_NLP"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "SARI and BLEU for automatic evaluation, often supplemented by human evaluation/readability metrics",
+  "general_score_metric": "SARI (primary for simplification quality); BLEU and human judgments also reported",
+  "year_of_publish": 2025,
+  "reputation": "A niche but valuable resource in legal NLP for statutory simplification research; adoption is growing within legal-AI research communities.",
+  "notes": "Domain-specific (legal) text simplification; outputs can be subjective and require human evaluation. Jurisdiction- and statute-specific language may limit generalization; not an LLM-specific benchmark.",
+  "creators": {
+    "scientists": [
+      "Emaan Hariri",
+      "Daniel E Ho"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://doi.org/10.1145/3769126.3769256",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

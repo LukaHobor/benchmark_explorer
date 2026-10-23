@@ -1,0 +1,37 @@
+{
+  "name": "CASTLE (CWE Automated Security Testing and Low-Level Evaluation)",
+  "description": "Identifying vulnerabilities in source code is crucial, especially in critical software components. Existing methods such as static analysis, dynamic analysis, formal verification, and recently Large Language Models are widely used to detect security flaws. This paper introduces CASTLE (CWE Automated Security Testing and Low-Level Evaluation), a benchmarking framework for evaluating the vulnerability detection capabilities of different methods. We assess 13 static analysis tools, 10 LLMs, and 2 formal verification tools using a hand-crafted dataset of 250 micro-benchmark programs covering 25 common CWEs. We propose the CASTLE Score, a novel evaluation metric to ensure fair comparison. Our results reveal key differences: ESBMC (a formal verification tool) minimizes false positives but struggles with vulnerabilities beyond model checking, such as weak cryptography or SQL injection. Static analyzers suffer from high false positives, increasing manual validation efforts for developers. LLMs perform exceptionally well in the CASTLE dataset when identifying vulnerabilities in small code snippets. However, their accuracy declines, and hallucinations increase as the code size grows. These results suggest that LLMs could play a pivotal role in future security solutions, particularly within code completion frameworks, where they can provide real-time guidance to prevent vulnerabilities. The dataset is accessible at https://github.com/CASTLE-Benchmark.",
+  "category": "code",
+  "domain": "software security / code analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "vulnerability_localization",
+    "open_ended"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "CASTLE Score (composite)",
+  "general_score_metric": "CASTLE Score (composite)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, research-focused benchmark gaining attention in security and ML-for-code communities but not yet widely adopted in industry.",
+  "notes": "Small, hand-crafted dataset (250 micro-benchmarks) focusing on isolated CWE examples; high risk of pretraining contamination for LLMs; emphasizes micro-snippet detection rather than large-codebase performance; includes varied tool types (static analyzers, formal methods, LLMs).",
+  "creators": {
+    "scientists": [
+      "Richard A. Dubniczky",
+      "Krisztofer Zoltán Horvát",
+      "Tamás Bisztray",
+      "Mohamed Amine Ferrag",
+      "Lucas C. Cordeiro",
+      "Norbert Tihanyi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2503.09433",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

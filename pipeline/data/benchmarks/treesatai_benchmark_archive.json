@@ -1,0 +1,37 @@
+{
+  "name": "TreeSatAI Benchmark Archive",
+  "description": "Abstract. Airborne and spaceborne platforms are the primary data sources for large-scale forest mapping, but visual interpretation for individual species determination is labour-intensive. Hence, various studies focusing on forests have investigated the benefits of multiple sensors for automated tree species classification. However, transferable deep learning approaches for large-scale applications are still lacking. This gap motivated us to create a novel dataset for tree species classification in Central Europe based on multi-sensor data from aerial, Sentinel-1 and Sentinel-2 imagery. In this paper, we introduce the TreeSatAI Benchmark Archive, which contains labels of 20 European tree species (i.e., 15 tree genera) derived from forest administration data of the federal state of Lower Saxony, Germany. We propose models and guidelines for the application of the latest machine learning techniques for the task of tree species classification with multi-label data. Finally, we provide various benchmark experiments showcasing the information which can be derived from the different sensors including artificial neural networks and tree-based machine learning methods. We found that residual neural networks (ResNet) perform sufficiently well with weighted precision scores up to 79 % only by using the RGB bands of aerial imagery. This result indicates that the spatial content present within the 0.2 m resolution data is very informative for tree species classification. With the incorporation of Sentinel-1 and Sentinel-2 imagery, performance improved marginally. However, the sole use of Sentinel-2 still allows for weighted precision scores of up to 74 % using either multi-layer perceptron (MLP) or Light Gradient Boosting Machine (LightGBM) models. Since the dataset is derived from real-world reference data, it contains high class imbalances. We found that this dataset attribute negatively affects the models' performances for many of the underrepresented classes (i.e., scarce tree species). However, the class-wise precision of the best performing late fusion model still reached values ranging from 54 % (Acer) to 88 % (Pinus). Based on our results, we conclude that deep learning techniques using aerial imagery could considerably support forestry administration in the provision of large-scale tree species maps at a very high resolution to plan for challenges driven by global environmental change. The original dataset used in this paper is shared via Zenodo (https://doi.org/10.5281/zenodo.6598390) [Schulz et al., 2022]. For citation of the dataset, we refer to this article.",
+  "category": "vision",
+  "domain": "geospatial / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "image_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "weighted_precision",
+  "general_score_metric": "weighted_precision",
+  "typical_sota_score": "74–79%",
+  "year_of_publish": 2022,
+  "reputation": "A well-documented multi-sensor remote sensing dataset with moderate adoption in the geospatial ML community for tree species classification studies.",
+  "notes": "Real-world dataset with strong class imbalance and geographic concentration (Central Europe). Multi-sensor (aerial, Sentinel-1/2) data improves performance but may limit transferability; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Steve Ahlswede",
+      "Christian Schulz",
+      "Christiano Gava",
+      "Patrick Helber",
+      "Benjamin Bischke",
+      "Michael Förster"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.5194/essd-2022-312",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

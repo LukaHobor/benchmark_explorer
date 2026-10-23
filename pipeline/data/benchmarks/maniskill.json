@@ -1,0 +1,41 @@
+{
+  "name": "ManiSkill",
+  "description": "Object manipulation from 3D visual inputs poses many challenges on building generalizable perception and policy models. However, 3D assets in existing benchmarks mostly lack the diversity of 3D shapes that align with real-world intra-class complexity in topology and geometry. Here we propose SAPIEN Manipulation Skill Benchmark (ManiSkill) to benchmark manipulation skills over diverse objects in a full-physics simulator. 3D assets in ManiSkill include large intra-class topological and geometric variations. Tasks are carefully chosen to cover distinct types of manipulation challenges. Latest progress in 3D vision also makes us believe that we should customize the benchmark so that the challenge is inviting to researchers working on 3D deep learning. To this end, we simulate a moving panoramic camera that returns ego-centric point clouds or RGB-D images. In addition, we would like ManiSkill to serve a broad set of researchers interested in manipulation research. Besides supporting the learning of policies from interactions, we also support learning-from-demonstrations (LfD) methods, by providing a large number of high-quality demonstrations (~36,000 successful trajectories, ~1.5M point cloud/RGB-D frames in total). We provide baselines using 3D deep learning and LfD algorithms. All code of our benchmark (simulator, environment, SDK, and baselines) is open-sourced, and a challenge facing interdisciplinary researchers will be held based on the benchmark.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reinforcement_learning",
+    "imitation_learning",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "varies widely (≈20–90% depending on task; hardest tasks typically <50%)",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded in robotic manipulation research for diverse 3D-object challenges and used by researchers studying 3D perception and policy learning; has an active community and challenge events.",
+  "notes": "Non-LLM benchmark (robotics/simulation). Large demonstration set (~36k trajectories). Results vary substantially by task and sim-to-real transfer is a known caveat; potential for overfitting to simulator-specific dynamics.",
+  "creators": {
+    "scientists": [
+      "Tongzhou Mu",
+      "Zhan Ling",
+      "Fanbo Xiang",
+      "Derek Yang",
+      "Xuanlin Li",
+      "Stone Tao",
+      "Zhiao Huang",
+      "Zhiwei Jia",
+      "Hao Su"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2107.14483",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

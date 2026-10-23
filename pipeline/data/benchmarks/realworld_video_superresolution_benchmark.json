@@ -1,0 +1,37 @@
+{
+  "name": "Real-World Video Super-Resolution Benchmark",
+  "description": "Video super-resolution (VSR) aiming to reconstruct a high-resolution (HR) video from its low-resolution (LR) counterpart has made tremendous progress in recent years. However, it remains challenging to deploy existing VSR methods to real-world data with complex degradations. On the one hand, there are few well-aligned real-world VSR datasets, especially with large super-resolution scale factors, which limits the development of real-world VSR tasks. On the other hand, alignment algorithms in existing VSR methods perform poorly for real-world videos, leading to unsatisfactory results. As an attempt to address the aforementioned issues, we build a real-world 4 VSR dataset, namely MVSR4$\\times$, where low- and high-resolution videos are captured with different focal length lenses of a smartphone, respectively. Moreover, we propose an effective alignment method for real-world VSR, namely EAVSR. EAVSR takes the proposed multi-layer adaptive spatial transform network (MultiAdaSTN) to refine the offsets provided by the pre-trained optical flow estimation network. Experimental results on RealVSR and MVSR4$\\times$ datasets show the effectiveness and practicality of our method, and we achieve state-of-the-art performance in real-world VSR task. The dataset and code will be publicly available.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_super_resolution",
+    "video_restoration"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM (objective image/video quality metrics), often complemented by perceptual (human) evaluation",
+  "general_score_metric": "PSNR (dB)",
+  "year_of_publish": 2022,
+  "reputation": "Recent real-world VSR dataset proposed to address realistic degradations; gaining attention in the VSR community but not yet as widely adopted as synthetic benchmarks.",
+  "notes": "Real paired captures reduce reliance on synthetic degradations but dataset size and scene/camera biases can limit generalization. Accurate spatial alignment between LR/HR pairs is challenging; evaluation sensitive to registration errors. Non-LLM benchmark and computationally intensive to train/evaluate.",
+  "creators": {
+    "scientists": [
+      "Ruohao Wang",
+      "Xiaohui Liu",
+      "Zhilu Zhang",
+      "Xiaohe Wu",
+      "Chun-Mei Feng",
+      "Lei Zhang",
+      "WangMeng Zuo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2212.05342",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

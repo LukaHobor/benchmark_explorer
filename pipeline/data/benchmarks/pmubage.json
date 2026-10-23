@@ -1,0 +1,35 @@
+{
+  "name": "pmuBAGE",
+  "description": "This paper introduces pmuGE (phasor measurement unit Generator of Events), one of the first data-driven generative model for power system event data. We have trained this model on thousands of actual events and created a dataset denoted pmuBAGE (the Benchmarking Assortment of Generated PMU Events). The dataset consists of almost 1000 instances of labeled event data to encourage benchmark evaluations on phasor measurement unit (PMU) data analytics. PMU data are challenging to obtain, especially those covering event periods. Nevertheless, power system problems have recently seen phenomenal advancements via data-driven machine learning solutions. A highly accessible standard benchmarking dataset would enable a drastic acceleration of the development of successful machine learning techniques in this field. We propose a novel learning method based on the Event Participation Decomposition of Power System Events, which makes it possible to learn a generative model of PMU data during system anomalies. The model can create highly realistic event data without compromising the differential privacy of the PMUs used to train it. The dataset is available online for any researcher or practitioner to use at the pmuBAGE Github Repository: https://github.com/NanpengYu/pmuBAGE.",
+  "category": "mixed",
+  "domain": "power systems / electrical grid",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_generation",
+    "anomaly_detection",
+    "event_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2022,
+  "reputation": "A specialized academic dataset introduced for PMU event modeling and increasingly referenced in power-systems ML research, but with limited cross-domain adoption.",
+  "notes": "Relatively small labeled set (~1k events); contains synthetic/generated events from a generative model (pmuGE) which may differ from real-world distributions; intended for power-system researchers (non-LLM benchmark); privacy-preserving generation reduces risk of direct data leakage but care required when mixing with operational datasets.",
+  "creators": {
+    "scientists": [
+      "Brandon Foggo",
+      "Koji Yamashita",
+      "Nanpeng Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2210.14204",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

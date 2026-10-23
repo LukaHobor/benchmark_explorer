@@ -1,0 +1,42 @@
+{
+  "name": "WebFace260M / WebFace42M",
+  "description": "In this paper, we contribute a new million-scale face benchmark containing noisy 4M identities/260M faces (WebFace260M) and cleaned 2M identities/42M faces (WebFace42M) training data, as well as an elaborately designed time-constrained evaluation protocol. Firstly, we collect 4M name list and download 260M faces from the Internet. Then, a Cleaning Automatically utilizing Self-Training (CAST) pipeline is devised to purify the tremendous WebFace260M, which is efficient and scalable. To the best of our knowledge, the cleaned WebFace42M is the largest public face recognition training set and we expect to close the data gap between academia and industry. Referring to practical scenarios, Face Recognition Under Inference Time conStraint (FRUITS) protocol and a test set are constructed to comprehensively evaluate face matchers. Equipped with this benchmark, we delve into million-scale face recognition problems. A distributed framework is developed to train face recognition models efficiently without tampering with the performance. Empowered by WebFace42M, we reduce relative 40% failure rate on the challenging IJB-C set, and ranks the 3rd among 430 entries on NIST-FRVT. Even 10% data (WebFace4M) shows superior performance compared with public training set. Furthermore, comprehensive baselines are established on our rich-attribute test set under FRUITS-100ms/500ms/1000ms protocol, including MobileNet, EfficientNet, AttentionNet, ResNet, SENet, ResNeXt and RegNet families. Benchmark website is https://www.face-benchmark.org.",
+  "category": "vision",
+  "domain": "computer vision (face recognition)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "face_identification",
+    "face_verification",
+    "representation_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "verification rate (TAR@FAR) and identification accuracy (Rank-1)",
+  "general_score_metric": "verification TAR at fixed FAR and Rank-1 identification accuracy",
+  "year_of_publish": 2021,
+  "reputation": "One of the largest public face-recognition training sets; widely used in academic research to close the data gap with industry.",
+  "notes": "Very large-scale with both noisy (WebFace260M) and cleaned (WebFace42M) variants; significant compute required; privacy and demographic-bias concerns; cleaned set reduces but does not eliminate contamination; non-LLM benchmark focused on face recognition and inference-time constrained evaluation (FRUITS).",
+  "creators": {
+    "scientists": [
+      "Zheng Zhu",
+      "Guan Huang",
+      "Jiankang Deng",
+      "Yun Ye",
+      "JunJie Huang",
+      "Xinze Chen",
+      "Jiagang Zhu",
+      "Tian Yang",
+      "Jiwen Lu",
+      "Dalong Du",
+      "Jie zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2103.04098",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

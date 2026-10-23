@@ -1,0 +1,34 @@
+{
+  "name": "SlovKE",
+  "description": "Keyphrase extraction for morphologically rich, low-resource languages remains understudied, largely due to the scarcity of suitable evaluation datasets. We address this gap for Slovak by constructing a dataset of 227,432 scientific abstracts with author-assigned keyphrases -- scraped and systematically cleaned from the Slovak Central Register of Theses -- representing a 25-fold increase over the largest prior Slovak resource and approaching the scale of established English benchmarks such as KP20K. Using this dataset, we benchmark three unsupervised baselines (YAKE, TextRank, KeyBERT with SlovakBERT embeddings) and evaluate KeyLLM, an LLM-based extraction method using GPT-3.5-turbo. Unsupervised baselines achieve at most 11.6\\% exact-match $F1@6$, with a large gap to partial matching (up to 51.5\\%), reflecting the difficulty of matching inflected surface forms to author-assigned keyphrases. KeyLLM narrows this exact--partial gap, producing keyphrases closer to the canonical forms assigned by authors, while manual evaluation on 100 documents ($\\kappa = 0.61$) confirms that KeyLLM captures relevant concepts that automated exact matching underestimates. Our analysis identifies morphological mismatch as the dominant failure mode for statistical methods -- a finding relevant to other inflected languages. The dataset (https://huggingface.co/datasets/NaiveNeuron/SlovKE) and evaluation code (https://github.com/NaiveNeuron/SlovKE) are publicly available.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "keyphrase_extraction",
+    "sequence_labeling",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Exact-match F1@k (commonly F1@6) and partial-match F1; supplemented by manual/human evaluation",
+  "general_score_metric": "exact-match F1@k (and partial-match F1 for more lenient matching)",
+  "typical_sota_score": "exact-match F1@6: ~5–30%; partial-match F1@6: ~30–55% (varies by method)",
+  "year_of_publish": 2026,
+  "reputation": "A large, high-quality Slovak keyphrase dataset that substantially expands available resources for Slovak NLP and is likely to become a standard evaluation set for the language.",
+  "notes": "Large-scale dataset scraped from thesis abstracts — strong domain bias toward academic texts and potential inconsistencies in author-assigned keyphrases. Morphological variation in Slovak causes many exact-match failures; human/partial matching recommended. Possible contamination risk if models were trained on overlapping web-crawled thesis material.",
+  "creators": {
+    "scientists": [
+      "David vStevavn'ak",
+      "Marek vSuppa"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2603.15523",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

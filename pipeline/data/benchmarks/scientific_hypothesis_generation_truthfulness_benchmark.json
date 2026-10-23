@@ -1,0 +1,37 @@
+{
+  "name": "Scientific Hypothesis Generation Truthfulness Benchmark",
+  "description": "Large language models (LLMs) have shown significant potential in scientific disciplines such as biomedicine, particularly in hypothesis generation, where they can analyze vast literature, identify patterns, and suggest research directions. However, a key challenge lies in evaluating the truthfulness of generated hypotheses, as verifying their accuracy often requires substantial time and resources. Additionally, the hallucination problem in LLMs can lead to the generation of hypotheses that appear plausible but are ultimately incorrect, undermining their reliability. To facilitate the systematic study of these challenges, we introduce TruthHypo, a benchmark for assessing the capabilities of LLMs in generating truthful scientific hypotheses, and KnowHD, a knowledge-based hallucination detector to evaluate how well hypotheses are grounded in existing knowledge. Our results show that LLMs struggle to generate truthful hypotheses. By analyzing hallucinations in reasoning steps, we demonstrate that the groundedness scores provided by KnowHD serve as an effective metric for filtering truthful hypotheses from the diverse outputs of LLMs. Human evaluations further validate the utility of KnowHD in identifying truthful hypotheses and accelerating scientific discovery. Our data and source code are available at https://github.com/Teddy-XiongGZ/TruthHypo.",
+  "category": "text",
+  "domain": "science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "generation",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "groundedness_score (KnowHD)",
+  "year_of_publish": 2024,
+  "reputation": "7 citations",
+  "notes": "Domain-specific, human-evaluation–heavy benchmark; potential pretraining contamination from scientific text; relatively small and costly to verify (requires domain experts); groundedness scoring complements but does not fully replace experimental validation.",
+  "creators": {
+    "scientists": [
+      "Yuhan Liu",
+      "Xiuying Chen",
+      "Xiaoqing Zhang",
+      "Xing Gao",
+      "Ji Zhang",
+      "Rui Yan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://doi.org/10.24963/ijcai.2024/873",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

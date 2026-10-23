@@ -1,0 +1,34 @@
+{
+  "name": "Needle In A Haystack",
+  "description": "The advent of the internet, followed shortly by the social media made it ubiquitous in consuming and sharing information between anyone with access to it. The evolution in the consumption of media driven by this change, led to the emergence of images as means to express oneself, convey information and convince others efficiently. With computer vision algorithms progressing radically over the last decade, it is become easier and easier to study at scale the role of images in the flow of information online. While the research questions and overall pipelines differ radically, almost all start with a crucial first step - evaluation of global perceptual similarity between different images. That initial step is crucial for overall pipeline performance and processes most images. A number of algorithms are available and currently used to perform it, but so far no comprehensive review was available to guide the choice of researchers as to the choice of an algorithm best suited to their question, assumptions and computational resources. With this paper we aim to fill this gap, showing that classical computer vision methods are not necessarily the best approach, whereas a pair of relatively little used methods - Dhash perceptual hash and SimCLR v2 ResNets achieve excellent performance, scale well and are computationally efficient.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_similarity",
+    "image_retrieval",
+    "perceptual_hashing_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "precision@k / mean_average_precision (mAP)",
+  "general_score_metric": "mean_average_precision (mAP) / precision@k",
+  "year_of_publish": 2022,
+  "reputation": "Comparative study rather than a standardized dataset — useful guidance for researchers choosing perceptual-similarity methods but not widely adopted as a formal benchmark.",
+  "notes": "Non-LLM, algorithm-comparison study; results are method- and dataset-dependent. Deep methods (e.g., SimCLR v2) may be affected by pretraining data overlap (contamination risk). Not a single standardized large benchmark; evaluation depends on chosen datasets/splits.",
+  "creators": {
+    "scientists": [
+      "Cyril Vallez",
+      "Andrei Kucharavy",
+      "Ljiljana Dolamic"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.00282",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

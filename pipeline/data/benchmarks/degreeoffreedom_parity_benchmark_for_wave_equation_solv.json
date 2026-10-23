@@ -1,0 +1,36 @@
+{
+  "name": "Degree-of-Freedom Parity Benchmark for Wave Equation Solvers",
+  "description": "We present a new benchmarking study comparing a boundary-constrained Ehrenpreis--Palamodov Gaussian Process (B-EPGP) surrogate with a classical finite element method combined with Crank--Nicolson time stepping (CN-FEM) for solving the two-dimensional wave equation with homogeneous Dirichlet boundary conditions. The B-EPGP construction leverages exponential-polynomial bases derived from the characteristic variety to enforce the PDE and boundary conditions exactly and employs penalized least squares to estimate the coefficients. To ensure fairness across paradigms, we introduce a degrees-of-freedom (DoF) matching protocol. Under matched DoF, B-EPGP consistently attains lower space-time $L^2$-error and maximum-in-time $L^{2}$-error in space than CN-FEM, improving accuracy by roughly two orders of magnitude.",
+  "category": "mixed",
+  "domain": "simulation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "numerical_prediction",
+    "scientific_computation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "error-based regression metrics",
+  "general_score_metric": "space-time L2 error",
+  "typical_sota_score": "B-EPGP reported ~100× reduction in space-time L2 error compared to CN-FEM (exact error magnitudes vary by experimental setup)",
+  "year_of_publish": 2025,
+  "reputation": "A niche research benchmark from a recent paper; it is not yet widely adopted as a standard community benchmark.",
+  "notes": "Non-LLM benchmark for PDE solvers; compares surrogate and numerical methods under matched degrees of freedom rather than standard classification-style evaluation.",
+  "creators": {
+    "scientists": [
+      "Obed Amo",
+      "Samit Ghosh",
+      "Markus Lange-Hegermann",
+      "Bogdan Raiţă",
+      "Michael Pokojovy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2511.04518",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

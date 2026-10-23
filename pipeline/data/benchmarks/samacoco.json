@@ -1,0 +1,35 @@
+{
+  "name": "Sama-COCO",
+  "description": "Benchmark datasets are used to profile and compare algorithms across a variety of tasks, ranging from image classification to segmentation, and also play a large role in image pretraining algorithms. Emphasis is placed on results with little regard to the actual content within the dataset. It is important to question what kind of information is being learned from these datasets and what are the nuances and biases within them. In the following work, Sama-COCO, a re-annotation of MS-COCO, is used to discover potential biases by leveraging a shape analysis pipeline. A model is trained and evaluated on both datasets to examine the impact of different annotation conditions. Results demonstrate that annotation styles are important and that annotation pipelines should closely consider the task of interest. The dataset is made publicly available at https://www.sama.com/sama-coco-dataset/ .",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "COCO-style mean average precision (AP / mAP, e.g. AP@[.5:.95])",
+  "general_score_metric": "COCO mAP (AP@[.5:.95])",
+  "typical_sota_score": "30–60% (COCO-style AP)",
+  "year_of_publish": 2023,
+  "reputation": "New re-annotation of MS-COCO with limited adoption so far; mainly used in research probing annotation biases and shape-driven evaluation.",
+  "notes": "Re-annotation of COCO images—annotation style differences are the main focus; shares same image content as MS-COCO (possible contamination with models pretrained on COCO); not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Eric Zimmermann",
+      "Justin Szeto",
+      "Jerome Pasquero",
+      "Frederic Ratle"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.02709",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

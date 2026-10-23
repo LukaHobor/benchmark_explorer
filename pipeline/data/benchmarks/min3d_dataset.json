@@ -1,0 +1,40 @@
+{
+  "name": "MIN3D Dataset",
+  "description": "Abstract The research potential in the field of mobile mapping technologies is often hindered by several constraints. These include the need for costly hardware to collect data, limited access to target sites with specific environmental conditions or the collection of ground truth data for a quantitative evaluation of the developed solutions. To address these challenges, the research community has often prepared open datasets suitable for developments and testing. However, the availability of datasets that encompass truly demanding mixed indoor–outdoor and subterranean conditions, acquired with diverse but synchronized sensors, is currently limited. To alleviate this issue, we propose the MIN3D dataset (MultI-seNsor 3D mapping with an unmanned ground vehicle for mining applications) which includes data gathered using a wheeled mobile robot in two distinct locations: (i) textureless dark corridors and outside parts of a university campus and (ii) tunnels of an underground WW2 site in Walim (Poland). MIN3D comprises around 150 GB of raw data, including images captured by multiple co-calibrated monocular, stereo and thermal cameras, two LiDAR sensors and three inertial measurement units. Reliable ground truth (GT) point clouds were collected using a survey-grade terrestrial laser scanner. By openly sharing this dataset, we aim to support the efforts of the scientific community in developing robust methods for navigation and mapping in challenging underground conditions. In the paper, we describe the collected data and provide an initial accuracy assessment of some visual- and LiDAR-based simultaneous localization and mapping (SLAM) algorithms for selected sequences. Encountered problems, open research questions and areas that could benefit from utilizing our dataset are discussed. Data are available at https://3dom.fbk.eu/benchmarks .",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "SLAM",
+    "visual_odometry",
+    "3D_mapping",
+    "localization",
+    "sensor_fusion",
+    "thermal_imaging_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "trajectory error metrics (ATE/RPE), point-cloud reconstruction error (RMSE), localization error, and qualitative/visual inspection",
+  "general_score_metric": "ATE (Absolute Trajectory Error) and RMSE for point-cloud alignment",
+  "year_of_publish": 2023,
+  "reputation": "10 citations",
+  "notes": "Large (~150 GB) multimodal non-LLM dataset for challenging indoor/outdoor/subterranean SLAM. Requires synchronized-sensor processing and specialized compute; limited number of distinct environments may affect generalization.",
+  "creators": {
+    "scientists": [
+      "Paweł Trybała",
+      "Jarosław Szrek",
+      "Fabio Remondino",
+      "Paulina Kujawa",
+      "Jacek Wodecki",
+      "Jan Blachowski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1007/s41064-023-00260-0",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

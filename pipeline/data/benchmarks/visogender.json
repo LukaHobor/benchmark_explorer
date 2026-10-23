@@ -1,0 +1,38 @@
+{
+  "name": "VisoGender",
+  "description": "We introduce VisoGender, a novel dataset for benchmarking gender bias in vision-language models. We focus on occupation-related biases within a hegemonic system of binary gender, inspired by Winograd and Winogender schemas, where each image is associated with a caption containing a pronoun relationship of subjects and objects in the scene. VisoGender is balanced by gender representation in professional roles, supporting bias evaluation in two ways: i) resolution bias, where we evaluate the difference between pronoun resolution accuracies for image subjects with gender presentations perceived as masculine versus feminine by human annotators and ii) retrieval bias, where we compare ratios of professionals perceived to have masculine and feminine gender presentations retrieved for a gender-neutral search query. We benchmark several state-of-the-art vision-language models and find that they demonstrate bias in resolving binary gender in complex scenes. While the direction and magnitude of gender bias depends on the task and the model being evaluated, captioning models are generally less biased than Vision-Language Encoders. Dataset and code are available at https://github.com/oxai/visogender",
+  "category": "multimodal",
+  "domain": "vision / vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pronoun_resolution",
+    "image_retrieval",
+    "captioning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "Moderately recognized in vision-language fairness research for measuring occupation-related gender bias; cited in related academic work but not a mainstream large-scale benchmark.",
+  "notes": "Frames gender as a binary/perceived presentation (limits representativeness); evaluates perceived gender which can conflate presentation with identity; moderate dataset size; risk of misuse when inferring or stereotyping identities.",
+  "creators": {
+    "scientists": [
+      "Siobhan Mackenzie Hall",
+      "Fernanda Gonçalves Abrantes",
+      "Hanwen Zhu",
+      "Grace Sodunke",
+      "Aleksandar Shtedritski",
+      "Hannah Rose Kirk"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.12424",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

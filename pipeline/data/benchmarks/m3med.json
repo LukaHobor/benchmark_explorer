@@ -1,0 +1,37 @@
+{
+  "name": "M3-Med",
+  "description": "With the rapid progress of artificial intelligence (AI) in multi-modal understanding, there is increasing potential for video comprehension technologies to support professional domains such as medical education. However, existing benchmarks suffer from two primary limitations: (1) Linguistic Singularity: they are largely confined to English, neglecting the need for multilingual resources; and (2) Shallow Reasoning: their questions are often designed for surface-level information retrieval, failing to properly assess deep multi-modal integration. To address these limitations, we present M3-Med, the first benchmark for Multi-lingual, Multi-modal, and Multi-hop reasoning in Medical instructional video understanding. M3-Med consists of medical questions paired with corresponding video segments, annotated by a team of medical experts. A key innovation of M3-Med is its multi-hop reasoning task, which requires a model to first locate a key entity in the text, then find corresponding visual evidence in the video, and finally synthesize information across both modalities to derive the answer. This design moves beyond simple text matching and poses a substantial challenge to a model's deep cross-modal understanding capabilities. We define two tasks: Temporal Answer Grounding in Single Video (TAGSV) and Temporal Answer Grounding in Video Corpus (TAGVC). We evaluated several state-of-the-art models and Large Language Models (LLMs) on M3-Med. The results reveal a significant performance gap between all models and human experts, especially on the complex multi-hop questions where model performance drops sharply. M3-Med effectively highlights the current limitations of AI models in deep cross-modal reasoning within specialized domains and provides a new direction for future research.",
+  "category": "multimodal",
+  "domain": "medical education / medical video understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "temporal_answer_grounding",
+    "multimodal_question_answering",
+    "multi-hop_reasoning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (for QA) + temporal grounding metrics (IoU / retrieval-style recall)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Specialized, expert-annotated medical instructional videos; limited size relative to large web-scale video corpora; multilingual but may have uneven language coverage; risk of pretraining contamination for LLMs/vision-language models; challenging multi-hop temporal grounding leads to large gap vs human experts.",
+  "creators": {
+    "scientists": [
+      "Shenxi Liu",
+      "Kan Li",
+      "Mingyang Zhao",
+      "Yuhang Tian",
+      "Bin Li",
+      "Shoujun Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2507.04289",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

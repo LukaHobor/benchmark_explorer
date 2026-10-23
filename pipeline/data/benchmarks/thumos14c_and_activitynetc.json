@@ -1,0 +1,38 @@
+{
+  "name": "THUMOS14-C and ActivityNet-C",
+  "description": "Temporal action detection (TAD) aims to locate action positions and recognize action categories in long-term untrimmed videos. Although many methods have achieved promising results, their robustness has not been thoroughly studied. In practice, we observe that temporal information in videos can be occasionally corrupted, such as missing or blurred frames. Interestingly, existing methods often incur a significant performance drop even if only one frame is affected. To formally evaluate the robustness, we establish two temporal corruption robustness benchmarks, namely THUMOS14-C and ActivityNet-v1.3-C. In this paper, we extensively analyze the robustness of seven leading TAD methods and obtain some interesting findings: 1) Existing methods are particularly vulnerable to temporal corruptions, and end-to-end methods are often more susceptible than those with a pre-trained feature extractor; 2) Vulnerability mainly comes from localization error rather than classification error; 3) When corruptions occur in the middle of an action instance, TAD models tend to yield the largest performance drop. Besides building a benchmark, we further develop a simple but effective robust training method to defend against temporal corruptions, through the FrameDrop augmentation and Temporal-Robust Consistency loss. Remarkably, our approach not only improves robustness but also yields promising improvements on clean data. We believe that this study will serve as a benchmark for future research in robust video analysis. Source code and models are available at https://github.com/Alvin-Zeng/temporal-robustness-benchmark.",
+  "category": "vision",
+  "domain": "video / temporal action detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "temporal_action_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) at temporal IoU thresholds (standard TAD evaluation)",
+  "general_score_metric": "mAP (mean Average Precision) at temporal IoU(s)",
+  "typical_sota_score": "THUMOS14 (clean) ~40–60% mAP (varies by IoU); ActivityNet (clean) ~20–40% mAP; performance drops substantially under introduced corruptions.",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A recent robustness-oriented extension of standard TAD datasets (THUMOS14 / ActivityNet) gaining attention for evaluating temporal-corruption robustness but not yet a de facto standard.",
+  "notes": "Corruption-augmented benchmark (uses modified original datasets) intended for robustness analysis rather than new data collection; reported scores depend strongly on IoU threshold and corruption type; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Runhao Zeng",
+      "Xiaoyong Chen",
+      "Jiaming Liang",
+      "Huisi Wu",
+      "Guangzhong Cao",
+      "Yong Guo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.20254",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

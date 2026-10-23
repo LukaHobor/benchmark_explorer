@@ -1,0 +1,36 @@
+{
+  "name": "Nanopore long-read RNA-seq transcript-level benchmark",
+  "description": "The human genome contains instructions to transcribe more than 200,000 RNAs. However, many RNA transcripts are generated from the same gene, resulting in alternative isoforms that are highly similar and that remain difficult to quantify. To evaluate the ability to study RNA transcript expression, we profiled seven human cell lines with five different RNA-sequencing protocols, including short-read cDNA, Nanopore long-read direct RNA, amplification-free direct cDNA and PCR-amplified cDNA sequencing, and PacBio IsoSeq, with multiple spike-in controls, and additional transcriptome-wide N6-methyladenosine profiling data. We describe differences in read length, coverage, throughput and transcript expression, reporting that long-read RNA sequencing more robustly identifies major isoforms. We illustrate the value of the SG-NEx data to identify alternative isoforms, novel transcripts, fusion transcripts and N6-methyladenosine RNA modifications. Together, the SG-NEx data provide a comprehensive resource enabling the development and benchmarking of computational methods for profiling complex transcriptional events at isoform-level resolution. This analysis provides a collection of sequencing datasets generated from long-read and short-read RNA sequencing, serving as a valuable resource for transcriptome profiling.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "isoform_quantification",
+    "transcript_identification",
+    "differential_expression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 / precision & recall for identification tasks and correlation (Pearson/Spearman) for quantification",
+  "general_score_metric": "F1 (identification) and Pearson/Spearman correlation (quantification)",
+  "year_of_publish": 2025,
+  "reputation": "29 citations",
+  "notes": "Complex, multi-protocol sequencing resource (long- and short-read) rather than a single standardized leaderboard; results vary strongly by protocol, coverage and analysis pipeline; not an LLM benchmark; potential batch effects and limited replication for some cell lines.",
+  "creators": {
+    "scientists": [
+      "Y. Chen",
+      "Nadia M. Davidson",
+      "Yuk Kei Wan",
+      "Fei Yao",
+      "Yan Su",
+      "Hasindu Gamaarachchi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

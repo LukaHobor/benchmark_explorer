@@ -1,0 +1,38 @@
+{
+  "name": "MARS-Bench",
+  "description": "Large Language Models (\\textbf{LLMs}), e.g. ChatGPT, have been widely adopted in real-world dialogue applications. However, LLMs'robustness, especially in handling long complex dialogue sessions, including frequent motivation transfer, sophisticated cross-turn dependency, is criticized all along. Nevertheless, no existing benchmarks can fully reflect these weaknesses. We present \\textbf{MARS-Bench}, a \\textbf{M}ulti-turn \\textbf{A}thletic \\textbf{R}eal-world \\textbf{S}cenario Dialogue \\textbf{Bench}mark, designed to remedy the gap. MARS-Bench is constructed from play-by-play text commentary so to feature realistic dialogues specifically designed to evaluate three critical aspects of multi-turn conversations: Ultra Multi-turn, Interactive Multi-turn, and Cross-turn Tasks. Extensive experiments on MARS-Bench also reveal that closed-source LLMs significantly outperform open-source alternatives, explicit reasoning significantly boosts LLMs'robustness on handling long complex dialogue sessions, and LLMs indeed face significant challenges when handling motivation transfer and sophisticated cross-turn dependency. Moreover, we provide mechanistic interpretability on how attention sinks due to special tokens lead to LLMs'performance degradation when handling long complex dialogue sessions based on attention visualization experiment in Qwen2.5-7B-Instruction.",
+  "category": "text",
+  "domain": "linguistics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "generation",
+    "multi_turn_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (human_eval combined with automatic dialogue metrics such as BLEU/ROUGE and task-specific success measures)",
+  "general_score_metric": "composite_dialogue_robustness_score",
+  "typical_sota_score": "80–95% (closed-source); 40–70% (open-source)",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Focuses on long, complex multi-turn dialogues derived from play-by-play commentary; susceptible to training-data contamination (closed models may have seen similar data); relies on both human evaluation and automatic metrics; specifically targets LLM robustness rather than general language understanding.",
+  "creators": {
+    "scientists": [
+      "Chenghao Yang",
+      "Yinbo Luo",
+      "Zhoufutu Wen",
+      "Qi Chu",
+      "Tao Gong",
+      "Longxiang Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2505.23810",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

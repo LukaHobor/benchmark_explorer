@@ -1,0 +1,39 @@
+{
+  "name": "MuSiQue",
+  "description": "Multihop Questions via Single-hop Question Composition (MuSiQue) is a multi-hop QA benchmark where 2-4 hop questions are constructed by combining single-hop questions. It addresses shortcut exploitation in multi-hop QA by ensuring answerable questions cannot be answered with fewer hops, and includes unanswerable variations to prevent reasoning shortcuts.",
+  "category": "text",
+  "domain": "question answering",
+  "task_types": [
+    "multi_hop_question_answering",
+    "answer_extraction"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 25000,
+  "evaluation_method": "F1 and Exact Match (EM)",
+  "general_score_metric": "F1 / Exact Match",
+  "typical_sota_score": "~45-55 F1 (human ~82 F1)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2022,
+  "reputation": "Rigorous multi-hop QA benchmark that prevents shortcut exploitation; published at TACL 2022; used to evaluate chain-of-thought and RAG systems",
+  "notes": "Published at TACL 2022. Composed from 2, 3, and 4 hop questions. Answerable subset (24K) + unanswerable subset (5K). Questions tested to ensure they cannot be answered with fewer hops. Compared to HotpotQA, MuSiQue is more challenging due to explicit anti-shortcut construction. Used in IR and RAG system evaluation.",
+  "creators": {
+    "scientists": [
+      "Harsh Trivedi",
+      "Nirmal Balasubramanian",
+      "Tushar Khot",
+      "Ashish Sabharwal"
+    ],
+    "institutions": [
+      "Stony Brook University",
+      "Allen Institute for AI"
+    ],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2108.00573",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9"
+  }
+}

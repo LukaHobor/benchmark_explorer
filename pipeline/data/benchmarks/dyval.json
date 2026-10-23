@@ -1,0 +1,37 @@
+{
+  "name": "DyVal",
+  "description": "Large language models (LLMs) have achieved remarkable performance in various evaluation benchmarks. However, concerns are raised about potential data contamination in their considerable volume of training corpus. Moreover, the static nature and fixed complexity of current benchmarks may inadequately gauge the advancing capabilities of LLMs. In this paper, we introduce DyVal, a general and flexible protocol for dynamic evaluation of LLMs. Based on our framework, we build graph-informed DyVal by leveraging the structural advantage of directed acyclic graphs to dynamically generate evaluation samples with controllable complexities. DyVal generates challenging evaluation sets on reasoning tasks including mathematics, logical reasoning, and algorithm problems. We evaluate various LLMs ranging from Flan-T5-large to GPT-3.5-Turbo and GPT-4. Experiments show that LLMs perform worse in DyVal-generated evaluation samples with different complexities, highlighting the significance of dynamic evaluation. We also analyze the failure cases and results of different prompting methods. Moreover, DyVal-generated samples are not only evaluation sets, but also helpful data for fine-tuning to improve the performance of LLMs on existing benchmarks. We hope that DyVal can shed light on future evaluation research of LLMs. Code is available at: https://github.com/microsoft/promptbench.",
+  "category": "mixed",
+  "domain": "reasoning",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "varies widely; top models (GPT-4) reported roughly 60–95% depending on task complexity",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "A research-oriented dynamic evaluation protocol that has influenced discussion on contamination-resistant benchmarking, but is not yet a widely standardized leaderboard.",
+  "notes": "Data Pollution, Complexity Control",
+  "creators": {
+    "scientists": [
+      "Kaijie Zhu",
+      "Jiaao Chen",
+      "Jindong Wang",
+      "Neil Zhenqiang Gong",
+      "Diyi Yang",
+      "Xing Xie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2309.17167v3",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-23",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

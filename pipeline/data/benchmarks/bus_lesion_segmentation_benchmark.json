@@ -1,0 +1,36 @@
+{
+  "name": "BUS Lesion Segmentation Benchmark",
+  "description": "Automatic lesion segmentation in breast ultrasound (BUS) images aids in the diagnosis of breast cancer, the most common type of cancer in women. Accurate lesion segmentation in ultrasound images is a challenging task due to speckle noise, artifacts, shadows, and lesion variability in size and shape. Recently, convolutional neural networks have demonstrated impressive results in medical image segmentation tasks. However, the lack of public benchmarks and a standardized evaluation method hampers the networks' performance comparison. This work presents a benchmark of seven state-of-the-art methods for the automatic breast lesion segmentation task. The methods were evaluated on a multi-center BUS dataset composed of three public datasets. Specifically, the U-Net, Dynamic U-Net, Semantic Segmentation Deep Residual Network with Variational Autoencoder (SegResNetVAE), U-Net Transformers, Residual Feedback Network, Multiscale Dual Attention-Based Network, and Global Guidance Network (GG-Net) architectures were evaluated. The training was performed with a combination of the cross-entropy and Dice loss functions and the overall performance of the networks was assessed using the Dice coefficient, Jaccard index, accuracy, recall, specificity, and precision. Despite all networks having obtained Dice scores superior to 75%, the GG-Net and SegResNetVAE architectures outperform the remaining methods, achieving 82.56% and 81.90%, respectively. Clinical Relevance- The results of this study allowed to prove the potential of deep neural networks to be used in clinical practice for breast lesion segmentation also suggesting the best model choices.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient (primary), Jaccard index (IoU), accuracy, recall, precision, specificity",
+  "general_score_metric": "Dice coefficient",
+  "typical_sota_score": "82–83%",
+  "year_of_publish": 2022,
+  "reputation": "8 citations",
+  "notes": "Medical image segmentation benchmark (non-LLM). Multi-center compilation but relatively limited dataset size; performance can be sensitive to annotation variability, class imbalance, and domain shift across ultrasound devices.",
+  "creators": {
+    "scientists": [
+      "Margarida R. Ferreira",
+      "Helena R. Torres",
+      "Bruno Oliveira",
+      "João Gomes‐Fonseca",
+      "Pedro Morais",
+      "Paulo Nováis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1109/embc48229.2022.9871091",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

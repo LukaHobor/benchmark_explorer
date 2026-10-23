@@ -1,0 +1,35 @@
+{
+  "name": "Reactor Optimization Benchmark (OpenNeoMC)",
+  "description": "Neutronic calculations for reactors are a daunting task when using Monte Carlo (MC) methods. As high-performance computing has advanced, the simulation of a reactor is nowadays more readily done, but design and optimization with multiple parameters is still a computational challenge. MC transport simulations, coupled with machine learning techniques, offer promising avenues for enhancing the efficiency and effectiveness of nuclear reactor optimization. This paper introduces a novel benchmark problem within the OpenNeoMC framework designed specifically for reinforcement learning. The benchmark involves optimizing a unit cell of a research reactor with two varying parameters (fuel density and water spacing) to maximize neutron flux while maintaining reactor criticality. The test case features distinct local optima, representing different physical regimes, thus posing a challenge for learning algorithms. Through extensive simulations utilizing evolutionary and neuroevolutionary algorithms, we demonstrate the effectiveness of reinforcement learning in navigating complex optimization landscapes with strict constraints. Furthermore, we propose acceleration techniques within the OpenNeoMC framework, including model updating and cross-section usage by RAM utilization, to expedite simulation times. Our findings emphasize the importance of machine learning integration in reactor optimization and contribute to advancing methodologies for addressing intricate optimization challenges in nuclear engineering. The sources of this work are available at our GitHub repository: https://github.com/Scientific-Computing-Lab-NRCN/RLOpenNeoMC",
+  "category": "mixed",
+  "domain": "nuclear engineering / reactor design",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "continuous_optimization",
+    "constrained_optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "episode return / objective value (neutron flux) combined with constraint-satisfaction rate (criticality maintained); reported as optimized objective under constraints",
+  "general_score_metric": "objective value (neutron flux) with constraint adherence (criticality) / task success rate",
+  "year_of_publish": 2024,
+  "reputation": "A niche, research-oriented benchmark introduced by the authors for nuclear-reactor optimization with RL; currently has limited adoption outside specialized academic and engineering groups.",
+  "notes": "Simulation-based, non-LLM benchmark that relies on Monte Carlo neutronics (computationally expensive and noisy). Results can be sensitive to simulator settings, HPC resources, and random seeds; constrained optimization and domain-specific physics make cross-benchmark comparisons challenging.",
+  "creators": {
+    "scientists": [
+      "Deborah Schwarcz",
+      "Nadav Schneider",
+      "Gal Oren",
+      "Uri Steinitz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2403.14273",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

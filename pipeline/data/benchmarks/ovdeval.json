@@ -1,0 +1,40 @@
+{
+  "name": "OVDEval",
+  "description": "Object detection (OD) in computer vision has made significant progress in recent years, transitioning from closed-set labels to open-vocabulary detection (OVD) based on large-scale vision-language pre-training (VLP). However, current evaluation methods and datasets are limited to testing generalization over object types and referral expressions, which do not provide a systematic, fine-grained, and accurate benchmark of OVD models' abilities. In this paper, we propose a new benchmark named OVDEval, which includes 9 sub-tasks and introduces evaluations on commonsense knowledge, attribute understanding, position understanding, object relation comprehension, and more. The dataset is meticulously created to provide hard negatives that challenge models' true understanding of visual and linguistic input. Additionally, we identify a problem with the popular Average Precision (AP) metric when benchmarking models on these fine-grained label datasets and propose a new metric called Non-Maximum Suppression Average Precision (NMS-AP) to address this issue. Extensive experimental results show that existing top OVD models all fail on the new tasks except for simple object types, demonstrating the value of the proposed dataset in pinpointing the weakness of current OVD models and guiding future research. Furthermore, the proposed NMS-AP metric is verified by experiments to provide a much more truthful evaluation of OVD models, whereas traditional AP metrics yield deceptive results. Data is available at \\url{https://github.com/om-ai-lab/OVDEval}",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "open_vocabulary_detection",
+    "attribute_and_relation_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "NMS-AP (Non-Maximum Suppression Average Precision) proposed by the authors",
+  "general_score_metric": "NMS-AP",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "A recent specialized benchmark for open-vocabulary detection that has attracted attention in the OVD research subcommunity but is not yet a widely established standard.",
+  "notes": "Dataset contains hard negatives and fine-grained labels; authors identify problems with traditional AP and recommend NMS-AP. Results are sensitive to evaluation protocol and NMS behavior; not directly comparable to standard OD benchmarks without careful metric alignment.",
+  "creators": {
+    "scientists": [
+      "Yiyang Yao",
+      "Peng Liu",
+      "Tiancheng Zhao",
+      "Qianqian Zhang",
+      "Jiajia Liao",
+      "Chunxin Fang",
+      "Kyusong Lee",
+      "Qing Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.13177",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

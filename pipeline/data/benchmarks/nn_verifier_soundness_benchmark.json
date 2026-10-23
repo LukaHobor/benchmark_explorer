@@ -1,0 +1,37 @@
+{
+  "name": "NN Verifier Soundness Benchmark",
+  "description": "In recent years, many neural network (NN) verifiers have been developed to formally verify certain properties of neural networks such as robustness. Although many benchmarks have been constructed to evaluate the performance of NN verifiers, they typically lack a ground-truth for hard instances where no current verifier can verify and no counterexample can be found, which makes it difficult to check the soundness of a new verifier if it claims to verify hard instances which no other verifier can do. We propose to develop a soundness benchmark for NN verification. Our benchmark contains instances with deliberately inserted counterexamples while we also try to hide the counterexamples from regular adversarial attacks which can be used for finding counterexamples. We design a training method to produce neural networks with such hidden counterexamples. Our benchmark aims to be used for testing the soundness of NN verifiers and identifying falsely claimed verifiability when it is known that hidden counterexamples exist. We systematically construct our benchmark and generate instances across diverse model architectures, activation functions, input sizes, and perturbation radii. We demonstrate that our benchmark successfully identifies bugs in state-of-the-art NN verifiers, as well as synthetic bugs, providing a crucial step toward enhancing the reliability of testing NN verifiers. Our code is available at https://github.com/MVP-Harry/SoundnessBench and our benchmark is available at https://huggingface.co/datasets/SoundnessBench/SoundnessBench.",
+  "category": "mixed",
+  "domain": "formal verification / machine learning robustness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "formal_verification",
+    "soundness_testing"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (measuring correct identification of instances with hidden counterexamples / soundness detection rate)",
+  "general_score_metric": "soundness_detection_rate (fraction of hidden-counterexample instances correctly identified or causing verifier failure)",
+  "year_of_publish": 2024,
+  "reputation": "Research-oriented benchmark with growing attention among verification researchers for testing verifier soundness rather than broad performance.",
+  "notes": "Non-LLM benchmark composed of synthetic and systematically constructed NN instances with deliberately hidden counterexamples; intended to expose verifier bugs. Small-to-moderate scale, task-specific, and primarily used for debugging/robustness of formal verifiers rather than benchmarking broad model capabilities.",
+  "creators": {
+    "scientists": [
+      "Xingjian Zhou",
+      "Hongji Xu",
+      "Andy Xu",
+      "Zhouxing Shi",
+      "Cho-Jui Hsieh",
+      "huan zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2412.03154",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

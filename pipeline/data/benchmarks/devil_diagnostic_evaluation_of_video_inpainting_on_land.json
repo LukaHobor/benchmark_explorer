@@ -1,0 +1,34 @@
+{
+  "name": "DEVIL (Diagnostic Evaluation of Video Inpainting on Landscapes)",
+  "description": "Quantitative evaluation has increased dramatically among recent video inpainting work, but the video and mask content used to gauge performance has received relatively little attention. Although attributes such as camera and background scene motion inherently change the difficulty of the task and affect methods differently, existing evaluation schemes fail to control for them, thereby providing minimal insight into inpainting failure modes. To address this gap, we propose the Diagnostic Evaluation of Video Inpainting on Landscapes (DEVIL) benchmark, which consists of two contributions: (i) a novel dataset of videos and masks labeled according to several key inpainting failure modes, and (ii) an evaluation scheme that samples slices of the dataset characterized by a fixed content attribute, and scores performance on each slice according to reconstruction, realism, and temporal consistency quality. By revealing systematic changes in performance induced by particular characteristics of the input content, our challenging benchmark enables more insightful analysis into video inpainting methods and serves as an invaluable diagnostic tool for the field. Our code and data are available at https://github.com/MichiganCOG/devil .",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_inpainting",
+    "diagnostic_evaluation",
+    "mask-conditioned_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score (reconstruction + realism + temporal consistency; typically measured via PSNR/SSIM/LPIPS/FVD plus human evaluation)",
+  "general_score_metric": "composite_score (reconstruction+realism+temporal_consistency)",
+  "year_of_publish": 2021,
+  "reputation": "A diagnostic, well-regarded dataset for video inpainting that is cited for enabling per-attribute analysis of failure modes, but remains a niche evaluation resource compared with larger generic video datasets.",
+  "notes": "Non-LLM benchmark; dataset is sliced by content attributes (diagnostic rather than large-scale); evaluation combines automatic metrics and human judgements; per-slice scores vary widely so overall SOTA aggregates are not directly comparable.",
+  "creators": {
+    "scientists": [
+      "Ryan Szeto",
+      "Jason J. Corso"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2105.05332",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

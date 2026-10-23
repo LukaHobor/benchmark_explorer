@@ -1,0 +1,38 @@
+{
+  "name": "CASTLE",
+  "description": "Identifying vulnerabilities in source code is crucial, especially in critical software components. Existing methods such as static analysis, dynamic analysis, formal verification, and recently Large Language Models are widely used to detect security flaws. This paper introduces CASTLE (CWE Automated Security Testing and Low-Level Evaluation), a benchmarking framework for evaluating the vulnerability detection capabilities of different methods. We assess 13 static analysis tools, 10 LLMs, and 2 formal verification tools using a hand-crafted dataset of 250 micro-benchmark programs covering 25 common CWEs. We propose the CASTLE Score, a novel evaluation metric to ensure fair comparison. Our results reveal key differences: ESBMC (a formal verification tool) minimizes false positives but struggles with vulnerabilities beyond model checking, such as weak cryptography or SQL injection. Static analyzers suffer from high false positives, increasing manual validation efforts for developers. LLMs perform exceptionally well in the CASTLE dataset when identifying vulnerabilities in small code snippets. However, their accuracy declines, and hallucinations increase as the code size grows. These results suggest that LLMs could play a pivotal role in future security solutions, particularly within code completion frameworks, where they can provide real-time guidance to prevent vulnerabilities. The dataset is accessible at https://github.com/CASTLE-Benchmark.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "vulnerability_localization",
+    "vulnerability_identification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "CASTLE Score (composite metric) supplemented by accuracy, precision, recall, and F1 for per-CWE detection",
+  "general_score_metric": "CASTLE Score (composite designed to balance true/false positives across tools and vulnerabilities)",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2025,
+  "reputation": "9 citations",
+  "notes": "Small, hand-crafted micro-benchmark (250 programs across 25 CWEs) — risk of dataset-specific overfitting and limited generalization to large real-world codebases; possible contamination if benchmark patterns appear in model training data; compares LLMs alongside static analysis and formal tools.",
+  "creators": {
+    "scientists": [
+      "Richard A. Dubniczky",
+      "Krisztofer Zolt'an Horv'at",
+      "Tamás Bisztray",
+      "M. Ferrag",
+      "L. C. Cordeiro",
+      "N. Tihanyi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2503.09433",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "Large annotated medical image dataset (segmentation)",
+  "description": "Semantic segmentation of medical images aims to associate a pixel with a\nlabel in a medical image without human initialization. The success of semantic\nsegmentation algorithms is contingent on the availability of high-quality\nimaging data with corresponding labels provided by experts. We sought to create\na large collection of annotated medical image datasets of various clinically\nrelevant anatomies available under open source license to facilitate the\ndevelopment of semantic segmentation algorithms. Such a resource would allow:\n1) objective assessment of general-purpose segmentation methods through\ncomprehensive benchmarking and 2) open and free access to medical image data\nfor any researcher interested in the problem domain. Through a\nmulti-institutional effort, we generated a large, curated dataset\nrepresentative of several highly variable segmentation tasks that was used in a\ncrowd-sourced challenge - the Medical Segmentation Decathlon held during the\n2018 Medical Image Computing and Computer Aided Interventions Conference in\nGranada, Spain. Here, we describe these ten labeled image datasets so that\nthese data may be effectively reused by the research community.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "medical_image_segmentation",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (Dice coefficient) and task-specific metrics (e.g., Dice per class, Hausdorff distance used in some tasks)",
+  "general_score_metric": "mean Dice (Dice coefficient) across tasks",
+  "typical_sota_score": "≈80–95% Dice (task-dependent; some tasks substantially lower/higher)",
+  "year_of_publish": 2019,
+  "reputation": "Widely used community benchmark (Medical Segmentation Decathlon) for comparing general-purpose medical image segmentation methods across multiple organs and modalities.",
+  "notes": "Collection of 10 heterogeneous segmentation tasks with varying dataset sizes and difficulty; not saturated across all tasks. Requires domain expertise to interpret; potential class imbalance and inter-rater label variability across modalities.",
+  "creators": {
+    "scientists": [
+      "Amber L. Simpson",
+      "Michela Antonelli",
+      "Spyridon Bakas",
+      "Michel Bilello",
+      "Keyvan Farahani",
+      "Bram van Ginneken",
+      "Annette Kopp-Schneider",
+      "Bennett A. Landman",
+      "Geert Litjens",
+      "Bjoern Menze",
+      "Olaf Ronneberger",
+      "Ronald M. Summers",
+      "Patrick Bilic",
+      "Patrick F. Christ",
+      "Richard K. G. Do",
+      "Marc Gollub",
+      "Jennifer Golia-Pernicka",
+      "Stephan H. Heckers",
+      "William R. Jarnagin",
+      "Maureen K. McHugo",
+      "Sandy Napel",
+      "Eugene Vorontsov",
+      "Lena Maier-Hein",
+      "M. Jorge Cardoso"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1902.09063",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

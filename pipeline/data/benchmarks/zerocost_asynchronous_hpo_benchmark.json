@@ -1,0 +1,36 @@
+{
+  "name": "Zero-Cost Asynchronous HPO Benchmark",
+  "description": "While deep learning has celebrated many successes, its results often hinge on the meticulous selection of hyperparameters (HPs). However, the time-consuming nature of deep learning training makes HP optimization (HPO) a costly endeavor, slowing down the development of efficient HPO tools. While zero-cost benchmarks, which provide performance and runtime without actual training, offer a solution for non-parallel setups, they fall short in parallel setups as each worker must communicate its queried runtime to return its evaluation in the exact order. This work addresses this challenge by introducing a user-friendly Python package that facilitates efficient parallel HPO with zero-cost benchmarks. Our approach calculates the exact return order based on the information stored in file system, eliminating the need for long waiting times and enabling much faster HPO evaluations. We first verify the correctness of our approach through extensive testing and the experiments with 6 popular HPO libraries show its applicability to diverse libraries and its ability to achieve over 1000x speedup compared to a traditional approach. Our package can be installed via pip install mfhpo-simulator.",
+  "category": "mixed",
+  "domain": "hyperparameter optimization / AutoML",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "hyperparameter_optimization",
+    "benchmarking",
+    "parallel_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "validation_performance + runtime (composite of best validation score and wall-clock time)",
+  "general_score_metric": "best_validation_performance (e.g., validation accuracy or validation loss) combined with runtime",
+  "year_of_publish": 2024,
+  "reputation": "A recent research benchmark with limited adoption so far, primarily of interest to HPO and AutoML researchers.",
+  "notes": "Non-LLM benchmark focused on HPO/runtime behavior rather than model architecture; results depend on filesystem/worker setup so reproducibility can vary; designed for parallel evaluation scenarios rather than large-scale real training traces.",
+  "creators": {
+    "scientists": [
+      "Shuhei Watanabe",
+      "Neeratyoy Mallik",
+      "Edward Bergman",
+      "Frank Hutter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2403.01888",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Cancer-Net PCa-Seg",
+  "description": "Prostate cancer (PCa) is the most prevalent cancer among men in the United States, accounting for nearly 300,000 cases, 29\\% of all diagnoses and 35,000 total deaths in 2024. Traditional screening methods such as prostate-specific antigen (PSA) testing and magnetic resonance imaging (MRI) have been pivotal in diagnosis, but have faced limitations in specificity and generalizability. In this paper, we explore the potential of enhancing PCa gland segmentation using a novel MRI modality called synthetic correlated diffusion imaging (CDI$^s$). We employ several state-of-the-art deep learning models, including U-Net, SegResNet, Swin UNETR, Attention U-Net, and LightM-UNet, to segment prostate glands from a 200 CDI$^s$ patient cohort. We find that SegResNet achieved superior segmentation performance with a Dice-Sorensen coefficient (DSC) of $76.68 \\pm 0.8$. Notably, the Attention U-Net, while slightly less accurate (DSC $74.82 \\pm 2.0$), offered a favorable balance between accuracy and computational efficiency. Our findings demonstrate the potential of deep learning models in improving prostate gland segmentation using CDI$^s$ to enhance PCa management and clinical support.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "medical_image_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice (Dice-Sørensen coefficient)",
+  "general_score_metric": "Dice (DSC)",
+  "typical_sota_score": "≈74–78%",
+  "year_of_publish": 2025,
+  "reputation": "New clinical imaging dataset introduced for prostate gland segmentation research; limited but growing adoption in medical imaging research.",
+  "notes": "Small cohort (200 patients) and a novel MRI modality (synthetic CDI^s) — may limit generalizability and require external validation. Reported scores come from classical segmentation architectures (e.g., SegResNet, Attention U-Net). Non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jarett Dewbury",
+      "Chi-en Amy Tai",
+      "Alexander Wong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2501.09185",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

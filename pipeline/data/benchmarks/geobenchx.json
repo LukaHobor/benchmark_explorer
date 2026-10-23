@@ -1,0 +1,36 @@
+{
+  "name": "GeoBenchX",
+  "description": "This paper establishes a benchmark for evaluating tool-calling capabilities of large language models (LLMs) on multi-step geospatial tasks relevant to commercial GIS practitioners. We assess eight commercial LLMs (Claude Sonnet 3.5 and 4, Claude Haiku 3.5, Gemini 2.0 Flash, Gemini 2.5 Pro Preview, GPT-4o, GPT-4.1 and o4-mini) using a simple tool-calling agent equipped with 23 geospatial functions. Our benchmark comprises tasks in four categories of increasing complexity, with both solvable and intentionally unsolvable tasks to test rejection accuracy. We develop a LLM-as-Judge evaluation framework to compare agent solutions against reference solutions. Results show o4-mini and Claude 3.5 Sonnet achieve the best overall performance, OpenAI's GPT-4.1, GPT-4o and Google's Gemini 2.5 Pro Preview do not fall far behind, but the last two are more efficient in identifying unsolvable tasks. Claude Sonnet 4, due its preference to provide any solution rather than reject a task, proved to be less",
+  "category": "multimodal",
+  "domain": "geospatial",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "tool_use",
+    "multi_step_reasoning",
+    "open_ended",
+    "rejection_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "60–80%",
+  "year_of_publish": 2025,
+  "reputation": "A very recent benchmark for geospatial tool use that is promising but not yet broadly adopted outside the paper.",
+  "notes": "Uses LLM-as-Judge scoring and includes intentionally unsolvable tasks, so rejection behavior materially affects results; performance depends on the tool-calling agent setup.",
+  "creators": {
+    "scientists": [
+      "Varvara Krechetova",
+      "Denis Kochedykov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2503.18129",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

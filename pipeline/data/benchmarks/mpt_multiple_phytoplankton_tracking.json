@@ -1,0 +1,35 @@
+{
+  "name": "MPT (Multiple Phytoplankton Tracking)",
+  "description": "Phytoplankton are a crucial component of aquatic ecosystems, and effective monitoring of them can provide valuable insights into ocean environments and ecosystem changes. Traditional phytoplankton monitoring methods are often complex and lack timely analysis. Therefore, deep learning algorithms offer a promising approach for automated phytoplankton monitoring. However, the lack of large-scale, high-quality training samples has become a major bottleneck in advancing phytoplankton tracking. In this paper, we propose a challenging benchmark dataset, Multiple Phytoplankton Tracking (MPT), which covers diverse background information and variations in motion during observation. The dataset includes 27 species of phytoplankton and zooplankton, 14 different backgrounds to simulate diverse and complex underwater environments, and a total of 140 videos. To enable accurate real-time observation of phytoplankton, we introduce a multi-object tracking method, Deviation-Corrected Multi-Scale Feature Fusion Tracker(DSFT), which addresses issues such as focus shifts during tracking and the loss of small target information when computing frame-to-frame similarity. Specifically, we introduce an additional feature extractor to predict the residuals of the standard feature extractor's output, and compute multi-scale frame-to-frame similarity based on features from different layers of the extractor. Extensive experiments on the MPT have demonstrated the validity of the dataset and the superiority of DSFT in tracking phytoplankton, providing an effective solution for phytoplankton monitoring.",
+  "category": "vision",
+  "domain": "marine biology / aquatic ecosystem monitoring",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_object_tracking",
+    "video_object_tracking",
+    "video_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MOTA / IDF1 / HOTA (standard multi-object tracking metrics)",
+  "general_score_metric": "MOTA",
+  "year_of_publish": 2024,
+  "reputation": "A niche but valuable dataset for aquatic imaging and phytoplankton tracking research; limited mainstream adoption so far.",
+  "notes": "Non-LLM vision benchmark focused on multi-object tracking of small biological targets; relatively small-scale (140 videos, 27 species), potential class imbalance and domain-specific imaging artifacts; standard MOT metrics apply.",
+  "creators": {
+    "scientists": [
+      "Yang Yu",
+      "Yuezun Li",
+      "Xin Sun",
+      "Junyu Dong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.16695",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

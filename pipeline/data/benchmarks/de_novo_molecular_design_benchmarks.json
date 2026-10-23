@@ -1,0 +1,33 @@
+{
+  "name": "De Novo Molecular Design Benchmarks",
+  "description": "De novo molecular design is a thriving research area in machine learning (ML) that lacks ubiquitous, high-quality, standardized benchmark tasks. Many existing benchmark tasks do not precisely specify a training dataset or an evaluation budget, which is problematic as they can significantly affect the performance of ML algorithms. This work elucidates the effect of dataset sizes and experimental budgets on established molecular optimization methods through a comprehensive evaluation with 11 selected benchmark tasks. We observe that the dataset size and budget significantly impact all methods' performance and relative ranking, suggesting that a meaningful comparison requires more than a single benchmark setup. Our results also highlight the relative difficulty of benchmarks, implying in particular that logP and QED are poor objectives. We end by offering guidance to researchers on their choice of experiments.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "optimization",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "best_objective_value (task-specific property scores) / improvement over baseline",
+  "general_score_metric": "best_objective_score (task-specific property value)",
+  "reputation": "Well-regarded in the ML-for-molecules community for clarifying the effects of dataset size and budget; cited by researchers studying evaluation protocol robustness, but not a single de-facto standard.",
+  "notes": "Non-LLM benchmark focused on molecular generation/optimization; performance is highly sensitive to dataset size and compute budget; some tasks (e.g., logP, QED) can be trivial or saturated; results have high variance across seeds and methods.",
+  "creators": {
+    "scientists": [
+      "Austin Tripp",
+      "Gregor N. C. Simm",
+      "José Miguel Hernández-Lobato"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

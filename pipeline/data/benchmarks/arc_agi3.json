@@ -1,0 +1,38 @@
+{
+  "name": "ARC-AGI-3",
+  "description": "An interactive agentic reasoning benchmark where agents must explore novel grid-based environments, infer goals on the fly, build world models, and adapt strategy — all without natural-language instructions. Unlike ARC-AGI-1/2, tasks are dynamic and turn-based: agents observe a 64×64 grid and issue actions across multiple levels within each environment. Performance is measured by Relative Human Action Efficiency (RHAE), comparing AI action efficiency to human baselines.",
+  "category": "multimodal",
+  "domain": "reasoning",
+  "task_types": [
+    "visual_reasoning",
+    "agentic_task",
+    "interactive_exploration"
+  ],
+  "difficulty_level": "expert",
+  "number_of_questions": 135,
+  "evaluation_method": "RHAE (Relative Human Action Efficiency): score = (human action count / AI action count)^2 per level, capped at 1.0; later levels weighted more heavily; averaged across environments",
+  "general_score_metric": "RHAE (Relative Human Action Efficiency), reported as percentage (0–100%)",
+  "typical_sota_score": "<1% for frontier LLMs (e.g., Gemini 3.1 Pro 0.37%, GPT-5.4 0.26%); best non-LLM specialized agent ~12.58% as of March 2026; human baseline 100%",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "Launched March 2026 by ARC Prize Foundation (Francois Chollet and Mike Knoop); part of a $2M competition (ARC Prize 2026); frontier LLMs score <1% while specialized non-LLM agents reach ~12%; billed as 'the only unsaturated general agentic intelligence benchmark as of March 2026'",
+  "notes": "135 handcrafted environments at launch (25 public, 55 semi-private, 55 private), each with 6–10 progressively harder levels. Designed to prevent memorization: novel environments with no prior training exposure. Requires Core Knowledge priors only. ARC Prize 2026 requires open-source solutions (MIT/CC0). Previous ARC-AGI-1 best AI ~53.5%, ARC-AGI-2 best AI ~24% — this benchmark resets the difficulty ceiling for agentic evaluation.",
+  "creators": {
+    "scientists": [
+      "Francois Chollet",
+      "Mike Knoop",
+      "Gregory Kamradt"
+    ],
+    "institutions": [
+      "ARC Prize Foundation"
+    ],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2603.24621",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-27",
+    "origin": "cynefin@d486fafa9"
+  }
+}

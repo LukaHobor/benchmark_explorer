@@ -1,0 +1,36 @@
+{
+  "name": "CFDBench",
+  "description": "In recent years, applying deep learning to solve physics problems has attracted much attention. Data-driven deep learning methods produce fast numerical operators that can learn approximate solutions to the whole system of partial differential equations (i.e., surrogate modeling). Although these neural networks may have lower accuracy than traditional numerical methods, they, once trained, are orders of magnitude faster at inference. Hence, one crucial feature is that these operators can generalize to unseen PDE parameters without expensive re-training.In this paper, we construct CFDBench, a benchmark tailored for evaluating the generalization ability of neural operators after training in computational fluid dynamics (CFD) problems. It features four classic CFD problems: lid-driven cavity flow, laminar boundary layer flow in circular tubes, dam flows through the steps, and periodic Karman vortex street. The data contains a total of 302K frames of velocity and pressure fields, involving 739 cases with different operating condition parameters, generated with numerical methods. We evaluate the effectiveness of popular neural operators including feed-forward networks, DeepONet, FNO, U-Net, etc. on CFDBnech by predicting flows with non-periodic boundary conditions, fluid properties, and flow domain shapes that are not seen during training. Appropriate modifications were made to apply popular deep neural networks to CFDBench and enable the accommodation of more changing inputs. Empirical results on CFDBench show many baseline models have errors as high as 300% in some problems, and severe error accumulation when performing autoregressive inference. CFDBench facilitates a more comprehensive comparison between different neural operators for CFD compared to existing benchmarks.",
+  "category": "mixed",
+  "domain": "computational fluid dynamics / fluid dynamics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "image_to_image",
+    "spatiotemporal_forecasting",
+    "generalization_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "normalized L2 error (relative L2) / MSE (reported per-field and per-case), sometimes MAE and percent error",
+  "general_score_metric": "relative L2 error (normalized L2) — primary reported metric",
+  "typical_sota_score": "5–50% relative L2 error for strong neural operators on some cases; many baseline models report much higher errors (up to >300%) on out-of-distribution cases",
+  "year_of_publish": 2023,
+  "reputation": "Adopted by researchers in ML-for-physics as a targeted benchmark for neural-operator generalization in CFD; moderate adoption in the community.",
+  "notes": "Non-LLM benchmark focused on CFD surrogate modeling; evaluation is task- and metric-dependent (per-field errors); contains 302K frames but case diversity can produce high variance; autoregressive evaluation can lead to severe error accumulation.",
+  "creators": {
+    "scientists": [
+      "Yining Luo",
+      "Yingfa Chen",
+      "Zhen Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2310.05963",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "LLM-generated Translation Benchmarks",
+  "description": "As large language models (LLMs) begin to saturate existing benchmarks, automated benchmark creation using LLMs (LLM as a benchmark) has emerged as a scalable alternative to slow and costly human curation. While these generated test sets have to potential to cheaply rank models, we demonstrate a critical flaw. LLM generated benchmarks systematically favor the model that created the benchmark, they exhibit self bias on low resource languages to English translation tasks. We show three key findings on automatic benchmarking of LLMs for translation: First, this bias originates from two sources: the generated test data (LLM as a testset) and the evaluation method (LLM as an evaluator), with their combination amplifying the effect. Second, self bias in LLM as a benchmark is heavily influenced by the model's generation capabilities in the source language. For instance, we observe more pronounced bias in into English translation, where the model's generation system is developed, than in out of",
+  "category": "text",
+  "domain": "machine translation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "translation",
+    "llm_generated_benchmarking",
+    "benchmark_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "win_rate",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark line that has drawn attention for exposing self-bias and evaluator bias in LLM-generated translation test sets, but it is not yet a widely standardized community benchmark.",
+  "notes": "Benchmarking is itself the subject of the paper; results are sensitive to self-bias, source-language generation strength, and evaluator choice. Not a fixed public leaderboard benchmark.",
+  "creators": {
+    "scientists": [
+      "Wenda Xu",
+      "Sweta Agrawal",
+      "Vilém Zouhar",
+      "Markus Freitag",
+      "Daniel Deutsch"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2509.26600",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

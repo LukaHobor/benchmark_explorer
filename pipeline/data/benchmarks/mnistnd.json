@@ -1,0 +1,38 @@
+{
+  "name": "MNIST-Nd",
+  "description": "Driven by advances in recording technology, large-scale high-dimensional datasets have emerged across many scientific disciplines. Especially in biology, clustering is often used to gain insights into the structure of such datasets, for instance to understand the organization of different cell types. However, clustering is known to scale poorly to high dimensions, even though the exact impact of dimensionality is unclear as current benchmark datasets are mostly two-dimensional. Here we propose MNIST-Nd, a set of synthetic datasets that share a key property of real-world datasets, namely that individual samples are noisy and clusters do not perfectly separate. MNIST-Nd is obtained by training mixture variational autoencoders with 2 to 64 latent dimensions on MNIST, resulting in six datasets with comparable structure but varying dimensionality. It thus offers the chance to disentangle the impact of dimensionality on clustering. Preliminary common clustering algorithm benchmarks on MNIST-Nd suggest that Leiden is the most robust for growing dimensions.",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "clustering",
+    "representation_learning",
+    "unsupervised_learning",
+    "dimensionality_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "adjusted_rand_index (ARI) / normalized_mutual_information (NMI)",
+  "general_score_metric": "Adjusted Rand Index (ARI)",
+  "year_of_publish": 2024,
+  "reputation": "Niche research benchmark used to study clustering behavior as latent dimensionality increases; modest adoption outside the clustering/representation-learning research community.",
+  "notes": "Synthetic, non-LLM benchmark derived from MNIST; focuses on clustering in latent spaces of varying dimensionality; moderate dataset size; results may not generalize to non-image or non-MNIST-like data.",
+  "creators": {
+    "scientists": [
+      "Polina Turishcheva",
+      "Laura Hansel",
+      "Martin Ritzert",
+      "Marissa A. Weis",
+      "Alexander S. Ecker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.16124",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

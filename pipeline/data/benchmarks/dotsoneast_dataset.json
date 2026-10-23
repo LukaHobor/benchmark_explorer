@@ -1,0 +1,36 @@
+{
+  "name": "DotsonEast Dataset",
+  "description": "Deep learning has shown promising results for multiple 3D point cloud registration datasets. However, in the underwater domain, most registration of multibeam echo-sounder (MBES) point cloud data are still performed using classical methods in the iterative closest point (ICP) family. In this work, we curate and release DotsonEast Dataset, a semi-synthetic MBES registration dataset constructed from an autonomous underwater vehicle in West Antarctica. Using this dataset, we systematically benchmark the performance of 2 classical and 4 learning-based methods. The experimental results show that the learning-based methods work well for coarse alignment, and are better at recovering rough transforms consistently at high overlap (20-50%). In comparison, GICP (a variant of ICP) performs well for fine alignment and is better across all metrics at extremely low overlap (10%). To the best of our knowledge, this is the first work to benchmark both learning-based and classical registration methods on an AUV-based MBES dataset. To facilitate future research, both the code and data are made available online.",
+  "category": "vision",
+  "domain": "marine robotics / underwater sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "point_cloud_registration",
+    "pose_estimation",
+    "rigid_transformation_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "rotation_error / translation_error / RMSE (and recall@threshold for successful registrations)",
+  "general_score_metric": "translation_error (m) and rotation_error (degrees) / registration RMSE",
+  "year_of_publish": 2024,
+  "reputation": "New academic dataset specialized for AUV MBES registration; limited adoption beyond the underwater robotics research niche.",
+  "notes": "Semi-synthetic and domain-specific (MBES/AUV); relatively small and specialized dataset; non-LLM benchmark focused on 3D registration metrics.",
+  "creators": {
+    "scientists": [
+      "Li Ling",
+      "Jun Zhang",
+      "Nils Bore",
+      "John Folkesson",
+      "Anna Wåhlin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.06279",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

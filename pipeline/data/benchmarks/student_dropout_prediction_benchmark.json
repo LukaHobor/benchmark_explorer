@@ -1,0 +1,35 @@
+{
+  "name": "student dropout prediction benchmark",
+  "description": "Student dropout remains a persistent challenge in higher education, with substantial personal, institutional, and societal costs. We developed a modular dropout prediction pipeline that couples data preprocessing with multi-model benchmarking and a governance-ready explainability layer. Using 17,883 undergraduate records from a Moroccan higher education institution, we evaluated nine algorithms (logistic regression (LR), decision tree (DT), random forest (RF), k-nearest neighbors (k-NN), support vector machine (SVM), gradient boosting, Extreme Gradient Boosting (XGBoost), Naïve Bayes (NB), and multilayer perceptron (MLP)). On our test set, XGBoost attained an area under the receiver operating characteristic curve (AUC–ROC) of 0.993, F1-score of 0.911, and recall of 0.944. Subgroup reporting supported governance and fairness: across credit–load bins, recall remained high and stable (e.g., <9 credits: precision 0.85, recall 0.932; 9–12: 0.886/0.969; >12: 0.915/0.936), with full TP/FP/FN/",
+  "category": "mixed",
+  "domain": "education",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "tabular_prediction",
+    "risk_prediction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUC-ROC, F1, recall, precision",
+  "general_score_metric": "AUC-ROC",
+  "typical_sota_score": "0.99+ AUC-ROC",
+  "year_of_publish": 2025,
+  "reputation": "A practical applied benchmark for student retention modeling, but not a widely standardized community benchmark.",
+  "notes": "Non-LLM, tabular institutional dataset; likely limited external generalization and potential dataset-specific bias.",
+  "creators": {
+    "scientists": [
+      "Abdelkarim Bettahi",
+      "Fatima-Zahra Belouadha",
+      "Hamid Harroud"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "MultiLoad",
+  "description": "Accurate power load forecasting is crucial for the stable operation and economic dispatch of modern smart grids. However, existing research faces two major bottlenecks: the lack of large-scale, standardized public datasets that comprehensively reflect multiple influencing factors such as weather and calendar effects, and the difficulty of effectively integrating general-purpose pretrained models with domain-specific external knowledge such as weather forecasts. To address these challenges, we construct MultiLoad, a large-scale multimodal power load forecasting benchmark dataset. MultiLoad integrates hourly load, meteorological, and calendar data from three geographically and climatically diverse regions-Belgium, New England, and Singapore-providing a valuable open research resource for the community. Building upon this foundation, we propose a novel conditional prediction model that deeply integrates the pretrained time series foundation model TimesFM with future multimodal conditioning information through a parameter-efficient conditioning injection mechanism. This approach preserves the model's powerful pretrained knowledge while leveraging known future weather and calendar information to guide the forecasting process. Extensive experiments on the MultiLoad dataset demonstrate that our method outperforms various traditional statistical, machine learning, and deep learning baselines across all evaluation metrics, validating that structured domain knowledge provides crucial complementary information to large pretrained models and substantially improves prediction accuracy. This work not only provides a much-needed benchmark for multimodal time series forecasting but also establishes an effective paradigm for adapting foundation models to domain-specific tasks with rich domain knowledge.",
+  "category": "multimodal",
+  "domain": "energy / power systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "multimodal_regression",
+    "probabilistic_forecasting",
+    "adaptation/evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE / RMSE / MAPE (point and probabilistic error measures)",
+  "general_score_metric": "MAE (primary reported metric), with RMSE and MAPE as complementary metrics",
+  "year_of_publish": 2025,
+  "reputation": "New specialized benchmark for multimodal power-load forecasting with limited community adoption to date, primarily cited within power-systems forecasting research.",
+  "notes": "Non-LLM benchmark focused on time-series/regression; results depend heavily on temporal split and weather/calendar covariates — risk of temporal leakage if not split properly; multimodal fusion and dataset size heterogeneity can make comparisons sensitive to preprocessing.",
+  "creators": {
+    "scientists": [
+      "Tiexuan Lou",
+      "Fushuan Wen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/psre67836.2025.11397968",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

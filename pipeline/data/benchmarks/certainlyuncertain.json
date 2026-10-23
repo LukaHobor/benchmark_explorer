@@ -1,0 +1,39 @@
+{
+  "name": "CertainlyUncertain",
+  "description": "The ability to acknowledge the inevitable uncertainty in their knowledge and reasoning is a prerequisite for AI systems to be truly truthful and reliable. In this paper, we present a taxonomy of uncertainty specific to vision-language AI systems, distinguishing between epistemic uncertainty (arising from a lack of information) and aleatoric uncertainty (due to inherent unpredictability), and further explore finer categories within. Based on this taxonomy, we synthesize a benchmark dataset, CertainlyUncertain, featuring 178K visual question answering (VQA) samples as contrastive pairs. This is achieved by 1) inpainting images to make previously answerable questions into unanswerable ones; and 2) using image captions to prompt large language models for both answerable and unanswerable questions. Additionally, we introduce a new metric confidence-weighted accuracy, that is well correlated with both accuracy and calibration error, to address the shortcomings of existing metrics.",
+  "category": "multimodal",
+  "domain": "vision-language / VQA",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "uncertainty_estimation",
+    "answerability_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "confidence-weighted_accuracy (primary); also evaluated with calibration metrics such as Expected Calibration Error (ECE)",
+  "general_score_metric": "confidence-weighted_accuracy",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed (2024) benchmark gaining attention in vision-language research for evaluating uncertainty and calibration.",
+  "notes": "Contains inpainted images and LLM-generated QA pairs to create answerable/unanswerable contrasts—this introduces synthetic artifacts and possible distribution shift; specifically designed to evaluate calibration/uncertainty rather than raw VQA accuracy.",
+  "creators": {
+    "scientists": [
+      "Khyathi Raghavi Chandu",
+      "Linjie Li",
+      "Anas Awadalla",
+      "Ximing Lu",
+      "Jae Sung Park",
+      "Jack Hessel",
+      "Lijuan Wang",
+      "Yejin Choi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.01942",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

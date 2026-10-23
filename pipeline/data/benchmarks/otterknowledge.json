@@ -1,0 +1,42 @@
+{
+  "name": "Otter-Knowledge",
+  "description": "Recent research on predicting the binding affinity between drug molecules and proteins use representations learned, through unsupervised learning techniques, from large databases of molecule SMILES and protein sequences. While these representations have significantly enhanced the predictions, they are usually based on a limited set of modalities, and they do not exploit available knowledge about existing relations among molecules and proteins. In this study, we demonstrate that by incorporating knowledge graphs from diverse sources and modalities into the sequences or SMILES representation, we can further enrich the representation and achieve state-of-the-art results for drug-target binding affinity prediction in the established Therapeutic Data Commons (TDC) benchmarks. We release a set of multimodal knowledge graphs, integrating data from seven public data sources, and containing over 30 million triples. Our intention is to foster additional research to explore how multimodal knowledge enhanced protein/molecule embeddings can improve prediction tasks, including prediction of binding affinity. We also release some pretrained models learned from our multimodal knowledge graphs, along with source code for running standard benchmark tasks for prediction of biding affinity.",
+  "category": "multimodal",
+  "domain": "bioinformatics / drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "link_prediction",
+    "representation_learning",
+    "multimodal_embedding"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE and Concordance Index (CI) (also MAE reported for some splits)",
+  "general_score_metric": "RMSE (primary) with Concordance Index (CI) as a common secondary metric",
+  "typical_sota_score": "RMSE ~0.2–1.0 (dataset-dependent); CI ~0.6–0.9",
+  "year_of_publish": 2023,
+  "reputation": "Emerging resource in computational drug discovery with growing adoption for exploring knowledge-graph–enhanced molecule/protein representations; provides large released KGs and pretrained models.",
+  "notes": "Non-LLM benchmark focused on bioinformatics; very large but noisy multimodal knowledge graphs; results are dataset- and split-dependent; risk of data leakage if KGs overlap train/test splits or with external pretraining data.",
+  "creators": {
+    "scientists": [
+      "Hoang Thanh Lam",
+      "Marco Luca Sbodio",
+      "Marcos Martínez Galindo",
+      "Mykhaylo Zayats",
+      "Raúl Fernández-Díaz",
+      "Víctor Valls",
+      "Gabriele Picco",
+      "Cesar Berrospi Ramis",
+      "Vanessa López"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2306.12802",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

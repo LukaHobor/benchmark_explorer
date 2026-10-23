@@ -1,0 +1,41 @@
+{
+  "name": "QualiSpeech",
+  "description": "This paper explores a novel perspective to speech quality assessment by leveraging natural language descriptions, offering richer, more nuanced insights than traditional numerical scoring methods. Natural language feedback provides instructive recommendations and detailed evaluations, yet existing datasets lack the comprehensive annotations needed for this approach. To bridge this gap, we introduce QualiSpeech, a comprehensive low-level speech quality assessment dataset encompassing 11 key aspects and detailed natural language comments that include reasoning and contextual insights. Additionally, we propose the QualiSpeech Benchmark to evaluate the low-level speech understanding capabilities of auditory large language models (LLMs). Experimental results demonstrate that finetuned auditory LLMs can reliably generate detailed descriptions of noise and distortion, effectively identifying their types and temporal characteristics. The results further highlight the potential for incorporating reasoning to enhance the accuracy and reliability of quality assessments. The dataset will be released at https://huggingface.co/datasets/tsinghua-ee/QualiSpeech.",
+  "category": "audio",
+  "domain": "speech quality assessment",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multi_label_classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval + automatic metrics (F1 for aspect classification; BLEU/ROUGE for generated comments)",
+  "general_score_metric": "composite (human_eval score for descriptions; F1 for aspect classification; BLEU/ROUGE for generated comments)",
+  "year_of_publish": 2025,
+  "reputation": "New dataset introduced by the authors with limited adoption so far but notable interest for auditory-LLM and speech-quality communities.",
+  "notes": "Annotations and quality judgments are inherently subjective (annotator bias risk); small/novel benchmark for auditory-LLMs at release; potential label noise and domain bias.",
+  "creators": {
+    "scientists": [
+      "Siyin Wang",
+      "Wenyi Yu",
+      "Xianzhao Chen",
+      "Xiaohai Tian",
+      "Jun Zhang",
+      "Lu Lu",
+      "Yu Tsao",
+      "Junichi Yamagishi",
+      "Yuxuan Wang",
+      "Chao Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2503.20290",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

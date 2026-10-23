@@ -1,0 +1,40 @@
+{
+  "name": "IMU-Enhanced Pen Online Handwriting Benchmark",
+  "description": "Purpose. Handwriting is one of the most frequently occurring patterns in everyday life and with it come challenging applications such as handwriting recognition (HWR), writer identification, and signature verification. In contrast to offline HWR that only uses spatial information (i.e., images), online HWR (OnHWR) uses richer spatio-temporal information (i.e., trajectory data or inertial data). While there exist many offline HWR datasets, there is only little data available for the development of OnHWR methods on paper as it requires hardware-integrated pens. Methods. This paper presents data and benchmark models for real-time sequence-to-sequence (seq2seq) learning and single character-based recognition. Our data is recorded by a sensor-enhanced ballpoint pen, yielding sensor data streams from triaxial accelerometers, a gyroscope, a magnetometer and a force sensor at 100 Hz. We propose a variety of datasets including equations and words for both the writer-dependent and writer-independent tasks. Our datasets allow a comparison between classical OnHWR on tablets and on paper with sensor-enhanced pens. We provide an evaluation benchmark for seq2seq and single character-based HWR using recurrent and temporal convolutional networks and Transformers combined with a connectionist temporal classification (CTC) loss and cross-entropy (CE) losses. Results. Our convolutional network combined with BiLSTMs outperforms Transformer-based architectures, is on par with InceptionTime for sequence-based classification tasks, and yields better results compared to 28 state-of-the-art techniques. Time-series augmentation methods improve the sequence-based task, and we show that CE variants can improve the single classification task.",
+  "category": "text",
+  "domain": "human-computer interaction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_to_sequence",
+    "classification",
+    "writer_identification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy and character error rate (CER); sequence-level metrics (CTC-based evaluation)",
+  "general_score_metric": "sequence accuracy / character error rate (CER)",
+  "typical_sota_score": "single-character accuracy ~95–99%; sequence CER ~5–20% (varies by task and split)",
+  "year_of_publish": 2022,
+  "reputation": "A niche but valuable dataset for on-paper online handwriting research using sensor-enhanced pens; primarily used within HCI/OnHWR communities.",
+  "notes": "Hardware-specific (sensor-enhanced pen) dataset with limited scale and subject diversity; non-LLM time-series benchmark; results can be sensitive to writer variability and sensor calibration.",
+  "creators": {
+    "scientists": [
+      "Felix Ott",
+      "David Rügamer",
+      "Lucas Heublein",
+      "Tim Hamann",
+      "Jens Barth",
+      "Bernd Bischl",
+      "Christopher Mutschler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2202.07036",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

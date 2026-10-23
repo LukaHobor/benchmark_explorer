@@ -1,0 +1,41 @@
+{
+  "name": "LOB-Bench",
+  "description": "While financial data presents one of the most challenging and interesting sequence modelling tasks due to high noise, heavy tails, and strategic interactions, progress in this area has been hindered by the lack of consensus on quantitative evaluation paradigms. To address this, we present LOB-Bench, a benchmark, implemented in python, designed to evaluate the quality and realism of generative message-by-order data for limit order books (LOB) in the LOBSTER format. Our framework measures distributional differences in conditional and unconditional statistics between generated and real LOB data, supporting flexible multivariate statistical evaluation. The benchmark also includes features commonly used LOB statistics such as spread, order book volumes, order imbalance, and message inter-arrival times, along with scores from a trained discriminator network. Lastly, LOB-Bench contains \"market impact metrics\", i.e. the cross-correlations and price response functions for specific events in the data. We benchmark generative autoregressive state-space models, a (C)GAN, as well as a parametric LOB model and find that the autoregressive GenAI approach beats traditional model classes.",
+  "category": "mixed",
+  "domain": "finance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_generation",
+    "distribution_matching",
+    "density_estimation",
+    "statistical_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (distributional distance metrics such as Wasserstein/KS, cross-correlation/price-response metrics, and discriminator score/AUC)",
+  "general_score_metric": "composite_score (combined distributional-distance metrics + discriminator score)",
+  "year_of_publish": 2025,
+  "reputation": "Niche academic benchmark respected in market-microstructure and financial ML research but not widely used outside that community.",
+  "notes": "Non-LLM benchmark focused on generative modelling of limit order books; evaluation uses multiple statistical metrics (no single canonical scalar), requires domain expertise to interpret results; not saturated and limited to LOBSTER-format data.",
+  "creators": {
+    "scientists": [
+      "Peer Nagy",
+      "Sascha Frey",
+      "Kang Li",
+      "Bidipta Sarkar",
+      "Svitlana Vyetrenko",
+      "Stefan Zohren",
+      "Ani Calinescu",
+      "Jakob Foerster"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2502.09172",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

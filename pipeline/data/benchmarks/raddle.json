@@ -1,0 +1,41 @@
+{
+  "name": "RADDLE",
+  "description": "For task-oriented dialog systems to be maximally useful, it must be able to process conversations in a way that is (1) generalizable with a small number of training examples for new task domains, and (2) robust to user input in various styles, modalities or domains. In pursuit of these goals, we introduce the RADDLE benchmark, a collection of corpora and tools for evaluating the performance of models across a diverse set of domains. By including tasks with limited training data, RADDLE is designed to favor and encourage models with a strong generalization ability. RADDLE also includes a diagnostic checklist that facilitates detailed robustness analysis in aspects such as language variations, speech errors, unseen entities, and out-of-domain utterances. We evaluate recent state-of-the-art systems based on pre-training and fine-tuning, and find that grounded pre-training on heterogeneous dialog corpora performs better than training a separate model per domain. Overall, existing models are less than satisfactory in robustness evaluation, which suggests opportunities for future improvement.",
+  "category": "text",
+  "domain": "dialog systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "dialog_state_tracking",
+    "intent_classification",
+    "slot_filling",
+    "response_generation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Slot F1, intent accuracy, BLEU for generation, and task_success_rate (task completion) for end-to-end evaluation",
+  "general_score_metric": "task_success_rate (with per-task slot F1 and intent accuracy as complementary metrics)",
+  "typical_sota_score": "Varies widely by subtask; task-success/overall performance often reported in the ~40–80% range depending on domain and data scarcity",
+  "year_of_publish": 2020,
+  "reputation": "Recognized in the dialog-robustness community as a useful benchmark for low-data and robustness evaluation, but not as widely adopted as some mainstream dialog corpora.",
+  "notes": "Multi-task benchmark with fragmented evaluation across tasks; emphasizes low-data and robustness scenarios so absolute scores are lower than large-data settings; not LLM-specific and some subsets are small, making per-domain variability high.",
+  "creators": {
+    "scientists": [
+      "Baolin Peng",
+      "Chunyuan Li",
+      "Zhu Zhang",
+      "Chenguang Zhu",
+      "Jinchao Li",
+      "Jianfeng Gao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2012.14666",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

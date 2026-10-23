@@ -1,0 +1,36 @@
+{
+  "name": "Unconstrained Face Sketch Benchmark",
+  "description": "Face sketch generation has attracted much attention in the field of visual computing. However, existing methods either are limited to constrained conditions or heavily rely on various preprocessing steps to deal with in-the-wild cases. In this paper, we argue that accurately perceiving facial region and facial components is crucial for unconstrained sketch synthesis. To this end, we propose a novel Perception-Adaptive Network (PANet), which can generate high-quality face sketches under unconstrained conditions in an end-to-end scheme. Specifically, our PANet is composed of i) a Fully Convolutional Encoder for hierarchical feature extraction, ii) a Face-Adaptive Perceiving Decoder for extracting potential facial region and handling face variations, and iii) a Component-Adaptive Perceiving Module for facial component aware feature representation learning. To facilitate further researches of unconstrained face sketch synthesis, we introduce a new benchmark termed WildSketch, which contains 800 pairs of face photo-sketch with large variations in pose, expression, ethnic origin, background, and illumination. Extensive experiments demonstrate that the proposed method is capable of achieving state-of-the-art performance under both constrained and unconstrained conditions. Our source codes and the WildSketch benchmark are resealed on the project page http://lingboliu.com/unconstrained_face_sketch.html.",
+  "category": "vision",
+  "domain": "vision / facial sketch",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_translation",
+    "conditional_image_generation",
+    "sketch_synthesis"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "SSIM / FID / human_eval (user study) / perceptual metrics",
+  "general_score_metric": "SSIM (structural similarity) reported as primary image-quality metric",
+  "year_of_publish": 2021,
+  "reputation": "Moderately cited within the face-sketch synthesis community as a useful in-the-wild benchmark, but adoption is limited by its small size.",
+  "notes": "Small dataset (800 photo–sketch pairs); non-LLM, vision-only benchmark; uses both automatic perceptual metrics and user studies; risk of overfitting due to limited size and class imbalance across poses/ethnicities.",
+  "creators": {
+    "scientists": [
+      "Lin Nie",
+      "Lingbo Liu",
+      "Zhengtao Wu",
+      "Wenxiong Kang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.01019",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

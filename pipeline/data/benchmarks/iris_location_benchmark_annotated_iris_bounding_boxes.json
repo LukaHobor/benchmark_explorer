@@ -1,0 +1,39 @@
+{
+  "name": "Iris Location Benchmark (annotated iris bounding boxes)",
+  "description": "The iris is considered as the biometric trait with the highest unique\nprobability. The iris location is an important task for biometrics systems,\naffecting directly the results obtained in specific applications such as iris\nrecognition, spoofing and contact lenses detection, among others. This work\ndefines the iris location problem as the delimitation of the smallest squared\nwindow that encompasses the iris region. In order to build a benchmark for iris\nlocation we annotate (iris squared bounding boxes) four databases from\ndifferent biometric applications and make them publicly available to the\ncommunity. Besides these 4 annotated databases, we include 2 others from the\nliterature. We perform experiments on these six databases, five obtained with\nnear infra-red sensors and one with visible light sensor. We compare the\nclassical and outstanding Daugman iris location approach with two window based\ndetectors: 1) a sliding window detector based on features from Histogram of\nOriented Gradients (HOG) and a linear Support Vector Machines (SVM) classifier;\n2) a deep learning based detector fine-tuned from YOLO object detector.\nExperimental results showed that the deep learning based detector outperforms\nthe other ones in terms of accuracy and runtime (GPUs version) and should be\nchosen whenever possible.",
+  "category": "vision",
+  "domain": "biometrics / iris recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "localization",
+    "bounding_box_regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (IoU / detection rate)",
+  "general_score_metric": "detection_accuracy (IoU-based)",
+  "typical_sota_score": "90–99%",
+  "year_of_publish": 2018,
+  "reputation": "A well-known, domain-specific benchmark within the iris/biometrics community used to evaluate iris localization methods; adoption is strong in that niche but limited outside it.",
+  "notes": "Dataset sizes are moderate and sensor types vary (NIR and visible light), so cross-sensor generalization can be limited; benchmark is non-LLM and focused on classical/deep vision detectors, posing contamination risk if used for model pretraining rather than evaluation.",
+  "creators": {
+    "scientists": [
+      "Evair Severo",
+      "Rayson Laroca",
+      "Cides S. Bezerra",
+      "Luiz A. Zanlorensi",
+      "Daniel Weingaertner",
+      "Gladston Moreira",
+      "David Menotti"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1803.01250",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

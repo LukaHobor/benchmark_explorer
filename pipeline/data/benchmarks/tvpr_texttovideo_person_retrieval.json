@@ -1,0 +1,38 @@
+{
+  "name": "TVPR (Text-to-Video Person Retrieval)",
+  "description": "Most existing methods for text-based person retrieval focus on text-to-image person retrieval. Nevertheless, due to the lack of dynamic information provided by isolated frames, the performance is hampered when the person is obscured or variable motion details are missed in isolated frames. To overcome this, we propose a novel Text-to-Video Person Retrieval (TVPR) task. Since there is no dataset or benchmark that describes person videos with natural language, we construct a large-scale cross-modal person video dataset containing detailed natural language annotations, termed as Text-to-Video Person Re-identification (TVPReid) dataset. In this paper, we introduce a Multielement Feature Guided Fragments Learning (MFGF) strategy, which leverages the cross-modal text-video representations to provide strong text-visual and text-motion matching information to tackle uncertain occlusion conflicting and variable motion details. Specifically, we establish two potential cross-modal spaces for text and video feature collaborative learning to progressively reduce the semantic difference between text and video. To evaluate the effectiveness of the proposed MFGF, extensive experiments have been conducted on TVPReid dataset. To the best of our knowledge, MFGF is the first successful attempt to use video for text-based person retrieval task and has achieved state-of-the-art performance on TVPReid dataset. The TVPReid dataset will be publicly available to benefit future research.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_video_retrieval",
+    "cross_modal_retrieval",
+    "person_re-identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@K (R@1/R@5/R@10) and mAP (retrieval metrics)",
+  "general_score_metric": "Recall@K (commonly R@1) and mAP",
+  "year_of_publish": 2023,
+  "reputation": "A niche but useful benchmark in cross-modal person retrieval; adopted within person re-identification and text-video retrieval research but not yet broadly used outside that subfield.",
+  "notes": "Video-based, non-LLM benchmark; focuses on person re-identification from natural-language descriptions — carries privacy/ethical concerns and potential demographic biases. Dataset size and domain specificity may limit generalization to broader text-video retrieval tasks.",
+  "creators": {
+    "scientists": [
+      "Xu Zhang",
+      "Fan Ni",
+      "Guan-Nan Dong",
+      "Aichun Zhu",
+      "Jianhui Wu",
+      "Mingcheng Ni",
+      "Hui Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2307.07184",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

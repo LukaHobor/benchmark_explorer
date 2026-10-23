@@ -1,0 +1,37 @@
+{
+  "name": "GNBG",
+  "description": "As optimization challenges continue to evolve, so too must our tools and understanding. To effectively assess, validate, and compare optimization algorithms, it is crucial to use a benchmark test suite that encompasses a diverse range of problem instances with various characteristics. Traditional benchmark suites often consist of numerous fixed test functions, making it challenging to align these with specific research objectives, such as the systematic evaluation of algorithms under controllable conditions. This paper introduces the Generalized Numerical Benchmark Generator (GNBG) for single-objective, box-constrained, continuous numerical optimization. Unlike existing approaches that rely on multiple baseline functions and transformations, GNBG utilizes a single, parametric, and configurable baseline function. This design allows for control over various problem characteristics. Researchers using GNBG can generate instances that cover a broad array of morphological features, from unimodal to highly multimodal functions, various local optima patterns, and symmetric to highly asymmetric structures. The generated problems can also vary in separability, variable interaction structures, dimensionality, conditioning, and basin shapes. These customizable features enable the systematic evaluation and comparison of optimization algorithms, allowing researchers to probe their strengths and weaknesses under diverse and controllable conditions.",
+  "category": "mixed",
+  "domain": "optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "black_box_optimization",
+    "single_objective_optimization",
+    "benchmark_instance_generation",
+    "continuous_function_optimization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "best_found_value (minimize or maximize objective; often reported with budget of function evaluations or regret)",
+  "general_score_metric": "best_found_objective_value (often reported across evaluation budgets or as simple regret)",
+  "year_of_publish": 2023,
+  "reputation": "A recent research benchmark proposal with limited adoption so far but valuable for researchers needing controllable, parametric optimization instances.",
+  "notes": "Non-LLM benchmark: generator produces arbitrary numbers of instances so dataset size is not a limitation; comparability depends on chosen parameter/configuration settings and evaluation budget; not prone to data contamination but results vary widely with instance selection and evaluation protocol.",
+  "creators": {
+    "scientists": [
+      "Danial Yazdani",
+      "Mohammad Nabi Omidvar",
+      "Delaram Yazdani",
+      "Kalyanmoy Deb",
+      "Amir H. Gandomi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2312.07083",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

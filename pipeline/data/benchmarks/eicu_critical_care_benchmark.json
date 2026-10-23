@@ -1,0 +1,36 @@
+{
+  "name": "eICU critical care benchmark",
+  "description": "Progress of machine learning in critical care has been difficult to track, in part due to absence of public benchmarks. Other fields of research (such as computer vision and natural language processing) have established various competitions and public benchmarks. Recent availability of large clinical datasets has enabled the possibility of establishing public benchmarks. Taking advantage of this opportunity, we propose a public benchmark suite to address four areas of critical care, namely mortality prediction, estimation of length of stay, patient phenotyping and risk of decompensation. We define each task and compare the performance of both clinical models as well as baseline and deep learning models using eICU critical care dataset of around 73,000 patients. This is the first public benchmark on a multi-centre critical care dataset, comparing the performance of clinical gold standard with our predictive model. We also investigate the impact of numerical variables as well as handling of categorical variables on each of the defined tasks. The source code, detailing our methods and experiments is publicly available such that anyone can replicate our results and build upon our work.",
+  "category": "mixed",
+  "domain": "critical care / healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "regression",
+    "multi_label_classification",
+    "time_series_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics: AUC for classification (mortality/decompensation), MAE/ RMSE for LOS regression, F1/AUPRC for phenotyping",
+  "general_score_metric": "AUC (for primary classification tasks such as mortality prediction)",
+  "typical_sota_score": "0.80–0.90 (AUC for mortality prediction in reported studies)",
+  "year_of_publish": 2019,
+  "reputation": "Viewed as an important public, multi-center critical care benchmark that enabled more consistent comparison of clinical and ML models in ICU settings.",
+  "notes": "EHR data subject to class imbalance, cohort shift, and biases; privacy and de-identification limit some data sharing. Non-LLM benchmark; multiple task-specific metrics must be used rather than a single universal score.",
+  "creators": {
+    "scientists": [
+      "Seyedmostafa Sheikhalishahi",
+      "Vevake Balaraman",
+      "Venet Osmani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1910.00964",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

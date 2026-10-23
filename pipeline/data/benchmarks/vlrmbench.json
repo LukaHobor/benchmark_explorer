@@ -1,0 +1,44 @@
+{
+  "name": "VLRMBench",
+  "description": "Although large visual-language models (LVLMs) have demonstrated strong performance in multimodal tasks, errors may occasionally arise due to biases during the reasoning process. Recently, reward models (RMs) have become increasingly pivotal in the reasoning process. Specifically, process RMs evaluate each reasoning step, outcome RMs focus on the assessment of reasoning results, and critique RMs perform error analysis on the entire reasoning process, followed by corrections. However, existing benchmarks for vision-language RMs (VLRMs) typically assess only a single aspect of their capabilities (e.g., distinguishing between two answers), thus limiting the all-round evaluation and restricting the development of RMs in the visual-language domain. To address this gap, we propose a comprehensive and challenging benchmark, dubbed as VLRMBench, encompassing 12,634 questions. VLRMBench is constructed based on three distinct types of datasets, covering mathematical reasoning, hallucination understanding, and multi-image understanding. We design 12 tasks across three major categories, focusing on evaluating VLRMs in the aspects of process understanding, outcome judgment, and critique generation. Extensive experiments are conducted on 21 open-source models and 5 advanced closed-source models, highlighting the challenges posed by VLRMBench. For instance, in the `Forecasting Future', a binary classification task, the advanced GPT-4o achieves only a 76.0% accuracy. Additionally, we perform comprehensive analytical studies, offering valuable insights for the future development of VLRMs. We anticipate that VLRMBench will serve as a pivotal benchmark in advancing VLRMs. Code and datasets will be available at https://github.com/JCruan519/VLRMBench.",
+  "category": "multimodal",
+  "domain": "vision-language / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multiple_choice",
+    "open_ended_generation",
+    "ranking",
+    "critique_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "70–80%",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A recently proposed, comprehensive benchmark (arXiv:2503.07478) gaining attention for evaluating vision-language reward models but not yet a de facto standard.",
+  "notes": "Contains heterogeneous tasks (classification and generation); requires mixed evaluation protocols. Risk of pretraining contamination for closed models; not yet saturated and remains challenging for top models.",
+  "creators": {
+    "scientists": [
+      "Jiacheng Ruan",
+      "Wenzhen Yuan",
+      "Xian Gao",
+      "Ye Guo",
+      "Daoxin Zhang",
+      "Zhe Xu",
+      "Yao Hu",
+      "Ting Liu",
+      "Yuzhuo Fu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.07478",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

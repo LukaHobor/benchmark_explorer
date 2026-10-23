@@ -1,0 +1,34 @@
+{
+  "name": "Image Perturbations for ADAS benchmark",
+  "description": "Advanced Driver Assistance Systems (ADAS) based on deep neural networks (DNNs) are widely used in autonomous vehicles for critical perception tasks such as object detection, semantic segmentation, and lane recognition. However, these systems are highly sensitive to input variations, such as noise and changes in lighting, which can compromise their effectiveness and potentially lead to safety-critical failures. This study offers a comprehensive empirical evaluation of image perturbations, techniques commonly used to assess the robustness of DNNs, to validate and improve the robustness and generalization of ADAS perception systems. We first conducted a systematic review of the literature, identifying 38 categories of perturbations. Next, we evaluated their effectiveness in revealing failures in two different ADAS, both at the component and at the system level. Finally, we explored the use of perturbation-based data augmentation and continuous learning strategies to improve ADAS adaptation to new operational design domains. Our results demonstrate that all categories of image perturbations successfully expose robustness issues in ADAS and that the use of dataset augmentation and continuous learning significantly improves ADAS performance in novel, unseen environments.",
+  "category": "vision",
+  "domain": "autonomous driving / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "semantic_segmentation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "standard CV task metrics (e.g., mAP, IoU) with emphasis on robustness measured as performance degradation / performance drop under perturbations",
+  "general_score_metric": "mAP / IoU (and measured performance drop under perturbations)",
+  "year_of_publish": 2025,
+  "reputation": "An academic benchmark introduced to systematically evaluate robustness of ADAS perception systems; used by researchers focusing on DNN robustness in autonomous driving but not a widely adopted industrial standard yet.",
+  "notes": "Non-LLM benchmark focused on vision robustness; evaluates synthetic and real perturbations across 38 categories. Results emphasize robustness degradation rather than clean-set peak accuracy; depending on perturbation realism and dataset size, findings may not fully generalize to all real-world driving conditions.",
+  "creators": {
+    "scientists": [
+      "Stefano Carlo Lambertenghi",
+      "Hannes Leonhard",
+      "Andrea Stocco"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2501.12269",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

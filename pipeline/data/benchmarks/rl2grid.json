@@ -1,0 +1,41 @@
+{
+  "name": "RL2Grid",
+  "description": "Reinforcement learning (RL) can transform power grid operations by providing adaptive and scalable controllers essential for grid decarbonization. However, existing methods struggle with the complex dynamics, aleatoric uncertainty, long-horizon goals, and hard physical constraints that occur in real-world systems. This paper presents RL2Grid, a benchmark designed in collaboration with power system operators to accelerate progress in grid control and foster RL maturity. Built on a power simulation framework developed by RTE France, RL2Grid standardizes tasks, state and action spaces, and reward structures within a unified interface for a systematic evaluation and comparison of RL approaches. Moreover, we integrate real control heuristics and safety constraints informed by the operators' expertise to ensure RL2Grid aligns with grid operation requirements. We benchmark popular RL baselines on the grid control tasks represented within RL2Grid, establishing reference performance metrics. Our results and discussion highlight the challenges that power grids pose for RL methods, emphasizing the need for novel algorithms capable of handling real-world physical systems.",
+  "category": "mixed",
+  "domain": "power systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "continuous_control",
+    "safety_constrained_control"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average episodic return (with reporting of constraint violations / task success rate)",
+  "general_score_metric": "average episodic return (primary), plus constraint violation counts / task success rate",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, operator-informed benchmark (developed with RTE France) gaining attention from the power-systems and RL research communities but not yet a universally adopted standard.",
+  "notes": "Simulator-based, non-LLM benchmark; potential sim-to-real gap and risk of overfitting to the provided simulator/configurations; includes explicit safety constraints and long-horizon, stochastic tasks that increase difficulty.",
+  "creators": {
+    "scientists": [
+      "Enrico Marchesini",
+      "Benjamin Donnot",
+      "Constance Crozier",
+      "Ian Dytham",
+      "Christian Merz",
+      "Lars Schewe",
+      "Nico Westerbeck",
+      "Cathy Wu",
+      "Antoine Marot",
+      "Priya L. Donti"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2503.23101",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "SLUE Phase-2",
+  "description": "Spoken language understanding (SLU) tasks have been studied for many decades in the speech research community, but have not received as much attention as lower-level tasks like speech and speaker recognition. In particular, there are not nearly as many SLU task benchmarks, and many of the existing ones use data that is not freely available to all researchers. Recent work has begun to introduce such benchmark datasets for several tasks. In this work, we introduce several new annotated SLU benchmark tasks based on freely available speech data, which complement existing benchmarks and address gaps in the SLU evaluation landscape. We contribute four tasks: question answering and summarization involve inference over longer speech sequences; named entity localization addresses the speech-specific task of locating the targeted content in the signal; dialog act classification identifies the function of a given speech utterance. We follow the blueprint of the Spoken Language Understanding Evaluation (SLUE) benchmark suite. In order to facilitate the development of SLU models that leverage the success of pre-trained speech representations, we will be publishing for each task (i) annotations for a relatively small fine-tuning set, (ii) annotated development and test sets, and (iii) baseline models for easy reproducibility and comparisons. In this work, we present the details of data collection and annotation and the performance of the baseline models. We also perform sensitivity analysis of pipeline models' performance (speech recognizer + text model) to the speech recognition accuracy, using more than 20 state-of-the-art speech recognition models.",
+  "category": "audio",
+  "domain": "speech / spoken language understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "question_answering",
+    "summarization",
+    "named_entity_localization",
+    "dialog_act_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (F1 for NER, Exact Match/F1 for QA, accuracy/F1 for dialog act, ROUGE for summarization)",
+  "general_score_metric": "Task-dependent (F1 / Exact Match / accuracy / ROUGE)",
+  "typical_sota_score": "varies by task; roughly 60–90% depending on subtask and evaluation metric",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded within the spoken language understanding community as a freely available benchmark suite complementing existing SLU resources.",
+  "notes": "Contains speech-derived data and annotations; performance is sensitive to ASR quality. Moderate dataset sizes per task; not an LLM benchmark and may be impacted by transcription errors and domain shifts.",
+  "creators": {
+    "scientists": [
+      "Suwon Shon",
+      "Siddhant Arora",
+      "Chyi-Jiunn Lin",
+      "Ankita Pasad",
+      "Felix Wu",
+      "Roshan Sharma",
+      "Wei-Lun Wu",
+      "Hung-Yi Lee",
+      "Karen Livescu",
+      "Shinji Watanabe"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2212.10525",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

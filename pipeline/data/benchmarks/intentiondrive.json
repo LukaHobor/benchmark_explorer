@@ -1,0 +1,39 @@
+{
+  "name": "Intention-Drive",
+  "description": "While end-to-end autonomous driving has achieved remarkable progress in geometric control, current systems remain constrained by a command-following paradigm that relies on simple navigational instructions. Transitioning to genuinely intelligent agents requires the capability to interpret and fulfill high-level, abstract human intentions. However, this advancement is hindered by the lack of dedicated benchmarks and semantic-aware evaluation metrics. In this paper, we formally define the task of Intention-Driven End-to-End Autonomous Driving and present Intention-Drive, a comprehensive benchmark designed to bridge this gap. We construct a large-scale dataset featuring complex natural language intentions paired with high-fidelity sensor data. To overcome the limitations of conventional trajectory-based metrics, we introduce the Imagined Future Alignment (IFA), a novel evaluation protocol leveraging generative world models to assess the semantic fulfillment of human goals beyond mere geometric accuracy. Furthermore, we explore the solution space by proposing two distinct paradigms: an end-to-end vision-language planner and a hierarchical agent-based framework. The experiments reveal a critical dichotomy where existing models exhibit satisfactory driving stability but struggle significantly with intention fulfillment. Notably, the proposed frameworks demonstrate superior alignment with human intentions.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "instruction_following",
+    "trajectory_generation",
+    "planning",
+    "multimodal_perception"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite (Imagined Future Alignment (IFA) semantic alignment score combined with conventional trajectory-based metrics)",
+  "general_score_metric": "Imagined Future Alignment (IFA) score (reported alongside trajectory-based success/completion metrics)",
+  "year_of_publish": 2025,
+  "reputation": "Newly proposed benchmark (from the referenced paper) that targets semantic evaluation of driving intentions; early-stage adoption with interest from the autonomous driving research community.",
+  "notes": "Multimodal, non-LLM benchmark requiring high-fidelity sensor data and heavy compute; evaluation depends on generative world models (IFA) which can introduce bias; results sensitive to dataset/domain shift and simulation/modeling choices.",
+  "creators": {
+    "scientists": [
+      "Huan Zheng",
+      "Yucheng Zhou",
+      "Tianyi Yan",
+      "Jiayi Su",
+      "Hongjun Chen",
+      "Dubing Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2512.12302",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

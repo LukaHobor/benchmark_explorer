@@ -1,0 +1,41 @@
+{
+  "name": "PBEBench",
+  "description": "Recently, long chain of thought (LCoT), Large Language Models (LLMs), have taken the machine learning world by storm with their breathtaking reasoning capabilities. However, are the abstract reasoning abilities of these models general enough for problems of practical importance? Unlike past work, which has focused mainly on math, coding, and data wrangling, we focus on a historical linguistics-inspired inductive reasoning problem, formulated as Programming by Examples. We develop a fully automated pipeline for dynamically generating a benchmark for this task with controllable difficulty in order to tackle scalability and contamination issues to which many reasoning benchmarks are subject. Using our pipeline, we generate a test set with nearly 1k instances that is challenging for all state-of-the-art reasoning LLMs, with the best model (Claude-3.7-Sonnet) achieving a mere 54% pass rate, demonstrating that LCoT LLMs still struggle with a class or reasoning that is ubiquitous in historical linguistics as well as many other domains.",
+  "category": "code",
+  "domain": "program synthesis / computational linguistics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "program_synthesis",
+    "inductive_programming",
+    "input_output_mapping",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pass@1 (exact input-output match / task_success_rate)",
+  "general_score_metric": "pass_rate (pass@1)",
+  "typical_sota_score": "≈54% (best reported in paper)",
+  "year_of_publish": 2025,
+  "reputation": "Newer reasoning/program-synthesis benchmark (2025) designed to stress LCoT models; gaining attention for exposing weaknesses in current reasoning LLMs.",
+  "notes": "Dynamically generated dataset (~1k test instances) to control difficulty and reduce contamination. Focused on Programming-by-Examples style inductive reasoning rather than math/coding; not saturated and explicitly designed to mitigate data contamination.",
+  "creators": {
+    "scientists": [
+      "Atharva Naik",
+      "Darsh Agrawal",
+      "Manav Kapadnis",
+      "Yuwei An",
+      "Yash Mathur",
+      "Carolyn Rose",
+      "David Mortensen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2505.23126",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

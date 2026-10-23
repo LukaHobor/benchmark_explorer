@@ -1,0 +1,50 @@
+{
+  "name": "ChemPile",
+  "description": "Foundation models have shown remarkable success across scientific domains, yet their impact in chemistry remains limited due to the absence of diverse, large-scale, high-quality datasets that reflect the field's multifaceted nature. We present the ChemPile, an open dataset containing over 75 billion tokens of curated chemical data, specifically built for training and evaluating general-purpose models in the chemical sciences. The dataset mirrors the human learning journey through chemistry -- from educational foundations to specialized expertise -- spanning multiple modalities and content types including structured data in diverse chemical representations (SMILES, SELFIES, IUPAC names, InChI, molecular renderings), scientific and educational text, executable code, and chemical images. ChemPile integrates foundational knowledge (textbooks, lecture notes), specialized expertise (scientific articles and language-interfaced data), visual understanding (molecular structures, diagrams), and advanced reasoning (problem-solving traces and code) -- mirroring how human chemists develop expertise through diverse learning materials and experiences. Constructed through hundreds of hours of expert curation, the ChemPile captures both foundational concepts and domain-specific complexity. We provide standardized training, validation, and test splits, enabling robust benchmarking. ChemPile is openly released via HuggingFace with a consistent API, permissive license, and detailed documentation. We hope the ChemPile will serve as a catalyst for chemical AI, enabling the development of the next generation of chemical foundation models.",
+  "category": "mixed",
+  "domain": "chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_generation",
+    "molecular_representation",
+    "SMILES_generation",
+    "property_prediction",
+    "code_generation",
+    "image_captioning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific metrics (e.g., exact_match/SMILES validity, RMSE/AUC for property prediction, BLEU/ROUGE for captioning) — reported as per-task task_success_rate",
+  "general_score_metric": "task-specific composite metrics (per-task task_success_rate or metric such as RMSE/accuracy/validity rate)",
+  "typical_sota_score": "unknown (varies widely by downstream task and model)",
+  "year_of_publish": 2025,
+  "reputation": "Large, curated chemical dataset intended for training/evaluating foundation models in chemistry; gaining attention for domain-specific pretraining.",
+  "notes": "Very large (≈75B tokens) and multi-modal; useful primarily as pretraining data rather than a single unified evaluation benchmark; potential contamination with public corpora and licensing/QA nuances across integrated sources.",
+  "creators": {
+    "scientists": [
+      "Adrian Mirza",
+      "Nawaf Alampara",
+      "Martiño Ríos-García",
+      "Mohamed Abdelalim",
+      "Jack Butler",
+      "Bethany Connolly",
+      "Tunca Dogan",
+      "Marianna Nezhurina",
+      "Bünyamin Şen",
+      "Santosh Tirunagari",
+      "Mark Worrall",
+      "Adamo Young",
+      "Philippe Schwaller",
+      "Michael Pieler",
+      "Kevin Maik Jablonka"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2505.12534",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

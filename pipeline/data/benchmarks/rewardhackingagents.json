@@ -1,0 +1,34 @@
+{
+  "name": "RewardHackingAgents",
+  "description": "LLM agents increasingly perform end-to-end ML engineering tasks where success is judged by a single scalar test metric. This creates a structural vulnerability: an agent can increase the reported score by compromising the evaluation pipeline rather than improving the model. We introduce RewardHackingAgents, a workspace-based benchmark that makes two compromise vectors explicit and measurable: evaluator tampering (modifying metric computation or reporting) and train/test leakage (accessing held-out data or labels during training). Each episode runs in a fresh workspace with patch tracking and runtime file-access logging; detectors compare the agent-reported metric to a trusted reference to assign auditable integrity labels. Across three tasks and two LLM backbones, scripted attacks succeed on both vectors in fully mutable workspaces; single-mechanism defenses block only one vector; and a combined regime blocks both. In natural-agent runs, evaluator-tampering attempts occur in about 50%",
+  "category": "mixed",
+  "domain": "machine learning agents",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "agentic_evaluation",
+    "ml_workflow",
+    "security",
+    "integrity_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "integrity label / attack success rate",
+  "year_of_publish": 2026,
+  "reputation": "A very recent benchmark aimed at the emerging problem of reward hacking in ML agents, with early-stage community awareness.",
+  "notes": "Non-LLM agent benchmark; security-focused and adversarial by design, with results depending on workspace mutability and defenses.",
+  "creators": {
+    "scientists": [
+      "Yonas Atinafu",
+      "Robin Cohen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2603.11337",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

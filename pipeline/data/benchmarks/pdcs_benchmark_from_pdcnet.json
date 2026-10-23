@@ -1,0 +1,37 @@
+{
+  "name": "PDCs benchmark (from PDCNet)",
+  "description": "Peptide-drug conjugates (PDCs) represent a promising therapeutic avenue for human diseases, particularly in cancer treatment. Systematic elucidation of structure-activity relationships (SARs) and accurate prediction of the activity of PDCs are critical for the rational design and optimization of these conjugates. To this end, we carefully design and construct a benchmark PDCs dataset compiled from literature-derived collections and PDCdb database, and then develop PDCNet, the first unified deep learning framework for forecasting the activity of PDCs. The architecture systematically captures the complex factors underlying anticancer decisions of PDCs in real-word scenarios through a multi-level feature fusion framework that collaboratively characterizes and learns the features of peptides, linkers, and payloads. Leveraging a curated PDCs benchmark dataset, comprehensive evaluation results show that PDCNet demonstrates superior predictive capability, with the highest AUC, F1, MCC and BA scores of 0.9213, 0.7656, 0.7071 and 0.8388 for the test set, outperforming eight established traditional machine learning models. Multi-level validations, including 5-fold cross-validation, threshold testing, ablation studies, model interpretability analysis and external independent testing, further confirm the superiority, robustness, and usability of the PDCNet architecture. We anticipate that PDCNet represents a novel paradigm, incorporating both a benchmark dataset and advanced models, which can accelerate the design and discovery of new PDC-based therapeutic agents.",
+  "category": "mixed",
+  "domain": "bioinformatics / drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC (ROC), F1, MCC, balanced_accuracy",
+  "general_score_metric": "AUC (ROC)",
+  "typical_sota_score": "AUC ≈ 0.92 (reported best by PDCNet)",
+  "year_of_publish": 2025,
+  "reputation": "New benchmark introduced with the PDCNet paper; currently primarily used by the authors and closely related research groups.",
+  "notes": "Non-LLM, domain-specific dataset curated from literature and PDCdb; potential class imbalance, limited dataset size and bias from literature-derived examples; possible risk of overlap with training data in related works.",
+  "creators": {
+    "scientists": [
+      "Yun Liu",
+      "Jintu Huang",
+      "Yingying Zhu",
+      "Congrui Wen",
+      "Yu Pang",
+      "Ji-Quan Zhang",
+      "Ling Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.12821",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

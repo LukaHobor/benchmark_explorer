@@ -1,0 +1,39 @@
+{
+  "name": "2023 Video Similarity Dataset and Challenge",
+  "description": "This work introduces a dataset, benchmark, and challenge for the problem of video copy detection and localization. The problem comprises two distinct but related tasks: determining whether a query video shares content with a reference video (\"detection\"), and additionally temporally localizing the shared content within each video (\"localization\"). The benchmark is designed to evaluate methods on these two tasks, and simulates a realistic needle-in-haystack setting, where the majority of both query and reference videos are \"distractors\" containing no copied content. We propose a metric that reflects both detection and localization accuracy. The associated challenge consists of two corresponding tracks, each with restrictions that reflect real-world settings. We provide implementation code for evaluation and baselines. We also analyze the results and methods of the top submissions to the challenge. The dataset, baseline methods and evaluation code is publicly available and will be discussed at a dedicated CVPR'23 workshop.",
+  "category": "vision",
+  "domain": "video / computer vision",
+  "benchmark_type": "competition",
+  "task_types": [
+    "detection",
+    "temporal_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite detection+localization metric (segment-level mAP / F1 combining detection and temporal localization accuracy)",
+  "general_score_metric": "composite detection+localization score (proposed combined metric reflecting both detection and temporal localization)",
+  "year_of_publish": 2023,
+  "reputation": "Introduced at a CVPR'23 workshop and used within the video copy-detection/localization community; recognized but relatively specialized.",
+  "notes": "Non-LLM benchmark focused on video copy detection/localization; realistic 'needle-in-haystack' setup with many distractors; evaluation code and baselines provided; class imbalance and heavy distractor presence are important caveats.",
+  "creators": {
+    "scientists": [
+      "Ed Pizzi",
+      "Giorgos Kordopatis-Zilos",
+      "Hiral Patel",
+      "Gheorghe Postelnicu",
+      "Sugosh Nagavara Ravindra",
+      "Akshay Gupta",
+      "Symeon Papadopoulos",
+      "Giorgos Tolias",
+      "Matthijs Douze"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.09489",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

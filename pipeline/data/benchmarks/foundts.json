@@ -1,0 +1,44 @@
+{
+  "name": "FoundTS",
+  "description": "Time Series Forecasting (TSF) is key functionality in numerous fields, including in finance, weather services, and energy management. While TSF methods are emerging these days, many of them require domain-specific data collection and model training and struggle with poor generalization performance on new domains. Foundation models aim to overcome this limitation. Pre-trained on large-scale language or time series data, they exhibit promising inferencing capabilities in new or unseen data. This has spurred a surge in new TSF foundation models. We propose a new benchmark, FoundTS, to enable thorough and fair evaluation and comparison of such models. FoundTS covers a variety of TSF foundation models, including those based on large language models and those pretrained on time series. Next, FoundTS supports different forecasting strategies, including zero-shot, few-shot, and full-shot, thereby facilitating more thorough evaluations. Finally, FoundTS offers a pipeline that standardizes evaluation processes such as dataset splitting, loading, normalization, and few-shot sampling, thereby facilitating fair evaluations. Building on this, we report on an extensive evaluation of TSF foundation models on a broad range of datasets from diverse domains and with different statistical characteristics. Specifically, we identify pros and cons and inherent limitations of existing foundation models, and we identify directions for future model design. We make our code and datasets available at https://anonymous.4open.science/r/FoundTS-C2B0.",
+  "category": "mixed",
+  "domain": "time series forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "zero_shot_forecasting",
+    "few_shot_forecasting",
+    "multivariate_forecasting"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE / MSE (point-forecasting metrics)",
+  "general_score_metric": "MAE",
+  "year_of_publish": 2024,
+  "reputation": "A recent benchmark aimed at evaluating foundation models for time-series forecasting; gaining attention in the forecasting research community but not yet a long-established standard.",
+  "notes": "Covers diverse datasets and forecasting regimes but results vary widely by dataset and horizon; potential risk of overlap between pretraining corpora and evaluation data for some foundation models; supports multiple forecasting strategies (zero-/few-/full-shot), and is not limited to LLMs so comparisons can mix architectures.",
+  "creators": {
+    "scientists": [
+      "Zhe Li",
+      "Xiangfei Qiu",
+      "Peng Chen",
+      "Yihang Wang",
+      "Hanyin Cheng",
+      "Yang Shu",
+      "Jilin Hu",
+      "Chenjuan Guo",
+      "Aoying Zhou",
+      "Qingsong Wen",
+      "Christian S. Jensen",
+      "Bin Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.11802",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

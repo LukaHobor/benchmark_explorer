@@ -1,0 +1,35 @@
+{
+  "name": "Dynamic Link Prediction GNN Benchmark",
+  "description": "Graph neural networks (GNNs) are rapidly becoming the dominant way to learn on graph-structured data.  Link prediction is a near-universal benchmark for new GNN models.  Many advanced models such as Dynamic graph neural networks(DGNNs)  specifically target dynamic link prediction.   However,  these models, particularly DGNNs, are rarely compared to each other or existing heuristics. Different works evaluate their models in different ways,  thus one cannot compare evaluation metrics directly. Motivated by this, we perform a comprehensive comparison study.  We compare link prediction heuristics, GNNs, discrete DGNNs, and continuous DGNNs on dynamic link prediction. We find that simple link prediction heuristics often perform better than GNNs and DGNNs, different sliding window sizes greatly affect performance,  and of all examined graph neural networks, that DGNNs consistently outperform static GNNs.",
+  "category": "mixed",
+  "domain": "graph machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "dynamic_link_prediction",
+    "temporal_edge_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "ROC-AUC / Average Precision (AP); sometimes Hits@k reported",
+  "general_score_metric": "ROC-AUC / Average Precision",
+  "typical_sota_score": "70–95% (highly dataset-dependent)",
+  "year_of_publish": 2025,
+  "reputation": "Well-regarded in the graph-ML community for providing a comprehensive, comparative study of dynamic link-prediction methods; moderate adoption as a benchmarking reference for DGNN work.",
+  "notes": "Non-LLM benchmark; strong baselines/heuristics often outperform complex models; performance sensitive to sliding-window and temporal splits; varying dataset sizes and densities across tasks.",
+  "creators": {
+    "scientists": [
+      "Joakim Skarding",
+      "Matthew Hellmich",
+      "Bogdan Gabrys",
+      "Katarzyna Musial-Gabrys"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

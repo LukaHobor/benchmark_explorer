@@ -1,0 +1,34 @@
+{
+  "name": "SynthCharge",
+  "description": "The electric vehicle routing problem with time windows (EVRPTW) extends the classical VRPTW by introducing battery capacity constraints and charging station decisions. Existing benchmark datasets are often static and lack verifiable feasibility, which restricts reproducible evaluation of learning-based routing models. We introduce SynthCharge, a parametric generator that produces diverse, feasibility-screened EVRPTW instances across varying spatiotemporal configurations and scalable customer counts. While SynthCharge can currently generate large-scale instances of up to 500 customers, we focus our experiments on sizes ranging from 5 to 100 customers. Unlike static benchmark suites, SynthCharge integrates instance geometry with adaptive energy capacity scaling and range-aware charging station placement. To guarantee structural validity, the generator systematically filters out unsolvable instances through a fast feasibility screening process. Ultimately, SynthCharge provides the dynamic",
+  "category": "mixed",
+  "domain": "logistics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "routing_optimization",
+    "feasibility_screening"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "solution quality / cost minimization under feasibility constraints",
+  "general_score_metric": "objective cost (route length / total travel cost)",
+  "year_of_publish": 2026,
+  "reputation": "A new synthetic benchmark/generator rather than a widely established community standard.",
+  "notes": "Synthetic instance generator for EVRPTW; not a fixed static benchmark. Performance is typically reported as objective value and feasibility, so results are not directly comparable across all generated settings.",
+  "creators": {
+    "scientists": [
+      "Mertcan Daysalilar",
+      "Fuat Uyguroglu",
+      "Gabriel Nicolosi",
+      "Adam Meyers"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2603.03230",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

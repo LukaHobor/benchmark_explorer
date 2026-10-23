@@ -1,0 +1,35 @@
+{
+  "name": "Multi-Modal Long-Range Depth in Adverse Weather Benchmark",
+  "description": "Depth estimation is a cornerstone computer vision application that is critical for scene understanding and autonomous driving. In real-world scenarios, achieving reliable depth perception under adverse weather—e.g. in fog and rain—is crucial to ensure safety and system robustness. However, quantitatively evaluating the performances of depth estimation methods in these scenarios is challenging due to the difficulty of obtaining ground truth data. A promising approach is using weather chambers to simulate diverse weather conditions in a controlled environment. However, current datasets are limited in distance and lack a dense ground truth. To address this gap, we introduce a novel evaluation benchmark that extends depth evaluation up to 200 meters under clear, foggy, and rainy conditions. To this end, we employ a multimodal sensor setup, including state-of-the-art stereo RGB, RCCB, Gated camera systems, and a long-range LiDAR sensor. Moreover, we record a digital twin of the test facility sampled at a millimeter scale using a high-end geodesic laser scanner. This comprehensive benchmark allows for the evaluation of different models and multiple sensing modalities in a more precise and accurate manner, as well as at far distances. Data and code will be released upon publication.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "dense_depth_estimation",
+    "multimodal_sensor_fusion_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Standard depth metrics (RMSE, Abs Rel, δ-threshold accuracy) reported over distance ranges; also sensor-specific and range-dependent error analyses",
+  "general_score_metric": "RMSE (depth error in meters)",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized benchmark aimed at autonomous driving research; limited adoption so far but expected to attract interest for robustness evaluations in adverse weather.",
+  "notes": "Non-LLM benchmark. Data were captured in a controlled weather chamber with a digital-twin dense ground truth — useful for precise long-range evaluation but may differ from unconstrained real-world weather distributions; dataset size and diversity may be limited.",
+  "creators": {
+    "scientists": [
+      "Stefanie Walz",
+      "Andrea Ramazzina",
+      "Dominik Scheuble",
+      "Samuel Brucker",
+      "Alexander Zuber",
+      "W. Ritter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

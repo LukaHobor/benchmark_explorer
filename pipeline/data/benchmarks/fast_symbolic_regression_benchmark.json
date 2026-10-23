@@ -1,0 +1,33 @@
+{
+  "name": "Fast Symbolic Regression Benchmark",
+  "description": "Symbolic regression (SR) uncovers mathematical models from data. Several benchmarks have been proposed to compare the performance of SR algorithms. However, existing ground-truth rediscovery benchmarks overemphasize the recovery of\"the one\"expression form or rely solely on computer algebra systems (such as SymPy) to assess success. Furthermore, existing benchmarks continue the expression search even after its discovery. We improve upon these issues by introducing curated lists of acceptable expressions, and a callback mechanism for early termination. As a starting point, we use the symbolic regression for scientific discovery (SRSD) benchmark problems proposed by Yoshitomo et al., and benchmark the two SR packages SymbolicRegression.jl and TiSR. The new benchmarking method increases the rediscovery rate of SymbolicRegression.jl from 26.7%, as reported by Yoshitomo et at., to 44.7%. Performing the benchmark takes 41.2% less computational expense. TiSR's rediscovery rate is 69.4%, while",
+  "category": "mixed",
+  "domain": "dynamical systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "symbolic_regression",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "rediscovery rate",
+  "typical_sota_score": "44–69%",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark for symbolic regression that builds on SRSD-style rediscovery tasks and is not yet widely established as a standard leaderboard.",
+  "notes": "Non-LLM benchmark focused on scientific symbolic regression; results depend on curated acceptable expressions and early-termination callbacks, so scores are not directly comparable to older rediscovery benchmarks.",
+  "creators": {
+    "scientists": [
+      "Viktor Martinek"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2508.14481",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

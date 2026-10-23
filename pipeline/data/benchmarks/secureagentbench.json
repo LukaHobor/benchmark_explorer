@@ -1,0 +1,39 @@
+{
+  "name": "SecureAgentBench",
+  "description": "Large language model (LLM) powered code agents are rapidly transforming software engineering by automating tasks such as testing, debugging, and repairing, yet the security risks of their generated code have become a critical concern. Existing benchmarks have offered valuable insights but remain insufficient: they often overlook the genuine context in which vulnerabilities were introduced or adopt narrow evaluation protocols that fail to capture either functional correctness or newly introduced vulnerabilities. We therefore introduce SecureAgentBench, a benchmark of 105 coding tasks designed to rigorously evaluate code agents'capabilities in secure code generation. Each task includes (i) realistic task settings that require multi-file edits in large repositories, (ii) aligned contexts based on real-world open-source vulnerabilities with precisely identified introduction points, and (iii) comprehensive evaluation that combines functionality testing, vulnerability checking through proof-of-concept exploits, and detection of newly introduced vulnerabilities using static analysis. We evaluate three representative agents (SWE-agent, OpenHands, and Aider) with three state-of-the-art LLMs (Claude 3.7 Sonnet, GPT-4.1, and DeepSeek-V3.1). Results show that (i) current agents struggle to produce secure code, as even the best-performing one, SWE-agent supported by DeepSeek-V3.1, achieves merely 15.2% correct-and-secure solutions, (ii) some agents produce functionally correct code but still introduce vulnerabilities, including new ones not previously recorded, and (iii) adding explicit security instructions for agents does not significantly improve secure coding, underscoring the need for further research. These findings establish SecureAgentBench as a rigorous benchmark for secure code generation and a step toward more reliable software development with LLMs.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "program_repair",
+    "vulnerability_detection",
+    "multifile_edit"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite (functionality testing + vulnerability checking via PoC exploits + static-analysis detection)",
+  "general_score_metric": "composite_score (correct-and-secure rate)",
+  "typical_sota_score": "≈15% (best reported 15.2% correct-and-secure solutions)",
+  "year_of_publish": 2025,
+  "reputation": "13 citations",
+  "notes": "Small benchmark (105 tasks) focused on realistic multi-file edits; potential dataset contamination from open-source repositories; rigorous evaluation combining functional and security checks can make comparisons sensitive to evaluator tooling and exploit quality.",
+  "creators": {
+    "scientists": [
+      "Junkai Chen",
+      "Huihui Huang",
+      "Yunbo Lyu",
+      "Junwen An",
+      "Jieke Shi",
+      "Chengran Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2509.22097",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

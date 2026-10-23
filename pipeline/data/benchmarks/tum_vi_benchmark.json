@@ -1,0 +1,39 @@
+{
+  "name": "TUM VI Benchmark",
+  "description": "Visual odometry and SLAM methods have a large variety of applications in domains such as augmented reality or robotics. Complementing vision sensors with inertial measurements tremendously improves tracking accuracy and robustness, and thus has spawned large interest in the development of visual-inertial (VI) odometry approaches. In this paper, we propose the TUM VI benchmark, a novel dataset with a diverse set of sequences in different scenes for evaluating VI odometry. It provides camera images with 1024x1024 resolution at 20 Hz, high dynamic range and photometric calibration. An IMU measures accelerations and angular velocities on 3 axes at 200 Hz, while the cameras and IMU sensors are time-synchronized in hardware. For trajectory evaluation, we also provide accurate pose ground truth from a motion capture system at high frequency (120 Hz) at the start and end of the sequences which we accurately aligned with the camera and IMU measurements. The full dataset with raw and calibrated data is publicly available. We also evaluate state-of-the-art VI odometry approaches on our dataset.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_odometry",
+    "slam",
+    "sensor_fusion",
+    "trajectory_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Absolute Trajectory Error (ATE) / Relative Pose Error (RPE)",
+  "general_score_metric": "ATE (meters) / RPE (degrees or meters)",
+  "typical_sota_score": "varies by sequence; top methods often report ATE in the range <0.1–0.5 m depending on scenario",
+  "year_of_publish": 2018,
+  "reputation": "A well-cited and widely used academic benchmark for visual-inertial odometry and SLAM research, frequently used to compare VO/VIO methods.",
+  "notes": "Non-LLM benchmark; results depend strongly on sensor calibration and sequence selection; not a large-scale dataset for long-term mapping and performance is sequence-dependent.",
+  "creators": {
+    "scientists": [
+      "David Schubert",
+      "Thore Goll",
+      "Nikolaus Demmel",
+      "Vladyslav Usenko",
+      "Jörg Stückler",
+      "Daniel Cremers"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1804.06120",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

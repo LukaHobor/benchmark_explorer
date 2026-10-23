@@ -1,0 +1,43 @@
+{
+  "name": "EPFL-Smart-Kitchen-30",
+  "description": "Understanding behavior requires datasets that capture humans while carrying out complex tasks. The kitchen is an excellent environment for assessing human motor and cognitive function, as many complex actions are naturally exhibited in kitchens from chopping to cleaning. Here, we introduce the EPFL-Smart-Kitchen-30 dataset, collected in a noninvasive motion capture platform inside a kitchen environment. Nine static RGB-D cameras, inertial measurement units (IMUs) and one head-mounted HoloLens~2 headset were used to capture 3D hand, body, and eye movements. The EPFL-Smart-Kitchen-30 dataset is a multi-view action dataset with synchronized exocentric, egocentric, depth, IMUs, eye gaze, body and hand kinematics spanning 29.7 hours of 16 subjects cooking four different recipes. Action sequences were densely annotated with 33.78 action segments per minute. Leveraging this multi-modal dataset, we propose four benchmarks to advance behavior understanding and modeling through 1) a vision-language benchmark, 2) a semantic text-to-motion generation benchmark, 3) a multi-modal action recognition benchmark, 4) a pose-based action segmentation benchmark. We expect the EPFL-Smart-Kitchen-30 dataset to pave the way for better methods as well as insights to understand the nature of ecologically-valid human behavior. Code and data are available at https://github.com/amathislab/EPFL-Smart-Kitchen",
+  "category": "multimodal",
+  "domain": "human activity / behavior",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "vision-language",
+    "text-to-motion",
+    "multi-modal_action_recognition",
+    "pose-based_action_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific (accuracy / recall@k for vision-language and recognition; segmental F1 for segmentation; motion metrics such as FID/MPJPE/DTW for text-to-motion)",
+  "general_score_metric": "task-specific (accuracy / recall@k / segmental F1 / motion_FID or MPJPE)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, multimodal dataset for realistic kitchen behavior that is gaining attention in behavior-understanding, robotics, and human motion communities but is not yet widely adopted compared to older benchmarks.",
+  "notes": "Multimodal, non-LLM benchmark with rich synchronized sensors (RGB-D, IMUs, HoloLens). Small subject pool (16) and specialized environment (kitchen) limit generalization; evaluation is task-dependent and may require complex pre-processing and alignment; potential privacy considerations for egocentric recordings.",
+  "creators": {
+    "scientists": [
+      "Andy Bonnetto",
+      "Haozhe Qi",
+      "Franklin Leong",
+      "Matea Tashkovska",
+      "Mahdi Rad",
+      "Solaiman Shokur",
+      "Friedhelm Hummel",
+      "Silvestro Micera",
+      "Marc Pollefeys",
+      "Alexander Mathis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.01608",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

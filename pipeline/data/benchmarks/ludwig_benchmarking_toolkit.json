@@ -1,0 +1,37 @@
+{
+  "name": "Ludwig Benchmarking Toolkit",
+  "description": "The rapid proliferation of machine learning models across domains and deployment settings has given rise to various communities (e.g. industry practitioners) which seek to benchmark models across tasks and objectives of personal value. Unfortunately, these users cannot use standard benchmark results to perform such value-driven comparisons as traditional benchmarks evaluate models on a single objective (e.g. average accuracy) and fail to facilitate a standardized training framework that controls for confounding variables (e.g. computational budget), making fair comparisons difficult. To address these challenges, we introduce the open-source Ludwig Benchmarking Toolkit (LBT), a personalized benchmarking toolkit for running end-to-end benchmark studies (from hyperparameter optimization to evaluation) across an easily extensible set of tasks, deep learning models, datasets and evaluation metrics. LBT provides a configurable interface for controlling training and customizing evaluation, a standardized training framework for eliminating confounding variables, and support for multi-objective evaluation. We demonstrate how LBT can be used to create personalized benchmark studies with a large-scale comparative analysis for text classification across 7 models and 9 datasets. We explore the trade-offs between inference latency and performance, relationships between dataset attributes and performance, and the effects of pretraining on convergence and robustness, showing how LBT can be used to satisfy various benchmarking objectives.",
+  "category": "mixed",
+  "domain": "machine learning benchmarking",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "classification",
+    "regression",
+    "sequence_labeling",
+    "generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-dependent (accuracy, F1, BLEU, RMSE, latency, etc.)",
+  "general_score_metric": "task-dependent / composite_score",
+  "year_of_publish": 2021,
+  "reputation": "An open-source benchmarking toolkit used in research and industry experiments for controlled, multi-objective model comparisons; moderately known in benchmarking circles.",
+  "notes": "Non-LLM-specific toolkit; results depend on user-chosen datasets and metrics. Designed to control confounders (compute, HPO) but contamination/saturation depend on included tasks and datasets.",
+  "creators": {
+    "scientists": [
+      "Avanika Narayan",
+      "Piero Molino",
+      "Karan Goel",
+      "Willie Neiswanger",
+      "Christopher Ré"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2111.04260",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

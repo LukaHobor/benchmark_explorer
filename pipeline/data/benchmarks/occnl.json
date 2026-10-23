@@ -1,0 +1,36 @@
+{
+  "name": "OccNL",
+  "description": "3D semantic occupancy prediction is a cornerstone of robotic perception, yet real-world voxel annotations are inherently corrupted by structural artifacts and dynamic trailing effects. This raises a critical but underexplored question: can autonomous systems safely rely on such unreliable occupancy supervision? To systematically investigate this issue, we establish OccNL, the first benchmark dedicated to 3D occupancy under occupancy-asymmetric and dynamic trailing noise. Our analysis reveals a fundamental domain gap: state-of-the-art 2D label noise learning strategies collapse catastrophically in sparse 3D voxel spaces, exposing a critical vulnerability in existing paradigms. To address this challenge, we propose DPR-Occ, a principled label noise-robust framework that constructs reliable supervision through dual-source partial label reasoning. By synergizing temporal model memory with representation-level structural affinity, DPR-Occ dynamically expands and prunes candidate label sets",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "occupancy_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "IoU/F1-based occupancy scoring",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2026,
+  "reputation": "A very recent niche autonomous-driving benchmark with little established adoption yet.",
+  "notes": "Non-LLM 3D vision benchmark; focuses on noisy occupancy supervision and dynamic trailing artifacts, so results are highly method-dependent.",
+  "creators": {
+    "scientists": [
+      "Wenxin Li",
+      "Kunyu Peng",
+      "Di Wen",
+      "Junwei Zheng",
+      "Jiale Wei",
+      "Mengfei Duan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2603.06279",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

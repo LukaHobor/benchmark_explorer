@@ -1,0 +1,33 @@
+{
+  "name": "Context Generalizability Crowd Mobility Benchmark",
+  "description": "Contextual features are important data sources for building citywide crowd mobility prediction models. However, the difficulty of applying context lies in the unknown generalizability of contextual features (e.g., weather, holiday, and points of interests) and context modeling techniques across different scenarios. In this paper, we present a unified analytic framework and a large-scale benchmark for evaluating context generalizability. The benchmark includes crowd mobility data, contextual data, and advanced prediction models. We conduct comprehensive experiments in several crowd mobility prediction tasks such as bike flow, metro passenger flow, and electric vehicle charging demand. Our results reveal several important observations: (1) Using more contextual features may not always result in better prediction with existing context modeling techniques; in particular, the combination of holiday and temporal position can provide more generalizable beneficial information than other contextual feature combinations. (2) In context modeling techniques, using a gated unit to incorporate raw contextual features into the deep prediction model has good generalizability. Besides, we offer several suggestions about incorporating contextual factors for building crowd mobility prediction applications. From our findings, we call for future research efforts devoted to developing new context modeling solutions.",
+  "category": "mixed",
+  "domain": "urban mobility / transportation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "RMSE / MAE (standard time-series forecasting error metrics)",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2021,
+  "reputation": "A recent large-scale benchmark targeted at mobility researchers studying contextual generalizability, gaining attention in urban mobility forecasting community.",
+  "notes": "Non-LLM benchmark covering multiple mobility tasks and cities; different tasks use different scales so normalization is required; care needed to avoid temporal leakage and overfitting to context signals.",
+  "creators": {
+    "scientists": [
+      "Liyue Chen",
+      "Xiaoxiang Wang",
+      "Leye Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2106.16046",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

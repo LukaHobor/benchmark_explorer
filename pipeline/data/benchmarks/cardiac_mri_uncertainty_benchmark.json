@@ -1,0 +1,37 @@
+{
+  "name": "Cardiac MRI Uncertainty Benchmark",
+  "description": "Objective: Convolutional neural networks (CNNs) have demonstrated promise in automated cardiac magnetic resonance image segmentation. However, when using CNNs in a large real-world dataset, it is important to quantify segmentation uncertainty and identify segmentations which could be problematic. In this work, we performed a systematic study of Bayesian and non-Bayesian methods for estimating uncertainty in segmentation neural networks. Methods: We evaluated Bayes by Backprop, Monte Carlo Dropout, Deep Ensembles, and Stochastic Segmentation Networks in terms of segmentation accuracy, probability calibration, uncertainty on out-of-distribution images, and segmentation quality control. Results: We observed that Deep Ensembles outperformed the other methods except for images with heavy noise and blurring distortions. We showed that Bayes by Backprop is more robust to noise distortions while Stochastic Segmentation Networks are more resistant to blurring distortions. For segmentation quality control, we showed that segmentation uncertainty is correlated with segmentation accuracy for all the methods. With the incorporation of uncertainty estimates, we were able to reduce the percentage of poor segmentation to 5% by flagging 31–48% of the most uncertain segmentations for manual review, substantially lower than random review without using neural network uncertainty (reviewing 75–78% of all images). Conclusion: This work provides a comprehensive evaluation of uncertainty estimation methods and showed that Deep Ensembles outperformed other methods in most cases. Significance: Neural network uncertainty measures can help identify potentially inaccurate segmentations and alert users for manual review.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "uncertainty_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient (F1 for segmentation) and uncertainty calibration metrics (ECE, NLL)",
+  "general_score_metric": "Dice coefficient (Dice score)",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2023,
+  "reputation": "Respected academic benchmark in medical imaging uncertainty quantification with moderate adoption in the research community.",
+  "notes": "Non-LLM benchmark focused on medical image segmentation; moderate-sized clinical dataset. Evaluation relies on both segmentation (Dice) and calibration metrics, so results are sensitive to metric choice and uncertainty-postprocessing; domain-specific and not broadly applicable beyond cardiac MRI.",
+  "creators": {
+    "scientists": [
+      "Matthew Ng",
+      "Fumin Guo",
+      "Labonny Biswas",
+      "Steffen E. Petersen",
+      "Stefan K. Piechnik",
+      "Stefan Neubauer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1109/tbme.2022.3232730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

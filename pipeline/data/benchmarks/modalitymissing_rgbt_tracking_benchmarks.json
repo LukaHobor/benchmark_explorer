@@ -1,0 +1,38 @@
+{
+  "name": "Modality-missing RGBT Tracking Benchmarks",
+  "description": "Current RGBT tracking research relies on the complete multi-modal input, but modal information might miss due to some factors such as thermal sensor self-calibration and data transmission error, called modality-missing challenge in this work. To address this challenge, we propose a novel invertible prompt learning approach, which integrates the content-preserving prompts into a well-trained tracking model to adapt to various modality-missing scenarios, for robust RGBT tracking. Given one modality-missing scenario, we propose to utilize the available modality to generate the prompt of the missing modality to adapt to RGBT tracking model. However, the cross-modality gap between available and missing modalities usually causes semantic distortion and information loss in prompt generation. To handle this issue, we design the invertible prompter by incorporating the full reconstruction of the input available modality from the generated prompt. To provide a comprehensive evaluation platform, we construct several high-quality benchmark datasets, in which various modality-missing scenarios are considered to simulate real-world challenges. Extensive experiments on three modality-missing benchmark datasets show that our method achieves significant performance improvements compared with state-of-the-art methods. We have released the code and simulation datasets at: \\href{https://github.com/Alexadlu/Modality-missing-RGBT-Tracking.git}{https://github.com/Alexadlu/Modality-missing-RGBT-Tracking.git}.",
+  "category": "multimodal",
+  "domain": "visual tracking / RGBT",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_tracking",
+    "rgbt_tracking",
+    "robust_multimodal_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (IoU-based success / AUC) and tracking precision",
+  "general_score_metric": "AUC of success plots (IoU-based success rate)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "New, research-focused benchmark (from a 2023 preprint) with limited community adoption so far but useful for robustness studies in RGBT tracking.",
+  "notes": "Non‑LLM benchmark for visual tracking; evaluations use standard tracking metrics (IoU/AUC/precision). Datasets simulate modality-missing scenarios and may be moderate in size; limited adoption and potential domain gap between simulated and real missing-modality conditions.",
+  "creators": {
+    "scientists": [
+      "Andong Lu",
+      "jiacong Zhao",
+      "Chenglong Li",
+      "Jin Tang",
+      "Bin Luo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.16244",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "categories-benchmark-eval",
+  "description": "Within each bench there are \n\ndata folder\nfiles contain the candidate models' labels in the field \"category_tag\".\n\n\nground truth files.\ncontain ground truth labels by larger models in the field \"label\"\nvote files contain labels calculated from the votes of claude-3-7-sonnet, deepseek-r1, gemini-2.0-pro, and gpt-4.5\nvote_2 : true if >= 2 models vote true\nvote_3 : true if >= 3 models vote true\nindividual votes are specified in the field \"votes\"",
+  "category": "text",
+  "domain": "general knowledge",
+  "tags": [
+    "license:apache-2.0"
+  ],
+  "task_types": [
+    "binary_classification",
+    "multi-label_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (and vote-based agreement with ground truth labels)",
+  "general_score_metric": "accuracy (vote agreement / label agreement)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "Hugging Face-hosted dataset used for label-agreement and calibration analyses; a niche but practical resource for model ensemble / label-consensus studies.",
+  "downloads": 66,
+  "likes": 5,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "lmarena-ai"
+    ]
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://huggingface.co/datasets/lmarena-ai/categories-benchmark-eval",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

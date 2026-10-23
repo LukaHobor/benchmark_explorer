@@ -1,0 +1,40 @@
+{
+  "name": "PTSBench",
+  "description": "With the increased attention to model efficiency, post-training sparsity (PTS) has become more and more prevalent because of its effectiveness and efficiency. However, there remain questions on better practice of PTS algorithms and the sparsification ability of models, which hinders the further development of this area. Therefore, a benchmark to comprehensively investigate the issues above is urgently needed. In this paper, we propose the first comprehensive post-training sparsity benchmark called PTSBench towards algorithms and models. We benchmark 10+ PTS general-pluggable fine-grained techniques on 3 typical tasks using over 40 off-the-shelf model architectures. Through extensive experiments and analyses, we obtain valuable conclusions and provide several insights from both algorithms and model aspects. Our PTSBench can provide (1) new observations for a better understanding of the PTS algorithms, (2) in-depth and comprehensive evaluations for the sparsification ability of models, and (3) a well-structured and easy-integrate open-source framework. We hope this work will provide illuminating conclusions and advice for future studies of post-training sparsity methods and sparsification-friendly model design. The code for our PTSBench is released at \\href{https://github.com/ModelTC/msbench}{https://github.com/ModelTC/msbench}.",
+  "category": "mixed",
+  "domain": "model efficiency / sparsity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "language_modeling",
+    "image_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy / perplexity, reported alongside sparsity and efficiency metrics (e.g., sparsity %, FLOPs, latency)",
+  "general_score_metric": "task-specific metrics (accuracy or perplexity) measured at target sparsity levels; efficiency metrics reported separately",
+  "year_of_publish": 2024,
+  "reputation": "A research-oriented benchmark gaining attention in the model-efficiency and sparsity community for providing a systematic, multi-model comparison of post-training sparsity methods.",
+  "notes": "Non-LLM-oriented benchmark focused on post-training sparsity; results are highly implementation- and hardware-dependent, sensitive to random seeds and pruning schedules; good coverage of architectures but not a single unified task metric.",
+  "creators": {
+    "scientists": [
+      "Zining Wnag",
+      "Jinyang Guo",
+      "Ruihao Gong",
+      "Yang Yong",
+      "Aishan Liu",
+      "Yushi Huang",
+      "Jiaheng Liu",
+      "Xianglong Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2412.07268",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

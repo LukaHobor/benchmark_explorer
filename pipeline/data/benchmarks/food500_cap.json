@@ -1,0 +1,37 @@
+{
+  "name": "Food-500 Cap",
+  "description": "Vision-language models (VLMs) have shown impressive performance in substantial downstream multi-modal tasks. However, only comparing the fine-tuned performance on downstream tasks leads to the poor interpretability of VLMs, which is adverse to their future improvement. Several prior works have identified this issue and used various probing methods under a zero-shot setting to detect VLMs' limitations, but they all examine VLMs using general datasets instead of specialized ones. In practical applications, VLMs are usually applied to specific scenarios, such as e-commerce and news fields, so the generalization of VLMs in specific domains should be given more attention. In this paper, we comprehensively investigate the capabilities of popular VLMs in a specific field, the food domain. To this end, we build a food caption dataset, Food-500 Cap, which contains 24,700 food images with 494 categories. Each image is accompanied by a detailed caption, including fine-grained attributes of food, such as the ingredient, shape, and color. We also provide a culinary culture taxonomy that classifies each food category based on its geographic origin in order to better analyze the performance differences of VLM in different regions. Experiments on our proposed datasets demonstrate that popular VLMs underperform in the food domain compared with their performance in the general domain. Furthermore, our research reveals severe bias in VLMs' ability to handle food items from different geographic regions. We adopt diverse probing methods and evaluate nine VLMs belonging to different architectures to verify the aforementioned observations. We hope that our study will bring researchers' attention to VLM's limitations when applying them to the domain of food or culinary cultures, and spur further investigations to address this issue.",
+  "category": "multimodal",
+  "domain": "vision / vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_captioning",
+    "fine_grained_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "CIDEr / BLEU / accuracy (for category/attribute classification)",
+  "general_score_metric": "CIDEr (for captioning) / accuracy (for category classification)",
+  "year_of_publish": 2023,
+  "reputation": "Domain-specific food captioning benchmark (2023) used in VLM probing studies; limited but growing use for culinary/food-focused evaluation.",
+  "notes": "Moderate-size (24.7k) domain-specific dataset with fine-grained attributes and geographic taxonomy; prone to class imbalance and geographic bias; potential contamination from large-scale web-pretrained VLMs may inflate zero-shot scores.",
+  "creators": {
+    "scientists": [
+      "Zheng Ma",
+      "Mianzhi Pan",
+      "Wenhan Wu",
+      "Kanzhi Cheng",
+      "Jianbing Zhang",
+      "ShuJian Huang",
+      "Jiajun Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.03151",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

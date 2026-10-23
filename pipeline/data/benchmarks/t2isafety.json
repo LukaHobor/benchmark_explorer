@@ -1,0 +1,42 @@
+{
+  "name": "T2ISafety",
+  "description": "Text-to-image (T2I) models have rapidly advanced, enabling the generation of high-quality images from text prompts across various domains. However, these models present notable safety concerns, including the risk of generating harmful, biased, or private content. Current research on assessing T2I safety remains in its early stages. While some efforts have been made to evaluate models on specific safety dimensions, many critical risks remain unexplored. To address this gap, we introduce T2ISafety, a safety benchmark that evaluates T2I models across three key domains: toxicity, fairness, and bias. We build a detailed hierarchy of 12 tasks and 44 categories based on these three domains, and meticulously collect 70K corresponding prompts. Based on this taxonomy and prompt set, we build a large-scale T2I dataset with 68K manually annotated images and train an evaluator capable of detecting critical risks that previous work has failed to identify, including risks that even ultra-large proprietary models like GPTs cannot correctly detect. We evaluate 12 prominent diffusion models on T2ISafety and reveal several concerns including persistent issues with racial fairness, a tendency to generate toxic content, and significant variation in privacy protection across the models, even with defense methods like concept erasing. Data and evaluator are released under https://github.com/adwardlee/t2i_safety.",
+  "category": "multimodal",
+  "domain": "vision / generative models (safety)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "safety_detection",
+    "bias_evaluation",
+    "toxic_content_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "macro-F1",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A recent, well-constructed benchmark for text-to-image safety that is gaining traction in the T2I safety research community due to its large annotated prompt–image collection and released evaluator.",
+  "notes": "Large human-annotated dataset (≈68K images) but some categories are imbalanced; evaluator models may inherit annotation biases. Focuses on diffusion models and safety properties, so findings may not fully generalize to other generative paradigms; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Lijun Li",
+      "Zhelun Shi",
+      "Xuhao Hu",
+      "Bowen Dong",
+      "Yiran Qin",
+      "Xihui Liu",
+      "Lu Sheng",
+      "Jing Shao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2501.12612",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

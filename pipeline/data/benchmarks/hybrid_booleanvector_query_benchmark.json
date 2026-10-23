@@ -1,0 +1,34 @@
+{
+  "name": "Hybrid Boolean+Vector Query Benchmark",
+  "description": "The growing use of vectors for unstructured data has made efficient hybrid queries-combining boolean filters with vector similarity searches-essential. However, publicly available datasets for evaluating DBMS performance on such queries are limited. To address this, we introduce two datasets: the singletable fungi dataset (STFD) with 295,938 base entities and the multi-table movie dataset (MTMD) with 284,713 base vectors, available at this link. These datasets provide a framework for evaluating DBMS performance on hybrid queries. Our experiments with Milvus, pgvector, ClickHouse, and Elasticsearch show that current DBMSs struggle with hybrid queries, each system exhibiting strengths and weaknesses. QPS varies up to $50 \\times$, and recall differences reach 55 %. These results underscore the importance of query optimization and index utilization. We outline future research directions, including specialized data structures, algorithms for hybrid queries, techniques for estimating query difficulty and predicate selectivity, and enhanced query optimization strategies, to support the development of more efficient DBMS solutions.",
+  "category": "text",
+  "domain": "information retrieval",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "retrieval",
+    "ranking",
+    "filtering"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "recall@k / MAP / NDCG (retrieval metrics)",
+  "general_score_metric": "recall@10",
+  "year_of_publish": 2025,
+  "reputation": "An emerging IR benchmark for hybrid boolean+vector systems with growing interest among vector-database and retrieval-research communities.",
+  "notes": "Evaluates hybrid boolean filtering + vector similarity; results depend heavily on dataset composition and query formulation. Risk of dataset/model contamination as foundation models improve; not an LLM-generation benchmark; potential saturation on some collections as vector search matures.",
+  "creators": {
+    "scientists": [
+      "Zijian Zhu",
+      "Yongli Wang",
+      "Dongmei Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://doi.org/10.1109/acie64499.2025.00026",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

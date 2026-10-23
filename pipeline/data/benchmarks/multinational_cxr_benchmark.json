@@ -1,0 +1,43 @@
+{
+  "name": "Multinational CXR Benchmark",
+  "description": "Foundation models leveraging vision-language pretraining have shown promise in chest X-ray (CXR) interpretation, yet their real-world performance across diverse populations and diagnostic tasks remains insufficiently evaluated. This study benchmarks the diagnostic performance and generalizability of foundation models versus traditional convolutional neural networks (CNNs) on multinational CXR datasets. We evaluated eight CXR diagnostic models - five vision-language foundation models and three CNN-based architectures - across 37 standardized classification tasks using six public datasets from the USA, Spain, India, and Vietnam, and three private datasets from hospitals in China. Performance was assessed using AUROC, AUPRC, and other metrics across both shared and dataset-specific tasks. Foundation models outperformed CNNs in both accuracy and task coverage. MAVL, a model incorporating knowledge-enhanced prompts and structured supervision, achieved the highest performance on public (mean AUROC: 0.82; AUPRC: 0.32) and private (mean AUROC: 0.95; AUPRC: 0.89) datasets, ranking first in 14 of 37 public and 3 of 4 private tasks. All models showed reduced performance on pediatric cases, with average AUROC dropping from 0.88 +/- 0.18 in adults to 0.57 +/- 0.29 in children (p = 0.0202). These findings highlight the value of structured supervision and prompt design in radiologic AI and suggest future directions including geographic expansion and ensemble modeling for clinical deployment. Code for all evaluated models is available at https://drive.google.com/drive/folders/1B99yMQm7bB4h1sVMIBja0RfUu8gLktCE",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC and AUPRC",
+  "general_score_metric": "mean AUROC",
+  "typical_sota_score": "0.82–0.95",
+  "year_of_publish": 2025,
+  "reputation": "Recent comprehensive multinational benchmark for chest X‑ray models; attracting attention in medical imaging research.",
+  "notes": "Includes heterogeneous public and private datasets and tasks, shows domain shift (notably worse performance on pediatric cases), potential demographic biases, and is not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Qinmei Xu",
+      "Yiheng Li",
+      "Xianghao Zhan",
+      "Ahmet Gorkem Er",
+      "Brittany Dashevsky",
+      "Chuanjun Xu",
+      "Mohammed Alawad",
+      "Mengya Yang",
+      "Liu Ya",
+      "Changsheng Zhou",
+      "Xiao Li",
+      "Haruka Itakura",
+      "Olivier Gevaert"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.16027",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "AnyCap",
+  "description": "Controllable captioning is essential for precise multimodal alignment and instruction following, yet existing models often lack fine-grained control and reliable evaluation protocols. To address this gap, we present the AnyCap Project, an integrated solution spanning model, dataset, and evaluation. We introduce AnyCapModel (ACM), a lightweight plug-and-play framework that enhances the controllability of existing foundation models for omni-modal captioning without retraining the base model. ACM reuses the original captions from base models while incorporating user instructions and modality features to generate improved captions. To remedy the data scarcity in controllable multimodal captioning, we build AnyCapDataset (ACD), covering three modalities, 28 user-instruction types, and 300\\,k high-quality data entries. We further propose AnyCapEval, a new benchmark that provides more reliable evaluation metrics for controllable captioning by decoupling content accuracy and stylistic fidelity. ACM markedly improves caption quality across a diverse set of base models on AnyCapEval. Notably, ACM-8B raises GPT-4o\\'s content scores by 45\\% and style scores by 12\\%, and it also achieves substantial gains on widely used benchmarks such as MIA-Bench and VidCapBench.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "caption_generation",
+    "controllable_captioning",
+    "instruction_following"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "separate content and style automatic metrics (e.g., semantic similarity / CIDEr / CLIPScore for content and classifier-based or style-specific metrics for style) combined with human evaluation",
+  "general_score_metric": "composite_score (separate content_score and style_score reported)",
+  "year_of_publish": 2025,
+  "reputation": "3 citations",
+  "notes": "Multimodal benchmark with a large curated dataset and dedicated evaluation split for content vs. style; potential contamination risk when evaluating large foundation models pretrained on similar web data; incorporates human evaluation components and is not limited to pure automatic metrics.",
+  "creators": {
+    "scientists": [
+      "Yiming Ren",
+      "Zhiqiang Lin",
+      "Yu Li",
+      "Gao Meng",
+      "Weiyun Wang",
+      "Junjie Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2507.12841",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

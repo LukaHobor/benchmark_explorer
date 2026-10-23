@@ -1,0 +1,40 @@
+{
+  "name": "TGB-Seq Benchmark",
+  "description": "Future link prediction is a fundamental challenge in various real-world dynamic systems. To address this, numerous temporal graph neural networks (temporal GNNs) and benchmark datasets have been developed. However, these datasets often feature excessive repeated edges and lack complex sequential dynamics, a key characteristic inherent in many real-world applications such as recommender systems and ``Who-To-Follow'' on social networks. This oversight has led existing methods to inadvertently downplay the importance of learning sequential dynamics, focusing primarily on predicting repeated edges. In this study, we demonstrate that existing methods, such as GraphMixer and DyGFormer, are inherently incapable of learning simple sequential dynamics, such as ``a user who has followed OpenAI and Anthropic is more likely to follow AI at Meta next.'' Motivated by this issue, we introduce the Temporal Graph Benchmark with Sequential Dynamics (TGB-Seq), a new benchmark carefully curated to minimize repeated edges, challenging models to learn sequential dynamics and generalize to unseen edges. TGB-Seq comprises large real-world datasets spanning diverse domains, including e-commerce interactions, movie ratings, business reviews, social networks, citation networks and web link networks. Benchmarking experiments reveal that current methods usually suffer significant performance degradation and incur substantial training costs on TGB-Seq, posing new challenges and opportunities for future research. TGB-Seq datasets, leaderboards, and example codes are available at https://tgb-seq.github.io/.",
+  "category": "mixed",
+  "domain": "temporal graphs / social networks",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "temporal_link_prediction",
+    "edge_prediction",
+    "representation_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MRR and Hits@k (primary); AUC / Precision@k reported where applicable",
+  "general_score_metric": "MRR",
+  "typical_sota_score": "0.20–0.65 (MRR, varies significantly by dataset & method)",
+  "year_of_publish": 2025,
+  "reputation": "New benchmark that has attracted interest in the temporal-GNN community for exposing sequential dynamics; early adoption but not yet a broadly established standard.",
+  "notes": "Non-LLM benchmark focused on temporal graphs with minimized repeated edges; large-scale and computationally intensive; many existing methods show degraded performance here versus prior benchmarks; potential class imbalance and domain-specific preprocessing requirements.",
+  "creators": {
+    "scientists": [
+      "Lu Yi",
+      "Jie Peng",
+      "Yanping Zheng",
+      "Fengran Mo",
+      "Zhewei Wei",
+      "Yuhang Ye",
+      "Yue Zixuan",
+      "Zengfeng Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2502.02975",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

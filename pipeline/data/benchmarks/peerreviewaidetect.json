@@ -1,0 +1,36 @@
+{
+  "name": "PeerReview-AI-Detect",
+  "description": "Peer review is a critical process for ensuring the integrity of published scientific research. Confidence in this process is predicated on the assumption that experts in the relevant domain give careful consideration to the merits of manuscripts which are submitted for publication. With the recent rapid advancements in large language models (LLMs), a new risk to the peer review process is that negligent reviewers will rely on LLMs to perform the often time consuming process of reviewing a paper. However, there is a lack of existing resources for benchmarking the detectability of AI text in the domain of peer review. To address this deficiency, we introduce a comprehensive dataset containing a total of 788,984 AI-written peer reviews paired with corresponding human reviews, covering 8 years of papers submitted to each of two leading AI research conferences (ICLR and NeurIPS). We use this new resource to evaluate the ability of 18 existing AI text detection algorithms to distinguish between peer reviews written by humans and different state-of-the-art LLMs. Motivated by the shortcomings of existing methods, we propose a new detection approach which surpasses existing methods in the identification of AI written peer reviews. Our work reveals the difficulty of identifying AI-generated text at the individual peer review level, highlighting the urgent need for new tools and methods to detect this unethical use of generative AI.",
+  "category": "text",
+  "domain": "academic peer review / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "60–80%",
+  "year_of_publish": 2025,
+  "reputation": "A large, recent and relevant dataset for research on detecting AI-generated peer reviews; gaining attention in the AI ethics and detection communities.",
+  "notes": "Very large corpus but domain-specific (peer review text) which can lead to domain bias; potential contamination risk if detection models were trained on overlapping conference corpora; label noise and difficulty at individual-review level reported.",
+  "creators": {
+    "scientists": [
+      "Sungduk Yu",
+      "Man Luo",
+      "Avinash Madusu",
+      "Vasudev Lal",
+      "Phillip Howard"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2502.19614",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

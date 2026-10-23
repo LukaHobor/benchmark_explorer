@@ -1,0 +1,35 @@
+{
+  "name": "Document Reading Order Benchmark (XY-Cut++ benchmark)",
+  "description": "Document Reading Order Recovery is a fundamental task in document image understanding, playing a pivotal role in enhancing Retrieval-Augmented Generation (RAG) and serving as a critical preprocessing step for large language models (LLMs). Existing methods often struggle with complex layouts(e.g., multi-column newspapers), high-overhead interactions between cross-modal elements (visual regions and textual semantics), and a lack of robust evaluation benchmarks. We introduce XY-Cut++, an advanced layout ordering method that integrates pre-mask processing, multi-granularity segmentation, and cross-modal matching to address these challenges. Our method significantly enhances layout ordering accuracy compared to traditional XY-Cut techniques. Specifically, XY-Cut++ achieves state-of-the-art performance (98.8 BLEU overall) while maintaining simplicity and efficiency. It outperforms existing baselines by up to 24\\% and demonstrates consistent accuracy across simple and complex layouts on the newly introduced DocBench-100 dataset. This advancement establishes a reliable foundation for document structure recovery, setting a new standard for layout ordering tasks and facilitating more effective RAG and LLM preprocessing.",
+  "category": "vision",
+  "domain": "document image understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_prediction",
+    "ordering",
+    "structured_prediction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "BLEU",
+  "general_score_metric": "BLEU",
+  "typical_sota_score": "≈98.8 BLEU",
+  "year_of_publish": 2025,
+  "reputation": "Newly introduced benchmark (arXiv 2025) with promising results but limited community adoption so far.",
+  "notes": "Small introduced dataset (DocBench-100) which may limit diversity; very high BLEU suggests potential saturation for simple layouts; targeted at document-layout ordering (non-LLM evaluation) and may not reflect end-to-end LLM/RAG performance.",
+  "creators": {
+    "scientists": [
+      "Shuai Liu",
+      "Youmeng Li",
+      "Jizeng Wei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.10258",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

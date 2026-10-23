@@ -1,0 +1,37 @@
+{
+  "name": "Nearshore HUTD Benchmark",
+  "description": "UAV-borne hyperspectral remote sensing has emerged as a promising approach for underwater target detection (UTD). However, its effectiveness is hindered by spectral distortions in nearshore environments, which compromise the accuracy of traditional hyperspectral UTD (HUTD) methods that rely on bathymetric model. These distortions lead to significant uncertainty in target and background spectra, challenging the detection process. To address this, we propose the Hyperspectral Underwater Contrastive Learning Network (HUCLNet), a novel framework that integrates contrastive learning with a self-paced learning paradigm for robust HUTD in nearshore regions. HUCLNet extracts discriminative features from distorted hyperspectral data through contrastive learning, while the self-paced learning strategy selectively prioritizes the most informative samples. Additionally, a reliability-guided clustering strategy enhances the robustness of learned representations.To evaluate the method effectiveness, we conduct a novel nearshore HUTD benchmark dataset, ATR2-HUTD, covering three diverse scenarios with varying water types and turbidity, and target types. Extensive experiments demonstrate that HUCLNet significantly outperforms state-of-the-art methods. The dataset and code will be publicly available at: https://github.com/qjh1996/HUTD",
+  "category": "vision",
+  "domain": "remote sensing / underwater detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ROC AUC / mAP (detection-focused metrics)",
+  "general_score_metric": "ROC AUC",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized nearshore hyperspectral UTD benchmark introduced with the HUCLNet paper; currently niche with limited external adoption.",
+  "notes": "Benchmark addresses nearshore spectral distortions—high domain specificity; sensor- and water-condition-dependent (limited generalizability); likely relatively small and tailored dataset; non‑LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jiahao Qi",
+      "Chuanhong Zhou",
+      "Xingyue Liu",
+      "Chen Chen",
+      "Dehui Zhu",
+      "Kangcheng Bin",
+      "Ping Zhong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.14495",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Weather-Robust 3D Human Reconstruction (mmWave-RGB)",
+  "description": "3D human reconstruction from RGB images achieves decent results in good weather conditions but degrades dramatically in rough weather. Complementarily, mmWave radars have been employed to reconstruct 3D human joints and meshes in rough weather. However, combining RGB and mmWave signals for weather-robust 3D human reconstruction is still an open challenge, given the sparse nature of mmWave and the vulnerability of RGB images. The limited research about the impact of missing points and sparsity features of mmWave data on reconstruction performance, as well as the lack of available datasets for paired mmWave-RGB data, further complicates the process of fusing the two modalities. To fill these gaps, we build up an automatic 3D body annotation system with multiple sensors to collect a large-scale mmWave dataset. The dataset consists of synchronized and calibrated mmWave radar point clouds and RGB(D) images under different weather conditions and skeleton/mesh annotations for humans in these scenes. With this dataset, we conduct a comprehensive analysis about the limitations of single-modality reconstruction and the impact of missing points and sparsity on the reconstruction performance. Based on the guidance of this analysis, we design ImmFusion, the first mmWave-RGB fusion solution to robustly reconstruct 3D human bodies in various weather conditions. Specifically, our ImmFusion consists of image and point backbones for token feature extraction and a Transformer module for token fusion. The image and point backbones refine global and local features from original data, and the Fusion Transformer Module aims for effective information fusion of two modalities by dynamically selecting informative tokens. Extensive experiments demonstrate that ImmFusion can efficiently utilize the information of two modalities to achieve robust 3D human body reconstruction in various weather environments.",
+  "category": "multimodal",
+  "domain": "robotics / human sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_human_reconstruction",
+    "pose_estimation",
+    "multimodal_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MPJPE (mean per joint position error), P‑MPJPE, Chamfer distance, PCK",
+  "general_score_metric": "MPJPE (lower is better)",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized dataset/paper with limited adoption so far but high relevance for weather-robust multimodal human reconstruction research.",
+  "notes": "Non-LLM benchmark using specialized mmWave hardware; mmWave data is sparse which can limit generalization; dataset focuses on weather-robust scenarios and may have privacy considerations for human sensing.",
+  "creators": {
+    "scientists": [
+      "Anjun Chen",
+      "Xiangyu Wang",
+      "Kun Shi",
+      "Yuchi Huo",
+      "Jiming Chen",
+      "Qi Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.04851",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

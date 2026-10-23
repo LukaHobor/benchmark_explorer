@@ -1,0 +1,36 @@
+{
+  "name": "MetaAudio",
+  "description": "Currently available benchmarks for few-shot learning (machine learning with few training examples) are limited in the domains they cover, primarily focusing on image classification. This work aims to alleviate this reliance on image-based benchmarks by offering the first comprehensive, public and fully reproducible audio based alternative, covering a variety of sound domains and experimental settings. We compare the few-shot classification performance of a variety of techniques on seven audio datasets (spanning environmental sounds to human-speech). Extending this, we carry out in-depth analyses of joint training (where all datasets are used during training) and cross-dataset adaptation protocols, establishing the possibility of a generalised audio few-shot classification algorithm. Our experimentation shows gradient-based meta-learning methods such as MAML and Meta-Curvature consistently outperform both metric and baseline methods. We also demonstrate that the joint training routine helps overall generalisation for the environmental sound databases included, as well as being a somewhat-effective method of tackling the cross-dataset/domain setting.",
+  "category": "audio",
+  "domain": "audio / few-shot learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification",
+    "audio_classification",
+    "cross-dataset_adaptation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "classification accuracy in N-way K-shot settings (few-shot accuracy); cross-dataset transfer evaluated by accuracy",
+  "general_score_metric": "few-shot classification accuracy",
+  "typical_sota_score": "varies by dataset and shot (roughly 40–80% depending on task and shot count)",
+  "year_of_publish": 2022,
+  "reputation": "A well-regarded, publicly available benchmark suite for audio few-shot learning that filled an important gap beyond image-centric few-shot benchmarks.",
+  "notes": "Covers diverse audio domains and protocols (joint training, cross-dataset). Not intended for LLMs; results depend strongly on preprocessing and feature extractors; datasets can be small and domain-dependent.",
+  "creators": {
+    "scientists": [
+      "Calum Heggan",
+      "Sam Budgett",
+      "Timothy Hospedales",
+      "Mehrdad Yaghoobi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2204.02121",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

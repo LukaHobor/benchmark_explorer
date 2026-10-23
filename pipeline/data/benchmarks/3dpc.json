@@ -1,0 +1,40 @@
+{
+  "name": "3D-PC",
+  "description": "Visual perspective taking (VPT) is the ability to perceive and reason about the perspectives of others. It is an essential feature of human intelligence, which develops over the first decade of life and requires an ability to process the 3D structure of visual scenes. A growing number of reports have indicated that deep neural networks (DNNs) become capable of analyzing 3D scenes after training on large image datasets. We investigated if this emergent ability for 3D analysis in DNNs is sufficient for VPT with the 3D perception challenge (3D-PC): a novel benchmark for 3D perception in humans and DNNs. The 3D-PC is comprised of three 3D-analysis tasks posed within natural scene images: 1. a simple test of object depth order, 2. a basic VPT task (VPT-basic), and 3. another version of VPT (VPT-Strategy) designed to limit the effectiveness of \"shortcut\" visual strategies. We tested human participants (N=33) and linearly probed or text-prompted over 300 DNNs on the challenge and found that nearly all of the DNNs approached or exceeded human accuracy in analyzing object depth order. Surprisingly, DNN accuracy on this task correlated with their object recognition performance. In contrast, there was an extraordinary gap between DNNs and humans on VPT-basic. Humans were nearly perfect, whereas most DNNs were near chance. Fine-tuning DNNs on VPT-basic brought them close to human performance, but they, unlike humans, dropped back to chance when tested on VPT-Strategy. Our challenge demonstrates that the training routines and architectures of today's DNNs are well-suited for learning basic 3D properties of scenes and objects but are ill-suited for reasoning about these properties as humans do. We release our 3D-PC datasets and code to help bridge this gap in 3D perception between humans and machines.",
+  "category": "vision",
+  "domain": "vision / cognitive perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multi_class_classification",
+    "visual_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Accuracy (per-subtask accuracy comparisons to human performance)",
+  "general_score_metric": "Accuracy (%) on each subtask (depth-order, VPT-basic, VPT-Strategy)",
+  "typical_sota_score": "Varies by subtask: depth-order ≈ 90–100%; VPT-basic can reach near-human after fine-tuning (~90–98% in reported experiments); VPT-Strategy remains low (near chance, ~50–60%).",
+  "year_of_publish": 2024,
+  "reputation": "A recent (2024) cognitive-vision benchmark drawing interest for studying visual perspective taking gaps between humans and DNNs; gaining attention but not yet widely adopted.",
+  "notes": "Non-LLM benchmark; multiple subtask behaviors differ widely — models often exploit visual shortcuts; dataset size and generalization to strategy-constrained tests can be limited; comparison to human data included (N=33).",
+  "creators": {
+    "scientists": [
+      "Drew Linsley",
+      "Peisen Zhou",
+      "Alekh Karkada Ashok",
+      "Akash Nagaraj",
+      "Gaurav Gaonkar",
+      "Francis E Lewis",
+      "Zygmunt Pizlo",
+      "Thomas Serre"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.04138",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

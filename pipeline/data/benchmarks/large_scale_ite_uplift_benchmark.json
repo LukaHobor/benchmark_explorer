@@ -1,0 +1,37 @@
+{
+  "name": "Large Scale ITE / Uplift Benchmark",
+  "description": "Individual Treatment Effect (ITE) prediction is an important area of research in machine learning which aims at explaining and estimating the causal impact of an action at the granular level. It represents a problem of growing interest in multiple sectors of application such as healthcare, online advertising or socioeconomics. To foster research on this topic we release a publicly available collection of 13.9 million samples collected from several randomized control trials, scaling up previously available datasets by a healthy 210x factor. We provide details on the data collection and perform sanity checks to validate the use of this data for causal inference tasks. First, we formalize the task of uplift modeling (UM) that can be performed with this data, along with the relevant evaluation metrics. Then, we propose synthetic response surfaces and heterogeneous treatment assignment providing a general set-up for ITE prediction. Finally, we report experiments to validate key characteristics of the dataset leveraging its size to evaluate and compare - with high statistical significance - a selection of baseline UM and ITE prediction methods.",
+  "category": "mixed",
+  "domain": "causal inference / healthcare / advertising",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "individual_treatment_effect_estimation",
+    "uplift_modeling",
+    "causal_inference"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "PEHE (Precision in Estimation of Heterogeneous Effect), ATE error, uplift/Qini curve and policy value (policy risk)",
+  "general_score_metric": "PEHE",
+  "year_of_publish": 2021,
+  "reputation": "Notable for its very large scale (13.9M samples) and used by causal-inference researchers to evaluate scalable ITE/uplift methods, though not yet as universally standard as smaller curated benchmarks (e.g., IHDP).",
+  "notes": "Large-scale collection from multiple RCTs but evaluation often uses synthetic response surfaces; combining trials can introduce heterogeneity and potential selection/aggregation confounders; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Eustache Diemert",
+      "Artem Betlei",
+      "Christophe Renaudin",
+      "Massih-Reza Amini",
+      "Théophane Gregoir",
+      "Thibaud Rahier"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2111.10106",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

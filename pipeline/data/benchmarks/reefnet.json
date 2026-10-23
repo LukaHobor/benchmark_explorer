@@ -1,0 +1,36 @@
+{
+  "name": "ReefNet",
+  "description": "Coral reefs are rapidly declining due to anthropogenic pressures such as climate change, underscoring the urgent need for scalable, automated monitoring. We introduce ReefNet, a large public coral reef image dataset with point-label annotations mapped to the World Register of Marine Species (WoRMS). ReefNet aggregates imagery from 76 curated CoralNet sources and an additional site from Al Wajh in the Red Sea, totaling approximately 925000 genus-level hard coral annotations with expert-verified labels. Unlike prior datasets, which are often limited by size, geography, or coarse labels and are not ML-ready, ReefNet offers fine-grained, taxonomically mapped labels at a global scale to WoRMS. We propose two evaluation settings: (i) a within-source benchmark that partitions each source's images for localized evaluation, and (ii) a cross-source benchmark that withholds entire sources to test domain generalization. We analyze both supervised and zero-shot classification performance on ReefNet and find that while supervised within-source performance is promising, supervised performance drops sharply across domains, and performance is low across the board for zero-shot models, especially for rare and visually similar genera. This provides a challenging benchmark intended to catalyze advances in domain generalization and fine-grained coral classification. We will release our dataset, benchmarking code, and pretrained models to advance robust, domain-adaptive, global coral reef monitoring and conservation.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "domain_generalization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "top-1 accuracy",
+  "general_score_metric": "top-1 accuracy",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Large, taxonomically mapped coral reef image dataset with severe class imbalance and long-tail genera; designed for cross-source domain generalization. Non-LLM vision benchmark; potential geographic bias and label noise/contamination risk from aggregated sources.",
+  "creators": {
+    "scientists": [
+      "Yahia Battach",
+      "Abdulwahab Felemban",
+      "F. Khan",
+      "Yousef A. Radwan",
+      "Xiang Li",
+      "Fabio Marchese"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2510.16822",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

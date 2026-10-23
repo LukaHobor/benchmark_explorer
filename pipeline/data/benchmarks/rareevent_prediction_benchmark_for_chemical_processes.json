@@ -1,0 +1,33 @@
+{
+  "name": "Rare-event Prediction Benchmark for Chemical Processes",
+  "description": "Previously, using forward-flux sampling (FFS) and machine learning (ML), we developed multivariate alarm systems to counter rare un-postulated abnormal events. Our alarm systems utilized ML-based predictive models to quantify committer probabilities as functions of key process variables (e.g., temperature, concentrations, and the like), with these data obtained in FFS simulations. Herein, we introduce a novel and comprehensive benchmark framework for rare-event prediction, comparing ML algorithms of varying complexity, including Linear Support-Vector Regressor and k-Nearest Neighbors, to more sophisticated algorithms, such as Random Forests, XGBoost, LightGBM, CatBoost, Dense Neural Networks, and TabNet. This evaluation uses comprehensive performance metrics, such as: $\\textit{RMSE}$, model training, testing, hyperparameter tuning and deployment times, and number and efficiency of alarms. These balance model accuracy, computational efficiency, and alarm-system efficiency, identifying optimal ML strategies for predicting abnormal rare events, enabling operators to obtain safer and more reliable plant operations.",
+  "category": "mixed",
+  "domain": "chemical processes",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "anomaly_detection",
+    "time_series_forecasting"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite (RMSE primary; secondary alarm-efficiency metrics such as precision/recall and computational cost/timing)",
+  "general_score_metric": "RMSE (primary) with alarm-efficiency metrics (precision/recall, alarm rate) as secondary",
+  "year_of_publish": 2024,
+  "reputation": "A niche academic benchmark used primarily in chemical engineering and process-safety research with limited adoption outside that community.",
+  "notes": "Non-LLM benchmark based on forward-flux sampling (simulated) data; strong class imbalance (rare events), potential simulation-to-reality gap, and sensitivity to hyperparameter/tuning and thresholding for alarm systems.",
+  "creators": {
+    "scientists": [
+      "Vikram Sudarshan",
+      "Warren D. Seider"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2409.00485",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

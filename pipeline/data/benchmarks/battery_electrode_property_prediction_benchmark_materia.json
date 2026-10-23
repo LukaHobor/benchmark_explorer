@@ -1,0 +1,33 @@
+{
+  "name": "Battery electrode property prediction benchmark (Materials Project)",
+  "description": "In this work, we benchmark three leading Machine Learning (ML) frameworks-MODNet, CrabNet, and a random forest model based on Magpie feature-for predicting properties of battery electrode materials using the Materials Project Battery Explorer dataset. We evaluate these models based on predictive accuracy, visualize numerical features using two-dimensional embeddings, and quantify performance using standard metrics. Our results demonstrate that CrabNet consistently outperforms the other models across all tests. To validate these findings, we employ robust statistical methods: bootstrap resampling and two cross-validation (CV) strategies (leave one cluster out and stratified 5-fold CV), comparing each model against a control baseline. In addition, we apply unsupervised clustering on MODNet-derived features using t-SNE and DBSCAN, revealing coherent material groupings without prior labels. This analysis confirms the robustness of the evaluated models and underscores the potential of ML-driven approaches for accelerating the electrode materials discovery. However, our study also identifies practical limitations and quantifies challenges associated with integrating ML models into materials science workflows. Despite these constraints, our findings suggest that ML models are highly effective for early-stage compositional screening in the battery industry. This work provides a foundation for future research on ML applications in materials discovery.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE (mean absolute error) / RMSE (reported together in comparisons)",
+  "general_score_metric": "MAE (mean absolute error)",
+  "year_of_publish": 2026,
+  "reputation": "Moderately used within the materials informatics community; leverages well-known Materials Project data and is respected for compositional property benchmarking.",
+  "notes": "Non-LLM benchmark focused on materials property regression; performance and reported errors are target-dependent (units vary by property). Dataset and splits can induce cluster bias; careful cross-validation (e.g., leave-one-cluster-out) recommended to avoid overly optimistic estimates.",
+  "creators": {
+    "scientists": [
+      "Hao Wu",
+      "Cameron J Hargreaves",
+      "Arpita Mishra",
+      "G.-M. Rignanese"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2603.07805",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

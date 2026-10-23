@@ -1,0 +1,38 @@
+{
+  "name": "IITP-VDLand",
+  "description": "This paper presents a comprehensive Decentraland parcels dataset, called IITP-VDLand, sourced from diverse platforms such as Decentraland, OpenSea, Etherscan, Google BigQuery, and various Social Media Platforms. Unlike existing datasets which have limited attributes and records, IITP-VDLand offers a rich array of attributes, encompassing parcel characteristics, trading history, past activities, transactions, and social media interactions. Alongside, we introduce a key attribute in the dataset, namely Rarity score, which measures the uniqueness of each parcel within the virtual world. Addressing the significant challenge posed by the dispersed nature of this data across various sources, we employ a systematic approach, utilizing both available APIs and custom scripts, to gather it. Subsequently, we meticulously curate and organize the information into four distinct fragments: (1) Characteristics, (2) OpenSea Trading History, (3) Ethereum Activity Transactions, and (4) Social Media. We envisage that this dataset would serve as a robust resource for training machine- and deep-learning models specifically designed to address real-world challenges within the domain of Decentraland parcels. The performance benchmarking of more than 20 state-of-the-art price prediction models on our dataset yields promising results, achieving a maximum R2 score of 0.8251 and an accuracy of 74.23% in case of Extra Trees Regressor and Classifier. The key findings reveal that the ensemble models perform better than both deep learning and linear models for our dataset. We observe a significant impact of coordinates, geographical proximity, rarity score, and few other economic indicators on the prediction of parcel prices.",
+  "category": "mixed",
+  "domain": "virtual worlds / virtual economy (metaverse)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "classification",
+    "time_series_forecasting"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "R2_score for regression and accuracy for classification (task-dependent)",
+  "general_score_metric": "R2_score (primary for price prediction); accuracy reported for classification experiments",
+  "typical_sota_score": "R2 ≈ 0.82; accuracy ≈ 74% (as reported by the paper for best models)",
+  "year_of_publish": 2024,
+  "reputation": "New dataset (arXiv 2404.07533) targeted at metaverse/virtual-economy research; currently limited adoption but relevant to researchers working on virtual-asset pricing.",
+  "notes": "Non-LLM dataset focused on virtual-economy prediction; susceptible to non-stationarity of markets and temporal leakage; results depend on marketplace and time period — external validity may be limited.",
+  "creators": {
+    "scientists": [
+      "Dipika Jha",
+      "Ankit K. Bhagat",
+      "Raju Halder",
+      "Rajendra N. Paramanik",
+      "Chandra M. Kumar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2404.07533",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

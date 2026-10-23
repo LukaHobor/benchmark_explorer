@@ -1,0 +1,38 @@
+{
+  "name": "GlobalGeoTree",
+  "description": "Abstract. Global tree species mapping using remote sensing data is vital for biodiversity monitoring, forest management, and ecological research. However, progress in this field has been constrained by the scarcity of large-scale, labeled datasets. To address this, we introduce GlobalGeoTree, a comprehensive global dataset for tree species classification. GlobalGeoTree comprises 6.3 million geolocated tree occurrences, spanning 275 families, 2734 genera, and 21 001 species across the hierarchical taxonomic levels. Each sample is paired with Sentinel-2 image time series and 27 auxiliary environmental variables, encompassing bioclimatic, geographic, and soil data. The dataset is partitioned into GlobalGeoTree-6M, a large subset for model pretraining, and curated evaluation subsets, primarily GlobalGeoTree-10kEval, a benchmark for zero-shot and few-shot classification. To demonstrate the utility of the dataset, we introduce a baseline model, GeoTreeCLIP, which leverages paired remote sensing data and taxonomic text labels within a vision-language framework pretrained on GlobalGeoTree-6M. Experimental results show that GeoTreeCLIP achieves substantial improvements in zero- and few-shot classification on GlobalGeoTree-10kEval over existing advanced models. By making the dataset, models, and code publicly available, we aim to establish a benchmark to advance tree species classification and foster innovation in biodiversity research and ecological applications. The code is publicly available at https://github.com/MUYang99/GlobalGeoTree (last access: 10 February 2026), and the GlobalGeoTree dataset is available at https://doi.org/10.15468/dd.9qxqyy (Mu et al., 2025b).",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "zero_shot_classification",
+    "few_shot_classification",
+    "representation_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (top-1, top-k for few/zero-shot)",
+  "general_score_metric": "top-1 accuracy",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Large-scale, non-LLM remote-sensing benchmark with extreme class imbalance and potential label noise/geographic bias; temporal/sensor variation and environmental covariates may affect generalization. Designed for pretraining and zero-/few-shot evaluation; caution about contamination if pretraining and eval splits are not strictly separated.",
+  "creators": {
+    "scientists": [
+      "Yang Mu",
+      "Zhitong Xiong",
+      "Yi Wang",
+      "M. Shahzad",
+      "Franz Essl",
+      "M. Kleunen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.12513",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

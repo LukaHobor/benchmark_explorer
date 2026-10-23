@@ -1,0 +1,42 @@
+{
+  "name": "SWT-Bench",
+  "description": "A benchmark where models are given real GitHub issue descriptions and must generate unit tests that reproduce the reported bug — specifically, tests that fail on the original codebase and pass after the canonical patch is applied. Derived from the same 12 Python repositories as SWE-bench, but inverts the task: instead of generating a patch, the model generates the test suite. Measures both reproduction success rate and line-coverage increase on the resolving patch.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "code_generation",
+    "unit_test_generation",
+    "bug_reproduction"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 1983,
+  "evaluation_method": "success rate (tests fail before patch, pass after); coverage increase (ΔC) on resolving patch",
+  "general_score_metric": "success rate 𝒮 (% of issues reproduced); coverage increase ΔC",
+  "typical_sota_score": "~87% success on Verified (TEX-T by Salesforce, 2025); frontier models score 50–87% on Verified; baseline agents score ~18% on Lite",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "NeurIPS 2024; from ETH Zurich SRI Lab; introduces the complementary task to SWE-bench (test generation vs. patch generation); official leaderboard at swtbench.com; used alongside SWE-bench to evaluate full bug-fix validation pipelines",
+  "notes": "NeurIPS 2024. Full split contains 1,983 instances after filtering from 2,294 original (same repos as SWE-bench). BM25 retrieval provides 27k-token context window (cl100k_base). Two prompt formats: ZeroShotBase (zsb) and ZeroShotPlus (zsp). SWT-bench Lite (276 instances) and SWT-bench Verified (433 instances) are focused subsets. Official leaderboard: swtbench.com. arXiv: 2406.12952.",
+  "creators": {
+    "scientists": [
+      "Niels Mündler",
+      "Mark Niklas Müller",
+      "Jingxuan He",
+      "Martin Vechev"
+    ],
+    "institutions": [
+      "ETH Zurich (SRI Lab — Secure, Reliable, and Intelligent Systems Lab)"
+    ],
+    "companies": [
+      "LogicStar AI"
+    ]
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2406.12952",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

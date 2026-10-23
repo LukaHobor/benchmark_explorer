@@ -1,0 +1,36 @@
+{
+  "name": "AIGVE-Tool (AIGVE-T)",
+  "description": "The rapid advancement in AI-generated video synthesis has led to a growth demand for standardized and effective evaluation metrics. Existing metrics lack a unified framework for systematically categorizing methodologies, limiting a holistic understanding of the evaluation landscape. Additionally, fragmented implementations and the absence of standardized interfaces lead to redundant processing overhead. Furthermore, many prior approaches are constrained by dataset-specific dependencies, limiting their applicability across diverse video domains. To address these challenges, we introduce AIGVE-Tool (AI-Generated Video Evaluation Toolkit), a unified framework that provides a structured and extensible evaluation pipeline for a comprehensive AI-generated video evaluation. Organized within a novel five-category taxonomy, AIGVE-Tool integrates multiple evaluation methodologies while allowing flexible customization through a modular configuration system. Additionally, we propose AIGVE-Bench, a large-scale benchmark dataset created with five SOTA video generation models based on hand-crafted instructions and prompts. This dataset systematically evaluates various video generation models across nine critical quality dimensions. Extensive experiments demonstrate the effectiveness of AIGVE-Tool in providing standardized and reliable evaluation results, highlighting specific strengths and limitations of current models and facilitating the advancements of next-generation AI-generated video techniques.",
+  "category": "vision",
+  "domain": "video / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "quality_assessment",
+    "automatic_metric_evaluation",
+    "human_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite metrics (automated perceptual/objective metrics such as FID/LPIPS/SSIM plus task- and dimension-specific scores and human evaluation); aggregated into per-dimension and overall scores",
+  "general_score_metric": "composite_score (aggregated across nine quality dimensions) with per-dimension metric reporting",
+  "year_of_publish": 2025,
+  "reputation": "A recent unified toolkit and benchmark proposal for AI-generated video evaluation; promising for standardization but still emerging in community adoption.",
+  "notes": "Non-LLM, vision/video benchmark; aggregates multiple metrics which can have varying correlation with human judgment. Dataset and metrics may be model- and dataset-dependent; evaluation can be compute-intensive and results sensitive to chosen metrics and implementation details.",
+  "creators": {
+    "scientists": [
+      "Xinhao Xiang",
+      "Xiao Liu",
+      "Zizhong Li",
+      "Zhuosheng Liu",
+      "Jiawei Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.14064",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

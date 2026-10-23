@@ -1,0 +1,39 @@
+{
+  "name": "Zero Resource Speech Benchmark 2021",
+  "description": "We introduce a new unsupervised task, spoken language modeling: the learning of linguistic representations from raw audio signals without any labels, along with the Zero Resource Speech Benchmark 2021: a suite of 4 black-box, zero-shot metrics probing for the quality of the learned models at 4 linguistic levels: phonetics, lexicon, syntax and semantics. We present the results and analyses of a composite baseline made of the concatenation of three unsupervised systems: self-supervised contrastive representation learning (CPC), clustering (k-means) and language modeling (LSTM or BERT). The language models learn on the basis of the pseudo-text derived from clustering the learned representations. This simple pipeline shows better than chance performance on all four metrics, demonstrating the feasibility of spoken language modeling from raw speech. It also yields worse performance compared to text-based 'topline' systems trained on the same data, delineating the space to be explored by more sophisticated end-to-end models.",
+  "category": "audio",
+  "domain": "speech / spoken language modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "zero_shot_evaluation",
+    "probing"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score (combines ABX for phonetics and separate lexicon/syntax/semantics metrics)",
+  "general_score_metric": "composite_score",
+  "typical_sota_score": "varies by subtask; not directly comparable across levels (unknown)",
+  "year_of_publish": 2020,
+  "reputation": "Well-known and respected in the unsupervised speech/spoken-language-modelling community as a standard suite for zero-resource evaluation.",
+  "notes": "Non-LLM benchmark focused on unsupervised spoken-language modeling; uses different, subtask-specific metrics (e.g., ABX for phonetics), so aggregated comparisons should be interpreted cautiously.",
+  "creators": {
+    "scientists": [
+      "Tu Anh Nguyen",
+      "Maureen de Seyssel",
+      "Patricia Rozé",
+      "Morgane Rivière",
+      "Evgeny Kharitonov",
+      "Alexei Baevski",
+      "Ewan Dunbar",
+      "Emmanuel Dupoux"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2011.11588",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

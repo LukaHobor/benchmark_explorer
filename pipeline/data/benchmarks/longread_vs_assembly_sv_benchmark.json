@@ -1,0 +1,37 @@
+{
+  "name": "Long-read vs Assembly SV Benchmark",
+  "description": "Abstract\n               Structural variant (SV) detection is essential for genomic studies, and long-read sequencing technologies have advanced our capacity to detect SVs directly from read or de novo assembly, also known as read-based and assembly-based strategy. However, to date, no independent studies have compared and benchmarked the two strategies. Here, on the basis of SVs detected by 20 read-based and eight assembly-based detection pipelines from six datasets of HG002 genome, we investigated the factors that influence the two strategies and assessed their performance with well-curated SVs. We found that up to 80% of the SVs could be detected by both strategies among different long-read datasets, whereas variant type, size, and breakpoint detected by read-based strategy were greatly affected by aligners. For the high-confident insertions and deletions at non-tandem repeat regions, a remarkable subset of them (82% in assembly-based calls and 93% in read-based calls), accounting for around 4000 SVs, could be captured by both reads and assemblies. However, discordance between two strategies was largely caused by complex SVs and inversions, which resulted from inconsistent alignment of reads and assemblies at these loci. Finally, benchmarking with SVs at medically relevant genes, the recall of read-based strategy reached 77% on 5X coverage data, whereas assembly-based strategy required 20X coverage data to achieve similar performance. Therefore, integrating SVs from read and assembly is suggested for general-purpose detection because of inconsistently detected complex SVs and inversions, whereas assembly-based strategy is optional for applications with limited resources.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structural_variant_detection",
+    "variant_calling",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision, recall and F1 (recall frequently emphasized in paper), reported across coverage levels",
+  "general_score_metric": "recall (with precision/F1 reported)",
+  "typical_sota_score": "approximately 77–93% recall depending on strategy and coverage (varies by SV type and region)",
+  "year_of_publish": 2023,
+  "reputation": "Published, peer-reviewed benchmarking work comparing read- and assembly-based SV callers on widely used HG002 data; referenced by genomics researchers concerned with SV detection trade-offs.",
+  "notes": "Benchmark is focused on a single well-characterized genome (HG002), so generalizability to diverse genomes may be limited; performance is highly coverage-dependent; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jiadong Lin",
+      "Peng Jia",
+      "Songbo Wang",
+      "Walter Kosters",
+      "Kai Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/bib/bbad188",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

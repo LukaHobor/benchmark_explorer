@@ -1,0 +1,34 @@
+{
+  "name": "Vietnamese Multi-Dialect (ViMD)",
+  "description": "Vietnamese, a low-resource language, is typically categorized into three primary dialect groups that belong to Northern, Central, and Southern Vietnam. However, each province within these regions exhibits its own distinct pronunciation variations. Despite the existence of various speech recognition datasets, none of them has provided a fine-grained classification of the 63 dialects specific to individual provinces of Vietnam. To address this gap, we introduce Vietnamese Multi-Dialect (ViMD) dataset, a novel comprehensive dataset capturing the rich diversity of 63 provincial dialects spoken across Vietnam. Our dataset comprises 102.56 hours of audio, consisting of approximately 19,000 utterances, and the associated transcripts contain over 1.2 million words. To provide benchmarks and simultaneously demonstrate the challenges of our dataset, we fine-tune state-of-the-art pre-trained models for two downstream tasks: (1) Dialect identification and (2) Speech recognition. The empirical results suggest two implications including the influence of geographical factors on dialects, and the constraints of current approaches in speech recognition tasks involving multi-dialect speech data. Our dataset is available for research purposes.",
+  "category": "audio",
+  "domain": "speech / language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "dialect_identification",
+    "automatic_speech_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (dialect identification), WER (word error rate) for speech recognition",
+  "general_score_metric": "accuracy (dialect ID) / WER (ASR)",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized dataset with limited adoption so far but considered valuable for Vietnamese dialect and multi-dialect ASR research.",
+  "notes": "Moderate-size speech corpus (~102.6 hours); non-LLM benchmark; fine-grained 63-dialect labels may be imbalanced; results sensitive to speaker overlap and acoustic conditions; potential contamination or label noise risks typical of spoken datasets.",
+  "creators": {
+    "scientists": [
+      "Nguyen Van Dinh",
+      "Thanh Chi Dang",
+      "Luan Thanh Nguyen",
+      "Kiet Van Nguyen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2410.03458",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Unified Unknown Detection Benchmark",
+  "description": "Deep neural networks have achieved outstanding performance over various tasks, but they have a critical issue: over-confident predictions even for completely unknown samples. Many studies have been proposed to successfully filter out these unknown samples, but they only considered narrow and specific tasks, referred to as misclassification detection, open-set recognition, or out-of-distribution detection. In this work, we argue that these tasks should be treated as fundamentally an identical problem because an ideal model should possess detection capability for all those tasks. Therefore, we introduce the unknown detection task, an integration of previous individual tasks, for a rigorous examination of the detection capability of deep neural networks on a wide spectrum of unknown samples. To this end, unified benchmark datasets on different scales were constructed and the unknown detection capabilities of existing popular methods were subject to comparison. We found that Deep Ensemble consistently outperforms the other approaches in detecting unknowns; however, all methods are only successful for a specific type of unknown. The reproducible code and benchmark datasets are available at https://github.com/daintlab/unknown-detection-benchmarks .",
+  "category": "vision",
+  "domain": "computer vision / anomaly detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "open_set_recognition",
+    "misclassification_detection",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "detection metrics such as AUROC, AUPR, and FPR@95TPR",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "70–99% (varies widely by dataset and unknown type)",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2022,
+  "reputation": "Respected research benchmark for unified evaluation of unknown-detection methods with moderate adoption in the anomaly/OOD research community.",
+  "notes": "Integrates multiple unknown types and scales; methods often succeed only on particular types of unknowns, so cross-dataset comparisons require care; reproducible code provided.",
+  "creators": {
+    "scientists": [
+      "Jihyo Kim",
+      "Jiin Koo",
+      "Sangheum Hwang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.00337",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

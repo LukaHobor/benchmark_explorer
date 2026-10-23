@@ -1,0 +1,40 @@
+{
+  "name": "Playing for Benchmarks",
+  "description": "We present a benchmark suite for visual perception. The benchmark is based on\nmore than 250K high-resolution video frames, all annotated with ground-truth\ndata for both low-level and high-level vision tasks, including optical flow,\nsemantic instance segmentation, object detection and tracking, object-level 3D\nscene layout, and visual odometry. Ground-truth data for all tasks is available\nfor every frame. The data was collected while driving, riding, and walking a\ntotal of 184 kilometers in diverse ambient conditions in a realistic virtual\nworld. To create the benchmark, we have developed a new approach to collecting\nground-truth data from simulated worlds without access to their source code or\ncontent. We conduct statistical analyses that show that the composition of the\nscenes in the benchmark closely matches the composition of corresponding\nphysical environments. The realism of the collected data is further validated\nvia perceptual experiments. We analyze the performance of state-of-the-art\nmethods for multiple tasks, providing reference baselines and highlighting\nchallenges for future research. The supplementary video can be viewed at\nhttps://youtu.be/T9OybWv923Y",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "object_detection",
+    "multi-object_tracking",
+    "optical_flow",
+    "visual_odometry / localization",
+    "3D_scene_layout"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (e.g., mIoU for segmentation, mAP for detection, MOTA/MOTP for tracking, EPE for optical flow, trajectory/pose error for odometry)",
+  "general_score_metric": "task-specific (mAP / mIoU / EPE / trajectory_error)",
+  "typical_sota_score": "varies by task; e.g., segmentation mIoU ≈ 60–80%, detection mAP ≈ 40–70%, optical flow EPE ≈ 1–5 px (approximate ranges)",
+  "year_of_publish": 2017,
+  "reputation": "Well-cited synthetic multi-task vision benchmark commonly used in research on autonomous-driving perception and domain adaptation.",
+  "notes": "Synthetic dataset with realistic rendering — useful for multi-task evaluation but subject to sim-to-real domain gap; not an LLM benchmark; large (≈250K frames) but care needed when transferring to real-world performance.",
+  "creators": {
+    "scientists": [
+      "Stephan R. Richter",
+      "Zeeshan Hayder",
+      "Vladlen Koltun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1709.07322",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

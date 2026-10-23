@@ -1,0 +1,41 @@
+{
+  "name": "M3-UDA",
+  "description": "The anatomical structure detection of fetal cardiac views is crucial for diagnosing fetal congenital heart disease. In practice there is a large domain gap between different hospitals' data such as the variable data quality due to differences in acquisition equipment. In addition accurate annotation information provided by obstetrician experts is always very costly or even unavailable. This study explores the unsupervised domain adaptive fetal cardiac structure detection issue. Existing unsupervised domain adaptive object detection (UDAOD) approaches mainly focus on detecting objects in natural scenes such as Foggy Cityscapes where the structural relationships of natural scenes are uncertain. Unlike all previous UDAOD scenarios we first collected a Fetal Cardiac Structure dataset from two hospital centers called FCS and proposed a multi-matching UDA approach (M3-UDA) including Histogram Matching (HM) Sub-structure Matching (SM) and Global-structure Matching (GM) to better transfer the topological knowledge of anatomical structure for UDA detection in medical scenarios. HM mitigates the domain gap between the source and target caused by pixel transformation. SM fuses the different angle information of the sub-structure to obtain the local topological knowledge for bridging the domain gap of the internal sub-structure. GM is designed to align the global topological knowledge of the whole organ from the source and target domain. Extensive experiments on our collected FCS and CardiacUDA and experimental results show that M3-UDA outperforms existing UDAOD studies significantly. All datasets and source code are available at : https://github.com/xmed-lab/M3-UDA",
+  "category": "vision",
+  "domain": "medical imaging (fetal echocardiography)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) / detection AP at IoU thresholds",
+  "general_score_metric": "mean Average Precision (mAP)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A specialized unsupervised domain adaptation benchmark for fetal cardiac structure detection with limited but growing attention in medical imaging research.",
+  "notes": "Dataset collected from a small number of hospitals (limited size); medical data with potential privacy restrictions; domain-adaptation focus means results depend heavily on source/target splits and imaging variations.",
+  "creators": {
+    "scientists": [
+      "Bin Pu",
+      "LiWen Wang",
+      "Jiewen Yang",
+      "Guannan He",
+      "Xingbo Dong",
+      "Shengli Li",
+      "Ying Tan",
+      "Ming Chen",
+      "Zhe Jin",
+      "Kenli Li",
+      "Xiaomeng Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

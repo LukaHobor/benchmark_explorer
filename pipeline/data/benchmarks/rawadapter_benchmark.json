@@ -1,0 +1,35 @@
+{
+  "name": "RAW-Adapter Benchmark",
+  "description": "In the computer vision community, the preference for pre-training visual models has largely shifted toward sRGB images due to their ease of acquisition and compact storage. However, camera RAW images preserve abundant physical details across diverse real-world scenarios. Despite this, most existing visual perception methods that utilize RAW data directly integrate image signal processing (ISP) stages with subsequent network modules, often overlooking potential synergies at the model level. Building on recent advances in adapter-based methodologies in both NLP and computer vision, we propose RAW-Adapter, a novel framework that incorporates learnable ISP modules as input-level adapters to adjust RAW inputs. At the same time, it employs model-level adapters to seamlessly bridge ISP processing with high-level downstream architectures. Moreover, RAW-Adapter serves as a general framework applicable to various computer vision frameworks. Furthermore, we introduce RAW-Bench, which incorporates 17 types of RAW-based common corruptions, including lightness degradations, weather effects, blurriness, camera imaging degradations, and variations in camera color response. Using this benchmark, we systematically compare the performance of RAW-Adapter with state-of-the-art (SOTA) ISP methods and other RAW-based high-level vision algorithms. Additionally, we propose a RAW-based data augmentation strategy to further enhance RAW-Adapter's performance and improve its out-of-domain (OOD) generalization ability. Extensive experiments substantiate the effectiveness and efficiency of RAW-Adapter, highlighting its robust performance across diverse scenarios.",
+  "category": "vision",
+  "domain": "vision / computational photography",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "image_restoration",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-dependent (accuracy for classification; PSNR/SSIM for restoration; mAP for detection) and robustness under RAW-based corruptions",
+  "general_score_metric": "task-dependent (accuracy / PSNR / SSIM / mAP) — reported per downstream task",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark introducing RAW-Bench; of growing interest in the RAW-image and robustness subcommunities but not yet widely adopted across mainstream CV leaderboards.",
+  "notes": "Non-LLM computer-vision benchmark focused on RAW-domain robustness; evaluation is task- and metric-dependent, contains 17 synthetic RAW corruptions, and comparisons can be sensitive to chosen ISP and downstream task. Dataset and metrics may produce mixed comparability across methods.",
+  "creators": {
+    "scientists": [
+      "Ziteng Cui",
+      "Jianfei Yang",
+      "Tatsuya Harada"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.17027",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

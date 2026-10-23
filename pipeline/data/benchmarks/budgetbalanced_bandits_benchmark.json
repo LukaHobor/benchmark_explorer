@@ -1,0 +1,36 @@
+{
+  "name": "Budget-Balanced Bandits Benchmark",
+  "description": "The adversarial Bandit with Knapsack problem is a multi-armed bandits problem with budget constraints and adversarial rewards and costs. In each round, a learner selects an action to take and observes the reward and cost of the selected action. The goal is to maximize the sum of rewards while satisfying the budget constraint. The classical benchmark to compare against is the best fixed distribution over actions that satisfies the budget constraint in expectation. Unlike its stochastic counterpart, where rewards and costs are drawn from some fixed distribution (Badanidiyuru et al., 2018), the adversarial BwK problem does not admit a no-regret algorithm for every problem instance due to the \"spend-or-save\" dilemma (Immorlica et al., 2022). A key problem left open by existing works is whether there exists a weaker but still meaningful benchmark to compare against such that no-regret learning is still possible. In this work, we present a new benchmark to compare against, motivated both by real-world applications such as autobidding and by its underlying mathematical structure. The benchmark is based on the Earth Mover's Distance (EMD), and we show that sublinear regret is attainable against any strategy whose spending pattern is within EMD $o(T^2)$ of any sub-pacing spending pattern. As a special case, we obtain results against the \"pacing over windows\" benchmark, where we partition time into disjoint windows of size $w$ and allow the benchmark strategies to choose a different distribution over actions for each window while satisfying a pacing budget constraint. Against this benchmark, our algorithm obtains a regret bound of $\\tilde{O}(T/\\sqrt{w}+\\sqrt{wT})$. We also show a matching lower bound, proving the optimality of our algorithm in this important special case. In addition, we provide further evidence of the necessity of the EMD condition for obtaining a sublinear regret.",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "online_learning",
+    "bandit",
+    "sequential_decision_making"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "cumulative regret (theoretical regret bounds vs the chosen benchmark class)",
+  "general_score_metric": "cumulative regret (asymptotic / instance-dependent regret bounds)",
+  "year_of_publish": 2025,
+  "reputation": "A recent theoretical benchmark proposal in adversarial Bandits-with-Knapsack literature; primarily of interest to researchers in online learning and algorithmic bidding, with limited practical benchmarking adoption so far.",
+  "notes": "The benchmark is theoretical (not a fixed dataset/leaderboard); results are stated as asymptotic regret bounds (EMD condition, window-pacing parameter w); applicability depends on adversary model and EMD constraints.",
+  "creators": {
+    "scientists": [
+      "Mark Braverman",
+      "Jingyi Liu",
+      "Jieming Mao",
+      "Jon Schneider",
+      "Eric Xue"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.14796",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

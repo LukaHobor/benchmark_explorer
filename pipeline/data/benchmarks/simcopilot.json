@@ -1,0 +1,35 @@
+{
+  "name": "SIMCOPILOT",
+  "description": "We introduce SIMCOPILOT, a benchmark that simulates the role of large language models (LLMs) as interactive, \"copilot\"-style coding assistants. Targeting both completion (finishing incomplete methods or code blocks) and infill tasks (filling missing segments within existing code), SIMCOPILOT provides a comprehensive framework for evaluating LLM coding capabilities. The benchmark comprises dedicated sub-benchmarks for Java (SIMCOPILOTJ) and Python (SIMCOPILOTP), covering diverse codebases varying in size and complexity. Our key contributions include: (a) establishing a realistic, detailed evaluation environment to assess LLM utility in practical coding scenarios, and (b) providing fine-grained analyses that address critical factors frequently overlooked by existing benchmarks, such as task-specific performance nuances, contextual understanding across code segments, and sensitivity to variable scope. Evaluations conducted across domains-including algorithms, databases, computer vision, a",
+  "category": "code",
+  "domain": "code",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_completion",
+    "code_infill"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match / pass@k",
+  "general_score_metric": "pass@1",
+  "typical_sota_score": "Varies by task and language; rough ranges reported for recent top models: pass@1 ≈60–90% (pass@k improves substantially), exact_match ≈50–85% depending on task difficulty",
+  "year_of_publish": 2025,
+  "reputation": "A new coding benchmark aimed at realistic copilot-style evaluation, but it is not yet broadly established in the community.",
+  "notes": "Benchmark is recent and likely small-to-medium scale; evaluates practical code completion and infill across Java and Python, so contamination risk may be nontrivial.",
+  "creators": {
+    "scientists": [
+      "Mingchao Jiang",
+      "Abhinav Jain",
+      "Sophia Zorek",
+      "Chris Jermaine"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2505.21514",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

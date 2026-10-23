@@ -1,0 +1,54 @@
+{
+  "name": "RiceSEG",
+  "description": "Developing computer vision-based rice phenotyping techniques is crucial for precision field management and accelerating breeding, thereby continuously advancing rice production. Among phenotyping tasks, distinguishing image components is a key prerequisite for characterizing plant growth and development at the organ scale, enabling deeper insights into eco-physiological processes. However, due to the fine structure of rice organs and complex illumination within the canopy, this task remains highly challenging, underscoring the need for a high-quality training dataset. Such datasets are scarce, both due to a lack of large, representative collections of rice field images and the time-intensive nature of annotation. To address this gap, we established the first comprehensive multi-class rice semantic segmentation dataset, RiceSEG. We gathered nearly 50,000 high-resolution, ground-based images from five major rice-growing countries (China, Japan, India, the Philippines, and Tanzania), encompassing over 6,000 genotypes across all growth stages. From these original images, 3,078 representative samples were selected and annotated with six classes (background, green vegetation, senescent vegetation, panicle, weeds, and duckweed) to form the RiceSEG dataset. Notably, the sub-dataset from China spans all major genotypes and rice-growing environments from the northeast to the south. Both state-of-the-art convolutional neural networks and transformer-based semantic segmentation models were used as baselines. While these models perform reasonably well in segmenting background and green vegetation, they face difficulties during the reproductive stage, when canopy structures are more complex and multiple classes are involved. These findings highlight the importance of our dataset for developing specialized segmentation models for rice and other crops.",
+  "category": "vision",
+  "domain": "agriculture / plant phenotyping",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "60–85% mIoU",
+  "year_of_publish": 2025,
+  "reputation": "Niche but valuable dataset in plant phenotyping and agri-vision; moderate adoption among researchers working on crop segmentation.",
+  "notes": "Relatively small annotated split (3,078 images) compared with the raw collection; class imbalance (panicle, weeds, duckweed are sparse); high-resolution, domain-specific (non-LLM) benchmark; models often struggle during reproductive stage when canopy structure is complex; geographically diverse (five countries) which helps generalization but still remains niche to rice phenotyping.",
+  "creators": {
+    "scientists": [
+      "Junchi Zhou",
+      "Haozhou Wang",
+      "Yoichiro Kato",
+      "Tejasri Nampally",
+      "P. Rajalakshmi",
+      "M. Balram",
+      "Keisuke Katsura",
+      "Hao Lu",
+      "Yue Mu",
+      "Wanneng Yang",
+      "Yangmingrui Gao",
+      "Feng Xiao",
+      "Hongtao Chen",
+      "Yuhao Chen",
+      "Wenjuan Li",
+      "Jingwen Wang",
+      "Fenghua Yu",
+      "Jian Zhou",
+      "Wensheng Wang",
+      "Xiaochun Hu",
+      "Yuanzhu Yang",
+      "Yanfeng Ding",
+      "Wei Guo",
+      "Shouyang Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.02880",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Gender Bias Benchmark for Neural NLP",
+  "description": "We examine whether neural natural language processing (NLP) systems reflect historical biases in training data. We define a general benchmark to quantify gender bias in a variety of neural NLP tasks. Our empirical evaluation with state-of-the-art neural coreference resolution and textbook RNN-based language models trained on benchmark datasets finds significant gender bias in how models view occupations. We then mitigate bias with CDA: a generic methodology for corpus augmentation via causal interventions that breaks associations between gendered and gender-neutral words. We empirically show that CDA effectively decreases gender bias while preserving accuracy. We also explore the space of mitigation strategies with CDA, a prior approach to word embedding debiasing (WED), and their compositions. We show that CDA outperforms WED, drastically so when word embeddings are trained. For pre-trained embeddings, the two methods can be effectively composed. We also find that as training proceeds on the original data set with gradient descent the gender bias grows as the loss reduces, indicating that the optimization encourages bias; CDA mitigates this behavior.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "coreference_resolution",
+    "language_modeling"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "bias_score (primary), task performance reported with F1 for coreference and perplexity for language models",
+  "general_score_metric": "bias_score (with F1/perplexity as task performance metrics)",
+  "year_of_publish": 2018,
+  "reputation": "73 citations",
+  "notes": "Research-focused benchmark (pre-LLM era); small-scale and designed for NLP models such as coreference systems and language models. Not originally aimed at modern large pre-trained LLMs; potential contamination with modern pretraining corpora and limited dataset size.",
+  "creators": {
+    "scientists": [
+      "Kaiji Lu",
+      "Piotr Mardziel",
+      "Fang–Jing Wu",
+      "Preetam Amancharla",
+      "Anupam Datta"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1807.11714",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

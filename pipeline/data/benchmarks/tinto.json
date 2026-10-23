@@ -1,0 +1,41 @@
+{
+  "name": "Tinto",
+  "description": "The increasing use of deep learning techniques has reduced interpretation time and, ideally, reduced interpreter bias by automatically deriving geological maps from digital outcrop models. However, accurate validation of these automated mapping approaches is a significant challenge due to the subjective nature of geological mapping and the difficulty in collecting quantitative validation data. Additionally, many state-of-the-art deep learning methods are limited to 2D image data, which is insufficient for 3D digital outcrops, such as hyperclouds. To address these challenges, we present Tinto, a multi-sensor benchmark digital outcrop dataset designed to facilitate the development and validation of deep learning approaches for geological mapping, especially for non-structured 3D data like point clouds. Tinto comprises two complementary sets: 1) a real digital outcrop model from Corta Atalaya (Spain), with spectral attributes and ground-truth data, and 2) a synthetic twin that uses latent features in the original datasets to reconstruct realistic spectral data (including sensor noise and processing artifacts) from the ground-truth. The point cloud is dense and contains 3,242,964 labeled points. We used these datasets to explore the abilities of different deep learning approaches for automated geological mapping. By making Tinto publicly available, we hope to foster the development and adaptation of new deep learning tools for 3D applications in Earth sciences. The dataset can be accessed through this link: https://doi.org/10.14278/rodare.2256.",
+  "category": "multimodal",
+  "domain": "geosciences",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "point_cloud_segmentation",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_IoU",
+  "general_score_metric": "mean_IoU",
+  "year_of_publish": 2023,
+  "reputation": "Emerging, domain-specific benchmark gaining interest among geoscience and 3D vision researchers but not yet widely adopted as a community standard.",
+  "notes": "Non-LLM benchmark focused on dense 3D point clouds; single real outcrop plus a synthetic twin limits geographic/diversity coverage and may introduce distribution shifts; geological labels can be subjective.",
+  "creators": {
+    "scientists": [
+      "Ahmed J. Afifi",
+      "Samuel T. Thiele",
+      "Aldino Rizaldy",
+      "Sandra Lorenz",
+      "Pedram Ghamisi",
+      "Raimon Tolosana-Delgado",
+      "Moritz Kirsch",
+      "Richard Gloaguen",
+      "Michael Heizmann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.09928",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

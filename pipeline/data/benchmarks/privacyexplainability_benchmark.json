@@ -1,0 +1,37 @@
+{
+  "name": "Privacy-Explainability Benchmark",
+  "description": "Since the mid-10s, the era of Deep Learning (DL) has continued to this day, bringing forth new superlatives and innovations each year. Nevertheless, the speed with which these innovations translate into real applications lags behind this fast pace. Safety-critical applications, in particular, underlie strict regulatory and ethical requirements which need to be taken care of and are still active areas of debate. eXplainable AI (XAI) and privacy-preserving machine learning (PPML) are both crucial research fields, aiming at mitigating some of the drawbacks of prevailing data-hungry black-box models in DL. Despite brisk research activity in the respective fields, no attention has yet been paid to their interaction. This work is the first to investigate the impact of private learning techniques on generated explanations for DL-based models. In an extensive experimental analysis covering various image and time series datasets from multiple domains, as well as varying privacy techniques, XAI methods, and model architectures, the effects of private training on generated explanations are studied. The findings suggest non-negligible changes in explanations through the introduction of privacy. Apart from reporting individual effects of PPML on XAI, the paper gives clear recommendations for the choice of techniques in real applications. By unveiling the interdependencies of these pivotal technologies, this work is a first step towards overcoming the remaining hurdles for practically applicable AI in safety-critical domains.",
+  "category": "mixed",
+  "domain": "machine learning / privacy / explainability",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "classification",
+    "explainability_evaluation",
+    "saliency_map_comparison"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy for predictive tasks; explanation-fidelity/similarity metrics (e.g., IoU, insertion/deletion, rank-correlation) for XAI evaluation",
+  "general_score_metric": "accuracy (for predictive tasks) and explanation-fidelity metrics (e.g., IoU, insertion/deletion scores, rank-correlation)",
+  "year_of_publish": 2022,
+  "reputation": "An academic contribution that is the first systematic study of how privacy-preserving training affects XAI outputs; cited in privacy/XAI research but not a standardized community benchmark.",
+  "notes": "Heterogeneous evaluation across image and time-series datasets and across XAI/PPML methods; not LLM-focused. Results and conclusions depend strongly on choice of privacy technique, XAI method, and dataset; some tasks/datasets may be small or domain-specific.",
+  "creators": {
+    "scientists": [
+      "Saifullah Saifullah",
+      "Dominique Mercier",
+      "Adriano Lucieri",
+      "Andreas Dengel",
+      "Sheraz Ahmed"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2211.04110",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

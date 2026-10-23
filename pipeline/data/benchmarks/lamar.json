@@ -1,0 +1,40 @@
+{
+  "name": "LaMAR",
+  "description": "Localization and mapping is the foundational technology for augmented reality (AR) that enables sharing and persistence of digital content in the real world. While significant progress has been made, researchers are still mostly driven by unrealistic benchmarks not representative of real-world AR scenarios. These benchmarks are often based on small-scale datasets with low scene diversity, captured from stationary cameras, and lack other sensor inputs like inertial, radio, or depth data. Furthermore, their ground-truth (GT) accuracy is mostly insufficient to satisfy AR requirements. To close this gap, we introduce LaMAR, a new benchmark with a comprehensive capture and GT pipeline that co-registers realistic trajectories and sensor streams captured by heterogeneous AR devices in large, unconstrained scenes. To establish an accurate GT, our pipeline robustly aligns the trajectories against laser scans in a fully automated manner. As a result, we publish a benchmark dataset of diverse and large-scale scenes recorded with head-mounted and hand-held AR devices. We extend several state-of-the-art methods to take advantage of the AR-specific setup and evaluate them on our benchmark. The results offer new insights on current research and reveal promising avenues for future work in the field of localization and mapping for AR.",
+  "category": "multimodal",
+  "domain": "augmented reality / localization and mapping",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "localization",
+    "mapping",
+    "pose_estimation",
+    "sensor_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pose error metrics (e.g., median position/orientation error), Absolute Trajectory Error (ATE), registration error",
+  "general_score_metric": "median localization error (meters) / ATE",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in the AR/localization community for providing large-scale, realistic captures with high-quality laser-aligned ground truth; moderate adoption for benchmarking AR SLAM/localization methods.",
+  "notes": "Non-LLM benchmark focused on AR localization/mapping. Provides large, diverse scenes and high-accuracy ground truth aligned to laser scans; metrics are task-specific (pose error, ATE) and not directly comparable to standard classification benchmarks. Not saturated.",
+  "creators": {
+    "scientists": [
+      "Paul-Edouard Sarlin",
+      "Mihai Dusmanu",
+      "Johannes L. Schönberger",
+      "Pablo Speciale",
+      "Lukas Gruber",
+      "Viktor Larsson",
+      "Ondrej Miksik",
+      "Marc Pollefeys"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.10770",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

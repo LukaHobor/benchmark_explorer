@@ -1,0 +1,34 @@
+{
+  "name": "Unmasking the Chameleons",
+  "description": "Despite their success, Machine Learning (ML) models do not generalize effectively to data not originating from the training distribution. To reliably employ ML models in real-world healthcare systems and avoid inaccurate predictions on out-of-distribution (OOD) data, it is crucial to detect OOD samples. Numerous OOD detection approaches have been suggested in other fields - especially in computer vision - but it remains unclear whether the challenge is resolved when dealing with medical tabular data. To answer this pressing need, we propose an extensive reproducible benchmark to compare different methods across a suite of tests including both near and far OODs. Our benchmark leverages the latest versions of eICU and MIMIC-IV, two public datasets encompassing tens of thousands of ICU patients in several hospitals. We consider a wide array of density-based methods and SOTA post-hoc detectors across diverse predictive architectures, including MLP, ResNet, and Transformer. Our findings sho",
+  "category": "mixed",
+  "domain": "medical tabular data",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2023,
+  "reputation": "A reproducible benchmark for OOD detection on medical tabular data that is useful in healthcare ML research, though still relatively specialized.",
+  "notes": "Non-LLM benchmark; results vary by near-vs-far OOD setting, dataset choice, and predictive architecture, and calibration can matter substantially.",
+  "creators": {
+    "scientists": [
+      "Mohammad Azizmalayeri",
+      "Ameen Abu-Hanna",
+      "Giovanni Ciná"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2309.16220",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

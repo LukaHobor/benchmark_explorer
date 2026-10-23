@@ -1,0 +1,33 @@
+{
+  "name": "easy regions for short-read variant calling",
+  "description": "Background: While benchmarks on short-read variant calling suggest low error rate below 0.5%, they are only applicable to predefined confident regions. For a human sample without such regions, the error rate could be 10 times higher. Although multiple sets of easy regions have been identified to alleviate the issue, they fail to consider non-reference samples or are biased towards existing short-read data or aligners. Results: Here, using hundreds of high-quality human assemblies, we derived a set of sample-agnostic easy regions where short-read variant calling reaches high accuracy. These regions cover 88.2% of GRCh38, 92.2% of coding regions and 96.3% of ClinVar pathogenic variants. They achieve a good balance between coverage and easiness and can be generated for other human assemblies or species with multiple well assembled genomes. Conclusion: This resource provides a convient and powerful way to filter spurious variant calls for clinical or research human samples.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "variant_calling",
+    "genomic_region_classification",
+    "benchmarking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "coverage / fraction of genome in easy regions",
+  "typical_sota_score": "88–96%",
+  "year_of_publish": 2025,
+  "reputation": "A recent bioinformatics resource benchmark with practical clinical relevance, but still emerging in community usage.",
+  "notes": "Non-LLM benchmark; derived from human assemblies and intended as a filtering/resource layer rather than a direct model-generation task.",
+  "creators": {
+    "scientists": [
+      "Heng Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2507.03718",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

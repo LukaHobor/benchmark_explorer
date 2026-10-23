@@ -1,0 +1,40 @@
+{
+  "name": "Shadow Detection/Removal/Generation Benchmark (Unveiling Deep Shadows)",
+  "description": "Shadows are created when light encounters obstacles, resulting in regions of reduced illumination. In computer vision, detecting, removing, and generating shadows are critical tasks for improving scene understanding, enhancing image quality, ensuring visual consistency in video editing, and optimizing virtual environments. This paper offers a comprehensive survey and evaluation benchmark on shadow detection, removal, and generation in both images and videos, focusing on the deep learning approaches of the past decade. It covers key aspects such as tasks, deep models, datasets, evaluation metrics, and comparative results under consistent experimental settings. Our main contributions include a thorough survey of shadow analysis, the standardization of experimental comparisons, an exploration of the relationships between model size, speed, and performance, a cross-dataset generalization study, the identification of open challenges and future research directions, and the provision of publicly available resources to support further research in this field.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "shadow_detection",
+    "segmentation",
+    "shadow_removal",
+    "image_to_image_translation",
+    "shadow_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Task-dependent: IoU / F1 for detection/segmentation; PSNR / SSIM / L1 for removal; FID / IS and human_eval for generation; cross-dataset generalization metrics for robustness",
+  "general_score_metric": "task-dependent (IoU/F1 for detection; PSNR/SSIM for removal; FID for generation)",
+  "typical_sota_score": "varies by subtask — detection IoU/F1 often in the ~80–95% range for in-distribution datasets; removal PSNR typically ~25–40 dB depending on dataset; generation FID varies widely (≈10–50)",
+  "year_of_publish": 2024,
+  "reputation": "A recent comprehensive survey and standardized benchmark that is gaining attention for unifying evaluation across shadow detection, removal, and generation tasks.",
+  "notes": "Heterogeneous evaluation across subtasks and datasets; results depend strongly on dataset domain and lighting conditions; cross-dataset generalization remains challenging; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xiaowei Hu",
+      "Zhenghao Xing",
+      "Tianyu Wang",
+      "Chi-Wing Fu",
+      "Pheng-Ann Heng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.02108",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

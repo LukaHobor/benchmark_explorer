@@ -1,0 +1,36 @@
+{
+  "name": "NeRF Robustness Benchmark",
+  "description": "Neural Radiance Field (NeRF) has demonstrated excellent quality in novel view synthesis, thanks to its ability to model 3D object geometries in a concise formulation. However, current approaches to NeRF-based models rely on clean images with accurate camera calibration, which can be difficult to obtain in the real world, where data is often subject to corruption and distortion. In this work, we provide the first comprehensive analysis of the robustness of NeRF-based novel view synthesis algorithms in the presence of different types of corruptions. We find that NeRF-based models are significantly degraded in the presence of corruption, and are more sensitive to a different set of corruptions than image recognition models. Furthermore, we analyze the robustness of the feature encoder in generalizable methods, which synthesize images using neural features extracted via convolutional neural networks or transformers, and find that it only contributes marginally to robustness. Finally, we reveal that standard data augmentation techniques, which can significantly improve the robustness of recognition models, do not help the robustness of NeRF-based models. We hope that our findings will attract more researchers to study the robustness of NeRF-based approaches and help to improve their performance in the real world.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "novel_view_synthesis",
+    "image_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "image-quality metrics (PSNR, SSIM, LPIPS) and task-specific robustness comparisons",
+  "general_score_metric": "PSNR (primary), with SSIM and LPIPS as complementary metrics",
+  "typical_sota_score": "PSNR ≈20–30 dB on clean scenes for top methods; substantially lower under common corruptions (varies by corruption type and severity)",
+  "year_of_publish": 2023,
+  "reputation": "Moderately cited 2023 study that drew attention in the NeRF/3D-vision robustness community for highlighting vulnerability to corruptions.",
+  "notes": "Non-LLM benchmark focused on image synthesis; robustness depends strongly on corruption types and severity; standard data augmentations found ineffective in this work; limited number of scenes/benchmarks means results may not fully generalize to all real-world capture conditions.",
+  "creators": {
+    "scientists": [
+      "Chen Wang",
+      "Angtian Wang",
+      "Junbo Li",
+      "Alan Yuille",
+      "Cihang Xie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2301.04075",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

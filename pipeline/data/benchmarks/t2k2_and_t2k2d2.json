@@ -1,0 +1,35 @@
+{
+  "name": "T^2K^2 and T^2K^2D^2",
+  "description": "Top-k keyword and top-k document extraction are very popular text analysis\ntechniques. Top-k keywords and documents are often computed on-the-fly, but\nthey exploit weighted vocabularies that are costly to build. To compare\ncompeting weighting schemes and database implementations, benchmarking is\ncustomary. To the best of our knowledge, no benchmark currently addresses these\nproblems. Hence, in this paper, we present T${}^2$K${}^2$, a top-k keywords and\ndocuments benchmark, and its decision support-oriented evolution\nT${}^2$K${}^2$D${}^2$. Both benchmarks feature a real tweet dataset and queries\nwith various complexities and selectivities. They help evaluate weighting\nschemes and database implementations in terms of computing performance. To\nillustrate our bench-marks' relevance and genericity, we successfully ran\nperformance tests on the TF-IDF and Okapi BM25 weighting schemes, on one hand,\nand on different relational (Oracle, PostgreSQL) and document-oriented\n(MongoDB) database implementations, on the other hand.",
+  "category": "text",
+  "domain": "social media / information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "keyword_extraction",
+    "information_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "execution_time (primary for system benchmarking) and relevance metrics such as precision@k/recall@k for result quality",
+  "general_score_metric": "query execution time / throughput (with secondary metrics like precision@k for relevance)",
+  "year_of_publish": 2018,
+  "reputation": "A niche academic benchmark for top-k keyword/document extraction and DB/IR implementation performance; used in research comparing weighting schemes and database backends.",
+  "notes": "Works on a real tweet dataset; focused on measuring computational performance of weighting schemes (TF-IDF, BM25) and database implementations (relational and document stores). Small/dataset-specific and oriented to system performance rather than semantic evaluation; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Truica Ciprian-Octavian  UPB",
+      "Darmont Jérôme  ERIC",
+      "Boicea Alexandru  UPB",
+      "Radulescu Florin  UPB"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/1804.07525",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

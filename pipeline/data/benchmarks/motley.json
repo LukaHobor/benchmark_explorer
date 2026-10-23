@@ -1,0 +1,39 @@
+{
+  "name": "Motley",
+  "description": "Personalized federated learning considers learning models unique to each client in a heterogeneous network. The resulting client-specific models have been purported to improve metrics such as accuracy, fairness, and robustness in federated networks. However, despite a plethora of work in this area, it remains unclear: (1) which personalization techniques are most effective in various settings, and (2) how important personalization truly is for realistic federated applications. To better answer these questions, we propose Motley, a benchmark for personalized federated learning. Motley consists of a suite of cross-device and cross-silo federated datasets from varied problem domains, as well as thorough evaluation metrics for better understanding the possible impacts of personalization. We establish baselines on the benchmark by comparing a number of representative personalized federated learning methods. These initial results highlight strengths and weaknesses of existing approaches, and raise several open questions for the community. Motley aims to provide a reproducible means with which to advance developments in personalized and heterogeneity-aware federated learning, as well as the related areas of transfer learning, meta-learning, and multi-task learning.",
+  "category": "mixed",
+  "domain": "federated learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "personalization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "client-averaged accuracy (for classification) / F1 or RMSE where applicable; personalization metrics such as accuracy gap and worst-client accuracy",
+  "general_score_metric": "client-averaged accuracy",
+  "typical_sota_score": "varies widely by dataset (roughly 60–95% accuracy depending on task and heterogeneity)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded within the personalized federated learning research community as a comprehensive suite, but not a mainstream benchmark outside federated-learning specialists.",
+  "notes": "Non-LLM benchmark covering multiple datasets and tasks; performance and rankings sensitive to simulation choices (client sampling, communication rounds); potential for dataset-specific overfitting; heterogeneous tasks mean no single universal metric.",
+  "creators": {
+    "scientists": [
+      "Shanshan Wu",
+      "Tian Li",
+      "Zachary Charles",
+      "Yu Xiao",
+      "Ziyu Liu",
+      "Zheng Xu",
+      "Virginia Smith"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2206.09262",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

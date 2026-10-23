@@ -1,0 +1,36 @@
+{
+  "name": "Endogenous Shift Detection Benchmark",
+  "description": "Existing cross-domain detection methods mostly study the domain shifts where differences between domains are often caused by external environment and perceivable for humans. However, in real-world scenarios (e.g., MRI medical diagnosis, X-ray security inspection), there still exists another type of shift, named endogenous shift, where the differences between domains are mainly caused by the intrinsic factors (e.g., imaging mechanisms, hardware components, etc.), and usually inconspicuous. This shift can also severely harm the cross-domain detection performance but has been rarely studied. To support this study, we contribute the first Endogenous Domain Shift (EDS) benchmark, X-ray security inspection, where the endogenous shifts among the domains are mainly caused by different X-ray machine types with different hardware parameters, wear degrees, etc. EDS consists of 14,219 images including 31,654 common instances from three domains (X-ray machines), with bounding-box annotations from 10 categories. To handle the endogenous shift, we further introduce the Perturbation Suppression Network (PSN), motivated by the fact that this shift is mainly caused by two types of perturbations: category-dependent and category-independent ones. PSN respectively exploits local prototype alignment and global adversarial learning mechanism to suppress these two types of perturbations. The comprehensive evaluation results show that PSN outperforms SOTA methods, serving a new perspective to the cross-domain research community.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP)",
+  "general_score_metric": "mAP",
+  "reputation": "A recent, specialized dataset with limited but growing adoption in cross-domain / X‑ray object detection research.",
+  "notes": "Non-LLM benchmark; relatively small and domain-specific (14k images) which can limit generalization; potential class imbalance; focuses on endogenous domain shift (hardware/imaging differences) rather than typical environmental shifts.",
+  "creators": {
+    "scientists": [
+      "Renshuai Tao",
+      "Hainan Li",
+      "Tianbo Wang",
+      "Yanlu Wei",
+      "Yifu Ding",
+      "Bowei Jin",
+      "Hongping Zhi",
+      "Xianglong Liu",
+      "Aishan Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

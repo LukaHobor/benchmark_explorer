@@ -1,0 +1,37 @@
+{
+  "name": "XAI Visual Explanation Benchmark",
+  "description": "The rise of deep learning has ushered in significant progress in computer vision (CV) tasks, yet the \"black box\" nature of these models often precludes interpretability. This challenge has spurred the development of Explainable Artificial Intelligence (XAI) by generating explanations to AI's decision-making process. An explanation is aimed to not only faithfully reflect the true reasoning process (i.e., faithfulness) but also align with humans' reasoning (i.e., alignment). Within XAI, visual explanations employ visual cues to elucidate the reasoning behind machine learning models, particularly in image processing, by highlighting images' critical areas important to predictions. Despite the considerable body of research in visual explanations, standardized benchmarks for evaluating them are seriously underdeveloped. In particular, to evaluate alignment, existing works usually merely illustrate a few images' visual explanations, or hire some referees to report the explanation quality under ad-hoc questionnaires. However, this cannot achieve a standardized, quantitative, and comprehensive evaluation. To address this issue, we develop a benchmark for visual explanation, consisting of eight datasets with human explanation annotations from various domains, accommodating both post-hoc and intrinsic visual explanation methods. Additionally, we devise a visual explanation pipeline that includes data loading, explanation generation, and method evaluation. Our proposed benchmarks facilitate a fair evaluation and comparison of visual explanation methods. Building on our curated collection of datasets, we benchmarked eight existing visual explanation methods and conducted a thorough comparison across four selected datasets using six alignment-based and causality-based metrics. Our benchmark will be accessible through our website https://xaidataset.github.io.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_explanation_evaluation",
+    "alignment_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval and quantitative alignment/causality-based metrics (composite)",
+  "general_score_metric": "composite alignment/causality score (multiple metrics)",
+  "year_of_publish": 2023,
+  "reputation": "Growing, research-oriented benchmark used by XAI and computer vision communities for standardized comparison of visual explanation methods.",
+  "notes": "Aggregates multiple datasets with heterogeneous human annotations and protocols; metrics sensitive to annotation variability; not designed for language models — focuses on visual explanation methods.",
+  "creators": {
+    "scientists": [
+      "Yifei Zhang",
+      "Siyi Gu",
+      "James Song",
+      "Bo Pan",
+      "Guangji Bai",
+      "Liang Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2310.08537",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

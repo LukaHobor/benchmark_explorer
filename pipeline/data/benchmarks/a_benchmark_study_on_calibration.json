@@ -1,0 +1,36 @@
+{
+  "name": "A Benchmark Study on Calibration",
+  "description": "Deep neural networks are increasingly utilized in various machine learning tasks. However, as these models grow in complexity, they often face calibration issues, despite enhanced prediction accuracy. Many studies have endeavored to improve calibration performance through the use of specific loss functions, data preprocessing and training frameworks. Yet, investigations into calibration properties have been somewhat overlooked. Our study leverages the Neural Architecture Search (NAS) search space, offering an exhaustive model architecture space for thorough calibration properties exploration. We specifically create a model calibration dataset. This dataset evaluates 90 bin-based and 12 additional calibration measurements across 117,702 unique neural networks within the widely employed NATS-Bench search space. Our analysis aims to answer several longstanding questions in the field, using our proposed dataset: (i) Can model calibration be generalized across different datasets? (ii) Can robustness be used as a calibration measurement? (iii) How reliable are calibration metrics? (iv) Does a post-hoc calibration method affect all models uniformly? (v) How does calibration interact with accuracy? (vi) What is the impact of bin size on calibration measurement? (vii) Which architectural designs are beneficial for calibration? Additionally, our study bridges an existing gap by exploring calibration within NAS. By providing this dataset, we enable further research into NAS calibration. As far as we are aware, our research represents the first large-scale investigation into calibration properties and the premier study of calibration issues within NAS. The project page can be found at https://www.taolinwei.com/calibration-study",
+  "category": "mixed",
+  "domain": "general machine learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "metric_evaluation",
+    "model_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "calibration_metrics (e.g., ECE, Brier score, reliability diagrams)",
+  "general_score_metric": "Expected Calibration Error (ECE) and Brier score (primary reported metrics)",
+  "year_of_publish": 2023,
+  "reputation": "A novel, large-scale research dataset for studying calibration within NAS; of interest mainly to researchers working on calibration and NAS rather than broad community benchmarking.",
+  "notes": "Benchmark is limited to the NATS-Bench search space and the specific datasets used there; results may not generalize to arbitrary architectures or real-world training regimes. Not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Linwei Tao",
+      "Younan Zhu",
+      "Haolan Guo",
+      "Minjing Dong",
+      "Chang Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2308.11838",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

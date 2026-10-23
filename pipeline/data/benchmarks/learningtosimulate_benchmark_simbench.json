@@ -1,0 +1,40 @@
+{
+  "name": "Learning-to-Simulate Benchmark (SimBench)",
+  "description": "Simulating physical systems is a core component of scientific computing, encompassing a wide range of physical domains and applications. Recently, there has been a surge in data-driven methods to complement traditional numerical simulations methods, motivated by the opportunity to reduce computational costs and/or learn new physical models leveraging access to large collections of data. However, the diversity of problem settings and applications has led to a plethora of approaches, each one evaluated on a different setup and with different evaluation metrics. We introduce a set of benchmark problems to take a step towards unified benchmarks and evaluation protocols. We propose four representative physical systems, as well as a collection of both widely used classical time integrators and representative data-driven methods (kernel-based, MLP, CNN, nearest neighbors). Our framework allows evaluating objectively and systematically the stability, accuracy, and computational efficiency of data-driven methods. Additionally, it is configurable to permit adjustments for accommodating other learning tasks and for establishing a foundation for future developments in machine learning for scientific computing.",
+  "category": "mixed",
+  "domain": "physical simulation / scientific computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_prediction",
+    "regression",
+    "physics_simulation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "L2 error / RMSE (with additional evaluation of numerical stability and computational efficiency)",
+  "general_score_metric": "RMSE (L2 error) on predicted fields",
+  "typical_sota_score": "task-dependent; no single unified SOTA",
+  "year_of_publish": 2021,
+  "reputation": "Adopted by a subset of the ML-for-physics and scientific-computing community as a useful multi-problem benchmark, but not a single dominant standard.",
+  "notes": "Non-LLM benchmark covering multiple physical systems; metrics and difficulty vary by task (accuracy vs stability vs speed trade-offs); not directly comparable to single-score benchmarks; reproducibility depends on numerical solver settings.",
+  "creators": {
+    "scientists": [
+      "Karl Otness",
+      "Arvi Gjoka",
+      "Joan Bruna",
+      "Daniele Panozzo",
+      "Benjamin Peherstorfer",
+      "Teseo Schneider",
+      "Denis Zorin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2108.07799",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

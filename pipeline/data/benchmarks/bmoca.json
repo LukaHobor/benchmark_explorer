@@ -1,0 +1,38 @@
+{
+  "name": "B-MoCA",
+  "description": "Mobile device control agents can largely enhance user interactions and productivity by automating daily tasks. However, despite growing interest in developing practical agents, the absence of a commonly adopted benchmark in this area makes it challenging to quantify scientific progress. In this work, we introduce B-MoCA: a novel benchmark with interactive environments for evaluating and developing mobile device control agents. To create a realistic benchmark, we develop B-MoCA based on the Android operating system and define 131 common daily tasks. Importantly, we incorporate a randomization feature that changes the configurations of mobile devices, including user interface layouts and language settings, to assess generalization performance. We benchmark diverse agents, including agents employing large language models (LLMs) or multi-modal LLMs as well as agents trained with imitation learning using human expert demonstrations. While these agents demonstrate proficiency in executing straightforward tasks, their poor performance on complex tasks highlights significant opportunities for future research to improve effectiveness. Our source code is publicly available at https://b-moca.github.io.",
+  "category": "multimodal",
+  "domain": "mobile device interaction / HCI",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "interactive_control",
+    "instruction_following",
+    "sequential_action_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2024,
+  "reputation": "New, realistic benchmark for mobile-device agent research; gaining attention in HCI and autonomous agent circles but not yet widely adopted.",
+  "notes": "Interactive environment-based benchmark (Android emulator) with randomized configurations (UI layouts, languages) to test generalization. Not a static text benchmark—requires simulation/emulator to reproduce results. Tuned agents may overfit to environment distributions; reproducibility depends on emulator and config control.",
+  "creators": {
+    "scientists": [
+      "Juyong Lee",
+      "Taywon Min",
+      "Minyong An",
+      "Dongyoon Hahm",
+      "Haeone Lee",
+      "Changyeon Kim",
+      "Kimin Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2404.16660",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

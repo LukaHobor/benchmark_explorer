@@ -1,0 +1,34 @@
+{
+  "name": "SHAPE-directed RNA structure benchmark",
+  "description": "Single-nucleotide-resolution chemical mapping for structured RNA is being rapidly advanced by new chemistries, faster readouts, and coupling to computational algorithms. Recent tests have shown that selective 2'-hydroxyl acylation by primer extension (SHAPE) can give near-zero error rates (0-2%) in modeling the helices of RNA secondary structure. Here, we benchmark the method using six molecules for which crystallographic data are available: tRNA(phe) and 5S rRNA from Escherichia coli, the P4-P6 domain of the Tetrahymena group I ribozyme, and ligand-bound domains from riboswitches for adenine, cyclic di-GMP, and glycine. SHAPE-directed modeling of these highly structured RNAs gave an overall false negative rate (FNR) of 17% and a false discovery rate (FDR) of 21%, with at least one helix prediction error in five of the six cases. Extensive variations of data processing, normalization, and modeling parameters did not significantly mitigate modeling errors. Only one varation, filtering out data collected with deoxyinosine triphosphate during primer extension, gave a modest improvement (FNR = 12%, and FDR = 14%). The residual structure modeling errors are explained by the insufficient information content of these RNAs' SHAPE data, as evaluated by a nonparametric bootstrapping analysis. Beyond these benchmark cases, bootstrapping suggests a low level of confidence (<50%) in the majority of helices in a previously proposed SHAPE-directed model for the HIV-1 RNA genome. Thus, SHAPE-directed RNA modeling is not always unambiguous, and helix-by-helix confidence estimates, as described herein, may be critical for interpreting results from this powerful methodology.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "secondary_structure_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "false negative rate (FNR) and false discovery rate (FDR)",
+  "general_score_metric": "FNR and FDR (per-helix / overall helix prediction rates)",
+  "typical_sota_score": "FNR ≈ 12–17%, FDR ≈ 14–21% (reported on the six-molecule benchmark)",
+  "year_of_publish": 2011,
+  "reputation": "96 citations",
+  "notes": "Small benchmark (six RNAs) and domain-specific; non-LLM. Results sensitive to data preprocessing and limited information content of SHAPE measurements; bootstrapping used to assess confidence per helix.",
+  "creators": {
+    "scientists": [
+      "Wipapat Kladwang",
+      "Christopher C. VanLang",
+      "Pablo Cordero",
+      "Rhiju Das"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1021/bi200524n",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

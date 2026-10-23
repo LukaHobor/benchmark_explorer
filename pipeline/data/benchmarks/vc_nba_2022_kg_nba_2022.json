@@ -1,0 +1,38 @@
+{
+  "name": "VC_NBA_2022 / KG_NBA_2022",
+  "description": "Despite the recent emergence of video captioning models, how to generate the text description with specific entity names and fine-grained actions is far from being solved, which however has great applications such as basketball live text broadcast. In this paper, a new multimodal knowledge graph supported basketball benchmark for video captioning is proposed. Specifically, we construct a multimodal basketball game knowledge graph (KG_NBA_2022) to provide additional knowledge beyond videos. Then, a multimodal basketball game video captioning (VC_NBA_2022) dataset that contains 9 types of fine-grained shooting events and 286 players' knowledge (i.e., images and names) is constructed based on KG_NBA_2022. We develop a knowledge guided entity-aware video captioning network (KEANet) based on a candidate player list in encoder-decoder form for basketball live text broadcast. The temporal contextual information in video is encoded by introducing the bi-directional GRU (Bi-GRU) module. And the entity-aware module is designed to model the relationships among the players and highlight the key players. Extensive experiments on multiple sports benchmarks demonstrate that KEANet effectively leverages extera knowledge and outperforms advanced video captioning models. The proposed dataset and corresponding codes will be publicly available soon",
+  "category": "multimodal",
+  "domain": "sports video / video captioning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "captioning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU, CIDEr, METEOR (standard captioning metrics)",
+  "general_score_metric": "CIDEr",
+  "year_of_publish": 2024,
+  "reputation": "Niche research benchmark focused on basketball video captioning and knowledge-grounded entity-aware captioning; limited adoption outside the authors' domain so far.",
+  "notes": "Domain-specific (basketball) with only ~9 event types and 286 player entities; useful for entity-aware captioning research but limited in scale and generalizability; requires paired knowledge graph and may carry domain biases.",
+  "creators": {
+    "scientists": [
+      "Zeyu Xi",
+      "Ge Shi",
+      "Xuefen Li",
+      "Junchi Yan",
+      "Zun Li",
+      "Lifang Wu",
+      "Zilin Liu",
+      "Liang Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2401.13888",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "DarkVision",
+  "description": "Imaging and perception in photon-limited scenarios is necessary for various applications, e.g., night surveillance or photography, high-speed photography, and autonomous driving. In these cases, cameras suffer from low signal-to-noise ratio, which degrades the image quality severely and poses challenges for downstream high-level vision tasks like object detection and recognition. Data-driven methods have achieved enormous success in both image restoration and high-level vision tasks. However, the lack of high-quality benchmark dataset with task-specific accurate annotations for photon-limited images/videos delays the research progress heavily. In this paper, we contribute the first multi-illuminance, multi-camera, and low-light dataset, named DarkVision, serving for both image enhancement and object detection. We provide bright and dark pairs with pixel-wise registration, in which the bright counterpart provides reliable reference for restoration and annotation. The dataset consists of bright-dark pairs of 900 static scenes with objects from 15 categories, and 32 dynamic scenes with 4-category objects. For each scene, images/videos were captured at 5 illuminance levels using three cameras of different grades, and average photons can be reliably estimated from the calibration data for quantitative studies. The static-scene images and dynamic videos respectively contain around 7,344 and 320,667 instances in total. With DarkVision, we established baselines for image/video enhancement and object detection by representative algorithms. To demonstrate an exemplary application of DarkVision, we propose two simple yet effective approaches for improving performance in video enhancement and object detection respectively. We believe DarkVision would advance the state-of-the-arts in both imaging and related computer vision tasks in low-light environment.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_enhancement",
+    "video_enhancement",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision) for detection; PSNR / SSIM for restoration/enhancement",
+  "general_score_metric": "mAP (for detection); PSNR / SSIM (for restoration)",
+  "typical_sota_score": "detection mAP ~20–60%; restoration PSNR ~20–35 dB (varies by task and camera/illuminance)",
+  "year_of_publish": 2023,
+  "reputation": "A specialized, well-cited dataset in low-light imaging research used for benchmarking both restoration and detection under photon-limited conditions.",
+  "notes": "Non-LLM benchmark; multi-task (restoration + detection) so results depend on chosen metric; per-illuminance splits and multi-camera setup can lead to domain shifts; static set is modest (900 scenes) though video frames provide many instances.",
+  "creators": {
+    "scientists": [
+      "Bo Zhang",
+      "Yuchen Guo",
+      "Runzhao Yang",
+      "Zhihong Zhang",
+      "Jiayi Xie",
+      "Jinli Suo",
+      "Qionghai Dai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2301.06269",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

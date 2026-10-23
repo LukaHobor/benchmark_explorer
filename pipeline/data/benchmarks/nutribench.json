@@ -1,0 +1,35 @@
+{
+  "name": "NutriBench",
+  "description": "Accurate nutrition estimation helps people make informed dietary choices and is essential in the prevention of serious health complications. We present NutriBench, the first publicly available natural language meal description nutrition benchmark. NutriBench consists of 11,857 meal descriptions generated from real-world global dietary intake data. The data is human-verified and annotated with macro-nutrient labels, including carbohydrates, proteins, fats, and calories. We conduct an extensive evaluation of NutriBench on the task of carbohydrate estimation, testing twelve leading Large Language Models (LLMs), including GPT-4o, Llama3.1, Qwen2, Gemma2, and OpenBioLLM models, using standard, Chain-of-Thought and Retrieval-Augmented Generation strategies. Additionally, we present a study involving professional nutritionists, finding that LLMs can provide comparable but significantly faster estimates. Finally, we perform a real-world risk assessment by simulating the effect of carbohydrate predictions on the blood glucose levels of individuals with diabetes. Our work highlights the opportunities and challenges of using LLMs for nutrition estimation, demonstrating their potential to aid professionals and laypersons and improve health outcomes. Our benchmark is publicly available at: https://mehak126.github.io/nutribench.html",
+  "category": "text",
+  "domain": "food science / nutrition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "numeric_estimation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "MAE (mean absolute error)",
+  "general_score_metric": "MAE",
+  "year_of_publish": 2024,
+  "reputation": "11 citations",
+  "notes": "Possible pretraining contamination risk for LLMs (nutrition facts appear in web corpora); labels derive from human-verified meal descriptions but description ambiguity and portion-size variance introduce label noise. Focused primarily on carbohydrate estimation (not full nutritional profiling). Moderate dataset size (~11.8k).",
+  "creators": {
+    "scientists": [
+      "Andong Hua",
+      "Mehak Preet Dhaliwal",
+      "Ryan Burke",
+      "Yao Qin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.12843",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

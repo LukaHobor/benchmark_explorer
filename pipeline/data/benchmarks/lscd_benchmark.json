@@ -1,0 +1,34 @@
+{
+  "name": "LSCD Benchmark",
+  "description": "Lexical Semantic Change Detection (LSCD) is a complex, lemma-level task, which is usually operationalized based on two subsequently applied usage-level tasks: First, Word-in-Context (WiC) labels are derived for pairs of usages. Then, these labels are represented in a graph on which Word Sense Induction (WSI) is applied to derive sense clusters. Finally, LSCD labels are derived by comparing sense clusters over time. This modularity is reflected in most LSCD datasets and models. It also leads to a large heterogeneity in modeling options and task definitions, which is exacerbated by a variety of dataset versions, preprocessing options and evaluation metrics. This heterogeneity makes it difficult to evaluate models under comparable conditions, to choose optimal model combinations or to reproduce results. Hence, we provide a benchmark repository standardizing LSCD evaluation. Through transparent implementation results become easily reproducible and by standardization different components can be freely combined. The repository reflects the task's modularity by allowing model evaluation for WiC, WSI and LSCD. This allows for careful evaluation of increasingly complex model components providing new ways of model optimization.",
+  "category": "text",
+  "domain": "lexical semantic change detection / historical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "word_in_context_classification",
+    "word_sense_induction",
+    "lexical_semantic_change_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 for classification tasks and clustering metrics (B-Cubed, V-measure, ARI) for WSI; combined evaluation for LSCD",
+  "general_score_metric": "Combination of F1 (WiC/LSCD) and clustering metrics (B-Cubed, V-measure, ARI) for WSI",
+  "year_of_publish": 2024,
+  "reputation": "A standardization effort in the historical NLP / lexical semantic change community, valued for enabling reproducible, modular evaluations though used primarily within a niche research area.",
+  "notes": "Modular benchmark spanning WiC, WSI and LSCD; heterogeneous task definitions and dataset versions complicate direct comparisons. Susceptible to dataset-versioning issues and not focused on LLM-specific evaluation.",
+  "creators": {
+    "scientists": [
+      "Dominik Schlechtweg",
+      "Shafqat Mumtaz Virk",
+      "Nikolay Arefyev"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2404.00176",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

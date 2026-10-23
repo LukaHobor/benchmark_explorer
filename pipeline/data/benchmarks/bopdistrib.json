@@ -1,0 +1,36 @@
+{
+  "name": "BOP-Distrib",
+  "description": "6D pose estimation aims at determining the object pose that best explains the camera observation. The unique solution for non-ambiguous objects can turn into a multi-modal pose distribution for symmetrical objects or when occlusions of symmetry-breaking elements happen, depending on the viewpoint. Currently, 6D pose estimation methods are benchmarked on datasets that consider, for their ground truth annotations, visual ambiguities as only related to global object symmetries, whereas they should be defined per-image to account for the camera viewpoint. We thus first propose an automatic method to re-annotate those datasets with a 6D pose distribution specific to each image, taking into account the object surface visibility in the image to correctly determine the visual ambiguities. Second, given this improved ground truth, we re-evaluate the state-of-the-art single pose methods and show that this greatly modifies the ranking of these methods. Third, as some recent works focus on estimating the complete set of solutions, we derive a precision/recall formulation to evaluate them against our image-wise distribution ground truth, making it the first benchmark for pose distribution methods on real images.",
+  "category": "vision",
+  "domain": "robotics / 3D vision",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "pose_estimation",
+    "distribution_estimation",
+    "multi_hypothesis_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision/recall-style evaluation for pose distributions (AP/precision-recall over predicted pose sets) together with traditional per-hypothesis pose error metrics (e.g., ADD-S, rotation/translation error) where applicable",
+  "general_score_metric": "precision/recall (AP) for predicted pose sets; supplemented by per-hypothesis pose error measures (ADD-S / pose error thresholds)",
+  "year_of_publish": 2024,
+  "reputation": "An academic extension of the BOP benchmark proposing per-image pose distributions; relevant to 6D pose estimation researchers and gaining traction for methods that predict multiple pose hypotheses.",
+  "notes": "designed for methods that output multiple pose hypotheses — single-hypothesis methods require adapted evaluation; ground-truth distributions are image-specific (visibility-aware), so evaluation is sensitive to hypothesis sampling and matching; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Boris Meden",
+      "Asma Brazi",
+      "Fabrice Mayran de Chamisso",
+      "Steve Bourgeois",
+      "Vincent Lepetit"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2408.17297",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

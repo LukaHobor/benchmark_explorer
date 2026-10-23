@@ -1,0 +1,33 @@
+{
+  "name": "AirSim Cross-dataset Benchmark for Safe UAV Landing and Monocular Depth Estimation",
+  "description": ": As there is a lack of publicly available datasets with depth and surface normal information from a drone’s view, in this paper, we introduce the synthetic and photorealistic AirSimNC dataset. This dataset is used as a benchmark to test the zero-shot cross-dataset performance of monocular depth and safe drone landing area estimation models. We analysed state-of-the-art Deep Learning networks and trained them on the SafeUAV dataset. While the depth models achieved very satisfactory results in the SafeUAV dataset, they showed a scaling error in the AirSimNC benchmark. We also compared the performance of networks trained on the KITTI and NYUv2 datasets, in order to test how training the networks on a bird’s eye view affects in the performance on our benchmark. Regarding the safe landing estimation models, they surprisingly showed barely any zero-shot cross-dataset penalty when it comes to the precision of horizontal surfaces.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "monocular_depth_estimation",
+    "safe_landing_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "depth RMSE / Abs Rel for monocular depth; landing task_success_rate for safe landing evaluation",
+  "general_score_metric": "depth_RMSE and landing_success_rate",
+  "year_of_publish": 2022,
+  "reputation": "A domain-specific cross-dataset evaluation used in UAV/robotics and computer vision research to study sim-to-real transfer and safe landing; recognized within the autonomous systems research community but not a broad, widely used standard benchmark.",
+  "notes": "Cross-dataset sim-to-real evaluation implies domain shift; benchmark evaluates both perception (depth) and control/decision (landing) components. Non-LLM benchmark; potential dataset size and domain shift limit direct comparability to large-scale vision benchmarks.",
+  "creators": {
+    "scientists": [
+      "Jon Iñiguez De Gordoa",
+      "Javier Barandiaran",
+      "Marcos Nieto"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.5220/0011562200003332",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

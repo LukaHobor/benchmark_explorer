@@ -1,0 +1,33 @@
+{
+  "name": "Tagalog tokenization/tagging/parsing benchmark",
+  "description": "The grammatical analysis of texts in any written language typically involves a number of basic processing tasks, such as tokenization, morphological tagging, and dependency parsing. State-of-the-art systems can achieve high accuracy on these tasks for languages with large datasets, but yield poor results for languages which have little to no annotated data. To address this issue for the Tagalog language, we investigate the use of alternative language resources for creating task-specific models in the absence of dependency-annotated Tagalog data. We also explore the use of word embeddings and data augmentation to improve performance when only a small amount of annotated Tagalog data is available. We show that these zero-shot and few-shot approaches yield substantial improvements on grammatical analysis of both in-domain and out-of-domain Tagalog text compared to state-of-the-art supervised baselines.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "tokenization",
+    "morphological_tagging",
+    "dependency_parsing"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "tagging accuracy; dependency parsing: LAS/UAS (Labeled/Unlabeled Attachment Score)",
+  "general_score_metric": "LAS/UAS for parsing and token/tag accuracy for tagging",
+  "year_of_publish": 2022,
+  "reputation": "A specialized research benchmark for low-resource Tagalog NLP; cited in academic work on cross-lingual and low-resource parsing but not widely used outside the research community.",
+  "notes": "Small/low-resource dataset; non-LLM benchmark focused on classic NLP tasks; potential domain and data-size limitations that affect generalization and risk saturation on narrow evaluation splits.",
+  "creators": {
+    "scientists": [
+      "Angelina Aquino",
+      "Franz de Leon"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2208.01814",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

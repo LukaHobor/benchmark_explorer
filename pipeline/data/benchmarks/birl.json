@@ -1,0 +1,32 @@
+{
+  "name": "BIRL",
+  "description": "This report presents a generic image registration benchmark with automatic evaluation using landmark annotations. The key features of the BIRL framework are: easily extendable, performance evaluation, parallel experimentation, simple visualisations, experiment's time-out limit, resuming unfinished experiments. From the research practice, we identified and focused on these two main use-cases: (a) comparison of user's (newly developed) method with some State-of-the-Art (SOTA) methods on a common dataset and (b) experimenting SOTA methods on user's custom dataset (which should contain landmark annotation). Moreover, we present an integration of several standard image registration methods aiming at biomedical imaging into the BIRL framework. This report also contains experimental results of these SOTA methods on the CIMA dataset, which is a dataset of Whole Slice Imaging (WSI) from histology/pathology containing several multi-stain tissue samples from three tissue kinds. Source and results: https://borda.github.io/BIRL",
+  "category": "vision",
+  "domain": "medical imaging / image registration",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_registration",
+    "landmark_detection",
+    "benchmark_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_landmark_error (distance) / target registration error",
+  "general_score_metric": "mean landmark error (mm) / target registration error",
+  "year_of_publish": 2019,
+  "reputation": "Recognized within the medical-image-registration research community as a reproducible framework, but with modest adoption beyond domain specialists.",
+  "notes": "Domain-specific, non-LLM benchmark focused on biomedical image registration; uses landmark-based evaluation on relatively small datasets (e.g., CIMA). Results can be sensitive to dataset scale and annotation quality; limited risk of web-text contamination but potential bias from tissue/sample selection.",
+  "creators": {
+    "scientists": [
+      "Jiri Borovec"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1912.13452",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

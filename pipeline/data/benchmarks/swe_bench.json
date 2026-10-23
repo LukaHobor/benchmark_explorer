@@ -1,0 +1,43 @@
+{
+  "name": "SWE-bench",
+  "description": "A benchmark where models are given real GitHub repository issues from 12 popular Python repositories and must generate working code patches that resolve them. Each instance pairs a GitHub issue with a reference pull request and a set of pass/fail tests used to verify resolution. Models must navigate multi-file codebases, understand issue descriptions, implement fixes, and pass hidden test suites — mirroring actual software engineering workflows.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "code_generation",
+    "patch_generation",
+    "program_repair",
+    "unit_test_verification"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 2294,
+  "evaluation_method": "pass rate (fraction of issues resolved by passing all tests)",
+  "general_score_metric": "resolution rate (% of issues resolved)",
+  "typical_sota_score": "~50–55% (frontier agents as of early 2026; started at ~1.7% in 2023)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Foundational real-world coding benchmark by Princeton NLP; catalyzed the coding-agent research area; the full 2,294-instance version underpins SWE-bench Lite (300) and SWE-bench Verified (500); universally cited in 2024–2026 frontier model evaluations",
+  "notes": "The original full split of SWE-bench; more noisy than SWE-bench Verified due to ambiguous or underspecified issues. Primarily Python-focused. SWE-bench Lite (300 tasks) is the fast-eval subset; SWE-bench Verified (500 tasks, OpenAI-vetted) is the current standard leaderboard. arxiv:2310.06770.",
+  "creators": {
+    "scientists": [
+      "Carlos E. Jimenez",
+      "John Yang",
+      "Alexander Wettig",
+      "Shunyu Yao",
+      "Kexin Pei",
+      "Ofir Press",
+      "Karthik Narasimhan"
+    ],
+    "institutions": [
+      "Princeton University"
+    ],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2310.06770",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9"
+  }
+}

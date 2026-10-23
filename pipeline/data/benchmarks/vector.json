@@ -1,0 +1,41 @@
+{
+  "name": "VECtor",
+  "description": "Event cameras have recently gained in popularity as they hold strong potential to complement regular cameras in situations of high dynamics or challenging illumination. An important problem that may benefit from the addition of an event camera is given by Simultaneous Localization And Mapping (SLAM). However, in order to ensure progress on event-inclusive multi-sensor SLAM, novel benchmark sequences are needed. Our contribution is the first complete set of benchmark datasets captured with a multi-sensor setup containing an event-based stereo camera, a regular stereo camera, multiple depth sensors, and an inertial measurement unit. The setup is fully hardware-synchronized and underwent accurate extrinsic calibration. All sequences come with ground truth data captured by highly accurate external reference devices such as a motion capture system. Individual sequences include both small and large-scale environments, and cover the specific challenges targeted by dynamic vision sensors.",
+  "category": "vision",
+  "domain": "robotics / SLAM",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_odometry",
+    "stereo_matching",
+    "SLAM",
+    "sensor_fusion",
+    "3D_reconstruction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Absolute Trajectory Error (ATE) / Relative Pose Error (RPE) (RMSE) for odometry/pose; standard reconstruction/registration error metrics for mapping",
+  "general_score_metric": "ATE (RMSE) for trajectory estimation",
+  "typical_sota_score": "varies by sequence; ATE typically reported in the range ~0.02–0.5 m depending on environment (indoor vs outdoor)",
+  "year_of_publish": 2022,
+  "reputation": "A well-regarded, specialized multi-sensor event-camera SLAM dataset in the event-vision and robotics community, cited by works on event-based SLAM and sensor fusion.",
+  "notes": "Non-LLM benchmark focused on event and stereo cameras; requires careful sensor calibration and hardware sync; relatively specialized (event-camera) so smaller community than mainstream vision datasets; evaluation sensitive to extrinsic/intrinsic calibration quality.",
+  "creators": {
+    "scientists": [
+      "Ling Gao",
+      "Yuxuan Liang",
+      "Jiaqi Yang",
+      "Shaoxun Wu",
+      "Chenyu Wang",
+      "Jiaben Chen",
+      "Laurent Kneip"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.01404",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

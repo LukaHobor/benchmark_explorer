@@ -1,0 +1,35 @@
+{
+  "name": "NH-HAZE",
+  "description": "Image dehazing is an ill-posed problem that has been extensively studied in the recent years. The objective performance evaluation of the dehazing methods is one of the major obstacles due to the lacking of a reference dataset. While the synthetic datasets have shown important limitations, the few realistic datasets introduced recently assume homogeneous haze over the entire scene. Since in many real cases haze is not uniformly distributed we introduce NH-HAZE, a non-homogeneous realistic dataset with pairs of real hazy and corresponding haze-free images. This is the first non-homogeneous image dehazing dataset and contains 55 outdoor scenes. The non-homogeneous haze has been introduced in the scene using a professional haze generator that imitates the real conditions of hazy scenes. Additionally, this work presents an objective assessment of several state-of-the-art single image dehazing methods that were evaluated using NH-HAZE dataset.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_dehazing",
+    "image_restoration",
+    "image_to_image_translation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "PSNR and SSIM (with additional perceptual / task-based evaluations sometimes reported)",
+  "general_score_metric": "PSNR (dB) and SSIM",
+  "typical_sota_score": "≈20–30 dB PSNR (SSIM ≈0.7–0.95) depending on method",
+  "year_of_publish": 2020,
+  "reputation": "Recognized in the dehazing community as the first realistic non-homogeneous haze dataset but adoption is limited by its small size.",
+  "notes": "Very small dataset (55 scenes) — high risk of overfitting and limited scene diversity; non-LLM benchmark; haze introduced with a generator (realistic but controlled), so results may not generalize to all real-world haze patterns.",
+  "creators": {
+    "scientists": [
+      "Codruta O. Ancuti",
+      "Cosmin Ancuti",
+      "Radu Timofte"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2005.03560",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

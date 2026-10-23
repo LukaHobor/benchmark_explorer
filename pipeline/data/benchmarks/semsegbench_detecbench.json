@@ -1,0 +1,39 @@
+{
+  "name": "SemSegBench / DetecBench",
+  "description": "Reliability and generalization in deep learning are predominantly studied in the context of image classification. Yet, real-world applications in safety-critical domains involve a broader set of semantic tasks, such as semantic segmentation and object detection, which come with a diverse set of dedicated model architectures. To facilitate research towards robust model design in segmentation and detection, our primary objective is to provide benchmarking tools regarding robustness to distribution shifts and adversarial manipulations. We propose the benchmarking tools SEMSEGBENCH and DETECBENCH, along with the most extensive evaluation to date on the reliability and generalization of semantic segmentation and object detection models. In particular, we benchmark 76 segmentation models across four datasets and 61 object detectors across two datasets, evaluating their performance under diverse adversarial attacks and common corruptions. Our findings reveal systematic weaknesses in state-of-the-art models and uncover key trends based on architecture, backbone, and model capacity. SEMSEGBENCH and DETECBENCH are open-sourced in our GitHub repository (https://github.com/shashankskagnihotri/benchmarking_reliability_generalization) along with our complete set of total 6139 evaluations. We anticipate the collected data to foster and encourage future research towards improved model reliability beyond classification.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mIoU (segmentation) and mAP (detection)",
+  "general_score_metric": "mean Intersection over Union (mIoU) for segmentation; mean Average Precision (mAP) for detection",
+  "typical_sota_score": "mIoU: ~70–90%; mAP: ~40–60% (varies by dataset and task)",
+  "year_of_publish": 2025,
+  "reputation": "A research-oriented benchmark suite for robustness in segmentation and detection that is gaining attention in robustness/generalization literature but is not a widely adopted standard like COCO or Cityscapes.",
+  "notes": "Non-LLM benchmark focused on robustness to distribution shift and adversarial attacks; evaluates many architectures across multiple datasets. Results vary substantially by dataset/metric; not saturated. Comparisons across tasks require care because segmentation and detection use different primary metrics.",
+  "creators": {
+    "scientists": [
+      "Shashank Agnihotri",
+      "David Schader",
+      "Jonas Jakubassa",
+      "Nico Sharei",
+      "Simon Kral",
+      "Mehmet Ege Kaçar",
+      "Ruben Weber",
+      "Margret Keuper"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.18015",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

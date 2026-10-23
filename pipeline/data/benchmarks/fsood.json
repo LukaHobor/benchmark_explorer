@@ -1,0 +1,33 @@
+{
+  "name": "FS-OOD",
+  "description": "Existing out-of-distribution (OOD) detection literature clearly defines semantic shift as a sign of OOD but does not have a consensus over covariate shift. Samples experiencing covariate shift but not semantic shift are either excluded from the test set or treated as OOD, which contradicts the primary goal in machine learning -- being able to generalize beyond the training distribution. In this paper, we take into account both shift types and introduce full-spectrum OOD (FS-OOD) detection, a more realistic problem setting that considers both detecting semantic shift and being tolerant to covariate shift; and designs three benchmarks. These new benchmarks have a more fine-grained categorization of distributions (i.e., training ID, covariate-shifted ID, near-OOD, and far-OOD) for the purpose of more comprehensively evaluating the pros and cons of algorithms. To address the FS-OOD detection problem, we propose SEM, a simple feature-based semantics score function. SEM is mainly composed of",
+  "category": "mixed",
+  "domain": "data-centric AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "out_of_distribution_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2022,
+  "reputation": "A niche but useful benchmark for a more realistic OOD setting; it has seen attention in OOD-detection research but is not yet a broadly standardized community benchmark.",
+  "notes": "Non-LLM benchmark; performance depends strongly on the chosen ID/OOD split and whether covariate-shifted ID samples are treated as in-distribution or OOD.",
+  "creators": {
+    "scientists": [
+      "Jingkang Yang",
+      "Kaiyang Zhou",
+      "Ziwei Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2204.05306",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Directed Graph Representation Learning (DGRL) for Hardware Benchmark",
+  "description": "To keep pace with the rapid advancements in design complexity within modern computing systems, directed graph representation learning (DGRL) has become crucial, particularly for encoding circuit netlists, computational graphs, and developing surrogate models for hardware performance prediction. However, DGRL remains relatively unexplored, especially in the hardware domain, mainly due to the lack of comprehensive and user-friendly benchmarks. This study presents a novel benchmark comprising five hardware design datasets and 13 prediction tasks spanning various levels of circuit abstraction. We evaluate 21 DGRL models, employing diverse graph neural networks and graph transformers (GTs) as backbones, enhanced by positional encodings (PEs) tailored for directed graphs. Our results highlight that bidirected (BI) message passing neural networks (MPNNs) and robust PEs significantly enhance model performance. Notably, the top-performing models include PE-enhanced GTs interleaved with BI-MPNN layers and BI-Graph Isomorphism Network, both surpassing baselines across the 13 tasks. Additionally, our investigation into out-of-distribution (OOD) performance emphasizes the urgent need to improve OOD generalization in DGRL models. This benchmark, implemented with a modular codebase, streamlines the evaluation of DGRL models for both hardware and ML practitioners",
+  "category": "mixed",
+  "domain": "hardware design / electronic design automation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "graph_regression",
+    "graph_classification",
+    "node_regression",
+    "node_classification",
+    "link_prediction",
+    "ood_generalization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-dependent (MAE/RMSE for regression tasks; accuracy/AUC for classification and ranking tasks)",
+  "general_score_metric": "task-dependent (MAE/RMSE for regression; accuracy for classification)",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark introduced in the cited paper; currently limited adoption but gaining attention in the hardware-ML and EDA research community.",
+  "notes": "Non-LLM benchmark focused on directed-graph GNNs/graph transformers for hardware netlists; moderate-sized, multi-task dataset with significant OOD generalization gaps noted by the authors; modular codebase reduces reproducibility barriers.",
+  "creators": {
+    "scientists": [
+      "Haoyu Wang",
+      "Yinan Huang",
+      "Nan Wu",
+      "Pan Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.06460",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

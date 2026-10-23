@@ -1,0 +1,39 @@
+{
+  "name": "TruthfulQA",
+  "description": "A benchmark of 817 adversarial questions designed to probe common human misconceptions across health, law, finance, politics, and popular myths. Questions are crafted to elicit plausible but false answers that humans tend to believe. Demonstrates 'inverse scaling' — larger models were initially less truthful, debunking the assumption that scale automatically improves reliability.",
+  "category": "text",
+  "domain": "general knowledge",
+  "task_types": [
+    "open_ended",
+    "multiple_choice"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 817,
+  "evaluation_method": "truthfulness rate (human-judged or GPT-judge binary: truthful vs. false)",
+  "general_score_metric": "truthfulness rate (%)",
+  "typical_sota_score": "~70–90% (frontier models as of 2025–2026; aligns with contamination concerns)",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2021,
+  "reputation": "Foundational safety and truthfulness benchmark; demonstrated inverse scaling (counter-intuitive finding); co-authored by Oxford and Anthropic researchers; included in HuggingFace Open LLM Leaderboard v1; canonical reference in alignment research",
+  "notes": "Introduced the influential finding of 'inverse scaling' — larger models were initially less truthful because they better learned and reproduced human misconceptions. Now vulnerable to contamination as questions are public and well-known. Used on HuggingFace Open LLM Leaderboard v1 but deprecated in v2. Still cited in alignment and safety research. Questions target 'memorized falsehoods' common in training data.",
+  "creators": {
+    "scientists": [
+      "Stephanie Lin",
+      "Jacob Hilton",
+      "Owain Evans"
+    ],
+    "institutions": [
+      "University of Oxford"
+    ],
+    "companies": [
+      "Anthropic"
+    ]
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2109.07958",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

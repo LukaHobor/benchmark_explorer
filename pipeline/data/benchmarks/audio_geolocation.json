@@ -1,0 +1,34 @@
+{
+  "name": "Audio Geolocation",
+  "description": "Can we determine someone's geographic location purely from the sounds they hear? Are acoustic signals enough to localize within a country, state, or even city? We tackle the challenge of global-scale audio geolocation, formalize the problem, and conduct an in-depth analysis with wildlife audio from the iNatSounds dataset. Adopting a vision-inspired approach, we convert audio recordings to spectrograms and benchmark existing image geolocation techniques. We hypothesize that species vocalizations offer strong geolocation cues due to their defined geographic ranges and propose an approach that integrates species range prediction with retrieval-based geolocation. We further evaluate whether geolocation improves when analyzing species-rich recordings or when aggregating across spatiotemporal neighborhoods. Finally, we introduce case studies from movies to explore multimodal geolocation using both audio and visual content. Our work highlights the advantages of integrating audio and visual cues, and sets the stage for future research in audio geolocation.",
+  "category": "audio",
+  "domain": "bioacoustics/geolocation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Region-level accuracy (classification), recall@k for retrieval, and median localization error (distance) for continuous geolocation",
+  "general_score_metric": "region-level accuracy (and retrieval recall@k)",
+  "year_of_publish": 2025,
+  "reputation": "An emerging research benchmark that applies bioacoustic data (iNatSounds) to global-scale geolocation; gaining interest in bioacoustics and geolocation research but not yet a broadly standardized benchmark.",
+  "notes": "Uses spectrograms and vision-style methods; performance depends strongly on species/geographic sampling bias, recording quality, and class imbalance. Temporal and recorder-device confounders exist. Not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mustafa Chasmai",
+      "Wuao Liu",
+      "Subhransu Maji",
+      "Grant van Horn"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2505.18726",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

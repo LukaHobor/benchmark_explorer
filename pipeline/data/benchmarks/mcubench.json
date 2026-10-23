@@ -1,0 +1,39 @@
+{
+  "name": "MCUBench",
+  "description": "We introduce MCUBench, a benchmark featuring over 100 YOLO-based object detection models evaluated on the VOC dataset across seven different MCUs. This benchmark provides detailed data on average precision, latency, RAM, and Flash usage for various input resolutions and YOLO-based one-stage detectors. By conducting a controlled comparison with a fixed training pipeline, we collect comprehensive performance metrics. Our Pareto-optimal analysis shows that integrating modern detection heads and training techniques allows various YOLO architectures, including legacy models like YOLOv3, to achieve a highly efficient tradeoff between mean Average Precision (mAP) and latency. MCUBench serves as a valuable tool for benchmarking the MCU performance of contemporary object detectors and aids in model selection based on specific constraints.",
+  "category": "vision",
+  "domain": "embedded vision / edge AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "performance_benchmarking",
+    "resource_constrained_inference"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean Average Precision (mAP) paired with hardware metrics (inference latency, RAM, Flash); Pareto analysis of mAP vs latency",
+  "general_score_metric": "mean Average Precision (mAP) (evaluated alongside latency and memory usage)",
+  "typical_sota_score": "varies by model and resolution; roughly 50–80% mAP on VOC for top-performing YOLO variants in the evaluated settings",
+  "year_of_publish": 2024,
+  "reputation": "Targeted, practical benchmark for embedded/edge-vision practitioners; useful within the MCU/embedded vision community but niche compared to general detection benchmarks.",
+  "notes": "Hardware-specific results — reproducibility depends on MCU configuration; uses VOC (limited classes) and a fixed training pipeline which may bias comparisons; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Sudhakar Sah",
+      "Darshan C. Ganji",
+      "Matteo Grimaldi",
+      "Ravish Kumar",
+      "Alexander Hoffman",
+      "Honnesh Rohmetra",
+      "Ehsan Saboori"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.18866",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

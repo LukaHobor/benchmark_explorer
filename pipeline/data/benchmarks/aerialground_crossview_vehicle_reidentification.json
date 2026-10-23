@@ -1,0 +1,38 @@
+{
+  "name": "Aerial-Ground Cross-View Vehicle Re-Identification",
+  "description": "Vehicle re-identification (Re-ID) is a critical computer vision task that aims to match the same vehicle across spatially distributed cameras, especially in the context of remote sensing imagery. While prior research has primarily focused on Re-ID using remote sensing images captured from similar, typically elevated viewpoints, these settings do not fully reflect complex aerial-ground collaborative remote sensing scenarios. In this work, we introduce a novel and challenging task: aerial-ground cross-view vehicle Re-ID, which involves retrieving vehicles in ground-view image galleries using query images captured from aerial (top-down) perspectives. This task is increasingly relevant due to the integration of drone-based surveillance and ground-level monitoring in multi-source remote sensing systems, yet it poses substantial challenges due to significant appearance variations between aerial and ground views. To support this task, we present AGID (Aerial-Ground Vehicle Re-Identification), the first benchmark dataset specifically designed for aerial-ground cross-view vehicle Re-ID. AGID comprises 20,785 remote sensing images of 834 vehicle identities, collected using drones and fixed ground cameras. We further propose a novel method, Enhanced Self-Correlation Feature Computation (ESFC), which enhances spatial relationships between semantically similar regions and incorporates shape information to improve feature discrimination. Extensive experiments on the AGID dataset and three widely used vehicle Re-ID benchmarks validate the effectiveness of our method, which achieves a Rank-1 accuracy of 69.0% on AGID, surpassing state-of-the-art approaches by 2.1%.",
+  "category": "vision",
+  "domain": "autonomous driving / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "re-identification",
+    "image_retrieval",
+    "metric_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Rank-k accuracy (Rank-1, Rank-5) and mean Average Precision (mAP)",
+  "general_score_metric": "Rank-1 accuracy",
+  "typical_sota_score": "≈69% (Rank-1 reported by authors; state-of-the-art around this value on AGID)",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized dataset for aerial–ground cross-view vehicle Re-ID with growing attention in remote sensing and vehicle Re-ID communities.",
+  "notes": "Relatively small scale (834 identities, ~20k images) and strong cross-view domain gap (aerial vs. ground); risk of overfitting; dataset is domain-specific and not applicable to LLMs.",
+  "creators": {
+    "scientists": [
+      "Linzhi Shang",
+      "Chen Min",
+      "Juan Wang",
+      "Liang Xiao",
+      "Dawei Zhao",
+      "Yiming Nie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.3390/rs17152653",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

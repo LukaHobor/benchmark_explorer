@@ -1,0 +1,35 @@
+{
+  "name": "GiCCS",
+  "description": "The Semantic textual similarity (STS) task is commonly used to evaluate the semantic representations that language models (LMs) learn from texts, under the assumption that good-quality representations will yield accurate similarity estimates. When it comes to estimating the similarity of two utterances in a dialogue, however, the conversational context plays a particularly important role. We argue for the need of benchmarks specifically created using conversational data in order to evaluate conversational LMs in the STS task. We introduce GiCCS, a first conversational STS evaluation benchmark for German. We collected the similarity annotations for GiCCS using best-worst scaling and presenting the target items in context, in order to obtain highly-reliable context-dependent similarity scores. We present benchmarking experiments for evaluating LMs on capturing the similarity of utterances. Results suggest that pretraining LMs on conversational data and providing conversational context can be useful for capturing similarity of utterances in dialogues. GiCCS will be publicly available to encourage benchmarking of conversational LMs.",
+  "category": "text",
+  "domain": "conversational NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_similarity",
+    "retrieval",
+    "pairwise_ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Spearman/Pearson correlation (and retrieval metrics like MAP/Recall@k for retrieval variants)",
+  "general_score_metric": "Spearman / Pearson correlation",
+  "year_of_publish": 2022,
+  "reputation": "Moderately known in German conversational NLP research; used for evaluating semantic similarity/retrieval in German dialogs.",
+  "notes": "Language-specific (German) conversational similarity benchmark; relatively small/specialized compared to large general-purpose multilingual similarity corpora. Low contamination risk for English-centric models but possible pretraining overlap for German models.",
+  "creators": {
+    "scientists": [
+      "Shima Asaadi",
+      "Zahra Kolagar",
+      "Alina Liebel",
+      "Alessandra Zarcone"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://doi.org/10.18653/v1/2022.gem-1.30",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

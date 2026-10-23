@@ -1,0 +1,35 @@
+{
+  "name": "Material Segmentation HPC Benchmark",
+  "description": "Performance Benchmarking of HPC systems is an ongoing effort that seeks to provide information that will allow for increased performance and improve the job schedulers that manage these systems. We develop a benchmarking tool that utilizes machine learning models and gathers performance data on GPU-accelerated nodes while they perform material segmentation analysis. The benchmark uses a ML model that has been converted from Caffe to PyTorch using the MMdnn toolkit and the MINC-2500 dataset. Performance data is gathered on two ERDC DSRC systems, Onyx and Vulcanite. The data reveals that while Vulcanite has faster model times in a large number of benchmarks, and it is also more subject to some environmental factors that can cause performances slower than Onyx. In contrast the model times from Onyx are consistent across benchmarks.",
+  "category": "mixed",
+  "domain": "high-performance computing / systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "segmentation",
+    "performance_measurement",
+    "throughput_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "runtime / throughput / latency (hardware performance metrics)",
+  "general_score_metric": "inference time (ms) and throughput (images/sec)",
+  "year_of_publish": 2023,
+  "reputation": "A niche, research-oriented HPC benchmark used primarily within ERDC/DoD and HPC performance communities to characterize ML inference performance on specific systems.",
+  "notes": "Non-LLM benchmark focused on system performance; uses the MINC-2500 dataset (relatively small) and a converted Caffe->PyTorch model. Results are highly hardware- and environment-dependent and may not reflect model-accuracy-centric benchmarks.",
+  "creators": {
+    "scientists": [
+      "Warren R. Williams",
+      "S. Ross Glandon",
+      "Luke L. Morris",
+      "Jing-Ru C. Cheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.14921",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

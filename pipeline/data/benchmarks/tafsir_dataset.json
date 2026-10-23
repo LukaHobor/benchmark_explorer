@@ -1,0 +1,35 @@
+{
+  "name": "Tafsir Dataset",
+  "description": "Various historical languages, which used to be lingua franca of science and arts, deserve the attention of current NLP research. In this work, we take the first data-driven steps towards this research line for Classical Arabic (CA) by addressing named entity recognition (NER) and topic modeling (TM) on the example of CA literature. We manually annotate the encyclopedic work of Tafsir Al-Tabari with span-based NEs, sentence-based topics, and span-based subtopics, thus creating the Tafsir Dataset with over 51,000 sentences, the first large-scale multi-task benchmark for CA. Next, we analyze our newly generated dataset, which we make open-source available, with current language models (lightweight BiLSTM, transformer-based MaChAmP) along a novel script compression method, thereby achieving state-of-the-art performance for our target task CA-NER. We also show that CA-TM from the perspective of historical topic models, which are central to Arabic studies, is very challenging. With this interdisciplinary work, we lay the foundations for future research on automatic analysis of CA literature.",
+  "category": "text",
+  "domain": "Arabic NLP / historical languages",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "topic_modeling"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "NER: span-based F1; TM: topic coherence (e.g., NPMI) / qualitative evaluation",
+  "general_score_metric": "span-based F1 (for NER)",
+  "reputation": "Well-regarded within the niche of Classical Arabic NLP as the first large-scale, multi-task annotated resource for Tafsir literature, with growing interest from researchers in historical Arabic.",
+  "notes": "Domain-specific (Classical Arabic) with script/compression considerations; large (≈51k sentences) but specialized, so contamination with modern corpora is limited; topic-modeling remains challenging and less saturated than NER.",
+  "creators": {
+    "scientists": [
+      "Sajawel Ahmed",
+      "Rob van der Goot",
+      "Misbahur Rehman",
+      "Carl Kruse",
+      "Ömer Özsoy",
+      "Alexander Mehler",
+      "Gemma Roig"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

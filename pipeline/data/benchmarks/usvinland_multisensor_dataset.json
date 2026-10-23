@@ -1,0 +1,36 @@
+{
+  "name": "USVInland Multisensor Dataset",
+  "description": "Unmanned surface vehicles (USVs) have great value with their ability to execute hazardous and time-consuming missions over water surfaces. Recently, USVs for inland waterways have attracted increasing attention for their potential application in autonomous monitoring, transportation, and cleaning. However, unlike sailing in open water, the challenges posed by scenes of inland waterways, such as the complex distribution of obstacles, the global positioning system (GPS) signal denial environment, the reflection of bank-side structures, and the fog over the water surface, all impede USV application in inland waterways. To address these problems and stimulate relevant research, we introduce USVInland, a multisensor dataset for USVs in inland waterways. The collection of USVInland spans a trajectory of more than 26 km in diverse real-world scenes of inland waterways using various modalities, including lidar, stereo cameras, millimeter-wave radar, GPS, and inertial measurement units (IMUs). Based on the requirements and challenges in the perception and navigation of USVs for inland waterways, we build benchmarks for simultaneous localization and mapping (SLAM), stereo matching, and water segmentation. We evaluate common algorithms for the above tasks to determine the influence of unique inland waterway scenes on algorithm performance. Our dataset and the development tools are available at. <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup>",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "simultaneous_localization_and_mapping",
+    "stereo_matching",
+    "water_segmentation",
+    "perception_for_navigation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-dependent (e.g., Absolute Trajectory Error (ATE) / Relative Pose Error (RPE) for SLAM; End-Point Error (EPE) or disparity error for stereo; mIoU / IoU / F1 for segmentation)",
+  "general_score_metric": "task-dependent (ATE for SLAM; EPE for stereo matching; mIoU for segmentation)",
+  "year_of_publish": 2021,
+  "reputation": "117 citations",
+  "notes": "Multisensor, non-LLM robotics dataset collected in challenging inland-waterway scenarios (GPS-denial, reflections, fog); benchmarks and metrics differ per task. Requires specialized sensor processing and careful synchronization; potential geographic/domain bias and limited to inland-waterway scenes.",
+  "creators": {
+    "scientists": [
+      "Yuwei Cheng",
+      "Mengxin Jiang",
+      "Jiannan Zhu",
+      "Yimin Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/lra.2021.3067271",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

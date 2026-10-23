@@ -1,0 +1,34 @@
+{
+  "name": "Polish Product Matching Benchmark",
+  "description": "Product matching corresponds to the task of matching identical products across different data sources. It typically employs available product features which, apart from being multimodal, i.e., comprised of various data types, might be non-homogeneous and incomplete. The paper shows that pre-trained, multilingual Transformer models, after fine-tuning, are suitable for solving the product matching problem using textual features both in English and Polish languages. We tested multilingual mBERT and XLM-RoBERTa models in English on Web Data Commons - training dataset and gold standard for large-scale product matching. The obtained results show that these models perform similarly to the latest solutions tested on this set, and in some cases, the results were even better. Additionally, we prepared a new dataset entirely in Polish and based on offers in selected categories obtained from several online stores for the research purpose. It is the first open dataset for product matching tasks in Polish, which allows comparing the effectiveness of the pre-trained models. Thus, we also showed the baseline results obtained by the fine-tuned mBERT and XLM-RoBERTa models on the Polish datasets.",
+  "category": "text",
+  "domain": "e-commerce / product matching",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_matching",
+    "binary_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 (precision/recall) and accuracy for pairwise product matching",
+  "general_score_metric": "F1 score (harmonic mean of precision and recall)",
+  "year_of_publish": 2022,
+  "reputation": "The first open dataset for product matching in Polish; valuable for regional and multilingual product-matching research though adoption is still limited.",
+  "notes": "Language-specific (Polish) dataset; relatively small compared to large web-scale product corpora; non-LLM benchmark (fine-tuned multilingual Transformers used); potential class imbalance and noisy/incomplete textual attributes.",
+  "creators": {
+    "scientists": [
+      "Michał Możdżonek",
+      "Anna Wróblewska",
+      "Sergiy Tkachuk",
+      "Szymon Łukasik"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2205.15712",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

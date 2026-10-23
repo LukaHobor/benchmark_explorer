@@ -1,0 +1,33 @@
+{
+  "name": "Semanscope",
+  "description": "With hundreds of multilingual embedding models available, practitioners lack clear guidance on which provide genuine cross-lingual semantic alignment versus task performance through language-specific patterns. Task-driven benchmarks (MTEB) may mask fundamental alignment shortcomings. We introduce Semantic Affinity (SA), a bounded (between 0 and 1) metric measuring inter-lingual to intra-lingual spread ratio using cosine distance, combined with PHATE visualization in our Semanscope framework. Benchmarking 13 models across 4 datasets (52 experiments) reveals a three-tier structure: (1) Top BERT models (LaBSE SA = 0.70, USE SA = 0.68, S-BERT SA = 0.68) achieve strong alignment via translation-pair supervision; (2) LLM embeddings plateau at SA between 0.55 and 0.61 regardless of 0.6 B to 8 B scale; (3) MLM-only BERT models (mBERT, XLM-R, SA < 0.50) fail despite more than 100 language training. Training objective, not architecture or scale, determines alignment. Oracle Bone primitives (1200",
+  "category": "text",
+  "domain": "information retrieval",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "embedding_similarity",
+    "cross_lingual_alignment",
+    "representation_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "bounded metric (Semantic Affinity / SA) based on cosine-distance spread ratio, with PHATE visualization for qualitative analysis",
+  "general_score_metric": "Semantic Affinity (SA)",
+  "typical_sota_score": "0.68–0.70",
+  "year_of_publish": 2025,
+  "reputation": "A niche but timely benchmark/framework for probing whether multilingual embeddings truly align across languages beyond downstream task scores.",
+  "notes": "Not a standard downstream task benchmark; focuses on representation geometry and alignment. Scores are bounded in [0,1], and results depend on the chosen datasets and embedding space.",
+  "creators": {
+    "scientists": [
+      "Wen G. Gong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2601.09732",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

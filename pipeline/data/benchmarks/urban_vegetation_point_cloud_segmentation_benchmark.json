@@ -1,0 +1,35 @@
+{
+  "name": "Urban Vegetation Point Cloud Segmentation Benchmark",
+  "description": "Vegetation is crucial for sustainable and resilient cities providing various ecosystem services and well-being of humans. However, vegetation is under critical stress with rapid urbanization and expanding infrastructure footprints. Consequently, mapping of this vegetation is essential in the urban environment. Recently, deep learning for point cloud semantic segmentation has shown significant progress. Advanced models attempt to obtain state-of-the-art performance on benchmark datasets, comprising multiple classes and representing real world scenarios. However, class specific segmentation with respect to vegetation points has not been explored. Therefore, selection of a deep learning model for vegetation points segmentation is ambiguous. To address this problem, we provide a comprehensive assessment of point-based deep learning models for semantic segmentation of vegetation class. We have selected seven representative point-based models, namely PointCNN, KPConv (omni-supervised), RandLANet, SCFNet, PointNeXt, SPoTr and PointMetaBase. These models are investigated on three different datasets, specifically Chandigarh, Toronto3D and Kerala, which are characterized by diverse nature of vegetation and varying scene complexity combined with changing per-point features and class-wise composition. PointMetaBase and KPConv (omni-supervised) achieve the highest mIoU on the Chandigarh (95.24%) and Toronto3D datasets (91.26%), respectively while PointCNN provides the highest mIoU on the Kerala dataset (85.68%). The paper develops a deeper insight, hitherto not reported, into the working of these models for vegetation segmentation and outlines the ingredients that should be included in a model specifically for vegetation segmentation. This paper is a step towards the development of a novel architecture for vegetation points segmentation.",
+  "category": "vision",
+  "domain": "urban mapping / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "point_cloud_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU (mean Intersection-over-Union)",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2023,
+  "reputation": "A recent, specialized benchmark from the remote sensing community with limited but growing attention among point-cloud segmentation researchers.",
+  "notes": "Non-LLM benchmark focused specifically on vegetation class; only three datasets (Chandigarh, Toronto3D, Kerala) so results may not generalize across all urban scenes; class imbalance and differing per-point features across datasets can cause variability; not saturated.",
+  "creators": {
+    "scientists": [
+      "Aditya Aditya",
+      "Bharat Lohani",
+      "Jagannath Aryal",
+      "Stephan Winter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.10274",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

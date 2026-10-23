@@ -1,0 +1,35 @@
+{
+  "name": "MetaCLBench",
+  "description": "Meta-Continual Learning (Meta-CL) has emerged as a promising approach to minimize manual labeling efforts and system resource requirements by enabling Continual Learning (CL) with limited labeled samples. However, while existing methods have shown success in image-based tasks, their effectiveness remains unexplored for sequential time-series data from sensor systems, particularly audio inputs. To address this gap, we conduct a comprehensive benchmark study evaluating six representative Meta-CL approaches using three network architectures on five datasets from both image and audio modalities. We develop MetaCLBench, an end-to-end Meta-CL benchmark framework for edge devices to evaluate system overheads and investigate trade-offs among performance, computational costs, and memory requirements across various Meta-CL methods. Our results reveal that while many Meta-CL methods enable to learn new classes for both image and audio modalities, they impose significant computational and memory costs on edge devices. Also, we find that pre-training and meta-training procedures based on source data before deployment improve Meta-CL performance. Finally, to facilitate further research, we provide practical guidelines for researchers and machine learning practitioners implementing Meta-CL on resource-constrained environments and make our benchmark framework and tools publicly available, enabling fair evaluation across both accuracy and system-level metrics.",
+  "category": "multimodal",
+  "domain": "edge devices / continual learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "continual_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy (reported alongside system-level metrics such as memory footprint and runtime/latency)",
+  "year_of_publish": 2025,
+  "reputation": "Emerging research benchmark for meta-continual learning on edge devices with limited community adoption to date.",
+  "notes": "Focuses on image and audio sequential data for Meta-CL on resource-constrained devices; reports both predictive performance and system-level costs (memory, runtime, energy). Small/moderate datasets and emphasis on non‑LLM models; results are context-dependent (pretraining/meta-training effects notable).",
+  "creators": {
+    "scientists": [
+      "Sijia Li",
+      "Young D. Kwon",
+      "Lik-Hang Lee",
+      "Pan Hui"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2504.00174",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

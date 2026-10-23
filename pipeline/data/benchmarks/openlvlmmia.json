@@ -1,0 +1,36 @@
+{
+  "name": "OpenLVLM-MIA",
+  "description": "OpenLVLM-MIA is a new benchmark that highlights fundamental challenges in evaluating membership inference attacks (MIA) against large vision-language models (LVLMs). While prior work has reported high attack success rates, our analysis suggests that these results often arise from detecting distributional bias introduced during dataset construction rather than from identifying true membership status. To address this issue, we introduce a controlled benchmark of 6{,}000 images where the distributions of member and non-member samples are carefully balanced, and ground-truth membership labels are provided across three distinct training stages. Experiments using OpenLVLM-MIA demonstrated that the performance of state-of-the-art MIA methods approached chance-level. OpenLVLM-MIA, designed to be transparent and unbiased benchmark, clarifies certain limitations of MIA research on LVLMs and provides a solid foundation for developing stronger privacy-preserving techniques.",
+  "category": "multimodal",
+  "domain": "ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "membership_inference",
+    "privacy_attack"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "attack success rate / membership inference accuracy",
+  "general_score_metric": "attack accuracy",
+  "typical_sota_score": "near chance level (about 50%)",
+  "year_of_publish": 2025,
+  "reputation": "A recent privacy benchmark aimed at correcting bias in LVLM membership inference evaluation and clarifying the limits of prior attack results.",
+  "notes": "Designed to reduce distributional bias; reported strong attacks often collapse toward chance, so results are not directly comparable to biased prior benchmarks.",
+  "creators": {
+    "scientists": [
+      "Ryoto Miyamoto",
+      "Xin Fan",
+      "Fuyuko Kido",
+      "Tsuneo Matsumoto",
+      "Hayato Yamana"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2510.16295",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

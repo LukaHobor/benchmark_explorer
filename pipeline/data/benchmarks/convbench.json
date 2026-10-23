@@ -1,0 +1,36 @@
+{
+  "name": "ConvBench",
+  "description": "Convolution is a compute-intensive operation placed at the heart of Convolution Neural Networks (CNNs). It has led to the development of many high-performance algorithms, such as Im2col-GEMM, Winograd, and Direct-Convolution. However, the comparison of different convolution algorithms is an error-prone task as it requires specific data layouts and system resources. Failure to address these requirements might lead to unwanted time penalties. Thus, considering all processing steps within convolution algorithms is essential to comprehensively evaluate and fairly compare their performance. Furthermore, most known convolution benchmarking adopts ad-hoc testing suites with limited coverage and handmade operations. This paper proposes ConvBench, a primitive-level benchmark for the evaluation and comparison of convolution algorithms. It assesses 9243 convolution operations derived from 1097 real-world deep learning models, resulting in performance and execution breakdown graphs for a detailed evaluation. ConvBench capability is evaluated across the Sliced Convolution (SConv) algorithm. The experiments showed results faster than Im2col-GEMM in 93.6% of the convolutions. However, the use of ConvBench allowed the delving into the remaining 6.4% underperforming convolutions, uncovering a critical slowdown of 79.5% on average of SConv's packing step. This analysis underscores a potential source of optimization for SConv, opening up new paths for convolution designers to improve their algorithms.",
+  "category": "mixed",
+  "domain": "systems / deep learning primitives",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "performance_benchmarking",
+    "throughput_measurement",
+    "latency_measurement"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "throughput (images/ops per second), latency, speedup factor relative to baselines, and memory/packing cost analysis",
+  "general_score_metric": "throughput (ops/sec) or speedup factor relative to a baseline algorithm",
+  "year_of_publish": 2024,
+  "reputation": "A systems-focused microbenchmark that provides broad coverage of real-world convolution operators; useful to convolution-algorithm researchers but not yet a mainstream community standard.",
+  "notes": "Non-LLM benchmark and hardware-sensitive; results depend heavily on implementation, data layout, and target hardware. Large coverage (9,243 ops) but microbenchmark findings may not directly translate to end-to-end model performance; reproducing some measurements may require specific system configurations.",
+  "creators": {
+    "scientists": [
+      "Lucas Alvarenga",
+      "Victor Ferrari",
+      "Rafael Souza",
+      "Marcio Pereira",
+      "Guido Araujo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2407.10730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

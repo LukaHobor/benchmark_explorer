@@ -1,0 +1,36 @@
+{
+  "name": "LiveFood",
+  "description": "Video highlights detection (VHD) is an active research field in computer vision, aiming to locate the most user-appealing clips given raw video inputs. However, most VHD methods are based on the closed world assumption, i.e., a fixed number of highlight categories is defined in advance and all training data are available beforehand. Consequently, existing methods have poor scalability with respect to increasing highlight domains and training data. To address above issues, we propose a novel video highlights detection method named Global Prototype Encoding (GPE) to learn incrementally for adapting to new domains via parameterized prototypes. To facilitate this new research direction, we collect a finely annotated dataset termed LiveFood, including over 5,100 live gourmet videos that consist of four domains: ingredients, cooking, presentation, and eating. To the best of our knowledge, this is the first work to explore video highlights detection in the incremental learning setting, opening up new land to apply VHD for practical scenarios where both the concerned highlight domains and training data increase over time. We demonstrate the effectiveness of GPE through extensive experiments. Notably, GPE surpasses popular domain incremental learning methods on LiveFood, achieving significant mAP improvements on all domains. Concerning the classic datasets, GPE also yields comparable performance as previous arts. The code is available at: https://github.com/ForeverPs/IncrementalVHD_GPE.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "temporal_localization",
+    "video_highlight_detection",
+    "incremental_learning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mAP",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2024,
+  "reputation": "Relatively new (2022) dataset for video highlights and incremental/incremental-domain learning with limited but growing adoption in the computer vision community.",
+  "notes": "Non-LLM benchmark; moderate size (~5,100 videos) and focused on incremental domain adaptation across four domains (ingredients, cooking, presentation, eating). Results are sensitive to domain shift; check licensing/collection details before reuse.",
+  "creators": {
+    "scientists": [
+      "Sen Pei",
+      "Shixiong Xu",
+      "Xiaojie Jin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.05166",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

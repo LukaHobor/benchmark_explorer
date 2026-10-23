@@ -1,0 +1,34 @@
+{
+  "name": "PT-Ranking",
+  "description": "Deep neural networks has become the first choice for researchers working on algorithmic aspects of learning-to-rank. Unfortunately, it is not trivial to find the optimal setting of hyper-parameters that achieves the best ranking performance. As a result, it becomes more and more difficult to develop a new model and conduct a fair comparison with prior methods, especially for newcomers. In this work, we propose PT-Ranking, an open-source project based on PyTorch for developing and evaluating learning-to-rank methods using deep neural networks as the basis to construct a scoring function. On one hand, PT-Ranking includes many representative learning-to-rank methods. Besides the traditional optimization framework via empirical risk minimization, adversarial optimization framework is also integrated. Furthermore, PT-Ranking's modular design provides a set of building blocks that users can leverage to develop new ranking models. On the other hand, PT-Ranking supports to compare different learning-to-rank methods based on the widely used datasets (e.g., MSLR-WEB30K, Yahoo!LETOR and Istella LETOR) in terms of different metrics, such as precision, MAP, nDCG, nERR. By randomly masking the ground-truth labels with a specified ratio, PT-Ranking allows to examine to what extent the ratio of unlabelled query-document pairs affects the performance of different learning-to-rank methods. We further conducted a series of demo experiments to clearly show the effect of different factors on neural learning-to-rank methods, such as the activation function, the number of layers and the optimization strategy.",
+  "category": "text",
+  "domain": "information retrieval / search",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "learning_to_rank",
+    "pairwise_ranking",
+    "listwise_ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "nDCG (normalized Discounted Cumulative Gain), MAP and precision (ranking metrics)",
+  "general_score_metric": "nDCG@k (primary reported metric)",
+  "typical_sota_score": "dataset-dependent; varies widely (e.g., nDCG@10 often ranges from ~0.2 to >0.8 depending on dataset and task)",
+  "year_of_publish": 2020,
+  "reputation": "Widely known within the learning-to-rank research community as an open-source PyTorch toolkit for developing and evaluating neural rankers.",
+  "notes": "Toolkit/non-LLM benchmark: results are highly dataset- and hyperparameter-dependent. Supports multiple ranking metrics (nDCG, MAP, nERR); not a single fixed benchmark so cross-dataset comparisons require care.",
+  "creators": {
+    "scientists": [
+      "Hai-Tao Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2008.13368",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

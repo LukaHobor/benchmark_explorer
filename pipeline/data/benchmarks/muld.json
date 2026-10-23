@@ -1,0 +1,35 @@
+{
+  "name": "MuLD",
+  "description": "The impressive progress in NLP techniques has been driven by the development of multi-task benchmarks such as GLUE and SuperGLUE. While these benchmarks focus on tasks for one or two input sentences, there has been exciting work in designing efficient techniques for processing much longer inputs. In this paper, we present MuLD: a new long document benchmark consisting of only documents over 10,000 tokens. By modifying existing NLP tasks, we create a diverse benchmark which requires models to successfully model long-term dependencies in the text. We evaluate how existing models perform, and find that our benchmark is much more challenging than their `short document' equivalents. Furthermore, by evaluating both regular and efficient transformers, we show that models with increased context length are better able to solve the tasks presented, suggesting that future improvements in these models are vital for solving similar long document problems. We release the data and code for baselines to encourage further research on efficient NLP models.",
+  "category": "text",
+  "domain": "natural language / long-document processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "long_document_question_answering",
+    "summarization",
+    "classification",
+    "information_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (task-specific metrics also used, e.g., ROUGE for summarization, F1/EM for QA, ranking metrics for retrieval)",
+  "general_score_metric": "accuracy (with task-specific metrics reported per task)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded within the long‑document research community as a challenging benchmark; moderately adopted for evaluating extended‑context and efficient transformer models.",
+  "notes": "Contains only documents >10k tokens; tasks are modified from existing benchmarks to require long-range modeling. Risk of pretraining contamination exists for web‑scraped models; evaluation is task‑specific and not saturated.",
+  "creators": {
+    "scientists": [
+      "G Thomas Hudson",
+      "Noura Al Moubayed"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2202.07362",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

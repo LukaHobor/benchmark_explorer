@@ -1,0 +1,30 @@
+{
+  "name": "Gas–liquid stratified flow benchmark case",
+  "description": "Abstract\n               Machine learning (ML) models offer intriguing alternatives for multiphase pipe flow simulations. Certain subsets of ML algorithms are computationally robust and may outperform physics-based models when applied within the training range. However, they tend to deteriorate on extrapolations, which are exceedingly common for multiphase flow applications at the industrial scale. \"Hybrid\" (a combination of ML and physics-based) models conceptually combine the strengths of the physics-based (extrapolability and interpretability) and ML models (adaptability and computational simplicity). In this paper, the author presents an accuracy comparison between a \"pure\" ML model, a hybrid model, and a high-definition or high-fidelity physics-based model (HD) in a multiphase flow application, which illustrates the benefits and drawbacks of each modeling option.\n               The author implemented two data-driven models to predict the liquid holdup in gas-liquid stratified flow in pipes: a pure ML and a hybrid model. Their accuracies are benchmarked against an HD stratified flow model. The pure ML model uses a neural network (NN) to predict liquid holdup directly. The hybrid model involves a 1D steady-state, fully developed, two-fluid conservation equations, coupled with NN to predict the interfacial friction. The HD model couples the aforementioned conservation equations with a preintegrated 2D velocity profile model, offering a physically self-consistent friction model for fluid-wall and fluid-fluid interfaces. The author collected more than 7,000 laboratory data points from various sources and split them [into training, cross validation (CV), and testing sets] in multiple ways. The splitting mechanism is a unique feature of this paper. The first split ensures the training and testing sets share similar characteristics while the others intentionally impose extrapolation between the two sets.\n               The hybrid model is shown to be more scalable than the pure ML model, albeit performing worse on training. It is also worth noting that the inclusion of physics may reduce the size of relevant training data. The use of dimensionless features improves the pure ML model's extrapolability, although the hybrid model remains superior. The HD model is more accurate and consistent across different data sets than the hybrid model, indicating that it is not always straightforward to reduce the physics to a minimum and task an ML model to compensate for the loss. Furthermore, the inclusion of physics seems to reduce model susceptibility to data noise. The author concludes that physics-based model development remains imperative for advancing the multiphase flow modeling state-of-the-art.\n               In this paper, the author discusses the potentials and challenges for a possible hybrid modeling scheme, in which ML is used as a substitute for a key closure for the physics-based model. This paper can serve as a valuable case study in engineering applications where ML implementation best-practices or workflows are not established yet, such as in multiphase pipe flow or flow assurance.",
+  "category": "mixed",
+  "domain": "fluid dynamics / multiphase flow",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSE / MAE (error-based regression metrics on continuous liquid holdup predictions)",
+  "general_score_metric": "RMSE (root mean squared error) on liquid holdup predictions",
+  "year_of_publish": 2023,
+  "reputation": "A niche academic benchmark known within the multiphase flow / CFD research community; useful as a case study for hybrid ML–physics modeling but not widely adopted outside that domain.",
+  "notes": "Non-LLM, physics-informed regression benchmark built from ~7,000+ laboratory points; includes multiple train/test split protocols explicitly testing extrapolation (high extrapolation risk). Dataset size is moderate; results depend strongly on split strategy and feature engineering (dimensionless features improve extrapolation).",
+  "creators": {
+    "scientists": [
+      "Auzan Abirama Soedarmo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.4043/32527-ms",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

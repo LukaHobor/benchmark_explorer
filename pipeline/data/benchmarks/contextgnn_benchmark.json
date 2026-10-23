@@ -1,0 +1,35 @@
+{
+  "name": "ContextGNN Benchmark",
+  "description": "Relational deep learning (RDL) settles among the most exciting advances in machine learning for relational databases, leveraging the representational power of message passing graph neural networks (GNNs) to derive useful knowledge and run predicting tasks on tables connected through primary-to-foreign key links. The RDL paradigm has been successfully applied to recommendation lately, through its most recent representative deep learning architecture namely, ContextGNN. While acknowledging ContextGNN's improved performance on real-world recommendation datasets and tasks, preliminary tests for the more traditional static link prediction task (aka personalized item recommendation) on the popular Amazon Book dataset have demonstrated how ContextGNN has still room for improvement compared to other state-of-the-art GNN-based recommender systems. To this end, with this paper, we integrate ContextGNN within Elliot, a popular framework for reproducibility and benchmarking analyses, counting around 50 state-of-the-art recommendation models from the literature to date. On such basis, we run preliminary experiments on three standard recommendation datasets and against six state-of-the-art GNN-based recommender systems, confirming similar trends to those observed by the authors in their original paper. The code is publicly available on GitHub: https://github.com/danielemalitesta/Rel-DeepLearning-RecSys.",
+  "category": "mixed",
+  "domain": "recommendation / relational learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "top_k_recommendation",
+    "rating_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "ranking and recommendation metrics (NDCG@k, Recall@k, AUC for binary predictions)",
+  "general_score_metric": "NDCG@k (primary for ranking), with Recall@k and AUC reported",
+  "typical_sota_score": "varies by dataset and split; typical NDCG@10 values range roughly 0.05–0.4",
+  "year_of_publish": 2025,
+  "reputation": "A research benchmark integrating ContextGNN into the Elliot framework for reproducible comparisons; of interest to relational-recommendation researchers but not yet a broadly standardized community benchmark.",
+  "notes": "Mixed-model / non-LLM benchmark; performance is highly sensitive to dataset splits, preprocessing and negative sampling; comparisons depend on exact evaluation protocol and hyperparameter tuning.",
+  "creators": {
+    "scientists": [
+      "Alejandro Ariza-Casabona",
+      "Nikos Kanakaris",
+      "Daniele Malitesta"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.16661",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

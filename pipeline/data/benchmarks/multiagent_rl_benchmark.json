@@ -1,0 +1,36 @@
+{
+  "name": "Multi-Agent RL Benchmark",
+  "description": "We benchmark commonly used multi-agent deep reinforcement learning (MARL) algorithms on a variety of cooperative multi-agent games. While there has been significant innovation in MARL algorithms, algorithms tend to be tested and tuned on a single domain and their average performance across multiple domains is less characterized. Furthermore, since the hyperparameters of the algorithms are carefully tuned to the task of interest, it is unclear whether hyperparameters can easily be found that allow the algorithm to be repurposed for other cooperative tasks with different reward structure and environment dynamics. To investigate the consistency of the performance of MARL algorithms, we build an open-source library of multi-agent algorithms including DDPG/TD3/SAC with centralized Q functions, PPO with centralized value functions, and QMix and test them across a range of tasks that vary in coordination difficulty and agent number. The domains include the particle-world environments, starcraft micromanagement challenges, the Hanabi challenge, and the hide-and-seek environments. Finally, we investigate the ease of hyper-parameter tuning for each of the algorithms by tuning hyper-parameters in one environment per domain and re-using them in the other environments within the domain.",
+  "category": "mixed",
+  "domain": "games / reinforcement learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "multi_agent_reinforcement_learning",
+    "cooperative_control",
+    "policy_optimization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average_return (mean episodic return) / task_success_rate",
+  "general_score_metric": "mean episodic return (average return) across seeds and environments",
+  "year_of_publish": 2025,
+  "reputation": "Widely cited in MARL research as a multi-domain evaluation suite for cooperative tasks; moderately adopted as a standard benchmarking collection.",
+  "notes": "Non-LLM benchmark; performance is highly sensitive to hyperparameters and random seed, making cross-domain comparisons noisy; includes diverse domains (StarCraft, Hanabi, particle-world, hide-and-seek) with varying scale and reproducibility.",
+  "creators": {
+    "scientists": [
+      "Chao Yu",
+      "Akash Velu",
+      "Eugene Vinitsky",
+      "Yu Wang",
+      "Alexandre Bayen",
+      "Yi Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

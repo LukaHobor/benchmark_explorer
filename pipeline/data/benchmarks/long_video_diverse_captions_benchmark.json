@@ -1,0 +1,38 @@
+{
+  "name": "Long Video Diverse Captions Benchmark",
+  "description": "Existing long video retrieval systems are trained and tested in the paragraph-to-video retrieval regime, where every long video is described by a single long paragraph. This neglects the richness and variety of possible valid descriptions of a video, which could range anywhere from moment-by-moment detail to a single phrase summary. To provide a more thorough evaluation of the capabilities of long video retrieval systems, we propose a pipeline that leverages state-of-the-art large language models to carefully generate a diverse set of synthetic captions for long videos. We validate this pipeline's fidelity via rigorous human inspection. We use synthetic captions from this pipeline to perform a benchmark of a representative set of video language models using long video datasets, and show that the models struggle on shorter captions. We show that finetuning on this data can both mitigate these issues (+2.8% R@1 over SOTA on ActivityNet with diverse captions), and even improve performance on standard paragraph-to-video retrieval (+1.0% R@1 on ActivityNet). We also use synthetic data from our pipeline as query expansion in the zero-shot setting (+3.4% R@1 on ActivityNet). We derive insights by analyzing failure cases for retrieval with short captions. For data access and other details, please refer to our project website at https://mgwillia.github.io/10k-words.",
+  "category": "multimodal",
+  "domain": "vision (video retrieval)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_retrieval",
+    "caption_generation",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@K (R@1, R@5), mAP and retrieval ranking metrics",
+  "general_score_metric": "R@1 (primary reported retrieval metric)",
+  "typical_sota_score": "varies by dataset; long-video retrieval R@1 is typically low-to-moderate (e.g., on the order of ~10–40% depending on dataset and caption verbosity)",
+  "year_of_publish": 2023,
+  "reputation": "A well-motivated research benchmark for long-video retrieval and caption diversity that has been cited in recent video-language retrieval work and used to highlight limitations of current models.",
+  "notes": "Captions are synthetic (LLM-generated) and, while human-validated, may introduce stylistic or topical bias; gains reported from synthetic augmentation may not generalize to all real-world caption distributions; potential for pretraining overlap/contamination with large multimodal models.",
+  "creators": {
+    "scientists": [
+      "Matthew Gwilliam",
+      "Michael Cogswell",
+      "Meng Ye",
+      "Karan Sikka",
+      "Abhinav Shrivastava",
+      "Ajay Divakaran"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.00115",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

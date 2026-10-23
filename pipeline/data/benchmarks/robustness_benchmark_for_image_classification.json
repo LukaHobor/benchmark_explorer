@@ -1,0 +1,42 @@
+{
+  "name": "Robustness Benchmark for Image Classification",
+  "description": "The robustness of deep neural networks is usually lacking under adversarial examples, common corruptions, and distribution shifts, which becomes an important research problem in the development of deep learning. Although new deep learning methods and robustness improvement techniques have been constantly proposed, the robustness evaluations of existing methods are often inadequate due to their rapid development, diverse noise patterns, and simple evaluation metrics. Without thorough robustness evaluations, it is hard to understand the advances in the field and identify the effective methods. In this paper, we establish a comprehensive robustness benchmark called \\textbf{ARES-Bench} on the image classification task. In our benchmark, we evaluate the robustness of 55 typical deep learning models on ImageNet with diverse architectures (e.g., CNNs, Transformers) and learning algorithms (e.g., normal supervised training, pre-training, adversarial training) under numerous adversarial attacks and out-of-distribution (OOD) datasets. Using robustness curves as the major evaluation criteria, we conduct large-scale experiments and draw several important findings, including: 1) there is an inherent trade-off between adversarial and natural robustness for the same model architecture; 2) adversarial training effectively improves adversarial robustness, especially when performed on Transformer architectures; 3) pre-training significantly improves natural robustness based on more training data or self-supervised learning. Based on ARES-Bench, we further analyze the training tricks in large-scale adversarial training on ImageNet. By designing the training settings accordingly, we achieve the new state-of-the-art adversarial robustness. We have made the benchmarking results and code platform publicly available.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation",
+    "adversarial_attack_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "robust accuracy (accuracy under corruptions/attacks) summarized via robustness curves / area-under-curve",
+  "general_score_metric": "robust accuracy / area under robustness curve",
+  "typical_sota_score": "varies widely — e.g., natural ImageNet accuracy ~60–80%, adversarial robust accuracy often ranges ~0–60% depending on attack strength",
+  "year_of_publish": 2023,
+  "reputation": "A comprehensive 2023 benchmark paper used by robustness researchers to compare many architectures and training schemes; respected within the robustness evaluation community.",
+  "notes": "Large-scale, non-LLM vision benchmark; computationally expensive to reproduce full evaluation; results are sensitive to attack/hyperparameter choices and can depend heavily on evaluation protocol (attack strength, dataset variants).",
+  "creators": {
+    "scientists": [
+      "Chang Liu",
+      "Yinpeng Dong",
+      "Wenzhao Xiang",
+      "Xiao Yang",
+      "Hang Su",
+      "Jun Zhu",
+      "Yuefeng Chen",
+      "Yuan He",
+      "Hui Xue",
+      "Shibao Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2302.14301",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

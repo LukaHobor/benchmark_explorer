@@ -1,0 +1,37 @@
+{
+  "name": "Mimicking-Bench",
+  "description": "Learning generic skills for humanoid robots interacting with 3D scenes by mimicking human data is a key research challenge with significant implications for robotics and real-world applications. However, existing methodologies and benchmarks are constrained by the use of small-scale, manually collected demonstrations, lacking the general dataset and benchmark support necessary to explore scene geometry generalization effectively. To address this gap, we introduce Mimicking-Bench, the first comprehensive benchmark designed for generalizable humanoid-scene interaction learning through mimicking large-scale human animation references. Mimicking-Bench includes six household full-body humanoid-scene interaction tasks, covering 11K diverse object shapes, along with 20K synthetic and 3K real-world human interaction skill references. We construct a complete humanoid skill learning pipeline and benchmark approaches for motion retargeting, motion tracking, imitation learning, and their various combinations. Extensive experiments highlight the value of human mimicking for skill learning, revealing key challenges and research directions.",
+  "category": "multimodal",
+  "domain": "robotics (humanoid interaction)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "motion_retargeting",
+    "motion_tracking",
+    "imitation_learning",
+    "skill_imitation_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate / motion_reconstruction_error (e.g., per-joint MSE) / per-frame pose_error ; qualitative human_eval for realism",
+  "general_score_metric": "task_success_rate (primary) ; motion_reconstruction_error as secondary",
+  "year_of_publish": 2024,
+  "reputation": "New, domain-specific benchmark for humanoid–scene interaction; promising but early adoption and limited baseline coverage so far.",
+  "notes": "Non-LLM benchmark combining synthetic and real human references; sizable but specialized dataset (poses + scene geometry) with potential sim-to-real and domain-gap challenges; requires physics / motion-retargeting pipelines; limited existing baselines and potential dataset biases in object shapes and interactions.",
+  "creators": {
+    "scientists": [
+      "Yun Liu",
+      "Bowen Yang",
+      "Licheng Zhong",
+      "He Wang",
+      "Li Yi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2412.17730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

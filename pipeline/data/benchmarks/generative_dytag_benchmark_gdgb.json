@@ -1,0 +1,37 @@
+{
+  "name": "Generative DyTAG Benchmark (GDGB)",
+  "description": "Dynamic Text-Attributed Graphs (DyTAGs), which intricately integrate structural, temporal, and textual attributes, are crucial for modeling complex real-world systems. However, most existing DyTAG datasets exhibit poor textual quality, which severely limits their utility for generative DyTAG tasks requiring semantically rich inputs. Additionally, prior work mainly focuses on discriminative tasks on DyTAGs, resulting in a lack of standardized task formulations and evaluation protocols tailored for DyTAG generation. To address these critical issues, we propose Generative DyTAG Benchmark (GDGB), which comprises eight meticulously curated DyTAG datasets with high-quality textual features for both nodes and edges, overcoming limitations of prior datasets. Building on GDGB, we define two novel DyTAG generation tasks: Transductive Dynamic Graph Generation (TDGG) and Inductive Dynamic Graph Generation (IDGG). TDGG transductively generates a target DyTAG based on the given source and destination node sets, while the more challenging IDGG introduces new node generation to inductively model the dynamic expansion of real-world graph data. To enable holistic evaluation, we design multifaceted metrics that assess the structural, temporal, and textual quality of the generated DyTAGs. We further propose GAG-General, an LLM-based multi-agent generative framework tailored for reproducible and robust benchmarking of DyTAG generation. Experimental results demonstrate that GDGB enables rigorous evaluation of TDGG and IDGG, with key insights revealing the critical interplay of structural and textual features in DyTAG generation. These findings establish GDGB as a foundational resource for advancing generative DyTAG research and unlocking further practical applications in DyTAG generation. The dataset and source code are available at https://github.com/Lucas-PJ/GDGB-ALGO.",
+  "category": "multimodal",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "dynamic_graph_generation",
+    "conditional_graph_generation",
+    "inductive_graph_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite evaluation (structural + temporal + textual metrics, e.g., graph similarity / graph edit distance / temporal consistency / text quality measures)",
+  "general_score_metric": "composite_score (combined structural/temporal/textual evaluation)",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Multimodal (text+structure+time) non-LLM benchmark; evaluation requires multiple specialized metrics and careful protocol adherence. New benchmark with potential sensitivity to dataset size and domain-specific text quality.",
+  "creators": {
+    "scientists": [
+      "Jie Peng",
+      "Jiarui Ji",
+      "Runlin Lei",
+      "Zhewei Wei",
+      "Yongchao Liu",
+      "Chuntao Hong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2507.03267",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

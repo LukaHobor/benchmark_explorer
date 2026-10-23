@@ -1,0 +1,41 @@
+{
+  "name": "IBSI Radiomics Feature Benchmarking",
+  "description": "There is no consensus regarding the radiomic feature terminology, the underlying mathematics, or their implementation. This creates a scenario where features extracted using different toolboxes could not be used to build or validate the same model leading to a non-generalization of radiomic results. In this study, the image biomarker standardization initiative (IBSI) established phantom and benchmark values were used to compare the variation of the radiomic features while using 6 publicly available software programs and 1 in-house radiomics pipeline. All IBSI-standardized features (11 classes, 173 in total) were extracted. The relative differences between the extracted feature values from the different software and the IBSI benchmark values were calculated to measure the inter-software agreement. To better understand the variations, features are further grouped into 3 categories according to their properties: 1) morphology, 2) statistic/histogram and 3)texture features. While a good agreement was observed for a majority of radiomics features across the various programs, relatively poor agreement was observed for morphology features. Significant differences were also found in programs that use different gray level discretization approaches. Since these programs do not include all IBSI features, the level of quantitative assessment for each category was analyzed using Venn and the UpSet diagrams and also quantified using two ad hoc metrics. Morphology features earns lowest scores for both metrics, indicating that morphological features are not consistently evaluated among software programs. We conclude that radiomic features calculated using different software programs may not be identical and reliable. Further studies are needed to standardize the workflow of radiomic feature extraction.",
+  "category": "vision",
+  "domain": "medical imaging / radiomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "feature_extraction",
+    "software_benchmarking",
+    "reproducibility"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "relative_difference",
+  "general_score_metric": "mean_relative_difference (%)",
+  "typical_sota_score": "varies; many features show <5% relative difference across tools, while morphology features often exceed 10%.",
+  "year_of_publish": 2020,
+  "reputation": "IBSI benchmarking is widely regarded in the radiomics community as a foundational standard for feature definition and software validation.",
+  "notes": "Non-ML benchmark focused on inter-software reproducibility. Not all tools implement the full IBSI feature set; results are sensitive to preprocessing and gray-level discretization choices. Uses phantom/benchmark values rather than large clinical cohorts.",
+  "creators": {
+    "scientists": [
+      "Mingxi Lei",
+      "Bino Varghese",
+      "Darryl Hwang",
+      "Steven Cen",
+      "Xiaomeng Lei",
+      "Afshin Azadikhah",
+      "Bhushan Desai",
+      "Assad Oberai",
+      "Vinay Duddalwar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2006.12761",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

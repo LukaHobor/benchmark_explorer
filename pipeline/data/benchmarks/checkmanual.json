@@ -1,0 +1,38 @@
+{
+  "name": "CheckManual",
+  "description": "Correct use of electrical appliances has significantly improved human life quality. Unlike simple tools that can be manipulated with common sense, different parts of electrical appliances have specific functions defined by manufacturers. If we want the robot to heat bread by microwave, we should enable them to review the microwave manual first. From the manual, it can learn about component functions, interaction methods, and representative task steps about appliances. However, previous manual-related works remain limited to question-answering tasks while existing manipulation researchers ignore the manual's important role and fail to comprehend multi-page manuals. In this paper, we propose the first manual-based appliance manipulation benchmark CheckManual. Specifically, we design a large model-assisted human-revised data generation pipeline to create manuals based on CAD appliance models. With these manuals, we establish novel manual-based manipulation challenges, metrics, and simulator environments for model performance evaluation. Furthermore, we propose the first manual-based manipulation planning model ManualPlan to set up a group of baselines for the CheckManual benchmark.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "competition",
+  "task_types": [
+    "instruction_following",
+    "manipulation_planning",
+    "multimodal_reasoning",
+    "simulated_execution"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate / plan fidelity (execution matches planned steps), step-level accuracy and simulation roll-out success",
+  "general_score_metric": "task_success_rate (episode-level)",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed benchmark exploring manual-informed manipulation planning with early baselines; promising but not yet widely adopted.",
+  "notes": "Contains LLM-assisted, human-revised manuals and simulated environments — risk of synthetic/manual bias and potential contamination from model-generated text; sim-to-real gap likely significant. Evaluation depends on simulator fidelity and how manuals were synthesized/edited.",
+  "creators": {
+    "scientists": [
+      "Yuxing Long",
+      "Jiyao Zhang",
+      "Mingjie Pan",
+      "Tianshu Wu",
+      "Taewhan Kim",
+      "Hao Dong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2506.09343",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

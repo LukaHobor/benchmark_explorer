@@ -1,0 +1,34 @@
+{
+  "name": "RGB-D SLAM INR Benchmark",
+  "description": "Implicit neural representation (INR), in combination with geometric rendering, has recently been employed in real-time dense RGB-D SLAM. Despite active research endeavors being made, there lacks a unified protocol for fair evaluation, impeding the evolution of this area. In this work, we establish, to our knowledge, the first open-source benchmark framework to evaluate the performance of a wide spectrum of commonly used INRs and rendering functions for mapping and localization. The goal of our benchmark is to 1) gain an intuition of how different INRs and rendering functions impact mapping and localization and 2) establish a unified evaluation protocol w.r.t. the design choices that may impact the mapping and localization. With the framework, we conduct a large suite of experiments, offering various insights in choosing the INRs and geometric rendering functions: for example, the dense feature grid outperforms other INRs (e.g. tri-plane and hash grid), even when geometric and color features are jointly encoded for memory efficiency. To extend the findings into the practical scenario, a hybrid encoding strategy is proposed to bring the best of the accuracy and completion from the grid-based and decomposition-based INRs. We further propose explicit hybrid encoding for high-fidelity dense grid mapping to comply with the RGB-D SLAM system that puts the premise on robustness and computation efficiency.",
+  "category": "vision",
+  "domain": "robotics/vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "mapping",
+    "localization",
+    "reconstruction",
+    "pose_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pose_error (Absolute Trajectory Error / Relative Pose Error) and reconstruction metrics (Chamfer distance, IoU)",
+  "general_score_metric": "Absolute Trajectory Error (ATE) / Chamfer distance",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) specialized benchmark with emerging recognition in the INR-for-SLAM subcommunity but limited broad adoption so far.",
+  "notes": "Non-LLM robotics/vision benchmark; evaluation uses multiple task-specific metrics (pose and reconstruction). Results can be sensitive to implementation details, rendering choices, and hardware; potential for overfitting to the provided protocol and sequences.",
+  "creators": {
+    "scientists": [
+      "Tongyan Hua",
+      "Lin Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.19473",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

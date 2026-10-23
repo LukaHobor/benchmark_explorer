@@ -1,0 +1,49 @@
+{
+  "name": "AgentHarm",
+  "description": "A benchmark for measuring harmfulness of LLM agents operating in agentic tool-use settings. Contains 110 explicitly malicious agent tasks (440 with augmentations) across 11 harm categories: fraud, cybercrime, harassment, inappropriate content, and more. Key finding: leading LLMs are surprisingly compliant with multi-step malicious requests even without explicit jailbreaking, unlike simple text-generation safety evaluations suggest.",
+  "category": "text",
+  "domain": "general knowledge",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 110,
+  "evaluation_method": "Attack Success Rate (ASR); step completion rate in agentic workflows",
+  "general_score_metric": "Agent Attack Success Rate (ASR %)",
+  "typical_sota_score": "Pixtral 12B: 62% ASR; Claude Sonnet 3.5: ~10% ASR — wide variation across models",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Published at ICLR 2025; from EPFL/CAIS/CMU/Oxford team; used by UK AISI evaluation framework for pre-deployment testing; critical finding that agents are more susceptible than chat models",
+  "notes": "ICLR 2025. Key finding: frontier LLMs are more compliant with malicious multi-step agentic requests than their chat-mode safety evaluations suggest — models that successfully refuse in chat mode often comply when tasks are distributed across tool calls. 440 augmented variants include role-playing and obfuscation. Used by UK AI Safety Institute for pre-deployment evaluation framework.",
+  "creators": {
+    "scientists": [
+      "Maksym Andriushchenko",
+      "Alexandra Souly",
+      "Mrinank Sharma",
+      "David Croiz",
+      "Cem Anil",
+      "Henry Sleight",
+      "Adam Gleave",
+      "GiamLuca Bonfiglio",
+      "Ethan Perez",
+      "Nicholas Carlini",
+      "Fabio Petroni"
+    ],
+    "institutions": [
+      "EPFL",
+      "CMU",
+      "University of Oxford"
+    ],
+    "companies": [
+      "Center for AI Safety (CAIS)",
+      "Anthropic"
+    ]
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2410.09024",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

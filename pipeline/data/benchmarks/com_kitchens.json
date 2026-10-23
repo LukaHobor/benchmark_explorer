@@ -1,0 +1,38 @@
+{
+  "name": "COM Kitchens",
+  "description": "Procedural video understanding is gaining attention in the vision and language community. Deep learning-based video analysis requires extensive data. Consequently, existing works often use web videos as training resources, making it challenging to query instructional contents from raw video observations. To address this issue, we propose a new dataset, COM Kitchens. The dataset consists of unedited overhead-view videos captured by smartphones, in which participants performed food preparation based on given recipes. Fixed-viewpoint video datasets often lack environmental diversity due to high camera setup costs. We used modern wide-angle smartphone lenses to cover cooking counters from sink to cooktop in an overhead view, capturing activity without in-person assistance. With this setup, we collected a diverse dataset by distributing smartphones to participants. With this dataset, we propose the novel video-to-text retrieval task Online Recipe Retrieval (OnRR) and new video captioning domain Dense Video Captioning on unedited Overhead-View videos (DVC-OV). Our experiments verified the capabilities and limitations of current web-video-based SOTA methods in handling these tasks.",
+  "category": "multimodal",
+  "domain": "procedural video / cooking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_captioning",
+    "video_to_text_retrieval",
+    "dense_video_captioning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@K for retrieval tasks; BLEU/CIDEr (and similar captioning metrics) for captioning/dense captioning",
+  "general_score_metric": "Recall@K and CIDEr",
+  "year_of_publish": 2024,
+  "reputation": "A recent procedural overhead-view cooking dataset gaining attention for evaluating video-to-text and dense captioning methods in the instructional video community, but adoption is still growing.",
+  "notes": "Overhead, unedited smartphone videos introduce domain bias relative to web videos; dataset size and viewpoint specificity may limit generalization. Not an LLM benchmark; evaluates video+language models and may be sensitive to pretraining on web video corpora (potential contamination/saturation risks).",
+  "creators": {
+    "scientists": [
+      "Koki Maeda",
+      "Tosho Hirasawa",
+      "Atsushi Hashimoto",
+      "Jun Harashima",
+      "Leszek Rybicki",
+      "Yusuke Fukasawa",
+      "Yoshitaka Ushiku"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2408.02272",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

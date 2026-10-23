@@ -1,0 +1,32 @@
+{
+  "name": "Groningen Low-Magnitude Earthquake Detection Benchmark",
+  "description": "While deep learning models have seen recent high uptake in the geosciences, and are appealing in their ability to learn from minimally processed input data, as black box models they do not provide an easy means to understand how a decision is reached, which in safety-critical tasks especially can be problematical. An alternative route is to use simpler, more transparent white box models, in which task-specific feature construction replaces the more opaque feature discovery process performed automatically within deep learning models. Using data from the Groningen Gas Field in the Netherlands, we build on an existing logistic regression model by the addition of four further features discovered using elastic net driven data mining within the catch22 time series analysis package. We then evaluate the performance of the augmented logistic regression model relative to a deep (CNN) model, pre-trained on the Groningen data, on progressively increasing noise-to-signal ratios. We discover that, for each ratio, our logistic regression model correctly detects every earthquake, while the deep model fails to detect nearly 20 % of seismic events, thus justifying at least a degree of caution in the application of deep models, especially to data with higher noise-to-signal ratios.",
+  "category": "audio",
+  "domain": "geoscience / seismology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall",
+  "general_score_metric": "recall (detection_rate)",
+  "year_of_publish": 2022,
+  "reputation": "Domain-specific benchmark reported in geoscience literature with limited wider adoption outside seismology research.",
+  "notes": "Small, domain-specific dataset; non-LLM benchmark focused on seismic time-series. Performance is highly sensitive to noise-to-signal ratio; engineered feature approaches may outperform deep models on noisy data. Limited public adoption and potential for dataset-specific tuning.",
+  "creators": {
+    "scientists": [
+      "Akshat Goel",
+      "Denise Gorse"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2205.00525",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

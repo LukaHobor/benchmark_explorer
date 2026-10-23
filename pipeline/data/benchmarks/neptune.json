@@ -1,0 +1,46 @@
+{
+  "name": "Neptune",
+  "description": "We introduce Neptune, a benchmark for long video understanding that requires reasoning over long time horizons and across different modalities. Many existing video datasets and models are focused on short clips (10s-30s). While some long video datasets do exist, they can often be solved by powerful image models applied per frame (and often to very few frames) in a video, and are usually manually annotated at high cost. In order to mitigate both these problems, we propose a scalable dataset creation pipeline which leverages large models (VLMs and LLMs), to automatically generate dense, time-aligned video captions, as well as tough question answer decoy sets for video segments (up to 15 minutes in length). Our dataset Neptune covers a broad range of long video reasoning abilities and consists of a subset that emphasizes multimodal reasoning. Since existing metrics for open-ended question answering are either rule-based or may rely on proprietary models, we provide a new open source model-based metric GEM to score open-ended responses on Neptune. Benchmark evaluations reveal that most current open-source long video models perform poorly on Neptune, particularly on questions testing temporal ordering, counting and state changes. Through Neptune, we aim to spur the development of more advanced models capable of understanding long videos. The dataset is available at https://github.com/google-deepmind/neptune",
+  "category": "multimodal",
+  "domain": "video / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multiple_choice",
+    "video_question_answering",
+    "temporal_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "GEM (model-based open-ended scoring) for free-form answers; accuracy for multiple-choice",
+  "general_score_metric": "GEM (model-based scoring)",
+  "typical_sota_score": "unknown (reported as low; most open-source long-video models perform poorly)",
+  "year_of_publish": 2024,
+  "reputation": "New large-scale long-video benchmark from Google/DeepMind gaining attention for highlighting weaknesses of current long-video models.",
+  "notes": "Automatically generated dense captions and decoy QAs using LLMs/VLMs — potential for training/test contamination and synthetic-label artifacts. Emphasizes long-range temporal reasoning; metric relies on a learned (open-source) scorer rather than simple string matching.",
+  "creators": {
+    "scientists": [
+      "Arsha Nagrani",
+      "Mingda Zhang",
+      "Ramin Mehran",
+      "Rachel Hornung",
+      "Nitesh Bharadwaj Gundavarapu",
+      "Nilpa Jha",
+      "Austin Myers",
+      "Xingyi Zhou",
+      "Boqing Gong",
+      "Cordelia Schmid",
+      "Mikhail Sirotenko",
+      "Yukun Zhu",
+      "Tobias Weyand"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.09582",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

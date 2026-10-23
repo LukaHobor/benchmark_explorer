@@ -1,0 +1,33 @@
+{
+  "name": "CaLiGraph",
+  "description": "CaLiGraph is a large-scale cross-domain knowledge graph generated from Wikipedia by exploiting the category system, list pages, and other list structures in Wikipedia, containing more than 15 million typed entities and around 10 million relation assertions. Other than knowledge graphs such as DBpedia and YAGO, whose ontologies are comparably simplistic, CaLiGraph also has a rich ontology, comprising more than 200,000 class restrictions. Those two properties - a large A-box and a rich ontology - make it an interesting challenge for benchmarking reasoners. In this paper, we show that a reasoning task which is particularly relevant for CaLiGraph, i.e., the materialization of owl:hasValue constraints into assertions between individuals and between individuals and literals, is insufficiently supported by available reasoning systems. We provide differently sized benchmark subsets of CaLiGraph, which can be used for performance analysis of reasoning systems.",
+  "category": "mixed",
+  "domain": "knowledge graphs / semantic web",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "knowledge_graph_reasoning",
+    "materialization",
+    "inference"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision/recall for entailed assertions combined with runtime/performance (materialization time, memory usage)",
+  "general_score_metric": "precision and recall of entailed assertions (and materialization time)",
+  "year_of_publish": 2021,
+  "reputation": "A specialized large-scale benchmark valued in the semantic web / reasoning community for stressing reasoners with a large A-box and rich ontology; less widely used than DBpedia/YAGO but important for performance analysis.",
+  "notes": "Non-LLM benchmark focused on OWL reasoning; very large scale (subsets provided) so results are highly dependent on hardware and reasoner implementation; potential label/ontology noise inherent from automatic extraction from Wikipedia.",
+  "creators": {
+    "scientists": [
+      "Nicolas Heist",
+      "Heiko Paulheim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2110.05028",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

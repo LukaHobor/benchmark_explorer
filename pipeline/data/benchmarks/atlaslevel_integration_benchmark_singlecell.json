@@ -1,0 +1,38 @@
+{
+  "name": "Atlas-level integration benchmark (single-cell)",
+  "description": "Single-cell atlases often include samples that span locations, laboratories and conditions, leading to complex, nested batch effects in data. Thus, joint analysis of atlas datasets requires reliable data integration. To guide integration method choice, we benchmarked 68 method and preprocessing combinations on 85 batches of gene expression, chromatin accessibility and simulation data from 23 publications, altogether representing >1.2 million cells distributed in 13 atlas-level integration tasks. We evaluated methods according to scalability, usability and their ability to remove batch effects while retaining biological variation using 14 evaluation metrics. We show that highly variable gene selection improves the performance of data integration methods, whereas scaling pushes methods to prioritize batch removal over conservation of biological variation. Overall, scANVI, Scanorama, scVI and scGen perform well, particularly on complex integration tasks, while single-cell ATAC-sequencing integration performance is strongly affected by choice of feature space. Our freely available Python module and benchmarking pipeline can identify optimal data integration methods for new data, benchmark new methods and improve method development.",
+  "category": "mixed",
+  "domain": "bioinformatics / single-cell genomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "data_integration",
+    "batch_correction",
+    "clustering",
+    "biological_conservation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (aggregation of 14 metrics including batch-effect removal, biological conservation, scalability, and usability)",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2021,
+  "reputation": "1315 citations",
+  "notes": "Large-scale, non-LLM benchmark (>1.2M cells) with heterogeneous tasks and 14 evaluation metrics; results are sensitive to preprocessing choices (e.g., gene selection, scaling) and integration objective trade-offs between batch removal and biological variation conservation.",
+  "creators": {
+    "scientists": [
+      "Malte D. Luecken",
+      "Maren Büttner",
+      "Kridsadakorn Chaichoompu",
+      "Anna Danese",
+      "Marta Interlandi",
+      "Martin Mueller"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41592-021-01336-8",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "AutoVP benchmark",
+  "description": "Visual prompting (VP) is an emerging parameter-efficient fine-tuning approach to adapting pre-trained vision models to solve various downstream image-classification tasks. However, there has hitherto been little systematic study of the design space of VP and no clear benchmark for evaluating its performance. To bridge this gap, we propose AutoVP, an end-to-end expandable framework for automating VP design choices, along with 12 downstream image-classification tasks that can serve as a holistic VP-performance benchmark. Our design space covers 1) the joint optimization of the prompts; 2) the selection of pre-trained models, including image classifiers and text-image encoders; and 3) model output mapping strategies, including nonparametric and trainable label mapping. Our extensive experimental results show that AutoVP outperforms the best-known current VP methods by a substantial margin, having up to 6.7% improvement in accuracy; and attains a maximum performance increase of 27.5% compared to linear-probing (LP) baseline. AutoVP thus makes a two-fold contribution: serving both as an efficient tool for hyperparameter tuning on VP design choices, and as a comprehensive benchmark that can reasonably be expected to accelerate VP's development. The source code is available at https://github.com/IBM/AutoVP.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "A targeted, newly proposed benchmark (from IBM) that has gained moderate attention in the visual prompting / parameter-efficient fine-tuning community for systematic VP evaluation.",
+  "notes": "Contains 12 downstream image-classification tasks (relatively small suite); focused on visual prompting (non-LLM). Results can be sensitive to pre-trained model choice and hyperparameters; possible dataset overlap/contamination depends on pretraining data of evaluated models.",
+  "creators": {
+    "scientists": [
+      "Hsi-Ai Tsao",
+      "Lei Hsiung",
+      "Pin-Yu Chen",
+      "Sijia Liu",
+      "Tsung-Yi Ho"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.08381",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

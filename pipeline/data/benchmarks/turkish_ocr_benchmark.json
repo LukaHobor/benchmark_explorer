@@ -1,0 +1,36 @@
+{
+  "name": "Turkish OCR Benchmark",
+  "description": "Abstract\n        Purpose:\nWe present the first systematic benchmark evaluation of Optical Character Recognition (OCR) and Vision-Language Models (VLMs) for Turkish text recognition, addressing a critical gap in low-resource language processing. Turkish, with its agglutinative structure and unique characters (ç, ğ, ı, İ, ö, ş, ü), poses challenges for models trained on high-resource languages such as English.\nMethods:\nWe developed a synthetic Turkish dataset of 6,600 images spanning three main text types: printed, handwritten, scene text. The dataset includes variations such as the presence of Turkish characters, effects of word length, sentence versus word recognition, and various distortion types (rotation, resolution, noise, and blur).Our evaluation compares three different model categories: traditional OCR systems, open-source VLMs, and commercial VLMs.\nResults:\nThe results show that modern VLMs significantly outperform traditional OCR approaches, with GPT-4o and Qwen2.5-VL models demonstrating superior performance. Notably, images containing Turkish-specific characters posed significant challenges for all models, with only GPT-4o maintaining stable performance. This highlights the critical impact of training dataset composition on multilingual performance. While the agglutinative word structure did not significantly affect recognition accuracy, handwritten text recognition remains a persistent challenge across all evaluated systems.\nConclusion:\nThe open-source Qwen2.5-VL model achieved comparable performance to the commercial GPT-4o despite having fewer parameters, showing strong potential as a computationally efficient alternative. This benchmark study establishes a standardized evaluation framework for Turkish text recognition research. To support future research in this domain, we publicly release the synthetic dataset, enabling reproducible research in low-resource language text recognition.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optical_character_recognition",
+    "image_to_text",
+    "text_recognition"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (primary), with character error rate (CER) and word-level accuracy reported as secondary metrics",
+  "general_score_metric": "word-level accuracy",
+  "typical_sota_score": "70–95% (varies by text type: printed > scene > handwritten; performance drops on Turkish-specific characters)",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific benchmark for Turkish OCR; valuable for researchers working on low-resource languages but not yet widely adopted outside that community.",
+  "notes": "Synthetic dataset (6,600 images) — may not fully reflect real-world distributions; relatively small size; modality-dependent performance; potential training-data overlap with commercial VLMs unknown; non-LLM baseline OCR systems included.",
+  "creators": {
+    "scientists": [
+      "Yasin Yılmaz",
+      "Erol Görkem Hanoğlu",
+      "Ayşe Gül Özkan",
+      "Kasım Öztoprak"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.21203/rs.3.rs-7797886/v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

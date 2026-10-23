@@ -1,0 +1,32 @@
+{
+  "name": "news-image bias benchmark",
+  "description": "Large vision-language models (VLMs) can jointly interpret images and text, but they are also prone to absorbing and reproducing harmful social stereotypes when visual cues such as age, gender, race, clothing, or occupation are present. To investigate these risks, we introduce a news-image benchmark consisting of 1,343 image-question pairs drawn from diverse outlets, which we annotated with ground-truth answers and demographic attributes (age, gender, race, occupation, and sports). We evaluate a range of state-of-the-art VLMs and employ a large language model (LLM) as judge, with human verification. Our findings show that: (i) visual context systematically shifts model outputs in open-ended settings; (ii) bias prevalence varies across attributes and models, with particularly high risk for gender and occupation; and (iii) higher faithfulness does not necessarily correspond to lower bias. We release the benchmark prompts, evaluation rubric, and code to support reproducible and fairness-aw",
+  "category": "multimodal",
+  "domain": "vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "LLM-judge with human verification",
+  "general_score_metric": "bias rate",
+  "year_of_publish": 2025,
+  "reputation": "A recent specialized benchmark for probing social bias in vision-language models, but not yet a widely standardized community leaderboard.",
+  "notes": "Small benchmark (1,343 examples) focused on bias/fairness rather than general task accuracy; scores depend on judge prompting and human verification.",
+  "creators": {
+    "scientists": [
+      "Aravind Narayanan",
+      "Vahid Reza Khazaie",
+      "Shaina Raza"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2509.19659",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

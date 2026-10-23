@@ -1,0 +1,35 @@
+{
+  "name": "SAM Medical Images Benchmark",
+  "description": "Background: The segment-anything model (SAM), introduced in April 2023, shows promise as a benchmark model and a universal solution to segment various natural images. It comes without previously-required re-training or fine-tuning specific to each new dataset. Purpose: To test SAM's accuracy in various medical image segmentation tasks and investigate potential factors that may affect its accuracy in medical images. Methods: SAM was tested on 12 public medical image segmentation datasets involving 7,451 subjects. The accuracy was measured by the Dice overlap between the algorithm-segmented and ground-truth masks. SAM was compared with five state-of-the-art algorithms specifically designed for medical image segmentation tasks. Associations of SAM's accuracy with six factors were computed, independently and jointly, including segmentation difficulties as measured by segmentation ability score and by Dice overlap in U-Net, image dimension, size of the target region, image modality, and con",
+  "category": "vision",
+  "domain": "medical imaging",
+  "task_types": [
+    "image_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "dice",
+  "general_score_metric": "Dice",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2023,
+  "reputation": "A widely discussed early benchmark for evaluating the zero-shot segmentation ability of SAM on medical images, often cited in medical imaging adaptation studies.",
+  "notes": "Not an LLM benchmark; results depend heavily on modality and target structure, and SAM is often substantially weaker on medical images than on natural images.",
+  "creators": {
+    "scientists": [
+      "Sheng He",
+      "Rina Bao",
+      "Jingpeng Li",
+      "Jeffrey Stout",
+      "Atle Bjornerud",
+      "P. Ellen Grant"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2304.09324",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

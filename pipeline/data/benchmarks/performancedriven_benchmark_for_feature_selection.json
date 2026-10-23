@@ -1,0 +1,36 @@
+{
+  "name": "Performance-Driven Benchmark for Feature Selection",
+  "description": "Academic tabular benchmarks often contain small sets of curated features. In contrast, data scientists typically collect as many features as possible into their datasets, and even engineer new features from existing ones. To prevent over-fitting in subsequent downstream modeling, practitioners commonly use automated feature selection methods that identify a reduced subset of informative features. Existing benchmarks for tabular feature selection consider classical downstream models, toy synthetic datasets, or do not evaluate feature selectors on the basis of downstream performance. We construct a challenging feature selection benchmark evaluated on downstream neural networks including transformers, using real datasets and multiple methods for generating extraneous features. We also propose an input-gradient-based analogue of LASSO for neural networks that outperforms classical feature selection methods on challenging problems such as selecting from corrupted or second-order features.Submission Number: 668",
+  "category": "mixed",
+  "domain": "tabular data / machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "feature_selection",
+    "classification",
+    "regression",
+    "downstream_performance_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "downstream predictive performance (accuracy/AUC/RMSE) combined with feature-selection metrics (precision/recall of selected informative features)",
+  "general_score_metric": "downstream accuracy / AUC (with supplementary feature-selection precision/recall)",
+  "year_of_publish": 2023,
+  "reputation": "A targeted research benchmark for evaluating feature-selection methods on realistic, challenging tabular problems; recognized within the feature-selection and tabular-ML research communities.",
+  "notes": "Designed to stress feature selectors by adding extraneous/corrupted features and second-order features; focuses on downstream neural-network performance rather than toy or classical baselines.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

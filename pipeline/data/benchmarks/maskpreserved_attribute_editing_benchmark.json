@@ -1,0 +1,37 @@
+{
+  "name": "Mask-Preserved Attribute Editing Benchmark",
+  "description": "When deploying segmentation models in practice, it is critical to evaluate their behaviors in varied and complex scenes. Different from the previous evaluation paradigms only in consideration of global attribute variations (e.g. adverse weather), we investigate both local and global attribute variations for robustness evaluation. To achieve this, we construct a mask-preserved attribute editing pipeline to edit visual attributes of real images with precise control of structural information. Therefore, the original segmentation labels can be reused for the edited images. Using our pipeline, we construct a benchmark covering both object and image attributes (e.g. color, material, pattern, style). We evaluate a broad variety of semantic segmentation models, spanning from conventional close-set models to recent open-vocabulary large models on their robustness to different types of variations. We find that both local and global attribute variations affect segmentation performances, and the sensitivity of models diverges across different variation types. We argue that local attributes have the same importance as global attributes, and should be considered in the robustness evaluation of segmentation models. Code: https://github.com/PRIS-CV/Pascal-EA.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "robustness_evaluation",
+    "mask-guided_image_editing"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean Intersection-over-Union (mIoU) and mIoU drop under edited attributes (per-class and overall)",
+  "general_score_metric": "mean IoU (mIoU) and relative mIoU degradation under attribute edits",
+  "year_of_publish": 2024,
+  "reputation": "A recent (arXiv 2403) research benchmark targeted at segmentation-robustness studies; adoption is emerging among robustness and segmentation researchers.",
+  "notes": "Non-LLM vision benchmark; relies on synthetic/edited real images—realism of edits can affect results; reuses original labels via mask preservation which mitigates labeling cost but may not capture all real-world variations; limited to the provided edited attribute types.",
+  "creators": {
+    "scientists": [
+      "Zijin Yin",
+      "Kongming Liang",
+      "Bing Li",
+      "Zhanyu Ma",
+      "Jun Guo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.01231",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

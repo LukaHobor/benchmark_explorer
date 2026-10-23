@@ -1,0 +1,37 @@
+{
+  "name": "TwiUSD",
+  "description": "User-level stance detection (UserSD) remains challenging due to the lack of high-quality benchmarks that jointly capture linguistic and social structure. In this paper, we introduce TwiUSD, the first large-scale, manually annotated UserSD benchmark with explicit followee relationships, containing 16,211 users and 47,757 tweets. TwiUSD enables rigorous evaluation of stance models by integrating tweet content and social links, with superior scale and annotation quality. Building on this resource, we propose MRFG: a structure-aware framework that uses LLM-based relevance filtering and feature routing to address noise and context heterogeneity. MRFG employs multi-scale filtering and adaptively routes features through graph neural networks or multi-layer perceptrons based on topological informativeness. Experiments show MRFG consistently outperforms strong baselines (including PLMs, graph-based models, and LLM prompting) in both in-target and cross-target evaluation.",
+  "category": "text",
+  "domain": "social computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "user_level_classification",
+    "graph_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "macro-F1 (primary), accuracy; also in-target / cross-target evaluation",
+  "general_score_metric": "macro-F1",
+  "typical_sota_score": "approximately 65–80% (macro-F1) depending on target and model",
+  "year_of_publish": 2025,
+  "reputation": "Recently released large-scale Twitter user-stance benchmark (2025); promising for stance + social-graph research but not yet widely adopted.",
+  "notes": "Contains social graph and Twitter data — privacy and deletion issues; models may be affected by pretraining contamination; relatively large but domain-specific (Twitter) dataset.",
+  "creators": {
+    "scientists": [
+      "Fuaing Niu",
+      "Zini Chen",
+      "Zhiyu Xie",
+      "Genan Dai",
+      "Bowen Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2506.13343",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "ASR-GLUE",
+  "description": "Language understanding in speech-based systems have attracted much attention in recent years with the growing demand for voice interface applications. However, the robustness of natural language understanding (NLU) systems to errors introduced by automatic speech recognition (ASR) is under-examined. %To facilitate the research on ASR-robust general language understanding, In this paper, we propose ASR-GLUE benchmark, a new collection of 6 different NLU tasks for evaluating the performance of models under ASR error across 3 different levels of background noise and 6 speakers with various voice characteristics. Based on the proposed benchmark, we systematically investigate the effect of ASR error on NLU tasks in terms of noise intensity, error type and speaker variants. We further purpose two ways, correction-based method and data augmentation-based method to improve robustness of the NLU systems. Extensive experimental results and analysises show that the proposed methods are effective to some extent, but still far from human performance, demonstrating that NLU under ASR error is still very challenging and requires further research.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "natural_language_inference",
+    "text_similarity"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-specific metrics (accuracy / F1 / Matthews correlation as appropriate) aggregated per GLUE-style task",
+  "general_score_metric": "task-specific primary metric (commonly accuracy or F1 depending on the subtask)",
+  "typical_sota_score": "varies by subtask and noise level (commonly degraded relative to text GLUE; roughly 50–90% depending on task and noise)",
+  "year_of_publish": 2021,
+  "reputation": "A targeted benchmark used in research on ASR-robust NLU; referenced in papers on robustness but not as broadly adopted as core GLUE.",
+  "notes": "Small speaker pool and limited noise conditions (6 speakers, 3 noise levels) — results are sensitive to ASR system used; not a large-scale speech corpus and metrics vary by subtask (some use Matthews correlation, others use F1/accuracy).",
+  "creators": {
+    "scientists": [
+      "Lingyun Feng",
+      "Jianwei Yu",
+      "Deng Cai",
+      "Songxiang Liu",
+      "Haitao Zheng",
+      "Yan Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2108.13048",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "CompAlign",
+  "description": "State-of-the-art T2I models are capable of generating high-resolution images given textual prompts. However, they still struggle with accurately depicting compositional scenes that specify multiple objects, attributes, and spatial relations. We present CompAlign, a challenging benchmark with an emphasis on assessing the depiction of 3D-spatial relationships, for evaluating and improving models on compositional image generation. CompAlign consists of 900 complex multi-subject image generation prompts that combine numerical and 3D-spatial relationships with varied attribute bindings. Our benchmark is remarkably challenging, incorporating generation tasks with 3+ generation subjects with complex 3D-spatial relationships. Additionally, we propose CompQuest, an interpretable and accurate evaluation framework that decomposes complex prompts into atomic sub-questions, then utilizes a MLLM to provide fine-grained binary feedback on the correctness of each aspect of generation elements in model-generated images. This enables precise quantification of alignment between generated images and compositional prompts. Furthermore, we propose an alignment framework that uses CompQuest's feedback as preference signals to improve diffusion models' compositional image generation abilities. Using adjustable per-image preferences, our method is easily scalable and flexible for different tasks. Evaluation of 9 T2I models reveals that: (1) models remarkable struggle more with compositional tasks with more complex 3D-spatial configurations, and (2) a noticeable performance gap exists between open-source accessible models and closed-source commercial models. Further empirical study on using CompAlign for model alignment yield promising results: post-alignment diffusion models achieve remarkable improvements in compositional accuracy, especially on complex generation tasks, outperforming previous approaches.",
+  "category": "multimodal",
+  "domain": "vision / image generation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_generation",
+    "open_ended",
+    "compositional_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "component-wise binary correctness / compositional accuracy (CompQuest uses atomic yes/no checks aggregated to per-image compositional accuracy)",
+  "general_score_metric": "compositional_accuracy (mean component-wise binary correctness)",
+  "typical_sota_score": "10–40%",
+  "year_of_publish": 2025,
+  "reputation": "A recent, research-focused benchmark that has attracted interest for evaluating compositional and 3D-spatial alignment in T2I models but is not yet a broad community standard.",
+  "notes": "Relatively small (900 prompts) and focused on complex 3D-spatial compositions; evaluation relies on an automated MLLM (CompQuest) which can introduce evaluator bias; highlights a gap between open-source and closed-source T2I models.",
+  "creators": {
+    "scientists": [
+      "Yixin Wan",
+      "Kai-Wei Chang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.11178",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

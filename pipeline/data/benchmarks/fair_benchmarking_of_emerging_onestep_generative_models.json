@@ -1,0 +1,39 @@
+{
+  "name": "Fair Benchmarking of Emerging One-Step Generative Models",
+  "description": "State-of-the-art text-to-image models produce high-quality images, but inference remains expensive as generation requires several sequential ODE or denoising steps. Native one-step models aim to reduce this cost by mapping noise to an image in a single step, yet fair comparisons to multi-step systems are difficult because studies use mismatched sampling steps and different classifier-free guidance (CFG) settings, where CFG can shift FID, Inception Score, and CLIP-based alignment in opposing directions. It is also unclear how well one-step models scale to multi-step inference, and there is limited standardized out-of-distribution evaluation for label-ID-conditioned generators beyond ImageNet. To address this, We benchmark eight models spanning one-step flows (MeanFlow, Improved MeanFlow, SoFlow), multi-step baselines (RAE, Scale-RAE), and established systems (SiT, Stable Diffusion 3.5, FLUX.1) under a controlled class-conditional protocol on ImageNet validation, ImageNetV2, and reLAIONe",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_generation",
+    "class_conditional_generation",
+    "out_of_distribution_generalization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "FID",
+  "general_score_metric": "FID",
+  "typical_sota_score": "varies widely by model and dataset; FID typically ranges from roughly ~5 for strong multi-step baselines on ImageNet to tens or higher for current one-step models depending on evaluation setting",
+  "year_of_publish": 2026,
+  "reputation": "A recent benchmarking study rather than a long-established community benchmark.",
+  "notes": "Focuses on fair comparison of one-step versus multi-step generative models under controlled CFG and sampling settings; scores depend strongly on evaluation protocol.",
+  "creators": {
+    "scientists": [
+      "A. Ravishankar",
+      "Serena Liu",
+      "Mingyang Wang",
+      "T. Zhou",
+      "Jeffrey Zhou",
+      "Arnav Sharma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2603.14186",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

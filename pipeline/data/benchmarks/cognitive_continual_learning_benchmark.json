@@ -1,0 +1,36 @@
+{
+  "name": "Cognitive Continual Learning Benchmark",
+  "description": "Continual learning addresses the problem of continuously acquiring and transferring knowledge without catastrophic forgetting of old concepts. While humans achieve continual learning via diverse neurocognitive mechanisms, there is a mismatch between cognitive properties and evaluation methods of continual learning models. First, the measurement of continual learning models mostly relies on evaluation metrics at a micro-level, which cannot characterize cognitive capacities of the model. Second, the measurement is method-specific, emphasizing model strengths in one aspect while obscuring potential weaknesses in other respects. To address these issues, we propose to integrate model cognitive capacities and evaluation metrics into a unified evaluation paradigm. We first characterize model capacities via desiderata derived from cognitive properties supporting human continual learning. The desiderata concern (1) adaptability in varying lengths of task sequence; (2) sensitivity to dynamic task variations; and (3) efficiency in memory usage and training time consumption. Then we design evaluation protocols for each desideratum to assess cognitive capacities of recent continual learning models. Experimental results show that no method we consider has satisfied all the desiderata and is still far away from realizing truly continual learning. Although some methods exhibit some degree of adaptability and efficiency, no method is able to identify task relationships when encountering dynamic task variations, or achieve a trade-off in learning similarities and differences between tasks. Inspired by these results, we discuss possible factors that influence model performance in these desiderata and provide guidance for the improvement of continual learning models.",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "class_incremental",
+    "task_incremental",
+    "online_continual_learning",
+    "continual_learning_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score (aggregating average accuracy, forgetting/backward transfer measures, forward transfer, and efficiency metrics such as memory/time)",
+  "year_of_publish": 2023,
+  "reputation": "A recent research benchmark proposing a cognitive evaluation paradigm for continual learning; has gained interest in the continual-learning research community but is not yet a broadly adopted standard.",
+  "notes": "Multi-metric evaluation rather than a single scalar; protocol choices strongly affect results; focuses on continual-learning scenarios (non-LLM specific); no method in the paper satisfies all desiderata—benchmark not saturated.",
+  "creators": {
+    "scientists": [
+      "Xiaoqian Liu",
+      "Junge Zhang",
+      "Mingyi Zhang",
+      "Peipei Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2312.03309",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

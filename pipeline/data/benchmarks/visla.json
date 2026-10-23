@@ -1,0 +1,37 @@
+{
+  "name": "VISLA",
+  "description": "Despite their remarkable successes, state-of-the-art language models face challenges in grasping certain important semantic details. This paper introduces the VISLA (Variance and Invariance to Semantic and Lexical Alterations) benchmark, designed to evaluate the semantic and lexical understanding of language models. VISLA presents a 3-way semantic (in)equivalence task with a triplet of sentences associated with an image, to evaluate both vision-language models (VLMs) and unimodal language models (ULMs). An evaluation involving 34 VLMs and 20 ULMs reveals surprising difficulties in distinguishing between lexical and semantic variations. Spatial semantics encoded by language models also appear to be highly sensitive to lexical information. Notably, text encoders of VLMs demonstrate greater sensitivity to semantic and lexical variations than unimodal text encoders. Our contributions include the unification of image-to-text and text-to-text retrieval tasks, an off-the-shelf evaluation without fine-tuning, and assessing LMs' semantic (in)variance in the presence of lexical alterations. The results highlight strengths and weaknesses across diverse vision and unimodal language models, contributing to a deeper understanding of their capabilities. % VISLA enables a rigorous evaluation, shedding light on language models' capabilities in handling semantic and lexical nuances. Data and code will be made available at https://github.com/Sri-Harsha/visla_benchmark.",
+  "category": "multimodal",
+  "domain": "vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "three_way_semantic_equivalence",
+    "image-text_retrieval",
+    "textual_invariance_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "A recent academic benchmark (arXiv 2024) with limited adoption so far but cited as a focused probe for semantic vs. lexical sensitivity in VLMs and ULMs.",
+  "notes": "Evaluates fine-grained semantic/lexical invariance; potential pretraining contamination of image-caption pairs; off-the-shelf (no fine-tuning) evaluation—may be sensitive to encoder/tokenizer choices and prompt/template design.",
+  "creators": {
+    "scientists": [
+      "Sri Harsha Dumpala",
+      "Aman Jaiswal",
+      "Chandramouli Sastry",
+      "Evangelos Milios",
+      "Sageev Oore",
+      "Hassan Sajjad"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.16365",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

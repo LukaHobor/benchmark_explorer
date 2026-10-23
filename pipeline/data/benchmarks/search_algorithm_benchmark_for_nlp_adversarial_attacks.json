@@ -1,0 +1,36 @@
+{
+  "name": "Search algorithm benchmark for NLP adversarial attacks",
+  "description": "We study the behavior of several black-box search algorithms used for generating adversarial examples for natural language processing (NLP) tasks. We perform a fine-grained analysis of three elements relevant to search: search algorithm, search space, and search budget. When new search algorithms are proposed in past work, the attack search space is often modified alongside the search algorithm. Without ablation studies benchmarking the search algorithm change with the search space held constant, one cannot tell if an increase in attack success rate is a result of an improved search algorithm or a less restrictive search space. Additionally, many previous studies fail to properly consider the search algorithms' run-time cost, which is essential for downstream tasks like adversarial training. Our experiments provide a reproducible benchmark of search algorithms across a variety of search spaces and query budgets to guide future research in adversarial NLP. Based on our experiments, we recommend greedy attacks with word importance ranking when under a time constraint or attacking long inputs, and either beam search or particle swarm optimization otherwise. Code implementation shared via https://github.com/QData/TextAttack-Search-Benchmark",
+  "category": "text",
+  "domain": "NLP / adversarial robustness",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "adversarial_attack",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "attack_success_rate (ASR) under fixed query budgets, along with query efficiency (queries-to-success) and perturbation size",
+  "general_score_metric": "attack_success_rate (ASR) at fixed query budgets",
+  "typical_sota_score": "varies widely by target model and budget (roughly 10%–90% across settings)",
+  "year_of_publish": 2020,
+  "year_of_last_update": 2020,
+  "reputation": "A well-cited, practical benchmark in the adversarial-NLP community (supported by the TextAttack repo) and commonly used to compare black-box search algorithms.",
+  "notes": "Outcomes depend strongly on victim model, dataset, allowed perturbation space and query budget; reproducibility requires careful matching of search space and budget; runtime cost is a key axis and results are not directly comparable across different API/query-cost regimes.",
+  "creators": {
+    "scientists": [
+      "Jin Yong Yoo",
+      "John X. Morris",
+      "Eli Lifland",
+      "Yanjun Qi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2009.06368",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

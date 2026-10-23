@@ -1,0 +1,35 @@
+{
+  "name": "Benchmarking Framework for Performance-Evaluation of Causal Inference Analysis",
+  "description": "Causal inference analysis is the estimation of the effects of actions on outcomes. In the context of healthcare data this means estimating the outcome of counter-factual treatments (i.e. including treatments that were not observed) on a patient's outcome. Compared to classic machine learning methods, evaluation and validation of causal inference analysis is more challenging because ground truth data of counter-factual outcome can never be obtained in any real-world scenario. Here, we present a comprehensive framework for benchmarking algorithms that estimate causal effect. The framework includes unlabeled data for prediction, labeled data for validation, and code for automatic evaluation of algorithm predictions using both established and novel metrics. The data is based on real-world covariates, and the treatment assignments and outcomes are based on simulations, which provides the basis for validation. In this framework we address two questions: one of scaling, and the other of data-",
+  "category": "mixed",
+  "domain": "healthcare",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "causal_effect_estimation",
+    "treatment_effect_prediction",
+    "counterfactual_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "error-based regression metrics and causal-effect metrics such as PEHE, ATE error, and related validation scores",
+  "general_score_metric": "PEHE",
+  "year_of_publish": 2018,
+  "reputation": "An early and influential benchmarking framework for causal inference evaluation, especially in healthcare settings.",
+  "notes": "Not a standard classification benchmark; ground truth counterfactuals are simulated rather than observed, so results depend heavily on simulation assumptions and data-generating process.",
+  "creators": {
+    "scientists": [
+      "Yishai Shimoni",
+      "Chen Yanover",
+      "Ehud Karavani",
+      "Yaara Goldschmnidt"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/1802.05046",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

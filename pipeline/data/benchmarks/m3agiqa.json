@@ -1,0 +1,38 @@
+{
+  "name": "M3-AGIQA",
+  "description": "The rapid advancement of AI-generated image (AGI) models has introduced significant challenges in evaluating their quality, which requires considering multiple dimensions such as perceptual quality, prompt correspondence, and authenticity. To address these challenges, we propose M3-AGIQA, a comprehensive framework for AGI quality assessment that is Multimodal, Multi-Round, and Multi-Aspect. Our approach leverages the capabilities of Multimodal Large Language Models (MLLMs) as joint text and image encoders and distills advanced captioning capabilities from online MLLMs into a local model via Low-Rank Adaptation (LoRA) fine-tuning. The framework includes a structured multi-round evaluation mechanism, where intermediate image descriptions are generated to provide deeper insights into the quality, correspondence, and authenticity aspects. To align predictions with human perceptual judgments, a predictor constructed by an xLSTM and a regression head is incorporated to process sequential logits and predict Mean Opinion Scores (MOSs). Extensive experiments conducted on multiple benchmark datasets demonstrate that M3-AGIQA achieves state-of-the-art performance, effectively capturing nuanced aspects of AGI quality. Furthermore, cross-dataset validation confirms its strong generalizability. The code is available at https://github.com/strawhatboy/M3-AGIQA.",
+  "category": "multimodal",
+  "domain": "computer vision / image generation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "image_quality_assessment",
+    "multimodal"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "MOS correlation (Spearman / PLCC)",
+  "year_of_publish": 2025,
+  "reputation": "New research benchmark (2025) with code released; limited community adoption so far but cited in recent AGI image-quality work.",
+  "notes": "Predicts Mean Opinion Scores (MOS) against human judgments — results sensitive to subjective labeling and dataset bias; depends on pretrained MLLMs (possible contamination) and quality/consistency of human MOS labels.",
+  "creators": {
+    "scientists": [
+      "Chuan Cui",
+      "Kejiang Chen",
+      "Zhihua Wei",
+      "Wen Shen",
+      "Weiming Zhang",
+      "Nenghai Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.15167",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

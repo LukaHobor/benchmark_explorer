@@ -1,0 +1,36 @@
+{
+  "name": "DiLiGenT-Pi",
+  "description": "Photometric stereo aims to recover detailed surface shapes from images captured under varying illuminations. However, existing real-world datasets primarily focus on evaluating photometric stereo for general non-Lambertian reflectances and feature bulgy shapes that have a certain height. As shape detail recovery is the key strength of photometric stereo over other 3D reconstruction techniques, and the near-planar surfaces widely exist in cultural relics and manufacturing workpieces, we present a new real-world dataset DiLiGenT-Pi containing 30 near-planar scenes with rich surface details. This dataset enables us to evaluate recent photometric stereo methods specifically for their ability to estimate shape details under diverse materials and to identify open problems such as near-planar surface normal estimation from uncalibrated photometric stereo and surface detail recovery for translucent materials. To inspire future research, this dataset will open soruced at https://photometricstereo.github.io/diligentpi.html.",
+  "category": "vision",
+  "domain": "computer vision / 3D reconstruction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "surface_normal_estimation",
+    "normal_map_prediction",
+    "dense_regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean angular error (degrees) between predicted and ground-truth normals",
+  "general_score_metric": "mean angular error (degrees)",
+  "typical_sota_score": "2–10°",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded within the photometric-stereo subcommunity as a targeted real-world benchmark for near-planar surfaces with detailed relief, though smaller in scale than some other vision datasets.",
+  "notes": "Small real-world dataset (30 scenes); specialized to photometric stereo (non-LLM); evaluates dense surface normals and sensitive to calibration/lighting differences; contains diverse materials including translucent surfaces which remain challenging.",
+  "creators": {
+    "scientists": [
+      "Feishi Wang",
+      "Jieji Ren",
+      "Heng Guo",
+      "Mingjun Ren",
+      "Boxin Shi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

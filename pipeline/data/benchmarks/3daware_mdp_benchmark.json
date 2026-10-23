@@ -1,0 +1,36 @@
+{
+  "name": "3D-aware MDP Benchmark",
+  "description": "There have been numerous recently proposed methods for monocular depth prediction (MDP) coupled with the equally rapid evolution of benchmarking tools. However, we argue that MDP is currently witnessing benchmark over-fitting and relying on metrics that are only partially helpful to gauge the usefulness of the predictions for 3D applications. This limits the design and development of novel methods that are truly aware of - and improving towards estimating - the 3D structure of the scene rather than optimizing 2D-based distances. In this work, we aim to bring structural awareness to MDP, an inherently 3D task, by exhibiting the limits of evaluation metrics towards assessing the quality of the 3D geometry. We propose a set of metrics well suited to evaluate the 3D geometry of MDP approaches and a novel indoor benchmark, RIO-D3D, crucial for the proposed evaluation methodology. Our benchmark is based on a real-world dataset featuring high-quality rendered depth maps obtained from RGB-D reconstructions. We further demonstrate this to help benchmark the closely-tied task of 3D scene completion.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "depth_estimation",
+    "3d_scene_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Abs Rel / RMSE / scale-invariant RMSE (for depth) and Chamfer distance / IoU / F-score (for 3D geometry)",
+  "general_score_metric": "Chamfer distance (for 3D geometry) and Abs Rel (for depth)",
+  "year_of_publish": 2022,
+  "reputation": "Proposed to bring 3D-awareness into monocular depth benchmarking; recognized by researchers focusing on 3D geometric evaluation but not as widely adopted as legacy depth benchmarks.",
+  "notes": "non-LLM benchmark; focuses on indoor scenes and 3D-aware metrics rather than traditional 2D losses; performance is sensitive to reconstruction quality and dataset scale.",
+  "creators": {
+    "scientists": [
+      "Evin Pınar Örnek",
+      "Shristi Mudgal",
+      "Johanna Wald",
+      "Yida Wang",
+      "Nassir Navab",
+      "Federico Tombari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2203.08122",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

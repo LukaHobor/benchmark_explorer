@@ -1,0 +1,38 @@
+{
+  "name": "MultiIoT",
+  "description": "The next generation of machine learning systems must be adept at perceiving and interacting with the physical world through a diverse array of sensory channels. Commonly referred to as the `Internet of Things (IoT)' ecosystem, sensory data from motion, thermal, geolocation, depth, wireless signals, video, and audio are increasingly used to model the states of physical environments and the humans inside them. Despite the potential for understanding human wellbeing, controlling physical devices, and interconnecting smart cities, the community has seen limited benchmarks for building machine learning systems for IoT. Existing efforts are often specialized to a single sensory modality or prediction task, which makes it difficult to study and train large-scale models across many IoT sensors and tasks. To accelerate the development of new machine learning technologies for IoT, this paper proposes MultiIoT, the most expansive and unified IoT benchmark to date, encompassing over 1.15 million samples from 12 modalities and 8 real-world tasks. MultiIoT introduces unique challenges involving (1) generalizable learning from many sensory modalities, (2) multimodal interactions across long temporal ranges, (3) extreme heterogeneity due to unique structure and noise topologies in real-world sensors, and (4) complexity during training and inference. We evaluate a comprehensive set of models on MultiIoT, including modality and task-specific methods, multisensory and multitask supervised models, and large multisensory foundation models. Our results highlight opportunities for ML to make a significant impact in IoT, but many challenges in scalable learning from heterogeneous, long-range, and imperfect sensory modalities still persist. We release all code and data to accelerate future research in machine learning for IoT.",
+  "category": "multimodal",
+  "domain": "Internet of Things",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "time_series_forecasting",
+    "anomaly_detection",
+    "multimodal_multitask_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific (accuracy / RMSE / F1 / AUC / MAE depending on task)",
+  "general_score_metric": "task-specific (accuracy / RMSE / F1 / AUC)",
+  "year_of_publish": 2023,
+  "reputation": "One of the most expansive unified IoT multimodal benchmarks; gaining research attention but not yet a broadly standardized community staple.",
+  "notes": "Very large and heterogeneous (≈1.15M samples across 12 modalities) — challenges include sensor noise, modality-specific preprocessing, class imbalance, privacy/sensitivity of some sensors, and difficulty of directly comparing performance across diverse tasks; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Shentong Mo",
+      "Louis-Philippe Morency",
+      "Russ Salakhutdinov",
+      "Paul Pu Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2311.06217",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

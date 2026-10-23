@@ -1,0 +1,36 @@
+{
+  "name": "Arabic Proper Name Diacritization Dataset",
+  "description": "Proper names in Arabic Wikipedia are frequently undiacritized, creating ambiguity in pronunciation and interpretation, especially for transliterated named entities of foreign origin. While transliteration and diacritization have been well-studied separately in Arabic NLP,their intersection remains underexplored. In this paper, we introduce a new manually diacritized dataset of Arabic proper names of various origins with their English Wikipedia equivalent glosses, and present the challenges and guidelines we followed to create it. We benchmark GPT-4o on the task of recovering full diacritization given the undiacritized Arabic and English forms, and analyze its performance. Achieving 73% accuracy, our results underscore both the difficulty of the task and the need for improved models and resources. We release our dataset to facilitate further research on Arabic Wikipedia proper name diacritization.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_generation",
+    "sequence_labeling"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (full-string / exact diacritization match)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈73% (reported for GPT-4o)",
+  "year_of_publish": 2025,
+  "reputation": "Newly released dataset addressing a niche but important problem (Arabic proper-name diacritization); limited adoption so far but valuable for Arabic NLP.",
+  "notes": "Small, specialized dataset of proper names; risk of contamination if models were trained on Wikipedia; not saturated and primarily intended for research on diacritization of named entities.",
+  "creators": {
+    "scientists": [
+      "Rawan Bondok",
+      "Mayar Nassar",
+      "Salam Khalifa",
+      "Kurt Micallef",
+      "Nizar Habash"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2505.02656",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "MMPedestron Multimodal Pedestrian Detection Benchmark",
+  "description": "Recent years have witnessed increasing research attention towards pedestrian detection by taking the advantages of different sensor modalities (e.g. RGB, IR, Depth, LiDAR and Event). However, designing a unified generalist model that can effectively process diverse sensor modalities remains a challenge. This paper introduces MMPedestron, a novel generalist model for multimodal perception. Unlike previous specialist models that only process one or a pair of specific modality inputs, MMPedestron is able to process multiple modal inputs and their dynamic combinations. The proposed approach comprises a unified encoder for modal representation and fusion and a general head for pedestrian detection. We introduce two extra learnable tokens, i.e. MAA and MAF, for adaptive multi-modal feature fusion. In addition, we construct the MMPD dataset, the first large-scale benchmark for multi-modal pedestrian detection. This benchmark incorporates existing public datasets and a newly collected dataset called EventPed, covering a wide range of sensor modalities including RGB, IR, Depth, LiDAR, and Event data. With multi-modal joint training, our model achieves state-of-the-art performance on a wide range of pedestrian detection benchmarks, surpassing leading models tailored for specific sensor modality. For example, it achieves 71.1 AP on COCO-Persons and 72.6 AP on LLVIP. Notably, our model achieves comparable performance to the InternImage-H model on CrowdHuman with 30x smaller parameters. Codes and data are available at https://github.com/BubblyYi/MMPedestron.",
+  "category": "multimodal",
+  "domain": "autonomous driving / surveillance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multimodal_object_detection",
+    "pedestrian_detection",
+    "bounding_box_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Average Precision (AP) / mean Average Precision (mAP)",
+  "general_score_metric": "AP (Average Precision)",
+  "typical_sota_score": "≈70–73 AP (varies by dataset; reported examples: 71.1 on COCO-Persons, 72.6 on LLVIP)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A recent multimodal pedestrian detection benchmark with growing interest in the multimodal perception community but limited widespread adoption so far.",
+  "notes": "Multimodal benchmark (RGB/IR/Depth/LiDAR/Event); not an LLM task. Challenges include modality availability/synchronization and domain shifts across merged datasets; relatively new so not yet saturated.",
+  "creators": {
+    "scientists": [
+      "Yi Zhang",
+      "Wang Zeng",
+      "Sheng Jin",
+      "Chen Qian",
+      "Ping Luo",
+      "Wentao Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.10125",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Natural Experiments Estimator Benchmark",
+  "description": "Estimating the effect of treatments from natural experiments, where treatments are pre-assigned, is an important and well-studied problem. We introduce a novel natural experiment dataset obtained from an early childhood literacy nonprofit. Surprisingly, applying over 20 established estimators to the dataset produces inconsistent results in evaluating the nonprofit's efficacy. To address this, we create a benchmark to evaluate estimator accuracy using synthetic outcomes, whose design was guided by domain experts. The benchmark extensively explores performance as real world conditions like sample size, treatment correlation, and propensity score accuracy vary. Based on our benchmark, we observe that the class of doubly robust treatment effect estimators, which are based on simple and intuitive regression adjustment, generally outperform other more complicated estimators by orders of magnitude. To better support our theoretical understanding of doubly robust estimators, we derive a closed form expression for the variance of any such estimator that uses dataset splitting to obtain an unbiased estimate. This expression motivates the design of a new doubly robust estimator that uses a novel loss function when fitting functions for regression adjustment. We release the dataset and benchmark in a Python package; the package is built in a modular way to facilitate new datasets and estimators.",
+  "category": "mixed",
+  "domain": "causal inference",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "treatment_effect_estimation",
+    "point_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "estimation_error (RMSE), bias, and confidence_interval_coverage",
+  "general_score_metric": "RMSE (root-mean-squared-error) for estimated treatment effects",
+  "year_of_publish": 2024,
+  "reputation": "A recent research benchmark (2024) used by causal-inference researchers to evaluate and compare estimators under realistic natural-experiment conditions; moderate interest in the academic community.",
+  "notes": "Non-LLM benchmark; results depend on synthetic outcome design and can be sensitive to sample size, treatment correlation, and propensity-model misspecification.",
+  "creators": {
+    "scientists": [
+      "R. Teal Witter",
+      "Christopher Musco"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2409.04500",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

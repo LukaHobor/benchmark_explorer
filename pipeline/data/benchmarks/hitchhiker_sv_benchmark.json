@@ -1,0 +1,37 @@
+{
+  "name": "Hitchhiker SV Benchmark",
+  "description": "Background: Structural variants (SVs) play a significant role in gene function and are implicated in numerous human diseases. With advances in sequencing technologies, identifying SVs through whole-genome sequencing (WGS) has become a key area of research. However, variability in SV detection persists due to the wide range of available tools and the absence of standardized methodologies. Methods: We assessed the accuracy of SV detection across various short-read (srWGS) and long-read (lrWGS) sequencing technologies—including Illumina short reads, PacBio long reads, and Oxford Nanopore Technologies (ONT) long reads—using deletion calls from the HG002 benchmark dataset. We examined how variables such as variant calling algorithms, reference genome choice, alignment strategies, and sequencing coverage influence SV detection performance. Results: DRAGEN v4.2 delivered the highest accuracy among ten srWGS callers tested. Notably, leveraging a graph-based multigenome reference improved SV calling in complex genomic regions. Moreover, we proved that combining minimap2 with Manta achieved performance comparable to DRAGEN for srWGS. For PacBio lrWGS data, Sniffles2 outperformed the other two tested tools. For ONT lrWGS, alignment with minimap2—among four aligners tested—consistently led to the best results. At up to 10× coverage, Duet achieved the highest accuracy, while at higher coverages, Dysgu yielded the best results. Conclusions: These results show for the first time that alignment software choice significantly impacts SV calling from srWGS, with results comparable to commercial solutions. For lrWGS, the performance depends on the technology and coverage.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structural_variant_detection",
+    "benchmarking",
+    "tool_comparison"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1-score (precision & recall)",
+  "year_of_publish": 2025,
+  "reputation": "A domain-specific benchmark (peer-reviewed) used to compare SV callers across sequencing technologies; useful but niche within genomics.",
+  "notes": "Results are technology-, aligner-, reference- and coverage-dependent; focuses on HG002 deletion calls and tool comparisons rather than ML/LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Giuseppe Giovanni Nardone",
+      "Valentina Andrioletti",
+      "Aurora Santin",
+      "Anna Morgan",
+      "Beatrice Spedicati",
+      "Maria Pina Concas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.3390/biomedicines13081949",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

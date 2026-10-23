@@ -1,0 +1,37 @@
+{
+  "name": "VisText",
+  "description": "Captions that describe or explain charts help improve recall and comprehension of the depicted data and provide a more accessible medium for people with visual disabilities. However, current approaches for automatically generating such captions struggle to articulate the perceptual or cognitive features that are the hallmark of charts (e.g., complex trends and patterns). In response, we introduce VisText: a dataset of 12,441 pairs of charts and captions that describe the charts' construction, report key statistics, and identify perceptual and cognitive phenomena. In VisText, a chart is available as three representations: a rasterized image, a backing data table, and a scene graph -- a hierarchical representation of a chart's visual elements akin to a web page's Document Object Model (DOM). To evaluate the impact of VisText, we fine-tune state-of-the-art language models on our chart captioning task and apply prefix-tuning to produce captions that vary the semantic content they convey. Our models generate coherent, semantically rich captions and perform on par with state-of-the-art chart captioning models across machine translation and text generation metrics. Through qualitative analysis, we identify six broad categories of errors that our models make that can inform future work.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_captioning",
+    "text_generation",
+    "multimodal_generation",
+    "open_ended"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "BLEU",
+  "general_score_metric": "BLEU",
+  "typical_sota_score": "10–30",
+  "year_of_publish": 2023,
+  "reputation": "A focused, recently published dataset for chart captioning and accessibility research with moderate interest among multimodal and visualization researchers.",
+  "notes": "Relatively small (12k) and domain-specific dataset; metrics like BLEU/ROUGE correlate imperfectly with human judgments of chart understanding; useful scene-graph and table inputs reduce some ambiguity but raise multimodal alignment complexity.",
+  "creators": {
+    "scientists": [
+      "Benny J. Tang",
+      "Angie Boggust",
+      "Arvind Satyanarayan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2307.05356",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

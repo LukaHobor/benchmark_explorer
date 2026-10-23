@@ -1,0 +1,38 @@
+{
+  "name": "PADetBench",
+  "description": "Physical attacks against object detection have gained increasing attention due to their significant practical implications. However, conducting physical experiments is extremely time-consuming and labor-intensive. Moreover, physical dynamics and cross-domain transformation are challenging to strictly regulate in the real world, leading to unaligned evaluation and comparison, severely hindering the development of physically robust models. To accommodate these challenges, we explore utilizing realistic simulation to thoroughly and rigorously benchmark physical attacks with fairness under controlled physical dynamics and cross-domain transformation. This resolves the problem of capturing identical adversarial images that cannot be achieved in the real world. Our benchmark includes 20 physical attack methods, 48 object detectors, comprehensive physical dynamics, and evaluation metrics. We also provide end-to-end pipelines for dataset generation, detection, evaluation, and further analysis. In addition, we perform 8064 groups of evaluation based on our benchmark, which includes both overall evaluation and further detailed ablation studies for controlled physical dynamics. Through these experiments, we provide in-depth analyses of physical attack performance and physical adversarial robustness, draw valuable observations, and discuss potential directions for future research. Codebase: https://github.com/JiaweiLian/Benchmarking_Physical_Attack",
+  "category": "vision",
+  "domain": "computer vision / adversarial robustness",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "object_detection",
+    "physical_adversarial_attack_evaluation",
+    "robustness_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack_success_rate and mAP degradation (mean Average Precision drop)",
+  "general_score_metric": "attack_success_rate (with complementary mAP drop)",
+  "year_of_publish": 2024,
+  "reputation": "New comprehensive simulation-based benchmark for physical adversarial attacks; notable among robustness researchers but not yet a de facto standard.",
+  "notes": "Simulation enables controlled, repeatable evaluation but introduces sim-to-real gap risks; large computational cost for exhaustive physical-dynamics sweeps. Non-LLM, vision-focused benchmark.",
+  "creators": {
+    "scientists": [
+      "Jiawei Lian",
+      "Jianhong Pan",
+      "Lefan Wang",
+      "Yi Wang",
+      "Lap-Pui Chau",
+      "Shaohui Mei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2408.09181",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

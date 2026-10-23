@@ -1,0 +1,37 @@
+{
+  "name": "PPG Beat Detection Benchmark / benchmarking framework",
+  "description": "The photoplethysmogram (PPG) signal is widely used in pulse oximeters and smartwatches. A fundamental step in analysing the PPG is the detection of heartbeats. Several PPG beat detection algorithms have been proposed, although it is not clear which performs best. Objective: This study aimed to: (i) develop a framework with which to design and test PPG beat detectors; (ii) assess the performance of PPG beat detectors in different use cases; and (iii) investigate how their performance is affected by patient demographics and physiology. Approach: Fifteen beat detectors were assessed against electrocardiogram-derived heartbeats using data from eight datasets. Performance was assessed using the F1 score, which combines sensitivity and positive predictive value. Main results: Eight beat detectors performed well in the absence of movement, with F1 scores of ≥90% on hospital data and wearable data collected at rest. Their performance was poorer during exercise, with F1 scores of 55-91%; poorer in neonates than adults with F1 scores of 84-96% in neonates compared to 98-99% in adults; and poorer in atrial fibrillation (AF), with F1 scores of 92-97% in AF, compared to 99-100% in normal sinus rhythm. Significance: Two PPG beat detectors denoted 'MSPTD' and 'qppg' performed best, with complementary performance characteristics. This evidence can be used to inform the choice of PPG beat detector algorithm. The algorithms, datasets, and assessment framework are freely available.",
+  "category": "audio",
+  "domain": "medical / physiological signals",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "beat_detection",
+    "event_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1 score",
+  "typical_sota_score": "55–99%",
+  "reputation": "Well-regarded in biomedical signal processing research as a comprehensive framework for designing, testing and comparing PPG beat detectors across multiple datasets and conditions.",
+  "notes": "Performance varies strongly with motion, age group and arrhythmia state (degrades during exercise and in neonates/AF); framework/datasets are non-LLM, freely available; some results may saturate on resting clinical data.",
+  "creators": {
+    "scientists": [
+      "Peter H Charlton",
+      "Kevin Kotzen",
+      "Elisa Mejía-Mejía",
+      "Philip J Aston",
+      "Karthik Budidha",
+      "Jonathan Mant",
+      "Callum Pettit",
+      "Joachim A Behar and Panayiotis A Kyriacou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

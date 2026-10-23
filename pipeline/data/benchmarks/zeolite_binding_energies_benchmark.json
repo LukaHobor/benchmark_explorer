@@ -1,0 +1,33 @@
+{
+  "name": "Zeolite Binding Energies Benchmark",
+  "description": "We present benchmark binding energies for five zeolite model complexes, with four of the adsorbates bound noncovalently and one covalently. The binding energies were determined as the sum of the infinite-basis-set limit of Møller−Plesset second-order perturbation theory (MP2) energies and a CCSD(T) correction term evaluated with the aug-cc-pVDZ basis set. The basis set limit of MP2 energies was determined by two-point extrapolation using the aug-cc-pVXZ basis sets for X = D and T and separate extrapolation of the Hartree−Fock and correlation energies. We found that correlation contributions beyond MP2 to the final binding energies are small; their magnitude is in the range of 0.02−1.0 kcal/mol. For the MP2 method to describe the interactions in these zeolite model systems accurately, one needs to use a basis set at least the size of aug-cc-pVTZ in conjunction with counterpoise corrections. Final binding energies (kcal/mol) of the model complexes are in the range of 3.5−19.5 kcal/mol, and they were used as reference data to test 6 wave function methods and 41 density functionals. Among the tested density functional methods, M06-L/6-31+G(d,p) gives a mean unsigned error (MUE) without counterpoise correction of 0.87 kcal/mol. With counterpoise corrections, the M06-2X and M05-2X functionals give the best performance. The MUE with counterpoise corrections for the M06-2X/6-311+G(2df,2p)//MP2/6-311+G(2df,2p) level of theory is 0.39 kcal/mol. With the DFT/6-31+G(d,p) geometries and the 6-311+G(2df,2p) basis set, M05-2X and M06-2X give MUEs with counterpoise corrections of 0.40 and 0.52 kcal/mol, respectively. Tests against the binding energies of four complexes (two noncovalent and two covalent) of the adsoption of isobutene on a large 16T zeolite model cluster confirmed that M06-L, M06, M05-2X, and M06-2X are very promising quantum mechanical methods for hybrid quantum mechanical/molecular mechanical (QM/MM) simulations of zeolites. In fact the performance of these four Minnesota functionals, as compared to other high-quality functionals, is relatively even better for the larger 16T clusters than for the smaller 3T ones.",
+  "category": "mixed",
+  "domain": "quantum chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binding_energy_prediction",
+    "quantum_chemistry_method_validation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_unsigned_error (MUE) in kcal/mol",
+  "general_score_metric": "MUE (mean unsigned error) relative to high-level CCSD(T)/MP2 reference (kcal/mol)",
+  "typical_sota_score": "≈0.3–1.0 kcal/mol MUE for the best tested DFT/wavefunction combinations (dataset- and method-dependent)",
+  "year_of_publish": 2008,
+  "reputation": "172 citations",
+  "notes": "Small benchmark (five model complexes) using high-level quantum references and cluster models; results may not fully generalize to periodic or larger zeolite systems; non-ML/LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yan Zhao",
+      "Donald G. Truhlar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1021/jp7112363",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Surround-View System Camera Calibration Benchmark",
+  "description": "Surround-view system (SVS) is widely used in the Advanced Driver Assistance System (ADAS). SVS uses four fisheye lenses to monitor real-time scenes around the vehicle. However, accurate intrinsic and extrinsic parameter estimation is required for the proper functioning of the system. At present, the intrinsic calibration can be pipeline by utilizing checkerboard algorithm, while extrinsic calibration is still immature. Therefore, we proposed a specific calibration pipeline to estimate extrinsic parameters robustly. This scheme takes a driving sequence of four cameras as input. It firstly utilizes lane line to roughly estimate each camera pose. Considering the environmental condition differences in each camera, we separately select strategies from two methods to accurately estimate the extrinsic parameters. To achieve accurate estimates for both front and rear camera, we proposed a method that mutually iterating line detection and pose estimation. As for bilateral camera, we iteratively adjust the camera pose and position by minimizing texture and edge error between ground projections of adjacent cameras. After estimating the extrinsic parameters, the surround-view image can be synthesized by homography-based transformation. The proposed pipeline can robustly estimate the four SVS camera extrinsic parameters in real driving environments. In addition, to evaluate the proposed scheme, we build a surround-view fisheye dataset, which contains 40 videos with 32,000 frames, acquired from different real traffic scenarios. All the frames in each video are manually labeled with lane annotation, with its GT extrinsic parameters. Moreover, this surround-view dataset could be used by other researchers to evaluate their performance. The dataset will be available soon.",
+  "category": "vision",
+  "domain": "automotive / ADAS",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "camera_calibration",
+    "parameter_estimation",
+    "pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "reprojection_error and RMSE of extrinsic/intrinsic parameters (e.g., pixels, degrees, meters)",
+  "general_score_metric": "reprojection_error (pixels) / RMSE of extrinsic parameters",
+  "year_of_publish": 2023,
+  "reputation": "A specialized ADAS/automotive calibration dataset proposed in the paper (2312.16499); currently limited adoption pending public release.",
+  "notes": "Small, specialized dataset (40 videos, ~32k frames); non-LLM benchmark; evaluation focuses on geometric error metrics; dataset availability was pending at time of publication which may limit adoption.",
+  "creators": {
+    "scientists": [
+      "L Qin",
+      "C Lin",
+      "S Huang",
+      "S Yang",
+      "Y Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.16499",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

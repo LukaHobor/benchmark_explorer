@@ -1,0 +1,35 @@
+{
+  "name": "SR+Codec",
+  "description": "In recent years, there has been significant interest in Super-Resolution (SR), which focuses on generating a high-resolution image from a low-resolution input. Deep learning-based methods for super-resolution have been particularly popular and have shown impressive results on various benchmarks. However, research indicates that these methods may not perform as well on strongly compressed videos. We developed a super-resolution benchmark to analyze SR's capacity to upscale compressed videos. Our dataset employed video codecs based on five widely-used compression standards: H.264, H.265, H.266, AV1, and AVS3. We assessed 19 popular SR models using our benchmark and evaluated their ability to restore details and their susceptibility to compression artifacts. To get an accurate perceptual ranking of SR models, we conducted a crowd-sourced side-by-side comparison of their outputs. We found that some SR models, combined with compression, allow us to reduce the video bitrate without significant loss of quality. We also compared a range of image and video quality metrics with subjective scores to evaluate their accuracy on super-resolved compressed videos. The benchmark is publicly available at https://videoprocessing.ai/benchmarks/super-resolution-for-video-compression.html",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_super_resolution",
+    "image_super_resolution",
+    "perceptual_quality_ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval (crowd-sourced mean opinion scores) alongside objective metrics (PSNR, SSIM, LPIPS)",
+  "general_score_metric": "mean opinion score (MOS) / perceptual ranking",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded within the video-processing community for studying SR performance on strongly compressed video; used by researchers evaluating SR under compression artifacts.",
+  "notes": "Non-LLM benchmark focused on compressed videos; relies on subjective MOS so results can vary by rater pool; objective metrics (PSNR/SSIM) often poorly correlate with perceptual rankings.",
+  "creators": {
+    "scientists": [
+      "Evgeney Bogatyrev",
+      "Ivan Molodetskikh",
+      "Dmitriy Vatolin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.04844",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

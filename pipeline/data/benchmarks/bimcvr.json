@@ -1,0 +1,37 @@
+{
+  "name": "BIMCV-R",
+  "description": "The burgeoning integration of 3D medical imaging into healthcare has led to a substantial increase in the workload of medical professionals. To assist clinicians in their diagnostic processes and alleviate their workload, the development of a robust system for retrieving similar case studies presents a viable solution. While the concept holds great promise, the field of 3D medical text-image retrieval is currently limited by the absence of robust evaluation benchmarks and curated datasets. To remedy this, our study presents a groundbreaking dataset, {BIMCV-R}, which includes an extensive collection of 8,069 3D CT volumes, encompassing over 2 million slices, paired with their respective radiological reports. Expanding upon the foundational work of our dataset, we craft a retrieval strategy, MedFinder. This approach employs a dual-stream network architecture, harnessing the potential of large language models to advance the field of medical image retrieval beyond existing text-image retrieval solutions. It marks our preliminary step towards developing a system capable of facilitating text-to-image, image-to-text, and keyword-based retrieval tasks. Our project is available at \\url{https://huggingface.co/datasets/cyd0806/BIMCV-R}.",
+  "category": "multimodal",
+  "domain": "medical imaging / radiology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text-to-image_retrieval",
+    "image-to-text_retrieval",
+    "keyword-based_retrieval",
+    "cross-modal_ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Recall@K (primary) and mean Average Precision (mAP)",
+  "general_score_metric": "Recall@1 / Recall@5 (primary reported retrieval metrics)",
+  "year_of_publish": 2024,
+  "reputation": "A large, recently released medical 3D CT–report retrieval dataset that is gaining attention in medical imaging retrieval research but has limited widespread deployment so far.",
+  "notes": "Medical dataset with potential patient-identifiable information and institutional biases; large-scale 3D volumes (non-LLM benchmark); evaluation sensitive to report preprocessing and retrieval protocol; limited prior SOTA benchmarks for direct comparison.",
+  "creators": {
+    "scientists": [
+      "Yinda Chen",
+      "Che Liu",
+      "Xiaoyu Liu",
+      "Rossella Arcucci",
+      "Zhiwei Xiong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2403.15992",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

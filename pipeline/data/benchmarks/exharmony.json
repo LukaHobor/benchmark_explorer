@@ -1,0 +1,36 @@
+{
+  "name": "exHarmony",
+  "description": "The peer review process is crucial for ensuring the quality and reliability of scholarly work, yet assigning suitable reviewers remains a significant challenge. Traditional manual methods are labor-intensive and often ineffective, leading to nonconstructive or biased reviews. This paper introduces the exHarmony (eHarmony but for connecting experts to manuscripts) benchmark, designed to address these challenges by re-imagining the Reviewer Assignment Problem (RAP) as a retrieval task. Utilizing the extensive data from OpenAlex, we propose a novel approach that considers a host of signals from the authors, most similar experts, and the citation relations as potential indicators for a suitable reviewer for a manuscript. This approach allows us to develop a standard benchmark dataset for evaluating the reviewer assignment problem without needing explicit labels. We benchmark various methods, including traditional lexical matching, static neural embeddings, and contextualized neural embeddings, and introduce evaluation metrics that assess both relevance and diversity in the context of RAP. Our results indicate that while traditional methods perform reasonably well, contextualized embeddings trained on scholarly literature show the best performance. The findings underscore the importance of further research to enhance the diversity and effectiveness of reviewer assignments.",
+  "category": "text",
+  "domain": "scholarly recommendation / reviewer assignment",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "ranking",
+    "recommendation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "ranking metrics (nDCG@k, Recall@k, Precision@k) with diversity-aware variants",
+  "general_score_metric": "nDCG@k",
+  "year_of_publish": 2025,
+  "reputation": "A recent benchmark built from OpenAlex that provides a standardized retrieval framing for reviewer assignment; promising but not yet widely adopted across the broader recommender community.",
+  "notes": "Uses proxy/implicit labels (no explicit ground-truth reviewer labels); potential for dataset biases and citation-based signal leakage; not primarily an LLM benchmark (focuses on embedding and retrieval methods).",
+  "creators": {
+    "scientists": [
+      "Sajad Ebrahimi",
+      "Sara Salamat",
+      "Negar Arabzadeh",
+      "Mahdi Bashari",
+      "Ebrahim Bagheri"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2502.07683",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

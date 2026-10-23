@@ -1,0 +1,35 @@
+{
+  "name": "HDA-SynChildFaces",
+  "description": "We address the need for a large-scale database of children's faces by using generative adversarial networks (GANs) and face age progression (FAP) models to synthesize a realistic dataset referred to as HDA-SynChildFaces. To this end, we proposed a processing pipeline that initially utilizes StyleGAN3 to sample adult subjects, which are subsequently progressed to children of varying ages using InterFaceGAN. Intra-subject variations, such as facial expression and pose, are created by further manipulating the subjects in their latent space. Additionally, the presented pipeline allows to evenly distribute the races of subjects, allowing to generate a balanced and fair dataset with respect to race distribution. The created HDA-SynChildFaces consists of 1,652 subjects and a total of 188,832 images, each subject being present at various ages and with many different intra-subject variations. Subsequently, we evaluates the performance of various facial recognition systems on the generated database and compare the results of adults and children at different ages. The study reveals that children consistently perform worse than adults, on all tested systems, and the degradation in performance is proportional to age. Additionally, our study uncovers some biases in the recognition systems, with Asian and Black subjects and females performing worse than White and Latino Hispanic subjects and males.",
+  "category": "vision",
+  "domain": "biometrics / face recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "face_verification",
+    "face_identification",
+    "bias_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "verification rate (TAR at specified FAR) and identification accuracy / rank-N",
+  "general_score_metric": "verification rate (TAR@FAR) and identification accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A recent synthetic dataset aimed at studying child-face recognition and demographic bias; of interest to biometrics researchers but adoption is limited by ethical and domain-gap concerns.",
+  "notes": "Synthetic data generated via GANs and age-progression—useful for controlled studies but may not reflect all real-world child-face characteristics; ethical considerations and domain gap to real child images limit direct deployment; potential bias remaining despite attempts at racial balancing.",
+  "creators": {
+    "scientists": [
+      "Magnus Falkenberg",
+      "Anders Bensen Ottsen",
+      "Mathias Ibsen",
+      "Christian Rathgeb"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2304.11685",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

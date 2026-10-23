@@ -1,0 +1,48 @@
+{
+  "name": "AndroidWorld",
+  "description": "Autonomous agents that execute human tasks by controlling computers can enhance human productivity and application accessibility. However, progress in this field will be driven by realistic and reproducible benchmarks. We present AndroidWorld, a fully functional Android environment that provides reward signals for 116 programmatic tasks across 20 real-world Android apps. Unlike existing interactive environments, which provide a static test set, AndroidWorld dynamically constructs tasks that are parameterized and expressed in natural language in unlimited ways, thus enabling testing on a much larger and more realistic suite of tasks. To ensure reproducibility, each task includes dedicated initialization, success-checking, and tear-down logic, which modifies and inspects the device's system state. We experiment with baseline agents to test AndroidWorld and provide initial results on the benchmark. Our best agent can complete 30.6% of AndroidWorld's tasks, leaving ample room for future work. Furthermore, we adapt a popular desktop web agent to work on Android, which we find to be less effective on mobile, suggesting future research is needed to achieve universal, cross-platform agents. Finally, we also conduct a robustness analysis, showing that task variations can significantly affect agent performance, demonstrating that without such testing, agent performance metrics may not fully reflect practical challenges. AndroidWorld and the experiments in this paper are available at github.com/google-research/android_world.",
+  "category": "mixed",
+  "domain": "autonomous agents",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "instruction_following",
+    "interactive_control",
+    "goal_oriented_task_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "≈30% (best reported agent ~30.6%)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "Released by Google Research, AndroidWorld is a well‑engineered, recently introduced environment that is gaining traction in autonomous UI/agent research but is not yet broadly adopted across the wider ML community.",
+  "notes": "Environment-based interactive benchmark (non-LLM specific) requiring Android emulation; tasks are programmatic and parameterized so dataset is effectively large but tied to a finite set of apps; not saturated; reproducible initialization and teardown reduce nondeterminism; some contamination risk if agents are trained on UI interaction traces or the exact apps.",
+  "creators": {
+    "scientists": [
+      "Christopher Rawles",
+      "Sarah Clinckemaillie",
+      "Yifan Chang",
+      "Jonathan Waltz",
+      "Gabrielle Lau",
+      "Marybeth Fair",
+      "Alice Li",
+      "William Bishop",
+      "Wei Li",
+      "Folawiyo Campbell-Ajala",
+      "Daniel Toyama",
+      "Robert Berry",
+      "Divya Tyamagundlu",
+      "Timothy Lillicrap",
+      "Oriana Riva"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2405.14573",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

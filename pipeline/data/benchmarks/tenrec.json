@@ -1,0 +1,45 @@
+{
+  "name": "Tenrec",
+  "description": "Existing benchmark datasets for recommender systems (RS) either are created at a small scale or involve very limited forms of user feedback. RS models evaluated on such datasets often lack practical values for large-scale real-world applications. In this paper, we describe Tenrec, a novel and publicly available data collection for RS that records various user feedback from four different recommendation scenarios. To be specific, Tenrec has the following five characteristics: (1) it is large-scale, containing around 5 million users and 140 million interactions; (2) it has not only positive user feedback, but also true negative feedback (vs. one-class recommendation); (3) it contains overlapped users and items across four different scenarios; (4) it contains various types of user positive feedback, in forms of clicks, likes, shares, and follows, etc; (5) it contains additional features beyond the user IDs and item IDs. We verify Tenrec on ten diverse recommendation tasks by running several classical baseline models per task. Tenrec has the potential to become a useful benchmark dataset for a majority of popular recommendation tasks.",
+  "category": "mixed",
+  "domain": "recommender systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ranking",
+    "top_k_recommendation",
+    "click_prediction",
+    "sequential_recommendation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k, NDCG, AUC",
+  "general_score_metric": "recall@k / NDCG",
+  "year_of_publish": 2022,
+  "reputation": "A large, public, and practically-focused recommendation dataset that has attracted interest for realistic RS research but is not yet a single de-facto community standard.",
+  "notes": "Large-scale, multi-scenario dataset with both positive and true negative feedback; non-LLM benchmark focused on recommender-system metrics; reproducing results can require substantial compute and careful handling of temporal splits.",
+  "creators": {
+    "scientists": [
+      "Guanghu Yuan",
+      "Fajie Yuan",
+      "Yudong Li",
+      "Beibei Kong",
+      "Shujie Li",
+      "Lei Chen",
+      "Min Yang",
+      "Chenyun Yu",
+      "Bo Hu",
+      "Zang Li",
+      "Yu Xu",
+      "XiaoHu Qie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2210.10629",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

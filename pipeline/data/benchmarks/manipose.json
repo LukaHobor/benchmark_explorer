@@ -1,0 +1,41 @@
+{
+  "name": "ManiPose",
+  "description": "Robotic manipulation in everyday scenarios, especially in unstructured environments, requires skills in pose-aware object manipulation (POM), which adapts robots' grasping and handling according to an object's 6D pose. Recognizing an object's position and orientation is crucial for effective manipulation. For example, if a mug is lying on its side, it's more effective to grasp it by the rim rather than the handle. Despite its importance, research in POM skills remains limited, because learning manipulation skills requires pose-varying simulation environments and datasets. This paper introduces ManiPose, a pioneering benchmark designed to advance the study of pose-varying manipulation tasks. ManiPose encompasses: 1) Simulation environments for POM feature tasks ranging from 6D pose-specific pick-and-place of single objects to cluttered scenes, further including interactions with articulated objects. 2) A comprehensive dataset featuring geometrically consistent and manipulation-oriented 6D pose labels for 2936 real-world scanned rigid objects and 100 articulated objects across 59 categories. 3) A baseline for POM, leveraging the inferencing abilities of LLM (e.g., ChatGPT) to analyze the relationship between 6D pose and task-specific requirements, offers enhanced pose-aware grasp prediction and motion planning capabilities. Our benchmark demonstrates notable advancements in pose estimation, pose-aware manipulation, and real-robot skill transfer, setting new standards for POM research. We will open-source the ManiPose benchmark with the final version paper, inviting the community to engage with our resources, available at our website:https://sites.google.com/view/manipose.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "6D_pose_estimation",
+    "pose_aware_grasp_prediction",
+    "motion_planning",
+    "sim-to-real_transfer"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate; pose_error (ADD / ADD-S); grasp_success_rate",
+  "general_score_metric": "task_success_rate and ADD/ADD-S pose error",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) pose-varying manipulation benchmark that has attracted interest in the robotics community but has limited long-term adoption so far.",
+  "notes": "Includes simulation environments and real-scanned object poses; sim-to-real transfer and domain gap are major caveats. Dataset is manipulation/robotics-focused (non-LLM primary evaluation). Baselines currently limited; performance depends on both perception and control components.",
+  "creators": {
+    "scientists": [
+      "Qiaojun Yu",
+      "Ce Hao",
+      "JunBo Wang",
+      "Wenhai Liu",
+      "Liu Liu",
+      "Yao Mu",
+      "Yang You",
+      "Hengxu Yan",
+      "Cewu Lu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2403.13365",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Multimodal Health Misinformation Dataset",
+  "description": "Infodemics and health misinformation have significant negative impact on individuals and society, exacerbating confusion and increasing hesitancy in adopting recommended health measures. Recent advancements in generative AI, capable of producing realistic, human like text and images, have significantly accelerated the spread and expanded the reach of health misinformation, resulting in an alarming surge in its dissemination. To combat the infodemics, most existing work has focused on developing misinformation datasets from social media and fact checking platforms, but has faced limitations in topical coverage, inclusion of AI generation, and accessibility of raw content. To address these issues, we present MM Health, a large scale multimodal misinformation dataset in the health domain consisting of 34,746 news article encompassing both textual and visual information. MM Health includes human-generated multimodal information (5,776 articles) and AI generated multimodal information (28,880 articles) from various SOTA generative AI models. Additionally, We benchmarked our dataset against three tasks (reliability checks, originality checks, and fine-grained AI detection) demonstrating that existing SOTA models struggle to accurately distinguish the reliability and origin of information. Our dataset aims to support the development of misinformation detection across various health scenarios, facilitating the detection of human and machine generated content at multimodal levels.",
+  "category": "multimodal",
+  "domain": "health / misinformation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multi_label_classification",
+    "ai_detection",
+    "multimodal_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy, F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "50–70%",
+  "year_of_publish": 2025,
+  "reputation": "A large, recent multimodal health-misinformation dataset gaining attention for research on AI-vs-human content and reliability detection.",
+  "notes": "Contains both human- and AI-generated articles; sensitive health content and potential labeling noise; class imbalance across labels and origins; multimodal (text+image) setup limits direct use by text-only models.",
+  "creators": {
+    "scientists": [
+      "Zhihao Zhang",
+      "Yiran Zhang",
+      "Xiyue Zhou",
+      "Liting Huang",
+      "Imran Razzak",
+      "Preslav Nakov",
+      "Usman Naseem"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.18685",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

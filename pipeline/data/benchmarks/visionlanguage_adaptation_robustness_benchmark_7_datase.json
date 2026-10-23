@@ -1,0 +1,35 @@
+{
+  "name": "Vision-Language Adaptation Robustness Benchmark (7 datasets)",
+  "description": "Various adaptation methods, such as LoRA, prompts, and adapters, have been proposed to enhance the performance of pre-trained vision-language models in specific domains. The robustness of these adaptation methods against distribution shifts have not been studied. In this study, we assess the robustness of 11 widely-used adaptation methods across 4 vision-language datasets under multimodal corruptions. Concretely, we introduce 7 benchmark datasets, including 96 visual and 87 textual corruptions, to investigate the robustness of different adaptation methods, the impact of available adaptation examples, and the influence of trainable parameter size during adaptation. Our analysis reveals that: 1) Adaptation methods are more sensitive to text corruptions than visual corruptions. 2) Full fine-tuning does not consistently provide the highest robustness; instead, adapters can achieve better robustness with comparable clean performance. 3) Contrary to expectations, our findings indicate that increasing the number of adaptation data and parameters does not guarantee enhanced robustness; instead it results in even lower robustness. We hope this study could benefit future research in the development of robust multimodal adaptation methods. The benchmark, code, and dataset used in this study can be accessed at https://adarobustness.github.io .",
+  "category": "multimodal",
+  "domain": "vision-language / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_text_matching",
+    "visual_question_answering",
+    "image_captioning",
+    "multimodal_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A recent research benchmark focused on robustness of adaptation methods; useful to the multimodal robustness community but not yet widely adopted in broad production evaluation suites.",
+  "notes": "Evaluates robustness under many synthetic visual and textual corruptions; results vary by task and corruption type. Not a single-task benchmark (multiple modalities/tasks), so metrics are heterogeneous. Possible pretraining/data contamination risk for some models; not saturated.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.02080",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

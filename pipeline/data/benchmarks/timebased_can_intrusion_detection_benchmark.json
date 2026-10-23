@@ -1,0 +1,36 @@
+{
+  "name": "Time-Based CAN Intrusion Detection Benchmark",
+  "description": "Modern vehicles are complex cyber-physical systems made of hundreds of electronic control units (ECUs) that communicate over controller area networks (CANs). This inherited complexity has expanded the CAN attack surface which is vulnerable to message injection attacks. These injections change the overall timing characteristics of messages on the bus, and thus, to detect these malicious messages, time-based intrusion detection systems (IDSs) have been proposed. However, time-based IDSs are usually trained and tested on low-fidelity datasets with unrealistic, labeled attacks. This makes difficult the task of evaluating, comparing, and validating IDSs. Here we detail and benchmark four time-based IDSs against the newly published ROAD dataset, the first open CAN IDS dataset with real (non-simulated) stealthy attacks with physically verified effects. We found that methods that perform hypothesis testing by explicitly estimating message timing distributions have lower performance than methods that seek anomalies in a distribution-related statistic. In particular, these \"distribution-agnostic\" based methods outperform \"distribution-based\" methods by at least 55% in area under the precision-recall curve (AUC-PR). Our results expand the body of knowledge of CAN time-based IDSs by providing details of these methods and reporting their results when tested on datasets with real advanced attacks. Finally, we develop an after-market plug-in detector using lightweight hardware, which can be used to deploy the best performing IDS method on nearly any vehicle.",
+  "category": "mixed",
+  "domain": "automotive cybersecurity / cyber-physical systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC-PR",
+  "general_score_metric": "AUC-PR",
+  "year_of_publish": 2021,
+  "reputation": "The benchmark and the ROAD dataset are notable in automotive cybersecurity research as one of the first public CAN IDS datasets with real, stealthy attacks and have been used as a reference for time-based IDS evaluations.",
+  "notes": "Non-LLM benchmark focused on time-series CAN message timing; limited to the vehicle platforms included in ROAD, sensitive to preprocessing and time-window selection, and may not represent all attack types or vehicle architectures.",
+  "creators": {
+    "scientists": [
+      "Deborah H. Blevins",
+      "Pablo Moriano",
+      "Robert A. Bridges",
+      "Miki E. Verma",
+      "Michael D. Iannacone",
+      "Samuel C Hollifield"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2101.05781",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

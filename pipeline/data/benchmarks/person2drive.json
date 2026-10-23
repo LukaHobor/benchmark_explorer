@@ -1,0 +1,37 @@
+{
+  "name": "Person2Drive",
+  "description": "Human driving behavior is inherently diverse, yet most end-to-end autonomous driving (E2E-AD) systems learn a single average driving style, neglecting individual differences. Achieving personalized E2E-AD faces challenges across three levels: limited real-world datasets with individual-level annotations, a lack of quantitative metrics for evaluating personal driving styles, and the absence of algorithms that can learn stylized representations from users'trajectories. To address these gaps, we propose Person2Drive, a comprehensive personalized E2E-AD platform and benchmark. It includes an open-source, flexible data collection system that simulates realistic scenarios to generate scalable and diverse personalized driving datasets; style vector-based evaluation metrics with Maximum Mean Discrepancy and KL divergence to comprehensively quantify individual driving behaviors; and a personalized E2E-AD framework with a style reward model that efficiently adapts E2E models for safe and individualized driving. Extensive experiments demonstrate that Person2Drive enables fine-grained analysis, reproducible evaluation, and effective personalization in end-to-end autonomous driving. Our dataset and code will be released after acceptance.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "end_to_end_driving",
+    "style_personalization",
+    "behavioral_cloning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score (style divergence: MMD and KL + task_success_rate / safety metrics)",
+  "general_score_metric": "style_divergence (MMD and KL) as primary; task_success_rate / safety metrics as secondary",
+  "year_of_publish": 2026,
+  "reputation": "New research benchmark; early-stage with limited adoption so far (dataset/code to be released post-acceptance).",
+  "notes": "Dataset/code were indicated to be released after paper acceptance (may be unavailable); simulation-based data may not fully represent real-world driving; non-LLM benchmark focused on driving/policy personalization.",
+  "creators": {
+    "scientists": [
+      "Xiaoru Dong",
+      "Ruiqin Li",
+      "Xiao Han",
+      "Zhe Wu",
+      "Jiamin Wang",
+      "Jian Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2602.18757",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

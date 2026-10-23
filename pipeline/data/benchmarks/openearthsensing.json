@@ -1,0 +1,43 @@
+{
+  "name": "OpenEarthSensing",
+  "description": "In open-world remote sensing, deployed models must continuously adapt to a steady influx of new data, which often exhibits various shifts compared to what the model encountered during the training phase. To effectively handle the new data, models are required to detect semantic shifts, adapt to covariate shifts, and continuously update themselves. These challenges give rise to a variety of open-world tasks. However, existing open-world remote sensing studies typically train and test within a single dataset to simulate open-world conditions. Currently, there is a lack of large-scale benchmarks capable of evaluating multiple open-world tasks. In this paper, we introduce OpenEarthSensing, a large-scale fine-grained benchmark for open-world remote sensing. OpenEarthSensing includes 189 scene and objects categories, covering the vast majority of potential semantic shifts that may occur in the real world. Additionally, OpenEarthSensing encompasses five data domains with significant covariate shifts, including two RGB satellite domians, one RGB aerial domian, one MS RGB domian, and one infrared domian. The various domains provide a more comprehensive testbed for evaluating the generalization performance of open-world models. We conduct the baseline evaluation of current mainstream open-world tasks and methods on OpenEarthSensing, demonstrating that it serves as a challenging benchmark for open-world remote sensing.",
+  "category": "vision",
+  "domain": "remote sensing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "scene_classification",
+    "object_detection",
+    "open_world_detection",
+    "domain_adaptation",
+    "continual_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-dependent (classification: accuracy; detection: mean Average Precision (mAP); open-world metrics for shift detection/adaptation)",
+  "general_score_metric": "mAP for detection tasks; overall accuracy for classification tasks (reported per-task)",
+  "year_of_publish": 2025,
+  "reputation": "New large-scale benchmark (arXiv 2025) intended to become a standard testbed for open-world remote sensing but not yet widely adopted.",
+  "notes": "Non‑LLM, multi-domain remote sensing benchmark covering 189 fine-grained classes and multiple sensor domains. Designed to stress open-world/domain-shift capabilities; baselines show challenging performance. Potential label noise and class imbalance due to fine-grained categories.",
+  "creators": {
+    "scientists": [
+      "Xiang Xiang",
+      "Zhuo Xu",
+      "Yao Deng",
+      "Qinhao Zhou",
+      "Yifan Liang",
+      "Ke Chen",
+      "Qingfang Zheng",
+      "YaoWei Wang",
+      "Xilin Chen",
+      "Wen Gao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.20668",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

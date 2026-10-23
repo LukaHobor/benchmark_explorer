@@ -1,0 +1,37 @@
+{
+  "name": "NELoRa-Bench",
+  "description": "Low-Power Wide-Area Networks (LPWANs) are an emerging Internet-of-Things (IoT) paradigm marked by low-power and long-distance communication. Among them, LoRa is widely deployed for its unique characteristics and open-source technology. By adopting the Chirp Spread Spectrum (CSS) modulation, LoRa enables low signal-to-noise ratio (SNR) communication. The standard LoRa demodulation method accumulates the chirp power of the whole chirp into an energy peak in the frequency domain. In this way, it can support communication even when SNR is lower than -15 dB. Beyond that, we proposed NELoRa, a neural-enhanced decoder that exploits multi-dimensional information to achieve significant SNR gain. This paper presents the dataset used to train/test NELoRa, which includes 27,329 LoRa symbols with spreading factors from 7 to 10, for further improvement of neural-enhanced LoRa demodulation. The dataset shows that NELoRa can achieve 1.84-2.35 dB SNR gain over the standard LoRa decoder. The dataset and codes can be found at https://github.com/daibiaoxuwu/NeLoRa_Dataset.",
+  "category": "mixed",
+  "domain": "wireless communications / IoT",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "signal_processing"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "symbol_error_rate (SER) / bit_error_rate (BER); reported SNR gain improvements",
+  "general_score_metric": "symbol_error_rate (SER) / SNR improvement (dB)",
+  "typical_sota_score": "reported SNR gain of 1.84–2.35 dB over standard LoRa decoding",
+  "year_of_publish": 2023,
+  "reputation": "A recent academic dataset (2023) targeting LoRa demodulation research with niche adoption in wireless/IoT ML communities.",
+  "notes": "Small, domain-specific non-LLM dataset (~27k symbols). Generated for research on neural-enhanced LoRa demodulation—simulation/recorded signals may limit generalization to all real-world deployments.",
+  "creators": {
+    "scientists": [
+      "Jialuo Du",
+      "Yidong Ren",
+      "Mi Zhang",
+      "Yunhao Liu",
+      "Zhichao Cao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2305.01573",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

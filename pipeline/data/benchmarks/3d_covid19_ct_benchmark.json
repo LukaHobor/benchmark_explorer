@@ -1,0 +1,41 @@
+{
+  "name": "3D COVID-19 CT Benchmark",
+  "description": "The COVID-19 pandemic has spread globally for several months. Because its transmissibility and high pathogenicity seriously threaten people's lives, it is crucial to accurately and quickly detect COVID-19 infection. Many recent studies have shown that deep learning (DL) based solutions can help detect COVID-19 based on chest CT scans. However, most existing work focuses on 2D datasets, which may result in low quality models as the real CT scans are 3D images. Besides, the reported results span a broad spectrum on different datasets with a relatively unfair comparison. In this paper, we first use three state-of-the-art 3D models (ResNet3D101, DenseNet3D121, and MC3\\_18) to establish the baseline performance on the three publicly available chest CT scan datasets. Then we propose a differentiable neural architecture search (DNAS) framework to automatically search for the 3D DL models for 3D chest CT scans classification with the Gumbel Softmax technique to improve the searching efficiency. We further exploit the Class Activation Mapping (CAM) technique on our models to provide the interpretability of the results. The experimental results show that our automatically searched models (CovidNet3D) outperform the baseline human-designed models on the three datasets with tens of times smaller model size and higher accuracy. Furthermore, the results also verify that CAM can be well applied in CovidNet3D for COVID-19 datasets to provide interpretability for medical diagnosis.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "binary_classification",
+    "3D_image_analysis"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2021,
+  "reputation": "Used in research on 3D deep-learning models for COVID-19 CT classification but less widely adopted than larger multi-institution medical imaging benchmarks.",
+  "notes": "Relatively small public CT datasets and variable preprocessing can cause results to be dataset-dependent; potential class imbalance and limited cross-site generalization; non-LLM medical imaging benchmark with privacy considerations.",
+  "creators": {
+    "scientists": [
+      "Xin He",
+      "Shihao Wang",
+      "Xiaowen Chu",
+      "Shaohuai Shi",
+      "Jiangping Tang",
+      "Xin Liu",
+      "Chenggang Yan",
+      "Jiyong Zhang",
+      "Guiguang Ding"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2101.05442",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

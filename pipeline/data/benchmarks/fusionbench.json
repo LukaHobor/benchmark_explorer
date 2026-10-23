@@ -1,0 +1,40 @@
+{
+  "name": "FusionBench",
+  "description": "Deep model fusion is an emerging technique that unifies the predictions or parameters of several deep neural networks into a single model in a cost-effective and data-efficient manner. This enables the unified model to take advantage of the original models' strengths, potentially exceeding their performance. Although a variety of deep model fusion techniques have been introduced, their evaluations tend to be inconsistent and often inadequate to validate their effectiveness and robustness against distribution shifts. To address this issue, we introduce FusionBench, which is the first comprehensive benchmark dedicated to deep model fusion. FusionBench covers a wide range of tasks, including open-vocabulary image classification, text classification, and text-to-text generation. Each category includes up to eight tasks with corresponding task-specific models, featuring both full fine-tuning and LoRA fine-tuning, as well as models of different sizes, to ensure fair and balanced comparisons of various multi-task model fusion techniques across different tasks, model scales, and fine-tuning strategies. We implement and evaluate a broad spectrum of deep model fusion techniques. These techniques range from model ensemble methods, which combine the predictions to improve the overall performance, to model merging, which integrates different models into a single one, and model mixing methods, which upscale or recombine the components of the original models. FusionBench now contains 26 distinct tasks, 74 fine-tuned models, and 16 fusion techniques, and we are committed to consistently expanding the benchmark with more tasks, models, and fusion techniques. In addition, we offer a well-documented set of resources and guidelines to aid researchers in understanding and replicating the benchmark results. Homepage https://github.com/tanganke/fusion_bench",
+  "category": "mixed",
+  "domain": "machine learning / model fusion",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_vocabulary_image_classification",
+    "text_classification",
+    "text_to_text_generation",
+    "model_fusion_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific (accuracy for classification; BLEU/ROUGE for generation)",
+  "general_score_metric": "task-specific (accuracy for classification; BLEU/ROUGE for generation)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "New, comprehensive benchmark with public code and resources; early-stage adoption in the community.",
+  "notes": "Covers 26 tasks, 74 fine-tuned models and 16 fusion techniques; comparisons require careful normalization across modalities and tasks. Not an LLM-only benchmark; results vary by task and fusion strategy.",
+  "creators": {
+    "scientists": [
+      "Anke Tang",
+      "Li Shen",
+      "Yong Luo",
+      "Han Hu",
+      "Bo Du",
+      "DaCheng Tao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2406.03280",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

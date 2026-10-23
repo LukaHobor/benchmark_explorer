@@ -1,0 +1,36 @@
+{
+  "name": "Multilingual Check-Worthy Claim Detection Benchmark",
+  "description": "This study compares the performance of (1) fine-tuned language models and (2) large language models on the task of check-worthy claim detection. For the purpose of the comparison we composed a multilingual and multi-topical dataset comprising texts of various sources and styles. Building on this, we performed a benchmark analysis to determine the most general multilingual and multi-topical claim detector. We chose three state-of-the-art models in the check-worthy claim detection task and fine-tuned them. Furthermore, we selected four state-of-the-art large language models without any fine-tuning. We made modifications to the models to adapt them for multilingual settings and through extensive experimentation and evaluation, we assessed the performance of all the models in terms of accuracy, recall, and F1-score in in-domain and cross-domain scenarios. Our results demonstrate that despite the technological progress in the area of natural language processing, the models fine-tuned for the task of check-worthy claim detection still outperform the zero-shot approaches in cross-domain settings.",
+  "category": "text",
+  "domain": "social media / fact-checking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1-score (alongside accuracy and recall for class-imbalance-aware evaluation)",
+  "general_score_metric": "F1-score",
+  "typical_sota_score": "≈55–80% F1 depending on language and domain (in-domain higher, cross-domain lower)",
+  "year_of_publish": 2023,
+  "reputation": "A niche but useful multilingual resource for the check-worthiness detection community; mainly cited in fact-checking and claim-detection research.",
+  "notes": "Multilingual and multi-topical dataset with class imbalance; cross-domain and cross-lingual evaluation typically harder; includes experiments with both fine-tuned models and zero-shot LLMs — not primarily an LLM-native benchmark; potential language-coverage and domain-shift caveats.",
+  "creators": {
+    "scientists": [
+      "Martin Hyben",
+      "Sebastian Kula",
+      "Ivan Srba",
+      "Robert Moro",
+      "Jakub Simko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2311.06121",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

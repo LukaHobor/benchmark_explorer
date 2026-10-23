@@ -1,0 +1,39 @@
+{
+  "name": "VPR-Bench",
+  "description": "Visual Place Recognition (VPR) is the process of recognising a previously visited place using visual information, often under varying appearance conditions and viewpoint changes and with computational constraints. VPR is related to the concepts of localisation, loop closure, image retrieval and is a critical component of many autonomous navigation systems ranging from autonomous vehicles to drones and computer vision systems. While the concept of place recognition has been around for many years, VPR research has grown rapidly as a field over the past decade due to improving camera hardware and its potential for deep learning-based techniques, and has become a widely studied topic in both the computer vision and robotics communities. This growth however has led to fragmentation and a lack of standardisation in the field, especially concerning performance evaluation. Moreover, the notion of viewpoint and illumination invariance of VPR techniques has largely been assessed qualitatively and hence ambiguously in the past. In this paper, we address these gaps through a new comprehensive open-source framework for assessing the performance of VPR techniques, dubbed \"VPR-Bench\". VPR-Bench (Open-sourced at: https://github.com/MubarizZaffar/VPR-Bench) introduces two much-needed capabilities for VPR researchers: firstly, it contains a benchmark of 12 fully-integrated datasets and 10 VPR techniques, and secondly, it integrates a comprehensive variation-quantified dataset for quantifying viewpoint and illumination invariance. We apply and analyse popular evaluation metrics for VPR from both the computer vision and robotics communities, and discuss how these different metrics complement and/or replace each other, depending upon the underlying applications and system requirements.",
+  "category": "vision",
+  "domain": "autonomous driving / robotics / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "place_recognition",
+    "localization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Recall@K (retrieval), Precision-Recall curves, area under the precision-recall curve (AUC); also localization error metrics where applicable",
+  "general_score_metric": "Recall@K (commonly Recall@1)",
+  "typical_sota_score": "20–95% (highly dataset- and condition-dependent; easier datasets see top scores ≈70–95%, very challenging ones ≈20–50%)",
+  "year_of_publish": 2020,
+  "reputation": "Widely used open-source evaluation framework in the VPR/robotics community for standardising visual place-recognition comparisons.",
+  "notes": "Non-LLM benchmark focused on visual place recognition; evaluations are dataset- and metric-dependent, sensitive to viewpoint/illumination variation; benchmark includes many datasets but differences in protocol can affect comparability; potential label/noise issues in extended datasets.",
+  "creators": {
+    "scientists": [
+      "Mubariz Zaffar",
+      "Sourav Garg",
+      "Michael Milford",
+      "Julian Kooij",
+      "David Flynn",
+      "Klaus McDonald-Maier",
+      "Shoaib Ehsan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2005.08135",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

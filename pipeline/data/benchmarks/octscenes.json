@@ -1,0 +1,39 @@
+{
+  "name": "OCTScenes",
+  "description": "Humans possess the cognitive ability to comprehend scenes in a compositional manner. To empower AI systems with similar capabilities, object-centric learning aims to acquire representations of individual objects from visual scenes without any supervision. Although recent advances in object-centric learning have made remarkable progress on complex synthesis datasets, there is a huge challenge for application to complex real-world scenes. One of the essential reasons is the scarcity of real-world datasets specifically tailored to object-centric learning. To address this problem, we propose a versatile real-world dataset of tabletop scenes for object-centric learning called OCTScenes, which is meticulously designed to serve as a benchmark for comparing, evaluating, and analyzing object-centric learning methods. OCTScenes contains 5000 tabletop scenes with a total of 15 objects. Each scene is captured in 60 frames covering a 360-degree perspective. Consequently, OCTScenes is a versatile benchmark dataset that can simultaneously satisfy the evaluation of object-centric learning methods based on single-image, video, and multi-view. Extensive experiments of representative object-centric learning methods are conducted on OCTScenes. The results demonstrate the shortcomings of state-of-the-art methods for learning meaningful representations from real-world data, despite their impressive performance on complex synthesis datasets. Furthermore, OCTScenes can serve as a catalyst for the advancement of existing methods, inspiring them to adapt to real-world scenes. Dataset and code are available at https://huggingface.co/datasets/Yinxuan/OCTScenes.",
+  "category": "vision",
+  "domain": "vision / object-centric learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "single_image_object_discovery",
+    "video_object_tracking",
+    "multi_view_object_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Adjusted Rand Index (ARI) / FG-ARI for segmentation/slot assignment, IoU for mask quality, and reconstruction errors for multi-view tasks",
+  "general_score_metric": "ARI (Adjusted Rand Index)",
+  "typical_sota_score": "10–40% ARI (substantially lower than on synthetic datasets)",
+  "year_of_publish": 2023,
+  "reputation": "Relatively new but relevant within the object-centric learning community as one of the few real-world multi-view/video benchmarks.",
+  "notes": "Real-world, moderately sized dataset (5k scenes) — not saturated; highlights limitations of current methods on real imagery; not an LLM benchmark; limited object/diversity compared to large-scale web datasets.",
+  "creators": {
+    "scientists": [
+      "Yinxuan Huang",
+      "Tonglin Chen",
+      "Zhimeng Shen",
+      "Jinghao Huang",
+      "Bin Li",
+      "xiangyang xue"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.09682",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "E-MLB",
+  "description": "Event cameras, such as dynamic vision sensors (DVS), are biologically inspired vision sensors that have advanced over conventional cameras in high dynamic range, low latency and low power consumption, showing great application potential in many fields. Event cameras are more sensitive to junction leakage current and photocurrent as they output differential signals, losing the smoothing function of the integral imaging process in the RGB camera. The logarithmic conversion further amplifies noise, especially in low-contrast conditions. Recently, researchers proposed a series of datasets and evaluation metrics but limitations remain: 1) the existing datasets are small in scale and insufficient in noise diversity, which cannot reflect the authentic working environments of event cameras; and 2) the existing denoising evaluation metrics are mostly referenced evaluation metrics, relying on APS information or manual annotation. To address the above issues, we construct a large-scale event denoising dataset (multilevel benchmark for event denoising, E-MLB) for the first time, which consists of 100 scenes, each with four noise levels, that is 12 times larger than the largest existing denoising dataset. We also propose the first nonreference event denoising metric, the event structural ratio (ESR), which measures the structural intensity of given events. ESR is inspired by the contrast metric, but is independent of the number of events and projection direction. Based on the proposed benchmark and ESR, we evaluate the most representative denoising algorithms, including classic and SOTA, and provide denoising baselines under various scenes and noise levels. The corresponding results and codes are available at https://github.com/KugaMaxx/cuke-emlb.",
+  "category": "vision",
+  "domain": "vision (event cameras)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "denoising",
+    "event_denoising",
+    "reconstruction_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ESR (event structural ratio) as primary non-reference metric; supplemented by reference-based reconstruction metrics (e.g., event-wise precision/recall, MSE) where available",
+  "general_score_metric": "ESR (Event Structural Ratio)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "A notable, larger-than-previous benchmark in the event-camera denoising community, attracting attention for its scale and the proposed non-reference ESR metric.",
+  "notes": "Non-LLM, vision/event-camera benchmark; substantially larger than prior denoising datasets (100 scenes × 4 noise levels). ESR is a novel non-reference metric but may not fully align with human-perceived quality; domain-specific biases (scene types, sensor models) and reliance on ESR should be considered.",
+  "creators": {
+    "scientists": [
+      "Saizhe Ding",
+      "Jinze Chen",
+      "Yang Wang",
+      "Yu Kang",
+      "Weiguo Song",
+      "Jie Cheng",
+      "Yang Cao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2303.11997",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

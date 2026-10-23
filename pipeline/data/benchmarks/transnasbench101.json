@@ -1,0 +1,39 @@
+{
+  "name": "TransNAS-Bench-101",
+  "description": "Recent breakthroughs of Neural Architecture Search (NAS) extend the field’s research scope towards a broader range of vision tasks and more diversified search spaces. While existing NAS methods mostly design architectures on a single task, algorithms that look beyond single-task search are surging to pursue a more efficient and universal solution across various tasks. Many of them leverage transfer learning and seek to preserve, reuse, and refine network design knowledge to achieve higher efficiency in future tasks. However, the enormous computational cost and experiment complexity of cross-task NAS are imposing barriers for valuable research in this direction. Existing NAS benchmarks all focus on one type of vision task, i.e., classification. In this work, we propose TransNAS-Bench-101, a benchmark dataset containing network performance across seven tasks, covering classification, regression, pixel-level prediction, and self-supervised tasks. This diversity provides opportunities to transfer NAS methods among tasks and allows for more complex transfer schemes to evolve. We explore two fundamentally different types of search space: cell-level search space and macro-level search space. With 7,352 backbones evaluated on seven tasks, 51,464 trained models with detailed training information are provided. With TransNAS-Bench-101, we hope to encourage the advent of exceptional NAS algorithms that raise cross-task search efficiency and generalizability to the next level. Our dataset and code will be available at Mindspore <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup> and VEGA <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">2</sup> .",
+  "category": "vision",
+  "domain": "machine learning / neural architecture search (vision, cross-task)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "regression",
+    "pixel_level_prediction",
+    "self_supervised_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Task-specific metrics (e.g., classification accuracy for classification tasks; RMSE or R2 for regression; mIoU or pixel-wise metrics for pixel-level tasks)",
+  "general_score_metric": "task-specific (classification accuracy is primary for classification tasks)",
+  "year_of_publish": 2021,
+  "reputation": "45 citations",
+  "notes": "Non-LLM, vision-focused NAS benchmark; provides many precomputed trained models (51,464) across tasks which can lead to overfitting to the benchmark/search-space; limited to the provided search spaces and training recipes which may not reflect modern large-scale training.",
+  "creators": {
+    "scientists": [
+      "Yawen Duan",
+      "Xin Chen",
+      "Hang Xu",
+      "Zewei Chen",
+      "Xiaodan Liang",
+      "Tong Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvpr46437.2021.00521",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

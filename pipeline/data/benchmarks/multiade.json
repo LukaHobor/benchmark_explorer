@@ -1,0 +1,38 @@
+{
+  "name": "MultiADE",
+  "description": "Active adverse event surveillance monitors Adverse Drug Events (ADE) from different data sources, such as electronic health records, medical literature, social media and search engine logs. Over the years, many datasets have been created, and shared tasks have been organised to facilitate active adverse event surveillance. However, most - if not all - datasets or shared tasks focus on extracting ADEs from a particular type of text. Domain generalisation - the ability of a machine learning model to perform well on new, unseen domains (text types) - is under-explored. Given the rapid advancements in natural language processing, one unanswered question is how far we are from having a single ADE extraction model that is effective on various types of text, such as scientific literature and social media posts. We contribute to answering this question by building a multi-domain benchmark for adverse drug event extraction, which we named MultiADE. The new benchmark comprises several existing datasets sampled from different text types and our newly created dataset - CADECv2, which is an extension of CADEC, covering online posts regarding more diverse drugs than CADEC. Our new dataset is carefully annotated by human annotators following detailed annotation guidelines. Our benchmark results show that the generalisation of the trained models is far from perfect, making it infeasible to be deployed to process different types of text. In addition, although intermediate transfer learning is a promising approach to utilising existing resources, further investigation is needed on methods of domain adaptation, particularly cost-effective methods to select useful training instances. The newly created CADECv2 and the scripts for building the benchmark are publicly available at CSIRO's Data Portal.",
+  "category": "text",
+  "domain": "biomedical / pharmacovigilance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "sequence_labeling",
+    "entity_extraction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "span-level F1",
+  "general_score_metric": "span-level F1",
+  "typical_sota_score": "varies (in-domain ~75–90% F1; cross-domain/generalisation often substantially lower, e.g., ~30–70% F1)",
+  "year_of_publish": 2024,
+  "reputation": "A recent multi-domain ADE extraction benchmark aimed at studying domain generalisation; gaining interest among pharmacovigilance/NLP researchers but not yet widely adopted as a community standard.",
+  "notes": "Composed from heterogeneous source datasets plus a new CADECv2 split — annotation/scheme differences and domain shift complicate evaluation; relatively small/imbalanced subsets per domain; focused on NER/sequence-labeling (not LLM-specific); potential privacy/PHI concerns depend on source data but public releases are typically de-identified.",
+  "creators": {
+    "scientists": [
+      "Xiang Dai",
+      "Sarvnaz Karimi",
+      "Abeed Sarker",
+      "Ben Hachey",
+      "Cecile Paris"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2405.18015",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ImplicitQA",
+  "description": "Video QA has made significant strides by leveraging multimodal learning to align visual and textual modalities. However, current benchmarks overwhelmingly focus on questions answerable through explicit visual content - actions, objects & events directly observable within individual frames or short clips. In contrast, creative and cinematic videos - such as movies, TV shows, and narrative-driven content - employ storytelling techniques that deliberately omit certain depictions, requiring viewers to infer motives, causality, and relationships across discontinuous frames. Humans naturally excel at such implicit reasoning, seamlessly integrating information across time and context to construct coherent narratives. Current VideoQA systems and benchmarks fail to capture this essential dimension of human-like understanding. To bridge this gap, we present ImplicitQA, a novel benchmark specifically designed to test models on implicit reasoning. It comprises 1K meticulously annotated QA pairs derived from 320+ high-quality creative video clips, systematically categorized into key reasoning dimensions: lateral and vertical spatial reasoning, depth and proximity, viewpoint and visibility, motion and trajectory, causal and motivational reasoning, social interactions, physical context, and inferred counting. These annotations are deliberately challenging, crafted by authors ensuring high-quality. Our extensive evaluations on leading VideoQA models reveals performance degradation, underscoring their reliance on surface-level visual cues and highlighting the difficulty of implicit reasoning. Performance variations across models further illustrate the complexity and diversity of the challenges presented by ImplicitQA. By releasing both the dataset and our data collection framework, we aim to stimulate further research and development in the community. https://huggingface.co/datasets/ucf-crcv/ImplicitQA.",
+  "category": "multimodal",
+  "domain": "vision (video QA)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "short_answer"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (exact-match / top-1)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "~20–50% accuracy (performance degrades substantially compared to explicit VideoQA; varies by model and reasoning category)",
+  "year_of_publish": 2025,
+  "reputation": "A recent dataset highlighting implicit, narrative-style reasoning in VideoQA; of growing interest in multimodal and VideoQA research but still early in adoption.",
+  "notes": "Relatively small (≈1K QA pairs) and focused on creative/narrative videos; annotations involve subjective implicit reasoning so labels can be ambiguous. Not an LLM-only benchmark; requires video understanding and temporal reasoning. Results sensitive to clip selection and annotation interpretation.",
+  "creators": {
+    "scientists": [
+      "Sirnam Swetha",
+      "Rohit Gupta",
+      "Parth Parag Kulkarni",
+      "David G Shatwell",
+      "Jeffrey A Chan Santiago",
+      "Nyle Siddiqui",
+      "Joseph Fioresi",
+      "Mubarak Shah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.21742",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

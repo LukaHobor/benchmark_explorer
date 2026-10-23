@@ -1,0 +1,36 @@
+{
+  "name": "UHD-IQA Benchmark Database",
+  "description": "We introduce a novel Image Quality Assessment (IQA) dataset comprising 6073 UHD-1 (4K) images, annotated at a fixed width of 3840 pixels. Contrary to existing No-Reference (NR) IQA datasets, ours focuses on highly aesthetic photos of high technical quality, filling a gap in the literature. The images, carefully curated to exclude synthetic content, are sufficiently diverse to train general NR-IQA models. Importantly, the dataset is annotated with perceptual quality ratings obtained through a crowdsourcing study. Ten expert raters, comprising photographers and graphics artists, assessed each image at least twice in multiple sessions spanning several days, resulting in 20 highly reliable ratings per image. Annotators were rigorously selected based on several metrics, including self-consistency, to ensure their reliability. The dataset includes rich metadata with user and machine-generated tags from over 5,000 categories and popularity indicators such as favorites, likes, downloads, and views. With its unique characteristics, such as its focus on high-quality images, reliable crowdsourced annotations, and high annotation resolution, our dataset opens up new opportunities for advancing perceptual image quality assessment research and developing practical NR-IQA models that apply to modern photos. Our dataset is available at https://database.mmsp-kn.de/uhd-iqa-benchmark-database.html",
+  "category": "vision",
+  "domain": "vision (image quality assessment)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "no_reference_IQA",
+    "regression",
+    "image_quality_ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Spearman rank correlation (SROCC), Pearson linear correlation (PLCC), RMSE",
+  "general_score_metric": "SROCC (Spearman rank correlation)",
+  "year_of_publish": 2024,
+  "reputation": "Well-regarded in the NR-IQA research community for its high-resolution, carefully curated images and reliable annotations; adoption is growing but specialized due to 4K data size.",
+  "notes": "Focuses on high-quality, aesthetic, real photos (no synthetic distortions) — this biases the dataset toward high-quality content and limits representation of extreme degradations. Large 4K images increase storage and compute requirements; annotations are high-reliability but may reflect rater/popularity bias.",
+  "creators": {
+    "scientists": [
+      "Vlad Hosu",
+      "Lorenzo Agnolucci",
+      "Oliver Wiedemann",
+      "Daisuke Iso",
+      "Dietmar Saupe"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.17472",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

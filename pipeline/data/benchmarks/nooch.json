@@ -1,0 +1,34 @@
+{
+  "name": "NOOCh",
+  "description": "Deep learning systems frequently fail at out-of-context (OOC) prediction, the problem of making reliable predictions on uncommon or unusual inputs or subgroups of the training distribution. To this end, a number of benchmarks for measuring OOC performance have recently been introduced. In this work, we introduce a framework unifying the literature on OOC performance measurement, and demonstrate how rich auxiliary information can be leveraged to identify candidate sets of OOC examples in existing datasets. We present NOOCh: a suite of naturally-occurring \"challenge sets\", and show how varying notions of context can be used to probe specific OOC failure modes. Experimentally, we explore the tradeoffs between various learning approaches on these challenge sets and demonstrate how the choices made in designing OOC benchmarks can yield varying conclusions.",
+  "category": "mixed",
+  "domain": "robustness / distribution shift",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation",
+    "distribution_shift_benchmarking",
+    "worst-group_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and worst-group accuracy / OOC performance gap (measuring performance drop on out-of-context challenge sets)",
+  "general_score_metric": "accuracy and worst-group / OOC-gap metrics",
+  "year_of_publish": 2021,
+  "reputation": "Cited in robustness and distribution-shift literature as a useful suite for evaluating naturally occurring out-of-context failure modes; moderate adoption among robustness researchers.",
+  "notes": "Aggregates challenge sets derived from existing datasets; heterogeneous in size and quality across tasks, potential label noise and dataset-specific biases, and not a single monolithic task — results depend strongly on the underlying base dataset and OOC definition.",
+  "creators": {
+    "scientists": [
+      "David Madras",
+      "Richard Zemel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2110.13223",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

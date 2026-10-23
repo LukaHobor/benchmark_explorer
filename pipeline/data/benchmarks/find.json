@@ -1,0 +1,40 @@
+{
+  "name": "FIND",
+  "description": "Labeling neural network submodules with human-legible descriptions is useful for many downstream tasks: such descriptions can surface failures, guide interventions, and perhaps even explain important model behaviors. To date, most mechanistic descriptions of trained networks have involved small models, narrowly delimited phenomena, and large amounts of human labor. Labeling all human-interpretable sub-computations in models of increasing size and complexity will almost certainly require tools that can generate and validate descriptions automatically. Recently, techniques that use learned models in-the-loop for labeling have begun to gain traction, but methods for evaluating their efficacy are limited and ad-hoc. How should we validate and compare open-ended labeling tools? This paper introduces FIND (Function INterpretation and Description), a benchmark suite for evaluating the building blocks of automated interpretability methods. FIND contains functions that resemble components of trained neural networks, and accompanying descriptions of the kind we seek to generate. The functions span textual and numeric domains, and involve a range of real-world complexities. We evaluate methods that use pretrained language models (LMs) to produce descriptions of function behavior in natural language and code. Additionally, we introduce a new interactive method in which an Automated Interpretability Agent (AIA) generates function descriptions. We find that an AIA, built from an LM with black-box access to functions, can infer function structure, acting as a scientist by forming hypotheses, proposing experiments, and updating descriptions in light of new data. However, AIA descriptions tend to capture global function behavior and miss local details. These results suggest that FIND will be useful for evaluating more sophisticated interpretability methods before they are applied to real-world models.",
+  "category": "text",
+  "domain": "machine learning / interpretability",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "code_generation",
+    "function_description"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human evaluation (primary) with automated text-similarity proxies (BLEU/ROUGE) to assess description quality and correctness",
+  "general_score_metric": "human evaluation score (augmented by BLEU/ROUGE as automated proxies)",
+  "year_of_publish": 2023,
+  "reputation": "A 2023 research benchmark aimed at automated interpretability; cited within interpretability research but not yet widely adopted beyond specialized groups.",
+  "notes": "Small, synthetic set of functions intended to emulate neural subcomponents; heavy reliance on human judgment for quality assessment; automated metrics are imperfect for open-ended descriptions; not a direct measure of LLM general knowledge.",
+  "creators": {
+    "scientists": [
+      "Sarah Schwettmann",
+      "Tamar Rott Shaham",
+      "Joanna Materzynska",
+      "Neil Chowdhury",
+      "Shuang Li",
+      "Jacob Andreas",
+      "David Bau",
+      "Antonio Torralba"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2309.03886",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

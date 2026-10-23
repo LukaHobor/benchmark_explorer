@@ -1,0 +1,34 @@
+{
+  "name": "Probabilistic Electricity Price Forecasting Benchmark (PEPF)",
+  "description": "Probabilistic electricity price forecasting (PEPF) is a highly complex task with broad economic and operational impact. Recent advances in time series foundation models (TSFMs) offer promising tools to improve PEPF performance. In contrast, PEPF provides a challenging platform for evaluating and accelerating the development of general TSFMs. Despite their potential synergies, TSFMs have received limited attention in the PEPF literature, while the PEPF task remains largely unexplored in the TSFM context. This work aims to bridge these currently parallel research streams, fostering convergence and cross-fertilization to advance both fields. Focusing on Moirai, an open-source probabilistic framework with native covariate support and fine-tuning capabilities, we set up a comprehensive benchmark against specialized neural network-based PEPF methods across multiple market regions characterized by high variability and heterogeneous conditions. Additionally, we systematically explore fine-tuning strategies and model configurations, including context lengths and exogenous variable usage, to assess their impact on probabilistic forecasting accuracy. Experimental results indicate that Moirai provides promising zero-shot predictions, though it still underperforms compared to domain-specific neural networks. Fine-tuning improves calibration, while the architecture does not yet fully leverage exogenous features. Taken together, these observations offer valuable insights to foster future developments. We release our code through an open repository to facilitate collaborative progress within the PEPF and TSFM communities.",
+  "category": "mixed",
+  "domain": "energy / electricity markets",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "probabilistic_forecasting",
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "CRPS (Continuous Ranked Probability Score); also reported: pinball loss, MAE/RMSE for point forecasts",
+  "general_score_metric": "CRPS",
+  "year_of_publish": 2025,
+  "reputation": "A recent, domain-focused benchmark bridging time-series foundation models and probabilistic electricity forecasting; currently of emerging interest within the energy forecasting research community but not yet widely adopted.",
+  "notes": "Non-LLM, domain-specific time-series benchmark; evaluation focuses on probabilistic metrics (CRPS/pinball). Results vary substantially across markets; code released but dataset/model splits and exogenous feature usage can influence comparability. Limited community saturation.",
+  "creators": {
+    "scientists": [
+      "Gabriele Marchesi",
+      "Andrea Ballarino",
+      "Alessandro Brusaferri"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.3390/en18236269",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

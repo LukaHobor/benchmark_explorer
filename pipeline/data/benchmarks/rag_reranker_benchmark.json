@@ -1,0 +1,36 @@
+{
+  "name": "RAG Reranker Benchmark",
+  "description": "Ranking models play a crucial role in enhancing overall accuracy of text retrieval systems. These multi-stage systems typically utilize either dense embedding models or sparse lexical indices to retrieve relevant passages based on a given query, followed by ranking models that refine the ordering of the candidate passages by its relevance to the query. This paper benchmarks various publicly available ranking models and examines their impact on ranking accuracy. We focus on text retrieval for question-answering tasks, a common use case for Retrieval-Augmented Generation systems. Our evaluation benchmarks include models some of which are commercially viable for industrial applications. We introduce a state-of-the-art ranking model, NV-RerankQA-Mistral-4B-v3, which achieves a significant accuracy increase of ~14% compared to pipelines with other rerankers. We also provide an ablation study comparing the fine-tuning of ranking models with different sizes, losses and self-attention mechanisms. Finally, we discuss challenges of text retrieval pipelines with ranking models in real-world industry applications, in particular the trade-offs among model size, ranking accuracy and system requirements like indexing and serving latency / throughput.",
+  "category": "text",
+  "domain": "text retrieval / question answering",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ranking",
+    "relevance_ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "NDCG@10",
+  "general_score_metric": "NDCG@10",
+  "year_of_publish": 2024,
+  "reputation": "An emerging, practically oriented benchmark for rerankers in RAG pipelines that is gaining attention in retrieval/IR research and industry.",
+  "notes": "Evaluates rerankers rather than end-to-end generative systems; results depend on retrieval backbone and index; practical concerns (latency, throughput) and use of commercial models may affect reproducibility and contamination risk.",
+  "creators": {
+    "scientists": [
+      "Gabriel de Souza P. Moreira",
+      "Ronay Ak",
+      "Benedikt Schifferer",
+      "Mengyao Xu",
+      "Radek Osmulski",
+      "Even Oldridge"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2409.07691",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

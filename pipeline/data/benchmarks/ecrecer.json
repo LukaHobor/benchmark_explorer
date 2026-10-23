@@ -1,0 +1,37 @@
+{
+  "name": "ECRECer",
+  "description": "Enzyme Commission (EC) numbers, which associate a protein sequence with the biochemical reactions it catalyzes, are essential for the accurate understanding of enzyme functions and cellular metabolism. Many ab-initio computational approaches were proposed to predict EC numbers for given input sequences directly. However, the prediction performance (accuracy, recall, precision), usability, and efficiency of existing methods still have much room to be improved. Here, we report ECRECer, a cloud platform for accurately predicting EC numbers based on novel deep learning techniques. To build ECRECer, we evaluate different protein representation methods and adopt a protein language model for protein sequence embedding. After embedding, we propose a multi-agent hierarchy deep learning-based framework to learn the proposed tasks in a multi-task manner. Specifically, we used an extreme multi-label classifier to perform the EC prediction and employed a greedy strategy to integrate and fine-tune the final model. Comparative analyses against four representative methods demonstrate that ECRECer delivers the highest performance, which improves accuracy and F1 score by 70% and 20% over the state-of-the-the-art, respectively. With ECRECer, we can annotate numerous enzymes in the Swiss-Prot database with incomplete EC numbers to their full fourth level. Take UniPort protein \"A0A0U5GJ41\" as an example (1.14.-.-), ECRECer annotated it with \"1.14.11.38\", which supported by further protein structure analysis based on AlphaFold2. Finally, we established a webserver (https://ecrecer.biodesign.ac.cn) and provided an offline bundle to improve usability.",
+  "category": "mixed",
+  "domain": "bioinformatics / enzymology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "hierarchical_classification",
+    "sequence_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy and F1-score (micro/macro) for multi-label/hierarchical EC prediction",
+  "general_score_metric": "top-1 accuracy and F1 (micro/macro)",
+  "year_of_publish": 2022,
+  "reputation": "A specialized tool/dataset and webserver for EC number prediction with reported strong improvements over several prior methods, but not a broadly standardized community benchmark.",
+  "notes": "Domain-specific (enzyme annotation) with hierarchical multi-level labels and class imbalance; possible data/annotation biases from UniProt/Swiss-Prot; not an LLM benchmark and performance depends on protein-language-model embeddings and extreme multi-label classifiers.",
+  "creators": {
+    "scientists": [
+      "Zhenkun Shi",
+      "Qianqian Yuan",
+      "Ruoyu Wang",
+      "Hoaran Li",
+      "Xiaoping Liao",
+      "Hongwu Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2202.03632",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "EndoDepth",
+  "description": "Accurate depth estimation in endoscopy is vital for successfully implementing computer vision pipelines for various medical procedures and CAD tools. In this paper, we present the EndoDepth benchmark, an evaluation framework designed to assess the robustness of monocular depth prediction models in endoscopic scenarios. Unlike traditional datasets, the EndoDepth benchmark incorporates common challenges encountered during endoscopic procedures. We present an evaluation approach that is consistent and specifically designed to evaluate the robustness performance of the model in endoscopic scenarios. Among these is a novel composite metric called the mean Depth Estimation Robustness Score (mDERS), which offers an in-depth evaluation of a model's accuracy against errors brought on by endoscopic image corruptions. Moreover, we present SCARED-C, a new dataset designed specifically to assess endoscopy robustness. Through extensive experimentation, we evaluate state-of-the-art depth prediction architectures on the EndoDepth benchmark, revealing their strengths and weaknesses in handling endoscopic challenging imaging artifacts. Our results demonstrate the importance of specialized techniques for accurate depth estimation in endoscopy and provide valuable insights for future research directions.",
+  "category": "vision",
+  "domain": "medical imaging (endoscopy)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "depth_estimation",
+    "robustness_evaluation",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mDERS (mean Depth Estimation Robustness Score); supplemented by standard depth metrics (RMSE, AbsRel, SILog)",
+  "general_score_metric": "mDERS (mean Depth Estimation Robustness Score)",
+  "year_of_publish": 2024,
+  "reputation": "A recently proposed, specialized benchmark focused on endoscopic depth-robustness; of growing interest to medical imaging researchers but not yet widely adopted.",
+  "notes": "Non-LLM benchmark; uses a small/specialized dataset (SCARED-C) and a composite robustness metric (mDERS); requires clinical/endoscopic data and careful preprocessing; heavy domain specificity limits generalization.",
+  "creators": {
+    "scientists": [
+      "Ivan Reyes-Amezcua",
+      "Ricardo Espinosa",
+      "Christian Daul",
+      "Gilberto Ochoa-Ruiz",
+      "Andres Mendez-Vazquez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2409.19930",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "XAI Pixel-Flipping / Occlusion Evaluation Benchmark",
+  "description": "Feature removal is a central building block for eXplainable AI (XAI), both for occlusion-based explanations (Shapley values) as well as their evaluation (pixel flipping, PF). However, occlusion strategies can vary significantly from simple mean replacement up to inpainting with state-of-the-art diffusion models. This ambiguity limits the usefulness of occlusion-based approaches. For example, PF benchmarks lead to contradicting rankings. This is amplified by competing PF measures: Features are either removed starting with most influential first (MIF) or least influential first (LIF). This study proposes two complementary perspectives to resolve this disagreement problem. Firstly, we address the common criticism of occlusion-based XAI, that artificial samples lead to unreliable model evaluations. We propose to measure the reliability by the R(eference)-Out-of-Model-Scope (OMS) score. The R-OMS score enables a systematic comparison of occlusion strategies and resolves the disagreement problem by grouping consistent PF rankings. Secondly, we show that the insightfulness of MIF and LIF is conversely dependent on the R-OMS score. To leverage this, we combine the MIF and LIF measures into the symmetric relevance gain (SRG) measure. This breaks the inherent connection to the underlying occlusion strategy and leads to consistent rankings. This resolves the disagreement problem, which we verify for a set of 40 different occlusion strategies.",
+  "category": "vision",
+  "domain": "explainable AI / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ranking",
+    "scoring",
+    "explainability_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "custom metrics: pixel-flipping/area-under-perturbation-curve measures plus the proposed R-OMS and SRG scores",
+  "general_score_metric": "SRG (symmetric relevance gain) and R-OMS (Reference Out-of-Model-Scope) scores",
+  "year_of_publish": 2024,
+  "reputation": "A recent research contribution in XAI/vision that provides a systematic critique and new metrics; of interest to explainability researchers but not yet a widespread standard benchmark.",
+  "notes": "Non-LLM, vision-focused benchmark; results are sensitive to the chosen occlusion/inpainting strategy and implementation details. Designed to compare occlusion strategies rather than to be a large standardized dataset; may not generalize across model architectures or datasets.",
+  "creators": {
+    "scientists": [
+      "Stefan Blücher",
+      "Johanna Vielhaben",
+      "Nils Strodthoff"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2401.06654",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

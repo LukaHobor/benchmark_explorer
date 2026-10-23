@@ -1,0 +1,40 @@
+{
+  "name": "ACDC Automated Cardiac Diagnosis Challenge",
+  "description": "Cardiovascular diseases are among the leading causes of mortality worldwide, highlighting the urgent need for advanced diagnostic tools to enable effective treatment. As a non-invasive imaging modality, cardiac MRI plays a crucial role in assessing cardiac function, perfusion, and morphology. Accurate segmentation of key cardiac structures – the Left Ventricle (LV), Right Ventricle (RV), and Myocardium (MYO), is essential for calculating critical metrics such as ejection fraction and myocardial mass. This study focuses on the Automated Cardiac Diagnosis Challenge (ACDC) dataset to evaluate the performance of several state-of-the-art neural network architectures for cardiac segmentation. We systematically investigated Convolutional Neural Networks (CNNs), including U-Net variants (U-Net, U-Net++, U-Net3+), and explored transformer-based models such as Trans U-Net and Swin U-Net. Hyperparameter tuning was conducted to optimize these models, considering different loss functions, batch sizes, and learning rates. The findings demonstrate that Attention U-net outperformed other models in segmenting the LV, RV, and MYO when trained using ImageNet pretrained weights. This highlights the significance of attention architectural designs in capturing both global and local image features. Additionally, pretrained models, particularly Attention U-Net with a VGG16 encoder initialized with ImageNet weights, achieved higher accuracy, underscoring the benefits of transfer learning in scenarios with limited training data. These findings contribute to the advancement of more accurate and reliable automated cardiac segmentation tools, which are crucial for improving clinical diagnostics and patient outcomes.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static",
+  "task_types": [
+    "semantic_segmentation",
+    "cardiac_mri_analysis",
+    "ventricle_segmentation",
+    "functional_diagnosis"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 100,
+  "evaluation_method": "Dice coefficient for segmentation, with additional clinical/functionality metrics such as volume and ejection-fraction error in some settings",
+  "general_score_metric": "Dice score",
+  "typical_sota_score": "85–90%",
+  "year_of_publish": 2017,
+  "year_of_last_update": 2017,
+  "reputation": "high",
+  "notes": "The challenge is widely used for cardiac MRI segmentation research; the provided author list is from the prompt and may not reflect the full original organizer team.",
+  "creators": {
+    "scientists": [
+      "Tijana Geroski",
+      "Nenad Filipović",
+      "Amir Amini"
+    ],
+    "institutions": [
+      "ACDC challenge organizers"
+    ],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://www.semanticscholar.org/paper/822e9cae12fa8ec05d63b58e711ab35089180ef4",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

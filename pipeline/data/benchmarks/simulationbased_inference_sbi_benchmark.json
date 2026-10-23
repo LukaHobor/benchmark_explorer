@@ -1,0 +1,37 @@
+{
+  "name": "Simulation-Based Inference (SBI) Benchmark",
+  "description": "Recent advances in probabilistic modelling have led to a large number of simulation-based inference algorithms which do not require numerical evaluation of likelihoods. However, a public benchmark with appropriate performance metrics for such 'likelihood-free' algorithms has been lacking. This has made it difficult to compare algorithms and identify their strengths and weaknesses. We set out to fill this gap: We provide a benchmark with inference tasks and suitable performance metrics, with an initial selection of algorithms including recent approaches employing neural networks and classical Approximate Bayesian Computation methods. We found that the choice of performance metric is critical, that even state-of-the-art algorithms have substantial room for improvement, and that sequential estimation improves sample efficiency. Neural network-based approaches generally exhibit better performance, but there is no uniformly best algorithm. We provide practical advice and highlight the potential of the benchmark to diagnose problems and improve algorithms. The results can be explored interactively on a companion website. All code is open source, making it possible to contribute further benchmark tasks and inference algorithms.",
+  "category": "mixed",
+  "domain": "probabilistic modeling / simulation-based inference",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "parameter_inference",
+    "density_estimation",
+    "likelihood-free_inference"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "posterior estimation and calibration metrics (log posterior predictive density, coverage/calibration, CRPS, RMSE of parameter estimates)",
+  "general_score_metric": "log posterior predictive density and calibration/coverage metrics",
+  "year_of_publish": 2021,
+  "reputation": "Recognized within the simulation-based inference community as a useful open benchmark for likelihood-free methods with moderate adoption.",
+  "notes": "Requires access to simulators; computationally intensive; performance is highly task- and simulator-dependent; useful for diagnosing calibration and sample-efficiency but not directly applicable to LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Jan-Matthis Lueckmann",
+      "Jan Boelts",
+      "David S. Greenberg",
+      "Pedro J. Gonçalves",
+      "Jakob H. Macke"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2101.04653",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

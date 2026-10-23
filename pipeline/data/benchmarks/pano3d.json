@@ -1,0 +1,39 @@
+{
+  "name": "Pano3D",
+  "description": "Pano3D is a new benchmark for depth estimation from spherical panoramas. It aims to assess performance across all depth estimation traits, the primary direct depth estimation performance targeting precision and accuracy, and also the secondary traits, boundary preservation, and smoothness. Moreover, Pano3D moves beyond typical intra-dataset evaluation to inter-dataset performance assessment. By disentangling the capacity to generalize to unseen data into different test splits, Pano3D represents a holistic benchmark for $360^o$ depth estimation. We use it as a basis for an extended analysis seeking to offer insights into classical choices for depth estimation. This results in a solid baseline for panoramic depth that follow-up works can build upon to steer future progress.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "depth_estimation",
+    "dense_regression",
+    "boundary_preservation_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "RMSE, AbsRel, and delta accuracy (common dense depth metrics)",
+  "general_score_metric": "RMSE / AbsRel (depth error metrics)",
+  "year_of_publish": 2021,
+  "reputation": "An emerging benchmark for 360° panoramic depth estimation referenced by follow-up panoramic depth works but not yet as widely adopted as standard perspective-depth datasets.",
+  "notes": "Inter-dataset splits emphasize generalization; evaluation uses multiple complementary metrics. Dataset reflects spherical distortions and may require specialized models; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Georgios Albanis",
+      "Nikolaos Zioulis",
+      "Petros Drakoulis",
+      "Vasileios Gkitsas",
+      "Vladimiros Sterzentsenko",
+      "Federico Alvarez",
+      "Dimitrios Zarpalas",
+      "Petros Daras"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2109.02749",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

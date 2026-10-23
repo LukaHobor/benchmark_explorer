@@ -1,0 +1,40 @@
+{
+  "name": "FELT",
+  "description": "Current event-/frame-event based trackers undergo evaluation on short-term tracking datasets, however, the tracking of real-world scenarios involves long-term tracking, and the performance of existing tracking algorithms in these scenarios remains unclear. In this paper, we first propose a new long-term and large-scale frame-event single object tracking dataset, termed FELT. It contains 742 videos and 1,594,474 RGB frames and event stream pairs and has become the largest frame-event tracking dataset to date. We re-train and evaluate 15 baseline trackers on our dataset for future works to compare. More importantly, we find that the RGB frames and event streams are naturally incomplete due to the influence of challenging factors and spatially sparse event flow. In response to this, we propose a novel associative memory Transformer network as a unified backbone by introducing modern Hopfield layers into multi-head self-attention blocks to fuse both RGB and event data. Extensive experiments on RGB-Event (FELT), RGB-Thermal (RGBT234, LasHeR), and RGB-Depth (DepthTrack) datasets fully validated the effectiveness of our model. The dataset and source code can be found at \\url{https://github.com/Event-AHU/FELT_SOT_Benchmark}.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "single_object_tracking",
+    "multi-modal_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "success rate (AUC of success plot) and precision",
+  "general_score_metric": "AUC (success rate) of tracking success plot",
+  "typical_sota_score": "40–70%",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "FELT is the largest frame–event long-term single-object tracking dataset to date and is becoming a key resource for RGB–event fusion and long-term tracking research.",
+  "notes": "Multi-modal vision benchmark (non-LLM). Large-scale and long-term but event streams are spatially sparse and RGB/event modalities can be naturally incomplete, making evaluation and cross-dataset generalization challenging.",
+  "creators": {
+    "scientists": [
+      "Xiao Wang",
+      "Ju Huang",
+      "Shiao Wang",
+      "Chuanming Tang",
+      "Bo Jiang",
+      "Yonghong Tian",
+      "Jin Tang",
+      "Bin Luo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.05839",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

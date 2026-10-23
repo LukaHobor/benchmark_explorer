@@ -1,0 +1,36 @@
+{
+  "name": "Endoscopic Content Area Benchmark",
+  "description": "Endoscopic content area refers to the informative area enclosed by the dark, non-informative, border regions present in most endoscopic footage. The estimation of the content area is a common task in endoscopic image processing and computer vision pipelines. Despite the apparent simplicity of the problem, several factors make reliable real-time estimation surprisingly challenging. The lack of rigorous investigation into the topic combined with the lack of a common benchmark dataset for this task has been a long-lasting issue in the field. In this paper, we propose two variants of a lean GPU-based computational pipeline combining edge detection and circle fitting. The two variants differ by relying on handcrafted features, and learned features respectively to extract content area edge point candidates. We also present a first-of-its-kind dataset of manually annotated and pseudo-labelled content areas across a range of surgical indications. To encourage further developments, the curated dataset, and an implementation of both algorithms, has been made public (https://doi.org/10.7303/syn32148000, https://github.com/charliebudd/torch-content-area). We compare our proposed algorithm with a state-of-the-art U-Net-based approach and demonstrate significant improvement in terms of both accuracy (Hausdorff distance: 6.3 px versus 118.1 px) and computational time (Average runtime per frame: 0.13 ms versus 11.2 ms).",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "boundary_estimation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Hausdorff distance (primary), runtime; can also report IoU/overlap metrics",
+  "general_score_metric": "Hausdorff distance",
+  "typical_sota_score": "≈6 px (Hausdorff distance) reported for the best proposed method",
+  "year_of_publish": 2022,
+  "reputation": "A focused, domain-specific benchmark and dataset for endoscopic content-area estimation with limited but growing use in surgical vision research.",
+  "notes": "Medical-imaging benchmark (non-LLM). Dataset includes manually annotated and pseudo-labelled masks — pseudo labels may be noisy. Performance is resolution-dependent (pixel units) and sensitive to annotation variability; also emphasizes runtime, so efficiency is an important axis. Dataset size is limited and specialized to endoscopy contexts.",
+  "creators": {
+    "scientists": [
+      "Charlie Budd",
+      "Luis C. Garcia-Peraza-Herrera",
+      "Martin Huber",
+      "Sebastien Ourselin",
+      "Tom Vercauteren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2210.14771",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

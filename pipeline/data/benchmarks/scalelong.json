@@ -1,0 +1,51 @@
+{
+  "name": "ScaleLong",
+  "description": "Although long-video understanding demands that models capture hierarchical temporal information -- from clip (seconds) and shot (tens of seconds) to event (minutes) and story (hours) -- existing benchmarks either neglect this multi-scale design or scatter scale-specific questions across different videos, preventing direct comparison of model performance across timescales on the same content. To address this, we introduce ScaleLong, the first benchmark to disentangle these factors by embedding questions targeting four hierarchical timescales -- clip (seconds), shot (tens of seconds), event (minutes), and story (hours) -- all within the same video content. This within-content multi-timescale questioning design enables direct comparison of model performance across timescales on identical videos. ScaleLong features 269 long videos (avg.\\ 86\\,min) from 5 main categories and 36 sub-categories, with 4--8 carefully designed questions, including at least one question for each timescale. Evaluating 23 MLLMs reveals a U-shaped performance curve, with higher accuracy at the shortest and longest timescales and a dip at intermediate levels. Furthermore, ablation studies show that increased visual token capacity consistently enhances reasoning across all timescales. ScaleLong offers a fine-grained, multi-timescale benchmark for advancing MLLM capabilities in long-video understanding. The code and dataset are available https://github.com/multimodal-art-projection/ScaleLong.",
+  "category": "vision",
+  "domain": "vision (long-form video understanding)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_question_answering",
+    "visual_question_answering",
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "Recently introduced and gaining attention among long-video MLLM researchers; early but growing adoption for multi-timescale evaluation.",
+  "notes": "Relatively small collection (269 videos) compared to web-scale corpora; potential pretraining contamination risk for widely used videos; high compute required for long-video evaluation; focuses on QA-style questions rather than end-to-end generation tasks.",
+  "creators": {
+    "scientists": [
+      "David Ma",
+      "Huaqing Yuan",
+      "Xingjian Wang",
+      "Qianbo Zang",
+      "Tianci Liu",
+      "Xinyang He",
+      "Yanbin Wei",
+      "Jiawei Guo",
+      "Ni Jiahui",
+      "Zhenzhu Yang",
+      "Meng Cao",
+      "Shanghaoran Quan",
+      "Yizhi Li",
+      "Wangchunshu Zhou",
+      "Jiaheng Liu",
+      "Wenhao Huang",
+      "Ge Zhang",
+      "Shiwen Ni",
+      "Xiaojie Jin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.23922",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

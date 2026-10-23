@@ -1,0 +1,33 @@
+{
+  "name": "Cell Segmentation Benchmark Competition at ISBI 2019",
+  "description": "The presented algorithms for segmentation and tracking follow a 3-step approach where we detect, track and finally segment nuclei. In the preprocessing phase, we detect centroids of the cell nuclei using a convolutional neural network (CNN) for the 2D images and a Laplacian-of-Gaussian Scale Space Maximum Projection approach for the 3D data sets. Tracking was performed in a backwards fashion on the predicted seed points, i.e., starting at the last frame and sequentially connecting corresponding objects until the first frame was reached. Correspondences were identified by propagating detections of a frame t to its preceding frame t-1 and by combining redundant detections using a hierarchical clustering approach. The tracked centroids were then used as input to variants of the seeded watershed algorithm to obtain the final segmentation.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "task_types": [
+    "image_segmentation",
+    "cell_tracking",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "segmentation and tracking metrics",
+  "general_score_metric": "SEG and TRA scores",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2019,
+  "reputation": "A respected biomedical image analysis benchmark associated with the ISBI cell tracking/segmentation challenge series and commonly used in microscopy research.",
+  "notes": "Challenge-style benchmark with domain-specific metrics; results depend heavily on preprocessing and postprocessing. Not an LLM benchmark and typically evaluated on microscopy images with limited dataset size.",
+  "creators": {
+    "scientists": [
+      "Dennis Eschweiler",
+      "Johannes Stegmaier"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1904.06890",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

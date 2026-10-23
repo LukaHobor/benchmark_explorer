@@ -1,0 +1,33 @@
+{
+  "name": "gSuite",
+  "description": "As the interest to Graph Neural Networks (GNNs) is growing, the importance of benchmarking and performance characterization studies of GNNs is increasing. So far, we have seen many studies that investigate and present the performance and computational efficiency of GNNs. However, the work done so far has been carried out using a few high-level GNN frameworks. Although these frameworks provide ease of use, they contain too many dependencies to other existing libraries. The layers of implementation details and the dependencies complicate the performance analysis of GNN models that are built on top of these frameworks, especially while using architectural simulators. Furthermore, different approaches on GNN computation are generally overlooked in prior characterization studies, and merely one of the common computational models is evaluated. Based on these shortcomings and needs that we observed, we developed a benchmark suite that is framework independent, supporting versatile computational models, easily configurable and can be used with architectural simulators without additional effort. Our benchmark suite, which we call gSuite, makes use of only hardware vendor's libraries and therefore it is independent of any other frameworks. gSuite enables performing detailed performance characterization studies on GNN Inference using both contemporary GPU profilers and architectural GPU simulators. To illustrate the benefits of our new benchmark suite, we perform a detailed characterization study with a set of well-known GNN models with various datasets; running gSuite both on a real GPU card and a timing-detailed GPU simulator. We also implicate the effect of computational models on performance. We use several evaluation metrics to rigorously measure the performance of GNN computation.",
+  "category": "mixed",
+  "domain": "graph neural networks",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "performance_benchmarking",
+    "profiling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "performance metrics (runtime, latency, throughput, memory usage) measured across GNN models and datasets",
+  "general_score_metric": "runtime / throughput / latency (hardware-dependent)",
+  "year_of_publish": 2022,
+  "reputation": "A systems-oriented benchmark suite used by researchers profiling GNN inference performance; modest adoption in architecture and ML systems communities.",
+  "notes": "Non-ML/LLM benchmarking focused on hardware and implementation performance. Results are highly hardware- and configuration-dependent; using vendor libraries reduces framework-related variability but may limit portability. Not affected by dataset contamination but can produce non-comparable results across different GPU architectures or driver stacks.",
+  "creators": {
+    "scientists": [
+      "Taha Tekdoğan",
+      "Serkan Göktaş",
+      "Ayse Yilmazer-Metin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2210.11601",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

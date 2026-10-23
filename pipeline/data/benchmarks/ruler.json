@@ -1,0 +1,42 @@
+{
+  "name": "RULER",
+  "description": "Realistic and Universal Long-context Evaluation for Models goes beyond simple needle-in-a-haystack retrieval to evaluate long-context reasoning across four task categories: retrieval (single/multi-key), multi-hop tracing (variable tracking across documents), aggregation (frequent item identification), and question answering. Measures the 'effective context length' — the length beyond which reasoning performance degrades below a threshold.",
+  "category": "text",
+  "domain": "reasoning",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy at various context lengths (4K–128K+ tokens)",
+  "general_score_metric": "accuracy (at specified context length)",
+  "typical_sota_score": "~90–96% at 128K tokens (best proprietary models); open-source models often collapse at 64K+",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Key benchmark for validating claimed context window lengths; developed by NVIDIA; reveals that many models claiming 32K+ contexts fail to maintain performance at those lengths; widely cited in long-context model evaluations",
+  "notes": "Introduced the concept of 'effective context length' — distinguishing claimed from actual usable context. Configurable across lengths from 4K to 128K+ tokens. Revealed significant gap between proprietary and open-source models. Models like Jamba 1.5 and Gemini 1.5 Pro maintain >94% at 128K; Mistral Large 2 drops to 48.1% at 128K. Published 2024 by NVIDIA.",
+  "creators": {
+    "scientists": [
+      "Cheng-Ping Hsieh",
+      "Simeng Sun",
+      "Samuel Kriman",
+      "Shantanu Acharya",
+      "Dima Rekesh",
+      "Fei Jia",
+      "Yang Zhang",
+      "Boris Ginsburg"
+    ],
+    "institutions": [
+      "NVIDIA Research"
+    ],
+    "companies": [
+      "NVIDIA"
+    ]
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2507.07077",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

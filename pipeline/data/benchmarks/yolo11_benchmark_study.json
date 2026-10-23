@@ -1,0 +1,36 @@
+{
+  "name": "YOLO11 Benchmark Study",
+  "description": "This study presents a comprehensive benchmark analysis of various YOLO (You Only Look Once) algorithms, from YOLOv3 to the newest addition. It represents the first research to comprehensively evaluate the performance of YOLO11, the latest addition to the YOLO family. It evaluates their performance on three diverse datasets: Traffic Signs (with varying object sizes), African Wildlife (with diverse aspect ratios and at least one instance of the object per image), and Ships and Vessels (with small-sized objects of a single class), ensuring a comprehensive assessment across datasets with distinct challenges. To ensure a robust evaluation, we employ a comprehensive set of metrics, including Precision, Recall, Mean Average Precision (mAP), Processing Time, GFLOPs count, and Model Size. Our analysis highlights the distinctive strengths and limitations of each YOLO version. For example: YOLOv9 demonstrates substantial accuracy but struggles with detecting small objects and efficiency whereas YOLOv10 exhibits relatively lower accuracy due to architectural choices that affect its performance in overlapping object detection but excels in speed and efficiency. Additionally, the YOLO11 family consistently shows superior performance in terms of accuracy, speed, computational efficiency, and model size. YOLO11m achieved a remarkable balance of accuracy and efficiency, scoring mAP50-95 scores of 0.795, 0.81, and 0.325 on the Traffic Signs, African Wildlife, and Ships datasets, respectively, while maintaining an average inference time of 2.4ms, a model size of 38.8Mb, and around 67.6 GFLOPs on average. These results provide critical insights for both industry and academia, facilitating the selection of the most suitable YOLO algorithm for diverse applications and guiding future enhancements.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "efficiency_benchmarking",
+    "model_size_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_average_precision (mAP) (with precision/recall and inference_time reported)",
+  "general_score_metric": "mAP50-95",
+  "typical_sota_score": "32–81% (dataset-dependent; reported per-dataset mAP50-95 range)",
+  "year_of_publish": 2024,
+  "reputation": "An emerging, research-focused benchmark for comparing YOLO-family detectors; it has attracted interest in the object-detection community but is not yet a de facto standard.",
+  "notes": "Non-LLM computer-vision benchmark; dataset- and hardware-dependent metrics (inference time, GFLOPs, model size). Results vary greatly by dataset (small-object and class-imbalanced cases); possible dataset bias and limited public adoption/reproducibility across implementations.",
+  "creators": {
+    "scientists": [
+      "Nidhal Jegham",
+      "Chan Young Koh",
+      "Marwan Abdelatti",
+      "Abdeltawab Hendawi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.00201",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

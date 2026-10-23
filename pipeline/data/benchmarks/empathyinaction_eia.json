@@ -1,0 +1,31 @@
+{
+  "name": "Empathy-in-Action (EIA)",
+  "description": "We investigate empathy-in-action -- the willingness to sacrifice task efficiency to address human needs -- as a linear direction in LLM activation space. Using contrastive prompts grounded in the Empathy-in-Action (EIA) benchmark, we test detection and steering across Phi-3-mini-4k (3.8B), Qwen2.5-7B (safety-trained), and Dolphin-Llama-3.1-8B (uncensored). Detection: All models show AUROC 0.996-1.00 at optimal layers. Uncensored Dolphin matches safety-trained models, demonstrating empathy encoding emerges independent of safety training. Phi-3 probes correlate strongly with EIA behavioral scores (r=0.71, p<0.01). Cross-model probe agreement is limited (Qwen: r=-0.06, Dolphin: r=0.18), revealing architecture-specific implementations despite convergent detection. Steering: Qwen achieves 65.3% success with bidirectional control and coherence at extreme interventions. Phi-3 shows 61.7% success with similar coherence. Dolphin exhibits asymmetric steerability: 94.4% success for pro-empathy st",
+  "category": "text",
+  "domain": "social cognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC for detection and task_success_rate for steering/intervention experiments",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "0.996–1.00 AUROC; 61–94% steering success depending on model and direction",
+  "year_of_publish": 2025,
+  "reputation": "A very recent research benchmark with emerging interest, but not yet widely adopted as a standard community benchmark.",
+  "notes": "Small, specialized benchmark focused on probing and steering empathy-related behavior in LLM activations; results are model- and layer-dependent rather than a single standardized leaderboard score.",
+  "creators": {
+    "scientists": [
+      "Juan P. Cadile"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2511.16699",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

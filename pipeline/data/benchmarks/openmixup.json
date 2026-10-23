@@ -1,0 +1,42 @@
+{
+  "name": "OpenMixup",
+  "description": "Mixup augmentation has emerged as a widely used technique for improving the generalization ability of deep neural networks (DNNs). However, the lack of standardized implementations and benchmarks has impeded recent progress, resulting in poor reproducibility, unfair comparisons, and conflicting insights. In this paper, we introduce OpenMixup, the first mixup augmentation codebase, and benchmark for visual representation learning. Specifically, we train 18 representative mixup baselines from scratch and rigorously evaluate them across 11 image datasets of varying scales and granularity, ranging from fine-grained scenarios to complex non-iconic scenes. We also open-source our modular codebase, including a collection of popular vision backbones, optimization strategies, and analysis toolkits, which not only supports the benchmarking but enables broader mixup applications beyond classification, such as self-supervised learning and regression tasks. Through experiments and empirical analysis, we gain observations and insights on mixup performance-efficiency trade-offs, generalization, and optimization behaviors, and thereby identify preferred choices for different needs. To the best of our knowledge, OpenMixup has facilitated several recent studies. We believe this work can further advance reproducible mixup augmentation research and thereby lay a solid ground for future progress in the community. The source code and user documents are available at \\url{https://github.com/Westlake-AI/openmixup}.",
+  "category": "vision",
+  "domain": "vision (visual representation learning / data augmentation)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "representation_learning",
+    "self_supervised",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (top-1) / linear evaluation accuracy",
+  "general_score_metric": "top-1 accuracy",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2025,
+  "reputation": "Well-regarded in the vision community for standardizing and reproducing mixup augmentation evaluations; used as a reference by subsequent mixup studies.",
+  "notes": "Vision-only benchmark (non-LLM). Evaluations span many datasets and scales, so no single saturation point; results can vary with backbone and training recipe. Focused on augmentation and representation performance rather than single-dataset SOTA.",
+  "creators": {
+    "scientists": [
+      "Siyuan Li",
+      "Zedong Wang",
+      "Zicheng Liu",
+      "Juanxi Tian",
+      "Di wu",
+      "Cheng Tan",
+      "Weiyang Jin",
+      "Stan Z. Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2209.04851",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

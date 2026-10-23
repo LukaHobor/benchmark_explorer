@@ -1,0 +1,36 @@
+{
+  "name": "Pasture",
+  "description": "For robots to be generally useful, they must be able to find arbitrary objects described by people (i.e., be language-driven) even without expensive navigation training on in-domain data (i.e., perform zero-shot inference). We explore these capabilities in a unified setting: language-driven zero-shot object navigation (L-ZSON). Inspired by the recent success of open-vocabulary models for image classification, we investigate a straightforward framework, CLIP on Wheels (CoW), to adapt open-vocabulary models to this task without fine-tuning. To better evaluate L-ZSON, we introduce the Pasture benchmark, which considers finding uncommon objects, objects described by spatial and appearance attributes, and hidden objects described relative to visible objects. We conduct an in-depth empirical study by directly deploying 21 CoW baselines across Habitat, RoboTHOR, and Pasture. In total, we evaluate over 90k navigation episodes and find that (1) CoW baselines often struggle to leverage language descriptions, but are proficient at finding uncommon objects. (2) A simple CoW, with CLIP-based object localization and classical exploration -- and no additional training -- matches the navigation efficiency of a state-of-the-art ZSON method trained for 500M steps on Habitat MP3D data. This same CoW provides a 15.6 percentage point improvement in success over a state-of-the-art RoboTHOR ZSON model.",
+  "category": "multimodal",
+  "domain": "robotics / embodied navigation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "embodied_navigation",
+    "visual_grounding",
+    "zero_shot_generalization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "success_rate (task_success_rate); SPL often reported as a secondary metric",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in embodied navigation research for evaluating language-driven zero-shot object search across multiple simulators (Habitat, RoboTHOR, Pasture).",
+  "notes": "Evaluated in simulated environments (Habitat, RoboTHOR, Pasture); focuses on zero-shot, uncommon and relational object descriptions. Not saturated; results vary substantially by environment and evaluation metric. Simulation-to-real gap and reliance on visual-language models (non-LLM) are important caveats.",
+  "creators": {
+    "scientists": [
+      "Samir Yitzhak Gadre",
+      "Mitchell Wortsman",
+      "Gabriel Ilharco",
+      "Ludwig Schmidt",
+      "Shuran Song"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2203.10421",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

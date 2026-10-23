@@ -1,0 +1,41 @@
+{
+  "name": "sensor-ocr-benchmark",
+  "description": "My Custom Dataset\n\t\n\n\n\t\n\t\t\n\t\tDescription\n\t\n\nThe original dataset was modified to inserto fake sensor information in bottom of image.\n\n\t\n\t\t\n\t\tUsage\n\t\n\nfrom datasets import load_dataset\ndataset = load_dataset(\"famousdetectiveadrianmonk/sensor-ocr-benchmark\")\nexample = dataset['train'][0]\nimg = example['pixel_values']\nsensor_zoomin = img.crop((600, 850, 1250, 1050))\n\n\n\t\n\t\t\n\t\n\t\n\t\tAttribution\n\t\n\nThis dataset is based on the original dataset provided by Segments.ai. The original dataset can… See the full description on the dataset page: https://huggingface.co/datasets/famousdetectiveadrianmonk/sensor-ocr-benchmark.",
+  "category": "vision",
+  "domain": "multidisciplinary",
+  "tags": [
+    "task_categories:image-to-text",
+    "language:en",
+    "license:mit",
+    "size_categories:n<1K",
+    "modality:image",
+    "modality:text"
+  ],
+  "task_types": [
+    "ocr_recognition",
+    "text_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "character_error_rate (CER) and word_error_rate (WER) for OCR; text-localization evaluated with mAP/IoU",
+  "general_score_metric": "CER / WER",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Small, custom Hugging Face dataset derived from Segments.ai annotations with limited community adoption.",
+  "downloads": 41,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "famousdetectiveadrianmonk"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://huggingface.co/datasets/famousdetectiveadrianmonk/sensor-ocr-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

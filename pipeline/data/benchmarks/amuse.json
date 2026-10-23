@@ -1,0 +1,39 @@
+{
+  "name": "AMUSE",
+  "description": "Recent multimodal large language models (MLLMs) such as GPT-4o and Qwen3-Omni show strong perception but struggle in multi-speaker, dialogue-centric settings that demand agentic reasoning tracking who speaks, maintaining roles, and grounding events across time. These scenarios are central to multimodal audio-video understanding, where models must jointly reason over audio and visual streams in applications such as conversational video assistants and meeting analytics. We introduce AMUSE, a benchmark designed around tasks that are inherently agentic, requiring models to decompose complex audio-visual interactions into planning, grounding, and reflection steps. It evaluates MLLMs across three modes zero-shot, guided, and agentic and six task families, including spatio-temporal speaker grounding and multimodal dialogue summarization. Across all modes, current models exhibit weak multi-speaker reasoning and inconsistent behavior under both non-agentic and agentic evaluation. Motivated by the inherently agentic nature of these tasks and recent advances in LLM agents, we propose RAFT, a data-efficient agentic alignment framework that integrates reward optimization with intrinsic multimodal self-evaluation as reward and selective parameter adaptation for data and parameter efficient updates. Using RAFT, we achieve up to 39.52\\% relative improvement in accuracy on our benchmark. Together, AMUSE and RAFT provide a practical platform for examining agentic reasoning in multimodal models and improving their capabilities.",
+  "category": "multimodal",
+  "domain": "multimodal / conversational AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "spatio-temporal_grounding",
+    "speaker_grounding",
+    "multimodal_dialogue_summarization",
+    "multi_speaker_reasoning",
+    "question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and F1 (and localization IoU for grounding tasks)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Heterogeneous multimodal tasks requiring multiple task-specific metrics; potential contamination if models are trained on overlapping web/video data; not yet saturated; agentic evaluation mode introduces additional evaluation variability.",
+  "creators": {
+    "scientists": [
+      "Sanjoy Chowdhury",
+      "K. D. Yang",
+      "Xudong Liu",
+      "Fartash Faghri",
+      "Pavan Kumar Anasosalu Vasu",
+      "Oncel Tuzel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2512.16250",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

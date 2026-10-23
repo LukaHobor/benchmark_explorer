@@ -1,0 +1,38 @@
+{
+  "name": "ISAC peak detection benchmark (CFAR vs CNN)",
+  "description": "Peak detection is a fundamental task in radar and has therefore been studied extensively in radar literature. However, Integrated Sensing and Communication (ISAC) systems for sixth generation (6G) cellular networks need to perform peak detection under hardware impairments and constraints imposed by the underlying system designed for communications. This paper presents a comparative study of classical Constant False Alarm Rate (CFAR)-based algorithms and a recently proposed Convolutional Neural Network (CNN)-based method for peak detection in ISAC radar images. To impose practical constraints of ISAC systems, we model the impact of hardware impairments, such as power amplifier nonlinearities and quantization noise. We perform extensive simulation campaigns focusing on multi-target detection under varying noise as well as on target separation in resolution-limited scenarios. The results show that CFAR detectors require approximate knowledge of the operating scenario and the use of window functions for reliable performance. The CNN, on the other hand, achieves high performance in all scenarios, but requires a preprocessing step for the input data.",
+  "category": "vision",
+  "domain": "radar / wireless sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "peak_detection",
+    "binary_classification",
+    "signal_processing"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Probability of detection (Pd) at fixed false alarm rate (Pfa) / ROC-based detection metrics",
+  "general_score_metric": "Probability of Detection (Pd) at a specified False Alarm Rate (Pfa); ROC curves / Pd vs Pfa",
+  "typical_sota_score": "70–95% (highly scenario- and SNR-dependent)",
+  "year_of_publish": 2025,
+  "reputation": "A niche, simulation-based benchmark with relevance in the radar/ISAC research community but limited adoption outside specialized groups.",
+  "notes": "Simulation-based benchmark (not a large real-world dataset); results strongly dependent on SNR, target separation, and impairment models; requires preprocessing for the CNN approach; non-LLM benchmark; reproducibility can depend on simulation seed and impairment parameter settings.",
+  "creators": {
+    "scientists": [
+      "Paolo Tosi",
+      "Steffen Schieler",
+      "Marcus Henninger",
+      "Sebastian Semper",
+      "Silvio Mandelli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.10969",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

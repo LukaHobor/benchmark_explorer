@@ -1,0 +1,31 @@
+{
+  "name": "HPO-NMT Benchmark",
+  "description": "Hyperparameter selection is a crucial part of building neural machine translation (NMT) systems across both academia and industry. Fine-grained adjustments to a model{'}s architecture or training recipe can mean the difference between a positive and negative research result or between a state-of-the-art and underperforming system. While recent literature has proposed methods for automatic hyperparameter optimization (HPO), there has been limited work on applying these methods to neural machine translation (NMT), due in part to the high costs associated with experiments that train large numbers of model variants. To facilitate research in this space, we introduce a lookup-based approach that uses a library of pre-trained models for fast, low cost HPO experimentation. Our contributions include (1) the release of a large collection of trained NMT models covering a wide range of hyperparameters, (2) the proposal of targeted metrics for evaluating HPO methods on NMT, and (3) a reproducible benchmark of several HPO methods against our model library, including novel graph-based and multiobjective methods.",
+  "category": "text",
+  "domain": "natural language processing / machine translation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "hyperparameter_optimization",
+    "machine_translation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "BLEU",
+  "general_score_metric": "BLEU",
+  "typical_sota_score": "varies by language pair and model (commonly ~20–40 BLEU for many standard NMT setups)",
+  "reputation": "A niche but useful benchmark/resource for research on HPO methods applied to NMT, offering a large precomputed model library to enable low-cost, reproducible HPO experimentation.",
+  "notes": "Lookup-based benchmark using a library of pre-trained models (so HPO experiments are fast but limited to the provided model pool); primary focus is on HPO methodology rather than producing new translation SOTAs; results depend on the coverage of the model library and target language pair.",
+  "creators": {
+    "scientists": [
+      "Xuan Zhang",
+      "Kevin Duh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Social Distance Estimation Benchmark",
+  "description": "The COVID-19 virus has caused a global pandemic since March 2020. The World Health Organization (WHO) has provided guidelines on how to reduce the spread of the virus and one of the most important measures is social distancing. Maintaining a minimum of one meter distance from other people is strongly suggested to reduce the risk of infection. This has created a strong interest in monitoring the social distances either as a safety measure or to study how the measures have affected human behavior and country-wise differences in this. The need for automatic social distance estimation algorithms is evident, but there is no suitable test benchmark for such algorithms. Collecting images with measured ground-truth pair-wise distances between all the people using different camera settings is cumbersome. Furthermore, performance evaluation for social distance estimation algorithms is not straightforward and there is no widely accepted evaluation protocol. In this paper, we provide a dataset of varying images with measured pair-wise social distances under different camera positionings and focal length values. We suggest a performance evaluation protocol and provide a benchmark to easily evaluate social distance estimation algorithms. We also propose a method for automatic social distance estimation. Our method takes advantage of object detection and human pose estimation. It can be applied on any single image as long as focal length and sensor size information are known. The results on our benchmark are encouraging with 92% human detection rate and only 28.9% average error in distance estimation among the detected people.",
+  "category": "vision",
+  "domain": "computer vision / public health",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "pose_estimation",
+    "distance_estimation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Human detection rate (recall) and average distance estimation error (MAE or percentage error)",
+  "general_score_metric": "Detection rate (recall) and average distance error (reported as percentage or meters)",
+  "typical_sota_score": "≈92% detection rate and ~28.9% average distance error (reported by the original paper)",
+  "year_of_publish": 2021,
+  "reputation": "Niche dataset introduced during COVID-19 research; used in a small set of computer-vision/health-safety studies but not widely adopted beyond that.",
+  "notes": "Requires camera focal length/sensor info for accurate metric recovery; relatively small and domain-specific; privacy considerations for people images; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mert Seker",
+      "Anssi Männistö",
+      "Alexandros Iosifidis",
+      "Jenni Raitoharju"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2103.06759",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

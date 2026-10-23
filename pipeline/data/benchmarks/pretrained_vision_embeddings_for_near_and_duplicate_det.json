@@ -1,0 +1,35 @@
+{
+  "name": "Pretrained Vision Embeddings for Near- and Duplicate Detection in Medical Images",
+  "description": "Near- and duplicate image detection is a critical concern in the field of medical imaging. Medical datasets often contain similar or duplicate images from various sources, which can lead to significant performance issues and evaluation biases, especially in machine learning tasks due to data leakage between training and testing subsets. In this paper, we present an approach for identifying near- and duplicate 3D medical images leveraging publicly available 2D computer vision embeddings. We assessed our approach by comparing embeddings extracted from two state-of-the-art self-supervised pretrained models and two different vector index structures for similarity retrieval. We generate an experimental benchmark based on the publicly available Medical Segmentation Decathlon dataset. The proposed method yields promising results for near- and duplicate image detection achieving a mean sensitivity and specificity of 0.9645 and 0.8559, respectively.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "duplicate_detection",
+    "image_retrieval",
+    "similarity_search"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "sensitivity_and_specificity (reported mean sensitivity and specificity)",
+  "general_score_metric": "mean sensitivity and specificity",
+  "typical_sota_score": "sensitivity ~96%, specificity ~86% (as reported by the paper)",
+  "year_of_publish": 2023,
+  "reputation": "A niche academic benchmark based on the Medical Segmentation Decathlon; primarily of interest to medical imaging researchers and not widely adopted outside that community.",
+  "notes": "Non-LLM benchmark; evaluated on Medical Segmentation Decathlon (limited cases per task); uses 2D vision embeddings for 3D images which may introduce domain-shift; risk of dataset-specific tuning/contamination if not carefully split.",
+  "creators": {
+    "scientists": [
+      "Tuan Truong",
+      "Farnaz Khun Jush",
+      "Matthias Lenga"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2312.07273",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

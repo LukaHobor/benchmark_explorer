@@ -1,0 +1,37 @@
+{
+  "name": "SAR Object Detection Unified Benchmark",
+  "description": "Despite much research progress in synthetic aperture radar (SAR) object detection, the performance of SAR object detection has encountered a bottleneck limited by the imaging mechanism of SAR. In this work, we investigate how to perform robust SAR object detection by distilling the category knowledge from optical images in the training stage. To this end, we propose a novel knowledge distillation method called Category-oriented Localization Distillation (CoLD), which employs the optical object detection network as the teacher to guide the SAR object detection network. To introduce the category prior knowledge of the teacher network in the localization knowledge transferring, a category-oriented partition module is designed in CoLD to decouple candidate bounding boxes into target and non-target ones according to the category information in optical images. Through box decoupling, the accuracy and efficiency of SAR object detection can be significantly improved. Moreover, an IoU-based weighting module is introduced in CoLD to guide the student network focusing more on high-quality candidate boxes by adaptively changing the weight of each candidate bounding box based on the corresponding IoU score in the teacher network. In addition, a unified benchmark dataset is created for the evaluation of optical information guided SAR object detection, which consists of 14,665 optical and SAR image pairs in the training set and 3,666 SAR images in the testing set. Extensive experiments on the dataset demonstrate the effectiveness of our CoLD against state-of-the-art methods. The dataset is available at: https://github.com/mmic-lcl/Datasets-and-benchmark-code.",
+  "category": "vision",
+  "domain": "remote sensing / signal processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_detection",
+    "cross-modal_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Detection metrics based on bounding box overlap (IoU) and mean Average Precision",
+  "general_score_metric": "mAP (mean Average Precision) at standard IoU thresholds",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "27 citations",
+  "notes": "Moderate-size dataset of paired optical–SAR images; domain shift between optical and SAR modalities and class imbalance are concerns; performance depends heavily on cross-modal distillation and pretraining; non-LLM benchmark with geospatial and sensor-specific biases.",
+  "creators": {
+    "scientists": [
+      "Chao Wang",
+      "Rui Ruan",
+      "Zhicheng Zhao",
+      "Chenglong Li",
+      "Jin Tang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/tgrs.2023.3291356",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

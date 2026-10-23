@@ -1,0 +1,42 @@
+{
+  "name": "Protein–ligand binding affinity benchmark",
+  "description": "Free energy calculations are rapidly becoming indispensable in structure-enabled drug discovery programs. As new methods, force fields, and implementations are developed, assessing their expected accuracy on real-world systems (benchmarking) becomes critical to provide users with an assessment of the accuracy expected when these methods are applied within their domain of applicability, and developers with a way to assess the expected impact of new methodologies. These assessments require construction of a benchmark - a set of well-prepared, high quality systems with corresponding experimental measurements designed to ensure the resulting calculations provide a realistic assessment of expected performance when these methods are deployed within their domains of applicability. To date, the community has not yet adopted a common standardized benchmark, and existing benchmark reports suffer from a myriad of issues, including poor data quality, limited statistical power, and statistically deficient analyses, all of which can conspire to produce benchmarks that are poorly predictive of real-world performance. Here, we address these issues by presenting guidelines for (1) curating experimental data to develop meaningful benchmark sets, (2) preparing benchmark inputs according to best practices to facilitate widespread adoption, and (3) analysis of the resulting predictions to enable statistically meaningful comparisons among methods and force fields.",
+  "category": "mixed",
+  "domain": "bioinformatics / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSE / MAE / Pearson correlation (comparison of predicted vs. experimental ΔG)",
+  "general_score_metric": "RMSE (kcal/mol) between predicted and experimental binding free energies",
+  "typical_sota_score": "≈1–2 kcal/mol RMSE (best methods on well‑curated systems)",
+  "year_of_publish": 2021,
+  "reputation": "Respected within the computational chemistry / drug‑discovery community as a principled approach to benchmark free‑energy methods, but no single community standard has been universally adopted.",
+  "notes": "Non‑LLM benchmark; limited by experimental data quality, small/heterogeneous datasets, sensitivity to system preparation and force field choice, and potential dataset construction biases.",
+  "creators": {
+    "scientists": [
+      "David F. Hahn",
+      "Christopher I. Bayly",
+      "Hannah E. Bruce Macdonald",
+      "John D. Chodera",
+      "Vytautas Gapsys",
+      "Antonia S. J. S. Mey",
+      "David L. Mobley",
+      "Laura Perez Benito",
+      "Christina E. M. Schindler",
+      "Gary Tresadern",
+      "Gregory L. Warren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2105.06222",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

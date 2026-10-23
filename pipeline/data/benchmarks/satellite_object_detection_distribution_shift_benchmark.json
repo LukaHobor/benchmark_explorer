@@ -1,0 +1,32 @@
+{
+  "name": "Satellite Object Detection Distribution Shift Benchmark",
+  "description": "Object detectors have achieved remarkable performance in many applications; however, these deep learning models are typically designed under the i.i.d. assumption, meaning they are trained and evaluated on data sampled from the same (source) distribution. In real-world deployment, however, target distributions often differ from source data, leading to substantial performance degradation. Domain Generalisation (DG) seeks to bridge this gap by enabling models to generalise to Out-Of-Distribution (OOD) data without access to target distributions during training, enhancing robustness to unseen conditions. In this work, we examine the generalisability and robustness of state-of-the-art object detectors under real-world distribution shifts, focusing particularly on spatial domain shifts. Despite the need, a standardised benchmark dataset specifically designed for assessing object detection under realistic DG scenarios is currently lacking. To address this, we introduce Real-World Distribution Shifts (RWDS), a suite of three novel DG benchmarking datasets that focus on humanitarian and climate change applications. These datasets enable the investigation of domain shifts across (i) climate zones and (ii) various disasters and geographic regions. To our knowledge, these are the first DG benchmarking datasets tailored for object detection in real-world, high-impact contexts. We aim for these datasets to serve as valuable resources for evaluating the robustness and generalisation of future object detection models. Our datasets and code are available at https://github.com/RWGAI/RWDS.",
+  "category": "vision",
+  "domain": "remote sensing / satellite imagery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision) / AP across IoU thresholds",
+  "general_score_metric": "mAP (mean Average Precision)",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, domain-focused benchmark for distribution-robust satellite object detection (recently introduced; limited adoption so far).",
+  "notes": "Designed for domain generalisation / real-world distribution shifts in satellite imagery. Not an LLM benchmark; performance sensitive to geographic/climatic shifts and class imbalance; relatively new so limited leaderboards and potential reproducibility variability.",
+  "creators": {
+    "scientists": [
+      "Sara Al-Emadi",
+      "Yin Yang",
+      "Ferda Ofli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.19202",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

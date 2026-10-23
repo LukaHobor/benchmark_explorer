@@ -1,0 +1,36 @@
+{
+  "name": "TabularMath",
+  "description": "Standard tabular benchmarks mainly focus on the evaluation of a model's capability to interpolate values inside a data manifold, where models good at performing local statistical smoothing are rewarded. However, there exists a very large category of high-value tabular data, including financial modeling and physical simulations, which are generated based upon deterministic computational processes, as opposed to stochastic and noisy relationships. Therefore, we investigate if tabular models can provide an extension from statistical interpolation to computational extrapolation. We propose TabularMath, a diagnostic benchmark of 114 deterministic problems (233,472 rows) generated from verified programs based on GSM8K and AIME. We evaluate 9 tabular architectures and in-context learning (ICL) with GPT-OSS-120B. On standard regression metrics, TabPFN v2.5 performs remarkably well, achieving R^2=0.998 in-distribution and maintaining positive R^2 even under distribution shift, which is unique a",
+  "category": "text",
+  "domain": "tabular ML",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "R^2",
+  "general_score_metric": "R^2",
+  "typical_sota_score": "R^2 ≈ 0.998 in-distribution (TabPFN v2.5); remains >0 under distribution shift",
+  "year_of_publish": 2026,
+  "reputation": "A new diagnostic tabular benchmark aimed at probing extrapolation rather than standard interpolation, so it is not yet broadly adopted but is conceptually important.",
+  "notes": "Very new benchmark with a small number of deterministic problems; results may be sensitive to distribution shift and model choice, and there is no established leaderboard yet.",
+  "creators": {
+    "scientists": [
+      "Zerui Cheng",
+      "Jiashuo Liu",
+      "Jianzhu Yao",
+      "Pramod Viswanath",
+      "Ge Zhang",
+      "Wenhao Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2602.02523",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

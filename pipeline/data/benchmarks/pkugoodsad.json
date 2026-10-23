@@ -1,0 +1,34 @@
+{
+  "name": "PKU-GoodsAD",
+  "description": "Visual anomaly detection is essential and commonly used for many tasks in the field of robotic vision. Recent anomaly detection datasets mainly focus on industrial automated inspection, medical image analysis and video surveillance. With the development of unmanned supermarkets, anomaly detection plays an important role in the inspection of the production and sale of goods and the automatic replacement of anomalous goods. We hence build the supermarket goods anomaly detection (GoodsAD) dataset. It contains 6124 high-resolution images of 484 different appearance goods divided into 6 categories. Each category contains several common different types of anomalies such as deformation, surface damage and opened. Anomalies contain both texture changes and structural changes. It follows the unsupervised setting and only normal (defect-free) images are used for training. Pixel-precise ground truth regions are provided for all anomalies. Moreover, we also conduct a thorough evaluation of current state-of-the-art unsupervised anomaly detection methods. This initial benchmark indicates that the practical GoodsAD dataset is quite different from the industrial datasets (e.g., MVTec AD) from the laboratory environment. Some methods which perform well on the industrial anomaly detection datasets, show poor performance on GoodsAD. This is a comprehensive, multi-object dataset for supermarket goods anomaly detection that focuses on real-world applications.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "unsupervised_anomaly_detection",
+    "pixel_level_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (area under the ROC) at image- and pixel-levels; region-based metrics such as PRO and pixel F1 are also reported",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2024,
+  "reputation": "14 citations",
+  "notes": "Unsupervised setting (only normal images for training); pixel-precise ground truth for anomalies; multi-object and real-world appearance variability make the dataset more challenging than industrial lab datasets (e.g., MVTec AD). Relatively small (6,124 images) and class-imbalanced; non-LLM benchmark. Possible domain shift and contamination risks if models were pretrained on similar supermarket imagery.",
+  "creators": {
+    "scientists": [
+      "Jian Zhang",
+      "Runwei Ding",
+      "Miaoju Ban",
+      "Linhui Dai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/lra.2024.3352358",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "MIMIC Clinical Prediction Benchmark",
+  "description": "Deep learning models (aka Deep Neural Networks) have revolutionized many\nfields including computer vision, natural language processing, speech\nrecognition, and is being increasingly used in clinical healthcare\napplications. However, few works exist which have benchmarked the performance\nof the deep learning models with respect to the state-of-the-art machine\nlearning models and prognostic scoring systems on publicly available healthcare\ndatasets. In this paper, we present the benchmarking results for several\nclinical prediction tasks such as mortality prediction, length of stay\nprediction, and ICD-9 code group prediction using Deep Learning models,\nensemble of machine learning models (Super Learner algorithm), SAPS II and SOFA\nscores. We used the Medical Information Mart for Intensive Care III (MIMIC-III)\n(v1.4) publicly available dataset, which includes all patients admitted to an\nICU at the Beth Israel Deaconess Medical Center from 2001 to 2012, for the\nbenchmarking tasks. Our results show that deep learning models consistently\noutperform all the other approaches especially when the `raw' clinical time\nseries data is used as input features to the models.",
+  "category": "mixed",
+  "domain": "healthcare / clinical prognostics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "regression",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC (mortality), MAE/MSE (length of stay), F1 / micro-F1 (ICD-9 prediction)",
+  "general_score_metric": "AUC (for primary mortality prediction task)",
+  "typical_sota_score": "0.80–0.95 (AUC for mortality prediction reported across studies)",
+  "year_of_publish": 2017,
+  "reputation": "Widely used and influential benchmark in clinical machine learning research for ICU prediction tasks; a standard reference dataset (MIMIC-III).",
+  "notes": "Non-LLM clinical benchmark based on de-identified EHRs; potential dataset shift and label noise across time, and standard concerns about reproducibility and cohort selection. Contains multiple task types with different primary metrics.",
+  "creators": {
+    "scientists": [
+      "Sanjay Purushotham",
+      "Chuizheng Meng",
+      "Zhengping Che",
+      "Yan Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1710.08531",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

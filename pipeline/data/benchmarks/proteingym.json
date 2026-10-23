@@ -1,0 +1,39 @@
+{
+  "name": "ProteinGym",
+  "description": "Predicting the effects of mutations in proteins is critical to many applications, from understanding genetic disease to designing novel proteins that can address our most pressing challenges in climate, agriculture and healthcare. Despite a surge in machine learning-based protein models to tackle these questions, an assessment of their respective benefits is challenging due to the use of distinct, often contrived, experimental datasets, and the variable performance of models across different protein families. Addressing these challenges requires scale. To that end we introduce ProteinGym, a large-scale and holistic set of benchmarks specifically designed for protein fitness prediction and design. It encompasses both a broad collection of over 250 standardized deep mutational scanning assays, spanning millions of mutated sequences, as well as curated clinical datasets providing high-quality expert annotations about mutation effects. We devise a robust evaluation framework that combines metrics for both fitness prediction and design, factors in known limitations of the underlying experimental methods, and covers both zero-shot and supervised settings. We report the performance of a diverse set of over 70 high-performing models from various subfields (eg., alignment-based, inverse folding) into a unified benchmark suite. We open source the corresponding codebase, datasets, MSAs, structures, model predictions and develop a user-friendly website that facilitates data access and analysis.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "fitness_prediction",
+    "mutation_effect_prediction",
+    "protein_design",
+    "zero_shot_evaluation",
+    "supervised_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Spearman correlation",
+  "general_score_metric": "Spearman correlation",
+  "year_of_publish": 2023,
+  "reputation": "190 citations",
+  "notes": "Non-LLM protein benchmark spanning >250 deep mutational scanning assays. Assay measurement noise and heterogeneity across protein families affect comparability; potential pretraining/sequence database contamination risks; performance varies widely by protein and task, not saturated.",
+  "creators": {
+    "scientists": [
+      "Pascal Notin",
+      "Aaron W. Kollasch",
+      "Daniel P. Ritter",
+      "Lood van Niekerk",
+      "Steffan B. Paul",
+      "Hansen Spinner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2023.12.07.570727",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

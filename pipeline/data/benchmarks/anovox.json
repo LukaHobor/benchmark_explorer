@@ -1,0 +1,43 @@
+{
+  "name": "AnoVox",
+  "description": "The scale-up of autonomous vehicles depends heavily on their ability to deal with anomalies, such as rare objects on the road. In order to handle such situations, it is necessary to detect anomalies in the first place. Anomaly detection for autonomous driving has made great progress in the past years but suffers from poorly designed benchmarks with a strong focus on camera data. In this work, we propose AnoVox, the largest benchmark for ANOmaly detection in autonomous driving to date. AnoVox incorporates large-scale multimodal sensor data and spatial VOXel ground truth, allowing for the comparison of methods independent of their used sensor. We propose a formal definition of normality and provide a compliant training dataset. AnoVox is the first benchmark to contain both content and temporal anomalies.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "detection",
+    "segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC / average_precision (AUPR) and detection/segmentation metrics (e.g., IoU, mAP) depending on task",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed large-scale, multimodal benchmark for anomaly detection in autonomous driving that is gaining interest because of its voxel ground truth and temporal anomaly coverage.",
+  "notes": "Multimodal (LiDAR, radar, cameras) and voxel-level ground truth; supports both content and temporal anomalies. Non-LLM benchmark focused on perception; evaluation can vary by modality (hence multiple metrics). Potential dataset biases and domain gaps (scene types, sensor setups) may affect generalization; not known to be saturated.",
+  "creators": {
+    "scientists": [
+      "Daniel Bogdoll",
+      "Iramm Hamdard",
+      "Lukas Namgyu Rößler",
+      "Felix Geisler",
+      "Muhammed Bayram",
+      "Felix Wang",
+      "Jan Imhof",
+      "Miguel de Campos",
+      "Anushervon Tabarov",
+      "Yitian Yang",
+      "Hanno Gottschalk",
+      "J. Marius Zöllner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2405.07865",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "DivScene",
+  "description": "Object navigation in unknown environments is crucial for deploying embodied agents in real-world applications. While we have witnessed huge progress due to large-scale scene datasets, faster simulators, and stronger models, previous studies mainly focus on limited scene types and target objects. In this paper, we study a new task of navigating to diverse target objects in a large number of scene types. To benchmark the problem, we present a large-scale scene dataset, DivScene, which contains 4,614 scenes across 81 different types. With the dataset, we build an end-to-end embodied agent, NatVLM, by fine-tuning a Large Vision Language Model (LVLM) through imitation learning. The LVLM is trained to take previous observations from the environment and generate the next actions. We also introduce CoT explanation traces of the action prediction for better performance when tuning LVLMs. Our extensive experiments find that we can build a performant LVLM-based agent through imitation learning on the shortest paths constructed by a BFS planner without any human supervision. Our agent achieves a success rate that surpasses GPT-4o by over 20%. Meanwhile, we carry out various analyses showing the generalization ability of our agent. Our code and data are available at https://github.com/zhaowei-wang-nlp/DivScene.",
+  "category": "multimodal",
+  "domain": "embodied agents / robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "object_navigation",
+    "vision-language_navigation",
+    "action_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "success_rate",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A newly proposed large-scale benchmark gaining attention in embodied agent and LVLM research for its diversity of scenes and objects.",
+  "notes": "Large-scale synthetic/photorealistic scene set (4,614 scenes) — potential sim-to-real transfer gaps; relatively new so limited external replication; designed for embodied agents rather than pure language-only evaluation.",
+  "creators": {
+    "scientists": [
+      "Zhaowei Wang",
+      "Hongming Zhang",
+      "Tianqing Fang",
+      "Ye Tian",
+      "Yue Yang",
+      "Kaixin Ma",
+      "Xiaoman Pan",
+      "Yangqiu Song",
+      "Dong Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2410.02730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

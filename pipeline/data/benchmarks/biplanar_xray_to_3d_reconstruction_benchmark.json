@@ -1,0 +1,33 @@
+{
+  "name": "Biplanar X-ray to 3D Reconstruction Benchmark",
+  "description": "Various deep learning models have been proposed for 3D bone shape reconstruction from two orthogonal (biplanar) X-ray images. However, it is unclear how these models compare against each other since they are evaluated on different anatomy, cohort and (often privately held) datasets. Moreover, the impact of the commonly optimized image-based segmentation metrics such as dice score on the estimation of clinical parameters relevant in 2D-3D bone shape reconstruction is not well known. To move closer toward clinical translation, we propose a benchmarking framework that evaluates tasks relevant to real-world clinical scenarios, including reconstruction of fractured bones, bones with implants, robustness to population shift, and error in estimating clinical parameters. Our open-source platform provides reference implementations of 8 models (many of whose implementations were not publicly available), APIs to easily collect and preprocess 6 public datasets, and the implementation of automatic clinical parameter and landmark extraction methods. We present an extensive evaluation of 8 2D-3D models on equal footing using 6 public datasets comprising images for four different anatomies. Our results show that attention-based methods that capture global spatial relationships tend to perform better across all anatomies and datasets; performance on clinically relevant subgroups may be overestimated without disaggregated reporting; ribs are substantially more difficult to reconstruct compared to femur, hip and spine; and the dice score improvement does not always bring a corresponding improvement in the automatic estimation of clinically relevant parameters.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3D_reconstruction",
+    "landmark_detection",
+    "clinical_parameter_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "segmentation/reconstruction metrics (Dice, Hausdorff/Chamfer/point-to-surface distances) plus errors in clinically relevant parameters (mm/degrees)",
+  "general_score_metric": "Dice score (with clinical parameter error reported alongside)",
+  "year_of_publish": 2023,
+  "reputation": "Open-source, well-documented benchmark with reference implementations; gaining recognition within medical-imaging research but still a specialized resource.",
+  "notes": "Uses multiple public but heterogeneous datasets (limited size per anatomy); performance varies strongly by anatomy and subgroup; improvements in common metrics (e.g., Dice) do not necessarily translate to better clinical-parameter estimates; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mahesh Shakya",
+      "Bishesh Khanal"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2309.13587",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

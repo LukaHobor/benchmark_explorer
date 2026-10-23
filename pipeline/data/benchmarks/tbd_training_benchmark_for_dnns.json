@@ -1,0 +1,41 @@
+{
+  "name": "TBD (Training Benchmark for DNNs)",
+  "description": "The recent popularity of deep neural networks (DNNs) has generated a lot of\nresearch interest in performing DNN-related computation efficiently. However,\nthe primary focus is usually very narrow and limited to (i) inference -- i.e.\nhow to efficiently execute already trained models and (ii) image classification\nnetworks as the primary benchmark for evaluation.\n  Our primary goal in this work is to break this myopic view by (i) proposing a\nnew benchmark for DNN training, called TBD (TBD is short for Training Benchmark\nfor DNNs), that uses a representative set of DNN models that cover a wide range\nof machine learning applications: image classification, machine translation,\nspeech recognition, object detection, adversarial networks, reinforcement\nlearning, and (ii) by performing an extensive performance analysis of training\nthese different applications on three major deep learning frameworks\n(TensorFlow, MXNet, CNTK) across different hardware configurations (single-GPU,\nmulti-GPU, and multi-machine). TBD currently covers six major application\ndomains and eight different state-of-the-art models.\n  We present a new toolchain for performance analysis for these models that\ncombines the targeted usage of existing performance analysis tools, careful\nselection of new and existing metrics and methodologies to analyze the results,\nand utilization of domain specific characteristics of DNN training. We also\nbuild a new set of tools for memory profiling in all three major frameworks;\nmuch needed tools that can finally shed some light on precisely how much memory\nis consumed by different data structures (weights, activations, gradients,\nworkspace) in DNN training. By using our tools and methodologies, we make\nseveral important observations and recommendations on where the future research\nand optimization of DNN training should be focused.",
+  "category": "mixed",
+  "domain": "machine learning systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "machine_translation",
+    "speech_recognition",
+    "object_detection",
+    "generative_adversarial_networks",
+    "reinforcement_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "measure training throughput (examples/sec or tokens/sec), time-to-target_accuracy (time-to-convergence), and resource usage (memory, GPU utilization)",
+  "general_score_metric": "training_throughput (examples/sec) and time-to-target_accuracy",
+  "year_of_publish": 2018,
+  "reputation": "Widely cited in ML systems research as a representative cross-framework training benchmark for diverse DNN workloads, but not a standardized community-wide benchmark like ImageNet for inference.",
+  "notes": "Systems-focused benchmark (non-LLM); emphasizes performance (throughput/time/memory) rather than downstream accuracy; results are sensitive to framework versions, hardware, and implementation details; limited to the set of models included in the 2018 release and may be dated for modern architectures.",
+  "creators": {
+    "scientists": [
+      "Hongyu Zhu",
+      "Mohamed Akrout",
+      "Bojian Zheng",
+      "Andrew Pelegris",
+      "Amar Phanishayee",
+      "Bianca Schroeder",
+      "Gennady Pekhimenko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1803.06905",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

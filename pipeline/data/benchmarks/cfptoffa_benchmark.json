@@ -1,0 +1,38 @@
+{
+  "name": "CFP-to-FFA Benchmark",
+  "description": "Fundus imaging is a pivotal tool in ophthalmology, and different imaging modalities are characterized by their specific advantages. For example, Fundus Fluorescein Angiography (FFA) uniquely provides detailed insights into retinal vascular dynamics and pathology, surpassing Color Fundus Photographs (CFP) in detecting microvascular abnormalities and perfusion status. However, the conventional invasive FFA involves discomfort and risks due to fluorescein dye injection, and it is meaningful but challenging to synthesize FFA images from non-invasive CFP. Previous studies primarily focused on FFA synthesis in a single disease category. In this work, we explore FFA synthesis in multiple diseases by devising a Diffusion-guided generative adversarial network, which introduces an adaptive and dynamic diffusion forward process into the discriminator and adds a category-aware representation enhancer. Moreover, to facilitate this research, we collect the first multi-disease CFP and FFA paired dataset, named the Multi-disease Paired Ocular Synthesis (MPOS) dataset, with four different fundus diseases. Experimental results show that our FFA synthesis network can generate better FFA images compared to state-of-the-art methods. Furthermore, we introduce a paired-modal diagnostic network to validate the effectiveness of synthetic FFA images in the diagnosis of multiple fundus diseases, and the results show that our synthesized FFA images with the real CFP images have higher diagnosis accuracy than that of the compared FFA synthesizing methods. Our research bridges the gap between non-invasive imaging and FFA, thereby offering promising prospects to enhance ophthalmic diagnosis and patient care, with a focus on reducing harm to patients through non-invasive procedures. Our dataset and code will be released to support further research in this field (https://github.com/whq-xxh/FFA-Synthesis).",
+  "category": "vision",
+  "domain": "medical imaging / ophthalmology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_translation",
+    "image_synthesis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "image similarity metrics (SSIM, PSNR, FID) plus downstream diagnostic classification accuracy (e.g., AUC/accuracy) and qualitative/human evaluation",
+  "general_score_metric": "SSIM / FID for image quality and diagnostic classification accuracy (AUC/accuracy) for clinical utility",
+  "year_of_publish": 2024,
+  "reputation": "Newly released dataset and method with limited adoption so far; primarily of interest to the ophthalmic imaging research community.",
+  "notes": "Paired multi-disease CFP–FFA dataset but likely limited in size; non-LLM vision benchmark; evaluation combines perceptual metrics and downstream diagnostic performance; potential domain-shift and clinical validation limitations; privacy/ethical considerations for medical images.",
+  "creators": {
+    "scientists": [
+      "Hongqiu Wang",
+      "Zhaohu Xing",
+      "Weitong Wu",
+      "Yijun Yang",
+      "Qingqing Tang",
+      "Meixia Zhang",
+      "Yanwu Xu",
+      "Lei Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2410.14965",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

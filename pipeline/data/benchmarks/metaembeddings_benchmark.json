@@ -1,0 +1,35 @@
+{
+  "name": "Meta-embeddings Benchmark",
+  "description": "In the last few years, several methods have been proposed to build meta-embeddings. The general aim was to obtain new representations integrating complementary knowledge from different source pre-trained embeddings thereby improving their overall quality. However, previous meta-embeddings have been evaluated using a variety of methods and datasets, which makes it difficult to draw meaningful conclusions regarding the merits of each approach. In this paper we propose a unified common framework, including both intrinsic and extrinsic tasks, for a fair and objective meta-embeddings evaluation. Furthermore, we present a new method to generate meta-embeddings, outperforming previous work on a large number of intrinsic evaluation benchmarks. Our evaluation framework also allows us to conclude that previous extrinsic evaluations of meta-embeddings have been overestimated.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "word_similarity",
+    "analogy",
+    "intrinsic_evaluation",
+    "extrinsic_evaluation",
+    "text_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Spearman_correlation (intrinsic) / accuracy (extrinsic)",
+  "general_score_metric": "Spearman_correlation",
+  "typical_sota_score": "varies by task and dataset; no single unified SOTA range",
+  "reputation": "Well-regarded within the word-embedding and representation learning community as a unified evaluation framework for meta-embeddings, but not a mainstream general-NLP benchmark.",
+  "notes": "Combines many intrinsic and extrinsic tasks; comparisons can be confounded by choice of downstream task and hyperparameters; intrinsic metrics (Spearman) do not always translate to extrinsic gains; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Iker García-Ferrero",
+      "Rodrigo Agerri",
+      "German Rigau"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

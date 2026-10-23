@@ -1,0 +1,39 @@
+{
+  "name": "CCSE (Chinese Character Stroke Extraction)",
+  "description": "Stroke is the basic element of Chinese character and stroke extraction has been an important and long-standing endeavor. Existing stroke extraction methods are often handcrafted and highly depend on domain expertise due to the limited training data. Moreover, there are no standardized benchmarks to provide a fair comparison between different stroke extraction methods, which, we believe, is a major impediment to the development of Chinese character stroke understanding and related tasks. In this work, we present the first public available Chinese Character Stroke Extraction (CCSE) benchmark, with two new large-scale datasets: Kaiti CCSE (CCSE-Kai) and Handwritten CCSE (CCSE-HW). With the large-scale datasets, we hope to leverage the representation power of deep models such as CNNs to solve the stroke extraction task, which, however, remains an open question. To this end, we turn the stroke extraction problem into a stroke instance segmentation problem. Using the proposed datasets to train a stroke instance segmentation model, we surpass previous methods by a large margin. Moreover, the models trained with the proposed datasets benefit the downstream font generation and handwritten aesthetic assessment tasks. We hope these benchmark results can facilitate further research. The source code and datasets are publicly available at: https://github.com/lizhaoliu-Lec/CCSE.",
+  "category": "vision",
+  "domain": "document analysis / OCR / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "instance_segmentation",
+    "segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mask mean Average Precision (mask mAP) / IoU-based instance segmentation metrics",
+  "general_score_metric": "mask mAP (instance segmentation AP)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2022,
+  "reputation": "A recent, specialized benchmark for Chinese character stroke extraction with interest in the document analysis and OCR research community but limited widespread adoption so far.",
+  "notes": "Non-LLM computer vision benchmark. Large-scale compared to prior unpublished sets, but still niche; annotations may contain fine-grained labeling noise. Evaluation sensitive to mask quality and stroke-level alignment; useful for downstream tasks like font generation and handwritten aesthetics.",
+  "creators": {
+    "scientists": [
+      "Lizhao Liu",
+      "Kunyang Lin",
+      "Shangxin Huang",
+      "Zhongli Li",
+      "Chao Li",
+      "Yunbo Cao",
+      "Qingyu Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.13826",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

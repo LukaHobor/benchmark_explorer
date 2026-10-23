@@ -1,0 +1,38 @@
+{
+  "name": "Multi-View Photometric Stereo (MVPS) dataset",
+  "description": "We present a method to capture both 3D shape and spatially varying reflectance with a multi-view photometric stereo (MVPS) technique that works for general isotropic materials. Our algorithm is suitable for perspective cameras and nearby point light sources. Our data capture setup is simple, which consists of only a digital camera, some LED lights, and an optional automatic turntable. From a single viewpoint, we use a set of photometric stereo images to identify surface points with the same distance to the camera. We collect this information from multiple viewpoints and combine it with structure-from-motion to obtain a precise reconstruction of the complete 3D shape. The spatially varying isotropic bidirectional reflectance distribution function (BRDF) is captured by simultaneously inferring a set of basis BRDFs and their mixing weights at each surface point. In experiments, we demonstrate our algorithm with two different setups: a studio setup for highest precision and a desktop setup for best usability. According to our experiments, under the studio setting, the captured shapes are accurate to 0.5 millimeters and the captured reflectance has a relative root-mean-square error (RMSE) of 9%. We also quantitatively evaluate state-of-the-art MVPS on a newly collected benchmark dataset, which is publicly available for inspiring future research.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_reconstruction",
+    "reflectance_estimation",
+    "photometric_stereo"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "reconstruction_error_mm and reflectance_RMSE (e.g., mean point-to-surface distance in mm; relative RMSE for BRDF)",
+  "general_score_metric": "reconstruction_error (mean point-to-surface distance, mm) — reported alongside reflectance RMSE (%)",
+  "typical_sota_score": "≈0.5 mm (shape accuracy, studio setting); ≈9% (reflectance RMSE)",
+  "year_of_publish": 2020,
+  "reputation": "84 citations",
+  "notes": "Non-LLM, vision/graphics benchmark captured under controlled setups (studio and desktop). High-precision but limited-scale dataset; results can depend strongly on capture setup and material diversity, so transfer to unconstrained scenes is limited.",
+  "creators": {
+    "scientists": [
+      "Li Min",
+      "Zhenglong Zhou",
+      "Zhe Wu",
+      "Boxin Shi",
+      "Changyu Diao",
+      "Ping Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/tip.2020.2968818",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

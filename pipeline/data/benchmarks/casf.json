@@ -1,0 +1,38 @@
+{
+  "name": "CASF",
+  "description": "Scoring functions are often applied in combination with molecular docking methods to predict ligand binding poses and ligand binding affinities or to identify active compounds through virtual screening. An objective benchmark for assessing the performance of current scoring functions is expected to provide practical guidance for the users to make smart choices among available methods. It can also elucidate the common weakness in current methods for future improvements. The primary goal of our comparative assessment of scoring functions (CASF) project is to provide a high-standard, publicly accessible benchmark of this type. Our latest study, i.e., CASF-2013, evaluated 20 popular scoring functions on an updated set of protein-ligand complexes. This data set was selected out of 8302 protein-ligand complexes recorded in the PDBbind database (version 2013) through a fairly complicated process. Sample selection was made by considering the quality of complex structures as well as binding data. Finally, qualified complexes were clustered by 90% similarity in protein sequences. Three representative complexes were chosen from each cluster to control sample redundancy. The final outcome, namely, the PDBbind core set (version 2013), consists of 195 protein-ligand complexes in 65 clusters with binding constants spanning nearly 10 orders of magnitude. In this data set, 82% of the ligand molecules are \"druglike\" and 78% of the protein molecules are validated or potential drug targets. Correlation between binding constants and several key properties of ligands are discussed. Methods and results of the scoring function evaluation will be described in a companion work in this issue (doi: 10.1021/ci500081m ).",
+  "category": "mixed",
+  "domain": "drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binding_affinity_prediction",
+    "pose_ranking",
+    "virtual_screening"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson/Spearman correlation and RMSE (affinity); enrichment factor / AUC (virtual screening/ranking)",
+  "general_score_metric": "Pearson correlation (affinity) and enrichment factor/AUC (screening)",
+  "typical_sota_score": "Pearson r ~0.4–0.7 (varies by method); RMSE often ~1–2 kcal/mol (approximate)",
+  "year_of_publish": 2014,
+  "reputation": "228 citations",
+  "notes": "Relatively small, highly curated core set (195 complexes) with selection biases; performance depends on docking/pose quality; benchmark reflects classical scoring functions—non-LLM and may not capture all modern end-to-end approaches.",
+  "creators": {
+    "scientists": [
+      "Yan Li",
+      "Zhihai Liu",
+      "Jie Li",
+      "Li Han",
+      "Jie Liu",
+      "Zhixiong Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1021/ci500080q",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

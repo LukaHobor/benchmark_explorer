@@ -1,0 +1,43 @@
+{
+  "name": "IoV Intrusion Detection ML Library Benchmark",
+  "description": "The Internet of Vehicles (IoV) may face challenging cybersecurity attacks that may require sophisticated intrusion detection systems, necessitating a rapid development and response system. This research investigates the performance advantages of GPU-accelerated libraries (cuML) compared to traditional CPU-based implementations (scikit-learn), focusing on the speed and efficiency required for machine learning models used in IoV threat detection environments. The comprehensive evaluations conducted employ four machine learning approaches (Random Forest, KNN, Logistic Regression, XGBoost) across three distinct IoV security datasets (OTIDS, GIDS, CICIoV2024). Our findings demonstrate that GPU-accelerated implementations dramatically improved computational efficiency, with training times reduced by a factor of up to 159 and prediction speeds accelerated by up to 95 times compared to traditional CPU processing, all while preserving detection accuracy. This remarkable performance breakthrough empowers researchers and security specialists to harness GPU acceleration for creating faster, more effective threat detection systems that meet the urgent real-time security demands of today's connected vehicle networks.",
+  "category": "mixed",
+  "domain": "autonomous driving / vehicular cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "anomaly_detection",
+    "benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": [
+    "accuracy",
+    "F1",
+    "training_time",
+    "inference_time"
+  ],
+  "general_score_metric": "accuracy (for detection) and runtime speedup (for library performance)",
+  "typical_sota_score": "≈90–99% (detection accuracy reported depending on dataset); runtime speedups reported up to 159× (training) and ~95× (prediction)",
+  "year_of_publish": 2025,
+  "reputation": "A practical engineering benchmark demonstrating GPU-accelerated ML libraries for IoV intrusion detection; of interest to applied cybersecurity and ML systems researchers but not a broadly adopted public benchmark.",
+  "notes": "Focuses on library/hardware performance as much as model quality; results are hardware-dependent and may not generalize across setups; not an LLM benchmark; datasets (OTIDS, GIDS, CICIoV2024) vary in size and characteristics.",
+  "creators": {
+    "scientists": [
+      "Furkan Çolhak",
+      "Hasan Coşkun",
+      "Tsafac Nkombong Regine Cyrille",
+      "Tedi Hoxa",
+      "Mert İlhan Ecevit",
+      "Mehmet Nafiz Aydın"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2504.01905",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

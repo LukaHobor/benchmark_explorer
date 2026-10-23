@@ -1,0 +1,38 @@
+{
+  "name": "FIORD",
+  "description": "The development of large-scale 3D scene reconstruction and novel view synthesis methods mostly rely on datasets comprising perspective images with narrow fields of view (FoV). While effective for small-scale scenes, these datasets require large image sets and extensive structure-from-motion (SfM) processing, limiting scalability. To address this, we introduce a fisheye image dataset tailored for scene reconstruction tasks. Using dual 200-degree fisheye lenses, our dataset provides full 360-degree coverage of 5 indoor and 5 outdoor scenes. Each scene has sparse SfM point clouds and precise LIDAR-derived dense point clouds that can be used as geometric ground-truth, enabling robust benchmarking under challenging conditions such as occlusions and reflections. While the baseline experiments focus on vanilla Gaussian Splatting and NeRF based Nerfacto methods, the dataset supports diverse approaches for scene reconstruction, novel view synthesis, and image-based rendering.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_reconstruction",
+    "novel_view_synthesis",
+    "image_based_rendering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR/SSIM/LPIPS and reconstruction quality metrics",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "PSNR ~20–35 dB, SSIM ~0.60–0.95, LPIPS ~0.02–0.30",
+  "year_of_publish": 2025,
+  "reputation": "A new specialized fisheye scene-reconstruction benchmark; likely useful to a niche 3D vision community but not yet widely adopted.",
+  "notes": "Small dataset (10 scenes) with strong geometric ground truth; non-LLM benchmark; results may be sensitive to scene-specific overfitting and fisheye-camera handling.",
+  "creators": {
+    "scientists": [
+      "Ulas Gunes",
+      "Matias Turkulainen",
+      "Xuqian Ren",
+      "Arno Solin",
+      "Juho Kannala",
+      "Esa Rahtu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.01732",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

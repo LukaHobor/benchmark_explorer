@@ -1,0 +1,35 @@
+{
+  "name": "LLM-Advisor",
+  "description": "Cost-efficient path planning across multiple terrains is a crucial task in robot navigation, requiring the identification of a path from the start to the goal that not only avoids obstacles but also minimizes the overall travel cost. This is especially crucial for real-world applications where robots need to navigate diverse terrains in outdoor environments with limited opportunities for recharging or refueling. Despite its practical importance, cost-efficient path planning across heterogeneous terrains has received relatively limited attention in prior work. In this paper, we propose LLM-Advisor, a prompt-based, planner-agnostic framework that leverages large language models (LLMs) as non-decisive post-processing advisors for cost refinement, without modifying the underlying planner. While we observe that LLMs may occasionally produce implausible suggestions, we introduce two effective hallucination-mitigation strategies. We further introduce two datasets, MultiTerraPath and RUGD_v2, for systematic evaluation of cost-efficient path planning. Extensive experiments reveal that state-of-the-art LLMs, including GPT-4o, GPT-4-turbo, Gemini-2.5-Flash, and Claude-Opus-4, perform poorly in zero-shot terrain-aware path planning, highlighting their limited spatial reasoning capability. In contrast, the proposed LLM-Advisor (with GPT-4o) improves cost efficiency for 72.37% of A*-planned paths, 69.47% of RRT*-planned paths, and 78.70% of LLM-A*-planned paths. On the MultiTerraPath dataset, LLM-Advisor demonstrates stronger performance on the hard subset, further validating its applicability to real-world scenarios.",
+  "category": "text",
+  "domain": "robotics / path planning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "path_planning",
+    "cost_optimization",
+    "trajectory_refinement"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean cost reduction (%) and task_success_rate (win-rate of paths with improved cost); also reports average path cost and success/failure counts",
+  "general_score_metric": "mean cost reduction (%) (win-rate of improved paths as secondary)",
+  "typical_sota_score": "≈69–79% (reported win-rate of paths for which LLM-Advisor improved cost across different planners)",
+  "year_of_publish": 2025,
+  "reputation": "12 citations",
+  "notes": "LLM-based advisory setup (not a replacement planner); LLMs can hallucinate—paper proposes mitigation methods; results depend on the underlying planner and dataset (MultiTerraPath, RUGD_v2); reported improvements are relative (% of paths improved) rather than absolute optimality guarantees.",
+  "creators": {
+    "scientists": [
+      "Ling Xiao",
+      "Toshihiko Yamasaki"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2503.01236",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

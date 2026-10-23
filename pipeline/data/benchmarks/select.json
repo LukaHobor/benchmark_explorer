@@ -1,0 +1,35 @@
+{
+  "name": "SELECT",
+  "description": "To deploy language models safely, it is crucial that they abstain from responding to inappropriate requests. Several prior studies test the safety promises of models based on their effectiveness in blocking malicious requests. In this work, we focus on evaluating the underlying techniques that cause models to abstain. We create SELECT, a benchmark derived from a set of benign concepts (e.g., \"rivers\") from a knowledge graph. Focusing on benign concepts isolates the effect of safety training, and grounding these concepts in a knowledge graph allows us to study the generalization and specificity of abstention techniques. Using SELECT, we benchmark different abstention techniques over six open-weight and closed-source models. We find that the examined techniques indeed cause models to abstain with over $80\\%$ abstention rates. However, these techniques are not as effective for descendants of the target concepts, where abstention rates drop by $19\\%$. We also characterize the generalizatio",
+  "category": "text",
+  "domain": "uncertainty",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "abstention_detection",
+    "classification",
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "abstention rate / accuracy",
+  "general_score_metric": "abstention rate",
+  "typical_sota_score": "80%+ abstention on target concepts; descendant concepts about 19% lower",
+  "year_of_publish": 2024,
+  "reputation": "A recent benchmark for studying safety abstention behavior, mainly of research interest rather than broad community standardization.",
+  "notes": "Focuses on benign concepts from a knowledge graph to isolate safety-training effects; evaluates abstention rather than task correctness, so scores are not directly comparable to standard QA benchmarks.",
+  "creators": {
+    "scientists": [
+      "Kinshuk Vasisht",
+      "Navreet Kaur",
+      "Danish Pruthi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2412.07430",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

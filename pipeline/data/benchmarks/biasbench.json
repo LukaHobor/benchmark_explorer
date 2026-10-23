@@ -1,0 +1,36 @@
+{
+  "name": "BiasBench",
+  "description": "Event-based cameras are bio-inspired sensors that detect light changes asynchronously for each pixel. They are increasingly used in fields like computer vision and robotics because of several advantages over traditional frame-based cameras, such as high temporal resolution, low latency, and high dynamic range. As with any camera, the output's quality depends on how well the camera's settings, called biases for event-based cameras, are configured. While frame-based cameras have advanced automatic configuration algorithms, there are very few such tools for tuning these biases. A systematic testing framework would require observing the same scene with different biases, which is tricky since event cameras only generate events when there is movement. Event simulators exist, but since biases heavily depend on the electrical circuit and the pixel design, available simulators are not well suited for bias tuning. To allow reproducibility, we present BiasBench, a novel event dataset containing multiple scenes with settings sampled in a grid-like pattern. We present three different scenes, each with a quality metric of the downstream application. Additionally, we present a novel, RL-based method to facilitate online bias adjustments.",
+  "category": "vision",
+  "domain": "computer vision / robotics (event cameras)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "parameter_optimization",
+    "policy_learning",
+    "downstream_quality_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "application-specific quality metrics (e.g., task success rate or downstream performance)",
+  "general_score_metric": "application-specific quality metric (task success rate)",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized dataset for event-camera bias tuning with limited but targeted interest in event-camera and robotics research.",
+  "notes": "Small number of scenes and highly specialized to event-camera hardware; not a general-purpose vision benchmark. Results may not transfer across different sensor designs; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Andreas Ziegler",
+      "David Joseph",
+      "Thomas Gossard",
+      "Emil Moldovan",
+      "Andreas Zell"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.18235",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

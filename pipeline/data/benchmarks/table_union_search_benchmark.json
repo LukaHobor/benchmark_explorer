@@ -1,0 +1,37 @@
+{
+  "name": "Table Union Search Benchmark",
+  "description": "Data management has traditionally relied on synthetic data generators to generate structured benchmarks, like the TPC suite, where we can control important parameters like data size and its distribution precisely. These benchmarks were central to the success and adoption of database management systems. But more and more, data management problems are of a semantic nature. An important example is finding tables that can be unioned. While any two tables with the same cardinality can be unioned, table union search is the problem of finding tables whose union is semantically coherent. Semantic problems cannot be benchmarked using synthetic data. Our current methods for creating benchmarks involve the manual curation and labeling of real data. These methods are not robust or scalable and perhaps more importantly, it is not clear how robust the created benchmarks are. We propose to use generative AI models to create structured data benchmarks for table union search. We present a novel method for using generative models to create tables with specified properties. Using this method, we create a new benchmark containing pairs of tables that are both unionable and non-unionable but related. We thoroughly evaluate recent existing table union search methods over existing benchmarks and our new benchmark. We also present and evaluate a new table search methods based on recent large language models over all benchmarks. We show that the new benchmark is more challenging for all methods than hand-curated benchmarks, specifically, the top-performing method achieves a Mean Average Precision of around 60%, over 30% less than its performance on existing manually created benchmarks. We examine why this is the case and show that the new benchmark permits more detailed analysis of methods, including a study of both false positives and false negatives that were not possible with existing benchmarks.",
+  "category": "mixed",
+  "domain": "data management / databases",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pair_classification",
+    "ranking",
+    "information_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Mean Average Precision (MAP) and ranking metrics (e.g., Precision@k)",
+  "general_score_metric": "Mean Average Precision (MAP)",
+  "typical_sota_score": "≈60% MAP (top-performing method reported around 60% MAP on the new benchmark)",
+  "year_of_publish": 2023,
+  "reputation": "New and emerging benchmark in the data management/DB research community; noted for being more challenging than prior hand-curated union-search datasets but not yet widely adopted.",
+  "notes": "Tables are synthetically generated via generative models to control properties—this raises potential contamination/overlap risk with LLM pretraining data. The benchmark is intentionally more challenging than prior datasets and is not saturated; evaluation focuses on ranking/pair classification rather than simple exact-match.",
+  "creators": {
+    "scientists": [
+      "Koyena Pal",
+      "Aamod Khatiwada",
+      "Roee Shraga",
+      "Renée J. Miller"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2308.03883",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

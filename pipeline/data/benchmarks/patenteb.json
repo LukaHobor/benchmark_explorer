@@ -1,0 +1,35 @@
+{
+  "name": "PatenTEB",
+  "description": "Patent text embeddings enable prior art search, technology landscaping, and patent analysis, yet existing benchmarks inadequately capture patent-specific challenges. We introduce PatenTEB, a comprehensive benchmark comprising 15 tasks across retrieval, classification, paraphrase, and clustering, with 2.06 million examples. PatenTEB employs domain-stratified splits, domain specific hard negative mining, and systematic coverage of asymmetric fragment-to-document matching scenarios absent from general embedding benchmarks. We develop the patembed model family through multi-task training, spanning 67M to 344M parameters with context lengths up to 4096 tokens. External validation shows strong generalization: patembed-base achieves state-of-the-art on MTEB BigPatentClustering.v2 (0.494 V-measure vs. 0.445 previous best), while patembed-large achieves 0.377 NDCG@100 on DAPFAM. Systematic ablations reveal that multi-task training improves external generalization despite minor benchmark costs,",
+  "category": "text",
+  "domain": "legal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "classification",
+    "paraphrase",
+    "clustering"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific retrieval/classification/clustering metrics aggregated across 15 tasks",
+  "general_score_metric": "composite_score",
+  "typical_sota_score": "0.35–0.50 (metric- and task-dependent; e.g., V-measure/NDCG ranges reported)",
+  "year_of_publish": 2025,
+  "reputation": "A new patent-focused embedding benchmark that is emerging in the literature, but it is not yet widely adopted as a standard community benchmark.",
+  "notes": "Large-scale benchmark with 2.06M examples; includes domain-stratified splits and hard negative mining. Scores are task-dependent and not directly comparable to general embedding benchmarks.",
+  "creators": {
+    "scientists": [
+      "Iliass Ayaou",
+      "Denis Cavallucci"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2510.22264",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

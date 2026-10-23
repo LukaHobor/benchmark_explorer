@@ -1,0 +1,36 @@
+{
+  "name": "GV-Bench",
+  "description": "Visual loop closure detection is an important module in visual simultaneous localization and mapping (SLAM), which associates current camera observation with previously visited places. Loop closures correct drifts in trajectory estimation to build a globally consistent map. However, a false loop closure can be fatal, so verification is required as an additional step to ensure robustness by rejecting the false positive loops. Geometric verification has been a well-acknowledged solution that leverages spatial clues provided by local feature matching to find true positives. Existing feature matching methods focus on homography and pose estimation in long-term visual localization, lacking references for geometric verification. To fill the gap, this paper proposes a unified benchmark targeting geometric verification of loop closure detection under long-term conditional variations. Furthermore, we evaluate six representative local feature matching methods (handcrafted and learning-based) under the benchmark, with in-depth analysis for limitations and future directions.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "geometric_verification",
+    "image_matching",
+    "visual_localization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "precision_recall (Average Precision, F1)",
+  "general_score_metric": "Average Precision (AP) and F1 for loop-closure detection",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed (2024) benchmark with growing interest among visual localization and SLAM researchers but limited adoption so far.",
+  "notes": "Non-LLM benchmark focused on geometric verification for loop-closure detection; evaluation sensitive to feature-matching thresholds and temporal/appearance variation; dataset and task are specialized (not widely saturated).",
+  "creators": {
+    "scientists": [
+      "Jingwen Yu",
+      "Hanjing Ye",
+      "Jianhao Jiao",
+      "Ping Tan",
+      "Hong Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.11736",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

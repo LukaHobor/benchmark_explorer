@@ -1,0 +1,35 @@
+{
+  "name": "DCA-Bench",
+  "description": "The quality of datasets plays an increasingly crucial role in the research and development of modern artificial intelligence (AI). Despite the proliferation of open dataset platforms nowadays, data quality issues, such as insufficient documentation, inaccurate annotations, and ethical concerns, remain common in datasets widely used in AI. Furthermore, these issues are often subtle and difficult to be detected by rule-based scripts, requiring expensive manual identification and verification by dataset users or maintainers. With the increasing capability of large language models (LLMs), it is promising to streamline the curation of datasets with LLM agents. In this work, as the initial step towards this goal, we propose a dataset curation agent benchmark, DCA-Bench, to measure LLM agents' capability of detecting hidden dataset quality issues. Specifically, we collect diverse real-world dataset quality issues from eight open dataset platforms as a testbed. Additionally, to establish an automatic pipeline for evaluating the success of LLM agents, which requires a nuanced understanding of the agent outputs, we implement a dedicated Evaluator using another LLM agent. We demonstrate that the LLM-based Evaluator empirically aligns well with human evaluation, allowing reliable automatic evaluation on the proposed benchmark. We further conduct experiments on several baseline LLM agents on the proposed benchmark and demonstrate the complexity of the task, indicating that applying LLMs to real-world dataset curation still requires further in-depth exploration and innovation. Finally, the proposed benchmark can also serve as a testbed for measuring the capability of LLMs in problem discovery rather than just problem-solving. The benchmark suite is available at \\url{https://github.com/TRAIS-Lab/dca-bench}.",
+  "category": "mixed",
+  "domain": "dataset curation / data quality",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2024,
+  "reputation": "New academic benchmark (arXiv 2024) focused on LLM-based dataset curation with limited adoption beyond research groups working on dataset quality.",
+  "notes": "Evaluation uses an LLM-based Evaluator aligned with human judgment; labels and success can be subjective. Risk of training-data contamination if benchmark examples overlap with LLM pretraining data. Moderate-sized, task is complex and not saturated.",
+  "creators": {
+    "scientists": [
+      "Benhao Huang",
+      "Yingzhuo Yu",
+      "Jin Huang",
+      "Xingjian Zhang",
+      "Jiaqi Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2406.07275",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

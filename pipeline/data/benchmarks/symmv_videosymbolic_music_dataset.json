@@ -1,0 +1,37 @@
+{
+  "name": "SymMV (video-symbolic music dataset)",
+  "description": "Music is essential when editing videos, but selecting music manually is difficult and time-consuming. Thus, we seek to automatically generate background music tracks given video input. This is a challenging task since it requires music-video datasets, efficient architectures for video-to-music generation, and reasonable metrics, none of which currently exist. To close this gap, we introduce a complete recipe including dataset, benchmark model, and evaluation metric for video background music generation. We present SymMV, a video and symbolic music dataset with various musical annotations. To the best of our knowledge, it is the first video-music dataset with rich musical annotations. We also propose a benchmark video background music generation framework named V-MusProd, which utilizes music priors of chords, melody, and accompaniment along with video-music relations of semantic, color, and motion features. To address the lack of objective metrics for video-music correspondence, we design a retrieval-based metric VMCP built upon a powerful video-music representation learning model. Experiments show that with our dataset, V-MusProd outperforms the state-of-the-art method in both music quality and correspondence with videos. We believe our dataset, benchmark model, and evaluation metric will boost the development of video background music generation. Our dataset and code are available at https://github.com/zhuole1025/SymMV.",
+  "category": "multimodal",
+  "domain": "music",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_to_music_generation",
+    "symbolic_music_generation",
+    "retrieval_based_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Retrieval-based metric (VMCP) built on learned video–music embeddings, supplemented by human evaluation",
+  "general_score_metric": "VMCP retrieval score (and human preference/quality ratings)",
+  "year_of_publish": 2023,
+  "reputation": "27 citations",
+  "notes": "Multimodal, domain-specific dataset in symbolic music format with limited scale; music quality and video–music correspondence are subjective and current automatic metrics are imperfect.",
+  "creators": {
+    "scientists": [
+      "Le Zhuo",
+      "Zhaokai Wang",
+      "Baisen Wang",
+      "Yue Liao",
+      "Chenxi Bao",
+      "Stanley Peng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/iccv51070.2023.01433",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

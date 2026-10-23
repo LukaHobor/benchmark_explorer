@@ -1,0 +1,36 @@
+{
+  "name": "Spacewalk-18",
+  "description": "Learning from videos is an emerging research area that enables robots to acquire skills from human demonstrations, such as procedural videos. To do this, video-language models must be able to obtain structured understandings, such as the temporal segmentation of a demonstration into sequences of actions and skills, and to generalize the understandings to novel domains. In pursuit of this goal, we introduce Spacewalk-18, a benchmark containing two tasks: (1) step recognition and (2) intra-video retrieval over a dataset of temporally segmented and labeled tasks in International Space Station spacewalk recordings. In tandem, the two tasks quantify a model's ability to make use of: (1) out-of-domain visual information; (2) a high temporal context window; and (3) multimodal (e.g. visual and speech) domains. This departs from existing benchmarks for procedural video understanding, which typically deal with short context lengths and can be solved with a single modality. Spacewalk-18, with its inherent multimodal and long-form complexity, exposes the high difficulty of task recognition and segmentation. We find that state-of-the-art methods perform poorly on our benchmark, but improvements can be obtained by incorporating information from longer-range temporal context across different modalities. Our experiments underscore the need to develop new approaches to these tasks. Data, model, and code will be released at https://brown-palm.github.io/Spacewalk-18/.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "step_recognition",
+    "intra_video_retrieval",
+    "temporal_segmentation",
+    "multimodal_action_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (for step recognition) and retrieval metrics (recall@k, mean Average Precision (mAP) for intra‑video retrieval)",
+  "general_score_metric": "accuracy (step recognition) and mAP / recall@k (retrieval)",
+  "year_of_publish": 2023,
+  "reputation": "New, research-stage benchmark with limited adoption outside the authors' evaluations so far.",
+  "notes": "Specialized domain (ISS spacewalks) with multimodal long-form videos and relatively small / niche dataset; not saturated, non‑LLM benchmark, potential domain-specific artifacts and limited external training data.",
+  "creators": {
+    "scientists": [
+      "Rohan Myer Krishnan",
+      "Zitian Tang",
+      "Zhiqiu Yu",
+      "Chen Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.18773",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

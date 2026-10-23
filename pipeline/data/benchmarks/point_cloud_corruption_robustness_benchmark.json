@@ -1,0 +1,36 @@
+{
+  "name": "Point Cloud Corruption Robustness Benchmark",
+  "description": "Object detection through LiDAR-based point cloud has recently been important in autonomous driving. Although achieving high accuracy on public benchmarks, the state-of-the-art detectors may still go wrong and cause a heavy loss due to the widespread corruptions in the real world like rain, snow, sensor noise, etc. Nevertheless, there is a lack of a large-scale dataset covering diverse scenes and realistic corruption types with different severities to develop practical and robust point cloud detectors, which is challenging due to the heavy collection costs. To alleviate the challenge and start the first step for robust point cloud detection, we propose the physical-aware simulation methods to generate degraded point clouds under different real-world common corruptions. Then, for the first attempt, we construct a benchmark based on the physical-aware common corruptions for point cloud detectors, which contains a total of 1,122,150 examples covering 7,481 scenes, 25 common corruption types, and 6 severities. With such a novel benchmark, we conduct extensive empirical studies on 8 state-of-the-art detectors that contain 6 different detection frameworks. Thus we get several insight observations revealing the vulnerabilities of the detectors and indicating the enhancement directions. Moreover, we further study the effectiveness of existing robustness enhancement methods based on data augmentation and data denoising. The benchmark can potentially be a new platform for evaluating point cloud detectors, opening a door for developing novel robustness enhancement methods.",
+  "category": "vision",
+  "domain": "autonomous driving / 3D perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision)",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2022,
+  "reputation": "Adopted by 3D perception and robustness researchers as an early large-scale corruption benchmark for LiDAR detectors; moderate community visibility.",
+  "notes": "Large, simulation-driven corruption suite (25 types × severities) — useful but subject to sim-to-real gap; non-LLM benchmark; results are sensitive to detector architecture, training protocol, and severity levels.",
+  "creators": {
+    "scientists": [
+      "Shuangzhi Li",
+      "Zhijie Wang",
+      "Felix Juefei-Xu",
+      "Qing Guo",
+      "Xingyu Li",
+      "Lei Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2210.05896",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

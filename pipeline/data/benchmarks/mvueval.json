@@ -1,0 +1,39 @@
+{
+  "name": "MVU-Eval",
+  "description": "The advent of Multimodal Large Language Models (MLLMs) has expanded AI capabilities to visual modalities, yet existing evaluation benchmarks remain limited to single-video understanding, overlooking the critical need for multi-video understanding in real-world scenarios (e.g., sports analytics and autonomous driving). To address this significant gap, we introduce MVU-Eval, the first comprehensive benchmark for evaluating Multi-Video Understanding for MLLMs. Specifically, our MVU-Eval mainly assesses eight core competencies through 1,824 meticulously curated question-answer pairs spanning 4,959 videos from diverse domains, addressing both fundamental perception tasks and high-order reasoning tasks. These capabilities are rigorously aligned with real-world applications such as multi-sensor synthesis in autonomous systems and cross-angle sports analytics. Through extensive evaluation of state-of-the-art open-source and closed-source models, we reveal significant performance discrepancies and limitations in current MLLMs'ability to perform understanding across multiple videos. The benchmark will be made publicly available to foster future research.",
+  "category": "multimodal",
+  "domain": "games",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "open_ended",
+    "temporal_reasoning",
+    "multi_video_synthesis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / exact_match (with task-specific allowances; some open-ended items may use human evaluation or top-k matching)",
+  "general_score_metric": "accuracy (task-specific exact/approximate match)",
+  "typical_sota_score": "25–60% (varies substantially by subtask; many models perform poorly on multi-video reasoning)",
+  "year_of_publish": 2025,
+  "reputation": "4 citations",
+  "notes": "Multimodal and multi-video benchmark with modest scale (1,824 QAs); potential pretraining/contamination risk for models trained on large web video datasets; not yet saturated.",
+  "creators": {
+    "scientists": [
+      "Tianhao Peng",
+      "Haochen Wang",
+      "Yuanxing Zhang",
+      "Zekun Wang",
+      "Zili Wang",
+      "Ge Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2511.07250",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

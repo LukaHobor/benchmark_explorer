@@ -1,0 +1,42 @@
+{
+  "name": "CBGBench",
+  "description": "Structure-based drug design (SBDD) aims to generate potential drugs that can bind to a target protein and is greatly expedited by the aid of AI techniques in generative models. However, a lack of systematic understanding persists due to the diverse settings, complex implementation, difficult reproducibility, and task singularity. Firstly, the absence of standardization can lead to unfair comparisons and inconclusive insights. To address this dilemma, we propose CBGBench, a comprehensive benchmark for SBDD, that unifies the task as a generative heterogeneous graph completion, analogous to fill-in-the-blank of the 3D complex binding graph. By categorizing existing methods based on their attributes, CBGBench facilitates a modular and extensible framework that implements various cutting-edge methods. Secondly, a single task on \\textit{de novo} molecule generation can hardly reflect their capabilities. To broaden the scope, we have adapted these models to a range of tasks essential in drug design, which are considered sub-tasks within the graph fill-in-the-blank tasks. These tasks include the generative designation of \\textit{de novo} molecules, linkers, fragments, scaffolds, and sidechains, all conditioned on the structures of protein pockets. Our evaluations are conducted with fairness, encompassing comprehensive perspectives on interaction, chemical properties, geometry authenticity, and substructure validity. We further provide the pre-trained versions of the state-of-the-art models and deep insights with analysis from empirical studies. The codebase for CBGBench is publicly accessible at \\url{https://github.com/Edapinenut/CBGBench}.",
+  "category": "mixed",
+  "domain": "structural bioinformatics / drug design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "generation",
+    "conditional_generation",
+    "graph_completion"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Composite evaluation combining chemical validity/validity rates, interaction metrics (predicted binding affinity / docking scores), geometry authenticity (RMSD/pose metrics), and substructure/chemical property metrics (validity, uniqueness, novelty)",
+  "general_score_metric": "composite_score (multi-metric aggregation across interaction, validity, geometry, and property metrics)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A recent, comprehensive benchmark proposed for structure-based drug design; promising but currently has limited external adoption pending broader community use and tooling standardization.",
+  "notes": "Multi-task, multi-metric benchmark covering 3D structure-conditioned generation; evaluations can be computationally expensive (docking/simulation) and sensitive to evaluation protocol. Potential reproducibility challenges from varying docking/back-end settings; not an LLM benchmark per se and requires structural/physics-aware models.",
+  "creators": {
+    "scientists": [
+      "Haitao Lin",
+      "Guojiang Zhao",
+      "Odin Zhang",
+      "Yufei Huang",
+      "Lirong Wu",
+      "Zicheng Liu",
+      "Siyuan Li",
+      "Cheng Tan",
+      "Zhifeng Gao",
+      "Stan Z. Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.10840",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

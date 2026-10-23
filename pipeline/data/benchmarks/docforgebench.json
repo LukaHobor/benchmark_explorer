@@ -1,0 +1,38 @@
+{
+  "name": "DOCFORGE-BENCH",
+  "description": "We present DOCFORGE-BENCH, the first unified zero-shot benchmark for document forgery detection, evaluating 14 methods across eight datasets spanning text tampering, receipt forgery, and identity document manipulation. Unlike fine-tuning-oriented evaluations such as ForensicHub [Du et al., 2025], DOCFORGE-BENCH applies all methods with their published pretrained weights and no domain adaptation -- a deliberate design choice that reflects the realistic deployment scenario where practitioners lack labeled document training data. Our central finding is a pervasive calibration failure invisible under single-threshold protocols: methods achieve moderate Pixel-AUC (>=0.76) yet near-zero Pixel-F1. This AUC-F1 gap is not a discrimination failure but a score-distribution shift: tampered regions occupy only 0.27-4.17% of pixels in document images -- an order of magnitude less than in natural image benchmarks -- making the standard tau=0.5 threshold catastrophically miscalibrated. Oracle-F1 is 2-",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "binary_classification",
+    "segmentation",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "Pixel-F1",
+  "typical_sota_score": "near 0% Pixel-F1",
+  "year_of_publish": 2026,
+  "reputation": "A new specialized benchmark for document forgery detection that is too recent to have broad community adoption yet.",
+  "notes": "Zero-shot evaluation only; strong calibration mismatch between Pixel-AUC and Pixel-F1 due to extreme class imbalance in tampered regions.",
+  "creators": {
+    "scientists": [
+      "Zengqi Zhao",
+      "Weidi Xia",
+      "En Wei",
+      "Yan Zhang",
+      "Jane Mo",
+      "Tiannan Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2603.01433",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

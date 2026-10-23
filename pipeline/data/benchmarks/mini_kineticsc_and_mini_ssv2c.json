@@ -1,0 +1,36 @@
+{
+  "name": "Mini Kinetics-C and Mini SSV2-C",
+  "description": "The state-of-the-art deep neural networks are vulnerable to common corruptions (e.g., input data degradations, distortions, and disturbances caused by weather changes, system error, and processing). While much progress has been made in analyzing and improving the robustness of models in image understanding, the robustness in video understanding is largely unexplored. In this paper, we establish a corruption robustness benchmark, Mini Kinetics-C and Mini SSV2-C, which considers temporal corruptions beyond spatial corruptions in images. We make the first attempt to conduct an exhaustive study on the corruption robustness of established CNN-based and Transformer-based spatial-temporal models. The study provides some guidance on robust model design and training: Transformer-based model performs better than CNN-based models on corruption robustness; the generalization ability of spatial-temporal models implies robustness against temporal corruptions; model corruption robustness (especially robustness in the temporal domain) enhances with computational cost and model capacity, which may contradict the current trend of improving the computational efficiency of models. Moreover, we find the robustness intervention for image-related tasks (e.g., training models with noise) may not work for spatial-temporal models.",
+  "category": "vision",
+  "domain": "video / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "Top-1 accuracy (often reported as relative robustness drop vs. clean)",
+  "typical_sota_score": "50–75%",
+  "year_of_publish": 2021,
+  "reputation": "Widely used in the video robustness community as a benchmark for corruption robustness of spatio-temporal models.",
+  "notes": "Non-LLM benchmark; uses synthetic temporal and spatial corruptions on mini subsets (may not fully reflect real-world degradations); evaluates robustness rather than absolute performance.",
+  "creators": {
+    "scientists": [
+      "Chenyu Yi",
+      "Siyuan Yang",
+      "Haoliang Li",
+      "Yap-Peng Tan",
+      "Alex Kot"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2110.06513",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "PS3 (Comprehensive Energy Footprint Benchmarking Algorithm)",
+  "description": "Autonomy and electrification in automotive control systems have made modern-day powertrains one of the most complex cyber-physical systems. This paper presents a benchmark algorithm to quantify the performance of complex automotive systems exhibiting mechanical, electrical, and thermal interactions at various time-scales. Traditionally Dynamic Programming has been used for benchmarking the performance, however, it fails to deliver results for system with higher number of states and control lever due to curse of dimensionality. We propose \"PS3\", a three-step algorithm for mixed-integer nonlinear optimal control problems with application to powertrain energy management. PS3 uses pseudo-spectral collocation theory for highly accurate modeling of dynamics. Based on the validated powertrain component models, we have addressed simultaneous optimization of electrical (SOC), vehicular (eco-driving) and thermal (after-treatment and battery temperatures) dynamics along with an integer (gear and engine on/off) control and its corresponding (dwell-time) constraints. PS3 is used to solve such large-scale powertrain problems having fast and slow dynamic states, discontinuous behaviors, non-differentiable and linearly interpolated 1-D and 2-D maps, as well as combinatorial constraints. Five case study powertrain control problems are given to benchmark the accuracy and computational effort against Dynamic Programming. Our analysis shows that this algorithm does not scale computational burden as Dynamic Programming does, and can handle highly complex interactions that occur in modern-day powertrains, without compromising nonlinear and complex plant modeling.",
+  "category": "mixed",
+  "domain": "automotive / electrified powertrains",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "optimization",
+    "simulation",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "solution_quality_and_runtime (e.g., optimality gap vs Dynamic Programming and computation time)",
+  "general_score_metric": "optimality_gap and computation_time",
+  "year_of_publish": 2021,
+  "reputation": "A specialized benchmark algorithm presented in control and automotive research; primarily cited within powertrain and optimal-control research communities rather than broad ML benchmarks.",
+  "notes": "Non-LLM, domain-specific benchmark; small number of case studies focused on powertrain problems; compares algorithmic optimality and runtime to Dynamic Programming; not a standardized public dataset for broad ML evaluation.",
+  "creators": {
+    "scientists": [
+      "Hamza Anwar",
+      "Aashrith Vishwanath",
+      "Apurva Chunodkar",
+      "Qadeer Ahmed"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2106.01459",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

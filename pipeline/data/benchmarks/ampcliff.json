@@ -1,0 +1,42 @@
+{
+  "name": "AMPCliff",
+  "description": "Since the mechanism of action of drug molecules in the human body is difficult to reproduce in the in vitro environment, it becomes difficult to reveal the causes of the activity cliff phenomenon of drug molecules. We found out the AC of small molecules has been extensively investigated but limited knowledge is accumulated about the AC phenomenon in peptides with canonical amino acids. Understanding the mechanism of AC in canonical amino acids might help understand the one in drug molecules. This study introduces a quantitative definition and benchmarking framework AMPCliff for the AC phenomenon in antimicrobial peptides (AMPs) composed by canonical amino acids. A comprehensive analysis of the existing AMP dataset reveals a significant prevalence of AC within AMPs. AMPCliff quantifies the activities of AMPs by the MIC, and defines 0.9 as the minimum threshold for the normalized BLOSUM62 similarity score between a pair of aligned peptides with at least two-fold MIC changes. This study establishes a benchmark dataset of paired AMPs in Staphylococcus aureus from the publicly available AMP dataset GRAMPA, and conducts a rigorous procedure to evaluate various AMP AC prediction models, including nine machine learning, four deep learning algorithms, four masked language models, and four generative language models. Our analysis reveals that these models are capable of detecting AMP AC events and the pre-trained protein language model ESM2 demonstrates superior performance across the evaluations. The predictive performance of AMP activity cliffs remains to be further improved, considering that ESM2 with 33 layers only achieves the Spearman correlation coefficient 0.4669 for the regression task of the MIC values on the benchmark dataset. Source code and additional resources are available at https://www.healthinformaticslab.org/supp/ or https://github.com/Kewei2023/AMPCliff-generation.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "classification",
+    "pairwise_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Spearman correlation (regression); AUROC / accuracy for classification tasks",
+  "general_score_metric": "Spearman correlation (primary reported metric for MIC regression)",
+  "typical_sota_score": "0.35–0.50 (Spearman)",
+  "year_of_publish": 2024,
+  "reputation": "A recent domain-specific benchmark for antimicrobial peptide activity-cliffs that is gaining attention in bioinformatics and protein modeling research but is not yet widely adopted outside the field.",
+  "notes": "Derived from GRAMPA and focused on S. aureus; relatively small and specialized dataset, potential pretraining/contamination risks for large protein models, class imbalance and thresholding choices affect results.",
+  "creators": {
+    "scientists": [
+      "Kewei Li",
+      "Yuqian Wu",
+      "Yinheng Li",
+      "Yutong Guo",
+      "Yan Wang",
+      "Yiyang Liang",
+      "Yusi Fan",
+      "Lan Huang",
+      "Ruochi Zhang",
+      "Fengfeng Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2404.09738",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

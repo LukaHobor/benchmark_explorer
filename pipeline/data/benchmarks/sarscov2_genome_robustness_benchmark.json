@@ -1,0 +1,36 @@
+{
+  "name": "SARS-CoV-2 Genome Robustness Benchmark",
+  "description": "The rapid spread of the COVID-19 pandemic has resulted in an unprecedented amount of sequence data of the SARS-CoV-2 genome -- millions of sequences and counting. This amount of data, while being orders of magnitude beyond the capacity of traditional approaches to understanding the diversity, dynamics, and evolution of viruses is nonetheless a rich resource for machine learning (ML) approaches as alternatives for extracting such important information from these data. It is of hence utmost importance to design a framework for testing and benchmarking the robustness of these ML models. This paper makes the first effort (to our knowledge) to benchmark the robustness of ML models by simulating biological sequences with errors. In this paper, we introduce several ways to perturb SARS-CoV-2 genome sequences to mimic the error profiles of common sequencing platforms such as Illumina and PacBio. We show from experiments on a wide array of ML models that some simulation-based approaches are more robust (and accurate) than others for specific embedding methods to certain adversarial attacks to the input sequences. Our benchmarking framework may assist researchers in properly assessing different ML models and help them understand the behavior of the SARS-CoV-2 virus or avoid possible future pandemics.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_classification",
+    "robustness_evaluation",
+    "perturbation_testing"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy and robustness measures (e.g., change in accuracy or robustness-drop under simulated sequencing errors)",
+  "general_score_metric": "accuracy (and robustness drop / degradation under perturbations)",
+  "year_of_publish": 2022,
+  "reputation": "A research-oriented benchmark for robustness of ML models on SARS-CoV-2 sequences; primarily used in bioinformatics/ML robustness studies with limited broad adoption.",
+  "notes": "Non-LLM, domain-specific benchmark using simulated sequencing errors; synthetic perturbations may not fully capture all real-world error modes; useful for robustness analysis but limited in generalization outside studied scenarios.",
+  "creators": {
+    "scientists": [
+      "Sarwan Ali",
+      "Bikram Sahoo",
+      "Alexander Zelikovskiy",
+      "Pin-Yu Chen",
+      "Murray Patterson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2207.08898",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

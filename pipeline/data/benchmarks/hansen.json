@@ -1,0 +1,39 @@
+{
+  "name": "HANSEN",
+  "description": "Authorship Analysis, also known as stylometry, has been an essential aspect of Natural Language Processing (NLP) for a long time. Likewise, the recent advancement of Large Language Models (LLMs) has made authorship analysis increasingly crucial for distinguishing between human-written and AI-generated texts. However, these authorship analysis tasks have primarily been focused on written texts, not considering spoken texts. Thus, we introduce the largest benchmark for spoken texts - HANSEN (Human ANd ai Spoken tExt beNchmark). HANSEN encompasses meticulous curation of existing speech datasets accompanied by transcripts, alongside the creation of novel AI-generated spoken text datasets. Together, it comprises 17 human datasets, and AI-generated spoken texts created using 3 prominent LLMs: ChatGPT, PaLM2, and Vicuna13B. To evaluate and demonstrate the utility of HANSEN, we perform Authorship Attribution (AA) & Author Verification (AV) on human-spoken datasets and conducted Human vs. AI spoken text detection using state-of-the-art (SOTA) models. While SOTA methods, such as, character ngram or Transformer-based model, exhibit similar AA & AV performance in human-spoken datasets compared to written ones, there is much room for improvement in AI-generated spoken text detection. The HANSEN benchmark is available at: https://huggingface.co/datasets/HANSEN-REPO/HANSEN.",
+  "category": "audio",
+  "domain": "speech / authorship analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "authorship_attribution",
+    "author_verification",
+    "ai_vs_human_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and F1 (AUC commonly used for verification tasks)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "60–90% (task-dependent; AI-vs-human detection is generally toward the lower end)",
+  "year_of_publish": 2023,
+  "reputation": "Relatively recent spoken-text authorship benchmark with growing interest from speech-forensics and AI-detection researchers but not yet a de facto community standard.",
+  "notes": "Contains ASR transcripts and synthetic AI-generated spoken texts; results can be affected by ASR noise, dataset bias, and limited diversity of generation models; potential contamination risk if generated examples overlap with model training data.",
+  "creators": {
+    "scientists": [
+      "Nafis Irtiza Tripto",
+      "Adaku Uchendu",
+      "Thai Le",
+      "Mattia Setzu",
+      "Fosca Giannotti",
+      "Dongwon Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2310.16746",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

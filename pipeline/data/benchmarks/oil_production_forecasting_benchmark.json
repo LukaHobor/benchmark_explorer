@@ -1,0 +1,34 @@
+{
+  "name": "Oil Production Forecasting Benchmark",
+  "description": "Forecasting oil well production is critical for optimizing reservoir management and planning field operations. Traditional approaches, such as Decline Curve Analysis (DCA) and physics-based simulation, often fall short in capturing nonlinear dynamics and operational variability, particularly in mature or unconventional fields. In this study, we benchmark a wide range of data-driven forecasting models, including classical machine learning, deep learning, and time series foundation models (TSFMs), on a real-world oil production dataset from a supergiant Middle Eastern reservoir.\n We evaluate each model across five forecast horizons (6, 12, 24, 36, and 48 months), using normalized Mean Absolute Error (nMAE) and normalized Root Mean Squared Error (nRMSE) as unitless metrics. Each model is tested both with and without exogenous variables such as wellhead pressure, choke size, and uptime, allowing us to assess the impact of operational context on predictive performance. The evaluation is conducted per well, using hold-out windows tailored to each horizon, simulating realistic deployment conditions.\n Our baseline, an XGBoost-based autoregressive forecaster (XGB-AR), is outperformed by several advanced models - most notably TimesFM, a pretrained TSFM, which delivers up to 23% improvement in RMSE and 22% in MAE at short horizons, and maintains 1110% gains at longer ones. Other deep learning models such as N-BEATS and N-HiTS show improvement over the baseline on MAE for selected horizons. At long horizons without exogenous variables, foundation models like Chronos, GPT4TS, and TimeXer outperform all others, indicating stronger generalization.\n Averaging across all models, the inclusion of exogenous features leads to consistent improvements, up to 13.7% in RMSE, highlighting their importance for capturing operational dynamics. Without exogenous inputs, model family differences narrow, and traditional methods remain competitive at short horizons.\n This work is one of the first to comprehensively compare TSFMs with classical and deep learning models in the oil and gas domain. Our results underscore the promise of foundation models for long-term, multivariate forecasting, while also revealing key limitations, such as inconsistent support for exogenous variables, that must be addressed for broader industrial adoption.",
+  "category": "mixed",
+  "domain": "energy / reservoir engineering",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression",
+    "multivariate_forecasting"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "normalized_MAE (nMAE) and normalized_RMSE (nRMSE)",
+  "general_score_metric": "nRMSE",
+  "year_of_publish": 2025,
+  "reputation": "Niche but growing benchmark used in reservoir engineering and industrial forecasting research exploring TSFMs vs classical methods.",
+  "notes": "Non-LLM time-series benchmark using a real-world supergiant-reservoir dataset from a single field (limited geographic generalization); per-well heterogeneity and variable support for exogenous inputs are important caveats; hold-out windows per horizon reduce but do not eliminate temporal leakage risk.",
+  "creators": {
+    "scientists": [
+      "A. Franco",
+      "Nidhal Belyouni",
+      "R. Ayoubi",
+      "Fatima Khalifa Alkaabi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

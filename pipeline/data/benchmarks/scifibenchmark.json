@@ -1,0 +1,35 @@
+{
+  "name": "SciFi-Benchmark",
+  "description": "Given the recent rate of progress in artificial intelligence (AI) and robotics, a tantalizing question is emerging: would robots controlled by emerging AI systems be strongly aligned with human values? In this work, we propose a scalable way to probe this question by generating a benchmark spanning the key moments in 824 major pieces of science fiction literature (movies, tv, novels and scientific books) where an agent (AI or robot) made critical decisions (good or bad). We use a LLM's recollection of each key moment to generate questions in similar situations, the decisions made by the agent, and alternative decisions it could have made (good or bad). We then measure an approximation of how well models align with human values on a set of human-voted answers. We also generate rules that can be automatically improved via amendment process in order to generate the first Sci-Fi inspired constitutions for promoting ethical behavior in AIs and robots in the real world. Our first finding is that modern LLMs paired with constitutions turn out to be well-aligned with human values (95.8%), contrary to unsettling decisions typically made in SciFi (only 21.2% alignment). Secondly, we find that generated constitutions substantially increase alignment compared to the base model (79.4% to 95.8%), and show resilience to an adversarial prompt setting (23.3% to 92.3%). Additionally, we find that those constitutions are among the top performers on the ASIMOV Benchmark which is derived from real-world images and hospital injury reports. Sci-Fi-inspired constitutions are thus highly aligned and applicable in real-world situations. We release SciFi-Benchmark: a large-scale dataset to advance robot ethics and safety research. It comprises 9,056 questions and 53,384 answers, in addition to a smaller human-labeled evaluation set. Data is available at https://scifi-benchmark.github.io",
+  "category": "text",
+  "domain": "robotics / AI alignment",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (human-alignment percentage)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "95–96%",
+  "year_of_publish": 2025,
+  "reputation": "New benchmark gaining attention in AI alignment and ethics research, but early in community adoption.",
+  "notes": "Many items are LLM-generated from Sci‑Fi sources — risk of contamination if evaluated models were trained on the same texts or generation seeds; human-labeled evaluation set is smaller; cultural and framing biases possible; measures proxy of alignment rather than real-world behavior.",
+  "creators": {
+    "scientists": [
+      "Pierre Sermanet",
+      "Anirudha Majumdar",
+      "Vikas Sindhwani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2503.10706",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "UAV-Rain1k",
+  "description": "Raindrops adhering to the lens of UAVs can obstruct visibility of the background scene and degrade image quality. Despite recent progress in image deraining methods and datasets, there is a lack of focus on raindrop removal from UAV aerial imagery due to the unique challenges posed by varying angles and rapid movement during drone flight. To fill the gap in this research, we first construct a new benchmark dataset for removing raindrops from UAV images, called UAV-Rain1k. In this letter, we provide a dataset generation pipeline, which includes modeling raindrop shapes using Blender, collecting background images from various UAV angles, random sampling of rain masks and etc. Based on the proposed benchmark, we further present a comprehensive evaluation of existing representative image deraining algorithms, and reveal future research opportunities worth exploring. The proposed dataset is publicly available at https://github.com/cschenxiang/UAV-Rain1k.",
+  "category": "vision",
+  "domain": "geospatial",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "PSNR/SSIM",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "PSNR ≈ 28–36 dB; SSIM ≈ 0.85–0.96 (top-performing deraining models on UAV-Rain1k)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A recent specialized dataset for UAV raindrop removal that is useful for niche aerial image restoration research but not yet a standard benchmark.",
+  "notes": "Small, task-specific vision benchmark; results are typically reported with PSNR and SSIM, and performance may not transfer to other deraining settings.",
+  "creators": {
+    "scientists": [
+      "Wenhui Chang",
+      "Hongming Chen",
+      "Xin He",
+      "Xiang Chen",
+      "Liangduo Shen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2402.05773",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

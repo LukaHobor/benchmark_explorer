@@ -1,0 +1,38 @@
+{
+  "name": "BMock12 mock community dataset",
+  "description": "Metagenomic sequence data from defined mock communities is crucial for the assessment of sequencing platform performance and downstream analyses, including assembly, binning and taxonomic assignment. We report a comparison of shotgun metagenome sequencing and assembly metrics of a defined microbial mock community using the Oxford Nanopore Technologies (ONT) MinION, PacBio and Illumina sequencing platforms. Our synthetic microbial community BMock12 consists of 12 bacterial strains with genome sizes spanning 3.2-7.2 Mbp, 40-73% GC content, and 1.5-7.3% repeats. Size selection of both PacBio and ONT sequencing libraries prior to sequencing was essential to yield comparable relative abundances of organisms among all sequencing technologies. While the Illumina-based metagenome assembly yielded good coverage with few misassemblies, contiguity was greatly improved by both, Illumina + ONT and Illumina + PacBio hybrid assemblies but increased misassemblies, most notably in genomes with high sequence similarity to each other. Our resulting datasets allow evaluation and benchmarking of bioinformatics software on Illumina, PacBio and ONT platforms in parallel.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "metagenomic_assembly",
+    "binning",
+    "taxonomic_assignment",
+    "sequencing_platform_comparison"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "assembly metrics (N50, NGA50), misassembly counts/rates, and binning metrics (completeness, contamination); precision/recall for taxonomic assignment",
+  "general_score_metric": "N50/NGA50 and misassembly rate for assembly; completeness and contamination for binning",
+  "year_of_publish": 2019,
+  "reputation": "132 citations",
+  "notes": "Small, defined synthetic community (12 strains) — good for controlled comparisons across sequencing platforms but not representative of complex environmental diversity; risk of overfitting to the mock community; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Volkan Sevi̇m",
+      "Juna Lee",
+      "Robert W. Egan",
+      "Alicia Clum",
+      "Hope Hundley",
+      "Janey Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41597-019-0287-z",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

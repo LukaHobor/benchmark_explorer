@@ -1,0 +1,33 @@
+{
+  "name": "Adaptiope",
+  "description": "Unsupervised domain adaptation (UDA) deals with the adaptation process of a given source domain with labeled training data to a target domain for which only unannotated data is available. This is a challenging task as the domain shift leads to degraded performance on the target domain data if not addressed. In this paper, we analyze commonly used UDA classification datasets and discover systematic problems with regard to dataset setup, ground truth ambiguity and annotation quality. We manually clean the most popular UDA dataset in the research area (Office-31) and quantify the negative effects of inaccurate annotations through thorough experiments. Based on these insights, we collect the Adaptiope dataset - a large scale, diverse UDA dataset with synthetic, product and real world data - and show that its transfer tasks provide a challenge even when considering recent UDA algorithms. Our datasets are available at https://gitlab.com/tringwald/adaptiope.",
+  "category": "vision",
+  "domain": "computer vision (unsupervised domain adaptation)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (target-domain classification accuracy / transfer accuracy)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "varies by transfer task (commonly in the ~50–90% range depending on source/target pair)",
+  "year_of_publish": 2021,
+  "reputation": "Growing adoption in the unsupervised domain adaptation community as a larger, cleaner alternative to Office-31; respected for highlighting annotation and setup issues.",
+  "notes": "Vision-only benchmark (non-LLM). Potential pretraining contamination for modern models (images may overlap with pretraining data). Transfer difficulty varies widely across tasks; not uniformly saturated.",
+  "creators": {
+    "scientists": [
+      "Tobias Ringwald",
+      "Rainer Stiefelhagen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

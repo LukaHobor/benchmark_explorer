@@ -1,0 +1,40 @@
+{
+  "name": "High-fidelity pedestrian tracking benchmark",
+  "description": "High-fidelity pedestrian tracking in real-life conditions has been an important tool in fundamental crowd dynamics research allowing to quantify statistics of relevant observables including walking velocities, mutual distances and body orientations. As this technology advances, it is becoming increasingly useful also in society. In fact, continued urbanization is overwhelming existing pedestrian infrastructures such as transportation hubs and stations, generating an urgent need for real-time highly-accurate usage data, aiming both at flow monitoring and dynamics understanding. To successfully employ pedestrian tracking techniques in research and technology, it is crucial to validate and benchmark them for accuracy. This is not only necessary to guarantee data quality, but also to identify systematic errors. In this contribution, we present and discuss a benchmark suite, towards an open standard in the community, for privacy-respectful pedestrian tracking techniques. The suite is technology-independent and is applicable to academic and commercial pedestrian tracking systems, operating both in lab environments and real-life conditions. The benchmark suite consists of 5 tests addressing specific aspects of pedestrian tracking quality, including accurate crowd flux estimation, density estimation, position detection and trajectory accuracy. The output of the tests are quality factors expressed as single numbers. We provide the benchmark results for two tracking systems, both operating in real-life, one commercial, and the other based on overhead depth-maps developed at TU Eindhoven. We discuss the results on the basis of the quality factors and report on the typical sensor and algorithmic performance. This enables us to highlight the current state-of-the-art, its limitations and provide installation recommendations, with specific attention to multi-sensor setups and data stitching.",
+  "category": "vision",
+  "domain": "crowd dynamics / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "detection",
+    "tracking",
+    "crowd_counting",
+    "density_estimation",
+    "trajectory_accuracy"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score (standard MOT metrics such as MOTA, MOTP, IDF1, plus counting/density error and position RMSE)",
+  "general_score_metric": "MOTA / IDF1 (reported alongside counting error and position RMSE)",
+  "year_of_publish": 2021,
+  "reputation": "Niche, academically cited within crowd-dynamics and pedestrian-tracking research but not a mainstream, widely adopted industry benchmark.",
+  "notes": "Non-LLM benchmark focused on vision/tracking; uses multiple complementary metrics rather than a single scalar; evaluated on limited systems in the original paper and sensitive to sensor setup and multi-sensor stitching choices.",
+  "creators": {
+    "scientists": [
+      "Caspar A. S. Pouw",
+      "Joris Willems",
+      "Frank van Schadewijk",
+      "Jasmin Thurau",
+      "Federico Toschi",
+      "Alessandro Corbetta"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2108.11719",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "VPI-Bench",
+  "description": "Computer-Use Agents (CUAs) with full system access enable powerful task automation but pose significant security and privacy risks due to their ability to manipulate files, access user data, and execute arbitrary commands. While prior work has focused on browser-based agents and HTML-level attacks, the vulnerabilities of CUAs remain underexplored. In this paper, we investigate Visual Prompt Injection (VPI) attacks, where malicious instructions are visually embedded within rendered user interfaces, and examine their impact on both CUAs and Browser-Use Agents (BUAs). We propose VPI-Bench, a benchmark of 306 test cases across five widely used platforms, to evaluate agent robustness under VPI threats. Each test case is a variant of a web platform, designed to be interactive, deployed in a realistic environment, and containing a visually embedded malicious prompt. Our empirical study shows that current CUAs and BUAs can be deceived at rates of up to 51% and 100%, respectively, on certain platforms. The experimental results also indicate that system prompt defenses offer only limited improvements. These findings highlight the need for robust, context-aware defenses to ensure the safe deployment of multimodal AI agents in real-world environments. The code and dataset are available at: https://github.com/cua-framework/agents",
+  "category": "multimodal",
+  "domain": "agent security / human-computer interaction",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "robustness_evaluation",
+    "adversarial_attack",
+    "interactive_agent_task"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "attack_success_rate",
+  "general_score_metric": "attack_success_rate",
+  "typical_sota_score": "platform-dependent; reported deception rates up to 51% for CUAs and up to 100% for BUAs",
+  "year_of_publish": 2025,
+  "reputation": "A recently proposed, domain-specific benchmark with emerging attention in agent-security research but limited broader adoption so far.",
+  "notes": "Relatively small benchmark (306 cases); interactive and platform-specific which may limit reproducibility; evaluates full-system agents (not only text-only LLMs) and thus is not a standard NLP-only benchmark; potential for overfitting to the limited scenarios.",
+  "creators": {
+    "scientists": [
+      "Tri Cao",
+      "Bennett Lim",
+      "Yue Liu",
+      "Yuan Sui",
+      "Yuexin Li",
+      "Shumin Deng",
+      "Lin Lu",
+      "Nay Oo",
+      "Shuicheng Yan",
+      "Bryan Hooi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2506.02456",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "CoIR",
+  "description": "Despite the substantial success of Information Retrieval (IR) in various NLP tasks, most IR systems predominantly handle queries and corpora in natural language, neglecting the domain of code retrieval. Code retrieval is critically important yet remains under-explored, with existing methods and benchmarks inadequately representing the diversity of code in various domains and tasks. Addressing this gap, we present COIR (Code Information Retrieval Benchmark), a robust and comprehensive benchmark specifically designed to assess code retrieval capabilities. COIR comprises ten meticulously curated code datasets, spanning eight distinctive retrieval tasks across seven diverse domains. We first discuss the construction of COIR and its diverse dataset composition. Further, we evaluate nine widely used retrieval models using COIR, uncovering significant difficulties in performing code retrieval tasks even with state-of-the-art systems. To facilitate easy adoption and integration within existing research workflows, COIR has been developed as a user-friendly Python framework, readily installable via pip. It shares same data schema as other popular benchmarks like MTEB and BEIR, enabling seamless cross-benchmark evaluations. Through COIR, we aim to invigorate research in the code retrieval domain, providing a versatile benchmarking tool that encourages further development and exploration of code retrieval systems https://github.com/CoIR-team/coir.",
+  "category": "code",
+  "domain": "code",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_search",
+    "semantic_retrieval",
+    "cross_language_retrieval",
+    "snippet_retrieval",
+    "function_retrieval",
+    "duplicate_detection",
+    "domain_adapted_retrieval",
+    "query_by_natural_language"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MRR (Mean Reciprocal Rank) and recall@k",
+  "general_score_metric": "MRR",
+  "typical_sota_score": "varies by dataset; MRR typically low to moderate (roughly 0.10–0.50 across tasks)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "Emerging, purpose-built benchmark for code retrieval with growing adoption; provided as a pip-installable framework and used to benchmark retrieval models across diverse code domains.",
+  "notes": "Heterogeneous collection of datasets/tasks — results are not directly comparable across all subsets. Possible contamination with public code corpora and sensitivity to indexing/tokenization choices; intended for retrieval (non-LLM and LLM-based) evaluation.",
+  "creators": {
+    "scientists": [
+      "Xiangyang Li",
+      "Kuicai Dong",
+      "Yi Quan Lee",
+      "Wei Xia",
+      "Hao Zhang",
+      "Xinyi Dai",
+      "Yasheng Wang",
+      "Ruiming Tang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2407.02883",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

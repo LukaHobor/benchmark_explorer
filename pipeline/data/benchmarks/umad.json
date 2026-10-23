@@ -1,0 +1,36 @@
+{
+  "name": "UMAD",
+  "description": "Anomaly detection is critical in surveillance systems and patrol robots by identifying anomalous regions in images for early warning. Depending on whether reference data are utilized, anomaly detection can be categorized into anomaly detection with reference and anomaly detection without reference. Currently, anomaly detection without reference, which is closely related to out-of-distribution (OoD) object detection, struggles with learning anomalous patterns due to the difficulty of collecting sufficiently large and diverse anomaly datasets with the inherent rarity and novelty of anomalies. Alternatively, anomaly detection with reference employs the scheme of change detection to identify anomalies by comparing semantic changes between a reference image and a query one. However, there are very few ADr works due to the scarcity of public datasets in this domain. In this paper, we aim to address this gap by introducing the UMAD Benchmark Dataset. To our best knowledge, this is the first benchmark dataset designed specifically for anomaly detection with reference in robotic patrolling scenarios, e.g., where an autonomous robot is employed to detect anomalous objects by comparing a reference and a query video sequences. The reference sequences can be taken by the robot along a specified route when there are no anomalous objects in the scene. The query sequences are captured online by the robot when it is patrolling in the same scene following the same route. Our benchmark dataset is elaborated such that each query image can find a corresponding reference based on accurate robot localization along the same route in the pre-built 3D map, with which the reference and query images can be geometrically aligned using adaptive warping. Besides the proposed benchmark dataset, we evaluate the baseline models of ADr on this dataset. We hope this benchmark dataset will facilitate the advancement of ADr methods in the future. Our UMAD benchmark dataset will be publicly accessible at https://github.com/IMRL/UMAD.",
+  "category": "vision",
+  "domain": "general anomaly detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "classification",
+    "segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A university-provided, domain-specific benchmark used by research groups working on visual anomaly detection; adoption is modest but growing in the academic anomaly-detection community.",
+  "notes": "Non-LLM visual benchmark; may exhibit class imbalance and limited dataset size for some anomaly types; contains a diverse set of anomaly scenarios that can limit cross-dataset comparability.",
+  "creators": {
+    "scientists": [
+      "Dong Li",
+      "Lineng Chen",
+      "Cheng-Zhong Xu",
+      "Hui Kong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/iros58592.2024.10802194",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

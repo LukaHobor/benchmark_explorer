@@ -1,0 +1,35 @@
+{
+  "name": "Grammar Induction Generalization Benchmark",
+  "description": "How well do neural networks generalize? Even for grammar induction tasks, where the target generalization is fully known, previous works have left the question open, testing very limited ranges beyond the training set and using different success criteria. We provide a measure of neural network generalization based on fully specified formal languages. Given a model and a formal grammar, the method assigns a generalization score representing how well a model generalizes to unseen samples in inverse relation to the amount of data it was trained on. The benchmark includes languages such as $a^nb^n$, $a^nb^nc^n$, $a^nb^mc^{n+m}$, and Dyck-1 and 2. We evaluate selected architectures using the benchmark and find that networks trained with a Minimum Description Length objective (MDL) generalize better and using less data than networks trained using standard loss functions. The benchmark is available at https://github.com/taucompling/bliss.",
+  "category": "text",
+  "domain": "formal languages / grammar induction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "grammar_induction",
+    "sequence_prediction",
+    "syntactic_generalization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "custom generalization score (MDL-based/amount-of-data vs. generalization metric)",
+  "general_score_metric": "generalization score (data-efficiency / MDL-based measure indicating how well model generalizes relative to training data size)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "A niche research benchmark used in formal language and grammar induction studies; known among researchers studying theoretical generalization.",
+  "notes": "Synthetic/formal-language tasks (e.g., a^n b^n, Dyck); not reflective of natural-language benchmarks or LLMs; intended for controlled generalization studies.",
+  "creators": {
+    "scientists": [
+      "Nur Lan",
+      "Emmanuel Chemla",
+      "Roni Katzir"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2308.08253",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

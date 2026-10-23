@@ -1,0 +1,33 @@
+{
+  "name": "Swedish Clinical Corpus (de-identified)",
+  "description": "Patient records contain valuable information in the form of both structured data and free text; however this information is sensitive since it can reveal the identity of patients. In order to allow new methods and techniques to be developed and evaluated on real world clinical data without revealing such sensitive information, researchers could be given access to de-identified records without protected health information (PHI), such as names, telephone numbers, and so on. One approach to minimizing the risk of revealing PHI when releasing text corpora from such records is to include only features of the words instead of the words themselves. Such features may include parts of speech, word length, and so on from which the sensitive information cannot be derived. In order to investigate what performance losses can be expected when replacing specific words with features, an experiment with two state-of-the-art machine learning methods, conditional random fields and random forests, is presented, comparing their ability to support de-identification, using the Stockholm EPR PHI corpus as a benchmark test. The results indicate severe performance losses when the actual words are removed, leading to the conclusion that the chosen features are not sufficient for the suggested approach to be viable.",
+  "category": "text",
+  "domain": "medical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "sequence_labeling",
+    "de-identification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2012,
+  "reputation": "9 citations",
+  "notes": "Clinical de-identification task; sensitive data / privacy constraints. Dataset size and language (Swedish) limit broad adoption; replacing words with feature-only representations degrades performance. Not primarily an LLM benchmark; risk of dataset-specific annotation styles.",
+  "creators": {
+    "scientists": [
+      "Hercules Dalianis",
+      "Henrik Boström"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

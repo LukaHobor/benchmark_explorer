@@ -1,0 +1,38 @@
+{
+  "name": "Weak Supervision Benchmark",
+  "description": "Weak supervision (WS) is a popular approach for label-efficient learning, leveraging diverse sources of noisy but inexpensive weak labels to automatically annotate training data. Despite its wide usage, WS and its practical value are challenging to benchmark due to the many knobs in its setup, including: data sources, labeling functions (LFs), aggregation techniques (called label models), and end model pipelines. Existing evaluation suites tend to be limited, focusing on particular components or specialized use cases. Moreover, they often involve simplistic benchmark tasks or de-facto LF sets that are suboptimally written, producing insights that may not generalize to real-world settings. We address these limitations by introducing a new benchmark, BOXWRENCH, designed to more accurately reflect real-world usages of WS. This benchmark features tasks with (1) higher class cardinality and imbalance, (2) notable domain expertise requirements, and (3) opportunities to re-use LFs across para",
+  "category": "mixed",
+  "domain": "data-centric AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "labeling_function_generation",
+    "weak_supervision_pipeline_evaluation",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A recent benchmark aimed at making weak supervision evaluation more realistic and comprehensive, but it is not yet widely established as a standard community benchmark.",
+  "notes": "Non-LLM benchmark focused on weak supervision systems; results depend heavily on labeling functions, label models, and end-model choices, so scores are not directly comparable across setups.",
+  "creators": {
+    "scientists": [
+      "Tianyi Zhang",
+      "Linrong Cai",
+      "Jeffrey Li",
+      "Nicholas Roberts",
+      "Neel Guha",
+      "Jinoh Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2501.07727",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

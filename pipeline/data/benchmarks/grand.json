@@ -1,0 +1,36 @@
+{
+  "name": "GRAND",
+  "description": "Cervical cancer causes the fourth most cancer-related deaths of women worldwide. Early detection of cervical intraepithelial neoplasia (CIN) can significantly increase the survival rate of patients. World Health Organization (WHO) divided the CIN into three grades (CIN1, CIN2 and CIN3). In clinical practice, different CIN grades require different treatments. Although existing studies proposed computer aided diagnosis (CAD) systems for cervical cancer diagnosis, most of them are fail to perform accurate separation between CIN1 and CIN2/3, due to the similar appearances under colposcopy. To boost the accuracy of CAD systems, we construct a colposcopic image dataset for GRAding cervical intraepithelial Neoplasia with fine-grained lesion Description (GRAND). The dataset consists of colposcopic images collected from 8,604 patients along with the pathological reports. Additionally, we invite the experienced colposcopist to annotate two main clues, which are usually adopted for clinical diagnosis of CIN grade, i.e., texture of acetowhite epithelium (TAE) and appearance of blood vessel (ABV). A multi-rater model using the annotated clues is benchmarked for our dataset. The proposed framework contains several sub-networks (raters) to exploit the fine-grained lesion features TAE and ABV, respectively, by contrastive learning and a backbone network to extract the global information from colposcopic images. A comprehensive experiment is conducted on our GRAND dataset. The experimental results demonstrate the benefit of using additional lesion descriptions (TAE and ABV), which increases the CIN grading accuracy by over 10%. Furthermore, we conduct a human-machine confrontation to evaluate the potential of the proposed benchmark framework for clinical applications. Particularly, three colposcopists on different professional levels (intern, in-service and professional) are invited to compete with our benchmark framework by investigating a same extra test set-our framework achieves a comparable CIN grading accuracy to that of a professional colposcopist.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "lesion_localization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy / F1 (for grading) and IoU / localization metrics (for lesion localization)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2021,
+  "reputation": "A well-regarded research dataset in the cervical histology/CIN grading community for evaluating fine-grained lesion descriptions and localization.",
+  "notes": "Clinical dataset with expert annotations and potential class imbalance; requires careful privacy/ethical handling; not a language-model benchmark.",
+  "creators": {
+    "scientists": [
+      "Yuexiang Li",
+      "Zhi-Hua Liu",
+      "Peng Xue",
+      "Jiawei Chen",
+      "Kai Ma",
+      "Tianyi Qian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1016/j.media.2021.102006",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

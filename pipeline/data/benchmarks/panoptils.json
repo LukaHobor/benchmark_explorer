@@ -1,0 +1,39 @@
+{
+  "name": "PanopTILs",
+  "description": "Abstract\n                \n                  Tumor-Infiltrating Lymphocytes (TILs) have strong prognostic and predictive value in breast cancer, but their visual assessment is subjective. To improve reproducibility, the International Immuno-oncology Working Group recently released recommendations for the computational assessment of TILs that build on visual scoring guidelines. However, existing resources do not adequately address these recommendations due to the lack of annotation datasets that enable joint, panoptic segmentation of tissue regions and cells. Moreover, existing deep-learning methods focus entirely on either tissue segmentation or cell nuclei detection, which complicates the process of TILs assessment by necessitating the use of multiple models and reconciling inconsistent predictions. We introduce\n                  PanopTILs\n                  , a region and cell-level annotation dataset containing 814,886 nuclei from 151 patients, openly accessible at: sites.google.com/view/panoptils. Using PanopTILs we developed\n                  MuTILs\n                  , a neural network optimized for assessing TILs in accordance with clinical recommendations. MuTILs is a concept bottleneck model designed to be interpretable and to encourage sensible predictions at multiple resolutions. Using a rigorous internal-external cross-validation procedure, MuTILs achieves an AUROC of 0.93 for lymphocyte detection and a DICE coefficient of 0.81 for tumor-associated stroma segmentation. Our computational score closely matched visual scores from 2 pathologists (Spearman R=0.58-0.61, p&lt;0.001). Moreover, computational TILs scores had a higher prognostic value than visual scores, independent of TNM stage and patient age. In conclusion, we introduce a comprehensive open data resource and a novel modeling approach for detailed mapping of the breast tumor microenvironment.",
+  "category": "vision",
+  "domain": "medical imaging / histopathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "panoptic_segmentation",
+    "nuclei_detection",
+    "instance_segmentation",
+    "cell_detection",
+    "tumor_region_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC for lymphocyte detection and Dice coefficient for segmentation (also detection F1/precision/recall for nuclei)",
+  "general_score_metric": "AUROC (for lymphocyte detection) and Dice coefficient (for tissue/stroma segmentation)",
+  "typical_sota_score": "AUROC ≈ 0.93; Dice ≈ 0.81 (reported for the MuTILs baseline)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded open dataset in computational pathology for TILs assessment; used as a reference for joint tissue-and-cell segmentation methods.",
+  "notes": "Medical-imaging benchmark (non-LLM); relatively large annotated set (814,886 nuclei from 151 patients) but focused on breast cancer histology — potential domain shift to other tissues/stains; requires expert annotation and care with cross-site generalization.",
+  "creators": {
+    "scientists": [
+      "Shangke Liu",
+      "Mohamed Amgad",
+      "Muhammad A. Rathore",
+      "Roberto Salgado",
+      "Lee A.D. Cooper"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2022.01.08.22268814",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

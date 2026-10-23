@@ -1,0 +1,36 @@
+{
+  "name": "FedAvg vs FedCurv Image Classification Benchmark",
+  "description": "Classic Machine Learning techniques require training on data available in a single data lake. However, aggregating data from different owners is not always convenient for different reasons, including security, privacy and secrecy. Data carry a value that might vanish when shared with others; the ability to avoid sharing the data enables industrial applications where security and privacy are of paramount importance, making it possible to train global models by implementing only local policies which can be run independently and even on air-gapped data centres. Federated Learning (FL) is a distributed machine learning approach which has emerged as an effective way to address privacy concerns by only sharing local AI models while keeping the data decentralized. Two critical challenges of Federated Learning are managing the heterogeneous systems in the same federated network and dealing with real data, which are often not independently and identically distributed (non-IID) among the clients. In this paper, we focus on the second problem, i.e., the problem of statistical heterogeneity of the data in the same federated network. In this setting, local models might be strayed far from the local optimum of the complete dataset, thus possibly hindering the convergence of the federated model. Several Federated Learning algorithms, such as FedAvg, FedProx and Federated Curvature (FedCurv), aiming at tackling the non-IID setting, have already been proposed. This work provides an empirical assessment of the behaviour of FedAvg and FedCurv in common non-IID scenarios. Results show that the number of epochs per round is an important hyper-parameter that, when tuned appropriately, can lead to significant performance gains while reducing the communication cost. As a side product of this work, we release the non-IID version of the datasets we used so to facilitate further comparisons from the FL community.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "federated_learning",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2023,
+  "reputation": "Used by the federated learning community for empirical comparisons of optimization algorithms under non-IID settings; has moderate adoption for method-level evaluations.",
+  "notes": "Non-LLM vision benchmark focused on federated, non-IID splits; results are sensitive to partitioning strategy and number of local epochs. Dataset splits may be simulated and reproducibility depends on exact partitioning and training hyperparameters.",
+  "creators": {
+    "scientists": [
+      "Bruno Casella",
+      "Roberto Esposito",
+      "Carlo Cavazzoni",
+      "Marco Aldinucci"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2303.17942",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

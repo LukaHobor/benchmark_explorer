@@ -1,0 +1,38 @@
+{
+  "name": "MultiTab",
+  "description": "Despite the widespread use of tabular data in real-world applications, most benchmarks rely on average-case metrics, which fail to reveal how model behavior varies across diverse data regimes. To address this, we propose MultiTab, a benchmark suite and evaluation framework for multi-dimensional, data-aware analysis of tabular learning algorithms. Rather than comparing models only in aggregate, MultiTab categorizes 196 publicly available datasets along key data characteristics, including sample size, label imbalance, and feature interaction, and evaluates 13 representative models spanning a range of inductive biases. Our analysis shows that model performance is highly sensitive to such regimes: for example, models using sample-level similarity excel on datasets with large sample sizes or high inter-feature correlation, while models encoding inter-feature dependencies perform best with weakly correlated features. These findings reveal that inductive biases do not always behave as intende",
+  "category": "mixed",
+  "domain": "tabular ML",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "tabular_classification",
+    "tabular_regression",
+    "benchmark_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and regression/classification performance metrics aggregated across dataset regimes",
+  "general_score_metric": "composite_score",
+  "typical_sota_score": "varies widely by dataset and task; no single SOTA (classification accuracies often span roughly 60–99% depending on dataset/regime)",
+  "year_of_publish": 2025,
+  "reputation": "A recent benchmark suite for tabular learning analysis, with growing interest among researchers studying inductive biases and dataset regimes.",
+  "notes": "Non-LLM benchmark; broad dataset coverage makes a single SOTA score hard to define, and performance varies substantially by regime and task type.",
+  "creators": {
+    "scientists": [
+      "Kyungeun Lee",
+      "Moonjung Eo",
+      "Hye-Seung Cho",
+      "Dongmin Kim",
+      "Ye Seul Sim",
+      "Seoyoon Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.14312",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

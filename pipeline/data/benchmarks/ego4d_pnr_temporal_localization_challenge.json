@@ -1,0 +1,37 @@
+{
+  "name": "Ego4D PNR Temporal Localization Challenge",
+  "description": "This technical report describes the SViT approach for the Ego4D Point of No Return (PNR) Temporal Localization Challenge. We propose a learning framework StructureViT (SViT for short), which demonstrates how utilizing the structure of a small number of images only available during training can improve a video model. SViT relies on two key insights. First, as both images and videos contain structured information, we enrich a transformer model with a set of \\emph{object tokens} that can be used across images and videos. Second, the scene representations of individual frames in video should \"align\" with those of still images. This is achieved via a \"Frame-Clip Consistency\" loss, which ensures the flow of structured information between images and videos. SViT obtains strong performance on the challenge test set with 0.656 absolute temporal localization error.",
+  "category": "multimodal",
+  "domain": "vision",
+  "task_types": [
+    "temporal_localization",
+    "video_grounding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "absolute_temporal_localization_error",
+  "general_score_metric": "absolute temporal localization error",
+  "typical_sota_score": "0.5–0.7 seconds",
+  "year_of_publish": 2022,
+  "reputation": "A well-known Ego4D challenge benchmark used in the video understanding community, especially for temporal localization and egocentric action understanding.",
+  "notes": "Challenge-style benchmark with a relatively specialized task and metric; scores are reported as lower-is-better temporal error rather than accuracy.",
+  "creators": {
+    "scientists": [
+      "Elad Ben-Avraham",
+      "Roei Herzig",
+      "Karttikeya Mangalam",
+      "Amir Bar",
+      "Anna Rohrbach",
+      "Leonid Karlinsky"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.07689",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

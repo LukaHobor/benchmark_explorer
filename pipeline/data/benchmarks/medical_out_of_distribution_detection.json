@@ -1,0 +1,35 @@
+{
+  "name": "Medical Out of Distribution Detection",
+  "description": "Motivation: Deep learning models deployed for use on medical tasks can be equipped with Out-of-Distribution Detection (OoDD) methods in order to avoid erroneous predictions. However it is unclear which OoDD method should be used in practice. Specific Problem: Systems trained for one particular domain of images cannot be expected to perform accurately on images of a different domain. These images should be flagged by an OoDD method prior to diagnosis. Our approach: This paper defines 3 categories of OoD examples and benchmarks popular OoDD methods in three domains of medical imaging: chest X-ray, fundus imaging, and histology slides. Results: Our experiments show that despite methods yielding good results on some categories of out-of-distribution samples, they fail to recognize images close to the training distribution. Conclusion: We find a simple binary classifier on the feature representation has the best accuracy and AUPRC on average. Users of diagnostic tools which employ these OoD",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "binary_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and AUPRC",
+  "general_score_metric": "AUPRC",
+  "typical_sota_score": "60–95% (task-dependent; reported as AUPRC/accuracy depending on subtask)",
+  "year_of_publish": 2020,
+  "reputation": "An early and frequently cited medical OOD detection benchmark that helped standardize evaluation across multiple imaging domains.",
+  "notes": "Non-LLM benchmark for medical imaging OOD detection; includes chest X-ray, fundus, and histology, and is sensitive to how near-OOD examples are defined.",
+  "creators": {
+    "scientists": [
+      "Tianshi Cao",
+      "Chin-Wei Huang",
+      "David Yu-Tung Hui",
+      "Joseph Paul Cohen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2007.04250",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

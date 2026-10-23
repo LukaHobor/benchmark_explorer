@@ -1,0 +1,38 @@
+{
+  "name": "E-Manual QA Benchmark",
+  "description": "Answering questions asked from instructional corpora such as E-manuals, recipe books, etc., has been far less studied than open-domain factoid context-based question answering. This can be primarily attributed to the absence of standard benchmark datasets. In this paper we meticulously create a large amount of data connected with E-manuals and develop suitable algorithm to exploit it. We collect E-Manual Corpus, a huge corpus of 307,957 E-manuals and pretrain RoBERTa on this large corpus. We create various benchmark QA datasets which include question answer pairs curated by experts based upon two E-manuals, real user questions from Community Question Answering Forum pertaining to E-manuals etc. We introduce EMQAP (E-Manual Question Answering Pipeline) that answers questions pertaining to electronics devices. Built upon the pretrained RoBERTa, it harbors a supervised multi-task learning framework which efficiently performs the dual tasks of identifying the section in the E-manual where the answer can be found and the exact answer span within that section. For E-Manual annotated question-answer pairs, we show an improvement of about 40% in ROUGE-L F1 scores over the most competitive baseline. We perform a detailed ablation study and establish the versatility of EMQAP across different circumstances. The code and datasets are shared at https://github.com/abhi1nandy2/EMNLP-2021-Findings, and the corresponding project website is https://sites.google.com/view/emanualqa/home.",
+  "category": "text",
+  "domain": "electronic devices / technical documentation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "section_selection",
+    "span_extraction",
+    "question_answering"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "ROUGE-L F1",
+  "general_score_metric": "ROUGE-L F1",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2024,
+  "reputation": "Introduced in EMNLP Findings (2021); useful within a niche community studying technical/instructional QA but not widely adopted as a mainstream benchmark.",
+  "notes": "Domain-specific benchmark with large unlabeled pretraining corpus but relatively small annotated QA subsets; evaluation emphasizes span/section identification (ROUGE-L), risk of overlap with pretraining data, and limited community saturation.",
+  "creators": {
+    "scientists": [
+      "Abhilash Nandy",
+      "Soumya Sharma",
+      "Shubham Maddhashiya",
+      "Kapil Sachdeva",
+      "Pawan Goyal",
+      "Niloy Ganguly"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2109.05897",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

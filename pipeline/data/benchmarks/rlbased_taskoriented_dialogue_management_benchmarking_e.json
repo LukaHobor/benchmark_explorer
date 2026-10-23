@@ -1,0 +1,40 @@
+{
+  "name": "RL-based Task-Oriented Dialogue Management benchmarking environment",
+  "description": "Dialogue assistants are rapidly becoming an indispensable daily aid. To avoid\nthe significant effort needed to hand-craft the required dialogue flow, the\nDialogue Management (DM) module can be cast as a continuous Markov Decision\nProcess (MDP) and trained through Reinforcement Learning (RL). Several RL\nmodels have been investigated over recent years. However, the lack of a common\nbenchmarking framework makes it difficult to perform a fair comparison between\ndifferent models and their capability to generalise to different environments.\nTherefore, this paper proposes a set of challenging simulated environments for\ndialogue model development and evaluation. To provide some baselines, we\ninvestigate a number of representative parametric algorithms, namely deep\nreinforcement learning algorithms - DQN, A2C and Natural Actor-Critic and\ncompare them to a non-parametric model, GP-SARSA. Both the environments and\npolicy models are implemented using the publicly available PyDial toolkit and\nreleased on-line, in order to establish a testbed framework for further\nexperiments and to facilitate experimental reproducibility.",
+  "category": "text",
+  "domain": "dialogue systems / conversational AI",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "dialogue_simulation",
+    "policy_learning",
+    "dialogue_management"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate (success rate and cumulative reward in simulated dialogues)",
+  "general_score_metric": "task_success_rate / cumulative_reward",
+  "year_of_publish": 2017,
+  "reputation": "Well-known in the dialogue research community as part of the PyDial toolkit; used as a standard simulation testbed for RL-based task-oriented dialogue policy work.",
+  "notes": "Simulation-based benchmark (PyDial); not an LLM benchmark. Results depend heavily on simulated user models and environment design (sim-to-real gap). Reproducibility is good when using the provided toolkit, but findings may not transfer directly to human interactions.",
+  "creators": {
+    "scientists": [
+      "Iñigo Casanueva",
+      "Paweł Budzianowski",
+      "Pei-Hao Su",
+      "Nikola Mrkšić",
+      "Tsung-Hsien Wen",
+      "Stefan Ultes",
+      "Lina Rojas-Barahona",
+      "Steve Young",
+      "Milica Gašić"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/1711.11023",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

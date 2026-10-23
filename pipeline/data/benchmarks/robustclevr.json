@@ -1,0 +1,33 @@
+{
+  "name": "RobustCLEVR",
+  "description": "Object-centric representation learning offers the potential to overcome limitations of image-level representations by explicitly parsing image scenes into their constituent components. While image-level representations typically lack robustness to natural image corruptions, the robustness of object-centric methods remains largely untested. To address this gap, we present the RobustCLEVR benchmark dataset and evaluation framework. Our framework takes a novel approach to evaluating robustness by enabling the specification of causal dependencies in the image generation process grounded in expert knowledge and capable of producing a wide range of image corruptions unattainable in existing robustness evaluations. Using our framework, we define several causal models of the image corruption process which explicitly encode assumptions about the causal relationships and distributions of each corruption type. We generate dataset variants for each causal model on which we evaluate state-of-the-art object-centric methods. Overall, we find that object-centric methods are not inherently robust to image corruptions. Our causal evaluation approach exposes model sensitivities not observed using conventional evaluation processes, yielding greater insight into robustness differences across algorithms. Lastly, while conventional robustness evaluations view corruptions as out-of-distribution, we use our causal framework to show that even training on in-distribution image corruptions does not guarantee increased model robustness. This work provides a step towards more concrete and substantiated understanding of model performance and deterioration under complex corruption processes of the real-world.",
+  "category": "vision",
+  "domain": "computer vision / object-centric learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "unsupervised_representation_learning",
+    "object_segmentation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "segmentation metrics (Adjusted Rand Index (ARI), FG-ARI) and reconstruction / reconstruction error",
+  "general_score_metric": "Adjusted Rand Index (ARI) for segmentation",
+  "year_of_publish": 2023,
+  "reputation": "Adopted within the object-centric learning research community as a targeted robustness evaluation, but not a broadly used standard outside that subfield.",
+  "notes": "non-LLM benchmark; synthetic, causally-generated corruptions that may not fully reflect real-world image corruptions; useful for diagnosing model sensitivities but may not translate directly to natural image robustness.",
+  "creators": {
+    "scientists": [
+      "Nathan Drenkow",
+      "Mathias Unberath"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.14899",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Oracle Bone Inscriptions Benchmark",
+  "description": "The oracle bone inscription (OBI) recognition plays a significant role in understanding the history and culture of ancient China. However, the existing OBI datasets suffer from a long-tail distribution problem, leading to biased performance of OBI recognition models across majority and minority classes. With recent advancements in generative models, OBI synthesis-based data augmentation has become a promising avenue to expand the sample size of minority classes. Unfortunately, current OBI datasets lack large-scale structure-aligned image pairs for generative model training. To address these problems, we first present the Oracle-P15K, a structure-aligned OBI dataset for OBI generation and denoising, consisting of 14,542 images infused with domain knowledge from OBI experts. Second, we propose a diffusion model-based pseudo OBI generator, called OBIDiff, to achieve realistic and controllable OBI generation. Given a clean glyph image and a target rubbing-style image, it can effectively transfer the noise style of the original rubbing to the glyph image. Extensive experiments on OBI downstream tasks and user preference studies show the effectiveness of the proposed Oracle-P15K dataset and demonstrate that OBIDiff can accurately preserve inherent glyph structures while transferring authentic rubbing styles effectively.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_generation",
+    "image_denoising",
+    "glyph_recognition"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "classification_accuracy",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized dataset and method with limited adoption outside oracle-bone inscription research so far.",
+  "notes": "Non-LLM vision benchmark (14,542 images) focused on a highly specialized domain with long-tail class distributions; generation evaluation typically combines human preference and image-quality metrics (e.g., FID/LPIPS) in addition to recognition accuracy.",
+  "creators": {
+    "scientists": [
+      "Jinhao Li",
+      "Zijian Chen",
+      "Runze Jiang",
+      "Tingzhu Chen",
+      "Changbo Wang",
+      "Guangtao Zhai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.09555",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

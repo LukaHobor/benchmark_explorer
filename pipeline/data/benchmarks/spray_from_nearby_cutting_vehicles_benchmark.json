@@ -1,0 +1,37 @@
+{
+  "name": "Spray from Nearby Cutting Vehicles Benchmark",
+  "description": "Current driver assistance systems and autonomous driving stacks are limited to well-defined environment conditions and geo fenced areas. To increase driving safety in adverse weather conditions, broadening the application spectrum of autonomous driving and driver assistance systems is necessary. In order to enable this development, reproducible benchmarking methods are required to quantify the expected distortions. In this publication, a testing methodology for disturbances from spray is presented. It introduces a novel lightweight and configurable spray setup alongside an evaluation scheme to assess the disturbances caused by spray. The analysis covers an automotive RGB camera and two different LiDAR systems, as well as downstream detection algorithms based on YOLOv3 and PV-RCNN. In a common scenario of a closely cutting vehicle, it is visible that the distortions are severely affecting the perception stack up to four seconds showing the necessity of benchmarking the influences of spray.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "object_detection",
+    "lidar_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) for detection tasks",
+  "general_score_metric": "mAP (mean Average Precision) for object detection / AP for LiDAR detection",
+  "year_of_publish": 2021,
+  "reputation": "A specialized research benchmark cited in robustness/perception studies for adverse-weather effects; used by a focused community rather than broadly adopted.",
+  "notes": "Non-LLM benchmark focused on sensor perception; uses a controlled spray rig and a limited set of scenarios and sensors, so results may not fully generalize to all vehicle configurations or real-world conditions.",
+  "creators": {
+    "scientists": [
+      "Stefanie Walz",
+      "Mario Bijelic",
+      "Florian Kraus",
+      "Werner Ritter",
+      "Martin Simon",
+      "Igor Doric"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2108.10800",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

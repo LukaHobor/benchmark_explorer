@@ -1,0 +1,33 @@
+{
+  "name": "RTime (Reversed in Time)",
+  "description": "Cross-modal (e.g. image-text, video-text) retrieval is an important task in information retrieval and multimodal vision-language understanding field. Temporal understanding makes video-text retrieval more challenging than image-text retrieval. However, we find that the widely used video-text benchmarks have shortcomings in comprehensively assessing abilities of models, especially in temporal understanding, causing large-scale image-text pre-trained models can already achieve comparable zero-shot performance with video-text pre-trained models. In this paper, we introduce RTime, a novel temporal-emphasized video-text retrieval dataset. We first obtain videos of actions or events with significant temporality, and then reverse these videos to create harder negative samples. We then recruit annotators to judge the significance and reversibility of candidate videos, and write captions for qualified videos. We further adopt GPT-4 to extend more captions based on human-written captions. Our RTime dataset currently consists of 21k videos with 10 captions per video, totalling about 122 hours. Based on RTime, we propose three retrieval benchmark tasks: RTime-Origin, RTime-Hard, and RTime-Binary. We further enhance the use of harder-negatives in model training, and benchmark a variety of video-text models on RTime. Extensive experiment analysis proves that RTime indeed poses new and higher challenges to video-text retrieval. We release our RTime dataset\\footnote{\\url{https://github.com/qyr0403/Reversed-in-Time}} to further advance video-text retrieval and multimodal understanding research.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_text_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k (R@1, R@5, R@10) / retrieval metrics",
+  "general_score_metric": "Recall@k (e.g., R@1 / R@5)",
+  "year_of_publish": 2024,
+  "reputation": "Recent dataset emphasizing temporal understanding in video-text retrieval; early-stage adoption by retrieval and multimodal researchers.",
+  "notes": "Includes hard negatives created by reversing videos and GPT-4–augmented captions; focuses on temporality, which increases difficulty; potential biases from LLM-augmented captions and sourced video content.",
+  "creators": {
+    "scientists": [
+      "Yang Du",
+      "Yuqi Liu",
+      "Qin Jin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.19178",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

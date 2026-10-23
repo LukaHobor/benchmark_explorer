@@ -1,0 +1,32 @@
+{
+  "name": "MedQA-Demog",
+  "description": "The application of large language models (LLMs) within clinical decision-support frameworks is receiving growing research attention, yet their fairness and demographic robustness remain insufficiently understood. This study introduces MedQA-Demog, a purpose-built, label-invariant extension of the MedQA-USMLE benchmark, designed to enable systematic auditing of demographic bias in medical reasoning models. Using a deterministic augmentation framework, we generated 4,659 question-answer items that incorporated counterfactual variations in gender, race/ethnicity, and age, and validated them through automated integrity and balance checks. We evaluated the Mistral 7B-Instruct model under stochastic (temperature = 0.7) and deterministic (temperature = 0.0) inference rules via the Ollama local environment, applying Wilson’s 95% confidence intervals, $\\chi ^{2}/z$ -tests, McNemar’s paired analysis, and Cohen’s h effect sizes to quantify fairness. Across all demographic variants, diagnostic acc",
+  "category": "text",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "80–90%",
+  "year_of_publish": 2026,
+  "reputation": "A recent specialized benchmark for auditing demographic bias in medical QA, with emerging but limited adoption so far.",
+  "notes": "Derived from MedQA-USMLE via counterfactual demographic augmentation; primarily a fairness/robustness benchmark rather than a general capability test. Likely sensitive to prompt/inference settings and not yet widely standardized.",
+  "creators": {
+    "scientists": [
+      "H. Ahmed",
+      "Abdul Hamid Sadka"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

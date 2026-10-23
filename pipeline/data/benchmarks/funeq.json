@@ -1,0 +1,32 @@
+{
+  "name": "FunEq",
+  "description": "Automated Theorem Proving (ATP) faces challenges due to its complexity and computational demands. Recent work has explored using Large Language Models (LLMs) for ATP action selection, but these methods can be resource-intensive. This study introduces FEAS, an agent that enhances the COPRA in-context learning framework within Lean. FEAS refines prompt generation, response parsing, and incorporates domain-specific heuristics for functional equations. It introduces FunEq, a curated dataset of functional equation problems with varying difficulty. FEAS outperforms baselines on FunEq, particularly with the integration of domain-specific heuristics. The results demonstrate FEAS's effectiveness in generating and formalizing high-level proof strategies into Lean proofs, showcasing the potential of tailored approaches for specific ATP challenges.",
+  "category": "code",
+  "domain": "formal mathematics / theorem proving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "proof_generation",
+    "formalization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (percentage of problems for which a correct Lean proof is produced and verified)",
+  "general_score_metric": "proof success rate (percent of theorems proved/verified)",
+  "year_of_publish": 2024,
+  "reputation": "New, domain-specific benchmark for functional-equation theorem proving in Lean; early interest from theorem-proving and LLM-for-ATP communities but limited adoption so far.",
+  "notes": "Domain-specific (functional equations) and likely small relative to general corpora; potential contamination risk from existing public Lean libraries; requires specialized tooling (Lean), so not directly comparable to general NLP benchmarks.",
+  "creators": {
+    "scientists": [
+      "Mahdi Buali",
+      "Robert Hoehndorf"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2407.14521",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

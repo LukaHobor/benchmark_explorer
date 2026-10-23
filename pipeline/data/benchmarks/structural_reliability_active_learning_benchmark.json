@@ -1,0 +1,36 @@
+{
+  "name": "Structural Reliability Active Learning Benchmark",
+  "description": "Active learning methods have recently surged in the literature due to their ability to solve complex structural reliability problems within an affordable computational cost. These methods are designed by adaptively building an inexpensive surrogate of the original limit-state function. Examples of such surrogates include Gaussian process models which have been adopted in many contributions, the most popular ones being the efficient global reliability analysis (EGRA) and the active Kriging Monte Carlo simulation (AK-MCS), two milestone contributions in the field. In this paper, we first conduct a survey of the recent literature, showing that most of the proposed methods actually span from modifying one or more aspects of the two aforementioned methods. We then propose a generalized modular framework to build on-the-fly efficient active learning strategies by combining the following four ingredients or modules: surrogate model, reliability estimation algorithm, learning function and stopping criterion. Using this framework, we devise 39 strategies for the solution of $20$ reliability benchmark problems. The results of this extensive benchmark (more than $12,000$ reliability problems solved) are analyzed under various criteria leading to a synthesized set of recommendations for practitioners. These may be refined with a priori knowledge about the feature of the problem to solve, i.e. dimensionality and magnitude of the failure probability. This benchmark has eventually highlighted the importance of using surrogates in conjunction with sophisticated reliability estimation algorithms as a way to enhance the efficiency of the latter.",
+  "category": "mixed",
+  "domain": "structural engineering / reliability analysis",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "benchmarking",
+    "surrogate_model_evaluation",
+    "active_learning_evaluation",
+    "reliability_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "estimation_error of failure probability and computational_efficiency (number_of_function_evaluations to converge)",
+  "general_score_metric": "number_of_function_evaluations_to_converge and estimation_error_of_failure_probability",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded within the structural reliability and engineering research community as a comprehensive comparative study of active-learning strategies.",
+  "notes": "Non-LLM / engineering benchmark focused on surrogate-based active learning; primary outcomes are efficiency and estimation error. Results can be sensitive to problem dimensionality and failure-probability magnitude; possible risk of method tuning to the 20 included problems.",
+  "creators": {
+    "scientists": [
+      "M. Moustapha",
+      "S. Marelli",
+      "B. Sudret"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2106.01713",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

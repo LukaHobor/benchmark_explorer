@@ -1,0 +1,39 @@
+{
+  "name": "TARGO",
+  "description": "Recent advances in predicting 6D grasp poses from a single depth image have led to promising performance in robotic grasping. However, previous grasping models face challenges in cluttered environments where nearby objects impact the target object's grasp. In this paper, we first establish a new benchmark dataset for TARget-driven Grasping under Occlusions, named TARGO. We make the following contributions: 1) We are the first to study the occlusion level of grasping. 2) We set up an evaluation benchmark consisting of large-scale synthetic data and part of real-world data, and we evaluated five grasp models and found that even the current SOTA model suffers when the occlusion level increases, leaving grasping under occlusion still a challenge. 3) We also generate a large-scale training dataset via a scalable pipeline, which can be used to boost the performance of grasping under occlusion and generalized to the real world. 4) We further propose a transformer-based grasping model involving a shape completion module, termed TARGO-Net, which performs most robustly as occlusion increases. Our benchmark dataset can be found at https://TARGO-benchmark.github.io/.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pose_estimation",
+    "object_grasping",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "grasp_success_rate (task_success_rate)",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) benchmark for occlusion-aware robotic grasping; limited but growing adoption in robotic perception/grasping research.",
+  "notes": "Non-LLM robotics benchmark with large synthetic + partial real data; focuses on occlusion robustness. Not saturated; sim-to-real differences and dataset bias possible.",
+  "creators": {
+    "scientists": [
+      "Yan Xia",
+      "Ran Ding",
+      "Ziyuan Qin",
+      "Guanqi Zhan",
+      "Kaichen Zhou",
+      "Long Yang",
+      "Hao Dong",
+      "Daniel Cremers"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2407.06168",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

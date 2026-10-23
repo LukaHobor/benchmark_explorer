@@ -1,0 +1,43 @@
+{
+  "name": "NoisyToolBench",
+  "description": "Equipped with the capability to call functions, modern large language models (LLMs) can leverage external tools for addressing a range of tasks unattainable through language skills alone. However, the effective execution of these tools relies heavily not just on the advanced capabilities of LLMs but also on precise user instructions, which often cannot be ensured in the real world. To evaluate the performance of LLMs tool-use under imperfect instructions, we meticulously examine the real-world instructions queried from users, analyze the error patterns, and build a challenging tool-use benchmark called Noisy ToolBench (NoisyToolBench). We find that due to the next-token prediction training objective, LLMs tend to arbitrarily generate the missed argument, which may lead to hallucinations and risks. To address this issue, we propose a novel framework, Ask-when-Needed (AwN), which prompts LLMs to ask questions to users whenever they encounter obstacles due to unclear instructions. Moreover, to reduce the manual labor involved in user-LLM interaction and assess LLMs performance in tool utilization from both accuracy and efficiency perspectives, we design an automated evaluation tool named ToolEvaluator. Our experiments demonstrate that the AwN significantly outperforms existing frameworks for tool learning in the NoisyToolBench. We will release all related code and datasets to support future research.",
+  "category": "text",
+  "domain": "general knowledge",
+  "task_types": [
+    "tool_use",
+    "open_ended",
+    "multi_step_reasoning",
+    "interactive_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 200,
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A recent benchmark for robust tool-use under imperfect instructions; it is not yet broadly established but addresses an important real-world failure mode.",
+  "notes": "This benchmark includes a collection of provided APIs, ambiguous queries, anticipated questions for clarification, and the corresponding responses.",
+  "creators": {
+    "scientists": [
+      "Wenxuan Wang",
+      "Juluan Shi",
+      "Zixuan Ling",
+      "Yuk-Kit Chan",
+      "Chaozheng Wang",
+      "Cheryl Lee",
+      "Youliang Yuan",
+      "Jen-tse Huang",
+      "Wenxiang Jiao",
+      "Michael R. Lyu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2409.00557v3",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-23",
+    "origin": "cynefin@d486fafa9"
+  }
+}

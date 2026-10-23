@@ -1,0 +1,33 @@
+{
+  "name": "FedSym",
+  "description": "Federated learning (FL) is a decentralized machine learning approach where independent learners process data privately. Its goal is to create a robust and accurate model by aggregating and retraining local models over multiple rounds. However, FL faces challenges regarding data heterogeneity and model aggregation effectiveness. In order to simulate real-world data, researchers use methods for data partitioning that transform a dataset designated for centralized learning into a group of sub-datasets suitable for distributed machine learning with different data heterogeneity. In this paper, we study the currently popular data partitioning techniques and visualize their main disadvantages: the lack of precision in the data diversity, which leads to unreliable heterogeneity indexes, and the inability to incrementally challenge the FL algorithms. To resolve this problem, we propose a method that leverages entropy and symmetry to construct 'the most challenging' and controllable data distributions with gradual difficulty. We introduce a metric to measure data heterogeneity among the learning agents and a transformation technique that divides any dataset into splits with precise data diversity. Through a comparative study, we demonstrate the superiority of our method over existing FL data partitioning approaches, showcasing its potential to challenge model aggregation algorithms. Experimental results indicate that our approach gradually challenges the FL strategies, and the models trained on FedSym distributions are more distinct.",
+  "category": "mixed",
+  "domain": "federated learning / distributed machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "data_partitioning_evaluation",
+    "federated_training_benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "model performance (accuracy/top-1) under controlled heterogeneity plus heterogeneity_index comparison",
+  "general_score_metric": "model_accuracy (top-1) together with proposed heterogeneity_score",
+  "year_of_publish": 2023,
+  "reputation": "Newer specialized benchmark for federated learning researchers focusing on data-partitioning; useful for stress-testing aggregation strategies but not yet widely adopted.",
+  "notes": "Dataset-agnostic partitioning methodology (not an LLM benchmark). Designed to create controllable heterogeneity; useful for research but may not reflect all real-world distributions.",
+  "creators": {
+    "scientists": [
+      "Ensiye Kiyamousavi",
+      "Boris Kraychev",
+      "Ivan Koychev"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2310.07807",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

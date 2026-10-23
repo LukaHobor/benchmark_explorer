@@ -1,0 +1,38 @@
+{
+  "name": "EuroCropsML",
+  "description": "Spatial imbalances in crop type data pose significant challenges for accurate classification in remote sensing applications. Algorithms aiming at transferring knowledge from data-rich to data-scarce tasks have thus surged in popularity. However, despite their effectiveness in previous evaluations, their performance in challenging real-world applications is unclear and needs to be evaluated. This study benchmarks transfer learning and several meta-learning algorithms, including (First-Order) Model-Agnostic Meta-Learning ((FO)-MAML), Almost No Inner Loop (ANIL), and Task-Informed Meta-Learning (TIML), on the real-world EuroCropsML time series dataset, which combines farmer-reported crop data with Sentinel-2 satellite observations from Estonia, Latvia, and Portugal. Our findings indicate that MAML-based meta-learning algorithms achieve slightly higher accuracy compared to simpler transfer learning methods when applied to crop type classification tasks in Estonia after pre-training on data from Latvia. However, this improvement comes at the cost of increased computational demands and training time. Moreover, we find that the transfer of knowledge between geographically disparate regions, such as Estonia and Portugal, poses significant challenges to all investigated algorithms. These insights underscore the trade-offs between accuracy and computational resource requirements in selecting machine learning methods for real-world crop type classification tasks and highlight the difficulties of transferring knowledge between different regions of the Earth. To facilitate future research in this domain, we present the first comprehensive benchmark for evaluating transfer and meta-learning methods for crop type classification under real-world conditions. The corresponding code is publicly available at https://github.com/dida-do/eurocrops-meta-learning.",
+  "category": "vision",
+  "domain": "remote sensing / agriculture",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "few_shot_learning",
+    "transfer_learning",
+    "meta_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (per-class and overall), few-shot classification accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A recently proposed benchmark (arXiv:2504.11022) aimed at the remote sensing and meta-learning communities; gaining interest for realistic cross-region transfer evaluations.",
+  "notes": "Non-LLM benchmark; real-world geographic covariate shift and class imbalance are central challenges; computationally intensive for meta-learning approaches; limited per-region sample sizes for few-shot tasks.",
+  "creators": {
+    "scientists": [
+      "Joana Reuss",
+      "Jan Macdonald",
+      "Simon Becker",
+      "Konrad Schultka",
+      "Lorenz Richter",
+      "Marco Körner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.11022",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

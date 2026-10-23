@@ -1,0 +1,38 @@
+{
+  "name": "Deep WGS cancer cell lines on Illumina HiSeqX and NovaSeq",
+  "description": "To test the performance of a new sequencing platform, develop an updated somatic calling pipeline and establish a reference for future benchmarking experiments, we performed whole-genome sequencing of 3 common cancer cell lines (COLO-829, HCC-1143 and HCC-1187) along with their matched normal cell lines to great sequencing depths (up to 278x coverage) on both Illumina HiSeqX and NovaSeq sequencing instruments. Somatic calling was generally consistent between the two platforms despite minor differences at the read level. We designed and implemented a novel pipeline for the analysis of tumor-normal samples, using multiple variant callers. We show that coupled with a high-confidence filtering strategy, the use of combination of tools improves the accuracy of somatic variant calling. We also demonstrate the utility of the dataset by creating an artificial purity ladder to evaluate the somatic pipeline and benchmark methods for estimating purity and ploidy from tumor-normal pairs. The data and results of the pipeline are made accessible to the cancer genomics community.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "variant_calling",
+    "purity_estimation",
+    "ploidy_estimation",
+    "pipeline_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision, recall (sensitivity/specificity) and F1 for variant calls; concordance between platforms for comparative assessment",
+  "general_score_metric": "F1 (variant calling), concordance metrics for platform comparison",
+  "year_of_publish": 2019,
+  "reputation": "71 citations",
+  "notes": "Small number of cell lines (three tumors with matched normals) limits cohort diversity; very high sequencing depth may not reflect typical clinical/research settings; potential for cell-line–specific biases and contamination; non-LLM, domain-specific bioinformatics benchmark intended for somatic variant caller and purity/ploidy tool evaluation.",
+  "creators": {
+    "scientists": [
+      "Kanika Arora",
+      "Minita Shah",
+      "Molly Johnson",
+      "Rashesh Sanghvi",
+      "Jennifer Shelton",
+      "Kshithija Nagulapalli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41598-019-55636-3",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

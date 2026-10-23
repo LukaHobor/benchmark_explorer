@@ -1,0 +1,37 @@
+{
+  "name": "CICIDS2017 IDS Benchmark",
+  "description": "An intrusion detection system (IDS) is an important protection instrument for detecting complex network attacks. Various machine learning (ML) or deep learning (DL) algorithms have been proposed for implementing anomaly-based IDS (AIDS). Our review of the AIDS literature identifies some issues in related work, including the randomness of the selected algorithms, parameters, and testing criteria, the application of old datasets, or shallow analyses and validation of the results. This paper comprehensively reviews previous studies on AIDS by using a set of criteria with different datasets and types of attacks to set benchmarking outcomes that can reveal the suitable AIDS algorithms, parameters, and testing criteria. Specifically, this paper applies 10 popular supervised and unsupervised ML algorithms for identifying effective and efficient ML-AIDS of networks and computers. These supervised ML algorithms include the artificial neural network (ANN), decision tree (DT), k-nearest neighbor (k-NN), naive Bayes (NB), random forest (RF), support vector machine (SVM), and convolutional neural network (CNN) algorithms, whereas the unsupervised ML algorithms include the expectation-maximization (EM), k-means, and self-organizing maps (SOM) algorithms. Several models of these algorithms are introduced, and the turning and training parameters of each algorithm are examined to achieve an optimal classifier evaluation. Unlike previous studies, this study evaluates the performance of AIDS by measuring the true positive and negative rates, accuracy, precision, recall, and F-Score of 31 ML-AIDS models. The training and testing time for ML-AIDS models are also considered in measuring their performance efficiency given that time complexity is an important factor in AIDSs. The ML-AIDS models are tested by using a recent and highly unbalanced multiclass CICIDS2017 dataset that involves real-world network attacks. In general, the k-NN-AIDS, DT-AIDS, and NB-AIDS models obtain the best results and show a greater capability in detecting web attacks compared with other models that demonstrate irregular and inferior results.",
+  "category": "mixed",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "classification",
+    "multiclass_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1-score",
+  "typical_sota_score": "90–99% (attack-dependent)",
+  "year_of_publish": 2021,
+  "reputation": "405 citations",
+  "notes": "Non-LLM benchmark; highly imbalanced multiclass dataset (class imbalance can inflate binary metrics); potential for temporal/feature leakage between train/test splits; per-attack performance varies widely.",
+  "creators": {
+    "scientists": [
+      "Ziadoon Kamil Maseer",
+      "Robiah Yusof",
+      "Nazrulazhar Bahaman",
+      "Salama A. Mostafa",
+      "Cik Feresa Mohd Foozy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/access.2021.3056614",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

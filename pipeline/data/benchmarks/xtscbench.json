@@ -1,0 +1,35 @@
+{
+  "name": "XTSC-Bench",
+  "description": "Despite the growing body of work on explainable machine learning in time series classification (TSC), it remains unclear how to evaluate different explainability methods. Resorting to qualitative assessment and user studies to evaluate explainers for TSC is difficult since humans have difficulties understanding the underlying information contained in time series data. Therefore, a systematic review and quantitative comparison of explanation methods to confirm their correctness becomes crucial. While steps to standardized evaluations were taken for tabular, image, and textual data, benchmarking explainability methods on time series is challenging due to a) traditional metrics not being directly applicable, b) implementation and adaption of traditional metrics for time series in the literature vary, and c) varying baseline implementations. This paper proposes XTSC-Bench, a benchmarking tool providing standardized datasets, models, and metrics for evaluating explanation methods on TSC. We analyze 3 perturbation-, 6 gradient- and 2 example-based explanation methods to TSC showing that improvements in the explainers' robustness and reliability are necessary, especially for multivariate data.",
+  "category": "mixed",
+  "domain": "time series",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_classification",
+    "explainability",
+    "evaluation_benchmark"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "perturbation-based metrics (deletion/insertion/AOPC), fidelity and robustness metrics",
+  "general_score_metric": "AOPC / deletion-insertion scores (area over/under perturbation curve)",
+  "typical_sota_score": "varies widely; no single unified SOTA",
+  "year_of_publish": 2023,
+  "reputation": "Designed to standardize explainability evaluation for time series; gaining attention among researchers working on TSC explainability but not yet a de facto standard.",
+  "notes": "Non-LLM benchmark; adapting common image/text explainability metrics to multivariate time series can be ambiguous; many metrics depend on perturbation protocol and baseline implementations, so results are sensitive to evaluation choices.",
+  "creators": {
+    "scientists": [
+      "Jacqueline Höllig",
+      "Steffen Thoma",
+      "Florian Grimm"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2310.14957",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

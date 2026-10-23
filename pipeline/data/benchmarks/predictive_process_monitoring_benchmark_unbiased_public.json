@@ -1,0 +1,36 @@
+{
+  "name": "Predictive Process Monitoring Benchmark (unbiased public event-log datasets)",
+  "description": "Advances in AI, and especially machine learning, are increasingly drawing research interest and efforts towards predictive process monitoring, the subfield of process mining (PM) that concerns predicting next events, process outcomes and remaining execution times. Unfortunately, researchers use a variety of datasets and ways to split them into training and test sets. The documentation of these preprocessing steps is not always complete. Consequently, research results are hard or even impossible to reproduce and to compare between papers. At times, the use of non-public domain knowledge further hampers the fair competition of ideas. Often the training and test sets are not completely separated, a data leakage problem particular to predictive process monitoring. Moreover, test sets usually suffer from bias in terms of both the mix of case durations and the number of running cases. These obstacles pose a challenge to the field's progress. The contribution of this paper is to identify and demonstrate the importance of these obstacles and to propose preprocessing steps to arrive at unbiased benchmark datasets in a principled way, thus creating representative test sets without data leakage with the aim of levelling the playing field, promoting open science and contributing to more rapid progress in predictive process monitoring.",
+  "category": "mixed",
+  "domain": "process mining / business process management",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "next_event_prediction",
+    "outcome_prediction",
+    "remaining_time_prediction",
+    "sequence_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 for classification tasks; MAE/RMSE for remaining time regression (task-dependent)",
+  "general_score_metric": "F1 (classification tasks) / MAE (time-prediction tasks)",
+  "typical_sota_score": "varies widely (classification F1 ~0.7–0.9; remaining-time MAE highly dataset-dependent)",
+  "year_of_publish": 2021,
+  "reputation": "Respected within the process-mining research community as a reproducibility-oriented benchmark that highlights preprocessing and leakage issues.",
+  "notes": "Non-LLM benchmark focused on process-mining; substantial risk of data leakage if preprocessing/splitting not followed; evaluation is task-dependent and results sensitive to event-log preprocessing and case-mix biases.",
+  "creators": {
+    "scientists": [
+      "Hans Weytjens",
+      "Jochen De Weerdt"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2107.01905",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

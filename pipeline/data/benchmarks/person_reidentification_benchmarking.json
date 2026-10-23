@@ -1,0 +1,35 @@
+{
+  "name": "Person Re-Identification Benchmarking",
+  "description": "Person Re-Identification (Re-ID) is receiving a lot of attention recently. Large datasets containing labeled images of various individuals have been released, allowing researchers to develop and test many successful approaches. However, when such Re-ID models are deployed in a new city or environment, the task of searching people within a network of security cameras is likely to face an important domain shift, thus resulting in decreased performance. Indeed, while most public datasets were collected in a limited geographic area, images from a new city present different features (e.g., people's ethnicities and clothing style, weather, architecture, etc.). In addition, the whole frames of the video streams must be converted into cropped images of people using pedestrian detection models, which behave differently from the human annotators who created the dataset used for training. To better understand the extent of this issue, this paper introduces a complete methodology to evaluate Re-ID approaches and training datasets with respect to their suitability for deployment for live operations. This method is used to benchmark four Re-ID approaches and three datasets and provides interesting insight and guidelines that can help designing better Re-ID pipelines in the future.",
+  "category": "vision",
+  "domain": "surveillance / security / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) and top-k accuracy (CMC / top-1, top-5)",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2014,
+  "reputation": "Well-regarded within the person re-identification and surveillance computer vision community for evaluating cross-domain and deployment robustness.",
+  "notes": "Focuses on domain-shift and deployment realism; non-LLM, vision-only benchmark. Results vary strongly by dataset and camera/domain; potential privacy considerations when used with real surveillance footage.",
+  "creators": {
+    "scientists": [
+      "Jose Miguel Huaman Cruz",
+      "Felix Oliver Sumari Huayta",
+      "Luigy Alex Machaca Arcana",
+      "Esteban GONZALEZ CLUA",
+      "Joris Guerin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

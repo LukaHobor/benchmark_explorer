@@ -1,0 +1,48 @@
+{
+  "name": "Hokkien Speech-to-Speech Translation Benchmark",
+  "description": "We study speech-to-speech translation (S2ST) that translates speech from one language into another language and focuses on building systems to support languages without standard text writing systems. We use English-Taiwanese Hokkien as a case study, and present an end-to-end solution from training data collection, modeling choices to benchmark dataset release. First, we present efforts on creating human annotated data, automatically mining data from large unlabeled speech datasets, and adopting pseudo-labeling to produce weakly supervised data. On the modeling, we take advantage of recent advances in applying self-supervised discrete representations as target for prediction in S2ST and show the effectiveness of leveraging additional text supervision from Mandarin, a language similar to Hokkien, in model training. Finally, we release an S2ST benchmark set to facilitate future research in this field. The demo can be found at https://huggingface.co/spaces/facebook/Hokkien_Translation .",
+  "category": "audio",
+  "domain": "speech / low-resource languages",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "speech_to_speech_translation",
+    "speech_translation",
+    "translation",
+    "low_resource_speech"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU, human_eval, and speech-similarity metrics (e.g., MCD) depending on evaluation protocol",
+  "general_score_metric": "BLEU",
+  "year_of_publish": 2022,
+  "reputation": "A niche, recently released benchmark (Meta) that is gaining interest in low-resource speech-to-speech research but has limited adoption outside that community.",
+  "notes": "Small, low-resource-language benchmark for a language without a standard orthography; uses mined and pseudo-labeled data (weak supervision) so label/noise issues and domain mismatch can affect results; not suitable for text-only models.",
+  "creators": {
+    "scientists": [
+      "Peng-Jen Chen",
+      "Kevin Tran",
+      "Yilin Yang",
+      "Jingfei Du",
+      "Justine Kao",
+      "Yu-An Chung",
+      "Paden Tomasello",
+      "Paul-Ambroise Duquenne",
+      "Holger Schwenk",
+      "Hongyu Gong",
+      "Hirofumi Inaguma",
+      "Sravya Popuri",
+      "Changhan Wang",
+      "Juan Pino",
+      "Wei-Ning Hsu",
+      "Ann Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2211.06474",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Quantum annealing benchmark for Boltzmann machine training",
+  "description": "Quantum annealing (QA) is a hardware-based heuristic optimization and\nsampling method applicable to discrete undirected graphical models. While\nsimilar to simulated annealing, QA relies on quantum, rather than thermal,\neffects to explore complex search spaces. For many classes of problems, QA is\nknown to offer computational advantages over simulated annealing. Here we\nreport on the ability of recent QA hardware to accelerate training of fully\nvisible Boltzmann machines. We characterize the sampling distribution of QA\nhardware, and show that in many cases, the quantum distributions differ\nsignificantly from classical Boltzmann distributions. In spite of this\ndifference, training (which seeks to match data and model statistics) using\nstandard classical gradient updates is still effective. We investigate the use\nof QA for seeding Markov chains as an alternative to contrastive divergence\n(CD) and persistent contrastive divergence (PCD). Using $k=50$ Gibbs steps, we\nshow that for problems with high-energy barriers between modes, QA-based seeds\ncan improve upon chains with CD and PCD initializations. For these hard\nproblems, QA gradient estimates are more accurate, and allow for faster\nlearning. Furthermore, and interestingly, even the case of raw QA samples (that\nis, $k=0$) achieved similar improvements. We argue that this relates to the\nfact that we are training a quantum rather than classical Boltzmann\ndistribution in this case. The learned parameters give rise to hardware QA\ndistributions closely approximating classical Boltzmann distributions that are\nhard to train with CD/PCD.",
+  "category": "mixed",
+  "domain": "quantum computing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "model_training",
+    "sampling",
+    "optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "training objective / log-likelihood and sampling fidelity (comparison of model vs data statistics)",
+  "general_score_metric": "log-likelihood (or related training objective) and quality of sampled statistics",
+  "year_of_publish": 2016,
+  "reputation": "A niche academic benchmark from the quantum-machine-learning community exploring quantum annealing for Boltzmann-machine training; influential within that subfield but not broadly adopted as a general ML benchmark.",
+  "notes": "Non-LLM benchmark focused on quantum annealing hardware; hardware- and implementation-specific results, small-scale experiments, and potential reproducibility constraints due to access to QA devices. Not susceptible to typical dataset contamination concerns; serves as a research/proof-of-concept benchmark.",
+  "creators": {
+    "scientists": [
+      "Dmytro Korenkevych",
+      "Yanbo Xue",
+      "Zhengbing Bian",
+      "Fabian Chudak",
+      "William G. Macready",
+      "Jason Rolfe",
+      "Evgeny Andriyash"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/1611.04528",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

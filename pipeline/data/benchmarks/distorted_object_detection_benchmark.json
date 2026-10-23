@@ -1,0 +1,34 @@
+{
+  "name": "Distorted Object Detection Benchmark",
+  "description": "The robustness of object detection algorithms plays a prominent role in real-world applications, especially in uncontrolled environments due to distortions during image acquisition. It has been proven that the performance of object detection methods suffers from in-capture distortions. In this study, we present a performance evaluation framework for the state-of-the-art object detection methods using a dedicated dataset containing images with various distortions at different levels of severity. Furthermore, we propose an original strategy of image distortion generation applied to the MS-COCO dataset that combines some local and global distortions to reach much better performances. We have shown that training using the proposed dataset improves the robustness of object detection by 31.5\\%. Finally, we provide a custom dataset including natural images distorted from MS-COCO to perform a more reliable evaluation of the robustness against common distortions. The database and the generation source codes of the different distortions are made publicly available",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision) evaluated across distortion types and severities",
+  "general_score_metric": "mAP (mean Average Precision)",
+  "typical_sota_score": "30–55%",
+  "year_of_publish": 2022,
+  "reputation": "Published dataset and code used in robustness research for object detection; publicly available but not a widely adopted standard benchmark.",
+  "notes": "Non-LLM vision benchmark derived from MS-COCO (possible overlap with COCO-trained models); evaluates robustness under synthetic and natural distortions at multiple severities; moderate-sized custom dataset.",
+  "creators": {
+    "scientists": [
+      "Ayman Beghdadi",
+      "Malik Mallem",
+      "Lotfi Beji"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.15999",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Aff-Wild",
+  "description": "Automatic understanding of human affect using visual signals is of great\nimportance in everyday human-machine interactions. Appraising human emotional\nstates, behaviors and reactions displayed in real-world settings, can be\naccomplished using latent continuous dimensions (e.g., the circumplex model of\naffect). Valence (i.e., how positive or negative is an emotion) & arousal\n(i.e., power of the activation of the emotion) constitute popular and effective\naffect representations. Nevertheless, the majority of collected datasets this\nfar, although containing naturalistic emotional states, have been captured in\nhighly controlled recording conditions. In this paper, we introduce the\nAff-Wild benchmark for training and evaluating affect recognition algorithms.\nWe also report on the results of the First Affect-in-the-wild Challenge that\nwas organized in conjunction with CVPR 2017 on the Aff-Wild database and was\nthe first ever challenge on the estimation of valence and arousal in-the-wild.\nFurthermore, we design and extensively train an end-to-end deep neural\narchitecture which performs prediction of continuous emotion dimensions based\non visual cues. The proposed deep learning architecture, AffWildNet, includes\nconvolutional & recurrent neural network layers, exploiting the invariant\nproperties of convolutional features, while also modeling temporal dynamics\nthat arise in human behavior via the recurrent layers. The AffWildNet produced\nstate-of-the-art results on the Aff-Wild Challenge. We then exploit the AffWild\ndatabase for learning features, which can be used as priors for achieving best\nperformances both for dimensional, as well as categorical emotion recognition,\nusing the RECOLA, AFEW-VA and EmotiW datasets, compared to all other methods\ndesigned for the same goal. The database and emotion recognition models are\navailable at http://ibug.doc.ic.ac.uk/resources/first-affect-wild-challenge.",
+  "category": "vision",
+  "domain": "vision / affective computing",
+  "benchmark_type": "competition",
+  "task_types": [
+    "regression",
+    "sequence_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Concordance Correlation Coefficient (CCC) for valence and arousal estimation",
+  "general_score_metric": "mean Concordance Correlation Coefficient (CCC)",
+  "typical_sota_score": "0.5–0.8 (CCC)",
+  "year_of_publish": 2018,
+  "reputation": "Well-known and widely used benchmark in affective-computing and facial-expression research for in-the-wild valence/arousal estimation.",
+  "notes": "In-the-wild video data with temporal dynamics and annotation noise; dataset size is moderate by modern deep‑learning standards; labels are continuous (subjective) so evaluation is sensitive to annotation variability; not a language/LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Dimitrios Kollias",
+      "Panagiotis Tzirakis",
+      "Mihalis A. Nicolaou",
+      "Athanasios Papaioannou",
+      "Guoying Zhao",
+      "Björn Schuller",
+      "Irene Kotsia",
+      "Stefanos Zafeiriou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1804.10938",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

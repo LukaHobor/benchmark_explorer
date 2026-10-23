@@ -1,0 +1,36 @@
+{
+  "name": "Accel-NASBench",
+  "description": "One of the primary challenges impeding the progress of Neural Architecture Search (NAS) is its extensive reliance on exorbitant computational resources. NAS benchmarks aim to simulate runs of NAS experiments at zero cost, remediating the need for extensive compute. However, existing NAS benchmarks use synthetic datasets and model proxies that make simplified assumptions about the characteristics of these datasets and models, leading to unrealistic evaluations. We present a technique that allows searching for training proxies that reduce the cost of benchmark construction by significant margins, making it possible to construct realistic NAS benchmarks for large-scale datasets. Using this technique, we construct an open-source bi-objective NAS benchmark for the ImageNet2012 dataset combined with the on-device performance of accelerators, including GPUs, TPUs, and FPGAs. Through extensive experimentation with various NAS optimizers and hardware platforms, we show that the benchmark is accurate and allows searching for state-of-the-art hardware-aware models at zero cost.",
+  "category": "mixed",
+  "domain": "neural architecture search / ML systems / hardware-aware NAS",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "neural_architecture_search",
+    "multi_objective_optimization",
+    "architecture_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "multi-objective evaluation combining model accuracy (e.g., ImageNet top-1 accuracy) and hardware performance metrics (latency, throughput, energy), often analyzed via Pareto frontiers or composite scores",
+  "general_score_metric": "ImageNet top-1 accuracy combined with hardware cost metrics (latency/throughput) — often reported as Pareto-optimal trade-offs or a composite score",
+  "typical_sota_score": "top-1 accuracy roughly in the ~70–85% range depending on hardware budget and model family",
+  "year_of_publish": 2024,
+  "reputation": "A recent, promising benchmark for hardware-aware NAS that is gaining attention in ML systems and NAS research communities for enabling realistic, zero-cost large-scale evaluations.",
+  "notes": "Non-LLM benchmark that uses proxy/zero-cost techniques to emulate NAS runs; results depend on proxy fidelity and target hardware; hardware-specific measurements may not generalize across accelerators; intended for NAS/hardware research rather than conventional supervised benchmarks.",
+  "creators": {
+    "scientists": [
+      "Afzal Ahmad",
+      "Linfeng Du",
+      "Zhiyao Xie",
+      "Wei zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2404.08005",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

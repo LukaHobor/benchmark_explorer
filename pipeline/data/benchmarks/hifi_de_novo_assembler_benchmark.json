@@ -1,0 +1,36 @@
+{
+  "name": "HiFi de novo assembler benchmark",
+  "description": "Pacific Biosciences (PacBio) HiFi sequencing technology generates long reads (>10 kbp) with very high accuracy (<0.01% sequencing error). Although several de novo assembly tools are available for HiFi reads, there are no comprehensive studies on the evaluation of these assemblers. We evaluated the performance of 11 de novo HiFi assemblers on (1) real data for three eukaryotic genomes; (2) 34 synthetic data sets with different ploidy, sequencing coverage levels, heterozygosity rates, and sequencing error rates; (3) one real metagenomic data set; and (4) five synthetic metagenomic data sets with different composition abundance and heterozygosity rates. The 11 assemblers were evaluated using quality assessment tool (QUAST) and benchmarking universal single-copy ortholog (BUSCO). We also used several additional criteria, namely, completion rate, single-copy completion rate, duplicated completion rate, average proportion of largest category, average distance difference, quality value, run-time, and memory utilization. Results show that hifiasm and hifiasm-meta should be the first choice for assembling eukaryotic genomes and metagenomes with HiFi data. We performed a comprehensive benchmarking study of commonly used assemblers on complex eukaryotic genomes and metagenomes. Our study will help the research community to choose the most appropriate assembler for their data and identify possible improvements in assembly algorithms.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "de_novo_assembly_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (QUAST metrics such as NGA50/contiguity + BUSCO completeness/duplication + auxiliary measures like QV, runtime, memory)",
+  "general_score_metric": "BUSCO completeness (completion rate, %)",
+  "typical_sota_score": "95–99%",
+  "year_of_publish": 2024,
+  "reputation": "27 citations",
+  "notes": "Non-LLM bioinformatics benchmark; uses both real and synthetic data covering different ploidy/heterozygosity/metagenomic settings. Computationally intensive (high RAM/CPU), results sensitive to contamination/parameter tuning and to the specific metrics chosen (e.g., BUSCO vs. NGA50 can favor different assemblers).",
+  "creators": {
+    "scientists": [
+      "Wenjuan Yu",
+      "Haohui Luo",
+      "Jinbao Yang",
+      "Shengchen Zhang",
+      "Heling Jiang",
+      "Xianjia Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/gr.278232.123",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

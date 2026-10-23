@@ -1,0 +1,36 @@
+{
+  "name": "ImageNet Class-Out-of-Distribution Detection Benchmark",
+  "description": "When deployed for risk-sensitive tasks, deep neural networks must be able to detect instances with labels from outside the distribution for which they were trained. In this paper we present a novel framework to benchmark the ability of image classifiers to detect class-out-of-distribution instances (i.e., instances whose true labels do not appear in the training distribution) at various levels of detection difficulty. We apply this technique to ImageNet, and benchmark 525 pretrained, publicly available, ImageNet-1k classifiers. The code for generating a benchmark for any ImageNet-1k classifier, along with the benchmarks prepared for the above-mentioned 525 models is available at https://github.com/mdabbah/COOD_benchmarking. The usefulness of the proposed framework and its advantage over alternative existing benchmarks is demonstrated by analyzing the results obtained for these models, which reveals numerous novel observations including: (1) knowledge distillation consistently improves class-out-of-distribution (C-OOD) detection performance; (2) a subset of ViTs performs better C-OOD detection than any other model; (3) the language--vision CLIP model achieves good zero-shot detection performance, with its best instance outperforming 96% of all other models evaluated; (4) accuracy and in-distribution ranking are positively correlated to C-OOD detection; and (5) we compare various confidence functions for C-OOD detection. Our companion paper, also published in ICLR 2023 (What Can We Learn From The Selective Prediction And Uncertainty Estimation Performance Of 523 Imagenet Classifiers), examines the uncertainty estimation performance (ranking, calibration, and selective prediction performance) of these classifiers in an in-distribution setting.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "out_of_distribution_detection",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC / AUC (primary), FPR@95TPR, AUPR",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "85–98%",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Well-regarded in the OOD detection research community as a systematic framework for class-out-of-distribution evaluation on many ImageNet classifiers.",
+  "notes": "Benchmarking framework rather than a single dataset; results can be affected by pretraining/data contamination of models (e.g., web-scale pretraining); non-LLM, evaluates many pretrained classifiers.",
+  "creators": {
+    "scientists": [
+      "Ido Galil",
+      "Mohammed Dabbah",
+      "Ran El-Yaniv"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2302.11893",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

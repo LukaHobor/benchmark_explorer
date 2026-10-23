@@ -1,0 +1,39 @@
+{
+  "name": "IVY-FAKE",
+  "description": "The rapid development of Artificial Intelligence Generated Content (AIGC) techniques has enabled the creation of high-quality synthetic content, but it also raises significant security concerns. Current detection methods face two major limitations: (1) the lack of multidimensional explainable datasets for generated images and videos. Existing open-source datasets (e.g., WildFake, GenVideo) rely on oversimplified binary annotations, which restrict the explainability and trustworthiness of trained detectors. (2) Prior MLLM-based forgery detectors (e.g., FakeVLM) exhibit insufficiently fine-grained interpretability in their step-by-step reasoning, which hinders reliable localization and explanation. To address these challenges, we introduce Ivy-Fake, the first large-scale multimodal benchmark for explainable AIGC detection. It consists of over 106K richly annotated training samples (images and videos) and 5,000 manually verified evaluation examples, sourced from multiple generative models and real world datasets through a carefully designed pipeline to ensure both diversity and quality. Furthermore, we propose Ivy-xDetector, a reinforcement learning model based on Group Relative Policy Optimization (GRPO), capable of producing explainable reasoning chains and achieving robust performance across multiple synthetic content detection benchmarks. Extensive experiments demonstrate the superiority of our dataset and confirm the effectiveness of our approach. Notably, our method improves performance on GenImage from 86.88% to 96.32%, surpassing prior state-of-the-art methods by a clear margin.",
+  "category": "vision",
+  "domain": "ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "localization",
+    "explainable_reasoning",
+    "multimodal_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "95–97%",
+  "year_of_publish": 2025,
+  "reputation": "12 citations",
+  "notes": "Multimodal dataset for synthetic-content detection; risk of contamination with model-generated data and rapid obsolescence as generative models evolve. Strong performance may reflect overfitting to artifact patterns rather than generalizable detection; human-verified evaluation set reduces but does not eliminate these risks.",
+  "creators": {
+    "scientists": [
+      "Wayne Zhang",
+      "Changjiang Jiang",
+      "Zhonghao Zhang",
+      "Chenyang Si",
+      "Fengchang Yu",
+      "Wei Peng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.00979",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

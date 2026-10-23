@@ -1,0 +1,39 @@
+{
+  "name": "CAMISIM",
+  "description": "Shotgun metagenome data sets of microbial communities are highly diverse, not only due to the natural variation of the underlying biological systems, but also due to differences in laboratory protocols, replicate numbers, and sequencing technologies. Accordingly, to effectively assess the performance of metagenomic analysis software, a wide range of benchmark data sets are required. Here, we describe the CAMISIM microbial community and metagenome simulator. The software can model different microbial abundance profiles, multi-sample time series and differential abundance studies, includes real and simulated strain-level diversity, and generates second and third generation sequencing data from taxonomic profiles or de novo. Gold standards are created for sequence assembly, genome binning, taxonomic binning, and taxonomic profiling. CAMSIM generated the benchmark data sets of the first CAMI challenge. For two simulated multi-sample data sets of the human and mouse gut microbiomes we observed high functional congruence to the real data. As further applications, we investigated the effect of varying evolutionary genome divergence, sequencing depth, and read error profiles on two popular metagenome assemblers, MEGAHIT and metaSPAdes, on several thousand small data sets generated with CAMISIM. CAMISIM can simulate a wide variety of microbial communities and metagenome data sets together with truth standards for method evaluation. All data sets and the software are freely available at: https://github.com/CAMI-challenge/CAMISIM",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_assembly",
+    "genome_binning",
+    "taxonomic_binning",
+    "taxonomic_profiling",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "domain-specific multi-metric evaluation (precision/recall/F1 for profiling/binned taxa; completeness/contamination and ARI for binning; N50, genome_fraction and assembly error rates for assembly)",
+  "general_score_metric": "task-dependent (F1 for profiling/bins; N50/genome_fraction for assemblies)",
+  "year_of_publish": 2018,
+  "reputation": "30 citations",
+  "notes": "Synthetic simulated data may not capture all complexities of real metagenomes; metrics are task-specific and multi-dimensional. CAMISIM is a non-LLM benchmark used to generate ground-truth datasets for benchmarking metagenomics tools; careful parameterization is required to avoid unrealistic or biased simulations.",
+  "creators": {
+    "scientists": [
+      "Adrian Fritz",
+      "Peter Hofmann",
+      "Stephan Majda",
+      "Eik Dahms",
+      "Johannes Dröge",
+      "Jessika Fiedler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/300970",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

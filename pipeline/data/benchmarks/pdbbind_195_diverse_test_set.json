@@ -1,0 +1,37 @@
+{
+  "name": "PDBbind 195 diverse test set",
+  "description": "Scoring functions are widely applied to the evaluation of protein-ligand binding in structure-based drug design. We have conducted a comparative assessment of 16 popular scoring functions implemented in main-stream commercial software or released by academic research groups. A set of 195 diverse protein-ligand complexes with high-resolution crystal structures and reliable binding constants were selected through a systematic nonredundant sampling of the PDBbind database and used as the primary test set in our study. All scoring functions were evaluated in three aspects, that is, \"docking power\", \"ranking power\", and \"scoring power\", and all evaluations were independent from the context of molecular docking or virtual screening. As for \"docking power\", six scoring functions, including GOLD::ASP, DS::PLP1, DrugScore(PDB), GlideScore-SP, DS::LigScore, and GOLD::ChemScore, achieved success rates over 70% when the acceptance cutoff was root-mean-square deviation < 2.0 A. Combining these scoring functions into consensus scoring schemes improved the success rates to 80% or even higher. As for \"ranking power\" and \"scoring power\", the top four scoring functions on the primary test set were X-Score, DrugScore(CSD), DS::PLP, and SYBYL::ChemScore. They were able to correctly rank the protein-ligand complexes containing the same type of protein with success rates around 50%. Correlation coefficients between the experimental binding constants and the binding scores computed by these scoring functions ranged from 0.545 to 0.644. Besides the primary test set, each scoring function was also tested on four additional test sets, each consisting of a certain number of protein-ligand complexes containing one particular type of protein. Our study serves as an updated benchmark for evaluating the general performance of today's scoring functions. Our results indicate that no single scoring function consistently outperforms others in all three aspects. Thus, it is important in practice to choose the appropriate scoring functions for different purposes.",
+  "category": "mixed",
+  "domain": "drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ranking",
+    "pose_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson_correlation / RMSE for affinity scoring; success_rate (RMSD < 2.0 Å) for docking; ranking_success_rate for ranking",
+  "general_score_metric": "Pearson_correlation (between predicted scores and experimental binding constants)",
+  "typical_sota_score": "0.545–0.644 (Pearson r)",
+  "year_of_publish": 2009,
+  "reputation": "521 citations",
+  "notes": "Small, specialized non-LLM benchmark (195 complexes). Evaluations cover multiple aspects (docking, ranking, scoring). Possible contamination risk for learned models trained on PDB-derived data; docking success is measured by an RMSD threshold which can mask pose quality nuances.",
+  "creators": {
+    "scientists": [
+      "Tiejun Cheng",
+      "Xun Li",
+      "Yan Li",
+      "Zhihai Liu",
+      "Renxiao Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1021/ci9000053",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Volumetric Radiology CBIR Benchmark",
+  "description": "While content-based image retrieval (CBIR) has been extensively studied in natural image retrieval, its application to medical images presents ongoing challenges, primarily due to the 3D nature of medical images. Recent studies have shown the potential use of pre-trained vision embeddings for CBIR in the context of radiology image retrieval. However, a benchmark for the retrieval of 3D volumetric medical images is still lacking, hindering the ability to objectively evaluate and compare the efficiency of proposed CBIR approaches in medical imaging. In this study, we extend previous work and establish a benchmark for region-based and localized multi-organ retrieval using the TotalSegmentator dataset (TS) with detailed multi-organ annotations. We benchmark embeddings derived from pre-trained supervised models on medical images against embeddings derived from pre-trained unsupervised models on non-medical images for 29 coarse and 104 detailed anatomical structures in volume and region levels. For volumetric image retrieval, we adopt a late interaction re-ranking method inspired by text matching. We compare it against the original method proposed for volume and region retrieval and achieve a retrieval recall of 1.0 for diverse anatomical regions with a wide size range. The findings and methodologies presented in this paper provide insights and benchmarks for further development and evaluation of CBIR approaches in the context of medical imaging.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "region_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "recall@k (primary), mAP / ranking metrics as secondary",
+  "general_score_metric": "recall@k",
+  "typical_sota_score": "varies by structure; reported high recall for many regions (often very high for coarse regions, e.g., approaching 90–100% for some settings)",
+  "year_of_publish": 2024,
+  "reputation": "A recent and specialized benchmark for 3D volumetric medical image retrieval that fills a gap in medical CBIR evaluations but is still new to the wider community.",
+  "notes": "Non-LLM benchmark focused on 3D medical images; uses TotalSegmentator annotations. Be mindful of medical-data privacy considerations and potential class/size imbalance across anatomical structures; some metrics may saturate for large/coarse regions.",
+  "creators": {
+    "scientists": [
+      "Farnaz Khun Jush",
+      "Steffen Vogler",
+      "Tuan Truong",
+      "Matthias Lenga"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2405.09334",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

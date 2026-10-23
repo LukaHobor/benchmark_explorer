@@ -1,0 +1,46 @@
+{
+  "name": "Zeroth-Order Optimization Benchmark for LLM Fine-Tuning",
+  "description": "In the evolving landscape of natural language processing (NLP), fine-tuning pre-trained Large Language Models (LLMs) with first-order (FO) optimizers like SGD and Adam has become standard. Yet, as LLMs grow {in size}, the substantial memory overhead from back-propagation (BP) for FO gradient computation presents a significant challenge. Addressing this issue is crucial, especially for applications like on-device training where memory efficiency is paramount. This paper proposes a shift towards BP-free, zeroth-order (ZO) optimization as a solution for reducing memory costs during LLM fine-tuning, building on the initial concept introduced by MeZO. Unlike traditional ZO-SGD methods, our work expands the exploration to a wider array of ZO optimization techniques, through a comprehensive, first-of-its-kind benchmarking study across five LLM families (Roberta, OPT, LLaMA, Vicuna, Mistral), three task complexities, and five fine-tuning schemes. Our study unveils previously overlooked optimization principles, highlighting the importance of task alignment, the role of the forward gradient method, and the balance between algorithm complexity and fine-tuning performance. We further introduce novel enhancements to ZO optimization, including block-wise descent, hybrid training, and gradient sparsity. Our study offers a promising direction for achieving further memory-efficient LLM fine-tuning. Codes to reproduce all our experiments are at https://github.com/ZO-Bench/ZO-LLM .",
+  "category": "text",
+  "domain": "machine learning / optimization",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "fine_tuning",
+    "optimization_evaluation",
+    "memory_efficiency_benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "An emergent, research-focused benchmark introduced in a recent paper (arXiv) that targets memory-efficient fine-tuning methods; primarily of interest to optimization and efficient-ML researchers.",
+  "notes": "Evaluates trade-offs between downstream task performance and memory/compute efficiency for zeroth-order optimizers; results vary substantially by model family and task. Code is provided for reproducibility; not yet a standardized benchmark across the broader LLM community.",
+  "creators": {
+    "scientists": [
+      "Yihua Zhang",
+      "Pingzhi Li",
+      "Junyuan Hong",
+      "Jiaxiang Li",
+      "Yimeng Zhang",
+      "Wenqing Zheng",
+      "Pin-Yu Chen",
+      "Jason D. Lee",
+      "Wotao Yin",
+      "Mingyi Hong",
+      "Zhangyang Wang",
+      "Sijia Liu",
+      "Tianlong Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2402.11592",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

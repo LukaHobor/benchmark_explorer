@@ -1,0 +1,40 @@
+{
+  "name": "MOMENT",
+  "description": "We introduce MOMENT, a family of open-source foundation models for general-purpose time series analysis. Pre-training large models on time series data is challenging due to (1) the absence of a large and cohesive public time series repository, and (2) diverse time series characteristics which make multi-dataset training onerous. Additionally, (3) experimental benchmarks to evaluate these models, especially in scenarios with limited resources, time, and supervision, are still in their nascent stages. To address these challenges, we compile a large and diverse collection of public time series, called the Time series Pile, and systematically tackle time series-specific challenges to unlock large-scale multi-dataset pre-training. Finally, we build on recent work to design a benchmark to evaluate time series foundation models on diverse tasks and datasets in limited supervision settings. Experiments on this benchmark demonstrate the effectiveness of our pre-trained models with minimal data and task-specific fine-tuning. Finally, we present several interesting empirical observations about large pre-trained time series models. Pre-trained models (AutonLab/MOMENT-1-large) and Time Series Pile (AutonLab/Timeseries-PILE) are available on Huggingface.",
+  "category": "mixed",
+  "domain": "time series",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "forecasting",
+    "classification",
+    "anomaly_detection",
+    "imputation",
+    "representation_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Task-specific metrics: MAE/MSE for forecasting, accuracy/F1 for classification, precision/recall/F1 for anomaly detection; evaluation often reports relative improvement over baselines",
+  "general_score_metric": "MAE / MSE for forecasting tasks (reported as primary aggregated metric where applicable)",
+  "typical_sota_score": "varies by task and dataset; authors report consistent improvements over standard baselines (e.g., single-digit to low-double-digit percent relative gains)",
+  "year_of_publish": 2024,
+  "reputation": "A recent open-source effort (Time Series Pile + MOMENT models) gaining attention in the time-series research community for enabling large-scale pretraining on diverse time-series data.",
+  "notes": "Heterogeneous multi-dataset pretraining introduces risk of dataset overlap/contamination across evaluation splits; evaluation performance varies widely by dataset characteristic (frequency, length, domain); not an LLM language benchmark.",
+  "creators": {
+    "scientists": [
+      "Mononito Goswami",
+      "Konrad Szafer",
+      "Arjun Choudhry",
+      "Yifu Cai",
+      "Shuo Li",
+      "Artur Dubrawski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2402.03885",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

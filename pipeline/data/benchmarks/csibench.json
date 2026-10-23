@@ -1,0 +1,40 @@
+{
+  "name": "CSI-Bench",
+  "description": "WiFi sensing has emerged as a compelling contactless modality for human activity monitoring by capturing fine-grained variations in Channel State Information (CSI). Its ability to operate continuously and non-intrusively while preserving user privacy makes it particularly suitable for health monitoring. However, existing WiFi sensing systems struggle to generalize in real-world settings, largely due to datasets collected in controlled environments with homogeneous hardware and fragmented, session-based recordings that fail to reflect continuous daily activity. We present CSI-Bench, a large-scale, in-the-wild benchmark dataset collected using commercial WiFi edge devices across 26 diverse indoor environments with 35 real users. Spanning over 461 hours of effective data, CSI-Bench captures realistic signal variability under natural conditions. It includes task-specific datasets for fall detection, breathing monitoring, localization, and motion source recognition, as well as a co-labeled multitask dataset with joint annotations for user identity, activity, and proximity. To support the development of robust and generalizable models, CSI-Bench provides standardized evaluation splits and baseline results for both single-task and multi-task learning. CSI-Bench offers a foundation for scalable, privacy-preserving WiFi sensing systems in health and broader human-centric applications.",
+  "category": "mixed",
+  "domain": "WiFi / wireless sensing / human activity recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "localization",
+    "multitask"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / F1 (classification), MAE/MSE (regression/localization) — task-dependent",
+  "general_score_metric": "F1 (primary for classification tasks)",
+  "typical_sota_score": "varies by task; classification F1/accuracy typically reported in the ~60–90% range depending on task and setting",
+  "year_of_publish": 2025,
+  "reputation": "Emerging, well-received within the WiFi/wireless sensing and human-monitoring research communities as a realistic in-the-wild benchmark.",
+  "notes": "Non-LLM benchmark; large in-the-wild dataset but device/hardware and environment-specific domain shifts exist; task metrics vary by sub-dataset (fall detection, breathing, localization); potential privacy considerations despite contactless sensing.",
+  "creators": {
+    "scientists": [
+      "Guozhen Zhu",
+      "Yuqian Hu",
+      "Weihang Gao",
+      "Wei-Hsiang Wang",
+      "Beibei Wang",
+      "K. J. Ray Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.21866",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

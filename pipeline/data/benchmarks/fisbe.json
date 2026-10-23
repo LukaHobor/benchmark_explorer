@@ -1,0 +1,39 @@
+{
+  "name": "FISBe",
+  "description": "Instance segmentation of neurons in volumetric light microscopy images of nervous systems enables groundbreaking research in neuroscience by facilitating joint functional and morphological analyses of neural circuits at cellular resolution. Yet said multi-neuron light microscopy data exhibits extremely challenging properties for the task of instance segmentation: Individual neurons have long-ranging thin filamentous and widely branching morphologies multiple neurons are tightly inter-weaved and partial volume effects uneven illumination and noise inherent to light microscopy severely impede local disentangling as well as long-range tracing of individual neurons. These properties reflect a current key challenge in machine learning research namely to effectively capture long-range dependencies in the data. While respective methodological research is buzzing to date methods are typically benchmarked on synthetic datasets. To address this gap we release the FlyLight Instance Segmentation Benchmark (FISBe) dataset the first publicly available multi-neuron light microscopy dataset with pixel-wise annotations. In addition we define a set of instance segmentation metrics for benchmarking that we designed to be meaningful with regard to downstream analyses. Lastly we provide three baselines to kick off a competition that we envision to both advance the field of machine learning regarding methodology for capturing long-range data dependencies and facilitate scientific discovery in basic neuroscience.",
+  "category": "vision",
+  "domain": "neuroscience / medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "instance_segmentation",
+    "image_segmentation",
+    "dense_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (instance-level IoU / matching-based metrics)",
+  "general_score_metric": "mean Average Precision (mAP) / instance F1",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized benchmark targeted at neuroscience / microscopy segmentation with limited adoption so far.",
+  "notes": "Small, domain-specific (light microscopy) non-LLM dataset; challenging long-range neuron morphologies and inter‑woven instances; uses custom instance-level metrics and currently has limited baseline coverage.",
+  "creators": {
+    "scientists": [
+      "Lisa Mais",
+      "Peter Hirsch",
+      "Claire Managan",
+      "Ramya Kandarpa",
+      "Josef Lorenz Rumberger",
+      "Annika Reinke",
+      "Lena Maier-Hein",
+      "Gudrun Ihrke",
+      "Dagmar Kainmueller"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

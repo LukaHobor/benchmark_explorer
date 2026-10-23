@@ -1,0 +1,36 @@
+{
+  "name": "Normalized Wasserstein Distance (NWD) Tiny Object Detection Benchmark",
+  "description": "Tiny object detection (TOD) in aerial images is challenging since a tiny object only contains a few pixels. State-of-the-art object detectors do not provide satisfactory results on tiny objects due to the lack of supervision from discriminative features. Our key observation is that the Intersection over Union (IoU) metric and its extensions are very sensitive to the location deviation of the tiny objects, which drastically deteriorates the quality of label assignment when used in anchor-based detectors. To tackle this problem, we propose a new evaluation metric dubbed Normalized Wasserstein Distance (NWD) and a new RanKing-based Assigning (RKA) strategy for tiny object detection. The proposed NWD-RKA strategy can be easily embedded into all kinds of anchor-based detectors to replace the standard IoU threshold-based one, significantly improving label assignment and providing sufficient supervision information for network training. Tested on four datasets, NWD-RKA can consistently improve tiny object detection performance by a large margin. Besides, observing prominent noisy labels in the Tiny Object Detection in Aerial Images (AI-TOD) dataset, we are motivated to meticulously relabel it and release AI-TOD-v2 and its corresponding benchmark. In AI-TOD-v2, the missing annotation and location error problems are considerably mitigated, facilitating more reliable training and validation processes. Embedding NWD-RKA into DetectoRS, the detection performance achieves 4.3 AP points improvement over state-of-the-art competitors on AI-TOD-v2. Datasets, codes, and more visualizations are available at: https://chasel-tsui.github.io/AI-TOD-v2/",
+  "category": "vision",
+  "domain": "remote sensing (aerial imagery)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP)",
+  "general_score_metric": "mAP (mean Average Precision)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in the remote sensing / tiny-object-detection community following the AI-TOD-v2 relabel release; used in research on aerial tiny object detectors.",
+  "notes": "Non-LLM vision benchmark; specifically targets tiny-object detection in aerial imagery. AI-TOD-v2 was relabeled to reduce noisy annotations; still a specialized dataset that may be imbalanced and sensitive to localization metrics (motivating NWD).",
+  "creators": {
+    "scientists": [
+      "Chang Xu",
+      "Jinwang Wang",
+      "Wen Yang",
+      "Huai Yu",
+      "Lei Yu",
+      "Gui-Song Xia"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.13996",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

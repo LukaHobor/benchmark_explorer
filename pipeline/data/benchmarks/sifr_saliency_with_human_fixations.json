@@ -1,0 +1,36 @@
+{
+  "name": "SIFR (Saliency with Human Fixations)",
+  "description": "Saliency ranking detection (SRD) has emerged as a challenging task in computer vision aiming not only to identify salient objects within images but also to rank them based on their degree of saliency. Existing SRD datasets have been created primarily using mouse-trajectory data which inadequately captures the intricacies of human visual perception. Addressing this gap this paper introduces the first large-scale SRD dataset SIFR constructed using genuine human fixation data thereby aligning more closely with real visual perceptual processes. To establish a baseline for this dataset we propose QAGNet a novel model that leverages salient instance query features from a transformer detector within a tri-tiered nested graph. Through extensive experiments we demonstrate that our approach outperforms existing state-of-the-art methods across two widely used SRD datasets and our newly proposed dataset. Code and dataset are available at https://github.com/EricDengbowen/QAGNet.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "saliency_ranking",
+    "salient_object_detection",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "rank correlation metrics (Spearman/Kendall) for saliency ranking, plus detection metrics (mAP, IoU) where applicable; fixation-based metrics (NSS/AUC) for fixation alignment",
+  "general_score_metric": "Spearman/Kendall rank correlation (for ranking) and mAP/IoU (for detection)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Introduces the first large-scale saliency-ranking dataset built from real human fixation data and is gaining attention as a more perceptually grounded SRD benchmark.",
+  "notes": "Strength: uses genuine human fixations (more perceptual realism). Caveats: fixation variability and noise, potential dataset bias in image/instance selection, and specialized task scope; not a language-model benchmark.",
+  "creators": {
+    "scientists": [
+      "Bowen Deng",
+      "Siyang Song",
+      "Andrew P. French",
+      "Denis Schluppeck",
+      "Michael P. Pound"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

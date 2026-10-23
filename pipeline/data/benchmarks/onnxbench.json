@@ -1,0 +1,37 @@
+{
+  "name": "ONNX-Bench",
+  "description": "Neural architecture search (NAS) automates the design process of high-performing architectures, but remains bottlenecked by expensive performance evaluation. Most existing studies that achieve faster evaluation are mostly tied to cell-based search spaces and graph encodings tailored to those individual search spaces, limiting their flexibility and scalability when applied to more expressive search spaces. In this work, we aim to close the gap of individual search space restrictions and search space dependent network representations. We present ONNX-Bench, a benchmark consisting of a collection of neural networks in a unified format based on ONNX files. ONNX-Bench includes all open-source NAS-bench-based neural networks, resulting in a total size of more than 600k {architecture, accuracy} pairs. This benchmark allows creating a shared neural network representation, ONNX-Net, able to represent any neural architecture using natural language descriptions acting as an input to a performance predictor. This text-based encoding can accommodate arbitrary layer types, operation parameters, and heterogeneous topologies, enabling a single surrogate to generalise across all neural architectures rather than being confined to cell-based search spaces. Experiments show strong zero-shot performance across disparate search spaces using only a small amount of pretraining samples, enabling the unprecedented ability to evaluate any neural network architecture instantly.",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "performance_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE and rank correlations (e.g., Spearman) between predicted and true accuracies",
+  "general_score_metric": "Spearman correlation (rank correlation) and RMSE on predicted accuracy",
+  "year_of_publish": 2025,
+  "reputation": "Emerging benchmark for NAS performance prediction that unifies many open-source NAS-Bench networks into ONNX format; of interest to NAS and surrogate-model researchers.",
+  "notes": "Non-LLM benchmark focused on neural-network performance prediction. Strengths: unified ONNX representation across search spaces and large scale (>600k pairs). Caveats: may not capture training hyperparameter/hardware effects; surrogate performance can vary across search spaces and data distributions.",
+  "creators": {
+    "scientists": [
+      "Shiwen Qin",
+      "Alexander Auras",
+      "Shay B. Cohen",
+      "Elliot Crowley",
+      "Michael Moeller",
+      "Linus Ericsson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2510.04938",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

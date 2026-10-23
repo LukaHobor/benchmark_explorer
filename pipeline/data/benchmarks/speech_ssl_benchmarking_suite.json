@@ -1,0 +1,39 @@
+{
+  "name": "Speech SSL Benchmarking Suite",
+  "description": "Self-supervised learning (SSL) has recently allowed leveraging large datasets of unlabeled speech signals to reach impressive performance on speech tasks using only small amounts of annotated data. The high number of proposed approaches fostered the need and rise of extended benchmarks that evaluate their performance on a set of downstream tasks exploring various aspects of the speech signal. However, and while the number of considered tasks has been growing, most rely upon a single decoding architecture that maps the frozen SSL representations to the downstream labels. This work investigates the robustness of such benchmarking results to changes in the decoder architecture. Interestingly, it appears that varying the architecture of the downstream decoder leads to significant variations in the leaderboards of most tasks. Concerningly, our study reveals that benchmarking using limited decoders may cause a counterproductive increase in the sizes of the developed SSL models.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "automatic_speech_recognition",
+    "phoneme_classification",
+    "speaker_identification",
+    "keyword_spotting",
+    "emotion_recognition"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-dependent (WER for ASR, accuracy for classification tasks, EER for speaker ID)",
+  "general_score_metric": "task-dependent (WER for ASR; accuracy/EER for classification/speaker tasks)",
+  "typical_sota_score": "varies by task (e.g., ASR WER ~2–10% on common benchmarks; classification accuracies often 80–99%)",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded in the speech-SSL research community as a comprehensive suite for downstream evaluation, frequently cited in comparative studies.",
+  "notes": "Results are highly sensitive to downstream decoder architecture; benchmark evaluates frozen SSL encoders with varied decoders. Not an LLM benchmark. Be cautious of decoder-induced leaderboard shifts and dataset/task-specific limits.",
+  "creators": {
+    "scientists": [
+      "Salah Zaiem",
+      "Youcef Kemiche",
+      "Titouan Parcollet",
+      "Slim Essid",
+      "Mirco Ravanelli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2306.00452",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

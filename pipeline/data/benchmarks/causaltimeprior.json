@@ -1,0 +1,32 @@
+{
+  "name": "CausalTimePrior",
+  "description": "Prior-data fitted networks (PFNs) have emerged as powerful foundation models for tabular causal inference, yet their extension to time series remains limited by the absence of synthetic data generators that provide interventional targets. Existing time series benchmarks generate observational data with ground-truth causal graphs but lack the interventional data required for training causal foundation models. To address this, we propose \\textbf{CausalTimePrior}, a principled framework for generating synthetic temporal structural causal models (TSCMs) with paired observational and interventional time series. Our prior supports configurable causal graph structures, nonlinear autoregressive mechanisms, regime-switching dynamics, and multiple intervention types (hard, soft, time-varying). We demonstrate that PFNs trained on CausalTimePrior can perform in-context causal effect estimation on held-out TSCMs, establishing a pathway toward foundation models for time series causal inference.",
+  "category": "mixed",
+  "domain": "dynamical systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "causal_effect_estimation",
+    "time_series_forecasting"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "error-based regression metrics",
+  "general_score_metric": "mean squared error",
+  "year_of_publish": 2026,
+  "reputation": "A new synthetic benchmark/framework aimed at causal time-series foundation models, with limited current adoption outside the originating work.",
+  "notes": "Synthetic benchmark for training/evaluating causal inference models rather than a fixed public leaderboard; results depend heavily on the generated SCM family and intervention settings.",
+  "creators": {
+    "scientists": [
+      "Dennis Thumm",
+      "Ying Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2603.11090",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

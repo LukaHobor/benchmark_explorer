@@ -1,0 +1,41 @@
+{
+  "name": "MSC-Bench",
+  "description": "Multi-sensor fusion models play a crucial role in autonomous driving perception, particularly in tasks like 3D object detection and HD map construction. These models provide essential and comprehensive static environmental information for autonomous driving systems. While camera-LiDAR fusion methods have shown promising results by integrating data from both modalities, they often depend on complete sensor inputs. This reliance can lead to low robustness and potential failures when sensors are corrupted or missing, raising significant safety concerns. To tackle this challenge, we introduce the Multi-Sensor Corruption Benchmark (MSC-Bench), the first comprehensive benchmark aimed at evaluating the robustness of multi-sensor autonomous driving perception models against various sensor corruptions. Our benchmark includes 16 combinations of corruption types that disrupt both camera and LiDAR inputs, either individually or concurrently. Extensive evaluations of six 3D object detection models and four HD map construction models reveal substantial performance degradation under adverse weather conditions and sensor failures, underscoring critical safety issues. The benchmark toolkit and affiliated code and model checkpoints have been made publicly accessible.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_object_detection",
+    "hd_map_construction",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP / NDS for 3D detection; IoU / F1 for HD map construction (reported per-task metrics)",
+  "general_score_metric": "mAP (primary for 3D object detection)",
+  "typical_sota_score": "50–75% mAP on clean data (drops substantially under corruption)",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, targeted benchmark for multi-sensor fusion robustness in autonomous driving with growing adoption in robustness and perception research.",
+  "notes": "Non-LLM benchmark focused on sensor corruptions; task-dependent metrics; not saturated. Results are sensitive to choice of detection metric and dataset split; requires multi-sensor model checkpoints and careful experiment reproducibility.",
+  "creators": {
+    "scientists": [
+      "Xiaoshuai Hao",
+      "Guanqun Liu",
+      "YuTing Zhao",
+      "Yuheng Ji",
+      "Mengchuan Wei",
+      "Haimei Zhao",
+      "Lingdong Kong",
+      "Rong Yin",
+      "Yu Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2501.01037",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

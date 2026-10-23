@@ -1,0 +1,34 @@
+{
+  "name": "SAR ATR Deep Learning Classifier Benchmark",
+  "description": "Synthetic Aperture Radar SAR Automatic Target Recognition ATR is a key technique of remote-sensing image recognition which can be supported by deep neural networks The existing works of SAR ATR mostly focus on improving the accuracy of the target recognition while ignoring the systems performance in terms of speed and storage which is critical to real-world applications of SAR ATR For decision-makers aiming to identify a proper deep learning model to deploy in a SAR ATR system it is important to understand the performance of different candidate deep learning models and determine the best model accordingly This paper comprehensively benchmarks several advanced deep learning models for SAR ATR with multiple distinct SAR imagery datasets Specifically we train and test five SAR image classifiers based on Residual Neural Networks ResNet18 ResNet34 ResNet50 Graph Neural Network GNN and Vision Transformer for Small-Sized Datasets (SS-ViT) We select three datasets MSTAR GBSAR and SynthWakeSAR that offer heterogeneity We evaluate and compare the five classifiers concerning their classification accuracy runtime performance in terms of inference throughput and analytical performance in terms of number of parameters number of layers model size and number of operations Experimental results show that the GNN classifier outperforms with respect to throughput and latency However it is also shown that no clear model winner emerges from all of our chosen metrics and a one model rules all case is doubtful in the domain of SAR ATR",
+  "category": "vision",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (classification accuracy), reported together with runtime/throughput and model-size metrics",
+  "general_score_metric": "classification_accuracy (with secondary metrics: inference_throughput, model_size, FLOPs)",
+  "year_of_publish": 2023,
+  "reputation": "Academic benchmark used by the remote sensing community to compare SAR ATR model accuracy and system-level trade-offs; moderately cited within SAR ATR research.",
+  "notes": "Uses relatively small and heterogeneous SAR datasets (MSTAR, GBSAR, SynthWakeSAR) — risk of overfitting and limited generalization; runtime/throughput measurements are hardware-dependent; class imbalance and sensor-specific characteristics can affect comparability; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jacob Fein-Ashley",
+      "Tian Ye",
+      "Rajgopal Kannan",
+      "Viktor Prasanna",
+      "Carl Busart"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.06940",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

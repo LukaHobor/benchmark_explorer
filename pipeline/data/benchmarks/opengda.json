@@ -1,0 +1,39 @@
+{
+  "name": "OpenGDA",
+  "description": "Graph domain adaptation models are widely adopted in cross-network learning tasks to transfer labeling or structural knowledge. Currently, there mainly exist two limitations in evaluating graph domain adaptation models. On one side, they are primarily tested for the specific cross-network node classification task, leaving tasks at edge-level and graph-level largely under-explored. Moreover, they are primarily examined in limited scenarios, such as social networks or citation networks, needing more validation in richer scenarios. As comprehensively assessing models could enhance model practicality in real-world applications, we propose a benchmark known as OpenGDA. It provides abundant pre-processed and unified datasets for different types of tasks (node, edge, graph). They originate from diverse scenarios, covering web information systems, urban systems and natural systems. Furthermore, it integrates state-of-the-art models with standardized and end-to-end pipelines. Overall, OpenGDA provides a user-friendly, scalable and reproducible benchmark for evaluating graph domain adaptation models. The benchmark experiments highlight the challenges of applying GDA models to real-world applications with consistent good performance, and they potentially provide insights to future research. As an emerging project, OpenGDA will be regularly updated with new datasets and models. It could be accessed from https://github.com/Skyorca/OpenGDA.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "edge_prediction",
+    "graph_classification",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / F1 / AUC depending on task (node/graph classification typically use accuracy or F1; edge prediction often uses AUC)",
+  "general_score_metric": "accuracy (for classification tasks; other tasks may report F1 or AUC)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "8 citations",
+  "notes": "Non-LLM benchmark for graph domain adaptation. Datasets are heterogeneous (node/edge/graph level) and originate from diverse scenarios, so reported metrics vary by task; potential issues include domain shift across source/target graphs, dataset imbalance, and evolving dataset/model additions.",
+  "creators": {
+    "scientists": [
+      "Boshen Shi",
+      "Yongqing Wang",
+      "Fangda Guo",
+      "Jiangli Shao",
+      "Huawei Shen",
+      "Xueqi Cheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.11341",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

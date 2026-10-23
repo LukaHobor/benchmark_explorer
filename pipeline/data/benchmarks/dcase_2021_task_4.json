@@ -1,0 +1,32 @@
+{
+  "name": "DCASE 2021 Task 4",
+  "description": "This report proposes a polyphonic sound event detection (SED) method for the DCASE 2021 Challenge Task 4. The proposed SED model consists of two stages: a mean-teacher model for providing target labels regarding weakly labeled or unlabeled data and a self-training-based noisy student model for predicting strong labels for sound events. The mean-teacher model, which is based on the residual convolutional recurrent neural network (RCRNN) for the teacher and student model, is first trained using all the training data from a weakly labeled dataset, an unlabeled dataset, and a strongly labeled synthetic dataset. Then, the trained mean-teacher model predicts the strong label to each of the weakly labeled and unlabeled datasets, which is brought to the noisy student model in the second stage of the proposed SED model. Here, the structure of the noisy student model is identical to the RCRNN-based student model of the mean-teacher model in the first stage. Then, it is self-trained by adding fea",
+  "category": "audio",
+  "domain": "audio",
+  "task_types": [
+    "sound_event_detection",
+    "polyphonic_sound_event_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "60–75%",
+  "year_of_publish": 2021,
+  "reputation": "A challenge benchmark tied to the DCASE 2021 Task 4 sound event detection track, which is well known within the audio event detection community.",
+  "notes": "Challenge-style benchmark with a specialized audio domain; scores are usually reported with event-based and segment-based F1 metrics, and results are not directly comparable across all submissions.",
+  "creators": {
+    "scientists": [
+      "Nam Kyun Kim",
+      "Hong Kook Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2107.02569",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Precise Benchmarking of Explainable AI Attribution Methods",
+  "description": "The rationale behind a deep learning model's output is often difficult to understand by humans. EXplainable AI (XAI) aims at solving this by developing methods that improve interpretability and explainability of machine learning models. Reliable evaluation metrics are needed to assess and compare different XAI methods. We propose a novel evaluation approach for benchmarking state-of-the-art XAI attribution methods. Our proposal consists of a synthetic classification model accompanied by its derived ground truth explanations allowing high precision representation of input nodes contributions. We also propose new high-fidelity metrics to quantify the difference between explanations of the investigated XAI method and those derived from the synthetic model. Our metrics allow assessment of explanations in terms of precision and recall separately. Also, we propose metrics to independently evaluate negative or positive contributions of inputs. Our proposal provides deeper insights into XAI methods output. We investigate our proposal by constructing a synthetic convolutional image classification model and benchmarking several widely used XAI attribution methods using our evaluation approach. We compare our results with established prior XAI evaluation metrics. By deriving the ground truth directly from the constructed model in our method, we ensure the absence of bias, e.g., subjective either based on the training set. Our experimental results provide novel insights into the performance of Guided-Backprop and Smoothgrad XAI methods that are widely in use. Both have good precision and recall scores among positively contributing pixels (0.7, 0.76 and 0.7, 0.77, respectively), but poor precision scores among negatively contributing pixels (0.44, 0.61 and 0.47, 0.75, resp.). The recall scores in the latter case remain close. We show that our metrics are among the fastest in terms of execution time.",
+  "category": "mixed",
+  "domain": "machine learning / interpretability",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "feature_attribution",
+    "saliency_map_evaluation",
+    "interpretability_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "precision_and_recall_of_attribution_maps (separate metrics for positive and negative contributions)",
+  "general_score_metric": "precision_and_recall_on_positive_and_negative_attributions",
+  "typical_sota_score": "Precision and recall typically in the ~0.4–0.8 range depending on method and contribution polarity",
+  "year_of_publish": 2023,
+  "reputation": "An academic/technical benchmark introduced in 2023 with limited but growing recognition among XAI researchers; not yet a widely adopted community standard.",
+  "notes": "Non-LLM benchmark using a synthetic model to derive ground-truth attributions (high precision ground truth but limited real-world generalizability); small, synthetic dataset; metrics optimized for speed.",
+  "creators": {
+    "scientists": [
+      "Rafaël Brandt",
+      "Daan Raatjens",
+      "Georgi Gaydadjiev"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2308.03161",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

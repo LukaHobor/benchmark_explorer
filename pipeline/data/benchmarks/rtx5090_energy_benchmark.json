@@ -1,0 +1,38 @@
+{
+  "name": "rtx5090-energy-benchmark",
+  "description": "RTX 5090 LLM Energy Benchmark\n\t\n\nFirst energy efficiency benchmark of 4-bit quantization on NVIDIA RTX 5090 (Blackwell architecture).\n\n\t\n\t\t\n\t\tKey Finding\n\t\n\n4-bit quantization increases energy consumption by up to 29% for models < 5B parameters.\nThe crossover point where quantization becomes beneficial is ~5B parameters.\n\n\t\n\t\t\n\t\tResults\n\t\n\n\n\t\n\t\t\nModel\nFP16 Energy\n4-bit Energy\nChange\n\n\n\t\t\nTinyLlama 1.1B\n1,659 J/1k\n2,098 J/1k\n+26.5% 🔴\n\n\nQwen2 1.5B\n2,411 J/1k\n3,120 J/1k\n+29.4% 🔴… See the full description on the dataset page: https://huggingface.co/datasets/hongpingzhang/rtx5090-energy-benchmark.",
+  "category": "text",
+  "domain": "multidisciplinary",
+  "tags": [
+    "license:apache-2.0"
+  ],
+  "task_types": [
+    "benchmarking",
+    "energy_measurement",
+    "inference_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "energy_consumption (Joules per 1k tokens)",
+  "general_score_metric": "energy (J/1k tokens)",
+  "typical_sota_score": "~1,600–3,200 J/1k tokens (varies by model size and precision; reported FP16 and 4-bit ranges)",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "A niche hardware/efficiency benchmark published on Hugging Face that is useful to researchers measuring energy use on NVIDIA RTX 5090; limited broad adoption to date.",
+  "downloads": 68,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "hongpingzhang"
+    ]
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://huggingface.co/datasets/hongpingzhang/rtx5090-energy-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Early Classification of Time Series (ECTS) benchmark",
+  "description": "In many situations, the measurements of a studied phenomenon are provided sequentially, and the prediction of its class needs to be made as early as possible so as not to incur too high a time penalty, but not too early and risk paying the cost of misclassification. This problem has been particularly studied in the case of time series, and is known as Early Classification of Time Series (ECTS). Although it has been the subject of a growing body of literature, there is still a lack of a systematic, shared evaluation protocol to compare the relative merits of the various existing methods. This document begins by situating these methods within a principle-based taxonomy. It defines dimensions for organizing their evaluation, and then reports the results of a very extensive set of experiments along these dimensions involving nine state-of-the art ECTS algorithms. In addition, these and other experiments can be carried out using an open-source library in which most of the existing ECTS algorithms have been implemented (see https://github.com/ML-EDM/ml_edm).",
+  "category": "mixed",
+  "domain": "time series analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_classification",
+    "early_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "classification accuracy combined with earliness-aware metrics (e.g., accuracy at stopping times, F1 with earliness trade-offs or cost-based scores)",
+  "general_score_metric": "accuracy combined with an earliness-aware combined score",
+  "year_of_publish": 2024,
+  "reputation": "A well-cited, specialized benchmark in the time-series community with an accompanying open-source library (ML-EDM) and active use in early classification research.",
+  "notes": "Non-LLM benchmark focused on temporal data; evaluation emphasizes trade-off between accuracy and earliness. Results vary widely by dataset and class balance; not standardized across all tasks, and saturation can occur on some small datasets.",
+  "creators": {
+    "scientists": [
+      "Aurélien Renault",
+      "Alexis Bondu",
+      "Antoine Cornuéjols",
+      "Vincent Lemaire"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.18332",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

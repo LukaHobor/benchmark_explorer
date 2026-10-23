@@ -1,0 +1,37 @@
+{
+  "name": "Regression Methods Benchmark (including CGAN)",
+  "description": "In recent years, impressive progress has been made in the design of implicit probabilistic models via Generative Adversarial Networks (GAN) and its extension, the Conditional GAN (CGAN). Excellent solutions have been demonstrated mostly in image processing applications which involve large, continuous output spaces. There is almost no application of these powerful tools to problems having small dimensional output spaces. Regression problems involving the inductive learning of a map, $y=f(x,z)$, $z$ denoting noise, $f:\\mathbb{R}^n\\times \\mathbb{R}^k \\rightarrow \\mathbb{R}^m$, with $m$ small (e.g., $m=1$ or just a few) is one good case in point. The standard approach to solve regression problems is to probabilistically model the output $y$ as the sum of a mean function $m(x)$ and a noise term $z$; it is also usual to take the noise to be a Gaussian. These are done for convenience sake so that the likelihood of observed data is expressible in closed form. In the real world, on the other hand, stochasticity of the output is usually caused by missing or noisy input variables. Such a real world situation is best represented using an implicit model in which an extra noise vector, $z$ is included with $x$ as input. CGAN is naturally suited to design such implicit models. This paper makes the first step in this direction and compares the existing regression methods with CGAN. We notice however, that the existing methods like mixture density networks (MDN) and XGBoost do quite well compared to CGAN in terms of likelihood and mean absolute error, respectively. Both these methods are comparatively easier to train than CGANs. CGANs need more innovation to have a comparable modeling and ease-of-training with respect to the existing regression solvers. In summary, for modeling uncertainty MDNs are better while XGBoost is better for the cases where accurate prediction is more important.",
+  "category": "mixed",
+  "domain": "machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "density_estimation",
+    "probabilistic_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "negative_log_likelihood and mean_absolute_error (task-dependent)",
+  "general_score_metric": "log_likelihood (for probabilistic models) and MAE (for point predictions)",
+  "year_of_publish": 2019,
+  "reputation": "A niche yet influential comparative study exploring CGANs for low-dimensional regression; referenced in research on probabilistic regression but not a broadly adopted standardized benchmark.",
+  "notes": "Focuses on small-dimensional outputs (not large-scale image outputs); GAN training instability and tuning sensitivity complicate comparisons; many baselines (MDN, XGBoost) can outperform CGANs on likelihood/MAE depending on the task; datasets and evaluation protocols are not standardized across studies.",
+  "creators": {
+    "scientists": [
+      "Karan Aggarwal",
+      "Matthieu Kirchmeyer",
+      "Pranjul Yadav",
+      "S. Sathiya Keerthi",
+      "Patrick Gallinari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1905.12868",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

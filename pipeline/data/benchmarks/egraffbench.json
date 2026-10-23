@@ -1,0 +1,43 @@
+{
+  "name": "EGraFFBench",
+  "description": "Equivariant graph neural networks force fields (EGraFFs) have shown great promise in modelling complex interactions in atomic systems by exploiting the graphs' inherent symmetries. Recent works have led to a surge in the development of novel architectures that incorporate equivariance-based inductive biases alongside architectural innovations like graph transformers and message passing to model atomic interactions. However, thorough evaluations of these deploying EGraFFs for the downstream task of real-world atomistic simulations, is lacking. To this end, here we perform a systematic benchmarking of 6 EGraFF algorithms (NequIP, Allegro, BOTNet, MACE, Equiformer, TorchMDNet), with the aim of understanding their capabilities and limitations for realistic atomistic simulations. In addition to our thorough evaluation and analysis on eight existing datasets based on the benchmarking literature, we release two new benchmark datasets, propose four new metrics, and three challenging tasks. The new datasets and tasks evaluate the performance of EGraFF to out-of-distribution data, in terms of different crystal structures, temperatures, and new molecules. Interestingly, evaluation of the EGraFF models based on dynamic simulations reveals that having a lower error on energy or force does not guarantee stable or reliable simulation or faithful replication of the atomic structures. Moreover, we find that no model clearly outperforms other models on all datasets and tasks. Importantly, we show that the performance of all the models on out-of-distribution datasets is unreliable, pointing to the need for the development of a foundation model for force fields that can be used in real-world simulations. In summary, this work establishes a rigorous framework for evaluating machine learning force fields in the context of atomic simulations and points to open research challenges within this domain.",
+  "category": "mixed",
+  "domain": "materials science / atomistic simulations",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "molecular_dynamics_simulation",
+    "out_of_distribution_evaluation",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "energy and force prediction errors (MAE/RMSE), simulation-stability metrics (trajectory fidelity, structural drift), and proposed specialized OOD/generalization metrics",
+  "general_score_metric": "force/energy MAE (and secondary simulation-stability/trajectory fidelity metrics)",
+  "typical_sota_score": "varies by dataset and task; no single model dominates across all tasks (performance ranges depend strongly on dataset and OOD condition)",
+  "year_of_publish": 2023,
+  "reputation": "A recent (2023) comprehensive benchmark for equivariant graph neural network force fields that is gaining attention in materials‑ML and molecular simulation communities for systematic evaluation of EGraFF models.",
+  "notes": "Includes multiple datasets and new challenging OOD tasks; demonstrates that low energy/force MAE does not guarantee stable or faithful dynamic simulations; evaluations are dataset- and metric-dependent; non-LLM.",
+  "creators": {
+    "scientists": [
+      "Vaibhav Bihani",
+      "Utkarsh Pratiush",
+      "Sajid Mannan",
+      "Tao Du",
+      "Zhimin Chen",
+      "Santiago Miret",
+      "Matthieu Micoulaut",
+      "Morten M Smedskjaer",
+      "Sayan Ranu",
+      "N M Anoop Krishnan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2310.02428",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

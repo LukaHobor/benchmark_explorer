@@ -1,0 +1,36 @@
+{
+  "name": "Multi-Source Sky-Ground ReID",
+  "description": "Person re-identification (Re-ID) aims to accurately match pairs of person images across different cameras. Existing Re-ID methods primarily focus on associations within single-type camera networks (e.g., ground-ground or sky-sky matching), which are ineffective in addressing the significant viewpoint discrepancies in multi-type camera networks. One key reason for this is the absence of suitable large-scale datasets for algorithm evaluation, which limits the applicability of Re-ID across more diverse scenarios, despite its critical importance. To expand the scope of visual coverage and facilitate search operations in the special locations, we construct a novel benchmark: Multi-Source Sky-Land person Re-ID dataset (MSSL), including 66,928 images from 2,099 volunteers in nearly 20 unique scenes. Additionally, we observe that existing Re-ID systems struggle with drastic viewpoint variations in sky-ground Re-ID, especially on MSSL. To address these issues, we propose Multi-Source Prompts (MSP), separately learning finer cross-modal features of pedestrians from both sky and ground perspectives. These refined features better represent the true appearance of pedestrians from different viewpoints. Subsequently, we employ Multi-Source Alignment Loss to mitigate the impact of drastic viewpoint changes. Extensive experiments demonstrate that our approach achieves state-of-the-art performance on our MSSL, as well as on other benchmarks such as AG-ReID dataset. Our MSSL dataset and the code will be available at https://github.com/sysuchx/SkyGroundReID.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "instance_reidentification",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean average precision (mAP) and rank-k accuracy (Rank-1, Rank-5)",
+  "general_score_metric": "mAP / Rank-1",
+  "year_of_publish": 2026,
+  "reputation": "A new, specialized dataset addressing sky-to-ground person Re-ID; of growing interest within the Re-ID research community but not as widely adopted as long-standing Re-ID benchmarks.",
+  "notes": "Non-LLM vision benchmark; moderate scale (~66k images) but focused on severe viewpoint shift (sky vs ground). Potential dataset biases (demographics, scene variety) and limited external replication beyond the originating group.",
+  "creators": {
+    "scientists": [
+      "Hongxu Chen",
+      "Zhizhi Lu",
+      "Nailong Zhao",
+      "Yuli Huang",
+      "Lingxiao Yang",
+      "Xiaohua Xie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

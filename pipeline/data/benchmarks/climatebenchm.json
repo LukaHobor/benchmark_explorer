@@ -1,0 +1,46 @@
+{
+  "name": "ClimateBench-M",
+  "description": "Climate science studies the structure and dynamics of Earth's climate system and seeks to understand how climate changes over time, where the data is usually stored in the format of time series, recording the climate features, geolocation, time attributes, etc. Recently, much research attention has been paid to the climate benchmarks. In addition to the most common task of weather forecasting, several pioneering benchmark works are proposed for extending the modality, such as domain-specific applications like tropical cyclone intensity prediction and flash flood damage estimation, or climate statement and confidence level in the format of natural language. To further motivate the artificial general intelligence development for climate science, in this paper, we first contribute a multi-modal climate benchmark, i.e., ClimateBench-M, which aligns (1) the time series climate data from ERA5, (2) extreme weather events data from NOAA, and (3) satellite image data from NASA HLS based on a unified spatial-temporal granularity. Second, under each data modality, we also propose a simple but strong generative method that could produce competitive performance in weather forecasting, thunderstorm alerts, and crop segmentation tasks in the proposed ClimateBench-M. The data and code of ClimateBench-M are publicly available at https://github.com/iDEA-iSAIL-Lab-UIUC/ClimateBench-M.",
+  "category": "multimodal",
+  "domain": "climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "event_detection",
+    "image_segmentation",
+    "multimodal_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MSE/MAE for forecasting; F1/precision-recall for event detection; IoU/Dice for segmentation",
+  "general_score_metric": "MSE (for primary weather-forecasting tasks)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A recent multimodal climate benchmark with growing visibility in climate-ML research, but not yet a broadly established community standard.",
+  "notes": "Multimodal alignment and differing spatial/temporal resolutions increase preprocessing complexity; multiple task-specific metrics used; large dataset size and domain-specific modalities (non-LLM); potential for dataset shift across regions and time.",
+  "creators": {
+    "scientists": [
+      "Dongqi Fu",
+      "Yada Zhu",
+      "Zhining Liu",
+      "Lecheng Zheng",
+      "Xiao Lin",
+      "Zihao Li",
+      "Liri Fang",
+      "Katherine Tieu",
+      "Onkar Bhardwaj",
+      "Kommy Weldemariam",
+      "Hanghang Tong",
+      "Hendrik Hamann",
+      "Jingrui He"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2504.07394",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

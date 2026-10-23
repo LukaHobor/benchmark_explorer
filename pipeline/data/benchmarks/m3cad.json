@@ -1,0 +1,43 @@
+{
+  "name": "M3CAD",
+  "description": "We introduce M$^3$CAD, a novel benchmark designed to advance research in generic cooperative autonomous driving. M$^3$CAD comprises 204 sequences with 30k frames, spanning a diverse range of cooperative driving scenarios. Each sequence includes multiple vehicles and sensing modalities, e.g., LiDAR point clouds, RGB images, and GPS/IMU, supporting a variety of autonomous driving tasks, including object detection and tracking, mapping, motion forecasting, occupancy prediction, and path planning. This rich multimodal setup enables M$^3$CAD to support both single-vehicle and multi-vehicle autonomous driving research, significantly broadening the scope of research in the field. To our knowledge, M$^3$CAD is the most comprehensive benchmark specifically tailored for cooperative multi-task autonomous driving research. We evaluate the state-of-the-art end-to-end solution on M$^3$CAD to establish baseline performance. To foster cooperative autonomous driving research, we also propose E2EC, a simple yet effective framework for cooperative driving solution that leverages inter-vehicle shared information for improved path planning. We release M$^3$CAD, along with our baseline models and evaluation results, to support the development of robust cooperative autonomous driving systems. All resources will be made publicly available on https://github.com/zhumorui/M3CAD",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "mapping",
+    "motion_forecasting",
+    "occupancy_prediction",
+    "path_planning",
+    "sensor_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "multiple_metrics (task-specific: mAP for detection, MOTA/MOTP for tracking, ADE/FDE for forecasting, IoU for occupancy, task_success_rate for planning)",
+  "general_score_metric": "task-specific metrics (mAP, ADE/FDE, MOTA, IoU, task_success_rate)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Recently released academic benchmark focused on cooperative multi-vehicle tasks; early-stage but gaining attention in cooperative autonomous driving research.",
+  "notes": "Multimodal, non-LLM benchmark; relatively small scale (204 sequences, ~30k frames) compared with large driving datasets; evaluation is task-dependent so no single unified metric; potential domain gap to diverse real-world driving conditions.",
+  "creators": {
+    "scientists": [
+      "Morui Zhu",
+      "Yongqi Zhu",
+      "Yihao Zhu",
+      "Qi Chen",
+      "Deyuan Qu",
+      "Song Fu",
+      "Qing Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2505.06746",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

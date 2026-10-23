@@ -1,0 +1,36 @@
+{
+  "name": "ZJU-Leaper",
+  "description": "Fabric inspection plays an important role in the process of quality control in textile manufacturing. There is a growing demand in the textile industry to leverage computer vision technology for more efficient quality control in the hope that it will replace the traditional labor-intensive inspection by naked eyes. However, there is an underlying viewpoint in most existing fabric datasets that automatic defect detection is a traditional image classification problem, thus more samples help better, which lacks enough consideration about the problem itself and real application environments. After deep communication with users, we find these facts that an assembly line usually has only a few fixed texture fabrics for a long period, users prefer fast deployment and easily upgradable model to a general model and long-time tuning, and users hope the process of collecting samples, annotating, and deployment affects assembly lines as little as possible. This implies that defect detection is different from popular deep learning problems. Multiple-stage models and fast training become more attractive since users are able to train and deploy models by themselves according to the real conditions of samples that can be obtained. Based on this analysis, we propose a new fabric dataset “ZJU-Leaper”. It provides a series of task settings in accordance with the progressive strategy dealing with the problem, from only normal samples to many defective samples with precise annotations, to facilitate real-world application. To avoid misleading information and inconsistency issues associated with the prior evaluation metrics, we propose a new evaluation protocol by experimental analysis of task-specific indexes, which can tell a truthful comparison between different inspection methods. We also offer some novel solutions to address the new challenges of our dataset, as part of the baseline experiments. It is our hope that ZJU-Leaper can accelerate the research of automated visual inspection and empower the practitioners with more opportunities for manufacturing automation in the textile industry. <p xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><i>Impact Statement</i>—Automatic defect inspection is very important in quality control of the fabric industry by helping manufacturers to identify production problems early, hence improving product quality and production efficiency. Meanwhile, it is able to reduce the high labor cost of manual inspection and boost the productivity of the textile industry. To develop effective mathematical inspection algorithms, the fabric dataset serves as an indispensable component to present a practical application environment and enable fair evaluation for algorithms. This paper proposes a new dataset, called “ZJU-Leaper” designed from a viewpoint of multiple-stage models and fast training, containing threefold novelty: 1) the data collection and organization consider the actual requirements and special characteristics of assembly lines in textile factories; 2) it has several designed task settings in order to meet the different levels of requirements in the practical inspection task; 3) it provides a reasonable evaluation protocol for comprehensive comparisons between different inspection algorithms. The preliminary experiments show that some existing algorithms still cannot reach the satisfying performance by this benchmark, which implies more effort should be made to develop new methods for the real use of automatic defect inspection.",
+  "category": "vision",
+  "domain": "manufacturing / textile inspection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "classification",
+    "segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-specific metrics (AUC for anomaly detection, mAP for detection, IoU/F1 for segmentation, accuracy for classification)",
+  "general_score_metric": "task-dependent (commonly AUC or mAP)",
+  "year_of_publish": 2020,
+  "reputation": "69 citations",
+  "notes": "Multiple task settings and a custom evaluation protocol reflecting real production constraints; non-LLM benchmark. Data is organized to support few-shot/one-class training regimes (many normal-only settings), which can make standard supervised metrics less informative without task-specific evaluation. Possible domain shift across fabric types and limited number of fabric classes for some tasks.",
+  "creators": {
+    "scientists": [
+      "Chenkai Zhang",
+      "Shaozhe Feng",
+      "Xulongqi Wang",
+      "Yueming Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/tai.2021.3057027",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

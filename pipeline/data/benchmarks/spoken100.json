@@ -1,0 +1,33 @@
+{
+  "name": "SpokeN-100",
+  "description": "Benchmarking plays a pivotal role in assessing and enhancing the performance of compact deep learning models designed for execution on resource-constrained devices, such as microcontrollers. Our study introduces a novel, entirely artificially generated benchmarking dataset tailored for speech recognition, representing a core challenge in the field of tiny deep learning. SpokeN-100 consists of spoken numbers from 0 to 99 spoken by 32 different speakers in four different languages, namely English, Mandarin, German and French, resulting in 12,800 audio samples. We determine auditory features and use UMAP (Uniform Manifold Approximation and Projection for Dimension Reduction) as a dimensionality reduction method to show the diversity and richness of the dataset. To highlight the use case of the dataset, we introduce two benchmark tasks: given an audio sample, classify (i) the used language and/or (ii) the spoken number. We optimized state-of-the-art deep neural networks and performed an evolutionary neural architecture search to find tiny architectures optimized for the 32-bit ARM Cortex-M4 nRF52840 microcontroller. Our results represent the first benchmark data achieved for SpokeN-100.",
+  "category": "audio",
+  "domain": "speech / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "language_identification",
+    "number_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "New, niche benchmark targeted at tiny-model/microcontroller speech research with limited adoption so far.",
+  "notes": "Fully artificially generated dataset (synthetic speech), relatively small (12,800 samples, 32 speakers), designed for microcontroller-sized models; non-LLM benchmark; risk of synthetic-data bias and limited speaker/language diversity.",
+  "creators": {
+    "scientists": [
+      "René Groh",
+      "Nina Goes",
+      "Andreas M. Kist"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2403.09753",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

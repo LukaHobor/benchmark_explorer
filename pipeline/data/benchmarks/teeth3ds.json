@@ -1,0 +1,41 @@
+{
+  "name": "Teeth3DS+",
+  "description": "Intraoral 3D scans analysis is a fundamental aspect of Computer-Aided Dentistry (CAD) systems, playing a crucial role in various dental applications, including teeth segmentation, detection, labeling, and dental landmark identification. Accurate analysis of 3D dental scans is essential for orthodontic and prosthetic treatment planning, as it enables automated processing and reduces the need for manual adjustments by dental professionals. However, developing robust automated tools for these tasks remains a significant challenge due to the limited availability of high-quality public datasets and benchmarks. This article introduces Teeth3DS+, the first comprehensive public benchmark designed to advance the field of intraoral 3D scan analysis. Developed as part of the 3DTeethSeg 2022 and 3DTeethLand 2024 MICCAI challenges, Teeth3DS+ aims to drive research in teeth identification, segmentation, labeling, 3D modeling, and dental landmarks identification. The dataset includes at least 1,800 intraoral scans (containing 23,999 annotated teeth) collected from 900 patients, covering both upper and lower jaws separately. All data have been acquired and validated by experienced orthodontists and dental surgeons with over five years of expertise. Detailed instructions for accessing the dataset are available at https://crns-smartvision.github.io/teeth3ds",
+  "category": "vision",
+  "domain": "medical imaging / dentistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "detection",
+    "landmark_localization",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice / IoU for segmentation; mean_average_precision (mAP) for detection; mean Euclidean distance (mm) for landmark localization",
+  "general_score_metric": "mean Dice coefficient (for segmentation)",
+  "typical_sota_score": "80–95% Dice",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded within medical/dental imaging research and used in MICCAI challenges, increasingly adopted for intraoral 3D tasks.",
+  "notes": "Clinical intraoral scans; requires access request in some cases; relatively large for the domain but still specialized; non-LLM benchmark focused on 3D vision/medical imaging.",
+  "creators": {
+    "scientists": [
+      "Achraf Ben-Hamadou",
+      "Nour Neifar",
+      "Ahmed Rekik",
+      "Oussama Smaoui",
+      "Firas Bouzguenda",
+      "Sergi Pujades",
+      "Edmond Boyer",
+      "Edouard Ladroit"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2210.06094",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

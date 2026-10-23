@@ -1,0 +1,39 @@
+{
+  "name": "CardioSyntax",
+  "description": "The SYNTAX score has become a widely used measure of coronary disease severity, crucial in selecting the optimal mode of the revascularization procedure. This paper introduces a new medical regression and classification problem - automatically estimating SYNTAX score from coronary angiography. Our study presents a comprehensive CardioSYNTAX dataset of 3,018 patients for the SYNTAX score estimation and coronary dominance classification. The dataset features a balanced distribution of individuals with zero and non-zero scores. This dataset includes a first-of-its-kind, complete coronary angiography samples captured through a multi-view X-ray video, allowing one to observe coronary arteries from multiple perspectives. Furthermore, we present a novel, fully automatic end-to-end method for estimating the SYNTAX. For such a difficult task, we have achieved a solid coefficient of determination R2 of 0.51 in score value prediction and 77.3% accuracy for zero score classification.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "binary_classification",
+    "multi_view_video_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Regression: R^2, MAE, RMSE; Classification: accuracy and AUC",
+  "general_score_metric": "R^2 for SYNTAX score regression; accuracy for zero/non-zero classification",
+  "typical_sota_score": "R^2 ≈ 0.51 (regression reported by authors); accuracy ≈ 77.3% (zero-score classification)",
+  "year_of_publish": 2024,
+  "reputation": "A new, specialized medical-imaging dataset proposed for automated SYNTAX score estimation and coronary dominance classification; important for research but currently limited adoption outside the authors' work.",
+  "notes": "Moderate-sized clinical dataset (≈3,000 patients) with multi-view X-ray video — sensitive medical data with potential label noise and inter-rater variability; requires clinical expertise to interpret and is not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Alexander Ponomarchuk",
+      "Ivan Kruzhilov",
+      "Galina Zubkova",
+      "Artem Shadrin",
+      "Ruslan Utegenov",
+      "Ivan Bessonov",
+      "Pavel Blinov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.19894",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

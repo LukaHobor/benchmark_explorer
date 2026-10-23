@@ -1,0 +1,37 @@
+{
+  "name": "EMOd",
+  "description": "Image sentiment influences visual perception. Emotion-eliciting stimuli such as happy faces and poisonous snakes are generally prioritized in human attention. However, little research has evaluated the interrelationships of image sentiment and visual saliency. In this paper, we present the first study to focus on the relation between emotional properties of an image and visual attention. We first create the EMOtional attention dataset (EMOd). It is a diverse set of emotion-eliciting images, and each image has (1) eye-tracking data collected from 16 subjects, (2) intensive image context labels including object contour, object sentiment, object semantic category, and high-level perceptual attributes such as image aesthetics and elicited emotions. We perform extensive analyses on EMOd to identify how image sentiment relates to human attention. We discover an emotion prioritization effect: for our images, emotion-eliciting content attracts human attention strongly, but such advantage diminishes dramatically after initial fixation. Aiming to model the human emotion prioritization computationally, we design a deep neural network for saliency prediction, which includes a novel subnetwork that learns the spatial and semantic context of the image scene. The proposed network outperforms the state-of-the-art on three benchmark datasets, by effectively capturing the relative importance of human attention within an image. The code, models, and dataset are available online at https://nus-sesame.top/emotionalattention/.",
+  "category": "vision",
+  "domain": "psychology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "saliency_prediction",
+    "visual_attention",
+    "image_attention_regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "saliency metrics (AUC, NSS, CC, KL-divergence, SIM)",
+  "general_score_metric": "NSS and AUC (commonly reported for saliency benchmarks)",
+  "year_of_publish": 2018,
+  "reputation": "160 citations",
+  "notes": "Small dataset (eye-tracking data from 16 subjects) with intensive contextual labels; limited scale may risk overfitting and reduced generalizability. Not an LLM benchmark; appropriate for saliency/vision models. Dataset contents require careful handling of demographic/content diversity and potential annotation biases.",
+  "creators": {
+    "scientists": [
+      "Shaojing Fan",
+      "Zhiqi Shen",
+      "Ming Jiang",
+      "Bryan L. Koenig",
+      "Juan Xu",
+      "Mohan Kankanhalli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvpr.2018.00785",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

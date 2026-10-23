@@ -1,0 +1,35 @@
+{
+  "name": "Real-world Debiasing Benchmark",
+  "description": "Spurious correlations in training data significantly hinder the generalization capability of machine learning models when faced with distribution shifts, leading to the proposition of numberous debiasing methods. However, it remains to be asked: \\textit{Do existing benchmarks for debiasing really represent biases in the real world?} Recent works attempt to address such concerns by sampling from real-world data (instead of synthesizing) according to some predefined biased distributions to ensure the realism of individual samples. However, the realism of the biased distribution is more critical yet challenging and underexplored due to the complexity of real-world bias distributions. To tackle the problem, we propose a fine-grained framework for analyzing biased distributions, based on which we empirically and theoretically identify key characteristics of biased distributions in the real world that are poorly represented by existing benchmarks. Towards applicable debiasing in the real world, we further introduce two novel real-world-inspired biases to bridge this gap and build a systematic evaluation framework for real-world debiasing, RDBench\\footnote{RDBench: Code to be released. Preliminary version in supplementary material for anonimized review.}. Furthermore, focusing on the practical setting of debiasing w/o bias label, we find real-world biases pose a novel \\textit{Sparse bias capturing} challenge to the existing paradigm. We propose a simple yet effective approach named Debias in Destruction (DiD), to address the challenge, whose effectiveness is validated with extensive experiments on 8 datasets of various biased distributions.",
+  "category": "mixed",
+  "domain": "machine learning / robustness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Overall accuracy and worst-group (per-group) accuracy / group gap (average per-group accuracy and robustness metrics)",
+  "general_score_metric": "worst-group accuracy (with overall accuracy reported as complementary metric)",
+  "typical_sota_score": "varies widely across datasets and bias types; no single consolidated SOTA (reported results depend strongly on dataset and bias severity)",
+  "year_of_publish": 2024,
+  "reputation": "A recent dataset/framework aimed at improving realism of debiasing evaluations; adoption is emerging within robustness and debiasing research communities.",
+  "notes": "Designed to emulate real-world biased distributions (non-LLM benchmark); introduces sparse-bias capturing challenges; covers multiple datasets and bias types so results are highly dataset-specific; not saturated and sensitive to dataset sampling choices.",
+  "creators": {
+    "scientists": [
+      "Peng Kuang",
+      "Zhibo Wang",
+      "Zhixuan Chu",
+      "Jingyi Wang",
+      "Kui Ren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.15240",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

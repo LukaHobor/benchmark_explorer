@@ -1,0 +1,36 @@
+{
+  "name": "Coronary Hemodynamic Mesh Benchmark",
+  "description": "Coronary artery disease, caused by the narrowing of coronary vessels due to atherosclerosis, is the leading cause of death worldwide. The diagnostic gold standard, fractional flow reserve (FFR), measures the trans-stenotic pressure ratio during maximal vasodilation but is invasive and costly. This has driven the development of virtual FFR (vFFR) using computational fluid dynamics (CFD) to simulate coronary flow. Geometric deep learning algorithms have shown promise for learning features on meshes, including cardiovascular research applications. This study empirically analyzes various backends for predicting vFFR fields in coronary arteries as CFD surrogates, comparing six backends for learning hemodynamics on meshes using CFD solutions as ground truth. The study has two parts: i) Using 1,500 synthetic left coronary artery bifurcations, models were trained to predict pressure-related fields for vFFR reconstruction, comparing different learning variables. ii) Using 427 patient-specific CFD simulations, experiments were repeated focusing on the best-performing learning variable from the synthetic dataset. Most backends performed well on the synthetic dataset, especially when predicting pressure drop over the manifold. Transformer-based backends outperformed others when predicting pressure and vFFR fields and were the only models achieving strong performance on patient-specific data, excelling in both average per-point error and vFFR accuracy in stenotic lesions. These results suggest geometric deep learning backends can effectively replace CFD for simple geometries, while transformer-based networks are superior for complex, heterogeneous datasets. Pressure drop was identified as the optimal network output for learning pressure-related fields.",
+  "category": "mixed",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "mesh_field_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_squared_error (MSE) / L2 (relative L2) / RMSE",
+  "general_score_metric": "relative L2 error / RMSE",
+  "year_of_publish": 2025,
+  "reputation": "A specialized benchmark with modest adoption among researchers in geometric deep learning and medical imaging.",
+  "notes": "Non-LLM benchmark; dataset is specialized and computationally intensive (mesh-based). Limited adoption outside the geometric-deep-learning/medical imaging niche; potential clinical/privacy considerations and sensitivity to mesh preprocessing.",
+  "creators": {
+    "scientists": [
+      "Nannini G",
+      "Suk J",
+      "Rygiel P",
+      "Saitta S",
+      "Mariani L",
+      "Maranga R"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2501.09046",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

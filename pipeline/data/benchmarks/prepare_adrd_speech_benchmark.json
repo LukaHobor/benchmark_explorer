@@ -1,0 +1,36 @@
+{
+  "name": "PREPARE (ADRD speech benchmark)",
+  "description": "Background: Alzheimer's disease and related dementias (ADRD) are progressive neurodegenerative conditions where early detection is vital for timely intervention and care. Spontaneous speech contains rich acoustic and linguistic markers that may serve as non-invasive biomarkers for cognitive decline. Foundation models, pre-trained on large-scale audio or text data, produce high-dimensional embeddings encoding contextual and acoustic features. Methods: We used the PREPARE Challenge dataset, which includes audio recordings from over 1,600 participants with three cognitive statuses: healthy control (HC), mild cognitive impairment (MCI), and Alzheimer's Disease (AD). We excluded non-English, non-spontaneous, or poor-quality recordings. The final dataset included 703 (59.13%) HC, 81 (6.81%) MCI, and 405 (34.06%) AD cases. We benchmarked a range of open-source foundation speech and language models to classify cognitive status into the three categories. Results: The Whisper-medium model achieved the highest performance among speech models (accuracy = 0.731, AUC = 0.802). Among language models, BERT with pause annotation performed best (accuracy = 0.662, AUC = 0.744). ADRD detection using state-of-the-art automatic speech recognition (ASR) model-generated audio embeddings outperformed others. Including non-semantic features like pause patterns consistently improved text-based classification. Conclusion: This study introduces a benchmarking framework using foundation models and a clinically relevant dataset. Acoustic-based approaches -- particularly ASR-derived embeddings -- demonstrate strong potential for scalable, non-invasive, and cost-effective early detection of ADRD.",
+  "category": "audio",
+  "domain": "healthcare / neurology / speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Accuracy (primary) and AUC (ROC) as secondary metric",
+  "general_score_metric": "accuracy (primary), AUC (secondary)",
+  "typical_sota_score": "≈73% accuracy (AUC ≈0.80) reported for top models",
+  "year_of_publish": 2025,
+  "reputation": "Emerging clinical speech benchmark with growing interest for ADRD detection using speech and foundation-model embeddings.",
+  "notes": "Moderate-sized clinical dataset with class imbalance (fewer MCI cases), data filtered for English and spontaneous speech; privacy/clinical constraints apply; performance sensitive to ASR quality and preprocessing; not an LLM benchmark per se.",
+  "creators": {
+    "scientists": [
+      "Jingyu Li",
+      "Lingchao Mao",
+      "Hairong Wang",
+      "Zhendong Wang",
+      "Xi Mao",
+      "Xuelei Sherry Ni"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2506.11119",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

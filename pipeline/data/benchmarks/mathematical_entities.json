@@ -1,0 +1,35 @@
+{
+  "name": "Mathematical Entities",
+  "description": "Mathematics is a highly specialized domain with its own unique set of challenges. Despite this, there has been relatively little research on natural language processing for mathematical texts, and there are few mathematical language resources aimed at NLP. In this paper, we aim to provide annotated corpora that can be used to study the language of mathematics in different contexts, ranging from fundamental concepts found in textbooks to advanced research mathematics. We preprocess the corpora with a neural parsing model and some manual intervention to provide part-of-speech tags, lemmas, and dependency trees. In total, we provide 182397 sentences across three corpora. We then aim to test and evaluate several noteworthy natural language processing models using these corpora, to show how well they can adapt to the domain of mathematics and provide useful tools for exploring mathematical language. We evaluate several neural and symbolic models against benchmarks that we extract from the corpus metadata to show that terminology extraction and definition extraction do not easily generalize to mathematics, and that additional work is needed to achieve good performance on these metrics. Finally, we provide a learning assistant that grants access to the content of these corpora in a context-sensitive manner, utilizing text search and entity linking. Though our corpora and benchmarks provide useful metrics for evaluating mathematical language processing, further work is necessary to adapt models to mathematics in order to provide more effective learning assistants and apply NLP methods to different mathematical domains.",
+  "category": "text",
+  "domain": "mathematics / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "definition_extraction",
+    "part_of_speech_tagging",
+    "dependency_parsing"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 (for NER/definition extraction), exact_match (for definition span recovery), LAS/UAS (for dependency parsing)",
+  "general_score_metric": "F1 (primary for entity/definition extraction); LAS/UAS for parsing",
+  "year_of_publish": 2024,
+  "reputation": "A niche but useful resource for mathematical NLP research; cited in specialized work but not yet widely adopted across general NLP benchmarks.",
+  "notes": "Corpora were preprocessed with a neural parser and manual intervention—possible annotation/processing bias; domain-specific vocabulary and structures limit generalization outside mathematical texts.",
+  "creators": {
+    "scientists": [
+      "Jacob Collard",
+      "Valeria de Paiva",
+      "Eswaran Subrahmanian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2406.11577",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Organ Segmentation Epistemic Uncertainty Benchmark",
+  "description": "Deep learning based methods for automatic organ segmentation have shown promise in aiding diagnosis and treatment planning. However, quantifying and understanding the uncertainty associated with model predictions is crucial in critical clinical applications. While many techniques have been proposed for epistemic or model-based uncertainty estimation, it is unclear which method is preferred in the medical image analysis setting. This paper presents a comprehensive benchmarking study that evaluates epistemic uncertainty quantification methods in organ segmentation in terms of accuracy, uncertainty calibration, and scalability. We provide a comprehensive discussion of the strengths, weaknesses, and out-of-distribution detection capabilities of each method as well as recommendations for future improvements. These findings contribute to the development of reliable and robust models that yield accurate segmentations while effectively quantifying epistemic uncertainty.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "uncertainty_estimation",
+    "out_of_distribution_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice / IoU for segmentation overlap, expected calibration error (ECE) for uncertainty calibration, AUROC for OOD detection",
+  "general_score_metric": "Mean Dice coefficient",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2023,
+  "reputation": "A specialized, well-regarded benchmark within medical-image-analysis research for comparing epistemic uncertainty methods, but used mainly by a niche community.",
+  "notes": "Medical-image benchmark (non-LLM). Results depend heavily on annotation quality and chosen organ(s); OOD scenarios and uncertainty calibration metrics vary by setup. Privacy/clinical data restrictions can limit dataset sizes and reproducibility.",
+  "creators": {
+    "scientists": [
+      "Jadie Adams",
+      "Shireen Y. Elhabian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2308.07506",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

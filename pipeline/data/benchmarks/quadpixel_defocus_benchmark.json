@@ -1,0 +1,37 @@
+{
+  "name": "Quad-Pixel Defocus Benchmark",
+  "description": "Defocus deblurring is a challenging task due to the spatially varying blur. Recent works have shown impressive results in data-driven approaches using dual-pixel (DP) sensors. Quad-pixel (QP) sensors represent an advanced evolution of DP sensors, providing four distinct sub-aperture views in contrast to only two views offered by DP sensors. However, research on QP-based defocus deblurring is scarce. In this paper, we propose a novel end-to-end learning-based approach for defocus deblurring that leverages QP data. To achieve this, we design a QP defocus and all-in-focus image pair acquisition method and provide a QP Defocus Deblurring (QPDD) dataset containing 4,935 image pairs. We then introduce a Local-gate assisted Mamba Network (LMNet), which includes a two-branch encoder and a Simple Fusion Module (SFM) to fully utilize features of sub-aperture views. In particular, our LMNet incorporates a Local-gate assisted Mamba Block (LAMB) that mitigates local pixel forgetting and channel redundancy within Mamba, and effectively captures global and local dependencies. By extending the defocus deblurring task from a DP-based to a QP-based approach, we demonstrate significant improvements in restoring sharp images. Comprehensive experimental evaluations further indicate that our approach outperforms state-of-the-art methods.",
+  "category": "vision",
+  "domain": "computational photography / imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "defocus_deblurring",
+    "image_translation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM (pixel-wise image quality metrics)",
+  "general_score_metric": "PSNR (dB)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, specialized dataset introducing quad-pixel defocus deblurring; currently niche with limited adoption but of interest to computational photography researchers.",
+  "notes": "Relatively small dataset (~4.9k pairs); non-LLM benchmark focused on imaging; common metrics are PSNR/SSIM; potential scene/domain biases and limited diversity compared to large-scale image datasets.",
+  "creators": {
+    "scientists": [
+      "Hang Chen",
+      "Yin Xie",
+      "Xiaoxiu Peng",
+      "Lihu Sun",
+      "Wenkai Su",
+      "Xiaodong Yang",
+      "Chengming Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

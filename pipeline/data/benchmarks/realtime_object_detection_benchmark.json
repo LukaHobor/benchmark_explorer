@@ -1,0 +1,36 @@
+{
+  "name": "Real-Time Object Detection Benchmark",
+  "description": "This work examines the reproducibility and benchmarking of state-of-the-art real-time object detection models. As object detection models are often used in real-world contexts, such as robotics, where inference time is paramount, simply measuring models' accuracy is not enough to compare them. We thus compare a large variety of object detection models' accuracy and inference speed on multiple graphics cards. In addition to this large benchmarking attempt, we also reproduce the following models from scratch using PyTorch on the MS COCO 2017 dataset: DETR, RTMDet, ViTDet and YOLOv7. More importantly, we propose a unified training and evaluation pipeline, based on MMDetection's features, to better compare models. Our implementation of DETR and ViTDet could not achieve accuracy or speed performances comparable to what is declared in the original papers. On the other hand, reproduced RTMDet and YOLOv7 could match such performances. Studied papers are also found to be generally lacking for reproducibility purposes. As for MMDetection pretrained models, speed performances are severely reduced with limited computing resources (larger, more accurate models even more so). Moreover, results exhibit a strong trade-off between accuracy and speed, prevailed by anchor-free models - notably RTMDet or YOLOx models. The code used is this paper and all the experiments is available in the repository at https://github.com/Don767/segdet_mlcr2024.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "speed_benchmarking",
+    "inference_latency_measurement"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "COCO-style mean Average Precision (mAP) combined with inference speed metrics (FPS / latency)",
+  "general_score_metric": "mAP (COCO AP) together with FPS/latency for accuracy-vs-speed comparison",
+  "typical_sota_score": "40–55%",
+  "year_of_publish": 2024,
+  "reputation": "A targeted reproducibility and benchmarking study noted by the object-detection community for highlighting speed/accuracy trade-offs, but not a widely adopted standard benchmark suite.",
+  "notes": "Hardware-dependent latency and implementation details strongly affect results; reproducibility issues reported for some reproduced models; non-LLM benchmark focused on COCO; results sensitive to GPU and pipeline configuration.",
+  "creators": {
+    "scientists": [
+      "Pierre-Luc Asselin",
+      "Vincent Coulombe",
+      "William Guimont-Martin",
+      "William Larrivée-Hardy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.06911",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

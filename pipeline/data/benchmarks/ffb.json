@@ -1,0 +1,39 @@
+{
+  "name": "FFB",
+  "description": "This paper introduces the Fair Fairness Benchmark (\\textsf{FFB}), a benchmarking framework for in-processing group fairness methods. Ensuring fairness in machine learning is important for ethical compliance. However, there exist challenges in comparing and developing fairness methods due to inconsistencies in experimental settings, lack of accessible algorithmic implementations, and limited extensibility of current fairness packages and tools. To address these issues, we introduce an open-source standardized benchmark for evaluating in-processing group fairness methods and provide a comprehensive analysis of state-of-the-art methods to ensure different notions of group fairness. This work offers the following key contributions: the provision of flexible, extensible, minimalistic, and research-oriented open-source code; the establishment of unified fairness method benchmarking pipelines; and extensive benchmarking, which yields key insights from $\\mathbf{45,079}$ experiments, $\\mathbf{14,428}$ GPU hours. We believe that our work will significantly facilitate the growth and development of the fairness research community.",
+  "category": "mixed",
+  "domain": "machine learning fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "group_fairness_evaluation",
+    "performance-vs-fairness_tradeoff_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "utility + fairness metrics (accuracy/AUC alongside fairness measures such as demographic parity gap, equalized odds gap, disparate impact); comparisons often use Pareto/frontier analyses",
+  "general_score_metric": "paired reporting of predictive performance (accuracy/AUC) and fairness metrics (demographic parity/equalized odds gaps)",
+  "typical_sota_score": "varies by dataset and fairness constraint; no single unified SOTA because methods trade off accuracy and fairness",
+  "year_of_publish": 2023,
+  "reputation": "Open-source benchmarking framework that is gaining adoption in the fairness research community for standardized in-processing comparisons.",
+  "notes": "Focuses on in-processing group-fairness methods and reproducibility; computationally intensive (reported tens of thousands of experiments / many GPU hours); not a single-task benchmark and not LLM-focused.",
+  "creators": {
+    "scientists": [
+      "Xiaotian Han",
+      "Jianfeng Chi",
+      "Yu Chen",
+      "Qifan Wang",
+      "Han Zhao",
+      "Na Zou",
+      "Xia Hu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2306.09468",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

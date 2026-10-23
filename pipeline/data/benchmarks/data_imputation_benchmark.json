@@ -1,0 +1,36 @@
+{
+  "name": "Data Imputation Benchmark",
+  "description": "With the increasing importance and complexity of data pipelines, data quality became one of the key challenges in modern software applications. The importance of data quality has been recognized beyond the field of data engineering and database management systems (DBMSs). Also, for machine learning (ML) applications, high data quality standards are crucial to ensure robust predictive performance and responsible usage of automated decision making. One of the most frequent data quality problems is missing values. Incomplete datasets can break data pipelines and can have a devastating impact on downstream ML applications when not detected. While statisticians and, more recently, ML researchers have introduced a variety of approaches to impute missing values, comprehensive benchmarks comparing classical and modern imputation approaches under fair and realistic conditions are underrepresented. Here, we aim to fill this gap. We conduct a comprehensive suite of experiments on a large number of datasets with heterogeneous data and realistic missingness conditions, comparing both novel deep learning approaches and classical ML imputation methods when either only test or train and test data are affected by missing data. Each imputation method is evaluated regarding the imputation quality and the impact imputation has on a downstream ML task. Our results provide valuable insights into the performance of a variety of imputation methods under realistic conditions. We hope that our results help researchers and engineers to guide their data preprocessing method selection for automated data quality improvement.",
+  "category": "mixed",
+  "domain": "tabular ML",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "data_imputation",
+    "regression",
+    "classification",
+    "downstream_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE for imputation quality; downstream predictive metrics such as accuracy or AUC; additional statistics (bias, coverage) for uncertainty-aware methods",
+  "general_score_metric": "imputation error (RMSE / MAE) together with downstream task performance (accuracy / AUC)",
+  "typical_sota_score": "varies by dataset and missingness mechanism; unknown",
+  "year_of_publish": 2021,
+  "reputation": "208 citations",
+  "notes": "Non-LLM tabular benchmark; many experiments rely on synthetic missingness (MCAR/MAR) which may not reflect real-world MNAR cases; performance depends strongly on missingness mechanism and dataset heterogeneity.",
+  "creators": {
+    "scientists": [
+      "Sebastian Jäger",
+      "Arndt Allhorn",
+      "Felix Bießmann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.3389/fdata.2021.693674",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

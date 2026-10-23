@@ -1,0 +1,39 @@
+{
+  "name": "CAMI (Critical Assessment of Metagenome Interpretation)",
+  "description": "Abstract In metagenome analysis, computational methods for assembly, taxonomic profiling and binning are key components facilitating downstream biological data interpretation. However, a lack of consensus about benchmarking datasets and evaluation metrics complicates proper performance assessment. The Critical Assessment of Metagenome Interpretation (CAMI) challenge has engaged the global developer community to benchmark their programs on datasets of unprecedented complexity and realism. Benchmark metagenomes were generated from ~700 newly sequenced microorganisms and ~600 novel viruses and plasmids, including genomes with varying degrees of relatedness to each other and to publicly available ones and representing common experimental setups. Across all datasets, assembly and genome binning programs performed well for species represented by individual genomes, while performance was substantially affected by the presence of related strains. Taxonomic profiling and binning programs were proficient at high taxonomic ranks, with a notable performance decrease below the family level. Parameter settings substantially impacted performances, underscoring the importance of program reproducibility. While highlighting current challenges in computational metagenomics, the CAMI results provide a roadmap for software selection to answer specific research questions.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "assembly",
+    "taxonomic_profiling",
+    "genome_binning",
+    "strain_resolution"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 / precision / recall (plus specialized metrics per subtask such as completeness, contamination, ARI, and L1 abundance error)",
+  "general_score_metric": "F1 (subtask-dependent; supplemented by completeness/contamination or L1 error where appropriate)",
+  "typical_sota_score": "varies by subtask (e.g., species-level profiling/binning F1 often 0.8–0.95; strain-level performance can drop to 0.2–0.6)",
+  "year_of_publish": 2017,
+  "reputation": "53 citations",
+  "notes": "Non-LLM, domain-specific benchmark with complex simulated and real metagenomes; results are sensitive to parameter choices and reference database overlap, and some subtasks have high variability depending on dataset composition.",
+  "creators": {
+    "scientists": [
+      "Alexander Sczyrba",
+      "Peter Hofmann",
+      "Peter Belmann",
+      "David Koslicki",
+      "Stefan Janssen",
+      "Johannes Dröge"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/099127",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

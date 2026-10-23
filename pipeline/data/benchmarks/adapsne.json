@@ -1,0 +1,27 @@
+{
+  "name": "AdapSNE",
+  "description": "Training deep neural networks (DNNs) on edge devices faces challenges due to the large-scale datasets required, which are costly for edge devices, especially in large language model (LLM) tasks. To address this, a DNN-free method called Near-Memory Sampling (NMS) has been introduced. NMS reduces dimensionality and performs exemplar sampling in the reduced space, avoiding architectural bias and improving generalization. However, NMS has two limitations: 1) The mismatch between the search method and the non-monotonic property of the perplexity error function leads to the emergence of outliers; 2) Key parameter (i.e., target perplexity) is selected empirically, introducing arbitrariness and leading to uneven sampling. These two issues lead to representative bias of exemplars, resulting in degraded accuracy. To overcome these, we propose AdapSNE, which integrates the Fireworks Algorithm (FWA) for efficient non-monotonic search to avoid outliers and uses entropy-guided optimization for uniform sampling, ensuring representative training samples. To reduce the cost of iterative computations, we design an accelerator with custom dataflow and time-multiplexing mechanisms. Experimental results show that AdapSNE outperforms state-of-the-art methods, including both DNN-based (DQAS) and DNN-free (NMS) approaches, across small-scale image datasets, large-scale datasets, and the MMLU benchmark for LLM tasks.",
+  "category": "vision",
+  "domain": "edge deep learning",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2026,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/tcsi.2026.3667183",
+  "provenance": {
+    "added_by": "scan-2026q2",
+    "added_at": "2026-08-19",
+    "origin": "cynefin@d486fafa9",
+    "gated": false,
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

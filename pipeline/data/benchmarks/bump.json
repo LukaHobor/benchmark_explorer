@@ -1,0 +1,38 @@
+{
+  "name": "BUMP",
+  "description": "The proliferation of automatic faithfulness metrics for summarization has produced a need for benchmarks to evaluate them. While existing benchmarks measure the correlation with human judgements of faithfulness on model-generated summaries, they are insufficient for diagnosing whether metrics are: 1) consistent, i.e., indicate lower faithfulness as errors are introduced into a summary, 2) effective on human-written texts, and 3) sensitive to different error types (as summaries can contain multiple errors). To address these needs, we present a benchmark of unfaithful minimal pairs (BUMP), a dataset of 889 human-written, minimally different summary pairs, where a single error is introduced to a summary from the CNN/DailyMail dataset to produce an unfaithful summary. We find BUMP complements existing benchmarks in a number of ways: 1) the summaries in BUMP are harder to discriminate and less probable under SOTA summarization models, 2) unlike non-pair-based datasets, BUMP can be used to measure the consistency of metrics, and reveals that the most discriminative metrics tend not to be the most consistent, and 3) unlike datasets containing generated summaries with multiple errors, BUMP enables the measurement of metrics' performance on individual error types.",
+  "category": "text",
+  "domain": "natural language processing / summarization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_comparison",
+    "binary_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (pairwise discrimination)",
+  "general_score_metric": "accuracy (percentage of correct pairwise preference indicating the faithful summary)",
+  "year_of_publish": 2022,
+  "reputation": "Recognized in the summarization/faithfulness community as a useful, targeted diagnostic dataset for minimal unfaithful pairs.",
+  "notes": "Relatively small (889 pairs) and focused on CNN/DailyMail; designed for minimal single-error analysis—may not generalize to multi-error or model-generated-summary settings; potential overlap/contamination with pretraining data.",
+  "creators": {
+    "scientists": [
+      "Liang Ma",
+      "Shuyang Cao",
+      "Robert L. Logan IV",
+      "Di Lu",
+      "Shihao Ran",
+      "Ke Zhang",
+      "Joel Tetreault",
+      "Alejandro Jaimes"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2212.09955",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

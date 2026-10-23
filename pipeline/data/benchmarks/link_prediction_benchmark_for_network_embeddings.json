@@ -1,0 +1,35 @@
+{
+  "name": "Link Prediction Benchmark for Network Embeddings",
+  "description": "Network embedding methods map a network's nodes to vectors in an embedding space, in such a way that these representations are useful for estimating some notion of similarity or proximity between pairs of nodes in the network. The quality of these node representations is then showcased through results of downstream prediction tasks. Commonly used benchmark tasks such as link prediction, however, present complex evaluation pipelines and an abundance of design choices. This, together with a lack of standardized evaluation setups can obscure the real progress in the field. In this paper, we aim to shed light on the state-of-the-art of network embedding methods for link prediction and show, using a consistent evaluation pipeline, that only thin progress has been made over the last years. The newly conducted benchmark that we present here, including 17 embedding methods, also shows that many approaches are outperformed even by simple heuristics. Finally, we argue that standardized evaluation tools can repair this situation and boost future progress in this field.",
+  "category": "mixed",
+  "domain": "graph / network science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "edge_prediction",
+    "ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUC / Average Precision / Hits@k (ranking/ROC-based metrics; task-dependent)",
+  "general_score_metric": "AUC",
+  "typical_sota_score": "80–95% (AUC, varies by dataset and preprocessing)",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded in the network-embedding community as a standardized evaluation highlighting that progress on link prediction has been modest and often sensitive to evaluation choices.",
+  "notes": "Results are highly sensitive to negative-sampling strategy, dataset splits, and preprocessing; simple heuristics can outperform complex embeddings on some datasets; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Alexandru Mara",
+      "Jefrey Lijffijt",
+      "Tijl De Bie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2002.11522",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

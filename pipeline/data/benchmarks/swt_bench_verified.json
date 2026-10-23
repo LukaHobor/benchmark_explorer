@@ -1,0 +1,42 @@
+{
+  "name": "SWT-Bench Verified",
+  "description": "A human-verified 433-instance split of SWT-Bench where instances have been quality-checked to ensure reproducibility and well-formed test conditions. Models must generate unit tests that fail before the canonical bug-fix patch and pass after, across 12 popular Python repositories. The verified split is the primary leaderboard target for reporting state-of-the-art test-generation results.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "code_generation",
+    "unit_test_generation",
+    "bug_reproduction"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 433,
+  "evaluation_method": "success rate (tests fail before patch, pass after); coverage increase (ΔC) on resolving patch",
+  "general_score_metric": "success rate 𝒮 (% of issues reproduced); coverage increase ΔC",
+  "typical_sota_score": "~87% success, ~70% ΔC (TEX-T by Salesforce using Claude Sonnet, 2025); ~84% (LogicStar L*Agent v1); ~80% (OpenHands with GPT-5); baseline pass-to-pass rate: 15.01%",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "NeurIPS 2024; the standard leaderboard split for SWT-Bench; human-verified instances ensure evaluation quality; leaderboard at swtbench.com; top venue for reporting test-generation SOTA",
+  "notes": "433-instance human-verified subset of SWT-Bench Full. Primary leaderboard split. BM25 retrieval provides 27k-token context (cl100k_base). Two prompt formats: eth-sri/SWT-bench_Verified_bm25_27k_zsb and eth-sri/SWT-bench_Verified_bm25_27k_zsp. Upper bound (gold oracle pass-to-pass rate) is 15.01%, reflecting that many canonical patches lack comprehensive test coverage. arXiv: 2406.12952.",
+  "creators": {
+    "scientists": [
+      "Niels Mündler",
+      "Mark Niklas Müller",
+      "Jingxuan He",
+      "Martin Vechev"
+    ],
+    "institutions": [
+      "ETH Zurich (SRI Lab — Secure, Reliable, and Intelligent Systems Lab)"
+    ],
+    "companies": [
+      "LogicStar AI"
+    ]
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2406.12952",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-05-05",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

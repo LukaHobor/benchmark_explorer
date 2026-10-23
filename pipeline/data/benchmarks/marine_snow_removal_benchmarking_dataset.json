@@ -1,0 +1,37 @@
+{
+  "name": "Marine Snow Removal Benchmarking Dataset",
+  "description": "This paper introduces a new benchmarking dataset for marine snow removal of underwater images. Marine snow is one of the main degradation sources of underwater images that are caused by small particles, e.g., organic matter and sand, between the underwater scene and photosensors. We mathematically model two typical types of marine snow from the observations of real underwater images. The modeled artifacts are synthesized with underwater images to construct large-scale pairs of ground truth and degraded images to calculate objective qualities for marine snow removal and to train a deep neural network. We propose two marine snow removal tasks using the dataset and show the first benchmarking results of marine snow removal. The Marine Snow Removal Benchmarking Dataset is publicly available online.",
+  "category": "vision",
+  "domain": "underwater imaging / marine robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_denoising",
+    "image_restoration",
+    "image_translation",
+    "supervised_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "PSNR and SSIM (objective image-quality metrics), supplemented by qualitative visual inspection",
+  "general_score_metric": "PSNR (primary), SSIM reported",
+  "year_of_publish": 2021,
+  "reputation": "A niche, research-focused benchmark introduced for underwater imaging; limited adoption outside the underwater/marine-robotics community.",
+  "notes": "Synthetic marine-snow models are used to generate paired data; may not fully capture real-world variability of marine snow. Dataset is image-restoration specific (non-LLM). Evaluation can be sensitive to color correction and exposure normalization.",
+  "creators": {
+    "scientists": [
+      "Reina Kaneko",
+      "Yuya Sato",
+      "Takumi Ueda",
+      "Hiroshi Higashi",
+      "Yuichi Tanaka"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2103.14249",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

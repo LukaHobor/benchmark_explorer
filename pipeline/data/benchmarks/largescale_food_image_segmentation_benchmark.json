@@ -1,0 +1,39 @@
+{
+  "name": "Large-Scale Food Image Segmentation Benchmark",
+  "description": "Food image segmentation is a critical and indispensible task for developing health-related applications such as estimating food calories and nutrients. Existing food image segmentation models are underperforming due to two reasons: (1) there is a lack of high quality food image datasets with fine-grained ingredient labels and pixel-wise location masks -- the existing datasets either carry coarse ingredient labels or are small in size; and (2) the complex appearance of food makes it difficult to localize and recognize ingredients in food images, e.g., the ingredients may overlap one another in the same image, and the identical ingredient may appear distinctly in different food images. In this work, we build a new food image dataset FoodSeg103 (and its extension FoodSeg154) containing 9,490 images. We annotate these images with 154 ingredient classes and each image has an average of 6 ingredient labels and pixel-wise masks. In addition, we propose a multi-modality pre-training approach called ReLeM that explicitly equips a segmentation model with rich and semantic food knowledge. In experiments, we use three popular semantic segmentation methods (i.e., Dilated Convolution based, Feature Pyramid based, and Vision Transformer based) as baselines, and evaluate them as well as ReLeM on our new datasets. We believe that the FoodSeg103 (and its extension FoodSeg154) and the pre-trained models using ReLeM can serve as a benchmark to facilitate future works on fine-grained food image understanding. We make all these datasets and methods public at \\url{https://xiongweiwu.github.io/foodseg103.html}.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU (mean Intersection over Union) / pixel accuracy / F1 (Dice) for segmentation; mAP/mask AP for instance outputs",
+  "general_score_metric": "mIoU (mean Intersection over Union)",
+  "typical_sota_score": "30–50% mIoU",
+  "year_of_publish": 2021,
+  "reputation": "Moderately known within the food-vision research community; used by a niche of fine-grained food segmentation works but not a broadly adopted benchmark outside that area.",
+  "notes": "Moderate-size dataset (≈9.5k images) with fine-grained, imbalanced classes and overlapping ingredients; annotation noise and class imbalance can affect results. Non-LLM benchmark focused on vision/segmentation.",
+  "creators": {
+    "scientists": [
+      "Xiongwei Wu",
+      "Xin Fu",
+      "Ying Liu",
+      "Ee-Peng Lim",
+      "Steven C. H. Hoi",
+      "Qianru Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2105.05409",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

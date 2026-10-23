@@ -1,0 +1,36 @@
+{
+  "name": "TIDE",
+  "description": "This paper investigates the capacity of small language models (0.5B-5B parameters) to generate empathetic responses for individuals with PTSD. We introduce Trauma-Informed Dialogue for Empathy (TIDE), a novel dataset comprising 10,000 two-turn conversations across 500 diverse, clinically-grounded PTSD personas (https://huggingface.co/datasets/yenopoya/TIDE). Using frontier model outputs as ground truth, we evaluate eight small LLMs in zero-shot settings and after fine-tuning. Fine-tuning enhances empathetic capabilities, improving cosine similarity and perceived empathy, although gains vary across emotional scenarios and smaller models exhibit a \"knowledge transfer ceiling.\" As expected, Claude Sonnet 3.5 consistently outperforms all models, but surprisingly, the smaller models often approach human-rated empathy levels. Demographic analyses showed that older adults favored responses that validated distress before offering support (p = .004), while graduate-educated users preferred emot",
+  "category": "text",
+  "domain": "social cognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "empathetic_response_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "cosine_similarity",
+  "year_of_publish": 2025,
+  "reputation": "A new, niche benchmark introduced in the paper; it is not yet widely adopted but is notable for PTSD-focused empathetic dialogue evaluation.",
+  "notes": "Small dataset (10,000 two-turn conversations) with frontier-model-generated reference responses; includes human-rated empathy and cosine similarity, so results may depend on reference-model bias and limited clinical coverage.",
+  "creators": {
+    "scientists": [
+      "Suhas BN",
+      "Yash Mahajan",
+      "Dominik Mattioli",
+      "Andrew M. Sherrill",
+      "Rosa I. Arriaga",
+      "Chris W. Wiese"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2505.15065",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

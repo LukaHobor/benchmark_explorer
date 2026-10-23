@@ -1,0 +1,35 @@
+{
+  "name": "CFD Algorithm Derivation Benchmark for LRMs",
+  "description": "This study examines the application of Large Reasoning Model (LRM)-based artificial intelligence (AI) agents to accelerate scientific discovery, with a specific focus on the rapid prototyping of numerical algorithms. The research demonstrates that current-generation LRM-based AI agents, when collaborating with human experts, can significantly expedite the development of complex algorithms by formalizing a Human-in-the-Loop (HIL) plus Chain-of-Thought (CoT) workflow and introducing, to our knowledge, the first quantitative benchmark of LRMs on a CFD algorithm derivation task. We test the hypothesis that CoT prompting plus domain-expert oversight reduces the derivation error rate and development time of high-order numerical schemes relative to typical prompting, and we instantiate this hypothesis in a cross-model evaluation suite with end-to-end feasibility, from symbolic derivation (polynomials and smoothness indicators) to automated code generation and solver-level validation. The novelty lies in the use of advanced reasoning artificial intelligence (AI) models to assist in the algorithm development process. To this end, the derivation of key formulae within the widely utilized Weighted Essentially Non-Oscillatory (WENO) algorithm –a high-order algorithm applicable to various fields such as fluid dynamics, astrophysics, and medical imaging– serves as a case study. We employ the WENO algorithm as a test case to help evaluate and demonstrate the capabilities of several AI models in this context, thereby laying the foundation for future research and development in this field. The interaction between a human expert and an LRM was examined in the context of designing and deploying a WENO scheme for simulating vortical flows. Initial AI-generated responses, while generally accurate, required iterative refinement guided by expert knowledge and a CoT approach to correct minor errors and optimize performance. This iterative process demonstrated the importance of user involvement, fostering both deeper engagement and a clearer understanding of the algorithm’s intricacies. Optimal performance was achieved through a collaborative partnership that leverages the AI’s computational speed and the human’s ability to perform logical decomposition and error detection. This collaborative approach facilitates the rapid development of tailored solutions. This study highlights the transformative potential of AI copilots in scientific research, showing that their effectiveness is maximized through synergy with domain experts. The findings suggest that artificial intelligence is poised to significantly accelerate research and development, driving scientific innovation.",
+  "category": "code",
+  "domain": "scientific computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "symbolic_derivation",
+    "mathematical_reasoning",
+    "code_generation",
+    "program_synthesis",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (derivation correctness + solver validation) with human_eval for iterative HIL steps",
+  "general_score_metric": "derivation_error_rate (primary) with development_time reported as secondary metric",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Small, specialized benchmark focused on WENO derivations; human-in-the-loop refinement is integral to evaluation; potential contamination if models were pretrained on similar derivations; not saturated and sensitive to prompt/coaching protocol.",
+  "creators": {
+    "scientists": [
+      "I. Kokkinakis",
+      "Dimitris Drikakis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

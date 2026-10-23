@@ -1,0 +1,34 @@
+{
+  "name": "Arabic Synonym Enrichment Benchmark",
+  "description": "This paper addresses the task of extending a given synset with additional synonyms taking into account synonymy strength as a fuzzy value. Given a mono/multilingual synset and a threshold (a fuzzy value [0-1]), our goal is to extract new synonyms above this threshold from existing lexicons. We present twofold contributions: an algorithm and a benchmark dataset. The dataset consists of 3K candidate synonyms for 500 synsets. Each candidate synonym is annotated with a fuzzy value by four linguists. The dataset is important for (i) understanding how much linguists (dis/)agree on synonymy, in addition to (ii) using the dataset as a baseline to evaluate our algorithm. Our proposed algorithm extracts synonyms from existing lexicons and computes a fuzzy value for each candidate. Our evaluations show that the algorithm behaves like a linguist and its fuzzy values are close to those proposed by linguists (using RMSE and MAE). The dataset and a demo page are publicly available at https://portal.sina.birzeit.edu/synonyms.",
+  "category": "text",
+  "domain": "lexical semantics / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "candidate_generation",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "RMSE, MAE",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2023,
+  "reputation": "A niche resource in Arabic lexical semantics research with limited adoption outside that community.",
+  "notes": "Small dataset (500 synsets, ~3K candidates); annotations are subjective (inter-annotator variability); designed for lexical-resource evaluation rather than large-scale LLM benchmarking.",
+  "creators": {
+    "scientists": [
+      "Sana Ghanem",
+      "Mustafa Jarrar",
+      "Radi Jarrar",
+      "Ibrahim Bounhas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2302.02232",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

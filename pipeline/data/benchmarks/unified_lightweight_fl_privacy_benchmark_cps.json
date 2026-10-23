@@ -1,0 +1,35 @@
+{
+  "name": "Unified Lightweight FL Privacy Benchmark (CPS)",
+  "description": "Federated learning (FL) enables collaborative training on decentralized data, but sharing model updates exposes clients to inference attacks. We introduce a lightweight, open benchmark for an apples-to-apples comparison of orthogonal privacy-enhancing technologies (PETs) under identical, resource-constrained conditions. While our framework supports homomorphic encryption (HE), this study focuses empirically on sample-level differential privacy (DP) and secure aggregation (SA) on a non-IID Fashion-MNIST setup with a shared CNN and optimizer.Across identical settings, we log model utility, communication, computation, and formal privacy. We observe a clear trade-off: the non-private FedAvg baseline reaches 86.50 % test accuracy in 6 rounds to convergence and 202.00 MB total communication. DP (final (ε, δ) = (1.86, 10−5)) drops to 76.30 % accuracy, requires 120 rounds to convergence, and transmits 4.05 GB. SA preserves high utility (82.50 %) with 7 rounds to convergence and 124.00 MB total traffic, adding only modest cryptographic overhead while shielding individual updates from a curious server. Taken together, our unified benchmark and results pro-vide actionable guidance for privacy choices in cyber-physical deployments where latency, bandwidth, and energy are tight.",
+  "category": "mixed",
+  "domain": "cyber-physical systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "privacy_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (primary) and privacy metrics such as differential-privacy epsilon / membership-inference advantage",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "85–95% (accuracy; depends strongly on privacy settings)",
+  "year_of_publish": 2026,
+  "reputation": "A lightweight, conference-level benchmark used to prototype privacy-preserving federated learning in CPS settings; used mainly by FL/privacy researchers for quick comparisons.",
+  "notes": "Small / synthetic-scale benchmark (uses Fashion-MNIST) — may not reflect large-scale CPS deployments. Results are sensitive to choice of privacy mechanism and threat model; potential for saturation on simple tasks. Not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Brice Ockman",
+      "Daniel Commey",
+      "Garth V. Crosby"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/ccnc65079.2026.11366332",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

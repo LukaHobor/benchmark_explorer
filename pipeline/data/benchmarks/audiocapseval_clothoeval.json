@@ -1,0 +1,35 @@
+{
+  "name": "AudioCaps-Eval / Clotho-Eval",
+  "description": "Automated audio captioning aims at generating textual descriptions for an audio clip. To evaluate the quality of generated audio captions, previous works directly adopt image captioning metrics like SPICE and CIDEr, without justifying their suitability in this new domain, which may mislead the development of advanced models. This problem is still unstudied due to the lack of human judgment datasets on caption quality. Therefore, we firstly construct two evaluation benchmarks, AudioCaps-Eval and Clotho-Eval. They are established with pairwise comparison instead of absolute rating to achieve better inter-annotator agreement. Current metrics are found in poor correlation with human annotations on these datasets. To overcome their limitations, we propose a metric named FENSE, where we combine the strength of Sentence-BERT in capturing similarity, and a novel Error Detector to penalize erroneous sentences for robustness. On the newly established benchmarks, FENSE outperforms current metrics",
+  "category": "text",
+  "domain": "audio",
+  "task_types": [
+    "caption_quality_assessment",
+    "pairwise_comparison"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "pairwise preference agreement / correlation with human judgments",
+  "year_of_publish": 2021,
+  "reputation": "Widely used in audio captioning research as a human-judged benchmark for validating caption metrics like FENSE.",
+  "notes": "Benchmark is for evaluating caption quality rather than caption generation directly; pairwise comparisons improve agreement, and standard caption metrics correlate poorly with human judgments.",
+  "creators": {
+    "scientists": [
+      "Zelin Zhou",
+      "Zhiling Zhang",
+      "Xuenan Xu",
+      "Zeyu Xie",
+      "Mengyue Wu",
+      "Kenny Q. Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2110.04684",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

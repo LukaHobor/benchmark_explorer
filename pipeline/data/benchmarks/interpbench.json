@@ -1,0 +1,35 @@
+{
+  "name": "InterpBench",
+  "description": "Mechanistic interpretability methods aim to identify the algorithm a neural network implements, but it is difficult to validate such methods when the true algorithm is unknown. This work presents InterpBench, a collection of semi-synthetic yet realistic transformers with known circuits for evaluating these techniques. We train simple neural networks using a stricter version of Interchange Intervention Training (IIT) which we call Strict IIT (SIIT). Like the original, SIIT trains neural networks by aligning their internal computation with a desired high-level causal model, but it also prevents non-circuit nodes from affecting the model's output. We evaluate SIIT on sparse transformers produced by the Tracr tool and find that SIIT models maintain Tracr's original circuit while being more realistic. SIIT can also train transformers with larger circuits, like Indirect Object Identification (IOI). Finally, we use our benchmark to evaluate existing circuit discovery techniques.",
+  "category": "text",
+  "domain": "machine learning (interpretability)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "interpretability",
+    "circuit_identification",
+    "model_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (fraction of circuit components or interventions correctly identified)",
+  "general_score_metric": "circuit_recovery_rate (fraction of ground-truth circuit elements correctly recovered)",
+  "year_of_publish": 2024,
+  "reputation": "A niche benchmark introduced for mechanistic interpretability research; limited but growing adoption among circuit-discovery researchers.",
+  "notes": "Semi-synthetic, transformer-focused benchmark (non-LLM evaluation); useful for controlled validation but may not fully reflect behavior on large real-world models; risk of methods overfitting to synthetic circuit patterns.",
+  "creators": {
+    "scientists": [
+      "Rohan Gupta",
+      "Iván Arcuschin",
+      "Thomas Kwa",
+      "Adrià Garriga-Alonso"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2407.14494",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

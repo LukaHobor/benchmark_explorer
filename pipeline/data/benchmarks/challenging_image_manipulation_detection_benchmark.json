@@ -1,0 +1,33 @@
+{
+  "name": "Challenging Image Manipulation Detection Benchmark",
+  "description": "The ability to detect manipulation in multimedia data is vital in digital forensics. Existing Image Manipulation Detection (IMD) methods are mainly based on detecting anomalous features arisen from image editing or double compression artifacts. All existing IMD techniques encounter challenges when it comes to detecting small tampered regions from a large image. Moreover, compression-based IMD approaches face difficulties in cases of double compression of identical quality factors. To investigate the State-of-The-Art (SoTA) IMD methods in those challenging conditions, we introduce a new Challenging Image Manipulation Detection (CIMD) benchmark dataset, which consists of two subsets, for evaluating editing-based and compression-based IMD methods, respectively. The dataset images were manually taken and tampered with high-quality annotations. In addition, we propose a new two-branch network model based on HRNet that can better detect both the image-editing and compression artifacts in those challenging conditions. Extensive experiments on the CIMD benchmark show that our model significantly outperforms SoTA IMD methods on CIMD.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pixel_level_segmentation",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (pixel-level) / IoU",
+  "general_score_metric": "pixel-level F1",
+  "year_of_publish": 2023,
+  "reputation": "Recently proposed specialized benchmark for challenging manipulation and compression scenarios; limited adoption so far but of interest to the forensics community.",
+  "notes": "Small, specialized dataset with two focused subsets (editing-based and compression-based); manually created high-quality annotations; designed to stress detection of small tampered regions and identical double-compression—may not reflect broader real-world distributions and is a non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Zhenfei Zhang",
+      "Mingyang Li",
+      "Ming-Ching Chang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.14218",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

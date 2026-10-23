@@ -1,0 +1,39 @@
+{
+  "name": "Solomon and Gehring-Homberger VRPTW Instances",
+  "description": "The canonical benchmark instances for the Vehicle Routing Problem with Time Windows (VRPTW). Solomon (1987) defined 56 instances of 100 customers organized into six classes (R1, R2, C1, C2, RC1, RC2) that vary geographic distribution (random, clustered, mixed) and time-window tightness. Gehring and Homberger (1999) extended the design to large-scale instances of 200 to 1000 customers. Solutions are scored hierarchically: first by the number of vehicles used, then by total travelled distance, against published best-known solutions.",
+  "category": "mixed",
+  "domain": "combinatorial optimization, operations research, vehicle routing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimization",
+    "routing",
+    "constrained_scheduling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "lexicographic (vehicles, then distance) gap to best-known",
+  "general_score_metric": "number of vehicles, then total distance",
+  "typical_sota_score": "Best-known solutions for the 100-customer Solomon set are largely settled; the large Gehring-Homberger instances are still actively improved by metaheuristics.",
+  "year_of_publish": 1987,
+  "year_of_last_update": 1999,
+  "reputation": "The canonical VRPTW benchmark; nearly every VRPTW solver and metaheuristic since the 1990s reports against the Solomon and Gehring-Homberger sets.",
+  "notes": "Not an LLM benchmark; targets VRPTW solvers and metaheuristics. The two-level objective (vehicles before distance) is a defining convention of the benchmark. Measures solution quality against best-known solutions.",
+  "creators": {
+    "scientists": [
+      "Marius M. Solomon",
+      "Hermann Gehring",
+      "Jorg Homberger"
+    ],
+    "institutions": [
+      "Northeastern University",
+      "FernUniversitat in Hagen"
+    ],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://www.sintef.no/projectweb/top/vrptw/",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-06-23",
+    "origin": "cynefin@d486fafa9"
+  }
+}

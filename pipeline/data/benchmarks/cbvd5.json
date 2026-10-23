@@ -1,0 +1,36 @@
+{
+  "name": "CBVD-5",
+  "description": "Real-time and accurate cattle behavior detection is crucial for improving animal welfare and optimizing livestock management. To address this, this study comprehensively evaluates six community-developed lightweight YOLO (You Only Look Once) models-YOLOv8n, YOLOv9t, YOLOv10n, YOLOv11n, YOLOv12n, and YOLOv13n-for recognizing five key cattle behaviors (standing, lying, foraging, drinking, and rumination) using the custom CBVD-5 dataset. The dataset includes diverse lighting conditions and natural barn environments to reflect real-world monitoring scenarios. All models were assessed using standard object detection metrics (precision, recall, mAP@50, and mAP@50-95) and deployment-oriented indicators including inference time, frames per second (FPS), model size, and training duration to provide a balanced evaluation of accuracy and efficiency. YOLOv13n achieved the highest mAP@50-95 (0.712), while YOLOv11n reached the highest mAP@50 (0.967) and exhibited stable convergence with a good trade-off between detection accuracy and inference speed. YOLOv10n demonstrated the fastest inference speed (1.2 ms/frame, ~833 FPS), making it well-suited for latency-sensitive applications such as continuous barn surveillance. All models maintained compact sizes below 6 MB and real-time throughput exceeding ~300 FPS, confirming their practicality for edge deployment. The results establish a reproducible benchmarking framework for evaluating modern YOLO variants, offering insights into model selection for efficient, scalable, and welfare-oriented livestock monitoring systems.",
+  "category": "vision",
+  "domain": "agriculture",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "behavior_recognition"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mAP (mean Average Precision) with precision/recall reporting",
+  "general_score_metric": "mAP@50-95 (primary), mAP@50 (reported for deployment-oriented comparisons)",
+  "typical_sota_score": "mAP@50-95 ≈ 0.71; mAP@50 up to ≈ 0.96 (model-dependent)",
+  "year_of_publish": 2025,
+  "reputation": "A domain-specific benchmark published with a focused dataset for livestock monitoring; adopted in agricultural computer-vision research but not a broad community standard.",
+  "notes": "Non-LLM vision benchmark; dataset focuses on five cattle behaviors in barn environments—may have limited class diversity and domain shift risk for other farms; emphasizes lightweight models and edge deployment metrics (inference time, FPS, model size).",
+  "creators": {
+    "scientists": [
+      "Zhixiong Wu",
+      "Zenghua Zhang",
+      "Liyuan Chen",
+      "Yongqiang Xiao",
+      "Yifang Gao",
+      "Tianxiang Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

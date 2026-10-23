@@ -1,0 +1,35 @@
+{
+  "name": "ShapeGen (synthetic graph explanation generator)",
+  "description": "Abstract As explanations are increasingly used to understand the behavior of graph neural networks (GNNs), evaluating the quality and reliability of GNN explanations is crucial. However, assessing the quality of GNN explanations is challenging as existing graph datasets have no or unreliable ground-truth explanations. Here, we introduce a synthetic graph data generator, Shape GG en , which can generate a variety of benchmark datasets (e.g., varying graph sizes, degree distributions, homophilic vs. heterophilic graphs) accompanied by ground-truth explanations. The flexibility to generate diverse synthetic datasets and corresponding ground-truth explanations allows Shape GG en to mimic the data in various real-world areas. We include Shape GG en and several real-world graph datasets in a graph explainability library, G raph XAI. In addition to synthetic and real-world graph datasets with ground-truth explanations, G raph XAI provides data loaders, data processing functions, visualizers, GNN model implementations, and evaluation metrics to benchmark GNN explainability methods.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "explanation_generation",
+    "explanation_retrieval",
+    "graph_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUPRC / F1_overlap_with_ground_truth_explanations",
+  "general_score_metric": "AUPRC (area under precision-recall) or F1 overlap between predicted and ground-truth explanatory nodes/edges",
+  "year_of_publish": 2023,
+  "reputation": "134 citations",
+  "notes": "Synthetic data provides ground-truth but may not capture all real-world explanation complexity (simulation gap); allows controlled studies across graph properties; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Chirag Agarwal",
+      "Owen Queen",
+      "Himabindu Lakkaraju",
+      "Marinka Žitnik"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1038/s41597-023-01974-x",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "PathCLIP robustness benchmark",
+  "description": "Accurate image classification and retrieval are of importance for clinical diagnosis and treatment decision-making. The recent contrastive language-image pretraining (CLIP) model has shown remarkable proficiency in understanding natural images. Drawing inspiration from CLIP, PathCLIP is specifically designed for pathology image analysis, utilizing over 200,000 image and text pairs in training. While the performance the PathCLIP is impressive, its robustness under a wide range of image corruptions remains unknown. Therefore, we conduct an extensive evaluation to analyze the performance of PathCLIP on various corrupted images from the datasets of Osteosarcoma and WSSS4LUAD. In our experiments, we introduce seven corruption types including brightness, contrast, Gaussian blur, resolution, saturation, hue, and markup at four severity levels. Through experiments, we find that PathCLIP is relatively robustness to image corruptions and surpasses OpenAI-CLIP and PLIP in zero-shot classification. Among the seven corruptions, blur and resolution can cause server performance degradation of the PathCLIP. This indicates that ensuring the quality of images is crucial before conducting a clinical test. Additionally, we assess the robustness of PathCLIP in the task of image-image retrieval, revealing that PathCLIP performs less effectively than PLIP on Osteosarcoma but performs better on WSSS4LUAD under diverse corruptions. Overall, PathCLIP presents impressive zero-shot classification and retrieval performance for pathology images, but appropriate care needs to be taken when using it. We hope this study provides a qualitative impression of PathCLIP and helps understand its differences from other CLIP models.",
+  "category": "vision",
+  "domain": "medical imaging (pathology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "zero-shot_image_classification",
+    "image_retrieval",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "classification accuracy; retrieval Recall@k",
+  "general_score_metric": "zero-shot classification accuracy and retrieval Recall@k",
+  "typical_sota_score": "classification accuracy typically ~70–95% depending on dataset and corruption severity; retrieval Recall@1 typically ~30–80% (dataset- and corruption-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "A focused robustness evaluation for PathCLIP in pathology contexts; new and of growing interest in medical imaging robustness studies.",
+  "notes": "Domain-specific (pathology) and evaluates robustness to image corruptions (brightness, blur, resolution, saturation, hue, markup); uses relatively small pathology datasets (Osteosarcoma, WSSS4LUAD); non-LLM benchmark; performance sensitive to image quality.",
+  "creators": {
+    "scientists": [
+      "Sunyi Zheng",
+      "Xiaonan Cui",
+      "Yuxuan Sun",
+      "Jingxiong Li",
+      "Honglin Li",
+      "Yunlong Zhang",
+      "Pingyi Chen",
+      "Xueping Jing",
+      "Zhaoxiang Ye",
+      "Lin Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2401.02651",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

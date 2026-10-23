@@ -1,0 +1,33 @@
+{
+  "name": "Advection-Diffusion Quantum Algorithms Benchmark",
+  "description": "We investigate the potential of near-term quantum algorithms for solving partial differential equations (PDEs), focusing on a linear one-dimensional advection-diffusion equation as a test case. This study benchmarks a ground-state algorithm, Variational Quantum Eigensolver (VQE), against three leading quantum dynamics algorithms, Trotterization, Variational Quantum Imaginary Time Evolution (VarQTE), and Adaptive Variational Quantum Dynamics Simulation (AVQDS), applied to the same PDE on small quantum hardware. While Trotterization is fully quantum, VarQTE and AVQDS are variational algorithms that reduce circuit depth for noisy intermediate-scale quantum (NISQ) devices. However, hardware results from these dynamics methods show sizable errors due to noise and limited shot statistics. To establish a noise-free performance baseline, we implement the VQE-based solver on a noiseless statevector simulator. Our results show VQE can reach final-time infidelities as low as ${O}(10^{-9})$ with $N=4$ qubits and moderate circuit depths, outperforming hardware-deployed dynamics methods that show infidelities $\\gtrsim 10^{-1}$. By comparing noiseless VQE to shot-based and hardware-run algorithms, we assess their accuracy and resource demands, providing a baseline for future quantum PDE solvers. We conclude with a discussion of limitations and potential extensions to higher-dimensional, nonlinear PDEs relevant to engineering and finance.",
+  "category": "mixed",
+  "domain": "quantum computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "quantum_simulation",
+    "pde_solving",
+    "algorithm_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "infidelity (final-time) and resource-based metrics (circuit depth, gate count, runtime)",
+  "general_score_metric": "final-time infidelity",
+  "typical_sota_score": "1e-9–1e-1 (infidelity)",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Non-LLM benchmark; small-system (N=4) noiseless simulator baselines vs noisy hardware results; hardware/shot noise and limited qubit counts limit generalization to larger PDEs; resource and noise sensitivity are major caveats.",
+  "creators": {
+    "scientists": [
+      "A. Ozguler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2503.24045",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

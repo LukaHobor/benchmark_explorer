@@ -1,0 +1,40 @@
+{
+  "name": "IrrMap",
+  "description": "We introduce IrrMap, the first large-scale dataset (1.1 million patches) for irrigation method mapping across regions. IrrMap consists of multi-resolution satellite imagery from LandSat and Sentinel, along with key auxiliary data such as crop type, land use, and vegetation indices. The dataset spans 1,687,899 farms and 14,117,330 acres across multiple western U.S. states from 2013 to 2023, providing a rich and diverse foundation for irrigation analysis and ensuring geospatial alignment and quality control. The dataset is ML-ready, with standardized 224x224 GeoTIFF patches, the multiple input modalities, carefully chosen train-test-split data, and accompanying dataloaders for seamless deep learning model training andbenchmarking in irrigation mapping. The dataset is also accompanied by a complete pipeline for dataset generation, enabling researchers to extend IrrMap to new regions for irrigation data collection or adapt it with minimal effort for other similar applications in agricultural and geospatial analysis. We also analyze the irrigation method distribution across crop groups, spatial irrigation patterns (using Shannon diversity indices), and irrigated area variations for both LandSat and Sentinel, providing insights into regional and resolution-based differences. To promote further exploration, we openly release IrrMap, along with the derived datasets, benchmark models, and pipeline code, through a GitHub repository: https://github.com/Nibir088/IrrMap and Data repository: https://huggingface.co/Nibir/IrrMap, providing comprehensive documentation and implementation details.",
+  "category": "vision",
+  "domain": "remote sensing / agriculture (irrigation mapping)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "reputation": "Emerging dataset in the remote sensing / agricultural ML community with growing interest for irrigation mapping research.",
+  "notes": "Large-scale geospatial dataset; potential class imbalance and geographic bias across regions and sensors. Temporal leakage/contamination risk if train/test splits are not carefully enforced. Non-LLM, vision-focused benchmark (patch-level labels); performance may saturate for some classes at high resolutions.",
+  "creators": {
+    "scientists": [
+      "Nibir Chandra Mandal",
+      "Oishee Bintey Hoque",
+      "Abhijin Adiga",
+      "Samarth Swarup",
+      "Mandy Wilson",
+      "Lu Feng",
+      "Yangfeng Ji",
+      "Miaomiao Zhang",
+      "Geoffrey Fox",
+      "Madhav Marathe"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.08273",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

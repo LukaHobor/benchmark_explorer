@@ -1,0 +1,38 @@
+{
+  "name": "Schrödinger Bridge / Continuous EOT Benchmark",
+  "description": "Over the last several years, there has been significant progress in developing neural solvers for the Schr\\\"odinger Bridge (SB) problem and applying them to generative modelling. This new research field is justifiably fruitful as it is interconnected with the practically well-performing diffusion models and theoretically grounded entropic optimal transport (EOT). Still, the area lacks non-trivial tests allowing a researcher to understand how well the methods solve SB or its equivalent continuous EOT problem. We fill this gap and propose a novel way to create pairs of probability distributions for which the ground truth OT solution is known by the construction. Our methodology is generic and works for a wide range of OT formulations, in particular, it covers the EOT which is equivalent to SB (the main interest of our study). This development allows us to create continuous benchmark distributions with the known EOT and SB solutions on high-dimensional spaces such as spaces of images. As an illustration, we use these benchmark pairs to test how well existing neural EOT/SB solvers actually compute the EOT solution. Our code for constructing benchmark pairs under different setups is available at: https://github.com/ngushchin/EntropicOTBenchmark.",
+  "category": "mixed",
+  "domain": "optimal transport / generative modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "generative_modeling",
+    "optimal_transport"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Optimal transport objective error (entropic OT / Sinkhorn distance) and sample-quality measures (e.g., FID) where applicable",
+  "general_score_metric": "Entropic OT objective error / Sinkhorn distance (distance to ground-truth transport plan)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "A niche, research-oriented synthetic benchmark created to provide ground-truth continuous EOT/SB solutions; used by researchers working on neural Schrödinger Bridge / entropic OT methods but not broadly adopted outside that community.",
+  "notes": "Continuous synthetic benchmark with constructed ground-truth transport solutions — useful for method diagnosis. Not a standard large-scale dataset; evaluations can be computationally expensive and results are specific to OT-related metrics rather than generic generative-quality metrics.",
+  "creators": {
+    "scientists": [
+      "Nikita Gushchin",
+      "Alexander Kolesov",
+      "Petr Mokrov",
+      "Polina Karpikova",
+      "Andrey Spiridonov",
+      "Evgeny Burnaev",
+      "Alexander Korotin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2306.10161",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

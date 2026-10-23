@@ -1,0 +1,36 @@
+{
+  "name": "Lake Extraction Benchmark (LEPrompter)",
+  "description": "Lake extraction from remote sensing imagery is a complex challenge due to the varied lake shapes and data noise. Current methods rely on multispectral image datasets, making it challenging to learn lake features accurately from pixel arrangements. This, in turn, affects model learning and the creation of accurate segmentation masks. This paper introduces a prompt-based dataset construction approach that provides approximate lake locations using point, box, and mask prompts. We also propose a two-stage prompt enhancement framework, LEPrompter, with prompt-based and prompt-free stages during training. The prompt-based stage employs a prompt encoder to extract prior information, integrating prompt tokens and image embedding through self- and cross-attention in the prompt decoder. Prompts are deactivated to ensure independence during inference, enabling automated lake extraction without introducing additional parameters and GFlops. Extensive experiments showcase performance improvements of our proposed approach compared to the previous state-of-the-art method. The source code is available at https://github.com/BastianChen/LEPrompter.",
+  "category": "vision",
+  "domain": "remote sensing / earth observation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "image_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean Intersection over Union (mIoU), Dice / F1 for binary masks",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2023,
+  "reputation": "New dataset/framework introduced in a single paper (2023); currently has limited community adoption outside the paper's experiments.",
+  "notes": "Prompt-based dataset construction; prompts are deactivated at inference. Potential geographic and sensor biases from the source imagery; dataset and results primarily reported in a single paper (limited external validation). Not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Ben Chen",
+      "Xuechao Zou",
+      "Kai Li",
+      "Yu Zhang",
+      "Junliang Xing",
+      "Pin Tao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.08443",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

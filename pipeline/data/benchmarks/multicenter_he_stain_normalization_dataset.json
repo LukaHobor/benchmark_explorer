@@ -1,0 +1,38 @@
+{
+  "name": "Multicenter H&E Stain Normalization Dataset",
+  "description": "Hematoxylin and Eosin (H&E) has been the gold standard in tissue analysis for decades, however, tissue specimens stained in different laboratories vary, often significantly, in appearance. This variation poses a challenge for both pathologists' and AI-based downstream analysis. Minimizing stain variation computationally is an active area of research. To further investigate this problem, we collected a unique multi-center tissue image dataset, wherein tissue samples from colon, kidney, and skin tissue blocks were distributed to 66 different labs for routine H&E staining. To isolate staining variation, other factors affecting the tissue appearance were kept constant. Further, we used this tissue image dataset to compare the performance of eight different stain normalization methods, including four traditional methods, namely, histogram matching, Macenko, Vahadane, and Reinhard normalization, and two deep learning-based methods namely CycleGAN and Pixp2pix, both with two variants each. We used both quantitative and qualitative evaluation to assess the performance of these methods. The dataset's inter-laboratory staining variation could also guide strategies to improve model generalizability through varied training data",
+  "category": "vision",
+  "domain": "medical imaging (histopathology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_translation",
+    "stain_normalization",
+    "domain_adaptation",
+    "visual_quality_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "SSIM (structural similarity) and color-distance (Delta E) alongside qualitative human ratings",
+  "year_of_publish": 2025,
+  "reputation": "A niche, domain-specific dataset used by the histopathology research community for evaluating stain normalization methods; moderately cited within that subfield.",
+  "notes": "Non-LLM benchmark focused on image-to-image normalization; limited number of tissue blocks (multi-center but finite samples); evaluation includes subjective human judgments and task-specific image-similarity metrics; results are hardware- and preprocessing-dependent.",
+  "creators": {
+    "scientists": [
+      "Umair Khan",
+      "Jouni Härkönen",
+      "Marjukka Friman",
+      "Leena Latonen",
+      "Teijo Kuopio",
+      "Pekka Ruusuvuori"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.19106",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

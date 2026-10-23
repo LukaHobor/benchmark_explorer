@@ -1,0 +1,30 @@
+{
+  "name": "Clarify-Then-Search",
+  "description": "Deep search is brittle on underspecified user queries: missing constraints (e.g., time, location, scope, or definitions) often lead to retrieval drift and incomplete answers. Although LLMs can ask clarifying questions, existing evaluations of clarification for deep search remain limited. We introduce a clarify-then-search benchmark to evaluate the ability of LLMs to ask clarifying questions that facilitate deep search. Built on real-world query data from the Baidu search engine, the benchmark contains 518 curated instances that target the scenarios where clarification is most needed: each instance provides an intent query q* (fused_query) and a corresponding underspecified query q (blurred_query). We run a deep-search backbone (we use WebDancer in this study) once per q* to archive evidence and construct a static golden reference as weighted, evidence-grounded nuggets with traceable source identifiers. At evaluation time, a Clarifier asks k ∈ 1, 2, 3 questions; a closed-book User Answerer replies using only information explicitly stated in q* (otherwise returning unknown); and a closed-book Rewriter produces a rewritten query q̃ using only q, and the elicited Q&A pairs. WebDancer then executes on q̃, and we score end-to-end utility by restore_score100 (0–100), a weighted nugget-recall score with partial credit against the static gold. Across all evaluated models, clarification improves over the nointeraction baseline at k = 1, and larger budgets (k = 2, 3) yield further gains. Notably, GPT-5.2 achieves the highest mean score at k = 1, while ERNIE-4.5-Turbo-128K leads the evaluated openweight models at k = 1 and becomes the overall top-performing model at k = 3, surpassing GPT-5.2, Claude-Sonnet-4.5, and Gemini- 2.5-Pro. Interaction diagnostics further reveal a consistent failure mode under strict closed-book clarification: many systems over-ask region-only questions that are often unanswerable from the intent and thus elicit unknown, producing low-yield interactions despite additional turns. Overall, the benchmark enables leakage-resistant and reproducible evaluation of clarify-then-search pipelines, while supporting fine-grained analyses of question utility, answerability, and clarification budget effects in deep search. All data and code are available on the project page: https://clarify-then-search.github.io/.",
+  "category": "text",
+  "domain": "conversational information retrieval",
+  "task_types": [
+    "retrieval",
+    "instruction_following",
+    "generation",
+    "qa"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2026,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://doi.org/10.1145/3770855.3817586",
+  "provenance": {
+    "added_by": "scan-2026q2",
+    "added_at": "2026-08-19",
+    "origin": "cynefin@d486fafa9",
+    "gated": false,
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

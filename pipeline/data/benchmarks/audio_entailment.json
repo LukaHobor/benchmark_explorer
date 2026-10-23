@@ -1,0 +1,37 @@
+{
+  "name": "Audio Entailment",
+  "description": "Recent literature uses language to build foundation models for audio. These Audio-Language Models (ALMs) are trained on a vast number of audio-text pairs and show remarkable performance in tasks including Text-to-Audio Retrieval, Captioning, and Question Answering. However, their ability to engage in more complex open-ended tasks, like Interactive Question-Answering, requires proficiency in logical reasoning- a skill not yet benchmarked. We introduce the novel task of Audio Entailment to evaluate an ALM's deductive reasoning ability. This task assesses whether a text description (hypothesis) of audio content can be deduced from an audio recording (premise), with potential conclusions being entailment, neutral, or contradiction, depending on the sufficiency of the evidence. We create two datasets for this task with audio recordings sourced from two audio captioning datasets-AudioCaps and Clotho-and hypotheses generated using Large Language Models (LLMs). We benchmark state-of-the-art ALMs and find deficiencies in logical reasoning with both zero-shot and linear probe evaluations. Finally, we propose \"caption-before-reason\", an intermediate step of captioning that improves the Zero-Shot and linear-probe performance of ALMs by an absolute 6% and 3%, respectively.",
+  "category": "multimodal",
+  "domain": "audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "three_way_classification",
+    "entailment_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (macro-accuracy recommended); can also report macro F1",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "3 citations",
+  "notes": "Hypotheses are generated with LLMs (possible generation bias/contamination); datasets derived from AudioCaps and Clotho (moderate size); evaluates multimodal logical reasoning rather than purely perceptual ability; labels can be noisy due to subjective judgement of entailment.",
+  "creators": {
+    "scientists": [
+      "Soham Deshmukh",
+      "Shuo Han",
+      "Hazim Bukhari",
+      "Benjamin Elizalde",
+      "Hannes Gamper",
+      "Rita Singh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.1609/aaai.v39i22.34548",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

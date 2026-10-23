@@ -1,0 +1,37 @@
+{
+  "name": "True Detail Restoration Benchmark",
+  "description": "Super-resolution (SR) has become a widely researched topic in recent years. SR methods can improve overall image and video quality and create new possibilities for further content analysis. But the SR mainstream focuses primarily on increasing the naturalness of the resulting image despite potentially losing context accuracy. Such methods may produce an incorrect digit, character, face, or other structural object even though they otherwise yield good visual quality. Incorrect detail restoration can cause errors when detecting and identifying objects both manually and automatically. To analyze the detail-restoration capabilities of image and video SR models, we developed a benchmark based on our own video dataset, which contains complex patterns that SR models generally fail to correctly restore. We assessed 32 recent SR models using our benchmark and compared their ability to preserve scene context. We also conducted a crowd-sourced comparison of restored details and developed an objective assessment metric that outperforms other quality metrics by correlation with subjective scores for this task. In conclusion, we provide a deep analysis of benchmark results that yields insights for future SR-based work.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_super_resolution",
+    "video_super_resolution",
+    "detail_restoration_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval (MOS) with objective metric correlation",
+  "general_score_metric": "Spearman/Pearson correlation with human mean opinion score (MOS)",
+  "year_of_publish": 2022,
+  "reputation": "Niche but respected within the super-resolution community for focusing on detail-preservation; moderate adoption.",
+  "notes": "Non-LLM benchmark based on a custom video dataset; dataset is specialized and relatively small; metric optimized for this task so risk of overfitting to benchmark specifics.",
+  "creators": {
+    "scientists": [
+      "Eugene Lyapustin",
+      "Anastasia Kirillova",
+      "Viacheslav Meshchaninov",
+      "Evgeney Zimin",
+      "Nikolai Karetin",
+      "Dmitriy Vatolin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2203.08923",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

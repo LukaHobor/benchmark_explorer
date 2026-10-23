@@ -1,0 +1,37 @@
+{
+  "name": "GigaGrounding",
+  "description": "Visual grounding refers to the process of associating natural language expressions with corresponding regions within an image. Existing benchmarks for visual grounding primarily operate within small-scale scenes with a few objects. Nevertheless recent advances in imaging technology have enabled the acquisition of gigapixel-level images providing high-resolution details in large-scale scenes containing numerous objects. To bridge this gap between imaging and computer vision benchmarks and make grounding more practically valuable we introduce a novel dataset named GigaGrounding designed to challenge visual grounding models in gigapixel-level large-scale scenes. We extensively analyze and compare the dataset with existing benchmarks demonstrating that GigaGrounding presents unique challenges such as large-scale scene understanding gigapixel-level resolution significant variations in object scales and the \"multi-hop expressions\". Furthermore we introduced a simple yet effective grounding approach which employs a \"glance-to-zoom-in\" paradigm and exhibits enhanced capabilities for addressing the GigaGrounding task. The dataset is available at www.gigavision.ai.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_grounding",
+    "referring_expression_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "IoU-based grounding accuracy (Recall@1 at specified IoU thresholds, e.g., IoU>0.5)",
+  "general_score_metric": "Recall@1 (IoU>0.5)",
+  "typical_sota_score": "≈20–50% Recall@1 (highly task- and method-dependent)",
+  "reputation": "A new large-scale benchmark notable for gigapixel scenes and multi-hop expressions; attracting interest but not yet an established community standard.",
+  "notes": "Extremely high-resolution images require tiling/zoom strategies and large compute/storage; annotations are complex (multi-hop expressions); evaluation can be sensitive to IoU threshold and localization strategy; not suitable for low-resource experimentation.",
+  "creators": {
+    "scientists": [
+      "Tao Ma",
+      "Bing Bai",
+      "Haozhe Lin",
+      "Heyuan Wang",
+      "Yu Wang",
+      "Lin Luo",
+      "Lu Fang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

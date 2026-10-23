@@ -1,0 +1,39 @@
+{
+  "name": "Cross-Modal Industrial Process Anomaly Detection Benchmark (FmFormer)",
+  "description": "Anomaly detection in complex industrial processes plays a pivotal role in ensuring efficient, stable, and secure operation. Existing anomaly detection methods primarily focus on analyzing dominant anomalies using the process variables (such as arc current) or constructing neural networks based on abnormal visual features, while overlooking the intrinsic correlation of cross-modal information. This paper proposes a cross-modal Transformer (dubbed FmFormer), designed to facilitate anomaly detection by exploring the correlation between visual features (video) and process variables (current) in the context of the fused magnesium smelting process. Our approach introduces a novel tokenization paradigm to effectively bridge the substantial dimensionality gap between the 3D video modality and the 1D current modality in a multiscale manner, enabling a hierarchical reconstruction of pixel-level anomaly detection. Subsequently, the FmFormer leverages self-attention to learn internal features within each modality and bidirectional cross-attention to capture correlations across modalities. By decoding the bidirectional correlation features, we obtain the final detection result and even locate the specific anomaly region. To validate the effectiveness of the proposed method, we also present a pioneering cross-modal benchmark of the fused magnesium smelting process, featuring synchronously acquired video and current data for over 2.2 million samples. Leveraging cross-modal learning, the proposed FmFormer achieves state-of-the-art performance in detecting anomalies, particularly under extreme interferences such as current fluctuations and visual occlusion caused by heavy water mist. The presented methodology and benchmark may be applicable to other industrial applications with some amendments. The benchmark will be released at https://github.com/GaochangWu/FMF-Benchmark.",
+  "category": "multimodal",
+  "domain": "industrial process monitoring / manufacturing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "video_anomaly_localization",
+    "time_series_anomaly_detection",
+    "multimodal_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "90–98%",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "Emerging research benchmark introduced by the authors with a GitHub release; limited but growing adoption in industrial anomaly-detection research.",
+  "notes": "Domain-specific, non-LLM benchmark; very large dataset (~2.2M samples); risk of dataset bias toward the specific magnesium-smelting setting; requires synchronized video+sensor data and substantial compute; may not generalize without adaptation to other industrial processes.",
+  "creators": {
+    "scientists": [
+      "Gaochang Wu",
+      "Yapeng Zhang",
+      "Lan Deng",
+      "Jingxin Zhang",
+      "Tianyou Chai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.09016",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

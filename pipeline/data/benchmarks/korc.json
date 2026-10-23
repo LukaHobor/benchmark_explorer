@@ -1,0 +1,39 @@
+{
+  "name": "KoRC",
+  "description": "Deep text understanding, which requires the connections between a given document and prior knowledge beyond its text, has been highlighted by many benchmarks in recent years. However, these benchmarks have encountered two major limitations. On the one hand, most of them require human annotation of knowledge, which leads to limited knowledge coverage. On the other hand, they usually use choices or spans in the texts as the answers, which results in narrow answer space. To overcome these limitations, we build a new challenging benchmark named KoRc in this paper. Compared with previous benchmarks, KoRC has two advantages, i.e., broad knowledge coverage and flexible answer format. Specifically, we utilize massive knowledge bases to guide annotators or large language models (LLMs) to construct knowledgable questions. Moreover, we use labels in knowledge bases rather than spans or choices as the final answers. We test state-of-the-art models on KoRC and the experimental results show that the strongest baseline only achieves 68.3% and 30.0% F1 measure in the in-distribution and out-of-distribution test set, respectively. These results indicate that deep text understanding is still an unsolved challenge. The benchmark dataset, leaderboard, and baseline methods are released in https://github.com/THU-KEG/KoRC.",
+  "category": "text",
+  "domain": "reading comprehension / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "entity_linking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "≈68.3% (in-distribution) / ≈30.0% (out-of-distribution)",
+  "year_of_publish": 2023,
+  "reputation": "A well-designed, challenging benchmark from THU-KEG that has attracted attention for evaluating deep text understanding and knowledge-grounded comprehension.",
+  "notes": "Uses knowledge-base labels as answers and employs KB-guided question construction; potential risks include label noise, possible contamination if LLMs or KBs overlap with model pretraining data, and strong out-of-distribution performance drops.",
+  "creators": {
+    "scientists": [
+      "Zijun Yao",
+      "Yantao Liu",
+      "Xin Lv",
+      "Shulin Cao",
+      "Jifan Yu",
+      "Lei Hou",
+      "Juanzi Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2307.03115",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

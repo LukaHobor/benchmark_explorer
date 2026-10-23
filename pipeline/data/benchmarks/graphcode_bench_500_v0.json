@@ -1,0 +1,43 @@
+{
+  "name": "GraphCode-Bench-500-v0",
+  "description": "GraphCode-Bench-500-v0\n\t\n\nGraphCode-Bench is a benchmark for evaluating LLMs on call-graph reasoning — given a function in a real-world repository, can a model identify which functions call it (upstream) or which functions it calls (downstream), across 1 and 2 hops?\nModels are evaluated agentically: they receive read-only filesystem tools (list_directory, read_file, search_in_file) and up to 10 turns to explore the codebase before producing an answer.\n\n\t\n\t\t\n\t\n\t\n\t\tDataset summary… See the full description on the dataset page: https://huggingface.co/datasets/VittorioRossi/GraphCode-Bench-500-v0.",
+  "category": "code",
+  "domain": "coding",
+  "tags": [
+    "task_categories:question-answering",
+    "task_categories:text-generation",
+    "language:en",
+    "language:code",
+    "license:apache-2.0",
+    "size_categories:n<1K",
+    "modality:text"
+  ],
+  "task_types": [
+    "call_graph_reasoning",
+    "code_understanding",
+    "code_search"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 / exact_match (retrieval of calling/called functions; measured via precision/recall/F1 and exact-match of predicted sets)",
+  "general_score_metric": "F1 (call retrieval) and Exact Match for full-set correctness",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "New and focused benchmark that has attracted interest from researchers studying agentic code reasoning and repository-level understanding, but adoption remains limited.",
+  "downloads": 8,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "VittorioRossi"
+    ]
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://huggingface.co/datasets/VittorioRossi/GraphCode-Bench-500-v0",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

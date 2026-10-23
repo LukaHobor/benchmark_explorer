@@ -1,0 +1,41 @@
+{
+  "name": "HRIBench",
+  "description": "Real-time human perception is crucial for effective human-robot interaction (HRI). Large vision-language models (VLMs) offer promising generalizable perceptual capabilities but often suffer from high latency, which negatively impacts user experience and limits VLM applicability in real-world scenarios. To systematically study VLM capabilities in human perception for HRI and performance-latency trade-offs, we introduce HRIBench, a visual question-answering (VQA) benchmark designed to evaluate VLMs across a diverse set of human perceptual tasks critical for HRI. HRIBench covers five key domains: (1) non-verbal cue understanding, (2) verbal instruction understanding, (3) human-robot object relationship understanding, (4) social navigation, and (5) person identification. To construct HRIBench, we collected data from real-world HRI environments to curate questions for non-verbal cue understanding, and leveraged publicly available datasets for the remaining four domains. We curated 200 VQA questions for each domain, resulting in a total of 1000 questions for HRIBench. We then conducted a comprehensive evaluation of both state-of-the-art closed-source and open-source VLMs (N=11) on HRIBench. Our results show that, despite their generalizability, current VLMs still struggle with core perceptual capabilities essential for HRI. Moreover, none of the models within our experiments demonstrated a satisfactory performance-latency trade-off suitable for real-time deployment, underscoring the need for future research on developing smaller, low-latency VLMs with improved human perception capabilities. HRIBench and our results can be found in this Github repository: https://github.com/interaction-lab/HRIBench.",
+  "category": "multimodal",
+  "domain": "human-robot interaction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "20–60%",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A newly introduced, domain-specific benchmark from the Interaction Lab that is gaining interest among VLM and HRI researchers but not yet widely adopted.",
+  "notes": "Small (1,000 questions) and domain-specific to human–robot interaction; measures both perception accuracy and latency trade-offs. Not saturated; requires multimodal VLMs and careful latency/control measurements; non-LLM-specific evaluation considerations (real-world images, timing).",
+  "creators": {
+    "scientists": [
+      "Zhonghao Shi",
+      "Enyu Zhao",
+      "Nathaniel Dennler",
+      "Jingzhen Wang",
+      "Xinyang Xu",
+      "Kaleen Shrestha",
+      "Mengxue Fu",
+      "Daniel Seita",
+      "Maja Matarić"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.20566",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

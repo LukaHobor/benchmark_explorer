@@ -1,0 +1,36 @@
+{
+  "name": "Surgical VLM Benchmark",
+  "description": "Minimally invasive surgery (MIS) presents significant visual and technical challenges, including surgical instrument classification and understanding surgical action involving instruments, verbs, and anatomical targets. While many machine learning-based methods have been developed for surgical understanding, they typically rely on procedure- and task-specific models trained on small, manually annotated datasets. In contrast, the recent success of vision-language models (VLMs) trained on large volumes of raw image-text pairs has demonstrated strong adaptability to diverse visual data and a range of downstream tasks. This opens meaningful research questions: how well do these general-purpose VLMs perform in the surgical domain? In this work, we explore those questions by benchmarking several VLMs across diverse surgical datasets, including general laparoscopic procedures and endoscopic submucosal dissection, to assess their current capabilities and limitations. Our benchmark reveals key gaps in the models' ability to consistently link language to the correct regions in surgical scenes.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "instrument_classification",
+    "action_recognition",
+    "visual_grounding",
+    "image_text_retrieval"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (task-dependent; visual grounding/region-linking evaluated with mAP/IoU)",
+  "general_score_metric": "accuracy (primary); grounding reported with mAP/IoU",
+  "year_of_publish": 2025,
+  "reputation": "Emerging, research-oriented benchmark with limited adoption outside surgical VLM and medical-vision communities.",
+  "notes": "Small, specialized surgical datasets with substantial domain gap from web-pretrained VLMs; multimodal grounding remains inconsistent. Not saturated; low contamination risk but limited data size and task-specific annotations.",
+  "creators": {
+    "scientists": [
+      "Jiajun Cheng",
+      "Xianwu Zhao",
+      "Shan Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.10764",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

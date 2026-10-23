@@ -1,0 +1,36 @@
+{
+  "name": "Synthetic Graph Generation Benchmark",
+  "description": "Graph learning algorithms have attained state-of-the-art performance on many graph analysis tasks such as node classification, link prediction, and clustering. It has, however, become hard to track the field's burgeoning progress. One reason is due to the very small number of datasets used in practice to benchmark the performance of graph learning algorithms. This shockingly small sample size (~10) allows for only limited scientific insight into the problem. In this work, we aim to address this deficiency. We propose to generate synthetic graphs, and study the behaviour of graph learning algorithms in a controlled scenario. We develop a fully-featured synthetic graph generator that allows deep inspection of different models. We argue that synthetic graph generations allows for thorough investigation of algorithms and provides more insights than overfitting on three citation datasets. In the case study, we show how our framework provides insight into unsupervised and supervised graph neural network models.",
+  "category": "mixed",
+  "domain": "graph learning / network analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "link_prediction",
+    "graph_clustering",
+    "synthetic_graph_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-dependent metrics (node classification: accuracy / F1; link prediction: AUC / AP; clustering: NMI / ARI)",
+  "general_score_metric": "task-dependent (accuracy for node classification; AUC for link prediction; NMI/ARI for clustering)",
+  "year_of_publish": 2022,
+  "reputation": "A methodological contribution used in graph learning research to enable controlled experiments; not a single standardized leaderboard dataset but cited for analysis of model behavior.",
+  "notes": "Synthetic-graph benchmark — results depend strongly on generator parameters; may not reflect real-world graph complexity. Not an LLM benchmark; useful for controlled analysis but has domain-transfer caveats and potential for overfitting to generator assumptions.",
+  "creators": {
+    "scientists": [
+      "Anton Tsitsulin",
+      "Benedek Rozemberczki",
+      "John Palowitch",
+      "Bryan Perozzi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2204.01376",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "3D Fluorescence Microscopy Synthesis Benchmark",
+  "description": "Automated image processing approaches are indispensable for many biomedical experiments and help to cope with the increasing amount of microscopy image data in a fast and reproducible way. Especially state-of-the-art deep learning-based approaches most often require large amounts of annotated training data to produce accurate and generalist outputs, but they are often compromised by the general lack of those annotated data sets. In this work, we propose how conditional generative adversarial networks can be utilized to generate realistic image data for 3D fluorescence microscopy from annotation masks of 3D cellular structures. In combination with mask simulation approaches, we demonstrate the generation of fully-annotated 3D microscopy data sets that we make publicly available for training or benchmarking. An additional positional conditioning of the cellular structures enables the reconstruction of position-dependent intensity characteristics and allows to generate image data of different quality levels. A patch-wise working principle and a subsequent full-size reassemble strategy is used to generate image data of arbitrary size and different organisms. We present this as a proof-of-concept for the automated generation of fully-annotated training data sets requiring only a minimum of manual interaction to alleviate the need of manual annotations.",
+  "category": "vision",
+  "domain": "medical imaging / microscopy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_synthesis",
+    "data_augmentation",
+    "segmentation_benchmark",
+    "image_quality_assessment"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Dice / IoU for segmentation accuracy; SSIM, PSNR and FID for image-quality/synthesis evaluation",
+  "general_score_metric": "Dice coefficient for segmentation performance and SSIM (plus PSNR/FID) for image realism/quality",
+  "year_of_publish": 2021,
+  "reputation": "A targeted research benchmark for microscopy image synthesis and downstream segmentation; used by a small community working on synthetic biomedical datasets and domain-adaptation.",
+  "notes": "Synthetic-data benchmark — downstream performance may not transfer to real microscopy due to domain gap; relatively small and domain-specific dataset; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Dennis Eschweiler",
+      "Malte Rethwisch",
+      "Mareike Jarchow",
+      "Simon Koppers",
+      "Johannes Stegmaier"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2107.10180",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

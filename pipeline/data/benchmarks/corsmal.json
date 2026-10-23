@@ -1,0 +1,54 @@
+{
+  "name": "CORSMAL",
+  "description": "The contactless estimation of the weight of a container and the amount of its content manipulated by a person are key pre-requisites for safe human-to-robot handovers. However, opaqueness and transparencies of the container and the content, and variability of materials, shapes, and sizes, make this estimation difficult. In this paper, we present a range of methods and an open framework to benchmark acoustic and visual perception for the estimation of the capacity of a container, and the type, mass, and amount of its content. The framework includes a dataset, specific tasks and performance measures. We conduct an in-depth comparative analysis of methods that used this framework and audio-only or vision-only baselines designed from related works. Based on this analysis, we can conclude that audio-only and audio-visual classifiers are suitable for the estimation of the type and amount of the content using different types of convolutional neural networks, combined with either recurrent neural networks or a majority voting strategy, whereas computer vision methods are suitable to determine the capacity of the container using regression and geometric approaches. Classifying the content type and level using only audio achieves a weighted average F1-score up to 81% and 97%, respectively. Estimating the container capacity with vision-only approaches and estimating the filling mass with audio-visual multi-stage approaches reach up to 65% weighted average capacity and mass scores. These results show that there is still room for improvement on the design of new methods. These new methods can be ranked and compared on the individual leaderboards provided by our open framework.",
+  "category": "multimodal",
+  "domain": "robotics / human-robot interaction / audio-visual perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "audio-visual_perception",
+    "multimodal_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Weighted F1 for classification tasks; weighted average percentage scores for capacity and mass estimation",
+  "general_score_metric": "Weighted F1 for classification tasks; weighted average score (%) for capacity and mass estimation",
+  "typical_sota_score": "Content-type F1 up to ~81%; content-level F1 up to ~97%; capacity and mass estimation up to ~65% (reported maxima)",
+  "year_of_publish": 2021,
+  "reputation": "Recognized benchmark in audio–visual human–robot interaction for contactless estimation of container capacity, content type/amount and mass; used by HRI and perception researchers.",
+  "notes": "Relatively small, controlled dataset with limited diversity of objects/environments; sensor- and setup-specific; non-LLM multimodal benchmark; room for improvement on generalization to unconstrained settings.",
+  "creators": {
+    "scientists": [
+      "Alessio Xompero",
+      "Santiago Donaher",
+      "Vladimir Iashin",
+      "Francesca Palermo",
+      "Gökhan Solak",
+      "Claudio Coppola",
+      "Reina Ishikawa",
+      "Yuichi Nagao",
+      "Ryo Hachiuma",
+      "Qi Liu",
+      "Fan Feng",
+      "Chuanlin Lan",
+      "Rosa H. M. Chan",
+      "Guilherme Christmann",
+      "Jyun-Ting Song",
+      "Gonuguntla Neeharika",
+      "Chinnakotla Krishna Teja Reddy",
+      "Dinesh Jain",
+      "Bakhtawar Ur Rehman",
+      "Andrea Cavallaro"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2107.12719",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

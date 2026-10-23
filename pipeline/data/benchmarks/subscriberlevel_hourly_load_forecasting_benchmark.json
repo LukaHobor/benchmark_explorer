@@ -1,0 +1,35 @@
+{
+  "name": "Subscriber-Level Hourly Load Forecasting Benchmark",
+  "description": "Accurate electricity load forecasting at the individual subscriber level is becoming increasingly critical for efficient energy management in modern power systems. This paper presents a comprehensive comparative benchmark of six forecasting models-four classical machine learning algorithms (Linear Regression, Random Forest, LightGBM, and XGBoost) and two deep learning architectures (1D Convolutional Neural Network and Gated Recurrent Unit). The models are evaluated using a real-world dataset comprising over 20 million consumption records from 541 individual subscribers in Southeastern Türkiye. All models were assessed using the Mean Absolute Error (MAE) metric averaged across all users. Results show that deep learning significantly outperforms classical methods, with the GRU model achieving the lowest average MAE of $1,111.20 \\mathrm{kWh}$, compared to the best-performing classical model, LightGBM (MAE of $4,383.41 \\mathrm{kWh}$). The findings emphasize the advantages of sequence-based deep learning approaches in capturing non-linear and volatile consumption patterns. This work provides actionable insights for utility companies seeking to enhance demand-side management, grid reliability, and personalized energy services.",
+  "category": "mixed",
+  "domain": "time series / energy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "RMSE / MAE",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2025,
+  "reputation": "A conference benchmark (ICRERA 2025) evaluating fine-grained electricity forecasting; of interest to power-systems and time-series forecasting researchers but not yet a widely adopted public standard.",
+  "notes": "Non-LLM benchmark with subscriber-level hourly data; potential privacy/sampling bias and seasonality effects; dataset size and heterogeneity may be limited, increasing risk of overfitting and reducing generalization.",
+  "creators": {
+    "scientists": [
+      "Ömer Adıgüzel",
+      "Gaye Tülgen Kale",
+      "Cem Haydaroğlu",
+      "Özal Yıldırım",
+      "Heybet Kılıç"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/icrera66237.2025.11283696",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

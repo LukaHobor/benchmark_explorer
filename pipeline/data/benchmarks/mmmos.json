@@ -1,0 +1,34 @@
+{
+  "name": "MMMOS",
+  "description": "Accurate audio quality estimation is essential for developing and evaluating audio generation, retrieval, and enhancement systems. Existing non-intrusive assessment models predict a single Mean Opinion Score (MOS) for speech, merging diverse perceptual factors and failing to generalize beyond speech. We propose MMMOS, a no-reference, multi-domain audio quality assessment system that estimates four orthogonal axes: Production Quality, Production Complexity, Content Enjoyment, and Content Usefulness across speech, music, and environmental sounds. MMMOS fuses frame-level embeddings from three pretrained encoders (WavLM, MuQ, and M2D) and evaluates three aggregation strategies with four loss functions. By ensembling the top eight models, MMMOS shows a 20-30% reduction in mean squared error and a 4-5% increase in Kendall's τ versus baseline, gains first place in six of eight Production Complexity metrics, and ranks among the top three on 17 of 32 challenge metrics.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "regression",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mse",
+  "general_score_metric": "mse",
+  "typical_sota_score": "MSE reduction of ~20–30% relative to baseline; Kendall’s τ improvements of ~4–5% (as reported for the MMMOS ensemble)",
+  "year_of_publish": 2025,
+  "reputation": "A recent audio-quality assessment benchmark that is gaining visibility in audio generation and evaluation research, especially for multi-domain MOS prediction.",
+  "notes": "Non-LLM regression benchmark with challenge-style metrics; results vary by audio domain and target axis, so a single headline score is not very meaningful.",
+  "creators": {
+    "scientists": [
+      "Yi-Cheng Lin",
+      "Jia-Hung Chen",
+      "Hung-yi Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2507.04094",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

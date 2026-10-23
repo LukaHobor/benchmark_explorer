@@ -1,0 +1,43 @@
+{
+  "name": "ExecRepoBench",
+  "description": "Code completion has become an essential tool for daily software development. Existing evaluation benchmarks often employ static methods that do not fully capture the dynamic nature of real-world coding environments and face significant challenges, including limited context length, reliance on superficial evaluation metrics, and potential overfitting to training datasets. In this work, we introduce a novel framework for enhancing code completion in software development through the creation of a repository-level benchmark ExecRepoBench and the instruction corpora Repo-Instruct, aim at improving the functionality of open-source large language models (LLMs) in real-world coding scenarios that involve complex interdependencies across multiple files. ExecRepoBench includes 1.2K samples from active Python repositories. Plus, we present a multi-level grammar-based completion methodology conditioned on the abstract syntax tree to mask code fragments at various logical units (e.g. statements, expressions, and functions). Then, we fine-tune the open-source LLM with 7B parameters on Repo-Instruct to produce a strong code completion baseline model Qwen2.5-Coder-Instruct-C based on the open-source model. Qwen2.5-Coder-Instruct-C is rigorously evaluated against existing benchmarks, including MultiPL-E and ExecRepoBench, which consistently outperforms prior baselines across all programming languages. The deployment of \\ourmethod{} can be used as a high-performance, local service for programming development\\footnote{\\url{https://execrepobench.github.io/}}.",
+  "category": "code",
+  "domain": "software engineering",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "code_completion",
+    "program_synthesis",
+    "multi_file_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pass@k (exact-match/functional correctness of completed fragments) often reported alongside edit-based exact_match and compilation/runtime tests",
+  "general_score_metric": "pass@k (commonly pass@1 / pass@10) and functional correctness rates",
+  "year_of_publish": 2024,
+  "reputation": "A recent repository-level benchmark introduced by the authors to better capture multi-file, real-world code completion; gaining attention among code‑LLM researchers but not yet a broadly established standard.",
+  "notes": "Repository-level setting (1.2K samples) introduces realistic multi-file dependencies but also risks of training-data contamination; dataset is moderate in size, Python-focused, and evaluation can be environment-dependent (requires proper context and build/runtime checks).",
+  "creators": {
+    "scientists": [
+      "Jian Yang",
+      "Jiajun Zhang",
+      "Jiaxi Yang",
+      "Ke Jin",
+      "Lei Zhang",
+      "Qiyao Peng",
+      "Ken Deng",
+      "Yibo Miao",
+      "Tianyu Liu",
+      "Zeyu Cui",
+      "Binyuan Hui",
+      "Junyang Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2412.11990",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "MyFoodRepo-273 / Food Recognition Benchmark",
+  "description": "The automatic recognition of food on images has numerous interesting applications, including nutritional tracking in medical cohorts. The problem has received significant research attention, but an ongoing public benchmark to develop open and reproducible algorithms has been missing. Here, we report on the setup of such a benchmark using publicly available food images sourced through the mobile MyFoodRepo app. Through four rounds, the benchmark released the MyFoodRepo-273 dataset constituting 24,119 images and a total of 39,325 segmented polygons categorized in 273 different classes. Models were evaluated on private tests sets from the same platform with 5,000 images and 7,865 annotations in the final round. Top-performing models on the 273 food categories reached a mean average precision of 0.568 (round 4) and a mean average recall of 0.885 (round 3). We present experimental validation of round 4 results, and discuss implications of the benchmark setup designed to increase the size and diversity of the dataset for future rounds.",
+  "category": "vision",
+  "domain": "computer vision (food recognition)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "instance_segmentation",
+    "object_detection",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean_average_precision (mAP)",
+  "general_score_metric": "mean average precision (mAP)",
+  "typical_sota_score": "56–57% (mAP; top reported round-4 ≈0.568)",
+  "year_of_publish": 2021,
+  "reputation": "Recognized within the food-recognition and medical-nutrition communities as a useful public benchmark for food instance segmentation, though adoption is narrower than major vision benchmarks.",
+  "notes": "Non-LLM computer-vision benchmark; relatively small scale (24k images, 273 classes) with class imbalance and segmented polygon annotations. Private test sets were used for final evaluation, so reproducibility requires access to benchmark splits; possible dataset bias toward the MyFoodRepo app user base.",
+  "creators": {
+    "scientists": [
+      "Sharada Prasanna Mohanty",
+      "Gaurav Singhal",
+      "Eric Antoine Scuccimarra",
+      "Djilani Kebaili",
+      "Harris Héritier",
+      "Victor Boulanger",
+      "Marcel Salathé"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2106.14977",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

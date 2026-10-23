@@ -1,0 +1,38 @@
+{
+  "name": "Teddy and Happy (photometric redshift validation catalogs)",
+  "description": "Two of the main problems encountered in the development and accurate validation of photometric redshift (photo-z ) techniques are the lack of spectroscopic coverage in feature space (e.g. colours and magnitudes) and the mismatch between photometric error distributions associated with the spectroscopic and photometric samples. Although these issues are well known, there is currently no standard benchmark allowing a quantitative analysis of their impact on the final photo-z estimation. In this work, we present two galaxy catalogues, Teddy and Happy, built to enable a more demanding and realistic test of photo-z methods. Using photometry from the Sloan Digital Sky Survey and spectroscopy from a collection of sources, we constructed datasets which mimic the biases between the underlying probability distribution of the real spectroscopic and photometric sample. We demonstrate the potential of these catalogues by submitting them to the scrutiny of different photo-z methods, including machine learning (ML) and template fitting approaches. Beyond the expected bad results from most ML algorithms for cases with missing coverage in feature space, we were able to recognize the superiority of global models in the same situation and the general failure across all types of methods when incomplete coverage is convoluted with the presence of photometric errors -a data situation which photo-z methods were not trained to deal with up to now and which must be addressed by future large scale surveys. Our catalogues represent the first controlled environment allowing a straightforward implementation of such tests. The data are publicly available within the COINtoolbox (https://github.com/COINtoolbox/photoz catalogues).",
+  "category": "mixed",
+  "domain": "astronomy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "domain_shift_analysis",
+    "validation/benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / NMAD / σ68 and catastrophic outlier fraction (outlier rate); bias and calibration metrics are commonly reported",
+  "general_score_metric": "NMAD (normalized median absolute deviation) and outlier rate (catastrophic failure fraction)",
+  "year_of_publish": 2017,
+  "reputation": "65 citations",
+  "notes": "Designed to stress-test photometric redshift methods under distribution mismatch — contains deliberate coverage gaps and photometric error mismatches; non-LLM benchmark, sensitive to spectroscopic sample overlap/contamination and limited spectroscopic coverage in some regions of feature space.",
+  "creators": {
+    "scientists": [
+      "Robert E. Beck",
+      "Chieh-An Lin",
+      "Émille E. O. Ishida",
+      "Fabian Gieseke",
+      "Rafael S. de Souza",
+      "M. V. Costa-Duarte"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://doi.org/10.1093/mnras/stx687",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Human-centric Behavior Description Benchmark",
+  "description": "In the domain of video surveillance, describing the behavior of each individual within the video is becoming increasingly essential, especially in complex scenarios with multiple individuals present. This is because describing each individual's behavior provides more detailed situational analysis, enabling accurate assessment and response to potential risks, ensuring the safety and harmony of public places. Currently, video-level captioning datasets cannot provide fine-grained descriptions for each individual's specific behavior. However, mere descriptions at the video-level fail to provide an in-depth interpretation of individual behaviors, making it challenging to accurately determine the specific identity of each individual. To address this challenge, we construct a human-centric video surveillance captioning dataset, which provides detailed descriptions of the dynamic behaviors of 7,820 individuals. Specifically, we have labeled several aspects of each person, such as location, clothing, and interactions with other elements in the scene, and these people are distributed across 1,012 videos. Based on this dataset, we can link individuals to their respective behaviors, allowing for further analysis of each person's behavior in surveillance videos. Besides the dataset, we propose a novel video captioning approach that can describe individual behavior in detail on a person-level basis, achieving state-of-the-art results. To facilitate further research in this field, we intend to release our dataset and code.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "captioning",
+    "dense_captioning",
+    "person-centric_description"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU / CIDEr / METEOR (standard captioning metrics) and human evaluation for detailed behavior fidelity",
+  "general_score_metric": "CIDEr (primary reported captioning metric)",
+  "year_of_publish": 2023,
+  "reputation": "New domain-specific dataset (2023) that has attracted attention in surveillance captioning research but has limited broad adoption so far.",
+  "notes": "Relatively small and domain-specific (1,012 videos, 7,820 individuals); privacy/ethical considerations for surveillance data; standard captioning metrics may not fully capture per-person behavior correctness, so human evaluation is often required.",
+  "creators": {
+    "scientists": [
+      "Lingru Zhou",
+      "Yiqi Gao",
+      "Manqing Zhang",
+      "Peng Wu",
+      "Peng Wang",
+      "Yanning Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.02894",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

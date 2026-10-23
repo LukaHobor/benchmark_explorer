@@ -1,0 +1,35 @@
+{
+  "name": "G4SATBench",
+  "description": "Graph neural networks (GNNs) have recently emerged as a promising approach for solving the Boolean Satisfiability Problem (SAT), offering potential alternatives to traditional backtracking or local search SAT solvers. However, despite the growing volume of literature in this field, there remains a notable absence of a unified dataset and a fair benchmark to evaluate and compare existing approaches. To address this crucial gap, we present G4SATBench, the first benchmark study that establishes a comprehensive evaluation framework for GNN-based SAT solvers. In G4SATBench, we meticulously curate a large and diverse set of SAT datasets comprising 7 problems with 3 difficulty levels and benchmark a broad range of GNN models across various prediction tasks, training objectives, and inference algorithms. To explore the learning abilities and comprehend the strengths and limitations of GNN-based SAT solvers, we also compare their solving processes with the heuristics in search-based SAT solvers. Our empirical results provide valuable insights into the performance of GNN-based SAT solvers and further suggest that existing GNN models can effectively learn a solving strategy akin to greedy local search but struggle to learn backtracking search in the latent space. Our codebase is available at https://github.com/zhaoyu-li/G4SATBench.",
+  "category": "mixed",
+  "domain": "SAT solving / combinatorial optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "satisfiability_prediction",
+    "solution_construction",
+    "search_policy_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (solver success) and accuracy for classification tasks",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Introduced as the first comprehensive benchmark for GNN-based SAT solvers with growing recognition in the ML-for-combinatorial-optimization community.",
+  "notes": "Non-LLM benchmark focused on GNNs and SAT solvers; contains diverse instance families and difficulty levels. Comparisons with traditional SAT solvers are sensitive to instance distribution; care needed to avoid train/test leakage when instances share generation procedures.",
+  "creators": {
+    "scientists": [
+      "Zhaoyu Li",
+      "Jinpei Guo",
+      "Xujie Si"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2309.16941",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

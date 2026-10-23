@@ -1,0 +1,33 @@
+{
+  "name": "Korean Cultural Dataset (KCD)",
+  "description": "Text-to-image (T2I) diffusion models (DMs) deliver impressive visual quality, yet their linguistic coverage and cultural fidelity remain limited due to English-centric training corpora. We present KoDi, a bilingual T2I framework with a Korean–English focus that 1) understands Korean prompts, 2) faithfully renders Korean cultural elements, and 3) preserves general-domain performance. We construct the Korean Cultural Dataset (KCD) spanning heritage architecture, cuisine, landmarks, and traditional clothing; each image is paired with a Korean caption plus two English variants—a semantic English translation(EN-SEM) and a phonetic romanization (EN-ROM). KoDi integrates a Korean–English CLIP text encoder into a pretrained diffusion backbone and is fine-tuned on KCD. We further introduce a compact cultural evaluation protocol comprising two components—KC-CLIP similarity and a Large Vision–Language Model (LVLM)-based evaluator—to quantify cultural attribution and prompt–image alignment. On the Bilingual Korean Culture (B-KC) benchmark, KoDi outperforms prior multilingual DMs, improving KC-CLIP similarity by +29% on Korean prompts, +39% on EN-ROM prompts, and +21% on EN-SEM. Human evaluations likewise favor KoDi across cultural relevance, text–image alignment, and aesthetics. On the Bilingual General (B-G) benchmark—extended with Korean prompts for DrawBench-200 and XM-3600—KoDi also achieves higher CLIP similarity than multilingual baselines. Beyond Korea, our modular data–model–evaluation recipe offers a practical way to adapt English-centric pretrained diffusion backbones to low-resource cultures with minimal changes to the backbone.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_generation",
+    "multimodal_alignment",
+    "image_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "KC-CLIP similarity (embedding/CLIP cosine) and LVLM-based automatic evaluation, supplemented by human_eval",
+  "general_score_metric": "KC-CLIP similarity (CLIP cosine similarity)",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, authors-led dataset for culturally aware T2I evaluation with growing interest in multilingual and cultural-adaptation research but limited broader adoption so far.",
+  "notes": "Culturally focused and relatively small; primarily used with diffusion-model fine-tuning. Risk of contamination with large pretrained multimodal models; evaluation mixes automatic embedding similarity and subjective human judgments.",
+  "creators": {
+    "scientists": [
+      "Kyuheon Jung",
+      "Noah Lee",
+      "Sungchul Choi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

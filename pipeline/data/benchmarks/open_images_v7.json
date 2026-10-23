@@ -1,0 +1,36 @@
+{
+  "name": "Open Images V7",
+  "description": "# Dataset Card for Open Images Dataset\n\nThis dataset contains images from the Open Images dataset. It includes image URLs, split into training, validation, and test sets.\n\n## Dataset Details\n\n### Dataset Description\n\nOpen Images is a dataset of approximately 9 million URLs to images that have been annotated with image-level labels, bounding boxes, object segmentation masks, and visual relationships.\n\n- **Curated by:** Google LLC\n- **License:** \n  - Images: [CC BY 2.0 license](https://creativecommons.org/licenses/by/2.0/)\n\n### Dataset Sources\n\n- **Repository:** [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html)\n\n## Uses\n\n### Direct Use\n\nThis dataset can be used for various computer vision tasks including image classification, object detection, segmentation, and visual relationship detection.\n\n### Out-of-Scope Use\n\nThe dataset should not be used for any malicious activities, and users should verify the license status of each image themselves.\n\n## Dataset Structure\n\nThe dataset is structured into three splits: train, test, and validation. Each split contains a parquet file with image URLs.\n\n## Dataset Creation\n\n### Curation Rationale\n\nThe dataset was created to advance research in computer vision by providing a large and diverse set of images.\n\n### Source Data\n\n#### Data Collection and Processing\n\nThe images were collected from various sources across the web and are provided under the Creative Commons Attribution 2.0 license.\n\n#### Who are the source data producers?\n\nThe images were sourced from various photographers and websites under the Creative Commons Attribution 2.0 license.\n\n## Bias, Risks, and Limitations\n\nThe dataset may contain biases inherent in the data sources. Users should be aware of these biases and exercise caution in interpreting the results.\n\n### Recommendations\n\nUsers should be aware of the biases, risks, and limitations of the dataset. It is recommended to review the dataset for any biases that may affect the results of",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static",
+  "task_types": [
+    "image_classification",
+    "object_detection",
+    "instance_segmentation",
+    "visual_relationship_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Mean Average Precision (mAP) and related detection/recognition metrics depending on the subtask.",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "Strong modern detectors perform very well on common classes, but long-tail categories remain substantially harder; overall scores depend heavily on the task split.",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2022,
+  "reputation": "high",
+  "notes": "A major benchmark for large-vocabulary recognition with significant class imbalance and long-tail coverage. The exact score depends on the selected challenge subtask.",
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "Google"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://huggingface.co/datasets/bitmind/open-images-v7",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "RobustPointSet",
+  "description": "The 3D deep learning community has seen significant strides in pointcloud processing over the last few years. However, the datasets on which deep models have been trained have largely remained the same. Most datasets comprise clean, clutter-free pointclouds canonicalized for pose. Models trained on these datasets fail in uninterpretible and unintuitive ways when presented with data that contains transformations \"unseen\" at train time. While data augmentation enables models to be robust to \"previously seen\" input transformations, 1) we show that this does not work for unseen transformations during inference, and 2) data augmentation makes it difficult to analyze a model's inherent robustness to transformations. To this end, we create a publicly available dataset for robustness analysis of point cloud classification models (independent of data augmentation) to input transformations, called RobustPointSet. Our experiments indicate that despite all the progress in the point cloud classification, there is no single architecture that consistently performs better -- several fail drastically -- when evaluated on transformed test sets. We also find that robustness to unseen transformations cannot be brought about merely by extensive data augmentation. RobustPointSet can be accessed through https://github.com/AutodeskAILab/RobustPointSet.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2020,
+  "reputation": "A niche dataset used within 3D point-cloud robustness research; moderately cited in works on model robustness to geometric and sensor transformations.",
+  "notes": "Non-LLM benchmark focused on 3D pointcloud classification robustness to input transformations; not saturated, intended for robustness analysis rather than standard clean accuracy comparisons; moderate dataset size and domain-shift focused.",
+  "creators": {
+    "scientists": [
+      "Saeid Asgari Taghanaki",
+      "Jieliang Luo",
+      "Ran Zhang",
+      "Ye Wang",
+      "Pradeep Kumar Jayaraman",
+      "Krishna Murthy Jatavallabhula"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2011.11572",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Price of Monotonicity (PoM)",
+  "description": "Financial institutions face a trade-off between predictive accuracy and interpretability when deploying machine learning models for credit risk. Monotonicity constraints align model behavior with domain knowledge, but their performance cost - the price of monotonicity - is not well quantified. This paper benchmarks monotone-constrained versus unconstrained gradient boosting models for credit probability of default across five public datasets and three libraries. We define the Price of Monotonicity (PoM) as the relative change in standard performance metrics when moving from unconstrained to constrained models, estimated via paired comparisons with bootstrap uncertainty. In our experiments, PoM in AUC ranges from essentially zero to about 2.9 percent: constraints are almost costless on large datasets (typically less than 0.2 percent, often indistinguishable from zero) and most costly on smaller datasets with extensive constraint coverage (around 2-3 percent). Thus, appropriately specifi",
+  "category": "text",
+  "domain": "credit risk",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "binary_classification",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUC",
+  "general_score_metric": "AUC",
+  "typical_sota_score": "70–95% AUC (varies substantially by dataset and modeling choice)",
+  "year_of_publish": 2025,
+  "reputation": "A niche benchmark from the credit-risk interpretability literature, with limited but relevant use in monotonic model evaluation.",
+  "notes": "Non-LLM benchmark focused on comparing constrained vs unconstrained models; results are dataset- and library-dependent, with small reported performance deltas.",
+  "creators": {
+    "scientists": [
+      "Petr Koklev"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2512.17945",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

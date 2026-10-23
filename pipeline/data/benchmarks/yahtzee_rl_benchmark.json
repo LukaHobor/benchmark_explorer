@@ -1,0 +1,32 @@
+{
+  "name": "Yahtzee RL Benchmark",
+  "description": "Yahtzee is a classic dice game with a stochastic, combinatorial structure and delayed rewards, making it an interesting mid-scale RL benchmark. While an optimal policy for solitaire Yahtzee can be computed using dynamic programming methods, multiplayer is intractable, motivating approximation methods. We formulate Yahtzee as a Markov Decision Process (MDP), and train self-play agents using various policy gradient methods: REINFORCE, Advantage Actor-Critic (A2C), and Proximal Policy Optimization (PPO), all using a multi-headed network with a shared trunk. We ablate feature and action encodings, architecture, return estimators, and entropy regularization to understand their impact on learning. Under a fixed training budget, REINFORCE and PPO prove sensitive to hyperparameters and fail to reach near-optimal performance, whereas A2C trains robustly across a range of settings. Our agent attains a median score of 241.78 points over 100,000 evaluation games, within 5.0\\% of the optimal DP sco",
+  "category": "mixed",
+  "domain": "games",
+  "task_types": [
+    "reinforcement_learning",
+    "game_playing",
+    "policy_optimization"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "average game score over many evaluation episodes",
+  "general_score_metric": "average score",
+  "typical_sota_score": "around 240–245 points",
+  "year_of_publish": 2025,
+  "reputation": "A niche but useful RL benchmark for stochastic decision-making and policy-gradient methods, especially in academic reinforcement learning research.",
+  "notes": "Non-LLM, game-specific RL benchmark; performance is sensitive to hyperparameters and training budget, and solitaire Yahtzee has a known dynamic-programming optimum.",
+  "creators": {
+    "scientists": [
+      "Nicholas A. Pape"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2601.00007",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Multifaceted Synthetic EHR Benchmark",
+  "description": "Synthetic health data have the potential to mitigate privacy concerns when sharing data to support biomedical research and the development of innovative healthcare applications. Modern approaches for data generation based on machine learning, generative adversarial networks (GAN) methods in particular, continue to evolve and demonstrate remarkable potential. Yet there is a lack of a systematic assessment framework to benchmark methods as they emerge and determine which methods are most appropriate for which use cases. In this work, we introduce a generalizable benchmarking framework to appraise key characteristics of synthetic health data with respect to utility and privacy metrics. We apply the framework to evaluate synthetic data generation methods for electronic health records (EHRs) data from two large academic medical centers with respect to several use cases. The results illustrate that there is a utility-privacy tradeoff for sharing synthetic EHR data. The results further indicate that no method is unequivocally the best on all criteria in each use case, which makes it evident why synthetic data generation methods need to be assessed in context.",
+  "category": "mixed",
+  "domain": "medical / electronic health records",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "synthetic_data_generation",
+    "privacy_evaluation",
+    "utility_evaluation",
+    "downstream_prediction_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite evaluation combining utility metrics (AUROC/accuracy for downstream tasks) and privacy metrics (re-identification risk, membership inference)",
+  "general_score_metric": "composite utility-privacy score (combining downstream task performance and measured privacy risk)",
+  "year_of_publish": 2022,
+  "reputation": "Emerging and useful framework in the synthetic-health-data community; cited in works assessing utility-privacy tradeoffs though not yet a universal standard.",
+  "notes": "Non-LLM benchmark; results are use-case dependent and sensitive to chosen utility/privacy metrics; synthetic data may still leak privacy—care required when interpreting results.",
+  "creators": {
+    "scientists": [
+      "Chao Yan",
+      "Yao Yan",
+      "Zhiyu Wan",
+      "Ziqi Zhang",
+      "Larsson Omberg",
+      "Justin Guinney",
+      "Sean D. Mooney",
+      "Bradley A. Malin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2208.01230",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

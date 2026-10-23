@@ -1,0 +1,40 @@
+{
+  "name": "OpenContrails",
+  "description": "Contrails (condensation trails) are line-shaped ice clouds caused by aircraft and are likely the largest contributor of aviation-induced climate change. Contrail avoidance is potentially an inexpensive way to significantly reduce the climate impact of aviation. An automated contrail detection system is an essential tool to develop and evaluate contrail avoidance systems. In this paper, we present a human-labeled dataset named OpenContrails to train and evaluate contrail detection models based on GOES-16 Advanced Baseline Imager (ABI) data. We propose and evaluate a contrail detection model that incorporates temporal context for improved detection accuracy. The human labeled dataset and the contrail detection outputs are publicly available on Google Cloud Storage at gs://goes_contrails_dataset.",
+  "category": "vision",
+  "domain": "climate science / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "binary_classification",
+    "object_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean IoU and F1 score",
+  "general_score_metric": "mean IoU",
+  "year_of_publish": 2023,
+  "reputation": "A publicly released, domain-specific dataset used by the remote sensing and atmospheric science community for contrail-detection research; adoption is growing but still niche.",
+  "notes": "GOES-16 ABI spatial/temporal coverage limits geographic scope (primarily North America). Labels may contain subjectivity and class imbalance (few contrail pixels vs background). Dataset targets vision tasks (non-LLM); performance can be sensitive to cloud conditions and seasonal variability. Data and annotations are hosted on Google Cloud Storage (gs://goes_contrails_dataset).",
+  "creators": {
+    "scientists": [
+      "Joe Yue-Hei Ng",
+      "Kevin McCloskey",
+      "Jian Cui",
+      "Vincent R. Meijer",
+      "Erica Brand",
+      "Aaron Sarna",
+      "Nita Goyal",
+      "Christopher Van Arsdale",
+      "Scott Geraedts"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2304.02122",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

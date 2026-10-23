@@ -1,0 +1,47 @@
+{
+  "name": "SAEBench",
+  "description": "Sparse autoencoders (SAEs) are a popular technique for interpreting language model activations, and there is extensive recent work on improving SAE effectiveness. However, most prior work evaluates progress using unsupervised proxy metrics with unclear practical relevance. We introduce SAEBench, a comprehensive evaluation suite that measures SAE performance across seven diverse metrics, spanning interpretability, feature disentanglement and practical applications like unlearning. To enable systematic comparison, we open-source a suite of over 200 SAEs across eight recently proposed SAE architectures and training algorithms. Our evaluation reveals that gains on proxy metrics do not reliably translate to better practical performance. For instance, while Matryoshka SAEs slightly underperform on existing proxy metrics, they substantially outperform other architectures on feature disentanglement metrics; moreover, this advantage grows with SAE scale. By providing a standardized framework for measuring progress in SAE development, SAEBench enables researchers to study scaling trends and make nuanced comparisons between different SAE architectures and training methodologies. Our interactive interface enables researchers to flexibly visualize relationships between metrics across hundreds of open-source SAEs at: https://saebench.xyz",
+  "category": "text",
+  "domain": "interpretability / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "representation_learning",
+    "interpretability",
+    "disentanglement",
+    "feature_unlearning",
+    "downstream_linear_probe"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score (aggregation of seven diverse metrics)",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark from the interpretability community; gaining attention among researchers working on sparse autoencoders but not yet a widespread industry standard.",
+  "notes": "Evaluates many proxy and practical metrics; gains on proxy metrics may not correlate with downstream utility. Focused on activation-level interpretability (not end-to-end LLM benchmarks); potential for metric gaming and sensitivity to SAE scale.",
+  "creators": {
+    "scientists": [
+      "Adam Karvonen",
+      "Can Rager",
+      "Johnny Lin",
+      "Curt Tigges",
+      "Joseph Bloom",
+      "David Chanin",
+      "Yeu-Tong Lau",
+      "Eoin Farrell",
+      "Callum McDougall",
+      "Kola Ayonrinde",
+      "Matthew Wearden",
+      "Arthur Conmy",
+      "Samuel Marks",
+      "Neel Nanda"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.09532",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

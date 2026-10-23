@@ -1,0 +1,36 @@
+{
+  "name": "ooDML",
+  "description": "Deep Metric Learning (DML) aims to find representations suitable for zero-shot transfer to a priori unknown test distributions. However, common evaluation protocols only test a single, fixed data split in which train and test classes are assigned randomly. More realistic evaluations should consider a broad spectrum of distribution shifts with potentially varying degree and difficulty. In this work, we systematically construct train-test splits of increasing difficulty and present the ooDML benchmark to characterize generalization under out-of-distribution shifts in DML. ooDML is designed to probe the generalization performance on much more challenging, diverse train-to-test distribution shifts. Based on our new benchmark, we conduct a thorough empirical analysis of state-of-the-art DML methods. We find that while generalization tends to consistently degrade with difficulty, some methods are better at retaining performance as the distribution shift increases. Finally, we propose few-sho",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "metric_learning",
+    "retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "retrieval accuracy / recall@k",
+  "general_score_metric": "Recall@1",
+  "year_of_publish": 2021,
+  "reputation": "A specialized benchmark for evaluating deep metric learning under controlled out-of-distribution shifts, used mainly in the metric learning research community.",
+  "notes": "Non-LLM vision benchmark focused on robustness to distribution shift; exact scores vary by split difficulty and method, so results are not directly comparable to standard random-split DML benchmarks.",
+  "creators": {
+    "scientists": [
+      "Timo Milbich",
+      "Karsten Roth",
+      "Samarth Sinha",
+      "Ludwig Schmidt",
+      "Marzyeh Ghassemi",
+      "Björn Ommer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2107.09562",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

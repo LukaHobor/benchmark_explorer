@@ -1,0 +1,40 @@
+{
+  "name": "Emo3D",
+  "description": "Producing emotionally dynamic 3D facial avatars with text derived from spoken words (Emo3D) has been a pivotal research topic in 3D avatar generation. While progress has been made in general-purpose 3D avatar generation, the exploration of generating emotional 3D avatars remains scarce, primarily due to the complexities of identifying and rendering rich emotions from spoken words. This paper reexamines Emo3D generation and draws inspiration from human processes, breaking down Emo3D into two cascading steps: Text-to-3D Expression Mapping (T3DEM) and 3D Avatar Rendering (3DAR). T3DEM is the most crucial step in determining the quality of Emo3D generation and encompasses three key challenges: Expression Diversity, Emotion-Content Consistency, and Expression Fluidity. To address these challenges, we introduce a novel benchmark to advance research in Emo3D generation. First, we present EmoAva, a large-scale, high-quality dataset for T3DEM, comprising 15,000 text-to-3D expression mappings that characterize the aforementioned three challenges in Emo3D generation. Furthermore, we develop various metrics to effectively evaluate models against these identified challenges. Next, to effectively model the consistency, diversity, and fluidity of human expressions in the T3DEM step, we propose the Continuous Text-to-Expression Generator, which employs an autoregressive Conditional Variational Autoencoder for expression code generation, enhanced with Latent Temporal Attention and Expression-wise Attention mechanisms. Finally, to further enhance the 3DAR step on rendering higher-quality subtle expressions, we present the Globally-informed Gaussian Avatar (GiGA) model. GiGA incorporates a global information mechanism into 3D Gaussian representations, enabling the capture of subtle micro-expressions and seamless transitions between emotional states.",
+  "category": "multimodal",
+  "domain": "3D avatar generation / graphics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_3d_expression_mapping",
+    "3d_avatar_rendering",
+    "multimodal_generation",
+    "benchmark_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval combined with specialized automatic metrics (expression consistency, diversity, fluidity)",
+  "general_score_metric": "composite_metric (consistency / diversity / fluidity) with supporting human evaluation",
+  "year_of_publish": 2024,
+  "reputation": "New and specialized benchmark for the 3D-avatar/emotion-generation community; emerging interest but limited adoption so far.",
+  "notes": "Domain-specific 3D assets and renderers required; benchmark uses novel automatic metrics alongside human evaluation. Recent work and metrics are specialized, so cross-benchmark comparisons are limited; potential reproducibility/compute barriers for full 3D rendering evaluation.",
+  "creators": {
+    "scientists": [
+      "Haidong Xu",
+      "Meishan Zhang",
+      "Hao Ju",
+      "Zhedong Zheng",
+      "Erik Cambria",
+      "Min Zhang",
+      "Hao Fei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.02508",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

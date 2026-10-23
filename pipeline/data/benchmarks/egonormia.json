@@ -1,0 +1,38 @@
+{
+  "name": "EgoNormia",
+  "description": "Human activity is moderated by norms. However, machines are often trained without explicit supervision on norm understanding and reasoning, particularly when norms are physically- or socially-grounded. To improve and evaluate the normative reasoning capability of vision-language models (VLMs), we present \\dataset{} $\\|\\epsilon\\|$, consisting of 1,853 challenging, multi-stage MCQ questions based on ego-centric videos of human interactions, evaluating both the prediction and justification of normative actions. The normative actions encompass seven categories: safety, privacy, proxemics, politeness, cooperation, coordination/proactivity, and communication/legibility. To compile this dataset at scale, we propose a novel pipeline leveraging video sampling, automatic answer generation, filtering, and human validation. Our work demonstrates that current state-of-the-art vision-language models lack robust norm understanding, scoring a maximum of 54\\% on \\dataset{} (versus a human bench of 92\\%). Our analysis of performance in each dimension highlights the significant risks of safety, privacy, and the lack of collaboration and communication capability when applied to real-world agents. We additionally show that through a retrieval-based generation (RAG) method, it is possible to use \\dataset{} to enhance normative reasoning in VLMs.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "explanation_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (for answer selection) and human_eval (for justification quality)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈50–54% (paper reports a maximum of 54% for current models vs. ~92% human)",
+  "year_of_publish": 2025,
+  "reputation": "A recent academic benchmark focused on normative reasoning in vision-language models; limited but growing adoption in VLM safety/normability research.",
+  "notes": "Small-to-moderate size (1,853 examples); multimodal and subjective justification evaluation can introduce annotation variability; risk of pretraining contamination for common video sources.",
+  "creators": {
+    "scientists": [
+      "MohammadHossein Rezaei",
+      "Yicheng Fu",
+      "Phil Cuvin",
+      "Caleb Ziems",
+      "Yanzhe Zhang",
+      "Hao Zhu",
+      "Diyi Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.20490",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

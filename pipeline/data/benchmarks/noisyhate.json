@@ -1,0 +1,35 @@
+{
+  "name": "NoisyHate",
+  "description": "Online texts with toxic content are a clear threat to the users on social media in particular and society in general. Although many platforms have adopted various measures (e.g., machine learning-based hate-speech detection systems) to diminish their effect, toxic content writers have also attempted to evade such measures by using cleverly modified toxic words, so-called human-written text perturbations. Therefore, to help build automatic detection tools to recognize those perturbations, prior methods have developed sophisticated techniques to generate diverse adversarial samples. However, we note that these ``algorithms\"-generated perturbations do not necessarily capture all the traits of ``human\"-written perturbations. Therefore, in this paper, we introduce a novel, high-quality dataset of human-written perturbations, named as NoisyHate, that was created from real-life perturbations that are both written and verified by human-in-the-loop. We show that perturbations in NoisyHate have different characteristics than prior algorithm-generated toxic datasets show, and thus can be in particular useful to help develop better toxic speech detection solutions. We thoroughly validate NoisyHate against state-of-the-art language models, such as BERT and RoBERTa, and black box APIs, such as Perspective API, on two tasks, such as perturbation normalization and understanding.",
+  "category": "text",
+  "domain": "content moderation / social media",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_normalization",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "50–80%",
+  "year_of_publish": 2023,
+  "reputation": "Introduced in 2023 and cited in robustness and hate-speech research; used by researchers studying adversarial human-written perturbations but not a broadly used production benchmark.",
+  "notes": "Dataset focuses on human-written perturbations (not algorithmic adversarial examples); moderate size and domain-specific biases; models often evaluated on both normalization (exact match/accuracy) and classification (F1); potential label/class imbalance and risk of overlap with toxicity corpora if used for pretraining.",
+  "creators": {
+    "scientists": [
+      "Yiran Ye",
+      "Thai Le",
+      "Dongwon Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2303.10430",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

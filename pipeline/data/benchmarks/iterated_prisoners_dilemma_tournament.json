@@ -1,0 +1,31 @@
+{
+  "name": "Iterated Prisoner's Dilemma Tournament",
+  "description": "Ever since Axelrod's seminal work, tournaments served as the main benchmark for evaluating strategies in the Iterated Prisoner's Dilemma (IPD). In this work, we first introduce a strategy for the IPD which outperforms previous tournament champions when evaluated against the 239 strategies in the Axelrod library, at noise levels in the IPD ranging from 0% to 10%. The basic idea behind our strategy is to start playing a version of tit-for-tat which forgives unprovoked defections if their rate is not significantly above the noise level, while building a (memory-1) model of the opponent; then switch to a strategy which is optimally adapted to the model of the opponent. We then argue that the above strategy (like other prominent strategies) lacks a couple of desirable properties which are not well tested for by tournaments, but which will be relevant in other contexts: we want our strategy to be self-cooperating, i.e., cooperate with a clone with high probability, even at high noise levels;",
+  "category": "mixed",
+  "domain": "game theory",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "iterated_game_play",
+    "strategy_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "average payoff",
+  "year_of_publish": 2023,
+  "reputation": "A classic benchmark family in game theory and evolutionary game research, originating from Axelrod's tournaments and still widely referenced.",
+  "notes": "Non-LLM benchmark with strong dependence on opponent set, noise level, and tournament rules; scores are not directly comparable across variants.",
+  "creators": {
+    "scientists": [
+      "Adrian Hutter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2303.03519",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

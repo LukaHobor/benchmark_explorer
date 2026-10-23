@@ -1,0 +1,35 @@
+{
+  "name": "THE Benchmark",
+  "description": "Generating 3D city models rapidly is crucial for many applications. Monocular height estimation is one of the most efficient and timely ways to obtain large-scale geometric information. However, existing works focus primarily on training and testing models using unbiased datasets, which does not align well with real-world applications. Therefore, we propose a new benchmark dataset to study the transferability of height estimation models in a cross-dataset setting. To this end, we first design and construct a large-scale benchmark dataset for cross-dataset transfer learning on the height estimation task. This benchmark dataset includes a newly proposed large-scale synthetic dataset, a newly collected real-world dataset, and four existing datasets from different cities. Next, a new experimental protocol, few-shot cross-dataset transfer, is designed. Furthermore, in this paper, we propose a scale-deformable convolution module to enhance the window-based Transformer for handling the scale-variation problem in the height estimation task. Experimental results have demonstrated the effectiveness of the proposed methods in the traditional and cross-dataset transfer settings. The datasets and codes are publicly available at https://mediatum.ub.tum.de/1662763 and https://thebenchmarkh.github.io/.",
+  "category": "vision",
+  "domain": "remote sensing / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "height_regression",
+    "cross_dataset_transfer",
+    "few_shot_transfer"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "regression error metrics (RMSE / MAE) for height estimation; cross-dataset transfer evaluated with few-shot protocol",
+  "general_score_metric": "RMSE / MAE (height estimation error)",
+  "year_of_publish": 2021,
+  "reputation": "A focused remote-sensing benchmark for monocular height estimation and cross-dataset transfer; of growing interest in the remote sensing and computer vision transfer-learning communities.",
+  "notes": "Non-LLM benchmark; includes synthetic and real datasets to study synthetic-to-real transfer and few-shot cross-dataset generalization; subject to domain-shift effects across cities and sensors.",
+  "creators": {
+    "scientists": [
+      "Zhitong Xiong",
+      "Wei Huang",
+      "Jingtao Hu",
+      "Xiao Xiang Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.14985",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

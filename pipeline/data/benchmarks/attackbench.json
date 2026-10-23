@@ -1,0 +1,38 @@
+{
+  "name": "AttackBench",
+  "description": "Adversarial examples are typically optimized with gradient-based attacks. While novel attacks are continuously proposed, each is shown to outperform its predecessors using different experimental setups, hyperparameter settings, and number of forward and backward calls to the target models. This provides overly-optimistic and even biased evaluations that may unfairly favor one particular attack over the others. In this work, we aim to overcome these limitations by proposing AttackBench, i.e., the first evaluation framework that enables a fair comparison among different attacks. To this end, we first propose a categorization of gradient-based attacks, identifying their main components and differences. We then introduce our framework, which evaluates their effectiveness and efficiency. We measure these characteristics by (i) defining an optimality metric that quantifies how close an attack is to the optimal solution, and (ii) limiting the number of forward and backward queries to the model, such that all attacks are compared within a given maximum query budget. Our extensive experimental analysis compares more than $100$ attack implementations with a total of over $800$ different configurations against CIFAR-10 and ImageNet models, highlighting that only very few attacks outperform all the competing approaches. Within this analysis, we shed light on several implementation issues that prevent many attacks from finding better solutions or running at all. We release AttackBench as a publicly-available benchmark, aiming to continuously update it to include and evaluate novel gradient-based attacks for optimizing adversarial examples.",
+  "category": "vision",
+  "domain": "adversarial ML",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "robustness_evaluation",
+    "attack_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack_success_rate",
+  "general_score_metric": "attack_success_rate",
+  "year_of_publish": 2024,
+  "reputation": "Recognized among adversarial-ML researchers for providing a systematic, query-budgeted comparison of gradient-based attacks and for highlighting implementation pitfalls.",
+  "notes": "Vision-focused, non-LLM benchmark; results highly sensitive to query budgets and implementation details; provides an optimality metric in addition to success rate to enable fairer comparisons.",
+  "creators": {
+    "scientists": [
+      "Antonio Emanuele Cinà",
+      "Jérôme Rony",
+      "Maura Pintor",
+      "Luca Demetrio",
+      "Ambra Demontis",
+      "Battista Biggio",
+      "Ismail Ben Ayed",
+      "Fabio Roli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2404.19460",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

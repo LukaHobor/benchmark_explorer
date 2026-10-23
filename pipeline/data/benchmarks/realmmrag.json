@@ -1,0 +1,38 @@
+{
+  "name": "REAL-MM-RAG",
+  "description": "Accurate multi-modal document retrieval is crucial for Retrieval-Augmented Generation (RAG), yet existing benchmarks do not fully capture real-world challenges with their current design. We introduce REAL-MM-RAG, an automatically generated benchmark designed to address four key properties essential for real-world retrieval: (i) multi-modal documents, (ii) enhanced difficulty, (iii) Realistic-RAG queries and (iv) accurate labeling. Additionally, we propose a multi-difficulty-level scheme based on query rephrasing to evaluate models' semantic understanding beyond keyword matching. Our benchmark reveals significant model weaknesses, particularly in handling table-heavy documents and robustness to query rephrasing. To mitigate these shortcomings, we curate a rephrased training set and introduce a new finance-focused, table-heavy dataset. Fine-tuning on these datasets enables models to achieve state-of-the-art retrieval performance on REAL-MM-RAG benchmark. Our work offers a better way to evaluate and improve retrieval in multi-modal RAG systems while also providing training data and models that address current limitations.",
+  "category": "multimodal",
+  "domain": "multimodal retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "document_reranking",
+    "multi_modal_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k (and MRR)",
+  "general_score_metric": "recall@k (e.g., recall@5)",
+  "year_of_publish": 2025,
+  "reputation": "A recent benchmark targeting realistic multi-modal RAG challenges; early adoption in retrieval/RAG research but not yet a standard across the community.",
+  "notes": "Automatically generated multi-modal data with multiple difficulty levels; table-heavy and OCR-dependent documents increase challenge; potential label noise and risk of train/test contamination if provided rephrased training sets are reused.",
+  "creators": {
+    "scientists": [
+      "Navve Wasserman",
+      "Roi Pony",
+      "Oshri Naparstek",
+      "Adi Raz Goldfarb",
+      "Eli Schwartz",
+      "Udi Barzelay",
+      "Leonid Karlinsky"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2502.12342",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

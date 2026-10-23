@@ -1,0 +1,41 @@
+{
+  "name": "RadFusion",
+  "description": "Despite the routine use of electronic health record (EHR) data by radiologists to contextualize clinical history and inform image interpretation, the majority of deep learning architectures for medical imaging are unimodal, i.e., they only learn features from pixel-level information. Recent research revealing how race can be recovered from pixel data alone highlights the potential for serious biases in models which fail to account for demographics and other key patient attributes. Yet the lack of imaging datasets which capture clinical context, inclusive of demographics and longitudinal medical history, has left multimodal medical imaging underexplored. To better assess these challenges, we present RadFusion, a multimodal, benchmark dataset of 1794 patients with corresponding EHR data and high-resolution computed tomography (CT) scans labeled for pulmonary embolism. We evaluate several representative multimodal fusion models and benchmark their fairness properties across protected subgroups, e.g., gender, race/ethnicity, age. Our results suggest that integrating imaging and EHR data can improve classification performance and robustness without introducing large disparities in the true positive rate between population groups.",
+  "category": "multimodal",
+  "domain": "medical imaging / healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multimodal_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ROC AUC (primary), with reported metrics including F1 and sensitivity/TPR for subgroup fairness analysis",
+  "general_score_metric": "ROC AUC",
+  "year_of_publish": 2021,
+  "reputation": "A well-regarded multimodal medical imaging benchmark for research on integrating EHR and imaging data, though adoption is limited by its modest size.",
+  "notes": "Relatively small dataset (≈1,794 patients); non-LLM benchmark focused on multimodal medical imaging; includes fairness subgroup analyses; potential privacy and class-imbalance considerations.",
+  "creators": {
+    "scientists": [
+      "Yuyin Zhou",
+      "Shih-Cheng Huang",
+      "Jason Alan Fries",
+      "Alaa Youssef",
+      "Timothy J. Amrhein",
+      "Marcello Chang",
+      "Imon Banerjee",
+      "Daniel Rubin",
+      "Lei Xing",
+      "Nigam Shah",
+      "Matthew P. Lungren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2111.11665",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "DQN-to-SNN Conversion Benchmark",
+  "description": "Spiking neural networks (SNNs) have great potential for energy-efficient implementation of Deep Neural Networks (DNNs) on dedicated neuromorphic hardware. Recent studies demonstrated competitive performance of SNNs compared with DNNs on image classification tasks, including CIFAR-10 and ImageNet data. The present work focuses on using SNNs in combination with deep reinforcement learning in ATARI games, which involves additional complexity as compared to image classification. We review the theory of converting DNNs to SNNs and extending the conversion to Deep Q-Networks (DQNs). We propose a robust representation of the firing rate to reduce the error during the conversion process. In addition, we introduce a new metric to evaluate the conversion process by comparing the decisions made by the DQN and SNN, respectively. We also analyze how the simulation time and parameter normalization influence the performance of converted SNNs. We achieve competitive scores on 17 top-performing Atari games. To the best of our knowledge, our work is the first to achieve state-of-the-art performance on multiple Atari games with SNNs. Our work serves as a benchmark for the conversion of DQNs to SNNs and paves the way for further research on solving reinforcement learning tasks with SNNs.",
+  "category": "vision",
+  "domain": "games",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "DQN_to_SNN_conversion",
+    "policy_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average_episode_reward (game score comparison between original DQN and converted SNN)",
+  "general_score_metric": "mean episodic reward / percent-of-DQN-performance",
+  "typical_sota_score": "game-dependent; often reported within ~80–100% of the original DQN performance on evaluated Atari titles",
+  "year_of_publish": 2020,
+  "reputation": "Niche but influential in the neuromorphic/SNN community; cited as an early benchmark achieving competitive Atari performance with SNN conversions.",
+  "notes": "Non-LLM benchmark; hardware- and simulation-time-sensitive (simulation duration, normalization impact results); limited to a subset of Atari games and subject to reproducibility variation across neuromorphic platforms.",
+  "creators": {
+    "scientists": [
+      "Weihao Tan",
+      "Devdhar Patel",
+      "Robert Kozma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2009.14456",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

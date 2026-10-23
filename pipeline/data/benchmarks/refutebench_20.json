@@ -1,0 +1,35 @@
+{
+  "name": "RefuteBench 2.0",
+  "description": "While large language models (LLMs) can leverage user feedback in multi-turn interactions, evaluating their ability to incorporate refutation feedback remains challenging. We introduce RefuteBench 2.0, an evaluation framework using LLM agents as refuters and evaluators to assess how models handle contradictory input. The framework includes transient and persistent refutation instructions with varying validity periods to reflect real-world interaction patterns. Meta-evaluation shows our approach generates human-like refutations and achieves high correlation with human evaluators. Experiments across various LLMs reveal a critical limitation: while models can satisfy immediate refutation requests, they fail to retain refutation information over extended dialogues. Notably, increasing refutations progressively degrades performance on the original task. Attention analysis confirms that current LLMs struggle with information retention and correct utilization in long-context scenarios, highlighting a fundamental weakness in their multi-turn reasoning capabilities.",
+  "category": "text",
+  "domain": "audio",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "interactive",
+    "instruction_following",
+    "dialogue"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "Recently proposed (2025); currently limited community uptake and mainly cited in specialized interactive evaluation work.",
+  "notes": "Agentic/interactive setup increases evaluation variance; risk of data/model contamination; requires interactive orchestration and can be sensitive to prompt/agent implementations.",
+  "creators": {
+    "scientists": [
+      "Jianhao Yan",
+      "Yun Luo",
+      "Yue Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://doi.org/10.1109/taslpro.2025.3626926",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

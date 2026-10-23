@@ -1,0 +1,37 @@
+{
+  "name": "Healthcare Causal Fairness Benchmarks",
+  "description": "Causal discovery in health data faces evaluation challenges when ground truth is unknown. We address this by collaborating with experts to construct proxy ground-truth graphs, establishing benchmarks for synthetic Alzheimer's disease and heart failure clinical records data. We evaluate the Peter-Clark, Greedy Equivalence Search, and Fast Causal Inference algorithms on structural recovery and path-specific fairness decomposition, going beyond composite fairness scores. On synthetic data, Peter-Clark achieved the best structural recovery. On heart failure data, Fast Causal Inference achieved the highest utility. For path-specific effects, ejection fraction contributed 3.37 percentage points to the indirect effect in the ground truth. These differences drove variations in the fairness-utility ratio across algorithms. Our results highlight the need for graph-aware fairness evaluation and fine-grained path-specific analysis when deploying causal discovery in clinical applications.",
+  "category": "mixed",
+  "domain": "healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "causal_discovery",
+    "fairness_analysis",
+    "graph_recovery"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "structural recovery score",
+  "year_of_publish": 2026,
+  "reputation": "A recent research benchmark from the causal discovery and healthcare fairness literature, but not yet widely adopted as a standard community benchmark.",
+  "notes": "Small, specialized benchmark built from synthetic proxy-ground-truth clinical graphs; results are algorithm-dependent and not directly comparable to broad LLM benchmarks.",
+  "creators": {
+    "scientists": [
+      "Nitish Nagesh",
+      "Elahe Khatibi",
+      "Thomas Hughes",
+      "Mahdi Bagheri",
+      "Pratik Gajane",
+      "Amir M. Rahmani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2603.15926",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "EEG Domain Generalization Benchmark",
+  "description": "Electroencephalography (EEG) based emotion recognition has demonstrated tremendous improvement in recent years. Specifically, numerous domain adaptation (DA) algorithms have been exploited in the past five years to enhance the generalization of emotion recognition models across subjects. The DA methods assume that calibration data (although unlabeled) exists in the target domain (new user). However, this assumption conflicts with the application scenario that the model should be deployed without the time-consuming calibration experiments. We argue that domain generalization (DG) is more reasonable than DA in these applications. DG learns how to generalize to unseen target domains by leveraging knowledge from multiple source domains, which provides a new possibility to train general models. In this paper, we for the first time benchmark state-of-the-art DG algorithms on EEG-based emotion recognition. Since convolutional neural network (CNN), deep brief network (DBN) and multilayer perceptron (MLP) have been proved to be effective emotion recognition models, we use these three models as solid baselines. Experimental results show that DG achieves an accuracy of up to 79.41\\% on the SEED dataset for recognizing three emotions, indicting the potential of DG in zero-training emotion recognition when multiple sources are available.",
+  "category": "mixed",
+  "domain": "EEG / affective computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈79% (reported best on SEED for 3-class recognition)",
+  "year_of_publish": 2022,
+  "reputation": "A relevant benchmark in the EEG/affective-computing community as an early systematic evaluation of domain generalization methods for EEG-based emotion recognition.",
+  "notes": "Contains subject variability and limited sample sizes typical of EEG datasets; evaluates cross-subject generalization (zero-calibration) so performance can vary widely by dataset and preprocessing; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yan Li",
+      "Hao Chen",
+      "Jake Zhao",
+      "Haolan Zhang",
+      "Jinpeng Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2204.09016",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

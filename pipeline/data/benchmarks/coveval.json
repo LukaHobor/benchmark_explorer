@@ -1,0 +1,38 @@
+{
+  "name": "CoV-Eval",
+  "description": "Code security and usability are both essential for various coding assistant applications driven by large language models (LLMs). Current code security benchmarks focus solely on single evaluation task and paradigm, such as code completion and generation, lacking comprehensive assessment across dimensions like secure code generation, vulnerability repair and discrimination. In this paper, we first propose CoV-Eval, a multi-task benchmark covering various tasks such as code completion, vulnerability repair, vulnerability detection and classification, for comprehensive evaluation of LLM code security. Besides, we developed VC-Judge, an improved judgment model that aligns closely with human experts and can review LLM-generated programs for vulnerabilities in a more efficient and reliable way. We conduct a comprehensive evaluation of 20 proprietary and open-source LLMs. Overall, while most LLMs identify vulnerable codes well, they still tend to generate insecure codes and struggle with recognizing specific vulnerability types and performing repairs. Extensive experiments and qualitative analyses reveal key challenges and optimization directions, offering insights for future research in LLM code security.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "vulnerability_detection",
+    "vulnerability_repair",
+    "classification",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Task-specific metrics: F1 for detection/classification, exact_match for repair/completion, supplemented by human-aligned judging via the VC-Judge model",
+  "general_score_metric": "composite_score (task-weighted combination of F1 and exact_match; supplemented by VC-Judge human-alignment scores)",
+  "year_of_publish": 2025,
+  "reputation": "4 citations",
+  "notes": "Multi-task nature makes cross-model comparisons complex; evaluation relies partly on VC-Judge (an automated judge aligned to humans), introducing modeling/judge bias risk. Potential contamination if models were trained on similar code corpora; results sensitive to dataset/task distribution.",
+  "creators": {
+    "scientists": [
+      "Yutao Mou",
+      "Xiao Deng",
+      "Yuxiao Luo",
+      "Shikun Zhang",
+      "Wei Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2505.10494",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Histopathology VLM Holistic Benchmark",
+  "description": "Recently, histopathology vision-language foundation models (VLMs) have gained popularity due to their enhanced performance and generalizability across different downstream tasks. However, most existing histopathology benchmarks are either unimodal or limited in terms of diversity of clinical tasks, organs, and acquisition instruments, as well as their partial availability to the public due to patient data privacy. As a consequence, there is a lack of comprehensive evaluation of existing histopathology VLMs on a unified benchmark setting that better reflects a wide range of clinical scenarios. To address this gap, we introduce HistoVL, a fully open-source comprehensive benchmark comprising images acquired using up to 11 various acquisition tools that are paired with specifically crafted captions by incorporating class names and diverse pathology descriptions. Our Histo-VL includes 26 organs, 31 cancer types, and a wide variety of tissue obtained from 14 heterogeneous patient cohorts, totaling more than 5 million patches obtained from over 41K WSIs viewed under various magnification levels. We systematically evaluate existing histopathology VLMs on Histo-VL to simulate diverse tasks performed by experts in real-world clinical scenarios. Our analysis reveals interesting findings, including large sensitivity of most existing histopathology VLMs to textual changes with a drop in balanced accuracy of up to 25% in tasks such as Metastasis detection, low robustness to adversarial attacks, as well as improper calibration of models evident through high ECE values and low model prediction confidence, all of which can affect their clinical implementation.",
+  "category": "multimodal",
+  "domain": "medical imaging / histopathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "detection",
+    "segmentation",
+    "captioning",
+    "visual_question_answering",
+    "retrieval"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "balanced_accuracy",
+  "general_score_metric": "balanced_accuracy",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, specialized open benchmark for histopathology VLMs gaining attention in the medical imaging community but not yet a broadly established standard.",
+  "notes": "Large-scale, fully open-source but heterogeneous across scanners/cohorts; susceptible to domain shift and class imbalance. Reported models show high sensitivity to prompt/text changes, low robustness to adversarial attacks, and calibration issues (high ECE). Not a simple LLM benchmark—focuses on vision-language models in clinical histopathology.",
+  "creators": {
+    "scientists": [
+      "Roba Al Majzoub",
+      "Hashmat Malik",
+      "Muzammal Naseer",
+      "Zaigham Zaheer",
+      "Tariq Mahmood",
+      "Salman Khan",
+      "Fahad Khan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2503.12990",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

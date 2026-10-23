@@ -1,0 +1,38 @@
+{
+  "name": "PTR",
+  "description": "A critical aspect of human visual perception is the ability to parse visual scenes into individual objects and further into object parts, forming part-whole hierarchies. Such composite structures could induce a rich set of semantic concepts and relations, thus playing an important role in the interpretation and organization of visual signals as well as for the generalization of visual perception and reasoning. However, existing visual reasoning benchmarks mostly focus on objects rather than parts. Visual reasoning based on the full part-whole hierarchy is much more challenging than object-centric reasoning due to finer-grained concepts, richer geometry relations, and more complex physics. Therefore, to better serve for part-based conceptual, relational and physical reasoning, we introduce a new large-scale diagnostic visual reasoning dataset named PTR. PTR contains around 70k RGBD synthetic images with ground truth object and part level annotations regarding semantic instance segmentation, color attributes, spatial and geometric relationships, and certain physical properties such as stability. These images are paired with 700k machine-generated questions covering various types of reasoning types, making them a good testbed for visual reasoning models. We examine several state-of-the-art visual reasoning models on this dataset and observe that they still make many surprising mistakes in situations where humans can easily infer the correct answer. We believe this dataset will open up new opportunities for part-based reasoning.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "semantic_segmentation",
+    "attribute_classification",
+    "relation_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy (for reasoning tasks); mIoU / IoU (for segmentation tasks)",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded in visual reasoning research as a challenging, part-centric diagnostic dataset but not yet as widely adopted as mainstream VQA or segmentation benchmarks.",
+  "notes": "Synthetic RGB-D dataset with extensive ground-truth part annotations — useful for diagnostic research but may suffer from sim-to-real generalization gaps; multi-task evaluation (segmentation + reasoning) requires reporting multiple metrics.",
+  "creators": {
+    "scientists": [
+      "Yining Hong",
+      "Li Yi",
+      "Joshua B. Tenenbaum",
+      "Antonio Torralba",
+      "Chuang Gan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.05136",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

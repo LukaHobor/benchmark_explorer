@@ -1,0 +1,36 @@
+{
+  "name": "OCL-3DSS",
+  "description": "Despite continual learning's long and well-established academic history, its application in real-world scenarios remains rather limited. This paper contends that this gap is attributable to a misalignment between the actual challenges of continual learning and the evaluation protocols in use, rendering proposed solutions ineffective for addressing the complexities of real-world setups. We validate our hypothesis and assess progress to date, using a new 3D semantic segmentation benchmark, OCL-3DSS. We investigate various continual learning schemes from the literature by utilizing more realistic protocols that necessitate online and continual learning for dynamic, real-world scenarios (eg., in robotics and 3D vision applications). The outcomes are sobering: all considered methods perform poorly, significantly deviating from the upper bound of joint offline training. This raises questions about the applicability of existing methods in realistic settings. Our paper aims to initiate a paradigm shift, advocating for the adoption of continual learning methods through new experimental protocols that better emulate real-world conditions to facilitate breakthroughs in the field.",
+  "category": "vision",
+  "domain": "3D perception / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "continual_learning",
+    "online_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean IoU (mIoU), accuracy, forgetting metrics",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "often <50% (varies by setting) — overall low compared to offline joint training",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) benchmark highlighting gaps in continual-learning for 3D semantic segmentation; limited adoption so far but influential for raising evaluation-standard discussions.",
+  "notes": "Non-LLM, specialized 3D/robotics benchmark using realistic online protocols; not saturated and currently demonstrates poor performance of existing methods; requires point-cloud/3D tooling.",
+  "creators": {
+    "scientists": [
+      "Theodora Kontogianni",
+      "Yuanwen Yue",
+      "Siyu Tang",
+      "Konrad Schindler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2402.10130",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

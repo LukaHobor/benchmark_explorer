@@ -1,0 +1,37 @@
+{
+  "name": "SFace",
+  "description": "Recent deep face recognition models proposed in the literature utilized large-scale public datasets such as MS-Celeb-1M and VGGFace2 for training very deep neural networks, achieving state-of-the-art performance on mainstream benchmarks. Recently, many of these datasets, e.g., MS-Celeb-1M and VGGFace2, are retracted due to credible privacy and ethical concerns. This motivates this work to propose and investigate the feasibility of using a privacy-friendly synthetically generated face dataset to train face recognition models. Towards this end, we utilize a class-conditional generative adversarial network to generate class-labeled synthetic face images, namely SFace. To address the privacy aspect of using such data to train a face recognition model, we provide extensive evaluation experiments on the identity relation between the synthetic dataset and the original authentic dataset used to train the generative model. Our reported evaluation proved that associating an identity of the authentic dataset to one with the same class label in the synthetic dataset is hardly possible. We also propose to train face recognition on our privacy-friendly dataset, SFace, using three different learning strategies, multi-class classification, label-free knowledge transfer, and combined learning of multi-class classification and knowledge transfer. The reported evaluation results on five authentic face benchmarks demonstrated that the privacy-friendly synthetic dataset has a high potential to be used for training face recognition models, achieving, for example, a verification accuracy of 91.87% on LFW using multi-class classification and 99.13% using the combined learning strategy. The training code and the synthetic face image dataset are publicly released <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup> <sup xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">1</sup> https://github.com/fdbtrs/SFace-Privacy-friendly-and-Accurate-Face-Recognition-using-Synthetic-Data.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "face_verification",
+    "face_identification",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "verification accuracy",
+  "typical_sota_score": "92–99%",
+  "year_of_publish": 2022,
+  "reputation": "92 citations",
+  "notes": "Synthetic, class-conditional GAN-generated face dataset intended as a privacy-friendly training resource. Key caveats: potential domain gap and synthetic artifacts compared to authentic face images, limited guarantees about demographic coverage, and intended for non-LLM vision model training; generally lower contamination/privacy risk versus real face datasets.",
+  "creators": {
+    "scientists": [
+      "Fadi Boutros",
+      "Marco Huber",
+      "Patrick Siebke",
+      "Tim Rieber",
+      "Naser Damer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/ijcb54206.2022.10007961",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

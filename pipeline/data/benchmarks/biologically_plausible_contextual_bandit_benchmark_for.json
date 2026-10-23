@@ -1,0 +1,37 @@
+{
+  "name": "Biologically Plausible Contextual Bandit Benchmark for Precision Oncology",
+  "description": "Precision oncology, the genetic sequencing of tumors to identify druggable targets, has emerged as the standard of care in the treatment of many cancers. Nonetheless, due to the pace of therapy development and variability in patient information, designing effective protocols for individual treatment assignment in a sample-efficient way remains a major challenge. One promising approach to this problem is to frame precision oncology treatment as a contextual bandit problem and to apply sequential decision-making algorithms designed to minimize regret in this setting. However, a clear prerequisite for considering this methodology in high-stakes clinical decisions is careful benchmarking to understand realistic costs and benefits. Here, we propose a benchmark dataset to evaluate contextual bandit algorithms based on real in vitro drug response of approximately 900 cancer cell lines. Specifically, we curated a dataset of complete treatment responses for a subset of 7 treatments from prior in vitro studies. This allows us to compute the regret of proposed decision policies using biologically plausible counterfactuals. We ran a suite of Bayesian bandit algorithms on our benchmark, and found that the methods accumulate less regret over a sequence of treatment assignment tasks than a rule-based baseline derived from current clinical practice. This effect was more pronounced when genomic information was included as context. We expect this work to be a starting point for evaluation of both the unique structural requirements and ethical implications for real-world testing of bandit based clinical decision support.",
+  "category": "mixed",
+  "domain": "medical / precision oncology",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "contextual_bandit",
+    "sequential_decision_making",
+    "off_policy_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "cumulative_regret",
+  "general_score_metric": "cumulative regret (or average regret per decision)",
+  "year_of_publish": 2019,
+  "reputation": "Academic benchmark of interest to bandit and medical ML researchers but has limited mainstream adoption.",
+  "notes": "Relatively small, domain-specific dataset (~900 cell lines, 7 treatments); counterfactuals are biologically plausible but synthetic for evaluation, so real-world deployment requires caution. Not an LLM benchmark; ethical and safety implications for clinical decision support should be considered.",
+  "creators": {
+    "scientists": [
+      "Niklas T. Rindtorff",
+      "MingYu Lu",
+      "Nisarg A. Patel",
+      "Huahua Zheng",
+      "Alexander D'Amour"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/1911.04389",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

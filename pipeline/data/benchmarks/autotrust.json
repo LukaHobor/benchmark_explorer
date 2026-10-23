@@ -1,0 +1,46 @@
+{
+  "name": "AutoTrust",
+  "description": "Recent advancements in large vision language models (VLMs) tailored for autonomous driving (AD) have shown strong scene understanding and reasoning capabilities, making them undeniable candidates for end-to-end driving systems. However, limited work exists on studying the trustworthiness of DriveVLMs -- a critical factor that directly impacts public transportation safety. In this paper, we introduce AutoTrust, a comprehensive trustworthiness benchmark for large vision-language models in autonomous driving (DriveVLMs), considering diverse perspectives -- including trustfulness, safety, robustness, privacy, and fairness. We constructed the largest visual question-answering dataset for investigating trustworthiness issues in driving scenarios, comprising over 10k unique scenes and 18k queries. We evaluated six publicly available VLMs, spanning from generalist to specialist, from open-source to commercial models. Our exhaustive evaluations have unveiled previously undiscovered vulnerabilities of DriveVLMs to trustworthiness threats. Specifically, we found that the general VLMs like LLaVA-v1.6 and GPT-4o-mini surprisingly outperform specialized models fine-tuned for driving in terms of overall trustworthiness. DriveVLMs like DriveLM-Agent are particularly vulnerable to disclosing sensitive information. Additionally, both generalist and specialist VLMs remain susceptible to adversarial attacks and struggle to ensure unbiased decision-making across diverse environments and populations. Our findings call for immediate and decisive action to address the trustworthiness of DriveVLMs -- an issue of critical importance to public safety and the welfare of all citizens relying on autonomous transportation systems. Our benchmark is publicly available at \\url{https://github.com/taco-group/AutoTrust}, and the leaderboard is released at \\url{https://taco-group.github.io/AutoTrust/}.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "open_ended",
+    "multiple_choice",
+    "yes_no"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "composite_trustworthiness_score (aggregated accuracy-based metrics across trustfulness, safety, robustness, privacy, fairness)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "New benchmark introduced for DriveVLM trustworthiness with growing interest in VLM/safety and autonomous-driving research but limited broad adoption so far.",
+  "notes": "Contains ~10k scenes and 18k queries; includes sensitive driving data (privacy risks) and adversarial/test-time perturbations; possible overlap with pretraining data for large VLMs; not yet saturated.",
+  "creators": {
+    "scientists": [
+      "Shuo Xing",
+      "Hongyuan Hua",
+      "Xiangbo Gao",
+      "Shenzhe Zhu",
+      "Renjie Li",
+      "Kexin Tian",
+      "Xiaopeng Li",
+      "Heng Huang",
+      "Tianbao Yang",
+      "Zhangyang Wang",
+      "Yang Zhou",
+      "Huaxiu Yao",
+      "Zhengzhong Tu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2412.15206",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

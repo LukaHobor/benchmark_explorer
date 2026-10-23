@@ -1,0 +1,33 @@
+{
+  "name": "TaskComplexity",
+  "description": "This paper addresses the challenge of classifying and assigning programming tasks to experts, a process that typically requires significant effort, time, and cost. To tackle this issue, a novel dataset containing a total of 4,112 programming tasks was created by extracting tasks from various websites. Web scraping techniques were employed to collect this dataset of programming problems systematically. Specific HTML tags were tracked to extract key elements of each issue, including the title, problem description, input-output, examples, problem class, and complexity score. Examples from the dataset are provided in the appendix to illustrate the variety and complexity of tasks included. The dataset's effectiveness has been evaluated and benchmarked using two approaches; the first approach involved fine-tuning the FLAN-T5 small model on the dataset, while the second approach used in-context learning (ICL) with the GPT-4o mini. The performance was assessed using standard metrics: accuracy, recall, precision, and F1-score. The results indicated that in-context learning with GPT-4o-mini outperformed the FLAN-T5 model.",
+  "category": "code",
+  "domain": "Programming tasks / education",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "accuracy, precision, recall, F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2024,
+  "reputation": "New academic dataset introduced in a recent paper with limited external adoption so far.",
+  "notes": "Dataset is web-scraped (4,112 tasks) and may contain label noise and contamination from source sites; relatively small scale compared to large public code benchmarks.",
+  "creators": {
+    "scientists": [
+      "Areeg Fahad Rasheed",
+      "M. Zarkoosh",
+      "Safa F. Abbas",
+      "Sana Sabah Al-Azzawi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2409.20189",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

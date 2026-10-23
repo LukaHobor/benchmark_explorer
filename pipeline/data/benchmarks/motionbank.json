@@ -1,0 +1,42 @@
+{
+  "name": "MotionBank",
+  "description": "In this paper, we tackle the problem of how to build and benchmark a large motion model (LMM). The ultimate goal of LMM is to serve as a foundation model for versatile motion-related tasks, e.g., human motion generation, with interpretability and generalizability. Though advanced, recent LMM-related works are still limited by small-scale motion data and costly text descriptions. Besides, previous motion benchmarks primarily focus on pure body movements, neglecting the ubiquitous motions in context, i.e., humans interacting with humans, objects, and scenes. To address these limitations, we consolidate large-scale video action datasets as knowledge banks to build MotionBank, which comprises 13 video action datasets, 1.24M motion sequences, and 132.9M frames of natural and diverse human motions. Different from laboratory-captured motions, in-the-wild human-centric videos contain abundant motions in context. To facilitate better motion text alignment, we also meticulously devise a motion caption generation algorithm to automatically produce rule-based, unbiased, and disentangled text descriptions via the kinematic characteristics for each motion. Extensive experiments show that our MotionBank is beneficial for general motion-related tasks of human motion generation, motion in-context generation, and motion understanding. Video motions together with the rule-based text annotations could serve as an efficient alternative for larger LMMs. Our dataset, codes, and benchmark will be publicly available at https://github.com/liangxuy/MotionBank.",
+  "category": "vision",
+  "domain": "motion / video / human motion",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "motion_generation",
+    "text_to_motion (caption-conditioned generation)",
+    "motion_understanding",
+    "retrieval"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "motion FID / R-precision / task-specific reconstruction and retrieval accuracy (and human evaluation for perceptual quality)",
+  "general_score_metric": "motion FID (primary for generation quality) and R-precision for text-motion alignment",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A large and recent consolidated motion dataset aimed at building foundation motion models; promising for the motion-research community but still new and not yet a de facto standard.",
+  "notes": "Very large multi-dataset consolidation (1.24M sequences); motion captions are algorithmically generated (rule-based), so text labels can be noisy or biased; useful for LMMs but requires care for downstream evaluation and potential contamination from constituent datasets.",
+  "creators": {
+    "scientists": [
+      "Liang Xu",
+      "Shaoyang Hua",
+      "Zili Lin",
+      "Yifan Liu",
+      "Feipeng Ma",
+      "Yichao Yan",
+      "Xin Jin",
+      "Xiaokang Yang",
+      "Wenjun Zeng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.13790",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

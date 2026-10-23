@@ -1,0 +1,38 @@
+{
+  "name": "Protein-ligand structure and conformation benchmark",
+  "description": "A benchmark for jointly evaluating methods that predict protein structures and ligand conformations (protein–ligand complex modeling).",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "docking",
+    "pose_prediction",
+    "structure_prediction",
+    "conformation_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Ligand pose RMSD (root-mean-square deviation) to native structure and pose success rate (fraction of predictions within a threshold, e.g., ≤2.0 Å)",
+  "general_score_metric": "Median ligand RMSD and success rate within 2 Å",
+  "typical_sota_score": "median RMSD ~1–3 Å; success rate within 2 Å typically in the ~30–70% range depending on dataset and flexibility",
+  "year_of_publish": 2023,
+  "reputation": "Valued within computational structural biology and drug-discovery circles for joint evaluation of protein and ligand modeling methods, though adoption is specialized to the field.",
+  "notes": "Performance heavily dependent on receptor flexibility, dataset composition, and preprocessing; limited experimental-complex diversity and possible training/test contamination if methods were trained on overlapping complexes; evaluation sensitive to alignment and protonation/water handling.",
+  "creators": {
+    "scientists": [
+      "Leemann M",
+      "Sagasta A",
+      "Eberhardt J",
+      "Schwede T",
+      "Robin X",
+      "Durairaj J"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

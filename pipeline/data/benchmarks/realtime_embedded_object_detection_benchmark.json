@@ -1,0 +1,34 @@
+{
+  "name": "Real-Time Embedded Object Detection Benchmark",
+  "description": "Object detection is one of the key tasks in many applications of computer vision. Deep Neural Networks (DNNs) are undoubtedly a well-suited approach for object detection. However, such DNNs need highly adapted hardware together with hardware-specific optimization to guarantee high efficiency during inference. This is especially the case when aiming for efficient object detection in video streaming applications on limited hardware such as edge devices. Comparing vendor-specific hardware and related optimization software pipelines in a fair experimental setup is a challenge. In this paper, we propose a framework that uses a host computer with a host software application together with a light-weight interface based on the Message Queuing Telemetry Transport (MQTT) protocol. Various different target devices with target apps can be connected via MQTT with this host computer. With well-defined and standardized MQTT messages, object detection results can be reported to the host computer, where the results are evaluated without harming or influencing the processing on the device. With this quite generic framework, we can measure the object detection performance, the runtime, and the energy efficiency at the same time. The effectiveness of this framework is demonstrated in multiple experiments that offer deep insights into the optimization of DNNs.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "object_detection",
+    "performance_measurement",
+    "energy_efficiency"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mAP (mean average precision) for detection plus latency and energy measurements (composite evaluation)",
+  "general_score_metric": "mAP (primary) with reported latency (ms) and energy (J) as secondary metrics",
+  "year_of_publish": 2023,
+  "reputation": "A systems-focused benchmarking framework from a single research paper; useful for device-level comparisons but not a broadly standardized community benchmark.",
+  "notes": "Non-LLM benchmark and hardware/implementation-dependent; results are sensitive to vendor optimizations and software stacks, which can hinder reproducibility and cross-device comparability.",
+  "creators": {
+    "scientists": [
+      "Michael Schlosser",
+      "Daniel König",
+      "Michael Teutsch"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2304.11580",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

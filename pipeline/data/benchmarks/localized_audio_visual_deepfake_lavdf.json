@@ -1,0 +1,47 @@
+{
+  "name": "Localized Audio Visual DeepFake (LAV-DF)",
+  "description": "Most deepfake detection methods focus on detecting spatial and/or spatio-temporal changes in facial attributes and are centered around the binary classification task of detecting whether a video is real or fake. This is because available benchmark datasets contain mostly visual-only modifications present in the entirety of the video. However, a sophisticated deepfake may include small segments of audio or audio-visual manipulations that can completely change the meaning of the video content. To addresses this gap, we propose and benchmark a new dataset, Localized Audio Visual DeepFake (LAV-DF), consisting of strategic content-driven audio, visual and audio-visual manipulations. The proposed baseline method, Boundary Aware Temporal Forgery Detection (BA-TFD), is a 3D Convolutional Neural Network-based architecture which effectively captures multimodal manipulations. We further improve (i.e. BA-TFD+) the baseline method by replacing the backbone with a Multiscale Vision Transformer and guide the training process with contrastive, frame classification, boundary matching and multimodal boundary matching loss functions. The quantitative analysis demonstrates the superiority of BA-TFD+ on temporal forgery localization and deepfake detection tasks using several benchmark datasets including our newly proposed dataset. The dataset, models and code are available at https://github.com/ControlNet/LAV-DF.",
+  "category": "multimodal",
+  "domain": "multimedia forensics / audio-visual deepfake detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "temporal_localization",
+    "forgery_localization",
+    "multimodal_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": [
+    "F1",
+    "AUC",
+    "mAP",
+    "IoU",
+    "accuracy"
+  ],
+  "general_score_metric": "F1",
+  "typical_sota_score": "60–90% (varies substantially by task and modality)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "Proposed in 2023 as a more challenging, localized audio-visual deepfake benchmark; has attracted attention from multimodal forgery-detection researchers but is not yet as widely used as older visual-only datasets.",
+  "notes": "Focuses on localized and multimodal forgeries — more realistic but also more heterogeneous; contains synthetic and edited content which may introduce artifacts; benchmark is multimodal (non-LLM) and task metrics vary by localization vs. detection.",
+  "creators": {
+    "scientists": [
+      "Zhixi Cai",
+      "Shreya Ghosh",
+      "Abhinav Dhall",
+      "Tom Gedeon",
+      "Kalin Stefanov",
+      "Munawar Hayat"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.01979",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

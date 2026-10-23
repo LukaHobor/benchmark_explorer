@@ -1,0 +1,38 @@
+{
+  "name": "Cold atom optimization benchmark",
+  "description": "The generation of cold atom clouds is a complex process which involves the optimization of noisy data in high dimensional parameter spaces. Optimization can be challenging both in and especially outside of the lab due to lack of time, expertise, or access for lengthy manual optimization. In recent years, it was demonstrated that machine learning offers a solution since it can optimize high dimensional problems quickly, without knowledge of the experiment itself. In this paper we present results showing the benchmarking of nine different optimization techniques and implementations, alongside their ability to optimize a Rubidium (Rb) cold atom experiment. The investigations are performed on a 3D $^{87}$Rb molasses with 10 and 18 adjustable parameters, respectively, where the atom number obtained by absorption imaging was chosen as the test problem. We further compare the best performing optimizers under different effective noise conditions by reducing the Signal-to-Noise ratio of the images via adapting the atomic vapor pressure in the 2D+ MOT and the detection laser frequency stability.",
+  "category": "mixed",
+  "domain": "atomic physics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "optimization",
+    "black_box_optimization",
+    "continuous_parameter_tuning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "objective_value (best observed atom number) and sample efficiency (number of trials to reach performance)",
+  "general_score_metric": "best_objective_value (atom count) / sample_efficiency",
+  "year_of_publish": 2023,
+  "reputation": "Niche but respected within experimental atomic physics and quantum-control communities as a real-world lab optimization benchmark.",
+  "notes": "Real-world laboratory benchmark with high experimental noise and hardware variability; not easily reproducible without access to similar equipment; small, specialized dataset and results sensitive to experimental conditions.",
+  "creators": {
+    "scientists": [
+      "Oliver Anton",
+      "Victoria A. Henderson",
+      "Elisa Da Ros",
+      "Ivan Sekulic",
+      "Sven Burger",
+      "Philipp-Immanuel Schneider",
+      "Markus Krutzik"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2312.13397",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

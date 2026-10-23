@@ -1,0 +1,41 @@
+{
+  "name": "MIGPerf",
+  "description": "New architecture GPUs like A100 are now equipped with multi-instance GPU (MIG) technology, which allows the GPU to be partitioned into multiple small, isolated instances. This technology provides more flexibility for users to support both deep learning training and inference workloads, but efficiently utilizing it can still be challenging. The vision of this paper is to provide a more comprehensive and practical benchmark study for MIG in order to eliminate the need for tedious manual benchmarking and tuning efforts. To achieve this vision, the paper presents MIGPerf, an open-source tool that streamlines the benchmark study for MIG. Using MIGPerf, the authors conduct a series of experiments, including deep learning training and inference characterization on MIG, GPU sharing characterization, and framework compatibility with MIG. The results of these experiments provide new insights and guidance for users to effectively employ MIG, and lay the foundation for further research on the orchestration of hybrid training and inference workloads on MIGs. The code and results are released on https://github.com/MLSysOps/MIGProfiler. This work is still in progress and more results will be published soon.",
+  "category": "mixed",
+  "domain": "deep learning systems / GPU hardware",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "performance_benchmarking",
+    "profiling",
+    "inference_and_training_characterization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "throughput_and_latency",
+  "general_score_metric": "throughput (samples/sec) and latency (ms); also GPU utilization and memory efficiency",
+  "year_of_publish": 2023,
+  "reputation": "An open-source tool and benchmark suite for MIG that is used by systems researchers and practitioners interested in GPU partitioning; adoption is growing within the ML systems community.",
+  "notes": "Non-LLM, hardware-specific benchmark; results are highly sensitive to GPU model, driver/CUDA versions, framework versions, and workload characteristics; reproducibility requires matching software and MIG partitioning configurations.",
+  "creators": {
+    "scientists": [
+      "Huaizheng Zhang",
+      "Yuanming Li",
+      "Wencong Xiao",
+      "Yizheng Huang",
+      "Xing Di",
+      "Jianxiong Yin",
+      "Simon See",
+      "Yong Luo",
+      "Chiew Tong Lau",
+      "Yang You"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2301.00407",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

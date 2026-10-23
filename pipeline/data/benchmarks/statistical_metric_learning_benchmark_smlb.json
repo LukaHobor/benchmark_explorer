@@ -1,0 +1,37 @@
+{
+  "name": "Statistical Metric Learning Benchmark (SMLB)",
+  "description": "Recently, self-supervised metric learning has raised attention for the potential to learn a generic distance function. It overcomes the limitations of conventional supervised one, e.g., scalability and label biases. Despite progress in this domain, current benchmarks, incorporating a narrow scope of classes, stop the nuanced evaluation of semantic representations. To bridge this gap, we introduce a large-scale benchmark with diversity and granularity of classes, Statistical Metric Learning Benchmark (SMLB) built upon ImageNet-21K and WordNet. SMLB is designed to rigorously evaluate the discriminative discernment and generalizability across more than 14M images, 20K classes, and 16K taxonomic nodes. Alongside, we propose novel evaluation metrics -- `overlap' for separability and `aSTD' for consistency -- to measure distance statistical information, which are efficient and robust to the change of class number. Our benchmark offers a novel perspective of evaluating the quality of representations beyond accuracy. Our findings reveal the limitations of supervised learning and the class bias inherent in SSL models, offering insights into potential areas for future model enhancement.",
+  "category": "vision",
+  "domain": "vision / representation learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "metric_learning",
+    "representation_learning",
+    "image_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "novel statistical metrics introduced by the paper (overlap and aSTD) plus retrieval-based metrics (e.g., recall@k) for downstream evaluation",
+  "general_score_metric": "overlap (primary novel metric) and aSTD",
+  "year_of_publish": 2023,
+  "reputation": "A recently proposed large-scale benchmark gaining attention in representation learning for offering more granular, taxonomically diverse evaluation than prior datasets.",
+  "notes": "Large-scale non-LLM vision benchmark; designed to stress class diversity and granularity; potential dataset contamination should be considered when evaluating models pretrained on large web corpora.",
+  "creators": {
+    "scientists": [
+      "Jiantao Wu",
+      "Shentong Mo",
+      "Sara Atito",
+      "Josef Kittler",
+      "ZhenHua Feng",
+      "Muhammad Awais"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.01118",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "VAD evaluation protocols / benchmark",
+  "description": "Video Anomaly Detection (VAD), which aims to detect anomalies that deviate from expectation, has attracted increasing attention in recent years. Existing advancements in VAD primarily focus on model architectures and training strategies, while devoting insufficient attention to evaluation metrics and benchmarks. In this paper, we rethink VAD evaluation protocols through comprehensive experimental analyses, revealing three critical limitations in current practices: 1) existing metrics are significantly influenced by single annotation bias; 2) current metrics fail to reward early detection of anomalies; 3) available benchmarks lack the capability to evaluate scene overfitting. To address these limitations, we propose three novel evaluation methods: first, we establish averaged AUC/AP metrics over multi-round annotations to mitigate single annotation bias; second, we develop a Latency-aware Average Precision (LaAP) metric that rewards early and accurate anomaly detection; and finally, we introduce two hard normal benchmarks (UCF-HN, MSAD-HN) with videos specifically designed to evaluate scene overfitting. We report performance comparisons of ten state-of-the-art VAD approaches using our proposed evaluation methods, providing novel perspectives for future VAD model development.",
+  "category": "vision",
+  "domain": "computer vision / video anomaly detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "temporal_localization",
+    "video_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC and Average Precision (AP) averaged over multiple annotations; Latency-aware Average Precision (LaAP) for early detection",
+  "general_score_metric": "averaged AUC/AP and LaAP",
+  "typical_sota_score": "dataset-dependent; AUC/AP commonly reported in ~60–95% ranges",
+  "year_of_publish": 2025,
+  "reputation": "A recent, well-motivated proposal to improve VAD evaluation that is gaining attention among VAD researchers but is not yet a de facto standard.",
+  "notes": "Evaluation-focused work (not a model zoo). Requires multi-round annotations to realize benefits; introduces latency-aware metric and hard-normal benchmarks to test scene overfitting. Non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Zihao Liu",
+      "Xiaoyu Wu",
+      "Wenna Li",
+      "Linlin Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.19022",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

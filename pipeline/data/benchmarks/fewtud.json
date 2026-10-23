@@ -1,0 +1,38 @@
+{
+  "name": "FewTUD",
+  "description": "Few-shot table understanding is a critical and challenging problem in real-world scenario as annotations over large amount of tables are usually costly. Pre-trained language models (PLMs), which have recently flourished on tabular data, have demonstrated their effectiveness for table understanding tasks. However, few-shot table understanding is rarely explored due to the deficiency of public table pre-training corpus and well-defined downstream benchmark tasks, especially in Chinese. In this paper, we establish a benchmark dataset, FewTUD, which consists of 5 different tasks with human annotations to systematically explore the few-shot table understanding in depth. Since there is no large number of public Chinese tables, we also collect a large-scale, multi-domain tabular corpus to facilitate future Chinese table pre-training, which includes one million tables and related natural language text with auxiliary supervised interaction signals. Finally, we present FewTPT, a novel table PLM with rich interactions over tabular data, and evaluate its performance comprehensively on the benchmark. Our dataset and model will be released to the public soon.",
+  "category": "text",
+  "domain": "tables / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "question_answering",
+    "table_to_text",
+    "semantic_parsing",
+    "entity_linking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Task-dependent: accuracy for classification tasks, F1 / exact_match for QA and parsing, BLEU/ROUGE or EM for table-to-text",
+  "general_score_metric": "Accuracy (task-dependent; some tasks report F1 or exact_match)",
+  "reputation": "New Chinese few-shot table-understanding benchmark with growing interest in the Chinese NLP and table-PLM research communities.",
+  "notes": "Contains multiple small few-shot tasks (5 tasks) — performance is task dependent; authors also provide a large Chinese table corpus for pretraining; Chinese-only (domain/language limitation); potential overlap with private pretraining data of large models; not a pure LLM benchmark (designed for table PLMs).",
+  "creators": {
+    "scientists": [
+      "Ruixue Liu",
+      "Shaozu Yuan",
+      "Aijun Dai",
+      "Lei Shen",
+      "Tiangang Zhu",
+      "Meng Chen",
+      "Xiaodong He"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

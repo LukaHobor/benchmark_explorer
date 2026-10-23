@@ -1,0 +1,36 @@
+{
+  "name": "ASCIIBench",
+  "description": "Large language models (LLMs) have demonstrated several emergent behaviors with scale, including reasoning and fluency in long-form text generation. However, they continue to struggle with tasks requiring precise spatial and positional reasoning. ASCII art, a symbolic medium where characters encode structure and form, provides a unique probe of this limitation. We introduce ASCIIBench, a novel benchmark for evaluating both the generation and classification of ASCII-text images. ASCIIBench consists of a filtered dataset of 5,315 class-labeled ASCII images and is, to our knowledge, the first publicly available benchmark of its kind. Alongside the dataset, we release weights for a fine-tuned CLIP model adapted to capture ASCII structure, enabling the evaluation of LLM-generated ASCII art. Our analysis shows that cosine similarity over CLIP embeddings fails to separate most ASCII categories, yielding chance-level performance even for low-variance classes. In contrast, classes with high inte",
+  "category": "text",
+  "domain": "mixed",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "generation",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A very recent and novel benchmark with limited community adoption so far, introduced to probe ASCII-art generation and recognition capabilities.",
+  "notes": "Contains 5,315 labeled ASCII images; as a new benchmark it may have limited external validation, and performance can depend on the chosen embedding/classifier setup.",
+  "creators": {
+    "scientists": [
+      "Kerry Luo",
+      "Michael Fu",
+      "Joshua Peguero",
+      "Husnain Malik",
+      "Anvay Patil",
+      "Joyce Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2512.04125",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

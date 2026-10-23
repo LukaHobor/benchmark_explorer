@@ -1,0 +1,40 @@
+{
+  "name": "3D Object Detection Corruption Robustness Benchmark",
+  "description": "3D object detection is an important task in autonomous driving to perceive the surroundings. Despite the excellent performance, the existing 3D detectors lack the robustness to real-world corruptions caused by adverse weathers, sensor noises, etc., provoking concerns about the safety and reliability of autonomous driving systems. To comprehensively and rigorously benchmark the corruption robustness of 3D detectors, in this paper we design 27 types of common corruptions for both LiDAR and camera inputs considering real-world driving scenarios. By synthesizing these corruptions on public datasets, we establish three corruption robustness benchmarks---KITTI-C, nuScenes-C, and Waymo-C. Then, we conduct large-scale experiments on 24 diverse 3D object detection models to evaluate their corruption robustness. Based on the evaluation results, we draw several important findings, including: 1) motion-level corruptions are the most threatening ones that lead to significant performance drop of all models; 2) LiDAR-camera fusion models demonstrate better robustness; 3) camera-only models are extremely vulnerable to image corruptions, showing the indispensability of LiDAR point clouds. We release the benchmarks and codes at https://github.com/thu-ml/3D_Corruptions_AD to be helpful for future studies.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision",
+  "general_score_metric": "mAP (mean average precision)",
+  "typical_sota_score": "50–70%",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Well-regarded in autonomous-driving robustness research; used by researchers studying corruption/safety effects on 3D detectors.",
+  "notes": "Non-LLM benchmark focused on LiDAR/camera 3D detection; uses synthetic corruptions of public datasets (KITTI, nuScenes, Waymo) so results depend on corruption types and severity. Useful for robustness research but not a direct proxy for real-world safety without further validation.",
+  "creators": {
+    "scientists": [
+      "Yinpeng Dong",
+      "Caixin Kang",
+      "Jinlai Zhang",
+      "Zijian Zhu",
+      "Yikai Wang",
+      "Xiao Yang",
+      "Hang Su",
+      "Xingxing Wei",
+      "Jun Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

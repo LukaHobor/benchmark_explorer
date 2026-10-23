@@ -1,0 +1,36 @@
+{
+  "name": "Low-Switching-Cost RL Benchmark",
+  "description": "A ubiquitous requirement in many practical reinforcement learning (RL) applications, including medical treatment, recommendation system, education and robotics, is that the deployed policy that actually interacts with the environment cannot change frequently. Such an RL setting is called low-switching-cost RL, i.e., achieving the highest reward while reducing the number of policy switches during training. Despite the recent trend of theoretical studies aiming to design provably efficient RL algorithms with low switching costs, none of the existing approaches have been thoroughly evaluated in popular RL testbeds. In this paper, we systematically studied a wide collection of policy-switching approaches, including theoretically guided criteria, policy-difference-based methods, and non-adaptive baselines. Through extensive experiments on a medical treatment environment, the Atari games, and robotic control tasks, we present the first empirical benchmark for low-switching-cost RL and report novel findings on how to decrease the switching cost while maintain a similar sample efficiency to the case without the low-switching-cost constraint. We hope this benchmark could serve as a starting point for developing more practically effective low-switching-cost RL algorithms. We release our code and complete results in https://sites.google.com/view/low-switching-cost-rl.",
+  "category": "mixed",
+  "domain": "reinforcement learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "online_rl",
+    "policy_optimization",
+    "control"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "cumulative_return (average episodic reward) reported jointly with policy_switch_count (number of times the deployed policy changes)",
+  "general_score_metric": "average cumulative return (episodic return) together with policy switch count (trade-off reported)",
+  "year_of_publish": 2021,
+  "reputation": "Introduced by the 2021 paper; a research-focused benchmark with limited adoption beyond the originating group so far.",
+  "notes": "Non-LLM RL benchmark spanning multiple domains (medical treatment, Atari, robotics). Compares reward vs. switching-cost trade-offs; results are environment-dependent and not directly comparable to standard RL-only benchmarks.",
+  "creators": {
+    "scientists": [
+      "Shusheng Xu",
+      "Yancheng Liang",
+      "Yunfei Li",
+      "Simon Shaolei Du",
+      "Yi Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2112.06424",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Histopathology Uncertainty Benchmark",
+  "description": "In the past years, deep learning has seen an increase in usage in the domain of histopathological applications. However, while these approaches have shown great potential, in high-risk environments deep learning models need to be able to judge their uncertainty and be able to reject inputs when there is a significant chance of misclassification. In this work, we conduct a rigorous evaluation of the most commonly used uncertainty and robustness methods for the classification of Whole Slide Images, with a focus on the task of selective classification, where the model should reject the classification in situations in which it is uncertain. We conduct our experiments on tile-level under the aspects of domain shift and label noise, as well as on slide-level. In our experiments, we compare Deep Ensembles, Monte-Carlo Dropout, Stochastic Variational Inference, Test-Time Data Augmentation as well as ensembles of the latter approaches. We observe that ensembles of methods generally lead to better uncertainty estimates as well as an increased robustness towards domain shifts and label noise, while contrary to results from classical computer vision benchmarks no systematic gain of the other methods can be shown. Across methods, a rejection of the most uncertain samples reliably leads to a significant increase in classification accuracy on both in-distribution as well as out-of-distribution data. Furthermore, we conduct experiments comparing these methods under varying conditions of label noise. Lastly, we publish our code framework to facilitate further research on uncertainty estimation on histopathological data.",
+  "category": "vision",
+  "domain": "medical imaging / histopathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "uncertainty_estimation",
+    "selective_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (selective classification / risk-coverage curves), AUROC for OOD detection, expected calibration error (ECE)",
+  "general_score_metric": "selective classification accuracy (accuracy after rejection)",
+  "year_of_publish": 2023,
+  "reputation": "A specialized benchmark used in the histopathology / medical imaging community for evaluating uncertainty estimation methods; moderate recognition in research on medical AI safety.",
+  "notes": "Non-LLM benchmark focused on WSI tile- and slide-level classification and uncertainty; common evaluation relies on AUROC, ECE and risk-coverage curves; datasets can exhibit class imbalance and label noise; ensemble methods often perform best.",
+  "creators": {
+    "scientists": [
+      "Hendrik A. Mehrtens",
+      "Alexander Kurz",
+      "Tabea-Clara Bucher",
+      "Titus J. Brinker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2301.01054",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

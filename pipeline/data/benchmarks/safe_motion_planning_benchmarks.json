@@ -1,0 +1,34 @@
+{
+  "name": "Safe Motion Planning Benchmarks",
+  "description": "This paper addresses the problem of planning a safe (i.e., collision-free)\ntrajectory from an initial state to a goal region when the obstacle space is\na-priori unknown and is incrementally revealed online, e.g., through\nline-of-sight perception. Despite its ubiquitous nature, this formulation of\nmotion planning has received relatively little theoretical investigation, as\nopposed to the setup where the environment is assumed known. A fundamental\nchallenge is that, unlike motion planning with known obstacles, it is not even\nclear what an optimal policy to strive for is. Our contribution is threefold.\nFirst, we present a notion of optimality for safe planning in unknown\nenvironments in the spirit of comparative (as opposed to competitive) analysis,\nwith the goal of obtaining a benchmark that is, at least conceptually,\nattainable. Second, by leveraging this theoretical benchmark, we derive a\npseudo-optimal class of policies that can seamlessly incorporate any amount of\nprior or learned information while still guaranteeing the robot never collides.\nFinally, we demonstrate the practicality of our algorithmic approach in\nnumerical experiments using a range of environment types and dynamics,\nincluding a comparison with a state of the art method. A key aspect of our\nframework is that it automatically and implicitly weighs exploration versus\nexploitation in a way that is optimal with respect to the information\navailable.",
+  "category": "mixed",
+  "domain": "robotics / autonomous navigation",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "planning",
+    "trajectory_optimization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate (collision-free goal reach) and relative path cost / competitive ratio",
+  "general_score_metric": "task_success_rate (with competitive ratio / path cost as secondary metric)",
+  "year_of_publish": 2018,
+  "reputation": "A well-cited research contribution for theoretical safe planning in unknown environments, but not a widely adopted standardized benchmark.",
+  "notes": "Non-LLM robotics benchmark focused on algorithmic theory; small-scale, environment-dependent experiments; evaluation mixes safety (no collisions) and cost, so direct single-number comparisons can be misleading.",
+  "creators": {
+    "scientists": [
+      "Lucas Janson",
+      "Tommy Hu",
+      "Marco Pavone"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1804.05804",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Visual Language Tracking (VLT) Interaction Benchmark",
+  "description": "Visual Language Tracking (VLT) enhances tracking by mitigating the limitations of relying solely on the visual modality, utilizing high-level semantic information through language. This integration of the language enables more advanced human-machine interaction. The essence of interaction is cognitive alignment, which typically requires multiple information exchanges, especially in the sequential decision-making process of VLT. However, current VLT benchmarks do not account for multi-round interactions during tracking. They provide only an initial text and bounding box (bbox) in the first frame, with no further interaction as tracking progresses, deviating from the original motivation of the VLT task. To address these limitations, we propose a novel and robust benchmark, VLT-MI (Visual Language Tracking with Multi-modal Interaction), which introduces multi-round interaction into the VLT task for the first time. (1) We generate diverse, multi-granularity texts for multi-round, multi-modal interaction based on existing mainstream VLT benchmarks using DTLLM-VLT, leveraging the world knowledge of LLMs. (2) We propose a new VLT interaction paradigm that achieves multi-round interaction through text updates and object recovery. When multiple tracking failures occur, we provide the tracker with more aligned texts and corrected bboxes through interaction, thereby expanding the scope of VLT downstream tasks. (3) We conduct comparative experiments on both traditional VLT benchmarks and VLT-MI, evaluating and analyzing the accuracy and robustness of trackers under the interactive paradigm. This work offers new insights and paradigms for the VLT task, enabling a fine-grained evaluation of multi-modal trackers. We believe this approach can be extended to additional datasets in the future, supporting broader evaluations and comparisons of video-language model capabilities.",
+  "category": "multimodal",
+  "domain": "visual tracking / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_tracking",
+    "interactive_sequence",
+    "bounding_box_prediction",
+    "language_grounding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (IoU-based success and precision)",
+  "general_score_metric": "IoU-based success (AUC) / precision",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed; addresses a gap in interactive VLT evaluation but not yet widely adopted.",
+  "notes": "Interactions are LLM-generated (DTLLM-VLT), introducing synthetic bias and potential distributional mismatch; relies on IoU/precision tracking metrics; new benchmark with limited community adoption and potential evaluation sensitivity to annotation/bbox correction policies.",
+  "creators": {
+    "scientists": [
+      "Xuchen Li",
+      "Shiyu Hu",
+      "Xiaokun Feng",
+      "Dailing Zhang",
+      "Meiqi Wu",
+      "Jing Zhang",
+      "Kaiqi Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.08887",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Individual Tree Mapping Benchmark",
+  "description": "There is a rising interest in mapping trees using satellite or aerial imagery, but there is no standardized evaluation protocol for comparing and enhancing methods. In dense canopy areas, the high variability of tree sizes and their spatial proximity makes it arduous to define the quality of the predictions. Concurrently, object-centric approaches such as bounding box detection usuallyperform poorly on small and dense objects. It thus remains unclear what is the ideal framework for individual tree mapping, in regards to detection and segmentation approaches, convolutional neural networks and transformers. In this paper, we introduce an evaluation framework suited for individual tree mapping in any physical environment, with annotation costs and applicative goals in mind. We review and compare different approaches and deep architectures, and introduce a new method that we experimentally prove to be a good compromise between segmentation and detection.",
+  "category": "vision",
+  "domain": "remote sensing / forestry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation",
+    "object_counting"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "object-level F1 / precision & recall for detection; IoU / mIoU and mask AP for segmentation",
+  "general_score_metric": "object-level F1 for detection; IoU / mask AP for segmentation",
+  "typical_sota_score": "60–85%",
+  "year_of_publish": 2023,
+  "reputation": "A specialized evaluation framework for tree mapping in remote sensing, referenced in the remote sensing / forestry research community but not yet a universally adopted standard.",
+  "notes": "Caveats include sensor- and region-specific variability, dense small-object challenges, and annotation cost/consistency issues; dataset sizes and modalities may vary—non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Dimitri Gominski",
+      "Ankit Kariryaa",
+      "Martin Brandt",
+      "Christian Igel",
+      "Sizhuo Li",
+      "Maurice Mugabowindekwe",
+      "Rasmus Fensholt"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2311.07981",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "LUMA",
+  "description": "Multimodal Deep Learning enhances decision-making by integrating diverse information sources, such as texts, images, audio, and videos. To develop trustworthy multimodal approaches, it is essential to understand how uncertainty impacts these models. We propose LUMA, a unique benchmark dataset, featuring audio, image, and textual data from 50 classes, for learning from uncertain and multimodal data. It extends the well-known CIFAR 10/100 dataset with audio samples extracted from three audio corpora, and text data generated using the Gemma-7B Large Language Model (LLM). The LUMA dataset enables the controlled injection of varying types and degrees of uncertainty to achieve and tailor specific experiments and benchmarking initiatives. LUMA is also available as a Python package including the functions for generating multiple variants of the dataset with controlling the diversity of the data, the amount of noise for each modality, and adding out-of-distribution samples. A baseline pre-trained model is also provided alongside three uncertainty quantification methods: Monte-Carlo Dropout, Deep Ensemble, and Reliable Conflictive Multi-View Learning. This comprehensive dataset and its benchmarking tools are intended to promote and support the development, evaluation, and benchmarking of trustworthy and robust multimodal deep learning approaches. We anticipate that the LUMA dataset will help the ICLR community to design more trustworthy and robust machine learning approaches for safety critical applications.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_class_classification",
+    "uncertainty_estimation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy and calibration metrics (e.g., ECE)",
+  "general_score_metric": "accuracy (with complementary calibration metrics such as ECE)",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed multimodal benchmark focusing on uncertainty; currently niche but relevant for researchers in multimodal robustness and uncertainty quantification.",
+  "notes": "Uses synthetic/generated text (Gemma-7B) and audio stitched to CIFAR images — risk of distributional mismatch and LLM-generated content contamination; moderate dataset size relative to large-scale vision benchmarks; designed for non-LLM multimodal robustness research.",
+  "creators": {
+    "scientists": [
+      "Grigor Bezirganyan",
+      "Sana Sellami",
+      "Laure Berti-ÉQuille",
+      "Sébastien Fournier"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.09864",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

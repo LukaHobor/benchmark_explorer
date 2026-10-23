@@ -1,0 +1,39 @@
+{
+  "name": "Multi-Modal Lidar SLAM Benchmark",
+  "description": "Lidar-based simultaneous localization and mapping (SLAM) approaches have obtained considerable success in autonomous robotic systems. This is in part owing to the high-accuracy of robust SLAM algorithms and the emergence of new and lower-cost lidar products. This study benchmarks current state-of-the-art lidar SLAM algorithms with a multi-modal lidar sensor setup showcasing diverse scanning modalities (spinning and solid-state) and sensing technologies, and lidar cameras, mounted on a mobile sensing and computing platform. We extend our previous multi-modal multi-lidar dataset with additional sequences and new sources of ground truth data. Specifically, we propose a new multi-modal multi-lidar SLAM-assisted and ICP-based sensor fusion method for generating ground truth maps. With these maps, we then match real-time pointcloud data using a natural distribution transform (NDT) method to obtain the ground truth with full 6 DOF pose estimation. This novel ground truth data leverages high-r",
+  "category": "multimodal",
+  "domain": "autonomous driving / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "trajectory estimation",
+    "pose estimation",
+    "mapping",
+    "localization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "ATE/RPE and pose error metrics",
+  "general_score_metric": "trajectory/pose error",
+  "typical_sota_score": "0.01–0.5 m ATE (translation) / ~0.1–1.0° RPE (rotation)",
+  "year_of_publish": 2022,
+  "reputation": "A niche robotics benchmark used to compare lidar SLAM methods under multi-modal sensing conditions, with relevance mainly in the SLAM research community.",
+  "notes": "Non-LLM robotics benchmark; performance depends on sensor modality and sequence conditions, and results are typically reported with localization and mapping error metrics rather than a single accuracy score.",
+  "creators": {
+    "scientists": [
+      "Ha Sier",
+      "Li Qingqing",
+      "Yu Xianjia",
+      "Jorge Peña Queralta",
+      "Zhuo Zou",
+      "Tomi Westerlund"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.00812",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Biomedical IE Benchmark",
+  "description": "Large Language Models (LLMs) are increasingly adopted for applications in healthcare, reaching the performance of domain experts on tasks such as question answering and document summarisation.Despite their success on these tasks, it is unclear how well LLMs perform on tasks that are traditionally pursued in the biomedical domain, such as structured information extraction.To bridge this gap, in this paper, we systematically benchmark LLM performance in Medical Classification and Named Entity Recognition (NER) tasks.We aim to disentangle the contribution of different factors to the performance, particularly the impact of LLMs' task knowledge and reasoning capabilities, their (parametric) domain knowledge, and addition of external knowledge.To this end, we evaluate various open LLMs-including BioMistral and Llama-2 models-on a diverse set of biomedical datasets, using standard prompting, Chainof-Thought (CoT) and Self-Consistency based reasoning as well as Retrieval-Augmented Generation (RAG) with PubMed and Wikipedia corpora.Counter-intuitively, our results reveal that standard prompting consistently outperforms more complex techniques across both tasks, laying bare the limitations in the current application of CoT, self-consistency and RAG in the biomedical domain.Our findings suggest that advanced prompting methods developed for knowledge-or reasoning-intensive tasks, such as CoT or RAG, are not easily portable to biomedical tasks where precise structured outputs are required.This highlights the need for more effective integration of external knowledge and reasoning mechanisms in LLMs to enhance their performance in real-world biomedical applications.",
+  "category": "text",
+  "domain": "medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "named_entity_recognition",
+    "sequence_labeling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (for NER/token-level) and accuracy (for classification)",
+  "general_score_metric": "F1 (primary for NER tasks)",
+  "year_of_publish": 2025,
+  "reputation": "11 citations",
+  "notes": "Domain-specific biomedical datasets with safety/privacy implications; structured-output requirements make some prompting strategies (CoT, RAG) less effective; performance varies widely by dataset and label schema.",
+  "creators": {
+    "scientists": [
+      "Aishik Nagar",
+      "Viktor Schlegel",
+      "Thanh-Tung Nguyen",
+      "Hao Li",
+      "Yuping Wu",
+      "Kuluhan Binici"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.18653/v1/2025.insights-1.11",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

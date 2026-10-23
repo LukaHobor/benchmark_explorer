@@ -1,0 +1,36 @@
+{
+  "name": "UNOS Waitlist Mortality Benchmark",
+  "description": "Decisions about managing patients on the heart transplant waitlist are currently made by committees of doctors who consider multiple factors, but the process remains largely ad-hoc. With the growing volume of longitudinal patient, donor, and organ data collected by the United Network for Organ Sharing (UNOS) since 2018, there is increasing interest in analytical approaches to support clinical decision-making at the time of organ availability. In this study, we benchmark machine learning models that leverage longitudinal waitlist history data for time-dependent, time-to-event modeling of waitlist mortality. We train on 23,807 patient records with 77 variables and evaluate both survival prediction and discrimination at a 1-year horizon. Our best model achieves a C-Index of 0.94 and AUROC of 0.89, significantly outperforming previous models. Key predictors align with known risk factors while also revealing novel associations. Our findings can support urgency assessment and policy refinement in heart transplant decision making.",
+  "category": "mixed",
+  "domain": "medical / cardiology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "survival_analysis",
+    "time_to_event_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "C-Index (concordance index), AUROC (at fixed horizons), calibration/Brier score for probabilistic predictions",
+  "general_score_metric": "C-Index",
+  "typical_sota_score": "89–94% (reported AUROC ~0.89, best C-Index up to ~0.94)",
+  "year_of_publish": 2025,
+  "reputation": "A well-regarded clinical benchmark in transplant and survival modeling research, used by researchers studying waitlist outcomes and policy; sourced from the authoritative UNOS registry.",
+  "notes": "Clinical dataset with censoring, missingness, and longitudinal structure; privacy/sensitivity considerations and potential population biases limit generalizability. Non-LLM benchmark requiring domain expertise for appropriate preprocessing and evaluation.",
+  "creators": {
+    "scientists": [
+      "Yingtao Luo",
+      "Reza Skandari",
+      "Carlos Martinez",
+      "Arman Kilic",
+      "Rema Padman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2507.07339",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "DCASE Task 4 Synthetic Soundscape Benchmark",
+  "description": "This paper proposes a benchmark of submissions to Detection and Classification Acoustic Scene and Events 2021 Challenge (DCASE) Task 4 representing a sampling of the state-of-the-art in Sound Event Detection task. The submissions are evaluated according to the two polyphonic sound detection score scenarios proposed for the DCASE 2021 Challenge Task 4, which allow to make an analysis on whether submissions are designed to perform fine-grained temporal segmentation, coarse-grained temporal segmentation, or have been designed to be polyvalent on the scenarios proposed.We study the solutions proposed by participants to analyze their robustness to varying level target to non-target signal-to-noise ratio and to temporal localization of target sound events. A last experiment is proposed in order to study the impact of non-target events on systems outputs. Results show that systems adapted to provide coarse segmentation outputs are more robust to different target to non-target signal-to-noise ratio and, with the help of specific data augmentation methods, they are more robust to time localization of the original event. Results of the last experiment display that systems tend to spuriously predict short events when non-target events are present. This is particularly true for systems that are tailored to have a fine segmentation.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sound_event_detection",
+    "temporal_localization",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "polyphonic_sound_detection_score (PSDS) and event-based F1",
+  "general_score_metric": "PSDS",
+  "year_of_publish": 2022,
+  "reputation": "Well-established DCASE challenge benchmark widely used in the acoustic scene and sound event detection research community.",
+  "notes": "Non-LLM audio benchmark; uses two PSDS scenarios to probe fine vs. coarse temporal segmentation and robustness to target/non-target SNR. Results are sensitive to augmentation and temporal granularity; synthetic soundscapes may not fully reflect all real-world recording conditions.",
+  "creators": {
+    "scientists": [
+      "Francesca Ronchini",
+      "Romain Serizel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.31219/osf.io/s7chd",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

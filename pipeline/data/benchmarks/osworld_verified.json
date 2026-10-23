@@ -1,0 +1,53 @@
+{
+  "name": "OSWorld-Verified",
+  "description": "A major upgrade of the OSWorld desktop/OS agent benchmark, introduced 2025-07-28. OSWorld-Verified retains the original 369 real-computer tasks across Ubuntu, Windows, and macOS but applies comprehensive corrections to task instructions, initial states, and evaluation scripts. The release fixes ambiguous prompts, environment-setup flakiness, and grader bugs identified in the original OSWorld so that reported scores reflect agent capability rather than infrastructure noise. Tasks still span web browsers, spreadsheets, presentations, email, calendar, file managers, terminals, PDF viewers, and code editors, with success measured by automated execution-based checks on the resulting VM state.",
+  "category": "multimodal",
+  "domain": "coding",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 369,
+  "evaluation_method": "task success rate",
+  "general_score_metric": "task success rate (%)",
+  "typical_sota_score": "~40–50% (frontier desktop agents on OSWorld-Verified, 2025)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Verified successor to OSWorld (NeurIPS 2024); maintained by xlang-ai; adopted as the canonical desktop-agent leaderboard after July 2025 upgrade; reduces evaluation noise that confounded earlier OSWorld comparisons",
+  "notes": "Released 2025-07-28 as comprehensive upgrade to OSWorld. Improvements: cleaned/clarified task instructions, hardened initial-state setup, fixed evaluator scripts that previously misjudged correct/incorrect outcomes, added retries for transient VM failures. Same 369-task catalog and 9 app categories as OSWorld so cross-version score comparison is possible but not strictly equivalent. After the cleanup, frontier multimodal agents score noticeably higher than on the original benchmark, indicating earlier gap was partially infrastructure-induced.",
+  "creators": {
+    "scientists": [
+      "Tianbao Xie",
+      "Danyang Zhang",
+      "Jixuan Chen",
+      "Xiaochuan Li",
+      "Siheng Zhao",
+      "Ruisheng Cao",
+      "Toh Jing Hua",
+      "Zhoujun Cheng",
+      "Dongchan Shin",
+      "Fangyu Lei",
+      "Yitao Liu",
+      "Yiheng Xu",
+      "Shuyan Zhou",
+      "Silvio Savarese",
+      "Caiming Xiong",
+      "Victor Zhong",
+      "Tao Yu"
+    ],
+    "institutions": [
+      "University of Hong Kong",
+      "Salesforce Research",
+      "University of Washington"
+    ],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://github.com/xlang-ai/OSWorld",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

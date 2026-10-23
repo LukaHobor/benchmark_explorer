@@ -1,0 +1,32 @@
+{
+  "name": "EmoSet++",
+  "description": "Foundation models have shown great promise in speech emotion recognition (SER) by leveraging their pre-trained representations to capture emotion patterns in speech signals. To further enhance SER performance across various languages and domains, we propose a novel twofold approach. First, we gather EmoSet++, a comprehensive multi-lingual, multi-cultural speech emotion corpus with 37 datasets, 150,907 samples, and a total duration of 119.5 hours. Second, we introduce ExHuBERT, an enhanced version of HuBERT achieved by backbone extension and fine-tuning on EmoSet++. We duplicate each encoder layer and its weights, then freeze the first duplicate, integrating an extra zero-initialized linear layer and skip connections to preserve functionality and ensure its adaptability for subsequent fine-tuning. Our evaluation on unseen datasets shows the efficacy of ExHuBERT, setting a new benchmark for various SER tasks. Model and details on EmoSet++: https://huggingface.co/amiriparian/ExHuBERT",
+  "category": "audio",
+  "domain": "speech / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "UAR (unweighted average recall) / F1",
+  "general_score_metric": "UAR (unweighted average recall)",
+  "year_of_publish": 2024,
+  "reputation": "A large, multilingual speech-emotion corpus that is gaining traction in the SER community as a comprehensive evaluation resource.",
+  "notes": "Non-LLM audio benchmark; large multilingual composition reduces single-language bias but may include dataset/domain mismatches and potential speaker overlap across subsets; evaluation commonly reports UAR to account for class imbalance.",
+  "creators": {
+    "scientists": [
+      "Shahin Amiriparian",
+      "Filip Packań",
+      "Maurice Gerczuk",
+      "Björn W. Schuller"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

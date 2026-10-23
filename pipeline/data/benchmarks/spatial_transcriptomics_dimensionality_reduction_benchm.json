@@ -1,0 +1,37 @@
+{
+  "name": "spatial transcriptomics dimensionality reduction benchmark",
+  "description": "We introduce a unified framework for evaluating dimensionality reduction techniques in spatial transcriptomics beyond standard PCA approaches. We benchmark six methods PCA, NMF, autoencoder, VAE, and two hybrid embeddings on a cholangiocarcinoma Xenium dataset, systematically varying latent dimensions ($k$=5-40) and clustering resolutions ($ρ$=0.1-1.2). Each configuration is evaluated using complementary metrics including reconstruction error, explained variance, cluster cohesion, and two novel biologically-motivated measures: Cluster Marker Coherence (CMC) and Marker Exclusion Rate (MER). Our results demonstrate distinct performance profiles: PCA provides a fast baseline, NMF maximizes marker enrichment, VAE balances reconstruction and interpretability, while autoencoders occupy a middle ground. We provide systematic hyperparameter selection using Pareto optimal analysis and demonstrate how MER-guided reassignment improves biological fidelity across all methods, with CMC scores improv",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "clustering",
+    "dimensionality_reduction",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2025,
+  "reputation": "A newer, specialized benchmark for spatial transcriptomics method comparison; useful in the bioinformatics community but not yet broadly standardized.",
+  "notes": "Non-LLM benchmark on a specific Xenium dataset; results depend heavily on latent dimension and clustering resolution, and scores are multi-metric rather than a single canonical number.",
+  "creators": {
+    "scientists": [
+      "Md Ishtyaq Mahmud",
+      "Veena Kochat",
+      "Suresh Satpati",
+      "Jagan Mohan Reddy Dwarampudi",
+      "Kunal Rai",
+      "Tania Banerjee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2509.13344",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

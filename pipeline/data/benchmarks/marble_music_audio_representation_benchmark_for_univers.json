@@ -1,0 +1,61 @@
+{
+  "name": "MARBLE (Music Audio Representation Benchmark for universaL Evaluation)",
+  "description": "In the era of extensive intersection between art and Artificial Intelligence (AI), such as image generation and fiction co-creation, AI for music remains relatively nascent, particularly in music understanding. This is evident in the limited work on deep music representations, the scarcity of large-scale datasets, and the absence of a universal and community-driven benchmark. To address this issue, we introduce the Music Audio Representation Benchmark for universaL Evaluation, termed MARBLE. It aims to provide a benchmark for various Music Information Retrieval (MIR) tasks by defining a comprehensive taxonomy with four hierarchy levels, including acoustic, performance, score, and high-level description. We then establish a unified protocol based on 14 tasks on 8 public-available datasets, providing a fair and standard assessment of representations of all open-sourced pre-trained models developed on music recordings as baselines. Besides, MARBLE offers an easy-to-use, extendable, and reproducible suite for the community, with a clear statement on copyright issues on datasets. Results suggest recently proposed large-scale pre-trained musical language models perform the best in most tasks, with room for further improvement. The leaderboard and toolkit repository are published at https://marble-bm.shef.ac.uk to promote future music AI research.",
+  "category": "audio",
+  "domain": "music information retrieval / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "tagging",
+    "regression",
+    "transcription",
+    "retrieval",
+    "similarity",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (accuracy / F1 for classification/tagging, MAE/MSE for regression, note overlap F-measures for transcription, mAP/recall for retrieval) — reported as per-task metrics and aggregated via a normalized composite score",
+  "general_score_metric": "composite_score (mean normalized task score across the 14 tasks)",
+  "typical_sota_score": "varies by task; top pre-trained music models commonly range approximately 60–90% depending on the task (higher on tagging/classification, lower on transcription/score-related tasks)",
+  "year_of_publish": 2023,
+  "reputation": "An emerging, community-oriented benchmark for music representation learning with a published toolkit and leaderboard that is gaining adoption in the MIR community.",
+  "notes": "non-LLM, heterogeneous tasks with per-task metrics; results depend on chosen normalization for aggregation; uses multiple public datasets with varying sizes and licenses — potential copyright/licensing caveats for some constituent datasets.",
+  "creators": {
+    "scientists": [
+      "Ruibin Yuan",
+      "Yinghao Ma",
+      "Yizhi Li",
+      "Ge Zhang",
+      "Xingran Chen",
+      "Hanzhi Yin",
+      "Le Zhuo",
+      "Yiqi Liu",
+      "Jiawen Huang",
+      "Zeyue Tian",
+      "Binyue Deng",
+      "Ningzhi Wang",
+      "Chenghua Lin",
+      "Emmanouil Benetos",
+      "Anton Ragni",
+      "Norbert Gyenge",
+      "Roger Dannenberg",
+      "Wenhu Chen",
+      "Gus Xia",
+      "Wei Xue",
+      "Si Liu",
+      "Shi Wang",
+      "Ruibo Liu",
+      "Yike Guo",
+      "Jie Fu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2306.10548",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

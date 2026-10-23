@@ -1,0 +1,39 @@
+{
+  "name": "Lane-level Traffic Prediction Benchmark",
+  "description": "Traffic prediction has long been a focal and pivotal area in research, witnessing both significant strides from city-level to road-level predictions in recent years. With the advancement of Vehicle-to-Everything (V2X) technologies, autonomous driving, and large-scale models in the traffic domain, lane-level traffic prediction has emerged as an indispensable direction. However, further progress in this field is hindered by the absence of comprehensive and unified evaluation standards, coupled with limited public availability of data and code. This paper extensively analyzes and categorizes existing research in lane-level traffic prediction, establishes a unified spatial topology structure and prediction tasks, and introduces a simple baseline model, GraphMLP, based on graph structure and MLP networks. We have replicated codes not publicly available in existing studies and, based on this, thoroughly and fairly assessed various models in terms of effectiveness, efficiency, and applicability, providing insights for practical applications. Additionally, we have released three new datasets and corresponding codes to accelerate progress in this field, all of which can be found on https://github.com/ShuhaoLii/TITS24LaneLevel-Traffic-Benchmark.",
+  "category": "mixed",
+  "domain": "traffic / autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "spatio-temporal_prediction",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "regression error metrics (MAE, RMSE, MAPE) on predicted traffic variables at lane level",
+  "general_score_metric": "MAE and RMSE (task-dependent units)",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) and emerging benchmark with released datasets and code; early adoption within lane-level traffic prediction and autonomous driving research.",
+  "notes": "Non-LLM benchmark; dataset heterogeneity, limited public data, and differences in sensor/map formats can complicate comparisons. Results depend strongly on spatial topology alignment and data preprocessing.",
+  "creators": {
+    "scientists": [
+      "Shuhao Li",
+      "Yue Cui",
+      "Jingyi Xu",
+      "Libin Li",
+      "Lingkai Meng",
+      "Weidong Yang",
+      "Fan Zhang",
+      "Xiaofang Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2403.14941",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

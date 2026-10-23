@@ -1,0 +1,43 @@
+{
+  "name": "SOS-HL-1K / SocialCD-3K",
+  "description": "On social media, users often express their personal feelings, which may exhibit cognitive distortions or even suicidal tendencies on certain specific topics. Early recognition of these signs is critical for effective psychological intervention. In this paper, we introduce two novel datasets from Chinese social media: SOS-HL-1K for suicidal risk classification and SocialCD-3K for cognitive distortions detection. The SOS-HL-1K dataset contained 1,249 posts and SocialCD-3K dataset was a multi-label classification dataset that containing 3,407 posts. We propose a comprehensive evaluation using two supervised learning methods and eight large language models (LLMs) on the proposed datasets. From the prompt engineering perspective, we experimented with two types of prompt strategies, including four zero-shot and five few-shot strategies. We also evaluated the performance of the LLMs after fine-tuning on the proposed tasks. The experimental results show that there is still a huge gap between LLMs relying only on prompt engineering and supervised learning. In the suicide classification task, this gap is 6.95% points in F1-score, while in the cognitive distortion task, the gap is even more pronounced, reaching 31.53% points in F1-score. However, after fine-tuning, this difference is significantly reduced. In the suicide and cognitive distortion classification tasks, the gap decreases to 4.31% and 3.14%, respectively. This research highlights the potential of LLMs in psychological contexts, but supervised learning remains necessary for more challenging tasks. All datasets and code are made available.",
+  "category": "text",
+  "domain": "mental health / social media",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1-score (reported as primary; often macro-F1 for imbalanced labels)",
+  "general_score_metric": "F1-score (macro F1)",
+  "year_of_publish": 2023,
+  "reputation": "New academic dataset (2023) for Chinese social-media suicide risk and cognitive distortion detection; useful for research but limited adoption so far.",
+  "notes": "Small datasets (SOS-HL-1K: ~1.25k posts; SocialCD-3K: ~3.4k posts), Chinese-language and sensitive content (privacy and ethical considerations), class imbalance; demonstrates gap between prompt-only LLMs and supervised/fine-tuned models.",
+  "creators": {
+    "scientists": [
+      "Hongzhi Qi",
+      "Qing Zhao",
+      "Jianqiang Li",
+      "Changwei Song",
+      "Wei Zhai",
+      "Dan Luo",
+      "Shuo Liu",
+      "Yi Jing Yu",
+      "Fan Wang",
+      "Huijing Zou",
+      "Bing Xiang Yang",
+      "Guanghui Fu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2309.03564",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

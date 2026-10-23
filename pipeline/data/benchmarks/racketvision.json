@@ -1,0 +1,38 @@
+{
+  "name": "RacketVision",
+  "description": "We introduce RacketVision, a novel dataset and benchmark for advancing computer vision in sports analytics, covering table tennis, tennis, and badminton. The dataset is the first to provide large-scale, fine-grained annotations for racket pose alongside traditional ball positions, enabling research into complex human-object interactions. It is designed to tackle three interconnected tasks: fine-grained ball tracking, articulated racket pose estimation, and predictive ball trajectory forecasting. Our evaluation of established baselines reveals a critical insight for multi-modal fusion: while naively concatenating racket pose features degrades performance, a Cross-Attention mechanism is essential to unlock their value, leading to trajectory prediction results that surpass strong unimodal baselines. RacketVision provides a versatile resource and a strong starting point for future research in dynamic object tracking, conditional motion forecasting, and multi-modal analysis in sports.",
+  "category": "vision",
+  "domain": "sports analytics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_tracking",
+    "pose_estimation",
+    "trajectory_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Task-specific metrics: tracking (MOTA/MOTP or tracking AP), pose (MPJPE / PCK), trajectory forecasting (ADE / FDE)",
+  "general_score_metric": "Task-specific metrics (e.g., MOTA for tracking, MPJPE for pose, ADE/FDE for trajectory forecasting)",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Multimodal sports dataset introducing fine-grained racket pose annotations; new (2025) and specialised — limited adoption so far. Performance depends strongly on multimodal fusion strategy; naive concatenation can hurt, cross-attention is beneficial.",
+  "creators": {
+    "scientists": [
+      "Linfeng Dong",
+      "Yuchen Yang",
+      "Hao Wu",
+      "Wei Wang",
+      "Yuenan Hou",
+      "Zhihang Zhong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2511.17045",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

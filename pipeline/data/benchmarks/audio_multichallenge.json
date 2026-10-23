@@ -1,0 +1,39 @@
+{
+  "name": "Audio MultiChallenge",
+  "description": "End-to-end (E2E) spoken dialogue systems are increasingly replacing cascaded pipelines for voice-based human-AI interaction, processing raw audio directly without intermediate transcription. Existing benchmarks primarily evaluate these models on synthetic speech and single-turn tasks, leaving realistic multi-turn conversational ability underexplored. We introduce Audio MultiChallenge, an open-source benchmark to evaluate E2E spoken dialogue systems under natural multi-turn interaction patterns. Building on the text-based MultiChallenge framework, which evaluates Inference Memory, Instruction Retention, and Self Coherence, we introduce a new axis Voice Editing that tests robustness to mid-utterance speech repairs and backtracking. We further augment each axis to the audio modality, such as introducing Audio-Cue challenges for Inference Memory that require recalling ambient sounds and paralinguistic signals beyond semantic content. We curate 452 conversations from 47 speakers with 1,712 instance-specific rubrics through a hybrid audio-native agentic and human-in-the-loop pipeline that exposes model failures at scale while preserving natural disfluencies found in unscripted human speech. Our evaluation of proprietary and open-source models reveals that even frontier models struggle on our benchmark, with Gemini 3 Pro Preview (Thinking), our highest-performing model achieving a 54.65% pass rate. Error analysis shows that models fail most often on our new axes and that Self Coherence degrades with longer audio context. These failures reflect difficulty of tracking edits, audio cues, and long-range context in natural spoken dialogue. Audio MultiChallenge provides a reproducible testbed to quantify them and drive improvements in audio-native multi-turn interaction capability.",
+  "category": "audio",
+  "domain": "speech / spoken dialogue",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "dialogue",
+    "audio_understanding",
+    "robustness"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (pass/fail per rubric) combined with human-evaluation rubrics; reported as pass rate percentage",
+  "general_score_metric": "pass rate (percentage)",
+  "typical_sota_score": "≈54.65% (best reported: Gemini 3 Pro Preview, Thinking)",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Audio-native multi-turn benchmark (452 conversations, 1,712 rubrics); human-in-the-loop annotations and real speaker disfluencies. Small-to-moderate dataset size, potential speaker/context overlap, includes proprietary-model evaluations; not directly applicable to text-only models.",
+  "creators": {
+    "scientists": [
+      "Advait Gosai",
+      "Tyler Vuong",
+      "Utkarsh Tyagi",
+      "Steve Li",
+      "Wenjia You",
+      "Miheer M. Bavare"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2512.14865",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

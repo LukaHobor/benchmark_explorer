@@ -1,0 +1,32 @@
+{
+  "name": "Human-Powered Aircraft Design Benchmark",
+  "description": "The landscapes of real-world optimization problems can vary strongly depending on the application. In engineering design optimization, objective functions and constraints are often derived from governing equations, resulting in moderate multimodality. However, benchmark problems with such moderate multimodality are typically confined to low-dimensional cases, making it challenging to conduct meaningful comparisons. To address this, we present a benchmark test suite focused on the design of human-powered aircraft for single and multi-objective optimization. This test suite incorporates governing equations from aerodynamics and material mechanics, providing a realistic testing environment. It includes 60 problems across three difficulty levels, with a wing segmentation parameter to scale complexity and dimensionality. Both constrained and unconstrained versions are provided, with penalty methods applied to the unconstrained version. The test suite is computationally inexpensive while retaining key characteristics of engineering problems. Numerical experiments indicate the presence of moderate multimodality, and multi-objective problems exhibit diverse Pareto front shapes.",
+  "category": "mixed",
+  "domain": "aerospace engineering / design optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "single_objective_optimization",
+    "multi_objective_optimization",
+    "constrained_optimization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "best-found objective value (for single-objective), hypervolume / Pareto front quality (for multi-objective); constraint violation penalties for constrained variants",
+  "general_score_metric": "best-found objective value (single-objective) and hypervolume / Pareto front quality (multi-objective)",
+  "year_of_publish": 2023,
+  "reputation": "Newly introduced benchmark (2023) that has drawn interest from the engineering/design-optimization community but is not yet widely adopted.",
+  "notes": "Computationally inexpensive and designed for optimization algorithms rather than LLMs; includes constrained and unconstrained variants (penalty methods); moderate multimodality and scalable dimensionality via wing segmentation; not saturated.",
+  "creators": {
+    "scientists": [
+      "Nobuo Namura"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2312.08953",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

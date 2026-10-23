@@ -1,0 +1,34 @@
+{
+  "name": "CAMUS Cardiac Ultrasound Segmentation Benchmark",
+  "description": "Several review papers summarize cardiac imaging and DL advances, few works connect this overview to a unified and reproducible experimental benchmark. In this study, we combine a focused review of cardiac ultrasound segmentation literature with a controlled comparison of three influential architectures, U-Net, Attention U-Net, and TransUNet, on the Cardiac Acquisitions for Multi-Structure Ultrasound Segmentation (CAMUS) echocardiography dataset. Our benchmark spans multiple preprocessing routes, including native NIfTI volumes, 16-bit PNG exports, GPT-assisted polygon-based pseudo-labels, and self-supervised pretraining (SSL) on thousands of unlabeled cine frames. Using identical training splits, losses, and evaluation criteria, a plain U-Net achieved a 94% mean Dice when trained directly on NIfTI data (preserving native dynamic range), while the PNG-16-bit workflow reached 91% under similar conditions. Attention U-Net provided modest improvements on small or low-contrast regions, reduc",
+  "category": "vision",
+  "domain": "medical imaging",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Dice",
+  "general_score_metric": "mean Dice",
+  "typical_sota_score": "91–95% Dice",
+  "year_of_publish": 2025,
+  "reputation": "CAMUS is a well-known public echocardiography dataset and a common baseline for cardiac ultrasound segmentation research.",
+  "notes": "Non-LLM medical imaging benchmark; performance depends strongly on preprocessing and data representation, and reported scores can vary across splits and label formats.",
+  "creators": {
+    "scientists": [
+      "Zahid Ullah",
+      "Muhammad Hilal",
+      "Eunsoo Lee",
+      "Dragan Pamucar",
+      "Jihie Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2601.00839",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

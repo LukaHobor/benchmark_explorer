@@ -1,0 +1,36 @@
+{
+  "name": "ConceptARC Benchmark",
+  "description": "The abilities to form and abstract concepts is key to human intelligence, but such abilities remain lacking in state-of-the-art AI systems. There has been substantial research on conceptual abstraction in AI, particularly using idealized domains such as Raven's Progressive Matrices and Bongard problems, but even when AI systems succeed on such problems, the systems are rarely evaluated in depth to see if they have actually grasped the concepts they are meant to capture. In this paper we describe an in-depth evaluation benchmark for the Abstraction and Reasoning Corpus (ARC), a collection of few-shot abstraction and analogy problems developed by Chollet [2019]. In particular, we describe ConceptARC, a new, publicly available benchmark in the ARC domain that systematically assesses abstraction and generalization abilities on a number of basic spatial and semantic concepts. ConceptARC differs from the original ARC dataset in that it is specifically organized around \"concept groups\" -- sets of problems that focus on specific concepts and that are vary in complexity and level of abstraction. We report results on testing humans on this benchmark as well as three machine solvers: the top two programs from a 2021 ARC competition and OpenAI's GPT-4. Our results show that humans substantially outperform the machine solvers on this benchmark, showing abilities to abstract and generalize concepts that are not yet captured by AI systems. We believe that this benchmark will spur improvements in the development of AI systems for conceptual abstraction and in the effective evaluation of such systems.",
+  "category": "vision",
+  "domain": "abstract visual reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "abstraction_and_reasoning",
+    "few_shot",
+    "visual_problem_solving"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (exact-match output grid correctness)",
+  "general_score_metric": "task_success_rate (fraction of tasks solved, exact match)",
+  "typical_sota_score": "5–30% task_success_rate (machines; humans substantially higher)",
+  "year_of_publish": 2023,
+  "reputation": "Respected within the abstract reasoning / ARC research community as a concept-focused, harder subset of ARC for probing generalization and abstraction.",
+  "notes": "Small, structured few-shot visual tasks; designed to probe conceptual abstraction rather than be a large-scale learner benchmark. Low saturation; risk of contamination if models were trained on ARC or related public solutions. Not an LLM-only benchmark (requires programmatic/grid outputs).",
+  "creators": {
+    "scientists": [
+      "Arseny Moskvichev",
+      "Victor Vikram Odouard",
+      "Melanie Mitchell"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.07141",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

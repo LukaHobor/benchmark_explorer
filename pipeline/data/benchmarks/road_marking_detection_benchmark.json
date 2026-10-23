@@ -1,0 +1,35 @@
+{
+  "name": "Road marking detection benchmark",
+  "description": "Detection of drivable road area and other critical objects like obstacles and landmarks in traffic scenes is fundamental to advanced driver assistance systems (ADAS) and self-driving car. Although scene parsing is able to make segmentation of road area from other objects and background, it basically does not get involved in recognizing other on-road markings. In fact, detection and classification of road area are only one small step towards true autonomous driving, because there are many categories of informative markings embodied within road area, such as lane markings, arrows, guiding lines, pedestrian crosswalks, and no-vehicle signs. If system identifies those markings, more information for both ADAS and self-driving car system can be provided. For this purpose, we release a benchmark dataset named TRoM (Tsinghua Road Marking), which is served for detection of 19 road-marking categories in urban scenarios. TRoM was built by means of over one-month data covering a full spectrum of time, weather, and traffic-load. An annotation toolkit was also presented to facilitate enriching such dataset. By directly applying our state-of-the-art method called RPP (ResNet with Pyramid Pooling), a reasonably accurate baseline on TRoM benchmark is made public for further performance comparison and evaluation.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) / mean_IoU (mIoU)",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "70–90%",
+  "year_of_publish": 2017,
+  "reputation": "28 citations",
+  "notes": "Dataset focuses on urban road-marking classes (19 categories) collected over ~1 month; relatively specialized and possibly limited in geographic/temporal diversity. Non-LLM benchmark; baseline provided by RPP method.",
+  "creators": {
+    "scientists": [
+      "Xiaolong Liu",
+      "Zhidong Deng",
+      "Hongchao Lu",
+      "Lele Cao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1109/itsc.2017.8317749",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

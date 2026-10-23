@@ -1,0 +1,35 @@
+{
+  "name": "Polaris-Bind",
+  "description": "Accurate prediction of protein-ligand binding proteins and their binding sites is essential for drug discovery and the identification of druggable regions. Although deep learning has made significant progress in this field, there remains a lack of comprehensive, multi-level benchmark datasets, particularly a unified benchmark for systematic model evaluation. To address this gap, we developed Polaris-Bind, a large-scale, ligand-centric benchmark dataset. Polaris-Bind integrates data from authoritative databases, including UniProt, InterPro, and BioLip, providing both coarse-grained protein function annotations and fine-grained residue-level annotations. The dataset contains protein-level annotations for over $\\text{8 0, 0 0 0}$ proteins covering 13 ligand types, as well as binding site prediction data for more than 17,000 proteins with 4.7 million annotated residues across 20 ligand types. For ligand-binding protein classification tasks, the dataset is systematically divided into mixed-species and cross-species subsets. The Polaris-Bind provides a comprehensive performance benchmark for related research. All associated data have been made publicly available at https://huggingface.co/datasets/LrZhang/Polaris-Bind.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "protein_classification",
+    "binding_site_prediction",
+    "sequence_labeling",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC / AUPRC",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2025,
+  "reputation": "Recently released, publicly hosted on HuggingFace; gaining interest but not yet a long-established community staple.",
+  "notes": "Large-scale ligand-centric benchmark with cross-species and mixed-species splits. Expect strong class imbalance and some annotation noise from integrated databases (UniProt/InterPro/BioLip). Not experimentally validated binding measurements; designed for ML benchmarking rather than wet-lab confirmation.",
+  "creators": {
+    "scientists": [
+      "Lingrong Zhang",
+      "Xuqi Sun",
+      "Yuxin Xia",
+      "Taigang Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

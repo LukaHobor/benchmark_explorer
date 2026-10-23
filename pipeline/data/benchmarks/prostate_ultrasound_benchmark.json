@@ -1,0 +1,41 @@
+{
+  "name": "Prostate Ultrasound Benchmark",
+  "description": "PURPOSE: Deep learning methods for classifying prostate cancer (PCa) in ultrasound images typically employ convolutional networks (CNNs) to detect cancer in small regions of interest (ROI) along a needle trace region. However, this approach suffers from weak labelling, since the ground-truth histopathology labels do not describe the properties of individual ROIs. Recently, multi-scale approaches have sought to mitigate this issue by combining the context awareness of transformers with a CNN feature extractor to detect cancer from multiple ROIs using multiple-instance learning (MIL). In this work, we present a detailed study of several image transformer architectures for both ROI-scale and multi-scale classification, and a comparison of the performance of CNNs and transformers for ultrasound-based prostate cancer classification. We also design a novel multi-objective learning strategy that combines both ROI and core predictions to further mitigate label noise. METHODS: We evaluate 3 image transformers on ROI-scale cancer classification, then use the strongest model to tune a multi-scale classifier with MIL. We train our MIL models using our novel multi-objective learning strategy and compare our results to existing baselines. RESULTS: We find that for both ROI-scale and multi-scale PCa detection, image transformer backbones lag behind their CNN counterparts. This deficit in performance is even more noticeable for larger models. When using multi-objective learning, we can improve performance of MIL, with a 77.9% AUROC, a sensitivity of 75.9%, and a specificity of 66.3%. CONCLUSION: Convolutional networks are better suited for modelling sparse datasets of prostate ultrasounds, producing more robust features than transformers in PCa detection. Multi-scale methods remain the best architecture for this task, with multi-objective learning presenting an effective way to improve performance.",
+  "category": "vision",
+  "domain": "medical imaging (ultrasound)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multiple_instance_learning",
+    "region_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC (primary), with sensitivity and specificity reported",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "≈77.9% AUROC",
+  "year_of_publish": 2024,
+  "reputation": "Recent research dataset focused on ultrasound-based prostate cancer detection; currently limited adoption outside the authors' study and related medical imaging research.",
+  "notes": "Clinical ultrasound data with weak ROI-level labels and label noise; moderate dataset size, class imbalance, non-LLM benchmark — results sensitive to MIL and multi-scale modeling choices.",
+  "creators": {
+    "scientists": [
+      "Mohamed Harmanani",
+      "Paul F. R. Wilson",
+      "Fahimeh Fooladgar",
+      "Amoon Jamzad",
+      "Mahdi Gilany",
+      "Minh Nguyen Nhat To",
+      "Brian Wodlinger",
+      "Purang Abolmaesumi",
+      "Parvin Mousavi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2403.18233",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

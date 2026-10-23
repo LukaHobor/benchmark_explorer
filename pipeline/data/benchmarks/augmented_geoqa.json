@@ -1,0 +1,32 @@
+{
+  "name": "Augmented GeoQA",
+  "description": "Automatic math problem solving has attracted much attention of NLP researchers recently. However, most of the works focus on the solving of Math Word Problems (MWPs). In this paper, we study on the Geometric Problem Solving based on neural networks. Solving geometric problems requires the integration of text and diagram information as well as the knowledge of the relevant theorems. The lack of high-quality datasets and efficient neural geometric solvers impedes the development of automatic geometric problems solving. Based on GeoQA, we newly annotate 2,518 geometric problems with richer types and greater difficulty to form an augmented benchmark dataset GeoQA+, containing 6,027 problems in training set and 7,528 totally. We further perform data augmentation method to expand the training set to 12,054. Besides, we design a Dual Parallel text Encoder DPE to efficiently encode long and medium-length problem text. The experimental results validate the effectiveness of GeoQA+ and DPE module, and the accuracy of automatic geometric problem solving is improved to 66.09%.",
+  "category": "multimodal",
+  "domain": "mathematics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "diagram_reasoning",
+    "multimodal_qa"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "≈66%",
+  "reputation": "An extended GeoQA dataset (GeoQA+) aimed at the geometric problem-solving community; used in recent research but not yet broadly adopted across general NLP/vision benchmarks.",
+  "notes": "Domain-specific (geometry) and multimodal (text+diagram); dataset size is moderate (~7.5K total, ~12K with augmentation) so risk of overfitting; varying diagram quality and theorem coverage can affect generalization.",
+  "creators": {
+    "scientists": [
+      "Jie Cao",
+      "Jing Xiao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

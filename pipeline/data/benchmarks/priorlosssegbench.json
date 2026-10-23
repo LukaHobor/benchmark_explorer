@@ -1,0 +1,36 @@
+{
+  "name": "PriorLossSegBench",
+  "description": "Today, deep convolutional neural networks (CNNs) have demonstrated state-of-the-art performance for medical image segmentation, on various imaging modalities and tasks. Despite early success, segmentation networks may still generate anatomically aberrant segmentations, with holes or inaccuracies near the object boundaries. To enforce anatomical plausibility, recent research studies have focused on incorporating prior knowledge such as object shape or boundary, as constraints in the loss function. Prior integrated could be low-level referring to reformulated representations extracted from the ground-truth segmentations, or high-level representing external medical information such as the organ's shape or size. Over the past few years, prior-based losses exhibited a rising interest in the research field since they allow integration of expert knowledge while still being architecture-agnostic. However, given the diversity of prior-based losses on different medical imaging challenges and tasks, it has become hard to identify what loss works best for which dataset. In this paper, we establish a benchmark of recent prior-based losses for medical image segmentation. The main objective is to provide intuition onto which losses to choose given a particular task or dataset. To this end, four low-level and high-level prior-based losses are selected. The considered losses are validated on 8 different datasets from a variety of medical image segmentation challenges including the Decathlon, the ISLES and the WMH challenge. Results show that whereas low-level prior-based losses can guarantee an increase in performance over the Dice loss baseline regardless of the dataset characteristics, high-level prior-based losses can increase anatomical plausibility as per data characteristics.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "medical_image_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Dice coefficient (primary), IoU (Jaccard), Hausdorff distance and boundary-based metrics",
+  "general_score_metric": "Dice coefficient",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2022,
+  "reputation": "A focused academic benchmark used by medical imaging researchers to compare prior-based loss functions across multiple segmentation challenges; modest adoption in the community.",
+  "notes": "Non-LLM medical imaging benchmark; performance and gains depend strongly on dataset characteristics (size, class imbalance, anatomy variability); results may not generalize across modalities/tasks.",
+  "creators": {
+    "scientists": [
+      "Rosana El Jurdi",
+      "Caroline Petitjean",
+      "Veronika Cheplygina",
+      "Paul Honeine",
+      "Fahed Abdallah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2201.02428",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

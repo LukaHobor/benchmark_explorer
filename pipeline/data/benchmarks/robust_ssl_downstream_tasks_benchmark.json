@@ -1,0 +1,43 @@
+{
+  "name": "Robust SSL Downstream Tasks Benchmark",
+  "description": "Large-scale vision models have become integral in many applications due to their unprecedented performance and versatility across downstream tasks. However, the robustness of these foundation models has primarily been explored for a single task, namely image classification. The vulnerability of other common vision tasks, such as semantic segmentation and depth estimation, remains largely unknown. We present a comprehensive empirical evaluation of the adversarial robustness of self-supervised vision encoders across multiple downstream tasks. Our attacks operate in the encoder embedding space and at the downstream task output level. In both cases, current state-of-the-art adversarial fine-tuning techniques tested only for classification significantly degrade clean and robust performance on other tasks. Since the purpose of a foundation model is to cater to multiple applications at once, our findings reveal the need to enhance encoder robustness more broadly. Our code is available at ${github.com/layer6ai-labs/ssl-robustness}$.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "semantic_segmentation",
+    "depth_estimation",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (accuracy for classification, mIoU for segmentation, depth error metrics for depth estimation) and robustness gap (drop from clean to adversarial)",
+  "general_score_metric": "robustness gap (change in task-specific metric between clean and adversarial conditions) alongside task-specific metrics",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Academic research benchmark focused on adversarial robustness of self-supervised vision encoders; recognized in robustness research circles but specialized.",
+  "notes": "Non‑LLM vision benchmark covering multiple downstream tasks; no single unified score (multiple task-specific metrics); results sensitive to chosen threat model and attack setting.",
+  "creators": {
+    "scientists": [
+      "Antoni Kowalczuk",
+      "Jan Dubiński",
+      "Atiyeh Ashari Ghomi",
+      "Yi Sui",
+      "George Stein",
+      "Jiapeng Wu",
+      "Jesse C. Cresswell",
+      "Franziska Boenisch",
+      "Adam Dziedzic"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2407.12588",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

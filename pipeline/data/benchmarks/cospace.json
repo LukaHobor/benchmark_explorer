@@ -1,0 +1,37 @@
+{
+  "name": "CoSpace",
+  "description": "Vision-Language Models (VLMs) have recently witnessed significant progress in visual comprehension. As the permitting length of image context grows, VLMs can now comprehend a broader range of views and spaces. Current benchmarks provide insightful analysis of VLMs in tasks involving complex visual instructions following, multi-image understanding and spatial reasoning. However, they usually focus on spatially irrelevant images or discrete images captured from varied viewpoints. The compositional characteristic of images captured from a static viewpoint remains underestimated. We term this characteristic as Continuous Space Perception. When observing a scene from a static viewpoint while shifting orientations, it produces a series of spatially continuous images, enabling the reconstruction of the entire space. In this paper, we present CoSpace, a multi-image visual understanding benchmark designed to assess the Continuous Space perception ability for VLMs. CoSpace contains 2,918 images and 1,626 question-answer pairs, covering seven types of tasks. We conduct evaluation across 19 proprietary and open-source VLMs. Results reveal that there exist pitfalls on the continuous space perception ability for most of the evaluated models, including proprietary ones. Interestingly, we find that the main discrepancy between open-source and proprietary models lies not in accuracy but in the consistency of responses. We believe that enhancing the ability of continuous space perception is essential for VLMs to perform effectively in real-world tasks and encourage further research to advance this capability.",
+  "category": "multimodal",
+  "domain": "multimodal (vision-language)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "multi_image_reasoning",
+    "spatial_reasoning",
+    "consistency_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (for QA tasks) with additional consistency/response-stability measures",
+  "general_score_metric": "accuracy (with separate consistency metrics)",
+  "year_of_publish": 2025,
+  "reputation": "New benchmark proposed for continuous-space, multi-image VLM evaluation; gaining attention in VLM research but not yet a broad community standard.",
+  "notes": "Relatively small dataset (∼2.9k images, ∼1.6k QA pairs); multimodal (vision+language) evaluation that includes proprietary model evaluations — potential contamination for models exposed to similar evaluation content; emphasizes response consistency beyond raw accuracy.",
+  "creators": {
+    "scientists": [
+      "Yiqi Zhu",
+      "Ziyue Wang",
+      "Can Zhang",
+      "Peng Li",
+      "Yang Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.14161",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

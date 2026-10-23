@@ -1,0 +1,48 @@
+{
+  "name": "Open Catalyst 2022 (OC22)",
+  "description": "The development of machine learning models for electrocatalysts requires a broad set of training data to enable their use across a wide variety of materials. One class of materials that currently lacks sufficient training data is oxides, which are critical for the development of OER catalysts. To address this, we developed the OC22 dataset, consisting of 62,331 DFT relaxations (~9,854,504 single point calculations) across a range of oxide materials, coverages, and adsorbates. We define generalized total energy tasks that enable property prediction beyond adsorption energies; we test baseline performance of several graph neural networks; and we provide pre-defined dataset splits to establish clear benchmarks for future efforts. In the most general task, GemNet-OC sees a ~36% improvement in energy predictions when combining the chemically dissimilar OC20 and OC22 datasets via fine-tuning. Similarly, we achieved a ~19% improvement in total energy predictions on OC20 and a ~9% improvement in force predictions in OC22 when using joint training. We demonstrate the practical utility of a top performing model by capturing literature adsorption energies and important OER scaling relationships. We expect OC22 to provide an important benchmark for models seeking to incorporate intricate long-range electrostatic and magnetic interactions in oxide surfaces. Dataset and baseline models are open sourced, and a public leaderboard is available to encourage continued community developments on the total energy tasks and data.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "graph_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_absolute_error (MAE) for energies and forces",
+  "general_score_metric": "MAE (eV) for energy predictions; MAE or RMSE for forces",
+  "typical_sota_score": "≈0.01–0.10 eV (energy MAE) depending on model and split",
+  "year_of_publish": 2022,
+  "reputation": "Widely used and well-regarded in the computational materials and catalysis ML community with public leaderboards and active adoption.",
+  "notes": "Non-LLM benchmark; large-scale DFT-derived dataset requiring substantial compute; focuses on oxide materials and may not fully generalize to other material classes.",
+  "creators": {
+    "scientists": [
+      "Richard Tran",
+      "Janice Lan",
+      "Muhammed Shuaibi",
+      "Brandon M. Wood",
+      "Siddharth Goyal",
+      "Abhishek Das",
+      "Javier Heras-Domingo",
+      "Adeesh Kolluru",
+      "Ammar Rizvi",
+      "Nima Shoghi",
+      "Anuroop Sriram",
+      "Felix Therrien",
+      "Jehad Abed",
+      "Oleksandr Voznyy",
+      "Edward H. Sargent",
+      "Zachary Ulissi",
+      "C. Lawrence Zitnick"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2206.08917",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

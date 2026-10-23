@@ -1,0 +1,34 @@
+{
+  "name": "CWRU multi-label bearing fault benchmark",
+  "description": "This paper proposes a novel approach for modeling the problem of fault diagnosis using the Case Western Reserve University (CWRU) bearing fault dataset. Although the dataset is considered a standard reference for testing new algorithms, the typical dataset division suffers from data leakage, as shown by Hendriks et al. (2022) and Abburi et al. (2023), leading to papers reporting over-optimistic results. While their proposed division significantly mitigates this issue, it does not eliminate it entirely. Moreover, their proposed multi-class classification task can still lead to an unrealistic scenario by excluding the possibility of more than one fault type occurring at the same or different locations. As advocated in this paper, a multi-label formulation (detecting the presence of each type of fault for each location) can solve both issues, leading to a scenario closer to reality. Additionally, this approach mitigates the heavy class imbalance of the CWRU dataset, where faulty cases appear much more frequently than healthy cases, even though the opposite is more likely to occur in practice. A multi-label formulation also enables a more precise evaluation using prevalence-independent evaluation metrics for binary classification, such as the ROC curve. Finally, this paper proposes a more realistic dataset division that allows for more diversity in the training dataset while keeping the division free from data leakage. The results show that this new division can significantly improve performance while enabling a fine-grained error analysis. As an application of our approach, a comparative benchmark is performed using several state-of-the-art deep learning models applied to 1D and 2D signal representations in time and/or frequency domains.",
+  "category": "mixed",
+  "domain": "predictive maintenance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "ROC_AUC and F1",
+  "general_score_metric": "ROC_AUC",
+  "year_of_publish": 2024,
+  "reputation": "Well-known within predictive-maintenance and condition-monitoring research; CWRU is a standard benchmark but has documented data‑leakage and realism concerns, and the multi-label variant is gaining interest.",
+  "notes": "Known issues with data leakage in common splits, strong class imbalance, relatively small dataset by modern standards; not an LLM benchmark (signal/ML domain).",
+  "creators": {
+    "scientists": [
+      "Rodrigo Kobashikawa Rosa",
+      "Danilo Braga",
+      "Danilo Silva"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2407.14625",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

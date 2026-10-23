@@ -1,0 +1,44 @@
+{
+  "name": "Statistical Shape Modeling Tools Benchmark",
+  "description": "Statistical shape modeling (SSM) is widely used in biology and medicine as a new generation of morphometric approaches for the quantitative analysis of anatomical shapes. Technological advancements of in vivo imaging have led to the development of open-source computational tools that automate the modeling of anatomical shapes and their population-level variability. However, little work has been done on the evaluation and validation of such tools in clinical applications that rely on morphometric quantifications (e.g., implant design and lesion screening). Here, we systematically assess the outcome of widely used, state-of-the-art SSM tools, namely ShapeWorks, Deformetrica, and SPHARM-PDM. We use both quantitative and qualitative metrics to evaluate shape models from different tools. We propose validation frameworks for anatomical landmark/measurement inference and lesion screening. We also present a lesion screening method to objectively characterize subtle abnormal shape changes with respect to learned population-level statistics of controls. Results demonstrate that SSM tools display different levels of consistencies, where ShapeWorks and Deformetrica models are more consistent compared to models from SPHARM-PDM due to the groupwise approach of estimating surface correspondences. Furthermore, ShapeWorks and Deformetrica shape models are found to capture clinically relevant population-level variability compared to SPHARM-PDM models.",
+  "category": "vision",
+  "domain": "medical imaging / clinical applications",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "statistical_shape_modeling",
+    "landmark_detection",
+    "shape_reconstruction",
+    "lesion_screening"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean landmark localization error (mm), reconstruction/registration error, model consistency metrics, lesion-screening sensitivity/specificity",
+  "general_score_metric": "mean landmark localization error (mm)",
+  "typical_sota_score": "1–5 mm (mean landmark localization error, tool- and dataset-dependent)",
+  "year_of_publish": 2020,
+  "reputation": "Well-cited in the medical imaging / morphometrics community as a comparative evaluation of widely used SSM tools (ShapeWorks, Deformetrica, SPHARM-PDM).",
+  "notes": "Domain-specific medical-imaging benchmark (non-LLM); outcomes are sensitive to preprocessing, parameter choices, and correspondence strategy; datasets used in comparisons can be small and methods vary in clinical applicability.",
+  "creators": {
+    "scientists": [
+      "Anupama Goparaju",
+      "Alexandre Bone",
+      "Nan Hu",
+      "Heath B. Henninger",
+      "Andrew E. Anderson",
+      "Stanley Durrleman",
+      "Matthijs Jacxsens",
+      "Alan Morris",
+      "Ibolya Csecs",
+      "Nassir Marrouche",
+      "Shireen Y. Elhabian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2009.02878",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

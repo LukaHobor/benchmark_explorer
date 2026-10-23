@@ -1,0 +1,37 @@
+{
+  "name": "scRNA-seq network inference benchmark",
+  "description": "Single-cell RNA-sequencing (scRNA-seq) offers unparalleled insight into the transcriptional programs of different cellular states by measuring the transcriptome of thousands of individual cells. An emerging problem in the analysis of scRNA-seq is the inference of transcriptional gene regulatory networks and a number of methods with different learning frameworks have been developed to address this problem. Here, we present an expanded benchmarking study of eleven recent network inference methods on seven published scRNA-seq datasets in human, mouse, and yeast considering different types of gold standard networks and evaluation metrics. We evaluate methods based on their computing requirements as well as on their ability to recover the network structure. We find that, while most methods have a modest recovery of experimentally derived interactions based on global metrics such as Area Under the Precision Recall curve, methods are able to capture targets of regulators that are relevant to the system under study. Among the top performing methods that use only expression were SCENIC, PIDC, MERLIN or Correlation. Addition of prior biological knowledge and the estimation of transcription factor activities resulted in the best overall performance with the Inferelator and MERLIN methods that use prior knowledge outperforming methods that use expression alone. We found that imputation for network inference did not improve network inference accuracy and could be detrimental. Comparisons of inferred networks for comparable bulk conditions showed that the networks inferred from scRNA-seq datasets are often better or at par with the networks inferred from bulk datasets. Our analysis should be beneficial in selecting methods for network inference. At the same time, this highlights the need for improved methods and better gold standards for regulatory network inference from scRNAseq datasets.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "network_inference",
+    "graph_reconstruction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Area Under Precision-Recall curve (AUPR) and related global metrics (AUC-ROC) comparing inferred edges to gold-standard networks",
+  "general_score_metric": "AUPR (Area Under the Precision-Recall curve)",
+  "typical_sota_score": "typically low to moderate; AUPR often below 0.5 for many methods depending on dataset",
+  "year_of_publish": 2023,
+  "reputation": "49 citations",
+  "notes": "Gold-standard regulatory networks are incomplete and noisy (limited/partial ground truth); performance varies strongly by dataset and prior-knowledge use; imputation may not improve results; methods are computationally heterogeneous and not LLM benchmarks.",
+  "creators": {
+    "scientists": [
+      "Sunnie Grace McCalla",
+      "Alireza Fotuhi Siahpirani",
+      "Jiaxin Li",
+      "Saptarshi Pyne",
+      "Matthew R. Stone",
+      "Viswesh Periyasamy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/g3journal/jkad004",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

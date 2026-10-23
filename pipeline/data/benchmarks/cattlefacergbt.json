@@ -1,0 +1,41 @@
+{
+  "name": "CattleFace-RGBT",
+  "description": "To address this challenge, we introduce CattleFace-RGBT, a RGB-T Cattle Facial Landmark dataset consisting of 2,300 RGB-T image pairs, a total of 4,600 images. Creating a landmark dataset is time-consuming, but AI-assisted annotation can help. However, applying AI to thermal images is challenging due to suboptimal results from direct thermal training and infeasible RGB-thermal alignment due to different camera views. Therefore, we opt to transfer models trained on RGB to thermal images and refine them using our AI-assisted annotation tool following a semi-automatic annotation approach. Accurately localizing facial key points on both RGB and thermal images enables us to not only discern the cattle's respiratory signs but also measure temperatures to assess the animal's thermal state. To the best of our knowledge, this is the first dataset for the cattle facial landmark on RGB-T images. We conduct benchmarking of the CattleFace-RGBT dataset across various backbone architectures, with the objective of establishing baselines for future research, analysis, and comparison. The dataset and models are at https://github.com/UARK-AICV/CattleFace-RGBT-benchmark",
+  "category": "vision",
+  "domain": "agriculture / animal monitoring",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "landmark_detection",
+    "keypoint_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "normalized_mean_error (NME) / PCK",
+  "general_score_metric": "NME / PCK",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "A recent, domain-specific RGB-T cattle facial landmark dataset with limited but growing interest among agricultural and animal-monitoring vision researchers.",
+  "notes": "Relatively small (2,300 RGB-T pairs) and domain-specific; semi-automatic annotation may introduce label noise; not applicable to LLM benchmarks.",
+  "creators": {
+    "scientists": [
+      "Ethan Coffman",
+      "Reagan Clark",
+      "Nhat-Tan Bui",
+      "Trong Thang Pham",
+      "Beth Kegley",
+      "Jeremy G. Powell",
+      "Jiangchao Zhao",
+      "Ngan Le"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.03431",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

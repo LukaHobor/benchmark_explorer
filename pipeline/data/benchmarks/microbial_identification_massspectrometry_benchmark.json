@@ -1,0 +1,35 @@
+{
+  "name": "Microbial Identification Mass-Spectrometry Benchmark",
+  "description": "Microbial identification is a central issue in microbiology, in particular in\nthe fields of infectious diseases diagnosis and industrial quality control. The\nconcept of species is tightly linked to the concept of biological and clinical\nclassification where the proximity between species is generally measured in\nterms of evolutionary distances and/or clinical phenotypes. Surprisingly, the\ninformation provided by this well-known hierarchical structure is rarely used\nby machine learning-based automatic microbial identification systems.\nStructured machine learning methods were recently proposed for taking into\naccount the structure embedded in a hierarchy and using it as additional a\npriori information, and could therefore allow to improve microbial\nidentification systems. We test and compare several state-of-the-art machine\nlearning methods for microbial identification on a new Matrix-Assisted Laser\nDesorption/Ionization Time-of-Flight mass spectrometry (MALDI-TOF MS) dataset.\nWe include in the benchmark standard and structured methods, that leverage the\nknowledge of the underlying hierarchical structure in the learning process. Our\nresults show that although some methods perform better than others, structured\nmethods do not consistently perform better than their \"flat\" counterparts. We\npostulate that this is partly due to the fact that standard methods already\nreach a high level of accuracy in this context, and that they mainly confuse\nspecies close to each other in the tree, a case where using the known hierarchy\nis not helpful.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi-class_classification",
+    "hierarchical_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "90–98%",
+  "year_of_publish": 2015,
+  "reputation": "Well-regarded in MALDI-TOF microbial ID research as a useful comparative benchmark, but not a large-scale community standard.",
+  "notes": "Non-LLM benchmark; small-to-moderate dataset size, class imbalance; evidence of saturation where standard (flat) methods already achieve high accuracy and hierarchical methods do not always improve results.",
+  "creators": {
+    "scientists": [
+      "Kévin Vervier",
+      "Pierre Mahé",
+      "Jean-Baptiste Veyrieras",
+      "Jean-Philippe Vert"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1506.07251",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

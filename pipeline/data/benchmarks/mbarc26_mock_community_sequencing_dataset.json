@@ -1,0 +1,38 @@
+{
+  "name": "MBARC-26 mock community sequencing dataset",
+  "description": "Generating sequence data of a defined community composed of organisms with complete reference genomes is indispensable for the benchmarking of new genome sequence analysis methods, including assembly and binning tools. Moreover the validation of new sequencing library protocols and platforms to assess critical components such as sequencing errors and biases relies on such datasets. We here report the next generation metagenomic sequence data of a defined mock community (Mock Bacteria ARchaea Community; MBARC-26), composed of 23 bacterial and 3 archaeal strains with finished genomes. These strains span 10 phyla and 14 classes, a range of GC contents, genome sizes, repeat content and encompass a diverse abundance profile. Short read Illumina and long-read PacBio SMRT sequences of this mock community are described. These data represent a valuable resource for the scientific community, enabling extensive benchmarking and comparative evaluation of bioinformatics tools without the need to simulate data. As such, these data can aid in improving our current sequence data analysis toolkit and spur interest in the development of new tools.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "genome_assembly",
+    "metagenomic_binning",
+    "read_mapping",
+    "error_profile_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "assembly and binning metrics (e.g., NGA50 / NGA75, genome fraction, completeness and contamination, F1 / ARI for binning)",
+  "general_score_metric": "composite (NGA50, genome_fraction, completeness/contamination, F1/ARI)",
+  "year_of_publish": 2016,
+  "reputation": "132 citations",
+  "notes": "Non-LLM benchmark for genomics tools; limited to a single defined 26-organism mock community (may not capture full environmental diversity). Data include both Illumina short reads and PacBio long reads (platform-specific biases). Useful for assembly/binning benchmarking but can be susceptible to overfitting and does not replace large, real environmental metagenomes.",
+  "creators": {
+    "scientists": [
+      "Esther Singer",
+      "Bill Andreopoulos",
+      "Robert M. Bowers",
+      "Janey Lee",
+      "Shweta Deshpande",
+      "Jennifer Chiniquy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/sdata.2016.81",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

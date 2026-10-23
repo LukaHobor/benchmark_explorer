@@ -1,0 +1,36 @@
+{
+  "name": "BigHand2.2M",
+  "description": "In this paper we introduce a large-scale hand pose dataset, collected using a\nnovel capture method. Existing datasets are either generated synthetically or\ncaptured using depth sensors: synthetic datasets exhibit a certain level of\nappearance difference from real depth images, and real datasets are limited in\nquantity and coverage, mainly due to the difficulty to annotate them. We\npropose a tracking system with six 6D magnetic sensors and inverse kinematics\nto automatically obtain 21-joints hand pose annotations of depth maps captured\nwith minimal restriction on the range of motion. The capture protocol aims to\nfully cover the natural hand pose space. As shown in embedding plots, the new\ndataset exhibits a significantly wider and denser range of hand poses compared\nto existing benchmarks. Current state-of-the-art methods are evaluated on the\ndataset, and we demonstrate significant improvements in cross-benchmark\nperformance. We also show significant improvements in egocentric hand pose\nestimation with a CNN trained on the new dataset.",
+  "category": "vision",
+  "domain": "hand pose estimation / depth imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "hand_pose_estimation",
+    "keypoint_regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean per-joint position error (MPJPE) in mm; sometimes PCK (percentage of correct keypoints) reported",
+  "general_score_metric": "MPJPE (mean per-joint position error, mm)",
+  "typical_sota_score": "≈10–20 mm (MPJPE) depending on method and test split",
+  "year_of_publish": 2017,
+  "reputation": "A well-cited, widely used large-scale real depth hand-pose dataset valued for its size and coverage of natural hand poses.",
+  "notes": "Non‑LLM vision benchmark; large-scale depth-only dataset collected with magnetic sensors — may have sensor-/depth-modality bias and limited RGB appearance variation; generally not saturated but results depend on evaluation metric (MPJPE vs PCK).",
+  "creators": {
+    "scientists": [
+      "Shanxin Yuan",
+      "Qi Ye",
+      "Bjorn Stenger",
+      "Siddhant Jain",
+      "Tae-Kyun Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1704.02612",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

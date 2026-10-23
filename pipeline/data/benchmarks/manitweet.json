@@ -1,0 +1,35 @@
+{
+  "name": "ManiTweet",
+  "description": "Considerable advancements have been made to tackle the misrepresentation of information derived from reference articles in the domains of fact-checking and faithful summarization. However, an unaddressed aspect remains - the identification of social media posts that manipulate information within associated news articles. This task presents a significant challenge, primarily due to the prevalence of personal opinions in such posts. We present a novel task, identifying manipulation of news on social media, which aims to detect manipulation in social media posts and identify manipulated or inserted information. To study this task, we have proposed a data collection schema and curated a dataset called ManiTweet, consisting of 3.6K pairs of tweets and corresponding articles. Our analysis demonstrates that this task is highly challenging, with large language models (LLMs) yielding unsatisfactory performance. Additionally, we have developed a simple yet effective basic model that outperforms LLMs significantly on the ManiTweet dataset. Finally, we have conducted an exploratory analysis of human-written tweets, unveiling intriguing connections between manipulation and the domain and factuality of news articles, as well as revealing that manipulated sentences are more likely to encapsulate the main story or consequences of a news outlet.",
+  "category": "text",
+  "domain": "social media / misinformation detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "span_extraction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (for span/extraction) and accuracy (for manipulation detection)",
+  "general_score_metric": "F1 (primary for extraction tasks)",
+  "year_of_publish": 2023,
+  "reputation": "Relatively new dataset in the misinformation/manipulation detection community; cited in related work but not yet widely adopted as a de facto standard.",
+  "notes": "Contains 3.6K tweet-article pairs (relatively small). Challenges include subjectivity in annotation, class imbalance, and potential contamination risk since tweets/articles may appear in large LLM training corpora. Evaluations typically report both detection accuracy and extraction F1.",
+  "creators": {
+    "scientists": [
+      "Kung-Hsiang Huang",
+      "Hou Pong Chan",
+      "Kathleen McKeown",
+      "Heng Ji"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2305.14225",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

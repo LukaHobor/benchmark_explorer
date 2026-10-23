@@ -1,0 +1,35 @@
+{
+  "name": "CausalReasoningBenchmark",
+  "description": "Many benchmarks for automated causal inference evaluate a system's performance based on a single numerical output, such as an Average Treatment Effect (ATE). This approach conflates two distinct steps in causal analysis: identification-formulating a valid research design under stated assumptions-and estimation-implementing that design numerically on finite data. We introduce CausalReasoningBenchmark, a benchmark of 173 queries across 138 real-world datasets, curated from 85 peer-reviewed research papers and four widely-used causal-inference textbooks. For each query a system must produce (i) a structured identification specification that names the strategy, the treatment, outcome, and control variables, and all design-specific elements, and (ii) a point estimate with a standard error. By scoring these two components separately, our benchmark enables granular diagnosis: it distinguishes failures in causal reasoning from errors in numerical execution. Baseline results with a state-of-the",
+  "category": "mixed",
+  "domain": "finance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended_generation",
+    "structured_output",
+    "numerical_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "exact_match_and_numeric_error",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2026,
+  "reputation": "A new benchmark that is likely to be of interest to causal inference researchers, but it is not yet a widely established community standard.",
+  "notes": "Very recent and specialized benchmark; combines identification and estimation, so results depend on both structured reasoning and numerical accuracy.",
+  "creators": {
+    "scientists": [
+      "Ayush Sawarni",
+      "Jiyuan Tan",
+      "Vasilis Syrgkanis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2602.20571",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

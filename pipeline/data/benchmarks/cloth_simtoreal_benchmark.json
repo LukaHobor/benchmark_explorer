@@ -1,0 +1,37 @@
+{
+  "name": "Cloth Sim-to-Real Benchmark",
+  "description": "Realistic physics engines play a crucial role for learning to manipulate deformable objects such as garments in simulation. By doing so, researchers can circumvent challenges such as sensing the deformation of the object in the real-world. In spite of the extensive use of simulations for this task, few works have evaluated the reality gap between deformable object simulators and real-world data. We present a benchmark dataset to evaluate the sim-to-real gap in cloth manipulation. The dataset is collected by performing a dynamic as well as a quasi-static cloth manipulation task involving contact with a rigid table. We use the dataset to evaluate the reality gap, computational time, and simulation stability of four popular deformable object simulators: MuJoCo, Bullet, Flex, and SOFA. Additionally, we discuss the benefits and drawbacks of each simulator. The benchmark dataset is open-source. Supplementary material, videos, and code, can be found at https://sites.google.com/view/cloth-sim2real-benchmark.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sim_to_real_evaluation",
+    "simulation_stability_assessment",
+    "dynamics_accuracy_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "simulation_error (e.g., mesh/vertex distance or deformation error), runtime (computational time), and simulation stability metrics (e.g., divergence/crash rates)",
+  "general_score_metric": "mean per-vertex distance / deformation error (for reality gap) together with runtime and stability scores",
+  "year_of_publish": 2023,
+  "reputation": "26 citations",
+  "notes": "Non-LLM, robotics/physics benchmark focused on simulators rather than learned models. Results depend strongly on simulator parameters and scene/setup; limited dataset size and task-specificity mean results may not generalize across manipulation scenarios.",
+  "creators": {
+    "scientists": [
+      "David Blanco Mulero",
+      "Oriol Barbany",
+      "G. Alcan",
+      "Adria Colom'e",
+      "Carme Torras",
+      "Ville Kyrki"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2310.09543",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

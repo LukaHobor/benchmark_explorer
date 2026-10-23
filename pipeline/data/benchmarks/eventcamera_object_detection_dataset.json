@@ -1,0 +1,38 @@
+{
+  "name": "Event-Camera Object Detection Dataset",
+  "description": "Object detection in event streams has emerged as a cutting-edge research area, demonstrating superior performance in low-light conditions, scenarios with motion blur, and rapid movements. Current detectors leverage spiking neural networks, Transformers, or convolutional neural networks as their core architectures, each with its own set of limitations including restricted performance, high computational overhead, or limited local receptive fields. This paper introduces a novel MoE (Mixture of Experts) heat conduction-based object detection algorithm that strikingly balances accuracy and computational efficiency. Initially, we employ a stem network for event data embedding, followed by processing through our innovative MoE-HCO blocks. Each block integrates various expert modules to mimic heat conduction within event streams. Subsequently, an IoU-based query selection module is utilized for efficient token extraction, which is then channeled into a detection head for the final object detection process. Furthermore, we are pleased to introduce EvDET200K, a novel benchmark dataset for event-based object detection. Captured with a high-definition Prophesee EVK4-HD event camera, this dataset encompasses 10 distinct categories, 200,000 bounding boxes, and 10,054 samples, each spanning 2 to 5 seconds. We also provide comprehensive results from over 15 state-of-the-art detectors, offering a solid foundation for future research and comparison. The source code of this paper will be released on: https://github.com/Event-AHU/OpenEvDET",
+  "category": "vision",
+  "domain": "vision (neuromorphic)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "bounding_box_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP)",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "A new, specialized benchmark in the event-based vision community with growing but still niche adoption among neuromorphic vision researchers.",
+  "notes": "Non-LLM benchmark using neuromorphic/event-camera data; sensor- and setup-specific (Prophesee EVK4-HD), potential class imbalance, moderate dataset size (10k samples, 200k boxes); not yet widely standardized across detectors.",
+  "creators": {
+    "scientists": [
+      "Xiao Wang",
+      "Yu Jin",
+      "Wentao Wu",
+      "Wei zhang",
+      "Lin Zhu",
+      "Bo Jiang",
+      "Yonghong Tian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.06647",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

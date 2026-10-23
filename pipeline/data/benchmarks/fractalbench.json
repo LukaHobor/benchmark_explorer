@@ -1,0 +1,33 @@
+{
+  "name": "FractalBench",
+  "description": "Mathematical reasoning requires abstracting symbolic rules from visual patterns -- inferring the infinite from the finite. We investigate whether multimodal AI systems possess this capability through FractalBench, a benchmark evaluating fractal program synthesis from images. Fractals provide ideal test cases: Iterated Function Systems with only a few contraction maps generate complex self-similar patterns through simple recursive rules, requiring models to bridge visual perception with mathematical abstraction. We evaluate four leading MLLMs -- GPT-4o, Claude 3.7 Sonnet, Gemini 2.5 Flash, and Qwen 2.5-VL -- on 12 canonical fractals. Models must generate executable Python code reproducing the fractal, enabling objective evaluation. Results reveal a striking disconnect: 76% generate syntactically valid code but only 4% capture mathematical structure. Success varies systematically -- models handle geometric transformations (Koch curves: 17-21%) but fail at branching recursion (trees:<2%),",
+  "category": "multimodal",
+  "domain": "formal reasoning",
+  "task_types": [
+    "open_ended",
+    "code_generation",
+    "program_synthesis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "structure capture rate",
+  "typical_sota_score": "4%",
+  "year_of_publish": 2025,
+  "reputation": "A very recent niche benchmark from an arXiv paper, with no established community adoption yet.",
+  "notes": "Small benchmark (12 canonical fractals); syntactic validity is much higher than true mathematical correctness, so exact code validity is not a good proxy for success.",
+  "creators": {
+    "scientists": [
+      "Jan Ondras",
+      "Marek Suppa"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2511.06522",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

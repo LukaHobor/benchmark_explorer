@@ -1,0 +1,37 @@
+{
+  "name": "ChestX-ray8",
+  "description": "The chest X-ray is one of the most commonly accessible radiological\nexaminations for screening and diagnosis of many lung diseases. A tremendous\nnumber of X-ray imaging studies accompanied by radiological reports are\naccumulated and stored in many modern hospitals' Picture Archiving and\nCommunication Systems (PACS). On the other side, it is still an open question\nhow this type of hospital-size knowledge database containing invaluable imaging\ninformatics (i.e., loosely labeled) can be used to facilitate the data-hungry\ndeep learning paradigms in building truly large-scale high precision\ncomputer-aided diagnosis (CAD) systems.\n  In this paper, we present a new chest X-ray database, namely \"ChestX-ray8\",\nwhich comprises 108,948 frontal-view X-ray images of 32,717 unique patients\nwith the text-mined eight disease image labels (where each image can have\nmulti-labels), from the associated radiological reports using natural language\nprocessing. Importantly, we demonstrate that these commonly occurring thoracic\ndiseases can be detected and even spatially-located via a unified\nweakly-supervised multi-label image classification and disease localization\nframework, which is validated using our proposed dataset. Although the initial\nquantitative results are promising as reported, deep convolutional neural\nnetwork based \"reading chest X-rays\" (i.e., recognizing and locating the common\ndisease patterns trained with only image-level labels) remains a strenuous task\nfor fully-automated high precision CAD systems. Data download link:\nhttps://nihcc.app.box.com/v/ChestXray-NIHCC",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ROC AUC for classification; IoU / localization metrics for localization tasks",
+  "general_score_metric": "ROC AUC",
+  "typical_sota_score": "80–95% (AUC, varies by disease)",
+  "year_of_publish": 2017,
+  "reputation": "One of the most widely used public chest X‑ray datasets for benchmarking automated disease detection, but known in the community for noisy labels.",
+  "notes": "Image labels were automatically text‑mined from radiology reports and contain noise and omissions; patient-level duplicates and class imbalance exist. Not clinical‑grade; results can be affected by dataset-specific biases and spurious correlations.",
+  "creators": {
+    "scientists": [
+      "Xiaosong Wang",
+      "Yifan Peng",
+      "Le Lu",
+      "Zhiyong Lu",
+      "Mohammadhadi Bagheri",
+      "Ronald M. Summers"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1705.02315",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

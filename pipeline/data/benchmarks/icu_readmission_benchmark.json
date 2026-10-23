@@ -1,0 +1,36 @@
+{
+  "name": "ICU Readmission Benchmark",
+  "description": "Objective: To compare different deep learning architectures for predicting the risk of readmission within 30 days of discharge from the intensive care unit (ICU). The interpretability of attention-based models is leveraged to describe patients-at-risk. Methods: Several deep learning architectures making use of attention mechanisms, recurrent layers, neural ordinary differential equations (ODEs), and medical concept embeddings with time-aware attention were trained using publicly available electronic medical record data (MIMIC-III) associated with 45,298 ICU stays for 33,150 patients. Bayesian inference was used to compute the posterior over weights of an attention-based model. Odds ratios associated with an increased risk of readmission were computed for static variables. Diagnoses, procedures, medications, and vital signs were ranked according to the associated risk of readmission. Results: A recurrent neural network, with time dynamics of code embeddings computed by neural ODEs, achi",
+  "category": "mixed",
+  "domain": "medical informatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "classification metrics such as AUROC and AUPRC, with accuracy sometimes reported",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "0.75–0.85 (AUROC)",
+  "year_of_publish": 2019,
+  "reputation": "A classic clinical prediction benchmark built on MIMIC-III that has been used in many healthcare ML studies.",
+  "notes": "Non-LLM benchmark; class imbalance and dataset shift are important, and reported performance depends heavily on feature engineering and cohort definition.",
+  "creators": {
+    "scientists": [
+      "Sebastiano Barbieri",
+      "James Kemp",
+      "Oscar Perez-Concha",
+      "Sradha Kotwal",
+      "Martin Gallagher",
+      "Angus Ritchie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1905.08547",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Single-cell RNA-seq pre-processing benchmark",
+  "description": "Abstract\n        Single-cell data analysis can transform the practice of personalised medicine by facilitating characterisation of disease-associated molecular changes across every single cell. Advanced single-cell multimodal assays can now simultaneously measure different types of molecules (e.g., DNA, RNA, Protein) across hundreds of thousands of individual cells to provide a complete molecular readout of the state of the cell. A key analytical challenge is to integrate single-cell measurements across different modalities. In recent years, different methods have been developed to integrate different molecular modalities of single cell measurements, yet there is no systematic evaluation on the performance of different techniques with respect to different pre-processig strategies. Here, we consider a general pipeline of single-cell data analyses comprising normalisation and data integration followed by the most popular dimensionality reduction methods where several algorithms can be adopted to each module in the pipeline. The performance of different algorithm combinations often depends on the sizes and characteristics of datasets. This paper explores the optimal framework of different algorithms using six datasets across diverse modalities, tissues and organisms. We use three evaluation metrics (Silhouette Coefficient Score, Adjusted Rand Index and Calinski-Harabasz Index) to explore the model's overall performance from the two aspects, including clustering performance and time efficiency. We conduct experiments based on combinations of seven normalization methods, four dimensional reduction methods, and five integration methods. Our results demonstrate that for the data integration module, the clustering performance of Seurat and Harmony are more prominent, but the time efficiency of Harmony was better. At the same time, the performance of Seurat for small data sets is superior. For the dimensionality reduction module, the UMAP method shows promising results in compatibility with the integration methods. The data normalization method could be differentiated according to different integration methods.",
+  "category": "multimodal",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "clustering",
+    "unsupervised_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Silhouette Coefficient, Adjusted Rand Index (ARI), and Calinski-Harabasz Index (as reported by the authors)",
+  "general_score_metric": "Adjusted Rand Index (for clustering agreement) and Silhouette Coefficient (for cluster separation) are primary reported metrics",
+  "year_of_publish": 2022,
+  "reputation": "A domain-specific preprint study evaluating preprocessing/integration pipelines for single-cell multimodal data; limited adoption as an established benchmark (preprint-stage and focused on six datasets).",
+  "notes": "Non-LLM, domain-specific bioinformatics benchmark with only six datasets — results may not generalize broadly; methods compared across normalization, integration, and dimensionality-reduction choices; preprint (not peer-reviewed) and sensitive to dataset size and modality.",
+  "creators": {
+    "scientists": [
+      "Ali Anaissi",
+      "Seid Miad Zandavi",
+      "Basem Suleiman",
+      "Widad Alyassine",
+      "Ali Braytee",
+      "Fatemeh Vafaee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.21203/rs.3.rs-2249309/v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

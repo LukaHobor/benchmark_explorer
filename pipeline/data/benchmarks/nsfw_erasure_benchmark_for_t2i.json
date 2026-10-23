@@ -1,0 +1,36 @@
+{
+  "name": "NSFW Erasure Benchmark for T2I",
+  "description": "Text-to-image (T2I) diffusion models have gained widespread application across various domains, demonstrating remarkable creative potential. However, the strong generalization capabilities of these models can inadvertently led they to generate NSFW content even with efforts on filtering NSFW content from the training dataset, posing risks to their safe deployment. While several concept erasure methods have been proposed to mitigate this issue, a comprehensive evaluation of their effectiveness remains absent. To bridge this gap, we present the first systematic investigation of concept erasure methods for NSFW content and its sub-themes in text-to-image diffusion models. At the task level, we provide a holistic evaluation of 11 state-of-the-art baseline methods with 14 variants. Specifically, we analyze these methods from six distinct assessment perspectives, including three conventional perspectives, i.e., erasure proportion, image quality, and semantic alignment, and three new perspectives, i.e., excessive erasure, the impact of explicit and implicit unsafe prompts, and robustness. At the tool level, we perform a detailed toxicity analysis of NSFW datasets and compare the performance of different NSFW classifiers, offering deeper insights into their performance alongside a compilation of comprehensive evaluation metrics. Our benchmark not only systematically evaluates concept erasure methods, but also delves into the underlying factors influencing their performance at the insight level. By synthesizing insights from various evaluation perspectives, we provide a deeper understanding of the challenges and opportunities in the field, offering actionable guidance and inspiration for advancing research and practical applications in concept erasure.",
+  "category": "multimodal",
+  "domain": "computer vision / multimodal safety",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_generation",
+    "safety_evaluation",
+    "robustness_testing"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2025,
+  "reputation": "Newly proposed benchmark focused on NSFW concept erasure for text-to-image diffusion models; currently limited adoption but relevant for safety and T2I research.",
+  "notes": "Non-LLM benchmark focused on diffusion T2I models. Results depend heavily on choice of NSFW classifiers and toxicity datasets (classifier bias risk). Uses multiple automated and human-centered metrics; robustness and prompt distribution may affect comparability.",
+  "creators": {
+    "scientists": [
+      "Die Chen",
+      "Zhiwen Li",
+      "Cen Chen",
+      "Xiaodan Li",
+      "Jinyan Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.12527",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Minecraft Universe (MCU)",
+  "description": "Evaluating generalist agents presents significant challenges due to their wide-ranging abilities and the limitations of current benchmarks in assessing true generalization. We introduce the Minecraft Universe (MCU), a fully automated benchmarking framework set within the open-world game Minecraft. MCU dynamically generates and evaluates a broad spectrum of tasks, offering three core components: 1) a task generation mechanism that provides high degrees of freedom and variability, 2) an ever-expanding set of over 3K composable atomic tasks, and 3) a general evaluation framework that supports open-ended task assessment. By integrating large language models (LLMs), MCU dynamically creates diverse environments for each evaluation, fostering agent generalization. The framework uses a vision-language model (VLM) to automatically generate evaluation criteria, achieving over 90% agreement with human ratings across multi-dimensional assessments, which demonstrates that MCU is a scalable and explainable solution for evaluating generalist agents. Additionally, we show that while state-of-the-art foundational models perform well on specific tasks, they often struggle with increased task diversity and difficulty.",
+  "category": "mixed",
+  "domain": "games / generalist agent evaluation",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "goal_conditioned",
+    "instruction_following",
+    "policy_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (primary) combined with automated multi-dimensional scoring via a vision-language model and human-evaluation agreement",
+  "general_score_metric": "task success rate (percentage) with reported agreement to human ratings",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded as a challenging, novel benchmark for generalist agents in open-world environments; growing interest but not yet ubiquitous.",
+  "notes": "Requires running Minecraft environment (heavy compute); evaluations can be non-deterministic and environment-specific; automatic VLM-based scoring correlates well with humans but is not a perfect substitute; not an LLM-only benchmark.",
+  "creators": {
+    "scientists": [
+      "Xinyue Zheng",
+      "Haowei Lin",
+      "Kaichen He",
+      "ZiHao Wang",
+      "Zilong Zheng",
+      "Yitao Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2310.08367",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

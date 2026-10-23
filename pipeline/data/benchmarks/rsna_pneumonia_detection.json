@@ -1,0 +1,36 @@
+{
+  "name": "RSNA Pneumonia Detection Challenge",
+  "description": "In this work, we describe our approach to pneumonia classification and localization in chest radiographs. This method uses only \\emph{open-source} deep learning object detection and is based on CoupleNet, a fully convolutional network which incorporates global and local features for object detection. Our approach achieves robustness through critical modifications of the training process and a novel ensembling algorithm which merges bounding boxes from several models. We tested our detection algorithm tested on a dataset of 3000 chest radiographs as part of the 2018 RSNA Pneumonia Challenge; our solution was recognized as a winning entry in a contest which attracted more than 1400 participants worldwide.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static",
+  "task_types": [
+    "object_detection",
+    "medical_image_analysis",
+    "radiology_image_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean average precision over bounding-box detections",
+  "general_score_metric": "mean average precision",
+  "typical_sota_score": "commonly reported strong solutions achieve high detection AP on the private leaderboard, but scores vary substantially with thresholding and post-processing",
+  "year_of_publish": 2018,
+  "year_of_last_update": 2018,
+  "reputation": "high",
+  "notes": "This benchmark is sensitive to annotation noise and the ambiguity of pneumonia appearance on X-rays. Solutions often use object detection architectures with heavy augmentation and ensembles.",
+  "creators": {
+    "scientists": [],
+    "institutions": [
+      "RSNA"
+    ],
+    "companies": [
+      "Kaggle"
+    ]
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1811.08939",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

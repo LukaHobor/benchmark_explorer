@@ -1,0 +1,38 @@
+{
+  "name": "3D Human Pose and Shape Benchmarking Study",
+  "description": "3D human pose and shape estimation (a.k.a. \"human mesh recovery\") has achieved substantial progress. Researchers mainly focus on the development of novel algorithms, while less attention has been paid to other critical factors involved. This could lead to less optimal baselines, hindering the fair and faithful evaluations of newly designed methodologies. To address this problem, this work presents the first comprehensive benchmarking study from three under-explored perspectives beyond algorithms. 1) Datasets. An analysis on 31 datasets reveals the distinct impacts of data samples: datasets featuring critical attributes (i.e. diverse poses, shapes, camera characteristics, backbone features) are more effective. Strategical selection and combination of high-quality datasets can yield a significant boost to the model performance. 2) Backbones. Experiments with 10 backbones, ranging from CNNs to transformers, show the knowledge learnt from a proximity task is readily transferable to human mesh recovery. 3) Training strategies. Proper augmentation techniques and loss designs are crucial. With the above findings, we achieve a PA-MPJPE of 47.3 mm on the 3DPW test set with a relatively simple model. More importantly, we provide strong baselines for fair comparisons of algorithms, and recommendations for building effective training configurations in the future. Codebase is available at http://github.com/smplbody/hmr-benchmarks",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_pose_estimation",
+    "human_mesh_recovery",
+    "pose_and_shape_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "PA-MPJPE (Procrustes Aligned Mean Per Joint Position Error) / MPJPE (mm)",
+  "general_score_metric": "PA-MPJPE (mm)",
+  "typical_sota_score": "≈40–50 mm (PA-MPJPE on 3DPW; task- and setup-dependent)",
+  "year_of_publish": 2022,
+  "reputation": "A comprehensive benchmarking study that is well-regarded for clarifying dataset, backbone, and training strategy impacts and for providing strong, reproducible baselines.",
+  "notes": "Results are highly sensitive to dataset selection, protocol (alignment/scale), and evaluation splits; provides strong baselines but comparisons require matching evaluation protocols; not applicable to LLMs.",
+  "creators": {
+    "scientists": [
+      "Hui En Pang",
+      "Zhongang Cai",
+      "Lei Yang",
+      "Tianwei Zhang",
+      "Ziwei Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.10529",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

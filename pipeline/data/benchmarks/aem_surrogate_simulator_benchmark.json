@@ -1,0 +1,37 @@
+{
+  "name": "AEM Surrogate Simulator Benchmark",
+  "description": "Artificial electromagnetic materials (AEMs), including metamaterials, derive their electromagnetic properties from geometry rather than chemistry. With the appropriate geometric design, AEMs have achieved exotic properties not realizable with conventional materials (e.g., cloaking or negative refractive index). However, understanding the relationship between the AEM structure and its properties is often poorly understood. While computational electromagnetic simulation (CEMS) may help design new AEMs, its use is limited due to its long computational time. Recently, it has been shown that deep learning can be an alternative solution to infer the relationship between an AEM geometry and its properties using a (relatively) small pool of CEMS data. However, the limited publicly released datasets and models and no widely-used benchmark for comparison have made using deep learning approaches even more difficult. Furthermore, configuring CEMS for a specific problem requires substantial expertise and time, making reproducibility challenging. Here, we develop a collection of three classes of AEM problems: metamaterials, nanophotonics, and color filter designs. We also publicly release software, allowing other researchers to conduct additional simulations for each system easily. Finally, we conduct experiments on our benchmark datasets with three recent neural network architectures: the multilayer perceptron (MLP), MLP-mixer, and transformer. We identify the methods and models that generalize best over the three problems to establish the best practice and baseline results upon which future research can build.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "surrogate_modeling",
+    "inverse_design_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MSE",
+  "general_score_metric": "MAE",
+  "reputation": "New, domain-specific benchmark introduced by the authors; useful as a baseline suite but not yet widely adopted outside the AEM research community.",
+  "notes": "Relatively small, domain-specific datasets; results depend on simulation fidelity; reproducibility helped by released simulation software but CEMS configuration remains expert-driven; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yang Deng*",
+      "Juncheng Dong*",
+      "Simiao Ren*",
+      "Omar Khatib",
+      "Mohammadreza Soltani",
+      "Vahid Tarokh",
+      "Willie Padilla",
+      "Jordan Malof"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "PulseImpute",
+  "description": "The promise of Mobile Health (mHealth) is the ability to use wearable sensors to monitor participant physiology at high frequencies during daily life to enable temporally-precise health interventions. However, a major challenge is frequent missing data. Despite a rich imputation literature, existing techniques are ineffective for the pulsative signals which comprise many mHealth applications, and a lack of available datasets has stymied progress. We address this gap with PulseImpute, the first large-scale pulsative signal imputation challenge which includes realistic mHealth missingness models, an extensive set of baselines, and clinically-relevant downstream tasks. Our baseline models include a novel transformer-based architecture designed to exploit the structure of pulsative signals. We hope that PulseImpute will enable the ML community to tackle this significant and challenging task.",
+  "category": "mixed",
+  "domain": "mobile health / physiological monitoring",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_imputation",
+    "signal_reconstruction",
+    "downstream_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE/RMSE for imputation, plus downstream task metrics (e.g., classification AUC) for clinical tasks",
+  "general_score_metric": "MAE/RMSE (primary), downstream task performance (e.g., AUC)",
+  "year_of_publish": 2022,
+  "reputation": "A recent research benchmark (PulseImpute) focused on pulsative physiological signal imputation that has attracted interest in the mHealth and time-series communities but is not yet a widely adopted standard.",
+  "notes": "Non‑LLM benchmark focused on wearable physiological (pulsative) signals; includes realistic missingness models and downstream clinical tasks. Users should note potential dataset size limits, domain-specific signal properties, and that performance varies by downstream task and missingness model.",
+  "creators": {
+    "scientists": [
+      "Maxwell A. Xu",
+      "Alexander Moreno",
+      "Supriya Nagesh",
+      "V. Burak Aydemir",
+      "David W. Wetter",
+      "Santosh Kumar",
+      "James M. Rehg"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2212.07514",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

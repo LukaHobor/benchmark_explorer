@@ -1,0 +1,39 @@
+{
+  "name": "BOPTEST",
+  "description": "We present a data-driven modeling and control framework for physics-based building emulators. Our approach consists of: (a) Offline training of differentiable surrogate models that accelerate model evaluations, provide cost-effective gradients, and maintain good predictive accuracy for the receding horizon in Model Predictive Control (MPC), and (b) Formulating and solving nonlinear building HVAC MPC problems. We extensively evaluate the modeling and control performance using multiple surrogate models and optimization frameworks across various test cases available in the Building Optimization Testing Framework (BOPTEST). Our framework is compatible with other modeling techniques and can be customized with different control formulations, making it adaptable and future-proof for test cases currently under development for BOPTEST. This modularity provides a path towards prototyping predictive controllers in large buildings, ensuring scalability and robustness in real-world applications.",
+  "category": "mixed",
+  "domain": "building energy systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "modeling",
+    "control",
+    "system_identification",
+    "optimization",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "composite_score (control cost / energy consumption + comfort/setpoint violations)",
+  "year_of_publish": 2023,
+  "reputation": "Widely used in the building-controls research community as a simulation-based testing framework for HVAC modeling and MPC development; moderate adoption outside controls research.",
+  "notes": "Non-LLM, simulation-based benchmark; evaluation depends heavily on simulator fidelity and scenario setup. Metrics are typically application-specific (energy/cost and comfort violations) rather than generic NLP metrics; results may not be directly comparable across studies without standardized scenarios.",
+  "creators": {
+    "scientists": [
+      "Saman Mostafavi",
+      "Chihyeon Song",
+      "Aayushman Sharma",
+      "Raman Goyal",
+      "Alejandro Brito"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2301.13447",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

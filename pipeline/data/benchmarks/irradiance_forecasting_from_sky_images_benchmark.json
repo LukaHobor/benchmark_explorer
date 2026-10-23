@@ -1,0 +1,35 @@
+{
+  "name": "Irradiance Forecasting from Sky Images Benchmark",
+  "description": "A number of industrial applications, such as smart grids, power plant operation, hybrid system management or energy trading, could benefit from improved short-term solar forecasting, addressing the intermittent energy production from solar panels. However, current approaches to modelling the cloud cover dynamics from sky images still lack precision regarding the spatial configuration of clouds, their temporal dynamics and physical interactions with solar radiation. Benefiting from a growing number of large datasets, data driven methods are being developed to address these limitations with promising results. In this study, we compare four commonly used Deep Learning architectures trained to forecast solar irradiance from sequences of hemispherical sky images and exogenous variables. To assess the relative performance of each model, we used the Forecast Skill metric based on the smart persistence model, as well as ramp and time distortion metrics. The results show that encoding spatiotemporal aspects of the sequence of sky images greatly improved the predictions with 10 min ahead Forecast Skill reaching 20.4% on the test year. However, based on the experimental data, we conclude that, with a common setup, Deep Learning models tend to behave just as a 'very smart persistence model', temporally aligned with the persistence model while mitigating its most penalising errors. Thus, despite being captured by the sky cameras, models often miss fundamental events causing large irradiance changes such as clouds obscuring the sun. We hope that our work will contribute to a shift of this approach to irradiance forecasting, from reactive to anticipatory.",
+  "category": "vision",
+  "domain": "renewable energy / solar forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "time_series_forecasting",
+    "visual_forecasting"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Forecast Skill (relative improvement over persistence), RMSE/MAE, ramp-detection metrics, time-distortion metrics",
+  "general_score_metric": "Forecast Skill (%)",
+  "typical_sota_score": "~20% (10-minute horizon; varies substantially with forecast horizon and dataset split)",
+  "year_of_publish": 2021,
+  "reputation": "A niche but useful research benchmark in the solar/renewable-energy forecasting community with moderate adoption among academic groups working on sky-image based forecasting.",
+  "notes": "Non-LLM benchmark focused on spatiotemporal visual regression; evaluation is horizon-dependent and often compared to a strong persistence baseline. Models can appear to perform well by aligning temporally with persistence (risk of apparent saturation), and many failures stem from missing rare sun-obscuring events. Dataset and results are specific to camera setup and location, limiting broad generalization.",
+  "creators": {
+    "scientists": [
+      "Quentin Paletta",
+      "Guillaume Arbod",
+      "Joan Lasenby"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2102.00721",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

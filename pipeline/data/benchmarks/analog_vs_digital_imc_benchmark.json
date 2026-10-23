@@ -1,0 +1,34 @@
+{
+  "name": "Analog vs Digital IMC Benchmark",
+  "description": "In-Memory Computing (IMC) has emerged as a promising paradigm for energy-efficient, throughput-efficient and area-efficient machine learning at the edge. However, the differences in hardware architectures, array dimensions, and fabrication technologies among published IMC realizations have made it difficult to grasp their relative strengths. Moreover, previous studies have primarily focused on exploring and benchmarking the peak performance of a single IMC macro rather than full system performance on real workloads. This paper aims to address the lack of a quantitative comparison of Analog In-Memory Computing (AIMC) and Digital In-Memory Computing (DIMC) processor architectures. We propose an analytical IMC performance model that is validated against published implementations and integrated into a system-level exploration framework for comprehensive performance assessments on different workloads with varying IMC configurations. Our experiments show that while DIMC generally has higher computational density than AIMC, AIMC with large macro sizes may have better energy efficiency than DIMC on convolutional-layers and pointwise-layers, which can exploit high spatial unrolling. On the other hand, DIMC with small macro size outperforms AIMC on depthwise-layers, which feature limited spatial unrolling opportunities inside a macro.",
+  "category": "mixed",
+  "domain": "hardware / in-memory computing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "system_performance_evaluation",
+    "energy_efficiency_evaluation",
+    "throughput_measurement"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "quantitative hardware metrics (throughput, latency, energy per operation / per inference, performance-per-watt)",
+  "general_score_metric": "throughput (ops/sec) and energy-per-inference (J) / performance-per-watt",
+  "year_of_publish": 2024,
+  "reputation": "A research-oriented benchmark/framework used in the IMC hardware community for comparing AIMC and DIMC architectures; limited adoption outside specialist hardware research groups.",
+  "notes": "Analytical and simulation-backed benchmark rather than a large standardized dataset; results are highly workload-, array-dimension-, and fabrication-dependent. Not applicable to LLM evaluation. Limited number of published hardware implementations for direct apples-to-apples comparison.",
+  "creators": {
+    "scientists": [
+      "Jiacong Sun",
+      "Pouya Houshmand",
+      "Marian Verhelst"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2405.14978",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

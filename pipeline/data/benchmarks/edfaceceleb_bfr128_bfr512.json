@@ -1,0 +1,37 @@
+{
+  "name": "EDFace-Celeb (BFR128 / BFR512)",
+  "description": "Blind Face Restoration (BFR) aims to construct a high-quality (HQ) face image from its corresponding low-quality (LQ) input. Recently, many BFR methods have been proposed and they have achieved remarkable success. However, these methods are trained or evaluated on privately synthesized datasets, which makes it infeasible for the subsequent approaches to fairly compare with them. To address this problem, we first synthesize two blind face restoration benchmark datasets called EDFace-Celeb-1M (BFR128) and EDFace-Celeb-150K (BFR512). State-of-the-art methods are benchmarked on them under five settings including blur, noise, low resolution, JPEG compression artifacts, and the combination of them (full degradation). To make the comparison more comprehensive, five widely-used quantitative metrics and two task-driven metrics including Average Face Landmark Distance (AFLD) and Average Face ID Cosine Similarity (AFICS) are applied. Furthermore, we develop an effective baseline model called Swin Transformer U-Net (STUNet). The STUNet with U-net architecture applies an attention mechanism and a shifted windowing scheme to capture long-range pixel interactions and focus more on significant features while still being trained efficiently. Experimental results show that the proposed baseline method performs favourably against the SOTA methods on various BFR tasks.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "image_translation",
+    "image_enhancement"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR, SSIM, LPIPS; plus task-driven metrics Average Face Landmark Distance (AFLD) and Average Face ID Cosine Similarity (AFICS)",
+  "general_score_metric": "PSNR (dB) and SSIM (with LPIPS / AFLD / AFICS as complementary metrics)",
+  "typical_sota_score": "PSNR ~24–35 dB; SSIM ~0.85–0.99; LPIPS ~0.01–0.15 (ranges vary by degradation and setting)",
+  "year_of_publish": 2022,
+  "reputation": "A recognized synthetic benchmark in the blind face restoration community introduced by the paper (2206.03697) and increasingly used to compare BFR methods under controlled degradations.",
+  "notes": "Non-LLM computer-vision benchmark with synthetic degradations; large-scale but synthetic dataset, so real-world generalization can be limited; potential privacy/identity considerations when using celebrity face images.",
+  "creators": {
+    "scientists": [
+      "Puyang Zhang",
+      "Kaihao Zhang",
+      "Wenhan Luo",
+      "Changsheng Li",
+      "Guoren Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.03697",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

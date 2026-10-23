@@ -1,0 +1,33 @@
+{
+  "name": "Photographic Social Distance Estimation Benchmark",
+  "description": "The social distancing regulations introduced to slow down the spread of COVID-19 virus directly affect a basic form of non-verbal communication, and there may be longer term impacts on human behavior and culture that remain to be analyzed in proxemics studies. To obtain quantitative results for such studies, large media and/or personal photo collections must be analyzed. Several social distance monitoring methods have been proposed for safety purposes, but they are not directly applicable to general photo collections with large variations in the imaging setup. In such studies, the interest shifts from safety to analyzing subtle differences in social distances. Currently, there is no suitable benchmark for developing such algorithms. Collecting images with measured ground-truth pair-wise distances using different camera settings is cumbersome. Moreover, performance evaluation for these algorithms is not straightforward, and there is no widely accepted evaluation protocol. In this paper, we provide an image dataset with measured pair-wise social distances under different camera positions and settings. We suggest a performance evaluation protocol and provide a benchmark to easily evaluate such algorithms. We also propose an automatic social distance estimation method that can be applied on general photo collections. Our method is a hybrid method that combines deep learning-based object detection and human pose estimation with projective geometry. The method can be applied on uncalibrated single images with known focal length and sensor size. The results on our benchmark are encouraging with 91% human detection rate and only 38.24% average relative distance estimation error among the detected people.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_absolute_error (MAE)",
+  "general_score_metric": "mean absolute error (meters)",
+  "year_of_publish": 2022,
+  "reputation": "Well-cited within the computer-vision literature focused on interpersonal distance estimation and public-safety applications, but specialized and not broadly used outside that niche.",
+  "notes": "Non-LLM benchmark; results depend strongly on camera intrinsics/scene scale and calibration. Dataset size and scene diversity are limited, so models may overfit to camera/scene biases.",
+  "creators": {
+    "scientists": [
+      "Mert Seker",
+      "Anssi Männistö",
+      "Alexandros Iosifidis",
+      "Jenni Raitoharju"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1016/j.mlwa.2022.100427",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

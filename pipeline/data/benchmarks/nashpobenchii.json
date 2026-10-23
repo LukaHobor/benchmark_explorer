@@ -1,0 +1,36 @@
+{
+  "name": "NAS-HPO-Bench-II",
+  "description": "The benchmark datasets for neural architecture search (NAS) have been developed to alleviate the computationally expensive evaluation process and ensure a fair comparison. Recent NAS benchmarks only focus on architecture optimization, although the training hyperparameters affect the obtained model performances. Building the benchmark dataset for joint optimization of architecture and training hyperparameters is essential to further NAS research. The existing NAS-HPO-Bench is a benchmark for joint optimization, but it does not consider the network connectivity design as done in modern NAS algorithms. This paper introduces the first benchmark dataset for joint optimization of network connections and training hyperparameters, which we call NAS-HPO-Bench-II. We collect the performance data of 4K cell-based convolutional neural network architectures trained on the CIFAR-10 dataset with different learning rate and batch size settings, resulting in the data of 192K configurations. The dataset includes the exact data for 12 epoch training. We further build the surrogate model predicting the accuracies after 200 epoch training to provide the performance data of longer training epoch. By analyzing NAS-HPO-Bench-II, we confirm the dependency between architecture and training hyperparameters and the necessity of joint optimization. Finally, we demonstrate the benchmarking of the baseline optimization algorithms using NAS-HPO-Bench-II.",
+  "category": "mixed",
+  "domain": "machine learning (neural architecture search / hyperparameter optimization)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "architecture_optimization",
+    "hyperparameter_optimization",
+    "surrogate_modeling"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (CIFAR-10 test accuracy)",
+  "general_score_metric": "test_accuracy",
+  "typical_sota_score": "90–96%",
+  "year_of_publish": 2021,
+  "reputation": "19 citations",
+  "notes": "Benchmark is limited to cell-based CNNs on CIFAR-10 and relies on surrogate models for long-training estimates; search space and dataset scale are small compared to modern NAS on larger datasets, and surrogate-model bias/approximation may affect transferability. Non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yoichi Hirose",
+      "Nozomu Yoshinari",
+      "S. Shirakawa"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2110.10165",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

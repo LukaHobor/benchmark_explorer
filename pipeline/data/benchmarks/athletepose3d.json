@@ -1,0 +1,38 @@
+{
+  "name": "AthletePose3D",
+  "description": "Human pose estimation is a critical task in computer vision and sports biomechanics, with applications spanning sports science, rehabilitation, and biomechanical research. While significant progress has been made in monocular 3D pose estimation, current datasets often fail to capture the complex, high-acceleration movements typical of competitive sports. In this work, we introduce AthletePose3D, a novel dataset designed to address this gap. AthletePose3D includes 12 types of sports motions across various disciplines, with approximately 1.3 million frames and 165 thousand individual postures, specifically capturing high-speed, high-acceleration athletic movements. We evaluate state-of-the-art (SOTA) monocular 2D and 3D pose estimation models on the dataset, revealing that models trained on conventional datasets perform poorly on athletic motions. However, fine-tuning these models on AthletePose3D notably reduces the SOTA model mean per joint position error (MPJPE) from 214mm to 65mm-a reduction of over 69%. We also validate the kinematic accuracy of monocular pose estimations through waveform analysis, highlighting strong correlations in joint angle estimations but limitations in velocity estimation. Our work provides a comprehensive evaluation of monocular pose estimation models in the context of sports, contributing valuable insights for advancing monocular pose estimation techniques in high-performance sports environments. The dataset, code, and model checkpoints are available at: https://github.com/calvinyeungck/AthletePose3D",
+  "category": "vision",
+  "domain": "sports biomechanics / human pose estimation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_pose_estimation",
+    "2d_pose_estimation",
+    "pose_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MPJPE (mean per joint position error), optionally PA-MPJPE and joint-angle waveform correlation",
+  "general_score_metric": "MPJPE (mean per joint position error)",
+  "typical_sota_score": "~65 mm MPJPE (best reported after fine-tuning; baseline models can be much worse)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Emerging dataset attracting interest in sports biomechanics and high-dynamics pose estimation; valuable for evaluating models on high-acceleration athletic motions.",
+  "notes": "Large, non-LLM vision dataset focused on athletic motions; offers richer, high-acceleration data but may differ from everyday pose distributions (domain shift) and emphasizes kinematic accuracy over velocity estimation.",
+  "creators": {
+    "scientists": [
+      "Calvin Yeung",
+      "Tomohiro Suzuki",
+      "Ryota Tanaka",
+      "Zhuoer Yin",
+      "Keisuke Fujii"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.07499",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

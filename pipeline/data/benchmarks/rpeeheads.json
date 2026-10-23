@@ -1,0 +1,37 @@
+{
+  "name": "RPEE-Heads",
+  "description": "The automatic detection of pedestrian heads in crowded environments is essential for crowd analysis and management tasks, particularly in high-risk settings such as railway platforms and event entrances. These environments, characterized by dense crowds and dynamic movements, are underrepresented in public datasets, posing challenges for existing deep learning models. To address this gap, we introduce the Railway Platforms and Event Entrances-Heads (RPEE-Heads) dataset, a novel, diverse, high-resolution, and accurately annotated resource. It includes 109,913 annotated pedestrian heads across 1,886 images from 66 video recordings, with an average of 56.2 heads per image. Annotations include bounding boxes for visible head regions. In addition to introducing the RPEE-Heads dataset, this paper evaluates eight state-of-the-art object detection algorithms using the RPEE-Heads dataset and analyzes the impact of head size on detection accuracy. The experimental results show that You Only Look Once v9 and Real-Time Detection Transformer outperform the other algorithms, achieving mean average precisions of 90.7% and 90.8%, with inference times of 11 and 14 milliseconds, respectively. Moreover, the findings underscore the need for specialized datasets like RPEE-Heads for training and evaluating accurate models for head detection in railway platforms and event entrances. The dataset and pretrained models are available at https://doi.org/10.34735/ped.2024.2.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "localization",
+    "bounding_box_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP)",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "90–91%",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized dataset for head detection in railway/event settings with published baselines but limited wider adoption so far.",
+  "notes": "High-resolution, densely crowded scenes but relatively small number of images (1,886); potential class/size imbalance and geographic bias; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mohamad Abubaker",
+      "Zubayda Alsadder",
+      "Hamed Abdelhaq",
+      "Maik Boltes",
+      "Ahmed Alia"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.18164",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Foolbox",
+  "description": "Even todays most advanced machine learning models are easily fooled by almost\nimperceptible perturbations of their inputs. Foolbox is a new Python package to\ngenerate such adversarial perturbations and to quantify and compare the\nrobustness of machine learning models. It is build around the idea that the\nmost comparable robustness measure is the minimum perturbation needed to craft\nan adversarial example. To this end, Foolbox provides reference implementations\nof most published adversarial attack methods alongside some new ones, all of\nwhich perform internal hyperparameter tuning to find the minimum adversarial\nperturbation. Additionally, Foolbox interfaces with most popular deep learning\nframeworks such as PyTorch, Keras, TensorFlow, Theano and MXNet and allows\ndifferent adversarial criteria such as targeted misclassification and top-k\nmisclassification as well as different distance measures. The code is licensed\nunder the MIT license and is openly available at\nhttps://github.com/bethgelab/foolbox . The most up-to-date documentation can be\nfound at http://foolbox.readthedocs.io .",
+  "category": "mixed",
+  "domain": "machine learning (robustness)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "adversarial_attack",
+    "robustness_benchmarking",
+    "attack_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Adversarial success rate and minimum perturbation norm (Linf/L2/etc.); reporting of attack strength (perturbation bounds) and success/failure rates",
+  "general_score_metric": "Adversarial success rate at specified perturbation budgets and minimum perturbation (norm) required to cause misclassification",
+  "typical_sota_score": "not_applicable",
+  "year_of_publish": 2017,
+  "reputation": "A widely used, well-regarded open-source toolkit in the adversarial ML and robustness research community for implementing and comparing attack methods.",
+  "notes": "Toolbox (not a single dataset) that supports many frameworks and attacks; results depend heavily on threat model, hyperparameter tuning and model defenses; potential for misuse (attack generation) and reproducibility variability across implementations.",
+  "creators": {
+    "scientists": [
+      "Jonas Rauber",
+      "Wieland Brendel",
+      "Matthias Bethge"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/1707.04131",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

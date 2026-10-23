@@ -1,0 +1,36 @@
+{
+  "name": "Landslide susceptibility benchmark",
+  "description": "Landslide susceptibility, the spatial likelihood of occurrence of landslides in a specific geographical area, is the subject of countless scientific publications. Different authors use heterogeneous data, and apply many different methods, mostly falling under the definition of statistical and/or machine learning approaches, with the common feature of considering many input variables and a single target output, denoting landslide presence. It is a classification problem: given N input variables assuming different values, each combination associated with a 0/1 possible outcome, a model should be trained with some dataset, tested to reproduce the target outcome, and eventually applied to unseen data possibly of practical application.At variance with many fields of science, no reference data exist to comparatively assess the performance of a given method for landslide susceptibility classification and mapping. We propose a benchmark dataset in Italy, extracted from a larger dataset covering the whole country and based on slope units as basic mapping units. The selected 7,360 slope units encompass an area of about 4,100 km^2 in Central Italy. The attribute table contains 26 columns, corresponding to predictors, and a binary column containing the landslide presence/absence flag.We release the dataset, along with a ``call for collaboration'', aimed at collecting a number of different calculations peformed with common input data, and establish a benchmark for landslide susceptibility models. Contributions to this collaboration will be presented at the 2023 European Geoscience Assembly, and collected in a journal publication authored by all of the contributors.",
+  "category": "mixed",
+  "domain": "geology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "geospatial_prediction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUC-ROC",
+  "general_score_metric": "AUC-ROC",
+  "typical_sota_score": "0.75–0.92 (AUC)",
+  "year_of_publish": 2022,
+  "reputation": "A regionally focused geoscience benchmark used by researchers for comparing landslide susceptibility models, but not a widely standardized community benchmark.",
+  "notes": "Relatively small and regional dataset (7,360 slope units); potential class imbalance and spatial autocorrelation risks; non-LLM geospatial benchmark.",
+  "creators": {
+    "scientists": [
+      "Massimiliano Alvioli",
+      "Liesbet Jacobs",
+      "Marco Loche",
+      "Carlos Grohmann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.31223/x52s9c",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

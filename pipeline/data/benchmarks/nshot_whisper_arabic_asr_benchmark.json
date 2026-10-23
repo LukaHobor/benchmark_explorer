@@ -1,0 +1,34 @@
+{
+  "name": "N-Shot Whisper Arabic ASR Benchmark",
+  "description": "Whisper, the recently developed multilingual weakly supervised model, is reported to perform well on multiple speech recognition benchmarks in both monolingual and multilingual settings. However, it is not clear how Whisper would fare under diverse conditions even on languages it was evaluated on such as Arabic. In this work, we address this gap by comprehensively evaluating Whisper on several varieties of Arabic speech for the ASR task. Our evaluation covers most publicly available Arabic speech data and is performed under n-shot (zero-, few-, and full) finetuning. We also investigate the robustness of Whisper under completely novel conditions, such as in dialect-accented standard Arabic and in unseen dialects for which we develop evaluation data. Our experiments show that although Whisper zero-shot outperforms fully finetuned XLS-R models on all datasets, its performance deteriorates significantly in the zero-shot setting for five unseen dialects (i.e., Algeria, Jordan, Palestine, UAE, and Yemen).",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "speech_recognition",
+    "transcription"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "word_error_rate",
+  "general_score_metric": "word_error_rate (WER)",
+  "typical_sota_score": "10–40% WER (varies substantially by dataset and dialect; unseen dialects often exceed 40%)",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded in the Arabic ASR research community for its broad dialect coverage and for evaluating n-shot (zero/few/full) finetuning scenarios.",
+  "notes": "Covers multiple public Arabic datasets with uneven dialect representation; evaluates zero-/few-/full-shot settings. Non-LLM (speech) benchmark — results sensitive to transcription conventions and dataset size; dialectal imbalance and domain shift can substantially affect scores.",
+  "creators": {
+    "scientists": [
+      "Bashar Talafha",
+      "Abdul Waheed",
+      "Muhammad Abdul-Mageed"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2306.02902",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

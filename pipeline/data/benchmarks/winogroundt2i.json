@@ -1,0 +1,37 @@
+{
+  "name": "Winoground-T2I",
+  "description": "Text-to-image (T2I) synthesis has recently achieved significant advancements. However, challenges remain in the model's compositionality, which is the ability to create new combinations from known components. We introduce Winoground-T2I, a benchmark designed to evaluate the compositionality of T2I models. This benchmark includes 11K complex, high-quality contrastive sentence pairs spanning 20 categories. These contrastive sentence pairs with subtle differences enable fine-grained evaluations of T2I synthesis models. Additionally, to address the inconsistency across different metrics, we propose a strategy that evaluates the reliability of various metrics by using comparative sentence pairs. We use Winoground-T2I with a dual objective: to evaluate the performance of T2I models and the metrics used for their evaluation. Finally, we provide insights into the strengths and weaknesses of these metrics and the capabilities of current T2I models in tackling challenges across a range of complex compositional categories. Our benchmark is publicly available at https://github.com/zhuxiangru/Winoground-T2I .",
+  "category": "multimodal",
+  "domain": "text-to-image synthesis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_generation",
+    "contrastive_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "correlation_with_human_judgments",
+  "year_of_publish": 2023,
+  "reputation": "An emerging benchmark for evaluating compositionality in T2I models that is gaining attention but is not yet widely adopted as a standard.",
+  "notes": "Contains ~11K contrastive sentence pairs focused on fine-grained compositional differences. Not saturated; metric choice strongly affects outcomes. Potential contamination if T2I models were trained on similar prompts; evaluates both model output quality and metric reliability.",
+  "creators": {
+    "scientists": [
+      "Xiangru Zhu",
+      "Penglei Sun",
+      "Chengyu Wang",
+      "Jingping Liu",
+      "Zhixu Li",
+      "Yanghua Xiao",
+      "Jun Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.02338",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

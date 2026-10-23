@@ -1,0 +1,32 @@
+{
+  "name": "LegalBench-RAG",
+  "description": "Retrieval-Augmented Generation (RAG) systems are showing promising potential, and are becoming increasingly relevant in AI-powered legal applications. Existing benchmarks, such as LegalBench, assess the generative capabilities of Large Language Models (LLMs) in the legal domain, but there is a critical gap in evaluating the retrieval component of RAG systems. To address this, we introduce LegalBench-RAG, the first benchmark specifically designed to evaluate the retrieval step of RAG pipelines within the legal space. LegalBench-RAG emphasizes precise retrieval by focusing on extracting minimal, highly relevant text segments from legal documents. These highly relevant snippets are preferred over retrieving document IDs, or large sequences of imprecise chunks, both of which can exceed context window limitations. Long context windows cost more to process, induce higher latency, and lead LLMs to forget or hallucinate information. Additionally, precise results allow LLMs to generate citations for the end user. The LegalBench-RAG benchmark is constructed by retracing the context used in LegalBench queries back to their original locations within the legal corpus, resulting in a dataset of 6,858 query-answer pairs over a corpus of over 79M characters, entirely human-annotated by legal experts. We also introduce LegalBench-RAG-mini, a lightweight version for rapid iteration and experimentation. By providing a dedicated benchmark for legal retrieval, LegalBench-RAG serves as a critical tool for companies and researchers focused on enhancing the accuracy and performance of RAG systems in the legal domain. The LegalBench-RAG dataset is publicly available at https://github.com/zeroentropy-cc/legalbenchrag.",
+  "category": "text",
+  "domain": "legal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "snippet_extraction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "exact_match and token-level F1 (measuring overlap between retrieved snippet and human-annotated ground-truth snippet)",
+  "general_score_metric": "exact_match / token-level F1",
+  "year_of_publish": 2024,
+  "reputation": "A newly introduced, domain-specialized benchmark aimed at improving legal RAG retrieval — of growing interest among legal-AI researchers but not yet widely adopted outside that niche.",
+  "notes": "Human-annotated snippet-level labels (6,858 queries) over a large legal corpus; specialized domain increases risk of dataset-specific biases and potential pretraining contamination; focuses on retrieval quality rather than end-to-end generation.",
+  "creators": {
+    "scientists": [
+      "Nicholas Pipitone",
+      "Ghita Houir Alami"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2408.10343",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

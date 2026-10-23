@@ -1,0 +1,38 @@
+{
+  "name": "Complex-query Referring Image Segmentation",
+  "description": "Referring Image Understanding (RIS) has been extensively studied over the past decade, leading to the development of advanced algorithms. However, there has been a lack of research investigating how existing algorithms should be benchmarked with complex language queries, which include more informative descriptions of surrounding objects and backgrounds (\\eg \\textit{\"the black car.\"} vs. \\textit{\"the black car is parking on the road and beside the bus.\"}). Given the significant improvement in the semantic understanding capability of large pre-trained models, it is crucial to take a step further in RIS by incorporating complex language that resembles real-world applications. To close this gap, building upon the existing RefCOCO and Visual Genome datasets, we propose a new RIS benchmark with complex queries, namely \\textbf{RIS-CQ}. The RIS-CQ dataset is of high quality and large scale, which challenges the existing RIS with enriched, specific and informative queries, and enables a more realistic scenario of RIS research. Besides, we present a nichetargeting method to better task the RIS-CQ, called dual-modality graph alignment model (\\textbf{\\textsc{DuMoGa}}), which outperforms a series of RIS methods.",
+  "category": "multimodal",
+  "domain": "vision / vision-and-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "referring_expression_segmentation",
+    "instance_segmentation",
+    "visual_grounding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mask IoU (Intersection-over-Union), reported as mIoU / IoU at thresholds; also region precision/recall",
+  "general_score_metric": "mIoU (mean mask Intersection-over-Union)",
+  "year_of_publish": 2023,
+  "reputation": "New (2023) dataset built from RefCOCO and Visual Genome; of growing interest in the referring-image segmentation community but not yet widely adopted.",
+  "notes": "Constructed from existing datasets (RefCOCO, Visual Genome) — potential overlap with pretraining data; focuses on more complex, descriptive queries so baseline scores may be lower than on original benchmarks; not saturated.",
+  "creators": {
+    "scientists": [
+      "Wei Ji",
+      "Li Li",
+      "Hao Fei",
+      "Xiangyan Liu",
+      "Xun Yang",
+      "Juncheng Li",
+      "Roger Zimmermann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2309.17205",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

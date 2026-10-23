@@ -1,0 +1,53 @@
+{
+  "name": "AbdomenAtlas",
+  "description": "We introduce the largest abdominal CT dataset (termed AbdomenAtlas) of 20,460 three-dimensional CT volumes sourced from 112 hospitals across diverse populations, geographies, and facilities. AbdomenAtlas provides 673K high-quality masks of anatomical structures in the abdominal region annotated by a team of 10 radiologists with the help of AI algorithms. We start by having expert radiologists manually annotate 22 anatomical structures in 5,246 CT volumes. Following this, a semi-automatic annotation procedure is performed for the remaining CT volumes, where radiologists revise the annotations predicted by AI, and in turn, AI improves its predictions by learning from revised annotations. Such a large-scale, detailed-annotated, and multi-center dataset is needed for two reasons. Firstly, AbdomenAtlas provides important resources for AI development at scale, branded as large pre-trained models, which can alleviate the annotation workload of expert radiologists to transfer to broader clinical applications. Secondly, AbdomenAtlas establishes a large-scale benchmark for evaluating AI algorithms -- the more data we use to test the algorithms, the better we can guarantee reliable performance in complex clinical scenarios. An ISBI & MICCAI challenge named BodyMaps: Towards 3D Atlas of Human Body was launched using a subset of our AbdomenAtlas, aiming to stimulate AI innovation and to benchmark segmentation accuracy, inference efficiency, and domain generalizability. We hope our AbdomenAtlas can set the stage for larger-scale clinical trials and offer exceptional opportunities to practitioners in the medical imaging community. Codes, models, and datasets are available at https://www.zongweiz.com/dataset",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "3D_segmentation",
+    "organ_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient (Dice / IoU), also reported: Hausdorff distance for boundary accuracy",
+  "general_score_metric": "Dice coefficient (F1)",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2024,
+  "reputation": "Large, multi-center abdominal CT dataset recently released and promoted via ISBI/MICCAI BodyMaps challenge; gaining attention in medical-imaging community for scale and annotation coverage.",
+  "notes": "Very large-scale 3D medical dataset with semi-automated annotations revised by radiologists — useful but subject to annotation bias and variable quality across centers; class imbalance for small structures; privacy/usage governed by dataset terms; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Wenxuan Li",
+      "Chongyu Qu",
+      "Xiaoxi Chen",
+      "Pedro R. A. S. Bassi",
+      "Yijia Shi",
+      "Yuxiang Lai",
+      "Qian Yu",
+      "Huimin Xue",
+      "Yixiong Chen",
+      "Xiaorui Lin",
+      "Yutong Tang",
+      "Yining Cao",
+      "Haoqi Han",
+      "Zheyuan Zhang",
+      "Jiawei Liu",
+      "Tiezheng Zhang",
+      "Yujiu Ma",
+      "Jincheng Wang",
+      "Guang Zhang",
+      "Alan Yuille",
+      "Zongwei Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.16697",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

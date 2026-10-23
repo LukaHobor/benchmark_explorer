@@ -1,0 +1,34 @@
+{
+  "name": "BreastDCEDL_AMBL",
+  "description": "Breast magnetic resonance imaging is a critical tool for cancer detection and treatment planning, but its clinical utility is hindered by poor specificity, leading to high false-positive rates and unnecessary biopsies. This study introduces a transformer-based framework for automated classification of breast lesions in dynamic contrast-enhanced MRI, addressing the challenge of distinguishing benign from malignant findings. We implemented a SegFormer architecture that achieved an AUC of 0.92 for lesion-level classification, with 100% sensitivity and 67% specificity at the patient level - potentially eliminating one-third of unnecessary biopsies without missing malignancies. The model quantifies malignant pixel distribution via semantic segmentation, producing interpretable spatial predictions that support clinical decision-making. To establish reproducible benchmarks, we curated BreastDCEDL_AMBL by transforming The Cancer Imaging Archive's AMBL collection into a standardized deep learning dataset with 88 patients and 133 annotated lesions (89 benign, 44 malignant). This resource addresses a key infrastructure gap, as existing public datasets lack benign lesion annotations, limiting benign-malignant classification research. Training incorporated an expanded cohort of over 1,200 patients through integration with BreastDCEDL datasets, validating transfer learning approaches despite primary tumor-only annotations. Public release of the dataset, models, and evaluation protocols provides the first standardized benchmark for DCE-MRI lesion classification, enabling methodological advancement toward clinical deployment.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "lesion_classification",
+    "binary_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC (ROC); reported sensitivity and specificity for clinical thresholds",
+  "general_score_metric": "AUC (ROC)",
+  "typical_sota_score": "≈0.92 (AUC)",
+  "year_of_publish": 2025,
+  "reputation": "A recently released, domain-specific benchmark for DCE‑MRI lesion classification that fills a gap by providing benign lesion annotations and is gaining interest in medical imaging research.",
+  "notes": "Small dataset (88 patients, 133 lesions) with class imbalance (more benign than malignant); clinical imaging benchmark (non-LLM) prone to overfitting and domain-shift; reported results include transfer-learning experiments from larger cohorts.",
+  "creators": {
+    "scientists": [
+      "Naomi Fridman",
+      "Anat Goldstein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2509.26440",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "SqCLIRIL",
+  "description": "This paper presents SqCLIRIL (Spoken Query Cross-lingual Information Retrieval in Indian Languages), a comprehensive benchmark designed to evaluate spoken query-based cross-lingual retrieval across five Indian languages: Hindi, Gujarati, Bengali, Kannada, and English. The task encompasses monolingual and cross-lingual retrieval settings across five language pairs, incorporating spoken queries (male and female voices) and document collections in text. The primary objective is to assess retrieval effectiveness in a low-resource, multilingual setting that reflects real-world language diversity and access constraints. We investigate four retrieval architectures: (i) sparse lexical matching using BM25, (ii) dense semantic retrieval via bi-encoder models, (iii) hybrid ranking through Reciprocal Rank Fusion (RRF) of sparse and dense scores, and (iv) a Large Language Model (LLM)-based pointwise fusion strategy (LPF) that integrates generative semantic alignment. Experimental evaluations on the human-translated TREC DL’19 and DL’20 query sets in the above five languages show that while dense retrieval improves substantially over traditional sparse models, fusion-based approaches—particularly LPF—consistently yield superior nDCG scores across most query-document language pairs. The results underscore the utility of generative AI in enhancing retrieval performance in multilingual, low-resource, speech-centric IR scenarios. This benchmark contributes to developing scalable, speech-first, and language-agnostic retrieval systems, with implications for inclusive information access in linguistically fragmented regions. • Introducing SqCLIRIL: a benchmark for spoken cross-lingual information retrieval in five indian languages. • Evaluation and comparison of CLIR approaches. • LPF achieves consistent gains across monolingual and cross-lingual settings. • Compares gender-based retrieval performance on spoken queries.",
+  "category": "multimodal",
+  "domain": "information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "nDCG@k",
+  "general_score_metric": "nDCG@k",
+  "year_of_publish": 2025,
+  "reputation": "3 citations",
+  "notes": "Multimodal benchmark combining spoken (audio) queries and text documents across low-resource Indian languages; susceptible to ASR errors and speaker/gender bias. Non-LLM retrieval components (BM25, dense retrievers) are baseline methods; dataset sizes are moderate and results are language-pair dependent.",
+  "creators": {
+    "scientists": [
+      "Bhargav Dave",
+      "Prasenjit Majumder"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://doi.org/10.1016/j.patrec.2025.08.022",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

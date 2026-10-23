@@ -1,0 +1,37 @@
+{
+  "name": "HALoGEN",
+  "description": "A comprehensive hallucination evaluation framework generating approximately 150,000 model outputs from 14 LLMs across 9 generation settings (biography, scientific claim, news, etc.). Introduces a three-type error taxonomy: incorrect recollection (the model misremembers real information), training data errors (hallucinations inherited from training data), and fabrication (entirely invented information). Even the best models hallucinate up to 86% of atomic facts in some high-hallucination domains.",
+  "category": "text",
+  "domain": "general knowledge",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "mixed",
+  "evaluation_method": "hallucination rate (atomic fact verification via search/knowledge bases)",
+  "general_score_metric": "hallucination rate (% atomic facts hallucinated; lower is better)",
+  "typical_sota_score": "10–86% hallucination rate depending on domain (biography and scientific claims show highest rates)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Published at ACL 2025; from Allen Institute for AI and University of Washington; one of the most comprehensive hallucination benchmarks to date; systematic across 14 models and 9 settings",
+  "notes": "ACL 2025. Three-type taxonomy distinguishes hallucination causes — crucial for mitigation strategies since different causes require different fixes. Automated verification pipeline using search engines and knowledge bases enables scalable evaluation. Finding: top models still hallucinate significant portions of atomic facts in knowledge-intensive generation tasks. From Allen Institute for AI.",
+  "creators": {
+    "scientists": [
+      "Abhilasha Ravichander",
+      "Shrusti Ghela",
+      "David Jurgens",
+      "Yejin Choi"
+    ],
+    "institutions": [
+      "Allen Institute for AI (AI2)",
+      "University of Washington",
+      "University of Michigan"
+    ],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "FDR SNP-caller Benchmark",
+  "description": "Sequence alignments form the basis for many comparative and population genomic studies. Alignment tools provide a range of accuracies dependent on the divergence between the sequences and the alignment methods. Despite widespread use, there is no standard method for assessing the accuracy of a dataset and alignment strategy after resequencing. We present a framework and tool for determining the overall accuracies of an input read dataset, alignment and SNP-calling method providing an isolate in that dataset has a corresponding, or closely related reference sequence available. In addition to this tool for comparing False Discovery Rates (FDR), we include a method for determining homozygous and heterozygous positions from an alignment using binomial probabilities for an expected error rate. We benchmark this method against other SNP callers using our FDR method with three fungal genomes, finding that it was able achieve a high level of accuracy. These tools are available at http://cfdr.sourceforge.net/.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "variant_calling",
+    "open_ended",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "false_discovery_rate (FDR) with complementary precision/recall/F1 reporting",
+  "general_score_metric": "false_discovery_rate (FDR)",
+  "typical_sota_score": "method- and dataset-dependent; often FDR < 5% on high-quality data",
+  "year_of_publish": 2013,
+  "reputation": "Well-cited in the genomics community as a formal FDR-based framework for comparing SNP callers, with moderate adoption in method-comparison studies.",
+  "notes": "Non-LLM benchmark; performance strongly depends on sequencing depth, sample contamination, reference bias and caller settings. FDR can saturate at low variant counts and comparisons are sensitive to ground-truth quality and platform-specific error profiles.",
+  "creators": {
+    "scientists": [
+      "Rhys A. Farrer",
+      "Daniel A. Henk",
+      "Dan MacLean",
+      "David J. Studholme",
+      "Matthew C. Fisher"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/srep01512",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

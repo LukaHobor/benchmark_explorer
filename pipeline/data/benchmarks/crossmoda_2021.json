@@ -1,0 +1,37 @@
+{
+  "name": "CrossMoDA 2021",
+  "description": "Domain Adaptation (DA) has recently raised strong interests in the medical imaging community. While a large variety of DA techniques has been proposed for image segmentation, most of these techniques have been validated either on private datasets or on small publicly available datasets. Moreover, these datasets mostly addressed single-class problems. To tackle these limitations, the Cross-Modality Domain Adaptation (crossMoDA) challenge was organised in conjunction with the 24th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI 2021). CrossMoDA is the first large and multi-class benchmark for unsupervised cross-modality DA. The challenge's goal is to segment two key brain structures involved in the follow-up and treatment planning of vestibular schwannoma (VS): the VS and the cochleas. Currently, the diagnosis and surveillance in patients with VS are performed using contrast-enhanced T1 (ceT1) MRI. However, there is growing interest in using non-contrast sequences such as high-resolution T2 (hrT2) MRI. Therefore, we created an unsupervised cross-modality segmentation benchmark. The training set provides annotated ceT1 (N=105) and unpaired non-annotated hrT2 (N=105). The aim was to automatically perform unilateral VS and bilateral cochlea segmentation on hrT2 as provided in the testing set (N=137). A total of 16 teams submitted their algorithm for the evaluation phase. The level of performance reached by the top-performing teams is strikingly high (best median Dice - VS:88.4%; Cochleas:85.7%) and close to full supervision (median Dice - VS:92.5%; Cochleas:87.7%). All top-performing methods made use of an image-to-image translation approach to transform the source-domain images into pseudo-target-domain images. A segmentation network was then trained using these generated images and the manual annotations provided for the source image.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "semantic_segmentation",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice (F1 / Dice coefficient)",
+  "general_score_metric": "Dice coefficient (mean Dice)",
+  "typical_sota_score": "80–92%",
+  "year_of_publish": 2023,
+  "reputation": "Widely used within the medical image-analysis and domain-adaptation communities as a standard cross-modality segmentation challenge.",
+  "notes": "Non-LLM benchmark; relatively small, specialized medical datasets with class imbalance; results sensitive to annotation protocol and pre-processing; primary metric is Dice which can mask boundary errors.",
+  "creators": {
+    "scientists": [
+      "Dorent R",
+      "Kujawa A",
+      "Ivory M",
+      "Bakas S",
+      "Rieke N",
+      "Joutard S"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2201.02831",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

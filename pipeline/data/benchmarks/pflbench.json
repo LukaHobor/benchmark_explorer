@@ -1,0 +1,36 @@
+{
+  "name": "pFL-Bench",
+  "description": "Personalized Federated Learning (pFL), which utilizes and deploys distinct local models, has gained increasing attention in recent years due to its success in handling the statistical heterogeneity of FL clients. However, standardized evaluation and systematical analysis of diverse pFL methods remain a challenge. Firstly, the highly varied datasets, FL simulation settings and pFL implementations prevent easy and fair comparisons of pFL methods. Secondly, the current pFL literature diverges in the adopted evaluation and ablation protocols. Finally, the effectiveness and robustness of pFL methods are under-explored in various practical scenarios, such as the generalization to new clients and the participation of resource-limited clients. To tackle these challenges, we propose the first comprehensive pFL benchmark, pFL-Bench, for facilitating rapid, reproducible, standardized and thorough pFL evaluation. The proposed benchmark contains more than 10 dataset variants in various application domains with a unified data partition and realistic heterogeneous settings; a modularized and easy-to-extend pFL codebase with more than 20 competitive pFL method implementations; and systematic evaluations under containerized environments in terms of generalization, fairness, system overhead, and convergence. We highlight the benefits and potential of state-of-the-art pFL methods and hope the pFL-Bench enables further pFL research and broad applications that would otherwise be difficult owing to the absence of a dedicated benchmark. The code is released at https://github.com/alibaba/FederatedScope/tree/master/benchmark/pFL-Bench.",
+  "category": "mixed",
+  "domain": "federated learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "personalized_classification",
+    "personalized_regression",
+    "federated_learning_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task performance (accuracy/F1) combined with system metrics (fairness measures, convergence behavior, communication/computation overhead)",
+  "general_score_metric": "accuracy / F1 (task-dependent); additional system and fairness metrics",
+  "year_of_publish": 2022,
+  "reputation": "A comprehensive, research-oriented benchmark (from FederatedScope) aimed at standardizing personalized federated learning evaluation and adopted by federated learning researchers for reproducible comparisons.",
+  "notes": "Contains multiple dataset variants and realistic heterogeneous settings; enables evaluations of generalization, fairness, and system overhead — results vary widely by dataset and setting; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Daoyuan Chen",
+      "Dawei Gao",
+      "Weirui Kuang",
+      "Yaliang Li",
+      "Bolin Ding"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2206.03655",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Benchmarking Subset Selection in EMO",
+  "description": "In the evolutionary multi-objective optimization (EMO) field, the standard practice is to present the final population of an EMO algorithm as the output. However, it has been shown that the final population often includes solutions which are dominated by other solutions generated and discarded in previous generations. Recently, a new EMO framework has been proposed to solve this issue by storing all the non-dominated solutions generated during the evolution in an archive and selecting a subset of solutions from the archive as the output. The key component in this framework is the subset selection from the archive which usually stores a large number of candidate solutions. However, most studies on subset selection focus on small candidate solution sets for environmental selection. There is no benchmark test suite for large-scale subset selection. This paper aims to fill this research gap by proposing a benchmark test suite for subset selection from large candidate solution sets, and comparing some representative methods using the proposed test suite. The proposed test suite together with the benchmarking studies provides a baseline for researchers to understand, use, compare, and develop subset selection methods in the EMO field.",
+  "category": "mixed",
+  "domain": "evolutionary multi-objective optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "subset_selection",
+    "ranking",
+    "optimization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "subset-quality metrics (e.g., hypervolume, IGD, coverage) and runtime/efficiency",
+  "general_score_metric": "average hypervolume (of the selected subset) / IGD as primary subset-quality metrics",
+  "year_of_publish": 2022,
+  "reputation": "A new, domain-specific benchmark introduced to fill a gap in EMO subset-selection research; provides baseline comparisons but has limited adoption outside the EMO community so far.",
+  "notes": "Non-LLM benchmark focused on evolutionary multi-objective optimization; emphasizes large candidate archives (scalability); results depend heavily on chosen quality metric (hypervolume/IGD) and are not directly comparable to standard environmental-selection evaluations.",
+  "creators": {
+    "scientists": [
+      "Ke Shang",
+      "Tianye Shu",
+      "Hisao Ishibuchi",
+      "Yang Nan",
+      "Lie Meng Pang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2201.06700",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

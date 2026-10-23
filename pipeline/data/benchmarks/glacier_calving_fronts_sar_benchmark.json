@@ -1,0 +1,36 @@
+{
+  "name": "Glacier Calving Fronts SAR Benchmark",
+  "description": "Abstract. Exact information on the calving front positions of marine- or lake-terminating glaciers is a fundamental glacier variable for analyzing ongoing glacier change processes and assessing other variables like frontal ablation rates. In recent years, researchers started implementing algorithms that can automatically detect the calving fronts on satellite imagery. Most studies use optical images, as calving fronts are often easy to distinguish in these images due to the sufficient spatial resolution and the presence of different spectral bands, allowing the separation of ice features. However, detecting calving fronts on synthetic aperture radar (SAR) images is highly desirable, as SAR images can also be acquired during the polar night and are independent of weather conditions (e.g., cloud cover), facilitating year-round monitoring worldwide. In this paper, we present a benchmark dataset (Gourmelon et al., 2022b) of SAR images from multiple regions of the globe with corresponding manually defined labels providing information on the position of the calving front (https://doi.org/10.1594/PANGAEA.940950). With this dataset, different approaches for the detection of glacier calving fronts can be implemented, tested, and their performance fairly compared so that the most effective approach can be determined. The dataset consists of 681 samples, making it large enough to train deep learning segmentation models. It is the first dataset to provide long-term glacier calving front information from multi-mission data. As the dataset includes glaciers from Antarctica, Greenland, and Alaska, the wide applicability of models trained and tested on this dataset is ensured. The test set is independent of the training set so that the generalization capabilities of the models can be evaluated. We provide two sets of labels: one binary segmentation label to discern the calving front from the background, and one label for multi-class segmentation of different landscape classes. Unlike other calving front datasets, the presented dataset contains not only the labels but also the corresponding preprocessed and geo-referenced SAR images as PNG files. The ease of access to the dataset will allow scientists from other fields, such as data science, to contribute their expertise. With this benchmark dataset, we enable comparability between different front detection algorithms and improve the reproducibility of front detection studies. Moreover, we present one baseline model for each kind of label type. Both models are based on the U-Net, one of the most popular deep learning segmentation architectures. In the following two post-processing procedures, the segmentation results are converted into 1-pixel-wide front delineations. By providing both types of labels, both approaches can be used to address the problem. To assess the performance of different models, we suggest first reviewing the segmentation results using the recall, precision, F1 score, and the Jaccard index. Second, the front delineation can be evaluated by calculating the mean distance error to the labeled front. The presented vanilla models provide a baseline of 150 m ± 24 m mean distance error for the Mapple Glacier in Antarctica and 840 m ± 84 m for the Columbia Glacier in Alaska, which has a more complex calving front, consisting of multiple sections, compared with a laterally well constrained, single calving front of Mapple Glacier.",
+  "category": "vision",
+  "domain": "geospatial / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "boundary_detection",
+    "image_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (IoU / Jaccard) and mean distance error for front delineation",
+  "general_score_metric": "F1 score (segmentation); mean distance error (front delineation)",
+  "year_of_publish": 2022,
+  "reputation": "35 citations",
+  "notes": "Moderate-sized, georeferenced SAR dataset (681 samples) for calving-front detection. SAR-specific noise and regional variability (Antarctica, Greenland, Alaska) make generalization challenging. Baseline U-Net results reported (e.g., mean distance errors ~150 m and ~840 m on different glaciers). Independent test set provided; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Nora Gourmelon",
+      "Thorsten Seehaus",
+      "Matthias Braun",
+      "Andreas Maier",
+      "Vincent Christlein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.5194/essd-14-4287-2022",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

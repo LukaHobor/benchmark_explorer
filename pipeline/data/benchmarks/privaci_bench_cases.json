@@ -1,0 +1,39 @@
+{
+  "name": "PrivaCI-Bench_cases",
+  "description": "Train/Test Split for cases\n\t\n\nimport datasets\nfrom datasets import load_dataset, DatasetDict\nimport os\n\n\ndef split_dataset(dataset_name, subsets, domain_name, split_ratio=0.8, random_seed=42):\n    # Loop through each subset and process it\n    dataset = load_dataset(dataset_name)\n    for subset in subsets:\n        print(f\"Processing subset: {subset}...\")\n        sub_dataset = dataset[subset]\n        # Split train set into train and test\n        train_test_split =… See the full description on the dataset page: https://huggingface.co/datasets/teapotlid/PrivaCI-Bench_cases.",
+  "category": "text",
+  "domain": "safety",
+  "tags": [
+    "license:mit",
+    "size_categories:1K<n<10K",
+    "modality:text"
+  ],
+  "task_types": [
+    "classification",
+    "privacy_risk_detection",
+    "train_test_split_preparation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A niche dataset for privacy-related case splits and evaluation, mainly used by researchers working on privacy-risk detection and dataset curation.",
+  "downloads": 6,
+  "likes": 2,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "teapotlid"
+    ]
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://huggingface.co/datasets/teapotlid/PrivaCI-Bench_cases",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

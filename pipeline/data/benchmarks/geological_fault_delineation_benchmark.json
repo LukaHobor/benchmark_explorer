@@ -1,0 +1,38 @@
+{
+  "name": "Geological Fault Delineation Benchmark",
+  "description": "Machine learning has taken a critical role in seismic interpretation workflows, especially in fault delineation tasks. However, despite the recent proliferation of pretrained models and synthetic datasets, the field still lacks a systematic understanding of the generalizability limits of these models across seismic data representing a variety of geologic, acquisition and processing settings. Distributional shifts between different data sources, limitations in fine-tuning strategies and labeled data accessibility, and inconsistent evaluation protocols all represent major roadblocks in the deployment of reliable and robust models in real-world exploration settings. In this paper, we present the first large-scale benchmarking study explicitly designed to provide answers and guidelines for domain shift strategies in seismic interpretation. Our benchmark encompasses over $200$ models trained and evaluated on three heterogeneous datasets (synthetic and real data) including FaultSeg3D, CRACKS, and Thebe. We systematically assess pretraining, fine-tuning, and joint training strategies under varying degrees of domain shift. Our analysis highlights the fragility of current fine-tuning practices, the emergence of catastrophic forgetting, and the challenges of interpreting performance in a systematic manner. We establish a robust experimental baseline to provide insights into the tradeoffs inherent to current fault delineation workflows, and shed light on directions for developing more generalizable, interpretable and effective machine learning models for seismic interpretation. The insights and analyses reported provide a set of guidelines on the deployment of fault delineation models within seismic interpretation workflows.",
+  "category": "vision",
+  "domain": "geoscience / seismic interpretation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "image_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "intersection-over-union (IoU) / mean IoU (mIoU), Dice / F1, precision/recall on pixel masks",
+  "general_score_metric": "mean IoU (mIoU)",
+  "year_of_publish": 2025,
+  "reputation": "A recent large-scale, domain-shift focused benchmark in seismic interpretation that is gaining attention among geoscience and seismic ML researchers for evaluating generalizability across synthetic and real datasets.",
+  "notes": "Contains heterogeneous data sources (synthetic and real) and strong domain shifts; susceptible to distributional shift, class imbalance (faults are sparse), and variability from acquisition/processing — comparisons across datasets should account for these factors.",
+  "creators": {
+    "scientists": [
+      "Jorge Quesada",
+      "Chen Zhou",
+      "Prithwijit Chowdhury",
+      "Mohammad Alotaibi",
+      "Ahmad Mustafa",
+      "Yusufjon Kumamnov",
+      "Mohit Prabhushankar",
+      "Ghassan AlRegib"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.08585",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "HLS-FPGA Benchmark",
+  "description": "High-level synthesis (HLS) aims to raise the abstraction layer in hardware design, enabling the design of domain-specific accelerators (DSAs) like field-programmable gate arrays (FPGAs) using C/C++ instead of hardware description languages (HDLs). Compiler directives in the form of pragmas play a crucial role in modifying the microarchitecture within the HLS framework. However, the space of possible microarchitectures grows exponentially with the number of pragmas. Moreover, the evaluation of each candidate design using the HLS tool consumes significant time, ranging from minutes to hours, leading to a time-consuming optimization process. To accelerate this process, machine learning models have been used to predict design quality in milliseconds. However, existing open-source datasets for training such models are limited in terms of design complexity and available optimizations. In this paper, we present HLSyn, the first benchmark that addresses these limitations. It contains more complex programs with a wider range of optimization pragmas, making it a comprehensive dataset for training and evaluating design quality prediction models. The HLSyn benchmark consists of 42 unique programs/kernels, resulting in over 42,000 labeled designs. We conduct an extensive comparison of state-of-the-art baselines to assess their effectiveness in predicting design quality. As an ongoing project, we anticipate expanding the HLSyn benchmark in terms of both quantity and variety of programs to further support the development of this field.",
+  "category": "code",
+  "domain": "hardware design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_absolute_error",
+  "general_score_metric": "mean_absolute_error",
+  "reputation": "A new but promising specialized benchmark for ML-assisted HLS/FPGA design quality prediction; of primary interest to the hardware design and EDA research communities.",
+  "notes": "Specialized, non-LLM benchmark focused on hardware design; contains 42k+ labeled designs but is limited to the provided kernels and pragmas, so coverage is narrow. Risk of overfitting/saturation for models trained specifically on this data; not meant for general language model evaluation.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

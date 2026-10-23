@@ -1,0 +1,38 @@
+{
+  "name": "QAMPARI",
+  "description": "Existing benchmarks for open-domain question answering (ODQA) typically focus on questions whose answers can be extracted from a single paragraph. By contrast, many natural questions, such as \"What players were drafted by the Brooklyn Nets?\" have a list of answers. Answering such questions requires retrieving and reading from many passages, in a large corpus. We introduce QAMPARI, an ODQA benchmark, where question answers are lists of entities, spread across many paragraphs. We created QAMPARI by (a) generating questions with multiple answers from Wikipedia's knowledge graph and tables, (b) automatically pairing answers with supporting evidence in Wikipedia paragraphs, and (c) manually paraphrasing questions and validating each answer. We train ODQA models from the retrieve-and-read family and find that QAMPARI is challenging in terms of both passage retrieval and answer generation, reaching an F1 score of 32.8 at best. Our results highlight the need for developing ODQA models that handle a broad range of question types, including single and multi-answer questions.",
+  "category": "text",
+  "domain": "question answering / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "list_generation",
+    "retrieval+reading"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Set-based F1 (precision/recall F1 over answer entity lists); exact_match sometimes for full-list correctness",
+  "general_score_metric": "List F1 (entity-level precision/recall F1)",
+  "typical_sota_score": "≈30–35% (best reported ~32.8% F1 in original work)",
+  "year_of_publish": 2022,
+  "reputation": "Recognized as a challenging ODQA benchmark for multi-answer/list questions and used in retrieval+reader research.",
+  "notes": "Requires retrieval across many passages and multi-answer aggregation; not saturated; significant contamination risk for models pretrained on Wikipedia (answers/evidence drawn from Wikipedia); evaluation sensitive to entity canonicalization and answer-paraphrasing.",
+  "creators": {
+    "scientists": [
+      "Samuel Joseph Amouyal",
+      "Tomer Wolfson",
+      "Ohad Rubin",
+      "Ori Yoran",
+      "Jonathan Herzig",
+      "Jonathan Berant"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2205.12665",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

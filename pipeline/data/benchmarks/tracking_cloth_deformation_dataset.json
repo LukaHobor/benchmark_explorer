@@ -1,0 +1,34 @@
+{
+  "name": "Tracking Cloth Deformation Dataset",
+  "description": "Robotic learning for deformable object manipulation—such as textiles—is often done in simulation due to the current limitation of perception methods to understand cloth’s deformation. For this reason, the robotics community is always on the search for more realistic simulators to reduce as much as possible the sim-to-real gap, which is still quite large especially when dynamic motions are applied. We present a cloth dataset consisting of 120 high-quality recordings of several textiles during dynamic motions. Using a Motion Capture System, we record the location of key-points on the cloth surface of four types of fabrics (cotton, denim, wool and polyester) of two sizes and at different speeds. The scenarios considered are all dynamic and involve rapid shaking and twisting of the textiles, collisions with frictional objects, strong hits with a long and thin rigid object and even self-collisions. We explain in detail the scenarios considered, the collected data and how to read it and use it. In addition, we propose a metric to use the dataset as a benchmark to quantify the sim-to-real gap of any cloth simulator. Finally, we show that the recorded trajectories can be directly executed by a robotic arm, enabling learning by demonstration and other imitation learning techniques. Dataset: https://doi.org/10.5281/zenodo.14644526 Video: https://fcoltraro.github.io/projects/dataset/",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "keypoint_tracking",
+    "trajectory_prediction",
+    "simulation_benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "RMSE / trajectory error (keypoint positional error)",
+  "general_score_metric": "root_mean_squared_error (RMSE) of keypoint positions / trajectory RMSE (sim-to-real gap)",
+  "year_of_publish": 2025,
+  "reputation": "4 citations",
+  "notes": "Small dataset (120 recordings) with four fabric types and two sizes; non-LLM benchmark intended for sim-to-real evaluation. High-quality motion-capture data but limited material diversity and scenario coverage may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Franco Coltraro",
+      "Júlia Borràs",
+      "Maria Alberich-Carramiñana",
+      "Carme Torras"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

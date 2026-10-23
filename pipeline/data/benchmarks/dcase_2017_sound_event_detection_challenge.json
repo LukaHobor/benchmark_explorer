@@ -1,0 +1,37 @@
+{
+  "name": "DCASE 2017 Sound Event Detection Challenge",
+  "description": "Each edition of the challenge on Detection and Classification of Acoustic Scenes and Events (DCASE) contained several tasks involving sound event detection in different setups. DCASE 2017 presented participants with three such tasks, each having specific datasets and detection requirements: Task 2, in which target sound events were very rare in both training and testing data, Task 3 having overlapping events annotated in real-life audio, and Task 4, in which only weakly labeled data were available for training. In this paper, we present three tasks, including the datasets and baseline systems, and analyze the challenge entries for each task. We observe the popularity of methods using deep neural networks, and the still widely used mel frequency-based representations, with only few approaches standing out as radically different. Analysis of the systems behavior reveals that task-specific optimization has a big role in producing good performance; however, often this optimization closely follows the ranking metric, and its maximization/minimization does not result in universally good performance. We also introduce the calculation of confidence intervals based on a jackknife resampling procedure to perform statistical analysis of the challenge results. The analysis indicates that while the 95% confidence intervals for many systems overlap, there are significant differences in performance between the top systems and the baseline for all tasks.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "sound_event_detection",
+    "audio_tagging"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "event- and segment-based evaluation using F1-score and error rate (ER) with collar/tolerance settings",
+  "general_score_metric": "event-based F1 (primary), reported together with error rate (ER)",
+  "typical_sota_score": "50–70%",
+  "year_of_publish": 2019,
+  "reputation": "A widely used benchmark in the sound-event-detection community that helped standardize evaluation (F1/ER) for temporal SED tasks.",
+  "notes": "Temporal annotations and collar tolerances make evaluation sensitive to tolerances; datasets are moderate in size and imbalanced across classes; results are stochastic so multiple runs recommended; non-LLM audio benchmark.",
+  "creators": {
+    "scientists": [
+      "Annamaria Mesaros",
+      "Aleksandr Diment",
+      "Benjamin Elizalde",
+      "Toni Heittola",
+      "Emmanuel Vincent",
+      "Bhiksha Raj"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.1109/taslp.2019.2907016",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

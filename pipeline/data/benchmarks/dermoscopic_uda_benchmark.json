@@ -1,0 +1,37 @@
+{
+  "name": "Dermoscopic UDA Benchmark",
+  "description": "The potential of deep neural networks in skin lesion classification has already been demonstrated to be on-par if not superior to the dermatologists diagnosis. However, the performance of these models usually deteriorates when the test data differs significantly from the training data (i.e. domain shift). This concerning limitation for models intended to be used in real-world skin lesion classification tasks poses a risk to patients. For example, different image acquisition systems or previously unseen anatomical sites on the patient can suffice to cause such domain shifts. Mitigating the negative effect of such shifts is therefore crucial, but developing effective methods to address domain shift has proven to be challenging. In this study, we carry out an in-depth analysis of eight different unsupervised domain adaptation methods to analyze their effectiveness in improving generalization for dermoscopic datasets. To ensure robustness of our findings, we test each method on a total of ten distinct datasets, thereby covering a variety of possible domain shifts. In addition, we investigated which factors in the domain shifted datasets have an impact on the effectiveness of domain adaptation methods. Our findings show that all of the eight domain adaptation methods result in improved AUPRC for the majority of analyzed datasets. Altogether, these results indicate that unsupervised domain adaptations generally lead to performance improvements for the binary melanoma-nevus classification task regardless of the nature of the domain shift. However, small or heavily imbalanced datasets lead to a reduced conformity of the results due to the influence of these factors on the methods performance.",
+  "category": "vision",
+  "domain": "medical imaging (dermatology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "unsupervised_domain_adaptation",
+    "binary_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUPRC (area under the precision-recall curve)",
+  "general_score_metric": "AUPRC",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2023,
+  "reputation": "A focused academic benchmark from a 2023 study; useful for UDA research in dermatology but has limited broad community adoption compared to larger medical imaging suites.",
+  "notes": "Non-LLM benchmark; results vary strongly with dataset size and class imbalance (small or heavily imbalanced sets reduce reliability); heterogeneous domain shifts across datasets; potential for dataset-specific artifacts and limited community-wide adoption.",
+  "creators": {
+    "scientists": [
+      "Sireesha Chamarthi",
+      "Katharina Fogelberg",
+      "Roman C. Maron",
+      "Titus J. Brinker",
+      "Julia Niebling"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2310.03432",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

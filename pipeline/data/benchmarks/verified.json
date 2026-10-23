@@ -1,0 +1,41 @@
+{
+  "name": "VERIFIED",
+  "description": "Existing Video Corpus Moment Retrieval (VCMR) is limited to coarse-grained understanding, which hinders precise video moment localization when given fine-grained queries. In this paper, we propose a more challenging fine-grained VCMR benchmark requiring methods to localize the best-matched moment from the corpus with other partially matched candidates. To improve the dataset construction efficiency and guarantee high-quality data annotations, we propose VERIFIED, an automatic \\underline{V}id\\underline{E}o-text annotation pipeline to generate captions with \\underline{R}el\\underline{I}able \\underline{FI}n\\underline{E}-grained statics and \\underline{D}ynamics. Specifically, we resort to large language models (LLM) and large multimodal models (LMM) with our proposed Statics and Dynamics Enhanced Captioning modules to generate diverse fine-grained captions for each video. To filter out the inaccurate annotations caused by the LLM hallucination, we propose a Fine-Granularity Aware Noise Evaluator where we fine-tune a video foundation model with disturbed hard-negatives augmented contrastive and matching losses. With VERIFIED, we construct a more challenging fine-grained VCMR benchmark containing Charades-FIG, DiDeMo-FIG, and ActivityNet-FIG which demonstrate a high level of annotation quality. We evaluate several state-of-the-art VCMR models on the proposed dataset, revealing that there is still significant scope for fine-grained video understanding in VCMR. Code and Datasets are in \\href{https://github.com/hlchen23/VERIFIED}{https://github.com/hlchen23/VERIFIED}.",
+  "category": "multimodal",
+  "domain": "video understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_corpus_moment_retrieval",
+    "temporal_localization",
+    "video_text_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k (R@1, R@5, R@10) with temporal IoU thresholds (and reporting of mAP/IoU where applicable)",
+  "general_score_metric": "Recall@K (e.g., R@1, R@5) reported at predefined IoU thresholds",
+  "typical_sota_score": "varies by split; R@1 commonly in the low-to-mid tens of percent (≈10–40%) on fine-grained splits",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "New (2024) fine-grained VCMR benchmark with limited community adoption so far but introduced in an active subfield of video-text retrieval research.",
+  "notes": "Annotations are automatically generated using LLM/LMM pipelines and then filtered, so residual annotation noise and LLM hallucination risk exist; built from existing corpora (Charades, DiDeMo, ActivityNet) so some data overlap/contamination risk is possible; benchmark is more challenging than coarse-grained VCMR and not yet saturated.",
+  "creators": {
+    "scientists": [
+      "Houlun Chen",
+      "Xin Wang",
+      "Hong Chen",
+      "Zeyang Zhang",
+      "Wei Feng",
+      "Bin Huang",
+      "Jia Jia",
+      "Wenwu Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.08593",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

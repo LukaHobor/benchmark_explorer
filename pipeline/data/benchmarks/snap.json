@@ -1,0 +1,36 @@
+{
+  "name": "SNAP",
+  "description": "Generalization of deep-learning-based (DL) computer vision algorithms to various image perturbations is hard to establish and remains an active area of research. The majority of past analyses focused on the images already captured, whereas effects of the image formation pipeline and environment are less studied. In this paper, we address this issue by analyzing the impact of capture conditions, such as camera parameters and lighting, on DL model performance on 3 vision tasks -- image classification, object detection, and visual question answering (VQA). To this end, we assess capture bias in common vision datasets and create a new benchmark, SNAP (for $\\textbf{S}$hutter speed, ISO se$\\textbf{N}$sitivity, and $\\textbf{AP}$erture), consisting of images of objects taken under controlled lighting conditions and with densely sampled camera settings. We then evaluate a large number of DL vision models and show the effects of capture conditions on each selected vision task. Lastly, we conduct an experiment to establish a human baseline for the VQA task. Our results show that computer vision datasets are significantly biased, the models trained on this data do not reach human accuracy even on the well-exposed images, and are susceptible to both major exposure changes and minute variations of camera settings. Code and data can be found at https://github.com/ykotseruba/SNAP",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "object_detection",
+    "visual_question_answering"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-specific (accuracy for classification and VQA, mAP for object detection)",
+  "general_score_metric": "accuracy / mAP (reported per task)",
+  "typical_sota_score": "varies by task — classification ~70–90% accuracy, detection mAP ~30–60%, VQA accuracy ~40–70%",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "A targeted, research-oriented benchmark used to study capture- and exposure-related robustness; cited in robustness/camera-bias literature but not a broad community standard.",
+  "notes": "Controlled capture-condition dataset emphasizing camera-parameter bias; not representative of generic in-the-wild distributions; includes human baseline for VQA.",
+  "creators": {
+    "scientists": [
+      "Iuliia Kotseruba",
+      "John K. Tsotsos"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.15628",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "FastEnsemble",
+  "description": "Estimating prediction uncertainty and confidence of deep learning models is crucial for mission-critical machine learning applications, such as biomedical imaging for diagnostics or therapy, and self-driving cars. However, making robust uncertainty estimation is complicated given the variety of learning objectives, data modalities, types of data corruption. Previous studies often addressed such a challenge by restricting datasets to standard ones like CIFAR or ImageNet. While convenient, it is doubtful whether the same conclusion holds for real-life datasets, in which more complicated image generation tasks are involved. This paper presents a different perspective to evaluate how confidence and uncertainty estimators behave under distribution shifts, focusing on the biomedical imaging domain. Specifically, we test a series of pair-wise cell imaging datasets using a new metric to compare existing models. In addition, we introduce FastEnsemble, a fast ensemble method which only requires less than $8\\%$ of the full-ensemble training time to generate a new ensemble member. Our experiments show that the proposed fast ensemble method is able to substantially improve the speed vs. quality trade-off.",
+  "category": "vision",
+  "domain": "image-to-image translation / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "uncertainty_estimation",
+    "confidence_estimation",
+    "ood_detection",
+    "calibration_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Expected Calibration Error (ECE), Negative Log-Likelihood (NLL), AUROC for OOD detection, accuracy",
+  "general_score_metric": "ECE and NLL (primary metrics for uncertainty quality)",
+  "year_of_publish": 2024,
+  "reputation": "Method-focused benchmark for biomedical imaging uncertainty; promising fast-ensemble approach but limited community-wide adoption to date.",
+  "notes": "focused on biomedical cell imaging datasets (small, domain-specific); non-LLM benchmark; improvements may be dataset- and model-dependent; emphasizes speed vs. quality trade-offs.",
+  "creators": {
+    "scientists": [
+      "Xuanqing Liu",
+      "Sara Imboden",
+      "Marie Payne",
+      "Neil Lin",
+      "Cho-Jui Hsieh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

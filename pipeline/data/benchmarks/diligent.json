@@ -1,0 +1,36 @@
+{
+  "name": "DiLiGenT",
+  "description": "Recent progress on photometric stereo extends the technique to deal with general materials and unknown illumination conditions. However, due to the lack of suitable benchmark data with ground truth shapes (normals), quantitative comparison and evaluation is difficult to achieve. In this paper, we first survey and categorize existing methods using a photometric stereo taxonomy emphasizing on non-Lambertian and uncalibrated methods. We then introduce the 'DiLiGenT' photometric stereo image dataset with calibrated Directional Lightings, objects of General reflectance, and 'ground Truth' shapes (normals). Based on our dataset, we quantitatively evaluate state-of-the-art photometric stereo methods for general non-Lambertian materials and unknown lightings to analyze their strengths and limitations.",
+  "category": "vision",
+  "domain": "computer vision (photometric stereo)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "surface_normal_estimation",
+    "dense_regression",
+    "per-pixel_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean angular error (per-pixel angular error between predicted and ground-truth normals, averaged over the object)",
+  "general_score_metric": "mean angular error (degrees)",
+  "typical_sota_score": "≈1–5° (mean angular error across objects; varies by method and object)",
+  "reputation": "Widely used and respected within the photometric stereo community as a standard calibrated benchmark for evaluating non-Lambertian and uncalibrated methods.",
+  "notes": "Small, curated dataset (limited number of objects/scenes) with calibrated directional lighting and ground-truth normals; not an LLM benchmark. Results can saturate on some objects and methods; limited diversity may limit generalization analyses.",
+  "creators": {
+    "scientists": [
+      "Boxin Shi",
+      "Zhe Wu",
+      "Zhipeng Mo",
+      "Dinglong Duan",
+      "Sai-Kit Yeung",
+      "Ping Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Low-Bitrate Video Understanding Benchmark",
+  "description": "Video compression is indispensable to most video analysis systems. Despite saving transportation bandwidth, it also deteriorates downstream video understanding tasks, especially at low-bitrate settings. To systematically investigate this problem, we first thoroughly review the previous methods, revealing that three principles, i.e., task-decoupled, label-free, and data-emerged semantic prior, are critical to a machine-friendly coding framework but are not fully satisfied so far. In this paper, we propose a traditional-neural mixed coding framework that simultaneously fulfills all these principles, by taking advantage of both traditional codecs and neural networks (NNs). On one hand, the traditional codecs can efficiently encode the pixel signal of videos but may distort the semantic information. On the other hand, highly non-linear NNs are proficient in condensing video semantics into a compact representation. The framework is optimized by ensuring that a transportation-efficient semantic representation of the video is preserved w.r.t. the coding procedure, which is spontaneously learned from unlabeled data in a self-supervised manner. The videos collaboratively decoded from two streams (codec and NN) are of rich semantics, as well as visually photo-realistic, empirically boosting several mainstream downstream video analysis task performances without any post-adaptation procedure. Furthermore, by introducing the attention mechanism and adaptive modeling scheme, the video semantic modeling ability of our approach is further enhanced. Finally, we build a low-bitrate video understanding benchmark with three downstream tasks on eight datasets, demonstrating the notable superiority of our approach. All codes, data, and models will be available at \\url{https://github.com/tianyuan168326/VCS-Pytorch}.",
+  "category": "vision",
+  "domain": "computer vision / video analytics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_classification",
+    "action_recognition",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-dependent (accuracy for classification/action recognition; mAP for detection)",
+  "general_score_metric": "task-dependent (accuracy / mAP)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2024,
+  "reputation": "Research-focused benchmark introduced to study the impact of low-bitrate compression on downstream video tasks; adoption is primarily among video-compression and video-understanding researchers.",
+  "notes": "Non-LLM, computer-vision benchmark combining multiple downstream datasets; results are codec- and bitrate-dependent, so cross-paper comparisons require matching bitrate/codecs and evaluation protocols.",
+  "creators": {
+    "scientists": [
+      "Yuan Tian",
+      "Guo Lu",
+      "Yichao Yan",
+      "Guangtao Zhai",
+      "Li Chen",
+      "Zhiyong Gao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2202.02813",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Cervical Muscle Ultrasound Dataset",
+  "description": "Objectives: To automate online segmentation of cervical muscles from transverse ultrasound (US) images of the human neck during functional head movement. To extend ground-truth labelling methodology beyond dependence upon MRI imaging of static head positions required for application to participants with involuntary movement disorders. Method: We collected sustained sequences (&amp;gt; 3 minutes) of US images of human posterior cervical neck muscles at 25 fps from 28 healthy adults, performing visually-guided pitch and yaw head motions. We sampled 1,100 frames (approx. 40 per participant) spanning the experimental range of head motion. We manually labelled all 1,100 US images and trained deconvolutional neural networks (DCNN) with a spatial SoftMax regression layer to classify every pixel in the full resolution (525x491) US images, as one of 14 classes (10 muscles, ligamentum nuchae, vertebra, skin, background). We investigated ‘MaxOut’ and Exponential Linear unit (ELU) transfer functions and compared with our previous benchmark (analytical shape modelling). Results: These DCNNs showed higher Jaccard Index (53.2%) and lower Hausdorff Distance (5.7 mm) than the previous benchmark (40.5%, 6.2 mm). SoftMax Confidence corresponded with correct classification. ‘MaxOut’ outperformed ELU marginally. Conclusion: The DCNN architecture accommodates challenging images and imperfect manual labels. The SoftMax layer gives user feedback of likely correct classification. The ‘MaxOut’ transfer function benefits from near-linear operation, compatibility with deconvolution operations and the dropout regulariser. Significance: This methodology for labelling ground-truth and training automated labelling networks is applicable for dynamic segmentation of moving muscles and for participants with involuntary movement disorders who cannot remain still.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "IoU (Jaccard Index) / Hausdorff distance",
+  "general_score_metric": "Jaccard Index (IoU)",
+  "typical_sota_score": "≈53% (Jaccard Index reported by authors)",
+  "year_of_publish": 2019,
+  "reputation": "Niche medical-imaging dataset (OSF-hosted) with limited but relevant use for cervical muscle segmentation research.",
+  "notes": "Small dataset (1,100 labelled frames) from healthy adults only; manual labels may be imperfect; intended for dynamic segmentation research; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Ryan Cunningham",
+      "María B. Sánchez",
+      "Ian D. Loram"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.31224/osf.io/fsa3c",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "WAN",
+  "description": "Multi-bit watermarking (MW) has been designed to enhance resistance against watermarking attacks, such as signal processing operations and geometric distortions. Various benchmark tools exist to assess this robustness through simulated attacks on watermarked images. However, these tools often fail to capitalize on the unique attributes of the targeted MW and typically neglect the aspect of visual quality, a critical factor in practical applications. To overcome these shortcomings, we introduce a watermarking attack network (WAN), a fully trainable watermarking benchmark tool designed to exploit vulnerabilities within MW systems and induce watermark bit inversions, significantly diminishing watermark extractability. The proposed WAN employs an architecture based on residual dense blocks, which is adept at both local and global feature learning, thereby maintaining high visual quality while obstructing the extraction of embedded information. Our empirical results demonstrate that the WAN",
+  "category": "vision",
+  "domain": "ML security",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_to_image_translation",
+    "adversarial_attack",
+    "watermark_removal"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "watermark bit inversion rate",
+  "year_of_publish": 2020,
+  "reputation": "A niche research benchmark/tool in the watermarking security literature, mainly used to test robustness of multi-bit watermarking systems.",
+  "notes": "Non-LLM benchmark; evaluates attack effectiveness against watermark extraction while preserving visual quality, often with PSNR/SSIM alongside attack success.",
+  "creators": {
+    "scientists": [
+      "Seung-Hun Nam",
+      "Jihyeon Kang",
+      "Daesik Kim",
+      "Namhyuk Ahn",
+      "Wonhyuk Ahn"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2008.06255",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

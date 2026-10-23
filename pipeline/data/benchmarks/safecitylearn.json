@@ -1,0 +1,34 @@
+{
+  "name": "SafeCityLearn",
+  "description": ": Safe reinforcement learning (Safe RL) aims to optimize performance while respecting safety constraints, yet existing benchmarks largely focus on robotic or navigation tasks. We introduce SafeCityLearn, the first benchmark for Safe RL in distributed energy systems. Extending the CityLearn environment, SafeCityLearn introduces configurable constraint functions and cost signals reflecting realistic energy limits, such as state-of-charge, comfort, and grid import bounds. The benchmark integrates with OmniSafe, enabling standardized training and evaluation across major Safe RL algorithms aiming to avoid constraint violations, including PPO-Lagrangian, RCPO, and SAC-Lag. Experiments on a full-year battery scheduling task show that Lagrangian-based algorithms significantly reduce SoC violation rates often below 5% while achieving competitive energy cost performance, whereas unconstrained baselines showcase persistent infeasibility. SafeCityLearn provides a reproducible framework for advancing constraint-aware reinforcement learning in sustainable energy systems. We make our implementation available to the community as open source for reproducibility. and community The full benchmark, implementation, and experiment scripts are publicly available at: https://github.com/AmalNamm/Safe-CityLearn.",
+  "category": "mixed",
+  "domain": "distributed energy systems",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "constrained_control"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "episodic return and safety_violation_rate (composite evaluation of performance and constraint satisfaction)",
+  "general_score_metric": "composite: episodic_return & safety_violation_rate (safety-constrained performance)",
+  "year_of_publish": 2026,
+  "reputation": "A domain-targeted suite used in research on safe RL for distributed energy systems; adoption is currently limited to the safe-RL and energy-control research community.",
+  "notes": "Simulation-based, non-LLM benchmark focused on safety-constrained control; results can be sensitive to environment realism, random seeds, and simulator fidelity. Designed for research rather than large-scale industrial benchmarking.",
+  "creators": {
+    "scientists": [
+      "Amal Nammouchi",
+      "Andreas Kassler",
+      "Arunselvan Ramaswamy",
+      "Andreas Theorcharis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://doi.org/10.5220/0014463300004052",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

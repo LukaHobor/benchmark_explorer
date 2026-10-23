@@ -1,0 +1,37 @@
+{
+  "name": "Fishyscapes",
+  "description": "Deep learning has enabled impressive progress in the accuracy of semantic segmentation. Yet, the ability to estimate uncertainty and detect failure is key for safety-critical applications like autonomous driving. Existing uncertainty estimates have mostly been evaluated on simple tasks, and it is unclear whether these methods generalize to more complex scenarios. We present Fishyscapes, the first public benchmark for uncertainty estimation in a real-world task of semantic segmentation for urban driving. It evaluates pixel-wise uncertainty estimates towards the detection of anomalous objects in front of the vehicle. We~adapt state-of-the-art methods to recent semantic segmentation models and compare approaches based on softmax confidence, Bayesian learning, and embedding density. Our results show that anomaly detection is far from solved even for ordinary situations, while our benchmark allows measuring advancements beyond the state-of-the-art.",
+  "category": "vision",
+  "domain": "autonomous driving / computer vision",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "semantic_segmentation",
+    "anomaly_detection",
+    "pixelwise_uncertainty_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (area under ROC) / AUPR (average precision) with additional reporting of FPR@95",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2019,
+  "reputation": "Widely used in the computer-vision community for evaluating anomaly detection and uncertainty estimation in urban semantic segmentation.",
+  "notes": "Non-LLM benchmark for vision; anomaly classes and dataset size are limited and focused on urban driving, making results sensitive to segmentation model quality and dataset bias.",
+  "creators": {
+    "scientists": [
+      "Hermann Blum",
+      "Paul-Edouard Sarlin",
+      "Juan Nieto",
+      "Roland Siegwart",
+      "Cesar Cadena"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1904.03215",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

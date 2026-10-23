@@ -1,0 +1,40 @@
+{
+  "name": "Tigrinya Abusive Language Benchmark",
+  "description": "Content moderation research has recently made significant advances, but still fails to serve the majority of the world's languages due to the lack of resources, leaving millions of vulnerable users to online hostility. This work presents a large-scale human-annotated multi-task benchmark dataset for abusive language detection in Tigrinya social media with joint annotations for three tasks: abusiveness, sentiment, and topic classification. The dataset comprises 13,717 YouTube comments annotated by nine native speakers, collected from 7,373 videos with a total of over 1.2 billion views across 51 channels. We developed an iterative term clustering approach for effective data selection. Recognizing that around 64% of Tigrinya social media content uses Romanized transliterations rather than native Ge'ez script, our dataset accommodates both writing systems to reflect actual language use. We establish strong baselines across the tasks in the benchmark, while leaving significant challenges for future contributions. Our experiments reveal that small, specialized multi-task models outperform the current frontier models in the low-resource setting, achieving up to 86% accuracy (+7 points) in abusiveness detection. We make the resources publicly available to promote research on online safety.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "sentiment_classification",
+    "topic_classification",
+    "multi-task"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "86% (best reported for abusiveness detection)",
+  "year_of_publish": 2025,
+  "reputation": "New, targeted benchmark for low-resource Tigrinya abusive-language research with growing adoption among NLP and online-safety communities.",
+  "notes": "Relatively small-scale (~13.7k examples); mixes Ge'ez and Romanized scripts which increases domain variation; potential class imbalance and annotation bias; limited prior model coverage — risk of contamination when fine-tuning large multilingual models.",
+  "creators": {
+    "scientists": [
+      "Fitsum Gaim",
+      "Hoyun Song",
+      "Huije Lee",
+      "Changgeon Ko",
+      "Eui Jun Hwang",
+      "Jong C. Park"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2505.12116",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

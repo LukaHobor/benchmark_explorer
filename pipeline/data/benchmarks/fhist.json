@@ -1,0 +1,38 @@
+{
+  "name": "FHIST",
+  "description": "Few-shot learning has recently attracted wide interest in image classification, but almost all the current public benchmarks are focused on natural images. The few-shot paradigm is highly relevant in medical-imaging applications due to the scarcity of labeled data, as annotations are expensive and require specialized expertise. However, in medical imaging, few-shot learning research is sparse, limited to private data sets and is at its early stage. In particular, the few-shot setting is of high interest in histology due to the diversity and fine granularity of cancer related tissue classification tasks, and the variety of data-preparation techniques. This paper introduces a highly diversified public benchmark, gathered from various public datasets, for few-shot histology data classification. We build few-shot tasks and base-training data with various tissue types, different levels of domain shifts stemming from various cancer sites, and different class-granularity levels, thereby reflecting realistic scenarios. We evaluate the performances of state-of-the-art few-shot learning methods on our benchmark, and observe that simple fine-tuning and regularization methods achieve better results than the popular meta-learning and episodic-training paradigm. Furthermore, we introduce three scenarios based on the domain shifts between the source and target histology data: near-domain, middle-domain and out-domain. Our experiments display the potential of few-shot learning in histology classification, with state-of-art few shot learning methods approaching the supervised-learning baselines in the near-domain setting. In our out-domain setting, for 5-way 5-shot, the best performing method reaches 60% accuracy. We believe that our work could help in building realistic evaluations and fair comparisons of few-shot learning methods and will further encourage research in the few-shot paradigm.",
+  "category": "vision",
+  "domain": "medical imaging / histopathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification",
+    "k_shot_n_way"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "60–90%",
+  "year_of_publish": 2022,
+  "reputation": "A focused public benchmark for few-shot histology image classification that is valued in medical imaging research for enabling realistic, domain-shifted few-shot evaluations; adoption is moderate within the medical-vision community.",
+  "notes": "Medical imaging domain with limited labeled examples per class (few-shot); contains domain shifts across tissue/cancer sites. Results can vary substantially by near/mid/out-domain splits. Sensitive to dataset curation and potential label variability; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Fereshteh Shakeri",
+      "Malik Boudiaf",
+      "Sina Mohammadi",
+      "Ivaxi Sheth",
+      "Mohammad Havaei",
+      "Ismail Ben Ayed",
+      "Samira Ebrahimi Kahou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2206.00092",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

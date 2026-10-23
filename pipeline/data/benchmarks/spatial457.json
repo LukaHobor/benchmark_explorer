@@ -1,0 +1,38 @@
+{
+  "name": "Spatial457",
+  "description": "Although large multimodal models (LMMs) have demonstrated remarkable capabilities in visual scene interpretation and reasoning, their capacity for complex and precise 3-dimensional spatial reasoning remains uncertain. Existing benchmarks focus predominantly on 2D spatial understanding and lack a framework to comprehensively evaluate 6D spatial reasoning across varying complexities.To address this limitation, we present Spatial457, a scalable and unbiased synthetic dataset designed with 4 key spatial components: multi-object recognition, 2D and 3D spatial relationships, and 3D orientation. Spatial457 supports a cascading evaluation structure, offering 7 question types across 5 difficulty levels that progress from basic single-object recognition to our newly proposed complex 6D spatial reasoning tasks.We evaluated various large multimodal models (LMMs) on Spatial457, observing a general decline in performance as task complexity increases, particularly in 3D reasoning and 6D spatial tasks. To quantify these challenges, we introduce the Relative Performance Dropping Rate (RPDR), highlighting key weaknesses in 3D reasoning capabilities. Leveraging the unbiased attribute design of our dataset, we also uncover prediction biases across different attributes, with similar patterns observed in real-world image settings.",
+  "category": "multimodal",
+  "domain": "multimodal / 3D spatial reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "varies by difficulty: roughly 30–80% on easier tasks, dropping to ~10–40% on hardest 6D tasks",
+  "year_of_publish": 2025,
+  "reputation": "Newer benchmark gaining attention for probing 3D/6D spatial reasoning in large multimodal models but not yet a broadly established standard.",
+  "notes": "Synthetic, scalable dataset (not natural images) designed for controlled 3D/6D spatial evaluation; exposes biases via attribute controls; not saturated and highlights clear weaknesses in current LMMs.",
+  "creators": {
+    "scientists": [
+      "Xingrui Wang",
+      "Wufei Ma",
+      "Tiezheng Zhang",
+      "Celso M de Melo",
+      "Jieneng Chen",
+      "Alan Yuille"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "multimodal-phi-masking-benchmark",
+  "description": "multimodal-phi-masking-benchmark\n\t\n\n\n10,000 synthetic clinical records paired with token-level PHI spans, masking decisions, cryptographic audit hashes, RL reward signals, and leakage scores. Five configs covering text, ASR, imaging, waveform, and audio modalities. The only public dataset pairing PHI masking decisions with FHIR R4 audit trails, RL reward signals, and a formally modeled adversarial evasion scenario.\nfrom datasets import load_dataset\n\nds      =… See the full description on the dataset page: https://huggingface.co/datasets/vkatg/multimodal-phi-masking-benchmark.",
+  "category": "multimodal",
+  "domain": "medical/safety/privacy",
+  "tags": [
+    "task_categories:token-classification",
+    "task_categories:text-classification",
+    "language:en",
+    "license:mit",
+    "size_categories:10K<n<100K",
+    "modality:text"
+  ],
+  "task_types": [
+    "sequence_labeling",
+    "classification",
+    "masking_decision",
+    "privacy_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (token-level PHI detection) and leakage_score (privacy leakage measurement)",
+  "general_score_metric": "F1 (token-level PHI detection); leakage_score for privacy evaluation",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "A niche, recently released Hugging Face dataset targeting privacy-aware clinical ML; gaining interest in privacy/healthcare ML research but not yet widely adopted.",
+  "downloads": 51,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "vkatg"
+    ]
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://huggingface.co/datasets/vkatg/multimodal-phi-masking-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

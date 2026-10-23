@@ -1,0 +1,37 @@
+{
+  "name": "IO-VNBD",
+  "description": "Low-cost inertial navigation sensors (INS) can be exploited for a reliable tracking solution for autonomous vehicles. However, position errors grow exponentially due to noises in the measurements. Several deep learning techniques have been investigated to mitigate the errors for a better navigation solution [1-10]. However, these studies have involved the use of different datasets not made publicly available. The lack of a robust benchmark dataset has thus hindered the advancement in the research, comparison and adoption of deep learning techniques for vehicle positioning based on inertial navigation. In order to facilitate the benchmarking, fast development and evaluation of positioning algorithms, we therefore present the first of its kind large-scale and information-rich inertial and odometry focused public dataset called IO-VNBD (Inertial Odometry Vehicle Navigation Benchmark Dataset).The vehicle tracking dataset was recorded using a research vehicle equipped with ego-motion sensors on public roads in the United Kingdom, Nigeria, and France. The sensors include a GPS receiver, inertial navigation sensors, wheel-speed sensors amongst other sensors found on the car as well as the inertial navigation sensors and GPS receiver in an android smart phone sampling at 10HZ. A diverse number of scenarios and vehicle dynamics are captured such as traffic, round-abouts, hard-braking etc. on different road types (country roads, motorways etc.) with varying driving patterns. The dataset consists of a total driving time of about 40 hours over 1,300km for the vehicle extracted data and about 58 hours over 4,400 km for the smartphone recorded data. We hope that this dataset will prove valuable in furthering research on the correlation between vehicle dynamics and its displacement as well as other related studies",
+  "category": "multimodal",
+  "domain": "robotics / autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "localization",
+    "odometry",
+    "sensor_fusion",
+    "trajectory_estimation",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "RMSE / Absolute Trajectory Error (ATE)",
+  "general_score_metric": "Absolute Trajectory Error (ATE) / RMSE",
+  "year_of_publish": 2021,
+  "reputation": "A domain-specific dataset used in robotics and vehicle localization research for evaluating inertial/odometry algorithms; moderately cited within the robotics community but not a large-scale industry benchmark.",
+  "notes": "Non-LLM benchmark; requires careful sensor synchronization and calibration. Dataset size and environmental diversity may be limited, which can constrain generalization. Potential for dataset-specific tuning / overfitting.",
+  "creators": {
+    "scientists": [
+      "Onyekpe U",
+      "Palade V",
+      "Kanarachos S",
+      "Szkolnik A"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2005.01701",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

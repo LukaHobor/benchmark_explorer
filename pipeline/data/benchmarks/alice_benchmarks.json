@@ -1,0 +1,37 @@
+{
+  "name": "Alice Benchmarks",
+  "description": "For object re-identification (re-ID), learning from synthetic data has become a promising strategy to cheaply acquire large-scale annotated datasets and effective models, with few privacy concerns. Many interesting research problems arise from this strategy, e.g., how to reduce the domain gap between synthetic source and real-world target. To facilitate developing more new approaches in learning from synthetic data, we introduce the Alice benchmarks, large-scale datasets providing benchmarks as well as evaluation protocols to the research community. Within the Alice benchmarks, two object re-ID tasks are offered: person and vehicle re-ID. We collected and annotated two challenging real-world target datasets: AlicePerson and AliceVehicle, captured under various illuminations, image resolutions, etc. As an important feature of our real target, the clusterability of its training set is not manually guaranteed to make it closer to a real domain adaptation test scenario. Correspondingly, we reuse existing PersonX and VehicleX as synthetic source domains. The primary goal is to train models from synthetic data that can work effectively in the real world. In this paper, we detail the settings of Alice benchmarks, provide an analysis of existing commonly-used domain adaptation methods, and discuss some interesting future directions. An online server has been set up for the community to evaluate methods conveniently and fairly. Datasets and the online server details are available at https://sites.google.com/view/alice-benchmarks.",
+  "category": "vision",
+  "domain": "computer vision (object re-identification)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "person_re-identification",
+    "vehicle_re-identification",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP and CMC (Rank-1 / Rank-5)",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "varies widely by task and method; roughly 20–70% mAP depending on person vs vehicle and adaptation approach",
+  "year_of_publish": 2023,
+  "reputation": "Synthetic-to-real re-ID benchmark (2023) with an online evaluation server; increasingly used in domain-adaptation and re-identification research.",
+  "notes": "Non-LLM vision benchmark; key challenge is synthetic-to-real domain gap. The real target training split is not manually clusterable, making evaluation closer to realistic adaptation scenarios. Results sensitive to illumination, resolution and camera layout; server-based evaluation reduces split leaks.",
+  "creators": {
+    "scientists": [
+      "Xiaoxiao Sun",
+      "Yue Yao",
+      "Shengjin Wang",
+      "Hongdong Li",
+      "Liang Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.04416",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

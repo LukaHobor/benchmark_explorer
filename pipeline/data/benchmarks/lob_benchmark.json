@@ -1,0 +1,35 @@
+{
+  "name": "LOB Benchmark",
+  "description": "The Limit Order Book (LOB), the mostly fundamental data of the financial market, provides a fine-grained view of market dynamics while poses significant challenges in dealing with the esteemed deep models due to its strong autocorrelation, cross-feature constrains, and feature scale disparity. Existing approaches often tightly couple representation learning with specific downstream tasks in an end-to-end manner, failed to analyze the learned representations individually and explicitly, limiting their reusability and generalization. This paper conducts the first systematic comparative study of LOB representation learning, aiming to identify the effective way of extracting transferable, compact features that capture essential LOB properties. We introduce LOBench, a standardized benchmark with real China A-share market data, offering curated datasets, unified preprocessing, consistent evaluation metrics, and strong baselines. Extensive experiments validate the sufficiency and necessity of LOB representations for various downstream tasks and highlight their advantages over both the traditional task-specific end-to-end models and the advanced representation learning models for general time series. Our work establishes a reproducible framework and provides clear guidelines for future research. Datasets and code will be publicly available at https://github.com/financial-simulation-lab/LOBench.",
+  "category": "mixed",
+  "domain": "finance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "representation_learning",
+    "classification",
+    "regression",
+    "time_series_forecasting"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy (for classification tasks); MSE or RMSE commonly used for regression/forecasting tasks",
+  "year_of_publish": 2025,
+  "reputation": "A focused, reproducible benchmark for LOB representation learning on China A-share data that is primarily of interest to finance and time-series ML researchers.",
+  "notes": "Domain-specific (China A-share) and subject to non-stationarity and temporal leakage risks; multiple downstream tasks with different metrics; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Muyao Zhong",
+      "Yushi Lin",
+      "Peng Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.02139",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "BARS",
+  "description": "Airport runway segmentation can effectively reduce the accident rate during the landing phase, which has the largest risk of flight accidents. With the rapid development of deep learning (DL), related methods achieve good performance on segmentation tasks and can be well adapted to complex scenes. However, the lack of large-scale, publicly available datasets in this field makes the development of methods based on DL difficult. Therefore, we propose a benchmark for airport runway segmentation, named BARS. Additionally, a semiautomatic annotation pipeline is designed to reduce the annotation workload. BARS has the largest dataset with the richest categories and the only instance annotation in the field. The dataset, which was collected using the X-Plane simulation platform, contains 10,256 images and 30,201 instances with three categories. We evaluate eleven representative instance segmentation methods on BARS and analyze their performance. Based on the characteristic of an airport runway with a regular shape, we propose a plug-and-play smoothing postprocessing module (SPM) and a contour point constraint loss (CPCL) function to smooth segmentation results for mask-based and contour-based methods, respectively. Furthermore, a novel evaluation metric named average smoothness (AS) is developed to measure smoothness. The experiments show that existing instance segmentation methods can achieve prediction results with good performance on BARS. SPM and CPCL can effectively enhance the AS metric while modestly improving accuracy. Our work will be available at https://github.com/c-wenhui/BARS.",
+  "category": "vision",
+  "domain": "aviation / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "instance_segmentation",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mean_average_precision",
+  "general_score_metric": "mask_mean_average_precision (mask mAP)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2025,
+  "reputation": "A domain-specific public dataset for airport runway segmentation that is notable for being the largest such simulated dataset and useful for remote-sensing/aviation segmentation research.",
+  "notes": "Synthetic dataset collected from a flight simulator (X-Plane) with instance annotations (10,256 images, 30,201 instances); domain gap to real aerial imagery and limited real-world diversity should be considered.",
+  "creators": {
+    "scientists": [
+      "Wenhui Chen",
+      "Zhijiang Zhang",
+      "Liang Yu",
+      "Yichun Tai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2210.12922",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

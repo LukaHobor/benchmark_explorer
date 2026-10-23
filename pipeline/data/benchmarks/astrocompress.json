@@ -1,0 +1,37 @@
+{
+  "name": "AstroCompress",
+  "description": "The site conditions that make astronomical observatories in space and on the ground so desirable -- cold and dark -- demand a physical remoteness that leads to limited data transmission capabilities. Such transmission limitations directly bottleneck the amount of data acquired and in an era of costly modern observatories, any improvements in lossless data compression has the potential scale to billions of dollars worth of additional science that can be accomplished on the same instrument. Traditional lossless methods for compressing astrophysical data are manually designed. Neural data compression, on the other hand, holds the promise of learning compression algorithms end-to-end from data and outperforming classical techniques by leveraging the unique spatial, temporal, and wavelength structures of astronomical images. This paper introduces AstroCompress: a neural compression challenge for astrophysics data, featuring four new datasets (and one legacy dataset) with 16-bit unsigned integer imaging data in various modes: space-based, ground-based, multi-wavelength, and time-series imaging. We provide code to easily access the data and benchmark seven lossless compression methods (three neural and four non-neural, including all practical state-of-the-art algorithms). Our results on lossless compression indicate that lossless neural compression techniques can enhance data collection at observatories, and provide guidance on the adoption of neural compression in scientific applications. Though the scope of this paper is restricted to lossless compression, we also comment on the potential exploration of lossy compression methods in future studies.",
+  "category": "vision",
+  "domain": "astronomy / astronomical data",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "lossless_compression",
+    "reconstruction_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "compression_ratio (bits-per-pixel / compressed size) with lossless reconstruction verification",
+  "general_score_metric": "bits-per-pixel (bpp) / compression_ratio (with lossless fidelity constraint)",
+  "year_of_publish": 2025,
+  "reputation": "A recent academic challenge aimed at the astroinformatics community; gaining attention among researchers in neural compression for scientific imaging but not yet widely adopted outside that niche.",
+  "notes": "Non-LLM benchmark on specialized 16-bit astronomical imaging data; dataset sizes and instrument-specific characteristics can limit generalization. Results are sensitive to pre-processing and sensor noise; licensing/access for some datasets may be restricted.",
+  "creators": {
+    "scientists": [
+      "Tuan Truong",
+      "Rithwik Sudharsan",
+      "Yibo Yang",
+      "Peter Xiangyuan Ma",
+      "Ruihan Yang",
+      "Stephan Mandt",
+      "Joshua S. Bloom"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2506.08306",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

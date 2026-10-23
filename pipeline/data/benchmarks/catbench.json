@@ -1,0 +1,35 @@
+{
+  "name": "CATBench",
+  "description": "Bayesian optimization is a powerful method for automating tuning of compilers. The complex landscape of autotuning provides a myriad of rarely considered structural challenges for black-box optimizers, and the lack of standardized benchmarks has limited the study of Bayesian optimization within the domain. To address this, we present CATBench, a comprehensive benchmarking suite that captures the complexities of compiler autotuning, ranging from discrete, conditional, and permutation parameter types to known and unknown binary constraints, as well as both multi-fidelity and multi-objective evaluations. The benchmarks in CATBench span a range of machine learning-oriented computations, from tensor algebra to image processing and clustering, and uses state-of-the-art compilers, such as TACO and RISE/ELEVATE. CATBench offers a unified interface for evaluating Bayesian optimization algorithms, promoting reproducibility and innovation through an easy-to-use, fully containerized setup of both surrogate and real-world compiler optimization tasks. We validate CATBench on several state-of-the-art algorithms, revealing their strengths and weaknesses and demonstrating the suite's potential for advancing both Bayesian optimization and compiler autotuning research.",
+  "category": "code",
+  "domain": "compilers / autotuning / systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "black_box_optimization",
+    "multi_objective_optimization",
+    "multi_fidelity_optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "best_found_objective / regret (normalized objective value, simple/aggregate regret)",
+  "general_score_metric": "normalized best-found objective (or regret)",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) specialized benchmark with growing interest among researchers in Bayesian optimization and compiler autotuning but not yet widely adopted outside that niche.",
+  "notes": "Non-LLM benchmark focused on optimization algorithms; includes both surrogate and real containerized tasks. Covers discrete/conditional/permutation parameters and multi-objective/multi-fidelity settings, so surrogate tasks may not perfectly reflect all real-world autotuning behaviors.",
+  "creators": {
+    "scientists": [
+      "Jacob O. Tørring",
+      "Carl Hvarfner",
+      "Luigi Nardi",
+      "Magnus Själander"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.17811",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

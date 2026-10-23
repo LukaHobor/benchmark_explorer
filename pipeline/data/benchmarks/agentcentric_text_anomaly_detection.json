@@ -1,0 +1,37 @@
+{
+  "name": "Agent-Centric Text Anomaly Detection",
+  "description": "The evaluation of large language models (LLMs) has predominantly relied on static datasets, which offer limited scalability and fail to capture the evolving reasoning capabilities of recent models. To overcome these limitations, we propose an agent-centric benchmarking paradigm that moves beyond static datasets by introducing a dynamic protocol in which autonomous agents iteratively generate, validate, and solve problems. Within this protocol, a teacher agent generates candidate problems, an orchestrator agent rigorously verifies their validity and guards against adversarial attacks, and a student agent attempts to solve the validated problems. An invalid problem is revised by the teacher agent until it passes validation. If the student correctly solves the problem, the orchestrator prompts the teacher to generate more challenging variants. Consequently, the benchmark scales in difficulty automatically as more capable agents are substituted into any role, enabling progressive evaluatio",
+  "category": "text",
+  "domain": "psychology",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "anomaly_detection",
+    "agentic_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2026,
+  "reputation": "An emerging agentic benchmark concept with little established community adoption yet, notable more for its dynamic evaluation protocol than for a widely used fixed dataset.",
+  "notes": "Dynamic, agent-generated benchmark rather than a static dataset; results may vary substantially with the teacher/orchestrator/student setup, and contamination is less relevant than protocol sensitivity and reproducibility.",
+  "creators": {
+    "scientists": [
+      "Seungdong Yoa",
+      "Sanghyu Yoon",
+      "Suhee Yoon",
+      "Dongmin Kim",
+      "Ye Seul Sim",
+      "Junhyun Lee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2602.23729",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Shadow Removal for Facial Landmark Detection Benchmark",
+  "description": "Facial landmark detection is a very fundamental and significant vision task with many important applications. In practice, facial landmark detection can be affected by a lot of natural degradations. One of the most common and important degradations is the shadow caused by light source blocking. While many advanced shadow removal methods have been proposed to recover the image quality in recent years, their effects to facial landmark detection are not well studied. For example, it remains unclear whether shadow removal could enhance the robustness of facial landmark detection to diverse shadow patterns or not. In this work, for the first attempt, we construct a novel benchmark to link two independent but related tasks (i.e., shadow removal and facial landmark detection). In particular, the proposed benchmark covers diverse face shadows with different intensities, sizes, shapes, and locations. Moreover, to mine hard shadow patterns against facial landmark detection, we propose a novel method (i.e., adversarial shadow attack), which allows us to construct a challenging subset of the benchmark for a comprehensive analysis. With the constructed benchmark, we conduct extensive analysis on three state-of-the-art shadow removal methods and three landmark detectors. The observation of this work motivates us to design a novel detection-aware shadow removal framework, which empowers shadow removal to achieve higher restoration quality and enhance the shadow robustness of deployed facial landmark detectors.",
+  "category": "vision",
+  "domain": "vision (facial analysis)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "shadow_removal",
+    "facial_landmark_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Normalized Mean Error (NME) / AUC for landmark localization; PSNR and SSIM for image restoration (reported separately and in downstream detection impact analyses)",
+  "general_score_metric": "Normalized Mean Error (NME) for landmark detection (primary downstream metric)",
+  "year_of_publish": 2021,
+  "reputation": "A specialized, recent (2021) benchmark with limited but growing adoption in the niche community studying the interaction between shadow removal and facial landmark robustness.",
+  "notes": "Vision benchmark (non-LLM). Contains an adversarially mined hard subset; reported results depend strongly on choice of detector and restoration metric. Dataset is specialized and not widely standardized across broader facial analysis benchmarks.",
+  "creators": {
+    "scientists": [
+      "Lan Fu",
+      "Qing Guo",
+      "Felix Juefei-Xu",
+      "Hongkai Yu",
+      "Wei Feng",
+      "Yang Liu",
+      "Song Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2111.13790",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

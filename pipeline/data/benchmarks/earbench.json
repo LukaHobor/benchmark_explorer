@@ -1,0 +1,41 @@
+{
+  "name": "EARBench",
+  "description": "Embodied artificial intelligence (EAI) integrates advanced AI models into physical entities for real-world interaction. The emergence of foundation models as the \"brain\" of EAI agents for high-level task planning has shown promising results. However, the deployment of these agents in physical environments presents significant safety challenges. For instance, a housekeeping robot lacking sufficient risk awareness might place a metal container in a microwave, potentially causing a fire. To address these critical safety concerns, comprehensive pre-deployment risk assessments are imperative. This study introduces EARBench, a novel framework for automated physical risk assessment in EAI scenarios. EAIRiskBench employs a multi-agent cooperative system that leverages various foundation models to generate safety guidelines, create risk-prone scenarios, make task planning, and evaluate safety systematically. Utilizing this framework, we construct EARDataset, comprising diverse test cases across various domains, encompassing both textual and visual scenarios. Our comprehensive evaluation of state-of-the-art foundation models reveals alarming results: all models exhibit high task risk rates (TRR), with an average of 95.75% across all evaluated models. To address these challenges, we further propose two prompting-based risk mitigation strategies. While these strategies demonstrate some efficacy in reducing TRR, the improvements are limited, still indicating substantial safety concerns. This study provides the first large-scale assessment of physical risk awareness in EAI agents. Our findings underscore the critical need for enhanced safety measures in EAI systems and provide valuable insights for future research directions in developing safer embodied artificial intelligence system. Data and code are available at https://github.com/zihao-ai/EARBench.",
+  "category": "multimodal",
+  "domain": "embodied AI / robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "risk_classification",
+    "scenario_generation",
+    "visual_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_risk_rate (TRR), supplemented by classification accuracy for discrete subtasks",
+  "general_score_metric": "Task Risk Rate (TRR)",
+  "typical_sota_score": "≈95.75% TRR (higher is worse)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "New (arXiv 2024) benchmark that has attracted attention in embodied AI safety research but remains early-stage with limited widespread adoption.",
+  "notes": "Multimodal (text+visual) dataset generated and evaluated by foundation models — risk of contamination and synthetic bias; relatively new and limited-scale evaluation to date; TRR measures risk propensity (not traditional accuracy).",
+  "creators": {
+    "scientists": [
+      "Zihao Zhu",
+      "Bingzhe Wu",
+      "Zhengyou Zhang",
+      "Lei Han",
+      "Qingshan Liu",
+      "Baoyuan Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2408.04449",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

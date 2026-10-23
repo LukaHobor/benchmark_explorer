@@ -1,0 +1,37 @@
+{
+  "name": "CATS",
+  "description": "Stereo matching is a well researched area using visible-band color cameras. Thermal images are typically lower resolution, have less texture, and are noisier compared to their visible-band counterparts and are more challenging for stereo matching algorithms. Previous benchmarks for stereo matching either focus entirely on visible-band cameras or contain only a single thermal camera. We present the Color And Thermal Stereo (CATS) benchmark, a dataset consisting of stereo thermal, stereo color, and cross-modality image pairs with high accuracy ground truth (< 2mm) generated from a LiDAR. We scanned 100 cluttered indoor and 80 outdoor scenes featuring challenging environments and conditions. CATS contains approximately 1400 images of pedestrians, vehicles, electronics, and other thermally interesting objects in different environmental conditions, including nighttime, daytime, and foggy scenes. Ground truth was projected to each of the four cameras to generate color-color, thermal-thermal, and cross-modality disparity maps. We develop a semi-automatic LiDAR to camera alignment procedure that does not require a calibration target. We compare state-of-the-art algorithms to baseline the dataset and show that in the thermal and cross modalities there is still much room for improvement. We expect our dataset to provide researchers with a more diverse set of imaged locations, objects, and modalities than previous benchmarks for stereo matching.",
+  "category": "vision",
+  "domain": "computer vision / thermal imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "stereo_matching",
+    "disparity_estimation",
+    "cross_modal_matching"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "end-point-error (EPE) and bad-pixel-rate (percentage of pixels with disparity error above threshold)",
+  "general_score_metric": "mean end-point-error (EPE) / bad-pixel-rate",
+  "reputation": "A niche but valuable dataset for thermal and cross-modality stereo matching; cited by researchers working on thermal vision and multimodal stereo.",
+  "notes": "Relatively small dataset (~1.4k images); high-quality LiDAR-derived ground truth (<2 mm); focused on thermal and cross-modality scenarios (non-LLM benchmark) so results may not generalize to large-scale visible-band stereo datasets.",
+  "creators": {
+    "scientists": [
+      "Wayne Treible",
+      "Philip Saponaro",
+      "Scott Sorensen",
+      "Abhishek Kolagunda",
+      "Michael O'Neal",
+      "Brian Phelan",
+      "Kelly Sherbondy",
+      "Chandra Kambhamettu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

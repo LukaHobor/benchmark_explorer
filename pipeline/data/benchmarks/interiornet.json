@@ -1,0 +1,40 @@
+{
+  "name": "InteriorNet",
+  "description": "Datasets have gained an enormous amount of popularity in the computer vision community, from training and evaluation of Deep Learning-based methods to benchmarking Simultaneous Localization and Mapping (SLAM). Without a doubt, synthetic imagery bears a vast potential due to scalability in terms of amounts of data obtainable without tedious manual ground truth annotations or measurements. Here, we present a dataset with the aim of providing a higher degree of photo-realism, larger scale, more variability as well as serving a wider range of purposes compared to existing datasets. Our dataset leverages the availability of millions of professional interior designs and millions of production-level furniture and object assets -- all coming with fine geometric details and high-resolution texture. We render high-resolution and high frame-rate video sequences following realistic trajectories while supporting various camera types as well as providing inertial measurements. Together with the release of the dataset, we will make executable program of our interactive simulator software as well as our renderer available at https://interiornetdataset.github.io. To showcase the usability and uniqueness of our dataset, we show benchmarking results of both sparse and dense SLAM algorithms.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_odometry",
+    "SLAM",
+    "depth_estimation",
+    "semantic_segmentation",
+    "pose_estimation",
+    "video_sequence_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (ATE/RPE for SLAM/odometry, RMSE for depth, mIoU/accuracy for segmentation, pose error for pose estimation)",
+  "general_score_metric": "task-specific primary metrics (e.g., ATE/RPE, RMSE, mIoU)",
+  "year_of_publish": 2018,
+  "reputation": "85 citations",
+  "notes": "Synthetic, large-scale indoor photorealistic data useful for SLAM/vision research; domain gap to real-world imagery can limit transfer. Non-LLM benchmark; contamination risk for vision models trained on mixed synthetic+real data is possible but not specific to language-model contamination.",
+  "creators": {
+    "scientists": [
+      "Wenbin Li",
+      "Sajad Saeedi",
+      "John McCormac",
+      "Ronald Clark",
+      "Dimos Tzoumanikas",
+      "Qing Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1809.00716",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

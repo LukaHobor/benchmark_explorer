@@ -1,0 +1,56 @@
+{
+  "name": "HANDS23",
+  "description": "We interact with the world with our hands and see it through our own (egocentric) perspective. A holistic 3Dunderstanding of such interactions from egocentric views is important for tasks in robotics, AR/VR, action recognition and motion generation. Accurately reconstructing such interactions in 3D is challenging due to heavy occlusion, viewpoint bias, camera distortion, and motion blur from the head movement. To this end, we designed the HANDS23 challenge based on the AssemblyHands and ARCTIC datasets with carefully designed training and testing splits. Based on the results of the top submitted methods and more recent baselines on the leaderboards, we perform a thorough analysis on 3D hand(-object) reconstruction tasks. Our analysis demonstrates the effectiveness of addressing distortion specific to egocentric cameras, adopting high-capacity transformers to learn complex hand-object interactions, and fusing predictions from different views. Our study further reveals challenging scenarios intractable with state-of-the-art methods, such as fast hand motion, object reconstruction from narrow egocentric views, and close contact between two hands and objects. Our efforts will enrich the community's knowledge foundation and facilitate future hand studies on egocentric hand-object interactions.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "competition",
+  "task_types": [
+    "3d_reconstruction",
+    "pose_estimation",
+    "hand_object_interaction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "3D reconstruction and pose metrics (MPJPE / reconstruction error), plus object IoU and contact-aware metrics",
+  "general_score_metric": "MPJPE (mean per-joint position error) / IoU for object reconstruction",
+  "typical_sota_score": "MPJPE: ~10–30 mm (varies by subtask)",
+  "year_of_publish": 2024,
+  "reputation": "Recognized benchmark within the egocentric hand-object community and used in the HANDS23 challenge and related workshops.",
+  "notes": "Non-LLM, vision-focused benchmark; challenging due to heavy occlusion and egocentric distortion; leaderboards may be sensitive to dataset-specific capture setups and viewpoint bias.",
+  "creators": {
+    "scientists": [
+      "Zicong Fan",
+      "Takehiko Ohkawa",
+      "Linlin Yang",
+      "Nie Lin",
+      "Zhishan Zhou",
+      "Shihao Zhou",
+      "Jiajun Liang",
+      "Zhong Gao",
+      "Xuanyang Zhang",
+      "Xue Zhang",
+      "Fei Li",
+      "Zheng Liu",
+      "Feng Lu",
+      "Karim Abou Zeid",
+      "Bastian Leibe",
+      "Jeongwan On",
+      "Seungryul Baek",
+      "Aditya Prakash",
+      "Saurabh Gupta",
+      "Kun He",
+      "Yoichi Sato",
+      "Otmar Hilliges",
+      "Hyung Jin Chang",
+      "Angela Yao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.16428",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

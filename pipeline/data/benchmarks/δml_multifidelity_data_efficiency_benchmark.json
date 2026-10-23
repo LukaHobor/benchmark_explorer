@@ -1,0 +1,33 @@
+{
+  "name": "Δ-ML / Multifidelity Data Efficiency Benchmark",
+  "description": "The development of machine learning (ML) methods has made quantum chemistry (QC) calculations more accessible by reducing the compute cost incurred in conventional QC methods. This has since been translated into the overhead cost of generating training data. Increased work in reducing the cost of generating training data resulted in the development of $\\Delta$-ML and multifidelity machine learning methods which use data at more than one QC level of accuracy, or fidelity. This work compares the data costs associated with $\\Delta$-ML, multifidelity machine learning (MFML), and optimized MFML (o-MFML) in contrast with a newly introduced Multifidelity$\\Delta$-Machine Learning (MF$\\Delta$ML) method for the prediction of ground state energies, vertical excitation energies, and the magnitude of electronic contribution of molecular dipole moments from the multifidelity benchmark dataset QeMFi. This assessment is made on the basis of training data generation cost associated with each model and is compared with the single fidelity kernel ridge regression (KRR) case. The results indicate that the use of multifidelity methods surpasses the standard $\\Delta$-ML approaches in cases of a large number of predictions. For applications which require only a few evaluations to be made using ML models, while the $\\Delta$-ML method might be favored, the MF$\\Delta$ML method is shown to be more efficient.",
+  "category": "mixed",
+  "domain": "quantum chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "property_prediction",
+    "multifidelity_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "error-based metrics (MAE / RMSE) comparing predicted molecular properties to high-fidelity QC references and cost-normalized data-efficiency comparisons",
+  "general_score_metric": "mean absolute error (MAE) or root mean squared error (RMSE) on predicted properties (often reported alongside data-generation cost savings)",
+  "year_of_publish": 2024,
+  "reputation": "A specialized benchmark in quantum-chemistry ML for assessing multifidelity and Δ-ML approaches; of interest within the QC/chemoinformatics community but not a general ML benchmark.",
+  "notes": "Non-LLM, domain-specific benchmark; comparisons are cost-sensitive (data fidelity vs. cost) so numeric error alone can be misleading; dataset size and fidelity levels drive performance differences.",
+  "creators": {
+    "scientists": [
+      "Vivin Vinod",
+      "Peter Zaspel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2410.11391",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-08-27",
+    "origin": "cynefin@d486fafa9"
+  }
+}

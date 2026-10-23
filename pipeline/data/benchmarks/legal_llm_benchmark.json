@@ -1,0 +1,46 @@
+{
+  "name": "legal-llm-benchmark",
+  "description": "Legal LLM Benchmark Dataset\n\t\n\nSafety-Utility Trade-offs in Legal AI: An LLM Evaluation Across 12 Models\n\n\n\t\n\t\t\n\t\tQuick Start\n\t\n\nfrom datasets import load_dataset\n\n# Core datasets\nquestions = load_dataset(\"marvintong/legal-llm-benchmark\", \"questions\")\nphase1_evals = load_dataset(\"marvintong/legal-llm-benchmark\", \"phase1_evaluations\")\nphase3_evals = load_dataset(\"marvintong/legal-llm-benchmark\", \"phase3_evaluations\")\n\n# Additional helpful datasets\ncontracts =… See the full description on the dataset page: https://huggingface.co/datasets/marvintong/legal-llm-benchmark.",
+  "category": "text",
+  "domain": "legal",
+  "tags": [
+    "task_categories:text-generation",
+    "task_categories:question-answering",
+    "task_categories:text-classification",
+    "language:en",
+    "license:mit",
+    "size_categories:1K<n<10K",
+    "modality:tabular",
+    "modality:text"
+  ],
+  "task_types": [
+    "open_ended_qa",
+    "multiple_choice",
+    "summarization",
+    "document_classification",
+    "legal_reasoning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Accuracy / F1 for closed tasks; ROUGE/BLEU for summarization; human_eval / composite safety-utility scoring for open-ended legal reasoning",
+  "general_score_metric": "composite safety-utility score (and accuracy for closed items)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Emerging benchmark in legal-AI and safety-utility research (hosted on Hugging Face); used in comparative evaluations but not yet a universally established standard.",
+  "downloads": 167,
+  "likes": 1,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "marvintong"
+    ]
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://huggingface.co/datasets/marvintong/legal-llm-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

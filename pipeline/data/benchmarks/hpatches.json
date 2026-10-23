@@ -1,0 +1,36 @@
+{
+  "name": "HPatches",
+  "description": "In this paper, we propose a novel benchmark for evaluating local image\ndescriptors. We demonstrate that the existing datasets and evaluation protocols\ndo not specify unambiguously all aspects of evaluation, leading to ambiguities\nand inconsistencies in results reported in the literature. Furthermore, these\ndatasets are nearly saturated due to the recent improvements in local\ndescriptors obtained by learning them from large annotated datasets. Therefore,\nwe introduce a new large dataset suitable for training and testing modern\ndescriptors, together with strictly defined evaluation protocols in several\ntasks such as matching, retrieval and classification. This allows for more\nrealistic, and thus more reliable comparisons in different application\nscenarios. We evaluate the performance of several state-of-the-art descriptors\nand analyse their properties. We show that a simple normalisation of\ntraditional hand-crafted descriptors can boost their performance to the level\nof deep learning based descriptors within a realistic benchmarks evaluation.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "descriptor_matching",
+    "patch_retrieval",
+    "patch_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean_average_precision (mAP) / matching accuracy",
+  "general_score_metric": "mean Average Precision (mAP)",
+  "typical_sota_score": "≈90–98% on easy/overall splits; substantially lower (≈60–80%) on hard/illumination sequences",
+  "year_of_publish": 2017,
+  "reputation": "Widely used and cited benchmark in the local image-descriptor community with well-specified protocols that corrected ambiguities in earlier datasets.",
+  "notes": "Non-LLM vision benchmark; tasks include matching, retrieval, classification. Paper notes prior dataset saturation; some splits remain nearly saturated by learned descriptors. Clean protocols reduce ambiguity but results vary strongly by split (easy vs. hard).",
+  "creators": {
+    "scientists": [
+      "Vassileios Balntas",
+      "Karel Lenc",
+      "Andrea Vedaldi",
+      "Krystian Mikolajczyk"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1704.05939",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "MultiVeg (Multi-Label Vegetation Segmentation Dataset)",
+  "description": "Urban vegetation plays a crucial role in urban ecosystems, but existing datasets are often focused on specific regions or large forests, failing to adequately reflect the characteristics and diversity of urban vegetation. In particular, high-resolution satellite imagery-based datasets are essential for vegetation analysis in regions like South Korea, where seasonal variations are pronounced. In this study, a multi-label vegetation segmentation dataset (MultiVeg) was constructed to reflect the geographical characteristics of South Korea, primarily consisting of urban and forest regions. The dataset was created through handcrafted labeling and visual inspection, and oversampling techniques were applied to mitigate class imbalance issues. To validate the quality and utility of the MultiVeg dataset, performance evaluation was conducted using the DeepLabV3+ model. In identifying the target classes of tree and grass, MultiVeg was shown to outperform or exhibit higher reliability compared to benchmark datasets (Wuhan Urban Semantic Understanding (WUSU), Zurich summer). Future research aims to enhance the performance of MultiVeg by collecting additional regional data to increase the diversity of the grass class, which showed relatively lower accuracy compared to the tree class. Furthermore, the multi-temporal data in MultiVeg will be utilized to perform precise geometric corrections and expand the dataset into a time-series vegetation change detection dataset. The dataset constructed in this study can be accessed via the following link: https://github.com/pang914/MultiVeg",
+  "category": "vision",
+  "domain": "earth sciences / urban ecology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mIoU",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "60–85%",
+  "year_of_publish": 2025,
+  "reputation": "A recent region-specific dataset for urban vegetation analysis with growing interest in the remote-sensing community but limited global adoption so far.",
+  "notes": "Regionally biased (South Korea) and class-imbalanced (grass underrepresented); relatively small/hand-labeled dataset derived from high-resolution satellite imagery; non-LLM benchmark; may require domain adaptation for other regions or seasons.",
+  "creators": {
+    "scientists": [
+      "Chang-woo Lee",
+      "Aisha Javed",
+      "Heein Yang",
+      "Daehee Kim",
+      "Jinmin Lee",
+      "Youkyung Han"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

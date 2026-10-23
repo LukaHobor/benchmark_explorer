@@ -1,0 +1,44 @@
+{
+  "name": "SysNoise",
+  "description": "Extensive studies have shown that deep learning models are vulnerable to adversarial and natural noises, yet little is known about model robustness on noises caused by different system implementations. In this paper, we for the first time introduce SysNoise, a frequently occurred but often overlooked noise in the deep learning training-deployment cycle. In particular, SysNoise happens when the source training system switches to a disparate target system in deployments, where various tiny system mismatch adds up to a non-negligible difference. We first identify and classify SysNoise into three categories based on the inference stage; we then build a holistic benchmark to quantitatively measure the impact of SysNoise on 20+ models, comprehending image classification, object detection, instance segmentation and natural language processing tasks. Our extensive experiments revealed that SysNoise could bring certain impacts on model robustness across different tasks and common mitigations like data augmentation and adversarial training show limited effects on it. Together, our findings open a new research topic and we hope this work will raise research attention to deep learning deployment systems accounting for model performance. We have open-sourced the benchmark and framework at https://modeltc.github.io/systemnoise_web.",
+  "category": "mixed",
+  "domain": "machine learning systems / deployment robustness",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_classification",
+    "object_detection",
+    "instance_segmentation",
+    "natural_language_processing"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (accuracy for classification, mAP for detection/segmentation, F1/accuracy for NLP tasks)",
+  "general_score_metric": "task-specific (accuracy / mAP / F1)",
+  "typical_sota_score": "varies by task; no single SOTA across modalities",
+  "year_of_publish": 2023,
+  "reputation": "A recent, specialized benchmark that has attracted attention in robustness and deployment-systems research for highlighting system-induced distribution shifts.",
+  "notes": "Non-LLM, multi-task benchmark focused on system-induced distribution shifts; results depend strongly on hardware/software stack and reproducibility requires careful matching of system configurations. Dataset sizes and effect magnitudes vary by task.",
+  "creators": {
+    "scientists": [
+      "Yan Wang",
+      "Yuhang Li",
+      "Ruihao Gong",
+      "Aishan Liu",
+      "Yanfei Wang",
+      "Jian Hu",
+      "Yongqiang Yao",
+      "Yunchen Zhang",
+      "Tianzi Xiao",
+      "Fengwei Yu",
+      "Xianglong Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2307.00280",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "HUMBI",
+  "description": "This paper presents a new large multiview dataset called HUMBI for human body expressions with natural clothing. The goal of HUMBI is to facilitate modeling view-specific appearance and geometry of five primary body signals including gaze, face, hand, body, and garment from assorted people. 107 synchronized HD cameras are used to capture 772 distinctive subjects across gender, ethnicity, age, and style. With the multiview image streams, we reconstruct high fidelity body expressions using 3D mesh models, which allows representing view-specific appearance. We demonstrate that HUMBI is highly effective in learning and reconstructing a complete human model and is complementary to the existing datasets of human body expressions with limited views and subjects such as MPII-Gaze, Multi-PIE, Human3.6M, and Panoptic Studio datasets. Based on HUMBI, we formulate a new benchmark challenge of a pose-guided appearance rendering task that aims to substantially extend photorealism in modeling diverse human expressions in 3D, which is the key enabling factor of authentic social tele-presence. HUMBI is publicly available at http://humbi-data.net",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pose_estimation",
+    "gaze_estimation",
+    "3D_reconstruction",
+    "view_synthesis",
+    "appearance_rendering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Task-dependent (e.g., MPJPE for 3D pose; PSNR / SSIM for appearance/rendering)",
+  "general_score_metric": "MPJPE (for 3D pose) and PSNR/SSIM (for rendering) depending on task",
+  "typical_sota_score": "varies by task; no single unified SOTA",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded multiview human dataset used in research on high-fidelity human modeling, reconstruction, and view-specific appearance; cited for enabling multiview 3D reconstruction work.",
+  "notes": "Large multiview dataset (107 cameras) with high storage/compute costs; specialized (non-LLM) benchmark — metrics and reported results vary substantially by subtask; potential privacy/consent considerations for human capture data.",
+  "creators": {
+    "scientists": [
+      "Jae Shin Yoon",
+      "Zhixuan Yu",
+      "Jaesik Park",
+      "Hyun Soo Park"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2110.00119",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

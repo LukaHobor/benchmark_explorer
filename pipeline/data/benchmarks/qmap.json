@@ -1,0 +1,33 @@
+{
+  "name": "QMAP",
+  "description": "ABSTRACT\n                \n                  Antimicrobial peptides (AMPs) are promising alternatives to conventional antibiotics, but progress in computational AMP discovery has been difficult to quantify due to inconsistent datasets and evaluation protocols. We introduce QMAP, a domain-specific benchmark for predicting AMP antimicrobial potency (MIC) and hemolytic toxicity (HC50) with homology-aware, predefined test sets. QMAP enforces strict sequence homology constraints between training and test data, ensuring that model performance reflects true generalization rather than overfitting. Applying QMAP, we reassess existing MIC models and establish baselines for MIC and HC50 regression. Results show limited progress over six years, poor performance for high-potency MIC regression, and low predictability for hemolytic activity, emphasizing the need for standardized evaluation and improved modeling approaches for highly potent peptides. We release a Python package facilitating practical adoption, and with a Rust-accelerated engine enabling efficient data manipulation, installable with\n                  pip install qmap-benchmark.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "property_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSE / MAE / R^2 (regression metrics)",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2026,
+  "reputation": "Domain-specific benchmark aimed at standardizing AMP potency and hemolysis prediction; likely to be adopted by peptide-modeling researchers but currently niche.",
+  "notes": "Uses homology-aware, predefined test splits to avoid information leakage; challenging for high-potency MIC regression and hemolytic activity prediction; limited by data sparsity for very potent peptides and by sequence-homology constraints.",
+  "creators": {
+    "scientists": [
+      "Anthony Lavertu",
+      "Jacques Corbeil",
+      "Pascal Germain"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.64898/2026.02.03.703041",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

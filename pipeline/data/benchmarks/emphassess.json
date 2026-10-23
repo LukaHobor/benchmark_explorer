@@ -1,0 +1,36 @@
+{
+  "name": "EmphAssess",
+  "description": "We introduce EmphAssess, a prosodic benchmark designed to evaluate the capability of speech-to-speech models to encode and reproduce prosodic emphasis. We apply this to two tasks: speech resynthesis and speech-to-speech translation. In both cases, the benchmark evaluates the ability of the model to encode emphasis in the speech input and accurately reproduce it in the output, potentially across a change of speaker and language. As part of the evaluation pipeline, we introduce EmphaClass, a new model that classifies emphasis at the frame or word level.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_labeling",
+    "classification",
+    "speech_resynthesis",
+    "speech_to_speech_translation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (for emphasis classification) and human evaluation / perceptual similarity for resynthesis/translation",
+  "general_score_metric": "F1 (primary for emphasis classification)",
+  "year_of_publish": 2023,
+  "reputation": "New research benchmark from a recent paper; currently emerging and not yet widely adopted.",
+  "notes": "Non-LLM audio benchmark; requires aligned speech and precise annotations; subjective human evaluations are needed for full assessment; dataset sizes and speaker/language coverage may be limited.",
+  "creators": {
+    "scientists": [
+      "Maureen de Seyssel",
+      "Antony D'Avirro",
+      "Adina Williams",
+      "Emmanuel Dupoux"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2312.14069",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

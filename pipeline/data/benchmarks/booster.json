@@ -1,0 +1,38 @@
+{
+  "name": "Booster",
+  "description": "Estimating depth from images nowadays yields outstanding results, both in terms of in-domain accuracy and generalization. However, we identify two main challenges that remain open in this field: dealing with non-Lambertian materials and effectively processing high-resolution images. Purposely, we propose a novel dataset that includes accurate and dense ground-truth labels at high resolution, featuring scenes containing several specular and transparent surfaces. Our acquisition pipeline leverages a novel deep space-time stereo framework, enabling easy and accurate labeling with sub-pixel precision. The dataset is composed of 606 samples collected in 85 different scenes, each sample includes both a high-resolution pair (12 Mpx) as well as an unbalanced stereo pair (Left: 12 Mpx, Right: 1.1 Mpx), typical of modern mobile devices that mount sensors with different resolutions. Additionally, we provide manually annotated material segmentation masks and 15K unlabeled samples. The dataset is composed of a train set and two test sets, the latter devoted to the evaluation of stereo and monocular depth estimation networks. Our experiments highlight the open challenges and future research directions in this field.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "stereo_depth_estimation",
+    "monocular_depth_estimation",
+    "material_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "standard depth metrics (RMSE, AbsRel, SqRel, and threshold accuracy δ<1.25)",
+  "general_score_metric": "RMSE (depth)",
+  "year_of_publish": 2023,
+  "reputation": "A specialized, high-resolution dataset valued for studying non-Lambertian surfaces and high-res stereo, attracting interest from depth-estimation researchers but less used than larger monocular benchmarks.",
+  "notes": "Small labeled set (606 samples) and very high-resolution images; includes many specular/transparent materials making tasks challenging. Not an LLM benchmark; risk of overfitting due to limited labeled examples.",
+  "creators": {
+    "scientists": [
+      "Pierluigi Zama Ramirez",
+      "Alex Costanzino",
+      "Fabio Tosi",
+      "Matteo Poggi",
+      "Samuele Salti",
+      "Stefano Mattoccia",
+      "Luigi Di Stefano"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2301.08245",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

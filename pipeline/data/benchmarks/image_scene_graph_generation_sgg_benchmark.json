@@ -1,0 +1,40 @@
+{
+  "name": "Image Scene Graph Generation (SGG) Benchmark",
+  "description": "There is a surge of interest in image scene graph generation (object, attribute and relationship detection) due to the need of building fine-grained image understanding models that go beyond object detection. Due to the lack of a good benchmark, the reported results of different scene graph generation models are not directly comparable, impeding the research progress. We have developed a much-needed scene graph generation benchmark based on the maskrcnn-benchmark and several popular models. This paper presents main features of our benchmark and a comprehensive ablation study of scene graph generation models using the Visual Genome and OpenImages Visual relationship detection datasets. Our codebase is made publicly available at https://github.com/microsoft/scene_graph_benchmark.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "relationship_prediction",
+    "attribute_prediction",
+    "scene_graph_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@K and mean-Recall@K (R@50, R@100, mR@50, mR@100); object detection components also evaluated with IoU-based metrics",
+  "general_score_metric": "Recall@K (R@50, R@100) and mean Recall@K",
+  "typical_sota_score": "Varies strongly by subtask and split; R@50/R@100 typically ranges ~20–80% depending on task, while mean-Recall metrics are generally lower (~10–40%)",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2022,
+  "reputation": "Widely used and well-cited benchmark in the scene-graph generation community (based on Visual Genome / OpenImages); a common standard for comparisons.",
+  "notes": "Datasets (e.g., Visual Genome) suffer long-tail predicate distribution and label noise; evaluation favors frequent predicates and depends on object proposal quality; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Xiaotian Han",
+      "Jianwei Yang",
+      "Houdong Hu",
+      "Lei Zhang",
+      "Jianfeng Gao",
+      "Pengchuan Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2107.12604",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

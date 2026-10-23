@@ -1,0 +1,33 @@
+{
+  "name": "Building Damage OOD Dataset",
+  "description": "An important step for limiting the negative impact of natural disasters is rapid damage assessment after a disaster occurred. For instance, building damage detection can be automated by applying computer vision techniques to satellite imagery. Such models operate in a multi-domain setting: every disaster is inherently different (new geolocation, unique circumstances), and models must be robust to a shift in distribution between disaster imagery available for training and the images of the new event. Accordingly, estimating real-world performance requires an out-of-domain (OOD) test set. However, building damage detection models have so far been evaluated mostly in the simpler yet unrealistic in-distribution (IID) test setting. Here we argue that future work should focus on the OOD regime instead. We assess OOD performance of two competitive damage detection models and find that existing state-of-the-art models show a substantial generalization gap: their performance drops when evaluated OOD on new disasters not used during training. Moreover, IID performance is not predictive of OOD performance, rendering current benchmarks uninformative about real-world performance. Code and model weights are available at https://github.com/ecker-lab/robust-bdd.",
+  "category": "vision",
+  "domain": "remote sensing / urban planning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "semantic_segmentation",
+    "out_of_distribution_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1 score",
+  "year_of_publish": 2020,
+  "reputation": "15 citations",
+  "notes": "Non-LLM, remote-sensing benchmark focused on out-of-domain generalization; OOD splits are essential. Potential geographic/domain bias and limited size for some events; IID performance does not predict OOD performance.",
+  "creators": {
+    "scientists": [
+      "Vitus Benson",
+      "Alexander Ecker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2011.10328",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

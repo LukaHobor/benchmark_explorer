@@ -1,0 +1,33 @@
+{
+  "name": "Multiscale Image Segmentation Benchmark",
+  "description": "Abstract In this paper, we present a segmentation algorithm to detect low-level structure present in images. The algorithm is designed to partition a given image into regions, corresponding to image structures, regardless of their shapes, sizes, and levels of interior homogeneity. We model a region as a connected set of pixels that is surrounded by ramp edge discontinuities where the magnitude of these discontinuities is large compared to the variation inside the region. Each region is associated with a scale that depends upon the fraction of the strong and weak parts of its boundary. Traversing through the range of all possible scales, we obtain all regions present in the image. Regions strictly merge as the scale increases; hence a tree is formed where the root node corresponds to the whole image, nodes closer to the root along a path correspond to larger regions and those further from the root capture smaller regions representing embedded details. To evaluate the accuracy and precision of our algorithm, as well as to compare it to the existing algorithms, we present a new benchmark dataset for low-level image segmentation. We provide evaluation methods for both boundary-based and region-based performance of algorithms. We also annotate different parts of the images that are difficult to segment with the types of segmentation challenges they pose. This enables our benchmark to give an account of which algorithm fails where. We show that our proposed algorithm performs better than the widely used low-level segmentation algorithms on this benchmark.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_segmentation",
+    "boundary_detection",
+    "unsupervised_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "IoU / Dice / boundary F-measure",
+  "general_score_metric": "mean IoU / boundary F-measure (dataset-dependent)",
+  "year_of_publish": 2020,
+  "reputation": "A specialized academic benchmark well-regarded in low-level, multiscale segmentation research but not broadly used as a mainstream ML leaderboard dataset.",
+  "notes": "Not an LLM benchmark; focuses on low-level, multiscale segmentation quality and may be sensitive to scale selection and parameter settings—results may not transfer to high-level vision tasks.",
+  "creators": {
+    "scientists": [
+      "Emre Akbas",
+      "Narendra Ahuja"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1016/j.cviu.2020.103026",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "PDEBench",
+  "description": "A large-scale benchmark dataset for scientific machine learning providing numerical simulation data across multiple PDE families (Burgers', advection, diffusion-reaction, compressible Navier-Stokes, and more) in 1D–3D settings. Designed to benchmark scientific ML models such as neural operators and PINNs against physics simulation ground truth, with support for both forward modeling and inverse parameter identification.",
+  "category": "mixed",
+  "domain": "mathematics, physics, scientific ML",
+  "task_types": [
+    "PDE solution prediction (forward modeling)",
+    "parameter identification (inverse problems)"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "model predictions vs. numerical simulation ground truth; relative L2 error / MSE typical",
+  "general_score_metric": "relative L2 error",
+  "typical_sota_score": "varies by PDE type and dimensionality; neural operators typically achieve <5% relative L2 error on canonical problems",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2024,
+  "reputation": "NeurIPS 2022 Benchmark track; one of the standard reference benchmarks for neural PDE solvers and scientific ML; CC-BY 4.0, actively maintained",
+  "notes": "Data stored in HDF5 format with dimensions [batch, time, x1, ..., xa, variables]. Dataset versioned (v8.0); hosted on DaRUS (University of Stuttgart). Distinct from non-physics PDE software benchmarks. GitHub available for implementation.",
+  "creators": {
+    "scientists": [
+      "Makoto Takamoto",
+      "Timothy Praditia",
+      "Raphael Leiteritz",
+      "Dirk Pflüger",
+      "Mathias Niepert",
+      "Dan MacKinlay",
+      "Francesco Alesiani"
+    ],
+    "institutions": [
+      "University of Stuttgart",
+      "CSIRO Data61"
+    ],
+    "companies": [
+      "NEC Labs Europe"
+    ]
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://darus.uni-stuttgart.de/dataset.xhtml?persistentId=doi:10.18419/darus-2986",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-21",
+    "origin": "cynefin@d486fafa9"
+  }
+}

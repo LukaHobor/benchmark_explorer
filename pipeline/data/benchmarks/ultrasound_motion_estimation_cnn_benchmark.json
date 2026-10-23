@@ -1,0 +1,38 @@
+{
+  "name": "Ultrasound motion estimation CNN benchmark",
+  "description": "In recent years, deep learning (DL) has been successfully applied to the analysis and processing of ultrasound images. To date, most of this research has focused on segmentation and view recognition. This article benchmarks different convolutional neural network algorithms for motion estimation in ultrasound imaging. We evaluated and compared several networks derived from FlowNet2, one of the most efficient architectures in computer vision. The networks were tested with and without transfer learning, and the best configuration was compared against the particle imaging velocimetry method, a popular state-of-the-art block-matching algorithm. Rotations are known to be difficult to track from ultrasound images due to a significant speckle decorrelation. We thus focused on the images of rotating disks, which could be tracked through speckle features only. Our database consisted of synthetic and in vitro B-mode images after log compression and covered a large range of rotational speeds. One of the FlowNet2 subnetworks, FlowNet2SD, produced competitive results with a motion field error smaller than 1 pixel on real data after transfer learning based on the simulated data. These errors remain small for a large velocity range without the need for hyperparameter tuning, which indicates the high potential and adaptability of DL solutions to motion estimation in ultrasound imaging.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optical_flow_estimation",
+    "motion_estimation",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "endpoint_error (motion field error in pixels)",
+  "general_score_metric": "mean endpoint error (pixels)",
+  "typical_sota_score": "≈<1 pixel (e.g., ~0.5–1.0 px on the reported real-data after transfer learning)",
+  "year_of_publish": 2020,
+  "reputation": "31 citations",
+  "notes": "Small and specialized dataset (rotating-disk sequences) with synthetic-to-real transfer; focused on a specific motion regime (rotations) and speckle decorrelation, non-LLM benchmark, and results depend strongly on transfer-learning from simulated data.",
+  "creators": {
+    "scientists": [
+      "Ewan Evain",
+      "Khuram Faraz",
+      "Thomas Grenier",
+      "Damien Garcia",
+      "Mathieu De Craene",
+      "Olivier Bernard"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1109/tuffc.2020.2976809",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

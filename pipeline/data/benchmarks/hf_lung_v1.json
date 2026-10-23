@@ -1,0 +1,50 @@
+{
+  "name": "HF_Lung_V1",
+  "description": "A reliable, remote, and continuous real-time respiratory sound monitor with automated respiratory sound analysis ability is urgently required in many clinical scenarios-such as in monitoring disease progression of coronavirus disease 2019-to replace conventional auscultation with a handheld stethoscope. However, a robust computerized respiratory sound analysis algorithm has not yet been validated in practical applications. In this study, we developed a lung sound database (HF_Lung_V1) comprising 9,765 audio files of lung sounds (duration of 15 s each), 34,095 inhalation labels, 18,349 exhalation labels, 13,883 continuous adventitious sound (CAS) labels (comprising 8,457 wheeze labels, 686 stridor labels, and 4,740 rhonchi labels), and 15,606 discontinuous adventitious sound labels (all crackles). We conducted benchmark tests for long short-term memory (LSTM), gated recurrent unit (GRU), bidirectional LSTM (BiLSTM), bidirectional GRU (BiGRU), convolutional neural network (CNN)-LSTM, CNN-GRU, CNN-BiLSTM, and CNN-BiGRU models for breath phase detection and adventitious sound detection. We also conducted a performance comparison between the LSTM-based and GRU-based models, between unidirectional and bidirectional models, and between models with and without a CNN. The results revealed that these models exhibited adequate performance in lung sound analysis. The GRU-based models outperformed, in terms of F1 scores and areas under the receiver operating characteristic curves, the LSTM-based models in most of the defined tasks. Furthermore, all bidirectional models outperformed their unidirectional counterparts. Finally, the addition of a CNN improved the accuracy of lung sound analysis, especially in the CAS detection tasks.",
+  "category": "audio",
+  "domain": "medical audio / clinical respiratory monitoring",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "audio_event_detection",
+    "breath_phase_detection",
+    "sequence_labeling",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2021,
+  "reputation": "Used within the clinical signal-processing community for respiratory-sound research; recognized as a valuable open dataset but not widely used outside specialist groups.",
+  "notes": "Non-LLM benchmark of real clinical audio; moderate-sized (9,765 files) but with class imbalance and label subjectivity; recordings likely from limited sites/devices so domain shift is a concern; reported metrics also include AUC.",
+  "creators": {
+    "scientists": [
+      "Fu-Shun Hsu",
+      "Shang-Ran Huang",
+      "Chien-Wen Huang",
+      "Chao-Jung Huang",
+      "Yuan-Ren Cheng",
+      "Chun-Chieh Chen",
+      "Jack Hsiao",
+      "Chung-Wei Chen",
+      "Li-Chin Chen",
+      "Yen-Chun Lai",
+      "Bi-Fang Hsu",
+      "Nian-Jhen Lin",
+      "Wan-Lin Tsai",
+      "Yi-Lin Wu",
+      "Tzu-Ling Tseng",
+      "Ching-Ting Tseng",
+      "Yi-Tsun Chen",
+      "Feipei Lai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2102.03049",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

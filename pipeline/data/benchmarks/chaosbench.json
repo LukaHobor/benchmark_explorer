@@ -1,0 +1,38 @@
+{
+  "name": "ChaosBench",
+  "description": "Accurate prediction of climate in the subseasonal-to-seasonal scale is crucial for disaster preparedness and robust decision making amidst climate change. Yet, forecasting beyond the weather timescale is challenging because it deals with problems other than initial condition, including boundary interaction, butterfly effect, and our inherent lack of physical understanding. At present, existing benchmarks tend to have shorter forecasting range of up-to 15 days, do not include a wide range of operational baselines, and lack physics-based constraints for explainability. Thus, we propose ChaosBench, a challenging benchmark to extend the predictability range of data-driven weather emulators to S2S timescale. First, ChaosBench is comprised of variables beyond the typical surface-atmospheric ERA5 to also include ocean, ice, and land reanalysis products that span over 45 years to allow for full Earth system emulation that respects boundary conditions. We also propose physics-based, in addition to deterministic and probabilistic metrics, to ensure a physically-consistent ensemble that accounts for butterfly effect. Furthermore, we evaluate on a diverse set of physics-based forecasts from four national weather agencies as baselines to our data-driven counterpart such as ViT/ClimaX, PanguWeather, GraphCast, and FourCastNetV2. Overall, we find methods originally developed for weather-scale applications fail on S2S task: their performance simply collapse to an unskilled climatology. Nonetheless, we outline and demonstrate several strategies that can extend the predictability range of existing weather emulators, including the use of ensembles, robust control of error propagation, and the use of physics-informed models. Our benchmark, datasets, and instructions are available at https://leap-stc.github.io/ChaosBench.",
+  "category": "multimodal",
+  "domain": "climate science / subseasonal-to-seasonal prediction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "probabilistic_forecasting",
+    "ensemble_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Deterministic and probabilistic scores including RMSE, anomaly correlation (ACC), CRPS and physics-based consistency metrics (energy/flux conservation, etc.)",
+  "general_score_metric": "RMSE (with probabilistic assessments via CRPS and physics-based consistency metrics reported alongside)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, domain-focused benchmark from the climate ML community attracting interest for subseasonal-to-seasonal prediction research, particularly among groups working on Earth-system emulation.",
+  "notes": "Multimodal Earth-system dataset spanning decades and multiple variables; non-LLM benchmark requiring substantial compute. Benchmarked operational baselines show current weather-scale emulators often collapse to climatology at S2S timescales. Large data volume and potential for model overfitting; careful train/test splits and consideration of physical constraints are required.",
+  "creators": {
+    "scientists": [
+      "Juan Nathaniel",
+      "Yongquan Qu",
+      "Tung Nguyen",
+      "Sungduk Yu",
+      "Julius Busecke",
+      "Aditya Grover",
+      "Pierre Gentine"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2402.00712",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

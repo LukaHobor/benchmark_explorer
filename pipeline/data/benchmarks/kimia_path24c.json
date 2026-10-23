@@ -1,0 +1,35 @@
+{
+  "name": "Kimia Path24C",
+  "description": "The Kimia Path24 dataset has been introduced as a classification and retrieval dataset for digital pathology. Although it provides multi-class data, the color information has been neglected in the process of extracting patches. The staining information plays a major role in the recognition of tissue patterns. To address this drawback, we introduce the color version of Kimia Path24 by recreating sample patches from all 24 scans to propose Kimia Path24C. We run extensive experiments to determine the best configuration for selected patches. To provide preliminary results for setting a benchmark for the new dataset, we utilize VGG16, InceptionV3 and DenseNet-121 model as feature extractors. Then, we use these feature vectors to retrieve test patches. The accuracy of image retrieval using DenseNet was 95.92% while the highest accuracy using InceptionV3 and VGG16 reached 92.45% and 92%, respectively. We also experimented with \"deep barcodes\" and established that with a small loss in accuracy (e.g., 93.43% for binarized features for DenseNet instead of 95.92% when the features themselves are used), the search operations can be significantly accelerated.",
+  "category": "vision",
+  "domain": "digital pathology / medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "image_retrieval"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "92–96% (reporting DenseNet ~95.9%)",
+  "year_of_publish": 2021,
+  "reputation": "A niche dataset in digital pathology for patch-based retrieval/classification with modest adoption by medical-imaging researchers.",
+  "notes": "Relatively small (24 scans) and domain-specific; color/stain variability important; potential for overfitting and limited diversity compared to large-scale histopathology datasets.",
+  "creators": {
+    "scientists": [
+      "Sobhan Shafiei",
+      "Morteza Babaie",
+      "Shivam Kalra",
+      "H. R. Tizhoosh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2102.07611",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

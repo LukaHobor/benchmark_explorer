@@ -1,0 +1,38 @@
+{
+  "name": "CoDBench",
+  "description": "Continuous dynamical systems, characterized by differential equations, are ubiquitously used to model several important problems: plasma dynamics, flow through porous media, weather forecasting, and epidemic dynamics. Recently, a wide range of data-driven models has been used successfully to model these systems. However, in contrast to established fields like computer vision, limited studies are available analyzing the strengths and potential applications of different classes of these models that could steer decision-making in scientific machine learning. Here, we introduce CodBench, an exhaustive benchmarking suite comprising 11 state-of-the-art data-driven models for solving differential equations. Specifically, we comprehensively evaluate 4 distinct categories of models, viz., feed forward neural networks, deep operator regression models, frequency-based neural operators, and transformer architectures against 8 widely applicable benchmark datasets encompassing challenges from fluid and solid mechanics. We conduct extensive experiments, assessing the operators' capabilities in learning, zero-shot super-resolution, data efficiency, robustness to noise, and computational efficiency. Interestingly, our findings highlight that current operators struggle with the newer mechanics datasets, motivating the need for more robust neural operators. All the datasets and codes will be shared in an easy-to-use fashion for the scientific community. We hope this resource will be an impetus for accelerated progress and exploration in modeling dynamical systems.",
+  "category": "mixed",
+  "domain": "continuous dynamical systems / scientific machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "operator_learning",
+    "zero_shot_super_resolution",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "relative L2 error / MSE (normalized error) and computational efficiency metrics",
+  "general_score_metric": "relative L2 error (normalized MSE)",
+  "typical_sota_score": "varies by task; typical relative L2 errors reported in literature ~0.01–0.2",
+  "year_of_publish": 2023,
+  "reputation": "A well-constructed scientific-ML benchmark for neural operators and PDE solvers with growing use in the neural operator and scientific ML communities.",
+  "notes": "Non-LLM benchmark; tasks are computationally intensive and may require specialized solvers/preprocessing; performance varies widely by PDE family and resolution; potential for overfitting to specific physics cases.",
+  "creators": {
+    "scientists": [
+      "Priyanshu Burark",
+      "Karn Tiwari",
+      "Meer Mehran Rashid",
+      "Prathosh A P",
+      "N M Anoop Krishnan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2310.01650",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

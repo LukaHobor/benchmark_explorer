@@ -1,0 +1,35 @@
+{
+  "name": "MCSM-Benchs",
+  "description": "Signal processing in the time-frequency plane has a long history and remains a field of methodological innovation. For instance, detection and denoising based on the zeros of the spectrogram have been proposed since 2015, contrasting with a long history of focusing on larger values of the spectrogram. Yet, unlike neighboring fields like optimization and machine learning, time-frequency signal processing lacks widely-adopted benchmarking tools. In this work, we contribute an open-source, Python-based toolbox termed MCSM-Benchs for benchmarking multi-component signal analysis methods, and we demonstrate our toolbox on three time-frequency benchmarks. First, we compare different methods for signal detection based on the zeros of the spectrogram, including unexplored variations of previously proposed detection tests. Second, we compare zero-based denoising methods to both classical and novel methods based on large values and ridges of the spectrogram. Finally, we compare the denoising performance of these methods against typical spectrogram thresholding strategies, in terms of post-processing artifacts commonly referred to as musical noise. At a low level, the obtained results provide new insight on the assessed approaches, and in particular research directions to further develop zero-based methods. At a higher level, our benchmarks exemplify the benefits of using a public, collaborative, common framework for benchmarking.",
+  "category": "audio",
+  "domain": "signal processing / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "detection",
+    "denoising",
+    "artifact_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "signal-quality and detection metrics (e.g., SNR/SDR improvement, ROC-AUC, false alarm rate, perceptual artifact measures)",
+  "general_score_metric": "SNR improvement (dB) for denoising; ROC-AUC / detection rate for detection tasks",
+  "year_of_publish": 2024,
+  "reputation": "Open-source benchmarking toolbox for time-frequency multi-component signal analysis; useful to the signal-processing community but newly released with limited adoption so far.",
+  "notes": "Non-LLM benchmark focused on time-frequency signal processing; evaluations use multiple domain-specific metrics (no single universal score); benchmarks may use synthetic and semi-real signals; comparability depends on noise models and parameter choices.",
+  "creators": {
+    "scientists": [
+      "Juan M. Miramont",
+      "Rémi Bardenet",
+      "Pierre Chainais",
+      "Francois Auger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2402.08521",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

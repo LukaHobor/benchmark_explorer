@@ -1,0 +1,40 @@
+{
+  "name": "mur-sst-ml-benchmark-Zarr",
+  "description": "MUR SST ML Benchmark (Pacific, Zarr)\n\t\n\nMachine-learning friendly Zarr subset of NASA/JPL GHRSST MUR SST.\n\nUpstream source (public, no auth): s3://mur-sst/zarr\nSubset:\nRegion: Pacific (20–50°N, 180–240°E); longitude is stored as 0–360°E\nTime: 2018-01-01 → 2019-12-30 (729 daily frames; upstream coverage for this slice ends on 2019-12-30)\nVariable: analysed_sst only (float32, °C)\n\n\nChunking for ML: (time, lat, lon) = (7, 256, 256) (weekly windows)\n\nWhy mur-sst/zarr-v1 during extraction?… See the full description on the dataset page: https://huggingface.co/datasets/KokosDev/mur-sst-ml-benchmark-Zarr.",
+  "category": "vision",
+  "domain": "science",
+  "tags": [
+    "task_categories:time-series-forecasting",
+    "language:en",
+    "license:other"
+  ],
+  "task_types": [
+    "regression",
+    "forecasting",
+    "spatiotemporal_prediction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "RMSE (root mean squared error)",
+  "general_score_metric": "RMSE (°C)",
+  "typical_sota_score": "0.1–0.5°C RMSE",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "A practical, machine-learning-friendly subset of GHRSST MUR SST used by researchers working on SST forecasting and remote-sensing ML; moderately known in the geoscience ML community.",
+  "downloads": 448,
+  "likes": 1,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "KokosDev"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://huggingface.co/datasets/KokosDev/mur-sst-ml-benchmark-Zarr",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

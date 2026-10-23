@@ -1,0 +1,35 @@
+{
+  "name": "cFreD",
+  "description": "Evaluating text-to-image and text-to-video models is challenging due to a fundamental disconnect: established metrics fail to jointly measure visual quality and semantic alignment with text, leading to a poor correlation with human judgments. To address this critical issue, we propose cFreD, a general metric based on a Conditional Fréchet Distance that unifies the assessment of visual fidelity and text-prompt consistency into a single score. Existing metrics such as Fréchet Inception Distance (FID) capture image quality but ignore text conditioning while alignment scores such as CLIPScore are insensitive to visual quality. Furthermore, learned preference models require constant retraining and are unlikely to generalize to novel architectures or out-of-distribution prompts. Through extensive experiments across multiple recently proposed text-to-image models and diverse prompt datasets, cFreD exhibits a higher correlation with human judgments compared to statistical metrics , including m",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_generation_evaluation",
+    "video_generation_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "cFreD",
+  "year_of_publish": 2025,
+  "reputation": "A recent proposed metric rather than a long-established benchmark; it is mainly of research interest for evaluating generative models and has limited community adoption so far.",
+  "notes": "This is a non-LLM evaluation metric for text-to-image/text-to-video systems, not a standard task benchmark; reported values are model- and dataset-dependent, and there is no single saturated score range.",
+  "creators": {
+    "scientists": [
+      "Jaywon Koo",
+      "Jefferson Hernandez",
+      "Moayed Haji-Ali",
+      "Ziyan Yang",
+      "Vicente Ordonez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.21721",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

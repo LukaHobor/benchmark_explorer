@@ -1,0 +1,37 @@
+{
+  "name": "Multispectral Beach Panoptic Segmentation (WorldView-3) Dataset",
+  "description": "Panoptic segmentation is a recent and powerful task that tackles individual object recognition (“things”) and multiple backgrounds (“stuff”) simultaneously. Remote sensing studies with panoptic segmentation are still restricted and recent, with great application perspectives. In this sense, we propose the first multispectral panoptic segmentation study, considering the “thing” and “stuff” classes in the beach scenario and evaluating different sets of spectral bands. Our methodology included developing a dataset with 3800 (3200 for training, 300 for validation, and 300 for testing) with 128 × 128 spatial dimensions and eight spectral bands considering fourteen classes (6 “thing” and 8 “stuff” classes). We used WorldView-3 images from Praia do Futuro, Fortaleza, and pan-sharpening to improve spatial resolution. Five different spectral band configurations were considered: (1) all eight bands, (2) RGB+NIR1+NIR2, (3) RGB+NIR1, (4) RGB+NIR2, and (5) only RGB. The model training used the Panoptic-FPN architecture with the same hyperparameter settings considering three backbones (ResNeXt-101, ResNet-101, and ResNet-50). The best result considered the ResNeXt-101 with all spectral bands. However, the results from the first four configurations were very similar, and the RGB alone was the only configuration with significantly lower results. We also evaluated 15 semantic segmentation models for a benchmark comparison for the Beach Dataset. We show in visual results that even though the semantic models may be precise, they fail at identifying unique targets, especially in crowded locations such as the beach. The panoptic segmentation allowed a necessary detailing and counting of tourist infrastructures and mapping of other background features, establishing an essential tool for inspecting beach areas.",
+  "category": "vision",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "panoptic_segmentation",
+    "semantic_segmentation",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "panoptic_quality (PQ) and mean Intersection-over-Union (mIoU)",
+  "general_score_metric": "Panoptic Quality (PQ)",
+  "year_of_publish": 2022,
+  "reputation": "9 citations",
+  "notes": "Relatively small dataset (3,800 patches) with geographic bias (single beach area); class imbalance across 'thing' and 'stuff' classes and dependency on multispectral sensor availability. Not an LLM benchmark — performance depends strongly on choice of backbone and panoptic architecture.",
+  "creators": {
+    "scientists": [
+      "Osmar Luiz Ferreira de Carvalho",
+      "Osmar Abílio de Carvalho Júnior",
+      "Anesmar Olino de Albuquerque",
+      "Níckolas Castro Santana",
+      "Dı́bio Leandro Borges",
+      "Argélica Saiaka Luiz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1016/j.jag.2022.102910",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

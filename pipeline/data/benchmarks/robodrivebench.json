@@ -1,0 +1,38 @@
+{
+  "name": "RoboDriveBench",
+  "description": "Current Vision-Language Model (VLM)-based end-to-end autonomous driving systems often leverage large language models to generate driving decisions directly based on their understanding of the current scene. However, such systems introduce multiple risks in real-world driving scenarios. To evaluate whether VLMs are truly viable for autonomous driving, we introduce RoboDriveBench, the first robustness benchmark focused on end-to-end trajectory prediction tasks. This benchmark systematically evaluates two critical categories of real-world challenges for VLM-based end-to-end autonomous driving systems through 11 simulated scenarios encompassing various corruption types, including 6 scenarios of sensor corruption caused by environmental variations, along with 5 cases of prompt corruption resulting from human intervention and data transmission failures. Each corruption type includes 250 unique driving scenarios and 5,689 frames, resulting in 64,559 total trajectory prediction cases per evaluation. To overcome these real-world challenges, we propose a novel VLM-based autonomous driving framework called RoboDriveVLM, which enhances robustness by mapping more multimodal data-e.g., lidar and radar-into a unified latent space. Furthermore, we introduce a new Test-Time Adaptation (TTA) method based on cross-modal knowledge distillation to improve the robustness of VLM-based autonomous driving systems. Through extensive experiments, our work highlights the limitations of current VLM-based end-to-end autonomous driving systems and provides a more reliable solution for real-world deployment. Source code and datasets will be released.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "trajectory_prediction",
+    "robustness_evaluation",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "ADE / FDE (average and final displacement error) and task_success_rate / collision rate for safety-critical evaluation",
+  "general_score_metric": "ADE / FDE (primary), plus task_success_rate (safety/robustness)",
+  "typical_sota_score": "scenario-dependent; typical reported ADE ranges ≈0.2–1.5 m and FDE ≈0.5–3.0 m depending on scenario and sensors",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Simulation-heavy benchmark focused on VLM-based end-to-end driving; includes many synthetic corruption scenarios (sensor and prompt corruptions). Results may not fully reflect real-world performance; non-LLM benchmark (multimodal). Dataset/code pending release in some cases—reproducibility depends on availability of provided assets.",
+  "creators": {
+    "scientists": [
+      "Dacheng Liao",
+      "Mengshi Qi",
+      "Peng Shu",
+      "Zhining Zhang",
+      "Yuxin Lin",
+      "Liang Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2512.01300",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

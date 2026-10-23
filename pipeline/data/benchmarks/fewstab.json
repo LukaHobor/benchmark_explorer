@@ -1,0 +1,36 @@
+{
+  "name": "FewSTAB",
+  "description": "Few-shot image classifiers are designed to recognize and classify new data with minimal supervision and limited data but often show reliance on spurious correlations between classes and spurious attributes, known as spurious bias. Spurious correlations commonly hold in certain samples and few-shot classifiers can suffer from spurious bias induced from them. There is an absence of an automatic benchmarking system to assess the robustness of few-shot classifiers against spurious bias. In this paper, we propose a systematic and rigorous benchmark framework, termed FewSTAB, to fairly demonstrate and quantify varied degrees of robustness of few-shot classifiers to spurious bias. FewSTAB creates few-shot evaluation tasks with biased attributes so that using them for predictions can demonstrate poor performance. To construct these tasks, we propose attribute-based sample selection strategies based on a pre-trained vision-language model, eliminating the need for manual dataset curation. This allows FewSTAB to automatically benchmark spurious bias using any existing test data. FewSTAB offers evaluation results in a new dimension along with a new design guideline for building robust classifiers. Moreover, it can benchmark spurious bias in varied degrees and enable designs for varied degrees of robustness. Its effectiveness is demonstrated through experiments on ten few-shot learning methods across three datasets. We hope our framework can inspire new designs of robust few-shot classifiers. Our code is available at https://github.com/gtzheng/FewSTAB.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification",
+    "image_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy (robustness often reported as accuracy drop under biased conditions)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "Recent (2024) proposal aimed at the few-shot robustness community; limited adoption so far but useful for bias-robustness evaluation.",
+  "notes": "Automatic attribute-based task generation using pre-trained vision–language models; non-LLM benchmark; evaluates degrees of spurious bias; dataset- and method-dependent results; potential contamination via large pretrained models.",
+  "creators": {
+    "scientists": [
+      "Guangtao Zheng",
+      "Wenqian Ye",
+      "Aidong Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.02882",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

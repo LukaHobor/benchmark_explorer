@@ -1,0 +1,36 @@
+{
+  "name": "FoldBench",
+  "description": "An all-atom benchmark for assessing the atomic-level accuracy of biomolecular structure prediction methods against high-resolution reference structures.",
+  "category": "mixed",
+  "domain": "biomolecular modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structure_prediction",
+    "atomic_accuracy_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "All-atom structural similarity metrics (RMSD, lDDT, TM-score and related atomic-distance based measures)",
+  "general_score_metric": "all-atom RMSD / lDDT (local distance difference test)",
+  "typical_sota_score": "variable; many top methods report lDDT in the ~70–90% range for high-quality targets but lower on challenging cases",
+  "year_of_publish": 2025,
+  "reputation": "15 citations",
+  "notes": "Compute- and data-intensive; benchmark performance depends on experimental structure resolution and target selection; potential training/test contamination if methods used similar experimental structures; focused on structural biology (non-LLM) and can be sensitive to minor modeling differences (side-chain placement, protonation).",
+  "creators": {
+    "scientists": [
+      "Sheng Xu",
+      "Qiantai Feng",
+      "Lifeng Qiao",
+      "Hao Wu",
+      "Tao Shen",
+      "Yu Cheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

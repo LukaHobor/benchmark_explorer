@@ -1,0 +1,35 @@
+{
+  "name": "10–90 GHz Localized Exposure Dataset",
+  "description": "The lack of freely available standardized datasets represents an aggravating factor during the development and testing the performance of novel computational techniques in exposure assessment and dosimetry research. This hinders progress as researchers are required to generate numerical data (field, power and temperature distribution) anew using simulation software for each exposure scenario. Other than being time consuming, this approach is highly susceptible to errors that occur during the configuration of the electromagnetic model. To address this issue, in this paper, the limited available data on the incident power density and resultant maximum temperature rise on the skin surface considering various steady-state exposure scenarios at 10$-$90 GHz have been statistically modeled. The synthetic data have been sampled from the fitted statistical multivariate distribution with respect to predetermined dosimetric constraints. We thus present a comprehensive and open-source dataset compiled of the high-fidelity numerical data considering various exposures to a realistic source. Furthermore, different surrogate models for predicting maximum temperature rise on the skin surface were fitted based on the synthetic dataset. All surrogate models were tested on the originally available data where satisfactory predictive performance has been demonstrated. A simple technique of combining quadratic polynomial and tensor-product spline surrogates, each operating on its own cluster of data, has achieved the lowest mean absolute error of 0.058 {\\deg}C. Therefore, overall experimental results indicate the validity of the proposed synthetic dataset.",
+  "category": "mixed",
+  "domain": "electromagnetics/dosimetry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "surrogate_modeling"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE",
+  "general_score_metric": "mean_absolute_error",
+  "typical_sota_score": "≈0.058 °C (MAE) reported for the best surrogate in the paper",
+  "year_of_publish": 2023,
+  "reputation": "A specialized, domain-specific dataset published alongside a research paper (arXiv:2305.02260); useful within the electromagnetics/dosimetry community but not widely used outside it.",
+  "notes": "Synthetic dataset generated from fitted multivariate distributions using limited original measurements; potential domain shift and contamination risk from synthetic sampling. Non-LLM benchmark focused on numerical prediction/regression for dosimetry.",
+  "creators": {
+    "scientists": [
+      "Ante Kapetanovic",
+      "Dragan Poljak",
+      "Kun Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2305.02260",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

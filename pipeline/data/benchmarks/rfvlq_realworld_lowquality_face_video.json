@@ -1,0 +1,39 @@
+{
+  "name": "RFV-LQ (Real-world Low-Quality Face Video)",
+  "description": "Recent progress in blind face restoration has resulted in producing high-quality restored results for static images. However, efforts to extend these advancements to video scenarios have been minimal, partly because of the absence of benchmarks that allow for a comprehensive and fair comparison. In this work, we first present a fair evaluation benchmark, in which we first introduce a Real-world Low-Quality Face Video benchmark (RFV-LQ), evaluate several leading image-based face restoration algorithms, and conduct a thorough systematical analysis of the benefits and challenges associated with extending blind face image restoration algorithms to degraded face videos. Our analysis identifies several key issues, primarily categorized into two aspects: significant jitters in facial components and noise-shape flickering between frames. To address these issues, we propose a Temporal Consistency Network (TCN) cooperated with alignment smoothing to reduce jitters and flickers in restored videos. TCN is a flexible component that can be seamlessly plugged into the most advanced face image restoration algorithms, ensuring the quality of image-based restoration is maintained as closely as possible. Extensive experiments have been conducted to evaluate the effectiveness and efficiency of our proposed TCN and alignment smoothing operation. Project page: https://wzhouxiff.github.io/projects/FIR2FVR/FIR2FVR.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_restoration",
+    "face_restoration",
+    "temporal_consistency_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS (image/video quality metrics) and sometimes human perceptual evaluation",
+  "general_score_metric": "PSNR (primary reported), supplemented by SSIM and LPIPS",
+  "typical_sota_score": "25–35 dB (PSNR, approximate range depending on noise/degradation levels)",
+  "year_of_publish": 2024,
+  "reputation": "A recent benchmark targeted at the video face-restoration community to enable fair comparisons; adoption is growing but still limited relative to major image benchmarks.",
+  "notes": "Non-LLM benchmark focused on real-world low-quality face videos; includes temporal-consistency challenges (jitters, flicker). Evaluation depends on pre- and post-processing; subjective perceptual quality may not correlate perfectly with PSNR/SSIM. Face/privacy considerations and dataset size/sample diversity may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Zhouxia Wang",
+      "Jiawei Zhang",
+      "Xintao Wang",
+      "Tianshui Chen",
+      "Ying Shan",
+      "Wenping Wang",
+      "Ping Luo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.11828",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

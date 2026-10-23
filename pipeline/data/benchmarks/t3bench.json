@@ -1,0 +1,37 @@
+{
+  "name": "T3Bench",
+  "description": "Recent methods in text-to-3D leverage powerful pretrained diffusion models to optimize NeRF. Notably, these methods are able to produce high-quality 3D scenes without training on 3D data. Due to the open-ended nature of the task, most studies evaluate their results with subjective case studies and user experiments, thereby presenting a challenge in quantitatively addressing the question: How has current progress in Text-to-3D gone so far? In this paper, we introduce T$^3$Bench, the first comprehensive text-to-3D benchmark containing diverse text prompts of three increasing complexity levels that are specially designed for 3D generation. To assess both the subjective quality and the text alignment, we propose two automatic metrics based on multi-view images produced by the 3D contents. The quality metric combines multi-view text-image scores and regional convolution to detect quality and view inconsistency. The alignment metric uses multi-view captioning and GPT-4 evaluation to measure text-3D consistency. Both metrics closely correlate with different dimensions of human judgments, providing a paradigm for efficiently evaluating text-to-3D models. The benchmarking results, shown in Fig. 1, reveal performance differences among an extensive 10 prevalent text-to-3D methods. Our analysis further highlights the common struggles for current methods on generating surroundings and multi-object scenes, as well as the bottleneck of leveraging 2D guidance for 3D generation. Our project page is available at: https://t3bench.com.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "human_eval",
+    "multimodal_alignment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score (automatic multi-view quality metric + multi-view alignment metric), correlated with human_eval",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2023,
+  "reputation": "11 citations",
+  "notes": "Non-LLM benchmark focused on text-to-3D; automatic metrics depend on rendering and captioning pipelines (e.g., multi-view captioning, GPT-4), which can be sensitive to implementation and may be gamed; covers a curated set of prompts rather than massive-scale data.",
+  "creators": {
+    "scientists": [
+      "Yuze He",
+      "Yushi Bai",
+      "Matthieu Lin",
+      "Wang Zhao",
+      "Yubin Hu",
+      "Jenny Sheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.02977",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

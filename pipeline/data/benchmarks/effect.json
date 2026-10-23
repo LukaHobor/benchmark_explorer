@@ -1,0 +1,37 @@
+{
+  "name": "EFFECT",
+  "description": "Creating computational biology models applicable to industry is much more difficult than it appears. There is a major gap between a model that looks good on paper and a model that performs well in the drug discovery process. We are trying to shrink this gap by introducing the Evaluation Framework For predicting Efficiency of Cancer Treatment (EFFECT) benchmark suite based on the DepMap and GDSC data sets to facilitate the creation of well-applicable machine learning models capable of predicting gene essentiality and/or drug sensitivity on in vitro cancer cell lines. We show that standard evaluation metrics like Pearson correlation are misleading due to inherent biases in the data. Thus, to assess the performance of models properly, we propose the use of cell line/perturbation exclusive data splits, perturbation-wise evaluation, and the application of our Bias Detector framework, which can identify model predictions not explicable by data bias alone. Testing the EFFECT suite on a few popular machine learning (ML) models showed that while library-standard non-linear models have measurable performance in splits representing precision medicine and target identification tasks, the actual corrected correlations are rather low, showing that even simple knock-out (KO)/drug sensitivity prediction is a yet unsolved task. For this reason, we aim our proposed framework to be a unified test and evaluation pipeline for ML models predicting cancer sensitivity data, facilitating unbiased benchmarking to support teams to improve on the state of the art.",
+  "category": "mixed",
+  "domain": "computational biology / drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "binary_classification",
+    "transfer_generalization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson correlation and bias-corrected correlation evaluated perturbation-wise with cell-line/perturbation-exclusive splits; perturbation-wise performance and Bias Detector analyses",
+  "general_score_metric": "bias-corrected Pearson correlation (perturbation-wise)",
+  "typical_sota_score": "typically low (corrected correlations often < 0.5)",
+  "year_of_publish": 2023,
+  "reputation": "5 citations",
+  "notes": "Non-LLM benchmark; dataset contains biological biases that can inflate naive metrics — careful split strategies and bias-detection are required; moderate dataset size and high computational/biological expertise requirements.",
+  "creators": {
+    "scientists": [
+      "B. Szalai",
+      "Imre Gáspár",
+      "Valér Kaszás",
+      "László Mérő",
+      "Milán Sztilkovics",
+      "Kristóf Z. Szalay"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

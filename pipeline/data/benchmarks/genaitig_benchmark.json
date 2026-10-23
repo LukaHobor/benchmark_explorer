@@ -1,0 +1,36 @@
+{
+  "name": "GenAI-TIG Benchmark",
+  "description": "Test Input Generators (TIGs) are crucial to assess the ability of Deep Learning (DL) image classifiers to provide correct predictions for inputs beyond their training and test sets. Recent advancements in Generative AI (GenAI) models have made them a powerful tool for creating and manipulating synthetic images, although these advancements also imply increased complexity and resource demands for training. In this work, we benchmark and combine different GenAI models with TIGs, assessing their effectiveness, efficiency, and quality of the generated test images, in terms of domain validity and label preservation. We conduct an empirical study involving three different GenAI architectures (VAEs, GANs, Diffusion Models), five classification tasks of increasing complexity, and 364 human evaluations. Our results show that simpler architectures, such as VAEs, are sufficient for less complex datasets like MNIST. However, when dealing with feature-rich datasets, such as ImageNet, more sophisticated architectures like Diffusion Models achieve superior performance by generating a higher number of valid, misclassification-inducing inputs.",
+  "category": "vision",
+  "domain": "computer vision / software testing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_generation",
+    "robustness_evaluation",
+    "image_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2024,
+  "reputation": "A recent academic benchmark exploring GenAI for test-input generation; limited adoption so far outside research groups studying DL robustness and synthetic data.",
+  "notes": "Non-LLM, image-focused benchmark; relies on human evaluation (364 judgments) for domain validity and label preservation, dataset-specific results (MNIST→ImageNet) and resource-intensive generative models.",
+  "creators": {
+    "scientists": [
+      "Maryam",
+      "Matteo Biagiola",
+      "Andrea Stocco",
+      "Vincenzo Riccio"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.17652",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

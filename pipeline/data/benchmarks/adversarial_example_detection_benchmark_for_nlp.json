@@ -1,0 +1,30 @@
+{
+  "name": "Adversarial Example Detection Benchmark for NLP",
+  "description": "Word-level adversarial attacks have shown success in NLP models, drastically decreasing the performance of transformer-based models in recent years. As a counter measure, adversarial defense has been explored, but relatively little efforts have been made to detect adversarial examples. However, detecting adversarial examples in NLP may be crucial for automated task (e.g. review sentiment analysis) that wishes to amass information about a certain population and additionally be a step towards a robust defense system. To this end, we release a dataset for four popular attack methods on three datasets and four NLP models to encourage further research in this field. Along with it, we propose a competitive baseline based on density estimation that has the highest \\textsc{auc} on 21 out of 22 dataset-attack-model combinations.\\footnote{https://github.com/anoymous92874838/text-adv-detection}",
+  "category": "text",
+  "domain": "NLP / security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUC (Area Under ROC); can also report accuracy/precision-recall for thresholded detection",
+  "general_score_metric": "AUC (Area Under ROC)",
+  "typical_sota_score": "varies widely by attack/model (commonly ~0.7–0.99 AUC across settings)",
+  "reputation": "Niche dataset used primarily by adversarial-NLP researchers; limited adoption outside the adversarial-detection community.",
+  "notes": "Class imbalance and varying attack strengths across splits; benchmark focuses on detector performance (not generation) and is non-LLM-specific; results depend strongly on victim model and attack type.",
+  "creators": {
+    "scientists": [
+      "Anonymous"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

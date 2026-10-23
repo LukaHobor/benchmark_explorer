@@ -1,0 +1,35 @@
+{
+  "name": "VIPriors Instance Segmentation Challenge",
+  "description": "Copy-Paste has proven to be a very effective data augmentation for instance segmentation which can improve the generalization of the model. We used a task-specific Copy-Paste data augmentation method to achieve good performance on the instance segmentation track of the 2nd VIPriors workshop challenge. We also applied additional data augmentation techniques including RandAugment and GridMask. Our segmentation model is the HTC detector on the CBSwin-B with CBFPN with some tweaks. This model was trained at the multi-scale mode by a random sampler on the 6x schedule and tested at the single-scale mode. By combining these techniques, we achieved 0.398 AP@0.50:0.95 with the validation set and 0.433 AP@0.50:0.95 with the test set. Finally, we reached 0.477 AP@0.50:0.95 with the test set by adding the validation set to the training data. Source code is available at https://github.com/jahongir7174/VIP2021.",
+  "category": "vision",
+  "domain": "vision",
+  "task_types": [
+    "instance_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "COCO-style mask AP (AP@[.50:.95])",
+  "general_score_metric": "AP@[.50:.95]",
+  "typical_sota_score": "0.43–0.48 AP",
+  "year_of_publish": 2021,
+  "reputation": "A workshop challenge benchmark used in the VIPriors community for instance segmentation research, but not a broadly standardized benchmark.",
+  "notes": "Small challenge-style benchmark; results are sensitive to augmentation and training recipe, and reported scores are on a specific workshop test set.",
+  "creators": {
+    "scientists": [
+      "Jahongir Yunusov",
+      "Shohruh Rakhmatov",
+      "Abdulaziz Namozov",
+      "Abdulaziz Gaybulayev",
+      "Tae-Hyong Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2110.00470",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "RefusalBench",
+  "description": "The ability of language models in RAG systems to selectively refuse to answer based on flawed context is critical for safety, yet remains a significant failure point. Our large-scale study reveals that even frontier models struggle in this setting, with refusal accuracy dropping below 50% on multi-document tasks, while exhibiting either dangerous overconfidence or overcaution. Static benchmarks fail to reliably evaluate this capability, as models exploit dataset-specific artifacts and memorize test instances. We introduce RefusalBench, a generative methodology that programmatically creates diagnostic test cases through controlled linguistic perturbation. Our framework employs 176 distinct perturbation strategies across six categories of informational uncertainty and three intensity levels. Evaluation of over 30 models uncovers systematic failure patterns: refusal comprises separable detection and categorization skills, and neither scale nor extended reasoning improves performance. We find that selective refusal is a trainable, alignment-sensitive capability, offering a clear path for improvement. We release two benchmarks -- RefusalBench-NQ (single document) and RefusalBench-GaRAGe (multi-document) -- and our complete generation framework to enable continued, dynamic evaluation of this critical capability.",
+  "category": "text",
+  "domain": "reasoning",
+  "task_types": [
+    "open_ended",
+    "generative"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A very recent benchmark with limited public adoption so far, mainly of interest to researchers studying selective refusal and grounded generation.",
+  "notes": "Includes two benchmarks (RefusalBench-NQ and RefusalBench-GaRAGe) and a generation framework; uses 176 perturbation strategies.",
+  "creators": {
+    "scientists": [
+      "Aashiq Muhamed",
+      "Leonardo F. R. Ribeiro",
+      "Markus Dreyer",
+      "Virginia Smith",
+      "Mona T. Diab"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2510.10390",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

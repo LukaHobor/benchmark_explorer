@@ -1,0 +1,40 @@
+{
+  "name": "Caltech Fish Counting Dataset (CFC)",
+  "description": "We present the Caltech Fish Counting Dataset (CFC), a large-scale dataset for detecting, tracking, and counting fish in sonar videos. We identify sonar videos as a rich source of data for advancing low signal-to-noise computer vision applications and tackling domain generalization in multiple-object tracking (MOT) and counting. In comparison to existing MOT and counting datasets, which are largely restricted to videos of people and vehicles in cities, CFC is sourced from a natural-world domain where targets are not easily resolvable and appearance features cannot be easily leveraged for target re-identification. With over half a million annotations in over 1,500 videos sourced from seven different sonar cameras, CFC allows researchers to train MOT and counting algorithms and evaluate generalization performance at unseen test locations. We perform extensive baseline experiments and identify key challenges and opportunities for advancing the state of the art in generalization in MOT and counting.",
+  "category": "vision",
+  "domain": "underwater computer vision / sonar",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multiple_object_tracking",
+    "counting",
+    "video_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MOTA / IDF1 for tracking; mAP for detection; MAE / MSE for counting (task_success_rate / average game score for counting/tracking pipelines)",
+  "general_score_metric": "MAE (counting) and MOTA / IDF1 (tracking)",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded within the underwater and sonar computer-vision / marine-robotics community as a large, challenging benchmark, but niche compared to mainstream MOT datasets.",
+  "notes": "Non-LLM benchmark focused on sonar imagery; domain-specific (sonar) so models trained here may not transfer to standard optical video; contains large number of annotations but targets are low-resolution/low-SNR which leads to noisy/ambiguous annotations and challenging re-identification across views.",
+  "creators": {
+    "scientists": [
+      "Justin Kay",
+      "Peter Kulits",
+      "Suzanne Stathatos",
+      "Siqi Deng",
+      "Erik Young",
+      "Sara Beery",
+      "Grant van Horn",
+      "Pietro Perona"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.09295",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Pre-trained Remote Sensing Benchmark",
+  "description": "Research in self-supervised learning (SSL) with natural images has progressed rapidly in recent years and is now increasingly being applied to and benchmarked with datasets containing remotely sensed imagery. A common benchmark case is to evaluate SSL pre-trained model embeddings on datasets of remotely sensed imagery with small patch sizes, e.g., 32x32 pixels, whereas standard SSL pre-training takes place with larger patch sizes, e.g., 224x224. Furthermore, pre-training methods tend to use different image normalization preprocessing steps depending on the dataset. In this paper, we show, across seven satellite and aerial imagery datasets of varying resolution, that by simply following the preprocessing steps used in pre-training (precisely, image sizing and normalization methods), one can achieve significant performance improvements when evaluating the extracted features on downstream tasks -- an important detail overlooked in previous work in this space. We show that by following these steps, ImageNet pre-training remains a competitive baseline for satellite imagery based transfer learning tasks -- for example we find that these steps give +32.28 to overall accuracy on the So2Sat random split dataset and +11.16 on the EuroSAT dataset. Finally, we report comprehensive benchmark results with a variety of simple baseline methods for each of the seven datasets, forming an initial benchmark suite for remote sensing imagery.",
+  "category": "vision",
+  "domain": "remote sensing / earth observation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "feature_extraction",
+    "transfer_learning"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (classification) / transfer performance of extracted features",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "An initial, practical benchmark suite for remote sensing feature-transfer that highlighted the importance of matching pretraining preprocessing; recognized in the remote sensing community as a useful baseline set.",
+  "notes": "Non-LLM vision benchmark; results are sensitive to pretraining preprocessing (image sizing and normalization), which can materially change performance. Benchmarks combine multiple remote sensing datasets of varying resolution — not a single homogeneous dataset.",
+  "creators": {
+    "scientists": [
+      "Isaac Corley",
+      "Caleb Robinson",
+      "Rahul Dodhia",
+      "Juan M. Lavista Ferres",
+      "Peyman Najafirad"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.13456",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

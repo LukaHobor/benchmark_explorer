@@ -1,0 +1,35 @@
+{
+  "name": "GreenRec",
+  "description": "Over recent years, news recommender systems have gained significant attention in both academia and industry, emphasizing the need for a standardized benchmark to evaluate and compare the performance of these systems. Concurrently, Green AI advocates for reducing the energy consumption and environmental impact of machine learning. To address these concerns, we introduce the first Green AI benchmarking framework for news recommendation, known as GreenRec, and propose a metric for assessing the tradeoff between recommendation accuracy and efficiency. Our benchmark encompasses 30 base models and their variants, covering traditional end-to-end training paradigms as well as our proposed efficient only-encode-once (OLEO) paradigm. Through experiments consuming 2000 GPU hours, we observe that the OLEO paradigm achieves competitive accuracy compared to state-of-the-art end-to-end paradigms and delivers up to a 2992\\% improvement in sustainability metrics.",
+  "category": "text",
+  "domain": "recommender systems",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "ranking",
+    "top_k_recommendation",
+    "efficiency_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "nDCG@k / Recall@k for accuracy plus energy/latency measurements and a composite accuracy–efficiency tradeoff score",
+  "general_score_metric": "composite accuracy–efficiency tradeoff score (accuracy metrics such as nDCG@k combined with energy/compute efficiency)",
+  "year_of_publish": 2024,
+  "reputation": "A recent (2024) research benchmark introducing a Green AI perspective to news recommendation; gaining attention among recommender-systems and sustainability researchers but not yet broadly adopted in production evaluations.",
+  "notes": "Focuses on news recommendation and includes 30 base models and variants; energy/sustainability measurements are hardware- and measurement-protocol dependent, so results may not be directly comparable across setups; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Qijiong Liu",
+      "Jieming Zhu",
+      "Quanyu Dai",
+      "Xiao-Ming Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2403.04736",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

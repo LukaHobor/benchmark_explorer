@@ -1,0 +1,36 @@
+{
+  "name": "Localized Drift Synthetic Benchmark",
+  "description": "Concept drift is a common phenomenon in data streams where the statistical properties of the target variable change over time. Traditionally, drift is assumed to occur globally, affecting the entire dataset uniformly. However, this assumption does not always hold true in real-world scenarios where only specific subpopulations within the data may experience drift. This paper explores the concept of localized drift and evaluates the performance of several drift detection techniques in identifying such localized changes. We introduce a synthetic dataset based on the Agrawal generator, where drift is induced in a randomly chosen subgroup. Our experiments demonstrate that commonly adopted drift detection methods may fail to detect drift when it is confined to a small subpopulation. We propose and test various drift detection approaches to quantify their effectiveness in this localized drift scenario. We make the source code for the generation of the synthetic benchmark available at https://github.com/fgiobergia/subgroup-agrawal-drift.",
+  "category": "mixed",
+  "domain": "data streams",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "drift_detection",
+    "concept_drift_detection",
+    "online_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "detection_rate",
+  "general_score_metric": "detection_rate",
+  "year_of_publish": 2024,
+  "reputation": "Academic, niche benchmark used in the streaming/concept-drift research community to study localized subgroup drift.",
+  "notes": "Synthetic non-LLM benchmark; sensitive to subgroup size (localized effects may be small), potential train/test contamination risks, and metric dependence on detector thresholds.",
+  "creators": {
+    "scientists": [
+      "Flavio Giobergia",
+      "Eliana Pastor",
+      "Luca de Alfaro",
+      "Elena Baralis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2408.14687",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

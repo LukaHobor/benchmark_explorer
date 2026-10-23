@@ -1,0 +1,38 @@
+{
+  "name": "3DGen-Bench (3DGen-Arena)",
+  "description": "3D generation is experiencing rapid advancements, while the development of 3D evaluation has not kept pace. How to keep automatic evaluation equitably aligned with human perception has become a well-recognized challenge. Recent advances in the field of language and image generation have explored human preferences and showcased respectable fitting ability. However, the 3D domain still lacks such a comprehensive preference dataset over generative models. To mitigate this absence, we develop 3DGen-Arena, an integrated platform in a battle manner. Then, we carefully design diverse text and image prompts and leverage the arena platform to gather human preferences from both public users and expert annotators, resulting in a large-scale multi-dimension human preference dataset 3DGen-Bench. Using this dataset, we further train a CLIP-based scoring model, 3DGen-Score, and a MLLM-based automatic evaluator, 3DGen-Eval. These two models innovatively unify the quality evaluation of text-to-3D and image-to-3D generation, and jointly form our automated evaluation system with their respective strengths. Extensive experiments demonstrate the efficacy of our scoring model in predicting human preferences, exhibiting a superior correlation with human ranks compared to existing metrics. We believe that our 3DGen-Bench dataset and automated evaluation system will foster a more equitable evaluation in the field of 3D generation, further promoting the development of 3D generative models and their downstream applications.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "human_preference_ranking",
+    "pairwise_comparison",
+    "quality_scoring"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "correlation_with_human_preferences (e.g., Spearman/Pearson)",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed human-preference benchmark and automated evaluation suite gaining attention in the 3D generation research community.",
+  "notes": "Preference-based dataset and learned scorers reflect human judgments and are subject to annotator bias and demographic variability; evaluation focuses on relative preference (not absolute fidelity) and may not fully capture all perceptual quality axes.",
+  "creators": {
+    "scientists": [
+      "Yuhan Zhang",
+      "Mengchen Zhang",
+      "Tong Wu",
+      "Tengfei Wang",
+      "Gordon Wetzstein",
+      "Dahua Lin",
+      "Ziwei Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.21745",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

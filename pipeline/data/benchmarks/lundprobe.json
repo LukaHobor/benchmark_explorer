@@ -1,0 +1,48 @@
+{
+  "name": "LUND-PROBE",
+  "description": "Radiotherapy treatment for prostate cancer relies on computed tomography (CT) and/or magnetic resonance imaging (MRI) for segmentation of target volumes and organs at risk (OARs). Manual segmentation of these volumes is regarded as the gold standard for ground truth in machine learning applications but to acquire such data is tedious and time-consuming. A publicly available clinical dataset is presented, comprising MRI- and synthetic CT (sCT) images, target and OARs segmentations, and radiotherapy dose distributions for 432 prostate cancer patients treated with MRI-guided radiotherapy. An extended dataset with 35 patients is also included, with the addition of deep learning (DL)-generated segmentations, DL segmentation uncertainty maps, and DL segmentations manually adjusted by four radiation oncologists. The publication of these resources aims to aid research within the fields of automated radiotherapy treatment planning, segmentation, inter-observer analyses, and DL model uncertainty investigation. The dataset is hosted on the AIDA Data Hub and offers a free-to-use resource for the scientific community, valuable for the advancement of medical imaging and prostate cancer radiotherapy research.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "dose_prediction",
+    "uncertainty_estimation",
+    "inter_observer_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient / Intersection-over-Union (IoU) and Hausdorff distance (for segmentation); dose-distribution metrics (e.g., DVH differences) for dose prediction",
+  "general_score_metric": "Dice coefficient (for segmentation)",
+  "typical_sota_score": "85–95% (Dice, reported ranges for prostate segmentation models)",
+  "year_of_publish": 2025,
+  "reputation": "Moderately adopted within the medical imaging and radiotherapy research community as a useful, freely available prostate MRI + sCT dataset hosted on the AIDA Data Hub.",
+  "notes": "Non-LLM medical imaging benchmark; reasonably sized for clinical imaging but still limited compared to large natural-image corpora; includes synthetic CT which may introduce modality-specific biases; extended subset contains DL-generated labels and manual adjustments which can introduce annotation biases; potential dataset-domain/generalization limitations and need for careful de-identification/ethical use.",
+  "creators": {
+    "scientists": [
+      "Viktor Rogowski",
+      "Lars E Olsson",
+      "Jonas Scherman",
+      "Emilia Persson",
+      "Mustafa Kadhim",
+      "Sacha af Wetterstedt",
+      "Adalsteinn Gunnlaugsson",
+      "Martin P. Nilsson",
+      "Nandor Vass",
+      "Mathieu Moreau",
+      "Maria Gebre Medhin",
+      "Sven Bäck",
+      "Per Munck af Rosenschöld",
+      "Silke Engelholm",
+      "Christian Jamtheim Gustafsson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2502.04493",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

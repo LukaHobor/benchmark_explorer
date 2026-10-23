@@ -1,0 +1,35 @@
+{
+  "name": "Pixel-Face",
+  "description": "3D face reconstruction is a fundamental task that can facilitate numerous applications such as robust facial analysis and augmented reality. It is also a challenging task due to the lack of high-quality datasets that can fuel current deep learning-based methods. However, existing datasets are limited in quantity, realisticity and diversity. To circumvent these hurdles, we introduce Pixel-Face, a large-scale, high-resolution and diverse 3D face dataset with massive annotations. Specifically, Pixel-Face contains 855 subjects aging from 18 to 80. Each subject has more than 20 samples with various expressions. Each sample is composed of high-resolution multi-view RGB images and 3D meshes with various expressions. Moreover, we collect precise landmarks annotation and 3D registration result for each data. To demonstrate the advantages of Pixel-Face, we re-parameterize the 3D Morphable Model (3DMM) into Pixel-3DM using the collected data. We show that the obtained Pixel-3DM is better in modeling a wide range of face shapes and expressions. We also carefully benchmark existing 3D face reconstruction methods on our dataset. Moreover, Pixel-Face serves as an effective training source. We observe that the performance of current face reconstruction models significantly improves both on existing benchmarks and Pixel-Face after being fine-tuned using our newly collected data. Extensive experiments demonstrate the effectiveness of Pixel-3DM and the usefulness of Pixel-Face.",
+  "category": "vision",
+  "domain": "vision (3D face reconstruction)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_reconstruction",
+    "landmark_detection",
+    "multi_view_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "3D reconstruction error (per-vertex RMSE) and normalized mean error (NME) for landmarks",
+  "general_score_metric": "RMSE (per-vertex) and NME (landmarks)",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded, high-resolution multi-view 3D face dataset that has gained attention for improving 3DMMs and fine-tuning reconstruction models.",
+  "notes": "Non-LLM benchmark focused on high-resolution multi-view face reconstruction; contains identifiable faces (privacy considerations). Large and diverse for 3D face tasks but may still have demographic and expression coverage limitations; not saturated for all metrics.",
+  "creators": {
+    "scientists": [
+      "Jiangjing Lyu",
+      "Xiaobo Li",
+      "Xiangyu Zhu",
+      "Cheng Cheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2008.12444",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

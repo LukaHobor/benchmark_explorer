@@ -1,0 +1,37 @@
+{
+  "name": "ISIC 2017 Skin Cancer Classification Benchmark",
+  "description": "Skin cancer is one of the deadly types of cancer and is common in the world. Recently, there has been a huge jump in the rate of people getting skin cancer. For this reason, the number of studies on skin cancer classification with deep learning are increasing day by day. For the growth of work in this area, the International Skin Imaging Collaboration (ISIC) organization was established and they created an open dataset archive. In this study, images were taken from ISIC 2017 Challenge. The skin cancer images taken were preprocessed and data augmented. Later, these images were trained with transfer learning and fine-tuning approach and deep learning models were created in this way. 3 different mobile deep learning models and 3 different batch size values were determined for each, and a total of 9 models were created. Among these models, the NASNetMobile model with 16 batch size got the best result. The accuracy value of this model is 82.00%, the precision value is 81.77% and the F1 score value is 0.8038. Our method is to benchmark mobile deep learning models which have few parameters and compare the results of the models.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "binary_classification",
+    "medical_diagnosis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "ROC-AUC (area under the ROC curve); accuracy and F1 commonly reported as secondary metrics",
+  "general_score_metric": "ROC-AUC",
+  "typical_sota_score": "AUC ≈ 0.85–0.95 depending on the task and class balance",
+  "year_of_publish": 2021,
+  "reputation": "Widely used benchmark in medical imaging/dermatology with broad community adoption (ISIC challenge series).",
+  "notes": "Class imbalance, limited dataset size, label noise and inter-rater variability. Possible patient/sample overlap across splits and domain shift from real clinical settings; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Abdurrahim Yilmaz",
+      "Mucahit Kalebasi",
+      "Yegor Samoylenko",
+      "Mehmet Erhan Guvenilir",
+      "Huseyin Uvet"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2110.12270",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

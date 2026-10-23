@@ -1,0 +1,39 @@
+{
+  "name": "CLOVER",
+  "description": "Software testing is a critical aspect of software development, yet generating test cases remains a routine task for engineers. This paper presents a benchmark, CLOVER, to evaluate models' capabilities in generating and completing test cases under specific conditions. Spanning from simple assertion completions to writing test cases that cover specific code blocks across multiple files, these tasks are based on 12 python repositories, analyzing 845 problems with context lengths ranging from 4k to 128k tokens. Utilizing code testing frameworks, we propose a method to construct retrieval contexts using coverage information. While models exhibit comparable performance with short contexts, notable differences emerge with 16k contexts. Notably, models like GPT-4o and Claude 3.5 can effectively leverage relevant snippets; however, all models score below 35\\% on the complex Task III, even with the oracle context provided, underscoring the benchmark's significance and the potential for model improvement. The benchmark is containerized for code execution across tasks, and we will release the code, data, and construction methodologies.",
+  "category": "code",
+  "domain": "software testing / ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_completion",
+    "test_generation",
+    "code_modification",
+    "retrieval_augmented_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "test_pass_rate",
+  "typical_sota_score": "≤35% on the most complex (Task III) problems; higher (roughly 50–80%) on simpler tasks/context settings",
+  "year_of_publish": 2025,
+  "reputation": "11 citations",
+  "notes": "Execution-based evaluation with unit-test pass rates. Small number of source repositories (12) so training-contamination risk may exist. Long-context and retrieval aspects matter (oracle vs retrieved context affects scores). Not saturated — current top models still struggle on complex multi-file test-generation tasks.",
+  "creators": {
+    "scientists": [
+      "Jiacheng Xu",
+      "Bo Pang",
+      "Jin Qu",
+      "Hiroaki Hayashi",
+      "Caiming Xiong",
+      "Yingbo Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2502.08806",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

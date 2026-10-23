@@ -1,0 +1,38 @@
+{
+  "name": "MALS",
+  "description": "In this paper, we introduce a large Multi-Attribute and Language Search dataset for text-based person retrieval, called MALS, and explore the feasibility of performing pre-training on both attribute recognition and image-text matching tasks in one stone. In particular, MALS contains 1,510,330 image-text pairs, which is about 37.5 times larger than prevailing CUHK-PEDES, and all images are annotated with 27 attributes. Considering the privacy concerns and annotation costs, we leverage the off-the-shelf diffusion models to generate the dataset. To verify the feasibility of learning from the generated data, we develop a new joint Attribute Prompt Learning and Text Matching Learning (APTM) framework, considering the shared knowledge between attribute and text. As the name implies, APTM contains an attribute prompt learning stream and a text matching learning stream. (1) The attribute prompt learning leverages the attribute prompts for image-attribute alignment, which enhances the text matching learning. (2) The text matching learning facilitates the representation learning on fine-grained details, and in turn, boosts the attribute prompt learning. Extensive experiments validate the effectiveness of the pre-training on MALS, achieving state-of-the-art retrieval performance via APTM on three challenging real-world benchmarks. In particular, APTM achieves a consistent improvement of +6.96%, +7.68%, and +16.95% Recall@1 accuracy on CUHK-PEDES, ICFG-PEDES, and RSTPReid datasets by a clear margin, respectively.",
+  "category": "multimodal",
+  "domain": "computer vision / text-based person retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_based_person_retrieval",
+    "attribute_recognition",
+    "pretraining"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@K (e.g., Recall@1, Recall@5)",
+  "general_score_metric": "Recall@1",
+  "year_of_publish": 2023,
+  "reputation": "A recent (2023) large synthetic dataset for text-based person retrieval that has attracted interest for pretraining, but is not yet broadly adopted as a standard benchmark.",
+  "notes": "Dataset is largely synthetic (diffusion-generated) which can introduce domain gap and synthetic bias; useful for pretraining but may not perfectly reflect real-world distributions; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Shuyu Yang",
+      "Yinan Zhou",
+      "Yaxiong Wang",
+      "Yujiao Wu",
+      "Li Zhu",
+      "Zhedong Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.02898",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "DPMLBench",
+  "description": "Differential privacy (DP), as a rigorous mathematical definition quantifying privacy leakage, has become a well-accepted standard for privacy protection. Combined with powerful machine learning techniques, differentially private machine learning (DPML) is increasingly important. As the most classic DPML algorithm, DP-SGD incurs a significant loss of utility, which hinders DPML's deployment in practice. Many studies have recently proposed improved algorithms based on DP-SGD to mitigate utility loss. However, these studies are isolated and cannot comprehensively measure the performance of improvements proposed in algorithms. More importantly, there is a lack of comprehensive research to compare improvements in these DPML algorithms across utility, defensive capabilities, and generalizability. We fill this gap by performing a holistic measurement of improved DPML algorithms on utility and defense capability against membership inference attacks (MIAs) on image classification tasks. We first present a taxonomy of where improvements are located in the machine learning life cycle. Based on our taxonomy, we jointly perform an extensive measurement study of the improved DPML algorithms. We also cover state-of-the-art label differential privacy (Label DP) algorithms in the evaluation. According to our empirical results, DP can effectively defend against MIAs, and sensitivity-bounding techniques such as per-sample gradient clipping play an important role in defense. We also explore some improvements that can maintain model utility and defend against MIAs more effectively. Experiments show that Label DP algorithms achieve less utility loss but are fragile to MIAs. To support our evaluation, we implement a modular re-usable software, DPMLBench, which enables sensitive data owners to deploy DPML algorithms and serves as a benchmark tool for researchers and practitioners.",
+  "category": "mixed",
+  "domain": "machine learning / privacy (differential privacy)",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "image_classification",
+    "benchmarking",
+    "privacy_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "test_accuracy (reported at fixed epsilon/privacy budget)",
+  "typical_sota_score": "varies widely by privacy budget (example ranges reported ~40–85% depending on epsilon and task)",
+  "year_of_publish": 2023,
+  "reputation": "A well-designed empirical benchmark in the differential privacy ML community used to compare DP-SGD variants and defenses; cited by researchers working on DP utility/defense trade-offs but not a universal standard.",
+  "notes": "Non-LLM benchmark focused on image tasks; results strongly depend on chosen privacy budget (epsilon), dataset, clipping/optimizer details and attack implementation. Label-DP methods may show better utility but can be fragile to membership inference. Reproducibility requires careful matching of DP hyperparameters.",
+  "creators": {
+    "scientists": [
+      "Chengkun Wei",
+      "Minghu Zhao",
+      "Zhikun Zhang",
+      "Min Chen",
+      "Wenlong Meng",
+      "Bo Liu",
+      "Yuan Fan",
+      "Wenzhi Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2305.05900",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

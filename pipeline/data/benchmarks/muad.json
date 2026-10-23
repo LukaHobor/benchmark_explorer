@@ -1,0 +1,41 @@
+{
+  "name": "MUAD",
+  "description": "Predictive uncertainty estimation is essential for safe deployment of Deep Neural Networks in real-world autonomous systems. However, disentangling the different types and sources of uncertainty is non trivial for most datasets, especially since there is no ground truth for uncertainty. In addition, while adverse weather conditions of varying intensities can disrupt neural network predictions, they are usually under-represented in both training and test sets in public datasets.We attempt to mitigate these setbacks and introduce the MUAD dataset (Multiple Uncertainties for Autonomous Driving), consisting of 10,413 realistic synthetic images with diverse adverse weather conditions (night, fog, rain, snow), out-of-distribution objects, and annotations for semantic segmentation, depth estimation, object, and instance detection. MUAD allows to better assess the impact of different sources of uncertainty on model performance. We conduct a thorough experimental study of this impact on several baseline Deep Neural Networks across multiple tasks, and release our dataset to allow researchers to benchmark their algorithm methodically in adverse conditions. More visualizations and the download link for MUAD are available at https://muad-dataset.github.io/.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "depth_estimation",
+    "object_detection",
+    "instance_segmentation",
+    "uncertainty_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (mIoU, mAP, RMSE, calibration/error metrics)",
+  "general_score_metric": "task-specific metrics (mIoU / mAP / RMSE / calibration metrics)",
+  "year_of_publish": 2022,
+  "reputation": "A recent dataset aimed at studying uncertainty under adverse weather; of interest to autonomous driving and uncertainty-estimation researchers but not yet widely adopted as a community standard.",
+  "notes": "Synthetic dataset (10k images) with adverse-weather and OOD inserts — useful for controlled studies but may have a domain gap to real-world driving; multi-task evaluations require different metrics per task; relatively small compared to large driving datasets.",
+  "creators": {
+    "scientists": [
+      "Gianni Franchi",
+      "Xuanlong Yu",
+      "Andrei Bursuc",
+      "Angel Tena",
+      "Rémi Kazmierczak",
+      "Séverine Dubuisson",
+      "Emanuel Aldea",
+      "David Filliat"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2203.01437",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

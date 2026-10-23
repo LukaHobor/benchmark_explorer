@@ -1,0 +1,36 @@
+{
+  "name": "COMICS Text+",
+  "description": "This study focuses on improving the optical character recognition (OCR) data for panels in the COMICS dataset, the largest dataset containing text and images from comic books. To do this, we developed a pipeline for OCR processing and labeling of comic books and created the first text detection and recognition datasets for western comics, called \"COMICS Text+: Detection\" and \"COMICS Text+: Recognition\". We evaluated the performance of state-of-the-art text detection and recognition models on these datasets and found significant improvement in word accuracy and normalized edit distance compared to the text in COMICS. We also created a new dataset called \"COMICS Text+\", which contains the extracted text from the textboxes in the COMICS dataset. Using the improved text data of COMICS Text+ in the comics processing model from resulted in state-of-the-art performance on cloze-style tasks without changing the model architecture. The COMICS Text+ dataset can be a valuable resource for researchers working on tasks including text detection, recognition, and high-level processing of comics, such as narrative understanding, character relations, and story generation. All the data and inference instructions can be accessed in https://github.com/gsoykan/comics_text_plus.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_detection",
+    "text_recognition",
+    "cloze_question_answering"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "word_accuracy",
+  "typical_sota_score": "varies (approx. 60–95% depending on subtask and model)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2023,
+  "reputation": "A niche but valuable dataset for the comics/NLP community; used for OCR/text-in-image and narrative/cloze evaluation in comics research.",
+  "notes": "Domain-specific (western comics) OCR challenges (stylized fonts, layouts); improvements reported over original COMICS OCR; non-LLM primary tasks; annotation and OCR noise possible.",
+  "creators": {
+    "scientists": [
+      "Gürkan Soykan",
+      "Deniz Yuret",
+      "Tevfik Metin Sezgin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2212.14674",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

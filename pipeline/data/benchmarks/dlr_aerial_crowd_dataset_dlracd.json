@@ -1,0 +1,35 @@
+{
+  "name": "DLR Aerial Crowd Dataset (DLR-ACD)",
+  "description": "In spite of the many advantages of aerial imagery for crowd monitoring and management at mass events, datasets of aerial images of crowds are still lacking in the field. As a remedy, in this work we introduce a novel crowd dataset, the DLR Aerial Crowd Dataset (DLR-ACD), which is composed of 33 large aerial images acquired from 16 flight campaigns over mass events with 226,291 persons annotated. To the best of our knowledge, DLR-ACD is the first aerial crowd dataset and will be released publicly. To tackle the problem of accurate crowd counting and density map estimation in aerial images of crowds, this work also proposes a new encoder-decoder convolutional neural network, the so-called Multi-Resolution Crowd Network MRCNet. The encoder is based on the VGG-16 network and the decoder is composed of a set of bilinear upsampling and convolutional layers. Using two losses, one at an earlier level and another at the last level of the decoder, MRCNet estimates crowd counts and high-resolution crowd density maps as two different but interrelated tasks. In addition, MRCNet utilizes contextual and detailed local information by combining high- and low-level features through a number of lateral connections inspired by the Feature Pyramid Network (FPN) technique. We evaluated MRCNet on the proposed DLR-ACD dataset as well as on the ShanghaiTech dataset, a CCTV-based crowd counting benchmark. The results demonstrate that MRCNet outperforms the state-of-the-art crowd counting methods in estimating the crowd counts and density maps for both aerial and CCTV-based images.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "density_map_estimation",
+    "regression",
+    "object_counting"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE (mean absolute error) and RMSE (root mean squared error) for counting; additional density-map quality metrics (e.g., MSE) may be reported",
+  "general_score_metric": "MAE (mean absolute error) on count estimates",
+  "year_of_publish": 2019,
+  "reputation": "22 citations",
+  "notes": "Contains only 33 large aerial images (226,291 annotated persons) — many annotations but a small number of images, which can risk overfitting and limits geographic/diversity coverage; non-LLM benchmark focused on aerial crowd counting and density estimation; models typically reported using MAE/RMSE.",
+  "creators": {
+    "scientists": [
+      "Reza Bahmanyar",
+      "Eleonora Vig",
+      "Peter Reinartz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1909.12743",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

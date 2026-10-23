@@ -1,0 +1,43 @@
+{
+  "name": "G-VUE",
+  "description": "Current computer vision models, unlike the human visual system, cannot yet achieve general-purpose visual understanding. Existing efforts to create a general vision model are limited in the scope of assessed tasks and offer no overarching framework to perform them holistically. We present a new comprehensive benchmark, General-purpose Visual Understanding Evaluation (G-VUE), covering the full spectrum of visual cognitive abilities with four functional domains $\\unicode{x2014}$ Perceive, Ground, Reason, and Act. The four domains are embodied in 11 carefully curated tasks, from 3D reconstruction to visual reasoning and manipulation. Along with the benchmark, we provide a general encoder-decoder framework to allow for the evaluation of arbitrary visual representation on all 11 tasks. We evaluate various pre-trained visual representations with our framework and observe that (1) Transformer-based visual backbone generally outperforms CNN-based backbone on G-VUE, (2) visual representations from vision-language pre-training are superior to those with vision-only pre-training across visual tasks. With G-VUE, we provide a holistic evaluation standard to motivate research toward building general-purpose visual systems via obtaining more general-purpose visual representations.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "3d_reconstruction",
+    "visual_reasoning",
+    "object_detection",
+    "segmentation",
+    "visual_question_answering",
+    "affordance_prediction",
+    "manipulation_task"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-dependent metrics (e.g., IoU, AP, accuracy, reconstruction error) aggregated into a composite/average benchmark score",
+  "general_score_metric": "composite average score across the 11 tasks/domains (task-weighted mean of task-specific metrics)",
+  "year_of_publish": 2022,
+  "reputation": "Proposed as a holistic benchmark for general-purpose visual understanding; cited in research on unified visual representations but not as widely adopted as single-task standards like COCO or ImageNet.",
+  "notes": "Comprehensive multi-task vision benchmark (not for LLMs); performance varies widely across tasks and depends on how representations are adapted to task heads. Not saturated; requires specialized evaluation code and per-task metric interpretation.",
+  "creators": {
+    "scientists": [
+      "Jiangyong Huang",
+      "William Yicheng Zhu",
+      "Baoxiong Jia",
+      "Zan Wang",
+      "Xiaojian Ma",
+      "Qing Li",
+      "Siyuan Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2211.15402",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

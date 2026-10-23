@@ -1,0 +1,39 @@
+{
+  "name": "Aariz",
+  "description": "The accurate identification and precise localization of cephalometric landmarks enable the classification and quantification of anatomical abnormalities. The traditional way of marking cephalometric landmarks on lateral cephalograms is a monotonous and time-consuming job. Endeavours to develop automated landmark detection systems have persistently been made, however, they are inadequate for orthodontic applications due to unavailability of a reliable dataset. We proposed a new state-of-the-art dataset to facilitate the development of robust AI solutions for quantitative morphometric analysis. The dataset includes 1000 lateral cephalometric radiographs (LCRs) obtained from 7 different radiographic imaging devices with varying resolutions, making it the most diverse and comprehensive cephalometric dataset to date. The clinical experts of our team meticulously annotated each radiograph with 29 cephalometric landmarks, including the most significant soft tissue landmarks ever marked in any publicly available dataset. Additionally, our experts also labelled the cervical vertebral maturation (CVM) stage of the patient in a radiograph, making this dataset the first standard resource for CVM classification. We believe that this dataset will be instrumental in the development of reliable automated landmark detection frameworks for use in orthodontics and beyond.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "landmark_localization",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_distance_error (mm) for landmarks; accuracy / F1 for CVM classification; percentage within X mm (P85/P90) often reported",
+  "general_score_metric": "mean radial/distance error (mm) for landmarks",
+  "typical_sota_score": "1.5–3.0 mm mean error (landmark localization); 80–95% accuracy (CVM classification)",
+  "year_of_publish": 2023,
+  "reputation": "Considered a high-quality, diverse cephalometric dataset in orthodontic imaging research with growing adoption.",
+  "notes": "Relatively small for modern deep-learning standards (1000 images) though large for cephalometry; images come from multiple devices (domain shift); annotation variability and inter-rater differences possible; non-LLM benchmark; potential patient privacy/consent considerations.",
+  "creators": {
+    "scientists": [
+      "Muhammad Anwaar Khalid",
+      "Kanwal Zulfiqar",
+      "Ulfat Bashir",
+      "Areeba Shaheen",
+      "Rida Iqbal",
+      "Zarnab Rizwan",
+      "Ghina Rizwan",
+      "Muhammad Moazam Fraz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2302.07797",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

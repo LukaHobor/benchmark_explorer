@@ -1,0 +1,38 @@
+{
+  "name": "Image Quality Assessment for Perceptual Image Restoration",
+  "description": "Image quality assessment (IQA) is the key factor for the fast development of image restoration (IR) algorithms. The most recent perceptual IR algorithms based on generative adversarial networks (GANs) have brought in significant improvement on visual performance, but also pose great challenges for quantitative evaluation. Notably, we observe an increasing inconsistency between perceptual quality and the evaluation results. We present two questions: Can existing IQA methods objectively evaluate recent IR algorithms? With the focus on beating current benchmarks, are we getting better IR algorithms? To answer the questions and promote the development of IQA methods, we contribute a large-scale IQA dataset, called Perceptual Image Processing ALgorithms (PIPAL) dataset. Especially, this dataset includes the results of GAN-based IR algorithms, which are missing in previous datasets. We collect more than 1.13 million human judgments to assign subjective scores for PIPAL images using the more reliable Elo system. Based on PIPAL, we present new benchmarks for both IQA and SR methods. Our results indicate that existing IQA methods cannot fairly evaluate GAN-based IR algorithms. While using appropriate evaluation methods is important, IQA methods should also be updated along with the development of IR algorithms. At last, we shed light on how to improve the IQA performance on GAN-based distortion. Inspired by the find that the existing IQA methods have an unsatisfactory performance on the GAN-based distortion partially because of their low tolerance to spatial misalignment, we propose to improve the performance of an IQA network on GAN-based distortion by explicitly considering this misalignment. We propose the Space Warping Difference Network, which includes the novel l_2 pooling layers and Space Warping Difference layers. Experiments demonstrate the effectiveness of the proposed method.",
+  "category": "vision",
+  "domain": "computer vision / image restoration",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_quality_assessment",
+    "image_restoration",
+    "super_resolution",
+    "human_judgment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "SRCC (Spearman rank correlation)",
+  "year_of_publish": 2020,
+  "reputation": "Widely cited and used in the image restoration/IQA research community as a challenging benchmark that explicitly includes GAN-based distortions.",
+  "notes": "Non-LLM benchmark; large-scale human Elo scores (≈1.13M judgments); includes GAN-based distortions that reduce correlation with traditional IQA metrics; sensitive to spatial misalignment; useful but not directly comparable to older SR/IQA datasets.",
+  "creators": {
+    "scientists": [
+      "Jinjin Gu",
+      "Haoming Cai",
+      "Haoyu Chen",
+      "Xiaoxing Ye",
+      "Jimmy Ren",
+      "Chao Dong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2011.15002",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

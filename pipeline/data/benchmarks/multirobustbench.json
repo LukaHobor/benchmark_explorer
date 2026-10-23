@@ -1,0 +1,37 @@
+{
+  "name": "MultiRobustBench",
+  "description": "The bulk of existing research in defending against adversarial examples focuses on defending against a single (typically bounded Lp-norm) attack, but for a practical setting, machine learning (ML) models should be robust to a wide variety of attacks. In this paper, we present the first unified framework for considering multiple attacks against ML models. Our framework is able to model different levels of learner's knowledge about the test-time adversary, allowing us to model robustness against unforeseen attacks and robustness against unions of attacks. Using our framework, we present the first leaderboard, MultiRobustBench, for benchmarking multiattack evaluation which captures performance across attack types and attack strengths. We evaluate the performance of 16 defended models for robustness against a set of 9 different attack types, including Lp-based threat models, spatial transformations, and color changes, at 20 different attack strengths (180 attacks total). Additionally, we analyze the state of current defenses against multiple attacks. Our analysis shows that while existing defenses have made progress in terms of average robustness across the set of attacks used, robustness against the worst-case attack is still a big open problem as all existing models perform worse than random guessing.",
+  "category": "mixed",
+  "domain": "adversarial robustness / security",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "robustness_evaluation",
+    "adversarial_attack_benchmark",
+    "multiattack_leaderboard"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "robust accuracy under attack — reported as average robust accuracy across attacks and worst-case (minimum) accuracy across attacks",
+  "general_score_metric": "average robust accuracy and worst-case accuracy across the evaluated attack suite",
+  "year_of_publish": 2023,
+  "reputation": "Recognized in the adversarial-robustness community as a useful unified multi-attack evaluation and leaderboard; has seen interest among robustness researchers but is not (yet) a universal standard.",
+  "notes": "Includes many attack types and strengths (computationally intensive). Results depend strongly on the chosen attack set/strengths and can be confounded by gradient obfuscation or evaluation implementation details. Non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Sihui Dai",
+      "Saeed Mahloujifar",
+      "Chong Xiang",
+      "Vikash Sehwag",
+      "Pin-Yu Chen",
+      "Prateek Mittal"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2302.10980",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

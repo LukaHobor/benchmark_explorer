@@ -1,0 +1,37 @@
+{
+  "name": "VDss-2440 dataset",
+  "description": "Background: The volume of distribution at steady state (VDss) is a fundamental pharmacokinetics (PK) property of drugs, which measures how effectively a drug molecule is distributed throughout the body. Along with the clearance (CL), it determines the half-life and, therefore, the drug dosing interval. However, the molecular data size limits the generalizability of the reported machine learning models. Objective: This study aims to provide a clean and comprehensive dataset for human VDss as the benchmarking data source, fostering and benefiting future predictive studies. Moreover, several predictive models were also built with machine learning regression algorithms. Methods: The dataset was curated from 13 publicly accessible data sources and the DrugBank database entirely from intravenous drug administration and then underwent extensive data cleaning. The molecular descriptors were calculated with Mordred, and feature selection was conducted for constructing predictive models. Five machine learning methods were used to build regression models, grid search was used to optimize hyperparameters, and ten-fold cross-validation was used to evaluate the model. Results: An enriched dataset of VDss (https://github.com/da-wen-er/VDss) was constructed with 2440 molecules. Among the prediction models, the LightGBM model was the most stable and had the best internal prediction ability with Q2 = 0.837, R2=0.814 and for the other four models, Q2 was higher than 0.79. Conclusions: To the best of our knowledge, this is the largest dataset for VDss, which can be used as the benchmark for computational studies of VDss. Moreover, the regression models reported within this study can be of use for pharmacokinetic related studies.",
+  "category": "mixed",
+  "domain": "pharmacokinetics / drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "molecular_property_prediction",
+    "pharmacokinetic_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "regression metrics (R2, Q2, RMSE)",
+  "general_score_metric": "Q2 (cross-validated coefficient of determination) / R2",
+  "typical_sota_score": "Q2 ≈ 0.79–0.84 (reported best internal Q2 ≈ 0.837)",
+  "year_of_publish": 2022,
+  "reputation": "Relatively new but cited as the largest publicly available VDss dataset and used as a benchmark in PK machine-learning studies.",
+  "notes": "Domain-specific, non-LLM benchmark; targets compiled from heterogeneous public sources (possible data heterogeneity and label noise); moderate dataset size (2440 molecules) limits some deep learning approaches; feature leakage or improper splitting across similar scaffolds can bias results.",
+  "creators": {
+    "scientists": [
+      "Wenwen Liu",
+      "Cheng Luo",
+      "Hecheng Wang",
+      "Fanwang Meng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2211.05661",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

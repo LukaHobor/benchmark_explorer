@@ -1,0 +1,37 @@
+{
+  "name": "M2FPA",
+  "description": "Facial images in surveillance or mobile scenarios often have large view-point variations in terms of pitch and yaw angles. These jointly occurred angle variations make face recognition challenging. Current public face databases mainly consider the case of yaw variations. In this paper, a new large-scale Multi-yaw Multi-pitch high-quality database is proposed for Facial Pose Analysis (M2FPA), including face frontalization, face rotation, facial pose estimation and pose-invariant face recognition. It contains 397,544 images of 229 subjects with yaw, pitch, attribute, illumination and accessory. M2FPA is the most comprehensive multi-view face database for facial pose analysis. Further, we provide an effective benchmark for face frontalization and pose-invariant face recognition on M2FPA with several state-of-the-art methods, including DR-GAN, TP-GAN and CAPG-GAN. We believe that the new database and benchmark can significantly push forward the advance of facial pose analysis in real-world applications. Moreover, a simple yet effective parsing guided discriminator is introduced to capture the local consistency during GAN optimization. Extensive quantitative and qualitative results on M2FPA and Multi-PIE demonstrate the superiority of our face frontalization method. Baseline results for both face synthesis and face recognition from state-of-theart methods demonstrate the challenge offered by this new database.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "face_recognition",
+    "face_frontalization",
+    "pose_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "identification/verification accuracy for recognition; SSIM/PSNR/FID for frontalization/image synthesis; success/precision curve metrics for tracking-like evaluation",
+  "general_score_metric": "verification/identification accuracy (for recognition tasks)",
+  "typical_sota_score": "≈85–95% (task- and protocol-dependent; lower under extreme pose variations)",
+  "year_of_publish": 2019,
+  "reputation": "Well-cited academic dataset for multi-pitch/multi-yaw facial pose analysis with moderate adoption in face pose/frontalization research.",
+  "notes": "Large image count but limited to 229 subjects (risk of subject overfitting); collected in controlled conditions (limited real-world variability); applicable to non-LLM vision research; potential privacy/consent considerations.",
+  "creators": {
+    "scientists": [
+      "Pei-Pei Li",
+      "Xiang Wu",
+      "Yibo Hu",
+      "Ran He",
+      "Zhenan Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1904.00168",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

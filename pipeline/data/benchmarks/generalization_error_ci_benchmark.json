@@ -1,0 +1,37 @@
+{
+  "name": "Generalization Error CI Benchmark",
+  "description": "When assessing the quality of prediction models in machine learning, confidence intervals (CIs) for the generalization error, which measures predictive performance, are a crucial tool. Luckily, there exist many methods for computing such CIs and new promising approaches are continuously being proposed. Typically, these methods combine various resampling procedures, most popular among them cross-validation and bootstrapping, with different variance estimation techniques. Unfortunately, however, there is currently no consensus on when any of these combinations may be most reliably employed and how they generally compare. In this work, we conduct a large-scale study comparing CIs for the generalization error, the first one of such size, where we empirically evaluate 13 different CI methods on a total of 19 tabular regression and classification problems, using seven different inducers and a total of eight loss functions. We give an overview of the methodological foundations and inherent challenges of constructing CIs for the generalization error and provide a concise review of all 13 methods in a unified framework. Finally, the CI methods are evaluated in terms of their relative coverage frequency, width, and runtime. Based on these findings, we can identify a subset of methods that we would recommend. We also publish the datasets as a benchmarking suite on OpenML and our code on GitHub to serve as a basis for further studies.",
+  "category": "mixed",
+  "domain": "tabular ML",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "coverage_frequency",
+  "general_score_metric": "coverage_frequency",
+  "typical_sota_score": "≈95% (target for nominal 95% CIs); varies substantially by method",
+  "year_of_publish": 2024,
+  "reputation": "3 citations",
+  "notes": "Non-LLM benchmark focused on tabular regression and classification CIs; evaluated on 19 datasets with 7 inducers and multiple loss functions. Results depend strongly on choice of resampling/variance estimator and inducer; some methods are computationally expensive. Datasets and code published on OpenML/GitHub.",
+  "creators": {
+    "scientists": [
+      "Hannah Schulz-Kümpel",
+      "Sebastian Fischer",
+      "Thomas Nagler",
+      "Anne‐Laure Boulesteix",
+      "Bernd Bischl",
+      "Roman Hornung"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2409.18836",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

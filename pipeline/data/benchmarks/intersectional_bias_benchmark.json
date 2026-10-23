@@ -1,0 +1,37 @@
+{
+  "name": "Intersectional Bias Benchmark",
+  "description": "There has been a recent wave of work assessing the fairness of machine learning models in general, and more specifically, on natural language processing (NLP) models built using machine learning techniques. While much work has highlighted biases embedded in state-of-the-art language models, and more recent efforts have focused on how to debias, research assessing the fairness and performance of biased/debiased models on downstream prediction tasks has been limited. Moreover, most prior work has emphasized bias along a single dimension such as gender or race. In this work, we benchmark multiple NLP models with regards to their fairness and predictive performance across a variety of NLP tasks. In particular, we assess intersectional bias - fairness across multiple demographic dimensions. The results show that while current debiasing strategies fare well in terms of the fairness-accuracy trade-off (generally preserving predictive power in debiased models), they are unable to effectively alleviate bias in downstream tasks. Furthermore, this bias is often amplified across dimensions (i.e., intersections). We conclude by highlighting possible causes and making recommendations for future NLP debiasing research.",
+  "category": "text",
+  "domain": "natural language processing / fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_classification",
+    "sequence_labeling",
+    "natural_language_inference",
+    "question_answering"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (with fairness-focused metrics such as group accuracy gap / disparity measures); F1 often reported",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "varies by task (≈70–95%)",
+  "year_of_publish": 2024,
+  "reputation": "Widely cited in fairness/NLP research as a useful benchmark for studying intersectional harms, though adoption is mostly within academic fairness communities rather than mainstream leaderboards.",
+  "notes": "Small subgroup sample sizes and class imbalance at intersections; evaluates intersectional fairness rather than overall task difficulty; not specific to LLMs; possible contamination depending on downstream tasks/datasets used.",
+  "creators": {
+    "scientists": [
+      "John Lalor",
+      "Yi Yang",
+      "Kendall Smith",
+      "Nicole Forsgren",
+      "Ahmed Abbasi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

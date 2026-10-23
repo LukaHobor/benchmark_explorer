@@ -1,0 +1,35 @@
+{
+  "name": "Inverse Visual Question Answering (iVQA) Benchmark",
+  "description": "In recent years, visual question answering (VQA) has become topical. The\npremise of VQA's significance as a benchmark in AI, is that both the image and\ntextual question need to be well understood and mutually grounded in order to\ninfer the correct answer. However, current VQA models perhaps `understand' less\nthan initially hoped, and instead master the easier task of exploiting cues\ngiven away in the question and biases in the answer distribution. In this paper\nwe propose the inverse problem of VQA (iVQA). The iVQA task is to generate a\nquestion that corresponds to a given image and answer pair. We propose a\nvariational iVQA model that can generate diverse, grammatically correct and\ncontent correlated questions that match the given answer. Based on this model,\nwe show that iVQA is an interesting benchmark for visuo-linguistic\nunderstanding, and a more challenging alternative to VQA because an iVQA model\nneeds to understand the image better to be successful. As a second\ncontribution, we show how to use iVQA in a novel reinforcement learning\nframework to diagnose any existing VQA model by way of exposing its belief set:\nthe set of question-answer pairs that the VQA model would predict true for a\ngiven image. This provides a completely new window into what VQA models\n`believe' about images. We show that existing VQA models have more erroneous\nbeliefs than previously thought, revealing their intrinsic weaknesses.\nSuggestions are then made on how to address these weaknesses going forward.",
+  "category": "multimodal",
+  "domain": "vision / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU and human_eval (question relevance and quality)",
+  "general_score_metric": "BLEU (augmented by human evaluation)",
+  "year_of_publish": 2018,
+  "reputation": "Well-cited as a novel and challenging alternative to VQA for diagnosing visio-linguistic understanding; moderately adopted in vision-language research.",
+  "notes": "Automatic text-generation metrics (e.g., BLEU) are imperfect proxies for question relevance; human evaluation is necessary. Dataset and metrics can be sensitive to bias in answer distributions and question templates; requires multimodal models.",
+  "creators": {
+    "scientists": [
+      "Feng Liu",
+      "Tao Xiang",
+      "Timothy M. Hospedales",
+      "Wankou Yang",
+      "Changyin Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1803.06936",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

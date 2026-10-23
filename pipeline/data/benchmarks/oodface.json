@@ -1,0 +1,39 @@
+{
+  "name": "OODFace",
+  "description": "With the rise of deep learning, facial recognition technology has seen extensive research and rapid development. Although facial recognition is considered a mature technology, we find that existing open-source models and commercial algorithms lack robustness in certain complex Out-of-Distribution (OOD) scenarios, raising concerns about the reliability of these systems. In this paper, we introduce OODFace, which explores the OOD challenges faced by facial recognition models from two perspectives: common corruptions and appearance variations. We systematically design 30 OOD scenarios across 9 major categories tailored for facial recognition. By simulating these challenges on public datasets, we establish three robustness benchmarks: LFW-C/V, CFP-FP-C/V, and YTF-C/V. We then conduct extensive experiments on 19 facial recognition models and 3 commercial APIs, along with extended physical experiments on face masks to assess their robustness. Next, we explore potential solutions from two perspectives: defense strategies and Vision-Language Models (VLMs). Based on the results, we draw several key insights, highlighting the vulnerability of facial recognition systems to OOD data and suggesting possible solutions. Additionally, we offer a unified toolkit that includes all corruption and variation types, easily extendable to other datasets. We hope that our benchmarks and findings can provide guidance for future improvements in facial recognition model robustness.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "verification",
+    "identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Verification accuracy / TAR@FAR (true accept rate at fixed false accept rate) and identification accuracy / rank‑1",
+  "general_score_metric": "Verification accuracy (and TAR@FAR for robustness reporting)",
+  "typical_sota_score": "≈98–99% on clean LFW; performance under OOD corruptions varies widely (commonly drops to ~60–95% depending on corruption severity)",
+  "year_of_publish": 2024,
+  "reputation": "Newer specialized benchmark for OOD robustness in face recognition; gaining attention among robustness researchers but not yet a universal standard.",
+  "notes": "Non‑LLM vision benchmark; simulated corruptions may not fully capture real‑world distribution shifts; ethical/privacy concerns inherent to face datasets and commercial API testing.",
+  "creators": {
+    "scientists": [
+      "Caixin Kang",
+      "Yubo Chen",
+      "Shouwei Ruan",
+      "Shiji Zhao",
+      "Ruochen Zhang",
+      "Jiayi Wang",
+      "Shan Fu",
+      "Xingxing Wei"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.02479",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

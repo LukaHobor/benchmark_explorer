@@ -1,0 +1,37 @@
+{
+  "name": "Scientific Discovery Benchmark",
+  "description": "Large language models (LLMs) are increasingly applied to scientific research, yet prevailing science benchmarks probe decontextualized knowledge and overlook the iterative reasoning, hypothesis generation, and observation interpretation that drive scientific discovery. We introduce a scenario-grounded benchmark that evaluates LLMs across biology, chemistry, materials, and physics, where domain experts define research projects of genuine interest and decompose them into modular research scenarios from which vetted questions are sampled. The framework assesses models at two levels: (i) question-level accuracy on scenario-tied items and (ii) project-level performance, where models must propose testable hypotheses, design simulations or experiments, and interpret results. Applying this two-phase scientific discovery evaluation (SDE) framework to state-of-the-art LLMs reveals a consistent performance gap relative to general science benchmarks, diminishing return of scaling up model sizes and reasoning, and systematic weaknesses shared across top-tier models from different providers. Large performance variation in research scenarios leads to changing choices of the best performing model on scientific discovery projects evaluated, suggesting all current LLMs are distant to general scientific\"superintelligence\". Nevertheless, LLMs already demonstrate promise in a great variety of scientific discovery projects, including cases where constituent scenario scores are low, highlighting the role of guided exploration and serendipity in discovery. This SDE framework offers a reproducible benchmark for discovery-relevant evaluation of LLMs and charts practical paths to advance their development toward scientific discovery.",
+  "category": "text",
+  "domain": "science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multi_step_reasoning",
+    "experiment_design"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval and accuracy (question-level accuracy; project-level human/evaluator rubric / project_success_rate)",
+  "general_score_metric": "question_accuracy; project_success_rate (human evaluation)",
+  "year_of_publish": 2025,
+  "reputation": "10 citations",
+  "notes": "Requires expert human evaluation and substantial annotation effort; high variance across scenarios; susceptible to training-data contamination; computationally and logistically expensive to run.",
+  "creators": {
+    "scientists": [
+      "Zhangde Song",
+      "Jieyu Lu",
+      "Yuanqi Du",
+      "Botao Yu",
+      "T. M. Pruyn",
+      "Yue Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2512.15567",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

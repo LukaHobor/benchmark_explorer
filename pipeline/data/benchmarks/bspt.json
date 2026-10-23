@@ -1,0 +1,38 @@
+{
+  "name": "BSPT",
+  "description": "Player tracking in broadcast soccer videos has received widespread attention in the field of sports video analysis, however, we note that there is not a suitable tracking algorithm specifically for soccer video, and the existing benchmarks used for soccer player tracking cover few scenarios with low difficulties. From the observation of the soccer scene that interference and occlusion are knotty problems because the distractors are extremely similar to the targets, a distractor-aware player tracking algorithm and a high-quality benchmark for soccer play tracking (BSPT) have been presented. The distractor-aware player tracking algorithm is able to perceive semantic information about distracting players in the background by similarity judgment, the semantic distractor-aware information is encoded into a context vector and is constantly updated as the objects move through a video sequence. Distractor-aware information is then appended to the tracking result of the baseline tracker to improve the intra-class discriminative power. BSPT contains a total of 120 sequences with rich annotations. Each sequence covers 8 specialized frame-level attributes from soccer scenarios and the player occlusion situations are finely divided into 4 categories for a more comprehensive comparison. In the experimental section, the performance of our algorithm and the other 14 compared trackers are evaluated on BSPT with detailed analysis. Experimental results reveal the effectiveness of the proposed distractor-aware model especially under the attribute of occlusion. The BSPT benchmark and raw experimental results are available on the project page at http://media.hust.edu.cn/BSPT.htm.",
+  "category": "vision",
+  "domain": "sports analytics / broadcast video",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_object_tracking",
+    "single_object_tracking",
+    "video_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Multiple Object Tracking metrics (MOTA, IDF1, MOTP) along with precision/recall",
+  "general_score_metric": "MOTA (Multiple Object Tracking Accuracy)",
+  "typical_sota_score": "50–80% MOTA (varies by tracker and occlusion severity)",
+  "year_of_publish": 2021,
+  "reputation": "8 citations",
+  "notes": "Non-LLM benchmark focused on vision/tracking; relatively small (120 sequences) and domain-specific to broadcast soccer with heavy occlusion and distractors, so results may not generalize to other sports or scenes.",
+  "creators": {
+    "scientists": [
+      "Zikai Song",
+      "Zhiwen Wan",
+      "Wei Yuan",
+      "Ying Tang",
+      "Junqing Yu",
+      "Yi‐Ping Phoebe Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1145/3460426.3463629",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

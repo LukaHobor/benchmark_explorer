@@ -1,0 +1,39 @@
+{
+  "name": "DafnyBench",
+  "description": "We introduce DafnyBench, the largest benchmark of its kind for training and evaluating machine learning systems for formal software verification. We test the ability of LLMs such as GPT-4 and Claude 3 to auto-generate enough hints for the Dafny formal verification engine to successfully verify over 750 programs with about 53,000 lines of code. The best model and prompting scheme achieved 68% success rate, and we quantify how this rate improves when retrying with error message feedback and how it deteriorates with the amount of required code and hints. We hope that DafnyBench will enable rapid improvements from this baseline as LLMs and verification techniques grow in quality.",
+  "category": "code",
+  "domain": "formal verification / software engineering",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "program_synthesis",
+    "formal_verification",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (verification success by the Dafny verifier)",
+  "general_score_metric": "success_rate (percentage of programs fully verified)",
+  "typical_sota_score": "≈68%",
+  "year_of_publish": 2024,
+  "reputation": "43 citations",
+  "notes": "Evaluation depends on the exact Dafny verifier configuration and prompt engineering; risk of contamination if solutions appear in model training data; specialized domain (formal verification) may limit generalization to other code tasks.",
+  "creators": {
+    "scientists": [
+      "Chloe Loughridge",
+      "Qinyi Sun",
+      "Seth Ahrenbach",
+      "Federico Cassano",
+      "Chuyue Sun",
+      "Ying Sheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2406.08467",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

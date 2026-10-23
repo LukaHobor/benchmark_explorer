@@ -1,0 +1,39 @@
+{
+  "name": "GlycanML",
+  "description": "Glycans are basic biomolecules and perform essential functions within living organisms. The rapid increase of functional glycan data provides a good opportunity for machine learning solutions to glycan understanding. However, there still lacks a standard machine learning benchmark for glycan property and function prediction. In this work, we fill this blank by building a comprehensive benchmark for Glycan Machine Learning (GlycanML). The GlycanML benchmark consists of diverse types of tasks including glycan taxonomy prediction, glycan immunogenicity prediction, glycosylation type prediction, and protein-glycan interaction prediction. Glycans can be represented by both sequences and graphs in GlycanML, which enables us to extensively evaluate sequence-based models and graph neural networks (GNNs) on benchmark tasks. Furthermore, by concurrently performing eight glycan taxonomy prediction tasks, we introduce the GlycanML-MTL testbed for multi-task learning (MTL) algorithms. Also, we evaluate how taxonomy prediction can boost other three function prediction tasks by MTL. Experimental results show the superiority of modeling glycans with multi-relational GNNs, and suitable MTL methods can further boost model performance. We provide all datasets and source codes at https://github.com/GlycanML/GlycanML and maintain a leaderboard at https://GlycanML.github.io/project",
+  "category": "mixed",
+  "domain": "glycobiology / bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "multi_label_classification",
+    "link_prediction",
+    "multi_task_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy / F1 / AUROC depending on task (taxonomy: accuracy; interaction: AUROC/F1)",
+  "general_score_metric": "accuracy (primary for taxonomy tasks); AUROC and F1 for interaction/immunogenicity tasks",
+  "year_of_publish": 2024,
+  "reputation": "A new, curated benchmark (with code and a leaderboard) intended to standardize ML evaluation on glycan tasks and attract early adoption in glycobiology ML.",
+  "notes": "Domain-specific biological benchmark combining sequence and graph representations; relatively new so leaderboard and baselines are emerging; dataset sizes vary by task and some tasks may be small or imbalanced.",
+  "creators": {
+    "scientists": [
+      "Minghao Xu",
+      "Yunteng Geng",
+      "Yihang Zhang",
+      "Ling Yang",
+      "Jian Tang",
+      "Wentao Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2405.16206",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

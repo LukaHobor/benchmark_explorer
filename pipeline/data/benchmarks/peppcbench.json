@@ -1,0 +1,38 @@
+{
+  "name": "PepPCBench",
+  "description": "Abstract\n                \n                  Peptides mediate up to 40% of protein-protein interactions (PPIs), offering high specificity and the ability to target binding sites inaccessible to small molecules, making them promising candidates for drug development. Accurate modeling of protein-peptide complexes is crucial for understanding fundamental biological processes and for advancing peptide-based drug design. However, due to the high conformational flexibility of peptides, predicting their interactions with proteins remains a significant challenge. Recent advancements in artificial intelligence (AI), exemplified by all-atom protein folding neural networks (PFNNs) such as AlphaFold3 (AF3), have expanded predictive capabilities beyond proteins to encompass protein-peptide complexes. Nevertheless, existing evaluations of these methods are often limited in scope and lack systematic, multi-dimensional, and fair comparisons of PFNN performance in protein-peptide complex prediction. Here, we introduce PepPCBench, a comprehensive benchmark framework specifically developed to evaluate AF3’s capabilities in predicting protein-peptide complexes. This study utilizes a carefully curated dataset named PepPCSet, which is excluded from the AF3’s training or validation sets. This dataset includes 261 protein-peptide complexes with peptide lengths ranging from 5 to 30 residues. Our benchmark results indicate that AF3 outperforms other PFNNs in prediction accuracy and structural validation. However, its performance remains insufficient for practical peptide drug discovery, indicating room for improvement. It is expected that PepPCBench can provide some valuable insights into the enhancement of protein-peptide complex structure prediction and the development of peptide-based therapeutics. The dataset and pipeline protocols are available at\n                  https://github.com/zhaisilong/PepPCBench\n                  .",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "protein_peptide_structure_prediction",
+    "docking",
+    "complex_structure_modeling"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "DockQ / RMSD / TM-score (structural similarity metrics)",
+  "general_score_metric": "DockQ",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A newly proposed, specialized benchmark (2025 preprint) with limited adoption so far but considered valuable for evaluating peptide–protein complex prediction.",
+  "notes": "Small curated test set (261 complexes) focused on peptides of length 5–30; excluded from AlphaFold3 training per authors; non-LLM benchmark; uses structure-based metrics (possible variability by chosen metric); limited community benchmarking to date.",
+  "creators": {
+    "scientists": [
+      "Silong Zhai",
+      "Huifeng Zhao",
+      "Jike Wang",
+      "Shaolong Lin",
+      "Tiantao Liu",
+      "Dejun Jiang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2025.04.08.647699",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

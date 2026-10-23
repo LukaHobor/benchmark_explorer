@@ -1,0 +1,37 @@
+{
+  "name": "Traffic prediction benchmark (spatio-temporal traffic datasets and protocol)",
+  "description": "Traffic prediction is the cornerstone of an intelligent transportation system. Accurate traffic forecasting is essential for the applications of smart cities, i.e., intelligent traffic management and urban planning. Although various methods are proposed for spatio-temporal modeling, they ignore the dynamic characteristics of correlations among locations on road networks. Meanwhile, most Recurrent Neural Network (RNN) based works are not efficient enough due to their recurrent operations. Additionally, there is a severe lack of fair comparison among different methods on the same datasets. To address the above challenges, in this paper, we propose a novel traffic prediction framework, named Dynamic Graph Convolutional Recurrent Network (DGCRN). In DGCRN, hyper-networks are designed to leverage and extract dynamic characteristics from node attributes, while the parameters of dynamic filters are generated at each time step. We filter the node embeddings and then use them to generate a dynamic graph, which is integrated with a pre-defined static graph. As far as we know, we are the first to employ a generation method to model fine topology of dynamic graph at each time step. Further, to enhance efficiency and performance, we employ a training strategy for DGCRN by restricting the iteration number of decoder during forward and backward propagation. Finally, a reproducible standardized benchmark and a brand new representative traffic dataset are opened for fair comparison and further research. Extensive experiments on three datasets demonstrate that our model outperforms 15 baselines consistently.",
+  "category": "mixed",
+  "domain": "transportation / traffic forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "spatio-temporal_prediction",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Regression metrics such as MAE, RMSE and MAPE computed on predicted traffic speeds/flows (and multi-horizon forecasting error curves)",
+  "general_score_metric": "MAE (commonly reported primary metric) / RMSE",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded in the spatio-temporal traffic forecasting community as a reproducible benchmark for comparing graph-based and sequence models.",
+  "notes": "Non-LLM benchmark; results are dataset- and split-dependent — temporal leakage or improper graph construction can bias comparisons; sensor coverage, missing data and distribution shifts are practical challenges.",
+  "creators": {
+    "scientists": [
+      "Fuxian Li",
+      "Jie Feng",
+      "Huan Yan",
+      "Guangyin Jin",
+      "Depeng Jin",
+      "Yong Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2104.14917",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

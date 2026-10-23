@@ -1,0 +1,31 @@
+{
+  "name": "ETSC-HD",
+  "description": "This paper presents ETSC-HD, an operational design domain (ODD)-robust, safety-aware benchmark and evidence pipeline for evaluating eco-driving deep reinforcement learning (DRL) on connected heavy-duty electric vehicles (HD-EVs). The benchmark systematically varies signal phase and timing (SPaT) and roadway grade to expose both in-distribution (ID) and out-of-distribution (OOD) operating conditions, and separates policy competence from system-level compliance via a red-light safety gate that enforces strict traffic light constraints by overriding non-stopping behaviour in red lights. Policies are trained under domain randomization over SPaT, grade, and initial conditions, while evaluation is fully deterministic, with fixed signal offsets and frozen observation normalization. A road is broken into independent segments for multi-environment parallel training, which is stitched back into one road for evaluation. We report segment-level, end-to-end, and stitched-continuity (state carry-over) results, and compute a composite ETSC score that combines Energy efficiency, travel Time, Safety, and ride Comfort (jerk), aggregated across random seeds with 95% confidence intervals (CI). On held-out routes with the safety gate enabled, across PPO, A2C, SAC, TD3, DDPG and rule-based baselines (EcoIDM/EcoMPC), the best agent (PPO) attains an ETSC score of 0.752±0.015 on the ID split, completes the route in 30.7±0.88 min using 44.1±2.43 kWh with zero red-light violations, and changes by ±1% under representative SPaT/grade shifts. These results quantify efficiency-time-safety-comfort trade-offs against ODD shifts for automated driving systems.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "task_types": [
+    "agentic",
+    "planning",
+    "safety_redteam",
+    "regression",
+    "perception"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2026,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1109/iv66570.2026.11623933",
+  "provenance": {
+    "added_by": "scan-2026q2",
+    "added_at": "2026-08-19",
+    "origin": "cynefin@d486fafa9",
+    "gated": false,
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Sparse System Identification Benchmark",
+  "description": "Sparse system identification is the data-driven process of obtaining parsimonious differential equations that describe the evolution of a dynamical system, balancing model complexity and accuracy. There has been rapid innovation in system identification across scientific domains, but there remains a gap in the literature for large-scale methodological comparisons that are evaluated on a variety of dynamical systems. In this work, we systematically benchmark sparse regression variants by utilizing the dysts standardized database of chaotic systems. In particular, we demonstrate how this open-source tool can be used to quantitatively compare different methods of system identification. To illustrate how this benchmark can be utilized, we perform a large comparison of four algorithms for solving the sparse identification of nonlinear dynamics (SINDy) optimization problem, finding strong performance of the original algorithm and a recent mixed-integer discrete algorithm. In all cases, we used ensembling to improve the noise robustness of SINDy and provide statistical comparisons. In addition, we show very compelling evidence that the weak SINDy formulation provides significant improvements over the traditional method, even on clean data. Lastly, we investigate how Pareto-optimal models generated from SINDy algorithms depend on the properties of the equations, finding that the performance shows no significant dependence on a set of dynamical properties that quantify the amount of chaos, scale separation, degree of nonlinearity, and the syntactic complexity.",
+  "category": "mixed",
+  "domain": "dynamical systems / system identification",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "symbolic_regression",
+    "model_selection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "reconstruction error (NRMSE)/support recovery (precision/recall/F1) and Pareto-front quality (error vs complexity)",
+  "general_score_metric": "NRMSE and support_recovery_F1 (reported jointly with model complexity on Pareto fronts)",
+  "year_of_publish": 2023,
+  "reputation": "Useful, reproducible benchmark within the system-identification and dynamical-systems research communities for comparing sparse-identification methods, though niche outside that field.",
+  "notes": "Non-LLM benchmark using synthetic chaotic systems from dysts; sensitive to noise, sampling, and hyperparameters; results depend strongly on evaluation metrics (error vs sparsity) and ensembling.",
+  "creators": {
+    "scientists": [
+      "Alan A. Kaptanoglu",
+      "Lanyue Zhang",
+      "Zachary G. Nicolaou",
+      "Urban Fasel",
+      "Steven L. Brunton"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2302.10787",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

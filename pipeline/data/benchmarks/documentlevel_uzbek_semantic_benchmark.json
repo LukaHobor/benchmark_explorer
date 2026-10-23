@@ -1,0 +1,37 @@
+{
+  "name": "Document-Level Uzbek Semantic Benchmark",
+  "description": "This work presents a practical document-level semantic annotation scheme for the Uzbek language and two target datasets of 1200 and 1500 documents designed for three tasks: topic classification (THEME/SUB), communicative function (FUNC), and concise abstractive summarization (one sentence). We release a reproducible pipeline (70/15/15 splits, training and evaluation scripts, report templates) and demonstrate reference results on a synthetic 2700-document stand that mirrors the size and class distributions of the intended corpora. Strong baselines based on TF-IDF+LR/SVM reach high accuracy for THEME and FUNC; a multilingual Transformer (XLM-R/DistilBERT) further improves performance on borderline cases. For summarization, we compare an extractive centroid against an abstractive mT5-small model constrained to a single sentence. Methodologically, our scheme relies on clear guidelines and a pilot double-annotation with Cohen’s κ; engineering-wise, it favors transparent protocols and low-cost baselines, making the solution appropriate both for production systems and for scholarly assessment.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "topic_classification",
+    "communicative_function_classification",
+    "abstractive_summarization"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "accuracy (THEME/FUNC classification); ROUGE (abstractive summarization) — plus standard classification metrics (precision/recall/F1) where applicable",
+  "general_score_metric": "accuracy (for classification tasks); ROUGE (for summarization)",
+  "typical_sota_score": "80–95% (classification, reported strong baselines); summarization performance: unknown",
+  "year_of_publish": 2025,
+  "reputation": "Niche, well-documented benchmark for Uzbek NLP with a reproducible pipeline; primarily used within low-resource language and regional NLP communities.",
+  "notes": "Small-scale, low-resource-language dataset (~2.7k documents total) — risk of overfitting and limited generality; clear annotation protocol and splits provided; not saturated and well suited for baseline and applied research.",
+  "creators": {
+    "scientists": [
+      "Saidbek P. Babayazov",
+      "Lola Samandarova",
+      "Mohira Matnazarova",
+      "Umidbek Babayazov",
+      "Khurshida Qodirova",
+      "Shukhrat Khudayberganov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

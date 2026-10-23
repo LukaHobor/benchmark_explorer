@@ -1,0 +1,37 @@
+{
+  "name": "Interpretability Methods Benchmark",
+  "description": "We propose an empirical measure of the approximate accuracy of feature importance estimates in deep neural networks. Our results across several large-scale image classification datasets show that many popular interpretability methods produce estimates of feature importance that are not better than a random designation of feature importance. Only certain ensemble based approaches---VarGrad and SmoothGrad-Squared---outperform such a random assignment of importance. The manner of ensembling remains critical, we show that some approaches do no better then the underlying method but carry a far higher computational burden.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "evaluation",
+    "feature_ranking",
+    "sanity_check"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "rank-correlation (e.g., Spearman) and randomization/sanity tests comparing importance maps to randomized baselines",
+  "general_score_metric": "Spearman rank correlation (or other rank/correlation metrics) against ground-truth or randomized baselines",
+  "typical_sota_score": "Many methods score near-random (≈0–0.2 correlation); certain ensemble methods (e.g., VarGrad/SmoothGrad-Squared) can achieve higher (~0.2–0.5) depending on settings",
+  "year_of_publish": 2018,
+  "reputation": "Highly influential—widely cited for highlighting serious limitations in popular saliency/interpretability methods and prompting follow-up work.",
+  "notes": "Non-LLM, vision-focused benchmark; results depend heavily on the choice of model/dataset and ensembling strategy; some evaluation variants are computationally expensive; the benchmark exposes that many methods do not outperform random baselines.",
+  "creators": {
+    "scientists": [
+      "Sara Hooker",
+      "Dumitru Erhan",
+      "Pieter-Jan Kindermans",
+      "Been Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/1806.10758",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

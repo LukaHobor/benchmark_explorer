@@ -1,0 +1,33 @@
+{
+  "name": "CAT benchmark",
+  "description": "Neural Machine Translation (NMT) is widely applied in software engineering tasks. The effectiveness of NMT for code retrieval relies on the ability to learn from the sequence of tokens in the source language to the sequence of tokens in the target language. While NMT performs well in pseudocode-to-code translation, it might have challenges in learning to translate from natural language query to source code in newly curated real-world code documentation/ implementation datasets. In this work, we analyze the performance of NMT in natural language-to-code translation in the newly curated CAT benchmark that includes the optimized versions of three Java datasets TLCodeSum, CodeSearchNet, Funcom, and a Python dataset PCSD. Our evaluation shows that NMT has low accuracy, measured by CrystalBLEU and Meteor metrics in this task. To alleviate the duty of NMT in learning complex representation of source code, we propose ASTTrans Representation, a tailored representation of an Abstract Syntax Tree (AST) using a subset of non-terminal nodes. We show that the classical approach NMT performs significantly better in learning ASTTrans Representation over code tokens with up to 36% improvement on Meteor score. Moreover, we leverage ASTTrans Representation to conduct combined code search processes from the state-of-the-art code search processes using GraphCodeBERT and UniXcoder. Our NMT models of learning ASTTrans Representation can boost the Mean Reciprocal Rank of these state-of-the-art code search processes by up to 3.08% and improve 23.08% of queries' results over the CAT benchmark.",
+  "category": "code",
+  "domain": "software engineering / code search",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "translation",
+    "code_search",
+    "code_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Meteor / CrystalBLEU for NL->code translation; Mean Reciprocal Rank (MRR) for code search",
+  "general_score_metric": "Meteor (for translation) and Mean Reciprocal Rank (MRR) (for code search)",
+  "year_of_publish": 2023,
+  "reputation": "New academic benchmark from an arXiv paper; limited but growing visibility in code/SE research.",
+  "notes": "Combines optimized subsets of existing datasets (TLCodeSum, CodeSearchNet, Funcom, PCSD) — risk of overlap/contamination with those sources; relatively new and not widely adopted; reported improvements measured both by translation metrics (CrystalBLEU/Meteor) and retrieval metric (MRR).",
+  "creators": {
+    "scientists": [
+      "Hung Phan",
+      "Ali Jannesari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2308.04693",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

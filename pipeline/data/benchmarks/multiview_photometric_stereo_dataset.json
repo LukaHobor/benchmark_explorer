@@ -1,0 +1,38 @@
+{
+  "name": "Multi-View Photometric Stereo Dataset",
+  "description": "We present a method to capture both 3D shape and spatially varying reflectance with a multi-view photometric stereo (MVPS) technique that works for general isotropic materials. Our algorithm is suitable for perspective cameras and nearby point light sources. Our data capture setup is simple, which consists of only a digital camera, some LED lights, and an optional automatic turntable. From a single viewpoint, we use a set of photometric stereo images to identify surface points with the same distance to the camera. We collect this information from multiple viewpoints and combine it with structure-from-motion to obtain a precise reconstruction of the complete 3D shape. The spatially varying isotropic bidirectional reflectance distribution function (BRDF) is captured by simultaneously inferring a set of basis BRDFs and their mixing weights at each surface point. In experiments, we demonstrate our algorithm with two different setups: a studio setup for highest precision and a desktop setup for best usability. According to our experiments, under the studio setting, the captured shapes are accurate to 0.5 millimeters and the captured reflectance has a relative root-mean-square error (RMSE) of 9%. We also quantitatively evaluate state-of-the-art MVPS on a newly collected benchmark dataset, which is publicly available for inspiring future research.",
+  "category": "vision",
+  "domain": "computer vision (3D reconstruction / reflectance)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "surface_reconstruction",
+    "reflectance_estimation",
+    "surface_normal_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE (for reflectance) and geometric reconstruction error in millimeters (for shape)",
+  "general_score_metric": "geometric error (mm) for shape; relative RMSE (%) for reflectance",
+  "typical_sota_score": "shape error ≈0.5 mm; reflectance relative RMSE ≈9%",
+  "year_of_publish": 2020,
+  "reputation": "Moderately cited within the photometric-stereo / multi-view reconstruction community as a controlled benchmark for joint geometry + BRDF capture.",
+  "notes": "Non-LLM computer-vision benchmark; captured in controlled setups (studio and desktop) with limited material/scene diversity and relatively small scale; evaluates both geometry (mm error) and appearance (relative RMSE).",
+  "creators": {
+    "scientists": [
+      "Min Li",
+      "Zhenglong Zhou",
+      "Zhe Wu",
+      "Boxin Shi",
+      "Changyu Diao",
+      "Ping Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2001.06659",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

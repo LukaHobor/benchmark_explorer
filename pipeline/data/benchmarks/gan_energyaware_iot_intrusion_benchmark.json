@@ -1,0 +1,34 @@
+{
+  "name": "GAN Energy-Aware IoT Intrusion Benchmark",
+  "description": "The proliferation of Internet of Things (IoT) devices has created unprecedented security challenges characterized by resource constraints, heterogeneous network architectures, and severe class imbalance in attack detection datasets. This paper presents a comprehensive benchmark evaluation of five Generative Adversarial Network (GAN) architectures for energy-aware intrusion detection: Standard GAN, Progressive GAN (PGAN), Conditional GAN (cGAN), Graph-based GAN (GraphGAN), and Wasserstein GAN with Gradient Penalty (WGAN-GP). Our evaluation framework introduces novel energy-normalized performance metrics, including Accuracy-per-Joule (APJ) and F1-per-Joule (F1PJ), that enable principled architecture selection for energy-constrained deployments. We propose an optimized WGAN-GP architecture incorporating diversity loss, feature matching, and noise injection mechanisms specifically designed for classification-oriented data augmentation. Experimental results on a stratified subset of the BoT-IoT dataset (approximately 1.83 million records) demonstrate that our optimized WGAN-GP achieves state-of-the-art performance, with 99.99% classification accuracy, a 0.99 macro-F1 score, and superior generation quality (MSE 0.01). While traditional classifiers augmented with SMOTE (i.e., Logistic Regression and CNN1D-TCN) also achieve 99.99% accuracy, they suffer from poor minority class detection (77.78–80.00%); our WGAN-GP improves minority class detection to 100.00% on the reported test split (45 of 45 attack instances correctly identified). Furthermore, WGAN-GP provides substantial efficiency advantages under our energy-normalized metrics, achieving superior accuracy-per-joule performance compared to Standard GAN. Also, a cross-dataset validation across five benchmarks (BoT-IoT, CICIoT2023, ToN-IoT, UNSW-NB15, CIC-IDS2017) was implemented using 250 pooled test attacks to confirm generalizability, with WGAN-GP achieving 98.40% minority class accuracy (246/250 attacks detected) compared to 76.80% for Classical + SMOTE methods, a statistically significant 21.60 percentage point improvement (p&lt;0.0001). Finally, our analysis reveals that incorporating diversity-promoting mechanisms in GAN training simultaneously achieves best generation quality AND best classification performance, demonstrating that these objectives are complementary rather than competing.",
+  "category": "mixed",
+  "domain": "IoT / network security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "data_augmentation",
+    "intrusion_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and macro-F1 (also reports energy-normalized metrics: Accuracy-per-Joule, F1-per-Joule)",
+  "general_score_metric": "accuracy and macro-F1 (with APJ / F1PJ energy-normalized metrics)",
+  "typical_sota_score": "≈99% (reported on the paper's reported splits)",
+  "year_of_publish": 2026,
+  "reputation": "Applied benchmark in IoT intrusion detection research leveraging common datasets (e.g., BoT-IoT); of interest to IoT security researchers but not a broadly standardized community benchmark.",
+  "notes": "High reported scores may reflect dataset imbalance, specific train/test splits, and small minority-class sample sizes; cross-dataset generalization can be limited; includes novel energy-normalized metrics; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Iacovos Ioannou",
+      "Vasos Vassiliou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.3390/s26030757",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

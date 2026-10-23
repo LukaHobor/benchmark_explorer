@@ -1,0 +1,36 @@
+{
+  "name": "Hydroacoustic Geophony Dataset",
+  "description": "Underwater seismic events such as earthquakes are known to produce not only seismic waves but also hydro-acoustic waves. Indeed, seismic waves arriving at the ocean bottom convert into acoustic waves in the water column. Other events, such as hot lava-seawater interactions or icequakes, also generate water-born acoustic signals. Monitoring these different signals with moored hydrophones proved to be useful and very efficient thanks to the little attenuation of acoustic waves propagating in the Sound Fixing and Ranging (SOFAR) channel. This led to the deployment of wide-range moored hydrophone networks to monitor active seafloor-spreading ridges in the world ocean. However, analyzing year-round data recordings from several stations is a cumbersome, user-dependent and most importantly time-consuming task. Despite some efforts to develop automatic detection algorithms, the community still lacks efficient and available off-the-shelf tools, as well as open datasets and benchmarks against which they could be compared objectively. To address this problem, we are glad to make publicly available three partially-annotated hydroacoustics datasets consisting of recordings from Atlantic and Indian oceans, with a total of ~60,000 hours. We propose a benchmark of models on a first task of binary classification, and an original convolutional neural network (CNN) model called TiSSNet showing promising results. To maximize the reliability of the evaluations, two datasets have been carefully and exhaustively annotated to serve as evaluation datasets. The getting started codes have also been made available on GitHub. We wish the datasets and benchmarks will be used as references upon which the state-of-the-art could be developed in a collaborative way. In the future, the best model, used as an automatic or semi-automatic detection framework, will be applied to larger datasets, and combined with multi-stations association and trilateration techniques to output nearly complete catalogs of geophonic events (source type and location, with signal characteristics).",
+  "category": "audio",
+  "domain": "marine acoustics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "event_detection",
+    "audio_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific academic dataset with limited adoption outside hydroacoustics research.",
+  "notes": "Partially annotated (large unlabeled portion, ~60k hours); class imbalance; long continuous recordings require heavy compute; two exhaustively annotated subsets used for evaluation; non-LLM audio benchmark.",
+  "creators": {
+    "scientists": [
+      "Pierre-Yves Raumer",
+      "Sara Bazin",
+      "Jean-Yves Royer",
+      "Cazau Dorian",
+      "Vaibhav Vijay Ingale"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.5194/egusphere-egu24-5256",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

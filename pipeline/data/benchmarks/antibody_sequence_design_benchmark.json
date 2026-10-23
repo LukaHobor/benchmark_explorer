@@ -1,0 +1,35 @@
+{
+  "name": "Antibody Sequence Design Benchmark",
+  "description": "Computational protein design, i.e. inferring novel and diverse protein sequences consistent with a given structure, remains a major unsolved challenge. Recently, deep generative models that learn from sequences alone or from sequences and structures jointly have shown impressive performance on this task. However, those models appear limited in terms of modeling structural constraints, capturing enough sequence diversity, or both. Here we consider three recently proposed deep generative frameworks for protein design: (AR) the sequence-based autoregressive generative model, (GVP) the precise structure-based graph neural network, and Fold2Seq that leverages a fuzzy and scale-free representation of a three-dimensional fold, while enforcing structure-to-sequence (and vice versa) consistency. We benchmark these models on the task of computational design of antibody sequences, which demand designing sequences with high diversity for functional implication. The Fold2Seq framework outperforms the two other baselines in terms of diversity of the designed sequences, while maintaining the typical fold.",
+  "category": "mixed",
+  "domain": "bioinformatics / computational protein design",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_design",
+    "generative_modeling",
+    "protein_design"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Combination of sequence-level metrics (diversity, identity/recovery) and structure-consistency metrics (e.g., RMSD between target and designed fold); secondary functional proxies when available",
+  "general_score_metric": "Sequence diversity (e.g., entropy / diversity indices) together with structural consistency (RMSD) as primary metrics",
+  "year_of_publish": 2021,
+  "reputation": "A research benchmark within the computational protein-design community valued for testing diversity-preserving design methods for antibodies, but not a broadly standardized benchmark yet.",
+  "notes": "Evaluations are mostly in silico with limited experimental validation; trade-off between sequence diversity and functional/structural fidelity; dataset and tasks are domain-specific and not applicable to general LLMs without domain adaptation; potential sensitivity to training data overlap with protein sequence databases.",
+  "creators": {
+    "scientists": [
+      "Igor Melnyk",
+      "Payel Das",
+      "Vijil Chenthamarakshan",
+      "Aurelie Lozano"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2111.06801",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

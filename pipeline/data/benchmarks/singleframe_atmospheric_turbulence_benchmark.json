@@ -1,0 +1,36 @@
+{
+  "name": "Single-Frame Atmospheric Turbulence Benchmark",
+  "description": "Image restoration algorithms for atmospheric turbulence are known to be much more challenging to design than traditional ones such as blur or noise because the distortion caused by the turbulence is an entanglement of spatially varying blur, geometric distortion, and sensor noise. Existing CNN-based restoration methods built upon convolutional kernels with static weights are insufficient to handle the spatially dynamical atmospheric turbulence effect. To address this problem, in this paper, we propose a physics-inspired transformer model for imaging through atmospheric turbulence. The proposed network utilizes the power of transformer blocks to jointly extract a dynamical turbulence distortion map and restore a turbulence-free image. In addition, recognizing the lack of a comprehensive dataset, we collect and present two new real-world turbulence datasets that allow for evaluation with both classical objective metrics (e.g., PSNR and SSIM) and a new task-driven metric using text recognition accuracy. Both real testing sets and all related code will be made publicly available.",
+  "category": "vision",
+  "domain": "vision (image restoration)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "deblurring",
+    "denoising",
+    "task-driven_text_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Classical image restoration metrics (PSNR, SSIM) and a task-driven OCR/text-recognition accuracy metric",
+  "general_score_metric": "PSNR and SSIM (primary), supplemented by OCR/text-recognition accuracy as a task-driven metric",
+  "year_of_publish": 2022,
+  "reputation": "A recently introduced, specialized benchmark for atmospheric-turbulence restoration with limited but growing adoption in the image-restoration research community.",
+  "notes": "Small real-world test sets; task-specific (atmospheric turbulence) and non-LLM; OCR-based metric can bias toward text-centric improvements; results sensitive to scene/content.",
+  "creators": {
+    "scientists": [
+      "Zhiyuan Mao",
+      "Ajay Jaiswal",
+      "Zhangyang Wang",
+      "Stanley H. Chan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2207.10040",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

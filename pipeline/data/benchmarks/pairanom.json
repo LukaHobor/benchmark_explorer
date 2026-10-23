@@ -1,0 +1,37 @@
+{
+  "name": "PairAnom",
+  "description": ": Video anomaly detection (VAD) in dynamic environmental conditions can be highly challenging. In particular, when normal and anomaly events become indistinguishable, VAD methods do not perform as expected. Moreover, existing VAD datasets are typically organized in terms of abnormal classes without any normal-abnormal pairing. We argue that a pairing of anomalous events with closely matching non-anomalous events will be more effective while training the classifiers. To accomplish this, we introduce and release PairAnom , a new VAD dataset comprising 2,132 real-world videos across eight highly important and fine-grained categories. The dataset contains six pairwise anomalous events, e.g. violent protest, firework festivity, chain/purse snatching, friendly mixing, etc. It addresses a critical gap of the existing datasets and methods that do not perform consistently to distinguish critical anomalies from normal events exhibiting similar visual features. We also present a new baseline that performs multi-class abnormality classification by leveraging two-stream I3D features combined via PCA and transformer frameworks. We have used PairAnom in binary as well as multi-class classifications settings for evaluation and benchmarked it against popular VAD methods (using binary settings) including DyAnNet (90.83%), RareAnom (87.31%), MIST (94.55%), OE-CTST (85.37%), RE-WARD (98.87%), etc. The baseline outperforms existing methods with AUC of 99.24% even with a full eight-class classification setup. Overall, PairAnom and the proposed baseline in combination establishes the first benchmark that makes distinction between similar looking normal-abnormal events with multi-class anomaly classification capability. It paves the way for development and evaluation of robust VAD techniques in challenging scenarios. The dataset can be found at PairAnom.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC / mAP",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2026,
+  "reputation": "A specialized benchmark for driving-related video anomaly detection with limited but relevant adoption in autonomous-driving research.",
+  "notes": "Small, domain-specific video dataset; non-LLM benchmark — results sensitive to video preprocessing and temporal modeling choices.",
+  "creators": {
+    "scientists": [
+      "Brajesh Kumar",
+      "Kamakshya Nayak",
+      "Kamalakar Thakare",
+      "Priti Pal",
+      "Manvendra Singh",
+      "Debi Dogra"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.5220/0014210600004084",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

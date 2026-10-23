@@ -1,0 +1,37 @@
+{
+  "name": "Turkish Tokenization Benchmark",
+  "description": "Tokenization is a fundamental preprocessing step in NLP, directly impacting large language models' (LLMs) ability to capture syntactic, morphosyntactic, and semantic structures. This paper introduces a novel framework for systematically evaluating tokenization strategies, addressing challenges in morphologically rich and low-resource languages. Using a Turkish dataset of 6,200 multiple-choice questions from the Massive Multitask Language Understanding (MMLU) benchmark, the framework assesses tokenizers across five key metrics: vocabulary size, token count, processing time, language-specific token percentages (\\%TR), and token purity. These metrics provide a structured approach to evaluating how well tokenizers preserve linguistic structures. While \\%TR measures the proportion of valid words in the target language, \\%Pure assesses the alignment of tokens with meaningful linguistic units, such as roots and valid morphemes, minimizing semantic fragmentation. The findings reveal that \\%TR, introduced as a critical metric, exhibits a stronger correlation with downstream performance (e.g., MMLU scores) than token purity, emphasizing its role in improving model accuracy. Additionally, larger model parameters do not necessarily yield better tokenization quality or enhanced results, highlighting the importance of tailored tokenization strategies that prioritize linguistic alignment. This framework sets a new standard for developing robust tokenization methods optimized for morphologically complex and low-resource languages. Future work will refine morphological analysis, explore domain-specific customizations, and conduct cross-linguistic evaluations to further enhance tokenization practices.",
+  "category": "text",
+  "domain": "natural language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "tokenization_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Intrinsic tokenization metrics (vocabulary size, token count, %TR, %Pure) and correlation with downstream MMLU accuracy (i.e., correlation_with_downstream_accuracy)",
+  "general_score_metric": "Downstream MMLU accuracy together with %TR (proposed intrinsic tokenization quality metric)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, specialized framework for Turkish tokenization evaluation with limited adoption so far outside tokenizer/morphology research.",
+  "notes": "Relatively small evaluation set (6,200 MMLU MCQs); focused on Turkish (morphologically rich) language issues — results may not generalize across languages; intrinsic metrics may correlate but not fully determine downstream performance; potential contamination if tokenizers/models were pretrained on the same MMLU data.",
+  "creators": {
+    "scientists": [
+      "M. Ali Bayram",
+      "Ali Arda Fincan",
+      "Ahmet Semih Gümüş",
+      "Sercan Karakaş",
+      "Banu Diri",
+      "Savaş Yıldırım"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2502.07057",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

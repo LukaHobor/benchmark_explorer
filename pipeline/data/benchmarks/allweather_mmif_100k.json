@@ -1,0 +1,39 @@
+{
+  "name": "All-weather MMIF 100k",
+  "description": "Multi-modality image fusion (MMIF) combines complementary information from different image modalities to provide a more comprehensive and objective interpretation of scenes. However, existing MMIF methods lack the ability to resist different weather interferences in real-world scenes, preventing them from being useful in practical applications such as autonomous driving. To bridge this research gap, we proposed an all-weather MMIF model. Achieving effective multi-tasking in this context is particularly challenging due to the complex and diverse nature of weather conditions. A key obstacle lies in the 'black box' nature of current deep learning architectures, which restricts their multi-tasking capabilities. To overcome this, we decompose the network into two modules: a fusion module and a restoration module. For the fusion module, we introduce a learnable low-rank representation model to decompose images into low-rank and sparse components. This interpretable feature separation allows us to better observe and understand images. For the restoration module, we propose a physically-aware clear feature prediction module based on an atmospheric scattering model that can deduce variations in light transmittance from both scene illumination and reflectance. We also construct a large-scale multi-modality dataset with 100,000 image pairs across rain, haze, and snow conditions, covering various degradation levels and diverse scenes to thoroughly evaluate image fusion methods in adverse weather. Experimental results in both real-world and synthetic scenes show that the proposed algorithm excels in detail recovery and multi-modality feature extraction. The code is available at https://github.com/ixilai/AWFusion.",
+  "category": "multimodal",
+  "domain": "autonomous driving / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_fusion",
+    "image_restoration",
+    "adverse_weather_enhancement",
+    "multimodal_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS (perceptual and fidelity metrics)",
+  "general_score_metric": "PSNR",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "New large-scale dataset (100k pairs) intended for the all-weather fusion community; promising but adoption still emerging.",
+  "notes": "Large synthetic + real-weather dataset (100k) with diverse conditions (rain, haze, snow); strong for training data-hungry models but domain gap between synthetic and real scenes possible; metrics focused on low-level fidelity (PSNR/SSIM/LPIPS); non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xilai Li",
+      "Wuyang Liu",
+      "Xiaosong Li",
+      "Fuqiang Zhou",
+      "Huafeng Li",
+      "Feiping Nie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2402.02090",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

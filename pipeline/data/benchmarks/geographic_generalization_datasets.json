@@ -1,0 +1,36 @@
+{
+  "name": "Geographic generalization datasets",
+  "description": "For more than a decade, researchers have measured progress in object recognition on ImageNet-based generalization benchmarks such as ImageNet-A, -C, and -R. Recent advances in foundation models, trained on orders of magnitude more data, have begun to saturate these standard benchmarks, but remain brittle in practice. This suggests standard benchmarks, which tend to focus on predefined or synthetic changes, may not be sufficient for measuring real world generalization. Consequently, we propose studying generalization across geography as a more realistic measure of progress using two datasets of objects from households across the globe. We conduct an extensive empirical evaluation of progress across nearly 100 vision models up to most recent foundation models. We first identify a progress gap between standard benchmarks and real-world, geographical shifts: progress on ImageNet results in up to 2.5x more progress on standard generalization benchmarks than real-world distribution shifts. Second, we study model generalization across geographies by measuring the disparities in performance across regions, a more fine-grained measure of real world generalization. We observe all models have large geographic disparities, even foundation CLIP models, with differences of 7-20% in accuracy between regions. Counter to modern intuition, we discover progress on standard benchmarks fails to improve geographic disparities and often exacerbates them: geographic disparities between the least performant models and today's best models have more than tripled. Our results suggest scaling alone is insufficient for consistent robustness to real-world distribution shifts. Finally, we highlight in early experiments how simple last layer retraining on more representative, curated data can complement scaling as a promising direction of future work, reducing geographic disparity on both benchmarks by over two-thirds.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation",
+    "distribution_shift",
+    "representation_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded recent benchmark for measuring geographic robustness and distribution shift; cited in robustness and foundation-model evaluation work but not as universally used as ImageNet variants.",
+  "notes": "Real-world, geographically diverse household images that reveal regional performance disparities; datasets are often imbalanced across regions and intended for robustness/distribution-shift evaluation rather than IID performance — not saturated by current models.",
+  "creators": {
+    "scientists": [
+      "Megan Richards",
+      "Polina Kirichenko",
+      "Diane Bouchacourt",
+      "Mark Ibrahim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2307.13136",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

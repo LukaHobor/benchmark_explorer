@@ -1,0 +1,44 @@
+{
+  "name": "EIS-ECM classification benchmark",
+  "description": "Analysis of Electrochemical Impedance Spectroscopy (EIS) data for electrochemical systems often consists of defining an Equivalent Circuit Model (ECM) using expert knowledge and then optimizing the model parameters to deconvolute various resistance, capacitive, inductive, or diffusion responses. For small data sets, this procedure can be conducted manually; however, it is not feasible to manually define a proper ECM for extensive data sets with a wide range of EIS responses. Automatic identification of an ECM would substantially accelerate the analysis of large sets of EIS data. We showcase machine learning methods to classify the ECMs of 9,300 impedance spectra provided by QuantumScape for the BatteryDEV hackathon. The best-performing approach is a gradient-boosted tree model utilizing a library to automatically generate features, followed by a random forest model using the raw spectral data. A convolutional neural network using boolean images of Nyquist representations is presented as an alternative, although it achieves a lower accuracy. We publish the data and open source the associated code. The approaches described in this article can serve as benchmarks for further studies. A key remaining challenge is the identifiability of the labels, underlined by the model performances and the comparison of misclassified spectra.",
+  "category": "mixed",
+  "domain": "electrochemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "multi_class"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A niche, domain-specific benchmark used in electrochemistry and battery ML research (BatteryDEV); limited but growing adoption in the battery diagnostics community.",
+  "notes": "Small-to-moderate dataset (~9,300 spectra); label identifiability and label noise are known issues; non-LLM benchmark; domain-specific features matter (risk of overfitting to instrument/collection artifacts).",
+  "creators": {
+    "scientists": [
+      "Joachim Schaeffer",
+      "Paul Gasper",
+      "Esteban Garcia-Tamayo",
+      "Raymond Gasper",
+      "Masaki Adachi",
+      "Juan Pablo Gaviria-Cardona",
+      "Simon Montoya-Bedoya",
+      "Anoushka Bhutani",
+      "Andrew Schiek",
+      "Rhys Goodall",
+      "Rolf Findeisen",
+      "Richard D. Braatz",
+      "Simon Engelke"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2302.03362",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

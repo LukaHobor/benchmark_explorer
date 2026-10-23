@@ -1,0 +1,37 @@
+{
+  "name": "Heterogeneous Network Embedding Benchmark",
+  "description": "Since real-world objects and their interactions are often multi-modal and multi-typed, heterogeneous networks have been widely used as a more powerful, realistic, and generic superclass of traditional homogeneous networks (graphs). Meanwhile, representation learning (\\aka~embedding) has recently been intensively studied and shown effective for various network mining and analytical tasks. In this work, we aim to provide a unified framework to deeply summarize and evaluate existing research on heterogeneous network embedding (HNE), which includes but goes beyond a normal survey. Since there has already been a broad body of HNE algorithms, as the first contribution of this work, we provide a generic paradigm for the systematic categorization and analysis over the merits of various existing HNE algorithms. Moreover, existing HNE algorithms, though mostly claimed generic, are often evaluated on different datasets. Understandable due to the application favor of HNE, such indirect comparisons largely hinder the proper attribution of improved task performance towards effective data preprocessing and novel technical design, especially considering the various ways possible to construct a heterogeneous network from real-world application data. Therefore, as the second contribution, we create four benchmark datasets with various properties regarding scale, structure, attribute/label availability, and \\etc.~from different sources, towards handy and fair evaluations of HNE algorithms. As the third contribution, we carefully refactor and amend the implementations and create friendly interfaces for 13 popular HNE algorithms, and provide all-around comparisons among them over multiple tasks and experimental settings.",
+  "category": "mixed",
+  "domain": "network representation learning / graph mining",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "link_prediction",
+    "node_clustering",
+    "embedding_quality_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "micro-F1 / macro-F1 for node classification; AUC for link prediction; clustering metrics (NMI) for clustering",
+  "general_score_metric": "micro-F1 (primary for node classification) / AUC (primary for link prediction)",
+  "year_of_publish": 2020,
+  "reputation": "Widely cited within the graph-mining / network representation learning community as a useful unified comparison of heterogeneous network embedding methods and datasets.",
+  "notes": "Non-LLM benchmark focused on graph embeddings; results sensitive to how heterogeneous graphs are constructed and preprocessed (node/edge types, attributes); dataset sizes vary and some splits are small, so comparisons can be influenced by preprocessing choices.",
+  "creators": {
+    "scientists": [
+      "Carl Yang",
+      "Yuxin Xiao",
+      "Yu Zhang",
+      "Yizhou Sun",
+      "Jiawei Han"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2004.00216",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

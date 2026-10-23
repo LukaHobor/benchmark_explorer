@@ -1,0 +1,36 @@
+{
+  "name": "SimSort",
+  "description": "Spike sorting is an essential process in neural recording, which identifies and separates electrical signals from individual neurons recorded by electrodes in the brain, enabling researchers to study how specific neurons communicate and process information. Although there exist a number of spike sorting methods which have contributed to significant neuroscientific breakthroughs, many are heuristically designed, making it challenging to verify their correctness due to the difficulty of obtaining ground truth labels from real-world neural recordings. In this work, we explore a data-driven, deep learning-based approach. We begin by creating a large-scale dataset through electrophysiology simulations using biologically realistic computational models. We then present SimSort, a pretraining framework for spike sorting. Trained solely on simulated data, SimSort demonstrates zero-shot generalizability to real-world spike sorting tasks, yielding consistent improvements over existing methods across multiple benchmarks. These results highlight the potential of simulation-driven pretraining to enhance the robustness and scalability of spike sorting in experimental neuroscience.",
+  "category": "audio",
+  "domain": "neuroscience",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "spike_sorting",
+    "source_separation",
+    "unsupervised_clustering"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "clustering and detection metrics such as Adjusted Rand Index (ARI), precision/recall for spike detection, false positive/negative rates",
+  "general_score_metric": "Adjusted Rand Index (ARI) and detection precision/recall (task-dependent)",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "Non-LLM neuroscience benchmark based on large simulated datasets; designed for sim-to-real pretraining. While simulation enables ground truth, potential sim-to-real domain gap and limited real-world labeled ground truth are important caveats.",
+  "creators": {
+    "scientists": [
+      "Yimu Zhang",
+      "Dongqi Han",
+      "Yansen Wang",
+      "Yu Gu",
+      "Dongsheng Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2502.03198",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

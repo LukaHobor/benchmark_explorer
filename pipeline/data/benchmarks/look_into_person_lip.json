@@ -1,0 +1,37 @@
+{
+  "name": "Look into Person (LIP)",
+  "description": "Human parsing and pose estimation have recently received considerable\ninterest due to their substantial application potentials. However, the existing\ndatasets have limited numbers of images and annotations and lack a variety of\nhuman appearances and coverage of challenging cases in unconstrained\nenvironments. In this paper, we introduce a new benchmark named \"Look into\nPerson (LIP)\" that provides a significant advancement in terms of scalability,\ndiversity, and difficulty, which are crucial for future developments in\nhuman-centric analysis. This comprehensive dataset contains over 50,000\nelaborately annotated images with 19 semantic part labels and 16 body joints,\nwhich are captured from a broad range of viewpoints, occlusions, and background\ncomplexities. Using these rich annotations, we perform detailed analyses of the\nleading human parsing and pose estimation approaches, thereby obtaining\ninsights into the successes and failures of these methods. To further explore\nand take advantage of the semantic correlation of these two tasks, we propose a\nnovel joint human parsing and pose estimation network to explore efficient\ncontext modeling, which can simultaneously predict parsing and pose with\nextremely high quality. Furthermore, we simplify the network to solve human\nparsing by exploring a novel self-supervised structure-sensitive learning\napproach, which imposes human pose structures into the parsing results without\nresorting to extra supervision. The dataset, code and models are available at\nhttp://www.sysu-hcp.net/lip/.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "human_parsing",
+    "semantic_segmentation",
+    "pose_estimation",
+    "keypoint_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection over Union (mIoU) for parsing; PCK / PCKh for pose estimation",
+  "general_score_metric": "mIoU (for parsing) and PCK/PCKh (for pose estimation)",
+  "typical_sota_score": "parsing mIoU ≈ 60–75%; pose PCK/PCKh ≈ 90–95%",
+  "year_of_publish": 2018,
+  "reputation": "Widely used benchmark in human parsing and pose-estimation research; considered a standard challenging dataset for these tasks.",
+  "notes": "Non-LLM vision benchmark; large (~50k) richly annotated dataset focused on people with occlusion and viewpoint challenges; class imbalance and occluded parts can make some metrics hard to interpret.",
+  "creators": {
+    "scientists": [
+      "Xiaodan Liang",
+      "Ke Gong",
+      "Xiaohui Shen",
+      "Liang Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1804.01984",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

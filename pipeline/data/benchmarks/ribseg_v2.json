@@ -1,0 +1,42 @@
+{
+  "name": "RibSeg v2",
+  "description": "Automatic rib labeling and anatomical centerline extraction are common prerequisites for various clinical applications. Prior studies either use in-house datasets that are inaccessible to communities, or focus on rib segmentation that neglects the clinical significance of rib labeling. To address these issues, we extend our prior dataset (RibSeg) on the binary rib segmentation task to a comprehensive benchmark, named RibSeg v2, with 660 CT scans (15,466 individual ribs in total) and annotations manually inspected by experts for rib labeling and anatomical centerline extraction. Based on the RibSeg v2, we develop a pipeline including deep learning-based methods for rib labeling, and a skeletonization-based method for centerline extraction. To improve computational efficiency, we propose a sparse point cloud representation of CT scans and compare it with standard dense voxel grids. Moreover, we design and analyze evaluation metrics to address the key challenges of each task. Our dataset, code, and model are available online to facilitate open research at https://github.com/M3DV/RibSeg",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "anatomical_labeling",
+    "centerline_extraction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (Dice) for segmentation; labeling accuracy for rib IDs; distance-based error metrics for centerlines",
+  "general_score_metric": "Dice (F1) for segmentation",
+  "typical_sota_score": "85–95%",
+  "year_of_publish": 2022,
+  "reputation": "Well-regarded in medical imaging for providing a large, expert-annotated rib dataset with public code and models; moderate adoption in the community.",
+  "notes": "Non-LLM benchmark; moderate dataset size (660 CTs); class imbalance across ribs and scanner/domain shifts can affect results; evaluations also rely on distance-based metrics for centerlines.",
+  "creators": {
+    "scientists": [
+      "Liang Jin",
+      "Shixuan Gu",
+      "Donglai Wei",
+      "Jason Ken Adhinarta",
+      "Kaiming Kuang",
+      "Yongjie Jessica Zhang",
+      "Hanspeter Pfister",
+      "Bingbing Ni",
+      "Jiancheng Yang",
+      "Ming Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2210.09309",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

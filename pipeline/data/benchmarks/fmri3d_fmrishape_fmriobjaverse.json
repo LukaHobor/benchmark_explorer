@@ -1,0 +1,37 @@
+{
+  "name": "fMRI-3D (fMRI-Shape & fMRI-Objaverse)",
+  "description": "Reconstructing 3D visuals from functional Magnetic Resonance Imaging (fMRI) data, introduced as Recon3DMind, is of significant interest to both cognitive neuroscience and computer vision. To advance this task, we present the fMRI-3D dataset, which includes data from 15 participants and showcases a total of 4,768 3D objects. The dataset consists of two components: fMRI-Shape, previously introduced and available at https://huggingface.co/datasets/Fudan-fMRI/fMRI-Shape, and fMRI-Objaverse, proposed in this paper and available at https://huggingface.co/datasets/Fudan-fMRI/fMRI-Objaverse. fMRI-Objaverse includes data from 5 subjects, 4 of whom are also part of the core set in fMRI-Shape. Each subject views 3,142 3D objects across 117 categories, all accompanied by text captions. This significantly enhances the diversity and potential applications of the dataset. Moreover, we propose MinD-3D++, a novel framework for decoding textured 3D visual information from fMRI signals. The framework evaluates the feasibility of not only reconstructing 3D objects from the human mind but also generating, for the first time, 3D textured meshes with detailed textures from fMRI data. We establish new benchmarks by designing metrics at the semantic, structural, and textured levels to evaluate model performance. Furthermore, we assess the model's effectiveness in out-of-distribution settings and analyze the attribution of the proposed 3D pari fMRI dataset in visual regions of interest (ROIs) in fMRI signals. Our experiments demonstrate that MinD-3D++ not only reconstructs 3D objects with high semantic and spatial accuracy but also provides deeper insights into how the human brain processes 3D visual information. Project page: https://jianxgao.github.io/MinD-3D.",
+  "category": "multimodal",
+  "domain": "neuroscience / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_reconstruction_from_fMRI",
+    "semantic_retrieval_from_fMRI",
+    "cross-modal_generation (fMRI→3D/text)"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "multi-faceted: structural metrics (Chamfer distance, IoU), semantic metrics (semantic accuracy / retrieval accuracy), and perceptual/similarity metrics (CLIP similarity / FID-like measures) evaluated at semantic, structural, and textured levels",
+  "general_score_metric": "combined evaluation using semantic accuracy and structural distance (Chamfer distance) as primary reported metrics",
+  "year_of_publish": 2024,
+  "reputation": "New dataset/framework (2024) aimed at a specialized intersection of neuroscience and 3D vision; early-stage adoption within those research communities.",
+  "notes": "small number of subjects (15) and high inter-subject variability; expensive/complex data collection and preprocessing; non-LLM benchmark; evaluation mixes semantic and low-level geometric metrics; limited sample size for robust generalization.",
+  "creators": {
+    "scientists": [
+      "Jianxiong Gao",
+      "Yanwei Fu",
+      "Yuqian Fu",
+      "Yun Wang",
+      "Xuelin Qian",
+      "Jianfeng Feng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.11315",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

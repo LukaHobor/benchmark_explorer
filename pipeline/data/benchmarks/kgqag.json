@@ -1,0 +1,42 @@
+{
+  "name": "KGQAG",
+  "description": "Knowledge Graph Question Answering (KGQA) systems rely on high-quality benchmarks to evaluate complex multi-hop reasoning. However, despite their widespread use, popular datasets such as WebQSP and CWQ suffer from critical quality issues, including inaccurate or incomplete ground-truth annotations, poorly constructed questions that are ambiguous, trivial, or unanswerable, and outdated or inconsistent knowledge. Through a manual audit of 16 popular KGQA datasets, including WebQSP and CWQ, we find that the average factual correctness rate is only 57 %. To address these issues, we introduce KGQAGen, an LLM-in-the-loop framework that systematically resolves these pitfalls. KGQAGen combines structured knowledge grounding, LLM-guided generation, and symbolic verification to produce challenging and verifiable QA instances. Using KGQAGen, we construct KGQAGen-10k, a ten-thousand scale benchmark grounded in Wikidata, and evaluate a diverse set of KG-RAG models. Experimental results demonstrate that even state-of-the-art systems struggle on this benchmark, highlighting its ability to expose limitations of existing models. Our findings advocate for more rigorous benchmark construction and position KGQAGen as a scalable framework for advancing KGQA evaluation.",
+  "category": "text",
+  "domain": "knowledge graph question answering (KGQA)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multi_hop_qa",
+    "entity_linking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match / Hits@1 (entity-level accuracy)",
+  "general_score_metric": "exact_match",
+  "year_of_publish": 2025,
+  "reputation": "A recent, higher-quality KGQA benchmark intended to address known issues in prior KGQA datasets; gaining attention in the KGQA/RAG research community.",
+  "notes": "Grounded in Wikidata and generated with an LLM-in-the-loop plus symbolic verification to improve answer veracity; designed to be challenging and to expose weaknesses of current KG-RAG systems; potential overlap with publicly available knowledge sources may still pose contamination risks.",
+  "creators": {
+    "scientists": [
+      "Liangliang Zhang",
+      "Zhuorui Jiang",
+      "Hongliang Chi",
+      "Haoyang Chen",
+      "Mohammed Elkoumy",
+      "Fali Wang",
+      "Qiong Wu",
+      "Zhengyi Zhou",
+      "Shirui Pan",
+      "Suhang Wang",
+      "Yao Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2505.23495",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

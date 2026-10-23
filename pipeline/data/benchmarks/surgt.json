@@ -1,0 +1,60 @@
+{
+  "name": "SurgT",
+  "description": "This paper introduces the ``SurgT: Surgical Tracking\" challenge which was organised in conjunction with MICCAI 2022. There were two purposes for the creation of this challenge: (1) the establishment of the first standardised benchmark for the research community to assess soft-tissue trackers; and (2) to encourage the development of unsupervised deep learning methods, given the lack of annotated data in surgery. A dataset of 157 stereo endoscopic videos from 20 clinical cases, along with stereo camera calibration parameters, have been provided. Participants were assigned the task of developing algorithms to track the movement of soft tissues, represented by bounding boxes, in stereo endoscopic videos. At the end of the challenge, the developed methods were assessed on a previously hidden test subset. This assessment uses benchmarking metrics that were purposely developed for this challenge, to verify the efficacy of unsupervised deep learning algorithms in tracking soft-tissue. The metric used for ranking the methods was the Expected Average Overlap (EAO) score, which measures the average overlap between a tracker's and the ground truth bounding boxes. Coming first in the challenge was the deep learning submission by ICVS-2Ai with a superior EAO score of 0.617. This method employs ARFlow to estimate unsupervised dense optical flow from cropped images, using photometric and regularization losses. Second, Jmees with an EAO of 0.583, uses deep learning for surgical tool segmentation on top of a non-deep learning baseline method: CSRT. CSRT by itself scores a similar EAO of 0.563. The results from this challenge show that currently, non-deep learning methods are still competitive. The dataset and benchmarking tool created for this challenge have been made publicly available at https://surgt.grand-challenge.org/.",
+  "category": "vision",
+  "domain": "surgical robotics",
+  "benchmark_type": "competition",
+  "task_types": [
+    "object_tracking",
+    "video_tracking",
+    "bounding_box_tracking",
+    "unsupervised_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Expected Average Overlap (EAO)",
+  "general_score_metric": "Expected Average Overlap (EAO)",
+  "typical_sota_score": "0.56–0.62 (EAO)",
+  "year_of_publish": 2023,
+  "reputation": "Established as the first standardized benchmark for soft-tissue tracking in endoscopic surgery; respected within the surgical-vision niche but has limited broader adoption.",
+  "notes": "Small, domain-specific dataset (157 videos, 20 cases); non-LLM benchmark focused on video/object tracking. Benchmark emphasizes unsupervised methods and uses a hidden test split; results show non-deep-learning methods remain competitive.",
+  "creators": {
+    "scientists": [
+      "Joao Cartucho",
+      "Alistair Weld",
+      "Samyakh Tukra",
+      "Haozheng Xu",
+      "Hiroki Matsuzaki",
+      "Taiyo Ishikawa",
+      "Minjun Kwon",
+      "Yong Eun Jang",
+      "Kwang-Ju Kim",
+      "Gwang Lee",
+      "Bizhe Bai",
+      "Lueder Kahrs",
+      "Lars Boecking",
+      "Simeon Allmendinger",
+      "Leopold Muller",
+      "Yitong Zhang",
+      "Yueming Jin",
+      "Sophia Bano",
+      "Francisco Vasconcelos",
+      "Wolfgang Reiter",
+      "Jonas Hajek",
+      "Bruno Silva",
+      "Estevao Lima",
+      "Joao L. Vilaca",
+      "Sandro Queiros",
+      "Stamatia Giannarou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2302.03022",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

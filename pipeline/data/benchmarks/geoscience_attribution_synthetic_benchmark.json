@@ -1,0 +1,35 @@
+{
+  "name": "Geoscience Attribution Synthetic Benchmark",
+  "description": "Despite the increasingly successful application of neural networks to many problems in the geosciences, their complex and nonlinear structure makes the interpretation of their predictions difficult, which limits model trust and does not allow scientists to gain physical insights about the problem at hand. Many different methods have been introduced in the emerging field of eXplainable Artificial Intelligence (XAI), which aim at attributing the network s prediction to specific features in the input domain. XAI methods are usually assessed by using benchmark datasets (like MNIST or ImageNet for image classification). However, an objective, theoretically derived ground truth for the attribution is lacking for most of these datasets, making the assessment of XAI in many cases subjective. Also, benchmark datasets specifically designed for problems in geosciences are rare. Here, we provide a framework, based on the use of additively separable functions, to generate attribution benchmark datasets for regression problems for which the ground truth of the attribution is known a priori. We generate a large benchmark dataset and train a fully connected network to learn the underlying function that was used for simulation. We then compare estimated heatmaps from different XAI methods to the ground truth in order to identify examples where specific XAI methods perform well or poorly. We believe that attribution benchmarks as the ones introduced herein are of great importance for further application of neural networks in the geosciences, and for more objective assessment and accurate implementation of XAI methods, which will increase model trust and assist in discovering new science.",
+  "category": "mixed",
+  "domain": "geoscience / earth sciences",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "feature_attribution",
+    "benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "comparison of estimated attributions to ground-truth attribution using similarity/correlation and error metrics (e.g., Spearman/Pearson correlation, L2 error, AUC/localization measures)",
+  "general_score_metric": "attribution similarity (Spearman/Pearson correlation) and attribution L2 error",
+  "typical_sota_score": "varies by method; top methods often report high attribution correlations (roughly 0.7–0.95) on the synthetic tasks",
+  "year_of_publish": 2021,
+  "reputation": "A niche, research-focused synthetic benchmark introduced in 2021 for assessing XAI methods in geoscience regression problems; modest but growing citation within XAI and geoscience ML communities.",
+  "notes": "Synthetic benchmark with known ground-truth attributions (additively separable functions); may not capture full complexity of real geoscience problems; non-LLM; assessments depend on chosen similarity metric.",
+  "creators": {
+    "scientists": [
+      "Antonios Mamalakis",
+      "Imme Ebert-Uphoff",
+      "Elizabeth A. Barnes"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2103.10005",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

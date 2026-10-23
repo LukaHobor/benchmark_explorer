@@ -1,0 +1,37 @@
+{
+  "name": "Constructing Confidence Intervals for 'the' Generalization Error -- a Comprehensive Benchmark Study",
+  "description": "When assessing the quality of prediction models in machine learning, confidence intervals (CIs) for the generalization error, which measures predictive performance, are a crucial tool. Luckily, there exist many methods for computing such CIs and new promising approaches are continuously being proposed. Typically, these methods combine various resampling procedures, most popular among them cross-validation and bootstrapping, with different variance estimation techniques. Unfortunately, however, there is currently no consensus on when any of these combinations may be most reliably employed and how they generally compare. In this work, we conduct a large-scale study comparing CIs for the generalization error, the first one of such size, where we empirically evaluate 13 different CI methods on a total of 19 tabular regression and classification problems, using seven different inducers and a total of eight loss functions. We give an overview of the methodological foundations and inherent challenges of constructing CIs for the generalization error and provide a concise review of all 13 methods in a unified framework. Finally, the CI methods are evaluated in terms of their relative coverage frequency, width, and runtime. Based on these findings, we can identify a subset of methods that we would recommend. We also publish the datasets as a benchmarking suite on OpenML and our code on GitHub to serve as a basis for further studies.",
+  "category": "mixed",
+  "domain": "machine learning / statistics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "confidence_interval_estimation",
+    "regression",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "coverage_frequency and interval_width (with runtime as secondary)",
+  "general_score_metric": "coverage frequency (empirical coverage)",
+  "year_of_publish": 2024,
+  "reputation": "A comprehensive, recent empirical study that is gaining attention among ML/statistics researchers interested in uncertainty quantification; datasets and code published for reproducibility.",
+  "notes": "Non-LLM, methodological benchmark across 19 OpenML datasets; not a single-model leaderboard — results depend strongly on learner, loss, and dataset; coverage vs. width trade-offs and runtime are primary considerations.",
+  "creators": {
+    "scientists": [
+      "Hannah Schulz-Kümpel",
+      "Sebastian Fischer",
+      "Roman Hornung",
+      "Anne-Laure Boulesteix",
+      "Thomas Nagler",
+      "Bernd Bischl"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2409.18836",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

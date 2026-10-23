@@ -1,0 +1,40 @@
+{
+  "name": "ACES (Translation Accuracy Challenge Sets)",
+  "description": "Recent machine translation (MT) metrics calibrate their effectiveness by correlating with human judgement but without any insights about their behaviour across different error types. Challenge sets are used to probe specific dimensions of metric behaviour but there are very few such datasets and they either focus on a limited number of phenomena or a limited number of language pairs. We introduce ACES, a contrastive challenge set spanning 146 language pairs, aimed at discovering whether metrics can identify 68 translation accuracy errors. These phenomena range from simple alterations at the word/character level to more complex errors based on discourse and real-world knowledge. We conduct a large-scale study by benchmarking ACES on 50 metrics submitted to the WMT 2022 and 2023 metrics shared tasks. We benchmark metric performance, assess their incremental performance over successive campaigns, and measure their sensitivity to a range of linguistic phenomena. We also investigate claims that Large Language Models (LLMs) are effective as MT evaluators by evaluating on ACES. Our results demonstrate that different metric families struggle with different phenomena and that LLM-based methods fail to demonstrate reliable performance. Our analyses indicate that most metrics ignore the source sentence, tend to prefer surface-level overlap and end up incorporating properties of base models which are not always beneficial. We expand ACES to include error span annotations, denoted as SPAN-ACES and we use this dataset to evaluate span-based error metrics showing these metrics also need considerable improvement. Finally, we provide a set of recommendations for building better MT metrics, including focusing on error labels instead of scores, ensembling, designing strategies to explicitly focus on the source sentence, focusing on semantic content and choosing the right base model for representations.",
+  "category": "text",
+  "domain": "machine translation / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "metric_evaluation",
+    "error_detection",
+    "span_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (contrastive accuracy for metric preference), span F1 for span-ACES",
+  "general_score_metric": "contrastive accuracy (percentage of pairs where metric prefers the reference-correct translation)",
+  "typical_sota_score": "60–90% (varies widely by phenomenon and language pair)",
+  "year_of_publish": 2024,
+  "reputation": "Developed for WMT-style metric analysis and increasingly referenced in the MT metrics community as a comprehensive, phenomenon-focused challenge set.",
+  "notes": "Covers many phenomena and 146 language pairs but not exhaustive; different metrics perform unevenly across phenomena; possible contamination/bias if metrics were tuned on related data; contrastive setup favors ranking-based evaluation over absolute adequacy scores.",
+  "creators": {
+    "scientists": [
+      "Nikita Moghe",
+      "Arnisa Fazla",
+      "Chantal Amrhein",
+      "Tom Kocmi",
+      "Mark Steedman",
+      "Alexandra Birch",
+      "Rico Sennrich",
+      "Liane Guillou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2401.16313",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

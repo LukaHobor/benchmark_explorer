@@ -1,0 +1,39 @@
+{
+  "name": "AutoML Medical Claims Benchmark",
+  "description": "We ascertain and compare the performances of AutoML tools on large, highly imbalanced healthcare datasets. We generated a large dataset using historical administrative claims including demographic information and flags for disease codes in four different time windows prior to 2019. We then trained three AutoML tools on this dataset to predict six different disease outcomes in 2019 and evaluated model performances on several metrics. The AutoML tools showed improvement from the baseline random forest model but did not differ significantly from each other. All models recorded low area under the precision-recall curve and failed to predict true positives while keeping the true negative rate high. Model performance was not directly related to prevalence. We provide a specific use-case to illustrate how to select a threshold that gives the best balance between true and false positive rates, as this is an important consideration in medical applications. Healthcare datasets present several challenges for AutoML tools, including large sample size, high imbalance, and limitations in the available features types. Improvements in scalability, combinations of imbalance-learning resampling and ensemble approaches, and curated feature selection are possible next steps to achieve better performance. Among the three explored, no AutoML tool consistently outperforms the rest in terms of predictive performance. The performances of the models in this study suggest that there may be room for improvement in handling medical claims data. Finally, selection of the optimal prediction threshold should be guided by the specific practical application.",
+  "category": "mixed",
+  "domain": "healthcare / medical claims",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multiclass_classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC (primary), with supplementary use of F1, accuracy, and calibration metrics",
+  "general_score_metric": "AUROC (area under ROC curve)",
+  "typical_sota_score": "0.70–0.90 (AUROC, varies by task and label prevalence)",
+  "year_of_publish": 2022,
+  "reputation": "Niche but useful benchmark for AutoML researchers working on clinical / claims data; referenced in AutoML evaluation literature but not a broadly adopted public leaderboard.",
+  "notes": "Uses sensitive healthcare claims-style features — results sensitive to feature engineering and cohort selection; potential distribution shift and label noise; not an LLM benchmark; resource/robustness measures also emphasized alongside accuracy.",
+  "creators": {
+    "scientists": [
+      "A Romero RA",
+      "Y Deypalan MN",
+      "Mehrotra S",
+      "Jungao JT",
+      "Sheils NE",
+      "Manduchi E"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2107.10495",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

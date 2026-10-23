@@ -1,0 +1,40 @@
+{
+  "name": "Long-Tailed Thorax Diseases Chest X‑Ray Benchmark",
+  "description": "Imaging exams, such as chest radiography, will yield a small set of common findings and a much larger set of uncommon findings. While a trained radiologist can learn the visual presentation of rare conditions by studying a few representative examples, teaching a machine to learn from such a \"long-tailed\" distribution is much more difficult, as standard methods would be easily biased toward the most frequent classes. In this paper, we present a comprehensive benchmark study of the long-tailed learning problem in the specific domain of thorax diseases on chest X-rays. We focus on learning from naturally distributed chest X-ray data, optimizing classification accuracy over not only the common \"head\" classes, but also the rare yet critical \"tail\" classes. To accomplish this, we introduce a challenging new long-tailed chest X-ray benchmark to facilitate research on developing long-tailed learning methods for medical image classification. The benchmark consists of two chest X-ray datasets for 19- and 20-way thorax disease classification, containing classes with as many as 53,000 and as few as 7 labeled training images. We evaluate both standard and state-of-the-art long-tailed learning methods on this new benchmark, analyzing which aspects of these methods are most beneficial for long-tailed medical image classification and summarizing insights for future algorithm design. The datasets, trained models, and code are available at https://github.com/VITA-Group/LongTailCXR.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "long_tail_learning",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and class-balanced accuracy (often reported as balanced_accuracy / macro-F1)",
+  "general_score_metric": "balanced_accuracy",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2022,
+  "reputation": "A respected academic benchmark in medical imaging for studying long-tailed learning; moderately used by researchers focusing on class-imbalance and medical X-ray classification.",
+  "notes": "Natural long-tailed class imbalance (some classes have as few as 7 examples); potential label noise and patient overlap risks; non-LLM benchmark focused on chest X-ray classification; evaluation sensitive to class-balancing choices.",
+  "creators": {
+    "scientists": [
+      "Gregory Holste",
+      "Song Wang",
+      "Ziyu Jiang",
+      "Thomas C. Shen",
+      "George Shih",
+      "Ronald M. Summers",
+      "Yifan Peng",
+      "Zhangyang Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2208.13365",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

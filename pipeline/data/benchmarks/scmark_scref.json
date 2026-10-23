@@ -1,0 +1,36 @@
+{
+  "name": "scMARK / scREF",
+  "description": "Many methods have been proposed for removing batch effects and aligning single-cell RNA (scRNA) datasets. However, performance is typically evaluated based on multiple parameters and few datasets, creating challenges in assessing which method is best for aligning data at scale. Here, we introduce the K-Neighbors Intersection (KNI) score, a single score that both penalizes batch effects and measures accuracy at cross-dataset cell-type label prediction alongside carefully curated small (scMARK) and large (scREF) benchmarks comprising 11 and 46 human scRNA studies respectively, where we have standardized author labels. Using the KNI score, we evaluate and optimize approaches for cross-dataset single-cell RNA integration. We introduce Batch Adversarial single-cell Variational Inference (BA-scVI), as a new variant of scVI that uses adversarial training to penalize batch-effects in the encoder and decoder, and show this approach outperforms other methods. In the resulting aligned space, we f",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "task_types": [
+    "batch_correction",
+    "cell_type_label_transfer",
+    "single_cell_integration"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "KNI score",
+  "year_of_publish": 2025,
+  "reputation": "A recent and increasingly relevant benchmark for large-scale single-cell integration, but not yet as established as long-running community leaderboards.",
+  "notes": "Non-LLM bioinformatics benchmark; performance depends on both batch mixing and label-transfer accuracy, and results can be sensitive to dataset composition and preprocessing.",
+  "creators": {
+    "scientists": [
+      "Juan Javier Diaz-Mejia",
+      "Elias Williams",
+      "Octavian Focsa",
+      "Dylan Mendonca",
+      "Swechha Singh",
+      "Brendan Innes"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2503.20730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

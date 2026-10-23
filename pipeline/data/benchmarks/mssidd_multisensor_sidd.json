@@ -1,0 +1,35 @@
+{
+  "name": "MSSIDD (Multi-Sensor SIDD)",
+  "description": "The cameras equipped on mobile terminals employ different sensors in different photograph modes, and the transferability of raw domain denoising models between these sensors is significant but remains sufficient exploration. Industrial solutions either develop distinct training strategies and models for different sensors or ignore the differences between sensors and simply extend existing models to new sensors, which leads to tedious training or unsatisfactory performance. In this paper, we introduce a new benchmark, the Multi-Sensor SIDD (MSSIDD) dataset, which is the first raw-domain dataset designed to evaluate the sensor transferability of denoising models. The MSSIDD dataset consists of 60,000 raw images of six distinct sensors, derived through the degeneration of sRGB images via different camera sensor parameters. Furthermore, we propose a sensor consistency training framework that enables denoising models to learn the sensor-invariant features, thereby facilitating the generalization of the consistent model to unseen sensors. We evaluate previous arts on the newly proposed MSSIDD dataset, and the experimental results validate the effectiveness of our proposed method. Our dataset is available at https://www.kaggle.com/datasets/sjtuwh/mssidd.",
+  "category": "vision",
+  "domain": "computational photography / mobile imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_denoising",
+    "image_restoration"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "PSNR / SSIM (peak signal-to-noise ratio and structural similarity; higher is better)",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "≈30–40 dB PSNR (model- and sensor-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "Newly introduced benchmark focused on sensor-transfer for raw-domain denoising; limited adoption so far but useful for researchers studying cross-sensor generalization.",
+  "notes": "Non-LLM benchmark for low-level vision. Dataset images are synthetic/derived (degeneration from sRGB using camera parameters), so there is a potential domain gap to truly raw sensor data; evaluation commonly saturates on PSNR/SSIM for some scenes; covers six sensors (limited sensor diversity).",
+  "creators": {
+    "scientists": [
+      "Shibin Mei",
+      "Hang Wang",
+      "Bingbing Ni"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.11562",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

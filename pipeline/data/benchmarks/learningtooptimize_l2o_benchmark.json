@@ -1,0 +1,39 @@
+{
+  "name": "Learning-to-Optimize (L2O) Benchmark",
+  "description": "Learning to optimize (L2O) is an emerging approach that leverages machine learning to develop optimization methods, aiming at reducing the laborious iterations of hand engineering. It automates the design of an optimization method based on its performance on a set of training problems. This data-driven procedure generates methods that can efficiently solve problems similar to those in the training. In sharp contrast, the typical and traditional designs of optimization methods are theory-driven, so they obtain performance guarantees over the classes of problems specified by the theory. The difference makes L2O suitable for repeatedly solving a certain type of optimization problems over a specific distribution of data, while it typically fails on out-of-distribution problems. The practicality of L2O depends on the type of target optimization, the chosen architecture of the method to learn, and the training procedure. This new paradigm has motivated a community of researchers to explore L2O and report their findings. This article is poised to be the first comprehensive survey and benchmark of L2O for continuous optimization. We set up taxonomies, categorize existing works and research directions, present insights, and identify open challenges. We also benchmarked many existing L2O approaches on a few but representative optimization problems. For reproducible research and fair benchmarking purposes, we released our software implementation and data in the package Open-L2O at https://github.com/VITA-Group/Open-L2O.",
+  "category": "mixed",
+  "domain": "optimization / machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimizer_training",
+    "algorithm_benchmarking",
+    "continuous_optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "final objective value (normalized), convergence speed (iterations to threshold), and runtime; generalization evaluated on out-of-distribution problem instances",
+  "general_score_metric": "normalized final objective value / convergence rate",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2023,
+  "reputation": "Cited as a foundational survey and benchmarking effort in the learning-to-optimize community; the Open-L2O package is used for reproducible comparisons.",
+  "notes": "Benchmark results are highly sensitive to problem distributions, initialization and hyperparameters; limited in scope to continuous optimization problems included in the suite. Non-LLM benchmark; OOD generalization is a known weakness.",
+  "creators": {
+    "scientists": [
+      "Tianlong Chen",
+      "Xiaohan Chen",
+      "Wuyang Chen",
+      "Howard Heaton",
+      "Jialin Liu",
+      "Zhangyang Wang",
+      "Wotao Yin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2103.12828",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

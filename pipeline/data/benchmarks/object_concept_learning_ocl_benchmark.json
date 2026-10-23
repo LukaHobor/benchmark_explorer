@@ -1,0 +1,38 @@
+{
+  "name": "Object Concept Learning (OCL) Benchmark",
+  "description": "Understanding objects is a central building block of artificial intelligence, especially for embodied AI. Even though object recognition excels with deep learning, current machines still struggle to learn higher-level knowledge, e.g., what attributes an object has, and what can we do with an object. In this work, we propose a challenging Object Concept Learning (OCL) task to push the envelope of object understanding. It requires machines to reason out object affordances and simultaneously give the reason: what attributes make an object possesses these affordances. To support OCL, we build a densely annotated knowledge base including extensive labels for three levels of object concept (category, attribute, affordance), and the causal relations of three levels. By analyzing the causal structure of OCL, we present a baseline, Object Concept Reasoning Network (OCRN). It leverages causal intervention and concept instantiation to infer the three levels following their causal relations. In experiments, OCRN effectively infers the object knowledge while following the causalities well. Our data and code are available at https://mvig-rhos.com/ocl.",
+  "category": "vision",
+  "domain": "vision / embodied AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "attribute_prediction",
+    "explanation_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / F1 for categories and attributes; human evaluation or qualitative metrics for generated explanations",
+  "general_score_metric": "accuracy (for category), F1 (for attributes/affordances), plus human-eval for explanations",
+  "year_of_publish": 2022,
+  "reputation": "A research dataset (from arXiv/vision community) that is recognized by researchers working on object affordances and embodied AI but not yet a mainstream benchmark.",
+  "notes": "Non-LLM, vision/embodied-AI benchmark with multi-level labels and causal annotations; moderately sized and specialized — potential reproducibility/hardware variation and limited mainstream adoption.",
+  "creators": {
+    "scientists": [
+      "Yong-Lu Li",
+      "Yue Xu",
+      "Xinyu Xu",
+      "Xiaohan Mao",
+      "Yuan YAO",
+      "SiQi Liu",
+      "Cewu Lu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2212.02710",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

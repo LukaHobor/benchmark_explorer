@@ -1,0 +1,36 @@
+{
+  "name": "ENRICH",
+  "description": "The availability of high-resolution data and accurate ground truth is essential to evaluate and compare methods and algorithms properly. Moreover, it is often difficult to acquire real data for a given application domain that is sufficiently representative and heterogeneous in terms of scene representation, acquisition conditions, point of view, etc. To overcome the limitations of available datasets, this paper presents a new synthetic, multi-purpose dataset called ENRICH for testing photogrammetric and computer vision algorithms. Compared to existing datasets, ENRICH offers higher resolution images rendered with different lighting conditions, camera orientations, scales, and fields of view. Specifically, ENRICH is composed of three sub-datasets: ENRICH-Aerial, ENRICH-Square, and ENRICH-Statue, each exhibiting different characteristics. We show the usefulness of the proposed dataset on several examples of photogrammetry and computer vision-related tasks such as: evaluation of hand-crafted and deep learning-based local features, effects of ground control points (GCPs) configuration on the 3D accuracy, and monocular depth estimation.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "local_feature_matching",
+    "monocular_depth_estimation",
+    "3d_reconstruction",
+    "camera_pose_estimation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "matching score / mAP for local features; depth RMSE / MAE for monocular depth; 3D reconstruction error / point-to-point RMSE and reprojection error for photogrammetry",
+  "general_score_metric": "matching score (for local feature evaluation) is the primary reported metric",
+  "reputation": "A niche synthetic high-resolution dataset valued for controlled photogrammetry and feature evaluation experiments but not yet widely adopted as a community standard.",
+  "notes": "Synthetic dataset with three sub-datasets (Aerial, Square, Statue); good for controlled studies but domain gap to real imagery; non-LLM vision benchmark; may not reflect all real-world imaging artifacts.",
+  "creators": {
+    "scientists": [
+      "Davide Marelli",
+      "Luca Morelli",
+      "Elisa Mariarosaria Farella",
+      "Simone Bianco",
+      "Gianluigi Ciocca",
+      "Fabio Remondino"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

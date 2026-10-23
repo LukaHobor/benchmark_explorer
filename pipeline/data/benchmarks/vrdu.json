@@ -1,0 +1,38 @@
+{
+  "name": "VRDU",
+  "description": "Understanding visually-rich business documents to extract structured data and automate business workflows has been receiving attention both in academia and industry. Although recent multi-modal language models have achieved impressive results, we find that existing benchmarks do not reflect the complexity of real documents seen in industry. In this work, we identify the desiderata for a more comprehensive benchmark and propose one we call Visually Rich Document Understanding (VRDU). VRDU contains two datasets that represent several challenges: rich schema including diverse data types as well as hierarchical entities, complex templates including tables and multi-column layouts, and diversity of different layouts (templates) within a single document type. We design few-shot and conventional experiment settings along with a carefully designed matching algorithm to evaluate extraction results. We report the performance of strong baselines and offer three observations: (1) generalizing to new document templates is still very challenging, (2) few-shot performance has a lot of headroom, and (3) models struggle with hierarchical fields such as line-items in an invoice. We plan to open source the benchmark and the evaluation toolkit. We hope this helps the community make progress on these challenging tasks in extracting structured data from visually rich documents.",
+  "category": "multimodal",
+  "domain": "document understanding / business documents",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "information_extraction",
+    "entity_extraction",
+    "table_extraction",
+    "few_shot_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (field-level F1 / exact_match for extracted fields)",
+  "general_score_metric": "F1 score (field-level)",
+  "typical_sota_score": "60–80%",
+  "year_of_publish": 2022,
+  "reputation": "Moderately cited dataset emphasizing template generalization and few-shot extraction challenges; used by researchers on business-document understanding.",
+  "notes": "Contains complex, hierarchical schemas and diverse templates leading to strong template/domain gaps; few-shot splits highlight large headroom; dataset size is moderate and some fields are sparse; evaluation relies on matching heuristics for hierarchical entities.",
+  "creators": {
+    "scientists": [
+      "Zilong Wang",
+      "Yichao Zhou",
+      "Wei Wei",
+      "Chen-Yu Lee",
+      "Sandeep Tata"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2211.15421",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

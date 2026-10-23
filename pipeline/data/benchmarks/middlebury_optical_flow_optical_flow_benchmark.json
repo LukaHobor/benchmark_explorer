@@ -1,0 +1,36 @@
+{
+  "name": "Middlebury Optical Flow (Optical Flow Benchmark)",
+  "description": "The quantitative evaluation of optical flow algorithms by Barron et al. (1994) led to significant advances in performance. The challenges for optical flow algorithms today go beyond the datasets and evaluation methods proposed in that paper. Instead, they center on problems associated with complex natural scenes, including nonrigid motion, real sensor noise, and motion discontinuities. We propose a new set of benchmarks and evaluation methods for the next generation of optical flow algorithms. To that end, we contribute four types of data to test different aspects of optical flow algorithms: (1) sequences with nonrigid motion where the ground-truth flow is determined by tracking hidden fluorescent texture, (2) realistic synthetic sequences, (3) high frame-rate video used to study interpolation error, and (4) modified stereo sequences of static scenes. In addition to the average angular error used by Barron et al., we compute the absolute flow endpoint error, measures for frame interpolation error, improved statistics, and results at motion discontinuities and in textureless regions. In October 2007, we published the performance of several well-known methods on a preliminary version of our data to establish the current state of the art. We also made the data freely available on the web at http://vision.middlebury.edu/flow/ . Subsequently a number of researchers have uploaded their results to our website and published papers using the data. A significant improvement in performance has already been achieved. In this paper we analyze the results obtained to date and draw a large number of conclusions from them.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "dense_prediction",
+    "per_pixel_regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average endpoint error (EPE) and average angular error",
+  "general_score_metric": "average endpoint error (EPE) — lower is better",
+  "year_of_publish": 2010,
+  "reputation": "2209 citations",
+  "notes": "Relatively small, curated dataset focused on challenging real-world motion (nonrigid motion, motion discontinuities); commonly used for classical and deep optical-flow methods (not an LLM benchmark). Some sequences are heavily studied and may be saturated by modern methods; potential for overfitting to a small set of scenes.",
+  "creators": {
+    "scientists": [
+      "Simon Baker",
+      "Daniel Scharstein",
+      "John Lewis",
+      "Stefan Roth",
+      "Michael J. Black",
+      "Richard Szeliski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1007/s11263-010-0390-2",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "OOD Electricity Load Forecasting Benchmark (COVID-19)",
+  "description": "In traditional deep learning algorithms, one of the key assumptions is that the data distribution remains constant during both training and deployment. However, this assumption becomes problematic when faced with Out-of-Distribution periods, such as the COVID-19 lockdowns, where the data distribution significantly deviates from what the model has seen during training. This paper employs a two-fold strategy: utilizing continual learning techniques to update models with new data and harnessing human mobility data collected from privacy-preserving pedestrian counters located outside buildings. In contrast to online learning, which suffers from 'catastrophic forgetting' as newly acquired knowledge often erases prior information, continual learning offers a holistic approach by preserving past insights while integrating new data. This research applies FSNet, a powerful continual learning algorithm, to real-world data from 13 building complexes in Melbourne, Australia, a city which had the second longest total lockdown duration globally during the pandemic. Results underscore the crucial role of continual learning in accurate energy forecasting, particularly during Out-of-Distribution periods. Secondary data such as mobility and temperature provided ancillary support to the primary forecasting model. More importantly, while traditional methods struggled to adapt during lockdowns, models featuring at least online learning demonstrated resilience, with lockdown periods posing fewer challenges once armed with adaptive learning techniques. This study contributes valuable methodologies and insights to the ongoing effort to improve energy load forecasting during future Out-of-Distribution periods.",
+  "category": "mixed",
+  "domain": "energy / electricity load forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE, RMSE",
+  "general_score_metric": "RMSE / MAE",
+  "year_of_publish": 2023,
+  "reputation": "A domain-specific research benchmark used in energy forecasting literature to study out-of-distribution behavior during COVID-19; recognized in the continual learning and energy communities but not a general-purpose standard.",
+  "notes": "Small-scale real-world dataset (13 building complexes); focused on non-stationary / OOD periods (COVID lockdowns); uses auxiliary mobility and temperature signals; non-LLM benchmark; results sensitive to train/test split and continual-learning protocol.",
+  "creators": {
+    "scientists": [
+      "Arian Prabowo",
+      "KaiXuan Chen",
+      "Hao Xue",
+      "Subbu Sethuvenkatraman",
+      "Flora D. Salim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2309.04296",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

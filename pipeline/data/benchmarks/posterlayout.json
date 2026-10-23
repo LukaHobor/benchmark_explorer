@@ -1,0 +1,36 @@
+{
+  "name": "PosterLayout",
+  "description": "Content-aware visual-textual presentation layout aims at arranging spatial space on the given canvas for pre-defined elements, including text, logo, and underlay, which is a key to automatic template-free creative graphic design. In practical applications, e.g., poster designs, the canvas is originally non-empty, and both inter-element relationships as well as inter-layer relationships should be concerned when generating a proper layout. A few recent works deal with them simultaneously, but they still suffer from poor graphic performance, such as a lack of layout variety or spatial non-alignment. Since content-aware visual-textual presentation layout is a novel task, we first construct a new dataset named PosterLayout, which consists of 9,974 poster-layout pairs and 905 images, i.e., non-empty canvases. It is more challenging and useful for greater layout variety, domain diversity, and content diversity. Then, we propose design sequence formation (DSF) that reorganizes elements in layouts to imitate the design processes of human designers, and a novel CNN-LSTM-based conditional generative adversarial network (GAN) is presented to generate proper layouts. Specifically, the discriminator is design-sequence-aware and will supervise the \"design\" process of the generator. Experimental results verify the usefulness of the new benchmark and the effectiveness of the proposed approach, which achieves the best performance by generating suitable layouts for diverse canvases.",
+  "category": "multimodal",
+  "domain": "graphic design / layout",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "conditional_generation",
+    "structured_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval (supplemented by layout alignment/overlap metrics)",
+  "general_score_metric": "human_eval",
+  "year_of_publish": 2023,
+  "reputation": "A niche, research-oriented benchmark introduced with a single paper; limited but growing adoption in the layout/design ML community.",
+  "notes": "Moderate-size, domain-specific dataset (9,974 pairs, 905 canvases); non-LLM benchmark focusing on visual-textual layout generation. Evaluation is partially subjective (human studies) and may include task-specific alignment/overlap measurements; risk of limited generalization beyond poster-style designs.",
+  "creators": {
+    "scientists": [
+      "HsiaoYuan Hsu",
+      "Xiangteng He",
+      "Yuxin Peng",
+      "Hao Kong",
+      "Qing Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2303.15937",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

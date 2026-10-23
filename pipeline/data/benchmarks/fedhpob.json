@@ -1,0 +1,36 @@
+{
+  "name": "FedHPO-B",
+  "description": "Hyperparameter optimization (HPO) is crucial for machine learning algorithms to achieve satisfactory performance, whose progress has been boosted by related benchmarks. Nonetheless, existing efforts in benchmarking all focus on HPO for traditional centralized learning while ignoring federated learning (FL), a promising paradigm for collaboratively learning models from dispersed data. In this paper, we first identify some uniqueness of HPO for FL algorithms from various aspects. Due to this uniqueness, existing HPO benchmarks no longer satisfy the need to compare HPO methods in the FL setting. To facilitate the research of HPO in the FL setting, we propose and implement a benchmark suite FedHPO-B that incorporates comprehensive FL tasks, enables efficient function evaluations, and eases continuing extensions. We also conduct extensive experiments based on FedHPO-B to benchmark a few HPO methods. We open-source FedHPO-B at https://github.com/alibaba/FederatedScope/tree/master/benchmark/FedHPOB.",
+  "category": "mixed",
+  "domain": "machine learning / federated learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "hyperparameter_optimization",
+    "black_box_optimization",
+    "federated_learning_simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "validation_accuracy (primary) with supplementary efficiency metrics such as time-to-convergence and regret",
+  "general_score_metric": "best_validation_accuracy (with resource-efficiency measures like time-to-convergence/regret)",
+  "year_of_publish": 2022,
+  "reputation": "A recent benchmark suite from Alibaba targeting HPO in federated settings; recognized by federated learning researchers but not yet broadly standardized.",
+  "notes": "Computationally expensive to evaluate; results depend strongly on federated simulation choices (client heterogeneity, communication/computation budgets). Non-LLM benchmark; reproducibility can be sensitive to environment and simulator setup.",
+  "creators": {
+    "scientists": [
+      "Zhen Wang",
+      "Weirui Kuang",
+      "Ce Zhang",
+      "Bolin Ding",
+      "Yaliang Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2206.03966",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

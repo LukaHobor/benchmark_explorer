@@ -1,0 +1,39 @@
+{
+  "name": "ULS23",
+  "description": "Size measurements of tumor manifestations on follow-up CT examinations are crucial for evaluating treatment outcomes in cancer patients. Efficient lesion segmentation can speed up these radiological workflows. While numerous benchmarks and challenges address lesion segmentation in specific organs like the liver, kidneys, and lungs, the larger variety of lesion types encountered in clinical practice demands a more universal approach. To address this gap, we introduced the ULS23 benchmark for 3D universal lesion segmentation in chest-abdomen-pelvis CT examinations. The ULS23 training dataset contains 38,693 lesions across this region, including challenging pancreatic, colon and bone lesions. For evaluation purposes, we curated a dataset comprising 775 lesions from 284 patients. Each of these lesions was identified as a target lesion in a clinical context, ensuring diversity and clinical relevance within this dataset. The ULS23 benchmark is publicly accessible via uls23.grand-challenge.org, enabling researchers worldwide to assess the performance of their segmentation methods. Furthermore, we have developed and publicly released our baseline semi-supervised 3D lesion segmentation model. This model achieved an average Dice coefficient of 0.703 $\\pm$ 0.240 on the challenge test set. We invite ongoing submissions to advance the development of future ULS models.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static",
+  "task_types": [
+    "3d_lesion_segmentation",
+    "ct_image_segmentation",
+    "universal_lesion_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "segmentation metrics such as Dice coefficient and lesion-wise detection/segmentation scores",
+  "general_score_metric": "Dice coefficient",
+  "typical_sota_score": "70–80%",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "emerging",
+  "notes": "Dataset includes a large training set and a curated test set of lesions across multiple anatomical regions; intended to support a more universal evaluation than organ-specific lesion benchmarks.",
+  "creators": {
+    "scientists": [
+      "M.J.J. de Grauw",
+      "E. Scholten",
+      "E. Smit",
+      "Matthieu Rutten",
+      "M. Prokop",
+      "B. V. Ginneken"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.05231",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

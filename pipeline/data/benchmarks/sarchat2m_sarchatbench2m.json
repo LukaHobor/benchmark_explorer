@@ -1,0 +1,38 @@
+{
+  "name": "SARChat-2M (SARChat-Bench-2M)",
+  "description": "As a powerful all-weather Earth observation tool, synthetic aperture radar (SAR) remote sensing enables critical military reconnaissance, maritime surveillance, and infrastructure monitoring. Although Vision language models (VLMs) have made remarkable progress in natural language processing and image understanding, their applications remain limited in professional domains due to insufficient domain expertise. This paper innovatively proposes the first large-scale multimodal dialogue dataset for SAR images, named SARChat-2M, which contains approximately 2 million high-quality image-text pairs, encompasses diverse scenarios with detailed target annotations. This dataset not only supports several key tasks such as visual understanding and object detection tasks, but also has unique innovative aspects: this study develop a visual-language dataset and benchmark for the SAR domain, enabling and evaluating VLMs' capabilities in SAR image interpretation, which provides a paradigmatic framework for constructing multimodal datasets across various remote sensing vertical domains. Through experiments on 16 mainstream VLMs, the effectiveness of the dataset has been fully verified. The project will be released at https://github.com/JimmyMa99/SARChat.",
+  "category": "multimodal",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_captioning",
+    "visual_question_answering",
+    "object_detection",
+    "multimodal_dialogue"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (mAP for detection; BLEU/CIDEr for captioning; accuracy for VQA; human_eval for dialogue)",
+  "general_score_metric": "task-specific (mAP / BLEU / accuracy)",
+  "year_of_publish": 2025,
+  "reputation": "A newly released, large-scale SAR multimodal benchmark (preprint) that has attracted interest in the remote sensing and VLM research communities but is not yet widely adopted.",
+  "notes": "Very large domain-specific dataset; potential label noise and domain bias. Possible overlap with models' pretraining data cannot be ruled out; evaluation is task-specific and may require specialized SAR expertise.",
+  "creators": {
+    "scientists": [
+      "ZhiMing Ma",
+      "Xiayang Xiao",
+      "Sihao Dong",
+      "Peidong Wang",
+      "Haipeng Wang",
+      "Qingyun Pan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.08168",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

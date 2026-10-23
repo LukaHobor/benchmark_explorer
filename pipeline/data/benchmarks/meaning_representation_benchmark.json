@@ -1,0 +1,37 @@
+{
+  "name": "Meaning Representation Benchmark",
+  "description": "Meaning representation is an important component of semantic parsing. Although researchers have designed a lot of meaning representations, recent work focuses on only a few of them. Thus, the impact of meaning representation on semantic parsing is less understood. Furthermore, existing work{'}s performance is often not comprehensively evaluated due to the lack of readily-available execution engines. Upon identifying these gaps, we propose , a new unified benchmark on meaning representations, by integrating existing semantic parsing datasets, completing the missing logical forms, and implementing the missing execution engines. The resulting unified benchmark contains the complete enumeration of logical forms and execution engines over three datasets $\\times$ four meaning representations. A thorough experimental study on Unimer reveals that neural semantic parsing approaches exhibit notably different performance when they are trained to generate different meaning representations. Also, program alias and grammar rules heavily impact the performance of different meaning representations. Our benchmark, execution engines and implementation can be found on: https://github.com/JasperGuo/Unimer.",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_parsing",
+    "sequence_to_sequence"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "exact_match on predicted logical forms and execution_accuracy/denotation accuracy using provided execution engines",
+  "general_score_metric": "exact_match / execution_accuracy",
+  "year_of_publish": 2020,
+  "reputation": "A research-oriented unified benchmark (Unimer) for meaning representations that has attracted interest in the semantic parsing community for comparative studies.",
+  "notes": "Non-LLM semantic parsing benchmark integrating multiple meaning representations and execution engines; performance varies substantially by representation, grammar rules, and program aliasing. Some subsets may be small and results depend on execution engine fidelity.",
+  "creators": {
+    "scientists": [
+      "Jiaqi Guo",
+      "Qian Liu",
+      "Jian-Guang Lou",
+      "Zhenwen Li",
+      "Xueqing Liu",
+      "Tao Xie",
+      "Ting Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

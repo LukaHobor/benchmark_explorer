@@ -1,0 +1,37 @@
+{
+  "name": "NIR-Assisted Image Denoising Dataset",
+  "description": "Despite the significant progress in image denoising, it is still challenging to restore fine-scale details while removing noise, especially in extremely low-light environments. Leveraging near-infrared (NIR) images to assist visible RGB image denoising shows the potential to address this issue, becoming a promising technology. Nonetheless, existing works still struggle with taking advantage of NIR information effectively for real-world image denoising, due to the content inconsistency between NIR-RGB images and the scarcity of real-world paired datasets. To alleviate the problem, we propose an efficient Selective Fusion Module (SFM), which can be plug-and-played into the advanced denoising networks to merge the deep NIR-RGB features. Specifically, we sequentially perform the global and local modulation for NIR and RGB features, and then integrate the two modulated features. Furthermore, we present a Real-world NIR-Assisted Image Denoising (Real-NAID) dataset, which covers diverse scenarios as well as various noise levels. Extensive experiments on both synthetic and our real-world datasets demonstrate that the proposed method achieves better results than state-of-the-art ones. The dataset, codes, and pre-trained models will be publicly available at https://github.com/ronjonxu/NAID.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_denoising",
+    "image_restoration",
+    "paired_image_supervision"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS (quantitative image restoration metrics)",
+  "general_score_metric": "PSNR (primary)",
+  "typical_sota_score": "30–40 dB PSNR (typical range reported in image denoising literature; exact values vary by noise level and scene)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "Emerging domain-specific dataset for NIR-assisted low-light denoising; useful to researchers working on multimodal image restoration but not yet widely used beyond that community.",
+  "notes": "Real paired NIR–RGB data is relatively scarce; content inconsistency between NIR and RGB channels can limit direct fusion; not an LLM benchmark; evaluation depends on image-quality metrics that may not capture perceptual preferences fully.",
+  "creators": {
+    "scientists": [
+      "Rongjian Xu",
+      "Zhilu Zhang",
+      "Renlong Wu",
+      "WangMeng Zuo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.08514",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

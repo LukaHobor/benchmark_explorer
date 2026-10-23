@@ -1,0 +1,41 @@
+{
+  "name": "COOOL",
+  "description": "As the Computer Vision community rapidly develops and advances algorithms for autonomous driving systems, the goal of safer and more efficient autonomous transportation is becoming increasingly achievable. However, it is 2024, and we still do not have fully self-driving cars. One of the remaining core challenges lies in addressing the novelty problem, where self-driving systems still struggle to handle previously unseen situations on the open road. With our Challenge of Out-Of-Label (COOOL) benchmark, we introduce a novel dataset for hazard detection, offering versatile evaluation metrics applicable across various tasks, including novelty-adjacent domains such as Anomaly Detection, Open-Set Recognition, Open Vocabulary, and Domain Adaptation. COOOL comprises over 200 collections of dashcam-oriented videos, annotated by human labelers to identify objects of interest and potential driving hazards. It includes a diverse range of hazards and nuisance objects. Due to the dataset's size and data complexity, COOOL serves exclusively as an evaluation benchmark.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "competition",
+  "task_types": [
+    "object_detection",
+    "anomaly_detection",
+    "open_set_recognition",
+    "open_vocabulary_detection",
+    "domain_adaptation",
+    "video_hazard_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP / AUROC / F1 (task-dependent; mean Average Precision commonly reported for detection)",
+  "general_score_metric": "mAP (mean Average Precision)",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark aimed at novelty/hazard detection in driving; likely to gain interest in autonomous-driving and anomaly-detection research but not yet widely established.",
+  "notes": "Evaluation-only dataset (not intended for large-scale training). Contains dashcam driving video and hazard labels; potential for distribution shift and privacy-sensitive content. Risk of test-set contamination if models are trained on overlapping external driving datasets.",
+  "creators": {
+    "scientists": [
+      "Ali K. AlShami",
+      "Ananya Kalita",
+      "Ryan Rabinowitz",
+      "Khang Lam",
+      "Rishabh Bezbarua",
+      "Terrance Boult",
+      "Jugal Kalita"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2412.05462",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Vogtareuth Rehab Depth Datasets",
+  "description": "Posture estimation using a single depth camera has become a useful tool for analyzing movements in rehabilitation. Recent advances in posture estimation in computer vision research have been possible due to the availability of large-scale pose datasets. However, the complex postures involved in rehabilitation exercises are not represented in the existing benchmark depth datasets. To address this limitation, we propose two rehabilitation-specific pose datasets containing depth images and 2D pose information of patients, both adult and children, performing rehab exercises. We use a state-of-the-art marker-less posture estimation model which is trained on a non-rehab benchmark dataset. We evaluate it on our rehab datasets, and observe that the performance degrades significantly from non-rehab to rehab, highlighting the need for these datasets. We show that our dataset can be used to train pose models to detect rehab-specific complex postures. The datasets will be released for the benefit of the research community.",
+  "category": "vision",
+  "domain": "rehabilitation / human pose estimation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pose_estimation",
+    "keypoint_detection",
+    "2D_pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PCK (Percentage of Correct Keypoints) / keypoint localization error",
+  "general_score_metric": "PCK (Percentage of Correct Keypoints)",
+  "year_of_publish": 2021,
+  "reputation": "A niche, domain-specific depth-pose dataset aimed at rehabilitation research with limited adoption outside medical/pose-estimation communities.",
+  "notes": "Depth-only, rehab-specific dataset with relatively small and specialized cohorts (adults and children); non-LLM benchmark. Models trained on standard pose datasets degrade on this data — cross-domain generalization is a major caveat. Potential privacy/consent considerations for patient data.",
+  "creators": {
+    "scientists": [
+      "Soubarna Banik",
+      "Alejandro Mendoza Garcia",
+      "Lorenz Kiwull",
+      "Steffen Berweck",
+      "Alois Knoll"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2108.10272",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

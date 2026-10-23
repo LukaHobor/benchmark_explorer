@@ -1,0 +1,39 @@
+{
+  "name": "LagrangeBench",
+  "description": "Machine learning has been successfully applied to grid-based PDE modeling in various scientific applications. However, learned PDE solvers based on Lagrangian particle discretizations, which are the preferred approach to problems with free surfaces or complex physics, remain largely unexplored. We present LagrangeBench, the first benchmarking suite for Lagrangian particle problems, focusing on temporal coarse-graining. In particular, our contribution is: (a) seven new fluid mechanics datasets (four in 2D and three in 3D) generated with the Smoothed Particle Hydrodynamics (SPH) method including the Taylor-Green vortex, lid-driven cavity, reverse Poiseuille flow, and dam break, each of which includes different physics like solid wall interactions or free surface, (b) efficient JAX-based API with various recent training strategies and three neighbor search routines, and (c) JAX implementation of established Graph Neural Networks (GNNs) like GNS and SEGNN with baseline results. Finally, to measure the performance of learned surrogates we go beyond established position errors and introduce physical metrics like kinetic energy MSE and Sinkhorn distance for the particle distribution. Our codebase is available at https://github.com/tumaer/lagrangebench .",
+  "category": "mixed",
+  "domain": "fluid mechanics / computational physics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "simulation",
+    "trajectory_prediction",
+    "graph_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MSE and physics-based metrics (kinetic energy MSE, Sinkhorn distance for particle distributions)",
+  "general_score_metric": "position MSE (primary) with supplementary physics metrics such as kinetic energy MSE and Sinkhorn distance",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "Respected in the scientific ML / computational physics community as a first comprehensive benchmark suite for learned Lagrangian particle solvers, though adoption is mainly within specialized research groups.",
+  "notes": "Non-LLM benchmark focused on particle-based PDE solvers; evaluation uses both geometric errors and physics-consistent metrics. Datasets are simulation-generated (low risk of web-text contamination) and results can vary substantially with model architecture and neighbor-search implementation.",
+  "creators": {
+    "scientists": [
+      "Artur P. Toshev",
+      "Gianluca Galletti",
+      "Fabian Fritz",
+      "Stefan Adami",
+      "Nikolaus A. Adams"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2309.16342",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

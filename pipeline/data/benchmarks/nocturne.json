@@ -1,0 +1,37 @@
+{
+  "name": "Nocturne",
+  "description": "We introduce Nocturne, a new 2D driving simulator for investigating multi-agent coordination under partial observability. The focus of Nocturne is to enable research into inference and theory of mind in real-world multi-agent settings without the computational overhead of computer vision and feature extraction from images. Agents in this simulator only observe an obstructed view of the scene, mimicking human visual sensing constraints. Unlike existing benchmarks that are bottlenecked by rendering human-like observations directly using a camera input, Nocturne uses efficient intersection methods to compute a vectorized set of visible features in a C++ back-end, allowing the simulator to run at over 2000 steps-per-second. Using open-source trajectory and map data, we construct a simulator to load and replay arbitrary trajectories and scenes from real-world driving data. Using this environment, we benchmark reinforcement-learning and imitation-learning agents and demonstrate that the agents are quite far from human-level coordination ability and deviate significantly from the expert trajectories.",
+  "category": "mixed",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "multi_agent_reinforcement_learning",
+    "imitation_learning",
+    "coordination_evaluation",
+    "trajectory_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (and related trajectory deviation / average return metrics)",
+  "general_score_metric": "task_success_rate (supplemented by average return and trajectory deviation measures)",
+  "year_of_publish": 2022,
+  "reputation": "A well-designed research benchmark for multi-agent coordination under partial observability with growing interest among multi-agent/robotics researchers but not yet widely adopted in mainstream RL leaderboards.",
+  "notes": "Non-vision, vectorized observation benchmark (not image-based); designed for research on partial observability and theory-of-mind—results are not directly comparable to pixel-based driving benchmarks; intended for simulation/algorithmic study rather than real-world deployment.",
+  "creators": {
+    "scientists": [
+      "Eugene Vinitsky",
+      "Nathan Lichtlé",
+      "Xiaomeng Yang",
+      "Brandon Amos",
+      "Jakob Foerster"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2206.09889",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

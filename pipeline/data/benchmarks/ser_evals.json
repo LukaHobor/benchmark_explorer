@@ -1,0 +1,33 @@
+{
+  "name": "SER Evals",
+  "description": "Speech emotion recognition (SER) has made significant strides with the advent of powerful self-supervised learning (SSL) models. However, the generalization of these models to diverse languages and emotional expressions remains a challenge. We propose a large-scale benchmark to evaluate the robustness and adaptability of state-of-the-art SER models in both in-domain and out-of-domain settings. Our benchmark includes a diverse set of multilingual datasets, focusing on less commonly used corpora to assess generalization to new data. We employ logit adjustment to account for varying class distributions and establish a single dataset cluster for systematic evaluation. Surprisingly, we find that the Whisper model, primarily designed for automatic speech recognition, outperforms dedicated SSL models in cross-lingual SER. Our results highlight the need for more robust and generalizable SER models, and our benchmark serves as a valuable resource to drive future research in this direction.",
+  "category": "audio",
+  "domain": "speech / speech emotion recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (typically macro or unweighted F1 to account for class imbalance)",
+  "general_score_metric": "macro F1",
+  "typical_sota_score": "50–80%",
+  "year_of_publish": 2024,
+  "reputation": "6 citations",
+  "notes": "Multilingual, non-LLM audio benchmark with class imbalance across datasets; uses logit adjustment to address differing class priors. Some constituent corpora are small or underrepresented, so cross-dataset contamination and limited language coverage are possible.",
+  "creators": {
+    "scientists": [
+      "Mohamed Osman",
+      "Daniel Z. Kaplan",
+      "Tamer Nadeem"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2408.07851",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

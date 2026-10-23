@@ -1,0 +1,39 @@
+{
+  "name": "Rosetta benchmark resource",
+  "description": "The development and validation of computational macromolecular modeling and design methods depend on suitable benchmark datasets and informative metrics for comparing protocols. In addition, if a method is intended to be adopted broadly in diverse biological applications, there needs to be information on appropriate parameters for each protocol, as well as metrics describing the expected accuracy compared to experimental data. In certain disciplines, there exist established benchmarks and public resources where experts in a particular methodology are encouraged to supply their most efficient implementation of each particular benchmark. We aim to provide such a resource for protocols in macromolecular modeling and design. We present a freely accessible web resource (https://kortemmelab.ucsf.edu/benchmarks) to guide the development of protocols for protein modeling and design. The site provides benchmark datasets and metrics to compare the performance of a variety of modeling protocols using different computational sampling methods and energy functions, providing a \"best practice\" set of parameters for each method. Each benchmark has an associated downloadable benchmark capture archive containing the input files, analysis scripts, and tutorials for running the benchmark. The captures may be run with any suitable modeling method; we supply command lines for running the benchmarks using the Rosetta software suite. We have compiled initial benchmarks for the resource spanning three key areas: prediction of energetic effects of mutations, protein design, and protein structure prediction, each with associated state-of-the-art modeling protocols. With the help of the wider macromolecular modeling community, we hope to expand the variety of benchmarks included on the website and continue to evaluate new iterations of current methods as they become available.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structure_prediction",
+    "mutation_effect_prediction",
+    "protein_design",
+    "scoring"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific (RMSD for structure prediction; Pearson/Spearman correlation for mutation energetics; sequence recovery / accuracy for design tasks)",
+  "general_score_metric": "task-specific composite (RMSD / correlation / sequence recovery)",
+  "typical_sota_score": "variable by task (e.g., structure RMSD <2 Å for high-quality predictions; Pearson r ≈ 0.5–0.8 for mutation energetics; sequence recovery ≈ 30–50% for design)",
+  "year_of_publish": 2015,
+  "reputation": "95 citations",
+  "notes": "Non-LLM, domain-specific benchmark suite; metrics and difficulty vary across sub-benchmarks. Results are sensitive to energy functions, sampling protocols, and parameter tuning. Some sub-datasets are modest in size; available Rosetta captures reduce run variability but do not eliminate model- or protocol-specific biases.",
+  "creators": {
+    "scientists": [
+      "Shane Ó Conchúir",
+      "Kyle A. Barlow",
+      "Roland A. Pache",
+      "Noah Ollikainen",
+      "Kale Kundert",
+      "Matthew J. O’Meara"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1371/journal.pone.0130433",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "PLATO Convex Continuous QPLIB Benchmark",
+  "description": "Evaluates continuous convex QP solvers on 42 CPU instances and additional GPU instances drawn from QPLIB, covering both interior-point and first-order GPU-accelerated methods. The benchmark compares classical solvers (MOSEK, KNITRO, IPOPT, COPT) against GPU implementations (cuOpt, HPR-QP) at varying solution tolerances (1e-4, 1e-6, 1e-8). Convex continuous QPs have unique globally optimal solutions.",
+  "category": "mixed",
+  "domain": "optimization, quadratic programming, operations research",
+  "task_types": [
+    "optimization",
+    "quadratic_programming"
+  ],
+  "difficulty_level": "expert",
+  "number_of_questions": 42,
+  "evaluation_method": "wall_clock_time",
+  "general_score_metric": "wall_clock_time",
+  "typical_sota_score": "COPT (1.0s, 42/42 CPU); KNITRO (1.95x); MOSEK (2.38x). GPU: cuOpt strong at standard tolerances; HPR-QP competitive at varying precision. 2-hour CPU limit.",
+  "year_of_publish": 2018,
+  "year_of_last_update": 2026,
+  "reputation": "Current benchmark comparing CPU and GPU QP solvers; maintained by Hans Mittelmann at ASU.",
+  "notes": "Not an LLM benchmark. GPU hardware: NVIDIA B200 (192GB). Problems from QPLIB IDs 2456–10038. Tests both CPU and GPU solver performance at multiple accuracy tolerances.",
+  "creators": {
+    "scientists": [
+      "Hans Mittelmann"
+    ],
+    "institutions": [
+      "Arizona State University"
+    ],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://plato.asu.edu/ftp/cconvex.html",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

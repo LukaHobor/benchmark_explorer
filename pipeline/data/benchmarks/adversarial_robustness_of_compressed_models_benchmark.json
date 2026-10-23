@@ -1,0 +1,37 @@
+{
+  "name": "Adversarial Robustness of Compressed Models Benchmark",
+  "description": "The increasing size of Deep Neural Networks (DNNs) poses a pressing need for model compression, particularly when employed on resource constrained devices. Concurrently, the susceptibility of DNNs to adversarial attacks presents another significant hurdle. Despite substantial research on both model compression and adversarial robustness, their joint examination remains underexplored. Our study bridges this gap, seeking to understand the effect of adversarial inputs crafted for base models on their pruned versions. To examine this relationship, we have developed a comprehensive benchmark across diverse adversarial attacks and popular DNN models. We uniquely focus on models not previously exposed to adversarial training and apply pruning schemes optimized for accuracy and performance. Our findings reveal that while the benefits of pruning enhanced generalizability, compression, and faster inference times are preserved, adversarial robustness remains comparable to the base model. This suggests that model compression while offering its unique advantages, does not undermine adversarial robustness.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "robustness_evaluation",
+    "classification",
+    "attack_simulation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy_under_attack (robust_accuracy)",
+  "general_score_metric": "accuracy_under_attack (robust_accuracy)",
+  "typical_sota_score": "varies widely depending on model, pruning level, and attack; no single consolidated SOTA",
+  "year_of_publish": 2023,
+  "reputation": "Relevant within adversarial robustness and model-compression research but not broadly adopted outside those communities.",
+  "notes": "Vision benchmark (non-LLM). Results are highly sensitive to choice and strength of attacks, pruning schedules, and whether adversarial training is used; comparisons require standardized attack protocols.",
+  "creators": {
+    "scientists": [
+      "Brijesh Vora",
+      "Kartik Patwari",
+      "Syed Mahbub Hafiz",
+      "Zubair Shafiq",
+      "Chen-Nee Chuah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2308.08160",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "PGLearn",
+  "description": "Machine Learning (ML) techniques for Optimal Power Flow (OPF) problems have recently garnered significant attention, reflecting a broader trend of leveraging ML to approximate and/or accelerate the resolution of complex optimization problems. These developments are necessitated by the increased volatility and scale in energy production for modern and future grids. However, progress in ML for OPF is hindered by the lack of standardized datasets and evaluation metrics, from generating and solving OPF instances, to training and benchmarking machine learning models. To address this challenge, this paper introduces PGLearn, a comprehensive suite of standardized datasets and evaluation tools for ML and OPF. PGLearn provides datasets that are representative of real-life operating conditions, by explicitly capturing both global and local variability in the data generation, and by, for the first time, including time series data for several large-scale systems. In addition, it supports multiple OPF formulations, including AC, DC, and second-order cone formulations. Standardized datasets are made publicly available to democratize access to this field, reduce the burden of data generation, and enable the fair comparison of various methodologies. PGLearn also includes a robust toolkit for training, evaluating, and benchmarking machine learning models for OPF, with the goal of standardizing performance evaluation across the field. By promoting open, standardized datasets and evaluation metrics, PGLearn aims at democratizing and accelerating research and innovation in machine learning applications for optimal power flow problems. Datasets are available for download at https://www.huggingface.co/PGLearn.",
+  "category": "mixed",
+  "domain": "power systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "structured_prediction",
+    "time_series_forecasting",
+    "optimization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean_squared_error / mean_absolute_error, relative_optimality_gap, constraint_violation_rate, feasibility_rate, runtime_speedup",
+  "general_score_metric": "relative_optimality_gap (primary), with MSE and constraint_violation_rate used as supplementary metrics",
+  "typical_sota_score": "0.1–5% (relative optimality gap)",
+  "year_of_publish": 2025,
+  "reputation": "Emerging, openly released benchmark gaining traction in power-systems ML research for standardized OPF evaluation and dataset sharing.",
+  "notes": "Non-LLM benchmark focused on power systems; includes synthetic and simulation-derived instances and time-series for large systems; evaluation requires solver access to compute ground-truth optimality and feasibility; potential distribution-shift between synthetic and real grid conditions.",
+  "creators": {
+    "scientists": [
+      "Michael Klamkin",
+      "Mathieu Tanneau",
+      "Pascal Van Hentenryck"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.22825",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

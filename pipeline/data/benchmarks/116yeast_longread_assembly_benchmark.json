@@ -1,0 +1,36 @@
+{
+  "name": "116-yeast long-read assembly benchmark",
+  "description": "Abstract\n                \n                  With increases in throughput and reductions in cost, long read sequencing has become the standard for most genome assembly projects and has opened up new avenues for large-scale genomic research. While more amenable to assembly than short-read sequence data, long-read datasets tend to have higher error rates. To address this problem numerous tools have been developed to correct reads before assembly and polish assembled contigs. Although, numerous studies have been conducted to assess or benchmark these tools, few capture the real variance in long read sequence data that might affect tool performance much less full pipeline performance. To address these shortcomings, we compiled a dataset containing long-read sequences of 116 different strains of brewers’ yeast,\n                  S. cerevisiae\n                  , gathered largely from public databases and evaluated different assembly-related tools as well as their interactions. We found that pre-assembly short-read error correction of long reads combined with post-assembly short-read polishing provided the best assemblies. We also found that correction/polishing steps with uncorrected long reads often lead to degradation of assembly quality. Finally, we show which tools and pipelines work best with different types of input data.",
+  "category": "mixed",
+  "domain": "bioinformatics / genomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "genome_assembly",
+    "read_correction",
+    "polishing",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "assembly_quality_metrics (NGA50/N50, error rate, BUSCO completeness, misassembly counts)",
+  "general_score_metric": "assembly_contiguity (NGA50) combined with consensus_error_rate / completeness (composite evaluation)",
+  "year_of_publish": 2022,
+  "reputation": "Moderately used in genomics assembly research for evaluating long‑read correction and polishing pipelines, but not a de facto community standard.",
+  "notes": "Real‑world 116‑strain long‑read collection captures biological and technical variance; metrics depend on assembler/correction pipeline. Not an LLM benchmark; comparisons can be sensitive to contamination, read depth, and sequencing technology.",
+  "creators": {
+    "scientists": [
+      "Noah Gettle",
+      "Brigida Gallone",
+      "Kevin J. Verstrepen",
+      "Rike Stelkens"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2022.03.17.484703",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

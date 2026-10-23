@@ -1,0 +1,35 @@
+{
+  "name": "CompGTSRB",
+  "description": "This paper studies how well Naturalistic Adversarial Patches (NAPs) transfer to a physical traffic sign setting when the detector is trained on a customized dataset for an autonomous vehicle (AV) environment. We construct a composite dataset, CompGTSRB (which is customized dataset for AV environment), by pasting traffic sign instances from the German Traffic Sign Recognition Benchmark (GTSRB) onto undistorted backgrounds captured from the target platform. CompGTSRB is used to train a YOLOv5 model and generate patches using a Generative Adversarial Network (GAN) with latent space optimization, following existing NAP methods. We carried out a series of experiments on our Quanser QCar testbed utilizing the front CSI camera provided in QCar. Across configurations, NAPs reduce the detector's STOP class confidence. Different configurations include distance, patch sizes, and patch placement. These results along with a detailed step-by-step methodology indicate the utility of CompGTSRB dataset",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "object_detection",
+    "adversarial_robustness"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "STOP class confidence reduction / attack success rate",
+  "year_of_publish": 2026,
+  "reputation": "A specialized research benchmark used in a single study to test transferability of naturalistic adversarial patches in an autonomous-driving setting, with limited community adoption so far.",
+  "notes": "Non-LLM vision benchmark focused on adversarial patch transfer; results depend heavily on patch size, placement, distance, and the specific QCar/YOLOv5 setup, so scores are not directly comparable across papers.",
+  "creators": {
+    "scientists": [
+      "Brianna D'Urso",
+      "Tahmid Hasan Sakib",
+      "Syed Rafay Hasan",
+      "Terry N. Guo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2603.00217",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

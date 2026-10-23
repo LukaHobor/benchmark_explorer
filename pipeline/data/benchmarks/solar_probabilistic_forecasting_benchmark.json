@@ -1,0 +1,37 @@
+{
+  "name": "Solar Probabilistic Forecasting Benchmark",
+  "description": "Despite the growing awareness in academia and industry of the importance of solar probabilistic forecasting for further enhancing the integration of variable photovoltaic power generation into electrical power grids, there is still no benchmark study comparing a wide range of solar probabilistic methods across various local climates. Having identified this research gap, experts involved in the activities of IEA PVPS T16 1 1 International Energy Agency - Photovoltaic Power Systems - Solar Resource for High Penetration and Large Scale Applications. agreed to establish a benchmarking exercise to evaluate the quality of intra-hour and intra-day probabilistic irradiance forecasts. The tested forecasting methodologies are based on different input data including ground measurements, satellite-based forecasts and Numerical Weather Predictions (NWP), and different statistical methods are employed to generate probabilistic forecasts from these. The exercise highlights different forecast quality depending on the method used, and more importantly, on the input data fed into the models. In particular, the benchmarking procedure reveals that the association of a point forecast that blends ground, satellite and NWP data with a statistical technique generates high-quality probabilistic forecasts. Therefore, in a subsequent step, an additional investigation was conducted to assess the added value of such a blended point forecast on forecast quality. Three new statistical methods were implemented using the blended point forecast as input. To ensure a fair evaluation of the different methods, we calculate a skill score that measures the performance of the proposed model relative to that of a trivial baseline model. The closer the skill score is to 100%, the more efficient the method is. Overall, skill scores of methods that use the blended point forecast ranges from 42% to 46% for the intra-hour scenario and 27% to 32% for the intra-day scenario. Conversely, methods that do not use the blended point forecast exhibit skill scores ranging from 33% to 43% for intra-hour forecasts and 8% to 16% for intra-day forecasts. These results suggest that using (a) blended point forecasts that optimally combine different sources of input data and (b) a post-processing with a statistical method to produce the quantile forecasts is an effective and consistent way to generate high-quality intra-hour or intra-day probabilistic forecasts.",
+  "category": "mixed",
+  "domain": "energy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "probabilistic_forecasting",
+    "time_series_forecasting"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "skill_score (relative to baseline); probabilistic forecast metrics such as CRPS are also used",
+  "general_score_metric": "skill score (percentage relative to a trivial baseline)",
+  "typical_sota_score": "42–46% (intra-hour methods using blended forecasts); 27–32% (intra-day blended); lower ranges for non-blended methods",
+  "year_of_publish": 2024,
+  "reputation": "5 citations",
+  "notes": "Non-LLM, domain-specific benchmark using ground, satellite and NWP inputs; compares probabilistic/statistical methods across climates. Results are reported as skill scores relative to a trivial baseline; dataset/coverage is specialized to solar irradiance sites and may be limited in geographic scope.",
+  "creators": {
+    "scientists": [
+      "Philippe Lauret",
+      "Rodrigo Alonso-Suárez",
+      "Rodrigo Amaro e Silva",
+      "John Boland",
+      "Mathieu David",
+      "Wiebke Herzberg"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1016/j.renene.2024.121574",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

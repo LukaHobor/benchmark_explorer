@@ -1,0 +1,43 @@
+{
+  "name": "B-FHTL",
+  "description": "To investigate the heterogeneity in federated learning in real-world scenarios, we generalize the classic federated learning to federated hetero-task learning, which emphasizes the inconsistency across the participants in federated learning in terms of both data distribution and learning tasks. We also present B-FHTL, a federated hetero-task learning benchmark consisting of simulation dataset, FL protocols and a unified evaluation mechanism. B-FHTL dataset contains three well-designed federated learning tasks with increasing heterogeneity. Each task simulates the clients with different non-IID data and learning tasks. To ensure fair comparison among different FL algorithms, B-FHTL builds in a full suite of FL protocols by providing high-level APIs to avoid privacy leakage, and presets most common evaluation metrics spanning across different learning tasks, such as regression, classification, text generation and etc. Furthermore, we compare the FL algorithms in fields of federated multi-task learning, federated personalization and federated meta learning within B-FHTL, and highlight the influence of heterogeneity and difficulties of federated hetero-task learning. Our benchmark, including the federated dataset, protocols, the evaluation mechanism and the preliminary experiment, is open-sourced at https://github.com/alibaba/FederatedScope/tree/master/benchmark/B-FHTL",
+  "category": "mixed",
+  "domain": "federated learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "text_generation",
+    "sequence_prediction",
+    "multi_task_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (accuracy for classification, RMSE/MSE for regression, BLEU for generation, F1 where applicable)",
+  "general_score_metric": "task-specific metrics (accuracy / RMSE / BLEU)",
+  "year_of_publish": 2022,
+  "reputation": "Moderately adopted within the federated learning research community as part of the FederatedScope benchmark suite, primarily used by researchers studying heterogeneity in FL.",
+  "notes": "Simulation-based federated benchmark (not using real private user data), covers heterogeneous tasks so comparisons require careful alignment of task-specific metrics; results are not directly comparable across tasks without a composed protocol.",
+  "creators": {
+    "scientists": [
+      "Liuyi Yao",
+      "Dawei Gao",
+      "Zhen Wang",
+      "Yuexiang Xie",
+      "Weirui Kuang",
+      "Daoyuan Chen",
+      "Haohui Wang",
+      "Chenhe Dong",
+      "Bolin Ding",
+      "Yaliang Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2206.03436",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

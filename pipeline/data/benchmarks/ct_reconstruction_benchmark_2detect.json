@@ -1,0 +1,41 @@
+{
+  "name": "CT Reconstruction Benchmark (2DeteCT)",
+  "description": "Computed tomography (CT) is a widely used non-invasive diagnostic method in various fields, and recent advances in deep learning have led to significant progress in CT image reconstruction. However, the lack of large-scale, open-access datasets has hindered the comparison of different types of learned methods. To address this gap, we use the 2DeteCT dataset, a real-world experimental computed tomography dataset, for benchmarking machine learning based CT image reconstruction algorithms. We categorize these methods into post-processing networks, learned/unrolled iterative methods, learned regularizer methods, and plug-and-play methods, and provide a pipeline for easy implementation and evaluation. Using key performance metrics, including SSIM and PSNR, our benchmarking results showcase the effectiveness of various algorithms on tasks such as full data reconstruction, limited-angle reconstruction, sparse-angle reconstruction, low-dose reconstruction, and beam-hardening corrected reconstruction. With this benchmarking study, we provide an evaluation of a range of algorithms representative for different categories of learned reconstruction methods on a recently published dataset of real-world experimental CT measurements. The reproducible setup of methods and CT image reconstruction tasks in an open-source toolbox enables straightforward addition and comparison of new methods later on. The toolbox also provides the option to load the 2DeteCT dataset differently for extensions to other problems and different CT reconstruction tasks.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_reconstruction",
+    "denoising",
+    "inverse_problem",
+    "low_dose_reconstruction",
+    "limited_angle_reconstruction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "SSIM/PSNR",
+  "general_score_metric": "SSIM",
+  "typical_sota_score": "0.80–0.98 (SSIM)",
+  "year_of_publish": 2024,
+  "reputation": "Emerging benchmark used by researchers working on learned CT reconstruction with real experimental data; growing but not yet a community standard.",
+  "notes": "Non-LLM benchmark based on the real-world 2DeteCT dataset; evaluation relies on image-quality metrics (SSIM, PSNR). Multiple task variants (full, limited/sparse angles, low-dose, beam-hardening correction) make direct comparisons nontrivial. Moderate dataset size and heterogeneity; not saturated.",
+  "creators": {
+    "scientists": [
+      "Maximilian B. Kiss",
+      "Ander Biguri",
+      "Zakhar Shumaylov",
+      "Ferdia Sherry",
+      "K. Joost Batenburg",
+      "Carola-Bibiane Schönlieb",
+      "Felix Lucka"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2412.08350",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

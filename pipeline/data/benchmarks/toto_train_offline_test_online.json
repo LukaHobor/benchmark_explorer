@@ -1,0 +1,45 @@
+{
+  "name": "TOTO (Train Offline, Test Online)",
+  "description": "Three challenges limit the progress of robot learning research: robots are expensive (few labs can participate), everyone uses different robots (findings do not generalize across labs), and we lack internet-scale robotics data. We take on these challenges via a new benchmark: Train Offline, Test Online (TOTO). TOTO provides remote users with access to shared robotic hardware for evaluating methods on common tasks and an open-source dataset of these tasks for offline training. Its manipulation task suite requires challenging generalization to unseen objects, positions, and lighting. We present initial results on TOTO comparing five pretrained visual representations and four offline policy learning baselines, remotely contributed by five institutions. The real promise of TOTO, however, lies in the future: we release the benchmark for additional submissions from any user, enabling easy, direct comparison to several methods without the need to obtain hardware or collect data.",
+  "category": "mixed",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "robotic_manipulation",
+    "offline_rl_evaluation",
+    "imitation_learning",
+    "policy_generalization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (binary success per episode), typically averaged across objects/conditions and seeds",
+  "general_score_metric": "average task success rate",
+  "typical_sota_score": "varies by task; initial baselines often report <50% success on the harder generalization cases",
+  "year_of_publish": 2023,
+  "reputation": "New (2023) benchmark that is notable for remote-hardware evaluation; limited but growing adoption in the robot-learning community.",
+  "notes": "Real-robot benchmark with remote access — limited throughput and hardware-specific variability. Dataset and hardware diversity constrained, online evaluation can change over time; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Gaoyue Zhou",
+      "Victoria Dean",
+      "Mohan Kumar Srirama",
+      "Aravind Rajeswaran",
+      "Jyothish Pari",
+      "Kyle Hatch",
+      "Aryan Jain",
+      "Tianhe Yu",
+      "Pieter Abbeel",
+      "Lerrel Pinto",
+      "Chelsea Finn",
+      "Abhinav Gupta"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2306.00942",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

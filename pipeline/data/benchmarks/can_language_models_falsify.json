@@ -1,0 +1,37 @@
+{
+  "name": "Can Language Models Falsify?",
+  "description": "There is growing excitement about the potential of Language Models (LMs) to accelerate scientific discovery. Falsifying hypotheses is key to scientific progress, as it allows claims to be iteratively refined over time. This process requires significant researcher effort, reasoning, and ingenuity. Yet current benchmarks for LMs predominantly assess their ability to generate solutions rather than challenge them. We advocate for developing benchmarks that evaluate this inverse capability - creating counterexamples for subtly incorrect solutions. To demonstrate this approach, we start with the domain of algorithmic problem solving, where counterexamples can be evaluated automatically using code execution. Specifically, we introduce REFUTE, a dynamically updating benchmark that includes recent problems and incorrect submissions from programming competitions, where human experts successfully identified counterexamples. Our analysis finds that the best reasoning agents, even OpenAI o3-mini (high) with code execution feedback, can create counterexamples for only <9% of incorrect solutions in REFUTE, even though ratings indicate its ability to solve up to 48% of these problems from scratch. We hope our work spurs progress in evaluating and enhancing LMs' ability to falsify incorrect solutions - a capability that is crucial for both accelerating research and making models self-improve through reliable reflective reasoning.",
+  "category": "code",
+  "domain": "reasoning",
+  "task_types": [
+    "counterexample_generation",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "typical_sota_score": "<9%",
+  "year_of_publish": 2025,
+  "reputation": "A novel benchmark proposal with early-stage adoption, aimed at measuring a capability that is rarely covered by existing benchmarks.",
+  "notes": "Evaluating Algorithmic Reasoning with Counterexample Creation | Tags: algorithmic reasoning, counterexample creation, logical reasoning, falsification, challenging",
+  "creators": {
+    "scientists": [
+      "Shiven Sinha",
+      "Shashwat Goel",
+      "Ponnurangam Kumaraguru",
+      "Jonas Geiping",
+      "Matthias Bethge",
+      "Ameya Prabhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2502.19414v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-23",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

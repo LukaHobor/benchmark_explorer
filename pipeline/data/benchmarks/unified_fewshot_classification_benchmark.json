@@ -1,0 +1,38 @@
+{
+  "name": "Unified Few-Shot Classification Benchmark",
+  "description": "Meta and transfer learning are two successful families of approaches to few-shot learning. Despite highly related goals, state-of-the-art advances in each family are measured largely in isolation of each other. As a result of diverging evaluation norms, a direct or thorough comparison of different approaches is challenging. To bridge this gap, we perform a cross-family study of the best transfer and meta learners on both a large-scale meta-learning benchmark (Meta-Dataset, MD), and a transfer learning benchmark (Visual Task Adaptation Benchmark, VTAB). We find that, on average, large-scale transfer methods (Big Transfer, BiT) outperform competing approaches on MD, even when trained only on ImageNet. In contrast, meta-learning approaches struggle to compete on VTAB when trained and validated on MD. However, BiT is not without limitations, and pushing for scale does not improve performance on highly out-of-distribution MD tasks. In performing this study, we reveal a number of discrepancies in evaluation norms and study some of these in light of the performance gap. We hope that this work facilitates sharing of insights from each community, and accelerates progress on few-shot learning.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_classification",
+    "transfer_learning_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (average per-task/episode accuracy)",
+  "general_score_metric": "accuracy (average across tasks)",
+  "typical_sota_score": "varies widely by task; top models often in the ~60–95% range",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded study/benchmark for comparing meta-learning and transfer-learning approaches across standard few-shot tasks; influential in few-shot evaluation discussions.",
+  "notes": "Performance is highly task-dependent; differences in training data and protocol (e.g., pretraining datasets) can cause contamination and complicate fair comparisons across methods.",
+  "creators": {
+    "scientists": [
+      "Vincent Dumoulin",
+      "Neil Houlsby",
+      "Utku Evci",
+      "Xiaohua Zhai",
+      "Ross Goroshin",
+      "Sylvain Gelly",
+      "Hugo Larochelle"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2104.02638",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

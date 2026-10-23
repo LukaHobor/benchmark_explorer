@@ -1,0 +1,37 @@
+{
+  "name": "OPV2V",
+  "description": "Employing Vehicle-to-Vehicle communication to enhance perception performance in self-driving technology has attracted considerable attention recently; however, the absence of a suitable open dataset for benchmarking algorithms has made it difficult to develop and assess cooperative perception technologies. To this end, we present the first large-scale open simulated dataset for Vehicle-to-Vehicle perception. It contains over 70 interesting scenes, 11,464 frames, and 232,913 annotated 3D vehicle bounding boxes, collected from 8 towns in CARLA and a digital town of Culver City, Los Angeles. We then construct a comprehensive benchmark with a total of 16 implemented models to evaluate several information fusion strategies~(i.e. early, late, and intermediate fusion) with state-of-the-art LiDAR detection algorithms. Moreover, we propose a new Attentive Intermediate Fusion pipeline to aggregate information from multiple connected vehicles. Our experiments show that the proposed pipeline can be easily integrated with existing 3D LiDAR detectors and achieve outstanding performance even with large compression rates. To encourage more researchers to investigate Vehicle-to-Vehicle perception, we will release the dataset, benchmark methods, and all related codes in https://mobility-lab.seas.ucla.edu/opv2v/.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_object_detection",
+    "sensor_fusion",
+    "cooperative_perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean average precision (mAP) on 3D bounding boxes measured at specified IoU thresholds",
+  "general_score_metric": "3D mAP (average precision)",
+  "year_of_publish": 2021,
+  "reputation": "Recognized within the vehicle-to-vehicle cooperative perception research community as an early, widely cited simulation benchmark for V2V fusion methods.",
+  "notes": "Simulation-based dataset collected in CARLA (plus a digital Culver City); useful for prototyping V2V fusion but subject to sim-to-real gap. Moderate dataset size but not real-world data; designed for non-LLM perception research and can be sensitive to sensor/communication compression settings.",
+  "creators": {
+    "scientists": [
+      "Runsheng Xu",
+      "Hao Xiang",
+      "Xin Xia",
+      "Xu Han",
+      "Jinlong Li",
+      "Jiaqi Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2109.07644",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

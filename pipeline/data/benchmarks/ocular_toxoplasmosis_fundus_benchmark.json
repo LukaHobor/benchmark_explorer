@@ -1,0 +1,36 @@
+{
+  "name": "Ocular Toxoplasmosis Fundus Benchmark",
+  "description": "Diagnosis of Ocular toxoplasmosis (OT) usually involves clinical examination and imaging, which can be expensive and require specialized personnel. The use of artificial intelligence (AI) to analyze fundus images for diagnosing ocular diseases is gaining traction. Despite that, there has not been much work done focusing on the detection of OT. To address this issue, we conducted a benchmark study that evaluates the effectiveness of existing pre-trained networks using transfer learning techniques to detect and segment OT lesions from fundus images. The goal of this study is to provide insights for future researchers interested in harnessing deep learning (DL) techniques for automated, easy-to-use, and precise diagnostic approaches of OT using retinal fundus images. Along with that, we have performed an in-depth analysis of different feature extraction techniques to find the most optimal one for the classification and segmentation of lesions. For classification tasks, we have evaluated pre-trained models such as VGG16, MobileNetV2, InceptionV3, ResNet50, and DenseNet121 models. Among them, MobileNetV2 outperformed all other models in terms of Accuracy (Acc.), Recall, and F1-Score outperforming the second-best InceptionV3 by 0.7% higher Acc. However, DenseNet121 achieved the best result in terms of Precision, which was 0.1% higher than MobileNetV2. For the segmentation task, we replaced the encoder block of the U-Net with pre-trained MobileNetV2, InceptionV3, ResNet34, and VGG16 and trained with two different loss functions (Dice loss and Jaccard loss). The MobileNetV2/U-Net outperformed ResNet34 by 0.5% and 2.1% in terms of Acc. and Dice Score, respectively when the most optimum Jaccard loss function is employed during the training. The results mentioned in this study verify the effectiveness of the DL techniques in the diagnosis of OT.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy / F1 / Dice (task-dependent)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "18 citations",
+  "notes": "Medical imaging benchmark with clinical labels — relatively small and specialized dataset, potential class imbalance and domain bias. Results depend on transfer-learning and pretraining choices; not an LLM benchmark. Requires clinical validation before deployment.",
+  "creators": {
+    "scientists": [
+      "Syed Samiul Alam",
+      "Samiul Based Shuvo",
+      "Shams Nafisa Ali",
+      "Fardeen Ahmed",
+      "Arbil Chakma",
+      "Yeong Min Jang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1109/access.2024.3359701",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

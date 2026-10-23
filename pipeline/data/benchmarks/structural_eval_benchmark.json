@@ -1,0 +1,41 @@
+{
+  "name": "structural-eval-benchmark",
+  "description": "StructuralEval: 结构力学大模型视觉推理评测基准\n\t\n\nStructuralEval 是一个专注于结构力学领域的垂直大模型评测基准。本项目旨在评估多模态大语言模型（LMMs）在专业工程场景下的视觉感知、空间推理以及结构建模能力。\n与传统的数学或通用视觉评测不同，本基准并不要求 AI 直接输出计算结果，而是要求 AI 扮演“建模工程师”的角色，将结构图片转化为计算机可识别的标准结构定义（JSON）。\n\n\t\n\t\t\n\t\t核心理念\n\t\n\n\"AI 负责建模，引擎负责计算\"\n\n视觉转译 (Visual-to-Schema): AI 模型输入一张包含梁 (Beam)、刚架 (Frame) 或 桁架 (Truss) 的图片，识别其中的节点坐标、构件连接关系、支座类型（铰接、固接等）以及荷载信息。\n物理验证 (Physics-Based Verification): AI 输出的 JSON 模型会被送入内置的 WASM 物理求解器 (FrameCalc) 进行有限元分析。\n结果对齐: 系统通过比较 AI 模型的物理响应（支座反力、最大弯矩）与真值（Ground… See the full description on the dataset page: https://huggingface.co/datasets/superhatk/structural-eval-benchmark.",
+  "category": "multimodal",
+  "domain": "science",
+  "tags": [
+    "task_categories:visual-question-answering",
+    "task_categories:image-to-text",
+    "language:en",
+    "language:zh",
+    "license:cc-by-nc-4.0",
+    "size_categories:n<1K"
+  ],
+  "task_types": [
+    "open_ended",
+    "structured_output"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "A niche, domain-specific benchmark aimed at structural-engineering LMM capabilities with growing interest among engineering-AI researchers.",
+  "downloads": 124,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "superhatk"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://huggingface.co/datasets/superhatk/structural-eval-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

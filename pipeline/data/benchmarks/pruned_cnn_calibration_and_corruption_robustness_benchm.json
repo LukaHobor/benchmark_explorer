@@ -1,0 +1,35 @@
+{
+  "name": "Pruned CNN Calibration and Corruption Robustness Benchmark",
+  "description": "Convolutional Neural Networks (CNNs) have achieved state-of-the-art performance in many computer vision tasks. However, high computational and storage demands hinder their deployment into resource-constrained environments, such as embedded devices. Model pruning helps to meet these restrictions by reducing the model size, while maintaining superior performance. Meanwhile, safety-critical applications pose more than just resource and performance constraints. In particular, predictions must not be overly confident, i.e., provide properly calibrated uncertainty estimations (proper uncertainty calibration), and CNNs must be robust against corruptions like naturally occurring input perturbations (natural corruption robustness). This work investigates the important trade-off between uncertainty calibration, natural corruption robustness, and performance for current state-of-research post-hoc CNN pruning techniques in the context of image classification tasks. Our study reveals that post-hoc pruning substantially improves the model's uncertainty calibration, performance, and natural corruption robustness, sparking hope for safe and robust embedded CNNs.Furthermore, uncertainty calibration and natural corruption robustness are not mutually exclusive targets under pruning, as evidenced by the improved safety aspects obtained by post-hoc unstructured pruning with increasing compression.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness",
+    "calibration"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy; expected_calibration_error (ECE); mean_corruption_error (mCE)",
+  "general_score_metric": "accuracy and expected_calibration_error (ECE)",
+  "typical_sota_score": "dataset-dependent (varies by model and dataset)",
+  "year_of_publish": 2024,
+  "reputation": "A research-focused benchmark from a single paper; of interest to the model-pruning and robustness community but not widely adopted as a general benchmark.",
+  "notes": "Non-LLM computer-vision benchmark focused on post-hoc pruning; primary metrics include ECE and corruption robustness (mCE). Results are highly dataset- and model-dependent; limited community adoption beyond pruning/robustness researchers.",
+  "creators": {
+    "scientists": [
+      "Pallavi Mitra",
+      "Gesina Schwalbe",
+      "Nadja Klein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.20876",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

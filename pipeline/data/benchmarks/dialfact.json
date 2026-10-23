@@ -1,0 +1,35 @@
+{
+  "name": "DialFact",
+  "description": "Fact-checking is an essential tool to mitigate the spread of misinformation and disinformation. We introduce the task of fact-checking in dialogue, which is a relatively unexplored area. We construct DialFact, a testing benchmark dataset of 22,245 annotated conversational claims, paired with pieces of evidence from Wikipedia. There are three sub-tasks in DialFact: 1) Verifiable claim detection task distinguishes whether a response carries verifiable factual information; 2) Evidence retrieval task retrieves the most relevant Wikipedia snippets as evidence; 3) Claim verification task predicts a dialogue response to be supported, refuted, or not enough information. We found that existing fact-checking models trained on non-dialogue data like FEVER fail to perform well on our task, and thus, we propose a simple yet data-efficient solution to effectively improve fact-checking performance in dialogue. We point out unique challenges in DialFact such as handling the colloquialisms, coreference",
+  "category": "text",
+  "domain": "communication",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "evidence_retrieval",
+    "three_way_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2021,
+  "reputation": "DialFact is a well-known dialogue fact-checking benchmark in the research community and is commonly used to study claim verification beyond standard FEVER-style settings.",
+  "notes": "Contains conversational claims with colloquialisms and coreference, making it harder than standard fact-checking datasets; evidence retrieval and verification are often evaluated separately.",
+  "creators": {
+    "scientists": [
+      "Prakhar Gupta",
+      "Chien-Sheng Wu",
+      "Wenhao Liu",
+      "Caiming Xiong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2110.08222",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "SiM3D",
+  "description": "We propose SiM3D, the first benchmark considering the integration of multiview and multimodal information for comprehensive 3D anomaly detection and segmentation (ADS), where the task is to produce a voxel-based Anomaly Volume. Moreover, SiM3D focuses on a scenario of high interest in manufacturing: single-instance anomaly detection, where only one object, either real or synthetic, is available for training. In this respect, SiM3D stands out as the first ADS benchmark that addresses the challenge of generalising from synthetic training data to real test data. SiM3D includes a novel multimodal multiview dataset acquired using top-tier industrial sensors and robots. The dataset features multiview high-resolution images (12 Mpx) and point clouds (7M points) for 333 instances of eight types of objects, alongside a CAD model for each type. We also provide manually annotated 3D segmentation GTs for anomalous test samples. To establish reference baselines for the proposed multiview 3D ADS task, we adapt prominent singleview methods and assess their performance using novel metrics that operate on Anomaly Volumes.",
+  "category": "multimodal",
+  "domain": "manufacturing / 3D vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "3d_segmentation",
+    "multiview_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "voxel-wise metrics (voxel IoU / voxel-wise F1) and AUROC on anomaly volumes",
+  "general_score_metric": "voxel IoU (with complementary voxel-wise F1 / AUROC)",
+  "year_of_publish": 2025,
+  "reputation": "Newly proposed benchmark (2025) attracting interest in manufacturing and 3D vision communities for multiview multimodal ADS research.",
+  "notes": "Small, specialized dataset (333 instances, 8 object types); focuses on synthetic-to-real generalization; non-LLM benchmark collected with industrial sensors — potential domain gap and limited class diversity.",
+  "creators": {
+    "scientists": [
+      "Alex Costanzino",
+      "Pierluigi Zama Ramirez",
+      "Luigi Lella",
+      "Matteo Ragaglia",
+      "Alessandro Oliva",
+      "Giuseppe Lisanti",
+      "Luigi Di Stefano"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.21549",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

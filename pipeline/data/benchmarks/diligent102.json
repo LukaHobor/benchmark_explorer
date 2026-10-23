@@ -1,0 +1,37 @@
+{
+  "name": "DiLiGenT102",
+  "description": "Evaluating photometric stereo using real-world dataset is important yet difficult. Existing datasets are insufficient due to their limited scale and random distributions in shape and material. This paper presents a new real-world photometric stereo dataset with \"ground truth\" normal maps, which is 10 times larger than the widely adopted one. More importantly, we propose to control the shape and material variations by fabricating objects from CAD models with carefully selected materials, covering typical aspects of reflectance properties that are distinctive for evaluating photometric stereo methods. By benchmarking recent photometric stereo methods using these 100 sets of images, with a special focus on recent learning based solutions, a 10 x 10 shape-material error distribution matrix is visualized to depict a \"portrait\" for each evaluated method. From such comprehensive analysis, open problems in this field are discussed. To inspire future research, this dataset is available at https://photometricstereo.github.io.",
+  "category": "vision",
+  "domain": "computer vision (photometric stereo)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "image_to_image",
+    "surface_normal_estimation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean_angular_error (per-pixel angular error between predicted and ground-truth normals)",
+  "general_score_metric": "mean angular error (degrees)",
+  "typical_sota_score": "≈1–5° (mean angular error, varies by scene/material)",
+  "year_of_publish": 2022,
+  "reputation": "A widely used real-world photometric-stereo dataset that is larger than earlier sets (10x DiLiGenT) and commonly used in research on reflectance-aware normal estimation.",
+  "notes": "Non-LLM vision benchmark; controlled fabricated objects reduce uncontrolled variability but limit scene diversity; evaluation focuses on angular error which can saturate for easy cases; ground-truth is from manufactured shapes rather than fully unconstrained real-world scenes.",
+  "creators": {
+    "scientists": [
+      "Jieji Ren",
+      "Feishi Wang",
+      "Jiahao Zhang",
+      "Qian Zheng",
+      "Mingjun Ren",
+      "Boxin Shi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

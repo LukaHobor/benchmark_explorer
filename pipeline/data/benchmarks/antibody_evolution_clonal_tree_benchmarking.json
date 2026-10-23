@@ -1,0 +1,34 @@
+{
+  "name": "Antibody evolution clonal tree benchmarking",
+  "description": "Affinity maturation (AM) of antibodies through somatic hypermutations (SHMs) enables the immune system to evolve to recognize diverse pathogens. The accumulation of SHMs leads to the formation of clonal trees of antibodies produced by B cells that have evolved from a common naive B cell. Recent advances in high-throughput sequencing have enabled deep scans of antibody repertoires, paving the way for reconstructing clonal trees. However, it is not clear if clonal trees, which capture micro-evolutionary time scales, can be reconstructed using traditional phylogenetic reconstruction methods with adequate accuracy. In fact, several clonal tree reconstruction methods have been developed to fix supposed shortcomings of phylogenetic methods. Nevertheless, no consensus has been reached regarding the relative accuracy of these methods, partially because evaluation is challenging. Benchmarking the performance of existing methods and developing better methods would both benefit from realistic models of clonal tree evolution specifically designed for emulating B cell evolution. In this paper, we propose a model for modeling B cell clonal tree evolution and use this model to benchmark several existing clonal tree reconstruction methods. Our model, designed to be extensible, has several features: by evolving the clonal tree and sequences simultaneously, it allows modelling selective pressure due to changes in affinity binding; it enables scalable simulations of millions of cells; it enables several rounds of infection by an evolving pathogen; and, it models building of memory. In addition, we also suggest a set of metrics for comparing clonal trees and for measuring their properties. Our benchmarking results show that while maximum likelihood phylogenetic reconstruction methods can fail to capture key features of clonal tree expansion if applied naively, a very simple postprocessing of their results, where super short branches are contracted, leads to inferences that are better than alternative methods.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "tree_reconstruction",
+    "simulation",
+    "phylogenetic_inference"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "tree_distance (e.g., Robinson–Foulds distance) / topology_accuracy",
+  "general_score_metric": "normalized_Robinson-Foulds_distance",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded within computational immunology and bioinformatics for providing a realistic, extensible simulation framework and a focused benchmark for clonal tree reconstruction methods.",
+  "notes": "Simulation-based benchmark (not purely empirical); results depend on simulation parameters and selective-pressure models; metrics are sensitive to tree size, polytomies, and branch-length conventions; non-LLM benchmark focused on specialized bioinformatics methods.",
+  "creators": {
+    "scientists": [
+      "Chao Zhang",
+      "Andrey V. Bzikadze",
+      "Yana Safonova",
+      "S. Mirarab"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

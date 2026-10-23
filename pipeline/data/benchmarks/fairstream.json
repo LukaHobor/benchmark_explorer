@@ -1,0 +1,36 @@
+{
+  "name": "FairStream",
+  "description": "Multimedia streaming accounts for the majority of traffic in today's internet. Mechanisms like adaptive bitrate streaming control the bitrate of a stream based on the estimated bandwidth, ideally resulting in smooth playback and a good Quality of Experience (QoE). However, selecting the optimal bitrate is challenging under volatile network conditions. This motivated researchers to train Reinforcement Learning (RL) agents for multimedia streaming. The considered training environments are often simplified, leading to promising results with limited applicability. Additionally, the QoE fairness across multiple streams is seldom considered by recent RL approaches. With this work, we propose a novel multi-agent environment that comprises multiple challenges of fair multimedia streaming: partial observability, multiple objectives, agent heterogeneity and asynchronicity. We provide and analyze baseline approaches across five different traffic classes to gain detailed insights into the behavior of the considered agents, and show that the commonly used Proximal Policy Optimization (PPO) algorithm is outperformed by a simple greedy heuristic. Future work includes the adaptation of multi-agent RL algorithms and further expansions of the environment.",
+  "category": "multimodal",
+  "domain": "multimedia streaming / networking",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "multi_agent",
+    "simulation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average QoE (composite of bitrate, rebuffering, quality switches), cumulative episode reward, fairness indices (e.g., Jain's fairness index)",
+  "general_score_metric": "Average QoE (composite score combining bitrate, rebuffering, and quality stability) and fairness index",
+  "year_of_publish": 2024,
+  "reputation": "A recently proposed multi-agent environment for fair multimedia streaming; useful for research on multi-objective and fairness-aware RL but not yet broadly used outside the networking/RL research niche.",
+  "notes": "Simulation/environment benchmark (non-LLM); results sensitive to traffic models, reward shaping and agent heterogeneity; baseline PPO may be outperformed by simple heuristics depending on class of traffic—care needed when comparing methods.",
+  "creators": {
+    "scientists": [
+      "Jannis Weil",
+      "Jonas Ringsdorf",
+      "Julian Barthel",
+      "Yi-Ping Phoebe Chen",
+      "Tobias Meuser"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2410.21029",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

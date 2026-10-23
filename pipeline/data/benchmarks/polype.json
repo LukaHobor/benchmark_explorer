@@ -1,0 +1,40 @@
+{
+  "name": "Polyp-E",
+  "description": "Automatic polyp segmentation is helpful to assist clinical diagnosis and treatment. In daily clinical practice, clinicians exhibit robustness in identifying polyps with both location and size variations. It is uncertain if deep segmentation models can achieve comparable robustness in automated colonoscopic analysis. To benchmark the model robustness, we focus on evaluating the robustness of segmentation models on the polyps with various attributes (e.g. location and size) and healthy samples. Based on the Latent Diffusion Model, we perform attribute editing on real polyps and build a new dataset named Polyp-E. Our synthetic dataset boasts exceptional realism, to the extent that clinical experts find it challenging to discern them from real data. We evaluate several existing polyp segmentation models on the proposed benchmark. The results reveal most of the models are highly sensitive to attribute variations. As a novel data augmentation technique, the proposed editing pipeline can improve both in-distribution and out-of-distribution generalization ability. The code and datasets will be released.",
+  "category": "vision",
+  "domain": "medical imaging (endoscopy)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice coefficient / Intersection-over-Union (mIoU); pixel-wise F1 can also be reported",
+  "general_score_metric": "mean Dice score (per-image / per-dataset)",
+  "typical_sota_score": "80–95% (in-distribution); substantially lower on robustness / edited-attribute subsets",
+  "year_of_publish": 2024,
+  "reputation": "New synthetic-polyp benchmark aimed at robustness evaluation in medical endoscopy; likely of interest to the medical imaging community but not yet widely adopted.",
+  "notes": "Synthetic dataset (latent-diffusion edited images) — high visual realism but potential for synthetic artefact bias and domain gap; limited to segmentation (non-LLM); clinical validation required before deployment.",
+  "creators": {
+    "scientists": [
+      "Runpu Wei",
+      "Zijin Yin",
+      "Kongming Liang",
+      "Min Min",
+      "Chengwei Pan",
+      "Gang Yu",
+      "Haonan Huang",
+      "Yan Liu",
+      "Zhanyu Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2410.16732",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

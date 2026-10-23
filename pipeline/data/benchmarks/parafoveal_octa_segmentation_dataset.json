@@ -1,0 +1,37 @@
+{
+  "name": "Parafoveal OCTA segmentation dataset",
+  "description": "Optical coherence tomography angiography (OCTA) is a novel non-invasive imaging modality for the visualisation of microvasculature in vivo that has encountered broad adoption in retinal research. OCTA potential in the assessment of pathological conditions and the reproducibility of studies relies on the quality of the image analysis. However, automated segmentation of parafoveal OCTA images is still an open problem. In this study, we generate the first open dataset of retinal parafoveal OCTA images with associated ground truth manual segmentations. Furthermore, we establish a standard for OCTA image segmentation by surveying a broad range of state-of-the-art vessel enhancement and binarisation procedures. We provide the most comprehensive comparison of these methods under a unified framework to date. Our results show that, for the set of images considered, deep learning architectures (U-Net and CS-Net) achieve the best performance. For applications where manually segmented data is not available to retrain these approaches, our findings suggest that optimal oriented flux is the best handcrafted filter from those considered. Furthermore, we report on the importance of preserving network structure in the segmentation to enable deep vascular phenotyping. We introduce new metrics for network structure evaluation in segmented angiograms. Our results demonstrate that segmentation methods with equal Dice score perform very differently in terms of network structure preservation. Moreover, we compare the error in the computation of clinically relevant vascular network metrics (e.g. foveal avascular zone area and vessel density) across segmentation methods. Our results show up to 25% differences in vessel density accuracy depending on the segmentation method employed. These findings should be taken into account when comparing the results of clinical studies and performing meta-analyses.",
+  "category": "vision",
+  "domain": "medical imaging / ophthalmology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient (overlap) / IoU",
+  "general_score_metric": "Dice score",
+  "typical_sota_score": "80–92%",
+  "year_of_publish": 2019,
+  "reputation": "A well-cited, domain-specific open dataset introduced in a peer-reviewed study (1912.09978) and used within the retinal OCTA segmentation community for method comparison.",
+  "notes": "Medical imaging benchmark with limited dataset size and modality specificity; not intended for LLMs. Results can vary substantially by segmentation method and impact downstream vascular metrics; care needed for cross-study comparisons.",
+  "creators": {
+    "scientists": [
+      "Ylenia Giarratano",
+      "Eleonora Bianchi",
+      "Calum Gray",
+      "Andrew Morris",
+      "Tom MacGillivray",
+      "Baljean Dhillon",
+      "Miguel O. Bernabeu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1912.09978",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

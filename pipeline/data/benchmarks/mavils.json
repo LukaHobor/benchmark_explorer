@@ -1,0 +1,36 @@
+{
+  "name": "MaViLS",
+  "description": "This paper presents a benchmark dataset for aligning lecture videos with corresponding slides and introduces a novel multimodal algorithm leveraging features from speech, text, and images. It achieves an average accuracy of 0.82 in comparison to SIFT (0.56) while being approximately 11 times faster. Using dynamic programming the algorithm tries to determine the optimal slide sequence. The results show that penalizing slide transitions increases accuracy. Features obtained via optical character recognition (OCR) contribute the most to a high matching accuracy, followed by image features. The findings highlight that audio transcripts alone provide valuable information for alignment and are beneficial if OCR data is lacking. Variations in matching accuracy across different lectures highlight the challenges associated with video quality and lecture style. The novel multimodal algorithm demonstrates robustness to some of these challenges, underscoring the potential of the approach.",
+  "category": "multimodal",
+  "domain": "video analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_alignment",
+    "retrieval",
+    "multimodal_matching"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "~82%",
+  "year_of_publish": 2024,
+  "reputation": "Recent multimodal benchmark introduced in the paper (arXiv:2409.16765) with limited adoption to date; primarily used in research on lecture-slide/video alignment.",
+  "notes": "Relatively small, domain-specific dataset; performance sensitive to video quality and lecture style. OCR/text features contribute strongly; not a general-purpose LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Katharina Anderer",
+      "Andreas Reich",
+      "Matthias Wölfel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.16765",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

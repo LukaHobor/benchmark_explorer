@@ -1,0 +1,33 @@
+{
+  "name": "DOS ATTACK dataset",
+  "description": "The \"DOS ATTACK\" dataset, which consists of network traffic data specially prepared to\nsupport the research effort into finding the possibility to trace DoS attacks using artificial\nintelligence and machine learning-based techniques, has more than 820,000 entries. Labeled\ninstances of attack and normal traffic represent this dataset, which are highly useful for training\nand evaluation of intrusion detection systems. Some of the notable features include source and\ndestination IP addresses, protocol type, packet size, and TCP-specific flags like SYN and ACK,\nwhich are actually quite crucial to observe patterns of attacks. The dataset is fairly balanced as\nabout 17 percent of entries fall under the category of attack instances, which gives very realistic\nsettings for evaluating the model. This dataset may also be important for benchmarking AIbased network intrusion detection models, especially for recognition of DoS attacks and\ngeneral knowledge about network behavior under attack conditions. Salient patterns of\ndistribution in the SYN and ACK flags, packet sizes, and temporal characteristics shown in our\nanalysis could constitute a foundation for more advanced intrusion detection research",
+  "category": "mixed",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1-score",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2024,
+  "reputation": "Moderately used in academic research on DoS detection; less widely adopted than larger public intrusion datasets (e.g., CICIDS, KDD99).",
+  "notes": "Network intrusion dataset (non-LLM). Moderate class imbalance (~17% attacks). Potential privacy/IP leakage in raw fields (source/destination IPs); possible feature leakage if temporal context not handled. Comparability to other IDS benchmarks may be limited by preprocessing differences.",
+  "creators": {
+    "scientists": [
+      "",
+      "Shihab Chilwan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.70295/smdj.2412023",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

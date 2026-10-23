@@ -1,0 +1,38 @@
+{
+  "name": "TAD",
+  "description": "Automatic traffic accidents detection has appealed to the machine vision community due to its implications on the development of autonomous intelligent transportation systems (ITS) and importance to traffic safety. Most previous studies on efficient analysis and prediction of traffic accidents, however, have used small-scale datasets with limited coverage, which limits their effect and applicability. Existing datasets in traffic accidents are either small-scale, not from surveillance cameras, not open-sourced, or not built for freeway scenes. Since accidents happened in freeways tend to cause serious damage and are too fast to catch the spot. An open-sourced datasets targeting on freeway traffic accidents collected from surveillance cameras is in great need and of practical importance. In order to help the vision community address these shortcomings, we endeavor to collect video data of real traffic accidents that covered abundant scenes. After integration and annotation by various dimensions, a large-scale traffic accidents dataset named TAD is proposed in this work. Various experiments on image classification, object detection, and video classification tasks, using public mainstream vision algorithms or frameworks are conducted in this work to demonstrate performance of different methods. The proposed dataset together with the experimental results are presented as a new benchmark to improve computer vision research, especially in ITS.",
+  "category": "vision",
+  "domain": "traffic surveillance / autonomous transportation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "video_classification",
+    "image_classification",
+    "action_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (for detection) / accuracy (for classification) / F1 (event detection)",
+  "general_score_metric": "mAP (mean Average Precision) for detection tasks",
+  "typical_sota_score": "varies by task; detection results often reported in the low-to-moderate mAP range (e.g., ~30–60%) depending on setup",
+  "year_of_publish": 2022,
+  "reputation": "A practical, domain-focused benchmark for freeway traffic-accident analysis that has attracted attention in ITS and traffic-surveillance research but is not yet a broadly used mainstream vision benchmark.",
+  "notes": "Real-world video data of rare events -> class imbalance and relatively few positive examples; temporal localization and occlusion make tasks challenging; dataset is video-based (not an LLM benchmark); potential bias toward camera viewpoints and locations in the collection.",
+  "creators": {
+    "scientists": [
+      "Yajun Xu",
+      "Chuwen Huang",
+      "Yibing Nan",
+      "Shiguo Lian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.12386",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

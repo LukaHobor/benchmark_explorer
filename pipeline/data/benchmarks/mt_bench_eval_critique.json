@@ -1,0 +1,37 @@
+{
+  "name": "mt-bench-eval-critique",
+  "description": "Description\n\t\n\nThis dataset is used to check criticon prompts/responses while testing, it contains instructions/responses from mt_bench_eval, as extracted from: https://github.com/kaistAI/prometheus/blob/main/evaluation/benchmark/data/mt_bench_eval.json\nThe dataset has been obtained cleaning the data with:\nimport re\nimport pandas as pd\nfrom datasets import Dataset\n\ndf = pd.read_json(\"mt_bench_eval.json\", lines=True)\n\nds = Dataset.from_pandas(df, preserve_index=False)… See the full description on the dataset page: https://huggingface.co/datasets/distilabel-internal-testing/mt-bench-eval-critique.",
+  "category": "text",
+  "domain": "multidisciplinary",
+  "tags": [
+    "size_categories:n<1K",
+    "modality:text"
+  ],
+  "task_types": [
+    "open_ended",
+    "response_critique"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human_eval",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "An internal/derivative critique dataset used for model evaluation and prompt-response checking; limited public adoption.",
+  "downloads": 3,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "distilabel-internal-testing"
+    ]
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://huggingface.co/datasets/distilabel-internal-testing/mt-bench-eval-critique",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

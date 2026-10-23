@@ -1,0 +1,35 @@
+{
+  "name": "Relative Saliency and Ranking",
+  "description": "Salient object detection is a problem that has been considered in detail and \\textcolor{black}{many solutions have been proposed}. In this paper, we argue that work to date has addressed a problem that is relatively ill-posed. Specifically, there is not universal agreement about what constitutes a salient object when multiple observers are queried. This implies that some objects are more likely to be judged salient than others, and implies a relative rank exists on salient objects. Initially, we present a novel deep learning solution based on a hierarchical representation of relative saliency and stage-wise refinement. Further to this, we present data, analysis and baseline benchmark results towards addressing the problem of salient object ranking. Methods for deriving suitable ranked salient object instances are presented, along with metrics suitable to measuring algorithm performance. In addition, we show how a derived dataset can be successively refined to provide cleaned results that correlate well with pristine ground truth in its characteristics and value for training and testing models. Finally, we provide a comparison among prevailing algorithms that address salient object ranking or detection to establish initial baselines providing a basis for comparison with future efforts addressing this problem. \\textcolor{black}{The source code and data are publicly available via our project page:} \\textrm{\\href{https://ryersonvisionlab.github.io/cocosalrank.html}{ryersonvisionlab.github.io/cocosalrank}}",
+  "category": "vision",
+  "domain": "computer vision / saliency detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "salient_object_detection",
+    "ranking",
+    "segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F-measure (F_beta) and ranking correlation (Spearman/Pearson), MAE",
+  "general_score_metric": "F-measure (F_beta) and ranking correlation (Spearman)",
+  "typical_sota_score": "70–85%",
+  "year_of_publish": 2018,
+  "reputation": "Well-regarded in the saliency research community for introducing and benchmarking salient-object ranking; moderately cited and used as a baseline for ranking tasks.",
+  "notes": "Non-LLM benchmark focused on computer-vision saliency ranking; moderate dataset size; labels reflect subjective judgments so there is annotation ambiguity; not prone to text-based data contamination.",
+  "creators": {
+    "scientists": [
+      "Mahmoud Kalash",
+      "Md Amirul Islam",
+      "Neil D. B. Bruce"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1810.02426",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

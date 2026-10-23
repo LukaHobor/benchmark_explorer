@@ -1,0 +1,37 @@
+{
+  "name": "Underwater soundscape benchmark scenarios",
+  "description": "Models of the underwater acoustic soundscape are important for evaluating the effects of human generated sounds on marine life. The performance of models can be validated against measurements or verified against each other for consistency. A verification workshop was held to compare models that predict the soundscape from wind and vessels and estimate detection ranges for a submerged target. Eight modeling groups participated in the workshop which predicted sound levels with observation windows of 1 min and 1 km2. Substantial differences were found in how modelers computed the propagation losses for decidecade bands and estimated the source level of wind. Further investigations resulted in recommendations on best practices. Choices of temporal and spatial modeling resolution affected the estimates of metrics proportional to total sound energy more than distributions of sound pressure level. Deeper receivers were less sensitive to these parameters than shallow ones. A temporal resolution of 1 min and spatial resolution of 100 m is recommended. Models that follow the recommendations will yield similar results. The detection range of underwater targets is highly variable when the ambient noise depends on moving noise sources. Future work to verify models against data and understand model uncertainty is recommended.",
+  "category": "audio",
+  "domain": "marine science",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "sound_level_prediction",
+    "simulation_verification",
+    "detection_range_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "error metrics comparing model predictions to observations (e.g., RMSE/MAE in dB) and inter-model consistency checks",
+  "general_score_metric": "RMSE or mean absolute error in dB (model vs. observations) / consistency statistics across models",
+  "year_of_publish": 2024,
+  "reputation": "9 citations",
+  "notes": "Workshop-style benchmark comparing physics/simulation models rather than ML-only models; results are sensitive to temporal/spatial resolution choices and source level assumptions; not an LLM benchmark and substantial inter-model variability was reported.",
+  "creators": {
+    "scientists": [
+      "S. B. Martin",
+      "Martin Siderius",
+      "Michael A. Ainslie",
+      "M. B. Halvorsen",
+      "Leila Hatch",
+      "Mark Prior"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

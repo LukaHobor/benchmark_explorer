@@ -1,0 +1,38 @@
+{
+  "name": "Action-Constrained RL Robotics Benchmark",
+  "description": "This study presents a benchmark for evaluating action-constrained reinforcement learning (RL) algorithms. In action-constrained RL, each action taken by the learning system must comply with certain constraints. These constraints are crucial for ensuring the feasibility and safety of actions in real-world systems. We evaluate existing algorithms and their novel variants across multiple robotics control environments, encompassing multiple action constraint types. Our evaluation provides the first in-depth perspective of the field, revealing surprising insights, including the effectiveness of a straightforward baseline approach. The benchmark problems and associated code utilized in our experiments are made available online at github.com/omron-sinicx/action-constrained-RL-benchmark for further research and development.",
+  "category": "mixed",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reinforcement_learning",
+    "continuous_control",
+    "safety_constrained_control"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Average episodic return (cumulative reward), task success rate, and constraint violation rate (safety metric)",
+  "general_score_metric": "Average episodic return / task success rate combined with constraint-violation rate (safety-aware performance)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "A recent (2023) specialized benchmark with public code; of growing interest in the constrained-RL and robotics safety community but not yet broadly standardized across RL benchmarks.",
+  "notes": "Non-LLM benchmark; results can be highly sensitive to simulator, seed, and hyperparameters; different environments use differing constraint definitions so cross-task comparisons require care; moderate community adoption so far.",
+  "creators": {
+    "scientists": [
+      "Kazumi Kasaura",
+      "Shuwa Miura",
+      "Tadashi Kozuno",
+      "Ryo Yonetani",
+      "Kenta Hoshino",
+      "Yohei Hosoe"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2304.08743",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

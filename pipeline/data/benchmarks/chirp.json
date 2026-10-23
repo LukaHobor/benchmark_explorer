@@ -1,0 +1,42 @@
+{
+  "name": "CHIRP",
+  "description": "The proliferation of Vision-Language Models (VLMs) in the past several years calls for rigorous and comprehensive evaluation methods and benchmarks. This work analyzes existing VLM evaluation techniques, including automated metrics, AI-based assessments, and human evaluations across diverse tasks. We first introduce Robin - a novel suite of VLMs that we built by combining Large Language Models (LLMs) and Vision Encoders (VEs) at multiple scales, and use Robin to identify shortcomings of current evaluation approaches across scales. Next, to overcome the identified limitations, we introduce CHIRP - a new long form response benchmark we developed for more robust and complete VLM evaluation. We provide open access to the Robin training code, model suite, and CHIRP benchmark to promote reproducibility and advance VLM research.",
+  "category": "multimodal",
+  "domain": "vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "long_form_generation",
+    "visual_question_answering",
+    "multimodal_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Human evaluation as primary metric supplemented by automated metrics (BLEU / ROUGE / BERTScore / LLM-based scoring); composite human+automated scoring commonly reported",
+  "general_score_metric": "human_eval (long-form response quality) / composite score combining human and automated metrics",
+  "year_of_publish": 2025,
+  "reputation": "New benchmark introduced alongside the authors' Robin model suite; intended to strengthen VLM evaluation but has limited external adoption so far.",
+  "notes": "Designed for long-form, subjective evaluation — relies heavily on human judgments and LLM-based scoring; vulnerable to evaluator subjectivity and potential overlap/contamination with LLM pretraining data. Not a simple exact-match benchmark.",
+  "creators": {
+    "scientists": [
+      "Alexis Roger",
+      "Prateek Humane",
+      "Daniel Z. Kaplan",
+      "Kshitij Gupta",
+      "Qi Sun",
+      "George Adamopoulos",
+      "Jonathan Siu Chi Lim",
+      "Quentin Anthony",
+      "Edwin Fennell",
+      "Irina Rish"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.09672",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

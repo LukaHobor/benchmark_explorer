@@ -1,0 +1,40 @@
+{
+  "name": "Multispectral Object Detection Benchmark",
+  "description": "Multispectral object detection, utilizing RGB and TIR (thermal infrared) modalities, is widely recognized as a challenging task. It requires not only the effective extraction of features from both modalities and robust fusion strategies, but also the ability to address issues such as spectral discrepancies, spatial misalignment, and environmental dependencies between RGB and TIR images. These challenges significantly hinder the generalization of multispectral detection systems across diverse scenarios. Although numerous studies have attempted to overcome these limitations, it remains difficult to clearly distinguish the performance gains of multispectral detection systems from the impact of these \"optimization techniques\". Worse still, despite the rapid emergence of high-performing single-modality detection models, there is still a lack of specialized training techniques that can effectively adapt these models for multispectral detection tasks. The absence of a standardized benchmark with fair and consistent experimental setups also poses a significant barrier to evaluating the effectiveness of new approaches. To this end, we propose the first fair and reproducible benchmark specifically designed to evaluate the training \"techniques\", which systematically classifies existing multispectral object detection methods, investigates their sensitivity to hyper-parameters, and standardizes the core configurations. A comprehensive evaluation is conducted across multiple representative multispectral object detection datasets, utilizing various backbone networks and detection frameworks. Additionally, we introduce an efficient and easily deployable multispectral object detection framework that can seamlessly optimize high-performing single-modality models into dual-modality models, integrating our advanced training techniques.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multimodal",
+    "detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) at specified IoU thresholds",
+  "general_score_metric": "mAP (mean Average Precision)",
+  "year_of_publish": 2024,
+  "reputation": "New, research-focused benchmark proposed to standardize training techniques for multispectral RGB+TIR detection; adoption is currently limited but it targets an important gap in reproducible multimodal detection evaluation.",
+  "notes": "Non-LLM, vision-only benchmark; results are highly sensitive to backbone, detection framework, and hyperparameters; datasets can have alignment/spectral-shift issues and limited size per domain, so cross-dataset generalization and dataset bias are important caveats.",
+  "creators": {
+    "scientists": [
+      "Chen Zhou",
+      "Peng Cheng",
+      "Junfeng Fang",
+      "Yifan Zhang",
+      "Yibo Yan",
+      "Xiaojun Jia",
+      "Yanyan Xu",
+      "Kun Wang",
+      "Xiaochun Cao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.18288",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

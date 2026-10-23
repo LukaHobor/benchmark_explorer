@@ -1,0 +1,34 @@
+{
+  "name": "HASARD",
+  "description": "Advancing safe autonomous systems through reinforcement learning (RL) requires robust benchmarks to evaluate performance, analyze methods, and assess agent competencies. Humans primarily rely on embodied visual perception to safely navigate and interact with their surroundings, making it a valuable capability for RL agents. However, existing vision-based 3D benchmarks only consider simple navigation tasks. To address this shortcoming, we introduce \\textbf{HASARD}, a suite of diverse and complex tasks to $\\textbf{HA}$rness $\\textbf{SA}$fe $\\textbf{R}$L with $\\textbf{D}$oom, requiring strategic decision-making, comprehending spatial relationships, and predicting the short-term future. HASARD features three difficulty levels and two action spaces. An empirical evaluation of popular baseline methods demonstrates the benchmark's complexity, unique challenges, and reward-cost trade-offs. Visualizing agent navigation during training with top-down heatmaps provides insight into a method's learning process. Incrementally training across difficulty levels offers an implicit learning curriculum. HASARD is the first safe RL benchmark to exclusively target egocentric vision-based learning, offering a cost-effective and insightful way to explore the potential and boundaries of current and future safe RL methods. The environments and baseline implementations are open-sourced at https://sites.google.com/view/hasard-bench/.",
+  "category": "vision",
+  "domain": "embodied AI / robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "visual_navigation",
+    "safety_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate and episode_return",
+  "general_score_metric": "episode_return (reward) / task_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "Relatively new academic benchmark focused on safe, egocentric vision-based RL; recognized in the safe-RL/embodied AI community but not yet widely adopted as a standard.",
+  "notes": "Simulation-based, non-LLM benchmark targeting embodied RL; includes multiple difficulty levels and action spaces. Results depend on reward-cost trade-offs and may not directly transfer to real-world robotics; limited risk of data contamination for LLMs since it is environment/simulation-focused.",
+  "creators": {
+    "scientists": [
+      "Tristan Tomilin",
+      "Meng Fang",
+      "Mykola Pechenizkiy"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2503.08241",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

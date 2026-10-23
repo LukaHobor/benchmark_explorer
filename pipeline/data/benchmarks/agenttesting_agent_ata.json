@@ -1,0 +1,33 @@
+{
+  "name": "Agent-Testing Agent (ATA)",
+  "description": "LLM agents are increasingly deployed to plan, retrieve, and write with tools, yet evaluation still leans on static benchmarks and small human studies. We present the Agent-Testing Agent (ATA), a meta-agent that combines static code analysis, designer interrogation, literature mining, and persona-driven adversarial test generation whose difficulty adapts via judge feedback. Each dialogue is scored with an LLM-as-a-Judge (LAAJ) rubric and used to steer subsequent tests toward the agent's weakest capabilities. On a travel planner and a Wikipedia writer, the ATA surfaces more diverse and severe failures than expert annotators while matching severity, and finishes in 20--30 minutes versus ten-annotator rounds that took days. Ablating code analysis and web search increases variance and miscalibration, underscoring the value of evidence-grounded test generation. The ATA outputs quantitative metrics and qualitative bug reports for developers. We release the full methodology and open-source implementation for reproducible agent testing: https://github.com/KhalilMrini/Agent-Testing-Agent",
+  "category": "text",
+  "domain": "information retrieval / conversational AI",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "dialogue",
+    "agent_testing"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "LLM-judged rubric (LLM-as-a-Judge / human_eval style)",
+  "general_score_metric": "severity-weighted failure discovery rate",
+  "year_of_publish": 2025,
+  "reputation": "New methodology with growing interest among researchers focused on agent robustness and automated testing.",
+  "notes": "Depends on LLM judges (risk of judge bias and miscalibration); adaptive, non-deterministic testing makes comparisons harder; potential contamination if agents have access to ATA implementation or prompts.",
+  "creators": {
+    "scientists": [
+      "Sameer Komoravolu",
+      "Khalil Mrini"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2508.17393",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

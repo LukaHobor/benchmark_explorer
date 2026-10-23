@@ -1,0 +1,37 @@
+{
+  "name": "PhysQuantAgent",
+  "description": "Vision-Language Models (VLMs) are increasingly applied to robotic perception and manipulation, yet their ability to infer physical properties required for manipulation remains limited. In particular, estimating the mass of real-world objects is essential for determining appropriate grasp force and ensuring safe interaction. However, current VLMs lack reliable mass reasoning capabilities, and most existing benchmarks do not explicitly evaluate physical quantity estimation under realistic sensing conditions. In this work, we propose PhysQuantAgent, a framework for real-world object mass estimation using VLMs, together with VisPhysQuant, a new benchmark dataset for evaluation. VisPhysQuant consists of RGB-D videos of real objects captured from multiple viewpoints, annotated with precise mass measurements. To improve estimation accuracy, we introduce three visual prompting methods that enhance the input image with object detection, scale estimation, and cross-sectional image generation to help the model comprehend the size and internal structure of the target object. Experiments show that visual prompting significantly improves mass estimation accuracy on real-world data, suggesting the efficacy of integrating spatial reasoning with VLM knowledge for physical inference.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "visual_question_answering",
+    "multimodal_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE (mean absolute error) / RMSE",
+  "general_score_metric": "mean_absolute_error",
+  "year_of_publish": 2026,
+  "reputation": "A new, specialized benchmark with limited community adoption so far but growing interest in robotics and VLM-based physical inference.",
+  "notes": "Small real-world RGB-D dataset with realistic sensor noise and limited object diversity; performance sensitive to scale estimation and prompt design; not a language-only benchmark.",
+  "creators": {
+    "scientists": [
+      "Hisayuki Yokomizo",
+      "Taiki Miyanishi",
+      "Yang Gang",
+      "Shuhei Kurita",
+      "Nakamasa Inoue",
+      "Yusuke Iwasawa"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2603.16958",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

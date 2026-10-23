@@ -1,0 +1,41 @@
+{
+  "name": "DAWNBench",
+  "description": "Researchers have proposed hardware, software, and algorithmic optimizations to improve the computational performance of deep learning. While some of these optimizations perform the same operations faster (e.g., increasing GPU clock speed), many others modify the semantics of the training procedure (e.g., reduced precision), and can impact the final model's accuracy on unseen data. Due to a lack of standard evaluation criteria that considers these trade-offs, it is difficult to directly compare these optimizations. To address this problem, we recently introduced DAWNBench, a benchmark competition focused on end-to-end training time to achieve near-state-of-the-art accuracy on an unseen dataset---a combined metric called time-to-accuracy (TTA). In this work, we analyze the entries from DAWNBench, which received optimized submissions from multiple industrial groups, to investigate the behavior of TTA as a metric as well as trends in the best-performing entries. We show that TTA has a low coefficient of variation and that models optimized for TTA generalize nearly as well as those trained using standard methods. Additionally, even though DAWNBench entries were able to train ImageNet models in under 3 minutes, we find they still underutilize hardware capabilities such as Tensor Cores. Furthermore, we find that distributed entries can spend more than half of their time on communication. We show similar findings with entries to the MLPERF v0.5 benchmark.",
+  "category": "mixed",
+  "domain": "machine learning systems",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "training_time_optimization",
+    "image_classification_training"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "time_to_accuracy (TTA) — composite metric combining end-to-end training time to reach a target accuracy on a held-out set",
+  "general_score_metric": "time-to-accuracy (TTA)",
+  "typical_sota_score": "ImageNet: top entries reported <3 minutes TTA (varies by model, hardware, and target accuracy)",
+  "year_of_publish": 2018,
+  "reputation": "Well-known in the ML systems community as an early benchmark for end-to-end training speed vs. accuracy; influenced later efforts like MLPerf but has more niche adoption today.",
+  "notes": "Hardware- and implementation-dependent composite metric; results sensitive to precision, distributed setup, and hyperparameter tuning. Non-LLM benchmark focused on training systems; comparisons across different hardware require careful normalization.",
+  "creators": {
+    "scientists": [
+      "Cody Coleman",
+      "Daniel Kang",
+      "Deepak Narayanan",
+      "Luigi Nardi",
+      "Tian Zhao",
+      "Jian Zhang",
+      "Peter Bailis",
+      "Kunle Olukotun",
+      "Chris Re",
+      "Matei Zaharia"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1806.01427",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

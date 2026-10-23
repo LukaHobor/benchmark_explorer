@@ -1,0 +1,33 @@
+{
+  "name": "DeepSurveySim",
+  "description": "Modern astronomical surveys have multiple competing scientific goals. Optimizing the observation schedule for these goals presents significant computational and theoretical challenges, and state-of-the-art methods rely on expensive human inspection of simulated telescope schedules. Automated methods, such as reinforcement learning, have recently been explored to accelerate scheduling. However, there do not yet exist benchmark data sets or user-friendly software frameworks for testing and comparing these methods. We present DeepSurveySim -- a high-fidelity and flexible simulation tool for use in telescope scheduling. DeepSurveySim provides methods for tracking and approximating sky conditions for a set of observations from a user-supplied telescope configuration. We envision this tool being used to produce benchmark data sets and for evaluating the efficacy of ground-based telescope scheduling algorithms, particularly for machine learning algorithms that would suffer in efficacy if limited to real data for training.We introduce three example survey configurations and related code implementations as benchmark problems that can be simulated with DeepSurveySim.",
+  "category": "mixed",
+  "domain": "astronomy / astronomical observation scheduling",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "sequential_decision_making",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate / cumulative_reward (survey utility measured by scheduler objective)",
+  "general_score_metric": "cumulative_reward (survey utility) / task_success_rate",
+  "year_of_publish": 2023,
+  "reputation": "A newly introduced simulation tool (arXiv 2312.09092) intended for telescope-scheduling research; gaining interest among astronomical scheduling and RL researchers but not yet a broadly adopted community standard.",
+  "notes": "Simulator-based benchmark — results depend on simulator fidelity; risk of sim-to-real gap; configurable scenarios but not a large ground-truth real-data benchmark; intended for evaluation of algorithms (RL/optimizers) rather than LLMs.",
+  "creators": {
+    "scientists": [
+      "M. Voetberg",
+      "Brian Nord"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2312.09092",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

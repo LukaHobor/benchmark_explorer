@@ -1,0 +1,40 @@
+{
+  "name": "Station-Scale Meteorological Downscaling Benchmark",
+  "description": "Downscaling (DS) of meteorological variables involves obtaining high-resolution states from low-resolution meteorological fields and is an important task in weather forecasting. Previous methods based on deep learning treat downscaling as a super-resolution task in computer vision and utilize high-resolution gridded meteorological fields as supervision to improve resolution at specific grid scales. However, this approach has struggled to align with the continuous distribution characteristics of meteorological fields, leading to an inherent systematic bias between the downscaled results and the actual observations at meteorological stations. In this paper, we extend meteorological downscaling to arbitrary scattered station scales, establish a brand new benchmark and dataset, and retrieve meteorological states at any given station location from a coarse-resolution meteorological field. Inspired by data assimilation techniques, we integrate observational data into the downscaling process, providing multi-scale observational priors. Building on this foundation, we propose a new downscaling model based on hypernetwork architecture, namely HyperDS, which efficiently integrates different observational information into the model training, achieving continuous scale modeling of the meteorological field. Through extensive experiments, our proposed method outperforms other specially designed baseline models on multiple surface variables. Notably, the mean squared error (MSE) for wind speed and surface pressure improved by 67% and 19.5% compared to other methods. We will release the dataset and code subsequently.",
+  "category": "vision",
+  "domain": "climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "super_resolution",
+    "spatial_interpolation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_squared_error",
+  "general_score_metric": "MSE (mean_squared_error)",
+  "year_of_publish": 2024,
+  "reputation": "A recent (2024) benchmark proposing station-scale continuous downscaling; gaining attention in the meteorological ML community but not yet widely adopted.",
+  "notes": "Non-LLM benchmark focused on geospatial regression; results depend on station coverage and observational assimilation, so there is risk of station-sampling bias and sensitivity to train/test split. Initial release size and adoption are limited.",
+  "creators": {
+    "scientists": [
+      "Zili Liu",
+      "Hao Chen",
+      "Lei Bai",
+      "Wenyuan Li",
+      "Keyan Chen",
+      "Zhengyi Wang",
+      "Wanli Ouyang",
+      "Zhengxia Zou",
+      "Zhenwei Shi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2401.11960",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

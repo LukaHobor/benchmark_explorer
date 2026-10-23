@@ -1,0 +1,35 @@
+{
+  "name": "Human Visual Search Benchmark",
+  "description": "Visual search is an essential part of almost any everyday human goal-directed interaction with the environment. Nowadays, several algorithms are able to predict gaze positions during simple observation, but few models attempt to simulate human behavior during visual search in natural scenes. Furthermore, these models vary widely in their design and exhibit differences in the datasets and metrics with which they were evaluated. Thus, there is a need for a reference point, on which each model can be tested and from where potential improvements can be derived. In the present work, we select publicly available state-of-the-art visual search models in natural scenes and evaluate them on different datasets, employing the same metrics to estimate their efficiency and similarity with human subjects. In particular, we propose an improvement to the Ideal Bayesian Searcher through a combination with a neural network-based visual search model, enabling it to generalize to other datasets. The present work sheds light on the limitations of current models and how potential improvements can be accomplished by combining approaches. Moreover, it moves forward on providing a solution for the urgent need for benchmarking data and metrics to support the development of more general human visual search computational models.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_search",
+    "gaze_prediction",
+    "scanpath_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate and human_similarity (scanpath/gaze metrics)",
+  "general_score_metric": "scanpath_similarity / search_efficiency (human similarity metrics)",
+  "year_of_publish": 2021,
+  "reputation": "A niche research benchmark used by the visual-cognition and computer-vision community for comparing human-like visual search models; moderate recognition in its subfield.",
+  "notes": "Non-LLM benchmark focused on visual search and gaze behavior; uses multiple specialized metrics (e.g., scanpath similarity, AUC/NSS variants) so scores are not directly comparable to standard classification metrics; dataset sizes and evaluation protocols vary across studies.",
+  "creators": {
+    "scientists": [
+      "F. Travi",
+      "G. Ruarte",
+      "G. Bujia",
+      "J. E. Kamienkowski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.05808",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

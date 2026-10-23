@@ -1,0 +1,32 @@
+{
+  "name": "Trainium vs CUDA ChestX-ray14 Benchmark",
+  "description": "Abstract\n                We present a rigorous benchmark comparing AWS Trainium (trn1 instances) and NVIDIA CUDA (g5 instances with A10G GPUs) for training convolutional neural networks on medical image classification. Using the NIH ChestX-ray14 dataset with 112,120 chest radiographs and 14 thoracic disease labels, we evaluate ResNet-50 and ConvNeXt architectures across both platforms. Our key findings are threefold: (1) Trainium achieves virtually identical accuracy to CUDA for compatible architectures (ConvNeXt-Pico: F1=0.8007 vs 0.8027, Δ=0.25%), (2) modern CNN architectures using depthwise convolutions and LayerNorm (ConvNeXt-Tiny and larger) fail to compile or load on Trainium due to hardware constraints, and (3) Trainium is 3–5 × more expensive than CUDA for CNN training even with correct instance sizing. We document the substantial porting effort required, including four critical XLA-specific code modifications, and provide guidance for practitioners considering Trainium for computer vision workloads.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "75–85%",
+  "year_of_publish": 2025,
+  "reputation": "A recent, practical comparison of AWS Trainium and NVIDIA CUDA for medical imaging training; useful to ML practitioners considering hardware trade-offs.",
+  "notes": "Hardware/platform-focused benchmark rather than a new modeling benchmark; limited to ChestX-ray14 and specific architectures. Some modern architectures failed to compile on Trainium, requiring substantial porting effort; results are sensitive to compiler/XLA specifics and instance sizing.",
+  "creators": {
+    "scientists": [
+      "George Fisher"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.64898/2025.12.23.25342933",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

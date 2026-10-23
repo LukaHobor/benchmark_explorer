@@ -1,0 +1,34 @@
+{
+  "name": "Echocardiogram Semi‑supervised Benchmark",
+  "description": "Semi-supervised image classification has shown substantial progress in learning from limited labeled data, but recent advances remain largely untested for clinical applications. Motivated by the urgent need to improve timely diagnosis of life-threatening heart conditions, especially aortic stenosis, we develop a benchmark dataset to assess semi-supervised approaches to two tasks relevant to cardiac ultrasound (echocardiogram) interpretation: view classification and disease severity classification. We find that a state-of-the-art method called MixMatch achieves promising gains in heldout accuracy on both tasks, learning from a large volume of truly unlabeled images as well as a labeled set collected at great expense to achieve better performance than is possible with the labeled set alone. We further pursue patient-level diagnosis prediction, which requires aggregating across hundreds of images of diverse view types, most of which are irrelevant, to make a coherent prediction. The best patient-level performance is achieved by new methods that prioritize diagnosis predictions from images that are predicted to be clinically-relevant views and transfer knowledge from the view task to the diagnosis task. We hope our released Tufts Medical Echocardiogram Dataset and evaluation framework inspire further improvements in multi-task semi-supervised learning for clinical applications.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "aggregation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2021,
+  "reputation": "Moderately cited within medical ML research for semi‑supervised echocardiogram tasks, but not widely used outside the clinical imaging community.",
+  "notes": "Domain-specific medical imaging benchmark with limited labeled data and patient‑level aggregation tasks; not an LLM benchmark. Potential class imbalance and privacy considerations; results may not generalize beyond the contributing institution.",
+  "creators": {
+    "scientists": [
+      "Zhe Huang",
+      "Gary Long",
+      "Benjamin Wessler",
+      "Michael C. Hughes"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2108.00080",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Oxford Spires Dataset",
+  "description": "This paper introduces a large-scale multi-modal dataset captured in and around well-known landmarks in Oxford using a custom-built multi-sensor perception unit as well as a millimetre-accurate map from a Terrestrial LiDAR Scanner (TLS). The perception unit includes three synchronised global shutter colour cameras, an automotive 3D LiDAR scanner, and an inertial sensor - all precisely calibrated. We also establish benchmarks for tasks involving localisation, reconstruction, and novel-view synthesis, which enable the evaluation of Simultaneous Localisation and Mapping (SLAM) methods, Structure-from-Motion (SfM) and Multi-view Stereo (MVS) methods as well as radiance field methods such as Neural Radiance Fields (NeRF) and 3D Gaussian Splatting. To evaluate 3D reconstruction the TLS 3D models are used as ground truth. Localisation ground truth is computed by registering the mobile LiDAR scans to the TLS 3D models. Radiance field methods are evaluated not only with poses sampled from the input trajectory, but also from viewpoints that are from trajectories which are distant from the training poses. Our evaluation demonstrates a key limitation of state-of-the-art radiance field methods: we show that they tend to overfit to the training poses/images and do not generalise well to out-of-sequence poses. They also underperform in 3D reconstruction compared to MVS systems using the same visual inputs. Our dataset and benchmarks are intended to facilitate better integration of radiance field methods and SLAM systems. The raw and processed data, along with software for parsing and evaluation, can be accessed at https://dynamic.robots.ox.ac.uk/datasets/oxford-spires/.",
+  "category": "multimodal",
+  "domain": "localisation, mapping and novel-view synthesis / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "camera_localization",
+    "3D_reconstruction",
+    "novel_view_synthesis",
+    "SLAM",
+    "MVS",
+    "radiance_field_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Pose error (translation/rotation) for localization; Chamfer/point-to-mesh metrics for 3D reconstruction; PSNR/SSIM/LPIPS for novel-view synthesis",
+  "general_score_metric": "Pose error (median translation/rotation) and PSNR for view synthesis",
+  "year_of_publish": 2024,
+  "reputation": "A recent, high-quality multi-sensor dataset from Oxford with millimetre-accurate TLS ground truth that is attracting interest for benchmarking SLAM, reconstruction and radiance-field generalization.",
+  "notes": "High-quality TLS ground truth and multi-sensor data; focused on Oxford landmarks (geographic bias); shows radiance-field methods tend to overfit training trajectories; not saturated; useful for cross-task benchmarking.",
+  "creators": {
+    "scientists": [
+      "Yifu Tao",
+      "Miguel Ángel Muñoz-Bañón",
+      "Lintong Zhang",
+      "Jiahao Wang",
+      "Lanke Frank Tarimo Fu",
+      "Maurice Fallon"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.10546",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "prometheus-bench-critique",
+  "description": "Description\n\t\n\nThis is the base dataset to create a benchmark for critique models, starting from the datasets used to benchmark Prometheus models.\n\n\t\n\t\t\n\t\tGeneration\n\t\n\n\nimport re\nimport pandas as pd\nfrom datasets import Dataset\n\nDATASETS = {\n    \"mt_bench_eval\": r\"https://raw.githubusercontent.com/kaistAI/prometheus/main/evaluation/benchmark/data/mt_bench_eval.json\",\n    \"vicuna_eval\":… See the full description on the dataset page: https://huggingface.co/datasets/distilabel-internal-testing/prometheus-bench-critique.",
+  "category": "text",
+  "domain": "safety",
+  "tags": [
+    "size_categories:1K<n<10K",
+    "modality:text"
+  ],
+  "task_types": [
+    "pairwise_comparison",
+    "scoring",
+    "open_ended_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "preference_agreement / preference accuracy against human labels (human_eval-style comparisons)",
+  "general_score_metric": "preference_accuracy (agreement with human judgments)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "An internally-oriented benchmark collection (originating from Prometheus evaluation suites) with limited public adoption but used for critique/alignment model development internally.",
+  "downloads": 4,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "distilabel-internal-testing"
+    ]
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://huggingface.co/datasets/distilabel-internal-testing/prometheus-bench-critique",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

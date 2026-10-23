@@ -1,0 +1,36 @@
+{
+  "name": "CRED",
+  "description": "ABSTRACT\n                Information on causal relationships is essential to many sciences, including biomedical science, and beneficial (e.g., causative rather than merely associative gene-disease relations can lead to better treatments). Despite much work on Relation Extraction (RE), automatically extracting causal relations from large text corpora remains less explored. Few existing studies on CRE (Causal RE) are limited to extracting causality within a sentence or for a particular disease, mainly due to the lack of a diverse benchmark dataset. Here, we carefully curate a new CRE Dataset (CRED) of 3639 (causal and non-causal) gene-disease pairs, spanning 204 diseases and 500 genes, within or across sentences of 267 published abstracts. CRED is assembled in two phases to reduce class imbalance, and its inter-annotator agreement is 89%. To assess CRED’s utility in classifying causal vs. non-causal pairs, we compared multiple classifiers and found SVM (Support Vector Machine) trained on embeddings from a deep learning transformer model called BioBERT to perform the best (F1 score 0.70). CRED outperformed a state-of-the-art RE dataset in terms of classifier performance and model interpretability, i.e., whether the model focuses importance/attention on words with causal connotations in abstracts. Moving from benchmark to real-world settings, application of our CRED-trained BioBERT+SVM model on all PubMed abstracts on Parkinson’s disease (PD) revealed both well- and less-studied PD-causing genes. For instance, genes predicted to be causal for PD in at least 50 abstracts by our model were already linked to PD in books; and lends confidence to further explore the other genes predicted to be causal in fewer abstracts. Our systematically curated and evaluated CRED, and its associated classification model and gene-disease causality scores, thus offer concrete resources for advancing future research in CRE from biomedical literature.",
+  "category": "text",
+  "domain": "biomedical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "relation_extraction",
+    "binary_classification",
+    "information_extraction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "≈70% (F1)",
+  "year_of_publish": 2024,
+  "reputation": "Newly curated biomedical causal relation dataset (preprint); useful for CRE work but not yet widely adopted.",
+  "notes": "Relatively small and domain-specific (3,639 pairs from 267 abstracts); assembled to reduce class imbalance; potential domain bias (abstracts only); reported inter-annotator agreement 89%.",
+  "creators": {
+    "scientists": [
+      "Nency Bansal",
+      "R C Sri Dhinesh",
+      "Ayush Pathak",
+      "Manikandan Narayanan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://doi.org/10.1101/2024.09.17.613424",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Tiny Object Optical Flow Benchmark",
+  "description": "Optical flow is pivotal in video-based tasks, yet existing methods mostly focus on medium-/large-size objects, while underperforming when characterizing the motion of tiny objects. To bridge this gap, we introduce the On-off Time-delay with Hassenstein-Reichardt correlator (OTHR), a computationally efficient scheme inspired by the primate visual cortex's direction selectivity mechanism. OTHR kernels, applied across multiple frames, discern bright/dark luminance changes along a specific direction over a time delay, effectively estimating motion of tiny objects amidst noise and static backgrounds. Notably, OTHR integrates seamlessly with leading deep learning flow estimation models such as RAFT and FlowFormer. We also propose refined evaluation metrics for tiny objects and contribute a new dataset featuring such objects to aid algorithm development. Our experiments confirm OTHR's superiority over competing methods, particularly in enhancing state-of-the-art models' performance on tiny object motion estimation at minimal cost. Specifically, for objects less than 100 pixels, OTHR reduces RAFT and FlowFormer's errors by 22.03% and 83.50%, respectively. The codes will be accessible at https://github.com/JaneEliot/OTHR.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optical_flow_estimation",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "average_endpoint_error (EPE)",
+  "general_score_metric": "average_endpoint_error (EPE)",
+  "year_of_publish": 2024,
+  "reputation": "A recent IJCAI 2024 benchmark that has attracted attention for addressing tiny-object motion, gaining interest among optical-flow researchers.",
+  "notes": "Specialized for very small objects (<100 px); may not reflect general optical-flow performance and could be sensitive to dataset scale and synthetic/real composition.",
+  "creators": {
+    "scientists": [
+      "Xueyao Ji",
+      "Gang Wang",
+      "Yizheng Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.24963/ijcai.2024/136",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

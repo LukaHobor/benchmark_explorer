@@ -1,0 +1,38 @@
+{
+  "name": "UK Biobank Survival Prediction Benchmark",
+  "description": "Predictive modelling is vital to guide preventive efforts. Whilst large-scale prospective cohort studies and a diverse toolkit of available machine learning (ML) algorithms have facilitated such survival task efforts, choosing the best-performing algorithm remains challenging. Benchmarking studies to date focus on relatively small-scale datasets and it is unclear how well such findings translate to large datasets that combine omics and clinical features. We sought to benchmark eight distinct survival task implementations, ranging from linear to deep learning (DL) models, within the large-scale prospective cohort study UK Biobank (UKB). We compared discrimination and computational requirements across heterogenous predictor matrices and endpoints. Finally, we assessed how well different architectures scale with sample sizes ranging from n = 5,000 to n = 250,000 individuals. Our results show that discriminative performance across a multitude of metrices is dependent on endpoint frequency and predictor matrix properties, with very robust performance of (penalised) COX Proportional Hazards (COX-PH) models. Of note, there are certain scenarios which favour more complex frameworks, specifically if working with larger numbers of observations and relatively simple predictor matrices. The observed computational requirements were vastly different, and we provide solutions in cases where current implementations were impracticable. In conclusion, this work delineates how optimal model choice is dependent on a variety of factors, including sample size, endpoint frequency and predictor matrix properties, thus constituting an informative resource for researchers working on similar datasets. Furthermore, we showcase how linear models still display a highly effective and scalable platform to perform risk modelling at scale and suggest that those are reported alongside non-linear ML models.",
+  "category": "mixed",
+  "domain": "healthcare / epidemiology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_to_event_prediction",
+    "survival_regression",
+    "risk_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "concordance index (C-index), Brier score",
+  "general_score_metric": "concordance index (C-index)",
+  "year_of_publish": 2025,
+  "reputation": "A large-scale, domain-relevant benchmark for survival models using UK Biobank data, relevant to ML-for-health and epidemiology researchers.",
+  "notes": "Uses sensitive UK Biobank data (access restrictions); results depend strongly on censoring, endpoint frequency and predictor matrix properties. High computational requirements for large sample sizes; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Rafael R. Oexner",
+      "Robin Schmitt",
+      "Hyunchan Ahn",
+      "Ravi A. Shah",
+      "Anna Zoccarato",
+      "Konstantinos Theofilatos",
+      "Ajay M. Shah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.08870",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

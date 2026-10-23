@@ -1,0 +1,34 @@
+{
+  "name": "Compositional Zero-Shot Learning benchmark datasets",
+  "description": "We introduce compositional soft prompting (CSP), a parameter-efficient learning technique to improve the zero-shot compositionality of large-scale pretrained vision-language models (VLMs) like CLIP. We develop CSP for compositional zero-shot learning, the task of predicting unseen attribute-object compositions (e.g., old cat and young tiger). VLMs have a flexible text encoder that can represent arbitrary classes as natural language prompts but they often underperform task-specific architectures on the compositional zero-shot benchmark datasets. CSP treats the attributes and objects that define classes as learnable tokens of vocabulary. During training, the vocabulary is tuned to recognize classes that compose tokens in multiple ways (e.g., old cat and white cat). At test time, we recompose the learned attribute-object vocabulary in new combinations to recognize novel classes. We show that CSP outperforms the CLIP on benchmark datasets by an average of 10.9 percentage points on AUC. CSP",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC / top-k accuracy",
+  "general_score_metric": "AUC",
+  "year_of_publish": 2022,
+  "reputation": "97 citations",
+  "notes": "Non-LLM vision-language benchmark for compositional zero-shot recognition; performance is often reported with AUC and per-composition accuracy, and results can be sensitive to prompt design and dataset splits.",
+  "creators": {
+    "scientists": [
+      "Nihal V. Nayak",
+      "Peilin Yu",
+      "Stephen H. Bach"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2204.03574",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Jam-ALT",
+  "description": "Current automatic lyrics transcription (ALT) benchmarks focus exclusively on word content and ignore the finer nuances of written lyrics including formatting and punctuation, which leads to a potential misalignment with the creative products of musicians and songwriters as well as listeners' experiences. For example, line breaks are important in conveying information about rhythm, emotional emphasis, rhyme, and high-level structure. To address this issue, we introduce Jam-ALT, a new lyrics transcription benchmark based on the JamendoLyrics dataset. Our contribution is twofold. Firstly, a complete revision of the transcripts, geared specifically towards ALT evaluation by following a newly created annotation guide that unifies the music industry's guidelines, covering aspects such as punctuation, line breaks, spelling, background vocals, and non-word sounds. Secondly, a suite of evaluation metrics designed, unlike the traditional word error rate, to capture such phenomena. We hope that the proposed benchmark contributes to the ALT task, enabling more precise and reliable assessments of transcription systems and enhancing the user experience in lyrics applications such as subtitle renderings for live captioning or karaoke.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "automatic_lyrics_transcription",
+    "sequence_transcription",
+    "audio_to_text"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "word-/character-level error metrics and formatting-aware metrics (WER, CER, plus proposed formatting-aware composite metrics)",
+  "general_score_metric": "Word Error Rate (WER) plus formatting-aware composite metrics proposed by the paper",
+  "year_of_publish": 2023,
+  "reputation": "A targeted benchmark of interest to the music information retrieval community for more faithful lyrics evaluation; adoption is growing but still specialized.",
+  "notes": "Based on JamendoLyrics—potential licensing/usage constraints; emphasizes formatting (line breaks, punctuation) so traditional WER may not fully capture performance; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Ondřej Cífka",
+      "Constantinos Dimitriou",
+      "Cheng-i Wang",
+      "Hendrik Schreiber",
+      "Luke Miner",
+      "Fabian-Robert Stöter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2311.13987",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

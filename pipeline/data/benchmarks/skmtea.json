@@ -1,0 +1,45 @@
+{
+  "name": "SKM-TEA",
+  "description": "Magnetic resonance imaging (MRI) is a cornerstone of modern medical imaging. However, long image acquisition times, the need for qualitative expert analysis, and the lack of (and difficulty extracting) quantitative indicators that are sensitive to tissue health have curtailed widespread clinical and research studies. While recent machine learning methods for MRI reconstruction and analysis have shown promise for reducing this burden, these techniques are primarily validated with imperfect image quality metrics, which are discordant with clinically-relevant measures that ultimately hamper clinical deployment and clinician trust. To mitigate this challenge, we present the Stanford Knee MRI with Multi-Task Evaluation (SKM-TEA) dataset, a collection of quantitative knee MRI (qMRI) scans that enables end-to-end, clinically-relevant evaluation of MRI reconstruction and analysis tools. This 1.6TB dataset consists of raw-data measurements of ~25,000 slices (155 patients) of anonymized patient MRI scans, the corresponding scanner-generated DICOM images, manual segmentations of four tissues, and bounding box annotations for sixteen clinically relevant pathologies. We provide a framework for using qMRI parameter maps, along with image reconstructions and dense image labels, for measuring the quality of qMRI biomarker estimates extracted from MRI reconstruction, segmentation, and detection techniques. Finally, we use this framework to benchmark state-of-the-art baselines on this dataset. We hope our SKM-TEA dataset and code can enable a broad spectrum of research for modular image reconstruction and image analysis in a clinically informed manner. Dataset access, code, and benchmarks are available at https://github.com/StanfordMIMI/skm-tea.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reconstruction",
+    "segmentation",
+    "detection",
+    "biomarker_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Task-dependent metrics (e.g., Dice for segmentation, PSNR/SSIM or MSE for reconstruction, MAE for biomarker estimates)",
+  "general_score_metric": "Task-specific (Dice for segmentation; PSNR/MSE for reconstruction; MAE for biomarker estimation)",
+  "typical_sota_score": "Varies by task — segmentation Dice ~0.80–0.95 reported for strong models; reconstruction metrics (PSNR/SSIM) are task- and baseline-dependent",
+  "year_of_publish": 2022,
+  "reputation": "From Stanford MIMI, the dataset is a substantial and well-documented resource for clinically oriented MRI reconstruction and analysis research and is gaining adoption in medical imaging research.",
+  "notes": "Very large (1.6 TB) clinical dataset with restricted access; non-LLM benchmark; enables end-to-end biomarker evaluation but results depend strongly on chosen downstream metric; not saturated and intended for clinically meaningful evaluation.",
+  "creators": {
+    "scientists": [
+      "Arjun D Desai",
+      "Andrew M Schmidt",
+      "Elka B Rubin",
+      "Christopher M Sandino",
+      "Marianne S Black",
+      "Valentina Mazzoli",
+      "Kathryn J Stevens",
+      "Robert Boutin",
+      "Christopher Ré",
+      "Garry E Gold",
+      "Brian A Hargreaves",
+      "Akshay S Chaudhari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2203.06823",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

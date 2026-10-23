@@ -1,0 +1,37 @@
+{
+  "name": "ROD",
+  "description": "In many computer vision applications (e.g., robotics and autonomous driving), high dynamic range (HDR) data is necessary for object detection algorithms to handle a variety of lighting conditions, such as strong glare. In this paper, we aim to achieve object detection on RAW sensor data, which naturally saves the HDR information from image sensors without extra equipment costs. We build a novel RAW sensor dataset, named ROD, for Deep Neural Networks (DNNs)-based object detection algorithms to be applied to HDR data. The ROD dataset contains a large amount of annotated instances of day and night driving scenes in 24-bit dynamic range. Based on the dataset, we first investigate the impact of dynamic range for DNNs-based detectors and demonstrate the importance of dynamic range adjustment for detection on RAW sensor data. Then, we propose a simple and effective adjustment method for object detection on HDR RAW sensor data, which is image adaptive and jointly optimized with the downstream detector in an end-to-end scheme. Extensive experiments demonstrate that the performance of detection on RAW sensor data is significantly superior to standard dynamic range (SDR) data in different situations. Moreover, we analyze the influence of texture information and pixel distribution of input data on the performance of the DNNs-based detector.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "bounding_box_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision)",
+  "general_score_metric": "mAP",
+  "reputation": "A specialized RAW/HDR object-detection dataset cited in research on sensor-level vision; useful for HDR-aware detection but niche compared to mainstream RGB benchmarks.",
+  "notes": "Requires RAW sensor input and specific preprocessing pipelines; not directly comparable to SDR/RGB datasets; limited community adoption and potential for dataset-specific tuning.",
+  "creators": {
+    "scientists": [
+      "Ruikang Xu",
+      "Chang Chen",
+      "Jingyang Peng",
+      "Cheng Li",
+      "Yibin Huang",
+      "Fenglong Song",
+      "Youliang Yan",
+      "Zhiwei Xiong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

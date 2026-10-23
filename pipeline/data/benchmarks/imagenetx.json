@@ -1,0 +1,38 @@
+{
+  "name": "ImageNet-X",
+  "description": "Out-of-distribution (OOD) detection is a task that detects OOD samples during inference to ensure the safety of deployed models. However, conventional benchmarks have reached performance saturation, making it difficult to compare recent OOD detection methods. To address this challenge, we introduce three novel OOD detection benchmarks that enable a deeper understanding of method characteristics and reflect real-world conditions. First, we present ImageNet-X, designed to evaluate performance under challenging semantic shifts. Second, we propose ImageNet-FS-X for full-spectrum OOD detection, assessing robustness to covariate shifts (feature distribution shifts). Finally, we propose Wilds-FS-X, which extends these evaluations to real-world datasets, offering a more comprehensive testbed. Our experiments reveal that recent CLIP-based OOD detection methods struggle to varying degrees across the three proposed benchmarks, and none of them consistently outperforms the others. We hope the community goes beyond specific benchmarks and includes more challenging conditions reflecting real-world scenarios. The code is https://github.com/hoshi23/OOD-X-Benchmarks.",
+  "category": "multimodal",
+  "domain": "vision (vision-language)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "robustness_evaluation",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (Area Under ROC) and FPR@95TPR",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "60–90% (varies widely by shift and method)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A recent benchmark designed to stress OOD detectors under challenging semantic and covariate shifts; gaining attention among robustness and OOD researchers.",
+  "notes": "Focuses on challenging semantic shifts and full-spectrum OOD; not an LLM benchmark, highlights saturation of older benchmarks, and results vary substantially across methods.",
+  "creators": {
+    "scientists": [
+      "Shiho Noda",
+      "Atsuyuki Miyai",
+      "Qing Yu",
+      "Go Irie",
+      "Kiyoharu Aizawa"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.18463",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

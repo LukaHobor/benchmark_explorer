@@ -1,0 +1,37 @@
+{
+  "name": "AKFruitYield",
+  "description": "AKFruitYield is a modular software that allows orchard data from RGB-D Azure Kinect cameras to be processed for fruit size and fruit yield estimation. Specifically, two modules have been developed: i) AK_SW_BENCHMARKER that makes it possible to apply different sizing algorithms and allometric yield prediction models to manually labelled color and depth tree images; and ii) AK_VIDEO_ANALYSER that analyses videos on which to automatically detect apples, estimate their size and predict yield at the plot or per hectare scale using the appropriate algorithms. Both modules have easy-to-use graphical interfaces and provide reports that can subsequently be used by other analysis tools.",
+  "category": "vision",
+  "domain": "precision agriculture",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_size_estimation",
+    "yield_regression",
+    "counting"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "average_precision (AP) / mAP for detection; mean_absolute_error (MAE) or mean_absolute_percentage_error (MAPE) for size and yield estimation; F1 for detection/labeling",
+  "general_score_metric": "MAE for yield prediction; AP / mAP for detection tasks",
+  "year_of_publish": 2023,
+  "reputation": "A niche, domain-specific benchmark/toolset used in precision-agriculture and agriculture-vision research with modest adoption outside that community.",
+  "notes": "Non-LLM benchmark; relies on RGB-D Azure Kinect data (hardware-specific); limited / domain-specific dataset size; results sensitive to lighting and occlusion; potential domain shift between orchards/years.",
+  "creators": {
+    "scientists": [
+      "Juan Carlos Miranda",
+      "Jaume Arnó",
+      "Jordi Gené-Mola",
+      "Spyros Fountas",
+      "Eduard Gregorio"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

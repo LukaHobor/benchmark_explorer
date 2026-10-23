@@ -1,0 +1,32 @@
+{
+  "name": "Two-Factor Perturbation Benchmark",
+  "description": "Accuracies of deep learning (DL) classifiers are often unstable in that they may change significantly when retested on adversarial images, imperfect images, or perturbed images. This paper adds to the fundamental body of work on benchmarking the robustness of DL classifiers on defective images. To measure robust DL classifiers, previous research reported on single-factor corruption. We created comprehensive 69 benchmarking image sets, including a clean set, sets with single factor perturbations, and sets with two-factor perturbation conditions. The state-of-the-art two-factor perturbation includes (a) two digital perturbations (salt & pepper noise and Gaussian noise) applied in both sequences, and (b) one digital perturbation (salt & pepper noise) and a geometric perturbation (rotation) applied in both sequences. Previous research evaluating DL classifiers has often used top-1/top-5 accuracy. We innovate a new two-dimensional, statistical matrix to evaluating robustness of DL classifiers. Also, we introduce a new visualization tool, including minimum accuracy, maximum accuracy, mean accuracies, and coefficient of variation (CV), for benchmarking robustness of DL classifiers. Comparing with single factor corruption, we first report that using two-factor perturbed images improves both robustness and accuracy of DL classifiers. All source codes and related image sets are shared on the Website at http://cslinux.semo.edu/david/data to support future academic research and industry projects.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (top-1/top-5) and robustness metrics (mean/min/max accuracy, coefficient of variation)",
+  "general_score_metric": "mean accuracy (with min/max and coefficient of variation reported as robustness metrics)",
+  "year_of_publish": 2022,
+  "reputation": "Academic robustness benchmark introduced in an arXiv paper; used in niche robustness research but not a broadly adopted community standard.",
+  "notes": "Non-LLM vision benchmark focused on synthetic digital and geometric perturbations; results vary widely by model and perturbation strength. May not reflect real-world corruptions; useful for controlled robustness studies.",
+  "creators": {
+    "scientists": [
+      "Wei Dai",
+      "Daniel Berleant"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2203.01323",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

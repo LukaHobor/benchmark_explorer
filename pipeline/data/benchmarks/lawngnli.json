@@ -1,0 +1,31 @@
+{
+  "name": "LawngNLI",
+  "description": "Natural language inference has trended with NLP toward studying reasoning over long contexts, with several datasets moving beyond the sentence level. However, short-sequence models typically perform best despite their sequence limits. Confounded by domain shifts between datasets, it has remained unclear whether long premises are truly needed at fine-tuning time to learn long-premise NLI. We construct LawngNLI, with premises that skew much longer than in existing NLI benchmarks and are multigranular: all contain a short version. LawngNLI is constructed from U.S. legal opinions, with automatic labels with high human-validated accuracy. Evaluating on its long-premise NLI, we show top performance is achieved only with fine-tuning using these long premises. Models only fine-tuned on existing datasets and even our short premises (which derive from judge-selected relevant Entail excerpts in source documents) thus controlling for domain underperform considerably. Top performance is by short-sequence models prepended with a standard retrieval method filtering across each premise, but they underperform absent fine-tuning using long premises as inputs. LawngNLI also holds relevance for the legal community, as NLI is a principal cognitive task in developing cases and advice. Models performing well could double as retrieval or implication scoring systems for legal cases.",
+  "category": "text",
+  "domain": "legal / law (NLP)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "natural_language_inference",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2022,
+  "reputation": "A recent dataset introduced for long-premise NLI in the legal domain; recognized in legal-NLP research but not yet a broadly adopted community standard.",
+  "notes": "Constructed from U.S. legal opinions with automatic labels (high human-validated accuracy) — potential label noise from automatic labeling; domain-specific (legal) so pretrained model contamination is possible; emphasizes long-premise fine-tuning rather than short-context evaluation.",
+  "creators": {
+    "scientists": [
+      "Anonymous"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2212.03222",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

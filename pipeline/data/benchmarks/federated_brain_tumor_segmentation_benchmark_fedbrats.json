@@ -1,0 +1,33 @@
+{
+  "name": "Federated Brain Tumor Segmentation Benchmark (FedBraTS)",
+  "description": "Recently, federated learning has raised increasing interest in the medical image analysis field due to its ability to aggregate multi-center data with privacy-preserving properties. A large amount of federated training schemes have been published, which we categorize into global (one final model), personalized (one model per institution) or hybrid (one model per cluster of institutions) methods. However, their applicability on the recently published Federated Brain Tumor Segmentation 2022 dataset has not been explored yet. We propose an extensive benchmark of federated learning algorithms from all three classes on this task. While standard FedAvg already performs very well, we show that some methods from each category can bring a slight performance improvement and potentially limit the final model(s) bias toward the predominant data distribution of the federation. Moreover, we provide a deeper understanding of the behaviour of federated learning on this task through alternative ways of distributing the pooled dataset among institutions, namely an Independent and Identical Distributed (IID) setup, and a limited data setup.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "federated_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient (primary) with complementary metrics such as Hausdorff distance",
+  "general_score_metric": "mean Dice score",
+  "year_of_publish": 2024,
+  "reputation": "Built on the BraTS dataset and used by federated medical imaging researchers; recognized in the community for evaluating federated segmentation methods but not yet a universal standard.",
+  "notes": "Non-LLM medical imaging benchmark; performance is sensitive to client data heterogeneity, labeling variation, and federation protocol. Requires careful privacy and clinical validation; results may not transfer directly to real-world clinical deployment.",
+  "creators": {
+    "scientists": [
+      "Matthis Manthe",
+      "Stefan Duffner",
+      "Carole Lartizien"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2410.17265",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

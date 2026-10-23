@@ -1,0 +1,42 @@
+{
+  "name": "OpenSTL",
+  "description": "Spatio-temporal predictive learning is a learning paradigm that enables models to learn spatial and temporal patterns by predicting future frames from given past frames in an unsupervised manner. Despite remarkable progress in recent years, a lack of systematic understanding persists due to the diverse settings, complex implementation, and difficult reproducibility. Without standardization, comparisons can be unfair and insights inconclusive. To address this dilemma, we propose OpenSTL, a comprehensive benchmark for spatio-temporal predictive learning that categorizes prevalent approaches into recurrent-based and recurrent-free models. OpenSTL provides a modular and extensible framework implementing various state-of-the-art methods. We conduct standard evaluations on datasets across various domains, including synthetic moving object trajectory, human motion, driving scenes, traffic flow and weather forecasting. Based on our observations, we provide a detailed analysis of how model architecture and dataset properties affect spatio-temporal predictive learning performance. Surprisingly, we find that recurrent-free models achieve a good balance between efficiency and performance than recurrent models. Thus, we further extend the common MetaFormers to boost recurrent-free spatial-temporal predictive learning. We open-source the code and models at https://github.com/chengtan9907/OpenSTL.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_frame_prediction",
+    "next_frame_prediction",
+    "spatio_temporal_forecasting"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MSE / SSIM / PSNR (dataset-dependent visual quality and error metrics)",
+  "general_score_metric": "Mean Squared Error (MSE) and SSIM (visual quality); PSNR often reported as well",
+  "typical_sota_score": "varies by dataset; e.g., PSNR ~20–35 dB, SSIM ~0.4–0.9 (dataset-dependent)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2026,
+  "reputation": "A recent, open-source benchmark and codebase for spatio-temporal predictive learning that is gaining traction among video/forecasting researchers for standardized comparisons.",
+  "notes": "Non-LLM, multi-dataset benchmark with heterogeneous metrics per dataset; aims to improve reproducibility but results depend strongly on dataset selection and evaluation metric.",
+  "creators": {
+    "scientists": [
+      "Cheng Tan",
+      "Siyuan Li",
+      "Zhangyang Gao",
+      "Wenfei Guan",
+      "Zedong Wang",
+      "Zicheng Liu",
+      "Lirong Wu",
+      "Stan Z. Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.11249",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

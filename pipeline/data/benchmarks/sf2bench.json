@@ -1,0 +1,40 @@
+{
+  "name": "SF^2Bench",
+  "description": "Forecasting compound floods presents a significant challenge due to the intricate interplay of meteorological, hydrological, and oceanographic factors. Analyzing compound floods has become more critical as the global climate increases flood risks. Traditional physics-based methods, such as the Hydrologic Engineering Center's River Analysis System, are often time-inefficient. Machine learning has recently demonstrated promise in both modeling accuracy and computational efficiency. However, the scarcity of comprehensive datasets currently hinders systematic analysis. Existing water-related datasets are often limited by a sparse network of monitoring stations and incomplete coverage of relevant factors. To address this challenge, we introduce SF2Bench, a comprehensive time series collection on compound floods in South Florida, which integrates four key factors: tide, rainfall, groundwater, and human management activities (gate and pump controlling). This integration allows for a more detailed analysis of the individual contributions of these drivers to compound flooding and informs the development of improved flood forecasting approaches. To comprehensively evaluate the potential of various modeling paradigms, we assess the performance of six categories of methods, encompassing Multilayer Perceptrons, Convolutional Neural Networks, Recurrent Neural Networks, Graph Neural Networks, Transformers, and Large Language Models. We verified the impact of different key features on flood forecasting through experiments. Our analysis examines temporal and spatial aspects, providing insights into the influence of historical data and spatial dependencies. The varying performance across these approaches underscores the diverse capabilities of each in capturing complex temporal and spatial dependencies inherent in compound floods.",
+  "category": "mixed",
+  "domain": "climate science / hydrology / flood forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "spatio_temporal_regression",
+    "multivariate_regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "RMSE / MAE / CRPS (continuous forecast error metrics)",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2025,
+  "reputation": "A recent domain-specific dataset (2025) gaining attention in hydrology and climate communities for studying compound floods, but not yet widely adopted outside that niche.",
+  "notes": "Non-LLM benchmark; geographically limited to South Florida (limited spatial coverage); multivariate and spatio-temporal dependencies make modelling challenging; potential temporal non-stationarity and class imbalance during extreme events; relatively new dataset with limited external benchmarks.",
+  "creators": {
+    "scientists": [
+      "Xu Zheng",
+      "Chaohao Lin",
+      "Sipeng Chen",
+      "Zhuomin Chen",
+      "Jimeng Shi",
+      "Wei Cheng",
+      "Jayantha Obeysekera",
+      "Jason Liu",
+      "Dongsheng Luo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2506.04281",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

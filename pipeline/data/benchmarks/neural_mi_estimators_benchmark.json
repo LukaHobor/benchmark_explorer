@@ -1,0 +1,33 @@
+{
+  "name": "Neural MI Estimators Benchmark",
+  "description": "Mutual Information (MI) is a fundamental metric for quantifying dependency between two random variables. When we can access only the samples, but not the underlying distribution functions, we can evaluate MI using sample-based estimators. Assessment of such MI estimators, however, has almost always relied on analytical datasets including Gaussian multivariates. Such datasets allow analytical calculations of the true MI values, but they are limited in that they do not reflect the complexities of real-world datasets. This study introduces a comprehensive benchmark suite for evaluating neural MI estimators on unstructured datasets, specifically focusing on images and texts. By leveraging same-class sampling for positive pairing and introducing a binary symmetric channel trick, we show that we can accurately manipulate true MI values of real-world datasets. Using the benchmark suite, we investigate seven challenging scenarios, shedding light on the reliability of neural MI estimators for unstructured datasets.",
+  "category": "mixed",
+  "domain": "machine learning / information theory",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "estimation",
+    "regression",
+    "unsupervised_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean_absolute_error (|I_est - I_true|) / RMSE",
+  "general_score_metric": "mean_absolute_error (absolute error between estimated and true MI)",
+  "year_of_publish": 2024,
+  "reputation": "New research benchmark (arXiv preprint) aimed at the MI estimation community; early-stage adoption with interest from ML researchers working on representation learning and information-theoretic methods.",
+  "notes": "Uses real-world unstructured data with a same-class pairing trick; not an LLM benchmark. Results depend on validity of the positive-pairing assumption and may be sensitive to dataset size, class imbalance, and sampling protocol.",
+  "creators": {
+    "scientists": [
+      "Kyungeun Lee",
+      "Wonjong Rhee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.10924",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

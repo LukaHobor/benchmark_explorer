@@ -1,0 +1,37 @@
+{
+  "name": "IBISCape",
+  "description": "The development process of high-fidelity SLAM systems depends on their validation upon reliable datasets. Towards this goal, we propose IBISCape, a simulated benchmark that includes data synchronization and acquisition APIs for telemetry from heterogeneous sensors: stereo-RGB/DVS, Depth, IMU, and GPS, along with the ground truth scene segmentation and vehicle ego-motion. Our benchmark is built upon the CARLA simulator, whose back-end is the Unreal Engine rendering a high dynamic scenery simulating the real world. Moreover, we offer 34 multi-modal datasets suitable for autonomous vehicles navigation, including scenarios for scene understanding evaluation like accidents, along with a wide range of frame quality based on a dynamic weather simulation class integrated with our APIs. We also introduce the first calibration targets to CARLA maps to solve the unknown distortion parameters problem of CARLA simulated DVS and RGB cameras. Finally, using IBISCape sequences, we evaluate four ORB-SLAM3 systems (monocular RGB, stereo RGB, Stereo Visual Inertial (SVI), and RGB-D) performance and BASALT Visual-Inertial Odometry (VIO) system on various sequences collected in simulated large-scale dynamic environments. Keywords: benchmark, multi-modal, datasets, Odometry, Calibration, DVS, SLAM",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_odometry",
+    "SLAM",
+    "semantic_segmentation",
+    "depth_estimation",
+    "sensor_calibration"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "absolute_trajectory_error (ATE) / relative_pose_error (RPE) for odometry/SLAM; Intersection-over-Union (IoU) for segmentation; RMSE for depth",
+  "general_score_metric": "absolute_trajectory_error (ATE)",
+  "year_of_publish": 2022,
+  "reputation": "A simulated multi-sensor CARLA-based benchmark used in academic SLAM/AV research; moderate adoption for simulation studies and algorithm prototyping.",
+  "notes": "Simulated (CARLA) data — domain gap to real-world sensors; includes specialized calibration targets and DVS artifacts; primarily a non-LLM benchmark focused on SLAM/odometry/segmentation tasks.",
+  "creators": {
+    "scientists": [
+      "Abanob Soliman",
+      "Fabien Bonardi",
+      "Désiré Sidibé",
+      "Samia Bouchafa"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2206.13455",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

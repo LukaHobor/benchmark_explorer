@@ -1,0 +1,45 @@
+{
+  "name": "Smarter Mobility Data Challenge",
+  "description": "The transport sector is a major contributor to greenhouse gas emissions in Europe. Shifting to electric vehicles (EVs) powered by a low-carbon energy mix would reduce carbon emissions. However, to support the development of electric mobility, a better understanding of EV charging behaviours and more accurate forecasting models are needed. To fill that gap, the Smarter Mobility Data Challenge has focused on the development of forecasting models to predict EV charging station occupancy. This challenge involved analysing a dataset of 91 charging stations across four geographical areas over seven months in 2020-2021. The forecasts were evaluated at three levels of aggregation (individual stations, areas and global) to capture the inherent hierarchical structure of the data. The results highlight the potential of hierarchical forecasting approaches to accurately predict EV charging station occupancy, providing valuable insights for energy providers and EV users alike. This open dataset addresses many real-world challenges associated with time series, such as missing values, non-stationarity and spatio-temporal correlations. Access to the dataset, code and benchmarks are available at https://gitlab.com/smarter-mobility-data-challenge/tutorials to foster future research.",
+  "category": "mixed",
+  "domain": "transportation",
+  "benchmark_type": "competition",
+  "task_types": [
+    "time_series_forecasting",
+    "regression",
+    "hierarchical_forecasting"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "RMSE / MAE / MAPE / sMAPE (hierarchical aggregation-aware error metrics commonly used)",
+  "general_score_metric": "RMSE (or normalized error like sMAPE for cross-station comparisons)",
+  "typical_sota_score": "sMAPE typically in the ~10–25% range (varies by aggregation level: station/area/global)",
+  "year_of_publish": 2023,
+  "reputation": "A niche but useful challenge in the EV/transport forecasting community with publicly available data and reference baselines for research.",
+  "notes": "Non-LLM benchmark; relatively small spatial footprint (91 stations, 7 months) with missing values, non-stationarity and COVID-era behavioral effects; results sensitive to pre-processing and external covariates.",
+  "creators": {
+    "scientists": [
+      "Yvenn Amara-Ouali",
+      "Yannig Goude",
+      "Nathan Doumèche",
+      "Pascal Veyret",
+      "Alexis Thomas",
+      "Daniel Hebenstreit",
+      "Thomas Wedenig",
+      "Arthur Satouf",
+      "Aymeric Jan",
+      "Yannick Deleuze",
+      "Paul Berhaut",
+      "Sébastien Treguer",
+      "Tiphaine Phe-Neau"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2306.06142",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

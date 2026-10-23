@@ -1,0 +1,45 @@
+{
+  "name": "ExplainaBoard",
+  "description": "With the rapid development of NLP research, leaderboards have emerged as one tool to track the performance of various systems on various NLP tasks. They are effective in this goal to some extent, but generally present a rather simplistic one-dimensional view of the submitted systems, communicated only through holistic accuracy numbers. In this paper, we present a new conceptualization and implementation of NLP evaluation: the ExplainaBoard, which in addition to inheriting the functionality of the standard leaderboard, also allows researchers to (i) diagnose strengths and weaknesses of a single system (e.g.~what is the best-performing system bad at?) (ii) interpret relationships between multiple systems. (e.g.~where does system A outperform system B? What if we combine systems A, B, and C?) and (iii) examine prediction results closely (e.g.~what are common errors made by multiple systems, or in what contexts do particular errors occur?). So far, ExplainaBoard covers more than 400 systems, 50 datasets, 40 languages, and 12 tasks. ExplainaBoard keeps updated and is recently upgraded by supporting (1) multilingual multi-task benchmark, (2) meta-evaluation, and (3) more complicated task: machine translation, which reviewers also suggested.} We not only released an online platform on the website \\url{http://explainaboard.nlpedia.ai/} but also make our evaluation tool an API with MIT Licence at Github \\url{https://github.com/neulab/explainaBoard} and PyPi \\url{https://pypi.org/project/interpret-eval/} that allows users to conveniently assess their models offline. We additionally release all output files from systems that we have run or collected to motivate \"output-driven\" research in the future.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "classification",
+    "sequence_labeling",
+    "machine_translation",
+    "summarization",
+    "question_answering",
+    "text_generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-specific metrics (accuracy, F1, BLEU, ROUGE, exact_match, etc.)",
+  "general_score_metric": "task-specific metrics and diagnostic/composite scores for cross-system comparison",
+  "typical_sota_score": "varies by task",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded in the NLP community as a diagnostic leaderboard and analysis tool for many tasks, adopted by researchers for fine-grained error analysis.",
+  "notes": "ExplainaBoard is a meta-evaluation platform (not a single-task benchmark). Metrics, difficulty, and contamination risks vary by dataset/task; it aggregates many datasets and system outputs and is useful for output-driven diagnosis rather than single-number leaderboards.",
+  "creators": {
+    "scientists": [
+      "PengFei Liu",
+      "Jinlan Fu",
+      "Yang Xiao",
+      "Weizhe Yuan",
+      "Shuaicheng Chang",
+      "Junqi Dai",
+      "Yixin Liu",
+      "Zihuiwen Ye",
+      "Zi-Yi Dou",
+      "Graham Neubig"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2104.06387",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "USB (Universal-Scale object detection Benchmark)",
+  "description": "Benchmarks, such as COCO, play a crucial role in object detection. However, existing benchmarks are insufficient in scale variation, and their protocols are inadequate for fair comparison. In this paper, we introduce the Universal-Scale object detection Benchmark (USB). USB has variations in object scales and image domains by incorporating COCO with the recently proposed Waymo Open Dataset and Manga109-s dataset. To enable fair comparison and inclusive research, we propose training and evaluation protocols. They have multiple divisions for training epochs and evaluation image resolutions, like weight classes in sports, and compatibility across training protocols, like the backward compatibility of the Universal Serial Bus. Specifically, we request participants to report results with not only higher protocols (longer training) but also lower protocols (shorter training). Using the proposed benchmark and protocols, we conducted extensive experiments using 15 methods and found weaknesses of existing COCO-biased methods. The code is available at https://github.com/shinya7y/UniverseNet .",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP)",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2023,
+  "reputation": "Proposed in 2021 as a domain- and scale-diverse alternative to COCO; limited adoption so far compared to mainstream benchmarks but of interest to scale-variation researchers.",
+  "notes": "Heterogeneous domains (COCO, Waymo, Manga) cause domain shift; multiple training/evaluation protocols require careful reporting for fair comparison; not as widely adopted as COCO.",
+  "creators": {
+    "scientists": [
+      "Yosuke Shinya"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2103.14027",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

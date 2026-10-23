@@ -1,0 +1,41 @@
+{
+  "name": "AlphaFin",
+  "description": "The task of financial analysis primarily encompasses two key areas: stock trend prediction and the corresponding financial question answering. Currently, machine learning and deep learning algorithms (ML&DL) have been widely applied for stock trend predictions, leading to significant progress. However, these methods fail to provide reasons for predictions, lacking interpretability and reasoning processes. Also, they can not integrate textual information such as financial news or reports. Meanwhile, large language models (LLMs) have remarkable textual understanding and generation ability. But due to the scarcity of financial training datasets and limited integration with real-time knowledge, LLMs still suffer from hallucinations and are unable to keep up with the latest information. To tackle these challenges, we first release AlphaFin datasets, combining traditional research datasets, real-time financial data, and handwritten chain-of-thought (CoT) data. It has a positive impact on training LLMs for completing financial analysis. We then use AlphaFin datasets to benchmark a state-of-the-art method, called Stock-Chain, for effectively tackling the financial analysis task, which integrates retrieval-augmented generation (RAG) techniques. Extensive experiments are conducted to demonstrate the effectiveness of our framework on financial analysis.",
+  "category": "mixed",
+  "domain": "finance / financial analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "regression",
+    "open_ended",
+    "qa"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (classification), RMSE/MSE (regression), exact_match/F1 (QA)",
+  "general_score_metric": "task-specific (accuracy / RMSE / exact_match)",
+  "year_of_publish": 2024,
+  "reputation": "A recent academic dataset (from 2403.12582) combining market data and human CoT designed for benchmarking financial analysis models; adoption is currently limited to research groups focusing on finance + LLMs.",
+  "notes": "Contains time-dependent financial data (risk of temporal leakage); potential pretraining contamination for public models; heterogeneous tasks require multiple metrics; dataset size and temporal coverage may limit generalization to live markets.",
+  "creators": {
+    "scientists": [
+      "Xiang Li",
+      "Zhenyu Li",
+      "Chen Shi",
+      "Yong Xu",
+      "Qing Du",
+      "Mingkui Tan",
+      "Jun Huang",
+      "Wei Lin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2403.12582",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

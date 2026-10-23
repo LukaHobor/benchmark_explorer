@@ -1,0 +1,37 @@
+{
+  "name": "Missing-Values Approaches Benchmark for Health Databases",
+  "description": "BACKGROUND: As databases grow larger, it becomes harder to fully control their collection, and they frequently come with missing values: incomplete observations. These large databases are well suited to train machine-learning models, for instance for forecasting or to extract biomarkers in biomedical settings. Such predictive approaches can use discriminative -- rather than generative -- modeling, and thus open the door to new missing-values strategies. Yet existing empirical evaluations of strategies to handle missing values have focused on inferential statistics. RESULTS: Here we conduct a systematic benchmark of missing-values strategies in predictive models with a focus on large health databases: four electronic health record datasets, a population brain imaging one, a health survey and two intensive care ones. Using gradient-boosted trees, we compare native support for missing values with simple and state-of-the-art imputation prior to learning. We investigate prediction accuracy and computational time. For prediction after imputation, we find that adding an indicator to express which values have been imputed is important, suggesting that the data are missing not at random. Elaborate missing values imputation can improve prediction compared to simple strategies but requires longer computational time on large data. Learning trees that model missing values-with missing incorporated attribute-leads to robust, fast, and well-performing predictive modeling. CONCLUSIONS: Native support for missing values in supervised machine learning predicts better than state-of-the-art imputation with much less computational cost. When using imputation, it is important to add indicator columns expressing which values have been imputed.",
+  "category": "mixed",
+  "domain": "health informatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy / AUC / MSE and computational_time (runtime)",
+  "general_score_metric": "accuracy (primary for classification) and runtime; MSE for regression",
+  "typical_sota_score": "dataset-dependent (varies widely); no single universal SOTA",
+  "year_of_publish": 2022,
+  "reputation": "A well-cited empirical study in health informatics highlighting practical trade-offs between native missing-value handling and imputation; respected for pragmatic guidance rather than establishing a single standard benchmark.",
+  "notes": "Non-LLM benchmark on tabular health data; results are dataset-dependent and may not generalize across healthcare settings. Emphasizes trade-offs between predictive performance and computational cost; missing-not-at-random effects and use of missingness indicators are important considerations.",
+  "creators": {
+    "scientists": [
+      "Alexandre Perez-Lebel",
+      "Gaël Varoquaux",
+      "Marine Le Morvan",
+      "Julie Josse",
+      "Jean-Baptiste Poline"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2202.10580",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

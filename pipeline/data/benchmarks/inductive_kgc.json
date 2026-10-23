@@ -1,0 +1,33 @@
+{
+  "name": "Inductive KGC",
+  "description": "Knowledge Graph Completion (KGC) attempts to predict missing facts in a Knowledge Graph (KG). Recently, there's been an increased focus on designing KGC methods that can excel in the inductive setting, where a portion or all of the entities and relations seen in inference are unobserved during training. Numerous benchmark datasets have been proposed for inductive KGC, all of which are subsets of existing KGs used for transductive KGC. However, we find that the current procedure for constructing inductive KGC datasets inadvertently creates a shortcut that can be exploited even while disregarding the relational information. Specifically, we observe that the Personalized PageRank (PPR) score can achieve strong or near SOTA performance on most datasets. In this paper, we study the root cause of this problem. Using these insights, we propose an alternative strategy for constructing inductive KGC datasets that helps mitigate the PPR shortcut. We then benchmark multiple popular methods using",
+  "category": "text",
+  "domain": "knowledge graphs",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "knowledge_graph_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MRR|Hits@K",
+  "general_score_metric": "MRR",
+  "year_of_publish": 2024,
+  "reputation": "A specialized benchmark line in the KGC community, notable for exposing shortcut biases in inductive evaluation and motivating revised dataset construction.",
+  "notes": "Non-LLM benchmark; inductive KGC datasets can be biased by structural shortcuts such as Personalized PageRank, so reported scores may overstate relational reasoning ability.",
+  "creators": {
+    "scientists": [
+      "Harry Shomer",
+      "Jay Revolinsky",
+      "Jiliang Tang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.11898",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

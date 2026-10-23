@@ -1,0 +1,34 @@
+{
+  "name": "CausalStep",
+  "description": "Recent advances in large language models (LLMs) have improved reasoning in text and image domains, yet achieving robust video reasoning remains a significant challenge. Existing video benchmarks mainly assess shallow understanding and reasoning and allow models to exploit global context, failing to rigorously evaluate true causal and stepwise reasoning. We present CausalStep, a benchmark designed for explicit stepwise causal reasoning in videos. CausalStep segments videos into causally linked units and enforces a strict stepwise question-answer (QA) protocol, requiring sequential answers and preventing shortcut solutions. Each question includes carefully constructed distractors based on error type taxonomy to ensure diagnostic value. The benchmark features 100 videos across six categories and 1,852 multiple-choice QA pairs. We introduce seven diagnostic metrics for comprehensive evaluation, enabling precise diagnosis of causal reasoning capabilities. Experiments with leading proprietary and open-source models, as well as human baselines, reveal a significant gap between current models and human-level stepwise reasoning. CausalStep provides a rigorous benchmark to drive progress in robust and interpretable video reasoning.",
+  "category": "multimodal",
+  "domain": "video reasoning / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (including stepwise and aggregated sequential accuracy)",
+  "general_score_metric": "accuracy (per-question and per-step sequence accuracy)",
+  "year_of_publish": 2025,
+  "reputation": "6 citations",
+  "notes": "Small dataset (100 videos, 1,852 QA pairs) which provides strong diagnostic value but may limit large-scale statistical claims; evaluation is multimodal (video+text) and sensitive to temporal grounding; potential for domain-specific biases and limited coverage of open-world scenarios.",
+  "creators": {
+    "scientists": [
+      "Xuchen Li",
+      "Xuzhao Li",
+      "Shiyu Hu",
+      "Kaiqi Huang",
+      "Wentao Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2507.16878",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

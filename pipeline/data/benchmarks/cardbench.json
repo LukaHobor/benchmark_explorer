@@ -1,0 +1,40 @@
+{
+  "name": "CardBench",
+  "description": "Cardinality estimation is crucial for enabling high query performance in relational databases. Recently learned cardinality estimation models have been proposed to improve accuracy but there is no systematic benchmark or datasets which allows researchers to evaluate the progress made by new learned approaches and even systematically develop new learned approaches. In this paper, we are releasing a benchmark, containing thousands of queries over 20 distinct real-world databases for learned cardinality estimation. In contrast to other initial benchmarks, our benchmark is much more diverse and can be used for training and testing learned models systematically. Using this benchmark, we explored whether learned cardinality estimation can be transferred to an unseen dataset in a zero-shot manner. We trained GNN-based and transformer-based models to study the problem in three setups: 1-) instance-based, 2-) zero-shot, and 3-) fine-tuned. Our results show that while we get promising results for zero-shot cardinality estimation on simple single table queries; as soon as we add joins, the accuracy drops. However, we show that with fine-tuning, we can still utilize pre-trained models for cardinality estimation, significantly reducing training overheads compared to instance specific models. We are open sourcing our scripts to collect statistics, generate queries and training datasets to foster more extensive research, also from the ML community on the important problem of cardinality estimation and in particular improve on recent directions such as pre-trained cardinality estimation.",
+  "category": "mixed",
+  "domain": "databases",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "cardinality_estimation",
+    "regression",
+    "zero_shot_transfer",
+    "fine_tuning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "q-error (median/mean q-error)",
+  "general_score_metric": "median q-error",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized benchmark (2024) aimed at learned cardinality estimation; limited adoption so far but useful for systematic evaluation across many real-world databases.",
+  "notes": "non-LLM benchmark; diverse set of 20 real-world databases; query distribution and sampling affect results heavily; potential overlap between training and test query templates; evaluation dominated by q-error which is heavy-tailed.",
+  "creators": {
+    "scientists": [
+      "Yannis Chronis",
+      "Yawen Wang",
+      "Yu Gan",
+      "Sami Abu-El-Haija",
+      "Chelsea Lin",
+      "Carsten Binnig",
+      "Fatma Özcan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2408.16170",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "MinneApple",
+  "description": "In this work, we present a new dataset to advance the state-of-the-art in fruit detection, segmentation, and counting in orchard environments. While there has been significant recent interest in solving these problems, the lack of a unified dataset has made it difficult to compare results. We hope to enable direct comparisons by providing a large variety of high-resolution images acquired in orchards, together with human annotations of the fruit on trees. The fruits are labeled using polygonal masks for each object instance to aid in precise object detection, localization, and segmentation. Additionally, we provide data for patch-based counting of clustered fruits. Our dataset contains over 41, 000 annotated object instances in 1000 images. We present a detailed overview of the dataset together with baseline performance analysis for bounding box detection, segmentation, and fruit counting as well as representative results for yield estimation. We make this dataset publicly available and host a CodaLab challenge to encourage comparison of results on a common dataset. To download the data and learn more about MinneApple please see the project website: http://rsn.cs.umn.edu/index.php/MinneApple. Up to date information is available online.",
+  "category": "vision",
+  "domain": "agriculture / orchard imagery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation",
+    "counting",
+    "yield_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) for detection/segmentation; MAE/MSE for counting and yield estimation",
+  "general_score_metric": "mAP (mean Average Precision) for detection/segmentation; MAE for counting",
+  "typical_sota_score": "varies by task; commonly reported detection/segmentation mAPs in the range ≈70–95% depending on evaluation setup",
+  "year_of_publish": 2019,
+  "reputation": "A well-known dataset in the agricultural computer vision community (hosted with a CodaLab challenge); moderately adopted for fruit detection and counting research.",
+  "notes": "High-resolution, tightly clustered and occluded fruit instances make tasks challenging; dataset is relatively small (1000 images, ~41k instances) compared to large-scale general-purpose vision benchmarks; non-LLM benchmark with domain-specific biases (orchard conditions, seasons).",
+  "creators": {
+    "scientists": [
+      "Nicolai Häni",
+      "Pravakar Roy",
+      "Volkan Isler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1909.06441",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

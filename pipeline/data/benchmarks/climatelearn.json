@@ -1,0 +1,37 @@
+{
+  "name": "ClimateLearn",
+  "description": "Modeling weather and climate is an essential endeavor to understand the near- and long-term impacts of climate change, as well as inform technology and policymaking for adaptation and mitigation efforts. In recent years, there has been a surging interest in applying data-driven methods based on machine learning for solving core problems such as weather forecasting and climate downscaling. Despite promising results, much of this progress has been impaired due to the lack of large-scale, open-source efforts for reproducibility, resulting in the use of inconsistent or underspecified datasets, training setups, and evaluations by both domain scientists and artificial intelligence researchers. We introduce ClimateLearn, an open-source PyTorch library that vastly simplifies the training and evaluation of machine learning models for data-driven climate science. ClimateLearn consists of holistic pipelines for dataset processing (e.g., ERA5, CMIP6, PRISM), implementation of state-of-the-art deep learning models (e.g., Transformers, ResNets), and quantitative and qualitative evaluation for standard weather and climate modeling tasks. We supplement these functionalities with extensive documentation, contribution guides, and quickstart tutorials to expand access and promote community growth. We have also performed comprehensive forecasting and downscaling experiments to showcase the capabilities and key features of our library. To our knowledge, ClimateLearn is the first large-scale, open-source effort for bridging research in weather and climate modeling with modern machine learning systems. Our library is available publicly at https://github.com/aditya-grover/climate-learn.",
+  "category": "mixed",
+  "domain": "climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "forecasting",
+    "downscaling",
+    "spatiotemporal_regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE and other regression/error metrics (e.g., anomaly correlation, skill scores)",
+  "general_score_metric": "RMSE (primary reported error metric)",
+  "typical_sota_score": "varies by task and dataset; no single consolidated SOTA",
+  "year_of_publish": 2023,
+  "reputation": "An emerging, well-documented open-source library that has gained recognition in the climate-ML community for enabling reproducible experimentation and benchmarking.",
+  "notes": "Non-LLM benchmark covering multiple datasets and tasks; results vary substantially by dataset and task (forecasting vs downscaling). Large compute and data requirements; potential domain shift and dataset bias across reanalysis/CMIP products.",
+  "creators": {
+    "scientists": [
+      "Tung Nguyen",
+      "Jason Jewik",
+      "Hritik Bansal",
+      "Prakhar Sharma",
+      "Aditya Grover"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.01909",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

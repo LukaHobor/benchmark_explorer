@@ -1,0 +1,35 @@
+{
+  "name": "MLCC-MT",
+  "description": "This paper presents a new benchmark test dataset for multi-level complexity-controllable machine translation (MLCC-MT), which is MT controlling the complexity of the output at more than two levels. In previous research, MLCC-MT models have been evaluated on a test dataset automatically constructed from the Newsela corpus, which is a document-level comparable corpus with document-level complexity. The existing test dataset has the following three problems: (i) A source language sentence and its target language sentence are not necessarily an exact translation pair because they are automatically detected. (ii) A target language sentence and its simplified target language sentence are not necessarily exactly parallel because they are automatically aligned. (iii) A sentence-level complexity is not necessarily appropriate because it is transferred from an article-level complexity attached to the Newsela corpus. Therefore, we create a benchmark test dataset for Japanese-to-English MLCC-MT from the Newsela corpus by introducing an automatic filtering of data with inappropriate sentence-level complexity, manual check for parallel target language sentences with different complexity levels, and manual translation. Moreover, we implement two MLCC-NMT frameworks with a Transformer architecture and report their performance on our test dataset as baselines for future research. Our test dataset and codes are released.",
+  "category": "text",
+  "domain": "machine translation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "translation",
+    "controlled_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "BLEU",
+  "general_score_metric": "BLEU",
+  "reputation": "Research benchmark for Japanese→English complexity-controllable MT, cited by a small group of MT researchers; primarily used as a task-specific test set and baseline resource.",
+  "notes": "Test set was manually checked for parallelism and sentence-level complexity; relatively small and curated dataset, not intended as a large-scale pretraining corpus; low contamination risk but limited scale and community coverage.",
+  "creators": {
+    "scientists": [
+      "Kazuki Tani",
+      "Ryoya Yuasa",
+      "Kazuki Takikawa",
+      "Akihiro Tamura",
+      "Tomoyuki Kajiwara",
+      "Takashi Ninomiya",
+      "Tsuneo Kato"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

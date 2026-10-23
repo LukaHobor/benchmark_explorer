@@ -1,0 +1,37 @@
+{
+  "name": "Uncertainty Disentanglement Benchmark",
+  "description": "Uncertainty quantification, once a singular task, has evolved into a spectrum of tasks, including abstained prediction, out-of-distribution detection, and aleatoric uncertainty quantification. The latest goal is disentanglement: the construction of multiple estimators that are each tailored to one and only one source of uncertainty. This paper presents the first benchmark of uncertainty disentanglement. We reimplement and evaluate a comprehensive range of uncertainty estimators, from Bayesian over evidential to deterministic ones, across a diverse range of uncertainty tasks on ImageNet. We find that, despite recent theoretical endeavors, no existing approach provides pairs of disentangled uncertainty estimators in practice. We further find that specialized uncertainty tasks are harder than predictive uncertainty tasks, where we observe saturating performance. Our results provide both practical advice for which uncertainty estimators to use for which specific task, and reveal opportunities for future research toward task-centric and disentangled uncertainties. All our reimplementations and Weights & Biases logs are available at https://github.com/bmucsanyi/untangle.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "out_of_distribution_detection",
+    "abstained_prediction",
+    "aleatoric_uncertainty_quantification",
+    "calibration"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (for OOD), Expected Calibration Error (ECE) (for calibration), accuracy/abstention-aware accuracy (for abstained prediction)",
+  "general_score_metric": "AUROC (primary for OOD) and ECE (primary for calibration); no single composite metric",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A recent, specialized benchmark in the uncertainty/vision community with code released; of interest to researchers working on uncertainty disentanglement but not yet widely adopted beyond that niche.",
+  "notes": "Non-LLM vision benchmark evaluated on ImageNet variants; uses multiple heterogeneous metrics so there is no single dominant score. Results show saturation on general predictive uncertainty but specialized disentanglement tasks remain challenging; reproducibility/implementation differences across estimators can affect comparisons.",
+  "creators": {
+    "scientists": [
+      "Bálint Mucsányi",
+      "Michael Kirchhof",
+      "Seong Joon Oh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2402.19460",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

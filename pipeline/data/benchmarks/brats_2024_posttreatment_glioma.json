@@ -1,0 +1,36 @@
+{
+  "name": "BraTS 2024 Post-treatment Glioma",
+  "description": "Gliomas are the most common malignant primary brain tumors in adults and one of the deadliest types of cancer. There are many challenges in treatment and monitoring due to the genetic diversity and high intrinsic heterogeneity in appearance, shape, histology, and treatment response. Treatments include surgery, radiation, and systemic therapies, with magnetic resonance imaging (MRI) playing a key role in treatment planning and post-treatment longitudinal assessment. The 2024 Brain Tumor Segmentation (BraTS) challenge on post-treatment glioma MRI will provide a community standard and benchmark for state-of-the-art automated segmentation models based on the largest expert-annotated post-treatment glioma MRI dataset. Challenge competitors will develop automated segmentation models to predict four distinct tumor sub-regions consisting of enhancing tissue (ET), surrounding non-enhancing T2/fluid-attenuated inversion recovery (FLAIR) hyperintensity (SNFH), non-enhancing tumor core (NETC), and resection cavity (RC). Models will be evaluated on separate validation and test datasets using standardized performance metrics utilized across the BraTS 2024 cluster of challenges, including lesion-wise Dice Similarity Coefficient and Hausdorff Distance. Models developed during this challenge will advance the field of automated MRI segmentation and contribute to their integration into clinical practice, ultimately enhancing patient care.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice Similarity Coefficient and Hausdorff Distance (lesion-wise), with rankings based primarily on Dice",
+  "general_score_metric": "lesion-wise Dice Similarity Coefficient",
+  "typical_sota_score": "70–90% (Dice, varies substantially by sub-region; whole-tumor often higher than enhancing or cavity regions)",
+  "year_of_publish": 2024,
+  "reputation": "83 citations",
+  "notes": "Non-LLM medical-imaging benchmark with expert manual annotations; heterogeneous post-treatment appearances increase label variability and evaluation difficulty. Large, curated dataset but potential domain shift between centers and variability in post-treatment cases; evaluation uses multiple metrics (Dice, Hausdorff).",
+  "creators": {
+    "scientists": [
+      "Maria Correia de Verdier",
+      "Rachit Saluja",
+      "Louis Gagnon",
+      "D. LaBella",
+      "U. Baid",
+      "N. Tahon"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2405.18368",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

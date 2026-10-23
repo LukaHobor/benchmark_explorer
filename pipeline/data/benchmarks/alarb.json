@@ -1,0 +1,43 @@
+{
+  "name": "ALARB",
+  "description": "We introduce ALARB, a dataset and suite of tasks designed to evaluate the reasoning capabilities of large language models (LLMs) within the Arabic legal domain. While existing Arabic benchmarks cover some knowledge-intensive tasks such as retrieval and understanding, substantial datasets focusing specifically on multistep reasoning for Arabic LLMs, especially in open-ended contexts, are lacking. The dataset comprises over 13K commercial court cases from Saudi Arabia, with each case including the facts presented, the reasoning of the court, the verdict, as well as the cited clauses extracted from the regulatory documents. We define a set of challenging tasks leveraging this dataset and reflecting the complexity of real-world legal reasoning, including verdict prediction, completion of reasoning chains in multistep legal arguments, and identification of relevant regulations based on case facts. We benchmark a representative selection of current open and closed Arabic LLMs on these tasks and demonstrate the dataset's utility for instruction tuning. Notably, we show that instruction-tuning a modest 12B parameter model using ALARB significantly enhances its performance in verdict prediction and Arabic verdict generation, reaching a level comparable to that of GPT-4o.",
+  "category": "text",
+  "domain": "legal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "open_ended",
+    "retrieval",
+    "reasoning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": [
+    "accuracy",
+    "exact_match",
+    "BLEU",
+    "human_eval"
+  ],
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "Newly introduced dataset with growing interest in Arabic legal NLP; initial benchmarks reported but broad community adoption is still limited.",
+  "notes": "Domain-specific (Saudi Arabian court cases) — language- and jurisdiction-specific; potential legal/privacy sensitivities; multi-task evaluation means different metrics per subtask; risk of overlap with proprietary model training data not fully known.",
+  "creators": {
+    "scientists": [
+      "Harethah Abu Shairah",
+      "Somayah AlHarbi",
+      "Abdulaziz AlHussein",
+      "Sameer Alsabea",
+      "Omar Shaqaqi",
+      "Hebah AlShamlan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2510.00694",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

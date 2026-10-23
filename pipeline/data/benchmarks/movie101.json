@@ -1,0 +1,38 @@
+{
+  "name": "Movie101",
+  "description": "To help the visually impaired enjoy movies, automatic movie narrating systems are expected to narrate accurate, coherent, and role-aware plots when there are no speaking lines of actors. Existing works benchmark this challenge as a normal video captioning task via some simplifications, such as removing role names and evaluating narrations with ngram-based metrics, which makes it difficult for automatic systems to meet the needs of real application scenarios. To narrow this gap, we construct a large-scale Chinese movie benchmark, named Movie101. Closer to real scenarios, the Movie Clip Narrating (MCN) task in our benchmark asks models to generate role-aware narration paragraphs for complete movie clips where no actors are speaking. External knowledge, such as role information and movie genres, is also provided for better movie understanding. Besides, we propose a new metric called Movie Narration Score (MNScore) for movie narrating evaluation, which achieves the best correlation with human evaluation. Our benchmark also supports the Temporal Narration Grounding (TNG) task to investigate clip localization given text descriptions. For both two tasks, our proposed methods well leverage external knowledge and outperform carefully designed baselines. The dataset and codes are released at https://github.com/yuezih/Movie101.",
+  "category": "multimodal",
+  "domain": "video understanding / assistive multimedia",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multimodal_captioning",
+    "temporal_grounding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MNScore (automatic) + human_eval for correlation",
+  "general_score_metric": "MNScore",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "A recent (2023) Chinese multimodal/video narration benchmark with growing interest in research on role-aware movie narration but limited adoption so far.",
+  "notes": "Chinese-only movie clips; introduces a novel MNScore metric (better correlated with human judgment than n-gram metrics); includes external role/genre metadata; potential copyright/ethical considerations from movie content; limited community adoption so far.",
+  "creators": {
+    "scientists": [
+      "Zihao Yue",
+      "Qi Zhang",
+      "Anwen Hu",
+      "Liang Zhang",
+      "Ziheng Wang",
+      "Qin Jin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2305.12140",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

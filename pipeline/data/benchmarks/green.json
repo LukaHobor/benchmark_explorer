@@ -1,0 +1,37 @@
+{
+  "name": "GREEN",
+  "description": "Accurate greenhouse gas (GHG) emission reporting is critical for governments, businesses, and investors. However, adoption remains limited particularly among small and medium enterprises due to high implementation costs, fragmented emission factor databases, and a lack of robust sector classification methods. To address these challenges, we introduce Group Reasoning Emission Estimation Networks (GREEN), an AI-driven carbon accounting framework that standardizes enterprise-level emission estimation, constructs a large-scale benchmark dataset, and leverages a novel reasoning approach with large language models (LLMs). Specifically, we compile textual descriptions for 20,850 companies with validated North American Industry Classification System (NAICS) labels and align these with an economic model of carbon intensity factors. By reframing sector classification as an information retrieval task, we fine-tune Sentence-BERT models using a contrastive learning loss. To overcome the limitations of single-stage models in handling thousands of hierarchical categories, we propose a Group Reasoning method that ensembles LLM classifiers based on the natural NAICS ontology, decomposing the task into multiple sub-classification steps. We theoretically prove that this approach reduces classification uncertainty and computational complexity. Experiments on 1,114 NAICS categories yield state-of-the-art performance (83.68% Top-1, 91.47% Top-10 accuracy), and case studies on 20 companies report a mean absolute percentage error (MAPE) of 45.88%. The project is available at: https://huggingface.co/datasets/Yvnminc/ExioNAICS.",
+  "category": "mixed",
+  "domain": "climate science / emissions",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "information_retrieval",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (Top-1, Top-10) for classification; MAPE for emission estimation",
+  "general_score_metric": "Top-1 accuracy",
+  "typical_sota_score": "82–85%",
+  "year_of_publish": 2025,
+  "reputation": "New but well-documented dataset (Hugging Face) with growing interest in emissions estimation and industry classification research; not yet widely adopted across the broader ML community.",
+  "notes": "Imbalanced long-tailed label distribution across thousands of NAICS categories; per-class sample scarcity for many labels; reported Top-10 accuracy much higher than Top-1; case-study emission estimates show high MAPE (≈45.9%); potential dataset/domain shift when applied outside the compiled company sample.",
+  "creators": {
+    "scientists": [
+      "Yanming Guo",
+      "Xiao Qian",
+      "Kevin Credit",
+      "Jin Ma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2502.06874",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

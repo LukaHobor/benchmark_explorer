@@ -1,0 +1,37 @@
+{
+  "name": "Robust Multi-View Depth Benchmark",
+  "description": "Recent deep learning approaches for multi-view depth estimation are employed either in a depth-from-video or a multi-view stereo setting. Despite different settings, these approaches are technically similar: they correlate multiple source views with a keyview to estimate a depth map for the keyview. In this work, we introduce the Robust Multi-View Depth Benchmark that is built upon a set of public datasets and allows evaluation in both settings on data from different domains. We evaluate recent approaches and find imbalanced performances across domains. Further, we consider a third setting, where camera poses are available and the objective is to estimate the corresponding depth maps with their correct scale. We show that recent approaches do not generalize across datasets in this setting. This is because their cost volume output runs out of distribution. To resolve this, we present the Robust MVD Baseline model for multi-view depth estimation, which is built upon existing components but employs a novel scale augmentation procedure. It can be applied for robust multi-view depth estimation, independent of the target data. We provide code for the proposed benchmark and baseline model at https://github.com/lmb-freiburg/robustmvd.",
+  "category": "vision",
+  "domain": "computer vision / multi-view depth estimation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "depth_estimation",
+    "multi_view_stereo",
+    "depth_from_video"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "depth error metrics (RMSE, Absolute Relative Error, 1.25 accuracy thresholds)",
+  "general_score_metric": "RMSE (meters) / Abs Rel",
+  "typical_sota_score": "Varies by source dataset (e.g., RMSE ≈0.2–1.5 m depending on scene and dataset)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2026,
+  "reputation": "A respected benchmark in the multi-view depth community that aggregates multiple public datasets to test cross-domain robustness and generalization.",
+  "notes": "Non-LLM benchmark combining several public datasets; contains domain shifts and scale-ambiguity issues; performance is highly dataset-dependent and sensitive to camera pose accuracy.",
+  "creators": {
+    "scientists": [
+      "Philipp Schröppel",
+      "Jan Bechtold",
+      "Artemij Amiranashvili",
+      "Thomas Brox"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.06681",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

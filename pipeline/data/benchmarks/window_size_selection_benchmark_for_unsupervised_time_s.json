@@ -1,0 +1,33 @@
+{
+  "name": "Window Size Selection Benchmark for Unsupervised Time Series Analytics",
+  "description": "Time series (TS) are sequences of values ordered in time. Such TS have in common, that important insights from the data can be drawn by inspecting local substructures, and not the recordings as a whole. ECG recordings, for instance, are characterized by normal or anomalous heartbeats that repeat themselves often within a longer TS. As such, many state-of-the-art time series data mining (TSDM) methods characterize TS by inspecting local substructures. The window size for extracting such subsequences is a crucial hyper-parameter, and setting an inappropriate value results in poor TSDM results. Finding the optimal window size has remained to be one of the most challenging tasks in TSDM domains, where no domain-agnostic method is known for learning the window size. We provide, for the first time, a systematic survey and experimental study of 6 TS window size selection (WSS) algorithms on three diverse TSDM tasks, namely anomaly detection, segmentation and motif discovery, using state-of-the art TSDM algorithms and benchmarks. We found that WSS methods are competitive with or even surpass human annotations, if an interesting or anomalous pattern can be attributed to (changes in) the period. That is because current WSS methods aim at finding the period length of data sets. This assumption is mostly true for segmentation or anomaly detection, by definition. In the case of motif discovery, however, the results were mixed. Motifs can be independent of a period, but repeat themselves unusually often. In this domain, WSS fails and more research is needed.",
+  "category": "mixed",
+  "domain": "time series analytics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "segmentation",
+    "motif_discovery",
+    "hyperparameter_selection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Task-dependent metrics (primarily F1 for anomaly detection, segmentation accuracy for segmentation, motif discovery scores for motifs)",
+  "general_score_metric": "Task-dependent (primarily F1 / segmentation accuracy)",
+  "reputation": "Cited within the time-series data-mining community as a focused study on window-size selection, but relatively niche compared to broad TSDM benchmarks.",
+  "notes": "Assumes periodicity/period-based patterns; methods may fail when motifs are not period-related. Limited algorithm set evaluated and results are task-dependent; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Arik Ermshaus",
+      "Patrick Schäfer",
+      "Ulf Leser"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

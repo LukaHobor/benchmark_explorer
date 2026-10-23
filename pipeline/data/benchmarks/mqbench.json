@@ -1,0 +1,40 @@
+{
+  "name": "MQBench",
+  "description": "Model quantization has emerged as an indispensable technique to accelerate deep learning inference. While researchers continue to push the frontier of quantization algorithms, existing quantization work is often unreproducible and undeployable. This is because researchers do not choose consistent training pipelines and ignore the requirements for hardware deployments. In this work, we propose Model Quantization Benchmark (MQBench), a first attempt to evaluate, analyze, and benchmark the reproducibility and deployability for model quantization algorithms. We choose multiple different platforms for real-world deployments, including CPU, GPU, ASIC, DSP, and evaluate extensive state-of-the-art quantization algorithms under a unified training pipeline. MQBench acts like a bridge to connect the algorithm and the hardware. We conduct a comprehensive analysis and find considerable intuitive or counter-intuitive insights. By aligning the training settings, we find existing algorithms have about the same performance on the conventional academic track. While for the hardware-deployable quantization, there is a huge accuracy gap which remains unsettled. Surprisingly, no existing algorithm wins every challenge in MQBench, and we hope this work could inspire future research directions.",
+  "category": "mixed",
+  "domain": "model compression / deployment",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "benchmarking",
+    "inference_performance_evaluation",
+    "accuracy_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (top-1) and latency/throughput (hardware performance)",
+  "general_score_metric": "accuracy (top-1) and throughput/latency",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded in the model compression / deployment community as a reproducible benchmark for quantization across multiple hardware backends; moderately cited and used.",
+  "notes": "Hardware- and implementation-dependent results; reproducibility can vary by backend (CPU/GPU/ASIC/DSP). Not a generative-LLM benchmark—focused on quantization and deployment constraints.",
+  "creators": {
+    "scientists": [
+      "Yuhang Li",
+      "Mingzhu Shen",
+      "Jian Ma",
+      "Yan Ren",
+      "Mingxin Zhao",
+      "Qi Zhang",
+      "Ruihao Gong",
+      "Fengwei Yu",
+      "Junjie Yan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2111.03759",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

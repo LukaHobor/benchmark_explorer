@@ -1,0 +1,36 @@
+{
+  "name": "Panoptic Segmentation Robustness Benchmark",
+  "description": "Precise situational awareness is required for the safe decision-making of assisted and automated driving (AAD) functions. Panoptic segmentation is a promising perception technique to identify and categorise objects, impending hazards, and driveable space at a pixel level. While segmentation quality is generally associated with the quality of the camera data, a comprehensive understanding and modelling of this relationship are paramount for AAD system designers. Motivated by such a need, this work proposes a unifying pipeline to assess the robustness of panoptic segmentation models for AAD, correlating it with traditional image quality. The first step of the proposed pipeline involves generating degraded camera data that reflects real-world noise factors. To this end, 19 noise factors have been identified and implemented with 3 severity levels. Of these factors, this work proposes novel models for unfavourable light and snow. After applying the degradation models, three state-of-the-art CNN- and vision transformers (ViT)-based panoptic segmentation networks are used to analyse their robustness. The variations of the segmentation performance are then correlated to 8 selected image quality metrics. This research reveals that: 1) certain specific noise factors produce the highest impact on panoptic segmentation, i.e. droplets on lens and Gaussian noise; 2) the ViT-based panoptic segmentation backbones show better robustness to the considered noise factors; 3) some image quality metrics (i.e. LPIPS and CW-SSIM) correlate strongly with panoptic segmentation performance and therefore they can be used as predictive metrics for network performance.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "panoptic_segmentation",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "panoptic_quality (PQ) / mean IoU (mIoU)",
+  "general_score_metric": "panoptic quality (PQ)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, domain-focused benchmark for AAD perception robustness with limited but growing awareness in autonomous-driving and segmentation robustness research.",
+  "notes": "Evaluations rely on synthetically degraded images (19 noise factors, 3 severity levels) which may not capture all real-world effects; intended for robustness analysis rather than large-scale leaderboard competition; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Yiting Wang",
+      "Haonan Zhao",
+      "Daniel Gummadi",
+      "Mehrdad Dianati",
+      "Kurt Debattista",
+      "Valentina Donzella"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2402.15469",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

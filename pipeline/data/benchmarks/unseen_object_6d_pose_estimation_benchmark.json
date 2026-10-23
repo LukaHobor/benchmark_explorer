@@ -1,0 +1,38 @@
+{
+  "name": "Unseen Object 6D Pose Estimation Benchmark",
+  "description": "Estimating the 6D pose for unseen objects is in great demand for many real-world applications. However, current state-of-the-art pose estimation methods can only handle objects that are previously trained. In this paper, we propose a new task that enables and facilitates algorithms to estimate the 6D pose estimation of novel objects during testing. We collect a dataset with both real and synthetic images and up to 48 unseen objects in the test set. In the mean while, we propose a new metric named Infimum ADD (IADD) which is an invariant measurement for objects with different types of pose ambiguity. A two-stage baseline solution for this task is also provided. By training an end-to-end 3D correspondences network, our method finds corresponding points between an unseen object and a partial view RGBD image accurately and efficiently. It then calculates the 6D pose from the correspondences using an algorithm robust to object symmetry. Extensive experiments show that our method outperforms several intuitive baselines and thus verify its effectiveness. All the data, code and models will be made publicly available. Project page: www.graspnet.net/unseen6d",
+  "category": "vision",
+  "domain": "robotics / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "6d_pose_estimation",
+    "pose_estimation",
+    "registration",
+    "correspondence_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "IADD (Infimum ADD) — pose error / pose-accuracy under thresholds (symmetry-aware), reported as percent of estimates within thresholds",
+  "general_score_metric": "IADD (Infimum ADD)",
+  "year_of_publish": 2022,
+  "reputation": "Niche but useful dataset/benchmark for unseen-object 6D pose research; referenced in works on generalizable pose estimation and robotics grasping.",
+  "notes": "Includes both real and synthetic data and up to 48 unseen test objects; dataset is relatively small compared to large-scale detection corpora, has sim-to-real gaps, and centers on non-LLM, robotics/vision tasks. Metric is symmetry-aware; potential contamination risk low but methods can overfit synthetic-to-real patterns.",
+  "creators": {
+    "scientists": [
+      "Minghao Gou",
+      "Haolin Pan",
+      "Hao-Shu Fang",
+      "Ziyuan Liu",
+      "Cewu Lu",
+      "Ping Tan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.11808",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

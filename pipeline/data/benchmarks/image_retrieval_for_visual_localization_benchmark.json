@@ -1,0 +1,41 @@
+{
+  "name": "Image Retrieval for Visual Localization benchmark",
+  "description": "Visual localization, i.e., camera pose estimation in a known scene, is a core component of technologies such as autonomous driving and augmented reality. State-of-the-art localization approaches often rely on image retrieval techniques for one of two purposes: (1) provide an approximate pose estimate or (2) determine which parts of the scene are potentially visible in a given query image. It is common practice to use state-of-the-art image retrieval algorithms for both of them. These algorithms are often trained for the goal of retrieving the same landmark under a large range of viewpoint changes which often differs from the requirements of visual localization. In order to investigate the consequences for visual localization, this paper focuses on understanding the role of image retrieval for multiple visual localization paradigms. First, we introduce a novel benchmark setup and compare state-of-the-art retrieval representations on multiple datasets using localization performance as metric. Second, we investigate several definitions of \"ground truth\" for image retrieval. Using these definitions as upper bounds for the visual localization paradigms, we show that there is still sgnificant room for improvement. Third, using these tools and in-depth analysis, we show that retrieval performance on classical landmark retrieval or place recognition tasks correlates only for some but not all paradigms to localization performance. Finally, we analyze the effects of blur and dynamic scenes in the images. We conclude that there is a need for retrieval approaches specifically designed for localization paradigms. Our benchmark and evaluation protocols are available at https://github.com/naver/kapture-localization.",
+  "category": "vision",
+  "domain": "autonomous driving / augmented reality (visual localization)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "visual_localization",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k for retrieval and localization accuracy (percentage of queries localized within pose-error thresholds)",
+  "general_score_metric": "Recall@k and localization accuracy (fraction of queries with pose error below specified thresholds)",
+  "typical_sota_score": "varies by dataset (example ranges: recall@1 ≈ 50–95%; localization accuracy ≈ 30–90% depending on scene and threshold)",
+  "year_of_publish": 2022,
+  "reputation": "A specialised benchmark used in the visual localization community (based on the kapture toolbox) with growing adoption for analyzing retrieval's role in localization.",
+  "notes": "Non-LLM benchmark; performance is dataset- and threshold-dependent. Ground-truth definitions vary and set upper bounds for downstream localization. Potential contamination if retrieval models were pre-trained on the same imagery; not saturated across all localization paradigms.",
+  "creators": {
+    "scientists": [
+      "Martin Humenberger",
+      "Yohann Cabon",
+      "Noé Pion",
+      "Philippe Weinzaepfel",
+      "Donghwan Lee",
+      "Nicolas Guérin",
+      "Torsten Sattler",
+      "Gabriela Csurka"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2205.15761",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Text-to-Image (DeepFashion-MultiModal) Benchmark",
+  "description": "This work presents an open-source unified benchmarking and evaluation framework for text-to-image generation models, with a particular focus on the impact of metadata augmented prompts. Leveraging the DeepFashion-MultiModal dataset, we assess generated outputs through a comprehensive set of quantitative metrics, including Weighted Score, CLIP (Contrastive Language Image Pre-training)-based similarity, LPIPS (Learned Perceptual Image Patch Similarity), FID (Frechet Inception Distance), and retrieval-based measures, as well as qualitative analysis. Our results demonstrate that structured metadata enrichments greatly enhance visual realism, semantic fidelity, and model robustness across diverse text-to-image architectures. While not a traditional recommender system, our framework enables task-specific recommendations for model selection and prompt design based on evaluation metrics.",
+  "category": "multimodal",
+  "domain": "vision / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_generation",
+    "retrieval",
+    "image_quality_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score (weighted combination of CLIP similarity, LPIPS, FID, retrieval metrics and other quality measures)",
+  "general_score_metric": "Weighted Score (composite of CLIP, LPIPS, FID, and retrieval-based metrics)",
+  "year_of_publish": 2025,
+  "reputation": "A focused, domain-specific benchmark valued in fashion and multimodal research for studying metadata-augmented prompts, but not yet a broadly adopted general benchmark.",
+  "notes": "Non-LLM, vision-centric benchmark with domain-specific biases (fashion styles); metrics (FID, LPIPS, CLIP) can be sensitive to model/generation settings. Potential dataset/style contamination and limited domain coverage; results can be sensitive to prompt engineering and evaluation weighting.",
+  "creators": {
+    "scientists": [
+      "Kapil Wanaskar",
+      "Gaytri Jena",
+      "Magdalini Eirinaki"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.04650",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

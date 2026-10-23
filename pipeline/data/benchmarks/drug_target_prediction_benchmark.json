@@ -1,0 +1,34 @@
+{
+  "name": "Drug Target Prediction Benchmark",
+  "description": "Despite the development of a range of biological tests that greatly improved the efficiency of drug screening, it is still considered laborious and expensive to screen a potentially vast number of drug-target protein combinations with biological tests. As such, computational (in silico) methods have become popular and are commonly applied for pre-screening as they are capable to conduct efficient screening with fewer resources. This tutorial will provide participants with experience in conducting computational experiments for drug target predictions. In the tutorial, the participants will firstly theoretically review the history of computational drug target prediction. The methods, datasets, and how the experiments are designed will be introduced. Later, the participants will be introduced to a data set, Linked Multipartite Network (LMN), a heterogeneous network that incorporates 12 repositories and includes 7 types of biomedical entities (#20,119 entities, # 194,296 associations). The participants will learn how to use LMN to facilitate drug target prediction, including computational validation, and facilitate scientific discovery. Finally, participants will be introduced to some state-of-the-art computational methods, and practice the adoption of these methods to conduct the experiments by running the tasks with the given training and testing files generated in the LMN. Through the proposed tutorial, participants, such as researchers and trainees, will understand the process of computational drug-target prediction and further learn how to adopt LMN as the dataset to facilitate the drug target prediction in practice as well as apply those skills in future studies.",
+  "category": "mixed",
+  "domain": "drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC / AUPRC for classification; RMSE or Pearson/Spearman for regression; precision@k or recall@k for ranking/prioritization",
+  "general_score_metric": "AUROC / AUPRC (classification) and RMSE (regression); ranking metrics (precision@k) for prioritization",
+  "typical_sota_score": "Varies by dataset and split method; commonly ~0.75–0.95 AUROC for well-curated benchmarks",
+  "year_of_publish": 2022,
+  "reputation": "Widely used in academic drug-discovery and cheminformatics research as a standard suite for evaluating drug–target interaction and prioritization methods.",
+  "notes": "Non-LLM benchmark; prone to dataset biases and leakage (e.g., scaffold or target overlap), results sensitive to evaluation protocol (random vs scaffold/temporal splits) and small or imbalanced datasets.",
+  "creators": {
+    "scientists": [
+      "Nansu Zong",
+      "Victoria Ngo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1109/ichi54592.2022.00110",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

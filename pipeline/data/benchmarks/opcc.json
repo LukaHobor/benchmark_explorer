@@ -1,0 +1,34 @@
+{
+  "name": "OPCC",
+  "description": "Decision makers often wish to use offline historical data to compare sequential-action policies at various world states. Importantly, computational tools should produce confidence values for such offline policy comparison (OPC) to account for statistical variance and limited data coverage. Nevertheless, there is little work that directly evaluates the quality of confidence values for OPC. In this work, we address this issue by creating benchmarks for OPC with Confidence (OPCC), derived by adding sets of policy comparison queries to datasets from offline reinforcement learning. In addition, we present an empirical evaluation of the risk versus coverage trade-off for a class of model-based baselines. In particular, the baselines learn ensembles of dynamics models, which are used in various ways to produce simulations for answering queries with confidence values. While our results suggest advantages for certain baseline variations, there appears to be significant room for improvement in future work.",
+  "category": "mixed",
+  "domain": "reinforcement learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "policy_evaluation",
+    "confidence_estimation",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "risk-coverage trade-off / coverage at fixed error rate (confidence-calibrated policy comparison)",
+  "general_score_metric": "risk-coverage curve / coverage at specified risk (and calibration/Error rate of confidence intervals)",
+  "year_of_publish": 2022,
+  "reputation": "A recent research-focused benchmark (arXiv 2022) with limited adoption so far, used primarily in offline RL and uncertainty-estimation studies.",
+  "notes": "Non-LLM benchmark focused on offline RL; emphasizes confidence calibration and coverage vs risk rather than simple accuracy. Derived from existing offline RL datasets; relatively new and research-oriented, so limited community-wide benchmarks and potential small-scale evaluations.",
+  "creators": {
+    "scientists": [
+      "Anurag Koul",
+      "Mariano Phielipp",
+      "Alan Fern"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2205.10739",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

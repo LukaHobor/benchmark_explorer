@@ -1,0 +1,35 @@
+{
+  "name": "GraspNet-1Billion",
+  "description": "Robust object grasping in cluttered scenes is vital to all robotic prehensile manipulation. In this paper, we present the GraspNet-1Billion benchmark that contains rich real-world captured cluttered scenarios and abundant annotations. This benchmark aims at solving two critical problems for the cluttered scenes parallel-finger grasping: the insufficient real-world training data and the lacking of evaluation benchmark. We first contribute a large-scale grasp pose detection dataset. Two different depth cameras based on structured-light and time-of-flight technologies are adopted. Our dataset contains 97,280 RGB-D images with over one billion grasp poses. In total, 190 cluttered scenes are collected, among which 100 are training set and 90 are for testing. Meanwhile, we build an evaluation system that is general and user-friendly. It directly reports a predicted grasp pose’s quality by analytic computation, which is able to evaluate any kind of grasp representation without exhaustively labeling the ground-truth. We further divide the test set into three difficulties to better evaluate algorithms’ generalization ability. Our dataset, accessing API and evaluation code, are publicly available at www.graspnet.net.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "grasp_pose_detection",
+    "pose_estimation",
+    "object_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "grasp_success_rate",
+  "year_of_publish": 2023,
+  "reputation": "22 citations",
+  "notes": "Non-LLM robotics benchmark. Large-scale real-world RGB-D dataset (97k images, >1B candidate grasps) with analytic grasp-quality evaluation rather than human labels. Contains three difficulty splits; evaluation is analytic and may not fully reflect real-world execution success on different hardware; not saturated.",
+  "creators": {
+    "scientists": [
+      "Hao-Shu Fang",
+      "Minghao Gou",
+      "Chenxi Wang",
+      "Cewu Lu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://doi.org/10.1177/02783649231193710",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

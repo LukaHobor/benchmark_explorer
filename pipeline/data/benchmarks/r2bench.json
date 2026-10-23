@@ -1,0 +1,43 @@
+{
+  "name": "R^2-Bench",
+  "description": "Referring perception, which aims at grounding visual objects with multimodal referring guidance, is essential for bridging the gap between humans, who provide instructions, and the environment where intelligent systems perceive. Despite progress in this field, the robustness of referring perception models (RPMs) against disruptive perturbations is not well explored. This work thoroughly assesses the resilience of RPMs against various perturbations in both general and specific contexts. Recognizing the complex nature of referring perception tasks, we present a comprehensive taxonomy of perturbations, and then develop a versatile toolbox for synthesizing and evaluating the effects of composite disturbances. Employing this toolbox, we construct $\\text{R}^2$-Bench, a benchmark for assessing the Robustness of Referring perception models under noisy conditions across five key tasks. Moreover, we propose the $\\text{R}^2$-Agent, an LLM-based agent that simplifies and automates model evaluation via natural language instructions. Our investigation uncovers the vulnerabilities of current RPMs to various perturbations and provides tools for assessing model robustness, potentially promoting the safe and resilient integration of intelligent systems into complex real-world scenarios.",
+  "category": "multimodal",
+  "domain": "vision / multimodal referring perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "referring_expression_comprehension",
+    "phrase_grounding",
+    "referring_segmentation",
+    "referring_detection",
+    "multimodal_grounding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Task-dependent metrics (mIoU/IoU for segmentation, accuracy for comprehension, mAP for detection)",
+  "general_score_metric": "mIoU (task-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "New specialized benchmark focused on robustness of referring perception; gaining attention among robustness and multimodal-vision researchers.",
+  "notes": "Non-LLM, robustness-focused benchmark using synthetic and real perturbations; results vary widely by perturbation type. Not saturated; intended to evaluate resilience rather than peak absolute accuracy.",
+  "creators": {
+    "scientists": [
+      "Xiang Li",
+      "Kai Qiu",
+      "Jinglu Wang",
+      "Xiaohao Xu",
+      "Rita Singh",
+      "Kashu Yamazak",
+      "Hao Chen",
+      "Xiaonan Huang",
+      "Bhiksha Raj"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2403.04924",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

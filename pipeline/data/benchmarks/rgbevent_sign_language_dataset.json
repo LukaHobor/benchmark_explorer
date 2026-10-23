@@ -1,0 +1,41 @@
+{
+  "name": "RGB-Event Sign Language Dataset",
+  "description": "Accurate sign language understanding serves as a crucial communication channel for individuals with disabilities. Current sign language translation algorithms predominantly rely on RGB frames, which may be limited by fixed frame rates, variable lighting conditions, and motion blur caused by rapid hand movements. Inspired by the recent successful application of event cameras in other fields, we propose to leverage event streams to assist RGB cameras in capturing gesture data, addressing the various challenges mentioned above. Specifically, we first collect a large-scale RGB-Event sign language translation dataset using the DVS346 camera, termed VECSL, which contains 15,676 RGB-Event samples, 15,191 glosses, and covers 2,568 Chinese characters. These samples were gathered across a diverse range of indoor and outdoor environments, capturing multiple viewing angles, varying light intensities, and different camera motions. Due to the absence of benchmark algorithms for comparison in this new task, we retrained and evaluated multiple state-of-the-art SLT algorithms, and believe that this benchmark can effectively support subsequent related research. Additionally, we propose a novel RGB-Event sign language translation framework (i.e., M$^2$-SLT) that incorporates fine-grained micro-sign and coarse-grained macro-sign retrieval, achieving state-of-the-art results on the proposed dataset. Both the source code and dataset will be released on https://github.com/Event-AHU/OpenESL.",
+  "category": "multimodal",
+  "domain": "vision / assistive technology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "translation",
+    "sequence_generation",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "BLEU",
+  "general_score_metric": "BLEU",
+  "typical_sota_score": "10–35 BLEU",
+  "year_of_publish": 2025,
+  "reputation": "New multimodal dataset combining RGB and event-camera streams; promising for sign-language research but currently has limited adoption due to specialized sensor requirements.",
+  "notes": "Multimodal (RGB + event camera) benchmark requiring specialized hardware (event cameras) which may limit reproducibility and adoption; relatively large but domain-specific dataset (Chinese sign glosses); not directly comparable to RGB-only SLT benchmarks without modality-specific handling.",
+  "creators": {
+    "scientists": [
+      "Xiao Wang",
+      "Yuehang Li",
+      "Fuling Wang",
+      "Bo Jiang",
+      "YaoWei Wang",
+      "Yonghong Tian",
+      "Jin Tang",
+      "Bin Luo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.06484",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

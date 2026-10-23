@@ -1,0 +1,32 @@
+{
+  "name": "Gender Bias NER Template Suite",
+  "description": "Named Entity Recognition (NER) constitutes a popular machine learning technique that empowers several natural language processing applications. As with other machine learning applications, NER models have been shown to be susceptible to gender bias. The latter is often assessed using benchmark datasets, which in turn are curated specifically for a given Natural Language Processing (NLP) task. In this work, we investigate the robustness of benchmark templates to detect gender bias and propose a novel method to improve the curation of such datasets. The method, based on masked token prediction, aims to filter out benchmark templates with a higher probability of detecting gender bias in NER models. We tested the method for English and German, using the corresponding fine-tuned BERT base model (cased) as the NER model. The gender gaps detected with templates classified as appropriate by the method were statistically larger than those detected with inappropriate templates. The results were similar for both languages and support the use of the proposed method in the curation of templates designed to detect gender bias.",
+  "category": "text",
+  "domain": "medical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_labeling"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "entity-level F1 and bias/disparity metrics (difference in performance across gender groups)",
+  "general_score_metric": "entity-level F1 (plus disparity metrics)",
+  "year_of_publish": 2024,
+  "reputation": "Niche but useful resource for researchers studying gender bias in clinical NER; limited broad adoption outside fairness-focused work.",
+  "notes": "Template-based evaluation may not reflect real-world clinical distribution; small/curated templates can under-represent variability; sensitive domain considerations apply.",
+  "creators": {
+    "scientists": [
+      "Ana Cimitan",
+      "Ana Alves Pinto",
+      "Michaela Geierhos"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://doi.org/10.63317/2dyh26kjgpa3",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

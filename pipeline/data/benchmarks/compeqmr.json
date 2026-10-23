@@ -1,0 +1,37 @@
+{
+  "name": "ComPEQ-MR",
+  "description": "Point cloud videos, also termed dynamic point clouds (DPCs), have the potential to provide immersive experiences with six degrees of freedom (6DoF). However, there are still several open issues in understanding the Quality of Experience (QoE) and visual attention of end users while experiencing 6DoF volumetric videos. For instance, the quality impact of compressing DPCs, which requires a significant amount of both time and computational resources, needs further investigation. Also, QoE prediction models for DPCs in 6DoF have rarely been developed due to the lack of visual quality databases. Furthermore, visual attention in 6DoF is hardly explored, which impedes research into more sophisticated approaches for adaptive streaming of DPCs. In this paper, we review and analyze in detail the open-source Compressed <inline-formula> <tex-math notation=\"LaTeX\">$P$ </tex-math></inline-formula>oint cloud dataset with <inline-formula> <tex-math notation=\"LaTeX\">$E$ </tex-math></inline-formula>ye-tracking and <inline-formula> <tex-math notation=\"LaTeX\">$Q$ </tex-math></inline-formula>uality assessment in <inline-formula> <tex-math notation=\"LaTeX\">$M$ </tex-math></inline-formula>ixed <inline-formula> <tex-math notation=\"LaTeX\">$R$ </tex-math></inline-formula>eality (ComPEQ–MR). The dataset, initially presented, comprises 4 uncompressed (raw) DPCs as well as compressed versions processed by Moving Picture Experts Group (MPEG) reference tools (i.e., Video-Based Point Cloud Compression (VPCC) and 2 Geometry-based Point Cloud Compression (GPCC) variants). The dataset includes eye-tracking data of 41 study participants watching the raw DPCs with 6DoF, yielding 164 visual attention maps. We analyze this data and present head and gaze movement results here. The dataset also includes results from subjective tests conducted to assess the quality of the DPCs, each both uncompressed and compressed with 12 levels of distortion, resulting in 2132 quality scores. This work presents the QoE performance results of the compression techniques, the factors with significant impact on participant ratings, and the correlation of the objective Peak Signal-to-Noise Ratio (PSNR) metrics with Mean Opinion Scores (MOS). The results indicate superior performance of the VPCC codec as well as significant variations in quality ratings based on codec choice, bitrate, and quality/distortion level, providing insights for optimizing point cloud video compression in MR applications. Finally, making use of the subjective scores, we trained and evaluated models for QoE prediction for DPCs compressed using the pertinent MPEG tools. We present the models and their prediction results, noting that the fine-tuned ITU-T P.1203 models exhibit good correlation with the subjective ratings. The dataset is available at <uri>https://ftp.itec.aau.at/datasets/ComPEQ-MR/</uri> and the code for its analysis is available at <uri>https://github.com/shivivats/PointCloudDataAnalysis</uri>",
+  "category": "multimodal",
+  "domain": "multimedia / virtual reality",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "quality_prediction",
+    "regression",
+    "saliency_prediction",
+    "visual_attention_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation-based metrics (Spearman / Pearson) and RMSE",
+  "general_score_metric": "Spearman rank correlation coefficient (SRCC)",
+  "typical_sota_score": "0.6–0.8",
+  "year_of_publish": 2025,
+  "reputation": "A specialized research dataset for QoE and visual attention in 6DoF dynamic point clouds, cited in volumetric video and VR QoE work but niche in broader ML.",
+  "notes": "Small set of source contents (4 raw DPCs with compressed variants) and 41 participants; useful for QoE/saliency research but limited diversity and susceptible to overfitting; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Shivi Vats",
+      "Minh Nguyen",
+      "Christian Timmerer",
+      "Hermann Hellwagner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

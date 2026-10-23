@@ -1,0 +1,42 @@
+{
+  "name": "RM-Bench Code",
+  "description": "The code domain split of RM-Bench (THU-KEG), evaluating reward models on their ability to discriminate subtle quality differences in code responses and resist stylistic manipulations. Tests whether code-oriented reward models reward correctness and clarity vs. superficial style properties like verbosity and formatting.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "pairwise_comparison"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 228,
+  "evaluation_method": "reward model accuracy on subtle preference pairs for code responses; robustness to style perturbations",
+  "general_score_metric": "reward model accuracy on subtle code preference pairs",
+  "typical_sota_score": "~60–75% accuracy on subtle quality pairs for code domain",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "ICLR 2025 Oral; part of THU-KEG/RM-Bench; reveals reward hacking patterns in code-oriented RMs; used to evaluate alignment of code reward models with actual code quality",
+  "notes": "ICLR 2025 Oral. Code split of RM-Bench (THU-KEG/RM-Bench, arXiv:2410.16184). 228 instances. Each sample includes a coding prompt plus 3 chosen responses (concise, detailed plain, detailed markdown) and 3 rejected responses varying in style. Reveals whether code RMs can distinguish functionally correct concise code from verbose but incorrect solutions. Full benchmark: 1,381 total instances across chat (183), code (228), math (529), safety (441).",
+  "creators": {
+    "scientists": [
+      "Weiwen Xu",
+      "Deng Cai",
+      "Ruifeng Yuan",
+      "Shuang Xu",
+      "Zhongwei Wan",
+      "Wei Wang",
+      "Wenhu Chen"
+    ],
+    "institutions": [
+      "Tsinghua University (KEG — Knowledge Engineering Group)",
+      "University of Waterloo"
+    ],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2410.16184",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

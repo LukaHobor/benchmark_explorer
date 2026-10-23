@@ -1,0 +1,33 @@
+{
+  "name": "Deep Imputation Benchmark for Time Series Health Data",
+  "description": "The imputation of missing values in multivariate time series (MTS) data is critical in ensuring data quality and producing reliable data-driven predictive models. Apart from many statistical approaches, a few recent studies have proposed state-of-the-art deep learning methods to impute missing values in MTS data. However, the evaluation of these deep methods is limited to one or two data sets, low missing rates, and completely random missing value types. This survey performs six data-centric experiments to benchmark state-of-the-art deep imputation methods on five time series health data sets. Our extensive analysis reveals that no single imputation method outperforms the others on all five data sets. The imputation performance depends on data types, individual variable statistics, missing value rates, and types. Deep learning methods that jointly perform cross-sectional (across variables) and longitudinal (across time) imputations of missing values in time series data yield statistically better data quality than traditional imputation methods. Although computationally expensive, deep learning methods are practical given the current availability of high-performance computing resources, especially when data quality and sample size are highly important in healthcare informatics. Our findings highlight the importance of data-centric selection of imputation methods to optimize data-driven predictive models.",
+  "category": "mixed",
+  "domain": "health / medical time series",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "imputation",
+    "time_series_forecasting",
+    "data_quality_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE/RMSE",
+  "general_score_metric": "MAE",
+  "year_of_publish": 2023,
+  "reputation": "A well-regarded, research-oriented benchmark for evaluating deep imputation methods on clinical time series; cited in the ML-for-health community but not a broad-production benchmark.",
+  "notes": "Non-LLM benchmark; results depend strongly on missingness patterns and dataset-specific statistics; potential contamination risk if temporal ordering or train/test splits are not strictly enforced; datasets can be small and heterogenous across clinical settings.",
+  "creators": {
+    "scientists": [
+      "Maksims Kazijevs",
+      "Manar D. Samad"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2302.10902",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

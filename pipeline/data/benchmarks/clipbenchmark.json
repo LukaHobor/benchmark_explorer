@@ -1,0 +1,39 @@
+{
+  "name": "CLIP-benchmark",
+  "description": "Contrastive Language-Image Pretraining (CLIP) has emerged as a novel paradigm to learn visual models from language supervision. While researchers continue to push the frontier of CLIP, reproducing these works remains challenging. This is because researchers do not choose consistent training recipes and even use different data, hampering the fair comparison between different methods. In this work, we propose CLIP-benchmark, a first attempt to evaluate, analyze, and benchmark CLIP and its variants. We conduct a comprehensive analysis of three key factors: data, supervision, and model architecture. We find considerable intuitive or counter-intuitive insights: (1). Data quality has a significant impact on performance. (2). Certain supervision has different effects for Convolutional Networks (ConvNets) and Vision Transformers (ViT). Applying more proper supervision can effectively improve the performance of CLIP. (3). Curtailing the text encoder reduces the training cost but not much affect the final performance. Moreover, we further combine DeCLIP with FILIP, bringing us the strongest variant DeFILIP. The CLIP-benchmark would be released at: https://github.com/Sense-GVT/DeCLIP for future CLIP research.",
+  "category": "multimodal",
+  "domain": "vision / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "zero_shot_image_classification",
+    "image_text_retrieval",
+    "representation_learning",
+    "linear_probe_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "top-1/top-5 accuracy (zero-shot/linear probe) and Recall@k for retrieval",
+  "general_score_metric": "top-1 accuracy (zero-shot) and Recall@k for retrieval tasks",
+  "typical_sota_score": "60–80% (top-1 zero-shot on common classification splits; retrieval Recall@1 varies widely)",
+  "year_of_publish": 2022,
+  "reputation": "A focused research benchmark used to compare CLIP variants and training recipes; moderate adoption within the vision/multimodal research community.",
+  "notes": "Non-LLM multimodal benchmark; results highly sensitive to training data and recipe (contamination and data variability risk); evaluates multiple tasks/metrics so scores are task-dependent.",
+  "creators": {
+    "scientists": [
+      "Yufeng Cui",
+      "Lichen Zhao",
+      "Feng Liang",
+      "Yangguang Li",
+      "Jing Shao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2203.05796",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Self-Supervised Medical Imaging Benchmark",
+  "description": "Self-supervised learning (SSL) has emerged as a promising paradigm in medical imaging, addressing the chronic challenge of limited labeled data in healthcare settings. While SSL has shown impressive results, existing studies in the medical domain are often limited in scope, focusing on specific datasets or modalities, or evaluating only isolated aspects of model performance. This fragmented evaluation approach poses a significant challenge, as models deployed in critical medical settings must not only achieve high accuracy but also demonstrate robust performance and generalizability across diverse datasets and varying conditions. To address this gap, we present a comprehensive evaluation of SSL methods within the medical domain, with a particular focus on robustness and generalizability. Using the MedMNIST dataset collection as a standardized benchmark, we evaluate 8 major SSL methods across 11 different medical datasets. Our study provides an in-depth analysis of model performance in both in-domain scenarios and the detection of out-of-distribution (OOD) samples, while exploring the effect of various initialization strategies, model architectures, and multi-domain pre-training. We further assess the generalizability of SSL methods through cross-dataset evaluations and the in-domain performance with varying label proportions (1%, 10%, and 100%) to simulate real-world scenarios with limited supervision. We hope this comprehensive benchmark helps practitioners and researchers make more informed decisions when applying SSL methods to medical applications.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "out_of_distribution_detection",
+    "representation_learning",
+    "transfer_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "80–95%",
+  "year_of_publish": 2024,
+  "reputation": "A comprehensive and timely evaluation of self-supervised methods on medical imaging built on the popular MedMNIST collection; gaining attention in medical-ML research but not yet a broad community standard.",
+  "notes": "Built on MedMNIST (small, low-resolution medical image subsets) — limited clinical realism and risk of saturation on simple tasks; contains non-LLM medical imaging benchmarks and includes OOD detection metrics (AUROC) in addition to accuracy.",
+  "creators": {
+    "scientists": [
+      "Valay Bundele",
+      "Oğuz Ata Çal",
+      "Bora Kargi",
+      "Karahan Sarıtaş",
+      "Kıvanç Tezören",
+      "Zohreh Ghaderi",
+      "Hendrik Lensch"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2412.19124",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

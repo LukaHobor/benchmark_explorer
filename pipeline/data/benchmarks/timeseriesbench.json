@@ -1,0 +1,38 @@
+{
+  "name": "TimeSeriesBench",
+  "description": "Time series anomaly detection (TSAD) has gained significant attention due to its real-world applications to improve the stability of modern software systems. However, there is no effective way to verify whether they can meet the requirements for real-world deployment. Firstly, current algorithms typically train a specific model for each time series. Maintaining such many models is impractical in a large-scale system with tens of thousands of curves. The performance of using merely one unified model to detect anomalies remains unknown. Secondly, most TSAD models are trained on the historical part of a time series and are tested on its future segment. In distributed systems, however, there are frequent system deployments and upgrades, with new, previously unseen time series emerging daily. The performance of testing newly incoming unseen time series on current TSAD algorithms remains unknown. Lastly, the assumptions of the evaluation metrics in existing benchmarks are far from practical",
+  "category": "text",
+  "domain": "time series",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "forecasting",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "70–95% (F1)",
+  "year_of_publish": 2024,
+  "reputation": "A recent research benchmark for practical time-series anomaly detection, but not yet widely adopted as a standard community benchmark.",
+  "notes": "Focuses on realistic TSAD settings such as unified models and unseen time series; benchmark assumptions and metrics are noted as less practical than real deployment.",
+  "creators": {
+    "scientists": [
+      "Haotian Si",
+      "Jianhui Li",
+      "Changhua Pei",
+      "Hang Cui",
+      "Jingwen Yang",
+      "Yongqian Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2402.10802",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

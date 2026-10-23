@@ -1,0 +1,36 @@
+{
+  "name": "SALICON",
+  "description": "Saliency in Context (SALICON) is an ongoing effort that aims at understanding and predicting visual attention. Conventional saliency models typically rely on low-level image statistics to predict human fixations. While these models perform significantly better than chance, there is still a large gap between model prediction and human behavior. This gap is largely due to the limited capability of models in predicting eye fixations with strong semantic content, the so-called semantic gap. This paper presents a focused study to narrow the semantic gap with an architecture based on Deep Neural Network (DNN). It leverages the representational power of high-level semantics encoded in DNNs pretrained for object recognition. Two key components are fine-tuning the DNNs fully convolutionally with an objective function based on the saliency evaluation metrics, and integrating information at different image scales. We compare our method with 14 saliency models on 6 public eye tracking benchmark datasets. Results demonstrate that our DNNs can automatically learn features particularly for saliency prediction that surpass by a big margin the state-of-the-art. In addition, our model ranks top to date under all seven metrics on the MIT300 challenge set.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "saliency_prediction",
+    "fixation_prediction",
+    "pixelwise_regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUC / NSS / CC / SIM / KL-divergence (multiple saliency metrics)",
+  "general_score_metric": "AUC (Area Under ROC) (commonly reported; complemented by NSS/CC/SIM/KL)",
+  "typical_sota_score": "0.85–0.93 (AUC range for top models on MIT300/SALICON-era challenges)",
+  "year_of_publish": 2015,
+  "reputation": "600 citations",
+  "notes": "Vision (non-LLM) benchmark; evaluated with multiple, sometimes complementary metrics which can saturate; moderate dataset size; comparisons should report several metrics (AUC, NSS, CC, SIM, KL) rather than a single number.",
+  "creators": {
+    "scientists": [
+      "Xun Huang",
+      "Chengyao Shen",
+      "Xavier Boix",
+      "Qi Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/iccv.2015.38",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

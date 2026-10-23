@@ -1,0 +1,36 @@
+{
+  "name": "3D U-shaped thoracic segmentation benchmark",
+  "description": "Recent rising interests in patient-specific thoracic surgical planning and simulation require efficient and robust creation of digital anatomical models from automatic medical image segmentation algorithms. Deep learning (DL) is now state-of-the-art in various radiological tasks, and U-shaped DL models have particularly excelled in medical image segmentation since the inception of the 2D UNet. To date, many variants of U-shaped models have been proposed by the integration of different attention mechanisms and network configurations. Systematic benchmark studies which analyze the architecture of these models by leveraging the recent development of the multi-label databases, can provide valuable insights for clinical deployment and future model designs, but such studies are still rare. We conduct the first systematic benchmark study for variants of 3D U-shaped models (3DUNet, STUNet, AttentionUNet, SwinUNETR, FocalSegNet, and a novel 3D SwinUnet with four variants) with a focus on CT-based anatomical segmentation for thoracic surgery. Our study systematically examines the impact of different attention mechanisms, the number of resolution stages, and network configurations on segmentation accuracy and computational complexity. To allow cross-reference with other recent benchmarking studies, we also included a performance assessment of the BTCV abdominal structural segmentation. With the STUNet ranking at the top, our study demonstrated the value of CNN-based U-shaped models for the investigated tasks and the benefit of residual blocks in network configuration designs to boost segmentation performance.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3D_semantic_segmentation",
+    "multi_label_segmentation",
+    "medical_image_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice coefficient (mean Dice) as primary; IoU and Hausdorff distance frequently reported as complementary metrics",
+  "general_score_metric": "mean Dice score",
+  "typical_sota_score": "80–95% (mean Dice; varies by organ and task; smaller structures at lower end)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, specialized benchmark (2024) for comparing 3D U-shaped architectures on thoracic CT; useful to researchers in medical image segmentation but not yet widely adopted beyond the paper's community.",
+  "notes": "Non-LLM benchmark; class imbalance and small-structure sensitivity can make Dice unstable; 3D models are compute- and memory-intensive; dataset size and domain (single-modality CT) limit generalization; complementary metrics (Hausdorff) important for surgical planning.",
+  "creators": {
+    "scientists": [
+      "Arash Harirpoush",
+      "Amirhossein Rasoulian",
+      "Marta Kersten-Oertel",
+      "Yiming Xiao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2402.03230",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

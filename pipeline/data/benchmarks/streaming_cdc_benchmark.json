@@ -1,0 +1,34 @@
+{
+  "name": "Streaming CDC Benchmark",
+  "description": "Streaming cross document entity coreference (CDC) systems disambiguate mentions of named entities in a scalable manner via incremental clustering. Unlike other approaches for named entity disambiguation (e.g., entity linking), streaming CDC allows for the disambiguation of entities that are unknown at inference time. Thus, it is well-suited for processing streams of data where new entities are frequently introduced. Despite these benefits, this task is currently difficult to study, as existing approaches are either evaluated on datasets that are no longer available, or omit other crucial details needed to ensure fair comparison. In this work, we address this issue by compiling a large benchmark adapted from existing free datasets, and performing a comprehensive evaluation of a number of novel and existing baseline models. We investigate: how to best encode mentions, which clustering algorithms are most effective for grouping mentions, how models transfer to different domains, and how bounding the number of mentions tracked during inference impacts performance. Our results show that the relative performance of neural and feature-based mention encoders varies across different domains, and in most cases the best performance is achieved using a combination of both approaches. We also find that performance is minimally impacted by limiting the number of tracked mentions.",
+  "category": "text",
+  "domain": "NLP / entity resolution",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "entity_coreference",
+    "streaming_coreference_resolution",
+    "incremental_clustering"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "B^3 / MUC / CEAF (coreference clustering metrics), reported as F1",
+  "general_score_metric": "B^3 F1 (primary clustering metric)",
+  "typical_sota_score": "50–75% (B^3 F1, varies by domain)",
+  "reputation": "A recent, targeted benchmark addressing streaming cross-document coreference that fills a gap left by unavailable legacy datasets and is gaining use among coreference researchers.",
+  "notes": "Text benchmark (non-LLM specific); constructed from multiple free datasets so domain composition can vary; performance sensitive to mention detection quality and streaming memory/boundedness settings; reproducibility depends on implementation details of incremental clustering.",
+  "creators": {
+    "scientists": [
+      "Robert L Logan IV",
+      "Andrew McCallum",
+      "Sameer Singh",
+      "Dan Bikel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

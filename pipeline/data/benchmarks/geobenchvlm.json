@@ -1,0 +1,44 @@
+{
+  "name": "GEOBench-VLM",
+  "description": "While numerous recent benchmarks focus on evaluating generic Vision-Language Models (VLMs), they fall short in addressing the unique demands of geospatial applications. Generic VLM benchmarks are not designed to handle the complexities of geospatial data, which is critical for applications such as environmental monitoring, urban planning, and disaster management. Some of the unique challenges in geospatial domain include temporal analysis for changes, counting objects in large quantities, detecting tiny objects, and understanding relationships between entities occurring in Remote Sensing imagery. To address this gap in the geospatial domain, we present GEOBench-VLM, a comprehensive benchmark specifically designed to evaluate VLMs on geospatial tasks, including scene understanding, object counting, localization, fine-grained categorization, and temporal analysis. Our benchmark features over 10,000 manually verified instructions and covers a diverse set of variations in visual conditions, object type, and scale. We evaluate several state-of-the-art VLMs to assess their accuracy within the geospatial context. The results indicate that although existing VLMs demonstrate potential, they face challenges when dealing with geospatial-specific examples, highlighting the room for further improvements. Specifically, the best-performing GPT4o achieves only 40\\% accuracy on MCQs, which is only double the random guess performance. Our benchmark is publicly available at https://github.com/The-AI-Alliance/GEO-Bench-VLM .",
+  "category": "multimodal",
+  "domain": "geospatial / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "visual_question_answering",
+    "counting",
+    "localization",
+    "classification",
+    "temporal_change_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Accuracy for MCQ/VQA; MAE for counting; IoU / localization accuracy for localization tasks",
+  "general_score_metric": "accuracy (for MCQ/VQA); task‑specific metrics for others (MAE, IoU)",
+  "typical_sota_score": "≈40% (reported best MCQ accuracy for top models like GPT‑4o); varies substantially by task",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "New (2024) geospatial VLM benchmark gaining attention for exposing weaknesses of generalist VLMs on remote‑sensing tasks.",
+  "notes": "Domain‑specific (remote sensing) with ~10k verified instructions; potential pretraining contamination unknown; results are not directly comparable to generic VLM benchmarks.",
+  "creators": {
+    "scientists": [
+      "Muhammad Sohail Danish",
+      "Muhammad Akhtar Munir",
+      "Syed Roshaan Ali Shah",
+      "Kartik Kuckreja",
+      "Fahad Shahbaz Khan",
+      "Paolo Fraccaro",
+      "Alexandre Lacoste",
+      "Salman Khan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.19325",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

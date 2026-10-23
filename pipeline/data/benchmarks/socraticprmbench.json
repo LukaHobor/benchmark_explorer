@@ -1,0 +1,42 @@
+{
+  "name": "Socratic-PRMBench",
+  "description": "Process Reward Models (PRMs) are crucial in complex reasoning and problem-solving tasks (e.g., LLM agents with long-horizon decision-making) by verifying the correctness of each intermediate reasoning step. In real-world scenarios, LLMs may apply various reasoning patterns (e.g., decomposition) to solve a problem, potentially suffering from errors under various reasoning patterns. Therefore, PRMs are required to identify errors under various reasoning patterns during the reasoning process. However, existing benchmarks mainly focus on evaluating PRMs with stepwise correctness, ignoring a systematic evaluation of PRMs under various reasoning patterns. To mitigate this gap, we introduce Socratic-PRMBench, a new benchmark to evaluate PRMs systematically under six reasoning patterns, including Transformation, Decomposition, Regather, Deduction, Verification, and Integration. Socratic-PRMBench}comprises 2995 reasoning paths with flaws within the aforementioned six reasoning patterns. Through our experiments on both PRMs and LLMs prompted as critic models, we identify notable deficiencies in existing PRMs. These observations underscore the significant weakness of current PRMs in conducting evaluations on reasoning steps under various reasoning patterns. We hope Socratic-PRMBench can serve as a comprehensive testbed for systematic evaluation of PRMs under diverse reasoning patterns and pave the way for future development of PRMs.",
+  "category": "text",
+  "domain": "AI agents / reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "sequence_classification",
+    "reasoning_critique"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Accuracy / F1 on stepwise correctness detection (often reported per reasoning-pattern), with precision/recall breakdowns",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "50–80% (accuracy; reported PRMs and prompted LLM critics show substantial errors across patterns)",
+  "year_of_publish": 2025,
+  "reputation": "New research benchmark with limited adoption so far, primarily used in PRM and agent-reasoning studies.",
+  "notes": "Moderate-sized (~3k flawed reasoning paths) and pattern-diverse but may not capture all real-world agent behaviours; potential annotation or generation bias and possible overlap with LLM pretraining data.",
+  "creators": {
+    "scientists": [
+      "Xiang Li",
+      "Haiyang Yu",
+      "Xinghua Zhang",
+      "Ziyang Huang",
+      "Shizhu He",
+      "Kang Liu",
+      "Jun Zhao",
+      "Fei Huang",
+      "Yongbin Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://arxiv.org/abs/2505.23474",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

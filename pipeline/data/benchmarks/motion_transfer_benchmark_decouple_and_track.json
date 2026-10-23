@@ -1,0 +1,38 @@
+{
+  "name": "Motion Transfer Benchmark (Decouple and Track)",
+  "description": "The motion transfer task involves transferring motion from a source video to newly generated videos, requiring the model to decouple motion from appearance. Previous diffusion-based methods primarily rely on separate spatial and temporal attention mechanisms within 3D U-Net. In contrast, state-of-the-art video Diffusion Transformers (DiT) models use 3D full attention, which does not explicitly separate temporal and spatial information. Thus, the interaction between spatial and temporal dimensions makes decoupling motion and appearance more challenging for DiT models. In this paper, we propose DeT, a method that adapts DiT models to improve motion transfer ability. Our approach introduces a simple yet effective temporal kernel to smooth DiT features along the temporal dimension, facilitating the decoupling of foreground motion from background appearance. Meanwhile, the temporal kernel effectively captures temporal variations in DiT features, which are closely related to motion. Moreover, we introduce explicit supervision along dense trajectories in the latent feature space to further enhance motion consistency. Additionally, we present MTBench, a general and challenging benchmark for motion transfer. We also introduce a hybrid motion fidelity metric that considers both the global and local motion similarity. Therefore, our work provides a more comprehensive evaluation than previous works. Extensive experiments on MTBench demonstrate that DeT achieves the best trade-off between motion fidelity and edit fidelity.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_generation",
+    "motion_transfer",
+    "conditional_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Hybrid motion fidelity metric (automatic) complemented by human_eval for perceptual/edit fidelity",
+  "general_score_metric": "hybrid motion fidelity",
+  "year_of_publish": 2025,
+  "reputation": "New academic benchmark (MTBench) introduced in 2024 for motion-transfer research; early adoption in video-generation literature.",
+  "notes": "Non-LLM benchmark focused on video models; computationally intensive evaluations and metrics may not fully capture perceptual quality; benchmark emphasizes motion vs. appearance trade-offs.",
+  "creators": {
+    "scientists": [
+      "Qingyu Shi",
+      "Jianzong Wu",
+      "Jinbin Bai",
+      "Jiangning Zhang",
+      "Lu Qi",
+      "Xiangtai Li",
+      "Yunhai Tong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.17350",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

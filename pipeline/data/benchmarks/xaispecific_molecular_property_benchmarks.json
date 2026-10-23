@@ -1,0 +1,35 @@
+{
+  "name": "XAI-specific Molecular Property Benchmarks",
+  "description": "Graph neural networks (GNNs) have received increasing attention because of their expressive power on topological data, but they are still criticized for their lack of interpretability. To interpret GNN models, explainable artificial intelligence (XAI) methods have been developed. However, these methods are limited to qualitative analyses without quantitative assessments from the real-world datasets due to a lack of ground truths. In this study, we have established five XAI-specific molecular property benchmarks, including two synthetic and three experimental datasets. Through the datasets, we quantitatively assessed six XAI methods on four GNN models and made comparisons with seven medicinal chemists of different experience levels. The results demonstrated that XAI methods could deliver reliable and informative answers for medicinal chemists in identifying the key substructures. Moreover, the identified substructures were shown to complement existing classical fingerprints to improve molecular property predictions, and the improvements increased with the growth of training data.",
+  "category": "mixed",
+  "domain": "chemistry / molecular property prediction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "molecular_property_prediction",
+    "explainability",
+    "substructure_localization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC-ROC (property prediction) and F1 / IoU for explanation / substructure localization, supplemented with human evaluation",
+  "general_score_metric": "AUC-ROC (for prediction) and F1 (for explanation localization)",
+  "year_of_publish": 2022,
+  "reputation": "72 citations",
+  "notes": "Domain‑specific (synthetic + experimental) molecular datasets with ground‑truth substructures; non‑LLM benchmark, relatively small and specialized; evaluation mixes predictive performance and explanation fidelity and includes comparisons to human chemists.",
+  "creators": {
+    "scientists": [
+      "Jiahua Rao",
+      "Shuangjia Zheng",
+      "Yutong Lu",
+      "Yuedong Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1016/j.patter.2022.100628",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

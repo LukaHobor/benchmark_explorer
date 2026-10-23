@@ -1,0 +1,37 @@
+{
+  "name": "Dependence Measures Benchmark for Medical Imaging",
+  "description": "Medical imaging cohorts are often confounded by factors such as acquisition devices, hospital sites, patient backgrounds, and many more. As a result, deep learning models tend to learn spurious correlations instead of causally related features, limiting their generalizability to new and unseen data. This problem can be addressed by minimizing dependence measures between intermediate representations of task-related and non-task-related variables. These measures include mutual information, distance correlation, and the performance of adversarial classifiers. Here, we benchmark such dependence measures for the task of preventing shortcut learning. We study a simplified setting using Morpho-MNIST and a medical imaging task with CheXpert chest radiographs. Our results provide insights into how to mitigate confounding factors in medical imaging.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "representation_learning",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC",
+  "general_score_metric": "AUC",
+  "year_of_publish": 2024,
+  "reputation": "A research-oriented benchmark introduced to study confounding and shortcut learning in medical imaging; currently of interest to robustness and fairness researchers but not yet a broadly adopted clinical benchmark.",
+  "notes": "Non-LLM benchmark focused on image-based models; experiments use Morpho-MNIST and CheXpert subsets (limited scope), so results may not generalize to full clinical populations; potential small-sample and dataset-specific biases.",
+  "creators": {
+    "scientists": [
+      "Sarah Müller",
+      "Louisa Fay",
+      "Lisa M. Koch",
+      "Sergios Gatidis",
+      "Thomas Küstner",
+      "Philipp Berens"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.18792",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

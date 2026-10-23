@@ -1,0 +1,39 @@
+{
+  "name": "RiskBench",
+  "description": "Intelligent driving systems aim to achieve a zero-collision mobility experience, requiring interdisciplinary efforts to enhance safety performance. This work focuses on risk identification, the process of identifying and analyzing risks stemming from dynamic traffic participants and unexpected events. While significant advances have been made in the community, the current evaluation of different risk identification algorithms uses independent datasets, leading to difficulty in direct comparison and hindering collective progress toward safety performance enhancement. To address this limitation, we introduce \\textbf{RiskBench}, a large-scale scenario-based benchmark for risk identification. We design a scenario taxonomy and augmentation pipeline to enable a systematic collection of ground truth risks under diverse scenarios. We assess the ability of ten algorithms to (1) detect and locate risks, (2) anticipate risks, and (3) facilitate decision-making. We conduct extensive experiments and summarize future research on risk identification. Our aim is to encourage collaborative endeavors in achieving a society with zero collisions. We have made our dataset and benchmark toolkit publicly on the project page: https://hcis-lab.github.io/RiskBench/",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "risk_detection",
+    "risk_localization",
+    "risk_prediction",
+    "decision_support"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) and precision/recall for detection; prediction accuracy for anticipation",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2023,
+  "reputation": "A recently introduced, domain-specific benchmark for autonomous driving risk identification with growing interest in the AV safety research community.",
+  "notes": "Non-LLM benchmark focused on vision and temporal prediction; evaluation varies by subtask (detection vs. anticipation). Possible issues include domain shift between simulated/augmented scenarios and real-world data, class imbalance of rare-risk events, and heterogeneous metrics across compared methods.",
+  "creators": {
+    "scientists": [
+      "Chi-Hsi Kung",
+      "Chieh-Chi Yang",
+      "Pang-Yuan Pao",
+      "Shu-Wei Lu",
+      "Pin-Lun Chen",
+      "Hsin-Cheng Lu",
+      "Yi-Ting Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2312.01659",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

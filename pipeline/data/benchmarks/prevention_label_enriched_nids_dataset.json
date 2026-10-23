@@ -1,0 +1,35 @@
+{
+  "name": "Prevention Label Enriched NIDS Dataset",
+  "description": "Cyberattacks on networks remain a critical threat, emphasizing the need for proactive defense mechanisms. Although machine learning–based Intrusion Detection Systems (IDS) have progressed in detecting threats, their effectiveness is limited to the detection stage and rarely extends to preventive recommendations. This limitation stems from the absence of preventive labels in publicly available datasets, leading to reactive models. To address this gap, this study enriches the benchmark IDS dataset, NSL-KDD, with preventive labels. The methodology includes attack pattern analysis, formulation of mitigation labels, cross-validation with the MITRE CAPEC framework, and expert evaluation. Results show that more than 82.5% of the proposed labels align with appropriate preventive actions, while the remaining were considered inconsistent with actual mitigation strategies. These findings highlight the need to balance tactical responses and a strengthened security posture. The main contribution of this study is a ready-to-use enriched dataset that facilitates the development of next-generation AI models capable of not only detecting but also recommending preventive measures, thereby supporting faster incident response and enhancing cybersecurity resilience.",
+  "category": "mixed",
+  "domain": "telecommunications",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "classification",
+    "event_prevention_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (detection F1), detection rate (recall), and false positive rate; may also report precision/recall and ROC-AUC for intrusion detection",
+  "general_score_metric": "F1 (detection F1) / detection rate",
+  "year_of_publish": 2025,
+  "reputation": "Newly published dataset (conference DOI) aimed at the IDS research community; currently limited adoption pending wider release and community validation.",
+  "notes": "Non-LLM benchmark focused on network intrusion detection and prevention; likely to have class imbalance, potential temporal leakage if train/test splits are not careful, and possible synthetic or hand-labeled prevention actions that may not generalize to all operational environments.",
+  "creators": {
+    "scientists": [
+      "Muhammad Iqbal",
+      "Dony Ariyus",
+      "Mohammad Koprawi",
+      "Anggit Ferdita Nugraha"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/icisit66233.2025.11402953",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

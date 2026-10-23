@@ -1,0 +1,37 @@
+{
+  "name": "Monocular 3D Occupancy Rebenchmark",
+  "description": "Inferring the 3D structure from a single image, particularly in occluded regions, remains a fundamental yet unsolved challenge in vision-centric autonomous driving. Existing unsupervised approaches typically train a neural radiance field and treat the network outputs as occupancy probabilities during evaluation, overlooking the inconsistency between training and evaluation protocols. Moreover, the prevalent use of 2D ground truth fails to reveal the inherent ambiguity in occluded regions caused by insufficient geometric constraints. To address these issues, this paper presents a reformulated benchmark for unsupervised monocular 3D occupancy prediction. We first interpret the variables involved in the volume rendering process and identify the most physically consistent representation of the occupancy probability. Building on these analyses, we improve existing evaluation protocols by aligning the newly identified representation with voxel-wise 3D occupancy ground truth, thereby enabling unsupervised methods to be evaluated in a manner consistent with that of supervised approaches. Additionally, to impose explicit constraints in occluded regions, we introduce an occlusion-aware polarization mechanism that incorporates multi-view visual cues to enhance discrimination between occupied and free spaces in these regions. Extensive experiments demonstrate that our approach not only significantly outperforms existing unsupervised approaches but also matches the performance of supervised ones. Our source code and evaluation protocol will be made available upon publication.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "occupancy_estimation",
+    "voxel_prediction",
+    "dense_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "IoU (voxel-wise occupancy IoU) and related voxel accuracy/F1",
+  "general_score_metric": "voxel IoU (occupancy IoU)",
+  "year_of_publish": 2026,
+  "reputation": "New benchmark (recent arXiv work) proposing improved evaluation protocols; not yet widely adopted but relevant to researchers in monocular 3D perception and autonomous driving.",
+  "notes": "Focuses on unsupervised vs supervised evaluation consistency; highlights occlusion ambiguity and the need for voxel-wise 3D ground truth; evaluation depends on voxelization choices and may be sensitive to dataset biases—non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Zizhan Guo",
+      "Yi Feng",
+      "Mengtan Zhang",
+      "Haoran Zhang",
+      "Wei Ye",
+      "Rui Fan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2602.06488",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

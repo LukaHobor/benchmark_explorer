@@ -1,0 +1,32 @@
+{
+  "name": "RNA–RNA interaction prediction benchmark",
+  "description": "RNA-RNA interactions are fast emerging as a major functional component in many newly discovered non-coding RNAs. Basepairing is believed to be a major contributor to the stability of these intermolecular interactions, much like intramolecular basepairs formed in RNA secondary structure. As such, using algorithms similar to those for predicting RNA secondary structure, computational methods have been recently developed for the prediction of RNA-RNA interactions. We provide the first comprehensive comparison comprising 14 methods that predict general intermolecular basepairs. To evaluate these, we compile an extensive data set of 54 experimentally confirmed fungal snoRNA-rRNA interactions and 102 bacterial sRNA-mRNA interactions. We test the performance accuracy of all methods, evaluating the effects of tool settings, sequence length, and multiple sequence alignment usage and quality. Our results show that-unlike for RNA secondary structure prediction--the overall best performing tools are non-comparative energy-based tools utilizing accessibility information that predict short interactions on this data set. Furthermore, we find that maintaining high accuracy across biologically different data sets and increasing input lengths remains a huge challenge, causing implications for de novo transcriptome-wide searches. Finally, we make our interaction data set publicly available for future development and benchmarking efforts.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structured_prediction",
+    "sequence_pair_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 (basepair-level)",
+  "general_score_metric": "F1 score (basepair-level)",
+  "year_of_publish": 2015,
+  "reputation": "68 citations",
+  "notes": "Small, specialized experimentally validated dataset (54 fungal snoRNA–rRNA and 102 bacterial sRNA–mRNA interactions). Non-LLM benchmark focused on bioinformatics; methods evaluated include energy-based accessibility-aware tools. Results vary strongly by input length, species, and alignment quality, so cross-dataset generalization is a known challenge.",
+  "creators": {
+    "scientists": [
+      "Daniel Lai",
+      "Irmtraud M. Meyer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/nar/gkv1477",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

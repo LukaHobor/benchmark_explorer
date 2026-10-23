@@ -1,0 +1,36 @@
+{
+  "name": "Middle-Training Retrieval Benchmark",
+  "description": "Middle training methods aim to bridge the gap between the Masked Language Model (MLM) pre-training and the final finetuning for retrieval. Recent models such as CoCondenser, RetroMAE, and LexMAE argue that the MLM task is not sufficient enough to pre-train a transformer network for retrieval and hence propose various tasks to do so. Intrigued by those novel methods, we noticed that all these models used different finetuning protocols, making it hard to assess the benefits of middle training. We propose in this paper a benchmark of CoCondenser, RetroMAE, and LexMAE, under the same finetuning conditions. We compare both dense and sparse approaches under various finetuning protocols and middle training on different collections (MS MARCO, Wikipedia or Tripclick). We use additional middle training baselines, such as a standard MLM finetuning on the retrieval collection, optionally augmented by a CLS predicting the passage term frequency. For the sparse approach, our study reveals that there is almost no statistical difference between those methods: the more effective the finetuning procedure is, the less difference there is between those models. For the dense approach, RetroMAE using MS MARCO as middle-training collection shows excellent results in almost all the settings. Finally, we show that middle training on the retrieval collection, thus adapting the language model to it, is a critical factor. Overall, a better experimental setup should be adopted to evaluate middle training methods. Code available at https://github.com/naver/splade/tree/benchmarch-SIGIR23",
+  "category": "text",
+  "domain": "information retrieval / neural search",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Recall@k (primary); MRR / nDCG reported as secondary",
+  "general_score_metric": "MRR@10",
+  "typical_sota_score": "35–45%",
+  "year_of_publish": 2023,
+  "reputation": "Adopted in retrieval research focused on middle-training effects to enable fair comparisons between CoCondenser / RetroMAE / LexMAE variants, but not a broadly standardized community benchmark like MS MARCO alone.",
+  "notes": "Results are highly sensitive to finetuning protocol and choice of retrieval collection (MS MARCO, Wikipedia, Tripclick). Benchmark highlights that middle-training gains vary by setup; heterogeneous metrics and dataset sizes make direct comparisons difficult. Not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Hervé Déjean",
+      "Stéphane Clinchant",
+      "Carlos Lassance",
+      "Simon Lupart",
+      "Thibault Formal"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2306.02867",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Seismic Event Relative Location Benchmark",
+  "description": "&amp;lt;p&amp;gt;&amp;quot;Precision seismology'' encompasses a set of methods which use differential measurements of time-delays to estimate the relative locations of earthquakes and explosions.&amp;amp;#160; Delay-times estimated from signal correlations often allow far more accurate estimates of one event location relative to another than is possible using classical hypocenter determination techniques.&amp;amp;#160; Many different algorithms and software implementations have been developed and different assumptions and procedures can often result in significant variability between different relative event location estimates.&amp;amp;#160; We present a Ground Truth (GT) database of 55 military surface explosions in northern Finland in 2007 that all took place within 300 meters of each other.&amp;amp;#160; The explosions were recorded with a high signal-to-noise ratio to distances of about 2 degrees, and the exceptional waveform similarity between the signals from the different explosions allows for accurate correlation-based time-delay measurements.&amp;amp;#160; With exact coordinates for the explosions, we can assess the fidelity of relative location estimates made using any location algorithm or implementation.&amp;amp;#160; Applying double-difference calculations using two different 1-d velocity models for the region results in hypocenter-to-hypocenter distances which are too short and the wavefield leaving the source region is more complicated than predicted by the models.&amp;amp;#160; Using the GT event coordinates, we can measure the slowness vectors associated with each outgoing ray from the source region. We demonstrate that, had such corrections been available, a significant improvement in the relative location estimates would have resulted.&amp;amp;#160; In practice we would of course need to solve for event hypocenters and slowness corrections simultaneously, and significant work will be needed to upgrade relative location algorithms to accommodate uncertainty in the form of the outgoing wavefield.&amp;amp;#160; We present this dataset, together with GT coordinates, raw waveforms for all events on six regional stations, and tables of time-delay measurements, as a reference benchmark by which relative location algorithms and software can be evaluated.&amp;lt;/p&amp;gt;",
+  "category": "mixed",
+  "domain": "geology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "time_series_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_localization_error (meters) / RMSE",
+  "general_score_metric": "mean_localization_error (meters)",
+  "year_of_publish": 2020,
+  "reputation": "A specialized, high-quality ground-truth dataset valued in the seismology community for benchmarking relative-event location algorithms, but with limited use outside that field.",
+  "notes": "Small, domain-specific dataset (55 events) with high SNR recordings; non-LLM benchmark. Results depend heavily on velocity-model assumptions and station geometry, and algorithms may need to model outgoing wavefield uncertainty to reach best performance.",
+  "creators": {
+    "scientists": [
+      "Tormod Kvaerna",
+      "Steven J. Gibbons",
+      "Timo Tiira",
+      "Elena Kozlovskaya"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.5194/egusphere-egu2020-7504",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

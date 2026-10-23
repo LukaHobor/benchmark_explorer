@@ -1,0 +1,37 @@
+{
+  "name": "Real-time Semantic Segmentation MOP Benchmark",
+  "description": "As one of the emerging challenges in Automated Machine Learning, the Hardware-aware Neural Architecture Search (HW-NAS) tasks can be treated as black-box multi-objective optimization problems (MOPs). An important application of HW-NAS is real-time semantic segmentation, which plays a pivotal role in autonomous driving scenarios. The HW-NAS for real-time semantic segmentation inherently needs to balance multiple optimization objectives, including model accuracy, inference speed, and hardware-specific considerations. Despite its importance, benchmarks have yet to be developed to frame such a challenging task as multi-objective optimization. To bridge the gap, we introduce a tailored streamline to transform the task of HW-NAS for real-time semantic segmentation into standard MOPs. Building upon the streamline, we present a benchmark test suite, CitySeg/MOP, comprising fifteen MOPs derived from the Cityscapes dataset. The CitySeg/MOP test suite is integrated into the EvoXBench platform to provide seamless interfaces with various programming languages (e.g., Python and MATLAB) for instant fitness evaluations. We comprehensively assessed the CitySeg/MOP test suite on various multi-objective evolutionary algorithms, showcasing its versatility and practicality. Source codes are available at https://github.com/EMI-Group/evoxbench.",
+  "category": "vision",
+  "domain": "autonomous driving / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_objective_optimization",
+    "semantic_segmentation",
+    "benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "multi-objective performance metrics focused on Pareto-front quality (e.g., hypervolume, Pareto optimality measures)",
+  "general_score_metric": "hypervolume (HV) and other Pareto-front quality metrics",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "A recent benchmark targeting HW-aware NAS for real-time segmentation; of particular interest in NAS and hardware-aware ML communities but not yet widely adopted outside those areas.",
+  "notes": "Non-LLM benchmark; evaluations are hardware- and latency-sensitive and can be compute- and time-intensive. Built on Cityscapes-derived tasks (moderate dataset size); comparisons require careful control of hardware and measurement protocols.",
+  "creators": {
+    "scientists": [
+      "Yifan Zhao",
+      "Zhenyu Liang",
+      "Zhichao Lu",
+      "Ran Cheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.16266",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

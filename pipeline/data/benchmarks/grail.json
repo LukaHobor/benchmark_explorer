@@ -1,0 +1,33 @@
+{
+  "name": "GRAIL",
+  "description": "Graph-based Active Learning (AL) leverages the structure of graphs to efficiently prioritize label queries, reducing labeling costs and user burden in applications like health monitoring, human behavior analysis, and sensor networks. By identifying strategically positioned nodes, graph AL minimizes data collection demands while maintaining model performance, making it a valuable tool for dynamic environments. Despite its potential, existing graph AL methods are often evaluated on static graph datasets and primarily focus on prediction accuracy, neglecting user-centric considerations such as sampling diversity, query fairness, and adaptability to dynamic settings. To bridge this gap, we introduce GRAIL, a novel benchmarking framework designed to evaluate graph AL strategies in dynamic, real-world environments. GRAIL introduces novel metrics to assess sustained effectiveness, diversity, and user burden, enabling a comprehensive evaluation of AL methods under varying conditions. Extensive experiments on datasets featuring dynamic, real-life human sensor data reveal trade-offs between prediction performance and user burden, highlighting limitations in existing AL strategies. GRAIL demonstrates the importance of balancing node importance, query diversity, and network topology, providing an evaluation mechanism for graph AL solutions in dynamic environments.",
+  "category": "mixed",
+  "domain": "sensor networks",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "node_classification",
+    "active_learning",
+    "dynamic_graph_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "predictive accuracy supplemented by user-burden/diversity metrics and sustained-effectiveness measures (often reported as a composite score)",
+  "general_score_metric": "composite score combining node classification accuracy and user-burden/diversity penalties",
+  "year_of_publish": 2025,
+  "reputation": "A recent framework for evaluating graph active learning in dynamic, human-sensor settings; currently of interest to specialized research groups but not yet widely adopted.",
+  "notes": "Non-LLM benchmark focused on dynamic graphs; outcomes depend on streaming assumptions and labeling-cost models; synthetic dynamics or dataset-specific biases can affect transferability.",
+  "creators": {
+    "scientists": [
+      "Maryam Khalid",
+      "Akane Sano"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2506.10120",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

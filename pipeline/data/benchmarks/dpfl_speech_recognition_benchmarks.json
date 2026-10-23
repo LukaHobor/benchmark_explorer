@@ -1,0 +1,38 @@
+{
+  "name": "DP-FL Speech Recognition Benchmarks",
+  "description": "While federated learning (FL) and differential privacy (DP) have been extensively studied, their application to automatic speech recognition (ASR) remains largely unexplored due to the challenges in training large transformer models. Specifically, large models further exacerbate issues in FL as they are particularly susceptible to gradient heterogeneity across layers, unlike the relatively uniform gradient behavior observed in shallow models. As a result, prior works struggle to converge with standard optimization techniques, even in the absence of DP mechanisms. To the best of our knowledge, no existing work establishes a competitive, practical recipe for FL with DP in the context of ASR. To address this gap, we establish \\textbf{the first benchmark for FL with DP in end-to-end ASR}. Our approach centers on per-layer clipping and layer-wise gradient normalization: theoretical analysis reveals that these techniques together mitigate clipping bias and gradient heterogeneity across layers in deeper models. Consistent with these theoretical insights, our empirical results show that FL with DP is viable under strong privacy guarantees, provided a population of at least several million users. Specifically, we achieve user-level (7.2, $10^{-9}$)-DP (resp. (4.5, $10^{-9}$)-DP) with only a 1.3% (resp. 4.6%) absolute drop in word error rate when extrapolating to high (resp. low) population scales for FL with DP in ASR. Although our experiments focus on ASR, the underlying principles we uncover - particularly those concerning gradient heterogeneity and layer-wise gradient normalization - offer broader guidance for designing scalable, privacy-preserving FL algorithms for large models across domains.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "automatic_speech_recognition",
+    "federated_learning",
+    "privacy_preserving_training"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "word_error_rate",
+  "general_score_metric": "word_error_rate",
+  "year_of_publish": 2023,
+  "reputation": "New and specialized research benchmark (2023) for studying ASR under federated learning with differential privacy; important for privacy-preserving ASR but not yet widely adopted in production settings.",
+  "notes": "Results rely on extrapolation to very large user populations; requires substantial compute to reproduce; sensitive to privacy parameter settings and population assumptions; non-LLM benchmark focused on ASR under FL+DP.",
+  "creators": {
+    "scientists": [
+      "Martin Pelikan",
+      "Sheikh Shams Azam",
+      "Vitaly Feldman",
+      "Jan \"Honza\" Silovsky",
+      "Kunal Talwar",
+      "Christopher G. Brinton",
+      "Tatiana Likhomanenko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2310.00098",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

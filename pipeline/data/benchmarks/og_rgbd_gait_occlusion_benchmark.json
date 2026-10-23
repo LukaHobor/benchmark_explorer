@@ -1,0 +1,33 @@
+{
+  "name": "OG RGB+D (Gait occlusion benchmark)",
+  "description": "Human gait is one of important biometric characteristics for human identification at a distance. In practice, occlusion usually occurs and seriously affects accuracy of gait recognition. However, there is no available database to support in-depth research of this problem, and state-of-arts gait recognition methods have not paid enough attention to it, thus this paper focuses on gait recognition under occlusion. We collect a new gait recognition database called OG RGB+D database, which breaks through the limitation of other gait databases and includes multimodal gait data of various occlusions (self-occlusion, active occlusion, and passive occlusion) by our multiple synchronous Azure Kinect DK sensors data acquisition system (multi-Kinect SDAS) that can be also applied in security situations. Because Azure Kinect DK can simultaneously collect multimodal data to support different types of gait recognition algorithms, especially enables us to effectively obtain camera-centric multi-person 3D poses, and multi-view is better to deal with occlusion than single-view. In particular, the OG RGB+D database provides accurate silhouettes and the optimized human 3D joints data (OJ) by fusing data collected by multi-Kinects which are more accurate in human pose representation under occlusion. We also use the OJ data to train an advanced 3D multi-person pose estimation model to improve its accuracy of pose estimation under occlusion for universality. Besides, as human pose is less sensitive to occlusion than human appearance, we propose a novel gait recognition method SkeletonGait based on human dual skeleton model using a framework of siamese spatio-temporal graph convolutional networks (siamese ST-GCN). The evaluation results demonstrate that SkeletonGait has competitive performance compared with state-of-art gait recognition methods on OG RGB+D database and popular CAISA-B database.",
+  "category": "multimodal",
+  "domain": "biometrics / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "identification",
+    "pose_estimation",
+    "silhouette_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "rank-1 accuracy",
+  "year_of_publish": 2021,
+  "reputation": "A specialized gait-occlusion dataset referenced in the gait-recognition community for occlusion research but not widely used outside that niche.",
+  "notes": "Multimodal (RGB, depth, silhouettes, 3D joints); specifically designed for occlusion scenarios. Non-LLM benchmark; potentially limited dataset scale and risk of overfitting to occlusion types present.",
+  "creators": {
+    "scientists": [
+      "Na Li",
+      "Xinbo Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2107.08990",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

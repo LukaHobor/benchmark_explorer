@@ -1,0 +1,40 @@
+{
+  "name": "PETA",
+  "description": "Protein language models (PLMs) play a dominant role in protein representation learning. Most existing PLMs regard proteins as sequences of 20 natural amino acids. The problem with this representation method is that it simply divides the protein sequence into sequences of individual amino acids, ignoring the fact that certain residues often occur together. Therefore, it is inappropriate to view amino acids as isolated tokens. Instead, the PLMs should recognize the frequently occurring combinations of amino acids as a single token. In this study, we use the byte-pair-encoding algorithm and unigram to construct advanced residue vocabularies for protein sequence tokenization, and we have shown that PLMs pre-trained using these advanced vocabularies exhibit superior performance on downstream tasks when compared to those trained with simple vocabularies. Furthermore, we introduce PETA, a comprehensive benchmark for systematically evaluating PLMs. We find that vocabularies comprising 50 and 200 elements achieve optimal performance. Our code, model weights, and datasets are available at https://github.com/ginnm/ProteinPretraining . SCIENTIFIC CONTRIBUTION: This study introduces advanced protein sequence tokenization analysis, leveraging the byte-pair-encoding algorithm and unigram. By recognizing frequently occurring combinations of amino acids as single tokens, our proposed method enhances the performance of PLMs on downstream tasks. Additionally, we present PETA, a new comprehensive benchmark for the systematic evaluation of PLMs, demonstrating that vocabularies of 50 and 200 elements offer optimal performance.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "protein_tokenization",
+    "representation_learning",
+    "sequence_classification",
+    "structure_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (accuracy/F1 for classification, ROC-AUC for binary tasks, Spearman/Pearson or RMSE for regression tasks such as stability or binding)",
+  "general_score_metric": "task-specific (e.g., accuracy, AUC, Spearman correlation)",
+  "typical_sota_score": "varies by task; often in the range 60–95% depending on downstream evaluation",
+  "year_of_publish": 2024,
+  "reputation": "15 citations",
+  "notes": "Non-LLM bioinformatics benchmark focused on tokenization and downstream PLM evaluation. Results sensitive to vocabulary size/choice (authors highlight 50 and 200 tokens as strong choices); risk of pretraining/data contamination if large public protein databases overlap with downstream test sets.",
+  "creators": {
+    "scientists": [
+      "Yang Tan",
+      "Mingchen Li",
+      "Ziyi Zhou",
+      "Pan Tan",
+      "Huiqun Yu",
+      "Guisheng Fan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1186/s13321-024-00884-3",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "PPG-BP Benchmark",
+  "description": "Photoplethysmography (PPG)-based blood pressure (BP) estimation represents a promising alternative to cuff-based BP measurements. Recently, an increasing number of deep learning models have been proposed to infer BP from the raw PPG waveform. However, these models have been predominantly evaluated on in-distribution test sets, which immediately raises the question of the generalizability of these models to external datasets. To investigate this question, we trained five deep learning models on the recently released PulseDB dataset, provided in-distribution benchmarking results on this dataset, and then assessed out-of-distribution performance on several external datasets. The best model (XResNet1d101) achieved in-distribution MAEs of 9.4 and 6.0 mmHg for systolic and diastolic BP respectively on PulseDB (with subject-specific calibration), and 14.0 and 8.5 mmHg respectively without calibration. Equivalent MAEs on external test datasets without calibration ranged from 15.0 to 25.1 mmHg (SBP) and 7.0 to 10.4 mmHg (DBP). Our results indicate that the performance is strongly influenced by the differences in BP distributions between datasets. We investigated a simple way of improving performance through sample-based domain adaptation and put forward recommendations for training models with good generalization properties. With this work, we hope to educate more researchers for the importance and challenges of out-of-distribution generalization.",
+  "category": "audio",
+  "domain": "medical/physiological monitoring",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_absolute_error (MAE) in mmHg",
+  "general_score_metric": "Mean Absolute Error (MAE) in mmHg for SBP and DBP",
+  "typical_sota_score": "SBP MAE ~9–25 mmHg; DBP MAE ~6–10 mmHg (ranges depend on calibration and dataset)",
+  "year_of_publish": 2025,
+  "reputation": "Recognized within the biomedical-signal community studying cuffless BP estimation; cited for highlighting out-of-distribution generalization challenges but not a clinical standard.",
+  "notes": "Non-LLM physiological-signal benchmark; strong dataset shift / OOD sensitivity; performance often requires subject-specific calibration; results currently far from clinical-grade accuracy.",
+  "creators": {
+    "scientists": [
+      "Mohammad Moulaeifard",
+      "Peter H. Charlton",
+      "Nils Strodthoff"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2502.19167",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

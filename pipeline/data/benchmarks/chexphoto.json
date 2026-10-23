@@ -1,0 +1,45 @@
+{
+  "name": "CheXphoto",
+  "description": "Clinical deployment of deep learning algorithms for chest x-ray interpretation requires a solution that can integrate into the vast spectrum of clinical workflows across the world. An appealing approach to scaled deployment is to leverage the ubiquity of smartphones by capturing photos of x-rays to share with clinicians using messaging services like WhatsApp. However, the application of chest x-ray algorithms to photos of chest x-rays requires reliable classification in the presence of artifacts not typically encountered in digital x-rays used to train machine learning models. We introduce CheXphoto, a dataset of smartphone photos and synthetic photographic transformations of chest x-rays sampled from the CheXpert dataset. To generate CheXphoto we (1) automatically and manually captured photos of digital x-rays under different settings, and (2) generated synthetic transformations of digital x-rays targeted to make them look like photos of digital x-rays and x-ray films. We release this dataset as a resource for testing and improving the robustness of deep learning algorithms for automated chest x-ray interpretation on smartphone photos of chest x-rays.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "multi_label_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC (area under the ROC curve) per finding; also report accuracy and calibration metrics in some experiments",
+  "general_score_metric": "AUROC (per-label)",
+  "typical_sota_score": "AUROC typically ~0.70–0.95 depending on finding and model robustness",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded as a robustness test set for chest x-ray models (smartphone-photo domain), used in medical imaging robustness research.",
+  "notes": "Non-LLM medical imaging benchmark; derived from CheXpert so risk of contamination if models were trained on CheXpert. Limited number of real smartphone photos and class imbalance; labels inherit limitations of original CheXpert labels.",
+  "creators": {
+    "scientists": [
+      "Nick A. Phillips",
+      "Pranav Rajpurkar",
+      "Mark Sabini",
+      "Rayan Krishnan",
+      "Sharon Zhou",
+      "Anuj Pareek",
+      "Nguyet Minh Phu",
+      "Chris Wang",
+      "Mudit Jain",
+      "Nguyen Duong Du",
+      "Steven QH Truong",
+      "Andrew Y. Ng",
+      "Matthew P. Lungren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2007.06199",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

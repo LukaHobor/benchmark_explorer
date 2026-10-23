@@ -1,0 +1,37 @@
+{
+  "name": "EBES",
+  "description": "Event sequences, characterized by irregular sampling intervals and a mix of categorical and numerical features, are common data structures in various real-world domains such as healthcare, finance, and user interaction logs. Despite advances in temporal data modeling techniques, there is no standardized benchmarks for evaluating their performance on event sequences. This complicates result comparison across different papers due to varying evaluation protocols, potentially misleading progress in this field. We introduce EBES, a comprehensive benchmarking tool with standardized evaluation scenarios and protocols, focusing on regression and classification problems with sequence-level targets. Our library simplifies benchmarking, dataset addition, and method integration through a unified interface. It includes a novel synthetic dataset and provides preprocessed real-world datasets, including the largest publicly available banking dataset. Our results provide an in-depth analysis of datasets, identifying some as unsuitable for model comparison. We investigate the importance of modeling temporal and sequential components, as well as the robustness and scaling properties of the models. These findings highlight potential directions for future research. Our benchmark aim is to facilitate reproducible research, expediting progress and increasing real-world impacts.",
+  "category": "mixed",
+  "domain": "time-series / event sequences",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "classification",
+    "time_series_forecasting"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC / RMSE (task-dependent; classification uses AUROC/AUC, regression uses RMSE/MSE)",
+  "general_score_metric": "AUROC / RMSE",
+  "year_of_publish": 2024,
+  "reputation": "A recently proposed, domain-focused benchmark for irregular event-sequence modeling with limited adoption so far but useful for standardized comparisons.",
+  "notes": "Non-LLM benchmark focused on event-sequence models; includes synthetic and real datasets (including a large banking dataset); authors note some datasets are unsuitable for comparison, so dataset-specific caveats apply.",
+  "creators": {
+    "scientists": [
+      "Dmitry Osin",
+      "Igor Udovichenko",
+      "Viktor Moskvoretskii",
+      "Egor Shvetsov",
+      "Evgeny Burnaev"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2410.03399",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

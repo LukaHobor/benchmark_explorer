@@ -1,0 +1,39 @@
+{
+  "name": "MerRec",
+  "description": "In the evolving e-commerce field, recommendation systems crucially shape user experience and engagement. The rise of Consumer-to-Consumer (C2C) recommendation systems, noted for their flexibility and ease of access for customer vendors, marks a significant trend. However, the academic focus remains largely on Business-to-Consumer (B2C) models, leaving a gap filled by the limited C2C recommendation datasets that lack in item attributes, user diversity, and scale. The intricacy of C2C recommendation systems is further accentuated by the dual roles users assume as both sellers and buyers, introducing a spectrum of less uniform and varied inputs. Addressing this, we introduce MerRec, the first large-scale dataset specifically for C2C recommendations, sourced from the Mercari e-commerce platform, covering millions of users and products over 6 months in 2023. MerRec not only includes standard features such as user_id, item_id, and session_id, but also unique elements like timestamped action types, product taxonomy, and textual product attributes, offering a comprehensive dataset for research. This dataset, extensively evaluated across four recommendation tasks, establishes a new benchmark for the development of advanced recommendation algorithms in real-world scenarios, bridging the gap between academia and industry and propelling the study of C2C recommendations. Our experiment code is available at https://github.com/mercari/mercari-ml-merrec-pub-us and dataset at https://huggingface.co/datasets/mercari-us/merrec.",
+  "category": "mixed",
+  "domain": "e-commerce / recommender systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "next_item_prediction",
+    "top_n_ranking",
+    "session_based_recommendation",
+    "rating_prediction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Hit Rate (HR@k) / NDCG@k / AUC (depending on task)",
+  "general_score_metric": "NDCG@10",
+  "year_of_publish": 2024,
+  "reputation": "A large-scale, industry-sourced C2C recommendation dataset from Mercari that is gaining attention as a realistic benchmark for C2C recommender research.",
+  "notes": "Dataset reflects real Mercari marketplace distribution: has temporal dynamics, class imbalance, and domain-specific taxonomy; potential privacy and bias concerns. Results depend on chosen task and metric (ranking vs. CTR vs. session tasks). Not an LLM-specific benchmark.",
+  "creators": {
+    "scientists": [
+      "Lichi Li",
+      "Zainul Abi Din",
+      "Zhen Tan",
+      "Sam London",
+      "Tianlong Chen",
+      "Ajay Daptardar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2402.14230",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

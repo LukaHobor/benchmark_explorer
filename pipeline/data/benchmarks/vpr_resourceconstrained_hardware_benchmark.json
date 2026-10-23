@@ -1,0 +1,38 @@
+{
+  "name": "VPR Resource-Constrained Hardware Benchmark",
+  "description": "Visual Place Recognition (VPR) has been a subject of significant research over the last 15 to 20 years. VPR is a fundamental task for autonomous navigation as it enables self-localization within an environment. Although robots are often equipped with resource-constrained hardware, the computational requirements of and effects on VPR techniques have received little attention. In this work, we present a hardware-focused benchmark evaluation of a number of state-of-the-art VPR techniques on public datasets. We consider popular single board computers, including ODroid, UP and Raspberry Pi 3, in addition to a commodity desktop and laptop for reference. We present our analysis based on several key metrics, including place-matching accuracy, image encoding time, descriptor matching time and memory needs. Key questions addressed include: (1) How does the performance accuracy of a VPR technique change with processor architecture? (2) How does power consumption vary for different VPR techniques and embedded platforms? (3) How much does descriptor size matter in comparison to today's embedded platforms' storage? (4) How does the performance of a high-end platform relate to an on-board low-end embedded platform for VPR? The extensive analysis and results in this work serve not only as a benchmark for the VPR community, but also provide useful insights for real-world adoption of VPR applications.",
+  "category": "vision",
+  "domain": "robotics / autonomous navigation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_place_recognition",
+    "image_retrieval",
+    "runtime_power_memory_benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "place-matching accuracy (reported alongside runtime, power consumption, descriptor size and memory usage)",
+  "general_score_metric": "place-matching accuracy (primary), with latency/power/memory as secondary performance metrics",
+  "typical_sota_score": "varies widely by dataset and platform (approximately 50–95% place-matching accuracy depending on scene and method)",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded within the VPR and robotics community for highlighting the impact of resource-constrained hardware on place recognition performance and efficiency.",
+  "notes": "Non-LLM benchmark; hardware- and dataset-specific results (single-board computers vs desktop) — emphasizes runtime, power and memory tradeoffs; results sensitive to dataset choice and descriptor size.",
+  "creators": {
+    "scientists": [
+      "Rose Power",
+      "Mubariz Zaffar",
+      "Bruno Ferrarini",
+      "Michael Milford",
+      "Klaus McDonald-Maier",
+      "Shoaib Ehsan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2109.11002",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

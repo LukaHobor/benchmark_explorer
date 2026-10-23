@@ -1,0 +1,36 @@
+{
+  "name": "ArFake",
+  "description": "With the rise of generative text-to-speech models, distinguishing between real and synthetic speech has become challenging, especially for Arabic that have received limited research attention. Most spoof detection efforts have focused on English, leaving a significant gap for Arabic and its many dialects. In this work, we introduce the first multi-dialect Arabic spoofed speech dataset. To evaluate the difficulty of the synthesized audio from each model and determine which produces the most challenging samples, we aimed to guide the construction of our final dataset either by merging audios from multiple models or by selecting the best-performing model, we conducted an evaluation pipeline that included training classifiers using two approaches: modern embedding-based methods combined with classifier heads; classical machine learning algorithms applied to MFCC features; and the RawNet2 architecture. The pipeline further incorporated the calculation of Mean Opinion Score based on human ratings, as well as processing both original and synthesized datasets through an Automatic Speech Recognition model to measure the Word Error Rate. Our results demonstrate that FishSpeech outperforms other TTS models in Arabic voice cloning on the Casablanca corpus, producing more realistic and challenging synthetic speech samples. However, relying on a single TTS for dataset creation may limit generalizability.",
+  "category": "audio",
+  "domain": "speech / computational linguistics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "audio_spoof_detection",
+    "speaker_authenticity_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / AUC / equal_error_rate (EER); also human_eval (MOS) and WER for downstream ASR impact",
+  "general_score_metric": "EER (equal error rate) and AUC for detection; MOS for perceptual realism",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Multi‑dialect Arabic focus but potential limited generalizability if dataset relies heavily on a single TTS model; contains both synthetic and bona fide speech, risk of dataset bias toward specific TTS artifacts; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Mohamed Maged",
+      "Alhassan Ehab",
+      "Ali Mekky",
+      "Besher Hassan",
+      "Shady Shehata"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2509.22808",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

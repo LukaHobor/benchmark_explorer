@@ -1,0 +1,35 @@
+{
+  "name": "Surveillance Face Recognition Challenge",
+  "description": "Face recognition (FR) is one of the most extensively investigated problems in\ncomputer vision. Significant progress in FR has been made due to the recent\nintroduction of the larger scale FR challenges, particularly with constrained\nsocial media web images, e.g. high-resolution photos of celebrity faces taken\nby professional photo-journalists. However, the more challenging FR in\nunconstrained and low-resolution surveillance images remains largely\nunder-studied. To facilitate more studies on developing FR models that are\neffective and robust for low-resolution surveillance facial images, we\nintroduce a new Surveillance Face Recognition Challenge, which we call the\nQMUL-SurvFace benchmark. This new benchmark is the largest and more importantly\nthe only true surveillance FR benchmark to our best knowledge, where\nlow-resolution images are not synthesised by artificial down-sampling of native\nhigh-resolution images. This challenge contains 463,507 face images of 15,573\ndistinct identities captured in real-world uncooperative surveillance scenes\nover wide space and time. As a consequence, it presents an extremely\nchallenging FR benchmark. We benchmark the FR performance on this challenge\nusing five representative deep learning face recognition models, in comparison\nto existing benchmarks. We show that the current state of the arts are still\nfar from being satisfactory to tackle the under-investigated surveillance FR\nproblem in practical forensic scenarios. Face recognition is generally more\ndifficult in an open-set setting which is typical for surveillance scenarios,\nowing to a large number of non-target people (distractors) appearing open\nspaced scenes. This is evidently so that on the new Surveillance FR Challenge,\nthe top-performing CentreFace deep learning FR model on the MegaFace benchmark\ncan now only achieve 13.2% success rate (at Rank-20) at a 10% false alarm rate.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "competition",
+  "task_types": [
+    "identification",
+    "verification",
+    "open_set_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (rank-N identification at fixed false alarm rate / true positive rate at fixed FPR)",
+  "general_score_metric": "Rank-N identification rate / true positive rate at fixed false alarm rate",
+  "typical_sota_score": "≈10–20% (very low in realistic settings; e.g., ~13% Rank-20 at 10% FPR reported)",
+  "year_of_publish": 2018,
+  "reputation": "Well-cited in surveillance face recognition research as a challenging, realistic low-resolution benchmark; less commonly used than large web-face datasets but important for forensic and surveillance scenarios.",
+  "notes": "Large-scale real surveillance images (not synthetically downsampled) with many distractors; open-set setting and severe domain shift from web-face datasets; privacy and potential demographic bias concerns; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Zhiyi Cheng",
+      "Xiatian Zhu",
+      "Shaogang Gong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1804.09691",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Remote rPPG benchmark framework",
+  "description": "rPPG (Remote photoplethysmography) is a technology that measures and analyzes BVP (Blood Volume Pulse) by using the light absorption characteristics of hemoglobin captured through a camera. Analyzing the measured BVP can derive various physiological signals such as heart rate, stress level, and blood pressure, which can be applied to various applications such as telemedicine, remote patient monitoring, and early prediction of cardiovascular disease. rPPG is rapidly evolving and attracting great attention from both academia and industry by providing great usability and convenience as it can measure biosignals using a camera-equipped device without medical or wearable devices. Despite extensive efforts and advances in this field, serious challenges remain, including issues related to skin color, camera characteristics, ambient lighting, and other sources of noise and artifacts, which degrade accuracy performance. We argue that fair and evaluable benchmarking is urgently required to overcome these challenges and make meaningful progress from both academic and commercial perspectives. In most existing work, models are trained, tested, and validated only on limited datasets. Even worse, some studies lack available code or reproducibility, making it difficult to fairly evaluate and compare performance. Therefore, the purpose of this study is to provide a benchmarking framework to evaluate various rPPG techniques across a wide range of datasets for fair evaluation and comparison, including both conventional non-deep neural network (non-DNN) and deep neural network (DNN) methods. GitHub URL: https://github.com/remotebiosensing/rppg",
+  "category": "vision",
+  "domain": "medical imaging / remote bio-sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "time_series_prediction",
+    "signal_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MAE / RMSE / Pearson correlation",
+  "general_score_metric": "MAE (heart rate, bpm)",
+  "typical_sota_score": "1–5 bpm (MAE)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "Emerging community benchmark and framework in the remote rPPG (camera-based physiological sensing) research area, increasingly used to compare traditional and deep-learning methods across datasets.",
+  "notes": "Non-LLM benchmark; sensitive to skin tone, lighting, camera characteristics and motion artifacts; cross-dataset generalization is challenging and ground-truth physiological signals can vary in quality; careful protocol required to avoid contamination.",
+  "creators": {
+    "scientists": [
+      "Dae-Yeol Kim",
+      "Eunsu Goh",
+      "Kwangkee Lee",
+      "JongEui Chae",
+      "JongHyeon Mun",
+      "Junyeong Na",
+      "Chae-Bong Sohn",
+      "Do-Yup Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2307.12644",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

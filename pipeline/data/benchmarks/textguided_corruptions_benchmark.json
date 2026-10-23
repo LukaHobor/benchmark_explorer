@@ -1,0 +1,32 @@
+{
+  "name": "Text-Guided Corruptions Benchmark",
+  "description": "This study investigates the robustness of image classifiers to text-guided corruptions. We utilize diffusion models to edit images to different domains. Unlike other works that use synthetic or hand-picked data for benchmarking, we use diffusion models as they are generative models capable of learning to edit images while preserving their semantic content. Thus, the corruptions will be more realistic and the comparison will be more informative. Also, there is no need for manual labeling and we can create large-scale benchmarks with less effort. We define a prompt hierarchy based on the original ImageNet hierarchy to apply edits in different domains. As well as introducing a new benchmark we try to investigate the robustness of different vision models. The results of this study demonstrate that the performance of image classifiers decreases significantly in different language-based corruptions and edit domains. We also observe that convolutional models are more robust than transformer architectures. Additionally, we see that common data augmentation techniques can improve the performance on both the original data and the edited images. The findings of this research can help improve the design of image classifiers and contribute to the development of more robust machine learning systems. The code for generating the benchmark is available at https://github.com/ckoorosh/RobuText.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "top-1 accuracy",
+  "year_of_publish": 2023,
+  "reputation": "Proposed robustness benchmark using diffusion-based, text-guided edits; cited in robustness research but not yet a broadly standardized benchmark.",
+  "notes": "Uses diffusion-generated edits (may introduce generative artifacts); no manual relabeling required but results sensitive to prompt hierarchy and edit quality; intended for assessing model robustness rather than training.",
+  "creators": {
+    "scientists": [
+      "Mohammadreza Mofayezi",
+      "Yasamin Medghalchi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2304.02963",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

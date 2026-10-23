@@ -1,0 +1,36 @@
+{
+  "name": "FPCD",
+  "description": "Change detection for aerial imagery involves locating and identifying changes associated with the areas of interest between co-registered bi-temporal or multi-temporal images of a geographical location. Farm ponds are man-made structures belonging to the category of minor irrigation structures used to collect surface run-off water for future irrigation purposes. Detection of farm ponds from aerial imagery and their evolution over time helps in land surveying to analyze the agricultural shifts, policy implementation, seasonal effects and climate changes. In this paper, we introduce a publicly available object detection and instance segmentation (OD/IS) dataset for localizing farm ponds from aerial imagery. We also collected and annotated the bi-temporal data over a time-span of 14 years across 17 villages, resulting in a binary change detection dataset called \\textbf{F}arm \\textbf{P}ond \\textbf{C}hange \\textbf{D}etection Dataset (\\textbf{FPCD}). We have benchmarked and analyzed the performance of various object detection and instance segmentation methods on our OD/IS dataset and the change detection methods over the FPCD dataset. The datasets are publicly accessible at this page: \\textit{\\url{https://huggingface.co/datasets/ctundia/FPCD}}",
+  "category": "vision",
+  "domain": "remote sensing / agriculture",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "instance_segmentation",
+    "change_detection",
+    "binary_change_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP / mask AP for object/instance tasks; IoU and F1 (pixel-wise) for change detection",
+  "general_score_metric": "mAP (for detection) / IoU or F1 (for change detection)",
+  "year_of_publish": 2023,
+  "reputation": "A niche dataset used in remote sensing and agricultural monitoring research; limited adoption outside that community.",
+  "notes": "Geographically and temporally specific (17 villages, 14 years) — risk of limited generalization. Moderate dataset size for remote sensing, contains class imbalance and small-object challenges; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Chintan Tundia",
+      "Rajiv Kumar",
+      "Om Damani",
+      "G. Sivakumar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2302.14554",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

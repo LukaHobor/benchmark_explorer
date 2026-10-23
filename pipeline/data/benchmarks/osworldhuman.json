@@ -1,0 +1,33 @@
+{
+  "name": "OSWorld-Human",
+  "description": "Generative AI is being leveraged to solve a variety of computer-use tasks involving desktop applications. State-of-the-art systems have focused solely on improving accuracy on leading benchmarks. However, these systems are practically unusable due to extremely high end-to-end latency (e.g., tens of minutes) for tasks that typically take humans just a few minutes to complete. To understand the cause behind this and to guide future developments of computer agents, we conduct the first study on the temporal performance of computer-use agents on OSWorld, the flagship benchmark in computer-use AI. We find that large model calls for planning and reflection account for the majority of the overall latency, and as an agent uses more steps to complete a task, each successive step can take 3x longer than steps at the beginning of a task. We then construct OSWorld-Human, a manually annotated version of the original OSWorld dataset that contains a human-determined trajectory for each task. We evaluate 16 agents on their efficiency using OSWorld-Human and found that even the highest-scoring agents on OSWorld take 1.4-2.7x more steps than necessary.",
+  "category": "mixed",
+  "domain": "human-computer interaction / software agents",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "sequential_decision"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "New benchmark introduced by the OSWorld authors to measure temporal efficiency of computer-use agents; gaining attention among researchers studying agent latency and interaction efficiency but not yet widely adopted as a standard.",
+  "notes": "Focuses on temporal/efficiency metrics (steps, latency) in addition to success; contains human-determined trajectories which can bias evaluation; potential contamination if agents are trained on OSWorld trajectories; evaluates both LLM-based and non-LLM agents.",
+  "creators": {
+    "scientists": [
+      "Reyna Abhyankar",
+      "Qi Qi",
+      "Yiying Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2506.16042",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

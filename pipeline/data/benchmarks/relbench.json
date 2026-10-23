@@ -1,0 +1,44 @@
+{
+  "name": "RelBench",
+  "description": "We present RelBench, a public benchmark for solving predictive tasks over relational databases with graph neural networks. RelBench provides databases and tasks spanning diverse domains and scales, and is intended to be a foundational infrastructure for future research. We use RelBench to conduct the first comprehensive study of Relational Deep Learning (RDL) (Fey et al., 2024), which combines graph neural network predictive models with (deep) tabular models that extract initial entity-level representations from raw tables. End-to-end learned RDL models fully exploit the predictive signal encoded in primary-foreign key links, marking a significant shift away from the dominant paradigm of manual feature engineering combined with tabular models. To thoroughly evaluate RDL against this prior gold-standard, we conduct an in-depth user study where an experienced data scientist manually engineers features for each task. In this study, RDL learns better models whilst reducing human work needed by more than an order of magnitude. This demonstrates the power of deep learning for solving predictive tasks over relational databases, opening up many new research opportunities enabled by RelBench.",
+  "category": "mixed",
+  "domain": "relational databases / graph neural networks",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "entity_classification",
+    "regression",
+    "link_prediction",
+    "predictive_modeling"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy / AUC / RMSE (task-dependent)",
+  "general_score_metric": "task-dependent (commonly accuracy or AUC for classification tasks)",
+  "year_of_publish": 2024,
+  "reputation": "A recently proposed, comprehensive benchmark for relational deep learning that is gaining traction as a standard testbed for GNNs over relational databases.",
+  "notes": "Caveats: heterogeneous tasks with varying scales and metrics; not an LLM benchmark; requires database schema familiarity and careful train/validation splits to avoid leakage.",
+  "creators": {
+    "scientists": [
+      "Joshua Robinson",
+      "Rishabh Ranjan",
+      "Weihua Hu",
+      "Kexin Huang",
+      "Jiaqi Han",
+      "Alejandro Dobles",
+      "Matthias Fey",
+      "Jan E. Lenssen",
+      "Yiwen Yuan",
+      "Zecheng Zhang",
+      "Xinwei He",
+      "Jure Leskovec"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2407.20060",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

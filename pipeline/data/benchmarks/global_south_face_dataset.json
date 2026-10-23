@@ -1,0 +1,35 @@
+{
+  "name": "Global South Face Dataset",
+  "description": "Facial Recognition Systems (FRSs) are being developed and deployed globally at unprecedented rates. Most platforms are designed in a limited set of countries but deployed in worldwide, without adequate checkpoints. This is especially problematic for Global South countries which lack strong legislation to safeguard persons facing disparate performance of these systems. A combination of unavailability of datasets, lack of understanding of FRS functionality and low-resource bias mitigation measures accentuate the problem. In this work, we propose a new face dataset composed of 6,579 unique male and female sportspersons from eight countries around the world. More than 50% of the dataset comprises individuals from the Global South countries and is demographically diverse. To aid adversarial audits and robust model training, each image has four adversarial variants, totaling over 40,000 images. We also benchmark five popular FRSs, both commercial and open-source, for the task of gender prediction (and country prediction for one of the open-source models as an example of red-teaming). Experiments on industrial FRSs reveal accuracies ranging from 98.2%--38.1%, with a large disparity between males and females in the Global South (max difference of 38.5%). Biases are also observed in all FRSs between females of the Global North and South (max difference of ~50%). Grad-CAM analysis identifies the nose, forehead and mouth as the regions of interest on one of the open-source FRSs. Utilizing this insight, we design simple, low-resource bias mitigation solutions using few-shot and novel contrastive learning techniques significantly improving the accuracy with disparity between males and females reducing from 50% to 1.5% in one of the settings. In the red-teaming experiment with the open-source Deepface model, contrastive learning proves more effective than simple fine-tuning.",
+  "category": "vision",
+  "domain": "biometrics / facial recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "38–98%",
+  "year_of_publish": 2024,
+  "reputation": "A recent, practical dataset aimed at auditing demographic and geographic biases in facial recognition with growing interest from fairness and audit communities.",
+  "notes": "Contains sensitive biometric data — privacy, consent, and misuse risks; moderate dataset size (6.5k identities) with adversarial variants; significant class and demographic bias observed; not intended for unchecked deployment in surveillance contexts.",
+  "creators": {
+    "scientists": [
+      "Siddharth D Jaiswal",
+      "Animesh Ganai",
+      "Abhisek Dash",
+      "Saptarshi Ghosh",
+      "Animesh Mukherjee"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.15810",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

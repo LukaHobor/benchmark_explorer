@@ -1,0 +1,33 @@
+{
+  "name": "HMDB-AD and HMDB-Violence",
+  "description": "Video Anomaly Detection (VAD) plays a crucial role in modern surveillance systems, aiming to identify various anomalies in real-world situations. However, current benchmark datasets predominantly emphasize simple, single-frame anomalies such as novel object detection. This narrow focus restricts the advancement of VAD models. In this research, we advocate for an expansion of VAD investigations to encompass intricate anomalies that extend beyond conventional benchmark boundaries. To facilitate this, we introduce two datasets, HMDB-AD and HMDB-Violence, to challenge models with diverse action-based anomalies. These datasets are derived from the HMDB51 action recognition dataset. We further present Multi-Frame Anomaly Detection (MFAD), a novel method built upon the AI-VAD framework. AI-VAD utilizes single-frame features such as pose estimation and deep image encoding, and two-frame features such as object velocity. They then apply a density estimation algorithm to compute anomaly scores. To address complex multi-frame anomalies, we add a deep video encoding features capturing long-range temporal dependencies, and logistic regression to enhance final score calculation. Experimental results confirm our assumptions, highlighting existing models limitations with new anomaly types. MFAD excels in both simple and complex anomaly detection scenarios.",
+  "category": "vision",
+  "domain": "video anomaly detection / surveillance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_anomaly_detection",
+    "action_recognition",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Frame-level AUC (ROC)",
+  "general_score_metric": "Frame-level AUC (ROC)",
+  "year_of_publish": 2023,
+  "reputation": "A recent, niche benchmark (derived from HMDB51) with limited community adoption so far; primarily discussed in the originating paper.",
+  "notes": "Derived from HMDB51 so overall dataset size and diversity are limited; focuses on action-based/multi-frame anomalies rather than pixel-level localization; non-LLM benchmark; limited external validation and adoption to date.",
+  "creators": {
+    "scientists": [
+      "Yoav Arad",
+      "Michael Werman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2310.01904",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "GenVideo",
+  "description": "Recently, video generation techniques have advanced rapidly. Given the popularity of video content on social media platforms, these models intensify concerns about the spread of fake information. Therefore, there is a growing demand for detectors capable of distinguishing between fake AI-generated videos and mitigating the potential harm caused by fake information. However, the lack of large-scale datasets from the most advanced video generators poses a barrier to the development of such detectors. To address this gap, we introduce the first AI-generated video detection dataset, GenVideo. It features the following characteristics: (1) a large volume of videos, including over one million AI-generated and real videos collected; (2) a rich diversity of generated content and methodologies, covering a broad spectrum of video categories and generation techniques. We conducted extensive studies of the dataset and proposed two evaluation methods tailored for real-world-like scenarios to assess the detectors' performance: the cross-generator video classification task assesses the generalizability of trained detectors on generators; the degraded video classification task evaluates the robustness of detectors to handle videos that have degraded in quality during dissemination. Moreover, we introduced a plug-and-play module, named Detail Mamba (DeMamba), designed to enhance the detectors by identifying AI-generated videos through the analysis of inconsistencies in temporal and spatial dimensions. Our extensive experiments demonstrate DeMamba's superior generalizability and robustness on GenVideo compared to existing detectors. We believe that the GenVideo dataset and the DeMamba module will significantly advance the field of AI-generated video detection. Our code and dataset will be aviliable at \\url{https://github.com/chenhaoxing/DeMamba}.",
+  "category": "vision",
+  "domain": "vision / video forensics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / AUC (area under ROC)",
+  "general_score_metric": "AUC",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "Newly released and gaining attention in video-forensics research for its scale and cross-generator evaluation, but not yet broadly adopted across the wider ML community.",
+  "notes": "Large-scale non-LLM video deepfake detection dataset with cross-generator and degraded-video evaluations; potential generator-specific biases and domain shifts, may not include the very latest generators; evaluation can report both AUC and accuracy.",
+  "creators": {
+    "scientists": [
+      "Haoxing Chen",
+      "Yan Hong",
+      "Zizheng Huang",
+      "Zhuoer Xu",
+      "Zhangxuan Gu",
+      "Yaohui Li",
+      "Jun Lan",
+      "Huijia Zhu",
+      "Jianfu Zhang",
+      "Weiqiang Wang",
+      "Huaxiong Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.19707",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

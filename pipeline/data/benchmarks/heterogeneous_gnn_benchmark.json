@@ -1,0 +1,42 @@
+{
+  "name": "Heterogeneous GNN Benchmark",
+  "description": "Heterogeneous graph neural networks (HGNNs) have been blossoming in recent years, but the unique data processing and evaluation setups used by each work obstruct a full understanding of their advancements. In this work, we present a systematical reproduction of 12 recent HGNNs by using their official codes, datasets, settings, and hyperparameters, revealing surprising findings about the progress of HGNNs. We find that the simple homogeneous GNNs, e.g., GCN and GAT, are largely underestimated due to improper settings. GAT with proper inputs can generally match or outperform all existing HGNNs across various scenarios. To facilitate robust and reproducible HGNN research, we construct the Heterogeneous Graph Benchmark (HGB), consisting of 11 diverse datasets with three tasks. HGB standardizes the process of heterogeneous graph data splits, feature processing, and performance evaluation. Finally, we introduce a simple but very strong baseline Simple-HGN--which significantly outperforms all previous models on HGB--to accelerate the advancement of HGNNs in the future.",
+  "category": "mixed",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "link_prediction",
+    "clustering"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific (accuracy / F1 / AUC)",
+  "general_score_metric": "task-specific metrics (accuracy, F1, AUC)",
+  "typical_sota_score": "varies widely by task (e.g., roughly 60–95% depending on dataset and metric)",
+  "year_of_publish": 2021,
+  "reputation": "Well-regarded benchmark for standardized, reproducible evaluation of heterogeneous GNNs and widely cited in the HGNN community.",
+  "notes": "Non-LLM benchmark; standardized splits and preprocessing; results are sensitive to input processing and hyperparameters; moderate dataset sizes may limit transfer conclusions.",
+  "creators": {
+    "scientists": [
+      "Qingsong Lv",
+      "Ming Ding",
+      "Qiang Liu",
+      "Yuxiang Chen",
+      "Wenzheng Feng",
+      "Siming He",
+      "Chang Zhou",
+      "Jianguo Jiang",
+      "Yuxiao Dong",
+      "Jie Tang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2112.14936",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

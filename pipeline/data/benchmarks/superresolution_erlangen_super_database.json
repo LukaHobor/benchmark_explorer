@@ -1,0 +1,38 @@
+{
+  "name": "Super-Resolution Erlangen (SupER) database",
+  "description": "Over the past decades, various super-resolution (SR) techniques have been\ndeveloped to enhance the spatial resolution of digital images. Despite the\ngreat number of methodical contributions, there is still a lack of comparative\nvalidations of SR under practical conditions, as capturing real ground truth\ndata is a challenging task. Therefore, current studies are either evaluated 1)\non simulated data or 2) on real data without a pixel-wise ground truth.\n  To facilitate comprehensive studies, this paper introduces the publicly\navailable Super-Resolution Erlangen (SupER) database that includes real\nlow-resolution images along with high-resolution ground truth data. Our\ndatabase comprises image sequences with more than 20k images captured from 14\nscenes under various types of motions and photometric conditions. The datasets\ncover four spatial resolution levels using camera hardware binning. With this\ndatabase, we benchmark 15 single-image and multi-frame SR algorithms. Our\nexperiments quantitatively analyze SR accuracy and robustness under realistic\nconditions including independent object and camera motion or photometric\nvariations.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "super_resolution",
+    "image_restoration",
+    "multi_frame_super_resolution"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "PSNR",
+  "general_score_metric": "PSNR (commonly reported alongside SSIM)",
+  "typical_sota_score": "26–34 dB (PSNR, depends on scale factor and scene)",
+  "year_of_publish": 2017,
+  "reputation": "Well-regarded dataset for evaluating real-world super-resolution methods because it provides real low-resolution images with high-resolution ground truth; frequently cited in SR literature.",
+  "notes": "Provides real ground truth via hardware binning but covers only 14 scenes (~20k images); not diverse across all image domains; PSNR/SSIM may not reflect perceptual quality; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Thomas Köhler",
+      "Michel Bätz",
+      "Farzad Naderi",
+      "André Kaup",
+      "Andreas K. Maier",
+      "Christian Riess"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1709.04881",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

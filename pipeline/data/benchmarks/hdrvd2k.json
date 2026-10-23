@@ -1,0 +1,39 @@
+{
+  "name": "HDRVD2K",
+  "description": "Recently, learned video compression (LVC) is undergoing a period of rapid development. However, due to absence of large and high-quality high dynamic range (HDR) video training data, LVC on HDR video is still unexplored. In this paper, we are the first to collect a large-scale HDR video benchmark dataset, named HDRVD2K, featuring huge quantity, diverse scenes and multiple motion types. HDRVD2K fills gaps of video training data and facilitate the development of LVC on HDR videos. Based on HDRVD2K, we further propose the first learned bit-depth scalable video compression (LBSVC) network for HDR videos by effectively exploiting bit-depth redundancy between videos of multiple dynamic ranges. To achieve this, we first propose a compression-friendly bit-depth enhancement module (BEM) to effectively predict original HDR videos based on compressed tone-mapped low dynamic range (LDR) videos and dynamic range prior, instead of reducing redundancy only through spatio-temporal predictions. Our method greatly improves the reconstruction quality and compression performance on HDR videos. Extensive experiments demonstrate the effectiveness of HDRVD2K on learned HDR video compression and great compression performance of our proposed LBSVC network. Code and dataset will be released in https://github.com/sdkinda/HDR-Learned-Video-Coding.",
+  "category": "vision",
+  "domain": "video compression / HDR video",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_compression",
+    "bit-depth_scalable_compression",
+    "reconstruction_quality_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR, MS-SSIM and bitrate (bpp) / RD-curve analysis",
+  "general_score_metric": "PSNR / MS-SSIM (measured across bitrate points)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Newly introduced, the first large-scale HDR video dataset for learned video compression and receiving interest in the LVC research community.",
+  "notes": "Non-LLM benchmark focused on HDR video compression; evaluation depends on bitrate-vs-quality (RD) curves; requires HDR-capable pipelines and large storage; dataset is large and domain-specific but not yet widely adopted.",
+  "creators": {
+    "scientists": [
+      "Zhaoyi Tian",
+      "Feifeng Wang",
+      "Shiwei Wang",
+      "ZiHao Zhou",
+      "Yao Zhu",
+      "Liquan Shen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.00410",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

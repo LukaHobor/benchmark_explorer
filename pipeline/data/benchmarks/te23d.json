@@ -1,0 +1,33 @@
+{
+  "name": "TE23D",
+  "description": "Natural disasters, particularly earthquakes, require rapid and accurate damage assessment for effective response and recovery. In this work, we present TE23D (Türkiye Earthquakes of 6 February 2023 Dataset) consisting of 1183 images and 2080 polygons labeled as damaged. The dataset was developed using the satellite images taken after the earthquakes occurred on 6 February 2023 in Türkiye, and the dataset was evaluated for benchmark results using various deep learning-based object detection techniques. Unlike many approaches that utilize both pre- and post-disaster imagery, TE23D focuses exclusively on post-earthquake images due to the lack of relevant pre-disaster data. This approach simplifies damage detection by directly labeling anomalies caused by the earthquake.To evaluate the dataset, state-of-the-art segmentation models, including BEiT, DPT, Mask R-CNN, MobileViT, U-Net, U-Net++, and SegFormer, were trained and benchmarked. SegFormer demonstrated superior performance, achieving 92.49% overall pixel accuracy and 74.45% intersection over union for the damaged class. These results confirm the effectiveness of focusing solely on post-event imagery for accurate damage detection.The findings emphasize the crucial role of high-quality, targeted datasets, such as TE23D in enhancing disaster response. By offering a focused benchmark, this dataset enables an efficient identification of damaged areas by earthquakes. This capability for rapid damage assessment is essential for prioritizing emergency response efforts and helping to save lives. While TE23D is tailored to the Türkiye earthquake, its methodology provides a scalable framework for addressing damage assessment in other disaster scenarios, highlighting the importance of well-curated datasets in improving the effectiveness of damage assessment.",
+  "category": "vision",
+  "domain": "earth sciences / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "instance_segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "IoU (intersection over union) and pixel accuracy",
+  "general_score_metric": "intersection_over_union (IoU) for damaged class",
+  "typical_sota_score": "≈72–75% IoU (SegFormer reported 74.45%); pixel accuracy ≈92%",
+  "year_of_publish": 2025,
+  "reputation": "5 citations",
+  "notes": "Small dataset (1,183 images) focused only on post-event imagery; class imbalance and geographic specificity (Türkiye) may limit generalization. Non-LLM benchmark; potential saturation risk for common architectures but useful for remote-sensing damage-assessment research.",
+  "creators": {
+    "scientists": [
+      "Can Ekkazan",
+      "M. Elif Karsligil"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

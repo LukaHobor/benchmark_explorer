@@ -1,0 +1,33 @@
+{
+  "name": "Deepfake Detection Assessment Framework",
+  "description": "Abstract Detecting digital face manipulation in images and video has attracted extensive attention due to the potential risk to public trust. To counteract the malicious usage of such techniques, deep learning-based deepfake detection methods have been employed and have exhibited remarkable performance. However, the performance of such detectors is often assessed on related benchmarks that hardly reflect real-world situations. For example, the impact of various image and video processing operations and typical workflow distortions on detection accuracy has not been systematically measured. In this paper, a more reliable assessment framework is proposed to evaluate the performance of learning-based deepfake detectors in more realistic settings. To the best of our acknowledgment, it is the first systematic assessment approach for deepfake detectors that not only reports the general performance under real-world conditions but also quantitatively measures their robustness toward different processing operations. To demonstrate the effectiveness and usage of the framework, extensive experiments and detailed analysis of four popular deepfake detection methods are further presented in this paper. In addition, a stochastic degradation-based data augmentation method driven by realistic processing operations is designed, which significantly improves the robustness of deepfake detectors.",
+  "category": "vision",
+  "domain": "ML security / vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "binary_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC and accuracy (robustness measured across degradations)",
+  "general_score_metric": "AUC",
+  "typical_sota_score": "≈90–99% on clean data, substantially lower under realistic degradations",
+  "year_of_publish": 2024,
+  "reputation": "42 citations",
+  "notes": "Focuses on robustness to realistic processing operations; non-LLM vision benchmark—clean-set performance can be high but may not reflect real-world robustness; risk of overfitting to common manipulations if detectors are tuned on similar augmentations.",
+  "creators": {
+    "scientists": [
+      "Yuhang Lu",
+      "Touradj Ebrahimi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1186/s13640-024-00621-8",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

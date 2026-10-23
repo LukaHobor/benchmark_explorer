@@ -1,0 +1,37 @@
+{
+  "name": "VLM2-Bench",
+  "description": "Visually linking matching cues is a crucial ability in daily life, such as identifying the same person in multiple photos based on their cues, even without knowing who they are. Despite the extensive knowledge that vision-language models (VLMs) possess, it remains largely unexplored whether they are capable of performing this fundamental task. To address this, we introduce VLM2-Bench, a benchmark designed to assess whether VLMs can Visually Link Matching cues, with 9 subtasks and over 3,000 test cases. Comprehensive evaluation across eight open-source VLMs and GPT-4o, along with further analysis of various language-side and vision-side prompting methods, leads to a total of eight key findings. We identify critical challenges in models' ability to link visual cues, highlighting a significant performance gap where even GPT-4o lags 34.80% behind humans. Based on these insights, we advocate for (i) enhancing core visual capabilities to improve adaptability and reduce reliance on prior knowledge, (ii) establishing clearer principles for integrating language-based reasoning in vision-centric tasks to prevent unnecessary biases, and (iii) shifting vision-text training paradigms toward fostering models' ability to independently structure and infer relationships among visual cues.",
+  "category": "multimodal",
+  "domain": "vision-language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_matching",
+    "visual_question_answering",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "50–70%",
+  "year_of_publish": 2025,
+  "reputation": "Emerging benchmark for evaluating vision-language models' ability to link matching visual cues; gaining attention for highlighting gaps between human and model cue-linking performance.",
+  "notes": "Moderate-size testset (~3k cases); focuses specifically on cue-linking tasks rather than general VQA, so results may not generalize to broader vision-language abilities. Contains evaluations including closed-source models (e.g., GPT-4o) which may complicate reproducibility; potential language priors and dataset biases.",
+  "creators": {
+    "scientists": [
+      "Jianshu Zhang",
+      "Dongyu Yao",
+      "Renjie Pi",
+      "Paul Pu Liang",
+      "Yi R. Fung"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.12084",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

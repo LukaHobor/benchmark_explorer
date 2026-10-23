@@ -1,0 +1,33 @@
+{
+  "name": "MRI reconstruction benchmark (fastMRI evaluation)",
+  "description": "Deep learning is starting to offer promising results for reconstruction in Magnetic Resonance Imaging (MRI). A lot of networks are being developed, but the comparisons remain hard because the frameworks used are not the same among studies, the networks are not properly re-trained, and the datasets used are not the same among comparisons. The recent release of a public dataset, fastMRI, consisting of raw k-space data, encouraged us to write a consistent benchmark of several deep neural networks for MR image reconstruction. This paper shows the results obtained for this benchmark, allowing to compare the networks, and links the open source implementation of all these networks in Keras. The main finding of this benchmark is that it is beneficial to perform more iterations between the image and the measurement spaces compared to having a deeper per-space network.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_reconstruction",
+    "inverse_imaging",
+    "denoising / de-aliasing"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Normalized Mean Squared Error (NMSE), Structural Similarity Index (SSIM), and PSNR",
+  "general_score_metric": "NMSE and SSIM (reported together; NMSE often primary for numeric comparisons)",
+  "typical_sota_score": "SSIM roughly in the 0.90–0.98 range for many top methods (varies by anatomy and acceleration factor); NMSE/PSNR vary accordingly",
+  "reputation": "fastMRI and its reconstruction benchmark are widely adopted as a standard public benchmark for MRI deep-learning reconstruction research.",
+  "notes": "Non-LLM benchmark; results sensitive to k-space preprocessing, acceleration factor and validation protocol; reproducibility depends on consistent evaluation (normalization, coil-combination); clinical validity not guaranteed by benchmark scores alone.",
+  "creators": {
+    "scientists": [
+      "Zaccharie Ramzi",
+      "Philippe Ciuciu",
+      "Jean-Luc Starck"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

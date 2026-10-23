@@ -1,0 +1,33 @@
+{
+  "name": "AmaSQuAD",
+  "description": "This research presents a novel framework for translating extractive question-answering datasets into low-resource languages, as demonstrated by the creation of the AmaSQuAD dataset, a translation of SQuAD 2.0 into Amharic. The methodology addresses challenges related to misalignment between translated questions and answers, as well as the presence of multiple answer instances in the translated context. For this purpose, we used cosine similarity utilizing embeddings from a fine-tuned BERT-based model for Amharic and Longest Common Subsequence (LCS). Additionally, we fine-tune the XLM-R model on the AmaSQuAD synthetic dataset for Amharic Question-Answering. The results show an improvement in baseline performance, with the fine-tuned model achieving an increase in the F1 score from 36.55% to 44.41% and 50.01% to 57.5% on the AmaSQuAD development dataset. Moreover, the model demonstrates improvement on the human-curated AmQA dataset, increasing the F1 score from 67.80% to 68.80% and the exact match score from 52.50% to 52.66%.The AmaSQuAD dataset is publicly available Datasets",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "extractive_qa"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match and F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "50–60%",
+  "year_of_publish": 2025,
+  "reputation": "A useful resource for low-resource NLP research focused on Amharic QA, cited in work on dataset translation and QA for low-resource languages.",
+  "notes": "Synthetic translation from SQuAD 2.0; contains alignment challenges and potential noise from automatic translation. Dataset size and synthetic nature can limit generalization; risk of contamination if models were trained on overlapping English-to-Amharic parallel data.",
+  "creators": {
+    "scientists": [
+      "Nebiyou Daniel Hailemariam",
+      "Blessed Guda",
+      "Tsegazeab Tefferi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2502.02047",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

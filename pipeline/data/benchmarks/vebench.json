@@ -1,0 +1,37 @@
+{
+  "name": "VE-Bench",
+  "description": "Text-driven video editing has recently experienced rapid development. Despite this, evaluating edited videos remains a considerable challenge. Current metrics tend to fail to align with human perceptions, and effective quantitative metrics for video editing are still notably absent. To address this, we introduce VE-Bench, a benchmark suite tailored to the assessment of text-driven video editing. This suite includes VE-Bench DB, a video quality assessment (VQA) database for video editing. VE-Bench DB encompasses a diverse set of source videos featuring various motions and subjects, along with multiple distinct editing prompts, editing results from 8 different models, and the corresponding Mean Opinion Scores (MOS) from 24 human annotators. Based on VE-Bench DB, we further propose VE-Bench QA, a quantitative human-aligned measurement for the text-driven video editing task. In addition to the aesthetic, distortion, and other visual quality indicators that traditional VQA methods emphasize, VE-Bench QA focuses on the text-video alignment and the relevance modeling between source and edited videos. It proposes a new assessment network for video editing that attains superior performance in alignment with human preferences. To the best of our knowledge, VE-Bench introduces the first quality assessment dataset for video editing and an effective subjective-aligned quantitative metric for this domain. All data and code will be publicly available at https://github.com/littlespray/VE-Bench.",
+  "category": "vision",
+  "domain": "video / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_quality_assessment",
+    "text-video_alignment_scoring"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval (MOS) and correlation-based metrics against MOS (Spearman / PLCC)",
+  "general_score_metric": "Spearman correlation with mean opinion score (MOS)",
+  "typical_sota_score": "≈ 0.6–0.85 Spearman correlation with MOS for the proposed metrics/models",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "New (2024) benchmark addressing evaluation for text-driven video editing; gaining interest but not yet widely standardized.",
+  "notes": "Subjective MOS labels (24 annotators) – moderate dataset size and number of evaluated models; metric alignment may not generalize across all editing styles; non-LLM benchmark focused on video.",
+  "creators": {
+    "scientists": [
+      "Shangkun Sun",
+      "Xiaoyu Liang",
+      "Songlin Fan",
+      "Wenxu Gao",
+      "Wei Gao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2408.11481",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

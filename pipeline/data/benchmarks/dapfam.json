@@ -1,0 +1,34 @@
+{
+  "name": "DAPFAM",
+  "description": "Patent prior-art retrieval becomes especially challenging when relevant disclosures cross technological boundaries. Existing benchmarks lack explicit domain partitions, making it difficult to assess how retrieval systems cope with such shifts. We introduce DAPFAM, a family-level benchmark with explicit IN-domain and OUT-domain partitions defined by a new IPC3 overlap scheme. The dataset contains 1,247 query families and 45,336 target families aggregated at the family level to reduce international redundancy, with citation based relevance judgments. We conduct 249 controlled experiments spanning lexical (BM25) and dense (transformer) backends, document and passage level retrieval, multiple query and document representations, aggregation strategies, and hybrid fusion via Reciprocal Rank Fusion (RRF). Results reveal a pronounced domain gap: OUT-domain performance remains roughly five times lower than IN-domain across all configurations. Passage-level retrieval consistently outperforms doc",
+  "category": "text",
+  "domain": "patent retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "information_retrieval",
+    "ranking",
+    "domain_generalization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "nDCG@k / MAP / recall@k",
+  "general_score_metric": "nDCG@k",
+  "year_of_publish": 2025,
+  "reputation": "A recent specialized patent-retrieval benchmark that is mainly used in the research paper introducing it, with limited evidence of broad community adoption so far.",
+  "notes": "Non-LLM benchmark centered on patent prior-art retrieval; includes explicit IN-domain vs OUT-domain splits and family-level aggregation, with strong domain shift between partitions.",
+  "creators": {
+    "scientists": [
+      "Iliass Ayaou",
+      "Denis Cavallucci",
+      "Hicham Chibane"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2506.22141",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

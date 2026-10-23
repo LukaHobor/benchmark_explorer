@@ -1,0 +1,39 @@
+{
+  "name": "HEAL-MedVQA",
+  "description": "Medical Large Multi-modal Models (LMMs) have demonstrated remarkable capabilities in medical data interpretation. However, these models frequently generate hallucinations contradicting source evidence, particularly due to inadequate localization reasoning. This work reveals a critical limitation in current medical LMMs: instead of analyzing relevant pathological regions, they often rely on linguistic patterns or attend to irrelevant image areas when responding to disease-related queries.\n\nTo address this, we introduce HEAL-MedVQA (Hallucination Evaluation via Localization MedVQA), a comprehensive benchmark designed to evaluate LMMs' localization abilities and hallucination robustness. HEAL-MedVQA features (i) two innovative evaluation protocols to assess visual and textual shortcut learning, and (ii) a dataset of 67K VQA pairs, with doctor-annotated anatomical segmentation masks for pathological regions. To improve visual reasoning, we propose the Localize-before-Answer (LobA) framework, which trains LMMs to localize target regions of interest and self-prompt to emphasize segmented pathological areas, generating grounded and reliable answers. Experimental results demonstrate that our approach significantly outperforms state-of-the-art biomedical LMMs on the challenging HEAL-MedVQA benchmark, advancing robustness in medical VQA.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "visual_grounding",
+    "segmentation",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "VQA accuracy for answers; IoU / segmentation F1 (Dice) for localization; plus specialized hallucination/error-rate metrics for groundedness",
+  "general_score_metric": "composite (VQA accuracy + localization IoU)",
+  "year_of_publish": 2025,
+  "reputation": "8 citations",
+  "notes": "Doctor-annotated segmentation masks reduce label noise but dataset is domain-specific (medical imaging) and requires clinically informed interpretation. Risk of distributional bias and limited generalization to non-clinical settings; relatively large (67K pairs) but still requires careful privacy/ethics handling.",
+  "creators": {
+    "scientists": [
+      "Dung Nguyen",
+      "Minh Khoi Ho",
+      "Huyck Ta",
+      "Thanh Tam Nguyen",
+      "Qi Chen",
+      "Kumar Rav"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.00744",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

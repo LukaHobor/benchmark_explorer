@@ -1,0 +1,47 @@
+{
+  "name": "PoseX",
+  "description": "Existing protein-ligand docking studies typically focus on the self-docking scenario, which is less practical in real applications. Moreover, some studies involve heavy frameworks requiring extensive training, posing challenges for convenient and efficient assessment of docking methods. To fill these gaps, we design PoseX, an open-source benchmark to evaluate both self-docking and cross-docking, enabling a practical and comprehensive assessment of algorithmic advances. Specifically, we curated a novel dataset comprising 718 entries for self-docking and 1,312 entries for cross-docking; second, we incorporated 23 docking methods in three methodological categories, including physics-based methods (e.g., Schr\\\"odinger Glide), AI docking methods (e.g., DiffDock) and AI co-folding methods (e.g., AlphaFold3); third, we developed a relaxation method for post-processing to minimize conformational energy and refine binding poses; fourth, we built a leaderboard to rank submitted models in real-time. We derived some key insights and conclusions from extensive experiments: (1) AI approaches have consistently outperformed physics-based methods in overall docking success rate. (2) Most intra- and intermolecular clashes of AI approaches can be greatly alleviated with relaxation, which means combining AI modeling with physics-based post-processing could achieve excellent performance. (3) AI co-folding methods exhibit ligand chirality issues, except for Boltz-1x, which introduced physics-inspired potentials to fix hallucinations, suggesting modeling on stereochemistry improves the structural plausibility markedly. (4) Specifying binding pockets significantly promotes docking performance, indicating that pocket information can be leveraged adequately, particularly for AI co-folding methods, in future modeling efforts. The code, dataset, and leaderboard are released at https://github.com/CataAI/PoseX.",
+  "category": "mixed",
+  "domain": "bioinformatics / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pose_prediction",
+    "structure_ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (RMSD-based thresholds for pose correctness)",
+  "general_score_metric": "docking success rate (percentage of predicted poses within specified RMSD thresholds)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "An emerging benchmark in structural biology and computational chemistry for comparing physics-based and AI docking approaches; gaining attention for its combined self- and cross-docking evaluation and public leaderboard.",
+  "notes": "Non-LLM benchmark focused on protein–ligand docking; relatively small dataset (718 self-docking, 1,312 cross-docking entries); evaluation dependent on RMSD thresholds and pocket specification; relaxation/post-processing can substantially change scores.",
+  "creators": {
+    "scientists": [
+      "Yize Jiang",
+      "Xinze Li",
+      "Yuanyuan Zhang",
+      "Jin Han",
+      "Youjun Xu",
+      "Ayush Pandit",
+      "Zaixi Zhang",
+      "Mengdi Wang",
+      "Mengyang Wang",
+      "Chong Liu",
+      "Guang Yang",
+      "Yejin Choi",
+      "Wu-Jun Li",
+      "Tianfan Fu",
+      "Fang Wu",
+      "Junhong Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.01700",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

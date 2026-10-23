@@ -1,0 +1,37 @@
+{
+  "name": "NA19240 PromethION SV benchmark",
+  "description": "We sequenced the genome of the Yoruban reference individual NA19240 on the long-read sequencing platform Oxford Nanopore PromethION for evaluation and benchmarking of recently published aligners and germline structural variant calling tools, as well as a comparison with the performance of structural variant calling from short-read sequencing data. The structural variant caller Sniffles after NGMLR or minimap2 alignment provides the most accurate results, but additional confidence or sensitivity can be obtained by a combination of multiple variant callers. Sensitive and fast results can be obtained by minimap2 for alignment and a combination of Sniffles and SVIM for variant identification. We describe a scalable workflow for identification, annotation, and characterization of tens of thousands of structural variants from long-read genome sequencing of an individual or population. By discussing the results of this well-characterized reference individual, we provide an approximation of what can be expected in future long-read sequencing studies aiming for structural variant identification.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "variant_calling",
+    "sequence_alignment",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision / recall / F1 for structural variant calls (breakpoint and size-aware comparisons)",
+  "general_score_metric": "F1 (precision and recall also reported)",
+  "year_of_publish": 2019,
+  "reputation": "177 citations",
+  "notes": "Single-individual (NA19240) benchmark from PromethION long reads — useful but limited by being one reference sample and by technology-specific biases; intended for benchmarking SV callers (non-LLM); combination of callers recommended for sensitivity/precision tradeoffs.",
+  "creators": {
+    "scientists": [
+      "Wouter De Coster",
+      "Peter De Rijk",
+      "Arne De Roeck",
+      "Tim De Pooter",
+      "Svenn D’Hert",
+      "Mojca Stražišar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/gr.244939.118",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

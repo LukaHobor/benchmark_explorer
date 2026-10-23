@@ -1,0 +1,35 @@
+{
+  "name": "Semantic Task Sampling",
+  "description": "Every day, a new method is published to tackle Few-Shot Image Classification, showing better and better performances on academic benchmarks. Nevertheless, we observe that these current benchmarks do not accurately represent the real industrial use cases that we encountered. In this work, through both qualitative and quantitative studies, we expose that the widely used benchmark tieredImageNet is strongly biased towards tasks composed of very semantically dissimilar classes e.g. bathtub, cabbage, pizza, schipperke, and cardoon. This makes tieredImageNet (and similar benchmarks) irrelevant to evaluate the ability of a model to solve real-life use cases usually involving more fine-grained classification. We mitigate this bias using semantic information about the classes of tieredImageNet and generate an improved, balanced benchmark. Going further, we also introduce a new benchmark for Few-Shot Image Classification using the Danish Fungi 2020 dataset. This benchmark proposes a wide variety of evaluation tasks with various fine-graininess. Moreover, this benchmark includes many-way tasks (e.g. composed of 100 classes), which is a challenging setting yet very common in industrial applications. Our experiments bring out the correlation between the difficulty of a task and the semantic similarity between its classes, as well as a heavy performance drop of state-of-the-art methods on many-way few-shot classification, raising questions about the scaling abilities of these methods. We hope that our work will encourage the community to further question the quality of standard evaluation processes and their relevance to real-life applications.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "classification",
+    "few_shot"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (top-1 classification accuracy on sampled few-shot tasks)",
+  "general_score_metric": "Top-1 accuracy (reported per shot/way configuration)",
+  "typical_sota_score": "Varies widely by setting (e.g., standard 5-way 5-shot: ~60–80%; many-way or fine-grained tasks: substantially lower, e.g., ~10–50%)",
+  "year_of_publish": 2022,
+  "reputation": "Influential within the few-shot image-classification community for highlighting semantic sampling biases; used by researchers investigating task difficulty and real-world applicability.",
+  "notes": "Addresses bias in existing benchmarks (semantic dissimilarity); includes many-way and fine-grained tasks that expose gaps in current methods; dataset-specific difficulty means scores are not directly comparable to standard tieredImageNet numbers.",
+  "creators": {
+    "scientists": [
+      "Etienne Bennequin",
+      "Myriam Tami",
+      "Antoine Toubhans",
+      "Celine Hudelot"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2205.05155",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

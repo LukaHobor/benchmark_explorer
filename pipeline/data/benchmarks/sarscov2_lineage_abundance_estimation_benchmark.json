@@ -1,0 +1,50 @@
+{
+  "name": "SARS-CoV-2 lineage abundance estimation benchmark",
+  "description": "In light of the continuous transmission and evolution of SARS-CoV-2 coupled with a significant decline in clinical testing, there is a pressing need for scalable, cost-effective, long-term, passive surveillance tools to effectively monitor viral variants circulating in the population. Wastewater genomic surveillance of SARS-CoV-2 has arrived as an alternative to clinical genomic surveillance, allowing to continuously monitor the prevalence of viral lineages in communities of various size at a fraction of the time, cost, and logistic effort and serving as an early warning system for emerging variants, critical for developed communities and especially for underserved ones. Importantly, lineage prevalence estimates obtained with this approach aren't distorted by biases related to clinical testing accessibility and participation. However, the relative performance of bioinformatics methods used to measure relative lineage abundances from wastewater sequencing data is unknown, preventing both the research community and public health authorities from making informed decisions regarding computational tool selection. Here, we perform comprehensive benchmarking of 18 bioinformatics methods for estimating the relative abundance of SARS-CoV-2 (sub)lineages in wastewater by using data from 36 in vitro mixtures of synthetic lineage and sublineage genomes. In addition, we use simulated data from 78 mixtures of lineages and sublineages co-occurring in the clinical setting with proportions mirroring their prevalence ratios observed in real data. Importantly, we investigate how the accuracy of the evaluated methods is impacted by the sequencing technology used, the associated error rate, the read length, read depth, but also by the exposure of the synthetic RNA mixtures to wastewater, with the goal of capturing the effects induced by the wastewater matrix, including RNA fragmentation and degradation.",
+  "category": "mixed",
+  "domain": "bioinformatics / public health genomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "abundance_estimation",
+    "regression",
+    "benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and distributional measures such as Jensen–Shannon divergence; correlation metrics (Pearson/Spearman) also reported",
+  "general_score_metric": "MAE",
+  "year_of_publish": 2023,
+  "reputation": "Well-regarded within the wastewater genomics and bioinformatics community as a realistic, experimentally grounded benchmark for lineage abundance estimation, though not yet a broad community standard.",
+  "notes": "Non-LLM bioinformatics benchmark based on 36 in vitro mixtures and 78 simulated mixtures; sensitive to sequencing technology, read length/depth, error rates, and wastewater-induced RNA degradation. Limited diversity of mixture conditions and simulation realism may affect generalization to all real-world sewage samples.",
+  "creators": {
+    "scientists": [
+      "Viorel Munteanu",
+      "Victor Gordeev",
+      "Michael Saldana",
+      "Eva Aßmann",
+      "Justin Maine Su",
+      "Nicolae Drabcinski",
+      "Oksana Zlenko",
+      "Maryna Kit",
+      "Felicia Iordachi",
+      "Khooshbu Kantibhai Patel",
+      "Abdullah Al Nahid",
+      "Likhitha Chittampalli",
+      "Yidian Xu",
+      "Pavel Skums",
+      "Shelesh Agrawal",
+      "Martin Hölzer",
+      "Adam Smith",
+      "Alex Zelikovsky",
+      "Serghei Mangul"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2309.16994",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "korean-llm-trustworthiness-benchmark",
+  "description": "Korean LLM Trustworthiness Benchmark (Sample)\n\t\n\n\n\t\n\t\t\n\t\t개요\n\t\n\n이 데이터셋은 AIHub의 \"초거대 언어모델 신뢰성 벤치마크 데이터\"를 기반으로 구축된 한국어 LLM 지시학습 데이터셋입니다. \nAI 모델의 세 가지 핵심 신뢰성 요소(도움적정성, 무해성, 정보정확성)를 평가하고 학습하기 위해 설계되었습니다.\n\n\t\n\t\t\n\t\t데이터셋 구조\n\t\n\n모든 데이터는 train split에 통합되어 있으며, type 필드로 데이터 유형을 구분합니다:\n\n\t\n\t\t\n필드명\n설명\n\n\n\t\t\ntype\n데이터 유형 (dpo_preference, sft_instruction, fact_checking)\n\n\nprompt\n프롬프트/질문 (DPO용)\n\n\nchosen\n선호 응답 (DPO용)\n\n\nrejected\n비선호 응답 (DPO용)\n\n\ninstruction\n지시문 (SFT/Fact Checking용)\n\n\ninput\n추가 입력 (SFT용)… See the full description on the dataset page: https://huggingface.co/datasets/neuralfoundry-coder/korean-llm-trustworthiness-benchmark.",
+  "category": "text",
+  "domain": "safety",
+  "tags": [
+    "task_categories:text-generation",
+    "task_categories:text-classification",
+    "language:ko",
+    "license:cc-by-nc-4.0",
+    "size_categories:1K<n<10K",
+    "modality:text"
+  ],
+  "task_types": [
+    "preference_ranking",
+    "classification",
+    "open_ended",
+    "fact_checking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "accuracy / preference_agreement",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "Built from AIHub resources and used within Korean LLM research for trustworthiness evaluation, but not yet widely adopted outside that community.",
+  "downloads": 22,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "neuralfoundry-coder"
+    ]
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://huggingface.co/datasets/neuralfoundry-coder/korean-llm-trustworthiness-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

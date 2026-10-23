@@ -1,0 +1,36 @@
+{
+  "name": "Simulation-based CSL benchmark for gene perturbation",
+  "description": "Causal structure learning (CSL) refers to the task of learning causal relationships from data. Advances in CSL now allow learning of causal graphs in diverse application domains, which has the potential to facilitate data-driven causal decision-making. Real-world CSL performance depends on a number of $\\textit{context-specific}$ factors, including context-specific data distributions and non-linear dependencies, that are important in practical use-cases. However, our understanding of how to assess and select CSL methods in specific contexts remains limited. To address this gap, we present $\\textit{CausalRegNet}$, a multiplicative effect structural causal model that allows for generating observational and interventional data incorporating context-specific properties, with a focus on the setting of gene perturbation experiments. Using real-world gene perturbation data, we show that CausalRegNet generates accurate distributions and scales far better than current simulation frameworks. We illustrate the use of CausalRegNet in assessing CSL methods in the context of interventional experiments in biology.",
+  "category": "mixed",
+  "domain": "bioinformatics / genomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "causal_structure_learning",
+    "graph_reconstruction",
+    "interventional_effect_estimation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "edge-level F1 and Structural Hamming Distance (SHD) (i.e., F1/SHD for graph recovery)",
+  "general_score_metric": "edge-level F1 (with SHD reported as a complementary metric)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, domain-focused simulation framework tailored to gene-perturbation CSL; promising for method evaluation but not yet broadly adopted beyond specialized causal/ genomics groups.",
+  "notes": "Simulation-based (CausalRegNet) tuned to gene-perturbation experiments—may not capture all real biological complexities; context-specific results; useful for controlled method comparisons but real-data validation remains necessary.",
+  "creators": {
+    "scientists": [
+      "Luka Kovačević",
+      "Izzy Newsham",
+      "Sach Mukherjee",
+      "John Whittaker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.06015",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

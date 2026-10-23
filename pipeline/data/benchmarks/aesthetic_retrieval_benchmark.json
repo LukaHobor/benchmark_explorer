@@ -1,0 +1,42 @@
+{
+  "name": "Aesthetic Retrieval Benchmark",
+  "description": "Modern vision models are trained on very large noisy datasets. While these models acquire strong capabilities, they may not follow the user's intent to output the desired results in certain aspects, e.g., visual aesthetic, preferred style, and responsibility. In this paper, we target the realm of visual aesthetics and aim to align vision models with human aesthetic standards in a retrieval system. Advanced retrieval systems usually adopt a cascade of aesthetic models as re-rankers or filters, which are limited to low-level features like saturation and perform poorly when stylistic, cultural or knowledge contexts are involved. We find that utilizing the reasoning ability of large language models (LLMs) to rephrase the search query and extend the aesthetic expectations can make up for this shortcoming. Based on the above findings, we propose a preference-based reinforcement learning method that fine-tunes the vision models to distill the knowledge from both LLMs reasoning and the aesthetic models to better align the vision models with human aesthetics. Meanwhile, with rare benchmarks designed for evaluating retrieval systems, we leverage large multi-modality model (LMM) to evaluate the aesthetic performance with their strong abilities. As aesthetic assessment is one of the most subjective tasks, to validate the robustness of LMM, we further propose a novel dataset named HPIR to benchmark the alignment with human aesthetics. Experiments demonstrate that our method significantly enhances the aesthetic behaviors of the vision models, under several metrics. We believe the proposed algorithm can be a general practice for aligning vision models with human values.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "ranking",
+    "preference_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "retrieval and ranking metrics (Recall@k, NDCG) supplemented by human/preference evaluations",
+  "general_score_metric": "Recall@k / NDCG (with auxiliary human preference accuracy)",
+  "year_of_publish": 2024,
+  "reputation": "Newer benchmark/dataset (HPIR) aimed at aesthetic alignment; limited community adoption so far but of interest for alignment and retrieval research.",
+  "notes": "Subjective task with high human variability; evaluations often mix automatic retrieval metrics with human or LMM-based preference judgments. Risk of evaluator bias due to using LMMs and large pretraining data contamination; HPIR is relatively novel and may be small compared to web-scale training sets.",
+  "creators": {
+    "scientists": [
+      "Miaosen Zhang",
+      "Yixuan Wei",
+      "Zhen Xing",
+      "Yifei Ma",
+      "Zuxuan Wu",
+      "Ji Li",
+      "Zheng Zhang",
+      "Qi Dai",
+      "Chong Luo",
+      "Xin Geng",
+      "Baining Guo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.09397",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

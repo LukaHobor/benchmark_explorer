@@ -1,0 +1,40 @@
+{
+  "name": "CrashAsLanguage",
+  "description": "The increasing rate of road accidents worldwide results not only in significant loss of life but also imposes billions financial burdens on societies. Current research in traffic crash frequency modeling and analysis has predominantly approached the problem as classification tasks, focusing mainly on learning-based classification or ensemble learning methods. These approaches often overlook the intricate relationships among the complex infrastructure, environmental, human and contextual factors related to traffic crashes and risky situations. In contrast, we initially propose a large-scale traffic crash language dataset, named CrashEvent, summarizing 19,340 real-world crash reports and incorporating infrastructure data, environmental and traffic textual and visual information in Washington State. Leveraging this rich dataset, we further formulate the crash event feature learning as a novel text reasoning problem and further fine-tune various large language models (LLMs) to predict detailed accident outcomes, such as crash types, severity and number of injuries, based on contextual and environmental factors. The proposed model, CrashLLM, distinguishes itself from existing solutions by leveraging the inherent text reasoning capabilities of LLMs to parse and learn from complex, unstructured data, thereby enabling a more nuanced analysis of contributing factors. Our experiments results shows that our LLM-based approach not only predicts the severity of accidents but also classifies different types of accidents and predicts injury outcomes, all with averaged F1 score boosted from 34.9% to 53.8%. Furthermore, CrashLLM can provide valuable insights for numerous open-world what-if situational-awareness traffic safety analyses with learned reasoning features, which existing models cannot offer. We make our benchmark, datasets, and model public available for further exploration.",
+  "category": "mixed",
+  "domain": "autonomous driving/traffic safety",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "text_reasoning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 (averaged F1 reported for classification tasks)",
+  "general_score_metric": "averaged F1",
+  "typical_sota_score": "≈53–54% F1",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed dataset and benchmark (recent preprint) with limited community adoption so far.",
+  "notes": "Multimodal and domain-specific (text + visual + infrastructure); moderate size (≈19k reports); contains potentially sensitive/crash-related information (privacy considerations); potential dataset shift when applied to other regions; possible contamination risk if LLMs were pretrained on similar public reports.",
+  "creators": {
+    "scientists": [
+      "Zhiwen Fan",
+      "Pu Wang",
+      "Yang Zhao",
+      "Yibo Zhao",
+      "Boris Ivanovic",
+      "Zhangyang Wang",
+      "Marco Pavone",
+      "Hao Frank Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2406.10789",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

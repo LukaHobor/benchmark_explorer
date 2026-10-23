@@ -1,0 +1,39 @@
+{
+  "name": "Instance-based MIL Digital Pathology Benchmark",
+  "description": "Multiple Instance Learning (MIL) has emerged as the best solution for Whole Slide Image (WSI) classification. It consists of dividing each slide into patches, which are treated as a bag of instances labeled with a global label. MIL includes two main approaches: instance-based and embedding-based. In the former, each patch is classified independently, and then the patch scores are aggregated to predict the bag label. In the latter, bag classification is performed after aggregating patch embeddings. Even if instance-based methods are naturally more interpretable, embedding-based MILs have usually been preferred in the past due to their robustness to poor feature extractors. However, recently, the quality of feature embeddings has drastically increased using self-supervised learning (SSL). Nevertheless, many authors continue to endorse the superiority of embedding-based MIL. To investigate this further, we conduct 710 experiments across 4 datasets, comparing 10 MIL strategies, 6 self-supervised methods with 4 backbones, 4 foundation models, and various pathology-adapted techniques. Furthermore, we introduce 4 instance-based MIL methods never used before in the pathology domain. Through these extensive experiments, we show that with a good SSL feature extractor, simple instance-based MILs, with very few parameters, obtain similar or better performance than complex, state-of-the-art (SOTA) embedding-based MIL methods, setting new SOTA results on the BRACS and Camelyon16 datasets. Since simple instance-based MIL methods are naturally more interpretable and explainable to clinicians, our results suggest that more effort should be put into well-adapted SSL methods for WSI rather than into complex embedding-based MIL methods.",
+  "category": "vision",
+  "domain": "medical imaging (digital pathology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "whole_slide_classification",
+    "instance_level_classification",
+    "multiple_instance_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "ROC AUC (area under ROC)",
+  "general_score_metric": "ROC AUC",
+  "typical_sota_score": "90–99%",
+  "year_of_publish": 2025,
+  "reputation": "Comprehensive, large-scale empirical benchmark in digital pathology research that has attracted interest for comparing MIL approaches, though not yet a universal standard.",
+  "notes": "Non-LLM benchmark requiring access to whole-slide images and substantial compute; results sensitive to SSL feature extractor, preprocessing, and class imbalance; potential limited public availability of some datasets.",
+  "creators": {
+    "scientists": [
+      "Ali Mammadov",
+      "Loic Le Folgoc",
+      "Julien Adam",
+      "Anne Buronfosse",
+      "Gilles Hayem",
+      "Guillaume Hocquet",
+      "Pietro Gori"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.01109",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

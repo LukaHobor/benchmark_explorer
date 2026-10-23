@@ -1,0 +1,39 @@
+{
+  "name": "CRUST-Bench",
+  "description": "C-to-Rust transpilation is essential for modernizing legacy C code while enhancing safety and interoperability with modern Rust ecosystems. However, no dataset currently exists for evaluating whether a system can transpile C into safe Rust that passes a set of test cases. We introduce CRUST-Bench, a dataset of 100 C repositories, each paired with manually-written interfaces in safe Rust as well as test cases that can be used to validate correctness of the transpilation. By considering entire repositories rather than isolated functions, CRUST-Bench captures the challenges of translating complex projects with dependencies across multiple files. The provided Rust interfaces provide explicit specifications that ensure adherence to idiomatic, memory-safe Rust patterns, while the accompanying test cases enforce functional correctness. We evaluate state-of-the-art large language models (LLMs) on this task and find that safe and idiomatic Rust generation is still a challenging problem for various state-of-the-art methods and techniques. We also provide insights into the errors LLMs usually make in transpiling code from C to safe Rust. The best performing model, OpenAI o1, is able to solve only 15 tasks in a single-shot setting. Improvements on CRUST-Bench would lead to improved transpilation systems that can reason about complex scenarios and help in migrating legacy codebases from C into languages like Rust that ensure memory safety. You can find the dataset and code at https://github.com/anirudhkhatry/CRUST-bench.",
+  "category": "code",
+  "domain": "software engineering / code translation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_translation",
+    "program_synthesis",
+    "functional_correctness_validation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (percentage of repositories for which generated Rust plus interfaces compile and pass the provided test suites)",
+  "general_score_metric": "task_success_rate (number/percentage of repos passing tests)",
+  "typical_sota_score": "≈15% (best reported single‑shot model in the paper)",
+  "year_of_publish": 2025,
+  "reputation": "New, targeted benchmark for end-to-end C→Rust transpilation with executable correctness checks; currently limited adoption but of growing interest in code-transformation research.",
+  "notes": "Small corpus (100 repos) — may be vulnerable to data leakage from public code in model training; requires compilation and test execution (non-LLM components). Results can be sensitive to environment, interface design, and non-deterministic model outputs.",
+  "creators": {
+    "scientists": [
+      "Anirudh Khatry",
+      "Robert Zhang",
+      "Jia Pan",
+      "Ziteng Wang",
+      "Qiaochu Chen",
+      "Greg Durrett",
+      "Isil Dillig"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2504.15254",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

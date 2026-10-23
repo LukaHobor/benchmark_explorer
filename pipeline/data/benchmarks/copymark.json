@@ -1,0 +1,34 @@
+{
+  "name": "CopyMark",
+  "description": "Membership inference attacks (MIAs) on diffusion models have emerged as potential evidence of unauthorized data usage in training pre-trained diffusion models. These attacks aim to detect the presence of specific images in training datasets of diffusion models. Our study delves into the evaluation of state-of-the-art MIAs on diffusion models and reveals critical flaws and overly optimistic performance estimates in existing MIA evaluation. We introduce CopyMark, a more realistic MIA benchmark that distinguishes itself through the support for pre-trained diffusion models, unbiased datasets, and fair evaluation pipelines. Through extensive experiments, we demonstrate that the effectiveness of current MIA methods significantly degrades under these more practical conditions. Based on our results, we alert that MIA, in its current state, is not a reliable approach for identifying unauthorized data usage in pre-trained diffusion models. To the best of our knowledge, we are the first to discover the performance overestimation of MIAs on diffusion models and present a unified benchmark for more realistic evaluation. Our code is available on GitHub: \\url{https://github.com/caradryanl/CopyMark}.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack_success_rate",
+  "general_score_metric": "attack_success_rate",
+  "typical_sota_score": "20–60%",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "New benchmark proposed to provide a more realistic evaluation of membership inference attacks on diffusion models; of emerging interest in privacy/security research but not yet broadly adopted.",
+  "notes": "Evaluation depends strongly on threat model assumptions (black-box vs white-box), access to model internals, and dataset selection; the authors report prior overestimation of MIA effectiveness and emphasize more realistic, unbiased evaluation settings.",
+  "creators": {
+    "scientists": [
+      "Chumeng Liang",
+      "Jiaxuan You"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2410.03640",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "NoTeS-Bank",
+  "description": "Understanding and reasoning over academic handwritten notes remains a challenge in document AI, particularly for mathematical equations, diagrams, and scientific notations. Existing visual question answering (VQA) benchmarks focus on printed or structured handwritten text, limiting generalization to real-world note-taking. To address this, we introduce NoTeS-Bank, an evaluation benchmark for Neural Transcription and Search in note-based question answering. NoTeS-Bank comprises complex notes across multiple domains, requiring models to process unstructured and multimodal content. The benchmark defines two tasks: (1) Evidence-Based VQA, where models retrieve localized answers with bounding-box evidence, and (2) Open-Domain VQA, where models classify the domain before retrieving relevant documents and answers. Unlike classical Document VQA datasets relying on optical character recognition (OCR) and structured data, NoTeS-BANK demands vision-language fusion, retrieval, and multimodal reasoning. We benchmark state-of-the-art Vision-Language Models (VLMs) and retrieval frameworks, exposing structured transcription and reasoning limitations. NoTeS-Bank provides a rigorous evaluation with NDCG@5, MRR, Recall@K, IoU, and ANLS, establishing a new standard for visual document understanding and reasoning.",
+  "category": "multimodal",
+  "domain": "document understanding / handwritten scientific notes",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "evidence_retrieval",
+    "document_retrieval",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "NDCG@5, MRR, Recall@K for retrieval; IoU for localization; ANLS for OCR/answer alignment",
+  "general_score_metric": "NDCG@5 (primary for retrieval tasks)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, research-focused benchmark highlighting challenges in handwritten scientific notes and gaining attention among document-VQA and VLM researchers.",
+  "notes": "Contains multimodal, handwritten scientific notes; OCR is often unreliable so text-only models perform poorly. Specialized domain and annotation noise can limit generalization; moderate dataset size and nontrivial annotation cost.",
+  "creators": {
+    "scientists": [
+      "Aniket Pal",
+      "Sanket Biswas",
+      "Alloy Das",
+      "Ayush Lodh",
+      "Priyanka Banerjee",
+      "Soumitri Chattopadhyay",
+      "Dimosthenis Karatzas",
+      "Josep Llados",
+      "C. V. Jawahar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.09249",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

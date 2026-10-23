@@ -1,0 +1,36 @@
+{
+  "name": "REPLAB",
+  "description": "Standardized evaluation measures have aided in the progress of machine learning approaches in disciplines such as computer vision and machine translation. In this paper, we make the case that robotic learning would also benefit from benchmarking, and present the \"REPLAB\" platform for benchmarking vision-based manipulation tasks. REPLAB is a reproducible and self-contained hardware stack (robot arm, camera, and workspace) that costs about 2000 USD, occupies a cuboid of size 70x40x60 cm, and permits full assembly within a few hours. Through this low-cost, compact design, REPLAB aims to drive wide participation by lowering the barrier to entry into robotics and to enable easy scaling to many robots. We envision REPLAB as a framework for reproducible research across manipulation tasks, and as a step in this direction, we define a template for a grasping benchmark consisting of a task definition, evaluation protocol, performance measures, and a dataset of 92k grasp attempts. We implement, evaluate, and analyze several previously proposed grasping approaches to establish baselines for this benchmark. Finally, we also implement and evaluate a deep reinforcement learning approach for 3D reaching tasks on our REPLAB platform. Project page with assembly instructions, code, and videos: https://goo.gl/5F9dP4.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "open_ended",
+    "continuous_control"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task_success_rate (grasp success / task completion rate)",
+  "general_score_metric": "grasp success rate (task_success_rate)",
+  "typical_sota_score": "50–90% (varies widely by task, object set, and algorithm/hardware)",
+  "year_of_publish": 2019,
+  "reputation": "An influential reproducible hardware benchmark in robotic manipulation that lowered the barrier to entry and is used as a practical platform for evaluating vision-based grasping approaches.",
+  "notes": "Requires physical hardware assembly (not an LLM benchmark); reproducibility and hardware variability can affect results; dataset includes ~92k grasp attempts but real-world variability remains a challenge.",
+  "creators": {
+    "scientists": [
+      "Brian Yang",
+      "Jesse Zhang",
+      "Vitchyr Pong",
+      "Sergey Levine",
+      "Dinesh Jayaraman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1905.07447",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

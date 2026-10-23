@@ -1,0 +1,44 @@
+{
+  "name": "Video-Bench",
+  "description": "Video generation assessment is essential for ensuring that generative models produce visually realistic, high-quality videos while aligning with human expectations. Current video generation benchmarks fall into two main categories: traditional benchmarks, which use metrics and embeddings to evaluate generated video quality across multiple dimensions but often lack alignment with human judgments; and large language model (LLM)-based benchmarks, though capable of human-like reasoning, are constrained by a limited understanding of video quality metrics and cross-modal consistency.To address these challenges and establish a benchmark that better aligns with human preferences, this paper introduces Video-Bench, a comprehensive benchmark featuring a rich prompt suite and extensive evaluation dimensions. This benchmark represents the first attempt to systematically leverage MLLMs across all dimensions relevant to video generation assessment in generative models. By incorporating few-shot scoring and chain-of-query techniques, Video-Bench provides a structured, scalable approach to generated video evaluation. Experimental results demonstrate that MLLMs achieve superior alignment with human preferences across all dimensions. Moreover, in instances where our framework's assessments diverge from human evaluations, it consistently offers more objective and accurate insights, suggesting an even greater potential advantage over traditional human judgment.",
+  "category": "vision",
+  "domain": "video generation / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "quality_assessment",
+    "human_alignment",
+    "scoring"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval (MLLM-based scoring aligned to human preference judgments, combined with automated video-quality metrics)",
+  "general_score_metric": "preference_agreement / alignment_score (agreement with human judgments)",
+  "year_of_publish": 2023,
+  "reputation": "A recent proposal that has attracted interest for MLLM-driven video evaluation but is not yet widely adopted as a community standard.",
+  "notes": "Relies on MLLM scoring and few-shot/chain-of-query methods; subjective human preferences and MLLM biases can influence results. May diverge from traditional automated metrics; potential dataset/prompt contamination and limited established baselines.",
+  "creators": {
+    "scientists": [
+      "Hui Han",
+      "Siyuan Li",
+      "Jiaqi Chen",
+      "Yiwen Yuan",
+      "Yuling Wu",
+      "Yufan Deng",
+      "Chak Tou Leong",
+      "Hanwen Du",
+      "Junchen Fu",
+      "Youhua Li",
+      "Jie Zhang",
+      "Chi Zhang",
+      "Li-Jia Li",
+      "Yongxin Ni"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

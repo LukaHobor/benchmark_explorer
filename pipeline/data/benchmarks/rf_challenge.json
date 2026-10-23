@@ -1,0 +1,40 @@
+{
+  "name": "RF Challenge",
+  "description": "We address the critical problem of interference rejection in radio-frequency (RF) signals using a data-driven approach that leverages deep-learning methods. A primary contribution of this paper is the introduction of the RF Challenge, which is a publicly available, diverse RF signal dataset for data-driven analyses of RF signal problems. Specifically, we adopt a simplified signal model for developing and analyzing interference rejection algorithms. For this signal model, we introduce a set of carefully chosen deep learning architectures, incorporating key domain-informed modifications alongside traditional benchmark solutions to establish baseline performance metrics for this intricate, ubiquitous problem. Through extensive simulations involving eight different signal mixture types, we demonstrate the superior performance (in some cases, by two orders of magnitude) of architectures such as UNet and WaveNet over traditional methods like matched filtering and linear minimum mean square error estimation. Our findings suggest that the data-driven approach can yield scalable solutions, in the sense that the same architectures may be similarly trained and deployed for different types of signals. Moreover, these findings further corroborate the promising potential of deep learning algorithms for enhancing communication systems, particularly via interference mitigation. This work also includes results from an open competition based on the RF Challenge, hosted at the 2024 IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP'24).",
+  "category": "mixed",
+  "domain": "wireless communications",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "interference_rejection",
+    "signal_separation",
+    "signal_classification",
+    "denoising",
+    "signal_reconstruction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "signal-to-noise ratio improvement (SNR improvement) and mean squared error (MSE)",
+  "general_score_metric": "SNR improvement (dB)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, publicly released benchmark that has gained visibility in the wireless/signal‑processing community (highlighted by an ICASSP'24 competition) but is still maturing.",
+  "notes": "Non-LLM benchmark built on a simplified/simulated signal model; may not fully capture all real-world RF conditions; reported metrics typically include SNR/MSE and task-specific measures; results can be dataset- and simulation-setup dependent.",
+  "creators": {
+    "scientists": [
+      "Alejandro Lancho",
+      "Amir Weiss",
+      "Gary C. F. Lee",
+      "Tejas Jayashankar",
+      "Binoy Kurien",
+      "Yury Polyanskiy",
+      "Gregory W. Wornell"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2409.08839",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

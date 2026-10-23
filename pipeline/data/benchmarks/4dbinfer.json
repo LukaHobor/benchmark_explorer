@@ -1,0 +1,52 @@
+{
+  "name": "4DBInfer",
+  "description": "Although RDBs store vast amounts of rich, informative data spread across interconnected tables, the progress of predictive machine learning models as applied to such tasks arguably falls well behind advances in other domains such as computer vision or natural language processing. This deficit stems, at least in part, from the lack of established/public RDB benchmarks as needed for training and evaluation purposes. As a result, related model development thus far often defaults to tabular approaches trained on ubiquitous single-table benchmarks, or on the relational side, graph-based alternatives such as GNNs applied to a completely different set of graph datasets devoid of tabular characteristics. To more precisely target RDBs lying at the nexus of these two complementary regimes, we explore a broad class of baseline models predicated on: (i) converting multi-table datasets into graphs using various strategies equipped with efficient subsampling, while preserving tabular characteristics; and (ii) trainable models with well-matched inductive biases that output predictions based on these input subgraphs. Then, to address the dearth of suitable public benchmarks and reduce siloed comparisons, we assemble a diverse collection of (i) large-scale RDB datasets and (ii) coincident predictive tasks. From a delivery standpoint, we operationalize the above four dimensions (4D) of exploration within a unified, scalable open-source toolbox called 4DBInfer. We conclude by presenting evaluations using 4DBInfer, the results of which highlight the importance of considering each such dimension in the design of RDB predictive models, as well as the limitations of more naive approaches such as simply joining adjacent tables. Our source code is released at https://github.com/awslabs/multi-table-benchmark .",
+  "category": "mixed",
+  "domain": "relational databases",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "relational_prediction",
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-dependent: accuracy / F1 for classification tasks; RMSE or MAE for regression tasks; also task-specific ranking metrics where applicable",
+  "general_score_metric": "accuracy (classification) / RMSE or MAE (regression) depending on task",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "An open-source, AWS‑backed benchmark/toolbox (4DBInfer) intended to standardize multi-table RDB predictive tasks; growing interest in the RDB research community but not yet ubiquitous.",
+  "notes": "Heterogeneous multi-table tasks across varied schemas — results vary widely by task and conversion strategy; risk of leakage if joins are mishandled; not an LLM benchmark; useful for evaluating relational inductive biases.",
+  "creators": {
+    "scientists": [
+      "Minjie Wang",
+      "Quan Gan",
+      "David Wipf",
+      "Zhenkun Cai",
+      "Ning li",
+      "Jianheng Tang",
+      "Yanlin Zhang",
+      "Zizhao Zhang",
+      "Zunyao Mao",
+      "Yakun Song",
+      "Yanbo Wang",
+      "Jiahang Li",
+      "Han Zhang",
+      "Guang Yang",
+      "Xiao Qin",
+      "Chuan Lei",
+      "Muhan Zhang",
+      "Weinan Zhang",
+      "Christos Faloutsos",
+      "Zheng Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2404.18209",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

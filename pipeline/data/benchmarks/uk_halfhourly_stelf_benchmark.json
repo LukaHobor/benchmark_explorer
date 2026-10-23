@@ -1,0 +1,32 @@
+{
+  "name": "UK Half-Hourly STELF Benchmark",
+  "description": "Accurate short-term electricity load forecasting (STELF) underpins reliable and flexible power system operation, particularly in markets like the United Kingdom (UK) which is undergoing rapid decarbonisation and renewable integration. In this study we conduct an empirical comparison of interpretable statistical and modern machine-learning (ML) models using half-hourly UK electricity data for the years 2015–2020. We evaluated the benchmarked models—Naïve, Seasonal Naïve, ETS, SARIMAX, Prophet, Gradient Boosting Machines (GBM), and Long Short-Term Memory (LSTM) networks—under consistent data splits, pre-processing, and diagnostic protocols, with dual baselines defined by relative skill (RelSkill) against S-Naïve and Diebold–Mariano (DM) tests against SARIMAX. Our analysis showed that although LSTM remains competitive at shorter horizons (H = 48), GBM provides the most stable and accurate week-ahead forecasts. ETS and Prophet exhibit persistent periodic residuals even though they offer interpretability. Ultimately, when trained on multi-year, high-frequency datasets, SARIMAX displays reduced  robustness, exhibiting empirical fragility at realistic history lengths. We introduce a dedicated DSR-slice analysis which isolates extreme ramps and demand peaks, revealing forecast sensitivity during operationally-critical flexibility events. We document the safeguards required to stabilise SARIMAX and show why tree-based ML is a safer default for operator-grade STELF. Outputs from our Jupyter pipeline are automatically labelled and saved in standardised formats to ensure consistency of results. Collectively, the results highlight the complementary strengths of statistical and data-driven methods and underscore the importance of hybrid designs that combine transparency with adaptability. This work establishes an empirical foundation for DSR-ready load forecasting under realistic, operator-grade conditions.",
+  "category": "mixed",
+  "domain": "time series / energy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE (Mean Absolute Error) as primary; RMSE reported; relative skill (RelSkill) vs seasonal-naïve and statistical significance via Diebold–Mariano tests",
+  "general_score_metric": "Mean Absolute Error (MAE)",
+  "year_of_publish": 2026,
+  "reputation": "A niche but well-regarded benchmark in the energy forecasting community for operator-grade, half-hourly UK load forecasting.",
+  "notes": "Non-LLM, real-world half-hourly UK electricity data (2015–2020); strong seasonality and nonstationarity; evaluation sensitive to exogenous covariates (weather, holidays); contains operator-focused DSR-slice analyses highlighting extreme ramps; potential data-leakage risks if covariate preprocessing or temporal splits are mishandled.",
+  "creators": {
+    "scientists": [
+      "Femi  O. Olatunji",
+      "Bamidele Adebisi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.2139/ssrn.6263505",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

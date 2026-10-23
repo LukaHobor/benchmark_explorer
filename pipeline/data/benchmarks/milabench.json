@@ -1,0 +1,48 @@
+{
+  "name": "Milabench",
+  "description": "AI workloads, particularly those driven by deep learning, are introducing novel usage patterns to high-performance computing (HPC) systems that are not comprehensively captured by standard HPC benchmarks. As one of the largest academic research centers dedicated to deep learning, Mila identified the need to develop a custom benchmarking suite to address the diverse requirements of its community, which consists of over 1,000 researchers. This report introduces Milabench, the resulting benchmarking suite. Its design was informed by an extensive literature review encompassing 867 papers, as well as surveys conducted with Mila researchers. This rigorous process led to the selection of 26 primary benchmarks tailored for procurement evaluations, alongside 16 optional benchmarks for in-depth analysis. We detail the design methodology, the structure of the benchmarking suite, and provide performance evaluations using GPUs from NVIDIA, AMD, and Intel. The Milabench suite is open source and can be accessed at github.com/mila-iqia/milabench.",
+  "category": "mixed",
+  "domain": "HPC / AI accelerators",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "training_performance",
+    "inference_performance",
+    "throughput_latency_measurement"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "hardware/performance metrics (throughput, latency, time-to-solution, FLOPs/utilization)",
+  "general_score_metric": "throughput (examples/sec) and time-to-solution / latency (task-dependent)",
+  "typical_sota_score": "varies by workload and hardware; no single SOTA",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "An open-source, practitioner-oriented GPU benchmarking suite from Mila intended for procurement and hardware evaluation; gaining attention in HPC/ML systems circles.",
+  "notes": "Suite covers diverse workloads so performance is highly hardware- and software-stack-dependent; results sensitive to driver/library versions and not a single-model accuracy-style benchmark.",
+  "creators": {
+    "scientists": [
+      "Pierre Delaunay",
+      "Xavier Bouthillier",
+      "Olivier Breuleux",
+      "Satya Ortiz-Gagné",
+      "Olexa Bilaniuk",
+      "Fabrice Normandin",
+      "Arnaud Bergeron",
+      "Bruno Carrez",
+      "Guillaume Alain",
+      "Soline Blanc",
+      "Frédéric Osterrath",
+      "Joseph Viviano",
+      "Roger Creus-Castanyer Darshan Patil",
+      "Rabiul Awal",
+      "Le Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2411.11940",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Thalamic nuclei segmentation benchmark",
+  "description": "The thalamus and its constituent nuclei are critical for a broad range of cognitive and sensorimotor processes, and implicated in many neurological and neurodegenerative conditions. However, the functional involvement and specificity of thalamic nuclei in human neuroimaging is underappreciated and not well studied due, in part, to technical challenges of accurately identifying and segmenting nuclei. This challenge is further exacerbated by a lack of common nomenclature for comparing segmentation methods. Here, we use data from healthy young (Human Connectome Project, 100 subjects) and older healthy adults, plus those with minor cognitive impairment and Alzheimer$'$s disease (Alzheimer$'$s Disease Neuroimaging Initiative, 540 subjects), to benchmark four state of the art thalamic segmentation methods for T1 MRI (FreeSurfer, HIPS-THOMAS, SCS-CNN, and T1-THOMAS) under a single segmentation framework. Segmentations were compared using overlap and dissimilarity metrics to the Morel stereotaxic atlas. We also quantified each method$'$s estimation of thalamic nuclear degeneration across Alzheimer$'$s disease progression, and how accurately early and late mild cognitive impairment, and Alzheimers disease could be distinguished from healthy controls. We show that HIPS-THOMAS produced the most effective segmentations of individual thalamic nuclei and was also most accurate in discriminating healthy controls from those with mild cognitive impairment and Alzheimer$'$s disease using individual nucleus volumes. This work is the first to systematically compare the efficacy of anatomical thalamic segmentation approaches under a unified nomenclature. We also provide recommendations of which segmentation method to use for studying the functional relevance of specific thalamic nuclei, based on their overlap and dissimilarity with the Morel atlas.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "volume_estimation",
+    "disease_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice coefficient and IoU (overlap metrics), Hausdorff distance (dissimilarity); classification accuracy for disease discrimination",
+  "general_score_metric": "Dice coefficient (mean per-nucleus)",
+  "typical_sota_score": "70–90%",
+  "year_of_publish": 2023,
+  "reputation": "Specialized, moderate recognition within the neuroimaging community for comparing thalamic segmentation methods.",
+  "notes": "Medical-imaging benchmark (non-LLM). Moderate dataset size (HCP 100 + ADNI 540); ground-truth based on the Morel stereotaxic atlas (an approximation), class imbalance across small nuclei, performance varies by nucleus size; care needed when generalizing across populations.",
+  "creators": {
+    "scientists": [
+      "Brendan Williams",
+      "Dan Nguyen",
+      "Julie Vidal",
+      "Alzheimer's Disease Neuroimaging Initiative",
+      "Manojkumar Saranathan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2309.15053",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

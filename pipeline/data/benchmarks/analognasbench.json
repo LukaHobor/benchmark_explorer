@@ -1,0 +1,35 @@
+{
+  "name": "AnalogNAS-Bench",
+  "description": "Analog In-memory Computing (AIMC) has emerged as a highly efficient paradigm for accelerating Deep Neural Networks (DNNs), offering significant energy and latency benefits over conventional digital hardware. However, state-of-the-art neural networks are not inherently designed for AIMC, as they fail to account for its unique non-idealities. Neural Architecture Search (NAS) is thus needed to systematically discover neural architectures optimized explicitly for AIMC constraints. However, comparing NAS methodologies and extracting insights about robust architectures for AIMC requires a dedicated NAS benchmark that explicitly accounts for AIMC-specific hardware non-idealities. To address this, we introduce AnalogNAS-Bench, the first NAS benchmark tailored specifically for AIMC. Our study reveals three key insights: (1) standard quantization techniques fail to capture AIMC-specific noises, (2) robust architectures tend to feature wider and branched blocks, (3) skip connections improve resilience to temporal drift noise. These insights highlight the limitations of current NAS benchmarks for AIMC and pave the way for future analog-aware NAS. All the implementations used in this paper can be found at https://github.com/IBM/analog-nas/tree/main/analognasbench.",
+  "category": "mixed",
+  "domain": "analog in-memory computing / hardware accelerators",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "architecture_search",
+    "performance_prediction",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy (classification accuracy under AIMC noise) and ranking of architectures by robustness",
+  "general_score_metric": "classification accuracy under simulated AIMC non-idealities (robust accuracy)",
+  "year_of_publish": 2025,
+  "reputation": "A recent IBM-proposed, domain-specific NAS benchmark for analog in‑memory computing that is gaining interest in the AIMC and hardware-aware NAS research communities but is not yet broadly adopted.",
+  "notes": "Non-LLM benchmark focused on analog in‑memory computing; evaluates architectures under simulated AIMC non-idealities (simulation fidelity matters); potential for overfitting to the simulated noise model; limited to the datasets and model families provided by the authors.",
+  "creators": {
+    "scientists": [
+      "Aniss Bessalah",
+      "Hatem Mohamed Abdelmoumen",
+      "Karima Benatchba",
+      "Hadjer Benmeziane"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2506.18495",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

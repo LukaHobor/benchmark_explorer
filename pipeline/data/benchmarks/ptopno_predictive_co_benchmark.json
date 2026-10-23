@@ -1,0 +1,40 @@
+{
+  "name": "PtO/PnO Predictive CO Benchmark",
+  "description": "Predictive combinatorial optimization, where the parameters of combinatorial optimization (CO) are unknown at the decision-making time, is the precise modeling of many real-world applications, including energy cost-aware scheduling and budget allocation on advertising. Tackling such a problem usually involves a prediction model and a CO solver. These two modules are integrated into the predictive CO pipeline following two design principles: \"Predict-then-Optimize (PtO)\", which learns predictions by supervised training and subsequently solves CO using predicted coefficients, while the other, named \"Predict-and-Optimize (PnO)\", directly optimizes towards the ultimate decision quality and claims to yield better decisions than traditional PtO approaches. However, there lacks a systematic benchmark of both approaches, including the specific design choices at the module level, as well as an evaluation dataset that covers representative real-world scenarios. To this end, we develop a modular framework to benchmark 11 existing PtO/PnO methods on 8 problems, including a new industrial dataset for combinatorial advertising that will be released. Our study shows that PnO approaches are better than PtO on 7 out of 8 benchmarks, but there is no silver bullet found for the specific design choices of PnO. A comprehensive categorization of current approaches and integration of typical scenarios are provided under a unified benchmark. Therefore, this paper could serve as a comprehensive benchmark for future PnO approach development and also offer fast prototyping for application-focused development. The code is available at https://github.com/Thinklab-SJTU/PredictiveCO-Benchmark.",
+  "category": "mixed",
+  "domain": "combinatorial optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "combinatorial_optimization",
+    "decision_quality_optimization",
+    "benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "decision_regret / optimality_gap (decision quality)",
+  "general_score_metric": "decision_regret / optimality_gap",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "A respected research benchmark for predictive combinatorial optimization (PtO vs PnO) introduced by Thinklab-SJTU; used in academic evaluations of end-to-end decision-focused methods.",
+  "notes": "Non-LLM benchmark combining prediction models and CO solvers; results are sensitive to solver choice, hyperparameters and problem instance generation. Some tasks include a newly released industrial dataset; dataset sizes and problem diversity vary across the 8 tasks.",
+  "creators": {
+    "scientists": [
+      "Haoyu Geng",
+      "Hang Ruan",
+      "Runzhong Wang",
+      "Yang Li",
+      "Yang Wang",
+      "Lei Chen",
+      "Junchi Yan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2311.07633",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "CSP Perturbed VQA Dataset",
+  "description": "Vision-language models (VLMs) excel in various multimodal tasks but frequently suffer from poor calibration, resulting in misalignment between their verbalized confidence and response correctness. This miscalibration undermines user trust, especially when models confidently provide incorrect or fabricated information. In this work, we propose a novel Confidence Calibration through Semantic Perturbation (CSP) framework to improve the calibration of verbalized confidence for VLMs in response to object-centric queries. We first introduce a perturbed dataset where Gaussian noise is applied to the key object regions to simulate visual uncertainty at different confidence levels, establishing an explicit mapping between visual ambiguity and confidence levels. We further enhance calibration through a two-stage training process combining supervised fine-tuning on the perturbed dataset with subsequent preference optimization. Extensive experiments on popular benchmarks demonstrate that our metho",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "confidence_calibration",
+    "multimodal_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "calibration_error",
+  "general_score_metric": "calibration error",
+  "year_of_publish": 2025,
+  "reputation": "A very recent calibration-focused VLM benchmark/framework that is still emerging and not yet widely established.",
+  "notes": "Perturbed synthetic dataset for confidence calibration rather than a standard open-ended VQA benchmark; likely small and specialized to object-centric queries.",
+  "creators": {
+    "scientists": [
+      "Yunpu Zhao",
+      "Rui Zhang",
+      "Junbin Xiao",
+      "Ruibo Hou",
+      "Jiaming Guo",
+      "Zihao Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.14848",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

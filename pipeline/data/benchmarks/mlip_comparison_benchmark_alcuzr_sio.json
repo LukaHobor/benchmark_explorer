@@ -1,0 +1,37 @@
+{
+  "name": "MLIP comparison benchmark (Al–Cu–Zr & Si–O)",
+  "description": "Machine learning interatomic potentials (MLIPs) have massively changed the field of atomistic modeling. They enable the accuracy of density functional theory in large-scale simulations while being nearly as fast as classical interatomic potentials (IPs). Over the last few years, a wide range of different types of MLIPs have been developed, but it is often difficult to judge which approach is the best for a given problem setting. For the case of structurally and chemically complex solids, namely Al–Cu–Zr and Si–O, we benchmark a range of MLIP approaches, in particular, the Gaussian approximation potential, high-dimensional neural network potentials, moment tensor potentials, the atomic cluster expansion (ACE) in its linear and nonlinear version, neural equivariant interatomic potentials (NequIP), Allegro, and MACE. We find that nonlinear ACE and the equivariant, message-passing graph neural networks NequIP and MACE form the Pareto front in the accuracy vs. computational cost trade-off. In case of the Al–Cu–Zr system we find that MACE and Allegro offer the highest accuracy, while NequIP outperforms them for Si–O. Furthermore, GPUs can massively accelerate the MLIPs, bringing them on par with and even ahead of non-accelerated classical IPs with regards to accessible timescales. Finally, we explore the extrapolation behavior of the corresponding potentials, probe the smoothness of the potential energy surfaces, and estimate the user friendliness of the corresponding fitting codes and molecular dynamics interfaces.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "energy_prediction",
+    "force_prediction",
+    "materials_property_prediction",
+    "computational_efficiency_benchmark"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_absolute_error (energy/forces) & computational_cost (timing); Pareto efficiency analyses",
+  "general_score_metric": "mean_absolute_error (energy/forces) combined with computational cost",
+  "year_of_publish": 2025,
+  "reputation": "13 citations",
+  "notes": "Non-LLM benchmark focused on ML interatomic potentials; results are sensitive to training data, hyperparameters and tested chemistries; GPU acceleration strongly affects performance comparisons.",
+  "creators": {
+    "scientists": [
+      "Niklas Leimeroth",
+      "Linus C. Erhard",
+      "Karsten Albe",
+      "Jochen Rohrer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2505.02503",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

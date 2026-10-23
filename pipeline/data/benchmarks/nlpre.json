@@ -1,0 +1,37 @@
+{
+  "name": "NLPre",
+  "description": "With the advancements of transformer-based architectures, we observe the rise of natural language preprocessing (NLPre) tools capable of solving preliminary NLP tasks (e.g. tokenisation, part-of-speech tagging, dependency parsing, or morphological analysis) without any external linguistic guidance. It is arduous to compare novel solutions to well-entrenched preprocessing toolkits, relying on rule-based morphological analysers or dictionaries. Aware of the shortcomings of existing NLPre evaluation approaches, we investigate a novel method of reliable and fair evaluation and performance reporting. Inspired by the GLUE benchmark, the proposed language-centric benchmarking system enables comprehensive ongoing evaluation of multiple NLPre tools, while credibly tracking their performance. The prototype application is configured for Polish and integrated with the thoroughly assembled NLPre-PL benchmark. Based on this benchmark, we conduct an extensive evaluation of a variety of Polish NLPre systems. To facilitate the construction of benchmarking environments for other languages, e.g. NLPre-GA for Irish or NLPre-ZH for Chinese, we ensure full customization of the publicly released source code of the benchmarking system. The links to all the resources (deployed platforms, source code, trained models, datasets etc.) can be found on the project website: https://sites.google.com/view/nlpre-benchmark.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "tokenization",
+    "sequence_labeling",
+    "dependency_parsing",
+    "morphological_analysis"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "task-dependent (accuracy / F1 for tagging / LAS/UAS for parsing)",
+  "general_score_metric": "task-dependent (F1, accuracy, LAS/UAS)",
+  "typical_sota_score": "varies by task: tokenization/POS often ~90–99%, parsing (LAS/UAS) typically ~75–90%",
+  "year_of_publish": 2024,
+  "reputation": "A useful prototype benchmarking framework for Polish NLPre tasks with academic interest; adoption is currently limited to language-processing researchers and tool developers.",
+  "notes": "Language-centric and currently configured for Polish (NLPre-PL); non-LLM focus (preprocessing tools); performance is task-dependent and results may be influenced by overlap between training data of evaluated systems and benchmark corpora.",
+  "creators": {
+    "scientists": [
+      "Martyna Wiącek",
+      "Piotr Rybak",
+      "Łukasz Pszenny",
+      "Alina Wróblewska"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2403.04507",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

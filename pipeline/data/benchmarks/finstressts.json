@@ -1,0 +1,27 @@
+{
+  "name": "FinStressTS",
+  "description": "Financial forecasting is notoriously difficult due to low signal-to-noise ratios, latent factors, and discontinuous jumps. A critical limitation of real-world benchmarks is the inability to attribute failure: researchers see that a model underperforms, but cannot isolate why, as the generative mechanisms are unobservable entanglements of noise and structure. Furthermore, real financial data reveal only one realized path, making it difficult to assess tail-risk calibration or data efficiency under controlled conditions. We introduce FinStressTS, a mechanism-aware synthetic benchmark designed to bridge this gap by providing controlled environments that link model behavior directly to specific structural causes. FinStressTS comprises 30 diagnostic environments organized around six canonical mechanism families: volatility clustering, multi-scale persistence, heavy-tailed shocks, regime switching, self-exciting jumps, and zero-inflated processes. We evaluate models on two distinct tasks: (1) Point Forecasting, where we assess predictive accuracy using NMAE across five diagnostic settings; and (2) Probabilistic Forecasting, where we benchmark distributional calibration using CRPS in settings with known data-generating mechanisms—an evaluation difficult to isolate with real data. We rigorously evaluate 15 diverse models, ranging from classical econometric methods (HAR, VAR) to modern Transformer-based forecasters (PatchTST, iTransformer) and deep probabilistic architectures (DeepAR, TSFlow), while also conducting learning curve analyses to measure performance as a function of sample size. Our evaluation reveals critical insights: (1) Mechanism Sensitivity: Model performance is governed by architectural inductive bias rather than capacity—simple autoregressive and linear models consistently outperform Transformers in volatility-, tail-, and jump-driven environments; (2) Distributional Alignment: Parametric probabilistic models (e.g., DeepAR) achieve superior calibration in stationary settings by aligning with volatility dynamics, whereas flexible density models (e.g., flows and mixtures) are necessary when predictive distributions become multimodal or sparse; (3) Data Inefficiency: Neural models require substantially more data to match simple baselines and often fail to benefit from additional samples in stationary regimes, with larger datasets helping primarily when learning latent regime structure or complex predictive distributions. FinStressTS provides the community with an open framework to diagnose failure modes and advance risk-aware forecasting; the accompanying code is available on GitHub.",
+  "category": "mixed",
+  "domain": "financial forecasting",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2026,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1145/3770855.3817578",
+  "provenance": {
+    "added_by": "scan-2026q2",
+    "added_at": "2026-08-19",
+    "origin": "cynefin@d486fafa9",
+    "gated": false,
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

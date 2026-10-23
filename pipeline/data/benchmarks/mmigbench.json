@@ -1,0 +1,38 @@
+{
+  "name": "MMIG-Bench",
+  "description": "Recent multimodal image generators such as GPT-4o, Gemini 2.0 Flash, and Gemini 2.5 Pro excel at following complex instructions, editing images and maintaining concept consistency. However, they are still evaluated by disjoint toolkits: text-to-image (T2I) benchmarks that lacks multi-modal conditioning, and customized image generation benchmarks that overlook compositional semantics and common knowledge. We propose MMIG-Bench, a comprehensive Multi-Modal Image Generation Benchmark that unifies these tasks by pairing 4,850 richly annotated text prompts with 1,750 multi-view reference images across 380 subjects, spanning humans, animals, objects, and artistic styles. MMIG-Bench is equipped with a three-level evaluation framework: (1) low-level metrics for visual artifacts and identity preservation of objects; (2) novel Aspect Matching Score (AMS): a VQA-based mid-level metric that delivers fine-grained prompt-image alignment and shows strong correlation with human judgments; and (3) high-level metrics for aesthetics and human preference. Using MMIG-Bench, we benchmark 17 state-of-the-art models, including Gemini 2.5 Pro, FLUX, DreamBooth, and IP-Adapter, and validate our metrics with 32k human ratings, yielding in-depth insights into architecture and data design.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image",
+    "image_editing",
+    "visual_question_answering",
+    "aesthetic_ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite (automated visual metrics like FID/LPIPS + AMS VQA-based alignment + human_eval/preferences)",
+  "general_score_metric": "Aspect Matching Score (AMS) combined with human preference scores",
+  "year_of_publish": 2025,
+  "reputation": "5 citations",
+  "notes": "Contains multi-component metrics and extensive human ratings; potential contamination risk from web-scale pretraining of evaluated models; not limited to LLM-only evaluation and unlikely to be saturated by current models.",
+  "creators": {
+    "scientists": [
+      "Hang Hua",
+      "Ziyun Zeng",
+      "Yizhi Song",
+      "Yunlong Tang",
+      "Liu He",
+      "Daniel G. Aliaga"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.19415",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "PV inverter transient stability / FRT benchmark",
+  "description": "The deployment of PV inverters is rapidly expanding across Europe, where these devices must increasingly comply with stringent grid requirements.This study presents a benchmark analysis of four PV inverter manufacturers, focusing on their Fault Ride Through capabilities under varying grid strengths, voltage dips, and fault durations, parameters critical for grid operators during fault conditions.The findings highlight the influence of different inverter controls on key metrics such as total harmonic distortion of current and voltage signals, as well as system stability following grid faults.Additionally, the study evaluates transient stability using two distinct testing approaches.The first approach employs the current standard method, which is testing with an ideal voltage source. The second utilizes a Power Hardware in the Loop methodology with a benchmark CIGRE grid model.The results reveal that while testing with an ideal voltage source is cost-effective and convenient in the short term, it lacks the ability to capture the dynamic interactions and feedback loops of physical grid components.This limitation can obscure critical real world factors, potentially leading to unexpected inverter behavior and operational challenges in grids with high PV penetration.This study underscores the importance of re-evaluating conventional testing methods and incorporating Power Hardware in the Loop structures to achieve test results that more closely align with real-world conditions.",
+  "category": "mixed",
+  "domain": "power systems / renewable energy",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "time_series_analysis",
+    "simulation_evaluation",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (measured via physical metrics)",
+  "general_score_metric": "total harmonic distortion (THD) and transient stability pass rate (system_stability_rate)",
+  "year_of_publish": 2025,
+  "reputation": "Niche, engineering-focused benchmark primarily used by power systems researchers and inverter manufacturers rather than the broader ML community.",
+  "notes": "Non-ML / hardware-focused benchmark using Power Hardware-in-the-Loop and ideal-source tests; domain-specific metrics (THD, recovery time, stability margin) are primary. Limited dataset/generalization across manufacturers, potential reproducibility constraints due to hardware requirements and test setup variability.",
+  "creators": {
+    "scientists": [
+      "Carina Lehmal",
+      "Ziqian Zhang",
+      "Robert Schürhuber"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2501.13503",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

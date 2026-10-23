@@ -1,0 +1,33 @@
+{
+  "name": "ChaosDB",
+  "description": "The striking fractal geometry of strange attractors underscores the generative nature of chaos: like probability distributions, chaotic systems can be repeatedly measured to produce arbitrarily-detailed information about the underlying attractor. Chaotic systems thus pose a unique challenge to modern statistical learning techniques, while retaining quantifiable mathematical properties that make them controllable and interpretable as benchmarks. Here, we present a growing database currently comprising 131 known chaotic dynamical systems spanning fields such as astrophysics, climatology, and biochemistry. Each system is paired with precomputed multivariate and univariate time series. Our dataset has comparable scale to existing static time series databases; however, our systems can be re-integrated to produce additional datasets of arbitrary length and granularity. Our dataset is annotated with known mathematical properties of each system, and we perform feature analysis to broadly categorize the diverse dynamics present across the collection. Chaotic systems inherently challenge forecasting models, and across extensive benchmarks we correlate forecasting performance with the degree of chaos present. We also exploit the unique generative properties of our dataset in several proof-of-concept experiments: surrogate transfer learning to improve time series classification, importance sampling to accelerate model training, and benchmarking symbolic regression algorithms.",
+  "category": "mixed",
+  "domain": "dynamical systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "classification",
+    "symbolic_regression",
+    "transfer_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / MAE / NRMSE for forecasting; accuracy/F1 for classification; domain-specific metrics for symbolic regression",
+  "general_score_metric": "RMSE (forecasting error) is the primary reported metric",
+  "year_of_publish": 2021,
+  "reputation": "A well-designed, curated collection that has attracted attention in the dynamical-systems and time-series ML communities for benchmarking chaos-informed forecasting and symbolic-regression methods.",
+  "notes": "Non-LLM time-series benchmark; contains 131 diverse chaotic systems that can be re-integrated to arbitrary lengths. Care needed for train/test splitting and for comparing models across systems of differing scales and chaoticity; potential for overfitting to particular attractors.",
+  "creators": {
+    "scientists": [
+      "William Gilpin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2110.05266",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

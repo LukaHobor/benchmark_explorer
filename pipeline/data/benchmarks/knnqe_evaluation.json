@@ -1,0 +1,33 @@
+{
+  "name": "kNN-QE Evaluation",
+  "description": "Providing quality scores along with Machine Translation (MT) output, so-called reference-free Quality Estimation (QE), is crucial to inform users about the reliability of the translation. We propose a model-specific, unsupervised QE approach, termed $k$NN-QE, that extracts information from the MT model's training data using $k$-nearest neighbors. Measuring the performance of model-specific QE is not straightforward, since they provide quality scores on their own MT output, thus cannot be evaluated using benchmark QE test sets containing human quality scores on premade MT output. Therefore, we propose an automatic evaluation method that uses quality scores from reference-based metrics as gold standard instead of human-generated ones. We are the first to conduct detailed analyses and conclude that this automatic method is sufficient, and the reference-based MetricX-23 is best for the task.",
+  "category": "text",
+  "domain": "machine translation",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "quality_estimation",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation",
+  "general_score_metric": "Pearson/Spearman correlation with reference-based metric scores",
+  "year_of_publish": 2024,
+  "reputation": "Widely used as a reference-free MT quality estimation setting in recent research, but the specific kNN-QE evaluation protocol is new and not yet broadly standardized.",
+  "notes": "Model-specific, unsupervised QE; evaluation uses reference-based metrics as proxy gold rather than human labels, so results depend on the chosen metric and may not transfer to human judgment.",
+  "creators": {
+    "scientists": [
+      "Tu Anh Dinh",
+      "Tobias Palzer",
+      "Jan Niehues"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2404.18031",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

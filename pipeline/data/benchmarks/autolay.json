@@ -1,0 +1,37 @@
+{
+  "name": "AutoLay",
+  "description": "Given an image or a video captured from a monocular camera, amodal layout estimation is the task of predicting semantics and occupancy in bird's eye view. The term amodal implies we also reason about entities in the scene that are occluded or truncated in image space. While several recent efforts have tackled this problem, there is a lack of standardization in task specification, datasets, and evaluation protocols. We address these gaps with AutoLay, a dataset and benchmark for amodal layout estimation from monocular images. AutoLay encompasses driving imagery from two popular datasets: KITTI and Argoverse. In addition to fine-grained attributes such as lanes, sidewalks, and vehicles, we also provide semantically annotated 3D point clouds. We implement several baselines and bleeding edge approaches, and release our data and code.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "amodal_layout_estimation",
+    "bird_eye_view_prediction",
+    "semantic_segmentation",
+    "occupancy_prediction",
+    "amodal_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection-over-Union (mIoU) / BEV IoU for semantic elements; Average Precision for object occupancy when applicable",
+  "general_score_metric": "mIoU (mean IoU) / BEV IoU",
+  "year_of_publish": 2021,
+  "reputation": "A specialized benchmark combining KITTI and Argoverse modalities; used in research on amodal/BEV layout estimation but not ubiquitous.",
+  "notes": "Ground truth for occluded/amodal regions derived from 3D reconstructions and sensor fusion, which can introduce noise. Limited dataset scale compared to large-scale driving benchmarks; evaluation sensitive to projection and annotation choices. Not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Kaustubh Mani",
+      "N. Sai Shankar",
+      "Krishna Murthy Jatavallabhula",
+      "K. Madhava Krishna"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2108.09047",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

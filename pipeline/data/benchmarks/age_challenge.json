@@ -1,0 +1,56 @@
+{
+  "name": "AGE Challenge",
+  "description": "Angle closure glaucoma (ACG) is a more aggressive disease than open-angle glaucoma, where the abnormal anatomical structures of the anterior chamber angle (ACA) may cause an elevated intraocular pressure and gradually lead to glaucomatous optic neuropathy and eventually to visual impairment and blindness. Anterior Segment Optical Coherence Tomography (AS-OCT) imaging provides a fast and contactless way to discriminate angle closure from open angle. Although many medical image analysis algorithms have been developed for glaucoma diagnosis, only a few studies have focused on AS-OCT imaging. In particular, there is no public AS-OCT dataset available for evaluating the existing methods in a uniform way, which limits progress in the development of automated techniques for angle closure detection and assessment. To address this, we organized the Angle closure Glaucoma Evaluation challenge (AGE), held in conjunction with MICCAI 2019. The AGE challenge consisted of two tasks: scleral spur localization and angle closure classification. For this challenge, we released a large dataset of 4800 annotated AS-OCT images from 199 patients, and also proposed an evaluation framework to benchmark and compare different models. During the AGE challenge, over 200 teams registered online, and more than 1100 results were submitted for online evaluation. Finally, eight teams participated in the onsite challenge. In this paper, we summarize these eight onsite challenge methods and analyze their corresponding results for the two tasks. We further discuss limitations and future directions. In the AGE challenge, the top-performing approach had an average Euclidean Distance of 10 pixels (10um) in scleral spur localization, while in the task of angle closure classification, all the algorithms achieved satisfactory performances, with two best obtaining an accuracy rate of 100%.",
+  "category": "vision",
+  "domain": "medical imaging / ophthalmology",
+  "benchmark_type": "competition",
+  "task_types": [
+    "keypoint_localization",
+    "binary_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Euclidean distance (pixels) for scleral spur localization; classification accuracy (and related metrics such as AUC/F1) for angle-closure detection",
+  "general_score_metric": "Euclidean distance (localization) and accuracy (classification)",
+  "typical_sota_score": "localization ≈ 10 pixels; classification up to 100% on the challenge test (task-dependent)",
+  "year_of_publish": 2020,
+  "reputation": "Organized as the MICCAI 2019 AGE challenge, it is a recognized benchmark in the AS-OCT/ophthalmic imaging community with moderate adoption for angle-closure research.",
+  "notes": "Non-LLM medical imaging benchmark; moderate dataset size (4,800 images from 199 patients); potential annotation variability and class imbalance; classification may be saturated on the challenge test set, so generalization should be validated on external data.",
+  "creators": {
+    "scientists": [
+      "Huazhu Fu",
+      "Fei Li",
+      "Xu sun",
+      "Xingxing Cao",
+      "Jingan Liao",
+      "Jose Ignacio Orlando",
+      "Xing Tao",
+      "Yuexiang Li",
+      "Shihao Zhang",
+      "Mingkui Tan",
+      "Chenglang Yuan",
+      "Cheng Bian",
+      "Ruitao Xie",
+      "Jiongcheng Li",
+      "Xiaomeng Li",
+      "Jing Wang",
+      "Le Geng",
+      "Panming Li",
+      "Huaying Hao",
+      "Jiang Liu",
+      "Yan Kong",
+      "Yongyong Ren",
+      "Hrvoje Bogunovic",
+      "Xiulan Zhang",
+      "Yanwu Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2005.02258",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "M3T2IBench",
+  "description": "Text-to-image models are known to struggle with generating images that perfectly align with textual prompts. Several previous studies have focused on evaluating image-text alignment in text-to-image generation. However, these evaluations either address overly simple scenarios, especially overlooking the difficulty of prompts with multiple different instances belonging to the same category, or they introduce metrics that do not correlate well with human evaluation. In this study, we introduce M$^3$T2IBench, a large-scale, multi-category, multi-instance, multi-relation along with an object-detection-based evaluation metric, $AlignScore$, which aligns closely with human evaluation. Our findings reveal that current open-source text-to-image models perform poorly on this challenging benchmark. Additionally, we propose the Revise-Then-Enforce approach to enhance image-text alignment. This training-free post-editing method demonstrates improvements in image-text alignment across a broad range of diffusion models. \\footnote{Our code and data has been released in supplementary material and will be made publicly available after the paper is accepted.}",
+  "category": "vision",
+  "domain": "multimodal / text-to-image generation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_image_generation",
+    "image_text_alignment",
+    "object_detection_based_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AlignScore (object-detection-based) and human evaluation",
+  "general_score_metric": "AlignScore",
+  "year_of_publish": 2025,
+  "reputation": "A recently proposed, specialized benchmark for multi-instance multi-relation image-text alignment in text-to-image models; relevant but not yet widely adopted.",
+  "notes": "Relies on object detector performance (AlignScore) so results are sensitive to detector quality; dataset/code were indicated to be released on paper acceptance, so initial adoption may be limited; focused on diffusion-based image generators rather than LLMs.",
+  "creators": {
+    "scientists": [
+      "Huixuan Zhang",
+      "Xiaojun Wan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2510.23020",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

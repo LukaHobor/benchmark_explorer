@@ -1,0 +1,36 @@
+{
+  "name": "ECCV Caption",
+  "description": "Image-Text matching (ITM) is a common task for evaluating the quality of Vision and Language (VL) models. However, existing ITM benchmarks have a significant limitation. They have many missing correspondences, originating from the data construction process itself. For example, a caption is only matched with one image although the caption can be matched with other similar images and vice versa. To correct the massive false negatives, we construct the Extended COCO Validation (ECCV) Caption dataset by supplying the missing associations with machine and human annotators. We employ five state-of-the-art ITM models with diverse properties for our annotation process. Our dataset provides x3.6 positive image-to-caption associations and x8.5 caption-to-image associations compared to the original MS-COCO. We also propose to use an informative ranking-based metric mAP@R, rather than the popular Recall@K (R@K). We re-evaluate the existing 25 VL models on existing and proposed benchmarks. Our find",
+  "category": "multimodal",
+  "domain": "vision",
+  "task_types": [
+    "image_text_matching",
+    "retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "ranking-based retrieval scoring (mAP@R, Recall@K)",
+  "general_score_metric": "mAP@R",
+  "typical_sota_score": "R@1 typically 60–90% across evaluated vision‑language models (varies substantially by model and metric; mAP@R values are dataset/metric dependent)",
+  "year_of_publish": 2022,
+  "reputation": "A specialized re-evaluation benchmark for vision-language retrieval that is cited for addressing false negatives in MS-COCO-style ITM evaluation.",
+  "notes": "Built from MS-COCO with additional positive associations; mainly a non-LLM vision-language retrieval benchmark and not a standard generative task.",
+  "creators": {
+    "scientists": [
+      "Sanghyuk Chun",
+      "Wonjae Kim",
+      "Song Park",
+      "Minsuk Chang",
+      "Seong Joon Oh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2204.03359",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

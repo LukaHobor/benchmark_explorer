@@ -1,0 +1,38 @@
+{
+  "name": "scMARK / scREF (with KNI score)",
+  "description": "Many methods have been proposed for removing batch effects and aligning single-cell RNA (scRNA) datasets. However, performance is typically evaluated based on multiple parameters and few datasets, creating challenges in assessing which method is best for aligning data at scale. Here, we introduce the K-Neighbors Intersection (KNI) score, a single score that both penalizes batch effects and measures accuracy at cross-dataset cell-type label prediction alongside carefully curated small (scMARK) and large (scREF) benchmarks comprising 11 and 46 human scRNA studies respectively, where we have standardized author labels. Using the KNI score, we evaluate and optimize approaches for cross-dataset single-cell RNA integration. We introduce Batch Adversarial single-cell Variational Inference (BA-scVI), as a new variant of scVI that uses adversarial training to penalize batch-effects in the encoder and decoder, and show this approach outperforms other methods. In the resulting aligned space, we find that the granularity of cell-type groupings is conserved, supporting the notion that whole-organism cell-type maps can be created by a single model without loss of information.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "unsupervised_representation_learning",
+    "domain_adaptation",
+    "cell_type_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "KNI_score (K-Neighbors Intersection) — a composite score penalizing batch mixing while measuring cross-dataset cell-type label prediction accuracy",
+  "general_score_metric": "KNI_score (composite)",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, domain-specific benchmark in single-cell RNA integration research that is gaining adoption for method comparison in the bioinformatics community.",
+  "notes": "Non-LLM benchmark focused on single-cell RNA integration; includes both small (scMARK) and large (scREF) curated collections. KNI is a single composite score which can favor methods that specifically optimize batch mixing vs. downstream task utility; curated author labels may introduce annotation biases.",
+  "creators": {
+    "scientists": [
+      "Juan Javier Diaz-Mejia",
+      "Elias Williams",
+      "Octavian Focsa",
+      "Dylan Mendonca",
+      "Swechha Singh",
+      "Brendan Innes",
+      "Sam Cooper"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2503.20730",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

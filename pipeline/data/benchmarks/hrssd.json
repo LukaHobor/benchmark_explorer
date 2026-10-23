@@ -1,0 +1,39 @@
+{
+  "name": "HRSSD",
+  "description": "The objective of hyperspectral remote sensing image salient object detection (HRSI-SOD) is to identify objects or regions that exhibit distinct spectrum contrasts with the background. This area holds significant promise for practical applications; however, progress has been limited by a notable scarcity of dedicated datasets and methodologies. To bridge this gap and stimulate further research, we introduce the first HRSI-SOD dataset, termed HRSSD, which includes 704 hyperspectral images and 5327 pixel-level annotated salient objects. The HRSSD dataset poses substantial challenges for salient object detection algorithms due to large scale variation, diverse foreground-background relations, and multi-salient objects. Additionally, we propose an innovative and efficient baseline model for HRSI-SOD, termed the Deep Spectral Saliency Network (DSSN). The core of DSSN is the Cross-level Saliency Assessment Block, which performs pixel-wise attention and evaluates the contributions of multi-scale similarity maps at each spatial location, effectively reducing erroneous responses in cluttered regions and emphasizes salient regions across scales. Additionally, the High-resolution Fusion Module combines bottom-up fusion strategy and learned spatial upsampling to leverage the strengths of multi-scale saliency maps, ensuring accurate localization of small objects. Experiments on the HRSSD dataset robustly validate the superiority of DSSN, underscoring the critical need for specialized datasets and methodologies in this domain. Further evaluations on the HSOD-BIT and HS-SOD datasets demonstrate the generalizability of the proposed method. The dataset and source code are publicly available at https://github.com/laprf/HRSSD.",
+  "category": "vision",
+  "domain": "remote sensing / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "salient_object_detection",
+    "segmentation",
+    "pixelwise_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F-measure (Fβ), MAE (mean absolute error), IoU (intersection over union)",
+  "general_score_metric": "F-measure (Fβ)",
+  "typical_sota_score": "75–90%",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Niche but important: the first dedicated hyperspectral salient object detection dataset, adopted by researchers working on HRSI-SOD and cited within that subcommunity.",
+  "notes": "Small, specialized dataset (704 hyperspectral images) focused on hyperspectral imagery; non-LLM benchmark evaluated with pixel-level saliency metrics; risk of overfitting and limited modality/diversity compared to large-scale RGB SOD datasets; baseline code and annotations are publicly available.",
+  "creators": {
+    "scientists": [
+      "Peifu Liu",
+      "Huiyan Bai",
+      "Tingfa Xu",
+      "Jihui Wang",
+      "Huan Chen",
+      "Jianan Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.02416",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

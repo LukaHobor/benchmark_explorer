@@ -1,0 +1,32 @@
+{
+  "name": "Probing-Trajectories Algorithm Selection Benchmark",
+  "description": "Recent approaches to training algorithm selectors in the black-box optimisation domain have advocated for the use of training data that is algorithm-centric in order to encapsulate information about how an algorithm performs on an instance, rather than relying on information derived from features of the instance itself. Probing-trajectories that consist of a sequence of objective performance per function evaluation obtained from a short run of an algorithm have recently shown particular promise in training accurate selectors. However, training models on this type of data requires an appropriately chosen classifier given the sequential nature of the data. There are currently no clear guidelines for choosing the most appropriate classifier for algorithm selection using time-series data from the plethora of models available. To address this, we conduct a large benchmark study using 17 different classifiers and three types of trajectory on a classification task using the BBOB benchmark suite using both leave-one-instance out and leave-one-problem out cross-validation. In contrast to previous studies using tabular data, we find that the choice of classifier has a significant impact, showing that feature-based and interval-based models are the best choices.",
+  "category": "mixed",
+  "domain": "algorithm selection / black-box optimisation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "time_series"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A niche, research-oriented benchmark within the black-box optimisation / algorithm selection community with growing interest for algorithm-centric training methods.",
+  "notes": "Non-LLM benchmark using short-run algorithm probing trajectories on the BBOB suite (limited instance count); results sensitive to trajectory type and cross-validation strategy (leave-one-instance-out vs leave-one-problem-out); potential overfitting to small instance sets.",
+  "creators": {
+    "scientists": [
+      "Quentin Renau",
+      "Emma Hart"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2501.11414",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

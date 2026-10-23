@@ -1,0 +1,36 @@
+{
+  "name": "Amino-acid-analog intermolecular interaction energy benchmark (MP2/aug-cc-pVTZ)",
+  "description": "In the companion paper, we presented a set of induced dipole interaction models using four types of screening functions, which include the Applequist (no screening), the Thole linear, the Thole exponential model, and the Thole Tinker-like (another form of exponential screening function) functions. In this work, we evaluate the performance of polarizability models using a large set of amino acid analog pairs in conformations that are frequently observed in protein structures as a benchmark. For each amino acid pair, we calculated quantum mechanical interaction energies at the MP2/aug-cc-pVTZ//MP2/6-311++G(d,p) level with the basis set superposition error (BSSE) correction and compared them with molecular mechanics results. Encouragingly, all polarizable models significantly outperform the additive F94 and F03 models (mimicking AMBER ff94/ff99 and ff03 force fields, respectively) in reproducing the BSSE-corrected quantum mechanical interaction energies. In particular, the root-mean-square errors (RMSEs) for three Thole models in Set A (where the 1-2 and 1-3 interactions are turned off and all 1-4 interactions are included) are 1.456, 1.417, and 1.406 kcal/mol for model AL (Thole Linear), model AE (Thole exponential), and model AT (Thole Tinker-like), respectively. In contrast, the RMSEs are 3.729 and 3.433 kcal/mol for F94 and F03 models, respectively. A similar trend was observed for the average unsigned errors (AUEs), which are 1.057, 1.025, 1.011, 2.219, and 2.070 kcal/mol for AL, AE, AT, F94/ff99, and F03, respectively. Analyses based on the trend line slopes indicate that the two fixed charge models substantially underestimate the relative strengths of noncharge-charge interactions by 24 (F03) and 35% (F94), respectively, whereas the four polarizable models overestimate the relative strengths by 5 (AT), 3 (AL, AE), and 13% (AA), respectively. Agreement was further improved by adjusting the van der Waals parameters. Judging from the notably improved accuracy in comparison with the fixed charge models, the polarizable models are expected to form the foundation for the development of high quality polarizable force fields for protein and nucleic acid simulations.",
+  "category": "mixed",
+  "domain": "computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSE / MAE (AUE) against BSSE-corrected MP2/aug-cc-pVTZ reference energies",
+  "general_score_metric": "RMSE (kcal/mol)",
+  "typical_sota_score": "1.4–1.5 kcal/mol (RMSE) for top Thole polarizable models",
+  "year_of_publish": 2011,
+  "reputation": "135 citations",
+  "notes": "Non-LLM benchmark for energy regression; QM reference data (MP2/aug-cc-pVTZ with BSSE correction). Moderate-size curated set of amino-acid-analog pairs; primary metrics are RMSE and AUE; not a classification task.",
+  "creators": {
+    "scientists": [
+      "Junmei Wang",
+      "Piotr Cieplak",
+      "Jie Li",
+      "Jun Wang",
+      "Qin Cai",
+      "Meng‐Juei Hsieh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1021/jp1121382",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

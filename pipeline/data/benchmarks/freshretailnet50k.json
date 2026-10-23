@@ -1,0 +1,40 @@
+{
+  "name": "FreshRetailNet-50K",
+  "description": "Accurate demand estimation is critical for the retail business in guiding the inventory and pricing policies of perishable products. However, it faces fundamental challenges from censored sales data during stockouts, where unobserved demand creates systemic policy biases. Existing datasets lack the temporal resolution and annotations needed to address this censoring effect. To fill this gap, we present FreshRetailNet-50K, the first large-scale benchmark for censored demand estimation. It comprises 50,000 store-product time series of detailed hourly sales data from 898 stores in 18 major cities, encompassing 863 perishable SKUs meticulously annotated for stockout events. The hourly stock status records unique to this dataset, combined with rich contextual covariates, including promotional discounts, precipitation, and temporal features, enable innovative research beyond existing solutions. We demonstrate one such use case of two-stage demand modeling: first, we reconstruct the latent demand during stockouts using precise hourly annotations. We then leverage the recovered demand to train robust demand forecasting models in the second stage. Experimental results show that this approach achieves a 2.73\\% improvement in prediction accuracy while reducing the systematic demand underestimation from 7.37\\% to near-zero bias. With unprecedented temporal granularity and comprehensive real-world information, FreshRetailNet-50K opens new research directions in demand imputation, perishable inventory optimization, and causal retail analytics. The unique annotation quality and scale of the dataset address long-standing limitations in retail AI, providing immediate solutions and a platform for future methodological innovation. The data (https://huggingface.co/datasets/Dingdong-Inc/FreshRetailNet-50K) and code (https://github.com/Dingdong-Inc/frn-50k-baseline}) are openly released.",
+  "category": "mixed",
+  "domain": "retail / demand forecasting",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "demand_imputation",
+    "causal_inference",
+    "inventory_optimization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAPE / MAE (mean absolute percentage error / mean absolute error)",
+  "general_score_metric": "MAPE",
+  "year_of_publish": 2025,
+  "reputation": "New large-scale retail dataset gaining attention for censored-demand research but not yet widely adopted outside the retail-forecasting research community.",
+  "notes": "Non-LLM benchmark with fine-grained hourly stockout annotations enabling demand imputation; potential geographic/store selection bias and privacy constraints; evaluation outcomes can be sensitive to the chosen imputation method; limited to 898 stores across 18 cities.",
+  "creators": {
+    "scientists": [
+      "Yangyang Wang",
+      "Jiawei Gu",
+      "Li Long",
+      "Xin Li",
+      "Li Shen",
+      "Zhouyu Fu",
+      "Xiangjun Zhou",
+      "Xu Jiang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.16319",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

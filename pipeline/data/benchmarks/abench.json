@@ -1,0 +1,42 @@
+{
+  "name": "A-Bench",
+  "description": "How to accurately and efficiently assess AI-generated images (AIGIs) remains a critical challenge for generative models. Given the high costs and extensive time commitments required for user studies, many researchers have turned towards employing large multi-modal models (LMMs) as AIGI evaluators, the precision and validity of which are still questionable. Furthermore, traditional benchmarks often utilize mostly natural-captured content rather than AIGIs to test the abilities of LMMs, leading to a noticeable gap for AIGIs. Therefore, we introduce A-Bench in this paper, a benchmark designed to diagnose whether LMMs are masters at evaluating AIGIs. Specifically, A-Bench is organized under two key principles: 1) Emphasizing both high-level semantic understanding and low-level visual quality perception to address the intricate demands of AIGIs. 2) Various generative models are utilized for AIGI creation, and various LMMs are employed for evaluation, which ensures a comprehensive validation scope. Ultimately, 2,864 AIGIs from 16 text-to-image models are sampled, each paired with question-answers annotated by human experts, and tested across 18 leading LMMs. We hope that A-Bench will significantly enhance the evaluation process and promote the generation quality for AIGIs. The benchmark is available at https://github.com/Q-Future/A-Bench.",
+  "category": "vision",
+  "domain": "vision / AI-generated images",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "open_ended",
+    "image_quality_assessment"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "agreement_with_human (accuracy/correlation against expert annotations)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "Recent benchmark (2024) focused on LMMs evaluating AI-generated images; gaining interest among researchers studying automated evaluation of generative image models.",
+  "notes": "Relatively small dataset (2,864 AIGIs) drawn from multiple generators; evaluates LMMs as evaluators rather than generator quality directly. Results may be sensitive to choice of human annotators and susceptible to overlap between LMM training data and AIGI sources.",
+  "creators": {
+    "scientists": [
+      "ZiCheng Zhang",
+      "HaoNing Wu",
+      "Chunyi Li",
+      "Yingjie Zhou",
+      "Wei Sun",
+      "Xiongkuo Min",
+      "Zijian Chen",
+      "Xiaohong Liu",
+      "Weisi Lin",
+      "Guangtao Zhai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.03070",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

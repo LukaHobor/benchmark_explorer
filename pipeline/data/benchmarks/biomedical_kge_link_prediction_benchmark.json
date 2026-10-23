@@ -1,0 +1,35 @@
+{
+  "name": "Biomedical KGE Link Prediction Benchmark",
+  "description": "Abstract In recent years, Knowledge Graphs (KGs) have received increasing attention for their ability to organize complex biomedical knowledge into structured representations of entities and relations. Knowledge Graph Embedding (KGE) models facilitate efficient exploration of KGs by learning compact data representations. These models are increasingly applied to biomedical KGs for link prediction, for instance to uncover new therapeutic uses for existing drugs. While numerous KGE models have been developed and benchmarked for link prediction, existing evaluations often over-look the critical issue of data leakage. Data leakage leads the model to learn patterns it would not encounter when deployed in real-world settings, artificially inflating performance metrics and compromising the overall validity of benchmark results. In machine learning, data leakage can arise when (1) there is redundancy between the training and test sets, (2) the model leverages illegitimate features, or (3) the test set does not accurately reflect real-world inference scenarios. In this study, we demonstrate the impact of train-test redundancies in KGE-based link prediction and implement a systematic control procedure to detect and remove those redundancies. In addition, through permutation experiments, we investigate whether node degree acts as an illegitimate predictive feature, and find no evidence that models rely on it. Finally, we evaluate how well common test set sampling strategies reflect the challenges of real-world inference in drug repurposing. We compare random and cold-start data splits with a real-world inference set derived from the Orphanet database. We find that performance drops significantly on the real-world inference set, indicating that current benchmarking practices may overestimate how well KGE models generalize to practical applications. Overall, our findings highlight the importance of rigorous benchmark design and careful evaluation of the generalization ability of KGE models for biomedical link prediction.",
+  "category": "mixed",
+  "domain": "biomedical / pharmacology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "entity_ranking",
+    "knowledge_graph_completion"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Mean Reciprocal Rank (MRR) and Hits@k (Hits@1/3/10); secondary analyses may include ROC-AUC for binary tasks",
+  "general_score_metric": "MRR",
+  "year_of_publish": 2025,
+  "reputation": "4 citations",
+  "notes": "Focuses on removing train-test redundancies to avoid data leakage; non-LLM benchmark for KGE models. Performance is highly sensitive to split strategy (random vs. cold-start vs. real-world), so reported scores can be inflated if leakage is not controlled. Relatively small/controlled biomedical splits and emphasis on realistic inference make direct comparisons to standard KGE benchmarks nontrivial.",
+  "creators": {
+    "scientists": [
+      "Galadriel Brière",
+      "Thomas STOSSKOPF",
+      "Benjamin Loire",
+      "Anaı̈s Baudot"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1101/2025.01.23.634511",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

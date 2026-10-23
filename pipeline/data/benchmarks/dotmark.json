@@ -1,0 +1,35 @@
+{
+  "name": "DOTmark",
+  "description": "The Wasserstein metric or earth mover's distance (EMD) is a useful tool in\nstatistics, machine learning and computer science with many applications to\nbiological or medical imaging, among others. Especially in the light of\nincreasingly complex data, the computation of these distances via optimal\ntransport is often the limiting factor. Inspired by this challenge, a variety\nof new approaches to optimal transport has been proposed in recent years and\nalong with these new methods comes the need for a meaningful comparison.\n  In this paper, we introduce a benchmark for discrete optimal transport,\ncalled DOTmark, which is designed to serve as a neutral collection of problems,\nwhere discrete optimal transport methods can be tested, compared to one\nanother, and brought to their limits on large-scale instances. It consists of a\nvariety of grayscale images, in various resolutions and classes, such as\nseveral types of randomly generated images, classical test images and real data\nfrom microscopy.\n  Along with the DOTmark we present a survey and a performance test for a cross\nsection of established methods ranging from more traditional algorithms, such\nas the transportation simplex, to recently developed approaches, such as the\nshielding neighborhood method, and including also a comparison with commercial\nsolvers.",
+  "category": "vision",
+  "domain": "optimization / computational imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimal_transport",
+    "benchmarking",
+    "image_comparison"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "runtime, memory usage, and relative error / objective gap of computed transport plan (and sometimes scalability tests)",
+  "general_score_metric": "runtime and relative error (objective gap)",
+  "typical_sota_score": "varies by method and instance; no single SOTA",
+  "year_of_publish": 2016,
+  "reputation": "Well-known and cited benchmark in the discrete optimal transport community for comparing algorithms on image-like instances.",
+  "notes": "Non-LLM benchmark focused on discrete OT; contains synthetic and real microscopy/image instances—useful for stress-testing scalability but may not reflect all application-specific constraints.",
+  "creators": {
+    "scientists": [
+      "Jörn Schrieber",
+      "Dominic Schuhmacher",
+      "Carsten Gottschlich"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1610.03368",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

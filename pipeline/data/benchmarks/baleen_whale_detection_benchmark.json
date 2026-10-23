@@ -1,0 +1,36 @@
+{
+  "name": "Baleen whale detection benchmark",
+  "description": "Passive acoustic monitoring (PAM) is commonly used to obtain year‐round continuous data on marine soundscapes harboring valuable information on species distributions or ecosystem dynamics. This continuously increasing amount of data requires highly efficient automated analysis techniques in order to exploit the full potential of the available data. Here, we propose a benchmark, which consists of a public dataset, a well‐defined task and evaluation procedure to develop and test automated analysis techniques. This benchmark focuses on the special case of detecting animal vocalizations in a real‐world dataset from the marine realm. We believe that such a benchmark is necessary to monitor the progress in the development of new detection algorithms in the field of marine bioacoustics. We ultimately use the proposed benchmark to test three detection approaches, namely ANIMAL‐SPOT, Koogu and a simple custom sequential convolutional neural network (CNN), and report performances. We report the performance of the three detection approaches in a blocked cross‐validation fashion with 11 site‐year blocks for a multi‐species detection scenario in a large marine passive acoustic dataset. Performance was measured with three simple metrics (i.e., true classification rate, noise misclassification rate and call misclassification rate) and one combined fitness metric, which allocates more weight to the minimization of false positives created by noise. Overall, ANIMAL‐SPOT performed the best with an average F metric of 0.83, followed by the custom CNN with an average fitness metric of 0.79 and finally Koogu with an average fitness metric of 0.59. The presented benchmark is an important step to advance in the automatic processing of the continuously growing amount of PAM data that are collected throughout the world's oceans. To ultimately achieve usability of developed algorithms, the focus of future work should be laid on the reduction of the false positives created by noise.",
+  "category": "audio",
+  "domain": "marine bioacoustics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "audio_event_detection",
+    "multi_species_detection",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score (fitness metric prioritizing low false positives) with per-class true-positive / false-positive rates",
+  "general_score_metric": "fitness_metric (composite score weighting minimization of noise false positives)",
+  "typical_sota_score": "59–83%",
+  "year_of_publish": 2024,
+  "reputation": "15 citations",
+  "notes": "Non-LLM audio benchmark; real-world noisy recordings and class imbalance; blocked site-year cross-validation reduces contamination risk; primary challenge is high false-positive rate from noise; moderate dataset size.",
+  "creators": {
+    "scientists": [
+      "Elena Schall",
+      "Idil Kaya",
+      "Elisabeth Debusschere",
+      "P. Devos",
+      "Clea Parcerisas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

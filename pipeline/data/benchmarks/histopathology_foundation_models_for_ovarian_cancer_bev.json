@@ -1,0 +1,36 @@
+{
+  "name": "Histopathology Foundation Models for Ovarian Cancer Bevacizumab Response Benchmark",
+  "description": "Bevacizumab is a widely studied targeted therapeutic drug used in conjunction with standard chemotherapy for the treatment of recurrent ovarian cancer. While its administration has shown to increase the progression-free survival (PFS) in patients with advanced stage ovarian cancer, the lack of identifiable biomarkers for predicting patient response has been a major roadblock in its effective adoption towards personalized medicine. In this work, we leverage the latest histopathology foundation models trained on large-scale whole slide image (WSI) datasets to extract ovarian tumor tissue features for predicting bevacizumab response from WSIs. Our extensive experiments across a combination of different histopathology foundation models and multiple instance learning (MIL) strategies demonstrate capability of these large models in predicting bevacizumab response in ovarian cancer patients with the best models achieving an AUC score of 0.86 and an accuracy score of 72.5%. Furthermore, our survival models are able to stratify high- and low-risk cases with statistical significance (p < 0.05) even among the patients with the aggressive subtype of high-grade serous ovarian carcinoma. This work highlights the utility of histopathology foundation models for the task of ovarian bevacizumab response prediction from WSIs. The high-attention regions of the WSIs highlighted by these models not only aid the model explainability but also serve as promising imaging biomarkers for treatment prognosis.",
+  "category": "vision",
+  "domain": "medical imaging / histopathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multiple_instance_learning",
+    "survival_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC (ROC) and accuracy (with survival model stratification/statistical significance tests)",
+  "general_score_metric": "AUC (ROC)",
+  "typical_sota_score": "AUC ≈ 0.86 (accuracy ≈ 72.5%)",
+  "year_of_publish": 2024,
+  "reputation": "Recent research benchmark leveraging histopathology foundation models; of high interest in computational pathology but not yet a widely standardized clinical benchmark.",
+  "notes": "Limited cohort size and potential class imbalance; single-institution or limited-site data can limit generalization. Non-LLM, domain-specific benchmark requiring WSI preprocessing and MIL approaches; clinical translation requires further validation.",
+  "creators": {
+    "scientists": [
+      "Mayur Mallya",
+      "Ali Khajegili Mirabadi",
+      "Hossein Farahani",
+      "Ali Bashashati"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.20596",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

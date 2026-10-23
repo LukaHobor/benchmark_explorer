@@ -1,0 +1,33 @@
+{
+  "name": "Semi-Inductive Link Prediction Benchmark (based on Wikidata5M)",
+  "description": "Semi-inductive link prediction (LP) in knowledge graphs (KG) is the task of predicting facts for new, previously unseen entities based on context information. Although new entities can be integrated by retraining the model from scratch in principle, such an approach is infeasible for large-scale KGs, where retraining is expensive and new entities may arise frequently. In this paper, we propose and describe a large-scale benchmark to evaluate semi-inductive LP models. The benchmark is based on and extends Wikidata5M: It provides transductive, k-shot, and 0-shot LP tasks, each varying the available information from (i) only KG structure, to (ii) including textual mentions, and (iii) detailed descriptions of the entities. We report on a small study of recent approaches and found that semi-inductive LP performance is far from transductive performance on long-tail entities throughout all experiments. The benchmark provides a test bed for further research into integrating context and textual information in semi-inductive LP models.",
+  "category": "mixed",
+  "domain": "knowledge graphs / semantic web",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "zero_shot",
+    "k-shot"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MRR / Hits@k",
+  "general_score_metric": "MRR (mean reciprocal rank)",
+  "year_of_publish": 2023,
+  "reputation": "A recent benchmark extending Wikidata5M for semi-inductive evaluation; gaining interest in the knowledge-graph community but not yet a de facto standard.",
+  "notes": "Large-scale, non-LLM benchmark; performance varies greatly between transductive and semi-inductive settings, long-tail entities are challenging, and results depend on available textual/contextual information; potential for dataset overlap if entity descriptions are reused.",
+  "creators": {
+    "scientists": [
+      "Adrian Kochsiek",
+      "Rainer Gemulla"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2310.11917",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

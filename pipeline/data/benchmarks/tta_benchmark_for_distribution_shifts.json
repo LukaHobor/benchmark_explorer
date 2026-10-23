@@ -1,0 +1,35 @@
+{
+  "name": "TTA benchmark for distribution shifts",
+  "description": "Test-time adaptation (TTA) is a technique aimed at enhancing the generalization performance of models by leveraging unlabeled samples solely during prediction. Given the need for robustness in neural network systems when faced with distribution shifts, numerous TTA methods have recently been proposed. However, evaluating these methods is often done under different settings, such as varying distribution shifts, backbones, and designing scenarios, leading to a lack of consistent and fair benchmarks to validate their effectiveness. To address this issue, we present a benchmark that systematically evaluates 13 prominent TTA methods and their variants on five widely used image classification datasets: CIFAR-10-C, CIFAR-100-C, ImageNet-C, DomainNet, and Office-Home. These methods encompass a wide range of adaptation scenarios (e.g. online adaptation v.s. offline adaptation, instance adaptation v.s. batch adaptation v.s. domain adaptation). Furthermore, we explore the compatibility of differe",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "image_classification",
+    "test_time_adaptation",
+    "distribution_shift_robustness"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "classification accuracy under distribution shift after test-time adaptation",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A useful research benchmark for fairly comparing TTA methods across common corruption, domain, and adaptation settings.",
+  "notes": "Benchmark spans multiple datasets and shift types, so scores are not directly comparable across all settings. Results can be sensitive to backbone choice, adaptation protocol, and online vs. offline assumptions.",
+  "creators": {
+    "scientists": [
+      "Yongcan Yu",
+      "Lijun Sheng",
+      "Ran He",
+      "Jian Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2307.03133",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

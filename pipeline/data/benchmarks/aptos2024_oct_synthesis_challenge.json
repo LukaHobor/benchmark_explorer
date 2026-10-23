@@ -1,0 +1,57 @@
+{
+  "name": "APTOS-2024 OCT synthesis challenge",
+  "description": "Optical Coherence Tomography (OCT) provides high-resolution, 3D, and non-invasive visualization of retinal layers in vivo, serving as a critical tool for lesion localization and disease diagnosis. However, its widespread adoption is limited by equipment costs and the need for specialized operators. In comparison, 2D color fundus photography offers faster acquisition and greater accessibility with less dependence on expensive devices. Although generative artificial intelligence has demonstrated promising results in medical image synthesis, translating 2D fundus images into 3D OCT images presents unique challenges due to inherent differences in data dimensionality and biological information between modalities. To advance generative models in the fundus-to-3D-OCT setting, the Asia Pacific Tele-Ophthalmology Society (APTOS-2024) organized a challenge titled Artificial Intelligence-based OCT Generation from Fundus Images. This paper details the challenge framework (referred to as APTOS-2024 Challenge), including: the benchmark dataset, evaluation methodology featuring two fidelity metrics-image-based distance (pixel-level OCT B-scan similarity) and video-based distance (semantic-level volumetric consistency), and analysis of top-performing solutions. The challenge attracted 342 participating teams, with 42 preliminary submissions and 9 finalists. Leading methodologies incorporated innovations in hybrid data preprocessing or augmentation (cross-modality collaborative paradigms), pre-training on external ophthalmic imaging datasets, integration of vision foundation models, and model architecture improvement. The APTOS-2024 Challenge is the first benchmark demonstrating the feasibility of fundus-to-3D-OCT synthesis as a potential solution for improving ophthalmic care accessibility in under-resourced healthcare settings, while helping to expedite medical research and clinical applications.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "competition",
+  "task_types": [
+    "image_synthesis",
+    "image-to-image",
+    "paired_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "combined fidelity metrics: image-based distance (pixel-level OCT B-scan similarity) and video/volumetric distance (semantic volumetric consistency); leaderboard uses these fidelity distances (lower is better) and composite ranking",
+  "general_score_metric": "composite fidelity score (aggregation of image-based distance and volumetric/video-based distance); individual metrics reported separately",
+  "year_of_publish": 2025,
+  "reputation": "High visibility within ophthalmic imaging and medical-vision communities—first large-scale challenge targeting fundus-to-3D-OCT synthesis with strong participation from academic and industry teams.",
+  "notes": "Medical imaging benchmark (non-LLM) with modality gap between 2D fundus and 3D OCT; clinical validity and generalization to diverse patient populations require further evaluation; dataset size, labeling consistency, and potential privacy/consent considerations should be noted.",
+  "creators": {
+    "scientists": [
+      "Bowen Liu",
+      "Weiyi Zhang",
+      "Peranut Chotcomwongse",
+      "Xiaolan Chen",
+      "Ruoyu Chen",
+      "Pawin Pakaymaskul",
+      "Niracha Arjkongharn",
+      "Nattaporn Vongsa",
+      "Xuelian Cheng",
+      "ZongYuan Ge",
+      "Kun Huang",
+      "Xiaohui Li",
+      "Yiru Duan",
+      "Zhenbang Wang",
+      "BaoYe Xie",
+      "Qiang Chen",
+      "Huazhu Fu",
+      "Michael A. Mahr",
+      "Jiaqi Qu",
+      "Wangyiyang Chen",
+      "Shiye Wang",
+      "Yubo Tan",
+      "YongJie Li",
+      "Mingguang He",
+      "Danli Shi",
+      "Paisan Ruamviboonsuk"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.07542",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

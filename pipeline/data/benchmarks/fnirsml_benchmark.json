@@ -1,0 +1,36 @@
+{
+  "name": "fNIRS-ML Benchmark",
+  "description": "Background: While efforts to establish best practices with functional near infrared spectroscopy (fNIRS) signal processing have been published, there are still no community standards for applying machine learning to fNIRS data. Moreover, the lack of open source benchmarks and standard expectations for reporting means that published works often claim high generalisation capabilities, but with poor practices or missing details in the paper. These issues make it hard to evaluate the performance of models when it comes to choosing them for brain-computer interfaces.\r\n\r\nMethods: We present an open-source benchmarking framework, BenchNIRS, to establish a best practice machine learning methodology to evaluate models applied to fNIRS data, using five open access datasets for brain-computer interface (BCI) applications. The BenchNIRS framework, using a robust methodology with nested cross-validation, enables researchers to optimise models and evaluate them without bias. The framework also enables us to produce useful metrics and figures to detail the performance of new models for comparison. To demonstrate the utility of the framework, we present a benchmarking of six baseline models [linear discriminant analysis (LDA), support-vector machine (SVM), k-nearest neighbours (kNN), artificial neural network (ANN), convolutional neural network (CNN), and long short-term memory (LSTM)] on the five datasets and investigate the influence of different factors on the classification performance, including: number of training examples and size of the time window of each fNIRS sample used for classification. We also present results with a sliding window as opposed to simple classification of epochs, and with a personalised approach (within subject data classification) as opposed to a generalised approach (unseen subject data classification).\r\n\r\nResults and discussion: Results show that the performance is typically lower than the scores often reported in literature, and without great differences between models, highlighting that predicting unseen data remains a difficult task. Our benchmarking framework provides future authors, who are achieving significant high classification scores, with a tool to demonstrate the advances in a comparable way. To complement our framework, we contribute a set of recommendations for methodology decisions and writing papers, when applying machine learning to fNIRS data.",
+  "category": "mixed",
+  "domain": "brain-computer interfaces / neuroimaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "time_series_classification",
+    "subject_generalization",
+    "sliding_window_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "reputation": "An emerging open benchmarking framework for fNIRS/BCI that is recognized for promoting best practices, though community adoption is still growing compared with more established neural signal benchmarks.",
+  "notes": "Small datasets and high inter-subject variability; results sensitive to preprocessing and validation protocol (nested CV recommended); non-LLM benchmark focused on neuroimaging/BCI data.",
+  "creators": {
+    "scientists": [
+      "Johann Benerradi",
+      "Jeremie Clos",
+      "Aleksandra Landowska",
+      "Michel F. Valstar",
+      "Max L. Wilson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

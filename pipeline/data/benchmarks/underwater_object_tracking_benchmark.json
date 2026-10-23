@@ -1,0 +1,36 @@
+{
+  "name": "Underwater Object Tracking Benchmark",
+  "description": "Autonomously controlling the position of Remotely Operated underwater Vehicles (ROVs) is of crucial importance for a wide range of underwater engineering applications, such as in the inspection and maintenance of underwater industrial structures. Consequently, studying vision-based underwater robot navigation and control has recently gained increasing attention to counter the numerous challenges faced in underwater conditions, such as lighting variability, turbidity, camera image distortions (due to bubbles), and ROV positional disturbances (due to underwater currents). In this paper, we propose (to the best of our knowledge) a first rigorous unified benchmarking of more than seven Machine Learning (ML)-based one-shot object tracking algorithms for vision-based position locking of ROV platforms. We propose a position-locking system that processes images of an object of interest in front of which the ROV must be kept stable. Then, our proposed system uses the output result of different object tracking algorithms to automatically correct the position of the ROV against external disturbances. We conducted numerous real-world experiments using a BlueROV2 platform within an indoor pool and provided clear demonstrations of the strengths and weaknesses of each tracking approach. Finally, to help alleviate the scarcity of underwater ROV data, we release our acquired data base as open-source with the hope of benefiting future research.",
+  "category": "vision",
+  "domain": "robotics / underwater perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_tracking",
+    "robot_control",
+    "visual_servoing"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "position_locking_success_rate (reported alongside tracking metrics like IoU and center error)",
+  "year_of_publish": 2025,
+  "reputation": "A niche, recently proposed academic benchmark for underwater ROV vision and control with limited adoption so far.",
+  "notes": "Real-world non-LLM benchmark with a relatively small collected dataset; performance is sensitive to environmental conditions (lighting, turbidity, bubbles) and can vary between sequences. Common reported metrics include IoU, center-location error, and downstream position-locking success; risk of overfitting to the limited indoor-pool conditions.",
+  "creators": {
+    "scientists": [
+      "Ali Safa",
+      "Waqas Aman",
+      "Ali Al-Zawqari",
+      "Saif Al-Kuwari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.16569",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

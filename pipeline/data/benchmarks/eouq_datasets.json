@@ -1,0 +1,38 @@
+{
+  "name": "EO-UQ Datasets",
+  "description": "Uncertainty quantification (UQ) is essential for assessing the reliability of Earth observation (EO) products. However, the extensive use of machine learning models in EO introduces an additional layer of complexity, as those models themselves are inherently uncertain. While various UQ methods do exist for machine learning models, their performance on EO datasets remains largely unevaluated. A key challenge in the community is the absence of the ground truth for uncertainty, i.e. how certain the uncertainty estimates are, apart from the labels for the image/signal. This article fills this gap by introducing three benchmark datasets specifically designed for UQ in EO machine learning models. These datasets address three common problem types in EO: regression, image segmentation, and scene classification. They enable a transparent comparison of different UQ methods for EO machine learning models. We describe the creation and characteristics of each dataset, including data sources, preprocessing steps, and label generation, with a particular focus on calculating the reference uncertainty. We also showcase baseline performance of several machine learning models on each dataset, highlighting the utility of these benchmarks for model development and comparison. Overall, this article offers a valuable resource for researchers and practitioners working in artificial intelligence for EO, promoting a more accurate and reliable quality measure of the outputs of machine learning models. The dataset and code are accessible via https://gitlab.lrz.de/ai4eo/WG_Uncertainty.",
+  "category": "vision",
+  "domain": "earth observation / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "image_segmentation",
+    "scene_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "uncertainty / calibration metrics (negative log-likelihood (NLL), expected calibration error (ECE), Brier score) plus task-specific accuracy/RMSE/IoU",
+  "general_score_metric": "Negative Log-Likelihood (NLL) and calibration error (ECE)",
+  "year_of_publish": 2024,
+  "reputation": "New and domain-specific: emerging benchmark with limited but growing adoption in the Earth-observation uncertainty quantification community.",
+  "notes": "Three task-specific datasets with derived/approximated ground-truth uncertainty; relatively small and domain-specific splits; not an LLM benchmark; performance metrics vary by task and require careful interpretation of the reference uncertainty.",
+  "creators": {
+    "scientists": [
+      "Yuanyuan Wang",
+      "Qian Song",
+      "Dawood Wasif",
+      "Muhammad Shahzad",
+      "Christoph Koller",
+      "Jonathan Bamber",
+      "Xiao Xiang Zhu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2412.06451",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

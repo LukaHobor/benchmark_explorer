@@ -1,0 +1,38 @@
+{
+  "name": "DynaDojo",
+  "description": "Modeling complex dynamical systems poses significant challenges, with traditional methods struggling to work on a variety of systems and scale to high-dimensional dynamics. In response, we present DynaDojo, a novel benchmarking platform designed for data-driven dynamical system identification. DynaDojo provides diagnostics on three ways an algorithm’s performance scales: across the number of training samples, the complexity of a dynamical system, and a target error to achieve. Furthermore, DynaDojo enables studying out-of-distribution generalization (by providing unique test conditions for each system) and active learning (by supporting closed-loop control). Through its user-friendly and easily extensible API, DynaDojo accommodates a wide range of user-defined \\texttt{Algorithms}, \\texttt{Systems}, and \\texttt{Challenges} (evaluation metrics). The platform also prioritizes resource-efficient training with parallel processing strategies for running on a cluster. To showcase its utility, in DynaDojo 0.9, we include implementations of 7 baseline algorithms and 20 dynamical systems, along with several demos exhibiting insights researchers can glean using our platform. This work aspires to make DynaDojo a unifying benchmarking platform for system identification, paralleling the role of OpenAI’s Gym in reinforcement learning.",
+  "category": "mixed",
+  "domain": "dynamical systems / system identification",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "system_identification",
+    "time_series_prediction",
+    "regression",
+    "model_based_control",
+    "out_of_distribution_generalization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE (root mean squared error) / normalized prediction error",
+  "general_score_metric": "RMSE (prediction error)",
+  "year_of_publish": 2023,
+  "reputation": "An emerging research benchmark with growing adoption in the system-identification and dynamical-systems communities for comparing data-driven modeling methods.",
+  "notes": "Non-LLM benchmark focused on dynamical systems; supports many simulated and real systems and OOD splits. Evaluation emphasizes continuous error metrics (not accuracy). Low contamination risk from public corpora but practitioners should verify train/test separation for simulated vs. real-world data.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

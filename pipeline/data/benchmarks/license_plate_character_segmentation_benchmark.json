@@ -1,0 +1,35 @@
+{
+  "name": "License Plate Character Segmentation Benchmark",
+  "description": "Automatic License Plate Recognition (ALPR) has been the focus of many\nresearches in the past years. In general, ALPR is divided into the following\nproblems: detection of on-track vehicles, license plates detection, segmention\nof license plate characters and optical character recognition (OCR). Even\nthough commercial solutions are available for controlled acquisition\nconditions, e.g., the entrance of a parking lot, ALPR is still an open problem\nwhen dealing with data acquired from uncontrolled environments, such as roads\nand highways when relying only on imaging sensors. Due to the multiple\norientations and scales of the license plates captured by the camera, a very\nchallenging task of the ALPR is the License Plate Character Segmentation (LPCS)\nstep, which effectiveness is required to be (near) optimal to achieve a high\nrecognition rate by the OCR. To tackle the LPCS problem, this work proposes a\nnovel benchmark composed of a dataset designed to focus specifically on the\ncharacter segmentation step of the ALPR within an evaluation protocol.\nFurthermore, we propose the Jaccard-Centroid coefficient, a new evaluation\nmeasure more suitable than the Jaccard coefficient regarding the location of\nthe bounding box within the ground-truth annotation. The dataset is composed of\n2,000 Brazilian license plates consisting of 14,000 alphanumeric symbols and\ntheir corresponding bounding box annotations. We also present a new\nstraightforward approach to perform LPCS efficiently. Finally, we provide an\nexperimental evaluation for the dataset based on four LPCS approaches and\ndemonstrate the importance of character segmentation for achieving an accurate\nOCR.",
+  "category": "vision",
+  "domain": "autonomous driving / traffic surveillance",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "image_segmentation",
+    "bounding_box_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Jaccard-Centroid coefficient (variant of Jaccard/IoU that penalizes bounding-box miscentering)",
+  "general_score_metric": "mean Jaccard-Centroid coefficient",
+  "year_of_publish": 2016,
+  "reputation": "A niche, well-cited dataset/protocol in ALPR segmentation research but not a broadly used general vision benchmark.",
+  "notes": "Small, domain-specific dataset (2,000 Brazilian plates, 14,000 symbols); focuses only on character segmentation (not end-to-end OCR); uses a bespoke metric (Jaccard-Centroid). Non-LLM benchmark; performance sensitive to annotation/IoU thresholds and to plate style/region (Brazil-specific).",
+  "creators": {
+    "scientists": [
+      "Gabriel Resende Gonçalves",
+      "Sirlene Pio Gomes da Silva",
+      "David Menotti",
+      "William Robson Schwartz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/1607.02937",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

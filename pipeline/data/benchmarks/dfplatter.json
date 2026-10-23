@@ -1,0 +1,38 @@
+{
+  "name": "DF-Platter",
+  "description": "Deepfake detection is gaining significant importance in the research community. While most of the research efforts are focused towards high-quality images and videos with controlled appearance of individuals, deepfake generation algorithms now have the capability to generate deep-fakes with low-resolution, occlusion, and manipulation of multiple subjects. In this research, we emulate the real-world scenario of deepfake generation and propose the DF-Platter dataset, which contains (i) both low-resolution and high-resolution deepfakes generated using multiple generation techniques and (ii) single-subject and multiple-subject deepfakes, with face images of Indian ethnicity. Faces in the dataset are annotated for various attributes such as gender, age, skin tone, and occlusion. The dataset is prepared in 116 days with continuous usage of 32 GPUs accounting to 1,800 GB cumulative memory. With over 500 GBs in size, the dataset contains a total of 133,260 videos encompassing three sets. To the best of our knowledge, this is one of the largest datasets containing vast variability and multiple challenges. We also provide benchmark results under multiple evaluation settings using popular and state-of-the-art deepfake detection models, for c0 images and videos along with c23 and c40 compression variants. The results demonstrate a significant performance reduction in the deepfake detection task on low-resolution deep-fakes. Furthermore, existing techniques yield declined detection accuracy on multiple-subject deepfakes. It is our assertion that this database will improve the state-of-the-art by extending the capabilities of deepfake detection algorithms to real-world scenarios. The database is available at: http://iab-rubric.org/df-platter-database.",
+  "category": "vision",
+  "domain": "ML security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "video_forensics",
+    "image_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC-ROC and accuracy (also F1 reported in many experiments)",
+  "general_score_metric": "AUC-ROC",
+  "typical_sota_score": "50–85%",
+  "year_of_publish": 2023,
+  "reputation": "54 citations",
+  "notes": "Non-LLM benchmark focused on deepfake detection; large (500+ GB) dataset with low- and high-resolution, single- and multiple-subject videos. Demographic bias (faces of Indian ethnicity) and compression variants (c0, c23, c40) can affect generalization. Heavy compute required to reproduce generation; useful for investigating robustness to resolution, occlusion, multi-subject scenarios.",
+  "creators": {
+    "scientists": [
+      "Kartik Narayan",
+      "Harsh Agarwal",
+      "Kartik Thakral",
+      "Surbhi Mittal",
+      "Mayank Vatsa",
+      "Richa Singh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvpr52729.2023.00939",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

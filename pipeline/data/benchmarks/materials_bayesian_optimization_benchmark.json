@@ -1,0 +1,47 @@
+{
+  "name": "Materials Bayesian Optimization benchmark",
+  "description": "In the field of machine learning (ML) for materials optimization, active learning algorithms, such as Bayesian Optimization (BO), have been leveraged for guiding autonomous and high-throughput experimentation systems. However, very few studies have evaluated the efficiency of BO as a general optimization algorithm across a broad range of experimental materials science domains. In this work, we evaluate the performance of BO algorithms with a collection of surrogate model and acquisition function pairs across five diverse experimental materials systems, namely carbon nanotube polymer blends, silver nanoparticles, lead-halide perovskites, as well as additively manufactured polymer structures and shapes. By defining acceleration and enhancement metrics for general materials optimization objectives, we find that for surrogate model selection, Gaussian Process (GP) with anisotropic kernels (automatic relevance detection, ARD) and Random Forests (RF) have comparable performance and both outperform the commonly used GP without ARD. We discuss the implicit distributional assumptions of RF and GP, and the benefits of using GP with anisotropic kernels in detail. We provide practical insights for experimentalists on surrogate model selection of BO during materials optimization campaigns.",
+  "category": "mixed",
+  "domain": "materials science",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "black_box_optimization",
+    "bayesian_optimization",
+    "active_learning",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "optimization efficiency (acceleration / enhancement metrics), best-found objective value and regret",
+  "general_score_metric": "best-found objective (with acceleration and enhancement metrics)",
+  "year_of_publish": 2021,
+  "reputation": "Cited in the materials ML literature as a comparative study of BO strategies across multiple experimental systems; used as a reference but not a universal benchmark.",
+  "notes": "Evaluations are domain-specific across five experimental systems and sensitive to noise, objective scaling, and choice of surrogate/acquisition; relatively small and heterogeneous set of tasks, relying on surrogate models and experimental data—limits broad generalization.",
+  "creators": {
+    "scientists": [
+      "Qiaohao Liang",
+      "Aldair E. Gongora",
+      "Zekun Ren",
+      "Armi Tiihonen",
+      "Zhe Liu",
+      "Shijing Sun",
+      "James R. Deneault",
+      "Daniil Bash",
+      "Flore Mekki-Berrada",
+      "Saif A. Khan",
+      "Kedar Hippalgaonkar",
+      "Benji Maruyama",
+      "Keith A. Brown",
+      "John Fisher III",
+      "Tonio Buonassisi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2106.01309",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

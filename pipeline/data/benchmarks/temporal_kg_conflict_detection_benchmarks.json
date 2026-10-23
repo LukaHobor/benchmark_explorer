@@ -1,0 +1,37 @@
+{
+  "name": "Temporal KG Conflict Detection Benchmarks",
+  "description": "Temporal facts, which are used to describe events that occur during specific time periods, have become a topic of increased interest in the field of knowledge graph (KG) research. In terms of quality management, the introduction of time restrictions brings new challenges to maintaining the temporal consistency of KGs. Previous studies rely on manually enumerated temporal constraints to detect conflicts, which are labor-intensive and may have granularity issues. To address this problem, we start from the common pattern of temporal facts and propose a pattern-based temporal constraint mining method, PaTeCon. Unlike previous studies, PaTeCon uses graph patterns and statistical information relevant to the given KG to automatically generate temporal constraints, without the need for human experts. In this paper, we illustrate how this method can be optimized to achieve significant speed improvement. We also annotate Wikidata and Freebase to build two new benchmarks for conflict detection. Extensive experiments demonstrate that our pattern-based automatic constraint mining approach is highly effective in generating valuable temporal constraints.",
+  "category": "mixed",
+  "domain": "knowledge graphs",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "conflict_detection",
+    "binary_classification",
+    "anomaly_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision/recall/F1",
+  "general_score_metric": "F1 score",
+  "year_of_publish": 2023,
+  "reputation": "New benchmark suite derived from Wikidata and Freebase for temporal consistency research in KG quality management; of interest to the KG community but not yet widely standardized.",
+  "notes": "Automatically mined temporal constraints can inherit KG-specific biases and patterns; annotation noise, class imbalance, and dependence on KG completeness are important caveats; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jianhao Chen",
+      "Junyang Ren",
+      "Wentao Ding",
+      "Haoyuan Ouyang",
+      "Wei Hu",
+      "Yuzhong Qu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2312.11053",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

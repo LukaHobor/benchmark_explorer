@@ -1,0 +1,33 @@
+{
+  "name": "RedTeam",
+  "description": "Many publicly available language models have been safety tuned to reduce the likelihood of toxic or liability-inducing text. To redteam or jailbreak these models for compliance with toxic requests, users and security analysts have developed adversarial prompting techniques. One attack method is to apply discrete optimization techniques to the prompt. However, the resulting attack strings are often gibberish text, easily filtered by defenders due to high measured perplexity, and may fail for unseen tasks and/or well-tuned models. In this work, we improve existing algorithms (primarily GCG and BEAST) to develop powerful and fluent attacks on safety-tuned models like Llama-2 and Phi-3. Our technique centers around a new distillation-based approach that encourages the victim model to emulate a toxified finetune, either in terms of output probabilities or internal activations. To encourage human-fluent attacks, we add a multi-model perplexity penalty and a repetition penalty to the objective. We also enhance optimizer strength by allowing token insertions, token swaps, and token deletions and by using longer attack sequences. The resulting process is able to reliably jailbreak the most difficult target models with prompts that appear similar to human-written prompts. On Advbench we achieve attack success rates $>93$% for Llama-2-7B, Llama-3-8B, and Vicuna-7B, while maintaining model-measured perplexity $<33$; we achieve $95$% attack success for Phi-3, though with higher perplexity. We also find a universally-optimized single fluent prompt that induces $>88$% compliance on previously unseen tasks across Llama-2-7B, Phi-3-mini and Vicuna-7B and transfers to other black-box models.",
+  "category": "text",
+  "domain": "safety",
+  "task_types": [
+    "open_ended",
+    "adversarial_prompting",
+    "jailbreak_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "attack success rate",
+  "typical_sota_score": "93–95%",
+  "year_of_publish": 2024,
+  "reputation": "An emerging safety benchmark/attack setting used in red-teaming research, especially for evaluating jailbreak robustness of aligned language models.",
+  "notes": "Non-standardized adversarial benchmark; scores depend heavily on target model, prompt budget, and attack constraints, and results are not directly comparable across setups.",
+  "creators": {
+    "scientists": [
+      "T. Ben Thompson",
+      "Michael Sklar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2407.17447v2",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-23",
+    "origin": "cynefin@d486fafa9"
+  }
+}

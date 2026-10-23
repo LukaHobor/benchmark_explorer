@@ -1,0 +1,36 @@
+{
+  "name": "SynBench",
+  "description": "Non-rigid point cloud registration is a crucial task in computer vision. Evaluating a non-rigid point cloud registration method requires a dataset with challenges such as large deformation levels, noise, outliers, and incompleteness. Despite the existence of several datasets for deformable point cloud registration, the absence of a comprehensive benchmark with all challenges makes it difficult to achieve fair evaluations among different methods. This paper introduces SynBench, a new non-rigid point cloud registration dataset created using SimTool, a toolset for soft body simulation in Flex and Unreal Engine. SynBench provides the ground truth of corresponding points between two point sets and encompasses key registration challenges, including varying levels of deformation, noise, outliers, and incompleteness. To the best of the authors' knowledge, compared to existing datasets, SynBench possesses three particular characteristics: (1) it is the first benchmark that provides various challenges for non-rigid point cloud registration, (2) SynBench encompasses challenges of varying difficulty levels, and (3) it includes ground truth corresponding points both before and after deformation. The authors believe that SynBench enables future non-rigid point cloud registration methods to present a fair comparison of their achievements. SynBench is publicly available at: https://doi.org/10.11588/data/R9IKCF.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "non_rigid_point_cloud_registration",
+    "correspondence_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "registration_error (e.g., RMSE), Chamfer distance, correspondence recall/precision",
+  "general_score_metric": "registration error / correspondence recall (e.g., RMSE or Chamfer distance)",
+  "year_of_publish": 2024,
+  "reputation": "A recently published (2024) synthetic benchmark aimed at fair evaluation of non-rigid registration methods; early adoption within the 3D vision/graphics community.",
+  "notes": "Synthetic dataset generated via simulation (Flex + Unreal). Useful for controlled experiments but may not fully reflect real-world sensor noise and capture artifacts; provides ground-truth correspondences before and after deformation.",
+  "creators": {
+    "scientists": [
+      "Sara Monji-Azad",
+      "Marvin Kinz",
+      "Claudia Scherl",
+      "David Männle",
+      "Jürgen Hesser",
+      "Nikolas Löw"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.14474",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

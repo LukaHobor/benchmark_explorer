@@ -1,0 +1,34 @@
+{
+  "name": "HPoint103",
+  "description": "3D landmark detection plays a pivotal role in various applications such as 3D registration, pose estimation, and virtual try-on. While considerable success has been achieved in 2D human landmark detection or pose estimation, there is a notable scarcity of reported works on landmark detection in unordered 3D point clouds. This paper introduces a novel challenge, namely 3D landmark detection on human point clouds, presenting two primary contributions. Firstly, we establish a comprehensive human point cloud dataset, named HPoint103, designed to support the 3D landmark detection community. This dataset comprises 103 human point clouds created with commercial software and actors, each manually annotated with 11 stable landmarks. Secondly, we propose a Dual Cascade Point Transformer (D-CPT) model for precise point-based landmark detection. D-CPT gradually refines the landmarks through cascade Transformer decoder layers across the entire point cloud stream, simultaneously enhancing landmark coordinates with a RefineNet over local regions. Comparative evaluations with popular point-based methods on HPoint103 and the public dataset DHP19 demonstrate the dramatic outperformance of our D-CPT. Additionally, the integration of our RefineNet into existing methods consistently improves performance.",
+  "category": "vision",
+  "domain": "3D human sensing / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "keypoint_detection",
+    "landmark_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Euclidean distance (MPJPE) and PCK@threshold",
+  "general_score_metric": "mean Euclidean distance (MPJPE) / PCK@threshold",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed dataset and method (D-CPT) with promising initial results for 3D human landmark detection; adoption is currently limited but of interest to the 3D point-cloud vision community.",
+  "notes": "Small dataset (103 point clouds) combining synthetic/commercially generated and actor-scanned data; manually annotated landmarks; non-LLM benchmark; potential domain gap and limited scale may affect generalization.",
+  "creators": {
+    "scientists": [
+      "Fan Zhang",
+      "Shuyi Mao",
+      "Qing Li",
+      "Xiaojiang Peng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2401.07251",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

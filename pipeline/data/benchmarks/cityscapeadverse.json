@@ -1,0 +1,39 @@
+{
+  "name": "Cityscape-Adverse",
+  "description": "Recent advancements in generative AI, particularly diffusion-based image editing, have enabled the transformation of images into highly realistic scenes using only text instructions. This technology offers significant potential for generating diverse synthetic datasets to evaluate model robustness. In this paper, we introduce Cityscape-Adverse, a benchmark that employs diffusion-based image editing to simulate eight adverse conditions, including variations in weather, lighting, and seasons, while preserving the original semantic labels. We evaluate the reliability of diffusion-based models in generating realistic scene modifications and assess the performance of state-of-the-art CNN and Transformer-based semantic segmentation models under these challenging conditions. Additionally, we analyze which modifications have the greatest impact on model performance and explore how training on synthetic datasets can improve robustness in real-world adverse scenarios. Our results demonstrate that all tested models, particularly CNN-based architectures, experienced significant performance degradation under extreme conditions, while Transformer-based models exhibited greater resilience. We verify that models trained on Cityscape-Adverse show significantly enhanced resilience when applied to unseen domains. Code and datasets will be released at https://github.com/naufalso/cityscape-adverse.",
+  "category": "vision",
+  "domain": "autonomous driving / urban vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "robustness_evaluation",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean intersection-over-union (mIoU)",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "40–85%",
+  "year_of_publish": 2024,
+  "reputation": "New research benchmark focused on synthetic adverse-condition augmentation; not yet widely adopted but of interest to autonomous-driving and robustness communities.",
+  "notes": "Uses diffusion-based synthetic edits to create adverse conditions; synthetic artifacts may differ from real-world degradations. Non-LLM benchmark; model performance is highly sensitive to the realism of edits and training data composition.",
+  "creators": {
+    "scientists": [
+      "Naufal Suryanto",
+      "Andro Aprila Adiputra",
+      "Ahmada Yusril Kadiptya",
+      "Thi-Thu-Huong Le",
+      "Derry Pratama",
+      "Yongsu Kim",
+      "Howon Kim"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2411.00425",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "RefEdit-Bench",
+  "description": "Despite recent advances in inversion and instruction-based image editing, existing approaches primarily excel at editing single, prominent objects but significantly struggle when applied to complex scenes containing multiple entities. To quantify this gap, we first introduce RefEdit-Bench, a rigorous real-world benchmark rooted in RefCOCO, where even baselines trained on millions of samples perform poorly. To overcome this limitation, we introduce RefEdit -- an instruction-based editing model trained on our scalable synthetic data generation pipeline. Our RefEdit, trained on only 20,000 editing triplets, outperforms the Flux/SD3 model-based baselines trained on millions of data. Extensive evaluations across various benchmarks demonstrate that our model not only excels in referring expression tasks but also enhances performance on traditional benchmarks, achieving state-of-the-art results comparable to closed-source methods. We release data \\& checkpoint for reproducibility.",
+  "category": "multimodal",
+  "domain": "vision (image editing) / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_editing",
+    "referring_expression",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval; automated metrics including IoU for localization, CLIP-score and FID for visual quality, and edit_success_rate",
+  "general_score_metric": "edit_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "Emerging, well-regarded benchmark for referring-expression image editing in complex scenes that is gaining attention for its realism and targeted evaluation.",
+  "notes": "Relies on synthetic data generation for training (potential domain gap); risk of dataset/model contamination with closed-source models; not yet saturated and focuses on complex multi-object scenes rather than single-object edits.",
+  "creators": {
+    "scientists": [
+      "Bimsara Pathiraja",
+      "Maitreya Patel",
+      "Shivam Singh",
+      "Yezhou Yang",
+      "Chitta Baral"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.03448",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Post-hoc Unknown-Category Detection in Food Recognition",
+  "description": "Food recognition models often struggle to distinguish between seen and unseen samples, frequently misclassifying samples from unseen categories by assigning them an in-distribution (ID) label. This misclassification presents significant challenges when deploying these models in real-world applications, particularly within automatic dietary assessment systems, where incorrect labels can lead to cascading errors throughout the system. Ideally, such models should prompt the user when an unknown sample is encountered, allowing for corrective action. Given no prior research exploring food recognition in real-world settings, in this work we conduct an empirical analysis of various post-hoc out-of-distribution (OOD) detection methods for fine-grained food recognition. Our findings indicate that virtual logit matching (ViM) performed the best overall, likely due to its combination of logits and feature-space representations. Additionally, our work reinforces prior notions in the OOD domain, noting that models with higher ID accuracy performed better across the evaluated OOD detection methods. Furthermore, transformer-based architectures consistently outperformed convolution-based models in detecting OOD samples across various methods.",
+  "category": "vision",
+  "domain": "food recognition / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "OOD_detection",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (commonly reported) and FPR@95%TPR as secondary metrics",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "70–95%",
+  "year_of_publish": 2025,
+  "reputation": "A recent arXiv study focused on a niche problem (fine-grained food OOD detection); limited adoption but relevant to food recognition research.",
+  "notes": "Non-LLM computer-vision benchmark for post-hoc OOD detection; results depend strongly on ID accuracy and architecture. Possible dataset size/labeling limitations typical of fine-grained food datasets; transformer backbones tended to outperform CNNs in the study.",
+  "creators": {
+    "scientists": [
+      "Lubnaa Abdur Rahman",
+      "Ioannis Papathanail",
+      "Lorenzo Brigato",
+      "Stavroula Mougiakakou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.18548",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

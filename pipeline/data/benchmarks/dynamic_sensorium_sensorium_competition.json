@@ -1,0 +1,58 @@
+{
+  "name": "Dynamic Sensorium (Sensorium) Competition",
+  "description": "Understanding how biological visual systems process information is challenging because of the nonlinear relationship between visual input and neuronal responses. Artificial neural networks allow computational neuroscientists to create predictive models that connect biological and machine vision. Machine learning has benefited tremendously from benchmarks that compare different model on the same task under standardized conditions. However, there was no standardized benchmark to identify state-of-the-art dynamic models of the mouse visual system. To address this gap, we established the Sensorium 2023 Benchmark Competition with dynamic input, featuring a new large-scale dataset from the primary visual cortex of ten mice. This dataset includes responses from 78,853 neurons to 2 hours of dynamic stimuli per neuron, together with the behavioral measurements such as running speed, pupil dilation, and eye movements. The competition ranked models in two tracks based on predictive performance for neuronal responses on a held-out test set: one focusing on predicting in-domain natural stimuli and another on out-of-distribution (OOD) stimuli to assess model generalization. As part of the NeurIPS 2023 competition track, we received more than 160 model submissions from 22 teams. Several new architectures for predictive models were proposed, and the winning teams improved the previous state-of-the-art model by 50%. Access to the dataset as well as the benchmarking infrastructure will remain online at www.sensorium-competition.net.",
+  "category": "vision",
+  "domain": "computational neuroscience / vision",
+  "benchmark_type": "competition",
+  "task_types": [
+    "neural_response_prediction",
+    "time_series_regression",
+    "OOD_generalization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson correlation (single-trial) and fraction of explainable variance explained (FEV) — correlation-to-noise-ceiling is commonly reported",
+  "general_score_metric": "correlation (Pearson r) / fraction of explainable variance explained (FEV)",
+  "typical_sota_score": "≈0.45–0.65 (Pearson r) on in-domain tracks; lower on OOD tracks (dataset-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "Widely recognized in computational neuroscience after the NeurIPS Sensorium competition; actively used for benchmarking dynamic mouse-visual-cortex response models.",
+  "notes": "Large-scale, dynamic-stimuli dataset with behavioral covariates (non-LLM). Strong community adoption from the NeurIPS competition; care needed for animal-to-animal generalization and overfitting to behavioral cues.",
+  "creators": {
+    "scientists": [
+      "Polina Turishcheva",
+      "Paul G. Fahey",
+      "Michaela Vystrčilová",
+      "Laura Hansel",
+      "Rachel Froebe",
+      "Kayla Ponder",
+      "Yongrong Qiu",
+      "Konstantin F. Willeke",
+      "Mohammad Bashiri",
+      "Ruslan Baikulov",
+      "Yu Zhu",
+      "Lei Ma",
+      "Shan Yu",
+      "Tiejun Huang",
+      "Bryan M. Li",
+      "Wolf De Wulf",
+      "Nina Kudryashova",
+      "Matthias H. Hennig",
+      "Nathalie L. Rochefort",
+      "Arno Onken",
+      "Eric Wang",
+      "Zhiwei Ding",
+      "Andreas S. Tolias",
+      "Fabian H. Sinz",
+      "Alexander S Ecker"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.09100",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

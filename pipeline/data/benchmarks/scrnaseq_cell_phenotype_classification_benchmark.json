@@ -1,0 +1,36 @@
+{
+  "name": "scRNA-seq cell phenotype classification benchmark",
+  "description": "Abstract\n        Background: Single-cell RNA sequencing (scRNA-seq) yields valuable insights about gene expression and gives critical information about complex tissue cellular composition. In the analysis of single-cell RNA sequencing, the annotations of cell subtypes are often done manually, which is time-consuming and irreproducible. Garnett is a cell-type annotation software based the on elastic net method. Beside cell-type annotation, supervised machine learning methods can also be applied to predict other cell phenotypes from genomic data. Despite the popularity of such applications, there is no existing study to systematically investigate the performance of those supervised algorithms in various sizes of scRNA-seq data sets. Methods and Results: This study evaluates 13 popular supervised machine learning algorithms to classify cell phenotypes, using published real and simulated data sets with diverse cell sizes. The benchmark contained two parts. In the first part, we used real data sets to assess the popular supervised algorithms’ computing speed and cell phenotype classification performance. The classification performances were evaluated using AUC statistics, F1-score, precision, recall, and false-positive rate. In the second part, we evaluated gene selection performance using published simulated data sets with a known list of real genes. Conclusion: The study outcomes showed that ElasticNet with interactions performed best in small and medium data sets. NB was another appropriate method for medium data sets. In large data sets, XGB works excellent. Ensemble algorithms were not significantly superior to individual machine learning methods. Adding interactions to ElasticNet can help, and the improvement was significant in small data sets.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC / F1",
+  "general_score_metric": "AUC",
+  "typical_sota_score": "0.80–0.98",
+  "year_of_publish": 2021,
+  "reputation": "A peer-reviewed academic benchmark in bioinformatics for comparing supervised classifiers on scRNA-seq phenotype prediction; cited within specialized genomics/methods literature but not a broad community standard.",
+  "notes": "Uses both real and simulated scRNA-seq data; gene-selection evaluation relies on simulated ground truth. Results can be dataset-size dependent and may be affected by batch effects and simulation realism; non-LLM benchmark focused on classical ML methods.",
+  "creators": {
+    "scientists": [
+      "Xiaowen Cao",
+      "Li Xing",
+      "Elham Majd",
+      "Hua He",
+      "Junhua Gu",
+      "Xuekui Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.21203/rs.3.rs-596075/v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

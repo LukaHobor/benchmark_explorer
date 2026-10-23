@@ -1,0 +1,31 @@
+{
+  "name": "Underwater Monocular Metric Depth Estimation Benchmark",
+  "description": "Monocular depth estimation has recently progressed beyond ordinal depth to provide metric depth predictions. However, its reliability in underwater environments remains limited due to light attenuation and scattering, color distortion, turbidity, and the lack of high-quality metric ground truth data. In this paper, we present a comprehensive benchmark of zero-shot and fine-tuned monocular metric depth estimation models on real-world underwater datasets with metric depth annotations, including FLSea and SQUID. We evaluated a diverse set of state-of-the-art Vision Foundation Models across a range of underwater conditions and depth ranges. Our results show that large-scale models trained on terrestrial data (real or synthetic) are effective in in-air settings, but perform poorly underwater due to significant domain shifts. To address this, we fine-tune Depth Anything V2 with a ViT-S backbone encoder on a synthetic underwater variant of the Hypersim dataset, which we simulated using a phys",
+  "category": "vision",
+  "domain": "vision / underwater imaging",
+  "task_types": [
+    "regression",
+    "depth_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "error-based depth metrics",
+  "general_score_metric": "Abs Rel / RMSE",
+  "year_of_publish": 2025,
+  "reputation": "A new specialized benchmark for underwater metric depth estimation, likely of emerging interest in the vision community but not yet broadly established.",
+  "notes": "Small, specialized underwater datasets with metric ground truth; strong domain shift from terrestrial training data and results are typically reported with depth error metrics rather than a single accuracy score.",
+  "creators": {
+    "scientists": [
+      "Zijie Cai",
+      "Christopher Metzler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2507.02148",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

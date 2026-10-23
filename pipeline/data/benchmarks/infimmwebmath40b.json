@@ -1,0 +1,43 @@
+{
+  "name": "InfiMM-WebMath-40B",
+  "description": "Pre-training on large-scale, high-quality datasets is crucial for enhancing the reasoning capabilities of Large Language Models (LLMs), especially in specialized domains such as mathematics. Despite the recognized importance, the Multimodal LLMs (MLLMs) field currently lacks a comprehensive open-source pre-training dataset specifically designed for mathematical reasoning. To address this gap, we introduce InfiMM-WebMath-40B, a high-quality dataset of interleaved image-text documents. It comprises 24 million web pages, 85 million associated image URLs, and 40 billion text tokens, all meticulously extracted and filtered from CommonCrawl. We provide a detailed overview of our data collection and processing pipeline. To demonstrate the robustness of InfiMM-WebMath-40B, we conducted evaluations in both text-only and multimodal settings. Our evaluations on text-only benchmarks show that, despite utilizing only 40 billion tokens, our dataset significantly enhances the performance of our 1.3B model, delivering results comparable to DeepSeekMath-1.3B, which uses 120 billion tokens for the same model size. Nevertheless, with the introduction of our multi-modal math pre-training dataset, our models set a new state-of-the-art among open-source models on multi-modal math benchmarks such as MathVerse and We-Math. We release our data at https://huggingface.co/datasets/Infi-MM/InfiMM-WebMath-40B.",
+  "category": "multimodal",
+  "domain": "multimodal mathematical reasoning / education",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "multiple_choice",
+    "multimodal_reasoning",
+    "symbolic_manipulation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / exact_match (dataset-dependent)",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "Recently released open-source dataset with growing interest in the multimodal math LLM community due to its math-focused, image+text crawled corpus.",
+  "notes": "Built from CommonCrawl — potential contamination with existing model pretraining data, licensing/duplication concerns, and variable quality depending on filtering; strong effect of pretraining scale and filtering on downstream performance.",
+  "creators": {
+    "scientists": [
+      "Xiaotian Han",
+      "Yiren Jian",
+      "Xuefeng Hu",
+      "Haogeng Liu",
+      "Yiqi Wang",
+      "Qihang Fan",
+      "Yuang Ai",
+      "Huaibo Huang",
+      "Ran He",
+      "Zhenheng Yang",
+      "Quanzeng You"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2409.12568",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "SonicSim",
+  "description": "Systematic evaluation of speech separation and enhancement models under moving sound source conditions requires extensive and diverse data. However, real-world datasets often lack sufficient data for training and evaluation, and synthetic datasets, while larger, lack acoustic realism. Consequently, neither effectively meets practical needs. To address this issue, we introduce SonicSim, a synthetic toolkit based on the embodied AI simulation platform Habitat-sim, designed to generate highly customizable data for moving sound sources. SonicSim supports multi-level adjustments, including scene-level, microphone-level, and source-level adjustments, enabling the creation of more diverse synthetic data. Leveraging SonicSim, we constructed a benchmark dataset called SonicSet, utilizing LibriSpeech, Freesound Dataset 50k (FSD50K), Free Music Archive (FMA), and 90 scenes from Matterport3D to evaluate speech separation and enhancement models. Additionally, to investigate the differences between synthetic and real-world data, we selected 5 hours of raw, non-reverberant data from the SonicSet validation set and recorded a real-world speech separation dataset, providing a reference for comparing SonicSet with other synthetic datasets. For speech enhancement, we utilized the real-world dataset RealMAN to validate the acoustic gap between SonicSet and existing synthetic datasets. The results indicate that models trained on SonicSet generalize better to real-world scenarios compared to other synthetic datasets. The code is publicly available at https://cslikai.cn/SonicSim/.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "speech_separation",
+    "speech_enhancement",
+    "source_localization",
+    "synthetic_data_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "SI-SDR / SDR (dB), PESQ, STOI — objective separation and enhancement metrics",
+  "general_score_metric": "SI-SDR (dB)",
+  "typical_sota_score": "15–25 dB (SI-SDR)",
+  "year_of_publish": 2024,
+  "reputation": "1 citations",
+  "notes": "Synthetic dataset with strong customization; primary caveat is a sim-to-real acoustic gap (only ~5 hours recorded real validation included). Non-LLM benchmark; results depend on chosen objective metrics (SI-SDR/PESQ/STOI).",
+  "creators": {
+    "scientists": [
+      "Kai Li",
+      "Wenjing Sang",
+      "Chang Zeng",
+      "Runxuan Yang",
+      "Chen Guo",
+      "Xiao Hu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2410.01481",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Adaptive VQA QUBO Benchmark",
+  "description": "In recent years, Variational Quantum Algorithms (VQAs) have emerged as a promising approach for solving optimization problems on quantum computers in the NISQ era. However, one limitation of VQAs is their reliance on fixed-structure circuits, which may not be taylored for specific problems or hardware configurations. A leading strategy to address this issue are Adaptative VQAs, which dynamically modify the circuit structure by adding and removing gates, and optimize their parameters during the training. Several Adaptative VQAs, based on heuristics such as circuit shallowness, entanglement capability and hardware compatibility, have already been proposed in the literature, but there is still lack of a systematic comparison between the different methods. In this paper, we aim to fill this gap by analyzing three Adaptative VQAs: Evolutionary Variational Quantum Eigensolver (EVQE), Variable Ansatz (VAns), already proposed in the literature, and Random Adapt-VQE (RA-VQE), a random approach we introduce as a baseline. In order to compare these algorithms to traditional VQAs, we also include the Quantum Approximate Optimization Algorithm (QAOA) in our analysis. We apply these algorithms to QUBO problems and study their performance by examining the quality of the solutions found and the computational times required. Additionally, we investigate how the choice of the hyperparameters can impact the overall performance of the algorithms, highlighting the importance of selecting an appropriate methodology for hyperparameter tuning. Our analysis sets benchmarks for Adaptative VQAs designed for near-term quantum devices and provides valuable insights to guide future research in this area.",
+  "category": "mixed",
+  "domain": "quantum computing / optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimization",
+    "benchmarking",
+    "simulation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "approximation_ratio (solution quality) and runtime",
+  "general_score_metric": "approximation_ratio",
+  "year_of_publish": 2023,
+  "reputation": "Niche benchmark within the quantum VQA research community used for comparing adaptive ansatz methods; limited adoption outside specialized quantum optimization research.",
+  "notes": "Non-LLM benchmark focused on quantum optimization; results sensitive to simulator vs hardware noise, instance size and hyperparameter tuning; small/problem-specific instances may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Gloria Turati",
+      "Maurizio Ferrari Dacrema",
+      "Paolo Cremonesi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2308.01789",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

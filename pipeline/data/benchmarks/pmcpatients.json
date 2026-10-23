@@ -1,0 +1,36 @@
+{
+  "name": "PMC-Patients",
+  "description": "Objective: Retrieval-based Clinical Decision Support (ReCDS) can aid clinical workflow by providing relevant literature and similar patients for a given patient. However, the development of ReCDS systems has been severely obstructed by the lack of diverse patient collections and publicly available large-scale patient-level annotation datasets. In this paper, we aim to define and benchmark two ReCDS tasks: Patient-to-Article Retrieval (ReCDS-PAR) and Patient-to-Patient Retrieval (ReCDS-PPR) using a novel dataset called PMC-Patients. Methods: We extract patient summaries from PubMed Central articles using simple heuristics and utilize the PubMed citation graph to define patient-article relevance and patient-patient similarity. We also implement and evaluate several ReCDS systems on the PMC-Patients benchmarks, including sparse retrievers, dense retrievers, and nearest neighbor retrievers. We conduct several case studies to show the clinical utility of PMC-Patients. Results: PMC-Patients",
+  "category": "text",
+  "domain": "clinical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "information_retrieval",
+    "patient_to_article_retrieval",
+    "patient_to_patient_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@k / ranking metrics",
+  "general_score_metric": "recall@k",
+  "year_of_publish": 2022,
+  "reputation": "A specialized clinical retrieval benchmark that has been used to study retrieval-based clinical decision support with patient-level relevance annotations.",
+  "notes": "Clinical IR benchmark with heuristic patient extraction and citation-graph-derived labels; annotation noise and dataset construction assumptions should be considered.",
+  "creators": {
+    "scientists": [
+      "Zhengyun Zhao",
+      "Qiao Jin",
+      "Fangyuan Chen",
+      "Tuorui Peng",
+      "Sheng Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2202.13876",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

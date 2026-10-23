@@ -1,0 +1,33 @@
+{
+  "name": "Peptide-MHC Binding Predictors Benchmark",
+  "description": "A number of machine learning-based predictors have been developed for identifying immunogenic T-cell epitopes based on major histocompatibility complex (MHC) class I and II binding affinities. Rationally selecting the most appropriate tool has been complicated by the evolving training data and machine learning methods. Despite the recent advances made in generating high-quality MHC-eluted, naturally processed ligandome, the reliability of new predictors on these epitopes has yet to be evaluated. This study reports the latest benchmarking on an extensive set of MHC-binding predictors by using newly available, untested data of both synthetic and naturally processed epitopes. 32 human leukocyte antigen (HLA) class I and 24 HLA class II alleles are included in the blind test set. Artificial neural network (ANN)-based approaches demonstrated better performance than regression-based machine learning and structural modeling. Among the 18 predictors benchmarked, ANN-based mhcflurry and nn_align perform the best for MHC class I 9-mer and class II 15-mer predictions, respectively, on binding/non-binding classification (Area Under Curves = 0.911). NetMHCpan4 also demonstrated comparable predictive power. Our customization of mhcflurry to a pan-HLA predictor has achieved similar accuracy to NetMHCpan. The overall accuracy of these methods are comparable between 9-mer and 10-mer testing data. However, the top methods deliver low correlations between the predicted versus the experimental affinities for strong MHC binders. When used on naturally processed MHC-ligands, tools that have been trained on elution data (NetMHCpan4 and MixMHCpred) shows better accuracy than pure binding affinity predictor. The variability of false prediction rate is considerable among HLA types and datasets. Finally, structure-based predictor of Rosetta FlexPepDock is less optimal compared to the machine learning approaches. With our benchmarking of MHC-binding and MHC-elution predictors using a comprehensive metrics, a unbiased view for establishing best practice of T-cell epitope predictions is presented, facilitating future development of methods in immunogenomics.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "ROC AUC for binding/non-binding classification; correlation metrics and RMSE for affinity regression",
+  "general_score_metric": "Area Under Curve (AUC) for classification",
+  "typical_sota_score": "≈0.90–0.92 (AUC for top methods in reported tests)",
+  "year_of_publish": 2018,
+  "reputation": "175 citations",
+  "notes": "Performance varies substantially by HLA allele and dataset (synthetic vs naturally processed ligands). Top predictors show high AUC but poor correlation on strong binders; benchmarks reflect evolving training data and may include biases from elution-trained vs affinity-trained methods. Non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Weilong Zhao",
+      "Xinwei Sher"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1371/journal.pcbi.1006457",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

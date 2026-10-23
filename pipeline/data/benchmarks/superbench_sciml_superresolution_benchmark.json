@@ -1,0 +1,39 @@
+{
+  "name": "SuperBench (SciML super-resolution benchmark)",
+  "description": "Super-resolution (SR) techniques aim to enhance data resolution, enabling the retrieval of finer details, and improving the overall quality and fidelity of the data representation. There is growing interest in applying SR methods to complex spatiotemporal systems within the Scientific Machine Learning (SciML) community, with the hope of accelerating numerical simulations and/or improving forecasts in weather, climate, and related areas. However, the lack of standardized benchmark datasets for comparing and validating SR methods hinders progress and adoption in SciML. To address this, we introduce SuperBench, the first benchmark dataset featuring high-resolution datasets, including data from fluid flows, cosmology, and weather. Here, we focus on validating spatial SR performance from data-centric and physics-preserved perspectives, as well as assessing robustness to data degradation tasks. While deep learning-based SR methods (developed in the computer vision community) excel on certain tasks, despite relatively limited prior physics information, we identify limitations of these methods in accurately capturing intricate fine-scale features and preserving fundamental physical properties and constraints in scientific data. These shortcomings highlight the importance and subtlety of incorporating domain knowledge into ML models. We anticipate that SuperBench will help to advance SR methods for science.",
+  "category": "vision",
+  "domain": "scientific machine learning / spatiotemporal data (climate, weather, simulations)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "super_resolution",
+    "image_restoration",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "PSNR / SSIM plus domain-specific physics-consistency metrics (e.g., conservation errors, spectral fidelity)",
+  "general_score_metric": "PSNR / SSIM",
+  "year_of_publish": 2023,
+  "reputation": "An emerging SciML benchmark referenced in the literature that is gaining attention among scientific ML researchers working on spatiotemporal super-resolution.",
+  "notes": "Non-LLM benchmark covering multiple scientific datasets (fluid flow, cosmology, weather). Per-dataset sizes can be small, includes physics-preservation and robustness evaluations, and requires domain-specific preprocessing and metrics.",
+  "creators": {
+    "scientists": [
+      "Pu Ren",
+      "N. Benjamin Erichson",
+      "Junyi Guo",
+      "Shashank Subramanian",
+      "Omer San",
+      "Zarija Lukic",
+      "Michael W. Mahoney"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.14070",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

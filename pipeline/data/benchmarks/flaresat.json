@@ -1,0 +1,31 @@
+{
+  "name": "FlareSat",
+  "description": "Gas flaring in oil and gas facilities prevents pressure buildup and ensures safety, but large-scale flaring emits significant greenhouse gases and contributes to climate change. Detecting and monitoring gas flaring are crucial for mitigating its impact. Satellite imagery offers key advantages for these tasks, including open data availability, global coverage, and broad spectral capture. However, despite the availability of flame and smoke datasets, as well as hyperspectral data for methane emissions, there is a lack of open hyperspectral satellite datasets and deep learning approaches for gas flaring detection. To address this gap, we introduce FlareSat, a specialized dataset for gas flaring segmentation using Landsat 8 imagery.  It includes 7,337 labeled image patches (256 X 256 pixels) covering 5,508 facilities across 94 countries, including onshore and offshore sites, making it a valuable resource for future research. Additionally, to ensure robustness, the dataset includes patches featuring sources similar to gas flaring, namely wildfires, active volcanoes, and urban areas with high solar reflectance. To evaluate the dataset, we used a baseline semantic segmentation model along with variations, exploring attention layers and transfer learning. Results showed that specialized machine learning techniques enhance the ability to distinguish between gas flares and other high-temperature sources.",
+  "category": "vision",
+  "domain": "remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mIoU / F1 (pixel-level segmentation metrics)",
+  "general_score_metric": "mIoU (mean Intersection over Union)",
+  "year_of_publish": 2025,
+  "reputation": "A newly introduced remote-sensing segmentation dataset for gas flaring detection that fills a niche gap and is of growing interest in the remote sensing community.",
+  "notes": "Contains potential confounders (wildfires, volcanoes, urban high-reflectance areas); moderate dataset size (7,337 patches); non-LLM benchmark focused on satellite imagery and segmentation tasks.",
+  "creators": {
+    "scientists": [
+      "Osmary Camila Bortoncello Glober",
+      "Ricardo Dutra da Silva"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.20944/preprints202511.1755.v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

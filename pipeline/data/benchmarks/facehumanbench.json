@@ -1,0 +1,41 @@
+{
+  "name": "Face-Human-Bench",
+  "description": "Faces and humans are crucial elements in social interaction and are widely included in everyday photos and videos. Therefore, a deep understanding of faces and humans will enable multi-modal assistants to achieve improved response quality and broadened application scope. Currently, the multi-modal assistant community lacks a comprehensive and scientific evaluation of face and human understanding abilities. In this paper, we first propose a hierarchical ability taxonomy that includes three levels of abilities. Then, based on this taxonomy, we collect images and annotations from publicly available datasets in the face and human community and build a semi-automatic data pipeline to produce problems for the new benchmark. Finally, the obtained Face-Human-Bench comprises a development set with 900 problems and a test set with 1800 problems, supporting both English and Chinese. We conduct evaluations over 25 mainstream multi-modal large language models (MLLMs) with our Face-Human-Bench, focusing on the correlation between abilities, the impact of the relative position of targets on performance, and the impact of Chain of Thought (CoT) prompting on performance. Moreover, inspired by multi-modal agents, we also explore which abilities of MLLMs need to be supplemented by specialist models.",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_question_answering",
+    "multi_modal_reasoning",
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (correctness of answers) and task-specific scoring; some tasks may use F1 for span-based answers",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "reputation": "Newer multimodal benchmark gaining attention for focused evaluation of face- and human-centric reasoning in MLLMs but not yet widely adopted outside that subcommunity.",
+  "notes": "Moderate-size dataset (900 dev, 1800 test); supports English and Chinese; potential pretraining overlap/contamination risk for widely used MLLMs; evaluation sensitive to prompt style and chain-of-thought prompting.",
+  "creators": {
+    "scientists": [
+      "Lixiong Qin",
+      "Shilong Ou",
+      "Miaoxuan Zhang",
+      "Jiangning Wei",
+      "Yuhang Zhang",
+      "Xiaoshuai Song",
+      "Yuchen Liu",
+      "Mei Wang",
+      "Weiran Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.01243",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

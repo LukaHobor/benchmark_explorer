@@ -1,0 +1,34 @@
+{
+  "name": "Multi-Distance Hand Gesture Benchmark",
+  "description": "Dynamic hand gesture recognition is crucial for intelligent interaction and immersive VR/AR/MR applications, yet most methods are not robust to hand scale variations caused by changing subject-camera distances. We propose DAHGRNet (Distance-Adaptive Hand Gesture Recognition Network), a novel dual-stream architecture designed for robust dynamic hand gesture recognition across varying subject-camera distances. For each video, a hand detector localizes multi-scale hand regions, and 16 frames are uniformly sampled between the first and last hand-detected frames. RGB frames are processed by a ResNet50 and linear layer, while hand detection features are mapped to the same dimension via an MLP. Two rounds of bidirectional gated cross-attention align the two modalities, and the aligned features are fused by element-wise addition. Learnable positional encodings are added, and the sequence is fed into a fourlayer Transformer encoder for temporal modeling. The output is aggregated by global temporal average pooling, followed by dropout and a classifier for gesture prediction. We constructed a dataset of 15,924 gesture videos spanning multiple distances and backgrounds to evaluate our approach in real-world VR/AR scenarios. Our method achieves 92.76% accuracy on the test set, surpassing previous approaches by 7.14%, and reaches 96.28%, 92.39%, and 88.59% accuracy at close, medium, and far distances, respectively. Comparative and ablation experiments validate both the performance and the design rationality of our method, demonstrating strong robustness across various interaction ranges. Code Availability: The implementation of DAHGRNet and dataset is publicly available at https://github.com/TonyLee1256/DAHGR-Net.",
+  "category": "vision",
+  "domain": "HCI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "hand_gesture_recognition",
+    "classification",
+    "distance_robustness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (per-class and overall) and F1 for imbalanced classes; per-distance performance breakdown",
+  "general_score_metric": "accuracy (with per-distance breakdowns and aggregated F1 where appropriate)",
+  "year_of_publish": 2025,
+  "reputation": "Published recently (ICVRV 2025) as a specialized benchmark for distance-robust gesture recognition; modest adoption so far within HCI/vision subcommunity.",
+  "notes": "Focuses on subject-to-camera distance variation; utility depends on dataset diversity (subjects, backgrounds) and may be sensitive to capture setup—not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Jiaming Li",
+      "Yongping Xiong",
+      "Hao Peng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/icvrv67992.2025.00021",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

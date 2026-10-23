@@ -1,0 +1,40 @@
+{
+  "name": "ViPlan",
+  "description": "Integrating Large Language Models with symbolic planners is a promising direction for obtaining verifiable and grounded plans compared to planning in natural language, with recent works extending this idea to visual domains using Vision-Language Models (VLMs). However, rigorous comparison between VLM-grounded symbolic approaches and methods that plan directly with a VLM has been hindered by a lack of common environments, evaluation protocols and model coverage. We introduce ViPlan, the first open-source benchmark for Visual Planning with symbolic predicates and VLMs. ViPlan features a series of increasingly challenging tasks in two domains: a visual variant of the classic Blocksworld planning problem and a simulated household robotics environment. We benchmark nine open-source VLM families across multiple sizes, along with selected closed models, evaluating both VLM-grounded symbolic planning and using the models directly to propose actions. We find symbolic planning to outperform direct VLM planning in Blocksworld, where accurate image grounding is crucial, whereas the opposite is true in the household robotics tasks, where commonsense knowledge and the ability to recover from errors are beneficial. Finally, we show that across most models and methods, there is no significant benefit to using Chain-of-Thought prompting, suggesting that current VLMs still struggle with visual reasoning.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_planning",
+    "symbolic_planning",
+    "action_generation",
+    "multimodal_reasoning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate (execution success of planned actions), with secondary metrics like plan length and grounding accuracy",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2025,
+  "reputation": "A recent open-source benchmark for VLM-grounded symbolic planning and direct VLM planning; currently new with initial adoption by visual-planning and embodied-AI researchers.",
+  "notes": "Domain-limited (Blocksworld and a simulated household); evaluates both symbolic and direct VLM approaches so results vary by domain and grounding quality; requires simulation environments and is not saturated.",
+  "creators": {
+    "scientists": [
+      "Matteo Merler",
+      "Nicola Dainese",
+      "Minttu Alakuijala",
+      "Giovanni Bonetta",
+      "Pietro Ferrazzi",
+      "Yu Tian",
+      "Bernardo Magnini",
+      "Pekka Marttinen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2505.13180",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

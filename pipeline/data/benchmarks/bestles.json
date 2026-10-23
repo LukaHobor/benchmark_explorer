@@ -1,0 +1,36 @@
+{
+  "name": "BeSt-LeS",
+  "description": "Brain stroke has become a significant burden on global health and thus we need remedies and prevention strategies to overcome this challenge. For this, the immediate identification of stroke and risk stratification is the primary task for clinicians. To aid expert clinicians, automated segmentation models are crucial. In this work, we consider the publicly available dataset ATLAS $v2.0$ to benchmark various end-to-end supervised U-Net style models. Specifically, we have benchmarked models on both 2D and 3D brain images and evaluated them using standard metrics. We have achieved the highest Dice score of 0.583 on the 2D transformer-based model and 0.504 on the 3D residual U-Net respectively. We have conducted the Wilcoxon test for 3D models to correlate the relationship between predicted and actual stroke volume. For reproducibility, the code and model weights are made publicly available: https://github.com/prantik-pdeb/BeSt-LeS.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "segmentation",
+    "semantic_segmentation",
+    "medical_image_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dice coefficient (Dice score); also commonly reported: IoU and volume correlation",
+  "general_score_metric": "Dice score",
+  "typical_sota_score": "50–58%",
+  "year_of_publish": 2023,
+  "reputation": "A domain-specific benchmark for ischemic stroke lesion segmentation based on ATLAS v2.0; recognized within the medical imaging segmentation community but not broadly adopted outside it.",
+  "notes": "Works on a medical-imaging segmentation task (non-LLM). Uses ATLAS v2.0 with known class imbalance and limited lesion-volume samples; reported scores are moderate and variability across centers can be high. Reproducibility aided by released code and weights.",
+  "creators": {
+    "scientists": [
+      "Prantik Deb",
+      "Lalith Bharadwaj Baru",
+      "Kamalaker Dadi",
+      "Bapi Raju S"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2310.07060",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

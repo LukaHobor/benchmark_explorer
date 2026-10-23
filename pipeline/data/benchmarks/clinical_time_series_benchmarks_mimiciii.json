@@ -1,0 +1,38 @@
+{
+  "name": "Clinical Time Series Benchmarks (MIMIC-III)",
+  "description": "Health care is one of the most exciting frontiers in data mining and machine learning. Successful adoption of electronic health records (EHRs) created an explosion in digital clinical data available for analysis, but progress in machine learning for healthcare research has been difficult to measure because of the absence of publicly available benchmark data sets. To address this problem, we propose four clinical prediction benchmarks using data derived from the publicly available Medical Information Mart for Intensive Care (MIMIC-III) database. These tasks cover a range of clinical problems including modeling risk of mortality, forecasting length of stay, detecting physiologic decline, and phenotype classification. We propose strong linear and neural baselines for all four tasks and evaluate the effect of deep supervision, multitask training and data-specific architectural modifications on the performance of neural models.",
+  "category": "mixed",
+  "domain": "healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "multilabel_classification",
+    "regression",
+    "time_series_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC/AUPRC for classification tasks; MAE/MSE for regression/forecasting tasks",
+  "general_score_metric": "AUROC (classification tasks) / MAE (regression tasks)",
+  "typical_sota_score": "varies by task; AUROC typically ~0.75–0.95 across different tasks",
+  "year_of_publish": 2019,
+  "reputation": "588 citations",
+  "notes": "Derived from MIMIC-III (real clinical EHRs). Common caveats: class imbalance, potential temporal leakage, limited external generalizability, privacy/legal constraints; non-LLM clinical benchmark.",
+  "creators": {
+    "scientists": [
+      "Hrayr Harutyunyan",
+      "Hrant Khachatrian",
+      "David C. Kale",
+      "Greg Ver Steeg",
+      "Aram Galstyan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41597-019-0103-9",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

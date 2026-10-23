@@ -1,0 +1,34 @@
+{
+  "name": "Three Hierarchical Text Classification Datasets",
+  "description": "Hierarchical Text Classification (HTC) is a natural language processing task with the objective to classify text documents into a set of classes from a structured class hierarchy. Many HTC approaches have been proposed which attempt to leverage the class hierarchy information in various ways to improve classification performance. Machine learning-based classification approaches require large amounts of training data and are most-commonly compared through three established benchmark datasets, which include the Web Of Science (WOS), Reuters Corpus Volume 1 Version 2 (RCV1-V2) and New York Times (NYT) datasets. However, apart from the RCV1-V2 dataset which is well-documented, these datasets are not accompanied with detailed description methodologies. In this paper, we introduce three new HTC benchmark datasets in the domain of research publications which comprise the titles and abstracts of papers from the Web of Science publication database. We first create two baseline datasets which use existing journal-and citation-based classification schemas. Due to the respective shortcomings of these two existing schemas, we propose an approach which combines their classifications to improve the reliability and robustness of the dataset. We evaluate the three created datasets with a clustering-based analysis and show that our proposed approach results in a higher quality dataset where documents that belong to the same class are semantically more similar compared to the other datasets. Finally, we provide the classification performance of four state-of-the-art HTC approaches on these three new datasets to provide baselines for future studies on machine learning-based techniques for scientific publication classification.",
+  "category": "text",
+  "domain": "natural language processing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "hierarchical_classification",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 (micro / macro; hierarchical F1 variants often reported)",
+  "general_score_metric": "micro-F1",
+  "typical_sota_score": "50–75%",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark introduced for HTC on scientific publications; modest adoption so far, mainly used in specialized hierarchical classification research.",
+  "notes": "Constructed from Web of Science titles/abstracts; class imbalance and label noise from combining journal- and citation-based schemas; hierarchical label dependencies require specialized metrics; not a large-scale general LLM benchmark and may be sensitive to domain shifts.",
+  "creators": {
+    "scientists": [
+      "Jaco du Toit",
+      "Herman Redelinghuys",
+      "Marcel Dunaiski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2411.19119",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

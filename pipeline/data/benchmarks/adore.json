@@ -1,0 +1,34 @@
+{
+  "name": "ADORE",
+  "description": "The use of machine learning for predicting ecotoxicological outcomes is promising, but underutilized. The curation of data with informative features requires both expertise in machine learning as well as a strong biological and ecotoxicological background, which we consider a barrier of entry for this kind of research. Additionally, model performances can only be compared across studies when the same dataset, cleaning, and splittings were used. Therefore, we provide ADORE, an extensive and well-described dataset on acute aquatic toxicity in three relevant taxonomic groups (fish, crustaceans, and algae). The core dataset describes ecotoxicological experiments and is expanded with phylogenetic and species-specific data on the species as well as chemical properties and molecular representations. Apart from challenging other researchers to try and achieve the best model performances across the whole dataset, we propose specific relevant challenges on subsets of the data and include datasets and splittings corresponding to each of these challenge as well as in-depth characterization and discussion of train-test splitting approaches.",
+  "category": "mixed",
+  "domain": "ecotoxicology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "RMSE / R² / ROC-AUC (task-dependent)",
+  "general_score_metric": "RMSE (primary for continuous toxicity endpoints) / ROC-AUC (for classification tasks)",
+  "reputation": "Well-regarded in ecotoxicology and environmental ML research circles for providing a curated, multi-species toxicity dataset; used by domain researchers but not a mainstream ML benchmark.",
+  "notes": "Dataset contains varied assays/species and requires careful train-test splitting to avoid leakage (phylogenetic/chemical similarity). Some subsets are small and imbalanced; primarily a non-LLM benchmark focused on chemical/biological feature modeling.",
+  "creators": {
+    "scientists": [
+      "Christoph Schür",
+      "Lilian Gasser",
+      "Fernando Perez-Cruz",
+      "Kristin Schirmer",
+      "Marco Baity-Jesi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

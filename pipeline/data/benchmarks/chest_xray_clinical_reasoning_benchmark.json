@@ -1,0 +1,39 @@
+{
+  "name": "Chest X-ray Clinical Reasoning Benchmark",
+  "description": "Artificial intelligence (AI)-based chest X-ray (CXR) interpretation assistants have demonstrated significant progress and are increasingly being applied in clinical settings. However, contemporary medical AI models often adhere to a simplistic input-to-output paradigm, directly processing an image and an instruction to generate a result, where the instructions may be integral to the model's architecture. This approach overlooks the modeling of the inherent diagnostic reasoning in chest X-ray interpretation. Such reasoning is typically sequential, where each interpretive stage considers the images, the current task, and the contextual information from previous stages. This oversight leads to several shortcomings, including misalignment with clinical scenarios, contextless reasoning, and untraceable errors. To fill this gap, we construct CXRTrek, a new multi-stage visual question answering (VQA) dataset for CXR interpretation. The dataset is designed to explicitly simulate the diagnostic reasoning process employed by radiologists in real-world clinical settings for the first time. CXRTrek covers 8 sequential diagnostic stages, comprising 428,966 samples and over 11 million question-answer (Q&A) pairs, with an average of 26.29 Q&A pairs per sample. Building on the CXRTrek dataset, we propose a new vision-language large model (VLLM), CXRTrekNet, specifically designed to incorporate the clinical reasoning flow into the VLLM framework. CXRTrekNet effectively models the dependencies between diagnostic stages and captures reasoning patterns within the radiological context. Trained on our dataset, the model consistently outperforms existing medical VLLMs on the CXRTrek benchmarks and demonstrates superior generalization across multiple tasks on five diverse external datasets. The dataset and model can be found in our repository (https://github.com/guanjinquan/CXRTrek).",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "Large, recently introduced dataset intended for research in clinical radiology VQA; notable within medical VLLM research but not yet a broadly adopted clinical standard.",
+  "notes": "Very large multi-stage medical VQA dataset simulating diagnostic workflows; requires clinical expertise to evaluate and validate. Not intended for direct clinical deployment; potential for dataset biases and domain-shift; privacy/ethical considerations and need for external clinical validation.",
+  "creators": {
+    "scientists": [
+      "Jinquan Guan",
+      "Qi Chen",
+      "Lizhou Liang",
+      "Yuhang Liu",
+      "Vu Minh Hieu Phan",
+      "Minh-Son To",
+      "Jian Chen",
+      "Yutong Xie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2505.23143",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Unified Data Poisoning / Backdoor Benchmark",
+  "description": "Data poisoning and backdoor attacks manipulate training data in order to cause models to fail during inference. A recent survey of industry practitioners found that data poisoning is the number one concern among threats ranging from model stealing to adversarial attacks. However, it remains unclear exactly how dangerous poisoning methods are and which ones are more effective considering that these methods, even ones with identical objectives, have not been tested in consistent or realistic settings. We observe that data poisoning and backdoor attacks are highly sensitive to variations in the testing setup. Moreover, we find that existing methods may not generalize to realistic settings. While these existing works serve as valuable prototypes for data poisoning, we apply rigorous tests to determine the extent to which we should fear them. In order to promote fair comparison in future work, we develop standardized benchmarks for data poisoning and backdoor attacks.",
+  "category": "mixed",
+  "domain": "security",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "backdoor_injection",
+    "poisoning_attack"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "attack_success_rate (ASR) and clean_accuracy",
+  "general_score_metric": "attack_success_rate (ASR)",
+  "typical_sota_score": "highly variable (often reported across 0–100% ASR depending on threat model and dataset)",
+  "year_of_publish": 2020,
+  "reputation": "A targeted benchmarking effort used in security research to standardize comparisons of poisoning/backdoor methods; moderate adoption among ML security practitioners.",
+  "notes": "Highly sensitive to experimental setup and dataset provenance; risk of contamination of training pipelines; results depend on threat model realism and access to training; non-LLM-specific (applies to models trained on poisoned data).",
+  "creators": {
+    "scientists": [
+      "Avi Schwarzschild",
+      "Micah Goldblum",
+      "Arjun Gupta",
+      "John P. Dickerson",
+      "Tom Goldstein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2006.12557",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Spacecraft Feature Components Benchmark",
+  "description": "Abstract Countries are increasingly interested in spacecraft surveillance and recognition which play an important role in on-orbit maintenance, space docking, and other applications. Traditional detection methods, including radar, have many restrictions, such as excessive costs and energy supply problems. For many on-orbit servicing spacecraft, image recognition is a simple but relatively accurate method for obtaining sufficient position and direction information to offer services. However, to the best of our knowledge, few practical machine-learning models focusing on the recognition of spacecraft feature components have been reported. In addition, it is difficult to find substantial on-orbit images with which to train or evaluate such a model. In this study, we first created a new dataset containing numerous artificial images of on-orbit spacecraft with labeled components. Our base images were derived from 3D Max and STK software. These images include many types of satellites and satellite postures. Considering real-world illumination conditions and imperfect camera observations, we developed a degradation algorithm that enabled us to produce thousands of artificial images of spacecraft. The feature components of the spacecraft in all images were labeled manually. We discovered that direct utilization of the DeepLab V3+ model leads to poor edge recognition. Poorly defined edges provide imprecise position or direction information and degrade the performance of on-orbit services. Thus, the edge information of the target was taken as a supervisory guide, and was used to develop the proposed Edge Auxiliary Supervision DeepLab Network (EASDN) . The main idea of EASDN is to provide a new edge auxiliary loss by calculating the L2 loss between the predicted edge masks and ground-truth edge masks during training. Our extensive experiments demonstrate that our network can perform well both on our benchmark and on real on-orbit spacecraft images from the Internet. Furthermore, the device usage and processing time meet the demands of engineering applications.",
+  "category": "vision",
+  "domain": "spacecraft recognition / aerospace vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "edge_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2021,
+  "reputation": "32 citations",
+  "notes": "Primarily synthetic/driven-from-3D-rendered images with simulated degradations, so there is risk of domain shift when deploying on real on-orbit imagery; focused on pixel-level segmentation and edge quality; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Linwei Qiu",
+      "Liang Tang",
+      "Rui Zhong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1007/s42064-021-0103-3",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

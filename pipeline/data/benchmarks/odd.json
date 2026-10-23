@@ -1,0 +1,43 @@
+{
+  "name": "ODD",
+  "description": "Opioid related aberrant behaviors (ORABs) present novel risk factors for opioid overdose. This paper introduces a novel biomedical natural language processing benchmark dataset named ODD, for ORAB Detection Dataset. ODD is an expert-annotated dataset designed to identify ORABs from patients' EHR notes and classify them into nine categories; 1) Confirmed Aberrant Behavior, 2) Suggested Aberrant Behavior, 3) Opioids, 4) Indication, 5) Diagnosed opioid dependency, 6) Benzodiazepines, 7) Medication Changes, 8) Central Nervous System-related, and 9) Social Determinants of Health. We explored two state-of-the-art natural language processing models (fine-tuning and prompt-tuning approaches) to identify ORAB. Experimental results show that the prompt-tuning models outperformed the fine-tuning models in most categories and the gains were especially higher among uncommon categories (Suggested Aberrant Behavior, Confirmed Aberrant Behaviors, Diagnosed Opioid Dependence, and Medication Change). Although the best model achieved the highest 88.17% on macro average area under precision recall curve, uncommon classes still have a large room for performance improvement. ODD is publicly available.",
+  "category": "text",
+  "domain": "medical/clinical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "sequence_classification",
+    "text_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "macro AUPRC (area under the precision-recall curve, macro-averaged)",
+  "general_score_metric": "macro AUPRC",
+  "typical_sota_score": "≈88.17% (macro AUPRC, reported best model)",
+  "year_of_publish": 2023,
+  "reputation": "Expert-annotated, publicly released clinical NLP dataset focused on opioid-related aberrant behaviors; of interest to biomedical NLP researchers but relatively specialized.",
+  "notes": "Clinical EHR data with privacy concerns and de-identification requirements; pronounced class imbalance and uncommon categories with much room for improvement; relatively small / specialized dataset; not a general-purpose LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Sunjae Kwon",
+      "Xun Wang",
+      "Weisong Liu",
+      "Emily Druhl",
+      "Minhee L. Sung",
+      "Joel I. Reisman",
+      "Wenjun Li",
+      "Robert D. Kerns",
+      "William Becker",
+      "Hong Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2307.02591",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

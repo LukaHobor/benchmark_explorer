@@ -1,0 +1,39 @@
+{
+  "name": "LongProc",
+  "description": "Existing benchmarks for evaluating long-context language models (LCLMs) primarily focus on long-context recall, requiring models to produce short responses based on a few critical snippets while processing thousands of irrelevant tokens. We introduce LongProc (Long Procedural Generation), a new benchmark that requires both the integration of highly dispersed information and long-form generation. LongProc consists of six diverse procedural generation tasks, such as extracting structured information from HTML pages into a TSV format and executing complex search procedures to create travel plans. These tasks challenge LCLMs by testing their ability to follow detailed procedural instructions, synthesize and reason over dispersed information, and generate structured, long-form outputs (up to 8K tokens). Furthermore, as these tasks adhere to deterministic procedures and yield structured outputs, they enable reliable rule-based evaluation. We evaluated 23 LCLMs, including instruction-tuned models and recent reasoning models, on LongProc at three difficulty levels, with the maximum number of output tokens set at 500, 2K, and 8K. Notably, while all tested models claim a context window size above 32K tokens, open-weight models typically falter on 2K-token tasks, and closed-source models like GPT-4o show significant degradation on 8K-token tasks. Reasoning models achieve stronger overall performance in long-form generation, benefiting from long CoT training. Further analysis reveals that LCLMs struggle to maintain long-range coherence in long-form generations. These findings highlight critical limitations in current LCLMs and suggest substantial room for improvement. Data and code available at: https://princeton-pli.github.io/LongProc.",
+  "category": "text",
+  "domain": "reasoning",
+  "task_types": [
+    "structured_generation",
+    "information_extraction",
+    "procedural_following",
+    "long_form_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match",
+  "year_of_publish": 2025,
+  "reputation": "A new long-context benchmark that is gaining attention for testing both dispersed-information integration and long-form procedural generation beyond simple recall.",
+  "notes": "Benchmarking Long-Context Language Models on Long Procedural Generation | Tags: long-context, procedural generation, long-form generation, challenging, text generation",
+  "creators": {
+    "scientists": [
+      "Xi Ye",
+      "Fangcong Yin",
+      "Yinghui He",
+      "Joie Zhang",
+      "Howard Yen",
+      "Tianyu Gao",
+      "Greg Durrett",
+      "Danqi Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2501.05414v3",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-23",
+    "origin": "cynefin@d486fafa9"
+  }
+}

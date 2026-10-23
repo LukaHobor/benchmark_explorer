@@ -1,0 +1,36 @@
+{
+  "name": "FINN FPGA QNN Benchmark",
+  "description": "The ever-growing cost of both training and inference for state-of-the-art neural networks has brought literature to look upon ways to cut off resources used with a minimal impact on accuracy. Using lower precision comes at the cost of negligible loss in accuracy. While training neural networks may require a powerful setup, deploying a network must be possible on low-power and low-resource hardware architectures. Reconfigurable architectures have proven to be more powerful and flexible than GPUs when looking at a specific application. This article aims to assess the impact of mixed-precision when applied to neural networks deployed on FPGAs. While several frameworks exist that create tools to deploy neural networks using reduced-precision, few of them assess the importance of quantization and the framework quality. FINN and Brevitas, two frameworks from Xilinx labs, are used to assess the impact of quantization on neural networks using 2 to 8 bit precisions and weights with several parallelization configurations. Equivalent accuracy can be obtained using lower-precision representation and enough training. However, the compressed network can be better parallelized allowing the deployed network throughput to be 62 times faster. The benchmark set up in this work is available in a public repository (https://github.com/QDucasse/nn benchmark).",
+  "category": "mixed",
+  "domain": "hardware acceleration",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "inference_throughput",
+    "accuracy_evaluation",
+    "quantization_benchmark"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy and throughput (images/sec)",
+  "general_score_metric": "accuracy and throughput (images/sec)",
+  "typical_sota_score": "within 0–2% of full-precision accuracy; throughput improvements up to 62× reported",
+  "year_of_publish": 2021,
+  "reputation": "Widely used within FPGA and quantized-neural-network research for evaluating FINN/Brevitas deployments, but niche compared to mainstream ML benchmarks.",
+  "notes": "Hardware-focused benchmark (non-LLM). Measures both accuracy and FPGA inference throughput/resource usage; results depend heavily on target FPGA board, synthesis settings, and parallelization; scope is limited to quantized networks and FINN/Brevitas tooling.",
+  "creators": {
+    "scientists": [
+      "Quentin Ducasse",
+      "Pascal Cotret",
+      "Loïc Lagadec",
+      "Robert Stewart"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2102.01341",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

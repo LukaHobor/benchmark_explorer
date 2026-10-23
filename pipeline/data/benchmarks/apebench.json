@@ -1,0 +1,36 @@
+{
+  "name": "APEBench",
+  "description": "We introduce the Autoregressive PDE Emulator Benchmark (APEBench), a comprehensive benchmark suite to evaluate autoregressive neural emulators for solving partial differential equations. APEBench is based on JAX and provides a seamlessly integrated differentiable simulation framework employing efficient pseudo-spectral methods, enabling 46 distinct PDEs across 1D, 2D, and 3D. Facilitating systematic analysis and comparison of learned emulators, we propose a novel taxonomy for unrolled training and introduce a unique identifier for PDE dynamics that directly relates to the stability criteria of classical numerical methods. APEBench enables the evaluation of diverse neural architectures, and unlike existing benchmarks, its tight integration of the solver enables support for differentiable physics training and neural-hybrid emulators. Moreover, APEBench emphasizes rollout metrics to understand temporal generalization, providing insights into the long-term behavior of emulating PDE dynamics. In several experiments, we highlight the similarities between neural emulators and numerical simulators.",
+  "category": "mixed",
+  "domain": "scientific computing / PDE simulation",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "simulation",
+    "time_series_forecasting",
+    "rollout_prediction",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean_squared_error / rollout_error (e.g., rollout RMSE)",
+  "general_score_metric": "rollout_RMSE (rollout mean squared/root-mean-squared error)",
+  "year_of_publish": 2024,
+  "reputation": "A specialized research benchmark in scientific computing and learned PDE emulation with growing interest among computational-science and ML-for-physics researchers.",
+  "notes": "Non-LLM benchmark focused on numerical emulation; emphasizes long-term rollout metrics and temporal generalization; requires substantial compute and careful numerical setup; not saturated.",
+  "creators": {
+    "scientists": [
+      "Felix Koehler",
+      "Simon Niedermayr",
+      "Rüdiger Westermann",
+      "Nils Thuerey"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2411.00180",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

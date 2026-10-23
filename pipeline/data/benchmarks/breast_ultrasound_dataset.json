@@ -1,0 +1,37 @@
+{
+  "name": "BrEaST ultrasound dataset",
+  "description": "A new detailed dataset of breast ultrasound scans (BrEaST) containing images of benign and malignant lesions as well as normal tissue examples, is presented. The dataset consists of 256 breast scans collected from 256 patients. Each scan was manually annotated and labeled by a radiologist experienced in breast ultrasound examination. In particular, each tumor was identified in the image using a freehand annotation and labeled according to BIRADS features and lexicon. The histopathological classification of the tumor was also provided for patients who underwent a biopsy. The BrEaST dataset is the first breast ultrasound dataset containing patient-level labels, image-level annotations, and tumor-level labels with all cases confirmed by follow-up care or core needle biopsy result. To enable research into breast disease detection, tumor segmentation and classification, the BrEaST dataset is made publicly available with the CC-BY 4.0 license.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "segmentation",
+    "object_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "classification: accuracy / AUC; segmentation: Dice coefficient / IoU; detection: precision/recall / mAP",
+  "general_score_metric": "AUC (classification) / Dice (segmentation)",
+  "typical_sota_score": "≈70–95% depending on task and metric (AUC for classification often in the high-70s to 90s; segmentation Dice typically lower)",
+  "year_of_publish": 2024,
+  "reputation": "80 citations",
+  "notes": "Small dataset (256 scans) with potential class imbalance and single-center annotations; patient-level labels and biopsy-confirmed cases are strengths. Not an LLM benchmark; limited sample size may constrain generalization.",
+  "creators": {
+    "scientists": [
+      "Anna Pawłowska",
+      "Anna Ćwierz-Pieńkowska",
+      "Agnieszka Domalik",
+      "Dominika Jaguś",
+      "P. Kasprzak",
+      "Rafał Matkowski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

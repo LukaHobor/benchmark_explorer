@@ -1,0 +1,33 @@
+{
+  "name": "VulnBench",
+  "description": "Reproducible benchmarking of tools that automatically detect vulnerabilities in source code remains challenging due to inconsistent implementations, varying data preprocessing, and methodological flaws that compromise fair model comparison. In a recent study, 9 in 10 vulnerability detection studies were found to use inappropriate evaluation approaches, with models achieving high scores through spurious correlations rather than actual vulnerability detection. We present VulnBench, an extensible, open-source benchmarking tool that enables fair comparison across models and datasets. Our systematic evaluation of CodeBERT, GraphCodeBERT, CodeT5 (encoder-only and full), and NatGen across eight mostly C/C++ source code datasets reveals that proper threshold optimization can improve F1-scores by up to 54%, as well as wide variation in F1-scores showing the large gap in the difficulty of the vulnerability dataset field. By standardising evaluation protocols, VulnBench enables researchers to distinguish between genuine model improvements and methodological artifacts as well as reducing wasteful duplication of effort spent on reproducing results.",
+  "category": "code",
+  "domain": "cybersecurity (vulnerability detection in code)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "vulnerability_localization",
+    "multi_label_classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (with precision/recall reporting and threshold optimization)",
+  "general_score_metric": "F1",
+  "year_of_publish": 2026,
+  "reputation": "Well-regarded in the security/ML research community as an open-source toolkit to standardize and make vulnerability-detection evaluations reproducible; adoption is growing among code-security researchers.",
+  "notes": "Addresses prior methodological flaws but underlying datasets vary in difficulty and label quality; risk of contamination/duplication across code corpora; predominantly non-LLM/code-model benchmark with class imbalance and dataset heterogeneity.",
+  "creators": {
+    "scientists": [
+      "J. Norton",
+      "D. Eyers",
+      "Veronica Liesaputra"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

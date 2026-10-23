@@ -1,0 +1,37 @@
+{
+  "name": "Expanded CFSL (continual few-shot learning) benchmark",
+  "description": "Continual learning and few-shot learning are important frontiers in progress toward broader Machine Learning (ML) capabilities. Recently, there has been intense interest in combining both. One of the first examples to do so was the Continual few-shot Learning (CFSL) framework of Antoniou et al. arXiv:2004.11967. In this study, we extend CFSL in two ways that capture a broader range of challenges, important for intelligent agent behaviour in real-world conditions. First, we increased the number of classes by an order of magnitude, making the results more comparable to standard continual learning experiments. Second, we introduced an 'instance test' which requires recognition of specific instances of classes -- a capability of animal cognition that is usually neglected in ML. For an initial exploration of ML model performance under these conditions, we selected representative baseline models from the original CFSL work and added a model variant with replay. As expected, learning more classes is more difficult than the original CFSL experiments, and interestingly, the way in which image instances and classes are presented affects classification performance. Surprisingly, accuracy in the baseline instance test is comparable to other classification tasks, but poor given significant occlusion and noise. The use of replay for consolidation substantially improves performance for both types of tasks, but particularly for the instance test.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "few_shot",
+    "continual_learning",
+    "instance_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2022,
+  "reputation": "A recent, specialized extension of the CFSL framework with limited but growing attention in continual- and few-shot- learning research; not widely adopted as a community standard.",
+  "notes": "vision-only benchmark (non-LLM); increased class count and an instance-recognition test with occlusion/noise; moderate dataset size relative to standard continual-learning suites; performance sensitive to replay/consolidation strategy and experimental seeds.",
+  "creators": {
+    "scientists": [
+      "Gideon Kowadlo",
+      "Abdelrahman Ahmed",
+      "Amir Mayan",
+      "David Rawlinson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2209.07863",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

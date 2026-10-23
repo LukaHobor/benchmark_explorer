@@ -1,0 +1,45 @@
+{
+  "name": "ED Triage Benchmark",
+  "description": "The demand for emergency department (ED) services is increasing across the globe, particularly during the current COVID-19 pandemic. Clinical triage and risk assessment have become increasingly challenging due to the shortage of medical resources and the strain on hospital infrastructure caused by the pandemic. As a result of the widespread use of electronic health records (EHRs), we now have access to a vast amount of clinical data, which allows us to develop predictive models and decision support systems to address these challenges. To date, however, there are no widely accepted benchmark ED triage prediction models based on large-scale public EHR data. An open-source benchmarking platform would streamline research workflows by eliminating cumbersome data preprocessing, and facilitate comparisons among different studies and methodologies. In this paper, based on the Medical Information Mart for Intensive Care IV Emergency Department (MIMIC-IV-ED) database, we developed a publicly available benchmark suite for ED triage predictive models and created a benchmark dataset that contains over 400,000 ED visits from 2011 to 2019. We introduced three ED-based outcomes (hospitalization, critical outcomes, and 72-hour ED reattendance) and implemented a variety of popular methodologies, ranging from machine learning methods to clinical scoring systems. We evaluated and compared the performance of these methods against benchmark tasks. Our codes are open-source, allowing anyone with MIMIC-IV-ED data access to perform the same steps in data processing, benchmark model building, and experiments. This study provides future researchers with insights, suggestions, and protocols for managing raw data and developing risk triaging tools for emergency care.",
+  "category": "mixed",
+  "domain": "healthcare / electronic health records",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "risk_prediction",
+    "readmission_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC, AUPRC, F1 (precision/recall)",
+  "general_score_metric": "AUROC",
+  "typical_sota_score": "75–90%",
+  "year_of_publish": 2021,
+  "reputation": "Moderately adopted within clinical ML and EHR research communities (requires MIMIC-IV-ED access); used as a reproducible ED triage benchmark by researchers with data access.",
+  "notes": "Requires MIMIC-IV-ED access; class imbalance and temporal drift are concerns; non-LLM benchmark focused on tabular/time-series EHR data; potential label noise and censoring; contamination risk if models pretrained on MIMIC-derived data.",
+  "creators": {
+    "scientists": [
+      "Feng Xie",
+      "Jun Zhou",
+      "Jin Wee Lee",
+      "Mingrui Tan",
+      "Siqi Li",
+      "Logasan S/O Rajnthern",
+      "Marcel Lucas Chee",
+      "Bibhas Chakraborty",
+      "An-Kwok Ian Wong",
+      "Alon Dagan",
+      "Marcus Eng Hock Ong",
+      "Fei Gao",
+      "Nan Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2111.11017",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

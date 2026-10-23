@@ -1,0 +1,63 @@
+{
+  "name": "MassSpecGym",
+  "description": "The discovery and identification of molecules in biological and environmental samples is crucial for advancing biomedical and chemical sciences. Tandem mass spectrometry (MS/MS) is the leading technique for high-throughput elucidation of molecular structures. However, decoding a molecular structure from its mass spectrum is exceptionally challenging, even when performed by human experts. As a result, the vast majority of acquired MS/MS spectra remain uninterpreted, thereby limiting our understanding of the underlying (bio)chemical processes. Despite decades of progress in machine learning applications for predicting molecular structures from MS/MS spectra, the development of new methods is severely hindered by the lack of standard datasets and evaluation protocols. To address this problem, we propose MassSpecGym -- the first comprehensive benchmark for the discovery and identification of molecules from MS/MS data. Our benchmark comprises the largest publicly available collection of high-quality labeled MS/MS spectra and defines three MS/MS annotation challenges: de novo molecular structure generation, molecule retrieval, and spectrum simulation. It includes new evaluation metrics and a generalization-demanding data split, therefore standardizing the MS/MS annotation tasks and rendering the problem accessible to the broad machine learning community. MassSpecGym is publicly available at https://github.com/pluskal-lab/MassSpecGym.",
+  "category": "mixed",
+  "domain": "mass spectrometry / cheminformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "de_novo_generation",
+    "retrieval",
+    "simulation",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific: top-k retrieval accuracy, exact_match for structure IDs (SMILES/InChI), molecular similarity (Tanimoto/Jaccard) for generated structures, and distributional/likelihood metrics for simulated spectra",
+  "general_score_metric": "composite (top-k retrieval accuracy and molecular similarity/Tanimoto for generation)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "An emerging, comprehensive benchmark for computational mass spectrometry that is gaining interest among cheminformatics and mass-spec ML researchers.",
+  "notes": "Domain-specific benchmark (non-LLM focused). Evaluation mixes retrieval and generative metrics; scores vary widely across tasks. Potential contamination risks if models were trained on public spectral libraries; evaluation sensitive to representation (SMILES/InChI) and stereochemistry. Dataset and splits designed to stress generalization.",
+  "creators": {
+    "scientists": [
+      "Roman Bushuiev",
+      "Anton Bushuiev",
+      "Niek F. de Jonge",
+      "Adamo Young",
+      "Fleming Kretschmer",
+      "Raman Samusevich",
+      "Janne Heirman",
+      "Fei Wang",
+      "Luke Zhang",
+      "Kai Dührkop",
+      "Marcus Ludwig",
+      "Nils A. Haupt",
+      "Apurva Kalia",
+      "Corinna Brungs",
+      "Robin Schmid",
+      "Russell Greiner",
+      "Bo wang",
+      "David S. Wishart",
+      "Li-Ping Liu",
+      "Juho Rousu",
+      "Wout Bittremieux",
+      "Hannes Rost",
+      "Tytus D. Mak",
+      "Soha Hassoun",
+      "Florian Huber",
+      "Justin J. J. van der Hooft",
+      "Michael A. Stravs",
+      "Sebastian Böcker",
+      "Josef Sivic",
+      "Tomáš Pluskal"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2410.23326",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

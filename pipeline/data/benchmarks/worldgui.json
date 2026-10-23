@@ -1,0 +1,37 @@
+{
+  "name": "WorldGUI",
+  "description": "GUI agents have achieved outstanding performance in GUI element grounding. However, planning remains highly challenging, especially due to the sensitivity to the initial state of the environment. Specifically, slight differences in the initial state-such as the target software not being open or the interface not being in its default state, often lead to planning errors. This issue is widespread in real application scenarios, but existing benchmarks fail to evaluate it. To address this gap, we introduce WorldGUI, a comprehensive GUI benchmark containing tasks across ten widely used desktop and web applications (e.g., PowerPoint, VSCode, Acrobat), each instantiated with diverse initial states to simulate authentic human-computer interactions. Complementing this, we propose WorldGUI-Agent, a universal framework that unifies three core modules: Planner-Critic for high-level plan refinement, Step-Check for intermediate verification, and Actor-Critic for action-level optimization to proactively detect and correct errors. Experimental evaluation shows that WorldGUI-Agent outperforms the outstanding existing model (Claude-3.5 Computer Use) by 12.4% in success rate on WorldGUI, and achieves a 31.2% overall success rate on WindowsAgentArena, surpassing the prior state-of-the-art by 11.7%. Our analysis further reveals that dynamic augmentation tasks and desktop environments pose substantial hurdles, underscoring the necessity of adaptive planning and feedback-driven execution for advancing real-world GUI automation. The code and data are available at https://github.com/showlab/WorldGUI.",
+  "category": "vision",
+  "domain": "human-computer interaction",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "instruction_following",
+    "action_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "success_rate",
+  "typical_sota_score": "20–40%",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A recent, well-scoped research benchmark that has attracted attention for evaluating robust planning in GUI automation but is not yet widely adopted outside HCI/agent research groups.",
+  "notes": "Environment- and OS-specific evaluation; reproducibility depends on exact application versions and initial-state configurations. Contains dynamic initial states that increase difficulty; benchmark evaluates agent execution in simulated/real GUI environments (not purely LLM text tasks).",
+  "creators": {
+    "scientists": [
+      "Henry Hengyuan Zhao",
+      "Kaiming Yang",
+      "Wendi Yu",
+      "Difei Gao",
+      "Mike Zheng Shou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2502.08047",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Need for Speed: JPEG Decoder Benchmark",
+  "description": "Image loading represents a critical bottleneck in modern machine learning pipelines, particularly in computer vision tasks where JPEG remains the dominant format. This study presents a systematic performance analysis of nine popular Python JPEG decoding libraries on different computing architectures. We benchmark traditional image processing libraries (Pillow, OpenCV), machine learning frameworks (TensorFlow, PyTorch), and specialized decoders (jpeg4py, kornia-rs) on both ARM64 (Apple M4 Max) and x86\\_64 (AMD Threadripper) platforms. Our findings reveal that modern implementations using libjpeg-turbo achieve up to 1.5x faster decoding speeds compared to traditional approaches. We provide evidence-based recommendations for choosing optimal JPEG decoders across different scenarios, from high-throughput training pipelines to real-time applications. This comprehensive analysis helps practitioners make informed decisions about image loading infrastructure, potentially reducing training times and improving system efficiency.",
+  "category": "vision",
+  "domain": "image processing / computer vision",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "benchmarking",
+    "performance_evaluation",
+    "throughput_measurement",
+    "latency_measurement"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "throughput (images/sec), per-image decode latency (ms), and resource utilization (CPU/GPU/IO)",
+  "general_score_metric": "throughput (images/sec) and latency (ms/image)",
+  "typical_sota_score": "modern libjpeg-turbo implementations yield up to ~1.5× faster decoding vs some traditional implementations",
+  "year_of_publish": 2025,
+  "reputation": "Practical, engineering-focused benchmark valued by practitioners optimizing image-loading pipelines; moderate attention in systems and ML ops communities.",
+  "notes": "Non-ML-model benchmark; results are highly hardware-, I/O- and implementation-dependent; reproducibility requires matching platform and workload conditions.",
+  "creators": {
+    "scientists": [
+      "Vladimir Iglovikov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2501.13131",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

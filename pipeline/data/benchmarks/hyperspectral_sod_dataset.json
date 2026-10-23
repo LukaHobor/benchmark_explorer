@@ -1,0 +1,38 @@
+{
+  "name": "Hyperspectral SOD Dataset",
+  "description": "Many works have been done on salient object detection using supervised or\nunsupervised approaches on colour images. Recently, a few studies demonstrated\nthat efficient salient object detection can also be implemented by using\nspectral features in visible spectrum of hyperspectral images from natural\nscenes. However, these models on hyperspectral salient object detection were\ntested with a very few number of data selected from various online public\ndataset, which are not specifically created for object detection purposes.\nTherefore, here, we aim to contribute to the field by releasing a hyperspectral\nsalient object detection dataset with a collection of 60 hyperspectral images\nwith their respective ground-truth binary images and representative rendered\ncolour images (sRGB). We took several aspects in consideration during the data\ncollection such as variation in object size, number of objects,\nforeground-background contrast, object position on the image, and etc. Then, we\nprepared ground truth binary images for each hyperspectral data, where salient\nobjects are labelled on the images. Finally, we did performance evaluation\nusing Area Under Curve (AUC) metric on some existing hyperspectral saliency\ndetection models in literature.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "salient_object_detection",
+    "binary_segmentation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "AUC (Area Under ROC Curve); often complemented by F-measure / MAE in saliency literature",
+  "general_score_metric": "AUC",
+  "typical_sota_score": "AUC ~0.80–0.95 on this dataset",
+  "year_of_publish": 2018,
+  "reputation": "A small, niche benchmark in hyperspectral saliency literature that is used for early research on spectral cues for salient object detection.",
+  "notes": "Very small dataset (60 images) — high risk of overfitting and limited generalization; domain-specific (hyperspectral) so models pretrained on RGB may not transfer; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Nevrez Imamoglu",
+      "Yu Oishi",
+      "Xiaoqiang Zhang",
+      "Guanqun Ding",
+      "Yuming Fang",
+      "Toru Kouyama",
+      "Ryosuke Nakamura"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1806.11314",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

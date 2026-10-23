@@ -1,0 +1,34 @@
+{
+  "name": "Peptide Force Field Benchmark",
+  "description": "Abstract\n                \n                  Linear peptides play essential roles in biology and drug discovery, frequently mediating protein–protein interactions through short, flexible motifs. However, their structural plasticity—ranging from disordered to context-dependent folding—makes them challenging targets for molecular simulations. In this work, we benchmark the performance of twelve popular and emerging fixed-charge force fields across a curated set of twelve peptides spanning structured miniproteins, context-sensitive epitopes, and disordered sequences. Each peptide was simulated from both folded (200 ns) and extended (10\n                  µ\n                  s) states to assess stability, folding behavior, and force field biases. Our analysis reveals consistent trends: some force fields exhibit strong structural bias, others allow reversible fluctuations, and no single model performs optimally across all systems. The study highlights limitations in current force fields’ ability to balance disorder and secondary structure, particularly when modeling conformational selection. These results offer practical guidance for peptide modeling and establish a benchmark framework for future force field development and validation in peptide-relevant regimes.",
+  "category": "mixed",
+  "domain": "materials science / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "model_evaluation",
+    "simulation_benchmarking",
+    "structure_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "structural_similarity metrics (RMSD, secondary-structure propensity) — composite reporting",
+  "general_score_metric": "RMSD / structural agreement (composite)",
+  "year_of_publish": 2025,
+  "reputation": "Of interest to the molecular modeling and force-field development community as a targeted benchmark, but not yet a broadly standardized community benchmark.",
+  "notes": "Non-LLM benchmark; relatively small curated set (12 peptides) and computationally expensive long-timescale simulations. Results sensitive to starting conformations and simulation protocol; no single force field dominates across all cases.",
+  "creators": {
+    "scientists": [
+      "Bhumika Singh",
+      "Yisel Martínez-Noa",
+      "Alberto Perez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1101/2025.07.31.667969",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "SegmentMeIfYouCan",
+  "description": "State-of-the-art semantic or instance segmentation deep neural networks (DNNs) are usually trained on a closed set of semantic classes. As such, they are ill-equipped to handle previously-unseen objects. However, detecting and localizing such objects is crucial for safety-critical applications such as perception for automated driving, especially if they appear on the road ahead. While some methods have tackled the tasks of anomalous or out-of-distribution object segmentation, progress remains slow, in large part due to the lack of solid benchmarks; existing datasets either consist of synthetic data, or suffer from label inconsistencies. In this paper, we bridge this gap by introducing the \"SegmentMeIfYouCan\" benchmark. Our benchmark addresses two tasks: Anomalous object segmentation, which considers any previously-unseen object category; and road obstacle segmentation, which focuses on any object on the road, may it be known or unknown. We provide two corresponding datasets together with a test suite performing an in-depth method analysis, considering both established pixel-wise performance metrics and recent component-wise ones, which are insensitive to object sizes. We empirically evaluate multiple state-of-the-art baseline methods, including several models specifically designed for anomaly / obstacle segmentation, on our datasets and on public ones, using our test suite. The anomaly and obstacle segmentation results show that our datasets contribute to the diversity and difficulty of both data landscapes.",
+  "category": "vision",
+  "domain": "autonomous driving / perception",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_segmentation",
+    "obstacle_segmentation",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU / F1 and component-wise metrics (insensitive to object size)",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2021,
+  "reputation": "Recognized benchmark in the autonomous driving research community for anomaly and road-obstacle segmentation, valued for realistic data and a detailed test suite though adoption is moderate compared to generic segmentation datasets.",
+  "notes": "Non-LLM benchmark tailored to safety-critical driving scenarios; emphasizes both pixel-wise and component-wise evaluation to mitigate size bias. Datasets increase realism compared to synthetic sets but the task remains challenging and not saturated.",
+  "creators": {
+    "scientists": [
+      "Robin Chan",
+      "Krzysztof Lis",
+      "Svenja Uhlemeyer",
+      "Hermann Blum",
+      "Sina Honari",
+      "Roland Siegwart",
+      "Pascal Fua",
+      "Mathieu Salzmann",
+      "Matthias Rottmann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2104.14812",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

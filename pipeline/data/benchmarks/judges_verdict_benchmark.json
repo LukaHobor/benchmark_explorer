@@ -1,0 +1,35 @@
+{
+  "name": "Judge's Verdict Benchmark",
+  "description": "This research introduces the Judge's Verdict Benchmark, a novel two-step methodology to evaluate Large Language Models (LLMs) as judges for response accuracy evaluation tasks. We assess how well 54 LLMs can replicate human judgment when scoring responses from RAG (Retrieval-Augmented Generation) or Agentic pipelines against ground truth answers. Our methodology progresses from traditional correlation analysis to comprehensive Cohen's Kappa analysis that measures actual agreement patterns. The two-step approach includes: (1) a correlation test that filters judges with strong alignment, followed by (2) a human-likeness test using z-scores to identify two distinct judgment patterns: human-like judgment (|z|<1) that mimics natural human variation, and super-consistent judgment (z>1) that exceeds typical human-to-human agreement levels. This methodology reveals that 27 out of 54 tested LLMs achieve Tier 1 performance: 23 models exhibit human-like patterns that preserve the nuances of human",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "judgment_evaluation",
+    "ranking",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "correlation and Cohen's kappa",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2025,
+  "reputation": "6 citations",
+  "notes": "Benchmarks LLMs as judges rather than answer generators; uses a two-step correlation plus agreement analysis, so scores are not directly comparable to standard accuracy benchmarks.",
+  "creators": {
+    "scientists": [
+      "Steve Han",
+      "Gilberto Titericz Junior",
+      "Tom Balough",
+      "Wenfei Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2510.09738",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

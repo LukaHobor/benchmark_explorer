@@ -1,0 +1,34 @@
+{
+  "name": "Pruned CNN Corruption Robustness Benchmark",
+  "description": "Convolutional Neural Networks (CNNs) have achieved state-of-the-art performance in many computer vision tasks. However, high computational and storage demands hinder their deployment into resource-constrained environments, such as embedded devices. Model pruning helps to meet these restrictions by reducing the model size, while maintaining superior performance. Meanwhile, safety-critical applications pose more than just resource and performance constraints. In particular, predictions must not be overly confident, i.e., provide properly calibrated uncertainty estimations (proper uncertainty calibration), and CNNs must be robust against corruptions like naturally occurring input perturbations (natural corruption robustness). This work investigates the important trade-off between uncertainty calibration, natural corruption robustness, and performance for current state-of-research post-hoc CNN pruning techniques in the context of image classification tasks. Our study reveals that post-hoc pruning substantially improves the model’s uncertainty calibration, performance, and natural corruption robustness, sparking hope for safe and robust embedded CNNs. Furthermore, uncertainty calibration and natural corruption robustness are not mutually exclusive targets under pruning, as evidenced by the improved safety aspects obtained by post-hoc unstructured pruning with increasing compression.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation",
+    "calibration_assessment"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "A recent, niche research benchmark focused on pruning and robustness with limited adoption outside of the paper's authors and related robustness communities.",
+  "notes": "Non-LLM vision robustness benchmark; also assesses calibration (e.g., ECE) in addition to accuracy under common corruptions. Results can be sensitive to pruning schedules and evaluation corruptions; dataset/experiments are specific to CNN pruning setups and may not generalize to other model families.",
+  "creators": {
+    "scientists": [
+      "Pallavi Mitra",
+      "Gesina Schwalbe",
+      "Nadja Klein"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1109/cvprw63382.2024.00358",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

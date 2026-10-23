@@ -1,0 +1,35 @@
+{
+  "name": "TDDBench",
+  "description": "Training Data Detection (TDD) is a task aimed at determining whether a specific data instance is used to train a machine learning model. In the computer security literature, TDD is also referred to as Membership Inference Attack (MIA). Given its potential to assess the risks of training data breaches, ensure copyright authentication, and verify model unlearning, TDD has garnered significant attention in recent years, leading to the development of numerous methods. Despite these advancements, there is no comprehensive benchmark to thoroughly evaluate the effectiveness of TDD methods. In this work, we introduce TDDBench, which consists of 13 datasets spanning three data modalities: image, tabular, and text. We benchmark 21 different TDD methods across four detection paradigms and evaluate their performance from five perspectives: average detection performance, best detection performance, memory consumption, and computational efficiency in both time and memory. With TDDBench, researchers can identify bottlenecks and areas for improvement in TDD algorithms, while practitioners can make informed trade-offs between effectiveness and efficiency when selecting TDD algorithms for specific use cases. Our large-scale benchmarking also reveals the generally unsatisfactory performance of TDD algorithms across different datasets. To enhance accessibility and reproducibility, we open-source TDDBench for the research community.",
+  "category": "mixed",
+  "domain": "machine learning security / privacy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC (ROC) / detection accuracy / F1",
+  "general_score_metric": "AUC (ROC)",
+  "typical_sota_score": "varies by dataset; often in the ~0.6–0.9 AUC range depending on modality and method",
+  "year_of_publish": 2024,
+  "reputation": "A recently proposed, large-scale benchmark for membership-inference / training-data-detection that is gaining attention in privacy and ML-security research for its comprehensive multi-modal evaluation.",
+  "notes": "Multi-modal (image, tabular, text) benchmark; evaluates many methods but overall performance is often unsatisfactory; non‑LLM, potential dataset/model contamination issues typical of membership-inference tasks; trade-offs between detection effectiveness and compute/memory measured.",
+  "creators": {
+    "scientists": [
+      "Zhihao Zhu",
+      "Yi Yang",
+      "Defu Lian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2411.03363",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

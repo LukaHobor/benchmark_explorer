@@ -1,0 +1,47 @@
+{
+  "name": "Unconstrained Face Detection and Open-Set Face Recognition Challenge",
+  "description": "Face detection and recognition benchmarks have shifted toward more difficult\nenvironments. The challenge presented in this paper addresses the next step in\nthe direction of automatic detection and identification of people from outdoor\nsurveillance cameras. While face detection has shown remarkable success in\nimages collected from the web, surveillance cameras include more diverse\nocclusions, poses, weather conditions and image blur. Although face\nverification or closed-set face identification have surpassed human\ncapabilities on some datasets, open-set identification is much more complex as\nit needs to reject both unknown identities and false accepts from the face\ndetector. We show that unconstrained face detection can approach high detection\nrates albeit with moderate false accept rates. By contrast, open-set face\nrecognition is currently weak and requires much more attention.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "competition",
+  "task_types": [
+    "face_detection",
+    "open_set_face_recognition",
+    "face_verification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "detection: mAP / detection rate vs false accept rate; open-set recognition: TPIR@FPIR (true positive identification rate at fixed false positive identification rate)",
+  "general_score_metric": "mAP (for detection) and TPIR@FPIR (for open-set identification)",
+  "typical_sota_score": "detection mAP often in the ~80–95% range on related benchmarks; open-set recognition performance is substantially lower (TPIR often <50% depending on FPIR)",
+  "year_of_publish": 2017,
+  "reputation": "Influential within the face recognition and surveillance research community for highlighting challenges of unconstrained, open-set scenarios, but specialized and sensitive in application.",
+  "notes": "Contains surveillance-style, unconstrained imagery with heavy occlusions/blur—raises privacy and bias concerns; open-set recognition remains an unsolved/low-performing problem compared to closed-set benchmarks; not saturated.",
+  "creators": {
+    "scientists": [
+      "Manuel Günther",
+      "Peiyun Hu",
+      "Christian Herrmann",
+      "Chi Ho Chan",
+      "Min Jiang",
+      "Shufan Yang",
+      "Akshay Raj Dhamija",
+      "Deva Ramanan",
+      "Jürgen Beyerer",
+      "Josef Kittler",
+      "Mohamad Al Jazaery",
+      "Mohammad Iqbal Nouyed",
+      "Guodong Guo",
+      "Cezary Stankiewicz",
+      "Terrance E. Boult"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1708.02337",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

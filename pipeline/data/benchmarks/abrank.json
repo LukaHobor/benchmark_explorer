@@ -1,0 +1,36 @@
+{
+  "name": "AbRank",
+  "description": "Accurate prediction of antibody-antigen (Ab-Ag) binding affinity is essential for therapeutic design and vaccine development, yet the performance of current models is limited by noisy experimental labels, heterogeneous assay conditions, and poor generalization across the vast antibody and antigen sequence space. We introduce AbRank, a large-scale benchmark and evaluation framework that reframes affinity prediction as a pairwise ranking problem. AbRank aggregates over 380,000 binding assays from nine heterogeneous sources, spanning diverse antibodies, antigens, and experimental conditions, and introduces standardized data splits that systematically increase distribution shift, from local perturbations such as point mutations to broad generalization across novel antigens and antibodies. To ensure robust supervision, AbRank defines an m-confident ranking framework by filtering out comparisons with marginal affinity differences, focusing training on pairs with at least an m-fold difference in measured binding strength. As a baseline for the benchmark, we introduce WALLE-Affinity, a graph-based approach that integrates protein language model embeddings with structural information to predict pairwise binding preferences. Our benchmarks reveal significant limitations in current methods under realistic generalization settings and demonstrate that ranking-based training improves robustness and transferability. In summary, AbRank offers a robust foundation for machine learning models to generalize across the antibody-antigen space, with direct relevance for scalable, structure-aware antibody therapeutic design.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pairwise_accuracy (ranking metrics such as AUC/Spearman are also reported)",
+  "general_score_metric": "pairwise_accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A newly proposed large-scale benchmark for antibody–antigen affinity ranking that targets the protein design and bioinformatics community and is likely to gain traction for structure-aware ML in therapeutics research.",
+  "notes": "Large aggregated dataset (~380k assays) from heterogeneous sources with noisy and heterogeneous experimental conditions; uses an m-confident filtering scheme to reduce label noise. Not an LLM benchmark and carries assay-specific biases and potential measurement noise.",
+  "creators": {
+    "scientists": [
+      "Chunan Liu",
+      "Aurelien Pelissier",
+      "Yanjun Shao",
+      "Lilian Denzler",
+      "Andrew C. R. Martin",
+      "Brooks Paige",
+      "Mariia Rodriguez Martinez"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.17857",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

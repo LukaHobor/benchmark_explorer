@@ -1,0 +1,38 @@
+{
+  "name": "T2V-CompBench",
+  "description": "Text-to-video (T2V) generative models have advanced significantly, yet their ability to compose different objects, attributes, actions, and motions into a video remains unexplored. Previous text-to-video benchmarks also neglect this important ability for evaluation. In this work, we conduct the first systematic study on compositional text-to-video generation. We propose T2V-CompBench, the first benchmark tailored for compositional text-to-video generation. T2V-CompBench encompasses diverse aspects of compositionality, including consistent attribute binding, dynamic attribute binding, spatial relationships, motion binding, action binding, object interactions, and generative numeracy. We further carefully design evaluation metrics of multimodal large language model (MLLM)-based, detection-based, and tracking-based metrics, which can better reflect the compositional text-to-video generation quality of seven proposed categories with 1400 text prompts. The effectiveness of the proposed metrics is verified by correlation with human evaluations. We also benchmark various text-to-video generative models and conduct in-depth analysis across different models and various compositional categories. We find that compositional text-to-video generation is highly challenging for current models, and we hope our attempt could shed light on future research in this direction.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "text_to_video_generation",
+    "compositionality_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval and composite automated metrics (MLLM-based, detection-based, tracking-based)",
+  "general_score_metric": "composite_score (MLLM-based composite correlated with human evaluation)",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized benchmark that is gaining attention in text-to-video compositionality research but not yet widely adopted.",
+  "notes": "Moderate-sized benchmark (1,400 prompts); relies on MLLM/detector/tracker automated metrics which can be biased; potential contamination risk with large pretrained models; not saturated.",
+  "creators": {
+    "scientists": [
+      "Kaiyue Sun",
+      "Kaiyi Huang",
+      "Xian Liu",
+      "Yue Wu",
+      "Zihan Xu",
+      "Zhenguo Li",
+      "Xihui Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.14505",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

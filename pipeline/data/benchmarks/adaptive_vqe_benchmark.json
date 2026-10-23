@@ -1,0 +1,33 @@
+{
+  "name": "Adaptive VQE Benchmark",
+  "description": "By design, the variational quantum eigensolver (VQE) strives to recover the lowest-energy eigenvalue of a given Hamiltonian by preparing quantum states guided by the variational principle. In practice, the prepared quantum state is indirectly assessed by the value of the associated energy. Novel adaptive derivative-assembled pseudo-trotter (ADAPT) ansatz approaches and recent formal advances now establish a clear connection between the theory of quantum chemistry and the quantum state ansatz used to solve the electronic structure problem. Here we benchmark the accuracy of VQE and ADAPT-VQE to calculate the electronic ground states and potential energy curves for a few selected diatomic molecules, namely H$_2$, NaH, and KH. Using numerical simulation, we find both methods provide good estimates of the energy and ground state, but only ADAPT-VQE proves to be robust to particularities in optimization methods. Another relevant finding is that gradient-based optimization is overall more eco",
+  "category": "mixed",
+  "domain": "quantum computing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "energy error / ground-state energy approximation (often reported as mean absolute error or absolute energy difference)",
+  "general_score_metric": "energy error",
+  "year_of_publish": 2020,
+  "reputation": "A well-known benchmark line for variational quantum algorithms in quantum chemistry, commonly used to compare VQE and ADAPT-VQE behavior on small molecules.",
+  "notes": "Non-LLM quantum simulation benchmark; small problem sizes and molecule set (H2, NaH, KH), so results are not directly comparable to large-scale quantum chemistry. Performance depends strongly on optimizer and ansatz choice.",
+  "creators": {
+    "scientists": [
+      "Daniel Claudino",
+      "Jerimiah Wright",
+      "Alexander J. McCaskey",
+      "Travis S. Humble"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2011.01279",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

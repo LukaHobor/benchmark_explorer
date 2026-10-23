@@ -1,0 +1,35 @@
+{
+  "name": "UniCausal",
+  "description": "Current causal text mining datasets vary in objectives, data coverage, and annotation schemes. These inconsistent efforts prevent modeling capabilities and fair comparisons of model performance. Furthermore, few datasets include cause-effect span annotations, which are needed for end-to-end causal relation extraction. To address these issues, we propose UniCausal, a unified benchmark for causal text mining across three tasks: (I) Causal Sequence Classification, (II) Cause-Effect Span Detection and (III) Causal Pair Classification. We consolidated and aligned annotations of six high quality, mainly human-annotated, corpora, resulting in a total of 58,720, 12,144 and 69,165 examples for each task respectively. Since the definition of causality can be subjective, our framework was designed to allow researchers to work on some or all datasets and tasks. To create an initial benchmark, we fine-tuned BERT pre-trained language models to each task, achieving 70.10% Binary F1, 52.42% Macro F1, and 84.68% Binary F1 scores respectively.",
+  "category": "text",
+  "domain": "natural language processing / causal inference",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_classification",
+    "span_detection",
+    "pair_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1-based evaluation: Binary F1 for causal sequence and pair classification; Macro F1 / span-based F1 for cause-effect span detection",
+  "general_score_metric": "F1 (Binary F1 for classification tasks; Macro F1 for span detection)",
+  "typical_sota_score": "Baseline BERT results reported: ~70.10% (Sequence Classification, Binary F1); ~52.42% (Span Detection, Macro F1); ~84.68% (Pair Classification, Binary F1); SOTA may be modestly higher.",
+  "year_of_publish": 2022,
+  "reputation": "A useful unified consolidation of multiple causal text datasets that has gained attention as a standard benchmark for causal relation extraction research.",
+  "notes": "Combines heterogeneous datasets with differing annotation schemes and subjective causality judgments; possible label noise and domain heterogeneity. Not an LLM-specific benchmark; facilitates modular evaluation across tasks but cross-dataset comparability can still be challenging.",
+  "creators": {
+    "scientists": [
+      "Fiona Anting Tan",
+      "Xinyu Zuo",
+      "See-Kiong Ng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2208.09163",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

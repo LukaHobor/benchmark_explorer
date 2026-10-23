@@ -1,0 +1,38 @@
+{
+  "name": "PairBench",
+  "description": "As large vision language models (VLMs) are increasingly used as automated evaluators, understanding their ability to effectively compare data pairs as instructed in the prompt becomes essential. To address this, we present PairBench, a low-cost framework that systematically evaluates VLMs as customizable similarity tools across various modalities and scenarios. Through PairBench, we introduce four metrics that represent key desiderata of similarity scores: alignment with human annotations, consistency for data pairs irrespective of their order, smoothness of similarity distributions, and controllability through prompting. Our analysis demonstrates that no model, whether closed- or open-source, is superior on all metrics; the optimal choice depends on an auto evaluator's desired behavior (e.g., a smooth vs. a sharp judge), highlighting risks of widespread adoption of VLMs as evaluators without thorough assessment. For instance, the majority of VLMs struggle with maintaining symmetric similarity scores regardless of order. Additionally, our results show that the performance of VLMs on the metrics in PairBench closely correlates with popular benchmarks, showcasing its predictive power in ranking models.",
+  "category": "multimodal",
+  "domain": "vision-language / multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_comparison",
+    "similarity_scoring",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation_with_human_annotations (Spearman/Pearson) plus custom consistency/controllability metrics",
+  "general_score_metric": "Spearman/Pearson correlation (alignment) along with custom consistency / controllability scores",
+  "year_of_publish": 2025,
+  "reputation": "Newly proposed framework for evaluating VLMs as automatic similarity judges; gaining attention in VLM-evaluation research but not yet a broadly standardized benchmark.",
+  "notes": "Designed to evaluate VLMs as evaluators rather than downstream tasks; metrics are prompt-sensitive and reveal ordering bias (symmetry issues); performance depends heavily on prompt design and modality, and there is potential variability across datasets and setups.",
+  "creators": {
+    "scientists": [
+      "Aarash Feizi",
+      "Sai Rajeswar",
+      "Adriana Romero-Soriano",
+      "Reihaneh Rabbany",
+      "Spandana Gella",
+      "Valentina Zantedeschi",
+      "João Monteiro"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2502.15210",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

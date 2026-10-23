@@ -1,0 +1,36 @@
+{
+  "name": "ClaraVid",
+  "description": "The development of aerial holistic scene understanding algorithms is hindered by the scarcity of comprehensive datasets that enable both semantic and geometric reconstruction. While synthetic datasets offer an alternative, existing options exhibit task-specific limitations, unrealistic scene compositions, and rendering artifacts that compromise real-world applicability. We introduce ClaraVid, a synthetic aerial dataset specifically designed to overcome these limitations. Comprising 16,917 high-resolution images captured at 4032x3024 from multiple viewpoints across diverse landscapes, ClaraVid provides dense depth maps, panoptic segmentation, sparse point clouds, and dynamic object masks, while mitigating common rendering artifacts. To further advance neural reconstruction, we introduce the Delentropic Scene Profile (DSP), a novel complexity metric derived from differential entropy analysis, designed to quantitatively assess scene difficulty and inform reconstruction tasks. Utilizing DSP, we systematically benchmark neural reconstruction methods, uncovering a consistent, measurable correlation between scene complexity and reconstruction accuracy. Empirical results indicate that higher delentropy strongly correlates with increased reconstruction errors, validating DSP as a reliable complexity prior. Currently under review, upon acceptance the data and code will be available at $\\href{https://rdbch.github.io/claravid}{rdbch.github.io/ClaraVid}$.",
+  "category": "vision",
+  "domain": "remote sensing / aerial scene understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "panoptic_segmentation",
+    "depth_estimation",
+    "point_cloud_reconstruction",
+    "dynamic_object_segmentation",
+    "novel_view_synthesis / neural_reconstruction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mIoU (segmentation) / RMSE (depth) / Chamfer distance (point clouds) / PSNR & LPIPS (reconstruction)",
+  "general_score_metric": "Chamfer distance (primary for geometric reconstruction); mIoU used as primary metric for segmentation tasks",
+  "year_of_publish": 2025,
+  "reputation": "Under review and not yet widely adopted; expected to attract researchers in aerial 3D reconstruction and holistic scene understanding.",
+  "notes": "Synthetic dataset (possible sim-to-real gap) though authors mitigate rendering artifacts; multi-task benchmark (non-LLM); moderate size (16,917 images); contamination risk low but domain shift to real aerial imagery should be considered.",
+  "creators": {
+    "scientists": [
+      "Radu Beche",
+      "Sergiu Nedevschi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.17856",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

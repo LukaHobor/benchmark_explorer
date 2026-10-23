@@ -1,0 +1,43 @@
+{
+  "name": "CG-SENSE ISMRM Reproducibility Challenge",
+  "description": "Purpose: The aim of this work is to shed light on the issue of reproducibility in MR image reconstruction in the context of a challenge. Participants had to recreate the results of \"Advances in sensitivity encoding with arbitrary k-space trajectories\" by Pruessmann et al. Methods: The task of the challenge was to reconstruct radially acquired multi-coil k-space data (brain/heart) following the method in the original paper, reproducing its key figures. Results were compared to consolidated reference implementations created after the challenge, accounting for the two most common programming languages used in the submissions (Matlab/Python). Results: Visually, differences between submissions were small. Pixel-wise differences originated from image orientation, assumed field-of-view or resolution. The reference implementations were in good agreement, both visually and in terms of image similarity metrics. Discussion and Conclusion: While the description level of the published algorithm enabled participants to reproduce CG-SENSE in general, details of the implementation varied, e.g., density compensation or Tikhonov regularization. Implicit assumptions about the data lead to further differences, emphasizing the importance of sufficient meta-data accompanying open data sets. Defining reproducibility quantitatively turned out to be non-trivial for this image reconstruction challenge, in the absence of ground-truth results. Typical similarity measures like NMSE of SSIM were misled by image intensity scaling and outlier pixels. Thus, to facilitate reproducibility, researchers are encouraged to publish code and data alongside the original paper. Future methodological papers on MR image reconstruction might benefit from the consolidated reference implementations of CG-SENSE presented here, as a benchmark for methods comparison.",
+  "category": "vision",
+  "domain": "medical imaging (MRI reconstruction)",
+  "benchmark_type": "competition",
+  "task_types": [
+    "image_reconstruction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "NMSE and SSIM (image similarity metrics) with visual assessment",
+  "general_score_metric": "SSIM / NMSE",
+  "year_of_publish": 2020,
+  "reputation": "Respected in the MR reconstruction community as a reproducibility-focused challenge and reference for CG-SENSE implementations.",
+  "notes": "No definitive ground truth for some data; evaluation sensitive to intensity scaling, FOV/orientation assumptions and outlier pixels; small/challenge-specific dataset and primarily a non-LLM medical imaging benchmark.",
+  "creators": {
+    "scientists": [
+      "Oliver Maier",
+      "Steven H. Baete",
+      "Alexander Fyrdahl",
+      "Kerstin Hammernik",
+      "Seb Harrevelt",
+      "Lars Kasper",
+      "Agah Karakuzu",
+      "Michael Loecher",
+      "Franz Patzig",
+      "Ye Tian",
+      "Ke Wang",
+      "Daniel Gallichan",
+      "Martin Uecker",
+      "Florian Knoll"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2008.04308",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

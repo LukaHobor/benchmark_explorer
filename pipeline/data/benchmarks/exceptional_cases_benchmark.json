@@ -1,0 +1,40 @@
+{
+  "name": "Exceptional Cases Benchmark",
+  "description": "Foundation models (FMs) have achieved significant success across various tasks, leading to research on benchmarks for reasoning abilities. However, there is a lack of studies on FMs performance in exceptional scenarios, which we define as out-of-distribution (OOD) reasoning tasks. This paper is the first to address these cases, developing a novel dataset for evaluation of FMs across multiple modalities, including graphic novels, calligraphy, news articles, and lyrics. It includes tasks for instance classification, character recognition, token prediction, and text generation. The paper also proposes prompt engineering techniques like Chain-of-Thought (CoT) and CoT+Few-Shot to enhance performance. Validation of FMs using various methods revealed improvements. The code repository is accessible at: https://github.com/MLAI-Yonsei/ExceptionalBenchmark",
+  "category": "multimodal",
+  "domain": "multimodal",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "character_recognition",
+    "token_prediction",
+    "text_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / F1 / token_accuracy / BLEU (task-specific metrics)",
+  "general_score_metric": "task-specific (accuracy / F1 / token_accuracy / BLEU)",
+  "year_of_publish": 2024,
+  "reputation": "A newly proposed multimodal benchmark addressing out-of-distribution reasoning; currently limited adoption but of interest for researchers studying OOD and exceptional-case evaluation.",
+  "notes": "Multimodal and heterogeneous tasks with varied metrics; dataset design targets OOD scenarios so performance can be low and unstable. Potential risks: limited adoption so far, varied task sizes across modalities, and possible contamination depending on pretraining data provenance.",
+  "creators": {
+    "scientists": [
+      "Suho Kang",
+      "Jungyang Park",
+      "Joonseo Ha",
+      "SoMin Kim",
+      "JinHyeong Kim",
+      "Subeen Park",
+      "Kyungwoo Song"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.18001",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

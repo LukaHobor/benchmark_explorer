@@ -1,0 +1,33 @@
+{
+  "name": "BSS-Bench",
+  "description": "The key technology to overcome the drawbacks of hyperspectral imaging (expensive, high capture delay, and low spatial resolution) and make it widely applicable is to select only a few representative bands from hundreds of bands. However, current band selection (BS) methods face challenges in fair comparisons due to inconsistent train/validation settings, including the number of bands, dataset splits, and retraining settings. To make BS methods easy and reproducible, this paper presents the first band selection search benchmark (BSS-Bench) containing 52k training and evaluation records of numerous band combinations (BC) with different backbones for various hyperspectral analysis tasks. The creation of BSS-Bench required a significant computational effort of 1.26k GPU days. By querying BSS-Bench, BS experiments can be performed easily and reproducibly, and the gap between the searched result and the best achievable performance can be measured. Based on BSS-Bench, we further discuss the impact of various factors on BS, such as the number of bands, unsupervised statistics, and different backbones. In addition to BSS-Bench, we present an effective one-shot BS method called Single Combination One Shot (SCOS), which learns the priority of any BCs through one-time training, eliminating the need for repetitive retraining on different BCs. Furthermore, the search process of SCOS is flexible and does not require training, making it efficient and effective. Our extensive evaluations demonstrate that SCOS outperforms current BS methods on multiple tasks, even with much fewer bands. Our BSS-Bench and codes are available in the supplementary material and will be publicly available.",
+  "category": "vision",
+  "domain": "remote sensing / hyperspectral imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "band_selection",
+    "image_classification",
+    "hyperspectral_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A comprehensive, reproducibility-focused benchmark in the hyperspectral imaging community that is valuable for fair comparisons of band-selection methods but is still recent and specialized.",
+  "notes": "Large-scale, non-LLM benchmark (52k records) produced with substantial compute; evaluation metrics are task-dependent (classification accuracy, reconstruction PSNR, mIoU, etc.); results depend strongly on backbone and number of bands — not saturated and sensitive to experimental protocol.",
+  "creators": {
+    "scientists": [
+      "Wenshuai Xu",
+      "Zhenbo Xu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.14570",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

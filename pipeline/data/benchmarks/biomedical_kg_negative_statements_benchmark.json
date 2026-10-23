@@ -1,0 +1,34 @@
+{
+  "name": "Biomedical KG Negative Statements Benchmark",
+  "description": "Knowledge graphs represent facts about real-world entities. Most of these facts are defined as positive statements. The negative statements are scarce but highly relevant under the open-world assumption. Furthermore, they have been demonstrated to improve the performance of several applications, namely in the biomedical domain. However, no benchmark dataset supports the evaluation of the methods that consider these negative statements. We present a collection of datasets for three relation prediction tasks - protein-protein interaction prediction, gene-disease association prediction and disease prediction - that aim at circumventing the difficulties in building benchmarks for knowledge graphs with negative statements. These datasets include data from two successful biomedical ontologies, Gene Ontology and Human Phenotype Ontology, enriched with negative statements. We also generate knowledge graph embeddings for each dataset with two popular path-based methods and evaluate the performance in each task. The results show that the negative statements can improve the performance of knowledge graph embeddings.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "relation_prediction",
+    "binary_classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC-ROC, F1, Hits@k and MRR (link/relationship prediction metrics)",
+  "general_score_metric": "AUC-ROC (primary reported) / Hits@k for link-prediction",
+  "year_of_publish": 2023,
+  "reputation": "Dataset introduced in a 2023 paper; of growing interest in the biomedical KG community but not yet widely adopted.",
+  "notes": "Small, domain-specific datasets derived from Gene Ontology and Human Phenotype Ontology; potential class imbalance and noise from generated negative statements; non-LLM benchmark focused on KG methods.",
+  "creators": {
+    "scientists": [
+      "Rita T. Sousa",
+      "Sara Silva",
+      "Catia Pesquita"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.11719",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

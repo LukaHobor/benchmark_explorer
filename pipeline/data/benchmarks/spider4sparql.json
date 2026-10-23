@@ -1,0 +1,34 @@
+{
+  "name": "Spider4SPARQL",
+  "description": "With the recent spike in the number and availability of Large Language Models (LLMs), it has become increasingly important to provide large and realistic benchmarks for evaluating Knowledge Graph Question Answering (KGQA) systems. So far the majority of benchmarks rely on pattern-based SPARQL query generation approaches. The subsequent natural language (NL) question generation is conducted through crowdsourcing or other automated methods, such as rule-based paraphrasing or NL question templates. Although some of these datasets are of considerable size, their pitfall lies in their pattern-based generation approaches, which do not always generalize well to the vague and linguistically diverse questions asked by humans in real-world contexts. In this paper, we introduce Spider4SPARQL - a new SPARQL benchmark dataset featuring 9,693 previously existing manually generated NL questions and 4,721 unique, novel, and complex SPARQL queries of varying complexity. In addition to the NL/SPARQL pairs, we also provide their corresponding 166 knowledge graphs and ontologies, which cover 138 different domains. Our complex benchmark enables novel ways of evaluating the strengths and weaknesses of modern KGQA systems. We evaluate the system with state-of-the-art KGQA systems as well as LLMs, which achieve only up to 45\\% execution accuracy, demonstrating that Spider4SPARQL is a challenging benchmark for future research.",
+  "category": "text",
+  "domain": "knowledge graphs",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_parsing",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "execution_accuracy (execute predicted SPARQL on target KG) and exact_match of SPARQL queries",
+  "general_score_metric": "execution_accuracy",
+  "typical_sota_score": "≈45% (execution accuracy reported for top models at publication)",
+  "year_of_publish": 2023,
+  "reputation": "Recognized in the KGQA/semantic-parsing community as a challenging, realistic benchmark for SPARQL generation with diverse real-world ontologies.",
+  "notes": "Covers many distinct knowledge graphs and domains so requires access to target KGs for evaluation; pattern-agnostic and linguistically diverse, not saturated; potential for some overlap with pretraining data but primarily designed to test complex, realistic queries.",
+  "creators": {
+    "scientists": [
+      "Catherine Kosten",
+      "Philippe Cudré-Mauroux",
+      "Kurt Stockinger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2309.16248",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

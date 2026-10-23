@@ -1,0 +1,47 @@
+{
+  "name": "EraseBench",
+  "description": "Concept erasure techniques have recently gained significant attention for their potential to remove unwanted concepts from text-to-image models. While these methods often demonstrate success in controlled scenarios, their robustness in real-world applications and readiness for deployment remain uncertain. In this work, we identify a critical gap in evaluating sanitized models, particularly in terms of their performance across various concept dimensions. We systematically investigate the failure modes of current concept erasure techniques, with a focus on visually similar, binomial, and semantically related concepts. We propose that these interconnected relationships give rise to a phenomenon of concept entanglement resulting in ripple effects and degradation in image quality. To facilitate more comprehensive evaluation, we introduce EraseBENCH, a multi-dimensional benchmark designed to assess concept erasure methods with greater depth. Our dataset includes over 100 diverse concepts and more than 1,000 tailored prompts, paired with a comprehensive suite of metrics that together offer a holistic view of erasure efficacy. Our findings reveal that even state-of-the-art techniques struggle with maintaining quality post-erasure, indicating that these approaches are not yet ready for real-world deployment. This highlights the gap in reliability of the concept erasure techniques.",
+  "category": "multimodal",
+  "domain": "vision (text-to-image / generative models)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_generation",
+    "concept_presence_detection",
+    "robustness_evaluation",
+    "human_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite (concept_removal_rate / classification accuracy drop + image-quality metrics such as FID/IS + targeted robustness tests + human_eval)",
+  "general_score_metric": "composite_score (primary reported: concept_removal_rate / erasure_success_rate alongside image-quality metrics)",
+  "year_of_publish": 2025,
+  "reputation": "New, specialized benchmark targeted at concept-erasure in text-to-image models; relevant to a niche but active research subcommunity.",
+  "notes": "Evaluation relies on a mix of automated proxies (classifiers, FID) and human judgments; dataset is specialized to text-to-image erasure tasks (non-LLM); ~1,000 prompts/100+ concepts so broader generalization still limited; potential contamination risk if evaluated models were trained on overlapping generative data.",
+  "creators": {
+    "scientists": [
+      "Ibtihel Amara",
+      "Ahmed Imtiaz Humayun",
+      "Ivana Kajic",
+      "Zarana Parekh",
+      "Natalie Harris",
+      "Sarah Young",
+      "Chirag Nagpal",
+      "Najoung Kim",
+      "Junfeng He",
+      "Cristina Nader Vasconcelos",
+      "Deepak Ramachandran",
+      "Goolnoosh Farnadi",
+      "Katherine Heller",
+      "Mohammad Havaei",
+      "Negar Rostamzadeh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.09833",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

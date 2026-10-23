@@ -1,0 +1,42 @@
+{
+  "name": "ForensicHub",
+  "description": "The field of Fake Image Detection and Localization (FIDL) is highly fragmented, encompassing four domains: deepfake detection (Deepfake), image manipulation detection and localization (IMDL), artificial intelligence-generated image detection (AIGC), and document image manipulation localization (Doc). Although individual benchmarks exist in some domains, a unified benchmark for all domains in FIDL remains blank. The absence of a unified benchmark results in significant domain silos, where each domain independently constructs its datasets, models, and evaluation protocols without interoperability, preventing cross-domain comparisons and hindering the development of the entire FIDL field. To close the domain silo barrier, we propose ForensicHub, the first unified benchmark & codebase for all-domain fake image detection and localization. Considering drastic variations on dataset, model, and evaluation configurations across all domains, as well as the scarcity of open-sourced baseline models and the lack of individual benchmarks in some domains, ForensicHub: i) proposes a modular and configuration-driven architecture that decomposes forensic pipelines into interchangeable components across datasets, transforms, models, and evaluators, allowing flexible composition across all domains; ii) fully implements 10 baseline models, 6 backbones, 2 new benchmarks for AIGC and Doc, and integrates 2 existing benchmarks of DeepfakeBench and IMDLBenCo through an adapter-based design; iii) conducts indepth analysis based on the ForensicHub, offering 8 key actionable insights into FIDL model architecture, dataset characteristics, and evaluation standards. ForensicHub represents a significant leap forward in breaking the domain silos in the FIDL field and inspiring future breakthroughs.",
+  "category": "vision",
+  "domain": "vision (image forensics)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "localization",
+    "segmentation",
+    "multi_domain_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC / accuracy / F1 for detection tasks; IoU and pixel-level F1 for localization/segmentation; mAP where relevant — metrics vary by subtask/domain",
+  "general_score_metric": "AUC (ROC) or accuracy for detection; IoU / pixel F1 for localization — reported per-domain depending on task",
+  "year_of_publish": 2025,
+  "reputation": "Promising unified benchmark that consolidates multiple subdomains of image forensics; gaining attention in forensics research but relatively new compared with long-established single-domain datasets.",
+  "notes": "Heterogeneous benchmark combining datasets and tasks across different forensic domains; evaluation protocols and metrics vary by subtask, so cross-domain comparisons require care. Includes baseline implementations but potential dataset biases and domain-shift effects should be considered.",
+  "creators": {
+    "scientists": [
+      "Bo Du",
+      "Xuekang Zhu",
+      "Xiaochen Ma",
+      "Chenfan Qu",
+      "Kaiwen Feng",
+      "Zhe Yang",
+      "Chi-Man Pun",
+      "Jian Liu",
+      "Jizhe Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.11003",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

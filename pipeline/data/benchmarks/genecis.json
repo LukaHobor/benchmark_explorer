@@ -1,0 +1,34 @@
+{
+  "name": "GeneCIS",
+  "description": "We argue that there are many notions of 'similarity' and that models, like humans, should be able to adapt to these dynamically. This contrasts with most representation learning methods, supervised or self-supervised, which learn a fixed embedding function and hence implicitly assume a single notion of similarity. For instance, models trained on ImageNet are biased towards object categories, while a user might prefer the model to focus on colors, textures or specific elements in the scene. In this paper, we propose the GeneCIS ('genesis') benchmark, which measures models' ability to adapt to a range of similarity conditions. Extending prior work, our benchmark is designed for zero-shot evaluation only, and hence considers an open-set of similarity conditions. We find that baselines from powerful CLIP models struggle on GeneCIS and that performance on the benchmark is only weakly correlated with ImageNet accuracy, suggesting that simply scaling existing methods is not fruitful. We further propose a simple, scalable solution based on automatically mining information from existing image-caption datasets. We find our method offers a substantial boost over the baselines on GeneCIS, and further improves zero-shot performance on related image retrieval benchmarks. In fact, though evaluated zero-shot, our model surpasses state-of-the-art supervised models on MIT-States. Project page at https://sgvaze.github.io/genecis/.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "similarity_adaptation",
+    "zero_shot_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "retrieval metrics (recall@k, e.g., R@1, R@5)",
+  "general_score_metric": "recall@1 / recall@5",
+  "year_of_publish": 2023,
+  "reputation": "A recent and well-regarded vision benchmark that highlights limitations of fixed embeddings (e.g., CLIP) for multiple notions of similarity; cited in work on adaptable similarity and zero-shot retrieval.",
+  "notes": "Zero-shot, open-set evaluation focusing on multiple similarity notions; not saturated, may be sensitive to dataset bias and selection of similarity conditions; non-LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Sagar Vaze",
+      "Nicolas Carion",
+      "Ishan Misra"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.07969",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Long-form ASR Corpora (TED-LIUM 3, GigaSpeech, VoxPopuli-en)",
+  "description": "The vast majority of ASR research uses corpora in which both the training and test data have been pre-segmented into utterances. In most real-word ASR use-cases, however, test audio is not segmented, leading to a mismatch between inference-time conditions and models trained on segmented utterances. In this paper, we re-release three standard ASR corpora - TED-LIUM 3, Gigapeech, and VoxPopuli-en - with updated transcription and alignments to enable their use for long-form ASR research. We use these reconstituted corpora to study the train-test mismatch problem for transducers and attention-based encoder-decoders (AEDs), confirming that AEDs are more susceptible to this issue. Finally, we benchmark a simple long-form training for these models, showing its efficacy for model robustness under this domain shift.",
+  "category": "audio",
+  "domain": "speech recognition / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "automatic_speech_recognition",
+    "long-form_asr",
+    "speech_recognition"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "word_error_rate (WER)",
+  "general_score_metric": "word_error_rate",
+  "typical_sota_score": "5–15% WER",
+  "year_of_publish": 2023,
+  "reputation": "Releases of widely used ASR corpora (TED-LIUM, GigaSpeech, VoxPopuli) restructured for long-form ASR; well-regarded and increasingly used for studying segmentation and long-context robustness.",
+  "notes": "Non-LLM audio benchmark. Evaluation sensitive to segmentation, language-modeling, and decoding choices. Large-scale datasets reduce some contamination risk but overlaps with widely used speech/text corpora remain possible; intended to study train-test segmentation mismatch rather than small-scale benchmarking.",
+  "creators": {
+    "scientists": [
+      "Jennifer Drexler Fox",
+      "Desh Raj",
+      "Natalie Delworth",
+      "Quinn McNamara",
+      "Corey Miller",
+      "Migüel Jetté"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2309.15013",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

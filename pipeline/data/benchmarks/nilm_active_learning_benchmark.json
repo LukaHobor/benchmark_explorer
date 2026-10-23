@@ -1,0 +1,37 @@
+{
+  "name": "NILM Active Learning Benchmark",
+  "description": "Non-intrusive load monitoring (NILM) focuses on disaggregating total household power consumption into appliance-specific usage. Many advanced NILM methods are based on neural networks that typically require substantial amounts of labeled appliance data, which can be challenging and costly to collect in real-world settings. We hypothesize that appliance data from all households does not uniformly contribute to NILM model improvements. Thus, we propose an active learning approach to selectively install appliance monitors in a limited number of houses. This work is the first to benchmark the use of active learning for strategically selecting appliance-level data to optimize NILM performance. We first develop uncertainty-aware neural networks for NILM and then install sensors in homes where disaggregation uncertainty is highest. Benchmarking our method on the publicly available Pecan Street Dataport dataset, we demonstrate that our approach significantly outperforms a standard random baseline and achieves performance comparable to models trained on the entire dataset. Using this approach, we achieve comparable NILM accuracy with approximately 30% of the data, and for a fixed number of sensors, we observe up to a 2x reduction in disaggregation errors compared to random sampling.",
+  "category": "mixed",
+  "domain": "energy / smart meters / NILM",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "time_series_disaggregation",
+    "regression",
+    "active_learning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "disaggregation_error (e.g., MAE)",
+  "general_score_metric": "disaggregation_error (MAE)",
+  "year_of_publish": 2024,
+  "reputation": "An emerging, domain-specific benchmark in the NILM/energy-disaggregation community demonstrating active learning benefits on Pecan Street data; moderate adoption within that niche.",
+  "notes": "Relies on the Pecan Street Dataport (geographically and demographically limited); not an LLM benchmark. Performance depends on sensor installation assumptions and active learning strategy; privacy and small-sample issues may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Dhruv Patel",
+      "Ankita Kumari Jain",
+      "Haikoo Khandor",
+      "Xhitij Choudhary",
+      "Nipun Batra"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2411.15805",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

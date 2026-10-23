@@ -1,0 +1,39 @@
+{
+  "name": "OpenDPD",
+  "description": "With the rise in communication capacity, deep neural networks (DNN) for digital pre-distortion (DPD) to correct non-linearity in wideband power amplifiers (PAs) have become prominent. Yet, there is a void in open-source and measurement-setup-independent platforms for fast DPD exploration and objective DPD model comparison. This paper presents an open-source framework, OpenDPD, crafted in PyTorch, with an associated dataset for PA modeling and DPD learning. We introduce a Dense Gated Recurrent Unit (DGRU)-DPD, trained via a novel end-to-end learning architecture, outperforming previous DPD models on a digital PA (DPA) in the new digital transmitter (DTX) architecture with unconventional transfer characteristics compared to analog PAs. Measurements show our DGRU-DPD achieves an ACPR of -44.69/-44.47 dBc and an EVM of -35.22 dB for 200 MHz OFDM signals. OpenDPD code, datasets, and documentation are publicly available at https://github.com/lab-emi/OpenDPD.",
+  "category": "audio",
+  "domain": "wireless communications / power amplifier modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "time_series_prediction",
+    "signal_reconstruction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "regression_metrics (ACPR, EVM, NMSE)",
+  "general_score_metric": "ACPR (dBc) and EVM (dB)",
+  "typical_sota_score": "ACPR ≈ -44 to -40 dBc; EVM ≈ -35 dB (reported for DGRU‑DPD baseline)",
+  "year_of_publish": 2024,
+  "reputation": "Open-source framework and dataset with code on GitHub; of interest to DPD/PA researchers but niche outside RF/communications labs.",
+  "notes": "Hardware- and waveform-dependent measurements; results sensitive to transmitter/PA setup and signal configuration; relatively niche, non-LLM benchmark; dataset size and diversity limited to provided measurement setups.",
+  "creators": {
+    "scientists": [
+      "Yizhuo Wu",
+      "Gagan Deep Singh",
+      "Mohammadreza Beikmirza",
+      "Leo C. N. de Vreede",
+      "Morteza Alavi",
+      "Chang Gao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2401.08318",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

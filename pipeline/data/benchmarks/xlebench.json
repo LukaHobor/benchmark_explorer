@@ -1,0 +1,43 @@
+{
+  "name": "X-LeBench",
+  "description": "Long-form egocentric video understanding provides rich contextual information and unique insights into long-term human behaviors, holding significant potential for applications in embodied intelligence, long-term activity analysis, and personalized assistive technologies. However, existing benchmark datasets primarily focus on single, short-duration videos or moderately long videos up to dozens of minutes, leaving a substantial gap in evaluating extensive, ultra-long egocentric video recordings. To address this, we introduce X-LeBench, a novel benchmark dataset specifically crafted for evaluating tasks on extremely long egocentric video recordings. Leveraging the advanced text processing capabilities of large language models (LLMs), X-LeBench develops a life-logging simulation pipeline that produces realistic, coherent daily plans aligned with real-world video data. This approach enables the flexible integration of synthetic daily plans with real-world footage from Ego4D-a massive-scale egocentric video dataset covers a wide range of daily life scenarios-resulting in 432 simulated video life logs that mirror realistic daily activities in contextually rich scenarios. The video life-log durations span from 23 minutes to 16.4 hours. The evaluation of several baseline systems and multimodal large language models (MLLMs) reveals their poor performance across the board, highlighting the inherent challenges of long-form egocentric video understanding and underscoring the need for more advanced models.",
+  "category": "vision",
+  "domain": "egocentric vision / embodied intelligence",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_question_answering",
+    "temporal_localization",
+    "retrieval",
+    "summarization",
+    "action_recognition"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (Recall@K / mAP for retrieval, IoU/mAP for localization, ROUGE/BLEU for summarization, accuracy/F1 for recognition)",
+  "general_score_metric": "composite_score (task-specific metrics aggregated)",
+  "year_of_publish": 2025,
+  "reputation": "Emerging benchmark that highlights challenges in ultra-long egocentric video understanding; limited adoption so far but attracting interest for long-form evaluation.",
+  "notes": "Uses a synthetic life-logging pipeline combined with Ego4D footage (risk of data overlap/contamination with Ego4D); relatively small number of simulated life-logs (432) compared with large-scale video benchmarks; diverse tasks require task-specific evaluation and no single metric fully captures performance.",
+  "creators": {
+    "scientists": [
+      "Wenqi Zhou",
+      "Kai Cao",
+      "Hao Zheng",
+      "Xinyi Zheng",
+      "Miao Liu",
+      "Per Ola Kristensson",
+      "Walterio Mayol-Cuevas",
+      "Fan Zhang",
+      "Weizhe Lin",
+      "Junxiao Shen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.06835",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

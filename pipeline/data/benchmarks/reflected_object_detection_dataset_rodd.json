@@ -1,0 +1,34 @@
+{
+  "name": "Reflected Object Detection Dataset (RODD)",
+  "description": "Object detection has greatly improved over the past decade thanks to advances in deep learning and large-scale datasets. However, detecting objects reflected in surfaces remains an underexplored area. Reflective surfaces are ubiquitous in daily life, appearing in homes, offices, public spaces, and natural environments. Accurate detection and interpretation of reflected objects are essential for various applications. This paper addresses this gap by introducing a extensive benchmark specifically designed for Reflected Object Detection. Our Reflected Object Detection Dataset (RODD) features a diverse collection of images showcasing reflected objects in various contexts, providing standard annotations for both real and reflected objects. This distinguishes it from traditional object detection benchmarks. RODD encompasses 10 categories and includes 21,059 images of real and reflected objects across different backgrounds, complete with standard bounding box annotations and the classification of objects as real or reflected. Additionally, we present baseline results by adapting five state-of-the-art object detection models to address this challenging task. Experimental results underscore the limitations of existing methods when applied to reflected object detection, highlighting the need for specialized approaches. By releasing RODD, we aim to support and advance future research on detecting reflected objects. Dataset and code are available at: https: //github.com/Tqybu-hans/RODD.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "reflection_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP / AP (mean Average Precision) for bounding-box detection, plus accuracy for real-vs-reflected classification",
+  "general_score_metric": "mAP (e.g., mAP@0.5) for detection",
+  "year_of_publish": 2024,
+  "reputation": "New 2024 dataset addressing a narrow but important problem; limited community adoption to date.",
+  "notes": "Moderate-size vision dataset (~21k images); annotation of reflected vs real objects may be subjective; domain-specific challenge (reflective surfaces) — non-LLM benchmark; potential class/background biases.",
+  "creators": {
+    "scientists": [
+      "Zhongtian Wang",
+      "You Wu",
+      "Hui Zhou",
+      "Shuiwang Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.05575",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "SAFIM",
+  "description": "Syntax-Aware Fill-in-the-Middle is a code completion benchmark of 17,720 examples testing the ability to fill in missing code segments while maintaining syntactic correctness and semantic coherence. Covers multiple programming languages and focuses on completing structural program elements (function bodies, conditional branches, loop contents) rather than token-level prediction. Sourced from post-April 2022 GitHub submissions to minimize training data contamination.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "code_generation"
+  ],
+  "difficulty_level": "medium",
+  "number_of_questions": 17720,
+  "evaluation_method": "pass@1 (syntax correctness + unit test execution)",
+  "general_score_metric": "pass@1",
+  "typical_sota_score": "~70–85% pass@1 (frontier code models as of 2024–2025)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "ICML 2024 Oral; large-scale with 17,720 examples; contamination-aware through post-April 2022 sourcing; tests structurally-aware completion distinct from HumanEval-style function generation; included in major code LLM evaluation suites",
+  "notes": "ICML 2024 Oral. Tests fill-in-the-middle (FIM) completion which requires bidirectional context understanding — harder than left-to-right completion. Post-April 2022 sourcing substantially reduces contamination. Focuses on syntactic structure completion rather than semantic novelty, making it complementary to HumanEval. Covers Python, Java, JavaScript, and other major languages.",
+  "creators": {
+    "scientists": [
+      "Linyuan Gong",
+      "Sida Wang",
+      "Mostafa Elhoushi",
+      "Alvin Cheung"
+    ],
+    "institutions": [
+      "UC Berkeley"
+    ],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2502.15243",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

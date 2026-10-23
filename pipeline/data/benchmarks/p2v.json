@@ -1,0 +1,36 @@
+{
+  "name": "P$^{2}$V",
+  "description": "Current audio deepfake detectors cannot be trusted. While they excel on controlled benchmarks, they fail when tested in the real world. We introduce Perturbed Public Voices (P$^{2}$V), an IRB-approved dataset capturing three critical aspects of malicious deepfakes: (1) identity-consistent transcripts via LLMs, (2) environmental and adversarial noise, and (3) state-of-the-art voice cloning (2020-2025). Experiments reveal alarming vulnerabilities of 22 recent audio deepfake detectors: models trained on current datasets lose 43% performance when tested on P$^{2}$V, with performance measured as the mean of F1 score on deepfake audio, AUC, and 1-EER. Simple adversarial perturbations induce up to 16% performance degradation, while advanced cloning techniques reduce detectability by 20-30%. In contrast, P$^{2}$V-trained models maintain robustness against these attacks while generalizing to existing datasets, establishing a new benchmark for robust audio deepfake detection. P$^{2}$V will be pu",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "audio_deepfake_detection",
+    "binary_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2025,
+  "reputation": "A new robustness-focused audio deepfake benchmark that is early in adoption but positioned to address real-world detector brittleness.",
+  "notes": "Non-LLM audio benchmark emphasizing robustness under perturbation and cloning attacks; reported performance combines F1, AUC, and 1-EER, so scores are not directly comparable to single-metric benchmarks.",
+  "creators": {
+    "scientists": [
+      "Chongyang Gao",
+      "Marco Postiglione",
+      "Isabel Gortner",
+      "Sarit Kraus",
+      "V. S. Subrahmanian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2508.10949",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

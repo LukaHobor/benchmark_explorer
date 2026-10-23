@@ -1,0 +1,35 @@
+{
+  "name": "Object Detection on Edge Devices Benchmark",
+  "description": "Modern applications, such as autonomous vehicles, require deploying deep learning algorithms on resource-constrained edge devices for real-time image and video processing. However, there is limited understanding of the efficiency and performance of various object detection models on these devices. In this paper, we evaluate state-of-the-art object detection models, including YOLOv8 (Nano, Small, Medium), EfficientDet Lite (Lite0, Lite1, Lite2), and SSD (SSD MobileNet V1, SSDLite MobileDet). We deployed these models on popular edge devices like the Raspberry Pi 3, 4, and 5 with/without TPU accelerators, and Jetson Orin Nano, collecting key performance metrics such as energy consumption, inference time, and Mean Average Precision (mAP). Our findings highlight that lower mAP models such as SSD MobileNet V1 are more energy-efficient and faster in inference, whereas higher mAP models like YOLOv8 Medium generally consume more energy and have slower inference, though with exceptions when accelerators like TPUs are used. Among the edge devices, Jetson Orin Nano stands out as the fastest and most energy-efficient option for request handling, despite having the highest idle energy consumption. These results emphasize the need to balance accuracy, speed, and energy efficiency when deploying deep learning models on edge devices, offering valuable guidance for practitioners and researchers selecting models and devices for their applications.",
+  "category": "vision",
+  "domain": "edge computing / autonomous systems / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "efficiency_evaluation",
+    "model_deployment"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mAP (mean Average Precision) plus latency and energy-efficiency measurements",
+  "general_score_metric": "mAP",
+  "typical_sota_score": "30–50% mAP",
+  "year_of_publish": 2024,
+  "reputation": "Practical, system-focused benchmark that is gaining traction among edge-computing and embedded-vision researchers and practitioners.",
+  "notes": "Hardware- and implementation-sensitive; results vary substantially with device, accelerator, model optimization, and software stack; reproducibility depends on measurement methodology; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Daghash K. Alqahtani",
+      "Aamir Cheema",
+      "Adel N. Toosi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2409.16808",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

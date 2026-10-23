@@ -1,0 +1,41 @@
+{
+  "name": "GazeSearch",
+  "description": "Medical eye-tracking data is an important information source for understanding how radiologists visually interpret medical images. This information not only improves the accuracy of deep learning models for X-ray analysis but also their interpretability, enhancing transparency in decision-making. However, the current eye-tracking data is dispersed, unprocessed, and ambiguous, making it difficult to derive meaningful insights. Therefore, there is a need to create a new dataset with more focus and purposeful eyetracking data, improving its utility for diagnostic applications. In this work, we propose a refinement method inspired by the target-present visual search challenge: there is a specific finding and fixations are guided to locate it. After refining the existing eye-tracking datasets, we transform them into a curated visual search dataset, called GazeSearch, specifically for radiology findings, where each fixation sequence is purposefully aligned to the task of locating a particular finding. Subsequently, we introduce a scan path prediction baseline, called ChestSearch, specifically tailored to GazeSearch. Finally, we employ the newly introduced GazeSearch as a benchmark to evaluate the performance of current state-of-the-art methods, offering a comprehensive assessment for visual search in the medical imaging domain. Code is available at \\url{https://github.com/UARK-AICV/GazeSearch}.",
+  "category": "vision",
+  "domain": "medical imaging (radiology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_prediction",
+    "fixation_prediction",
+    "scanpath_prediction",
+    "visual_search_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "NSS / AUC / CC and scanpath similarity metrics (e.g., MultiMatch, Levenshtein-based scanpath measures)",
+  "general_score_metric": "NSS (Normalized Scanpath Saliency) often reported as primary metric for fixation prediction",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2026,
+  "reputation": "A recent, domain-specific benchmark for radiology visual search and scanpath prediction that has attracted interest from medical imaging and eye-tracking researchers but is not yet widely adopted.",
+  "notes": "Medical eye-tracking dataset with specialized, task-aligned fixations; relatively small and domain-specific, requires careful de-identification and domain expertise to interpret results; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Trong Thang Pham",
+      "Tien-Phat Nguyen",
+      "Yuki Ikebe",
+      "Akash Awasthi",
+      "Zhigang Deng",
+      "Carol C. Wu",
+      "Hien Nguyen",
+      "Ngan Le"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2411.05780",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Learn2Reg",
+  "description": "Image registration is a fundamental medical image analysis task, and a wide variety of approaches have been proposed. However, only a few studies have comprehensively compared medical image registration approaches on a wide range of clinically relevant tasks. This limits the development of registration methods, the adoption of research advances into practice, and a fair benchmark across competing approaches. The Learn2Reg challenge addresses these limitations by providing a multi-task medical image registration data set for comprehensive characterisation of deformable registration algorithms. A continuous evaluation will be possible at https://learn2reg.grand-challenge.org. Learn2Reg covers a wide range of anatomies (brain, abdomen, and thorax), modalities (ultrasound, CT, MR), availability of annotations, as well as intra- and inter-patient registration evaluation. We established an easily accessible framework for training and validation of 3D registration methods, which enabled the compilation of results of over 65 individual method submissions from more than 20 unique teams. We used a complementary set of metrics, including robustness, accuracy, plausibility, and runtime, enabling unique insight into the current state-of-the-art of medical image registration. This paper describes datasets, tasks, evaluation methods and results of the challenge, as well as results of further analysis of transferability to new datasets, the importance of label supervision, and resulting bias. While no single approach worked best across all tasks, many methodological aspects could be identified that push the performance of medical image registration to new state-of-the-art performance. Furthermore, we demystified the common belief that conventional registration methods have to be much slower than deep-learning-based methods.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "image_registration",
+    "landmark_registration",
+    "multimodal_registration"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Dice / TRE (target registration error) and related overlap/landmark metrics",
+  "general_score_metric": "Dice (primary) with TRE also commonly reported",
+  "typical_sota_score": "varies by task; typically ~0.70–0.95 (Dice)",
+  "year_of_publish": 2023,
+  "reputation": "Well-known and widely used in the medical image registration community; frequently used as the basis for challenge leaderboards and method comparisons.",
+  "notes": "Non-LLM benchmark focused on medical image registration; results vary substantially by anatomy and modality. Some tasks have limited data and risk of overfitting to leaderboard datasets; metrics are multi-faceted (Dice, TRE, Jacobian) so single-number comparisons can be misleading.",
+  "creators": {
+    "scientists": [
+      "Hering A",
+      "Hansen L",
+      "Mok TCW",
+      "Chung ACS",
+      "Siebert H",
+      "Hager S"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2112.04489",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

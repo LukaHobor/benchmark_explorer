@@ -1,0 +1,41 @@
+{
+  "name": "codereview-bench",
+  "description": "CodeReview-Bench\n\t\n\nA benchmark for evaluating models on two code review tasks, curated from ronantakizawa/github-codereview.\n\n\t\n\t\t\n\t\tTasks\n\t\n\n\n\t\n\t\t\n\t\t1. Code Editing\n\t\n\nGiven code and a reviewer comment, apply the requested change.\n\nInput: before_code, reviewer_comment, language, diff_context\nTarget: after_code\n\nfrom datasets import load_dataset\n\nds = load_dataset(\"ronantakizawa/codereview-bench\", \"code-editing\")\nexample = ds[\"test\"][0]\n\nprompt = f\"\"\"Apply the following review comment… See the full description on the dataset page: https://huggingface.co/datasets/ronantakizawa/codereview-bench.",
+  "category": "code",
+  "domain": "coding",
+  "tags": [
+    "task_categories:text-generation",
+    "language:en",
+    "language:code",
+    "license:mit",
+    "size_categories:100K<n<1M",
+    "modality:text"
+  ],
+  "task_types": [
+    "code_editing",
+    "patch_generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "exact_match / edit-level accuracy (diff-based correctness); can be complemented by CodeBLEU or unit-test based validation",
+  "general_score_metric": "exact_match (edit accuracy)",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "A community-contributed GitHub-derived dataset used by researchers evaluating code-editing and patch-generation capabilities, with moderate adoption in code-model evaluations.",
+  "downloads": 80,
+  "likes": 3,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "ronantakizawa"
+    ]
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://huggingface.co/datasets/ronantakizawa/codereview-bench",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

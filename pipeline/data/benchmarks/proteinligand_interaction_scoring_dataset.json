@@ -1,0 +1,39 @@
+{
+  "name": "Protein–Ligand Interaction Scoring dataset",
+  "description": "In structure-based drug design, scoring functions are widely used for fast evaluation of protein-ligand interactions. They are often applied in combination with molecular docking and de novo design methods. Since the early 1990s, a whole spectrum of protein-ligand interaction scoring functions have been developed. Regardless of their technical difference, scoring functions all need data sets combining protein-ligand complex structures and binding affinity data for parametrization and validation. However, data sets of this kind used to be rather limited in terms of size and quality. On the other hand, standard metrics for evaluating scoring function used to be ambiguous. Scoring functions are often tested in molecular docking or even virtual screening trials, which do not directly reflect the genuine quality of scoring functions. Collectively, these underlying obstacles have impeded the invention of more advanced scoring functions. In this Account, we describe our long-lasting efforts to overcome these obstacles, which involve two related projects. On the first project, we have created the PDBbind database. It is the first database that systematically annotates the protein-ligand complexes in the Protein Data Bank (PDB) with experimental binding data. This database has been updated annually since its first public release in 2004. The latest release (version 2016) provides binding data for 16 179 biomolecular complexes in PDB. Data sets provided by PDBbind have been applied to many computational and statistical studies on protein-ligand interaction and various subjects. In particular, it has become a major data resource for scoring function development. On the second project, we have established the Comparative Assessment of Scoring Functions (CASF) benchmark for scoring function evaluation. Our key idea is to decouple the \"scoring\" process from the \"sampling\" process, so scoring functions can be tested in a relatively pure context to reflect their quality. In our latest work on this track, i.e. CASF-2013, the performance of a scoring function was quantified in four aspects, including \"scoring power\", \"ranking power\", \"docking power\", and \"screening power\". All four performance tests were conducted on a test set containing 195 high-quality protein-ligand complexes selected from PDBbind. A panel of 20 standard scoring functions were tested as demonstration. Importantly, CASF is designed to be an open-access benchmark, with which scoring functions developed by different researchers can be compared on the same grounds. Indeed, it has become a popular choice for scoring function validation in recent years. Despite the considerable progress that has been made so far, the performance of today's scoring functions still does not meet people's expectations in many aspects. There is a constant demand for more advanced scoring functions. Our efforts have helped to overcome some obstacles underlying scoring function development so that the researchers in this field can move forward faster. We will continue to improve the PDBbind database and the CASF benchmark in the future to keep them as useful community resources.",
+  "category": "mixed",
+  "domain": "drug discovery / structural bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "affinity_regression",
+    "binding_ranking",
+    "docking_scoring",
+    "virtual_screening"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Pearson_correlation / RMSE for scoring power; Spearman/Kendall for ranking; docking_success_rate for docking power; AUC/Enrichment_Factor for screening",
+  "general_score_metric": "Pearson_correlation",
+  "typical_sota_score": "0.6–0.8 (Pearson correlation, depends on split and test set)",
+  "year_of_publish": 2017,
+  "reputation": "478 citations",
+  "notes": "Widely used non-LLM benchmark (PDBbind/CASF). Risks: data leakage/overlap across releases, varying data quality and experimental conditions, benchmark performance depends strongly on train/test splits and decoupling of sampling vs scoring. Dataset size has grown but biases and label noise remain.",
+  "creators": {
+    "scientists": [
+      "Zhihai Liu",
+      "Minyi Su",
+      "Li Han",
+      "Jie Liu",
+      "Qifan Yang",
+      "Yan Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1021/acs.accounts.6b00491",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

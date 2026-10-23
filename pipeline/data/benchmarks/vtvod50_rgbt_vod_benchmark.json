@@ -1,0 +1,37 @@
+{
+  "name": "VT-VOD50 (RGBT VOD benchmark)",
+  "description": "Recently, many breakthroughs are made in the field of Video Object Detection (VOD), but the performance is still limited due to the imaging limitations of RGB sensors in adverse illumination conditions. To alleviate this issue, this work introduces a new computer vision task called RGB-thermal (RGBT) VOD by introducing the thermal modality that is insensitive to adverse illumination conditions. To promote the research and development of RGBT VOD, we design a novel Erasure-based Interaction Network (EINet) and establish a comprehensive benchmark dataset (VT-VOD50) for this task. Traditional VOD methods often leverage temporal information by using many auxiliary frames, and thus have large computational burden. Considering that thermal images exhibit less noise than RGB ones, we develop a negative activation function that is used to erase the noise of RGB features with the help of thermal image features. Furthermore, with the benefits from thermal images, we rely only on a small temporal window to model the spatio-temporal information to greatly improve efficiency while maintaining detection accuracy. VT-VOD50 dataset consists of 50 pairs of challenging RGBT video sequences with complex backgrounds, various objects and different illuminations, which are collected in real traffic scenarios. Extensive experiments on VT-VOD50 dataset demonstrate the effectiveness and efficiency of our proposed method against existing mainstream VOD methods. The code of EINet and the dataset will be released to the public for free academic usage.",
+  "category": "vision",
+  "domain": "video object detection / multimodal thermal-RGB vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "video_object_detection",
+    "multimodal_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mean Average Precision)",
+  "general_score_metric": "mAP (mean Average Precision)",
+  "year_of_publish": 2023,
+  "reputation": "Relatively new, niche dataset introduced alongside a single-method paper with limited adoption beyond thermal–RGB VOD researchers.",
+  "notes": "Small dataset (50 RGBT video pairs); multimodal (RGB+thermal) and non-LLM benchmark; domain-specific (traffic) bias; limited benchmark saturation and community results.",
+  "creators": {
+    "scientists": [
+      "Zhengzheng Tu",
+      "Qishun Wang",
+      "Hongshun Wang",
+      "Kunpeng Wang",
+      "Chenglong Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.01630",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

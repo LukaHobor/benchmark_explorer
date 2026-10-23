@@ -1,0 +1,34 @@
+{
+  "name": "Worker Flexibility Benchmark for FJSSP-W",
+  "description": "In Production Scheduling, the Flexible Job Shop Scheduling Problem (FJSSP) aims to optimize a sequence of operations and assign each to an eligible machine with varying processing times. For integration of the workforce, each machine also requires a worker to be present to process an operation which additionally affects the processing times. The resulting problem is called Flexible Job Shop Scheduling Problem with Worker Flexibility (FJSSP-W). The FJSSP has been approached with various problem representations, including Mixed Integer Linear Programming (MILP), Constrained Programming (CP), and Simulation-based Optimization (SBO). In the latter area in particular, there exists a large number of specialized Evolutionary Algorithms (EA) like Particle Swarm Optimization (PSO) or Genetic Algorithms (GA). Yet, the solvers are often developed for single use cases only, and validated on a few selected test instances, let alone compared with results from solvers using other problem representations. While suitable approaches do also exist, the design of the FJSSP-W instances is not standardized and the algorithms are hardly comparable. This calls for a systematic benchmarking environment that provides a comprehensive set of FJSSP(-W) instances and supports targeted algorithm development. It will facilitate the comparison of algorithmic performance in the face of different problem characteristics. The present paper presents a collection of 402 commonly accepted FJSSP instances and proposes an approach to extend these with worker flexibility. In addition, we present a detailed procedure for the evaluation of scheduling algorithms on these problem sets and provide suitable model representations for this purpose. We provide complexity characteristics for all presented instances as well as baseline results of common commercial solvers to facilitate the validation of new algorithmic developments.",
+  "category": "mixed",
+  "domain": "manufacturing / production scheduling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimization",
+    "scheduling",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "objective_value (e.g., makespan, total completion time, weighted completion time)",
+  "general_score_metric": "makespan (or other scheduling objective specified per instance)",
+  "year_of_publish": 2025,
+  "reputation": "Adopted within operations-research and scheduling research communities as a comprehensive testbed for FJSSP-W algorithm development, but specialized to that field.",
+  "notes": "Non-LLM benchmark; contains 402 instances extended for worker flexibility; baseline results from commercial solvers are provided. Solver comparisons can be sensitive to representation and objective choice; not prone to data-contamination issues typical of ML benchmarks.",
+  "creators": {
+    "scientists": [
+      "David Hutter",
+      "Thomas Steinberger",
+      "Michael Hellwig"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2501.16159",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

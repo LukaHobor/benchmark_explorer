@@ -1,0 +1,38 @@
+{
+  "name": "COMBO",
+  "description": "Open knowledge graph (KG) consists of (subject, relation, object) triples extracted from millions of raw text. The subject and object noun phrases and the relation in open KG have severe redundancy and ambiguity and need to be canonicalized. Existing datasets for open KG canonicalization only provide gold entity-level canonicalization for noun phrases. In this paper, we present COMBO, a Complete Benchmark for Open KG canonicalization. Compared with existing datasets, we additionally provide gold canonicalization for relation phrases, gold ontology-level canonicalization for noun phrases, as well as source sentences from which triples are extracted. We also propose metrics for evaluating each type of canonicalization. On the COMBO dataset, we empirically compare previously proposed canonicalization methods as well as a few simple baseline methods based on pretrained language models. We find that properly encoding the phrases in a triple using pretrained language models results in better relation canonicalization and ontology-level canonicalization of the noun phrase. We release our dataset, baselines, and evaluation scripts at https://github.com/jeffchy/COMBO/tree/main.",
+  "category": "text",
+  "domain": "knowledge graphs / NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "entity_canonicalization",
+    "relation_canonicalization",
+    "ontology_mapping"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "A recent academic benchmark for open KG canonicalization that has attracted interest in the KG/NLP research community but is not yet a broadly adopted standard.",
+  "notes": "Provides gold canonicalizations for entities and relations and source sentences; useful for evaluating both entity-level and relation-level canonicalization. Potential contamination risk from overlap with pretraining corpora; moderate dataset size and primarily targeted at research (not production LLM evaluations).",
+  "creators": {
+    "scientists": [
+      "Chengyue Jiang",
+      "Yong Jiang",
+      "Weiqi Wu",
+      "Yuting Zheng",
+      "Pengjun Xie",
+      "Kewei Tu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2302.03905",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

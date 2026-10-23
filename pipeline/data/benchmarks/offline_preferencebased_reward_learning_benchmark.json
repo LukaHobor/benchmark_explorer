@@ -1,0 +1,34 @@
+{
+  "name": "Offline Preference-Based Reward Learning Benchmark",
+  "description": "Learning a reward function from human preferences is challenging as it typically requires having a high-fidelity simulator or using expensive and potentially unsafe actual physical rollouts in the environment. However, in many tasks the agent might have access to offline data from related tasks in the same target environment. While offline data is increasingly being used to aid policy optimization via offline RL, our observation is that it can be a surprisingly rich source of information for preference learning as well. We propose an approach that uses an offline dataset to craft preference queries via pool-based active learning, learns a distribution over reward functions, and optimizes a corresponding policy via offline RL. Crucially, our proposed approach does not require actual physical rollouts or an accurate simulator for either the reward learning or policy optimization steps. To test our approach, we first evaluate existing offline RL benchmarks for their suitability for offline reward learning. Surprisingly, for many offline RL domains, we find that simply using a trivial reward function results good policy performance, making these domains ill-suited for evaluating learned rewards. To address this, we identify a subset of existing offline RL benchmarks that are well suited for offline reward learning and also propose new offline apprenticeship learning benchmarks which allow for more open-ended behaviors. When evaluated on this curated set of domains, our empirical results suggest that combining offline RL with learned human preferences can enable an agent to learn to perform novel tasks that were not explicitly shown in the offline data.",
+  "category": "mixed",
+  "domain": "reinforcement learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "preference_learning",
+    "offline_rl",
+    "policy_optimization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate",
+  "general_score_metric": "task_success_rate",
+  "year_of_publish": 2023,
+  "reputation": "A research benchmark (ICLR/NeurIPS-style) used by the offline-RL and reward-learning community for evaluating preference-based reward learning methods; limited but growing adoption.",
+  "notes": "Requires simulated environments/offline datasets (non-LLM). Authors note many standard offline-RL domains are ill-suited for reward learning and thus curate/evaluate a subset; results sensitive to offline data quality.",
+  "creators": {
+    "scientists": [
+      "Daniel Shin",
+      "Anca D. Dragan",
+      "Daniel S. Brown"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2301.01392",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

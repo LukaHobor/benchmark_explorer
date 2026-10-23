@@ -1,0 +1,39 @@
+{
+  "name": "SciEGQA-Bench",
+  "description": "SciEGQA Bench\n\t\n\n\n\t\n\t\t\n\t\tQuick start\n\t\n\nimport json\nfrom pathlib import Path\nfrom PIL import Image, ImageDraw\n\nwith open(\"SciEGQA_Bench.jsonl\", \"r\", encoding=\"utf-8\") as f:\n    sample = json.loads(next(f))\n\nfor page, boxes in zip(sample[\"evidence_page\"], sample[\"bbox\"]):\n    page_path = (\n        Path(sample[\"category\"])\n        / sample[\"doc_name\"]\n        / f\"{sample['doc_name']}_{page}.png\"\n    )\n    image = Image.open(page_path).convert(\"RGB\")\n    draw = ImageDraw.Draw(image)… See the full description on the dataset page: https://huggingface.co/datasets/Yuwh07/SciEGQA-Bench.",
+  "category": "multimodal",
+  "domain": "science",
+  "tags": [
+    "task_categories:question-answering",
+    "language:en",
+    "size_categories:1K<n<10K",
+    "modality:text"
+  ],
+  "task_types": [
+    "open_ended",
+    "evidence_extraction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "An emerging benchmark for evidence-grounded scientific question answering and document-based multimodal reasoning with modest adoption in related research.",
+  "downloads": 141,
+  "likes": 5,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "Yuwh07"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://huggingface.co/datasets/Yuwh07/SciEGQA-Bench",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

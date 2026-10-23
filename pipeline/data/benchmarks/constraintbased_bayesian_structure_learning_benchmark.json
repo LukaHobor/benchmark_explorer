@@ -1,0 +1,33 @@
+{
+  "name": "Constraint-Based Bayesian Structure Learning Benchmark",
+  "description": "Modeling the associations between real world entities from their multivariate cross-sectional profiles can provide cues into the concerted working of these entities as a system. Several techniques have been proposed for deciphering these associations including constraint-based Bayesian structure learning (BSL) algorithms that model them as directed acyclic graphs. Benchmarking these algorithms have typically focused on assessing the variation in performance measures such as sensitivity as a function of the dimensionality represented by the number of nodes in the DAG, and sample size. The present study elucidates the importance of network topology in benchmarking exercises. More specifically, it investigates variations in sensitivity across distinct network topologies while constraining the nodes, edges, and sample-size to be identical, eliminating these as potential confounders. Sensitivity of three popular constraint-based BSL algorithms (Peter-Clarke, Grow-Shrink, Incremental Association Markov Blanket) in learning the network structure from multivariate cross-sectional profiles sampled from network models with sub-linear, linear, and super-linear DAG topologies generated using preferential attachment is investigated. Results across linear and nonlinear models revealed statistically significant $(\\alpha=0.05)$ decrease in sensitivity estimates from sub-linear to super-linear topology constitutively across the three algorithms. These results are demonstrated on networks with nodes $(N_{nods}=48,64)$, noise strengths $(\\sigma =3,6)$ and sample size $(N = 2^{10})$. The findings elucidate the importance of accommodating the network topology in constraint-based BSL benchmarking exercises.",
+  "category": "mixed",
+  "domain": "causal discovery / graphical models",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "structure_learning",
+    "edge_identification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "sensitivity (recall)",
+  "general_score_metric": "sensitivity",
+  "year_of_publish": 2025,
+  "reputation": "A specialized research benchmark in the causal discovery/graphical models community, cited in domain literature but with limited general adoption.",
+  "notes": "Simulation-based / synthetic-data benchmark focused on topology effects (tested on networks with 48 and 64 nodes); not an LLM benchmark. Results depend strongly on network topology and noise; relatively small-scale experiments may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Radha Nagarajan",
+      "Marco Scutari"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2501.02019",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

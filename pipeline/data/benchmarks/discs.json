@@ -1,0 +1,35 @@
+{
+  "name": "DISCS",
+  "description": "Sampling in discrete spaces, with critical applications in simulation and optimization, has recently been boosted by significant advances in gradient-based approaches that exploit modern accelerators like GPUs. However, two key challenges are hindering further advancement in research on discrete sampling. First, since there is no consensus on experimental settings and evaluation setups, the empirical results in different research papers are often not comparable. Second, implementing samplers and target distributions often requires a nontrivial amount of effort in terms of calibration and parallelism. To tackle these challenges, we propose DISCS (DISCrete Sampling), a tailored package and benchmark that supports unified and efficient experiment implementation and evaluations for discrete sampling in three types of tasks: sampling from classical graphical models and energy based generative models, and sampling for solving combinatorial optimization. Throughout the comprehensive evaluations in DISCS, we gained new insights into scalability, design principles for proposal distributions, and lessons for adaptive sampling design. DISCS efficiently implements representative discrete samplers in existing research works as baselines and offers a simple interface that researchers can conveniently add new discrete samplers and directly compare their performance with the benchmark result in a calibrated setup.",
+  "category": "mixed",
+  "domain": "discrete sampling / simulation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sampling",
+    "optimization",
+    "simulation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "sample-quality metrics (MMD, ESS, KL divergence, negative log-likelihood) plus runtime/scalability measures",
+  "general_score_metric": "MMD / ESS (sample quality) combined with runtime",
+  "reputation": "Provides a practical, reproducible toolkit and benchmark for discrete sampling research and has moderate adoption among researchers working on efficient discrete samplers.",
+  "notes": "Non-LLM benchmark focused on discrete sampling; emphasizes reproducibility and calibrated comparisons. Results depend strongly on problem families, sampler hyperparameters and hardware parallelism.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

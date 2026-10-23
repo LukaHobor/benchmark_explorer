@@ -1,0 +1,43 @@
+{
+  "name": "Out-of-Scope Intent Dataset",
+  "description": "Task-oriented dialog systems need to know when a query falls outside their range of supported intents, but current text classification corpora only define label sets that cover every example. We introduce a new dataset that includes queries that are out-of-scope---i.e., queries that do not fall into any of the system's supported intents. This poses a new challenge because models cannot assume that every query at inference time belongs to a system-supported intent class. Our dataset also covers 150 intent classes over 10 domains, capturing the breadth that a production task-oriented agent must handle. We evaluate a range of benchmark classifiers on our dataset along with several different out-of-scope identification schemes. We find that while the classifiers perform well on in-scope intent classification, they struggle to identify out-of-scope queries. Our dataset and evaluation fill an important gap in the field, offering a way of more rigorously and realistically benchmarking text classification in task-driven dialog systems.",
+  "category": "text",
+  "domain": "dialog systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "intent_classification",
+    "out_of_scope_detection",
+    "multi_class_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy and F1 for intent classification; F1 and AUROC commonly reported for out‑of‑scope detection",
+  "general_score_metric": "Intent F1 / OOS detection F1 (and AUROC)",
+  "typical_sota_score": "Intent classification: ~90–98%; Out‑of‑scope detection: ~40–80% (varies widely by method and thresholding)",
+  "year_of_publish": 2019,
+  "reputation": "Well‑known dataset in the dialog systems community for evaluating out‑of‑scope intent detection; cited frequently for OOS research and robustness studies.",
+  "creators": {
+    "scientists": [
+      "Stefan Larson",
+      "Anish Mahendran",
+      "Joseph J. Peper",
+      "Christopher Clarke",
+      "Andrew Lee",
+      "Parker Hill",
+      "Jonathan K. Kummerfeld",
+      "Kevin Leach",
+      "Michael A. Laurenzano",
+      "Lingjia Tang",
+      "Jason Mars"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1909.02027",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "3D-MIR",
+  "description": "The increasing use of medical imaging in healthcare settings presents a significant challenge due to the increasing workload for radiologists, yet it also offers opportunity for enhancing healthcare outcomes if effectively leveraged. 3D image retrieval holds potential to reduce radiologist workloads by enabling clinicians to efficiently search through diagnostically similar or otherwise relevant cases, resulting in faster and more precise diagnoses. However, the field of 3D medical image retrieval is still emerging, lacking established evaluation benchmarks, comprehensive datasets, and thorough studies. This paper attempts to bridge this gap by introducing a novel benchmark for 3D Medical Image Retrieval (3D-MIR) that encompasses four different anatomies imaged with computed tomography. Using this benchmark, we explore a diverse set of search strategies that use aggregated 2D slices, 3D volumes, and multi-modal embeddings from popular multi-modal foundation models as queries. Quantitative and qualitative assessments of each approach are provided alongside an in-depth discussion that offers insight for future research. To promote the advancement of this field, our benchmark, dataset, and code are made publicly available.",
+  "category": "vision",
+  "domain": "medical imaging (radiology)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_retrieval",
+    "similarity_search"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "recall@k (e.g., recall@1, recall@5) and mean_average_precision (mAP)",
+  "general_score_metric": "recall@k (primary reported: recall@1 / recall@5)",
+  "year_of_publish": 2023,
+  "reputation": "New, task-specific benchmark introduced by the authors to seed research in 3D medical image retrieval but not yet widely adopted.",
+  "notes": "Non-LLM benchmark focused on 3D medical CT volumes across a few anatomies; limited prior baselines and dataset size for some anatomies may risk overfitting. Evaluation depends on retrieval metrics (recall@k, mAP); possible domain shift across institutions. Public dataset and code mitigate reproducibility concerns.",
+  "creators": {
+    "scientists": [
+      "Asma Ben Abacha",
+      "Alberto Santamaria-Pang",
+      "Ho Hin Lee",
+      "Jameson Merkow",
+      "Qin Cai",
+      "Surya Teja Devarakonda",
+      "Abdullah Islam",
+      "Julia Gong",
+      "Matthew P. Lungren",
+      "Thomas Lin",
+      "Noel C Codella",
+      "Ivan Tarapov"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2311.13752",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

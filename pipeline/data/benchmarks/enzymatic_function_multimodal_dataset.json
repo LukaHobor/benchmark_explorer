@@ -1,0 +1,38 @@
+{
+  "name": "Enzymatic Function Multimodal Dataset",
+  "description": "Predicting gene function from its DNA sequence is a fundamental challenge in biology. Many deep learning models have been proposed to embed DNA sequences and predict their enzymatic function, leveraging information in public databases linking DNA sequences to an enzymatic function label. However, much of the scientific community's knowledge of biological function is not represented in these categorical labels, and is instead captured in unstructured text descriptions of mechanisms, reactions, and enzyme behavior. These descriptions are often captured alongside DNA sequences in biological databases, albeit in an unstructured manner. Deep learning of models predicting enzymatic function are likely to benefit from incorporating this multi-modal data encoding scientific knowledge of biological function. There is, however, no dataset designed for machine learning algorithms to leverage this multi-modal information. Here we propose a novel dataset and benchmark suite that enables the exploration and development of large multi-modal neural network models on gene DNA sequences and natural language descriptions of gene function. We present baseline performance on benchmarks for both unsupervised and supervised tasks that demonstrate the difficulty of this modeling objective, while demonstrating the potential benefit of incorporating multi-modal data types in function prediction compared to DNA sequences alone. Our dataset is at: https://hoarfrost-lab.github.io/BioTalk/.",
+  "category": "multimodal",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "supervised_classification",
+    "representation_learning",
+    "multimodal_embedding",
+    "sequence_to_function_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific metrics (accuracy / F1 / ROC-AUC depending on task; supervised classification typically reported via F1/accuracy)",
+  "general_score_metric": "task-specific (primary reported: F1 / accuracy for classification tasks)",
+  "year_of_publish": 2024,
+  "reputation": "New multimodal dataset aimed at the bioinformatics community for integrating sequence and textual functional descriptions; early-stage adoption among domain researchers.",
+  "notes": "Domain-specific dataset with potential class imbalance and overlap with public sequence databases (contamination risk); supports both supervised and unsupervised benchmarks; not a general-language benchmark.",
+  "creators": {
+    "scientists": [
+      "Yuchen Zhang",
+      "Ratish Kumar Chandrakant Jha",
+      "Soumya Bharadwaj",
+      "Vatsal Sanjaykumar Thakkar",
+      "Adrienne Hoarfrost",
+      "Jin Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.15888",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

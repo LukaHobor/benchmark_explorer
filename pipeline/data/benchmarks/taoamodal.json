@@ -1,0 +1,37 @@
+{
+  "name": "TAO-Amodal",
+  "description": "Amodal perception, the ability to comprehend complete object structures from partial visibility, is a fundamental skill, even for infants. Its significance extends to applications like autonomous driving, where a clear understanding of heavily occluded objects is essential. However, modern detection and tracking algorithms often overlook this critical capability, perhaps due to the prevalence of \\textit{modal} annotations in most benchmarks. To address the scarcity of amodal benchmarks, we introduce TAO-Amodal, featuring 833 diverse categories in thousands of video sequences. Our dataset includes \\textit{amodal} and modal bounding boxes for visible and partially or fully occluded objects, including those that are partially out of the camera frame. We investigate the current lay of the land in both amodal tracking and detection by benchmarking state-of-the-art modal trackers and amodal segmentation methods. We find that existing methods, even when adapted for amodal tracking, struggle to detect and track objects under heavy occlusion. To mitigate this, we explore simple finetuning schemes that can increase the amodal tracking and detection metrics of occluded objects by 2.1\\% and 3.3\\%.",
+  "category": "vision",
+  "domain": "vision (video tracking)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "amodal_completion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "detection: mean_average_precision (mAP); tracking: MOTA/MOTP and related tracking metrics",
+  "general_score_metric": "mean Average Precision (mAP) (with separate tracking metrics like MOTA for tracking)",
+  "typical_sota_score": "20–50%",
+  "year_of_publish": 2023,
+  "reputation": "An extension of the widely cited TAO dataset focusing on amodal perception; gaining attention in the vision community studying occlusion and long-tail video tracking.",
+  "notes": "Large long-tail label space (833 categories) and heavy occlusion make scores lower than typical detection datasets; video-based, non-LLM benchmark with challenging occluded and out-of-frame cases.",
+  "creators": {
+    "scientists": [
+      "Cheng-Yen Hsieh",
+      "Kaihua Chen",
+      "Achal Dave",
+      "Tarasha Khurana",
+      "Deva Ramanan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2312.12433",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

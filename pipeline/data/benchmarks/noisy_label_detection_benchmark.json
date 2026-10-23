@@ -1,0 +1,37 @@
+{
+  "name": "Noisy Label Detection Benchmark",
+  "description": "Label noise is a common problem in real-world datasets, affecting both model training and validation. Clean data are essential for achieving strong performance and ensuring reliable evaluation. While various techniques have been proposed to detect noisy labels, there is no clear consensus on optimal approaches. We perform a comprehensive benchmark of detection methods by decomposing them into three fundamental components: label agreement function, aggregation method, and information gathering approach (in-sample vs out-of-sample). This decomposition can be applied to many existing detection methods, and enables systematic comparison across diverse approaches. To fairly compare methods, we propose a unified benchmark task, detecting a fraction of training samples equal to the dataset's noise rate. We also introduce a novel metric: the false negative rate at this fixed operating point. Our evaluation spans vision and tabular datasets under both synthetic and real-world noise conditions.",
+  "category": "mixed",
+  "domain": "data-centric AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "noisy_label_detection",
+    "sample_ranking",
+    "outlier_detection",
+    "dataset_cleaning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "false_negative_rate",
+  "general_score_metric": "false_negative_rate",
+  "typical_sota_score": "5–25% false negative rate (FNR) at the fixed operating point, depending on dataset and noise type",
+  "year_of_publish": 2025,
+  "reputation": "A specialized benchmark used in the data-centric AI literature for systematically comparing noisy-label detection methods across vision and tabular data.",
+  "notes": "Non-LLM benchmark; performance depends on the assumed noise rate and operating point, and results may vary across synthetic versus real-world noise settings.",
+  "creators": {
+    "scientists": [
+      "Henrique Pickler",
+      "Jorge K. S. Kamassury",
+      "Danilo Silva"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2510.16211",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

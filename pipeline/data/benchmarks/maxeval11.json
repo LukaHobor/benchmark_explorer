@@ -1,0 +1,36 @@
+{
+  "name": "MAX-EVAL-11",
+  "description": "Abstract\n                \n                  MAX-EVAL-11\n                  is constructed by converting MIMIC-III discharge summaries from ICD-9 to ICD-11 codes through systematic mapping, creating a synthetic diagnosis dataset of 10,000 clinical notes with comprehensive ICD-11 annotations spanning the complete taxonomy. Unlike existing partial-taxonomy benchmarks that rely on traditional precision-recall metrics, MAX-EVAL-11 introduces a\n                  clinically-informed evaluation framework\n                  that assigns weighted reward points based on code relevance ranking and diagnostic specificity. This ranking-based scoring system accounts for the varying clinical importance of correctly identifying primary diagnoses versus secondary conditions, better reflecting real-world medical coding accuracy requirements. Our comprehensive evaluation across state-of-the-art LLMs reveals significant performance variations: Claude 4 Sonnet achieves a weighted score of\n                  0.433\n                  with clinical precision of\n                  43.3%\n                  , while Claude 3.7 Sonnet attains\n                  0.396\n                  with\n                  37.2%\n                  clinical precision. Gemini Flash demonstrates a weighted score of\n                  0.341\n                  with\n                  31.5%\n                  clinical precision. These results reveal substantial performance gaps even in advanced foundation models, underscoring the complexity of comprehensive ICD-11 coding and the need for specialized medical AI systems beyond general-purpose LLMs. The benchmark provides standardized evaluation through our novel weighted scoring methodology that prioritizes diagnostic accuracy and clinical relevance over simple code-matching metrics. MAX-EVAL-11 addresses critical gaps in medical AI evaluation infrastructure by supporting the transition from legacy ICD-9 systems to ICD-11, facilitating development of clinically validated automated coding solutions that can handle real-world diagnostic complexity at scale.",
+  "category": "text",
+  "domain": "medical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_label_classification",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "custom weighted ranking score (clinically‑informed) with reported clinical precision; also reports precision/recall/F1 for code matching",
+  "general_score_metric": "weighted clinical score (proposed clinically‑informed ranking metric)",
+  "typical_sota_score": "0.34–0.433 weighted score (reported clinical precision ~31.5%–43.3% for evaluated models)",
+  "year_of_publish": 2025,
+  "reputation": "New, medically focused benchmark proposing a clinically weighted evaluation; currently emerging and not yet widely adopted outside specialized medical AI groups.",
+  "notes": "Derived from MIMIC‑III (10,000 synthetic ICD‑11‑annotated notes) — potential pretraining/contamination risk and label noise from automated mapping; evaluation emphasizes clinical relevance over simple code matching and requires domain expertise to interpret.",
+  "creators": {
+    "scientists": [
+      "Ujjwal Singh",
+      "Sarthak Deshwal",
+      "Nitish Dube",
+      "Arjun Sharma"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2025.10.30.25339130",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "FreeStyle_Bench",
+  "description": "# FreeStyle Bench\n\nThis repository contains benchmark inputs for evaluating FreeStyle reference-based image editing.\n\nIt includes two benchmark subsets:\n\n- `sref_bench/`: a style-transfer benchmark.\n- `cref_sref_bench/`: a content-and-style dual-reference benchmark.\n\nBoth subsets use the same basic layout: a content-reference folder, a style-reference folder, and a `prompts.json` file that links each pair to its text prompt.\n\n## Repository Layout\n\n```text\n<repo-root>/\n  README.md\n  sref_bench/\n    cref/\n      ... content reference images ...\n    sref/\n      ... style reference images ...\n    prompts.json\n  cref_sref_bench/\n    cref/\n      ... content reference images ...\n    sref/\n      ... style reference images ...\n    prompts.json\n```\n\n## `sref_bench`\n\n`sref_bench` is the style-transfer benchmark.\n\nFor each benchmark pair:\n\n- `sref_bench/cref/` contains the content reference image.\n- `sref_bench/sref/` contains the style reference image.\n- `sref_bench/prompts.json` contains the text prompt or instruction for the pair.\n\nThe keys in `prompts.json` are pair basenames. A key can be used to match the corresponding content and style reference images across the two folders.\n\nFor example, if `prompts.json` contains a key:\n\n```text\nexample_pair\n```\n\nthen the corresponding files should be found by matching the same basename under:\n\n```text\nsref_bench/cref/example_pair.*\nsref_bench/sref/example_pair.*\n```\n\nwhere the image extension may depend on the actual uploaded files.\n\n## `cref_sref_bench`\n\n`cref_sref_bench` is the content-and-style dual-reference benchmark.\n\nIt has the same structure as `sref_bench`:\n\n- `cref_sref_bench/cref/` contains the content reference image.\n- `cref_sref_bench/sref/` contains the style reference image.\n- `cref_sref_bench/prompts.json` contains the text prompt or instruction for the pair.\n\nAgain, each key in `prompts.json` is a pair basename and can be used to align the content reference image in `cref/` with the style reference image in `sref/`.",
+  "category": "text",
+  "domain": "open-ended generation",
+  "tags": [
+    "size_categories:1K<n<10K",
+    "modality:image"
+  ],
+  "task_types": [
+    "unknown"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human_eval",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "downloads": 4042,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "Blue2Giant"
+    ]
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://huggingface.co/datasets/Blue2Giant/FreeStyle_Bench",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "MTCMB",
+  "description": "Traditional Chinese Medicine (TCM) is a holistic medical system with millennia of accumulated clinical experience, playing a vital role in global healthcare-particularly across East Asia. However, the implicit reasoning, diverse textual forms, and lack of standardization in TCM pose major challenges for computational modeling and evaluation. Large Language Models (LLMs) have demonstrated remarkable potential in processing natural language across diverse domains, including general medicine. Yet, their systematic evaluation in the TCM domain remains underdeveloped. Existing benchmarks either focus narrowly on factual question answering or lack domain-specific tasks and clinical realism. To fill this gap, we introduce MTCMB-a Multi-Task Benchmark for Evaluating LLMs on TCM Knowledge, Reasoning, and Safety. Developed in collaboration with certified TCM experts, MTCMB comprises 12 sub-datasets spanning five major categories: knowledge QA, language understanding, diagnostic reasoning, prescription generation, and safety evaluation. The benchmark integrates real-world case records, national licensing exams, and classical texts, providing an authentic and comprehensive testbed for TCM-capable models. Preliminary results indicate that current LLMs perform well on foundational knowledge but fall short in clinical reasoning, prescription planning, and safety compliance. These findings highlight the urgent need for domain-aligned benchmarks like MTCMB to guide the development of more competent and trustworthy medical AI systems. All datasets, code, and evaluation tools are publicly available at: https://github.com/Wayyuanyuan/MTCMB.",
+  "category": "text",
+  "domain": "healthcare / traditional Chinese medicine",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "short_answer",
+    "open_ended_generation",
+    "diagnosis",
+    "structured_prediction",
+    "safety_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-specific (accuracy / F1 / exact_match for QA and understanding; BLEU/ROUGE for generation; human evaluation for clinical correctness and safety)",
+  "general_score_metric": "composite_score (aggregated task-specific primary metrics)",
+  "typical_sota_score": "varies by subtask (knowledge QA ~70–90%; clinical reasoning and prescription generation typically substantially lower, ~30–60%)",
+  "year_of_publish": 2025,
+  "reputation": "7 citations",
+  "notes": "Domain- and safety-sensitive medical benchmark. Potential training-data contamination because public LLMs may have been exposed to TCM sources; requires expert human evaluation for clinical-safety tasks; label heterogeneity and cultural/terminological specificity.",
+  "creators": {
+    "scientists": [
+      "Shufeng Kong",
+      "Xingru Yang",
+      "Yuanyuan Wei",
+      "Zijie Wang",
+      "Hao Tang",
+      "Jiuqi Qin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2506.01252",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

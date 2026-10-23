@@ -1,0 +1,39 @@
+{
+  "name": "Collaborative SLAM Benchmark",
+  "description": "As service environments have become diverse, they have started to demand complicated tasks that are difficult for a single robot to complete. This change has led to an interest in multiple robots instead of a single robot. C-SLAM, as a fundamental technique for multiple service robots, needs to handle diverse challenges such as homogeneous scenes and dynamic objects to ensure that robots operate smoothly and perform their tasks safely. However, existing C-SLAM datasets do not include the various indoor service environments with the aforementioned challenges. To close this gap, we introduce a new multi-modal C-SLAM dataset for multiple service robots in various indoor service environments, called C-SLAM dataset in Service Environments (CSE). We use the NVIDIA Isaac Sim to generate data in various indoor service environments with the challenges that may occur in real-world service environments. By using simulation, we can provide accurate and precisely time-synchronized sensor data, such as stereo RGB, stereo depth, IMU, and ground truth (GT) poses. We configure three common indoor service environments (Hospital, Office, and Warehouse), each of which includes various dynamic objects that perform motions suitable to each environment. In addition, we drive three robots to mimic the actions of real service robots. Through these factors, we generate a more realistic C-SLAM dataset for multiple service robots. We demonstrate our dataset by evaluating diverse state-of-the-art single-robot SLAM and multi-robot SLAM methods. Our dataset is available at https://github.com/vision3d-lab/CSE_Dataset.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multi_robot_slam",
+    "pose_estimation",
+    "mapping",
+    "visual_odometry",
+    "sensor_fusion"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ATE / RPE (trajectory RMSE) and mapping accuracy (IoU / map error) along with standard SLAM metrics",
+  "general_score_metric": "ATE (Absolute Trajectory Error)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "New simulated multi-robot SLAM dataset aimed at service-robot scenarios; currently has limited adoption but is relevant for multi-agent SLAM research.",
+  "notes": "Data is simulation-generated (NVIDIA Isaac Sim) with precise ground truth — beneficial for controlled evaluation but subject to sim-to-real gap; supports multi-sensor synchronized data; not a language-model benchmark.",
+  "creators": {
+    "scientists": [
+      "Harin Park",
+      "Inha Lee",
+      "Minje Kim",
+      "Hyungyu Park",
+      "Kyungdon Joo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2411.14775",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

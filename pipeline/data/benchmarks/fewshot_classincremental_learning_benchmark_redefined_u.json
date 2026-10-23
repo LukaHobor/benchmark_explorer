@@ -1,0 +1,35 @@
+{
+  "name": "Few-Shot Class-Incremental Learning Benchmark (redefined upper bound)",
+  "description": "Class-incremental learning (CIL) aims to continuously adapt to emerging classes while retaining knowledge of previously learned ones. Few-shot class-incremental learning (FSCIL) presents an even greater challenge which requires the model to learn incremental classes with only a limited number of samples. In conventional CIL, joint training is widely considered the upper bound, serving as both a benchmark and a methodological guide. However, we find that joint training fails to be a meaningful upper bound in FSCIL due to the inherent difficulty of inter-task class separation (ICS) caused by severe class imbalance. In this work, we introduce a new joint training benchmark tailored for FSCIL by integrating imbalance-aware techniques, effectively bridging the performance gap between base and incremental classes. Furthermore, we point out inconsistencies in the experimental setup and evaluation of existing FSCIL methods. To ensure fair comparisons between different FSCIL approaches and joint training, we standardize training conditions and propose a unified evaluation protocol that simultaneously considers the validation set and computational complexity. By establishing a reliable upper bound and a standardized evaluation framework for FSCIL, our work provides a clear benchmark and a practical foundation for future research.",
+  "category": "vision",
+  "domain": "continual learning / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "few_shot_class_incremental_learning",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (session-wise incremental / average incremental Top‑1 accuracy)",
+  "general_score_metric": "average incremental accuracy (Top‑1)",
+  "year_of_publish": 2025,
+  "reputation": "A recent, focused benchmark proposing a refined joint-training upper bound for FSCIL; emerging adoption as a standardized evaluation in the FSCIL community.",
+  "notes": "Addresses prior inconsistencies in FSCIL evaluation and emphasizes imbalance-aware joint-training baselines; results can be sensitive to experimental protocol and computational cost.",
+  "creators": {
+    "scientists": [
+      "Shiwon Kim",
+      "Dongjun Hwang",
+      "Sungwon Woo",
+      "Rita Singh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.10003",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

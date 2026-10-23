@@ -1,0 +1,33 @@
+{
+  "name": "Vision-based Robotics RL Benchmark (PyBullet KukaDiverseObject & RacecarZEDGym)",
+  "description": "This paper presents a benchmarking study of some of the state-of-the-art reinforcement learning algorithms used for solving two simulated vision-based robotics problems. The algorithms considered in this study include soft actor-critic (SAC), proximal policy optimization (PPO), interpolated policy gradients (IPG), and their variants with Hindsight Experience replay (HER). The performances of these algorithms are compared against PyBullet's two simulation environments known as KukaDiverseObjectEnv and RacecarZEDGymEnv respectively. The state observations in these environments are available in the form of RGB images and the action space is continuous, making them difficult to solve. A number of strategies are suggested to provide intermediate hindsight goals required for implementing HER algorithm on these problems which are essentially single-goal environments. In addition, a number of feature extraction architectures are proposed to incorporate spatial and temporal attention in the learning process. Through rigorous simulation experiments, the improvement achieved with these components are established. To the best of our knowledge, such a benchmarking study is not available for the above two vision-based robotics problems making it a novel contribution in the field.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "continuous_control"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "episodic_return / task_success_rate",
+  "general_score_metric": "average episodic return (and task success rate)",
+  "year_of_publish": 2022,
+  "reputation": "A paper-specific benchmarking suite for vision-based robotic control in PyBullet; useful for comparing RL algorithms on these simulated tasks but not a widely standardized community benchmark.",
+  "notes": "Simulated-environment benchmark (non-LLM); reported results can have high variance and be sensitive to implementation details, seed selection, and compute; sample-efficiency and reproducibility are common concerns.",
+  "creators": {
+    "scientists": [
+      "Swagat Kumar",
+      "Hayden Sampson",
+      "Ardhendu Behera"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2201.04224",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

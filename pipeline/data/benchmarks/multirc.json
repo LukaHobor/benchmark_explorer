@@ -1,0 +1,39 @@
+{
+  "name": "MultiRC",
+  "description": "Multi-Sentence Reading Comprehension (MultiRC) is a reading comprehension benchmark where each question may have multiple correct answers. Models answer yes/no for each candidate answer across diverse paragraph sources. The key challenge is that questions often require multi-sentence reasoning across the passage.",
+  "category": "text",
+  "domain": "reading comprehension",
+  "task_types": [
+    "multi_answer_reading_comprehension",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 9872,
+  "evaluation_method": "F1 (exact match over all answer options)",
+  "general_score_metric": "F1a (F1 averaged over questions)",
+  "typical_sota_score": "~88-90 F1 (human ~86.8 F1)",
+  "year_of_publish": 2018,
+  "year_of_last_update": 2018,
+  "reputation": "Component benchmark of SuperGLUE; evaluates multi-sentence reasoning with multiple correct answers; sourced from diverse passage types",
+  "notes": "Introduced at NAACL 2018. Passages from 7 domains: news, fiction, historical texts, etc. Each question has 2-5 candidate answers, each labeled true/false. Included as a task in SuperGLUE benchmark. Requires cross-sentence reasoning to identify all correct answers. Performance metrics measure ability to correctly classify all candidates.",
+  "creators": {
+    "scientists": [
+      "Daniel Khashabi",
+      "Snigdha Chaturvedi",
+      "Michael Roth",
+      "Shyam Upadhyay",
+      "Dan Roth"
+    ],
+    "institutions": [
+      "University of Pennsylvania",
+      "University of Illinois at Urbana-Champaign"
+    ],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9"
+  }
+}

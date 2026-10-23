@@ -1,0 +1,37 @@
+{
+  "name": "OSMa-Bench",
+  "description": "Open Semantic Mapping (OSM) is a key technology in robotic perception, combining semantic segmentation and SLAM techniques. This paper introduces a dynamically configurable and highly automated LLM/LVLM-powered pipeline for evaluating OSM solutions called OSMa-Bench (Open Semantic Mapping Benchmark). The study focuses on evaluating state-of-the-art semantic mapping algorithms under varying indoor lighting conditions, a critical challenge in indoor environments. We introduce a novel dataset with simulated RGB-D sequences and ground truth 3D reconstructions, facilitating the rigorous analysis of mapping performance across different lighting conditions. Through experiments on leading models such as ConceptGraphs, BBQ and OpenScene, we evaluate the semantic fidelity of object recognition and segmentation. Additionally, we introduce a Scene Graph evaluation method to analyze the ability of models to interpret semantic structure. The results provide insights into the robustness of these models, forming future research directions for developing resilient and adaptable robotic systems. Our code is available at https://be2rlab.github.io/OSMa-Bench/.",
+  "category": "vision",
+  "domain": "robotics / SLAM",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "semantic_segmentation",
+    "object_recognition",
+    "scene_graph_evaluation",
+    "3d_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU (mean Intersection-over-Union) and scene-graph precision/recall",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2025,
+  "reputation": "New, research-oriented benchmark with limited adoption so far.",
+  "notes": "Uses simulated RGB-D sequences — potential sim-to-real gap; focuses on semantic mapping and scene-graph metrics; not an LLM benchmark and dataset size/modality may limit generalization.",
+  "creators": {
+    "scientists": [
+      "Maxim Popov",
+      "Regina Kurkova",
+      "Mikhail Iumanov",
+      "Jaafar Mahmoud",
+      "Sergey Kolyubin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.10331",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

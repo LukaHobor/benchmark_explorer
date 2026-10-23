@@ -1,0 +1,36 @@
+{
+  "name": "WDC Products",
+  "description": "The difficulty of an entity matching task depends on a combination of multiple factors such as the amount of corner-case pairs, the fraction of entities in the test set that have not been seen during training, and the size of the development set. Current entity matching benchmarks usually represent single points in the space along such dimensions or they provide for the evaluation of matching methods along a single dimension, for instance the amount of training data. This paper presents WDC Products, an entity matching benchmark which provides for the systematic evaluation of matching systems along combinations of three dimensions while relying on real-world data. The three dimensions are (i) amount of corner-cases (ii) generalization to unseen entities, and (iii) development set size (training set plus validation set). Generalization to unseen entities is a dimension not covered by any of the existing English-language benchmarks yet but is crucial for evaluating the robustness of entity matching systems. Instead of learning how to match entity pairs, entity matching can also be formulated as a multi-class classification task that requires the matcher to recognize individual entities. WDC Products is the first benchmark that provides a pair-wise and a multi-class formulation of the same tasks. We evaluate WDC Products using several state-of-the-art matching systems, including Ditto, HierGAT, and R-SupCon. The evaluation shows that all matching systems struggle with unseen entities to varying degrees. It also shows that for entity matching contrastive learning is more training data efficient compared to cross-encoders.",
+  "category": "mixed",
+  "domain": "e-commerce / data integration",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pairwise_classification",
+    "multi_class_classification",
+    "binary_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "varies widely by split and difficulty (approximately '50–90%')",
+  "year_of_publish": 2023,
+  "reputation": "Recognized in the entity matching / data integration community for providing controlled, real-world difficulty dimensions and used by researchers studying generalization and robustness.",
+  "notes": "Designed to probe combinations of difficulty axes (corner-cases, unseen entities, dev size); non-LLM benchmark typically evaluated with specialized matching models; results sensitive to data splits and class imbalance; careful split design required to avoid leakage.",
+  "creators": {
+    "scientists": [
+      "Ralph Peeters",
+      "Reng Chiz Der",
+      "Christian Bizer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2301.09521",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

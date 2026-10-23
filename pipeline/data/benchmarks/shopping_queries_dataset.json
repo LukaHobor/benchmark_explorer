@@ -1,0 +1,40 @@
+{
+  "name": "Shopping Queries Dataset",
+  "description": "Improving the quality of search results can significantly enhance users experience and engagement with search engines. In spite of several recent advancements in the fields of machine learning and data mining, correctly classifying items for a particular user search query has been a long-standing challenge, which still has a large room for improvement. This paper introduces the \"Shopping Queries Dataset\", a large dataset of difficult Amazon search queries and results, publicly released with the aim of fostering research in improving the quality of search results. The dataset contains around 130 thousand unique queries and 2.6 million manually labeled (query,product) relevance judgements. The dataset is multilingual with queries in English, Japanese, and Spanish. The Shopping Queries Dataset is being used in one of the KDDCup'22 challenges. In this paper, we describe the dataset and present three evaluation tasks along with baseline results: (i) ranking the results list, (ii) classifying product results into relevance categories, and (iii) identifying substitute products for a given query. We anticipate that this data will become the gold standard for future research in the topic of product search.",
+  "category": "text",
+  "domain": "e-commerce",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ranking",
+    "classification",
+    "product_retrieval"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "NDCG, MAP, accuracy/F1 (depending on task)",
+  "general_score_metric": "NDCG@k",
+  "year_of_publish": 2022,
+  "reputation": "Well-known in e-commerce search research and used in a KDDCup challenge, giving it moderate to strong adoption for product search evaluations.",
+  "notes": "Large, multilingual (EN/JA/ES) human-labeled dataset for product search with multiple tasks (ranking, relevance classification, substitutes). Domain-specific to e-commerce; used in competitions. Potential label noise and domain-specific biases; not primarily an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Chandan K. Reddy",
+      "Lluís Màrquez",
+      "Fran Valero",
+      "Nikhil Rao",
+      "Hugo Zaragoza",
+      "Sambaran Bandyopadhyay",
+      "Arnab Biswas",
+      "Anlu Xing",
+      "Karthik Subbian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2206.06588",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

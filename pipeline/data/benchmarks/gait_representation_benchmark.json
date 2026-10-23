@@ -1,0 +1,37 @@
+{
+  "name": "Gait Representation Benchmark",
+  "description": "Gait depicts individuals' unique and distinguishing walking patterns and has become one of the most promising biometric features for human identification. As a fine-grained recognition task, gait recognition is easily affected by many factors and usually requires a large amount of completely annotated data that is costly and insatiable. This paper proposes a large-scale self-supervised benchmark for gait recognition with contrastive learning, aiming to learn the general gait representation from massive unlabelled walking videos for practical applications via offering informative walking priors and diverse real-world variations. Specifically, we collect a large-scale unlabelled gait dataset GaitLU-1M consisting of 1.02M walking sequences and propose a conceptually simple yet empirically powerful baseline model GaitSSB. Experimentally, we evaluate the pre-trained model on four widely-used gait benchmarks, CASIA-B, OU-MVLP, GREW and Gait3D with or without transfer learning. The unsupervised results are comparable to or even better than the early model-based and GEI-based methods. After transfer learning, our method outperforms existing methods by a large margin in most cases. Theoretically, we discuss the critical issues for gait-specific contrastive framework and present some insights for further study. As far as we know, GaitLU-1M is the first large-scale unlabelled gait dataset, and GaitSSB is the first method that achieves remarkable unsupervised results on the aforementioned benchmarks. The source code of GaitSSB will be integrated into OpenGait which is available at https://github.com/ShiqiYu/OpenGait.",
+  "category": "vision",
+  "domain": "biometrics / gait recognition",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "identification",
+    "representation_learning",
+    "transfer_learning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "Rank-1 accuracy",
+  "typical_sota_score": "dataset-dependent; rank-1 accuracy often reported in the ~60–95% range depending on target benchmark and protocol",
+  "year_of_publish": 2022,
+  "reputation": "Introduced a large-scale unlabelled gait corpus (GaitLU-1M) and an influential self-supervised baseline (GaitSSB); gaining traction in the gait-recognition research community.",
+  "notes": "Non-LLM, vision/biometrics benchmark using large-scale unlabelled video for contrastive pretraining; potential privacy/ethical concerns due to biometric data and domain-shift across datasets; performance highly dataset- and protocol-dependent.",
+  "creators": {
+    "scientists": [
+      "Chao Fan",
+      "Saihui Hou",
+      "Jilong Wang",
+      "Yongzhen Huang",
+      "Shiqi Yu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2206.13964",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "CLRS",
+  "description": "Learning representations of algorithms is an emerging area of machine learning, seeking to bridge concepts from neural networks with classical algorithms. Several important works have investigated whether neural networks can effectively reason like algorithms, typically by learning to execute them. The common trend in the area, however, is to generate targeted kinds of algorithmic data to evaluate specific hypotheses, making results hard to transfer across publications, and increasing the barrier of entry. To consolidate progress and work towards unified evaluation, we propose the CLRS Algorithmic Reasoning Benchmark, covering classical algorithms from the Introduction to Algorithms textbook. Our benchmark spans a variety of algorithmic reasoning procedures, including sorting, searching, dynamic programming, graph algorithms, string algorithms and geometric algorithms. We perform extensive experiments to demonstrate how several popular algorithmic reasoning baselines perform on these tasks, and consequently, highlight links to several open challenges. Our library is readily available at https://github.com/deepmind/clrs.",
+  "category": "code",
+  "domain": "algorithmic reasoning / algorithms",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "structured_output"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "sequence-level accuracy / per-step exact_match",
+  "general_score_metric": "per-step accuracy and sequence exact_match (overall task correctness)",
+  "typical_sota_score": "varies widely; many models score low on harder tasks (commonly <50% on sequence-exact metrics)",
+  "year_of_publish": 2022,
+  "reputation": "Well-known and widely used within the algorithmic reasoning / neural algorithm learning community as a standard benchmark for learning to execute classical algorithms.",
+  "notes": "Synthetic dataset of algorithm traces (not natural text); not an LLM benchmark per se though LMs are often evaluated on it. Potential contamination if models trained on CLRS-generated traces; evaluation requires structured outputs and careful metric selection across diverse algorithm families.",
+  "creators": {
+    "scientists": [
+      "Petar Veličković",
+      "Adrià Puigdomènech Badia",
+      "David Budden",
+      "Razvan Pascanu",
+      "Andrea Banino",
+      "Misha Dashevskiy",
+      "Raia Hadsell",
+      "Charles Blundell"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2205.15659",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

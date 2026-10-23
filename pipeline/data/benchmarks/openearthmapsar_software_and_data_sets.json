@@ -1,0 +1,38 @@
+{
+  "name": "OpenEarthMap-SAR (Software and Data Sets)",
+  "description": "High-resolution land cover mapping is vital for global challenges such as urban planning, environmental monitoring, disaster response, and sustainable development. Yet, building accurate large-scale datasets remains difficult due to complex terrain, multimodal sensor data, and varying atmospheric conditions. Synthetic aperture radar (SAR), with its cloud-penetrating, all-weather, and day-and-night imaging capabilities, provides a unique advantage, but progress has been hindered by the lack of tailored benchmark datasets. In this article, we introduce OpenEarthMap-SAR, a large-scale benchmark dataset for high-resolution land cover mapping using SAR imagery. OpenEarthMap-SAR includes 1.5 million segments across 5,033 aerial and satellite images (1,024 × 1,024 pixels) from 35 regions in Japan, France, and the United States. It features partially manually annotated and fully pseudo-labeled eight-class land cover labels at a ground sampling distance (GSD) of 0.15–0.5 m. We evaluate state-of-the-art semantic segmentation, unsupervised domain adaptation (UDA), and Image2Image/Label2Image translation methods and propose challenging benchmark settings to foster future development. OpenEarthMap-SAR also serves as the official dataset for track 1 of the IEEE Geoscience and Remote Sensing Society (GRSS) Data Fusion Contest, specifically for the task of semantic segmentation. The dataset and source codes with pretrained models have been made publicly available at https://zenodo.org/records/14622048 and https://github.com/cliffbb/OpenEarthMap-SAR.",
+  "category": "vision",
+  "domain": "geospatial",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "image_to_image_translation",
+    "domain_adaptation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection over Union (mIoU) and pixel accuracy (also per-class IoU/F1 reported)",
+  "general_score_metric": "mIoU",
+  "typical_sota_score": "50–75% mIoU",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "2 citations",
+  "notes": "Contains a mix of manually annotated and pseudo-labeled data (label noise risk); class imbalance and limited geographic diversity (Japan, France, USA); large-scale, non-LLM remote sensing benchmark requiring SAR-specific preprocessing.",
+  "creators": {
+    "scientists": [
+      "Junshi Xia",
+      "Hongruixuan Chen",
+      "Clifford Broni-Bediako",
+      "Yimin Wei",
+      "Jian Song",
+      "Naoto Yokoya"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Open3DBench",
+  "description": "This work introduces Open3DBench, an open-source 3D-IC backend implementation benchmark built upon the OpenROAD-flow-scripts framework, enabling comprehensive evaluation of power, performance, area, and thermal metrics. Our proposed flow supports modular integration of 3D partitioning, placement, 3D routing, RC extraction, and thermal simulation, aligning with advanced 3D flows that rely on commercial tools and in-house scripts. We present two foundational 3D placement algorithms: Open3D-Tiling, which emphasizes regular macro placement, and Open3D-DMP, which enhances wirelength optimization through cross-die co-placement with analytical placer DREAMPlace. Experimental results show significant improvements in area (51.19%), wirelength (24.06%), timing (30.84%), and power (5.72%) compared to 2D flows. The results also highlight that better wirelength does not necessarily lead to PPA gain, emphasizing the need of developing PPA-driven methods. Open3DBench offers a standardized, reproducible platform for evaluating 3D EDA methods, effectively bridging the gap between open-source tools and commercial solutions in 3D-IC design.",
+  "category": "mixed",
+  "domain": "electronic design automation / 3D integrated circuits",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "design_evaluation",
+    "performance_benchmark",
+    "optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite PPA metrics and numerical metrics (power, performance/timing, area) plus thermal metrics",
+  "general_score_metric": "PPA (power-performance-area) composite with individual metrics reported (wirelength, timing, power, area, thermal)",
+  "typical_sota_score": "Reported improvements versus 2D baselines in the paper (example figures): area +51.19%, wirelength −24.06%, timing −30.84%, power −5.72%; results are flow- and benchmark-dependent",
+  "year_of_publish": 2025,
+  "reputation": "Open-source benchmark aimed at the EDA research community; gaining interest for reproducible 3D-IC evaluations though not an industry standard.",
+  "notes": "Non-LLM, domain-specific EDA benchmark; results strongly depend on the chosen open-source toolchain and flow configuration and may differ from commercial tool results; facilitates reproducible research but may not fully reflect industrial flows or larger benchmark suites.",
+  "creators": {
+    "scientists": [
+      "Yunqi Shi",
+      "Chengrui Gao",
+      "Wanqi Ren",
+      "Siyuan Xu",
+      "Ke Xue",
+      "Mingxuan Yuan",
+      "Chao Qian",
+      "Zhi-Hua Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2503.12946",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "CRITERIA",
+  "description": "Benchmarking is a common method for evaluating trajectory prediction models for autonomous driving. Existing benchmarks rely on datasets, which are biased towards more common scenarios, such as cruising, and distance-based metrics that are computed by averaging over all scenarios. Following such a regiment provides a little insight into the properties of the models both in terms of how well they can handle different scenarios and how admissible and diverse their outputs are. There exist a number of complementary metrics designed to measure the admissibility and diversity of trajectories, however, they suffer from biases, such as length of trajectories. In this paper, we propose a new benChmarking paRadIgm for evaluaTing trajEctoRy predIction Approaches (CRITERIA). Particularly, we propose 1) a method for extracting driving scenarios at varying levels of specificity according to the structure of the roads, models' performance, and data properties for fine-grained ranking of prediction models; 2) A set of new bias-free metrics for measuring diversity, by incorporating the characteristics of a given scenario, and admissibility, by considering the structure of roads and kinematic compliancy, motivated by real-world driving constraints. 3) Using the proposed benchmark, we conduct extensive experimentation on a representative set of the prediction models using the large scale Argoverse dataset. We show that the proposed benchmark can produce a more accurate ranking of the models and serve as a means of characterizing their behavior. We further present ablation studies to highlight contributions of different elements that are used to compute the proposed metrics.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "trajectory_prediction",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "ADE/FDE plus the paper's proposed bias-free diversity and admissibility metrics and scenario-aware ranking",
+  "general_score_metric": "composite score (scenario-aware ranking combining admissibility and diversity metrics, alongside ADE/FDE)",
+  "year_of_publish": 2023,
+  "reputation": "A recent research benchmark proposal (CRITERIA) aimed at providing finer-grained, bias-aware evaluation for trajectory prediction; gaining interest in the autonomous-driving research community for more nuanced model comparisons.",
+  "notes": "Built on Argoverse — results sensitive to dataset biases and scenario extraction choices; proposed metrics are newer and less standardized than ADE/FDE; not an LLM benchmark; additional implementation complexity to compute scenario-specific metrics.",
+  "creators": {
+    "scientists": [
+      "Changhe Chen",
+      "Mozhgan PourKeshavarz",
+      "Amir Rasouli"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2310.07794",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

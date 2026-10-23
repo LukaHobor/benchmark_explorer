@@ -1,0 +1,36 @@
+{
+  "name": "IRef-VLA",
+  "description": "With the recent rise of large language models, vision-language models, and other general foundation models, there is growing potential for multimodal, multi-task robotics that can operate in diverse environments given natural language input. One such application is indoor navigation using natural language instructions. However, despite recent progress, this problem remains challenging due to the 3D spatial reasoning and semantic understanding required. Additionally, the language used may be imperfect or misaligned with the scene, further complicating the task. To address this challenge, we curate a benchmark dataset, IRef-VLA, for Interactive Referential Vision and Language-guided Action in 3D Scenes with imperfect references. IRef-VLA is the largest real-world dataset for the referential grounding task, consisting of over 11.5K scanned 3D rooms from existing datasets, 7.6M heuristically generated semantic relations, and 4.7M referential statements. Our dataset also contains semantic object and room annotations, scene graphs, navigable free space annotations, and is augmented with statements where the language has imperfections or ambiguities. We verify the generalizability of our dataset by evaluating with state-of-the-art models to obtain a performance baseline and also develop a graph-search baseline to demonstrate the performance bound and generation of alternatives using scene-graph knowledge. With this benchmark, we aim to provide a resource for 3D scene understanding that aids the development of robust, interactive navigation systems. The dataset and all source code is publicly released at https://github.com/HaochenZ11/IRef-VLA.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "referential_grounding",
+    "vision_language",
+    "interactive_navigation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy / grounding accuracy (sometimes recall@k for candidate grounding); task_success_rate for downstream navigation",
+  "general_score_metric": "accuracy (grounding accuracy)",
+  "year_of_publish": 2025,
+  "reputation": "New, large-scale dataset aimed at 3D referential grounding and interactive navigation; gaining attention for multimodal robotics and VL research but not yet a de facto standard.",
+  "notes": "Large real-world 3D dataset with heuristic relation generation and imperfect/ambiguous language augmentations. Non-LLM benchmark requiring 3D scene understanding; potential biases from heuristic relation generation and domain mismatch with synthetic setups.",
+  "creators": {
+    "scientists": [
+      "Haochen Zhang",
+      "Nader Zantout",
+      "Pujith Kachana",
+      "Ji Zhang",
+      "Wenshan Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2503.17406",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

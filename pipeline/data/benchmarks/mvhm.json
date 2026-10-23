@@ -1,0 +1,37 @@
+{
+  "name": "MVHM",
+  "description": "Estimating 3D hand poses from a single RGB image is challenging because depth ambiguity leads the problem ill-posed. Training hand pose estimators with 3D hand mesh annotations and multi-view images often results in significant performance gains. However, existing multi-view datasets are relatively small with hand joints annotated by off-the-shelf trackers or automated through model predictions, both of which may be inaccurate and can introduce biases. Collecting a large-scale multi-view 3D hand pose images with accurate mesh and joint annotations is valuable but strenuous. In this paper, we design a spin match algorithm that enables a rigid mesh model matching with any target mesh ground truth. Based on the match algorithm, we propose an efficient pipeline to generate a large-scale multi-view hand mesh (MVHM) dataset with accurate 3D hand mesh and joint labels. We further present a multi-view hand pose estimation approach to verify that training a hand pose estimator with our generated dataset greatly enhances the performance. Experimental results show that our approach achieves the performance of 0.990 in $\\text{AUC}_{\\text{20-50}}$ on the MHP dataset compared to the previous state-of-the-art of 0.939 on this dataset. Our datasset is public available. \\footnote{\\url{https://github.com/Kuzphi/MVHM}} Our datasset is available at~\\href{https://github.com/Kuzphi/MVHM}{\\color{blue}{https://github.com/Kuzphi/MVHM}}.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_pose_estimation",
+    "mesh_reconstruction",
+    "keypoint_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC_20-50",
+  "general_score_metric": "AUC_20-50",
+  "typical_sota_score": "0.94–0.99",
+  "year_of_publish": 2020,
+  "reputation": "A targeted, recently proposed large multi‑view hand mesh dataset used in the hand‑pose/mesh community to improve multi‑view training; adoption is growing but still specialized.",
+  "notes": "Generated via a spin‑match pipeline producing synthetic/matched multi‑view meshes—offers accurate mesh labels but may introduce domain gaps or biases relative to purely real capture data; non‑LLM vision benchmark.",
+  "creators": {
+    "scientists": [
+      "Liangjian Chen",
+      "Shih-Yao Lin",
+      "Yusheng Xie",
+      "Yen-Yu Lin",
+      "Xiaohui Xie"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2012.03206",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "CAN Masquerade IDS Benchmark",
+  "description": "Vehicular controller area networks (CANs) are susceptible to masquerade attacks by malicious adversaries. In masquerade attacks, adversaries silence a targeted ID and then send malicious frames with forged content at the expected timing of benign frames. As masquerade attacks could seriously harm vehicle functionality and are the stealthiest attacks to detect in CAN, recent work has devoted attention to compare frameworks for detecting masquerade attacks in CAN. However, most existing works report offline evaluations using CAN logs already collected using simulations that do not comply with the domain's real-time constraints. Here we contribute to advance the state of the art by introducing a benchmark study of four different non-deep learning (DL)-based unsupervised online intrusion detection systems (IDS) for masquerade attacks in CAN. Our approach differs from existing benchmarks in that we analyze the effect of controlling streaming data conditions in a sliding window setting. In doing so, we use realistic masquerade attacks being replayed from the ROAD dataset. We show that although benchmarked IDS are not effective at detecting every attack type, the method that relies on detecting changes in the hierarchical structure of clusters of time series produces the best results at the expense of higher computational overhead. We discuss limitations, open challenges, and how the benchmarked methods can be used for practical unsupervised online CAN IDS for masquerade attacks.",
+  "category": "mixed",
+  "domain": "automotive / vehicle network security",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "anomaly_detection",
+    "online_detection",
+    "time_series_clustering"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1-score / detection_rate (true positive rate) with false_positive_rate and detection latency as auxiliary metrics",
+  "general_score_metric": "F1-score (balance of detection rate and false positive rate)",
+  "year_of_publish": 2024,
+  "reputation": "A recent academic benchmark (arXiv) focusing on realistic streaming masquerade attacks in CAN; of growing interest to automotive security researchers but not yet widely adopted.",
+  "notes": "Evaluations emphasize online/streaming constraints and use replayed realistic attacks; methods compared are non-deep-learning and may not generalize to all attack types or live vehicle environments; benchmark sizes and attack variety may be limited.",
+  "creators": {
+    "scientists": [
+      "Pablo Moriano",
+      "Steven C. Hespeler",
+      "Mingyan Li",
+      "Robert A. Bridges"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2406.13778",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "EnergyStar++",
+  "description": "Building energy performance benchmarking has been adopted widely in the USA and Canada through the Energy Star Portfolio Manager platform. Building operations and energy management professionals have long used a simple 1-100 score to understand how their building compares to its peers. This single number is easy to use, but is created by inaccurate linear regression (MLR) models. This paper proposes a methodology that enhances the existing Energy Star calculation method by increasing accuracy and providing additional model output processing to help explain why a building is achieving a certain score. We propose and test two new prediction models: multiple linear regression with feature interactions (MLRi) and gradient boosted trees (GBT). Both models have better average accuracy than the baseline Energy Star models. The third order MLRi and GBT models achieve 4.9% and 24.9% increase in adjusted R2, respectively, and 7.0% and 13.7% decrease in normalized root mean squared error (NRMSE), respectively, on average than MLR models for six building types. Even more importantly, a set of techniques is developed to help determine which factors most influence the score using SHAP values. The SHAP force visualization in particular offers an accessible overview of the aspects of the building that influence the score that non-technical users can readily interpret. This methodology is tested on the 2012 Commercial Building Energy Consumption Survey (CBECS)(1,812 buildings) and public data sets from the energy disclosure programs of New York City (11,131 buildings) and Seattle (2,073 buildings).",
+  "category": "mixed",
+  "domain": "building energy / climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "score_prediction",
+    "model_explainability"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "adjusted R^2 (primary), normalized RMSE (NRMSE), and prediction error metrics; explainability assessed via SHAP analyses",
+  "general_score_metric": "adjusted R^2 (primary) and NRMSE",
+  "year_of_publish": 2019,
+  "reputation": "Influential in the building energy analytics community for improving Energy Star scoring and adding explainability, though not a universally adopted public benchmark.",
+  "notes": "Non-LLM regression benchmark; uses moderate-sized, region-specific datasets (CBECS, NYC, Seattle) with potential sampling and geographic biases; results may not generalize across regions or building vintages.",
+  "creators": {
+    "scientists": [
+      "Pandarasamy Arjunan",
+      "Kameshwar Poolla",
+      "Clayton Miller"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1910.14563",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

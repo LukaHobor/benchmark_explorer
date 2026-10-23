@@ -1,0 +1,41 @@
+{
+  "name": "FollowNet",
+  "description": "Car-following is a control process in which a following vehicle (FV) adjusts its acceleration to keep a safe distance from the lead vehicle (LV). Recently, there has been a booming of data-driven models that enable more accurate modeling of car-following through real-world driving datasets. Although there are several public datasets available, their formats are not always consistent, making it challenging to determine the state-of-the-art models and how well a new model performs compared to existing ones. In contrast, research fields such as image recognition and object detection have benchmark datasets like ImageNet, Microsoft COCO, and KITTI. To address this gap and promote the development of microscopic traffic flow modeling, we establish a public benchmark dataset for car-following behavior modeling. The benchmark consists of more than 80K car-following events extracted from five public driving datasets using the same criteria. These events cover diverse situations including different road types, various weather conditions, and mixed traffic flows with autonomous vehicles. Moreover, to give an overview of current progress in car-following modeling, we implemented and tested representative baseline models with the benchmark. Results show that the deep deterministic policy gradient (DDPG) based model performs competitively with a lower MSE for spacing compared to traditional intelligent driver model (IDM) and Gazis-Herman-Rothery (GHR) models, and a smaller collision rate compared to fully connected neural network (NN) and long short-term memory (LSTM) models in most datasets. The established benchmark will provide researchers with consistent data formats and metrics for cross-comparing different car-following models, promoting the development of more accurate models. We open-source our dataset and implementation code in https://github.com/HKUST-DRIVE-AI-LAB/FollowNet.",
+  "category": "mixed",
+  "domain": "autonomous driving / transportation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression",
+    "trajectory_prediction",
+    "control_policy_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Mean Squared Error (spacing/velocity) and safety metrics such as collision rate (execution/interaction-based evaluation)",
+  "general_score_metric": "Mean Squared Error (spacing/velocity) and collision rate",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2023,
+  "reputation": "Open benchmark with released code and baselines; gaining attention in microscopic traffic-flow and autonomous driving research but not yet a broadly established community standard.",
+  "notes": "Non-LLM benchmark focused on car-following events; covers diverse scenarios but results are sensitive to dataset splits, traffic conditions and simulator/environment differences.",
+  "creators": {
+    "scientists": [
+      "Xianda Chen",
+      "Meixin Zhu",
+      "Kehua Chen",
+      "Pengqin Wang",
+      "Hongliang Lu",
+      "Hui Zhong",
+      "Xu Han",
+      "Yinhai Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2306.05381",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

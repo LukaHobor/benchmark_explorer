@@ -1,0 +1,36 @@
+{
+  "name": "RNA structure benchmarking pipeline (RNAz/SISSIz)",
+  "description": "Evolutionarily conserved RNA secondary structures are a robust indicator of purifying selection and, consequently, molecular function. Evaluating their genome-wide occurrence through comparative genomics has consistently been plagued by high false-positive rates and divergent predictions. We present a novel benchmarking pipeline aimed at calibrating the precision of genome-wide scans for consensus RNA structure prediction. The benchmarking data obtained from two refined structure prediction algorithms, RNAz and SISSIz, were then analyzed to fine-tune the parameters of an optimized workflow for genomic sliding window screens. When applied to consistency-based multiple genome alignments of 35 mammals, our approach confidently identifies >4 million evolutionarily constrained RNA structures using a conservative sensitivity threshold that entails historically low false discovery rates for such analyses (5-22%). These predictions comprise 13.6% of the human genome, 88% of which fall outside any known sequence-constrained element, suggesting that a large proportion of the mammalian genome is functional. As an example, our findings identify both known and novel conserved RNA structure motifs in the long noncoding RNA MALAT1. This study provides an extensive set of functional transcriptomic annotations that will assist researchers in uncovering the precise mechanisms underlying the developmental ontologies of higher eukaryotes.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_classification",
+    "structure_prediction",
+    "genomic_scan"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "precision/recall with explicit reporting of false discovery rate (FDR) and sensitivity",
+  "general_score_metric": "false_discovery_rate (FDR) / sensitivity",
+  "typical_sota_score": "FDR 5–22% (reported)",
+  "year_of_publish": 2013,
+  "reputation": "177 citations",
+  "notes": "Non-LLM bioinformatics benchmark focused on comparative genomics; historically high false-positive rates addressed here but results are algorithm- and alignment-dependent. Large-scale genome-wide predictions may include annotation biases and depend on multiple-sequence-alignment quality.",
+  "creators": {
+    "scientists": [
+      "Martin A. Smith",
+      "Tanja Gesell",
+      "Peter F. Stadler",
+      "John S. Mattick"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1093/nar/gkt596",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

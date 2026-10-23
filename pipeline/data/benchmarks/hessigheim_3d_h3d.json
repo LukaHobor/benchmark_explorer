@@ -1,0 +1,40 @@
+{
+  "name": "Hessigheim 3D (H3D)",
+  "description": "Automated semantic segmentation and object detection are of great importance in geospatial data analysis. However, supervised machine learning systems such as convolutional neural networks require large corpora of annotated training data. Especially in the geospatial domain, such datasets are quite scarce. Within this paper, we aim to alleviate this issue by introducing a new annotated 3D dataset that is unique in three ways: i) The dataset consists of both an Unmanned Aerial Vehicle (UAV) laser scanning point cloud and a 3D textured mesh. ii) The point cloud features a mean point density of about 800 pts/sqm and the oblique imagery used for 3D mesh texturing realizes a ground sampling distance of about 2-3 cm. This enables the identification of fine-grained structures and represents the state of the art in UAV-based mapping. iii) Both data modalities will be published for a total of three epochs allowing applications such as change detection. The dataset depicts the village of Hessigheim (Germany), henceforth referred to as H3D. It is designed to promote research in the field of 3D data analysis on one hand and to evaluate and rank existing and emerging approaches for semantic segmentation of both data modalities on the other hand. Ultimately, we hope that H3D will become a widely used benchmark dataset in company with the well-established ISPRS Vaihingen 3D Semantic Labeling Challenge benchmark (V3D). The dataset can be downloaded from https://ifpwww.ifp.uni-stuttgart.de/benchmark/hessigheim/default.aspx.",
+  "category": "vision",
+  "domain": "geospatial / remote sensing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "object_detection",
+    "3d_semantic_labeling",
+    "change_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU (mean Intersection over Union) / per-class IoU",
+  "general_score_metric": "mIoU (mean IoU) for semantic segmentation",
+  "typical_sota_score": "70–85% mIoU (task- and class-dependent; approximate)",
+  "year_of_publish": 2021,
+  "reputation": "High-resolution, well-documented 3D geospatial benchmark intended to complement ISPRS Vaihingen; recognized in the 3D geospatial research community with moderate adoption.",
+  "notes": "Non-LLM benchmark; very high point density and textured mesh enable fine-grained evaluation but increase annotation complexity; includes multi-epoch data (good for change detection); class imbalance and domain-specific biases possible; requires specialized 3D/point-cloud tooling.",
+  "creators": {
+    "scientists": [
+      "Michael Kölle",
+      "Dominik Laupheimer",
+      "Stefan Schmohl",
+      "Norbert Haala",
+      "Franz Rottensteiner",
+      "Jan Dirk Wegner",
+      "Hugo Ledoux"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2102.05346",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

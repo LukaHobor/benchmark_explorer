@@ -1,0 +1,42 @@
+{
+  "name": "LakeBench",
+  "description": "Within enterprises, there is a growing need to intelligently navigate data lakes, specifically focusing on data discovery. Of particular importance to enterprises is the ability to find related tables in data repositories. These tables can be unionable, joinable, or subsets of each other. There is a dearth of benchmarks for these tasks in the public domain, with related work targeting private datasets. In LakeBench, we develop multiple benchmarks for these tasks by using the tables that are drawn from a diverse set of data sources such as government data from CKAN, Socrata, and the European Central Bank. We compare the performance of 4 publicly available tabular foundational models on these tasks. None of the existing models had been trained on the data discovery tasks that we developed for this benchmark; not surprisingly, their performance shows significant room for improvement. The results suggest that the establishment of such benchmarks may be useful to the community to build tabular models usable for data discovery in data lakes.",
+  "category": "mixed",
+  "domain": "data management / data lakes",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "table_retrieval",
+    "joinability_detection",
+    "unionability_detection",
+    "subset_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy (and retrieval metrics such as Recall@k for retrieval-style tasks)",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "30–60%",
+  "year_of_publish": 2023,
+  "reputation": "New (2023) benchmark addressing an under-served enterprise data-discovery problem; useful for tabular foundation-model research but not yet widely adopted in industry.",
+  "notes": "Benchmarks use public government and open datasets (CKAN, Socrata, ECB); models evaluated were not trained on these tasks (so scores reflect transfer); potential dataset bias toward public-sector tables; non-LLM / tabular-focused tasks.",
+  "creators": {
+    "scientists": [
+      "Kavitha Srinivas",
+      "Julian Dolby",
+      "Ibrahim Abdelaziz",
+      "Oktie Hassanzadeh",
+      "Harsha Kokel",
+      "Aamod Khatiwada",
+      "Tejaswini Pedapati",
+      "Subhajit Chaudhury",
+      "Horst Samulowitz"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.04217",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

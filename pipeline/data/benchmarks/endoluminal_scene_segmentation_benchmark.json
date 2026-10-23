@@ -1,0 +1,39 @@
+{
+  "name": "Endoluminal Scene Segmentation Benchmark",
+  "description": "Colorectal cancer (CRC) is the third cause of cancer death worldwide.\nCurrently, the standard approach to reduce CRC-related mortality is to perform\nregular screening in search for polyps and colonoscopy is the screening tool of\nchoice. The main limitations of this screening procedure are polyp miss-rate\nand inability to perform visual assessment of polyp malignancy. These drawbacks\ncan be reduced by designing Decision Support Systems (DSS) aiming to help\nclinicians in the different stages of the procedure by providing endoluminal\nscene segmentation. Thus, in this paper, we introduce an extended benchmark of\ncolonoscopy image, with the hope of establishing a new strong benchmark for\ncolonoscopy image analysis research. We provide new baselines on this dataset\nby training standard fully convolutional networks (FCN) for semantic\nsegmentation and significantly outperforming, without any further\npost-processing, prior results in endoluminal scene segmentation.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "medical_image_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Intersection over Union (mIoU) / Dice coefficient (F1) / pixel-wise accuracy",
+  "general_score_metric": "mean Intersection over Union (mIoU)",
+  "typical_sota_score": "mIoU typically in the ~70–90% range depending on class and method; Dice/F1 for polyp segmentation often reported around 0.8–0.95",
+  "year_of_publish": 2016,
+  "reputation": "Widely used in endoscopy/colonoscopy image-analysis research as a standard benchmark for endoluminal scene and polyp segmentation.",
+  "notes": "Medical imaging benchmark (non-LLM) with class imbalance and clinical variability; datasets can be relatively small and prone to overfitting and domain shift across centers; many methods use post-processing that impacts reported scores.",
+  "creators": {
+    "scientists": [
+      "David Vázquez",
+      "Jorge Bernal",
+      "F. Javier Sánchez",
+      "Gloria Fernández-Esparrach",
+      "Antonio M. López",
+      "Adriana Romero",
+      "Michal Drozdzal",
+      "Aaron Courville"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/1612.00799",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

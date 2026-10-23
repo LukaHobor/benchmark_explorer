@@ -1,0 +1,36 @@
+{
+  "name": "ReXTime",
+  "description": "We introduce ReXTime, a benchmark designed to rigorously test AI models' ability to perform temporal reasoning within video events. Specifically, ReXTime focuses on reasoning across time, i.e. human-like understanding when the question and its corresponding answer occur in different video segments. This form of reasoning, requiring advanced understanding of cause-and-effect relationships across video segments, poses significant challenges to even the frontier multimodal large language models. To facilitate this evaluation, we develop an automated pipeline for generating temporal reasoning question-answer pairs, significantly reducing the need for labor-intensive manual annotations. Our benchmark includes 921 carefully vetted validation samples and 2,143 test samples, each manually curated for accuracy and relevance. Evaluation results show that while frontier large language models outperform academic models, they still lag behind human performance by a significant 14.3% accuracy gap. Additionally, our pipeline creates a training dataset of 9,695 machine generated samples without manual effort, which empirical studies suggest can enhance the across-time reasoning via fine-tuning.",
+  "category": "multimodal",
+  "domain": "video understanding / temporal reasoning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark with growing interest in temporal video reasoning; not yet widely adopted but cited by researchers working on multimodal reasoning.",
+  "notes": "Relatively small manually curated test/validation sets (~3k total); large portion of training data is machine-generated which may introduce distribution mismatch; evaluating video QA requires heavy compute and careful prompt/video alignment; potential contamination if video sources overlap with model training data.",
+  "creators": {
+    "scientists": [
+      "Jr-Jen Chen",
+      "Yu-Chien Liao",
+      "Hsi-Che Lin",
+      "Yu-Chu Yu",
+      "Yen-Chun Chen",
+      "Yu-Chiang Frank Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.19392",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

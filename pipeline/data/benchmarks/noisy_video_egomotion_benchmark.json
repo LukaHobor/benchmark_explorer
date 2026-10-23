@@ -1,0 +1,43 @@
+{
+  "name": "Noisy Video Ego-Motion Benchmark",
+  "description": "We aim to redefine robust ego-motion estimation and photorealistic 3D reconstruction by addressing a critical limitation: the reliance on noise-free data in existing models. While such sanitized conditions simplify evaluation, they fail to capture the unpredictable, noisy complexities of real-world environments. Dynamic motion, sensor imperfections, and synchronization perturbations lead to sharp performance declines when these models are deployed in practice, revealing an urgent need for frameworks that embrace and excel under real-world noise. To bridge this gap, we tackle three core challenges: scalable data generation, comprehensive benchmarking, and model robustness enhancement. First, we introduce a scalable noisy data synthesis pipeline that generates diverse datasets simulating complex motion, sensor imperfections, and synchronization errors. Second, we leverage this pipeline to create Robust-Ego3D, a benchmark rigorously designed to expose noise-induced performance degradation, highlighting the limitations of current learning-based methods in ego-motion accuracy and 3D reconstruction quality. Third, we propose Correspondence-guided Gaussian Splatting (CorrGS), a novel test-time adaptation method that progressively refines an internal clean 3D representation by aligning noisy observations with rendered RGB-D frames from clean 3D map, enhancing geometric alignment and appearance restoration through visual correspondence. Extensive experiments on synthetic and real-world data demonstrate that CorrGS consistently outperforms prior state-of-the-art methods, particularly in scenarios involving rapid motion and dynamic illumination.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "pose_estimation",
+    "3d_reconstruction",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "error metrics for pose (ATE/RPE) and reconstruction quality (PSNR, SSIM) — reported as a composite of geometric error and image reconstruction metrics",
+  "general_score_metric": "Composite: Absolute Trajectory Error (ATE) for ego-motion and PSNR/SSIM for 3D reconstruction",
+  "year_of_publish": 2025,
+  "reputation": "Recently proposed (arXiv 2501.14319); currently has limited adoption but is gaining attention in ego-motion and 3D reconstruction robustness research.",
+  "notes": "Non-LLM benchmark focused on vision/geometry; evaluation sensitive to chosen noise models and synthesis parameters; includes both synthetic and limited real-world data — results can vary substantially with noise realism.",
+  "creators": {
+    "scientists": [
+      "Xiaohao Xu",
+      "Tianyi Zhang",
+      "Shibo Zhao",
+      "Xiang Li",
+      "Sibo Wang",
+      "Yongqi Chen",
+      "Ye Li",
+      "Bhiksha Raj",
+      "Matthew Johnson-Roberson",
+      "Sebastian Scherer",
+      "Xiaonan Huang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.14319",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

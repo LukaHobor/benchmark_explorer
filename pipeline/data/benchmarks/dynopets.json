@@ -1,0 +1,38 @@
+{
+  "name": "DynOPETs",
+  "description": "In the realm of object pose estimation, scenarios involving both dynamic objects and moving cameras are prevalent. However, the scarcity of corresponding real-world datasets significantly hinders the development and evaluation of robust pose estimation models. This is largely attributed to the inherent challenges in accurately annotating object poses in dynamic scenes captured by moving cameras. To bridge this gap, this paper presents a novel dataset DynOPETs and a dedicated data acquisition and annotation pipeline tailored for object pose estimation and tracking in such unconstrained environments. Our efficient annotation method innovatively integrates pose estimation and pose tracking techniques to generate pseudo-labels, which are subsequently refined through pose graph optimization. The resulting dataset offers accurate pose annotations for dynamic objects observed from moving cameras. To validate the effectiveness and value of our dataset, we perform comprehensive evaluations using 18 state-of-the-art methods, demonstrating its potential to accelerate research in this challenging domain. The dataset will be made publicly available to facilitate further exploration and advancement in the field.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "6d_pose_estimation",
+    "object_tracking",
+    "pose_tracking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pose error metrics (ADD / ADD-S / rotation and translation error) for pose estimation; tracking metrics (e.g., MOTA/MOTP) for tracking",
+  "general_score_metric": "ADD / ADD-S (average distance of model points) and rotation/translation error",
+  "year_of_publish": 2025,
+  "reputation": "A newly introduced dataset addressing dynamic objects and moving cameras; valuable to the pose-estimation and robotics communities but not yet widely adopted given its recent release.",
+  "notes": "Annotations are generated via a pseudo-label + refinement pipeline—possible residual label noise; dataset targets vision/robotics tasks (non-LLM) and may be limited in scale or object diversity depending on capture.",
+  "creators": {
+    "scientists": [
+      "Xiangting Meng",
+      "Jiaqi Yang",
+      "Mingshu Chen",
+      "Chenxin Yan",
+      "Yujiao Shi",
+      "Wenchao Ding",
+      "Laurent Kneip"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2503.19625",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

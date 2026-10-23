@@ -1,0 +1,37 @@
+{
+  "name": "DriveTrack",
+  "description": "This paper presents DriveTrack, a new benchmark and data generation framework for long-range keypoint tracking in real-world videos. DriveTrack is motivated by the observation that the accuracy of state-of-the-art trackers depends strongly on visual attributes around the selected keypoints, such as texture and lighting. The problem is that these artifacts are especially pronounced in real-world videos, but these trackers are unable to train on such scenes due to a dearth of annotations. DriveTrack bridges this gap by building a framework to automatically annotate point tracks on autonomous driving datasets. We release a dataset consisting of 1 billion point tracks across 24 hours of video, which is seven orders of magnitude greater than prior real-world benchmarks and on par with the scale of synthetic benchmarks. DriveTrack unlocks new use cases for point tracking in real-world videos. First, we show that fine-tuning keypoint trackers on DriveTrack improves accuracy on real-world scenes by up to 7%. Second, we analyze the sensitivity of trackers to visual artifacts in real scenes and motivate the idea of running assistive keypoint selectors alongside trackers.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "keypoint_tracking",
+    "long_term_tracking",
+    "point_tracking",
+    "robustness_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "tracking accuracy / percentage of correctly tracked keypoints and endpoint error; improvements often reported as % accuracy gain after fine-tuning",
+  "general_score_metric": "tracking_accuracy (percentage of correctly tracked keypoints) and tracking_endpoint_error",
+  "year_of_publish": 2023,
+  "reputation": "A large-scale, recent benchmark (1 billion tracks) expected to be influential for real-world keypoint/point-tracking research in autonomous driving.",
+  "notes": "Automatically annotated at scale so labels may contain noise; domain-specific to driving scenes (potential distributional biases); very large and compute-intensive to process; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Arjun Balasingam",
+      "Joseph Chandler",
+      "Chenning Li",
+      "Zhoutong Zhang",
+      "Hari Balakrishnan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2312.09523",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

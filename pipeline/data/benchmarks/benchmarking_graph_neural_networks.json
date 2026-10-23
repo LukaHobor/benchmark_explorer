@@ -1,0 +1,39 @@
+{
+  "name": "Benchmarking Graph Neural Networks",
+  "description": "In the last few years, graph neural networks (GNNs) have become the standard toolkit for analyzing and learning from data on graphs. This emerging field has witnessed an extensive growth of promising techniques that have been applied with success to computer science, mathematics, biology, physics and chemistry. But for any successful field to become mainstream and reliable, benchmarks must be developed to quantify progress. This led us in March 2020 to release a benchmark framework that i) comprises of a diverse collection of mathematical and real-world graphs, ii) enables fair model comparison with the same parameter budget to identify key architectures, iii) has an open-source, easy-to-use and reproducible code infrastructure, and iv) is flexible for researchers to experiment with new theoretical ideas. As of December 2022, the GitHub repository has reached 2,000 stars and 380 forks, which demonstrates the utility of the proposed open-source framework through the wide usage by the GNN community. In this paper, we present an updated version of our benchmark with a concise presentation of the aforementioned framework characteristics, an additional medium-sized molecular dataset AQSOL, similar to the popular ZINC, but with a real-world measured chemical target, and discuss how this framework can be leveraged to explore new GNN designs and insights. As a proof of value of our benchmark, we study the case of graph positional encoding (PE) in GNNs, which was introduced with this benchmark and has since spurred interest of exploring more powerful PE for Transformers and GNNs in a robust experimental setting.",
+  "category": "mixed",
+  "domain": "graph learning / network science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "graph_classification",
+    "graph_regression",
+    "link_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task-specific metrics (accuracy or F1 for classification, ROC-AUC for binary tasks, RMSE/MAE for regression, mAP for ranking/link tasks)",
+  "general_score_metric": "task-specific metrics (e.g., accuracy for node/graph classification; RMSE/MAE for regression)",
+  "typical_sota_score": "varies by dataset and task (roughly 70–95% for many classification tasks; wide spread for regression/link tasks)",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded and widely used benchmark framework in the GNN research community since 2020, with substantial GitHub adoption.",
+  "notes": "Contains diverse real-world and synthetic graph datasets of varying sizes; enforces equal parameter budgets which helps fair comparisons but can encourage overfitting on small datasets; not a language-model benchmark.",
+  "creators": {
+    "scientists": [
+      "Vijay Prakash Dwivedi",
+      "Chaitanya K. Joshi",
+      "Anh Tuan Luu",
+      "Thomas Laurent",
+      "Yoshua Bengio",
+      "Xavier Bresson"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2003.00982",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "WebFAQ",
+  "description": "We present WebFAQ, a large-scale collection of open-domain question answering datasets derived from FAQ-style schema.org annotations. In total, the data collection consists of 96 million natural question-answer (QA) pairs across 75 languages, including 47 million (49%) non-English samples. WebFAQ further serves as the foundation for 20 monolingual retrieval benchmarks with a total size of 11.2 million QA pairs (5.9 million non-English). These datasets are carefully curated through refined filtering and near-duplicate detection, yielding high-quality resources for training and evaluating multilingual dense retrieval models. To empirically confirm WebFAQ's efficacy, we use the collected QAs to fine-tune an in-domain pretrained XLM-RoBERTa model. Through this process of dataset-specific fine-tuning, the model achieves significant retrieval performance gains, which generalize - beyond WebFAQ - to other multilingual retrieval benchmarks evaluated in zero-shot setting. Last but not least, we utilize WebFAQ to construct a set of QA-aligned bilingual corpora spanning over 1000 language pairs using state-of-the-art bitext mining and automated LLM-assessed translation evaluation. Due to our advanced, automated method of bitext dataset generation, the resulting bilingual corpora demonstrate higher translation quality compared to similar datasets. WebFAQ and all associated resources are publicly available on GitHub and HuggingFace.",
+  "category": "text",
+  "domain": "open-domain QA / information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval",
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "recall@k and MRR (e.g., recall@1/5/10, MRR@10)",
+  "general_score_metric": "MRR / recall@k",
+  "year_of_publish": 2025,
+  "reputation": "A large multilingual retrieval resource gaining attention for training and evaluating dense retrieval models across many languages; notable for scale and multilingual coverage.",
+  "notes": "Derived from schema.org FAQ annotations on the web — risk of overlap/contamination with web-trained LLM corpora. Large scale and multilingual coverage reduce sparsity but may include noisy or duplicated QA pairs despite filtering.",
+  "creators": {
+    "scientists": [
+      "Michael Dinzinger",
+      "Laura Caspari",
+      "Kanishka Ghosh Dastidar",
+      "Jelena Mitrović",
+      "Michael Granitzer"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2502.20936",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

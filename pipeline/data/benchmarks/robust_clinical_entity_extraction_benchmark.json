@@ -1,0 +1,38 @@
+{
+  "name": "Robust Clinical Entity Extraction Benchmark",
+  "description": "Clinical studies often require understanding elements of a patient's narrative that exist only in free text clinical notes. To transform notes into structured data for downstream use, these elements are commonly extracted and normalized to medical vocabularies. In this work, we audit the performance of and indicate areas of improvement for state-of-the-art systems. We find that high task accuracies for clinical entity normalization systems on the 2019 n2c2 Shared Task are misleading, and underlying performance is still brittle. Normalization accuracy is high for common concepts (95.3%), but much lower for concepts unseen in training data (69.3%). We demonstrate that current approaches are hindered in part by inconsistencies in medical vocabularies, limitations of existing labeling schemas, and narrow evaluation techniques. We reformulate the annotation framework for clinical entity extraction to factor in these issues to allow for robust end-to-end system benchmarking. We evaluate concordance of annotations from our new framework between two annotators and achieve a Jaccard similarity of 0.73 for entity recognition and an agreement of 0.83 for entity normalization. We propose a path forward to address the demonstrated need for the creation of a reference standard to spur method development in entity recognition and normalization.",
+  "category": "text",
+  "domain": "healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "entity_normalization",
+    "span_detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Entity-level F1 (for recognition) and normalization accuracy (for mapping to vocabularies)",
+  "general_score_metric": "Entity-level F1 (recognition) and accuracy (normalization)",
+  "typical_sota_score": "69–95%",
+  "year_of_publish": 2020,
+  "reputation": "Valued in clinical NLP research for highlighting robustness and generalization issues in entity extraction and normalization; cited for revealing gaps in existing high-scoring systems.",
+  "notes": "Contains sensitive clinical content — privacy and data-use constraints apply. Highlights vocabulary inconsistencies and annotation schema limitations; performance reported to vary widely between common and unseen concepts, so single aggregate scores can be misleading.",
+  "creators": {
+    "scientists": [
+      "Monica Agrawal",
+      "Chloe O'Connell",
+      "Yasmin Fatemi",
+      "Ariel Levy",
+      "David Sontag"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2007.16127",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

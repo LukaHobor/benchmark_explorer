@@ -1,0 +1,51 @@
+{
+  "name": "Network Fabric Benchmark for Distributed Training",
+  "description": "Artificial Intelligence/Machine Learning applications require the training of complex models on large amounts of labelled data. The large computational requirements for training deep models have necessitated the development of new methods for faster training. One such approach is the data parallel approach, where the training data is distributed across multiple compute nodes. This approach is simple to implement and supported by most of the commonly used machine learning frameworks. The data parallel approach leverages MPI for communicating gradients across all nodes. In this paper, we examine the effects of using different physical hardware interconnects and network-related software primitives for enabling data distributed deep learning. We compare the effect of using GPUDirect and NCCL on Ethernet and OmniPath fabrics. Our results show that using Ethernet-based networking in shared HPC systems does not have a significant effect on the training times for commonly used deep neural network architectures or traditional HPC applications such as Computational Fluid Dynamics.",
+  "category": "mixed",
+  "domain": "machine learning infrastructure / systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "throughput_benchmarking",
+    "latency_measurement",
+    "scalability_evaluation",
+    "training_time_benchmark"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "wall_clock_time / throughput (lower time / higher throughput is better)",
+  "general_score_metric": "time-to-train (seconds) and network throughput (GB/s)",
+  "year_of_publish": 2020,
+  "reputation": "Moderately cited within ML-systems and HPC communities as a focused study of network-fabric effects on distributed training performance.",
+  "notes": "Hardware- and configuration-dependent results; non-LLM benchmark; not directly comparable across different cluster setups; sensitive to software stack (NCCL/GPUDirect) and fabric specifics.",
+  "creators": {
+    "scientists": [
+      "Siddharth Samsi",
+      "Andrew Prout",
+      "Michael Jones",
+      "Andrew Kirby",
+      "Bill Arcand",
+      "Bill Bergeron",
+      "David Bestor",
+      "Chansup Byun",
+      "Vijay Gadepally",
+      "Michael Houle",
+      "Matthew Hubbell",
+      "Anna Klein",
+      "Peter Michaleas",
+      "Lauren Milechin",
+      "Julie Mullen",
+      "Antonio Rosa",
+      "Charles Yee",
+      "Albert Reuther",
+      "Jeremy Kepner"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2008.08057",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

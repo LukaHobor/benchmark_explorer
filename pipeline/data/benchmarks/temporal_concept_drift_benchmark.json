@@ -1,0 +1,37 @@
+{
+  "name": "Temporal Concept Drift Benchmark",
+  "description": "Temporal concept drift refers to the problem of data changing over time. In NLP, that would entail that language (e.g. new expressions, meaning shifts) and factual knowledge (e.g. new concepts, updated facts) evolve over time. Focusing on the latter, we benchmark $11$ pretrained masked language models (MLMs) on a series of tests designed to evaluate the effect of temporal concept drift, as it is crucial that widely used language models remain up-to-date with the ever-evolving factual updates of the real world. Specifically, we provide a holistic framework that (1) dynamically creates temporal test sets of any time granularity (e.g. month, quarter, year) of factual data from Wikidata, (2) constructs fine-grained splits of tests (e.g. updated, new, unchanged facts) to ensure comprehensive analysis, and (3) evaluates MLMs in three distinct ways (single-token probing, multi-token generation, MLM scoring). In contrast to prior work, our framework aims to unveil how robust an MLM is over tim",
+  "category": "text",
+  "domain": "NLP",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "masked_language_modeling",
+    "knowledge_probing",
+    "generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A niche but useful benchmark for studying how pretrained language models handle factual knowledge drift over time.",
+  "notes": "Non-LLM benchmark; evaluates temporal robustness of MLM factual knowledge. Scores vary by time split and probing setup, and the benchmark is not widely standardized.",
+  "creators": {
+    "scientists": [
+      "Katerina Margatina",
+      "Shuai Wang",
+      "Yogarshi Vyas",
+      "Neha Anna John",
+      "Yassine Benajiba",
+      "Miguel Ballesteros"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2302.12297",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

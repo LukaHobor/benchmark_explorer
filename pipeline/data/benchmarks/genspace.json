@@ -1,0 +1,38 @@
+{
+  "name": "GenSpace",
+  "description": "Humans can intuitively compose and arrange scenes in the 3D space for photography. However, can advanced AI image generators plan scenes with similar 3D spatial awareness when creating images from text or image prompts? We present GenSpace, a novel benchmark and evaluation pipeline to comprehensively assess the spatial awareness of current image generation models. Furthermore, standard evaluations using general Vision-Language Models (VLMs) frequently fail to capture the detailed spatial errors. To handle this challenge, we propose a specialized evaluation pipeline and metric, which reconstructs 3D scene geometry using multiple visual foundation models and provides a more accurate and human-aligned metric of spatial faithfulness. Our findings show that while AI models create visually appealing images and can follow general instructions, they struggle with specific 3D details like object placement, relationships, and measurements. We summarize three core limitations in the spatial perception of current state-of-the-art image generation models: 1) Object Perspective Understanding, 2) Egocentric-Allocentric Transformation and 3) Metric Measurement Adherence, highlighting possible directions for improving spatial intelligence in image generation.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_generation",
+    "spatial_evaluation",
+    "spatial_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "automated spatial_faithfulness_metric (3D reconstruction-based) complemented by human evaluation",
+  "general_score_metric": "spatial_faithfulness_score (reconstructed-3D consistency metric)",
+  "year_of_publish": 2025,
+  "reputation": "A recent benchmark attracting interest among generative-vision researchers for measuring 3D/spatial fidelity of image generators.",
+  "notes": "Evaluation depends on multiple foundation models for 3D reconstruction, so results can inherit upstream model biases and errors; may be sensitive to pretraining/contamination of evaluated models and currently focuses on spatial aspects rather than overall image quality.",
+  "creators": {
+    "scientists": [
+      "Zehan Wang",
+      "Jiayang Xu",
+      "Ziang Zhang",
+      "Tianyu Pan",
+      "Chao Du",
+      "Hengshuang Zhao",
+      "Zhou Zhao"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.24870",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

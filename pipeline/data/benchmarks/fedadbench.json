@@ -1,0 +1,38 @@
+{
+  "name": "FedAD-Bench",
+  "description": "The emergence of federated learning (FL) presents a promising approach to leverage decentralized data while preserving privacy. Furthermore, the combination of FL and anomaly detection is particularly compelling because it allows for detecting rare and critical anomalies (usually also rare in locally gathered data) in sensitive data from multiple sources, such as cybersecurity and healthcare. However, benchmarking the performance of anomaly detection methods in FL environments remains an underexplored area. This paper introduces FedAD-Bench, a unified benchmark for evaluating unsupervised anomaly detection algorithms within the context of FL. We systematically analyze and compare the performance of recent deep learning anomaly detection models under federated settings, which were typically assessed solely in centralized settings. FedAD-Bench encompasses diverse datasets and metrics to provide a holistic evaluation. Through extensive experiments, we identify key challenges such as model aggregation inefficiencies and metric unreliability. We present insights into FL's regularization effects, revealing scenarios in which it outperforms centralized approaches due to its inherent ability to mitigate overfitting. Our work aims to establish a standardized benchmark to guide future research and development in federated anomaly detection, promoting reproducibility and fair comparison across studies.",
+  "category": "mixed",
+  "domain": "federated learning / anomaly detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "unsupervised_learning",
+    "federated_learning_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC-ROC / AUPRC / F1",
+  "general_score_metric": "AUC-ROC",
+  "year_of_publish": 2024,
+  "reputation": "A recent, specialized benchmark (arXiv:2408.04442) intended to standardize evaluation of anomaly detection methods in federated learning; adopting community interest is growing but still early.",
+  "notes": "Non-LLM benchmark with class imbalance and label scarcity across clients; results sensitive to aggregation strategy and metric unreliability under extreme imbalance. Dataset heterogeneity and client drift can contaminate comparisons.",
+  "creators": {
+    "scientists": [
+      "Ahmed Anwar",
+      "Brian Moser",
+      "Dayananda Herurkar",
+      "Federico Raue",
+      "Vinit Hegiste",
+      "Tatjana Legler",
+      "Andreas Dengel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2408.04442",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

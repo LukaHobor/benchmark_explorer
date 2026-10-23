@@ -1,0 +1,40 @@
+{
+  "name": "safe-control-gym",
+  "description": "In recent years, both reinforcement learning and learning-based control -- as well as the study of their safety, which is crucial for deployment in real-world robots -- have gained significant traction. However, to adequately gauge the progress and applicability of new results, we need the tools to equitably compare the approaches proposed by the controls and reinforcement learning communities. Here, we propose a new open-source benchmark suite, called safe-control-gym, supporting both model-based and data-based control techniques. We provide implementations for three dynamic systems -- the cart-pole, the 1D, and 2D quadrotor -- and two control tasks -- stabilization and trajectory tracking. We propose to extend OpenAI's Gym API -- the de facto standard in reinforcement learning research -- with (i) the ability to specify (and query) symbolic dynamics and (ii) constraints, and (iii) (repeatably) inject simulated disturbances in the control inputs, state measurements, and inertial properties. To demonstrate our proposal and in an attempt to bring research communities closer together, we show how to use safe-control-gym to quantitatively compare the control performance, data efficiency, and safety of multiple approaches from the fields of traditional control, learning-based control, and reinforcement learning.",
+  "category": "mixed",
+  "domain": "robotics / control",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "model-based_control",
+    "trajectory_tracking",
+    "stabilization",
+    "simulation_benchmark"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "task_success_rate (with complementary continuous metrics such as cumulative reward, tracking error, and constraint-violation counts)",
+  "general_score_metric": "composite_score (tracking error + constraint violations + cumulative reward)",
+  "year_of_publish": 2021,
+  "reputation": "An open-source research benchmark with growing adoption in the controls and RL safety communities for evaluating safety-aware control approaches.",
+  "notes": "Non-LLM benchmark; small set of environments (cart-pole, 1D/2D quadrotor) so risk of overfitting to few tasks; metrics vary by task and implementation; simulation-only (no real-robot data).",
+  "creators": {
+    "scientists": [
+      "Zhaocong Yuan",
+      "Adam W. Hall",
+      "SiQi Zhou",
+      "Lukas Brunke",
+      "Melissa Greeff",
+      "Jacopo Panerati",
+      "Angela P. Schoellig"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2109.06325",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

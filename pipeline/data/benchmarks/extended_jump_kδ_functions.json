@@ -1,0 +1,34 @@
+{
+  "name": "Extended Jump_{k,δ} Functions",
+  "description": "Jump functions are the {most-studied} non-unimodal benchmark in the theory of randomized search heuristics, in particular, evolutionary algorithms (EAs). They have significantly improved our understanding of how EAs escape from local optima. However, their particular structure -- to leave the local optimum one can only jump directly to the global optimum -- raises the question of how representative such results are. For this reason, we propose an extended class $\\textsc{Jump}_{k,\\delta}$ of jump functions that contain a valley of low fitness of width $\\delta$ starting at distance $k$ from the global optimum. We prove that several previous results extend to this more general class: for all {$k \\le \\frac{n^{1/3}}{\\ln{n}}$} and $\\delta < k$, the optimal mutation rate for the $(1+1)$~EA is $\\frac{\\delta}{n}$, and the fast $(1+1)$~EA runs faster than the classical $(1+1)$~EA by a factor super-exponential in $\\delta$. However, we also observe that some known results do not generalize: the randomized local search algorithm with stagnation detection, which is faster than the fast $(1+1)$~EA by a factor polynomial in $k$ on $\\textsc{Jump}_k$, is slower by a factor polynomial in $n$ on some $\\textsc{Jump}_{k,\\delta}$ instances. Computationally, the new class allows experiments with wider fitness valleys, especially when they lie further away from the global optimum.",
+  "category": "mixed",
+  "domain": "optimization / evolutionary computation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimization",
+    "runtime_analysis",
+    "algorithm_benchmarking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "expected_runtime",
+  "general_score_metric": "expected_runtime",
+  "year_of_publish": 2021,
+  "reputation": "A well-regarded theoretical benchmark in the evolutionary computation community; the extended Jump_{k,δ} variant is a recent research contribution used for algorithmic analysis.",
+  "notes": "Non-ML theoretical benchmark (synthetic functions). Primary evaluation is runtime/number of fitness evaluations to reach the optimum; not susceptible to dataset contamination. Designed for theoretical and empirical analysis of randomized search heuristics rather than for LLM evaluation.",
+  "creators": {
+    "scientists": [
+      "Henry Bambury",
+      "Antoine Bultel",
+      "Benjamin Doerr"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2105.03090",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-08-27",
+    "origin": "cynefin@d486fafa9"
+  }
+}

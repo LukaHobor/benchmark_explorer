@@ -1,0 +1,34 @@
+{
+  "name": "2DNMRGym",
+  "description": "Two-dimensional (2D) Nuclear Magnetic Resonance (NMR) spectroscopy, particularly Heteronuclear Single Quantum Coherence (HSQC) spectroscopy, plays a critical role in elucidating molecular structures, interactions, and electronic properties. However, accurately interpreting 2D NMR data remains labor-intensive and error-prone, requiring highly trained domain experts, especially for complex molecules. Machine Learning (ML) holds significant potential in 2D NMR analysis by learning molecular representations and recognizing complex patterns from data. However, progress has been limited by the lack of large-scale and high-quality annotated datasets. In this work, we introduce 2DNMRGym, the first annotated experimental dataset designed for ML-based molecular representation learning in 2D NMR. It includes over 22,000 HSQC spectra, along with the corresponding molecular graphs and SMILES strings. Uniquely, 2DNMRGym adopts a surrogate supervision setup: models are trained using algorithm-generated annotations derived from a previously validated method and evaluated on a held-out set of human-annotated gold-standard labels. This enables rigorous assessment of a model's ability to generalize from imperfect supervision to expert-level interpretation. We provide benchmark results using a series of 2D and 3D GNN and GNN transformer models, establishing a strong foundation for future work. 2DNMRGym supports scalable model training and introduces a chemically meaningful benchmark for evaluating atom-level molecular representations in NMR-guided structural tasks. Our data and code is open-source and available on Huggingface and Github.",
+  "category": "mixed",
+  "domain": "chemistry / NMR spectroscopy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "node_classification",
+    "representation_learning",
+    "structure_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific dataset (arXiv release) with growing interest among cheminformatics and NMR-ML researchers but not yet widely adopted.",
+  "notes": "Non-LLM benchmark focused on 2D NMR (HSQC) spectra. Uses surrogate (algorithm-generated) training labels with a held-out human-annotated gold set — introduces label noise risk. Domain-specific chemical bias and potential limited molecular diversity; designed for atom-level/graph-based models (GNNs, GNN-transformers).",
+  "creators": {
+    "scientists": [
+      "Yunrui Li",
+      "Hao Xu",
+      "Pengyu Hong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2505.18181",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

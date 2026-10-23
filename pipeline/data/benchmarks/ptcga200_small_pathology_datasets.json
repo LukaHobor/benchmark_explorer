@@ -1,0 +1,37 @@
+{
+  "name": "PTCGA200 & small pathology datasets",
+  "description": "Pretraining a deep learning model on large image datasets is a standard step before fine-tuning the model on small targeted datasets. The large dataset is usually general images (e.g. imagenet2012) while the small dataset can be specialized datasets that have different distributions from the large dataset. However, this 'large-to-small' strategy is not well-validated when the large dataset is specialized and has a similar distribution to small datasets. We newly compiled three hematoxylin and eosin-stained image datasets, one large (PTCGA200) and two magnification-adjusted small datasets (PCam200 and segPANDA200). Major deep learning models were trained with supervised and self-supervised learning methods and fine-tuned on the small datasets for tumor classification and tissue segmentation benchmarks. ResNet50 pretrained with MoCov2, SimCLR, and BYOL on PTCGA200 was better than imagenet2012 pretraining when fine-tuned on PTCGA200 (accuracy of 83.94%, 86.41%, 84.91%, and 82.72%, respectively). ResNet50 pre-trained on PTCGA200 with MoCov2 exceeded the COCOtrain2017-pretrained baseline and was the best in ResNet50 for the tissue segmentation benchmark (mIoU of 63.53% and 63.22%). We found re-training imagenet-pretrained models (ResNet50, BiT-M-R50x1, and ViT-S/16) on PTCGA200 improved downstream benchmarks.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": [
+    "accuracy",
+    "mIoU"
+  ],
+  "general_score_metric": "accuracy (classification) / mIoU (segmentation)",
+  "typical_sota_score": "82–87% (classification); ~63% mIoU (segmentation)",
+  "year_of_publish": 2023,
+  "reputation": "New dataset with limited but growing adoption in computational pathology pretraining and transfer-learning studies.",
+  "notes": "Domain-specific H&E pathology images; small-to-medium dataset sizes; non-LLM benchmark. Risk of overfitting and distribution shift when transferring from general-image pretrained models; results sensitive to magnification/preprocessing.",
+  "creators": {
+    "scientists": [
+      "Masataka Kawai",
+      "Noriaki Ota",
+      "Shinsuke Yamaoka"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2303.15693",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

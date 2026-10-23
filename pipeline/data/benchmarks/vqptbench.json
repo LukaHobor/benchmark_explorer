@@ -1,0 +1,34 @@
+{
+  "name": "VQPT-Bench",
+  "description": "We present a quantum-analogous experimental demonstration of variational quantum process tomography using an optical processor. This approach leverages classical one-hot encoding and unitary decomposition to perform the variational quantum algorithm on a photonic platform. We create the first benchmark for variational quantum process tomography evaluating the performance of the quantum-analogous experiment on the optical processor against several publicly accessible quantum computing platforms, including IBM’s 127-qubit Sherbrooke processor, QuTech’s five-qubit Tuna-5 processor, and Quandela’s 12-mode Ascella quantum optical processor. We evaluate each method using process fidelity, cost function convergence, and processing time per iteration for variational quantum circuit depths of d = 3 and d = 6. Our results indicate that the optical processors outperform their superconducting counterparts in terms of fidelity and convergence behavior reaching fidelities of 0.8 after nine iterations, particularly at higher depths, where the noise of decoherence and dephasing affect the superconducting processors significantly. We further investigate the influence of any additional quantum optical effects in our platform relative to the classical one-hot encoding. From the process fidelity results it shows that the (classical) thermal noise in the phase-shifters dominates over other optical imperfections, such as mode mismatch and dark counts from single-photon sources. The benchmarking framework and experimental results demonstrate that photonic processors are strong contenders for near-term quantum algorithm deployment, particularly in hybrid variational contexts. This analysis is valuable not only for state and process tomography but also for a wide range of applications involving variational quantum circuit based algorithms.",
+  "category": "mixed",
+  "domain": "quantum computing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "process_tomography",
+    "comparative_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "process_fidelity (with convergence rate and runtime as secondary metrics)",
+  "general_score_metric": "process_fidelity",
+  "typical_sota_score": "≈0.8 (optical processors reported ~0.8 fidelity under the evaluated conditions)",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Small, hardware-specific experimental benchmark; results are dominated by device noise models (thermal noise, decoherence) and are not directly comparable across very different hardware backends; non-LLM.",
+  "creators": {
+    "scientists": [
+      "Vladlen Galetsky",
+      "Paul Kohl",
+      "Janis Nötzel"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2507.08570",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

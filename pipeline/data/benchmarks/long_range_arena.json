@@ -1,0 +1,44 @@
+{
+  "name": "Long Range Arena",
+  "description": "Transformers do not scale very well to long sequence lengths largely because of quadratic self-attention complexity. In the recent months, a wide spectrum of efficient, fast Transformers have been proposed to tackle this problem, more often than not claiming superior or comparable model quality to vanilla Transformer models. To this date, there is no well-established consensus on how to evaluate this class of models. Moreover, inconsistent benchmarking on a wide spectrum of tasks and datasets makes it difficult to assess relative model quality amongst many models. This paper proposes a systematic and unified benchmark, LRA, specifically focused on evaluating model quality under long-context scenarios. Our benchmark is a suite of tasks consisting of sequences ranging from $1K$ to $16K$ tokens, encompassing a wide range of data types and modalities such as text, natural, synthetic images, and mathematical expressions requiring similarity, structural, and visual-spatial reasoning. We systematically evaluate ten well-established long-range Transformer models (Reformers, Linformers, Linear Transformers, Sinkhorn Transformers, Performers, Synthesizers, Sparse Transformers, and Longformers) on our newly proposed benchmark suite. LRA paves the way towards better understanding this class of efficient Transformer models, facilitates more research in this direction, and presents new challenging tasks to tackle. Our benchmark code will be released at https://github.com/google-research/long-range-arena.",
+  "category": "mixed",
+  "domain": "sequence modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "sequence_classification",
+    "similarity",
+    "retrieval",
+    "image_classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (task-dependent; reported as per-task accuracy and average accuracy across the suite)",
+  "general_score_metric": "average accuracy across tasks",
+  "typical_sota_score": "varies widely by task (roughly 30–90% depending on task and model)",
+  "year_of_publish": 2020,
+  "year_of_last_update": 2023,
+  "reputation": "A widely cited benchmark for evaluating long-context Transformer variants; commonly used in efficient-transformer and long-sequence research.",
+  "notes": "Suite mixes real and synthetic tasks across modalities and sequence lengths (1K–16K); task mix and synthetic components can make absolute comparisons task-dependent; not specifically tailored for LLM instruction-following evaluation.",
+  "creators": {
+    "scientists": [
+      "Yi Tay",
+      "Mostafa Dehghani",
+      "Samira Abnar",
+      "Yikang Shen",
+      "Dara Bahri",
+      "Philip Pham",
+      "Jinfeng Rao",
+      "Liu Yang",
+      "Sebastian Ruder",
+      "Donald Metzler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2011.04006",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

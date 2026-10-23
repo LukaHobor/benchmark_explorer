@@ -1,0 +1,33 @@
+{
+  "name": "KidsCook (Hierarchical Script Knowledge Benchmark)",
+  "description": "Understanding procedural language requires reasoning about both hierarchical and temporal relations between events. For example, {``}boiling pasta{''} is a sub-event of {``}making a pasta dish{''}, typically happens before {``}draining pasta,{''} and requires the use of omitted tools (e.g. a strainer, sink...). While people are able to choose when and how to use abstract versus concrete instructions, the NLP community lacks corpora and tasks for evaluating if our models can do the same. In this paper, we introduce KidsCook, a parallel script corpus, as well as a cloze task which matches video captions with missing procedural details. Experimental results show that state-of-the-art models struggle at this task, which requires inducing functional commonsense knowledge not explicitly stated in text.",
+  "category": "text",
+  "domain": "commonsense / procedural language",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "cloze",
+    "multiple_choice"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "40–60%",
+  "reputation": "Valued in the procedural-commonsense community as a targeted evaluation of hierarchical and temporal script understanding, but relatively specialized with modest adoption.",
+  "notes": "Moderate-size corpus focused on procedural text; models can be affected by pretraining exposure to recipe/process corpora (contamination risk). Task requires functional commonsense not always present in pretraining data, so performance can be low; dataset is specialized rather than broadly representative.",
+  "creators": {
+    "scientists": [
+      "Yonatan Bisk",
+      "Jan Buys",
+      "Karl Pichotta",
+      "Yejin Choi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "CAF-Score",
+  "description": "While Large Audio-Language Models (LALMs) have advanced audio captioning, robust evaluation remains difficult. Reference-based metrics are expensive and often fail to assess acoustic fidelity, while Contrastive Language-Audio Pretraining (CLAP)-based approaches frequently overlook syntactic errors and fine-grained details. We propose CAF-Score, a reference-free metric that calibrates CLAP's coarse-grained semantic alignment with the fine-grained comprehension and syntactic awareness of LALMs. By combining contrastive audio-text embeddings with LALM reasoning, CAF-Score effectively detects syntactic inconsistencies and subtle hallucinations. Experiments on the BRACE benchmark demonstrate that our approach achieves the highest correlation with human judgments, even outperforming reference-based baselines in challenging scenarios. These results highlight the efficacy of CAF-Score for reference-free audio captioning evaluation. Code and results are available at https://github.com/inseong00/CAF-Score.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "scoring",
+    "reference_free_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation_with_human_judgments (Spearman / Pearson)",
+  "general_score_metric": "Spearman correlation with human judgments",
+  "year_of_publish": 2026,
+  "reputation": "Recent reference-free metric proposal for audio captioning that has shown promising correlation with human judgments on BRACE but is not yet widely adopted.",
+  "notes": "Reference-free metric combining CLAP embeddings and LALM reasoning; dependent on quality and calibration of CLAP and LALMs, validated primarily on BRACE — may not generalize across audio domains or model families.",
+  "creators": {
+    "scientists": [
+      "Insung Lee",
+      "Taeyoung Jeong",
+      "Haejun Yoo",
+      "Du-Seong Chang",
+      "M. Koo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2603.19615",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

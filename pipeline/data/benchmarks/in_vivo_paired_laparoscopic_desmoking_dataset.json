@@ -1,0 +1,34 @@
+{
+  "name": "In Vivo Paired Laparoscopic De-smoking Dataset",
+  "description": "The single greatest obstacle in developing effective algorithms for removing surgical smoke in laparoscopic surgery is the lack of a paired dataset featuring real smoky and smoke-free surgical scenes. Consequently, existing de-smoking algorithms are developed and evaluated based on atmospheric scattering models, synthetic data, and non-reference image enhancement metrics, which do not adequately capture the complexity and essence of in vivo surgical scenes with smoke. To bridge this gap, we propose creating a paired dataset by identifying video sequences with relatively stationary scenes from existing laparoscopic surgical recordings where smoke emerges. In addition, we developed an approach to facilitate robust motion tracking through smoke to compensate for patients’ involuntary movements. As a result, we obtained 21 video sequences from 63 laparoscopic prostatectomy procedure recordings, comprising 961 pairs of smoky images and their corresponding smoke-free ground truth. Using this unique dataset, we compared a representative set of current de-smoking methods, confirming their efficacy and revealing their limitations, thereby offering insights for future directions.",
+  "category": "vision",
+  "domain": "medical imaging / surgery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "denoising",
+    "image_enhancement"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR and SSIM (with supplementary perceptual/human evaluation for visual quality)",
+  "general_score_metric": "PSNR",
+  "year_of_publish": 2024,
+  "reputation": "Valued niche dataset in surgical imaging because it provides rare paired real smoky / smoke-free laparoscopic frames, but adoption is limited by dataset size and specialty domain.",
+  "notes": "Small dataset (961 pairs) collected from a single procedure type (prostatectomy) — good for realistic evaluation but limited generalization; potential patient/privacy constraints; not designed for large-scale deep-learning pretraining.",
+  "creators": {
+    "scientists": [
+      "Wenyao Xia",
+      "Victoria Fan",
+      "Terry Peters",
+      "Elvis C. S. Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "DCI",
+  "description": "Adversarial attacks in the physical world can harm the robustness of detection models. Evaluating the robustness of detection models in the physical world can be challenging due to the time-consuming and labor-intensive nature of many experiments. Thus, virtual simulation experiments can provide a solution to this challenge. However, there is no unified detection benchmark based on virtual simulation environment. To address this challenge, we proposed an instant-level data generation pipeline based on the CARLA simulator. Using this pipeline, we generated the DCI dataset and conducted extensive experiments on three detection models and three physical adversarial attacks. The dataset covers 7 continuous and 1 discrete scenes, with over 40 angles, 20 distances, and 20,000 positions. The results indicate that Yolo v6 had strongest resistance, with only a 6.59% average AP drop, and ASA was the most effective attack algorithm with a 14.51% average AP reduction, twice that of other algorithms. Static scenes had higher recognition AP, and results under different weather conditions were similar. Adversarial attack algorithm improvement may be approaching its 'limitation'.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision",
+  "general_score_metric": "mean Average Precision (mAP / AP)",
+  "year_of_publish": 2023,
+  "reputation": "A recent CARLA-simulator–based benchmark used primarily by research groups focused on physical adversarial robustness for autonomous driving; limited wider adoption so far.",
+  "notes": "Synthetic/simulated dataset generated in CARLA (domain gap to real-world); moderate scale (~20k positions/instances); focused on physical adversarial attacks rather than general detection benchmarking; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Tianyuan Zhang",
+      "Yisong Xiao",
+      "Xiaoya Zhang",
+      "Hao Li",
+      "Lu Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2304.05098",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "ASQ-PHI",
+  "description": "Hospitals and vendors now run HIPAA-compliant Business Associate Agreement (BAA) large language models (LLMs) for clinical work. These systems do not use input data for further training, so clinicians can enter Protected Health Information (PHI) into them. LLMs are trained on a fixed corpus with a historical cutoff, therefore their answers often need to be supplemented with more recent clinical evidence from external sources such as live web search or other tools that are often not covered by a BAA. This creates a “safe handoff” point where a clinician’s PHI-containing query must be transformed into a HIPAA Safe Harbor compliant version before leaving the protected environment. However, publicly shareable datasets for this setting are scarce; this article describes PHI-rich clinician-style questions paired with HIPAA Safe Harbor annotations at the point where an external tool is called. Existing de-identification benchmarks are typically built from long electronic health record narratives such as discharge summaries and clinic notes, rather than from short, compressed search-style queries such as those that might be used in chat-based clinical LLM interfaces. ASQ-PHI (Adversarial Synthetic Queries for Protected Health Information de-identification) is a fully synthetic benchmark dataset designed for this safe handoff setting; no real patient data, electronic health records, or protected health information were accessed, used, or referenced during dataset creation. It contains 1051 single-turn clinical search queries that are designed to resemble prompts that clinicians might enter into HIPAA-compliant LLMs. Each record uses machine-parsable delimiters to separate the free text query from PHI annotations, which are provided as one JSON object per element specifying the HIPAA Safe Harbor identifier category and exact string value. The corpus includes 832 PHI-positive queries (79.2%) and 219 hard negatives (20.8%) engineered to mimic PHI-like syntax while containing only non-identifying clinical information such as ages under 90 years, diagnoses, medications, and symptoms. Across the dataset, there are 2973 PHI elements labeled from 13 textual HIPAA Safe Harbor identifier types that can be represented as short alphanumeric strings in single-line clinical questions, supporting the measurement of both PHI removal and over-redaction on PHI-free queries. All queries were generated with an adversarial few-shot prompting pipeline using Azure OpenAI GPT-4o. The associated Mendeley Data repository provides the complete dataset file, a Jupyter notebook that implements the generation pipeline, summary statistics, baseline metrics for a commercial PHI detection service, and six figures that describe the dataset. ASQ-PHI is released under an MIT license.",
+  "category": "text",
+  "domain": "medical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "de_identification",
+    "information_retrieval",
+    "privacy_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "token-level F1",
+  "year_of_publish": 2026,
+  "reputation": "New, synthetic adversarial dataset with limited adoption to date; intended for stress-testing clinical de-identification systems in research settings.",
+  "notes": "Synthetic and adversarial construction may not reflect real-world PHI distributions or complexity; intended for evaluation rather than training; potential domain shift and limited dataset diversity/sample size.",
+  "creators": {
+    "scientists": [
+      "James Weatherhead",
+      "George Golovko",
+      "Peter McCaffrey"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1016/j.dib.2026.112586",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Pokémon Team Strategy Generalization Benchmark",
+  "description": "Developing AI agents that can robustly adapt to dramatically different strategic landscapes without retraining is a central challenge for multi-agent learning. Pok\\'emon Video Game Championships (VGC) is a domain with an extraordinarily large space of possible team configurations of approximately $10^{139}$ - far larger than those of Dota or Starcraft. The highly discrete, combinatorial nature of team building in Pok\\'emon VGC causes optimal strategies to shift dramatically depending on both the team being piloted and the opponent's team, making generalization uniquely challenging. To advance research on this problem, we introduce VGC-Bench: a benchmark that provides critical infrastructure, standardizes evaluation protocols, and supplies human-play datasets and a range of baselines - from large-language-model agents and behavior cloning to reinforcement learning and empirical game-theoretic methods such as self-play, fictitious play, and double oracle. In the restricted setting where an agent is trained and evaluated on a single-team configuration, our methods are able to win against a professional VGC competitor. We extensively evaluated all baseline methods over progressively larger team sets and find that even the best-performing algorithm in the single-team setting struggles at scaling up as team size grows. Thus, policy generalization across diverse team strategies remains an open challenge for the community. Our code is open sourced at https://github.com/cameronangliss/VGC-Bench.",
+  "category": "mixed",
+  "domain": "games",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "policy_generalization",
+    "multi_agent_rl",
+    "behavior_cloning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "win_rate",
+  "general_score_metric": "win_rate",
+  "typical_sota_score": "varies widely (≈20–70% depending on setting and team pool)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "Gaining attention in multi-agent and game-AI research for its extreme combinatorial challenge and open-source tooling.",
+  "notes": "Non-LLM, simulator-based benchmark; evaluation highly sensitive to opponent/team distribution; not saturated; large combinatorial space.",
+  "creators": {
+    "scientists": [
+      "Cameron Angliss",
+      "Jiaxun Cui",
+      "Jiaheng Hu",
+      "Arrasy Rahman",
+      "Peter Stone"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2506.10326",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

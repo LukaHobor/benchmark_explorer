@@ -1,0 +1,33 @@
+{
+  "name": "ECAsT (Expanded-CAsT)",
+  "description": "The Text REtrieval Conference Conversational assistance track (CAsT) is an annual conversational passage retrieval challenge to create a large-scale open-domain conversational search benchmarking. However, as of yet, the datasets used are small, with just more than 1,000 turns and 100 conversation topics. In the first part of this research, we address the dataset limitation by building a much larger novel multi-turn conversation dataset for conversation search benchmarking called Expanded-CAsT (ECAsT). ECAsT is built using a multi-stage solution that uses a combination of conversational query reformulation and neural paraphrasing and also includes a new model to create multi-turn paraphrases. The meaning and diversity of paraphrases are evaluated with human and automatic evaluation. Using this methodology, we produce and release to the research community a conversational search dataset that is 665% more extensive in terms of size and language diversity than is available at the time of this study, with more than 9,200 turns. The augmented dataset not only provides more data but also more language diversity to improve conversational search neural model training and testing. In the second part of the research, we use ECAsT to assess the robustness of traditional metrics for conversational evaluation used in CAsT and identify its bias toward language diversity. Results show the benefits of adding language diversity for improving the collection of pooled passages and reducing evaluation bias. We found that introducing language diversity via paraphrases returned up to 24% new passages compared to only 2% using CAsT baseline.",
+  "category": "text",
+  "domain": "information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "conversational_retrieval",
+    "query_reformulation",
+    "passage_ranking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "retrieval metrics (nDCG@k, recall@k, MRR)",
+  "general_score_metric": "nDCG@k",
+  "year_of_publish": 2023,
+  "reputation": "1 citations",
+  "notes": "Augmented with synthetic paraphrases, so language diversity is higher than original CAsT; paraphrasing introduces synthetic data artefacts and potential distributional differences from natural queries. Relatively small compared to large-scale IR corpora but substantially larger than original CAsT.",
+  "creators": {
+    "scientists": [
+      "Haya Al-Thani",
+      "B. Jansen",
+      "Tamer Elsayed"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

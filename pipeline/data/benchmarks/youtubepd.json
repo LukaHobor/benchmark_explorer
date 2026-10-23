@@ -1,0 +1,34 @@
+{
+  "name": "YouTubePD",
+  "description": "The healthcare and AI communities have witnessed a growing interest in the development of AI-assisted systems for automated diagnosis of Parkinson's Disease (PD), one of the most prevalent neurodegenerative disorders. However, the progress in this area has been significantly impeded by the absence of a unified, publicly available benchmark, which prevents comprehensive evaluation of existing PD analysis methods and the development of advanced models. This work overcomes these challenges by introducing YouTubePD -- the first publicly available multimodal benchmark designed for PD analysis. We crowd-source existing videos featured with PD from YouTube, exploit multimodal information including in-the-wild videos, audio data, and facial landmarks across 200+ subject videos, and provide dense and diverse annotations from clinical expert. Based on our benchmark, we propose three challenging and complementary tasks encompassing both discriminative and generative tasks, along with a comprehensive set of corresponding baselines. Experimental evaluation showcases the potential of modern deep learning and computer vision techniques, in particular the generalizability of the models developed on YouTubePD to real-world clinical settings, while revealing their limitations. We hope our work paves the way for future research in this direction.",
+  "category": "multimodal",
+  "domain": "healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "severity_regression",
+    "multimodal_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Accuracy / AUC for classification tasks; MAE / MSE for regression; FID or human_eval for generative tasks (task-dependent)",
+  "general_score_metric": "AUC / accuracy (classification) / MAE (regression) — task-dependent",
+  "year_of_publish": 2023,
+  "reputation": "A recent multimodal, in-the-wild benchmark for Parkinson's Disease analysis that is gaining attention in healthcare and computer vision research but is not yet a broad clinical standard.",
+  "notes": "Relatively small dataset (200+ subject videos), in-the-wild variability, potential label noise and demographic biases, privacy and ethical considerations for video data, multimodal (video/audio/landmarks) and non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

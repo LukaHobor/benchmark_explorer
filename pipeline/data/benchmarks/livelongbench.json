@@ -1,0 +1,36 @@
+{
+  "name": "LiveLongBench",
+  "description": "Long-context understanding poses significant challenges in natural language processing, particularly for real-world dialogues characterized by speech-based elements, high redundancy, and uneven information density. Although large language models (LLMs) achieve impressive results on existing benchmarks, these datasets fail to reflect the complexities of such texts, limiting their applicability to practical scenarios. To bridge this gap, we construct the first spoken long-text dataset, derived from live streams, designed to reflect the redundancy-rich and conversational nature of real-world scenarios. We construct tasks in three categories: retrieval-dependent, reasoning-dependent, and hybrid. We then evaluate both popular LLMs and specialized methods to assess their ability to understand long-contexts in these tasks. Our results show that current methods exhibit strong task-specific preferences and perform poorly on highly redundant inputs, with no single method consistently outperforming others. We propose a new baseline that better handles redundancy in spoken text and achieves strong performance across tasks. Our findings highlight key limitations of current methods and suggest future directions for improving long-context understanding. Finally, our benchmark fills a gap in evaluating long-context spoken language understanding and provides a practical foundation for developing real-world e-commerce systems. The code and benchmark are available at https://github.com/Yarayx/livelongbench.",
+  "category": "audio",
+  "domain": "speech / spoken dialogue",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "retrieval_dependent",
+    "reasoning_dependent",
+    "hybrid"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task-specific metrics (accuracy / Recall@k / F1 / exact_match depending on subtask)",
+  "general_score_metric": "task-specific aggregate (commonly accuracy or Recall@k for retrieval tasks, F1/exact_match for QA)",
+  "year_of_publish": 2025,
+  "reputation": "A recently proposed spoken long-text benchmark (arXiv) aimed at long-context and speech-based understanding; currently limited adoption as a niche, domain-specific dataset.",
+  "notes": "Contains spoken/live-stream data so performance depends on ASR quality; noisy and redundancy-rich inputs make saturation unlikely; new dataset with limited replication at the time of release.",
+  "creators": {
+    "scientists": [
+      "Yongxuan Wu",
+      "Runyu Chen",
+      "Peiyu Liu",
+      "Hongjin Qian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2504.17366",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

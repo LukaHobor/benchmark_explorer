@@ -1,0 +1,40 @@
+{
+  "name": "MAPLM",
+  "description": "Vision-language generative AI has demonstrated remarkable promise for empowering cross-modal scene understanding of autonomous driving and high-definition (HD) map systems. However current benchmark datasets lack multi-modal point cloud image and language data pairs. Recent approaches utilize visual instruction learning and cross-modal prompt engineering to expand vision-language models into this domain. In this paper we propose a new vision-language benchmark that can be used to finetune traffic and HD map domain-specific foundation models. Specifically we annotate and leverage large-scale broad-coverage traffic and map data extracted from huge HD map annotations and use CLIP and LLaMA-2 / Vicuna to finetune a baseline model with instruction-following data. Our experimental results across various algorithms reveal that while visual instruction-tuning large language models (LLMs) can effectively learn meaningful representations from MAPLM-QA there remains significant room for further advancements. To facilitate applying LLMs and multi-modal data into self-driving research we will release our visual-language QA data and the baseline models at GitHub.com/LLVM-AD/MAPLM.",
+  "category": "multimodal",
+  "domain": "autonomous driving / map understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "visual_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2023,
+  "reputation": "A newly proposed domain-specific vision-language QA benchmark for autonomous driving / HD map understanding with limited community adoption so far but of interest to self-driving researchers.",
+  "notes": "Domain-specific (traffic/HD map) data may differ from general VQA benchmarks; potential for dataset-specific biases and limited diversity. Not yet widely benchmarked — baseline results reported by the authors but broad contamination risk with common image-text pretraining corpora is uncertain.",
+  "creators": {
+    "scientists": [
+      "Xu Cao",
+      "Tong Zhou",
+      "Yunsheng Ma",
+      "Wenqian Ye",
+      "Can Cui",
+      "Kun Tang",
+      "Zhipeng Cao",
+      "Kaizhao Liang",
+      "Ziran Wang",
+      "James M. Rehg",
+      "Chao Zheng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Unbiased 3D Registration Benchmark",
+  "description": "Recent 3D registration methods are mostly learning-based that either find correspondences in feature space and match them, or directly estimate the registration transformation from the given point cloud features. Therefore, these feature-based methods have difficulties with generalizing onto point clouds that differ substantially from their training data. This issue is not so apparent because of the problematic benchmark definitions that cannot provide any in-depth analysis and contain a bias toward similar data. Therefore, we propose a methodology to create a 3D registration benchmark, given a point cloud dataset, that provides a more informative evaluation of a method w.r.t. other benchmarks. Using this methodology, we create a novel FAUST-partial (FP) benchmark, based on the FAUST dataset, with several difficulty levels. The FP benchmark addresses the limitations of the current benchmarks: lack of data and parameter range variability, and allows to evaluate the strengths and weaknesses of a 3D registration method w.r.t. a single registration parameter. Using the new FP benchmark, we provide a thorough analysis of the current state-of-the-art methods and observe that the current method still struggle to generalize onto severely different out-of-sample data. Therefore, we propose a simple featureless traditional 3D registration baseline method based on the weighted cross-correlation between two given point clouds. Our method achieves strong results on current benchmarking datasets, outperforming most deep learning methods. Our source code is available on github.com/DavidBoja/exhaustive-grid-search.",
+  "category": "vision",
+  "domain": "3D computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_registration",
+    "pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "registration success rate (percentage of trials below predefined rotation/translation error thresholds); reported rotation/translation errors",
+  "general_score_metric": "registration success rate (percentage below error thresholds)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A niche benchmark proposed for rigorous generalization analysis in 3D registration research; referenced by specialists evaluating out-of-sample robustness but not as widely adopted as large-scale benchmarks like KITTI.",
+  "notes": "Non-LLM benchmark derived from FAUST (human shapes) with multiple difficulty levels; dataset is relatively small and domain-limited (human scans), so results may not generalize to other object categories. Useful for analyzing generalization but susceptible to overfitting to dataset-specific biases.",
+  "creators": {
+    "scientists": [
+      "Bojanić",
+      "David; Bartol",
+      "Kristijan; Forest",
+      "Josep; Petković",
+      "Tomislav; Pribanić",
+      "Tomislav"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

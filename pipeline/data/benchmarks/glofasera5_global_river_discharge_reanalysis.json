@@ -1,0 +1,38 @@
+{
+  "name": "GloFAS-ERA5 global river discharge reanalysis",
+  "description": "Abstract. Estimating how much water is flowing through rivers at the global scale is challenging due to a lack of observations in space and time. A way forward is to optimally combine the global network of earth system observations with advanced numerical weather prediction (NWP) models to generate consistent spatio-temporal maps of land, ocean, and atmospheric variables of interest, which is known as a reanalysis. While the current generation of NWP models output runoff at each grid cell, they currently do not produce river discharge at catchment scales directly and thus have limited utility in hydrological applications such as flood and drought monitoring and forecasting. This is overcome in the Global Flood Awareness System (GloFAS; http://www.globalfloods.eu/, last access: 28 June 2020) by coupling surface and sub-surface runoff from the Hydrology Tiled ECMWF Scheme for Surface Exchanges over Land (HTESSEL) land surface model used within ECMWF's latest global atmospheric reanalysis (ERA5) with the LISFLOOD hydrological and channel routing model. The aim of this paper is to describe and evaluate the GloFAS-ERA5 global river discharge reanalysis dataset launched on 5 November 2019 (version 2.1 release). The river discharge reanalysis is a global gridded dataset with a horizontal resolution of 0.1∘ at a daily time step. An innovative feature is that it is produced in an operational environment so is available to users from 1 January 1979 until near real time (2 to 5 d behind real time). The reanalysis was evaluated against a global network of 1801 daily river discharge observation stations. Results found that the GloFAS-ERA5 reanalysis was skilful against a mean flow benchmark in 86 % of catchments according to the modified Kling–Gupta efficiency skill score, although the strength of skill varied considerably with location. The global median Pearson correlation coefficient was 0.61 with an interquartile range of 0.44 to 0.74. The long-term and operational nature of the GloFAS-ERA5 reanalysis dataset provides a valuable dataset to the user community for applications ranging from monitoring global flood and drought conditions to the identification of hydroclimatic variability and change and as raw input for post-processing and machine learning methods that can add further value. The dataset is openly available from the Copernicus Climate Change Service Climate Data Store: https://cds.climate.copernicus.eu/cdsapp#!/dataset/cems-glofas-historical?tab=overview (last access: 28 June 2020) with the following DOI: https://doi.org/10.24381/cds.a4fdd6b9 (C3S, 2019).",
+  "category": "mixed",
+  "domain": "climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression",
+    "spatio-temporal_modeling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "modified_Kling–Gupta_efficiency (KGE), Pearson_correlation, RMSE (task uses KGE as primary skill score)",
+  "general_score_metric": "modified_Kling–Gupta_efficiency (KGE)",
+  "typical_sota_score": "KGE skilful in ~86% of catchments (per paper); global median Pearson r ≈ 0.61",
+  "year_of_publish": 2020,
+  "reputation": "335 citations",
+  "notes": "Non-LLM, domain-specific hydrology benchmark. Observational coverage limited to ~1801 stations with spatially heterogeneous skill; reanalysis product (ERA5+LISFLOOD) may exhibit regional biases. Dataset is long-term and operational (1979–near real time).",
+  "creators": {
+    "scientists": [
+      "Shaun Harrigan",
+      "Ervin Zsótér",
+      "Lorenzo Alfieri",
+      "Christel Prudhomme",
+      "Peter Salamon",
+      "Fredrik Wetterhall"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.5194/essd-12-2043-2020",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

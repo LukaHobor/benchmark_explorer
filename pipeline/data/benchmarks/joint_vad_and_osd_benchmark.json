@@ -1,0 +1,38 @@
+{
+  "name": "Joint VAD and OSD benchmark",
+  "description": "Voice activity and overlapped speech detection (respectively VAD and OSD) are key pre-processing tasks for speaker diarization. The final segmentation performance highly relies on the robustness of these sub-tasks. Recent studies have shown VAD and OSD can be trained jointly using a multi-class classification model. However, these works are often restricted to a specific speech domain, lacking information about the generalization capacities of the systems. This paper proposes a complete and new benchmark of different VAD and OSD models, on multiple audio setups (single/multi-channel) and speech domains (e.g. media, meeting...). Our 2/3-class systems, which combine a Temporal Convolutional Network with speech representations adapted to the setup, outperform state-of-the-art results. We show that the joint training of these two tasks offers similar performances in terms of F1-score to two dedicated VAD and OSD systems while reducing the training cost. This unique architecture can also be used for single and multichannel speech processing.",
+  "category": "audio",
+  "domain": "speech / audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "audio_event_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2023,
+  "reputation": "A domain-focused benchmark introduced to the speech community for joint VAD/OSD evaluation; valuable for diarization research but not yet a universal standard.",
+  "notes": "Non-LLM audio benchmark covering single- and multi-channel setups and multiple speech domains; emphasizes generalization across domains and setups and may expose domain-shift sensitivity.",
+  "creators": {
+    "scientists": [
+      "Martin Lebourdais",
+      "Théo Mariotte",
+      "Marie Tahon",
+      "Anthony Larcher",
+      "Antoine Laurent",
+      "Silvio Montresor",
+      "Sylvain Meignier",
+      "Jean-Hugh Thomas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2307.13012",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

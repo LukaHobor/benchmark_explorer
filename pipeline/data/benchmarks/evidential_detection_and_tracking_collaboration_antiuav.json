@@ -1,0 +1,42 @@
+{
+  "name": "Evidential Detection and Tracking Collaboration (Anti-UAV) Benchmark",
+  "description": "Unmanned Aerial Vehicles (UAVs) have been widely used in many areas, including transportation, surveillance, and military. However, their potential for safety and privacy violations is an increasing issue and highly limits their broader applications, underscoring the critical importance of UAV perception and defense (anti-UAV). Still, previous works have simplified such an anti-UAV task as a tracking problem, where the prior information of UAVs is always provided; such a scheme fails in real-world anti-UAV tasks (i.e. complex scenes, indeterminate-appear and -reappear UAVs, and real-time UAV surveillance). In this paper, we first formulate a new and practical anti-UAV problem featuring the UAVs perception in complex scenes without prior UAVs information. To benchmark such a challenging task, we propose the largest UAV dataset dubbed AntiUAV600 and a new evaluation metric. The AntiUAV600 comprises 600 video sequences of challenging scenes with random, fast, and small-scale UAVs, with over 723K thermal infrared frames densely annotated with bounding boxes. Finally, we develop a novel anti-UAV approach via an evidential collaboration of global UAVs detection and local UAVs tracking, which effectively tackles the proposed problem and can serve as a strong baseline for future research. Extensive experiments show our method outperforms SOTA approaches and validate the ability of AntiUAV600 to enhance UAV perception performance due to its large scale and complexity. Our dataset, pretrained models, and source codes will be released publically.",
+  "category": "vision",
+  "domain": "autonomous systems / UAV detection and defense",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "object_detection",
+    "object_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP for detection; tracking metrics such as MOTA / IDF1 for tracking (the paper also proposes a task-specific metric)",
+  "general_score_metric": "mAP (detection) and standard tracking metrics (MOTA / IDF1)",
+  "year_of_publish": 2023,
+  "reputation": "A substantial, domain-specific dataset (AntiUAV600) that has attracted attention in UAV detection/tracking research for its scale and thermal imagery.",
+  "notes": "Thermal infrared imagery and small, fast-moving targets make the benchmark challenging; large dataset size increases training requirements. Domain-specific (UAV/thermal) so models trained here may not generalise to RGB or other settings. Not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xue-Feng Zhu",
+      "Tianyang Xu",
+      "Jian Zhao",
+      "Jia-Wei Liu",
+      "Kai Wang",
+      "Gang Wang",
+      "Jianan Li",
+      "Qiang Wang",
+      "Lei Jin",
+      "Zheng Zhu",
+      "Junliang Xing",
+      "Xiao-Jun Wu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.15767",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

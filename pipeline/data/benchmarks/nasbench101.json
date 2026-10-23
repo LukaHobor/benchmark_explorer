@@ -1,0 +1,39 @@
+{
+  "name": "NAS-Bench-101",
+  "description": "Recent advances in neural architecture search (NAS) demand tremendous computational resources, which makes it difficult to reproduce experiments and imposes a barrier-to-entry to researchers without access to large-scale computation. We aim to ameliorate these problems by introducing NAS-Bench-101, the first public architecture dataset for NAS research. To build NAS-Bench-101, we carefully constructed a compact, yet expressive, search space, exploiting graph isomorphisms to identify 423k unique convolutional architectures. We trained and evaluated all of these architectures multiple times on CIFAR-10 and compiled the results into a large dataset of over 5 million trained models. This allows researchers to evaluate the quality of a diverse range of models in milliseconds by querying the pre-computed dataset. We demonstrate its utility by analyzing the dataset as a whole and by benchmarking a range of architecture optimization algorithms.",
+  "category": "vision",
+  "domain": "machine learning / neural architecture search (vision)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "architecture_search",
+    "performance_evaluation",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "test_accuracy (CIFAR-10 top-1)",
+  "typical_sota_score": "90–95%",
+  "year_of_publish": 2019,
+  "reputation": "253 citations",
+  "notes": "Non-LLM benchmark with a precomputed lookup table of ~423k convolutional architectures trained on CIFAR-10. Limited search space and fixed training pipeline can cause saturation and reduce transferability to larger datasets or modern architectures; excellent for fast reproducible NAS research but not representative of modern large-scale settings.",
+  "creators": {
+    "scientists": [
+      "Chris Ying",
+      "Aaron Klein",
+      "Eric Christiansen",
+      "Esteban Real",
+      "Kevin Murphy",
+      "Frank Hutter"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/1902.09635",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

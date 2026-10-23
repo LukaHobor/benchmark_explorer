@@ -1,0 +1,37 @@
+{
+  "name": "MovingFashion",
+  "description": "Retrieving clothes which are worn in social media videos (Instagram, TikTok) is the latest frontier of e-fashion, referred to as \"video-to-shop\" in the computer vision literature. In this paper we present MovingFashion, the first publicly available dataset to cope with this challenge. MovingFashion is composed of 14855 social videos, each one of them associated to e-commerce \"shop\" images where the corresponding clothing items are clearly portrayed. In addition, we present a network for retrieving the shop images in this scenario, dubbed SEAM Match-RCNN. The model is trained by image-to-video domain adaptation, allowing to use video sequences where only their association with a shop image is given, eliminating the need of millions of annotated bounding boxes. SEAM Match-RCNN builds an embedding, where an attention-based weighted sum of few frames (10) of a social video is enough to individuate the correct product within the first 5 retrieved items in a 14K+ shop element gallery with an accuracy of 80%. This provides the best performance on MovingFashion, comparing exhaustively against the related state-of-the-art approaches and alternative baselines.",
+  "category": "vision",
+  "domain": "fashion / computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_to_shop_retrieval",
+    "image_retrieval",
+    "instance_search"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Recall@K (e.g., R@1, R@5)",
+  "general_score_metric": "Recall@5",
+  "typical_sota_score": "≈80% (R@5)",
+  "year_of_publish": 2021,
+  "reputation": "Well-cited within the fashion retrieval literature as one of the first publicly available video-to-shop benchmarks, used by several follow-up works.",
+  "notes": "Non-LLM computer-vision benchmark; contains social-media videos so privacy and bias concerns apply. Moderate dataset size (~14K shop items); reported metrics are retrieval-focused (Recall@K).",
+  "creators": {
+    "scientists": [
+      "Marco Godi",
+      "Christian Joppi",
+      "Geri Skenderi",
+      "Marco Cristani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2110.02627",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "IM-IAD",
+  "description": "Image anomaly detection (IAD) is an emerging and vital computer vision task in industrial manufacturing (IM). Recently, many advanced algorithms have been reported, but their performance deviates considerably with various IM settings. We realize that the lack of a uniform IM benchmark is hindering the development and usage of IAD methods in real-world applications. In addition, it is difficult for researchers to analyze IAD algorithms without a uniform benchmark. To solve this problem, we propose a uniform IM benchmark, for the first time, to assess how well these algorithms perform, which includes various levels of supervision (unsupervised versus fully supervised), learning paradigms (few-shot, continual and noisy label), and efficiency (memory usage and inference speed). Then, we construct a comprehensive image anomaly detection benchmark (IM-IAD), which includes 19 algorithms on seven major datasets with a uniform setting. Extensive experiments (17,017 total) on IM-IAD provide in-depth insights into IAD algorithm redesign or selection. Moreover, the proposed IM-IAD benchmark challenges existing algorithms and suggests future research directions. To foster reproducibility and accessibility, the source code of IM-IAD is uploaded on the website, https://github.com/M-3LAB/IM-IAD.",
+  "category": "vision",
+  "domain": "manufacturing / industrial vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "unsupervised_anomaly_detection",
+    "few_shot",
+    "continual_learning",
+    "efficiency_benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC (image-level), AUPRO / pixel-wise metrics, F1 for localization, plus efficiency measures (inference speed, memory)",
+  "general_score_metric": "AUROC (image-level) / AUPRO (pixel-level) depending on task",
+  "typical_sota_score": "≈85–99% (AUROC) depending on dataset and setting",
+  "year_of_publish": 2023,
+  "reputation": "A comprehensive, well-documented benchmark that has gained attention for standardized evaluation of industrial image-anomaly detection methods across many settings.",
+  "notes": "Multi-dataset benchmark with many settings (supervision levels, continual/few-shot, noisy labels) — results vary widely by dataset. Includes efficiency metrics. Not an LLM benchmark; possible domain shifts between datasets and some label noise in real-world collections.",
+  "creators": {
+    "scientists": [
+      "Guoyang Xie",
+      "Jinbao Wang",
+      "Jiaqi Liu",
+      "Jiayi Lyu",
+      "Yong liu",
+      "Chengjie Wang",
+      "Feng Zheng",
+      "Yaochu Jin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2301.13359",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

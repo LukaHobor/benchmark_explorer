@@ -1,0 +1,41 @@
+{
+  "name": "BraTS 2023 (BraSyn)",
+  "description": "Automated brain tumor segmentation methods have become well-established and reached performance levels offering clear clinical utility. These methods typically rely on four input magnetic resonance imaging (MRI) modalities: T1-weighted images with and without contrast enhancement, T2-weighted images, and FLAIR images. However, some sequences are often missing in clinical practice due to time constraints or image artifacts, such as patient motion. Consequently, the ability to substitute missing modalities and gain segmentation performance is highly desirable and necessary for the broader adoption of these algorithms in the clinical routine. In this work, we present the establishment of the Brain MR Image Synthesis Benchmark (BraSyn) in conjunction with the Medical Image Computing and Computer-Assisted Intervention (MICCAI) 2023. The primary objective of this challenge is to evaluate image synthesis methods that can realistically generate missing MRI modalities when multiple available images are provided. The ultimate aim is to facilitate automated brain tumor segmentation pipelines. The image dataset used in the benchmark is diverse and multi-modal, created through collaboration with various hospitals and research institutions.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "leaderboard",
+  "task_types": [
+    "image_synthesis",
+    "image_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": [
+    "Dice_coefficient",
+    "Hausdorff_distance",
+    "segmentation_accuracy"
+  ],
+  "general_score_metric": "Dice coefficient (mean Dice for target tumor regions)",
+  "typical_sota_score": "≈0.80–0.90 (mean Dice, depending on region and method)",
+  "year_of_publish": 2024,
+  "reputation": "Part of the well-established BraTS challenge series; widely used in the medical imaging community for brain tumor segmentation research.",
+  "notes": "Medical imaging dataset with standardized leaderboard and evaluation; requires appropriate data-use agreements and handling; performance varies by tumor sub-region and clinical modality; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Li HB",
+      "Conte GM",
+      "Hu Q",
+      "Anwar SM",
+      "Kofler F",
+      "Ezhov I"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2305.09011",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

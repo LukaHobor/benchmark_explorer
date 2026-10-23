@@ -1,0 +1,42 @@
+{
+  "name": "SRFUND",
+  "description": "Accurately identifying and organizing textual content is crucial for the automation of document processing in the field of form understanding. Existing datasets, such as FUNSD and XFUND, support entity classification and relationship prediction tasks but are typically limited to local and entity-level annotations. This limitation overlooks the hierarchically structured representation of documents, constraining comprehensive understanding of complex forms. To address this issue, we present the SRFUND, a hierarchically structured multi-task form understanding benchmark. SRFUND provides refined annotations on top of the original FUNSD and XFUND datasets, encompassing five tasks: (1) word to text-line merging, (2) text-line to entity merging, (3) entity category classification, (4) item table localization, and (5) entity-based full-document hierarchical structure recovery. We meticulously supplemented the original dataset with missing annotations at various levels of granularity and added detailed annotations for multi-item table regions within the forms. Additionally, we introduce global hierarchical structure dependencies for entity relation prediction tasks, surpassing traditional local key-value associations. The SRFUND dataset includes eight languages including English, Chinese, Japanese, German, French, Spanish, Italian, and Portuguese, making it a powerful tool for cross-lingual form understanding. Extensive experimental results demonstrate that the SRFUND dataset presents new challenges and significant opportunities in handling diverse layouts and global hierarchical structures of forms, thus providing deep insights into the field of form understanding. The original dataset and implementations of baseline methods are available at https://sprateam-ustc.github.io/SRFUND",
+  "category": "multimodal",
+  "domain": "document understanding / form understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "word_line_merging",
+    "line_entity_merging",
+    "entity_classification",
+    "table_localization",
+    "hierarchical_structure_recovery"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (merging/classification), IoU / mAP (table localization), exact_match / tree-similarity (hierarchical structure recovery)",
+  "general_score_metric": "F1 (primary for entity-level tasks)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, research-focused benchmark extending FUNSD/XFUND for hierarchical and cross-lingual form understanding; gaining interest but not yet widely adopted.",
+  "notes": "Derived from FUNSD/XFUND so dataset size is limited; multi-task evaluations across heterogeneous metrics; not an LLM benchmark; potential class imbalance and language/layout variance.",
+  "creators": {
+    "scientists": [
+      "Jiefeng Ma",
+      "Yan Wang",
+      "Chenyu Liu",
+      "Jun Du",
+      "Yu Hu",
+      "Zhenrong Zhang",
+      "Pengfei Hu",
+      "Qing Wang",
+      "Jianshu Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.08757",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

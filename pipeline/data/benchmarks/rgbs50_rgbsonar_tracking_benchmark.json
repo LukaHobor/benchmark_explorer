@@ -1,0 +1,36 @@
+{
+  "name": "RGBS50 (RGB-Sonar tracking benchmark)",
+  "description": "Vision camera and sonar are naturally complementary in the underwater environment. Combining the information from two modalities will promote better observation of underwater targets. However, this problem has not received sufficient attention in previous research. Therefore, this paper introduces a new challenging RGB-Sonar (RGB-S) tracking task and investigates how to achieve efficient tracking of an underwater target through the interaction of RGB and sonar modalities. Specifically, we first propose an RGBS50 benchmark dataset containing 50 sequences and more than 87000 high-quality annotated bounding boxes. Experimental results show that the RGBS50 benchmark poses a challenge to currently popular SOT trackers. Second, we propose an RGB-S tracker called SCANet, which includes a spatial cross-attention module (SCAM) consisting of a novel spatial cross-attention layer and two independent global integration modules. The spatial cross-attention is used to overcome the problem of spatial misalignment of between RGB and sonar images. Third, we propose a SOT data-based RGB-S simulation training method (SRST) to overcome the lack of RGB-S training datasets. It converts RGB images into sonar-like saliency images to construct pseudo-data pairs, enabling the model to learn the semantic structure of RGB-S-like data. Comprehensive experiments show that the proposed spatial cross-attention effectively achieves the interaction between RGB and sonar modalities and SCANet achieves state-of-the-art performance on the proposed benchmark. The code is available at https://github.com/LiYunfengLYF/RGBS50.",
+  "category": "multimodal",
+  "domain": "underwater vision / robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "single_object_tracking",
+    "multimodal_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Intersection over Union (IoU) / Success rate (AUC) and Precision",
+  "general_score_metric": "Success (IoU) AUC",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized benchmark for underwater RGB–sonar tracking; adoption is currently limited but growing within the underwater-vision and robotics community.",
+  "notes": "Small dataset (50 sequences) with domain-specific challenges (underwater conditions, sensor alignment); many methods rely on simulated or pseudo sonar data for training; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Yunfeng Li",
+      "Bo wang",
+      "Jiuran Sun",
+      "Xueyi Wu",
+      "Ye Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.07189",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

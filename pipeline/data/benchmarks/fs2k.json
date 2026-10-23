@@ -1,0 +1,37 @@
+{
+  "name": "FS2K",
+  "description": "This paper aims to conduct a comprehensive study on facial-sketch synthesis (FSS). However, due to the high costs of obtaining hand-drawn sketch datasets, there lacks a complete benchmark for assessing the development of FSS algorithms over the last decade. We first introduce a high-quality dataset for FSS, named FS2K, which consists of 2,104 image-sketch pairs spanning three types of sketch styles, image backgrounds, lighting conditions, skin colors, and facial attributes. FS2K differs from previous FSS datasets in difficulty, diversity, and scalability and should thus facilitate the progress of FSS research. Second, we present the largest-scale FSS investigation by reviewing 89 classical methods, including 25 handcrafted feature-based facial-sketch synthesis approaches, 29 general translation methods, and 35 image-to-sketch approaches. Besides, we elaborate comprehensive experiments on the existing 19 cutting-edge models. Third, we present a simple baseline for FSS, named FSGAN. With only two straightforward components, i.e., facial-aware masking and style-vector expansion, FSGAN surpasses the performance of all previous state-of-the-art models on the proposed FS2K dataset by a large margin. Finally, we conclude with lessons learned over the past years and point out several unsolved challenges. Our code is available at https://github.com/DengPingFan/FSGAN.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_to_image_translation",
+    "image_synthesis",
+    "conditional_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "FID, LPIPS, SSIM, human_eval",
+  "general_score_metric": "FID",
+  "year_of_publish": 2021,
+  "reputation": "Introduced in 2021 for facial-sketch synthesis research; a respected dataset within the niche FSS community with growing but still specialized adoption.",
+  "notes": "Non-LLM vision benchmark; relatively small dataset (2,104 pairs) — higher diversity than prior FSS sets but still limited scale; common evaluation uses perceptual metrics (FID/LPIPS) and user studies; potential style/artist bias in sketches.",
+  "creators": {
+    "scientists": [
+      "Deng-Ping Fan",
+      "Ziling Huang",
+      "Peng Zheng",
+      "Hong Liu",
+      "Xuebin Qin",
+      "Luc van Gool"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2112.15439",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

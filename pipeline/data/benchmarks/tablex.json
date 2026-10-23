@@ -1,0 +1,35 @@
+{
+  "name": "TabLeX",
+  "description": "Information Extraction (IE) from the tables present in scientific articles is challenging due to complicated tabular representations and complex embedded text. This paper presents TabLeX, a large-scale benchmark dataset comprising table images generated from scientific articles. TabLeX consists of two subsets, one for table structure extraction and the other for table content extraction. Each table image is accompanied by its corresponding LATEX source code. To facilitate the development of robust table IE tools, TabLeX contains images in different aspect ratios and in a variety of fonts. Our analysis sheds light on the shortcomings of current state-of-the-art table extraction models and shows that they fail on even simple table images. Towards the end, we experiment with a transformer-based existing baseline to report performance scores. In contrast to the static benchmarks, we plan to augment this dataset with more complex and diverse tables at regular intervals.",
+  "category": "multimodal",
+  "domain": "document understanding",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "table_structure_recognition",
+    "table_content_recognition",
+    "image_to_LaTeX_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match (structure tokens) and F1 (cell/content-level)",
+  "general_score_metric": "exact_match (for generated LaTeX / structure) / F1 (for content cells)",
+  "typical_sota_score": "10–40% (varies by subtask; models reported to perform poorly on many examples)",
+  "year_of_publish": 2021,
+  "reputation": "Introduced in 2021; a niche but useful dataset for scientific table IE with limited adoption and growing interest in document-understanding research.",
+  "notes": "Image-based, non-LLM benchmark; covers varied aspect ratios/fonts; models often fail on simple cases; dataset is large-scale but still specialized to scientific LaTeX-rendered tables and may require task-specific pre/post-processing.",
+  "creators": {
+    "scientists": [
+      "Harsh Desai",
+      "Pratik Kayal",
+      "Mayank Singh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2105.06400",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

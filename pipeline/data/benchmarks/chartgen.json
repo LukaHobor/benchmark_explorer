@@ -1,0 +1,37 @@
+{
+  "name": "ChartGen",
+  "description": "Chart-to-code reconstruction -- the task of recovering executable plotting scripts from chart images -- provides important insights into a model's ability to ground data visualizations in precise, machine-readable form. Yet many existing multimodal benchmarks largely focus primarily on answering questions about charts or summarizing them. To bridge this gap, we present ChartGen, a fully-automated pipeline for code-guided synthetic chart generation. Starting from seed chart images, ChartGen (i) prompts a vision-language model (VLM) to reconstruct each image into a python script, and (ii) iteratively augments that script with a code-oriented large language model (LLM). Using ChartGen, we create 222.5K unique chart-image code pairs from 13K seed chart images, and present an open-source synthetic chart dataset covering 27 chart types, 11 plotting libraries, and multiple data modalities (image, code, text, CSV, DocTags). From this corpus, we curate a held-out chart-to-code evaluation subset",
+  "category": "vision",
+  "domain": "multimodal",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "chart_to_code",
+    "code_generation",
+    "multimodal_reconstruction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact match / code similarity / execution-based correctness",
+  "general_score_metric": "execution accuracy",
+  "year_of_publish": 2025,
+  "reputation": "A very recent synthetic benchmark for chart-to-code reconstruction that is still emerging and not yet widely established.",
+  "notes": "Synthetic multimodal benchmark; potential contamination risk because it is generated from model-assisted reconstruction pipelines. Evaluation is code-centric and may depend on execution environment and plotting-library specifics.",
+  "creators": {
+    "scientists": [
+      "Jovana Kondic",
+      "Pengyuan Li",
+      "Dhiraj Joshi",
+      "Zexue He",
+      "Shafiq Abedin",
+      "Jennifer Sun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2507.19492",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

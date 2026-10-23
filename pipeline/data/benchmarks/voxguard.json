@@ -1,0 +1,36 @@
+{
+  "name": "VoxGuard",
+  "description": "Voice anonymization aims to conceal speaker identity and attributes while preserving intelligibility, but current evaluations rely almost exclusively on Equal Error Rate (EER) that obscures whether adversaries can mount high-precision attacks. We argue that privacy should instead be evaluated in the low false-positive rate (FPR) regime, where even a small number of successful identifications constitutes a meaningful breach. To this end, we introduce VoxGuard, a framework grounded in differential privacy and membership inference that formalizes two complementary notions: User Privacy, preventing speaker re-identification, and Attribute Privacy, protecting sensitive traits such as gender and accent. Across synthetic and real datasets, we find that informed adversaries, especially those using fine-tuned models and max-similarity scoring, achieve orders-of-magnitude stronger attacks at low-FPR despite similar EER. For attributes, we show that simple transparent attacks recover gender and a",
+  "category": "audio",
+  "domain": "speech privacy",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "binary_classification",
+    "ranking",
+    "privacy_attack_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "low-FPR attack performance and privacy leakage metrics (e.g., TPR at fixed low FPR, AUC/EER)",
+  "general_score_metric": "TPR at low FPR",
+  "year_of_publish": 2025,
+  "reputation": "A recent privacy-focused speech benchmark that is notable for shifting evaluation beyond EER toward realistic low-FPR adversarial settings.",
+  "notes": "Non-LLM benchmark; emphasizes privacy leakage under strong adversaries and low false-positive regimes rather than standard EER alone.",
+  "creators": {
+    "scientists": [
+      "Efthymios Tsaprazlis",
+      "Thanathai Lertpetchpun",
+      "Tiantian Feng",
+      "Sai Praneeth Karimireddy",
+      "Shrikanth Narayanan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2509.18413",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

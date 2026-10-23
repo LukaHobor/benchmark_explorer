@@ -1,0 +1,37 @@
+{
+  "name": "Fine-tuning and Long-tailed Scene Text Detection Benchmark",
+  "description": "Scene text detection has seen the emergence of high-performing methods that excel on academic benchmarks. However, these detectors often fail to replicate such success in real-world scenarios. We uncover two key factors contributing to this discrepancy through extensive experiments. First, a \\textit{Fine-tuning Gap}, where models leverage \\textit{Dataset-Specific Optimization} (DSO) paradigm for one domain at the cost of reduced effectiveness in others, leads to inflated performances on academic benchmarks. Second, the suboptimal performance in practical settings is primarily attributed to the long-tailed distribution of texts, where detectors struggle with rare and complex categories as artistic or overlapped text. Given that the DSO paradigm might undermine the generalization ability of models, we advocate for a \\textit{Joint-Dataset Learning} (JDL) protocol to alleviate the Fine-tuning Gap. Additionally, an error analysis is conducted to identify three major categories and 13 subcategories of challenges in long-tailed scene text, upon which we propose a Long-Tailed Benchmark (LTB). LTB facilitates a comprehensive evaluation of ability to handle a diverse range of long-tailed challenges. We further introduce MAEDet, a self-supervised learning-based method, as a strong baseline for LTB. The code is available at https://github.com/pd162/LTB.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "text_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (detection F‑measure)",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A recent benchmark focused on long-tailed scene text challenges; gaining attention for highlighting real-world failures of academic detectors but not yet a universal standard.",
+  "notes": "Highlights a Fine-tuning Gap and long-tailed category issues; evaluations may be sensitive to dataset-specific optimization and class imbalance. Not an LLM benchmark; performance on rare/complex categories can be low and dataset may have limited coverage for some real-world variants.",
+  "creators": {
+    "scientists": [
+      "Tianjiao Cao",
+      "Jiahao Lyu",
+      "Weichao Zeng",
+      "Weimin Mu",
+      "Yu Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2505.15649",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

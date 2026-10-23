@@ -1,0 +1,34 @@
+{
+  "name": "PET/CT Tumor Segmentation Benchmark",
+  "description": "Cancer is one of the leading causes of death globally, and early diagnosis is crucial for patient survival. Deep learning algorithms have great potential for automatic cancer analysis. Artificial intelligence has achieved high performance in recognizing and segmenting single lesions. However, diagnosing multiple lesions remains a challenge. This study examines and compares various neural network architectures and training strategies for automatically segmentation of cancer lesions using PET/CT images from the head, neck, and whole body. The authors analyzed datasets from the AutoPET and HECKTOR challenges, exploring popular single-step segmentation architectures and presenting a two-step approach. The results indicate that the V-Net and nnU-Net models were the most effective for their respective datasets. The results for the HECKTOR dataset ranged from 0.75 to 0.76 for the aggregated Dice coefficient. Eliminating cancer-free cases from the AutoPET dataset was found to improve the performance of most models. In the case of AutoPET data, the average segmentation efficiency after training only on images containing cancer lesions increased from 0.55 to 0.66 for the classic Dice coefficient and from 0.65 to 0.73 for the aggregated Dice coefficient. The research demonstrates the potential of artificial intelligence in precise oncological diagnostics and may contribute to the development of more targeted and effective cancer assessment techniques.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "image_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1 (Dice coefficient / IoU)",
+  "general_score_metric": "Dice coefficient (classic and aggregated Dice)",
+  "typical_sota_score": "0.75–0.85 (Dice)",
+  "year_of_publish": 2024,
+  "reputation": "Moderately adopted in academic medical-imaging research; builds on and compares models for AutoPET and HECKTOR datasets.",
+  "notes": "Non-LLM benchmark; limited by class imbalance and heterogeneous annotations across datasets, sensitivity to presence/absence of lesions (cancer-free cases), and relatively small/clinical datasets that complicate generalization.",
+  "creators": {
+    "scientists": [
+      "Monika Górka",
+      "Daniel Jaworek",
+      "Marek Wodzinski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2404.09761",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

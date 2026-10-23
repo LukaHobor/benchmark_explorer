@@ -1,0 +1,50 @@
+{
+  "name": "Spinal Cord Ultrasound Dataset",
+  "description": "While deep learning has catalyzed breakthroughs across numerous domains, its broader adoption in clinical settings is inhibited by the costly and time-intensive nature of data acquisition and annotation. To further facilitate medical machine learning, we present an ultrasound dataset of 10,223 Brightness-mode (B-mode) images consisting of sagittal slices of porcine spinal cords (N=25) before and after a contusion injury. We additionally benchmark the performance metrics of several state-of-the-art object detection algorithms to localize the site of injury and semantic segmentation models to label the anatomy for comparison and creation of task-specific architectures. Finally, we evaluate the zero-shot generalization capabilities of the segmentation models on human ultrasound spinal cord images to determine whether training on our porcine dataset is sufficient for accurately interpreting human data. Our results show that the YOLOv8 detection model outperforms all evaluated models for injury localization, achieving a mean Average Precision (mAP50-95) score of 0.606. Segmentation metrics indicate that the DeepLabv3 segmentation model achieves the highest accuracy on unseen porcine anatomy, with a Mean Dice score of 0.587, while SAMed achieves the highest Mean Dice score generalizing to human anatomy (0.445). To the best of our knowledge, this is the largest annotated dataset of spinal cord ultrasound images made publicly available to researchers and medical professionals, as well as the first public report of object detection and segmentation architectures to assess anatomical markers in the spinal cord for methodology development and clinical applications.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP (mAP50-95) for detection; Dice (Mean Dice) for segmentation",
+  "general_score_metric": "mAP50-95 (detection) and Mean Dice (segmentation)",
+  "typical_sota_score": "YOLOv8 mAP50-95 = 0.606 (detection); DeepLabv3 Mean Dice = 0.587 (porcine segmentation); SAMed Mean Dice = 0.445 (human generalization)",
+  "year_of_publish": 2024,
+  "reputation": "A new, specialized medical-imaging dataset (largest public spinal-cord ultrasound collection to date) that is of interest to clinical ML and imaging researchers but not yet widely adopted outside that niche.",
+  "notes": "Largest public spinal-cord ultrasound set available but limited by small number of subjects (N=25 porcine) and domain shift to human data; not an LLM benchmark. Useful for research but not necessarily clinical-ready; potential class imbalance and generalization caveats.",
+  "creators": {
+    "scientists": [
+      "Avisha Kumar",
+      "Kunal Kotkar",
+      "Kelly Jiang",
+      "Meghana Bhimreddy",
+      "Daniel Davidar",
+      "Carly Weber-Levine",
+      "Siddharth Krishnan",
+      "Max J. Kerensky",
+      "Ruixing Liang",
+      "Kelley Kempski Leadingham",
+      "Denis Routkevitch",
+      "Andrew M. Hersh",
+      "Kimberly Ashayeri",
+      "Betty Tyler",
+      "Ian Suk",
+      "Jennifer Son",
+      "Nicholas Theodore",
+      "Nitish Thakor",
+      "Amir Manbachi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2409.16441",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

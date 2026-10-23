@@ -1,0 +1,38 @@
+{
+  "name": "MR Explanation Performance Benchmark",
+  "description": "Convolutional Neural Networks (CNNs) are frequently and successfully used in medical prediction tasks. They are often used in combination with transfer learning, leading to improved performance when training data for the task are scarce. The resulting models are highly complex and typically do not provide any insight into their predictive mechanisms, motivating the field of 'explainable' artificial intelligence (XAI). However, previous studies have rarely quantitatively evaluated the 'explanation performance' of XAI methods against ground-truth data, and transfer learning and its influence on objective measures of explanation performance has not been investigated. Here, we propose a benchmark dataset that allows for quantifying explanation performance in a realistic magnetic resonance imaging (MRI) classification task. We employ this benchmark to understand the influence of transfer learning on the quality of explanations. Experimental results show that popular XAI methods applied to the same underlying model differ vastly in performance, even when considering only correctly classified examples. We further observe that explanation performance strongly depends on the task used for pre-training and the number of CNN layers pre-trained. These results hold after correcting for a substantial correlation between explanation and classification performance.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "explanation_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "localization metrics (e.g., mean Intersection-over-Union (mIoU) or AUC) comparing model saliency / explanation maps to ground-truth annotations",
+  "general_score_metric": "mean Intersection-over-Union (mIoU) for explanation localization (AUC also reported)",
+  "typical_sota_score": "varies widely depending on method and pretraining; reported mIoU typically in the range '10–60%'",
+  "year_of_publish": 2023,
+  "reputation": "Research benchmark introduced in 2023 for MRI XAI; used within medical-imaging and explainability research but has limited broad adoption.",
+  "notes": "Non-LLM medical-imaging benchmark using sensitive patient data; moderate dataset size; explanation metrics are correlated with classification performance and are sensitive to pretraining choices and evaluation protocol.",
+  "creators": {
+    "scientists": [
+      "Marta Oliveira",
+      "Rick Wilming",
+      "Benedict Clark",
+      "Céline Budding",
+      "Fabian Eitel",
+      "Kerstin Ritter",
+      "Stefan Haufe"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2306.12150",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

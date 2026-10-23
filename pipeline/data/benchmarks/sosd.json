@@ -1,0 +1,41 @@
+{
+  "name": "SOSD",
+  "description": "A groundswell of recent work has focused on improving data management systems with learned components. Specifically, work on learned index structures has proposed replacing traditional index structures, such as B-trees, with learned models. Given the decades of research committed to improving index structures, there is significant skepticism about whether learned indexes actually outperform state-of-the-art implementations of traditional structures on real-world data. To answer this question, we propose a new benchmarking framework that comes with a variety of real-world datasets and baseline implementations to compare against. We also show preliminary results for selected index structures, and find that learned models indeed often outperform state-of-the-art implementations, and are therefore a promising direction for future research.",
+  "category": "code",
+  "domain": "databases / data management",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "index_building",
+    "point_lookup",
+    "range_query",
+    "bulk_load"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "latency / throughput / index_size / build_time",
+  "general_score_metric": "average lookup latency (and throughput / queries-per-second)",
+  "typical_sota_score": "varies widely; learned-index methods often report ~10–50% latency improvements over classical baselines on selected datasets",
+  "year_of_publish": 2019,
+  "reputation": "Widely used within the learned-index and data systems community as a standard open benchmarking framework for comparing learned and traditional index structures.",
+  "notes": "Non-LLM benchmark; highly hardware- and workload-dependent; results can be sensitive to dataset characteristics and implementation/tuning; potential for overfitting to provided datasets.",
+  "creators": {
+    "scientists": [
+      "Andreas Kipf",
+      "Ryan Marcus",
+      "Alexander van Renen",
+      "Mihail Stoian",
+      "Alfons Kemper",
+      "Tim Kraska",
+      "Thomas Neumann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1911.13014",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

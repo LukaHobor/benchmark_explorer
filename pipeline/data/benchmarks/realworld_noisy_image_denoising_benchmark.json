@@ -1,0 +1,35 @@
+{
+  "name": "Real-world Noisy Image Denoising Benchmark",
+  "description": "Most of previous image denoising methods focus on additive white Gaussian\nnoise (AWGN). However,the real-world noisy image denoising problem with the\nadvancing of the computer vision techiniques. In order to promote the study on\nthis problem while implementing the concurrent real-world image denoising\ndatasets, we construct a new benchmark dataset which contains comprehensive\nreal-world noisy images of different natural scenes. These images are captured\nby different cameras under different camera settings. We evaluate the different\ndenoising methods on our new dataset as well as previous datasets. Extensive\nexperimental results demonstrate that the recently proposed methods designed\nspecifically for realistic noise removal based on sparse or low rank theories\nachieve better denoising performance and are more robust than other competing\nmethods, and the newly proposed dataset is more challenging. The constructed\ndataset of real photographs is publicly available at\n\\url{https://github.com/csjunxu/PolyUDataset} for researchers to investigate\nnew real-world image denoising methods. We will add more analysis on the noise\nstatistics in the real photographs of our new dataset in the next version of\nthis article.",
+  "category": "vision",
+  "domain": "computational photography / imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_denoising"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR/SSIM (image restoration metrics); often reported alongside visual/qualitative comparisons",
+  "general_score_metric": "PSNR (dB) (primary), SSIM (secondary)",
+  "typical_sota_score": "≈30–45 dB (PSNR) depending on scene and camera; SSIM typically 0.75–0.98 (varies by method)",
+  "year_of_publish": 2018,
+  "reputation": "A commonly cited real-world denoising dataset in the image-denoising community since 2018; used as a standard benchmark for non-AWGN realistic-noise methods.",
+  "notes": "Non-LLM benchmark; real photographs with scene/camera-specific noise (can limit generalization); relatively small and camera-specific compared to synthetic AWGN datasets; evaluation sensitive to alignment and ground-truth acquisition; commonly evaluated using PSNR/SSIM which may not fully capture perceptual quality.",
+  "creators": {
+    "scientists": [
+      "Jun Xu",
+      "Hui Li",
+      "Zhetong Liang",
+      "David Zhang",
+      "Lei Zhang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1804.02603",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

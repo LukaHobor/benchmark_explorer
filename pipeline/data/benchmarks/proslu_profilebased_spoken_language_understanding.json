@@ -1,0 +1,39 @@
+{
+  "name": "ProSLU (Profile-based Spoken Language Understanding)",
+  "description": "Current researches on spoken language understanding (SLU) heavily are limited to a simple setting: the plain text-based SLU that takes the user utterance as input and generates its corresponding semantic frames (e.g., intent and slots). Unfortunately, such a simple setting may fail to work in complex real-world scenarios when an utterance is semantically ambiguous, which cannot be achieved by the text-based SLU models. In this paper, we first introduce a new and important task, Profile-based Spoken Language Understanding (ProSLU), which requires the model that not only relies on the plain text but also the supporting profile information to predict the correct intents and slots. To this end, we further introduce a large-scale human-annotated Chinese dataset with over 5K utterances and their corresponding supporting profile information (Knowledge Graph (KG), User Profile (UP), Context Awareness (CA)). In addition, we evaluate several state-of-the-art baseline models and explore a multi-level knowledge adapter to effectively incorporate profile information. Experimental results reveal that all existing text-based SLU models fail to work when the utterances are semantically ambiguous and our proposed framework can effectively fuse the supporting information for sentence-level intent detection and token-level slot filling. Finally, we summarize key challenges and provide new points for future directions, which hopes to facilitate the research.",
+  "category": "multimodal",
+  "domain": "spoken language / dialogue systems",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "intent_detection",
+    "slot_filling",
+    "profile-aware_spoken_language_understanding"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "intent accuracy (sentence-level) and slot F1 (token-level); also joint metrics for SLU where reported",
+  "general_score_metric": "intent accuracy and slot F1",
+  "typical_sota_score": "intent accuracy ~80–95%; slot F1 ~60–85% (varies by model and use of profile information)",
+  "year_of_publish": 2021,
+  "reputation": "A newly introduced Chinese profile-aware SLU dataset (ProSLU) with limited but growing adoption for research on context/profile-conditioned SLU.",
+  "notes": "Relatively small dataset (~5K utterances), Chinese-only and multimodal (text + profile/knowledge), sensitive to profile availability; useful for profile-aware SLU research but prone to overfitting and domain-specific biases; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xiao Xu",
+      "Libo Qin",
+      "Kaiji Chen",
+      "Guoxing Wu",
+      "Linlin Li",
+      "Wanxiang Che"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2112.11953",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

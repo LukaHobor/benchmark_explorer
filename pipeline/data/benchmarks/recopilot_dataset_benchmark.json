@@ -1,0 +1,37 @@
+{
+  "name": "ReCopilot dataset / benchmark",
+  "description": "Binary analysis plays a pivotal role in security domains such as malware detection and vulnerability discovery, yet it remains labor-intensive and heavily reliant on expert knowledge. General-purpose large language models (LLMs) perform well in programming analysis on source code, while binaryspecific LLMs are underexplored. In this work, we present ReCopilot, an expert LLM designed for binary analysis tasks. ReCopilot integrates binary code knowledge through a meticulously constructed dataset, encompassing continue pretraining (CPT), supervised fine-tuning (SFT), and direct preference optimization (DPO) stages. It leverages variable data flow and call graph to enhance context awareness and employs test-time scaling to improve reasoning capabilities. Evaluations on a comprehensive binary analysis benchmark demonstrate that ReCopilot achieves state-of-the-art performance in tasks such as function name recovery and variable type inference on the decompiled pseudo code, outperforming both existing tools and LLMs by 13%. Our findings highlight the effectiveness of domain-specific training and context enhancement, while also revealing challenges in building super long chain-of-thought. ReCopilot represents a significant step toward automating binary analysis with interpretable and scalable AI assistance in this domain.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "classification",
+    "sequence_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy (top-1)",
+  "general_score_metric": "accuracy (top-1)",
+  "year_of_publish": 2025,
+  "reputation": "8 citations",
+  "notes": "Domain-specific binary-analysis benchmark; risk of pretraining/data contamination if models were exposed to similar decompiled code or labels; specialized tasks (function-name recovery, type inference) have limited public data and are not standard NLP/LLM benchmarks.",
+  "creators": {
+    "scientists": [
+      "Guoqiang Chen",
+      "Huiqi Sun",
+      "Daguang Liu",
+      "Zhiqi Wang",
+      "Qiang Wang",
+      "Bin Yin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2505.16366",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

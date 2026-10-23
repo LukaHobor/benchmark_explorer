@@ -1,0 +1,36 @@
+{
+  "name": "ContractEval",
+  "description": "Current code generation benchmarks measure functional correctness on well-formed inputs, as test cases are curated to satisfy input preconditions. This leaves a gap: generated programs may appear correct but fail to satisfy contracts -- assertion-level validity constraints for rejecting ill-formed inputs. We introduce ContractEval, a benchmark for evaluating contract-satisfying assertions in code generation, i.e., whether code rejects contract-violating inputs by triggering intended assertions. Built on HumanEval+ and MBPP+, ContractEval augments each task with contract-violation tests derived from reference assertions. We synthesize these via a neuro-symbolic pipeline: an LLM converts assertion clauses into constraints, and an SMT solver enumerates satisfiable violation combinations to generate inputs that violate selected clauses while satisfying the rest. Across five code LLMs, standard prompting yields 0% contract satisfaction, while adding a few contract-violation examples boosts",
+  "category": "code",
+  "domain": "code",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "code_generation",
+    "assertion_satisfaction",
+    "program_synthesis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pass@k",
+  "general_score_metric": "contract satisfaction rate",
+  "year_of_publish": 2025,
+  "reputation": "A new research benchmark built on HumanEval+ and MBPP+ that is not yet widely adopted, but is relevant for studying contract-aware code generation.",
+  "notes": "Built from HumanEval+ and MBPP+ with synthetic contract-violation tests; relatively new and likely small, with potential contamination overlap from the underlying code benchmarks.",
+  "creators": {
+    "scientists": [
+      "Soohan Lim",
+      "Joonghyuk Hahn",
+      "Hyunwoo Park",
+      "Sang-Ki Ko",
+      "Yo-Sub Han"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "source": "https://arxiv.org/abs/2510.12047",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

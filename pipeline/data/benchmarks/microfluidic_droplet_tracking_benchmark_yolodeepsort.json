@@ -1,0 +1,41 @@
+{
+  "name": "Microfluidic Droplet Tracking Benchmark (YOLO+DeepSORT)",
+  "description": "Tracking droplets in microfluidics is a challenging task. The difficulty arises in choosing a tool to analyze general microfluidic videos to infer physical quantities. The state-of-the-art object detector algorithm You Only Look Once (YOLO) and the object tracking algorithm Simple Online and Realtime Tracking with a Deep Association Metric (DeepSORT) are customizable for droplet identification and tracking. The customization includes training YOLO and DeepSORT networks to identify and track the objects of interest. We trained several YOLOv5 and YOLOv7 models and the DeepSORT network for droplet identification and tracking from microfluidic experimental videos. We compare the performance of the droplet tracking applications with YOLOv5 and YOLOv7 in terms of training time and time to analyze a given video across various hardware configurations. Despite the latest YOLOv7 being 10% faster, the real-time tracking is only achieved by lighter YOLO models on RTX 3070 Ti GPU machine due to additional significant droplet tracking costs arising from the DeepSORT algorithm. This work is a benchmark study for the YOLOv5 and YOLOv7 networks with DeepSORT in terms of the training time and inference time for a custom dataset of microfluidic droplets.",
+  "category": "vision",
+  "domain": "microfluidics / microscopy",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "video_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "tracking metrics (MOTA, IDF1, MOTP) plus runtime measures (inference FPS) and training time",
+  "general_score_metric": "MOTA (Multi-Object Tracking Accuracy)",
+  "year_of_publish": 2023,
+  "reputation": "Niche, primarily of interest to microfluidics and microscopy researchers; not widely adopted beyond that community.",
+  "notes": "Small, custom non-LLM dataset; evaluation mixes accuracy and hardware-dependent runtime (DeepSORT association adds substantial overhead); results are sensitive to GPU/CPU configuration and detector choice.",
+  "creators": {
+    "scientists": [
+      "Mihir Durve",
+      "Sibilla Orsini",
+      "Adriano Tiribocchi",
+      "Andrea Montessori",
+      "Jean-Michel Tucny",
+      "Marco Lauricella",
+      "Andrea Camposeo",
+      "Dario Pisignano",
+      "Sauro Succi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2301.08189",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

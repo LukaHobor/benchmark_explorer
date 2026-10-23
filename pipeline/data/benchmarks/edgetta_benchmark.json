@@ -1,0 +1,34 @@
+{
+  "name": "EdgeTTA Benchmark",
+  "description": "The prediction accuracy of the deep neural networks (DNNs) after deployment at the edge can suffer with time due to shifts in the distribution of the new data. To improve robustness of DNNs, they must be able to update themselves to enhance their prediction accuracy. This adaptation at the resource-constrained edge is challenging as: (i) new labeled data may not be present; (ii) adaptation needs to be on device as connections to cloud may not be available; and (iii) the process must not only be fast but also memory- and energy-efficient. Recently, lightweight prediction-time unsupervised DNN adaptation techniques have been introduced that improve prediction accuracy of the models for noisy data by re-tuning the batch normalization (BN) parameters. This paper, for the first time, performs a comprehensive measurement study of such techniques to quantify their performance and energy on various edge devices as well as find bottlenecks and propose optimization opportunities. In particular, this study considers CIFAR-10-C image classification dataset with corruptions, three robust DNNs (ResNeXt, Wide-ResNet, ResNet-18), two BN adaptation algorithms (one that updates normalization statistics and the other that also optimizes transformation parameters), and three edge devices (FPGA, Raspberry-Pi, and Nvidia Xavier NX). We find that the approach that only updates the normalization parameters with Wide-ResNet, running on Xavier GPU, to be overall effective in terms of balancing multiple cost metrics. However, the adaptation overhead can still be significant (around 213 ms). The results strongly motivate the need for algorithm-hardware co-design for efficient on-device DNN adaptation.",
+  "category": "vision",
+  "domain": "edge computing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "image_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2022,
+  "reputation": "A focused research benchmark for on-device test-time adaptation and energy/latency measurement that is known in the edge-computing and robustness research community but is niche compared to mainstream vision benchmarks.",
+  "notes": "Uses CIFAR-10-C (synthetic corruptions); hardware- and implementation-specific results (energy/latency) — not a general LLM benchmark; adaptation protocols and device variability can affect reproducibility.",
+  "creators": {
+    "scientists": [
+      "Kshitij Bhardwaj",
+      "James Diffenderfer",
+      "Bhavya Kailkhura",
+      "Maya Gokhale"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2203.11295",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

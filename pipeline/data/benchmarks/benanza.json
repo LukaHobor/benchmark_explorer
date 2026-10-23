@@ -1,0 +1,35 @@
+{
+  "name": "Benanza",
+  "description": "As Deep Learning (DL) models have been increasingly used in latency-sensitive applications, there has been a growing interest in improving their response time. An important venue for such improvement is to profile the execution of these models and characterize their performance to identify possible optimization opportunities. However, the current profiling tools lack the highly desired abilities to characterize ideal performance, identify sources of inefficiency, and quantify the benefits of potential optimizations. Such deficiencies have led to slow characterization/optimization cycles that cannot keep up with the fast pace at which new DL models are introduced. We propose Benanza, a sustainable and extensible benchmarking and analysis design that speeds up the characterization/optimization cycle of DL models on GPUs. Benanza consists of four major components: a model processor that parses models into an internal representation, a configurable benchmark generator that automatically generates micro-benchmarks given a set of models, a database of benchmark results, and an analyzer that computes the \"lower-bound\" latency of DL models using the benchmark data and informs optimizations of model execution. The \"lower-bound\" latency metric estimates the ideal model execution on a GPU system and serves as the basis for identifying optimization opportunities in frameworks or system libraries. We used Benanza to evaluate 30 ONNX models in MXNet, ONNX Runtime, and PyTorch on 7 GPUs ranging from Kepler to the latest Turing, and identified optimizations in parallel layer execution, cuDNN convolution algorithm selection, framework inefficiency, layer fusion, and using Tensor Cores.",
+  "category": "mixed",
+  "domain": "ML systems / performance",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "benchmarking",
+    "profiling",
+    "microbenchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "latency and throughput measurements (primary: estimated lower-bound latency)",
+  "general_score_metric": "estimated lower-bound latency (ms) / throughput",
+  "year_of_publish": 2019,
+  "reputation": "Well-regarded in systems/performance research as a useful methodology for deriving lower-bound latency estimates; referenced in GPU/ML optimization work but not a widely used public leaderboard.",
+  "notes": "Hardware- and workload-specific; results depend on GPU architecture, framework implementation, and benchmark generation choices — microbenchmarks may not capture complex end-to-end model behavior.",
+  "creators": {
+    "scientists": [
+      "Cheng Li",
+      "Abdul Dakkak",
+      "JinJun Xiong",
+      "Wen-mei Hwu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1911.06922",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

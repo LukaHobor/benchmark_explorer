@@ -1,0 +1,40 @@
+{
+  "name": "Lumbar spine segmentation dataset",
+  "description": "This paper presents a large publicly available multi-center lumbar spine magnetic resonance imaging (MRI) dataset with reference segmentations of vertebrae, intervertebral discs (IVDs), and spinal canal. The dataset includes 447 sagittal T1 and T2 MRI series from 218 patients with a history of low back pain and was collected from four different hospitals. An iterative data annotation approach was used by training a segmentation algorithm on a small part of the dataset, enabling semi-automatic segmentation of the remaining images. The algorithm provided an initial segmentation, which was subsequently reviewed, manually corrected, and added to the training data. We provide reference performance values for this baseline algorithm and nnU-Net, which performed comparably. Performance values were computed on a sequestered set of 39 studies with 97 series, which were additionally used to set up a continuous segmentation challenge that allows for a fair comparison of different segmentation algorithms. This study may encourage wider collaboration in the field of spine segmentation and improve the diagnostic value of lumbar spine MRI.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation",
+    "medical_image_segmentation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "Dice coefficient / IoU",
+  "general_score_metric": "Dice coefficient",
+  "typical_sota_score": "0.85–0.95",
+  "year_of_publish": 2023,
+  "reputation": "A multi-center lumbar spine MRI segmentation dataset used to benchmark and host a continuous segmentation challenge; respected for its multi-center scope and reference baselines.",
+  "notes": "Relatively modest dataset size (447 series); class imbalance across structures possible; sequestered test set used for fair external evaluation.",
+  "creators": {
+    "scientists": [
+      "Jasper W. van der Graaf",
+      "Miranda L. van Hooff",
+      "Constantinus F. M. Buckens",
+      "Matthieu Rutten",
+      "Job L. C. van Susante",
+      "Robert Jan Kroeze",
+      "Marinus de Kleuver",
+      "Bram van Ginneken",
+      "Nikolas Lessmann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2306.12217",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

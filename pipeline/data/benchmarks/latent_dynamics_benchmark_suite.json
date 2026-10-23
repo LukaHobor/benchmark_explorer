@@ -1,0 +1,38 @@
+{
+  "name": "Latent dynamics benchmark suite",
+  "description": "Learning dynamics is at the heart of many important applications of machine learning (ML), such as robotics and autonomous driving. In these settings, ML algorithms typically need to reason about a physical system using high dimensional observations, such as images, without access to the underlying state. Recently, several methods have proposed to integrate priors from classical mechanics into ML models to address the challenge of physical reasoning from images. In this work, we take a sober look at the current capabilities of these models. To this end, we introduce a suite consisting of 17 datasets with visual observations based on physical systems exhibiting a wide range of dynamics. We conduct a thorough and detailed comparison of the major classes of physically inspired methods alongside several strong baselines. While models that incorporate physical priors can often learn latent spaces with desirable properties, our results demonstrate that these methods fail to significantly improve upon standard techniques. Nonetheless, we find that the use of continuous and time-reversible dynamics benefits models of all classes.",
+  "category": "vision",
+  "domain": "robotics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "state_prediction",
+    "future_prediction",
+    "representation_learning",
+    "system_identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "prediction / reconstruction errors (trajectory RMSE, MSE), explained variance (R²) and latent-space quality metrics",
+  "general_score_metric": "Trajectory prediction error (RMSE) and reconstruction error (MSE) / explained variance",
+  "year_of_publish": 2021,
+  "reputation": "Respectable within the latent dynamics and physics-informed ML research community; used as a comparative suite in follow-up work.",
+  "notes": "Suite contains many small-to-moderate synthetic and simulated vision-based physical systems; heterogeneous tasks make a single aggregate SOTA hard to define; useful for evaluating latent-space properties rather than plug-and-play downstream performance.",
+  "creators": {
+    "scientists": [
+      "Aleksandar Botev",
+      "Andrew Jaegle",
+      "Peter Wirnsberger",
+      "Daniel Hennes",
+      "Irina Higgins"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2111.05458",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

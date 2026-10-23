@@ -1,0 +1,33 @@
+{
+  "name": "3D Reconstruction from Aerial Imagery Benchmark (Urban)",
+  "description": "This paper presents a novel benchmark to evaluate 3D reconstruction methods using aerial images in a largescale urban scenario. In particular, it presents an evaluation of open-source state-of-the-art pipelines for imagebased 3D reconstruction including, for the first time, an analysis per urban object category. Therefore, the standard evaluation presented in generalist image-based reconstruction benchmarks is extended and adapted to the city. Furthermore, our benchmark uses the densest annotated LiDAR point cloud available at city scale as ground truth and the imagery captured alongside. Additionally, an online evaluation server will be made available to the community.",
+  "category": "vision",
+  "domain": "geospatial",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_reconstruction",
+    "depth_estimation",
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Chamfer distance / RMSE / Intersection-over-Union (IoU) depending on the subtask (custom geometric metrics)",
+  "general_score_metric": "Chamfer distance (geometry) / RMSE (depth); IoU for segmentation sub-tasks",
+  "year_of_publish": 2021,
+  "reputation": "Used in photogrammetry and remote sensing research with moderate adoption in the geospatial community but not a mainstream benchmark in general computer vision.",
+  "notes": "Non-LLM benchmark requiring georeferenced aerial imagery and often additional sensor/metadata; task-specific metrics vary widely (geometry vs. segmentation); potential domain-shift between datasets (urban types, seasons); dataset size and licensing can be limiting factors.",
+  "creators": {
+    "scientists": [
+      "Susana Ruano",
+      "Aljosa Smolic"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.5220/0010338407320741",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

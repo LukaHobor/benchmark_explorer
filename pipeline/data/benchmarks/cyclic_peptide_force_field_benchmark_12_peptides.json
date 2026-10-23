@@ -1,0 +1,38 @@
+{
+  "name": "Cyclic peptide force field benchmark (12 peptides)",
+  "description": "Molecular dynamics simulation is a powerful tool for characterizing the solution structural ensembles of cyclic peptides. However, the ability of simulation to recapitulate experimental results and make accurate predictions largely depends on the force fields used. In our work here, we evaluate the performance of seven state-of-the-art force fields in recapitulating the experimental NMR results in water of 12 benchmark cyclic peptides, consisting of 6 cyclic pentapeptides, 4 cyclic hexapeptides, and 2 cyclic heptapeptides. The results show that RSFF2+TIP3P, RSFF2C+TIP3P, and Amber14SB+TIP3P exhibit similar and the best performance, all recapitulating the NMR-derived structure information on 10 cyclic peptides. Amber19SB+OPC successfully recapitulates the NMR-derived structure information on 8 cyclic peptides. In contrast, OPLS-AA/M+TIP4P, Amber03+TIP3P, and Amber14SBonlysc+GB-neck2 could only recapitulate the NMR-derived structure information on 5 cyclic peptides, the majority of which are not well-structured.",
+  "category": "mixed",
+  "domain": "materials science / computational chemistry",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "comparative_evaluation",
+    "regression",
+    "model_benchmarking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "recapitulation_count / success_count (comparison to experimental NMR data), supplemented by structural similarity metrics (e.g., RMSD) where applicable",
+  "general_score_metric": "recapitulation_count (number of peptides whose NMR-derived structural information is recapitulated, out of 12)",
+  "typical_sota_score": "8–10 out of 12",
+  "year_of_publish": 2024,
+  "reputation": "21 citations",
+  "notes": "Small dataset (only 12 peptides) and focused on specific cyclic peptide families; non-LLM benchmark; results depend heavily on force-field parametrization and solvent model choices; experimental uncertainties and limited structural diversity limit broad generalization.",
+  "creators": {
+    "scientists": [
+      "J. Miao",
+      "Arghya Ghosh",
+      "Minh Ngoc Ho",
+      "Chengxi Li",
+      "Xuejian Huang",
+      "Bradley L. Pentelute"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://doi.org/10.1021/acs.jpcb.4c00157",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

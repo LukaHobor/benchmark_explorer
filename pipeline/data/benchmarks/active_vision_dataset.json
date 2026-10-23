@@ -1,0 +1,37 @@
+{
+  "name": "Active Vision Dataset",
+  "description": "We present a new public dataset with a focus on simulating robotic vision\ntasks in everyday indoor environments using real imagery. The dataset includes\n20,000+ RGB-D images and 50,000+ 2D bounding boxes of object instances densely\ncaptured in 9 unique scenes. We train a fast object category detector for\ninstance detection on our data. Using the dataset we show that, although\nincreasingly accurate and fast, the state of the art for object detection is\nstill severely impacted by object scale, occlusion, and viewing direction all\nof which matter for robotics applications. We next validate the dataset for\nsimulating active vision, and use the dataset to develop and evaluate a\ndeep-network-based system for next best move prediction for object\nclassification using reinforcement learning. Our dataset is available for\ndownload at cs.unc.edu/~ammirato/active_vision_dataset_website/.",
+  "category": "vision",
+  "domain": "robotics / vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "active_view_selection",
+    "reinforcement_learning (next-best-view prediction)"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) for object detection; accuracy / task_success_rate or cumulative reward for next-best-move prediction",
+  "general_score_metric": "mAP (for detection); task_success_rate / accuracy (for active/RL tasks)",
+  "typical_sota_score": "varies by task; detection mAPs often reported in the ~50–75% range, while next-best-move prediction accuracies are typically lower (task-dependent)",
+  "year_of_publish": 2017,
+  "reputation": "Well-cited in active vision and robotics communities as a real-image dataset for simulating robotic vision and next-best-view research, though limited by number of scenes.",
+  "notes": "Relatively small number of unique scenes (9) limits scene diversity despite dense capture; challenges include occlusion, scale and viewpoint bias — not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Phil Ammirato",
+      "Patrick Poirson",
+      "Eunbyung Park",
+      "Jana Kosecka",
+      "Alexander C. Berg"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1702.08272",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "Multi-cohort chest radiography benchmark",
+  "description": "Artificial intelligence (AI) algorithms evaluating [supine] chest radiographs ([S]CXRs) have remarkably increased in number recently. Since training and validation are often performed on subsets of the same overall dataset, external validation is mandatory to reproduce results and reveal potential training errors. We applied a multicohort benchmarking to the publicly accessible (S)CXR analyzing AI algorithm CheXNet, comprising three clinically relevant study cohorts which differ in patient positioning ([S]CXRs), the applied reference standards (CT-/[S]CXR-based) and the possibility to also compare algorithm classification with different medical experts' reading performance. The study cohorts include [1] a cohort, characterized by 563 CXRs acquired in the emergency unit that were evaluated by 9 readers (radiologists and non-radiologists) in terms of 4 common pathologies, [2] a collection of 6,248 SCXRs annotated by radiologists in terms of pneumothorax presence, its size and presence of inserted thoracic tube material which allowed for subgroup and confounding bias analysis and [3] a cohort consisting of 166 patients with SCXRs that were evaluated by radiologists for underlying causes of basal lung opacities, all of those cases having been correlated to a timely acquired computed tomography scan (SCXR and CT within < 90 min). CheXNet non-significantly exceeded the radiology resident (RR) consensus in the detection of suspicious lung nodules (cohort [1], AUC AI/RR: 0.851/0.839, p = 0.793) and the radiological readers in the detection of basal pneumonia (cohort [3], AUC AI/reader consensus: 0.825/0.782, p = 0.390) and basal pleural effusion (cohort [3], AUC AI/reader consensus: 0.762/0.710, p = 0.336) in SCXR, partly with AUC values higher than originally published (\"Nodule\": 0.780, \"Infiltration\": 0.735, \"Effusion\": 0.864). The classifier \"Infiltration\" turned out to be very dependent on patient positioning (best in CXR, worst in SCXR). The pneumothorax SCXR cohort [2] revealed poor algorithm performance in CXRs without inserted thoracic material and in the detection of small pneumothoraces, which can be explained by a known systematic confounding error in the algorithm training process. The benefit of clinically relevant external validation is demonstrated by the differences in algorithm performance as compared to the original publication. Our multi-cohort benchmarking finally enables the consideration of confounders, different reference standards and patient positioning as well as the AI performance comparison with differentially qualified medical readers.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "detection"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUC (area under ROC)",
+  "general_score_metric": "AUC (ROC)",
+  "typical_sota_score": "75–86%",
+  "year_of_publish": 2022,
+  "reputation": "14 citations",
+  "notes": "External multicohort validation highlights sensitivity to patient positioning and reference-standard differences; relatively small and heterogeneous cohorts; demonstrates confounding risks (e.g., presence of inserted thoracic material) and thus potential dataset-specific biases. Non-LLM medical imaging benchmark; comparison against human readers included.",
+  "creators": {
+    "scientists": [
+      "Jan Rudolph",
+      "Balthasar Schachtner",
+      "Nicola Fink",
+      "Vanessa Koliogiannis",
+      "Vincent Schwarze",
+      "Sophia S. Goller"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41598-022-16514-7",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

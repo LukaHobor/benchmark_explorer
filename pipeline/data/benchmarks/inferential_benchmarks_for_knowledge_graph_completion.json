@@ -1,0 +1,33 @@
+{
+  "name": "Inferential Benchmarks for Knowledge Graph Completion",
+  "description": "Knowledge Graph (KG) completion is the problem of extending an incomplete KG with missing facts. A key feature of Machine Learning approaches for KG completion is their ability to learn inference patterns, so that the predicted facts are the results of applying these patterns to the KG. Standard completion benchmarks, however, are not well-suited for evaluating models' abilities to learn patterns, because the training and test sets of these benchmarks are a random split of a given KG and hence do not capture the causality of inference patterns. We propose a novel approach for designing KG completion benchmarks based on the following principles: there is a set of logical rules so that the missing facts are the results of the rules' application; the training set includes both premises matching rule antecedents and the corresponding conclusions; the test set consists of the results of applying the rules to the training set; the negative examples are designed to discourage the models from",
+  "category": "text",
+  "domain": "graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ranking metrics such as MRR and Hits@k",
+  "general_score_metric": "MRR",
+  "year_of_publish": 2023,
+  "reputation": "A research benchmark proposal for probing inference in KG completion, but not a widely established standard benchmark.",
+  "notes": "Designed to test rule-based inference rather than random-split completion; likely smaller and more diagnostic than standard KG benchmarks, with limited community adoption.",
+  "creators": {
+    "scientists": [
+      "Shuwen Liu",
+      "Bernardo Cuenca Grau",
+      "Ian Horrocks",
+      "Egor V. Kostylev"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2306.04814",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

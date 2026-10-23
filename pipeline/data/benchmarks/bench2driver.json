@@ -1,0 +1,37 @@
+{
+  "name": "Bench2Drive-R",
+  "description": "For end-to-end autonomous driving (E2E-AD), the evaluation system remains an open problem. Existing closed-loop evaluation protocols usually rely on simulators like CARLA being less realistic; while NAVSIM using real-world vision data, yet is limited to fixed planning trajectories in short horizon and assumes other agents are not reactive. We introduce Bench2Drive-R, a generative framework that enables reactive closed-loop evaluation. Unlike existing video generative models for AD, the proposed designs are tailored for interactive simulation, where sensor rendering and behavior rollout are decoupled by applying a separate behavioral controller to simulate the reactions of surrounding agents. As a result, the renderer could focus on image fidelity, control adherence, and spatial-temporal coherence. For temporal consistency, due to the step-wise interaction nature of simulation, we design a noise modulating temporal encoder with Gaussian blurring to encourage long-horizon autoregressive rollout of image sequences without deteriorating distribution shifts. For spatial consistency, a retrieval mechanism, which takes the spatially nearest images as references, is introduced to to ensure scene-level rendering fidelity during the generation process. The spatial relations between target and reference are explicitly modeled with 3D relative position encodings and the potential over-reliance of reference images is mitigated with hierarchical sampling and classifier-free guidance. We compare the generation quality of Bench2Drive-R with existing generative models and achieve state-of-the-art performance. We further integrate Bench2Drive-R into nuPlan and evaluate the generative qualities with closed-loop simulation results. We will open source our code.",
+  "category": "vision",
+  "domain": "autonomous driving",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "video_generation",
+    "closed_loop_simulation",
+    "trajectory_prediction",
+    "sensor_rendering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_metric (FID / LPIPS / SSIM for rendering quality + closed-loop task_success_rate / control_adherence for downstream driving performance)",
+  "general_score_metric": "composite_score",
+  "year_of_publish": 2024,
+  "reputation": "13 citations",
+  "notes": "Non-LLM, vision-focused generative benchmark integrated with nuPlan; reported metrics combine perceptual image-quality scores and downstream closed-loop performance. Potential caveats: sim-to-real realism limits, possible overfitting to nuPlan protocols, and sensitivity to renderer/controller pairings.",
+  "creators": {
+    "scientists": [
+      "Junqi You",
+      "Xiaosong Jia",
+      "Zhiyuan Zhang",
+      "Yutao Zhu",
+      "Junchi Yan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2412.09647",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

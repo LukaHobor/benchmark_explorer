@@ -1,0 +1,37 @@
+{
+  "name": "AEM Inverse Design Benchmark",
+  "description": "Deep learning (DL) inverse techniques have increased the speed of artificial electromagnetic material (AEM) design and improved the quality of resulting devices. Many DL inverse techniques have succeeded on a number of AEM design tasks, but to compare, contrast, and evaluate assorted techniques it is critical to clarify the underlying ill-posedness of inverse problems. Here we review state-of-the-art approaches and present a comprehensive survey of deep learning inverse methods and invertible and conditional invertible neural networks to AEM design. We produce easily accessible and rapidly implementable AEM design benchmarks, which offers a methodology to efficiently determine the DL technique best suited to solving different design challenges. Our methodology is guided by constraints on repeated simulation and an easily integrated metric, which we propose expresses the relative ill-posedness of any AEM design problem. We show that as the problem becomes increasingly ill-posed, the neural adjoint with boundary loss (NA) generates better solutions faster, regardless of simulation constraints. On simpler AEM design tasks, direct neural networks (NN) fare better when simulations are limited, while geometries predicted by mixture density networks (MDN) and conditional variational auto-encoders (VAE) can improve with continued sampling and re-simulation.",
+  "category": "mixed",
+  "domain": "materials science / electromagnetic materials",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "inverse_design",
+    "regression",
+    "conditional_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task_success_rate (simulation-based performance / how often generated designs meet target specs) and reconstruction error (MSE) in many reported comparisons",
+  "general_score_metric": "task_success_rate (percentage of generated designs that meet target simulation metrics) / mean squared error (MSE) for geometry-to-response reconstructions",
+  "year_of_publish": 2021,
+  "reputation": "A niche, research-oriented benchmark used within the electromagnetic materials / photonics ML community for comparing inverse-design methods; not a broadly adopted general ML benchmark.",
+  "notes": "Non-LLM benchmark that is simulation-driven; results depend on the simulator budget and problem ill-posedness; dataset sizes and task difficulty vary by subtask, making direct cross-task comparisons delicate.",
+  "creators": {
+    "scientists": [
+      "Simiao Ren",
+      "Ashwin Mahendra",
+      "Omar Khatib",
+      "Yang Deng",
+      "Willie J. Padilla",
+      "Jordan M. Malof"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2112.10254",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

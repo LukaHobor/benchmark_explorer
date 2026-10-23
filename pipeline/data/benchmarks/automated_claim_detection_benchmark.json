@@ -1,0 +1,36 @@
+{
+  "name": "Automated Claim Detection Benchmark",
+  "description": "In an effort to assist factcheckers in the process of factchecking, we tackle the claim detection task, one of the necessary stages prior to determining the veracity of a claim. It consists of identifying the set of sentences, out of a long text, deemed capable of being factchecked. This paper is a collaborative work between Full Fact, an independent factchecking charity, and academic partners. Leveraging the expertise of professional factcheckers, we develop an annotation schema and a benchmark for automated claim detection that is more consistent across time, topics and annotators than previous approaches. Our annotation schema has been used to crowdsource the annotation of a dataset with sentences from UK political TV shows. We introduce an approach based on universal sentence representations to perform the classification, achieving an F1 score of 0.83, with over 5% relative improvement over the state-of-the-art methods ClaimBuster and ClaimRank. The system was deployed in production and received positive user feedback.",
+  "category": "text",
+  "domain": "news/factchecking",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "sentence_classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "typical_sota_score": "≈0.83 F1 (reported in paper); top systems generally ~0.80–0.88 F1 depending on setup",
+  "year_of_publish": 2018,
+  "reputation": "Influential in the fact‑checking community (developed with Full Fact) and referenced by subsequent claim-detection work; deployed in production by the authors.",
+  "notes": "Domain-specific (UK political TV transcripts) so generalization may be limited; class imbalance and annotation subjectivity exist; possible contamination risk for models pretrained on similar broadcast/transcript corpora.",
+  "creators": {
+    "scientists": [
+      "Lev Konstantinovskiy",
+      "Oliver Price",
+      "Mevan Babakar",
+      "Arkaitz Zubiaga"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/1809.08193",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

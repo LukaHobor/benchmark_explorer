@@ -1,0 +1,32 @@
+{
+  "name": "PyCode_Vul",
+  "description": "We present PyCode_Vul, a Python-based software vulnerability dataset constructed from 15 open-source GitHub projects. The corpus comprises 17,811 function-level instances, including 7,899 vulnerable and 9,912 non-vulnerable samples. Our pipeline mines commit histories, extracts code changes, and recovers complete functions with AST-validated parsing. Labels are assigned via CWE mapping that combines heuristic patterns with the Bandit static analysis tool, followed by rigorous deduplication to reduce leakage and near-duplicates. We benchmark ten large language models (LLMs) on PyCode_Vul and evaluate cross-dataset generalization on CVEfixes, VUDENC, PyData, Cod_Vulnerability_Python, Buggy_Python, and PCV+Merge, alongside our PyCode_Vul Test split. Results indicate that UniXcoder and CodeT5+ consistently achieve the best overall performance on our proposed test set and the merged split, indicating that PyCode_Vul exhibits a coherent, learnable distribution for LLM-based vulnerability detection. Dataset can be found in: https://github.com/TasminKarim-19/PyCode_Vul/tree/main",
+  "category": "code",
+  "domain": "cybersecurity",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "code_vulnerability_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2025,
+  "reputation": "Emerging dataset in the software-vulnerability research community, cited by a small but growing number of studies on Python vulnerability detection.",
+  "notes": "Labels are partially derived from heuristics and Bandit static analysis, so label noise is possible; moderate dataset size (17.8k functions) with deduplication but residual leakage risk across repositories; not saturated.",
+  "creators": {
+    "scientists": [
+      "Tasmin Karim",
+      "Mst. Shapna Akter",
+      "Alfredo Cuzzocrea"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Code & Developer Tasks",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

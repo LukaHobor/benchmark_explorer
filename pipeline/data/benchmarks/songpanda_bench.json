@@ -1,0 +1,39 @@
+{
+  "name": "SongPanda-Bench",
+  "description": "SongPanda-Bench\n\t\n\n\n\n\t\n\t\t\n\t\t数据集概述\n\t\n\nSongPanda-Bench 是针对古籍垂直领域设计的视觉语言模型评测基准，解决古籍领域评测数据稀缺、标注不专业的问题，支撑模型在复杂版式古籍任务上的性能验证。\n\n\t\n\t\t\n\t\t核心构成\n\t\n\n\n数据来源：覆盖 105 本古籍（宋至清刻本 + 域外刻本），参考专家意见，筛选重要版本，平衡经史子集分类\n\n规模：356 张高清古籍图像，优先选择含小字夹注的复杂版面\n\n标注质量：硕士生初标（基于 PaddleOCR 辅助校对）+ 博士生复核，标注规则：\n\n\n\n提取正文，夹注用标签标注\n\n漫漶不清处用#占位，异体字适当放宽修改\n\n\n\n\n\t\n\t\t\n\t\n\t\n\t\t评测维度\n\t\n\n\n准确度：结合 NED_score（文本相似度）与 NER_F1（夹注识别精度）\n\n鲁棒性：评估模型应对噪音时的输出稳定性（重复 n-gram 惩罚机制）\n\nSongPanda模型的评价结果\n\n\n\n\t\n\t\t\n\t\t获取与使用\n\t\n\n\n\t\n\t\t\n\t\t数据集获取\n\t\n\n直接从 Hugging Face 加载：\n\\#… See the full description on the dataset page: https://huggingface.co/datasets/ningzhuo/SongPanda-Bench.",
+  "category": "multimodal",
+  "domain": "multidisciplinary",
+  "tags": [
+    "size_categories:n<1K",
+    "modality:image"
+  ],
+  "task_types": [
+    "ocr_text_recognition",
+    "named_entity_recognition",
+    "layout_analysis",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite (NER_F1 + NED_text_similarity)",
+  "general_score_metric": "composite_score (weighted NER_F1 and NED text-similarity)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2025,
+  "reputation": "A niche, emerging benchmark in Chinese digital humanities and OCR communities, hosted on Hugging Face with growing but limited adoption.",
+  "downloads": 5,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "ningzhuo"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://huggingface.co/datasets/ningzhuo/SongPanda-Bench",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

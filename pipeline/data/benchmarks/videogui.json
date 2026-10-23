@@ -1,0 +1,41 @@
+{
+  "name": "VideoGUI",
+  "description": "Graphical User Interface (GUI) automation holds significant promise for enhancing human productivity by assisting with computer tasks. Existing task formulations primarily focus on simple tasks that can be specified by a single, language-only instruction, such as \"Insert a new slide.\" In this work, we introduce VideoGUI, a novel multi-modal benchmark designed to evaluate GUI assistants on visual-centric GUI tasks. Sourced from high-quality web instructional videos, our benchmark focuses on tasks involving professional and novel software (e.g., Adobe Photoshop or Stable Diffusion WebUI) and complex activities (e.g., video editing). VideoGUI evaluates GUI assistants through a hierarchical process, allowing for identification of the specific levels at which they may fail: (i) high-level planning: reconstruct procedural subtasks from visual conditions without language descriptions; (ii) middle-level planning: generate sequences of precise action narrations based on visual state (i.e., screenshot) and goals; (iii) atomic action execution: perform specific actions such as accurately clicking designated elements. For each level, we design evaluation metrics across individual dimensions to provide clear signals, such as individual performance in clicking, dragging, typing, and scrolling for atomic action execution. Our evaluation on VideoGUI reveals that even the SoTA large multimodal model GPT4o performs poorly on visual-centric GUI tasks, especially for high-level planning.",
+  "category": "multimodal",
+  "domain": "GUI automation / HCI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "sequence_prediction",
+    "visual_action_detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate (hierarchical: high-level plan reconstruction accuracy, middle-level sequence exact_match/F1, atomic action accuracy and click/drag/typing/scrolling precision)",
+  "general_score_metric": "composite_score (hierarchical task_success_rate + atomic action accuracy)",
+  "typical_sota_score": "low (reported SoTA multimodal models perform poorly; roughly 10–30% on some atomic/task-success metrics)",
+  "year_of_publish": 2024,
+  "reputation": "New (2024) multimodal benchmark gaining attention in GUI automation and HCI research but not yet widely adopted outside that niche.",
+  "notes": "Derived from web instructional videos — potential pretraining/contamination risk; multi-modal and not LLM-only; hierarchical metrics reduce saturation but dataset is specialized to professional software and may be niche.",
+  "creators": {
+    "scientists": [
+      "Kevin Qinghong Lin",
+      "Linjie Li",
+      "Difei Gao",
+      "Qinchen Wu",
+      "Mingyi Yan",
+      "Zhengyuan Yang",
+      "Lijuan Wang",
+      "Mike Zheng Shou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2406.10227",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

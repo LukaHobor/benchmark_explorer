@@ -1,0 +1,39 @@
+{
+  "name": "RAMIE segmentation dataset",
+  "description": "Esophageal cancer is among the most common types of cancer worldwide. It is traditionally treated using open esophagectomy, but in recent years, robot-assisted minimally invasive esophagectomy (RAMIE) has emerged as a promising alternative. However, robot-assisted surgery can be challenging for novice surgeons, as they often suffer from a loss of spatial orientation. Computer-aided anatomy recognition holds promise for improving surgical navigation, but research in this area remains limited. In this study, we developed a comprehensive dataset for semantic segmentation in RAMIE, featuring the largest collection of vital anatomical structures and surgical instruments to date. Handling this diverse set of classes presents challenges, including class imbalance and the recognition of complex structures such as nerves. This study aims to understand the challenges and limitations of current state-of-the-art algorithms on this novel dataset and problem. Therefore, we benchmarked eight real-time deep learning models using two pretraining datasets. We assessed both traditional and attention-based networks, hypothesizing that attention-based networks better capture global patterns and address challenges such as occlusion caused by blood or other tissues. The benchmark includes our RAMIE dataset and the publicly available CholecSeg8k dataset, enabling a thorough assessment of surgical segmentation tasks. Our findings indicate that pretraining on ADE20k, a dataset for semantic segmentation, is more effective than pretraining on ImageNet. Furthermore, attention-based models outperform traditional convolutional neural networks, with SegNeXt and Mask2Former achieving higher Dice scores, and Mask2Former additionally excelling in average symmetric surface distance.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Dice (F1) / Intersection over Union (IoU) / Average Symmetric Surface Distance (ASSD)",
+  "general_score_metric": "Dice",
+  "year_of_publish": 2024,
+  "reputation": "Newly introduced academic dataset (2024) with limited adoption so far but considered valuable for surgical anatomy segmentation research.",
+  "notes": "Non-LLM medical imaging benchmark; strong class imbalance and challenging classes (e.g., nerves); reported metrics include surface-distance measures; potential patient/privacy considerations; pretraining on segmentation datasets (ADE20k) found more effective than ImageNet in the originating study.",
+  "creators": {
+    "scientists": [
+      "Ronald L. P. D. de Jong",
+      "Yasmina Al Khalil",
+      "Tim J. M. Jaspers",
+      "Romy C. van Jaarsveld",
+      "Gino M. Kuiper",
+      "Yiping Li",
+      "Richard van Hillegersberg",
+      "Jelle P. Ruurda",
+      "Marcel Breeuwer",
+      "Fons van der Sommen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2412.03401",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

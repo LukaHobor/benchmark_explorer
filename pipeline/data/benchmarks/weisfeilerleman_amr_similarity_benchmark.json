@@ -1,0 +1,34 @@
+{
+  "name": "Weisfeiler-Leman AMR similarity benchmark",
+  "description": "Several metrics have been proposed for assessing the similarity of (abstract) meaning representations (AMRs), but little is known about how they relate to human similarity ratings. Moreover, the current metrics have complementary strengths and weaknesses: Some emphasize speed, while others make the alignment of graph structures explicit, at the price of a costly alignment step. In this work we propose new Weisfeiler-Leman AMR similarity metrics that unify the strengths of previous metrics, while mitigating their weaknesses. Specifically, our new metrics are able to match contextualized substructures and induce n:m alignments between their nodes. Furthermore, we introduce a Benchmark for AMR Metrics based on Overt Objectives (Bamboo), the first benchmark to support empirical assessment of graph-based MR similarity metrics. Bamboo maximizes the interpretability of results by defining multiple overt objectives that range from sentence similarity objectives to stress tests that probe a metric’s robustness against meaning-altering and meaning- preserving graph transformations. We show the benefits of Bamboo by profiling previous metrics and our own metrics. Results indicate that our novel metrics may serve as a strong baseline for future work.",
+  "category": "text",
+  "domain": "NLP / semantic parsing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "semantic_similarity",
+    "robustness_stress_test",
+    "graph_alignment"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "correlation with human similarity ratings (Spearman/Pearson) plus task-specific similarity scores across overt objectives",
+  "general_score_metric": "Spearman/Pearson correlation with human judgments and explicit graph-similarity scores",
+  "typical_sota_score": "varies by metric; often moderate correlations (roughly 0.5–0.8) depending on the overt objective",
+  "year_of_publish": 2021,
+  "reputation": "Relevant within the AMR and semantic-parsing community as a focused benchmark for evaluating graph-based meaning-representation metrics; relatively niche outside that subfield.",
+  "notes": "Specialized, non-LLM benchmark with human-rated subsets and stress tests; some metrics require costly graph alignments; results depend on choice of overt objectives and transformation suites.",
+  "creators": {
+    "scientists": [
+      "Juri Opitz",
+      "Angel Daza",
+      "and Anette Frank."
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

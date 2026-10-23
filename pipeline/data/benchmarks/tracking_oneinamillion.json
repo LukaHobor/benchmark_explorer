@@ -1,0 +1,41 @@
+{
+  "name": "Tracking One-in-a-Million",
+  "description": "Tracking the development of living cells in live-cell time-lapses reveals crucial insights into single-cell behavior and presents tremendous potential for biomedical and biotechnological applications. In microbial live-cell imaging (MLCI), a few to thousands of cells have to be detected and tracked within dozens of growing cell colonies. The challenge of tracking cells is heavily influenced by the experiment parameters, namely the imaging interval and maximal cell number. For now, tracking benchmarks are not widely available in MLCI and the effect of these parameters on the tracking performance are not yet known. Therefore, we present the largest publicly available and annotated dataset for MLCI, containing more than 1.4 million cell instances, 29k cell tracks, and 14k cell divisions. With this dataset at hand, we generalize existing tracking metrics to incorporate relevant imaging and experiment parameters into experiment-aware metrics. These metrics reveal that current cell tracking methods crucially depend on the choice of the experiment parameters, where their performance deteriorates at high imaging intervals and large cell colonies. Thus, our new benchmark quantifies the influence of experiment parameters on the tracking quality, and gives the opportunity to develop new data-driven methods that generalize across imaging and experiment parameters. The benchmark dataset is publicly available at https://zenodo.org/doi/10.5281/zenodo.7260136.",
+  "category": "vision",
+  "domain": "biomedical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "cell_tracking",
+    "instance_segmentation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MOTA / MOTP / IDF1 / track-wise F1",
+  "general_score_metric": "MOTA",
+  "year_of_publish": 2024,
+  "reputation": "Large, high-quality public dataset that has become a reference benchmark for microbial live-cell tracking research.",
+  "notes": "Non-LLM benchmark; tracking performance is highly sensitive to experiment parameters (imaging interval, colony size); very large dataset reduces overfitting risk but results depend strongly on experimental conditions and annotation protocols.",
+  "creators": {
+    "scientists": [
+      "J. Seiffarth",
+      "L. Blöbaum",
+      "R. D. Paul",
+      "N. Friederich",
+      "A. J. Yamachui Sitcheu",
+      "R. Mikut",
+      "H. Scharr",
+      "A. Grünberger",
+      "K. Nöh"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2411.00552",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Open Link Prediction Benchmark",
+  "description": "Open Information Extraction systems extract ({``}subject text{''}, {``}relation text{''}, {``}object text{''}) triples from raw text. Some triples are textual versions of facts, i.e., non-canonicalized mentions of entities and relations. In this paper, we investigate whether it is possible to infer new facts directly from the open knowledge graph without any canonicalization or any supervision from curated knowledge. For this purpose, we propose the open link prediction task,i.e., predicting test facts by completing ({``}subject text{''}, {``}relation text{''}, ?) questions. An evaluation in such a setup raises the question if a correct prediction is actually a new fact that was induced by reasoning over the open knowledge graph or if it can be trivially explained. For example, facts can appear in different paraphrased textual variants, which can lead to test leakage. To this end, we propose an evaluation protocol and a methodology for creating the open link prediction benchmark OlpBench. We performed experiments with a prototypical knowledge graph embedding model for openlink prediction. While the task is very challenging, our results suggests that it is possible to predict genuinely new facts, which can not be trivially explained.",
+  "category": "text",
+  "domain": "knowledge graphs / information extraction",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "fact_completion",
+    "open_question_answering"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "MRR and Hits@k (e.g., Hits@1/3/10)",
+  "general_score_metric": "MRR (mean reciprocal rank)",
+  "reputation": "A focused research benchmark for open information extraction / open knowledge graph link prediction; respected in the KG embedding community but not as widely adopted as canonical KG benchmarks.",
+  "notes": "Contains non-canonicalized, paraphrased entity and relation mentions — risk of test leakage via paraphrase overlap; evaluation is more challenging than canonical KG link prediction and is primarily used in research (non-LLM focused).",
+  "creators": {
+    "scientists": [
+      "Samuel Broscheit",
+      "Kiril Gashteovski",
+      "Yanjie Wang",
+      "Rainer Gemulla"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

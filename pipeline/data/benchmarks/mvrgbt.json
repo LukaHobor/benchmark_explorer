@@ -1,0 +1,43 @@
+{
+  "name": "MV-RGBT",
+  "description": "RGBT tracking draws increasing attention due to its robustness in multi-modality warranting (MMW) scenarios, such as nighttime and bad weather, where relying on a single sensing modality fails to ensure stable tracking results. However, the existing benchmarks predominantly consist of videos collected in common scenarios where both RGB and thermal infrared (TIR) information are of sufficient quality. This makes the data unrepresentative of severe imaging conditions, leading to tracking failures in MMW scenarios. To bridge this gap, we present a new benchmark, MV-RGBT, captured specifically in MMW scenarios. In contrast with the existing datasets, MV-RGBT comprises more object categories and scenes, providing a diverse and challenging benchmark. Furthermore, for severe imaging conditions of MMW scenarios, a new problem is posed, namely \\textit{when to fuse}, to stimulate the development of fusion strategies for such data. We propose a new method based on a mixture of experts, namely MoETrack, as a baseline fusion strategy. In MoETrack, each expert generates independent tracking results along with the corresponding confidence score, which is used to control the fusion process. Extensive experimental results demonstrate the significant potential of MV-RGBT in advancing RGBT tracking and elicit the conclusion that fusion is not always beneficial, especially in MMW scenarios. Significantly, the proposed MoETrack method achieves new state-of-the-art results not only on MV-RGBT, but also on standard benchmarks, such as RGBT234, LasHeR, and the short-term split of VTUAV (VTUAV-ST). More information of MV-RGBT and the source code of MoETrack will be released at https://github.com/Zhangyong-Tang/MoETrack.",
+  "category": "multimodal",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "visual_tracking",
+    "multi-modal_tracking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "success_rate (AUC) / precision",
+  "general_score_metric": "success_rate (AUC)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A recent multimodal RGBT benchmark aimed at challenging fusion strategies in adverse conditions; currently of interest to the visual tracking community but not yet widely adopted.",
+  "notes": "Non-LLM benchmark; focused on multimodal (RGB+thermal) tracking in severe conditions — may have sensor-specific biases and a limited, specialized domain. Evaluations commonly report multiple metrics (AUC, precision).",
+  "creators": {
+    "scientists": [
+      "Zhangyong Tang",
+      "Tianyang Xu",
+      "ZhenHua Feng",
+      "XueFeng Zhu",
+      "He Wang",
+      "Pengcheng Shao",
+      "Chunyang Cheng",
+      "Xiao-Jun Wu",
+      "Muhammad Awais",
+      "Sara Atito",
+      "Josef Kittler"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2405.00168",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

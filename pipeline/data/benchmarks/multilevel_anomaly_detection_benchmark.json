@@ -1,0 +1,39 @@
+{
+  "name": "Multilevel Anomaly Detection Benchmark",
+  "description": "Anomaly detection (AD) is a machine learning task that identifies anomalies by learning patterns from normal training data. In many real-world scenarios, anomalies vary in severity, from minor anomalies with little risk to severe abnormalities requiring immediate attention. However, existing models primarily operate in a binary setting, and the anomaly scores they produce are usually based on the deviation of data points from normal data, which may not accurately reflect practical severity. In this paper, we address this gap by making three key contributions. First, we propose a novel setting, Multilevel AD (MAD), in which the anomaly score represents the severity of anomalies in real-world applications, and we highlight its diverse applications across various domains. Second, we introduce a novel benchmark, MAD-Bench, that evaluates models not only on their ability to detect anomalies, but also on how effectively their anomaly scores reflect severity. This benchmark incorporates multiple types of baselines and real-world applications involving severity. Finally, we conduct a comprehensive performance analysis on MAD-Bench. We evaluate models on their ability to assign severity-aligned scores, investigate the correspondence between their performance on binary and multilevel detection, and study their robustness. This analysis offers key insights into improving AD models for practical severity alignment. The code framework and datasets used for the benchmark will be made publicly available.",
+  "category": "mixed",
+  "domain": "anomaly detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "severity_estimation",
+    "outlier_scoring",
+    "unsupervised_detection"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC and severity_score_correlation (e.g., Spearman/Pearson)",
+  "general_score_metric": "severity_score_correlation (Spearman)",
+  "year_of_publish": 2024,
+  "reputation": "Newly proposed benchmark focused on severity-aligned anomaly scoring with early-stage adoption and growing interest in the AD community.",
+  "notes": "Non-LLM benchmark; severity labels may be subjective and datasets can be imbalanced; evaluates both binary detection and severity alignment, so direct comparisons to standard AD benchmarks may be limited.",
+  "creators": {
+    "scientists": [
+      "Tri Cao",
+      "Minh-Huy Trinh",
+      "Ailin Deng",
+      "Quoc-Nam Nguyen",
+      "Khoa Duong",
+      "Ngai-Man Cheung",
+      "Bryan Hooi"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2411.14515",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

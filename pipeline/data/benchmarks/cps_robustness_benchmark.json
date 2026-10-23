@@ -1,0 +1,35 @@
+{
+  "name": "CPS Robustness Benchmark",
+  "description": "Cyber-Physical Systems (CPS) in domains such as manufacturing and energy distribution generate complex time series data crucial for Prognostics and Health Management (PHM). While Deep Learning (DL) methods have demonstrated strong forecasting capabilities, their adoption in industrial CPS remains limited due insufficient robustness. Existing robustness evaluations primarily focus on formal verification or adversarial perturbations, inadequately representing the complexities encountered in real-world CPS scenarios. To address this, we introduce a practical robustness definition grounded in distributional robustness, explicitly tailored to industrial CPS, and propose a systematic framework for robustness evaluation. Our framework simulates realistic disturbances, such as sensor drift, noise and irregular sampling, enabling thorough robustness analyses of forecasting models on real-world CPS datasets. The robustness definition provides a standardized score to quantify and compare model performance across diverse datasets, assisting in informed model selection and architecture design. Through extensive empirical studies evaluating prominent DL architectures (including recurrent, convolutional, attention-based, modular, and structured state-space models) we demonstrate the applicability and effectiveness of our approach. We publicly release our robustness benchmark to encourage further research and reproducibility.",
+  "category": "mixed",
+  "domain": "cyber-physical systems / industrial time series",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "time_series_forecasting",
+    "robustness_evaluation",
+    "distributional_robustness_testing"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "robustness_score (standardized distributional robustness metric) reported alongside forecasting errors such as RMSE/MAE",
+  "general_score_metric": "robustness_score (distributional robustness metric), reported with RMSE/MAE",
+  "year_of_publish": 2025,
+  "reputation": "Recently proposed, domain-focused benchmark for CPS robustness; of growing interest in PHM and industrial time-series research but not yet broadly standardized.",
+  "notes": "Non-LLM benchmark; evaluates models under simulated realistic disturbances (sensor drift, noise, irregular sampling). Potential caveats: dataset- and scenario-specific results, varying dataset sizes, and risk of overfitting to synthetic disturbance patterns; comparability depends on standardized disturbance settings.",
+  "creators": {
+    "scientists": [
+      "Alexander Windmann",
+      "Henrik Steude",
+      "Daniel Boschmann",
+      "Oliver Niggemann"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2504.03494",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

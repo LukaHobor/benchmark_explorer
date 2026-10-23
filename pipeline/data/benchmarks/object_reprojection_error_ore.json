@@ -1,0 +1,35 @@
+{
+  "name": "Object Reprojection Error (ORE)",
+  "description": "3D spatial understanding is highly valuable in the context of semantic modeling of environments, agents, and their relationships.  Semantic modeling approaches employed on monocular video often ingest outputs from off-the-shelf SLAM/SfM pipelines, which are anecdotally observed to perform poorly or fail completely on some fraction of the videos of interest.  These target videos may vary widely in complexity of scenes, activities, camera trajectory, etc.  Unfortunately, such semantically-rich video data often comes with no ground-truth 3D information, and in practice it is prohibitively costly or impossible to obtain ground truth reconstructions or camera pose post-hoc.  \n\nThis paper proposes a novel evaluation protocol, Object Reprojection Error (ORE) to benchmark camera trajectories; ORE computes reprojection error for static objects within the video and requires only lightweight object tracklet annotations.  These annotations are easy to gather on new or existing video, enabling ORE to be calculated on essentially arbitrary datasets.  We show that ORE maintains high rank correlation with standard metrics based on groundtruth.  Leveraging ORE, we source videos and annotations from Ego4D-EgoTracks, resulting in EgoStatic, a large-scale diverse dataset for evaluating camera trajectories in-the-wild.",
+  "category": "vision",
+  "domain": "3D computer vision / camera pose",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "camera_pose_estimation",
+    "trajectory_evaluation",
+    "metric_benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean reprojection error (pixels) and ranking correlation with ground-truth trajectory metrics (lower error = better)",
+  "general_score_metric": "mean reprojection error (and rank-correlation with standard ground-truth metrics)",
+  "year_of_publish": 2023,
+  "reputation": "A practical evaluation protocol proposed for in-the-wild camera-trajectory benchmarking that has attracted interest from researchers needing lightweight alternatives to full 3D ground truth.",
+  "notes": "Non-LLM, non-classification benchmark that requires lightweight object tracklet annotations; designed for broad applicability when ground-truth 3D is unavailable. Correlates well with ground-truth metrics but does not replace dense 3D evaluation; results depend on quality of object tracking annotations.",
+  "creators": {
+    "scientists": [
+      "unknown"
+    ],
+    "institutions": [
+      "unknown"
+    ],
+    "companies": [
+      "unknown"
+    ]
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

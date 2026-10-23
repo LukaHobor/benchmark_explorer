@@ -1,0 +1,41 @@
+{
+  "name": "UBnormal",
+  "description": "Detecting abnormal events in video is commonly framed as a one-class classification task, where training videos contain only normal events, while test videos encompass both normal and abnormal events. In this scenario, anomaly detection is an open-set problem. However, some studies assimilate anomaly detection to action recognition. This is a closed-set scenario that fails to test the capability of systems at detecting new anomaly types. To this end, we propose UBnormal, a new supervised open-set benchmark composed of multiple virtual scenes for video anomaly detection. Unlike existing data sets, we introduce abnormal events annotated at the pixel level at training time, for the first time enabling the use of fully-supervised learning methods for abnormal event detection. To preserve the typical open-set formulation, we make sure to include disjoint sets of anomaly types in our training and test collections of videos. To our knowledge, UBnormal is the first video anomaly detection benchmark to allow a fair head-to-head comparison between one-class open-set models and supervised closed-set models, as shown in our experiments. Moreover, we provide empirical evidence showing that UBnormal can enhance the performance of a state-of-the-art anomaly detection framework on two prominent data sets, Avenue and ShanghaiTech. Our benchmark is freely available at https://github.com/lilygeorgescu/UBnormal.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "video_segmentation",
+    "open_set_classification",
+    "pixel_level_annotation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ROC AUC (frame-level) / mAP or IoU (pixel-level)",
+  "general_score_metric": "AUC (ROC) at frame-level",
+  "year_of_publish": 2021,
+  "year_of_last_update": 2022,
+  "reputation": "An emerging, well-documented open-set benchmark with growing interest in the video-anomaly community but not yet widely adopted.",
+  "notes": "Synthetic/virtual scenes with pixel-level annotations; enables supervised vs. one-class comparisons; domain gap to real-world data; moderate dataset size; designed splits reduce contamination risk.",
+  "creators": {
+    "scientists": [
+      "Andra Acsintoae",
+      "Andrei Florescu",
+      "Mariana-Iuliana Georgescu",
+      "Tudor Mare",
+      "Paul Sumedrea",
+      "Radu Tudor Ionescu",
+      "Fahad Shahbaz Khan",
+      "Mubarak Shah"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2111.08644",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "CPath Domain Generalization Benchmark",
+  "description": "Deep learning models have shown immense promise in computational pathology (CPath) tasks, but their performance often suffers when applied to unseen data due to domain shifts. Addressing this requires domain generalization (DG) algorithms. However, a systematic evaluation of DG algorithms in the CPath context is lacking. This study aims to benchmark the effectiveness of 30 DG algorithms on 3 CPath tasks of varying difficulty through 7,560 cross-validation runs. We evaluate these algorithms using a unified and robust platform, incorporating modality-specific techniques and recent advances like pretrained foundation models. Our extensive cross-validation experiments provide insights into the relative performance of various DG strategies. We observe that self-supervised learning and stain augmentation consistently outperform other methods, highlighting the potential of pretrained models and data augmentation. Furthermore, we introduce a new pan-cancer tumor detection dataset (HISTOPANTUM) as a benchmark for future research. This study offers valuable guidance to researchers in selecting appropriate DG approaches for CPath tasks.",
+  "category": "vision",
+  "domain": "medical imaging / computational pathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "detection",
+    "domain_generalization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC (area under ROC curve)",
+  "year_of_publish": 2024,
+  "reputation": "Recent, comprehensive benchmark for domain generalization in computational pathology; gaining attention but not yet a longstanding community standard.",
+  "notes": "Large cross‑validation study across many DG algorithms and tasks; includes a newly introduced HISTOPANTUM dataset. Caveats include label variability, stain and scanner shifts, potential privacy constraints, and reliance on pretrained models—results sensitive to pretraining and augmentation strategies.",
+  "creators": {
+    "scientists": [
+      "Neda Zamanitajeddin",
+      "Mostafa Jahanifar",
+      "Kesi Xu",
+      "Fouzia Siraj",
+      "Nasir Rajpoot"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2409.17063",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

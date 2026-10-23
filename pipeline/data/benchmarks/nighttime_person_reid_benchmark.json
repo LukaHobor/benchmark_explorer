@@ -1,0 +1,39 @@
+{
+  "name": "Nighttime Person Re-ID Benchmark",
+  "description": "Nighttime person Re-ID (person re-identification in the nighttime) is a very important and challenging task for visual surveillance but it has not been thoroughly investigated. Under the low illumination condition, the performance of person Re-ID methods usually sharply deteriorates. To address the low illumination challenge in nighttime person Re-ID, this paper proposes an Illumination Distillation Framework (IDF), which utilizes illumination enhancement and illumination distillation schemes to promote the learning of Re-ID models. Specifically, IDF consists of a master branch, an illumination enhancement branch, and an illumination distillation module. The master branch is used to extract the features from a nighttime image. The illumination enhancement branch first estimates an enhanced image from the nighttime image using a nonlinear curve mapping method and then extracts the enhanced features. However, nighttime and enhanced features usually contain data noise due to unstable lighting conditions and enhancement failures. To fully exploit the complementary benefits of nighttime and enhanced features while suppressing data noise, we propose an illumination distillation module. In particular, the illumination distillation module fuses the features from two branches through a bottleneck fusion model and then uses the fused features to guide the learning of both branches in a distillation manner. In addition, we build a real-world nighttime person Re-ID dataset, named Night600, which contains 600 identities captured from different viewpoints and nighttime illumination conditions under complex outdoor environments. Experimental results demonstrate that our IDF can achieve state-of-the-art performance on two nighttime person Re-ID datasets (i.e., Night600 and Knight ). We will release our code and dataset at https://github.com/Alexadlu/IDF.",
+  "category": "vision",
+  "domain": "vision (surveillance)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "reidentification",
+    "image_retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP and Rank-1 accuracy",
+  "general_score_metric": "mAP",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Niche but relevant within the person Re-ID and surveillance research community; dataset and method have modest adoption for nighttime-specific Re-ID work.",
+  "notes": "Small dataset (600 identities) focused on nighttime conditions; specialized benchmark that may not generalize to daytime Re-ID. Non-LLM benchmark; possible dataset size limitations and class imbalance.",
+  "creators": {
+    "scientists": [
+      "Andong Lu",
+      "Zhang Zhang",
+      "Yan Huang",
+      "Yifan Zhang",
+      "Chenglong Li",
+      "Jin Tang",
+      "Liang Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.16486",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

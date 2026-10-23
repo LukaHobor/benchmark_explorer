@@ -1,0 +1,32 @@
+{
+  "name": "LSTM Benchmarks",
+  "description": "This study provides benchmarks for different implementations of LSTM units\nbetween the deep learning frameworks PyTorch, TensorFlow, Lasagne and Keras.\nThe comparison includes cuDNN LSTMs, fused LSTM variants and less optimized,\nbut more flexible LSTM implementations. The benchmarks reflect two typical\nscenarios for automatic speech recognition, notably continuous speech\nrecognition and isolated digit recognition. These scenarios cover input\nsequences of fixed and variable length as well as the loss functions CTC and\ncross entropy. Additionally, a comparison between four different PyTorch\nversions is included. The code is available online\nhttps://github.com/stefbraun/rnn_benchmarks.",
+  "category": "audio",
+  "domain": "speech",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "benchmarking",
+    "performance_evaluation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "runtime (throughput/latency, memory) and recognition accuracy (WER/CER) for ASR scenarios",
+  "general_score_metric": "throughput (samples/sec) and recognition accuracy (WER/CER)",
+  "year_of_publish": 2018,
+  "year_of_last_update": 2018,
+  "reputation": "Well-known among systems and speech-research practitioners comparing LSTM implementations across frameworks, but not a mainstream task benchmark for model quality.",
+  "notes": "Non-LLM benchmark focused on implementation/runtime rather than model conceptual evaluation; results are highly hardware- and framework-version dependent; benchmarks include both optimized (cuDNN/fused) and unoptimized implementations; codebase dates from 2018 so some comparisons may be outdated; reproducibility can vary with software/hardware stack.",
+  "creators": {
+    "scientists": [
+      "Stefan Braun"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/1806.01818",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

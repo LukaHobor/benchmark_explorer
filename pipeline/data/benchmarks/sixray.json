@@ -1,0 +1,39 @@
+{
+  "name": "SIXray",
+  "description": "In this paper, we present a large-scale dataset and establish a baseline for\nprohibited item discovery in Security Inspection X-ray images. Our dataset,\nnamed SIXray, consists of 1,059,231 X-ray images, in which 6 classes of 8,929\nprohibited items are manually annotated. It raises a brand new challenge of\noverlapping image data, meanwhile shares the same properties with existing\ndatasets, including complex yet meaningless contexts and class imbalance. We\npropose an approach named class-balanced hierarchical refinement (CHR) to deal\nwith these difficulties. CHR assumes that each input image is sampled from a\nmixture distribution, and that deep networks require an iterative process to\ninfer image contents accurately. To accelerate, we insert reversed connections\nto different network backbones, delivering high-level visual cues to assist\nmid-level features. In addition, a class-balanced loss function is designed to\nmaximally alleviate the noise introduced by easy negative samples. We evaluate\nCHR on SIXray with different ratios of positive/negative samples. Compared to\nthe baselines, CHR enjoys a better ability of discriminating objects especially\nusing mid-level features, which offers the possibility of using a\nweakly-supervised approach towards accurate object localization. In particular,\nthe advantage of CHR is more significant in the scenarios with fewer positive\ntraining samples, which demonstrates its potential application in real-world\nsecurity inspection.",
+  "category": "vision",
+  "domain": "security X-ray / inspection imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "image_classification",
+    "weakly_supervised_localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) for detection; classification accuracy and localization AP; evaluation often reports results at common IoU thresholds",
+  "general_score_metric": "mean average precision (mAP)",
+  "typical_sota_score": "50–80% mAP (varies by task setup, ratio of positives/negatives, and supervision level)",
+  "year_of_publish": 2019,
+  "reputation": "A widely cited and influential dataset in the security X-ray imaging community, used frequently to study prohibited-item detection under heavy occlusion and class imbalance.",
+  "notes": "Large-scale dataset with severe class imbalance and frequent object overlap, which makes detection challenging. Designed for security X-ray research (non-LLM). Potential annotation noise and domain-specific biases; not intended for public-person-identifying tasks.",
+  "creators": {
+    "scientists": [
+      "Caijing Miao",
+      "Lingxi Xie",
+      "Fang Wan",
+      "Chi Su",
+      "Hongye Liu",
+      "Jianbin Jiao",
+      "Qixiang Ye"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1901.00303",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

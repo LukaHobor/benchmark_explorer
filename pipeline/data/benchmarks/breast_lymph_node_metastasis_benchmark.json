@@ -1,0 +1,39 @@
+{
+  "name": "Breast Lymph Node Metastasis Benchmark",
+  "description": "Advances in optical microscopy scanning have significantly contributed to computational pathology (CPath) by converting traditional histopathological slides into whole slide images (WSIs). This development enables comprehensive digital reviews by pathologists and accelerates AI-driven diagnostic support for WSI analysis. Recent advances in foundational pathology models have increased the need for benchmarking tasks. The Camelyon series is one of the most widely used open-source datasets in computational pathology. However, the quality, accessibility, and clinical relevance of the labels have not been comprehensively evaluated. In this study, we reprocessed 1,399 WSIs and labels from the Camelyon-16 and Camelyon-17 datasets, removing low-quality slides, correcting erroneous labels, and providing expert pixel annotations for tumor regions in the previously unreleased test set. Based on the sizes of re-annotated tumor regions, we upgraded the binary cancer screening task to a four-class task: negative, micro-metastasis, macro-metastasis, and Isolated Tumor Cells (ITC). We reevaluated pre-trained pathology feature extractors and multiple instance learning (MIL) methods using the cleaned dataset, providing a benchmark that advances AI development in histopathology.",
+  "category": "vision",
+  "domain": "computational pathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "segmentation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "AUC (slide-level); F1 / IoU (region-level)",
+  "typical_sota_score": "80–98%",
+  "year_of_publish": 2024,
+  "reputation": "Builds on the widely used Camelyon datasets and is gaining attention as a cleaner, more clinically relevant benchmark in computational pathology.",
+  "notes": "Reprocessed subset of Camelyon16/17 with corrected labels and pixel annotations; moderate-sized WSI collection (1,399 slides). Tasks include both slide-level classification and lesion segmentation. Potential remaining label noise and domain-shift issues; non-LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Xitong Ling",
+      "Yuanyuan Lei",
+      "Jiawen Li",
+      "Junru Cheng",
+      "Wenting Huang",
+      "Tian Guan",
+      "Jian Guan",
+      "Yonghong He"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2411.10752",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

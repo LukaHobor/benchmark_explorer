@@ -1,0 +1,38 @@
+{
+  "name": "Diverse Genomic Embedding Benchmark",
+  "description": "Abstract\n                \n                  Biological foundation models hold significant promise for deciphering complex biological functions. However, evaluating their performance on functional tasks remains challenging due to the lack of standardized benchmarks encompassing diverse sequences and functions. Existing functional annotations are often scarce, biased, and susceptible to train-test leakage, hindering robust evaluation. Furthermore, biological functions manifest at multiple scales, from individual residues to large genomic segments. To address these limitations, we introduce the Diverse Genomic Embedding Benchmark (DGEB), inspired by natural language embedding benchmarks. DGEB comprises six embedding tasks across 18 expert curated datasets, spanning sequences from all domains of life and encompassing both nucleic acid and amino acid modalities. Notably, four datasets enable direct comparison between models trained on different modalities. Benchmarking protein and genomic language models (pLMs and gLMs) on DGEB reveals performance saturation with model scaling on numerous tasks, especially on those with underrepresented sequences (e.g. Archaea). This highlights the limitations of existing modeling objectives and training data distributions for capturing diverse biological functions. DGEB is available as an open-source package with a public leaderboard at\n                  https://github.com/TattaBio/DGEB\n                  .",
+  "category": "mixed",
+  "domain": "genomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "embedding_similarity",
+    "classification",
+    "ranking",
+    "clustering"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Spearman_correlation / AUC / precision@k (task-dependent)",
+  "general_score_metric": "task-dependent composite (commonly Spearman correlation for similarity tasks)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "A recent, domain-focused benchmark (DGEB) introduced for evaluating genomic and protein embeddings; gaining attention in computational biology for its breadth and modality comparisons.",
+  "notes": "Contains tasks spanning multiple scales and modalities; susceptible to train-test leakage if models were trained on overlapping sequences, shows performance saturation for larger models on underrepresented taxa (e.g., Archaea), and task metrics vary considerably across datasets.",
+  "creators": {
+    "scientists": [
+      "Jacob West-Roberts",
+      "Joshua Kravitz",
+      "Nishant Jha",
+      "Andre Cornman",
+      "Yunha Hwang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2024.07.10.602933",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

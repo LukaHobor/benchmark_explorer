@@ -1,0 +1,34 @@
+{
+  "name": "Deepfake Speech Detection Evaluation Framework",
+  "description": "Abstract The proliferation of deepfake speech poses a significant threat to cybersecurity, from manipulating political speeches and impersonating public figures to spoofing voice biometric systems. The increasing sophistication of adversaries increases the necessity of deploying adaptive detection methods. Moreover, real-world incidents such as fraudulent financial transactions highlight the severity of the problem. Although numerous detectors have been developed, their evaluation remains difficult due to different methodologies and benchmark datasets, making direct comparisons impossible. This study presents a general and detailed framework for evaluating and comparing deepfake speech detectors. We further demonstrate the use of this framework to evaluate 40 state-of-the-art deepfake speech detectors under various conditions and data samples. We objectively compare these methods and identify the key attributes influencing performance the most. We also stress the issue of generalisation, as current detectors struggle to detect previously unseen deepfake speech samples or samples that have been modified. Finally, to strengthen the defence against synthetic audio content, we provide recommendations for improving the robustness of future detectors.",
+  "category": "audio",
+  "domain": "audio",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "EER (Equal Error Rate) and AUC (ROC); accuracy/F1 reported as secondary metrics",
+  "general_score_metric": "EER (primary) and AUC",
+  "typical_sota_score": "varies by dataset; roughly 5–20% EER depending on seen/unseen conditions",
+  "year_of_publish": 2025,
+  "reputation": "1 citations",
+  "notes": "Major caveats include poor generalization to unseen synthesis methods, dataset bias and mismatch, and differences in preprocessing/augmentation; results are sensitive to train/test provenance. Non-LLM benchmark focused on audio forensics.",
+  "creators": {
+    "scientists": [
+      "Anton Firc",
+      "Kamil Malinka",
+      "Petr Hanáček"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://doi.org/10.1186/s42400-024-00346-1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

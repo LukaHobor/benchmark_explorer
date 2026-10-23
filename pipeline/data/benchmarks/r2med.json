@@ -1,0 +1,35 @@
+{
+  "name": "R2MED",
+  "description": "Current medical retrieval benchmarks primarily emphasize lexical or shallow semantic similarity, overlooking the reasoning-intensive demands that are central to clinical decision-making. In practice, physicians often retrieve authoritative medical evidence to support diagnostic hypotheses. Such evidence typically aligns with an inferred diagnosis rather than the surface form of a patient's symptoms, leading to low lexical or semantic overlap between queries and relevant documents. To address this gap, we introduce R2MED, the first benchmark explicitly designed for reasoning-driven medical retrieval. It comprises 876 queries spanning three tasks: Q&A reference retrieval, clinical evidence retrieval, and clinical case retrieval. These tasks are drawn from five representative medical scenarios and twelve body systems, capturing the complexity and diversity of real-world medical information needs. We evaluate 15 widely-used retrieval systems on R2MED and find that even the best model achieves only 31.4 nDCG@10, demonstrating the benchmark's difficulty. Classical re-ranking and generation-augmented retrieval methods offer only modest improvements. Although large reasoning models improve performance via intermediate inference generation, the best results still peak at 41.4 nDCG@10. These findings underscore a substantial gap between current retrieval techniques and the reasoning demands of real clinical tasks. We release R2MED as a challenging benchmark to foster the development of next-generation medical retrieval systems with enhanced reasoning capabilities. Data and code are available at https://github.com/R2MED/R2MED",
+  "category": "text",
+  "domain": "medical information retrieval / clinical decision support",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "document_retrieval",
+    "ranking"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "nDCG@10",
+  "general_score_metric": "nDCG@10",
+  "typical_sota_score": "31–41 (nDCG@10)",
+  "year_of_publish": 2025,
+  "year_of_last_update": 2026,
+  "reputation": "A recently proposed, challenging medical retrieval benchmark that has attracted attention in information retrieval and clinical-IR research but is not yet widely adopted outside specialized communities.",
+  "notes": "Small set of 876 queries across specialized clinical scenarios; reasoning-heavy and domain-specific (clinical) so models require medical knowledge; strong potential for dataset-specific overfitting and limited suitability for general-domain LMs without adaptation.",
+  "creators": {
+    "scientists": [
+      "Lei LI",
+      "Xiao Zhou",
+      "Zheng Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2505.14558",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

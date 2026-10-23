@@ -1,0 +1,35 @@
+{
+  "name": "Backdoor XAI Benchmark",
+  "description": "Attribution methods compute importance scores for input features to explain the output predictions of deep models. However, accurate assessment of attribution methods is challenged by the lack of benchmark fidelity for attributing model predictions. Moreover, other confounding factors in attribution estimation, including the setup choices of post-processing techniques and explained model predictions, further compromise the reliability of the evaluation. In this work, we first identify a set of fidelity criteria that reliable benchmarks for attribution methods are expected to fulfill, thereby facilitating a systematic assessment of attribution benchmarks. Next, we introduce a Backdoor-based eXplainable AI benchmark (BackX) that adheres to the desired fidelity criteria. We theoretically establish the superiority of our approach over the existing benchmarks for well-founded attribution evaluation. With extensive analysis, we also identify a setup for a consistent and fair benchmarking of attribution methods across different underlying methodologies. This setup is ultimately employed for a comprehensive comparison of existing methods using our BackX benchmark. Finally, our analysis also provides guidance for defending against backdoor attacks with the help of attribution methods.",
+  "category": "mixed",
+  "domain": "explainable AI / machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "explainability",
+    "attribution_evaluation",
+    "robustness_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "Fidelity metrics (AUC-like measures comparing attributions to ground-truth backdoor signals), insertion/deletion and localization-based scores",
+  "general_score_metric": "composite fidelity score (combining AUC/localization and insertion/deletion metrics)",
+  "year_of_publish": 2024,
+  "reputation": "A recent academically proposed benchmark emphasizing principled fidelity for attribution methods; of interest to explainability and security researchers but not yet broadly adopted in industry.",
+  "notes": "Constructs ground-truth via backdoor triggers enabling controlled fidelity evaluation; results can be sensitive to post-processing choices and model architectures. Focuses on attribution fidelity for backdoor scenarios (not general-purpose XAI), so scores may not transfer to natural attribution tasks; risk of overfitting methods to the synthetic backdoor setup.",
+  "creators": {
+    "scientists": [
+      "Peiyu Yang",
+      "Naveed Akhtar",
+      "Jiantong Jiang",
+      "Ajmal Mian"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Safety, Robustness & Evaluation",
+  "source": "https://arxiv.org/abs/2405.02344",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

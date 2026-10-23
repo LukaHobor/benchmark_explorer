@@ -1,0 +1,33 @@
+{
+  "name": "PersonaDrift",
+  "description": "People living with dementia (PLwD) often show gradual shifts in how they communicate, becoming less expressive, more repetitive, or drifting off-topic in subtle ways. While caregivers may notice these changes informally, most computational tools are not designed to track such behavioral drift over time. This paper introduces PersonaDrift, a synthetic benchmark designed to evaluate machine learning and statistical methods for detecting progressive changes in daily communication, focusing on user responses to a digital reminder system. PersonaDrift simulates 60-day interaction logs for synthetic users modeled after real PLwD, based on interviews with caregivers. These caregiver-informed personas vary in tone, modality, and communication habits, enabling realistic diversity in behavior. The benchmark focuses on two forms of longitudinal change that caregivers highlighted as particularly salient: flattened sentiment (reduced emotional tone and verbosity) and off-topic replies (semantic drift). These changes are injected progressively at different rates to emulate naturalistic cognitive trajectories, and the framework is designed to be extensible to additional behaviors in future use cases. To explore this novel application space, we evaluate several anomaly detection approaches, unsupervised statistical methods (CUSUM, EWMA, One-Class SVM), sequence models using contextual embeddings (GRU + BERT), and supervised classifiers in both generalized and personalized settings. Preliminary results show that flattened sentiment can often be detected with simple statistical models in users with low baseline variability, while detecting semantic drift requires temporal modeling and personalized baselines. Across both tasks, personalized classifiers consistently outperform generalized ones, highlighting the importance of individual behavioral context. By providing a structured, longitudinal, and caregiver-informed benchmark, PersonaDrift lays critical groundwork for next-generation NLP systems that can track subtle, personalized communication changes over time. It supports the development of ethical, privacy-aware monitoring tools that are responsive to the evolving needs of PLwD, helping caregivers and clinicians detect early signs of change and provide timely support.",
+  "category": "text",
+  "domain": "healthcare (dementia monitoring)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "anomaly_detection",
+    "change_point_detection",
+    "longitudinal_language_monitoring"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUC / F1 (anomaly detection metrics) and detection latency where applicable",
+  "general_score_metric": "AUC",
+  "year_of_publish": 2025,
+  "reputation": "New, domain-specific benchmark for clinical longitudinal NLP with limited adoption so far but of interest to dementia-monitoring researchers.",
+  "notes": "Clinical/longitudinal dataset with likely small cohorts and class imbalance; privacy and consent restrictions limit broad reuse. Not suitable for indiscriminate model pretraining; contamination risk low but dataset access may be restricted.",
+  "creators": {
+    "scientists": [
+      "Joy Lai",
+      "Alex Mihaildis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/mlnlp66797.2025.11387796",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

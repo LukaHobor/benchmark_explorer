@@ -1,0 +1,31 @@
+{
+  "name": "Open EPPI corpus",
+  "description": "The Open EPPI corpus comprises $151$ full-text papers annotated by domain experts for entity mentions, protein-protein interactions (PPIs), and normalisation of entities to publicly available ontologies.\nThe corpus is publicly available at [ANON].\nWe benchmark recent nested NER and relation extraction models.\nResults show that, although existing nested NER models achieve good performance on outermost and innermost entity mentions, they struggle with other types of nested mentions.\nBenchmark results for relation extraction show substantial room for improvement with precision under $70$ and recall around $40$ to $52$.",
+  "category": "text",
+  "domain": "biomedical NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "relation_extraction",
+    "entity_normalization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1 (for NER) and precision/recall/F1 (for relation extraction)",
+  "general_score_metric": "F1",
+  "typical_sota_score": "NER F1 often ~75–90%; relation extraction precision <70% and recall ~40–52%",
+  "reputation": "A specialized, expert-annotated biomedical corpus used in nested NER and PPI relation extraction research; known but limited in size.",
+  "notes": "Small corpus (151 full-text papers) in a specialized biomedical domain; contains nested entities and normalization labels. Results show NER models handle outer/inner mentions better than other nested types; relation extraction performance leaves substantial room for improvement. Not a large-scale LLM benchmark and may be sensitive to annotation variability.",
+  "creators": {
+    "scientists": [
+      "Anonymous"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

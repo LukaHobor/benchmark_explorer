@@ -1,0 +1,42 @@
+{
+  "name": "ByteMorph",
+  "description": "Editing images with instructions to reflect non-rigid motions, camera viewpoint shifts, object deformations, human articulations, and complex interactions, poses a challenging yet underexplored problem in computer vision. Existing approaches and datasets predominantly focus on static scenes or rigid transformations, limiting their capacity to handle expressive edits involving dynamic motion. To address this gap, we introduce ByteMorph, a comprehensive framework for instruction-based image editing with an emphasis on non-rigid motions. ByteMorph comprises a large-scale dataset, ByteMorph-6M, and a strong baseline model built upon the Diffusion Transformer (DiT), named ByteMorpher. ByteMorph-6M includes over 6 million high-resolution image editing pairs for training, along with a carefully curated evaluation benchmark ByteMorph-Bench. Both capture a wide variety of non-rigid motion types across diverse environments, human figures, and object categories. The dataset is constructed using motion-guided data generation, layered compositing techniques, and automated captioning to ensure diversity, realism, and semantic coherence. We further conduct a comprehensive evaluation of recent instruction-based image editing methods from both academic and commercial domains.",
+  "category": "multimodal",
+  "domain": "computer vision / image editing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_editing",
+    "conditional_image_generation",
+    "instruction_following",
+    "multimodal_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human preference / human evaluation score (supplemented by perceptual metrics such as FID, LPIPS, CLIP score)",
+  "year_of_publish": 2025,
+  "reputation": "New, large-scale benchmark (ByteMorph-6M) introduced by the authors; gaining attention for non-rigid instruction-based image editing but not yet widely adopted across the community.",
+  "notes": "Very large synthetic/augmented dataset (6M pairs) created via motion-guided generation and automated captioning — potential for synthetic artifacts and caption noise; evaluation relies heavily on human judgment; non-LLM, vision-focused benchmark; large compute/storage requirements.",
+  "creators": {
+    "scientists": [
+      "Di Chang",
+      "Mingdeng Cao",
+      "Yichun Shi",
+      "Bo Liu",
+      "Shengqu Cai",
+      "Shijie Zhou",
+      "Weilin Huang",
+      "Gordon Wetzstein",
+      "Mohammad Soleymani",
+      "Peng Wang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.03107",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

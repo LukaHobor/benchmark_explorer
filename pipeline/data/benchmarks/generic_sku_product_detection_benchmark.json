@@ -1,0 +1,34 @@
+{
+  "name": "Generic SKU Product Detection Benchmark",
+  "description": "Object detection in densely packed scenes is a new area where standard object detectors fail to train well. Dense object detectors like RetinaNet trained on large and dense datasets show great performance. We train a standard object detector on a small, normally packed dataset with data augmentation techniques. This dataset is 265 times smaller than the standard dataset, in terms of number of annotations. This low data baseline achieves satisfactory results (mAP=0.56) at standard IoU of 0.5. We also create a varied benchmark for generic SKU product detection by providing full annotations for multiple public datasets. It can be accessed at https://github.com/ParallelDots/generic-sku-detection-benchmark. We hope that this benchmark helps in building robust detectors that perform reliably across different settings in the wild.",
+  "category": "vision",
+  "domain": "retail / product detection",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mAP (mean Average Precision), typically reported at IoU thresholds such as IoU=0.5",
+  "general_score_metric": "mAP@0.5 (mean Average Precision at IoU 0.5)",
+  "typical_sota_score": "≈0.56 reported for a low-data baseline on this benchmark; actual top scores vary by dataset and detector",
+  "year_of_publish": 2019,
+  "year_of_last_update": 2020,
+  "reputation": "A niche but useful benchmark/collection for SKU and densely packed object detection; referenced by researchers working on retail/product detection and robustness to dense scenes.",
+  "notes": "Relatively small-annotation regime (authors note dataset is ~265× smaller than standard datasets); domain-specific (retail/SKU) and subject to domain shift; non-LLM vision benchmark; performance sensitive to augmentation and training strategy.",
+  "creators": {
+    "scientists": [
+      "Srikrishna Varadarajan",
+      "Sonaal Kant",
+      "Muktabh Mayank Srivastava"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/1912.09476",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

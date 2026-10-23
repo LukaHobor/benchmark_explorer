@@ -1,0 +1,37 @@
+{
+  "name": "Myopic Trap",
+  "description": "This study investigates a specific form of positional bias, termed the Myopic Trap, where retrieval models disproportionately attend to the early parts of documents while overlooking relevant information that appears later. To systematically quantify this phenomenon, we propose a semantics-preserving evaluation framework that repurposes the existing NLP datasets into position-aware retrieval benchmarks. By evaluating the SOTA models of full retrieval pipeline, including BM25, embedding models, ColBERT-style late-interaction models, and reranker models, we offer a broader empirical perspective on positional bias than prior work. Experimental results show that embedding models and ColBERT-style models exhibit significant performance degradation when query-related content is shifted toward later positions, indicating a pronounced head bias. Notably, under the same training configuration, ColBERT-style approach show greater potential for mitigating positional bias compared to the traditional single-vector approach. In contrast, BM25 and reranker models remain largely unaffected by such perturbations, underscoring their robustness to positional bias. Code and data are publicly available at: www.github.com/NovaSearch-Team/RAG-Retrieval.",
+  "category": "text",
+  "domain": "information retrieval",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "passage_retrieval",
+    "ranking",
+    "robustness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "recall@k / MRR / nDCG",
+  "general_score_metric": "Recall@k",
+  "typical_sota_score": "60–95%",
+  "year_of_publish": 2025,
+  "reputation": "A recent benchmark probing positional bias in retrieval systems that is attracting interest among IR researchers focused on robustness.",
+  "notes": "Constructed by perturbing existing NLP datasets (semantics-preserving position shifts); evaluates retrieval pipelines rather than pure LLM generation; potential overlap/contamination with original datasets; performance varies greatly with metric and perturbation severity.",
+  "creators": {
+    "scientists": [
+      "Ziyang Zeng",
+      "Dun Zhang",
+      "Jiacheng Li",
+      "Panxiang Zou",
+      "Yuqing Yang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://arxiv.org/abs/2505.13950",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

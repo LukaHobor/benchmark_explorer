@@ -1,0 +1,36 @@
+{
+  "name": "debiaSAE",
+  "description": "As Vision Language Models (VLMs) gain widespread use, their fairness remains under-explored. In this paper, we analyze demographic biases across five models and six datasets. We find that portrait datasets like UTKFace and CelebA are the best tools for bias detection, finding gaps in performance and fairness for both LLaVa and CLIP models. Scene-based datasets like PATA and VLStereoSet fail to be useful benchmarks for bias due to their text prompts allowing the model to guess the answer without a picture. As for pronoun-based datasets like VisoGender, we receive mixed signals as only some subsets of the data are useful in providing insights. To alleviate these two problems, we introduce a more rigorous evaluation dataset and a debiasing method based on Sparse Autoencoders to help reduce bias in models. We find that our data set generates more meaningful errors than the previous data sets. Furthermore, our debiasing method improves fairness, gaining 5-15 points in performance over the baseline. This study displays the problems with the current benchmarks for measuring demographic bias in Vision Language Models and introduces both a more effective dataset for measuring bias and a novel and interpretable debiasing method based on Sparse Autoencoders.",
+  "category": "multimodal",
+  "domain": "vision-language fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "fairness_evaluation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy plus fairness metrics (e.g., demographic parity gap, equalized odds / group accuracy gap)",
+  "general_score_metric": "group accuracy gap (demographic parity gap) and per-group accuracy",
+  "typical_sota_score": "baseline-to-debiased improvement reported at ~5–15 percentage points",
+  "year_of_publish": 2024,
+  "reputation": "A recent targeted contribution to VLM fairness research that attracted interest for its dataset and proposed debiasing method but is not yet broadly standardized.",
+  "notes": "Contains portrait-focused subsets that are most informative; several existing scene and pronoun datasets are weak (models can guess from text), so results depend strongly on subset selection; dataset size and subset utility are limited; risk of prompt/image leakage for some benchmarks.",
+  "creators": {
+    "scientists": [
+      "Kuleen Sasse",
+      "Shan Chen",
+      "Jackson Pond",
+      "Danielle Bitterman",
+      "John Osborne"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2410.13146",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "Interstate-24 3D Dataset",
+  "description": "This work presents a novel video dataset recorded from overlapping highway traffic cameras along an urban interstate, enabling multi-camera 3D object tracking in a traffic monitoring context. Data is released from 3 scenes containing video from at least 16 cameras each, totaling 57 minutes in length. 877,000 3D bounding boxes and corresponding object tracklets are fully and accurately annotated for each camera field of view and are combined into a spatially and temporally continuous set of vehicle trajectories for each scene. Lastly, existing algorithms are combined to benchmark a number of 3D multi-camera tracking pipelines on the dataset, with results indicating that the dataset is challenging due to the difficulty of matching objects traveling at high speeds across cameras and heavy object occlusion, potentially for hundreds of frames, during congested traffic. This work aims to enable the development of accurate and automatic vehicle trajectory extraction algorithms, which will play a vital role in understanding impacts of autonomous vehicle technologies on the safety and efficiency of traffic.",
+  "category": "vision",
+  "domain": "autonomous driving / traffic monitoring",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_detection",
+    "multi_object_tracking",
+    "3d_tracking",
+    "cross_camera_association"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Multiple tracking and detection metrics (MOTA, IDF1) plus 3D AP / 3D IoU for detection and cross-camera association accuracy",
+  "general_score_metric": "MOTA and IDF1 (with 3D AP / 3D IoU for detection)",
+  "year_of_publish": 2023,
+  "reputation": "A recently released, domain-specific dataset (2023) gaining attention in multi-camera 3D tracking and traffic-monitoring research but not yet a widespread benchmark outside that community.",
+  "notes": "Relatively limited total duration (57 minutes) and only 3 scenes; challenging due to high vehicle speeds and long occlusions across many cameras. Non-LLM, computer-vision benchmark; evaluation uses multiple complementary metrics.",
+  "creators": {
+    "scientists": [
+      "Derek Gloudemans",
+      "Yanbing Wang",
+      "Gracie Gumm",
+      "William Barbour",
+      "Daniel B. Work"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.14833",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

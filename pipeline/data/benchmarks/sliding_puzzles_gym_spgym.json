@@ -1,0 +1,37 @@
+{
+  "name": "Sliding Puzzles Gym (SPGym)",
+  "description": "Learning effective visual representations is crucial in open-world environments where agents encounter diverse and unstructured observations. This ability enables agents to extract meaningful information from raw sensory inputs, like pixels, which is essential for generalization across different tasks. However, evaluating representation learning separately from policy learning remains a challenge in most reinforcement learning (RL) benchmarks. To address this, we introduce the Sliding Puzzles Gym (SPGym), a benchmark that extends the classic 15-tile puzzle with variable grid sizes and observation spaces, including large real-world image datasets. SPGym allows scaling the representation learning challenge while keeping the latent environment dynamics and algorithmic problem fixed, providing a targeted assessment of agents' ability to form compositional and generalizable state representations. Our experiments with both model-free and model-based RL algorithms, with and without explicit representation learning components, show that as the representation challenge scales, SPGym effectively distinguishes agents based on their capabilities. Moreover, SPGym reaches difficulty levels where no tested algorithm consistently excels, highlighting key challenges and opportunities for advancing representation learning for decision-making research.",
+  "category": "vision",
+  "domain": "reinforcement learning",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "reinforcement_learning",
+    "representation_learning",
+    "control"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "task_success_rate / normalized episodic return",
+  "general_score_metric": "normalized episode return / task success rate",
+  "year_of_publish": 2024,
+  "reputation": "A recent specialized benchmark for disentangling representation learning from policy learning that is gaining attention in the RL research community but is not yet widely adopted as a standard.",
+  "notes": "Non-LLM benchmark; scalable visual observation spaces can make experiments computationally heavy; designed to stress representation learning so scores depend heavily on the visual dataset used; not saturated — many tasks remain challenging for current algorithms.",
+  "creators": {
+    "scientists": [
+      "Bryan L. M. de Oliveira",
+      "Murilo L. da Luz",
+      "Bruno Brandão",
+      "Luana G. B. Martins",
+      "Telma W. de L. Soares",
+      "Luckeciano C. Melo"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
+  "source": "https://arxiv.org/abs/2410.14038",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

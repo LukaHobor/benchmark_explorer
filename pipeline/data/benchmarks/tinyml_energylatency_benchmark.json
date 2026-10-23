@@ -1,0 +1,37 @@
+{
+  "name": "TinyML Energy-Latency Benchmark",
+  "description": "The rise of IoT has increased the need for on-edge machine learning, with TinyML emerging as a promising solution for resource-constrained devices such as MCU. However, evaluating their performance remains challenging due to diverse architectures and application scenarios. Current solutions have many non-negligible limitations. This work introduces an alternative benchmarking methodology that integrates energy and latency measurements while distinguishing three execution phases pre-inference, inference, and post-inference. Additionally, the setup ensures that the device operates without being powered by an external measurement unit, while automated testing can be leveraged to enhance statistical significance. To evaluate our setup, we tested the STM32N6 MCU, which includes a NPU for executing neural networks. Two configurations were considered: high-performance and Low-power. The variation of the EDP was analyzed separately for each phase, providing insights into the impact of hardware configurations on energy efficiency. Each model was tested 1000 times to ensure statistically relevant results. Our findings demonstrate that reducing the core voltage and clock frequency improve the efficiency of pre- and post-processing without significantly affecting network execution performance. This approach can also be used for cross-platform comparisons to determine the most efficient inference platform and to quantify how pre- and post-processing overhead varies across different hardware implementations.",
+  "category": "mixed",
+  "domain": "embedded systems / IoT / TinyML",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "inference_latency_measurement",
+    "energy_measurement",
+    "performance_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "energy-delay product (EDP) / latency / energy-per-inference (measured experimentally)",
+  "general_score_metric": "Energy-Delay Product (EDP)",
+  "year_of_publish": 2025,
+  "reputation": "Well-aligned with TinyML and embedded-systems research practices; of interest to hardware and TinyML communities but not a single de-facto standard.",
+  "notes": "Hardware- and workload-dependent results; requires careful, reproducible measurement setup (voltage, clock, power isolation). Not an accuracy benchmark; small number of devices tested in the paper (e.g., STM32N6) limits generalizability across MCUs/NPUs.",
+  "creators": {
+    "scientists": [
+      "Pietro Bartoli",
+      "Christian Veronesi",
+      "Andrea Giudici",
+      "David Siorpaes",
+      "Diana Trojaniello",
+      "Franco Zappa"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2505.15622",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

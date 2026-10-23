@@ -1,0 +1,36 @@
+{
+  "name": "CausalDiscovery-TreatmentEffect Benchmark",
+  "description": "The practical utility of causality in decision-making is widespread and brought about by the intertwining of causal discovery and causal inference. Nevertheless, a notable gap exists in the evaluation of causal discovery methods, where insufficient emphasis is placed on downstream inference. To address this gap, we evaluate seven established baseline causal discovery methods including a newly proposed method based on GFlowNets, on the downstream task of treatment effect estimation. Through the implementation of a distribution-level evaluation, we offer valuable and unique insights into the efficacy of these causal discovery methods for treatment effect estimation, considering both synthetic and real-world scenarios, as well as low-data scenarios. The results of our study demonstrate that some of the algorithms studied are able to effectively capture a wide range of useful and diverse ATE modes, while some tend to learn many low-probability modes which impacts the (unrelaxed) recall and precision.",
+  "category": "mixed",
+  "domain": "causal inference",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "estimation",
+    "distribution_estimation",
+    "downstream_inference"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "ATE error (MSE/RMSE) and distribution-level precision/recall (distribution similarity metrics)",
+  "general_score_metric": "ATE error (MSE/RMSE) combined with distribution-level precision/recall",
+  "year_of_publish": 2023,
+  "reputation": "A research-focused benchmark introduced in a 2023 paper; of interest within the causal inference community but not yet widely adopted outside specialists.",
+  "notes": "Benchmarks downstream treatment-effect estimation of causal discovery methods using both synthetic and real data; small and specialized datasets and distribution-level evaluation make direct comparison to general ML benchmarks difficult. This is a non-LLM, research-focused benchmark with sensitivity to low-data regimes.",
+  "creators": {
+    "scientists": [
+      "Chris Chinenye Emezue",
+      "Alexandre Drouin",
+      "Tristan Deleu",
+      "Stefan Bauer",
+      "Yoshua Bengio"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2307.04988",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Explainable Personality Recognition Dataset",
+  "description": "Personality recognition aims to identify the personality traits implied in user data such as dialogues and social media posts. Current research predominantly treats personality recognition as a classification task, failing to reveal the supporting evidence for the recognized personality. In this paper, we propose a novel task named Explainable Personality Recognition, aiming to reveal the reasoning process as supporting evidence of the personality trait. Inspired by personality theories, personality traits are made up of stable patterns of personality state, where the states are short-term characteristic patterns of thoughts, feelings, and behaviors in a concrete situation at a specific moment in time. We propose an explainable personality recognition framework called Chain-of-Personality-Evidence (CoPE), which involves a reasoning process from specific contexts to short-term personality states to long-term personality traits. Furthermore, based on the CoPE framework, we construct an explainable personality recognition dataset from dialogues, PersonalityEvd. We introduce two explainable personality state recognition and explainable personality trait recognition tasks, which require models to recognize the personality state and trait labels and their corresponding support evidence. Our extensive experiments based on Large Language Models on the two tasks show that revealing personality traits is very challenging and we present some insights for future research. Our data and code are available at https://github.com/Lei-Sun-RUC/PersonalityEvd.",
+  "category": "text",
+  "domain": "social media / dialogue / psychology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "span_extraction",
+    "rationale_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": [
+    "accuracy",
+    "F1",
+    "exact_match"
+  ],
+  "general_score_metric": "accuracy (for trait/state labels); F1/exact_match for evidence spans",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "New and specialized dataset aimed at explainable personality recognition; early-stage adoption primarily by researchers working on explainability and personality inference.",
+  "notes": "Labels are subjective and culturally sensitive; evidence annotation can be noisy; privacy and ethical concerns for personality inference; benchmark is challenging with current LLMs.",
+  "creators": {
+    "scientists": [
+      "Lei Sun",
+      "Jinming Zhao",
+      "Qin Jin"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://arxiv.org/abs/2409.19723",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

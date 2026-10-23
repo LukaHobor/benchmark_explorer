@@ -1,0 +1,42 @@
+{
+  "name": "HiEve",
+  "description": "Along with the development of modern smart cities, human-centric video analysis has been encountering the challenge of analyzing diverse and complex events in real scenes. A complex event relates to dense crowds, anomalous individuals, or collective behaviors. However, limited by the scale and coverage of existing video datasets, few human analysis approaches have reported their performances on such complex events. To this end, we present a new large-scale dataset with comprehensive annotations, named Human-in-Events or HiEve (Human-centric video analysis in complex Events), for the understanding of human motions, poses, and actions in a variety of realistic events, especially in crowd & complex events. It contains a record number of poses (>1M), the largest number of action instances (>56k) under complex events, as well as one of the largest numbers of trajectories lasting for longer time (with an average trajectory length of >480 frames). Based on its diverse annotation, we present two simple baselines for action recognition and pose estimation, respectively. They leverage cross-label information during training to enhance the feature learning in corresponding visual tasks. Experiments show that they could boost the performance of existing action recognition and pose estimation pipelines. More importantly, they prove the widely ranged annotations in HiEve can improve various video tasks. Furthermore, we conduct extensive experiments to benchmark recent video analysis approaches together with our baseline methods, demonstrating HiEve is a challenging dataset for human-centric video analysis. We expect that the dataset will advance the development of cutting-edge techniques in human-centric analysis and the understanding of complex events. The dataset is available at http://humaninevents.org",
+  "category": "vision",
+  "domain": "human-centric video analysis",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "action_recognition",
+    "pose_estimation",
+    "multi_object_tracking",
+    "trajectory_analysis"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean Average Precision (mAP) for action recognition / PCK or MPJPE for pose estimation / MOTA/MOTP for tracking (commonly reported: mAP for action detection tasks)",
+  "general_score_metric": "mean Average Precision (mAP) (for action recognition tasks)",
+  "year_of_publish": 2020,
+  "reputation": "Recognized in the video-analysis community as a large and challenging dataset for human-centric analysis in crowded/complex events; used in follow-up work on action recognition and pose estimation under crowd conditions.",
+  "notes": "Large-scale and densely annotated (poses, actions, long trajectories) making it challenging; class imbalance and heavy occlusion are common; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Weiyao Lin",
+      "Huabin Liu",
+      "Shizhan Liu",
+      "Yuxi Li",
+      "Rui Qian",
+      "Tao Wang",
+      "Ning Xu",
+      "Hongkai Xiong",
+      "Guo-Jun Qi",
+      "Nicu Sebe"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2005.04490",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

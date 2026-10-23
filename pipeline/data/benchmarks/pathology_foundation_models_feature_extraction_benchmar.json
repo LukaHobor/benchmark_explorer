@@ -1,0 +1,49 @@
+{
+  "name": "Pathology Foundation Models Feature Extraction Benchmark",
+  "description": "Advancements in artificial intelligence have driven the development of numerous pathology foundation models capable of extracting clinically relevant information. However, there is currently limited literature independently evaluating these foundation models on truly external cohorts and clinically-relevant tasks to uncover adjustments for future improvements. In this study, we benchmarked 19 histopathology foundation models on 13 patient cohorts with 6,818 patients and 9,528 slides from lung, colorectal, gastric, and breast cancers. The models were evaluated on weakly-supervised tasks related to biomarkers, morphological properties, and prognostic outcomes. We show that a vision-language foundation model, CONCH, yielded the highest performance when compared to vision-only foundation models, with Virchow2 as close second. The experiments reveal that foundation models trained on distinct cohorts learn complementary features to predict the same label, and can be fused to outperform the current state of the art. An ensemble combining CONCH and Virchow2 predictions outperformed individual models in 55% of tasks, leveraging their complementary strengths in classification scenarios. Moreover, our findings suggest that data diversity outweighs data volume for foundation models. Our work highlights actionable adjustments to improve pathology foundation models.",
+  "category": "vision",
+  "domain": "computational pathology / medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "biomarker_prediction",
+    "prognosis_prediction",
+    "feature_extraction",
+    "weakly_supervised_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC / AUPRC for classification tasks; accuracy/F1 for categorical labels; concordance index (C-index) for prognostic/survival outcomes",
+  "general_score_metric": "AUROC",
+  "year_of_publish": 2024,
+  "reputation": "Recent, well-regarded in computational pathology research for multi-cohort external evaluation of foundation models; gaining attention but not yet a broadly standardized community benchmark.",
+  "notes": "Non-LLM, medical imaging benchmark; uses weak supervision and heterogeneous external cohorts (6,818 patients, 9,528 slides); potential label noise and class imbalance across cohorts; authors note data diversity often more important than sheer volume.",
+  "creators": {
+    "scientists": [
+      "Peter Neidlinger",
+      "Omar S. M. El Nahhas",
+      "Hannah Sophie Muti",
+      "Tim Lenz",
+      "Michael Hoffmeister",
+      "Hermann Brenner",
+      "Marko van Treeck",
+      "Rupert Langer",
+      "Bastian Dislich",
+      "Hans Michael Behrens",
+      "Christoph Röcken",
+      "Sebastian Foersch",
+      "Daniel Truhn",
+      "Antonio Marra",
+      "Oliver Lester Saldanha",
+      "Jakob Nikolas Kather"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2408.15823",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

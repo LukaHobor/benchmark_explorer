@@ -1,0 +1,37 @@
+{
+  "name": "IML-ViT",
+  "description": "Advanced image tampering techniques are increasingly challenging the trustworthiness of multimedia, leading to the development of Image Manipulation Localization (IML). But what makes a good IML model? The answer lies in the way to capture artifacts. Exploiting artifacts requires the model to extract non-semantic discrepancies between manipulated and authentic regions, necessitating explicit comparisons between the two areas. With the self-attention mechanism, naturally, the Transformer should be a better candidate to capture artifacts. However, due to limited datasets, there is currently no pure ViT-based approach for IML to serve as a benchmark, and CNNs dominate the entire task. Nevertheless, CNNs suffer from weak long-range and non-semantic modeling. To bridge this gap, based on the fact that artifacts are sensitive to image resolution, amplified under multi-scale features, and massive at the manipulation border, we formulate the answer to the former question as building a ViT with high-resolution capacity, multi-scale feature extraction capability, and manipulation edge supervision that could converge with a small amount of data. We term this simple but effective ViT paradigm IML-ViT, which has significant potential to become a new benchmark for IML. Extensive experiments on three different mainstream protocols verified our model outperforms the state-of-the-art manipulation localization methods. Code and models are available at https://github.com/SunnyHaze/IML-ViT.",
+  "category": "vision",
+  "domain": "vision / multimedia forensics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_segmentation",
+    "manipulation_localization"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F1 / IoU (pixel-level segmentation metrics)",
+  "general_score_metric": "F1 (pixel-level)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2025,
+  "reputation": "A recent ViT-based approach and proposed benchmark for image manipulation localization that shows promising results but is newly introduced and not yet widely established as a community standard.",
+  "notes": "Non-LLM benchmark; datasets for IML are limited in size which can cause sensitivity to overfitting; evaluation is resolution- and edge-sensitive and results depend on multi-scale setup.",
+  "creators": {
+    "scientists": [
+      "Xiaochen Ma",
+      "Bo Du",
+      "Zhuohang Jiang",
+      "Xia Du",
+      "Ahmed Y. Al Hammadi",
+      "Jizhe Zhou"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2307.14863",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

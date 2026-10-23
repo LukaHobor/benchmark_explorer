@@ -1,0 +1,33 @@
+{
+  "name": "Tabular Attention vs Contrastive Benchmark",
+  "description": "Despite groundbreaking success in image and text learning, deep learning has not achieved significant improvements against traditional machine learning (ML) when it comes to tabular data. This performance gap underscores the need for data-centric treatment and benchmarking of learning algorithms. Recently, attention and contrastive learning breakthroughs have shifted computer vision and natural language processing paradigms. However, the effectiveness of these advanced deep models on tabular data is sparsely studied using a few data sets with very large sample sizes, reporting mixed findings after benchmarking against a limited number of baselines. We argue that the heterogeneity of tabular data sets and selective baselines in the literature can bias the benchmarking outcomes. This article extensively evaluates state-of-the-art attention and contrastive learning methods on a wide selection of 28 tabular data sets (14 easy and 14 hard-to-classify) against traditional deep and machine learning. Our data-centric benchmarking demonstrates when traditional ML is preferred over deep learning and vice versa because no best learning method exists for all tabular data sets. Combining between-sample and between-feature attentions conquers the invincible traditional ML on tabular data sets by a significant margin but fails on high dimensional data, where contrastive learning takes a robust lead. While a hybrid attention-contrastive learning strategy mostly wins on hard-to-classify data sets, traditional methods are frequently superior on easy-to-classify data sets with presumably simpler decision boundaries. To the best of our knowledge, this is the first benchmarking paper with statistical analyses of attention and contrastive learning performances on a diverse selection of tabular data sets against traditional deep and machine learning baselines to facilitate further advances in this field.",
+  "category": "mixed",
+  "domain": "tabular machine learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy for classification tasks; RMSE/MSE for regression tasks (reported per dataset)",
+  "general_score_metric": "classification accuracy (and regression RMSE where applicable)",
+  "year_of_publish": 2024,
+  "reputation": "A recent, data-centric benchmarking study (arXiv) that systematically compares attention and contrastive deep methods against classical ML on a diverse set of tabular datasets; useful reference for tabular learning research but not a single standardized leaderboard.",
+  "notes": "Non-LLM benchmark across 28 tabular datasets (14 easy, 14 hard); results vary substantially by dataset and task type. Highlights heterogeneity of tabular data and the absence of a universally dominant method; potential sensitivity to dataset preprocessing and split choices.",
+  "creators": {
+    "scientists": [
+      "Shourav B. Rabbani",
+      "Ivan V. Medri",
+      "Manar D. Samad"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2401.04266",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

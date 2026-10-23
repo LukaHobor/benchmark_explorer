@@ -1,0 +1,43 @@
+{
+  "name": "OOD-CV-v2",
+  "description": "Enhancing the robustness of vision algorithms in real-world scenarios is challenging. One reason is that existing robustness benchmarks are limited, as they either rely on synthetic data or ignore the effects of individual nuisance factors. We introduce OOD-CV-v2, a benchmark dataset that includes out-of-distribution examples of 10 object categories in terms of pose, shape, texture, context and the weather conditions, and enables benchmarking of models for image classification, object detection, and 3D pose estimation. In addition to this novel dataset, we contribute extensive experiments using popular baseline methods, which reveal that: 1) Some nuisance factors have a much stronger negative effect on the performance compared to others, also depending on the vision task. 2) Current approaches to enhance robustness have only marginal effects, and can even reduce robustness. 3) We do not observe significant differences between convolutional and transformer architectures. We believe our dataset provides a rich test bed to study robustness and will help push forward research in this area. Our dataset can be accessed from https://bzhao.me/OOD-CV/",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_classification",
+    "object_detection",
+    "pose_estimation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy (classification), mAP (detection), and pose error / rotation error for 3D pose estimation",
+  "general_score_metric": "accuracy (classification) / mAP (detection)",
+  "typical_sota_score": "varies widely by task and nuisance (roughly 40–80% depending on setting)",
+  "year_of_publish": 2023,
+  "reputation": "Recognized in robustness and OOD generalization research as a useful controlled testbed for nuisance factors; moderate adoption in the robustness community.",
+  "notes": "Non-LLM vision benchmark focused on controlled nuisance factors; limited to 10 object categories so results may not generalize to large-scale datasets; useful for targeted robustness analyses rather than broad benchmarking.",
+  "creators": {
+    "scientists": [
+      "Bingchen Zhao",
+      "Jiahao Wang",
+      "Wufei Ma",
+      "Artur Jesslen",
+      "Siwei Yang",
+      "Shaozuo Yu",
+      "Oliver Zendel",
+      "Christian Theobalt",
+      "Alan Yuille",
+      "Adam Kortylewski"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2304.10266",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Vision meets mmWave Radar 3D Perception Benchmark",
+  "description": "Sensor fusion is crucial for an accurate and robust perception system on autonomous vehicles. Most existing datasets and perception solutions focus on fusing cameras and LiDAR. However, the collaboration between camera and radar is significantly under-exploited. The incorporation of rich semantic information from the camera, and reliable 3D information from the radar can potentially achieve an efficient, cheap, and portable solution for 3D object perception tasks. It can also be robust to different lighting or all-weather driving scenarios due to the capability of mmWave radars. In this paper, we introduce the CRUW3D dataset, including 66K synchronized and well-calibrated camera, radar, and LiDAR frames in various driving scenarios. Unlike other large-scale autonomous driving datasets, our radar data is in the format of radio frequency (RF) tensors that contain not only 3D location information but also spatio-temporal semantic information. This kind of radar format can enable machine learning models to generate more reliable object perception results after interacting and fusing the information or features between the camera and radar.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3d_object_detection",
+    "semantic_segmentation",
+    "sensor_fusion",
+    "tracking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "mean_average_precision (mAP) for detection / IoU for segmentation / standard tracking metrics (e.g., MOTA)",
+  "general_score_metric": "mean_average_precision (mAP) for 3D detection",
+  "year_of_publish": 2023,
+  "reputation": "A relatively new, domain-specific dataset introducing RF-tensor radar data for camera–radar fusion; gaining attention among autonomous-driving sensor-fusion researchers but not yet widely adopted across mainstream benchmarks.",
+  "notes": "Non-LLM benchmark; radar data is provided as RF tensors (specialized format) requiring signal-processing familiarity; large-scale (66K frames) but format and calibration specifics may limit out-of-the-box reuse and cross-dataset comparisons.",
+  "creators": {
+    "scientists": [
+      "Yizhou Wang",
+      "Jen-Hao Cheng",
+      "Jui-Te Huang",
+      "Sheng-Yao Kuan",
+      "Qiqian Fu",
+      "Chiming Ni",
+      "Shengyu Hao",
+      "Gaoang Wang",
+      "Guanbin Xing",
+      "Hui Liu",
+      "Jenq-Neng Hwang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2311.10261",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

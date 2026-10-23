@@ -1,0 +1,37 @@
+{
+  "name": "Bias in Gender Bias Benchmarks: How Spurious Features Distort Evaluation",
+  "description": "Gender bias in vision-language foundation models (VLMs) raises concerns about their safe deployment and is typically evaluated using benchmarks with gender annotations on real-world images. However, as these benchmarks often contain spurious correlations between gender and non-gender features, such as objects and backgrounds, we identify a critical oversight in gender bias evaluation: Do spurious features distort gender bias evaluation? To address this question, we systematically perturb non-gender features across four widely used benchmarks (COCO-gender, FACET, MIAP, and PHASE) and various VLMs to quantify their impact on bias evaluation. Our findings reveal that even minimal perturbations, such as masking just 10% of objects or weakly blurring backgrounds, can dramatically alter bias scores, shifting metrics by up to 175% in generative VLMs and 43% in CLIP variants. This suggests that current bias evaluations often reflect model responses to spurious features rather than gender bias,",
+  "category": "multimodal",
+  "domain": "fairness",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "bias_evaluation",
+    "multimodal_classification",
+    "robustness_analysis"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "metric_shift / bias-score change under perturbations",
+  "general_score_metric": "bias score",
+  "year_of_publish": 2025,
+  "reputation": "A recent research benchmark paper rather than a long-established community standard, but it targets widely used gender-bias evaluation sets in vision-language models.",
+  "notes": "Evaluates sensitivity of bias metrics to spurious non-gender features; not a standard accuracy benchmark and results are highly perturbation-dependent.",
+  "creators": {
+    "scientists": [
+      "Yusuke Hirota",
+      "Ryo Hachiuma",
+      "Boyi Li",
+      "Ximing Lu",
+      "Michael Ross Boone",
+      "Boris Ivanovic"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2509.07596",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

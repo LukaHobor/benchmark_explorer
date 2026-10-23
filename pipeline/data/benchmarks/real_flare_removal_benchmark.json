@@ -1,0 +1,37 @@
+{
+  "name": "Real Flare Removal Benchmark",
+  "description": "Photographing in the under-illuminated scenes, the presence of complex light sources often leave strong flare artifacts in images, where the intensity, the spectrum, the reflection, and the aberration altogether contribute the deterioration. Besides the image quality, it also influence the performance of down-stream visual applications. Thus, removing the lens flare and ghosts is a challenge issue especially in low-light environment. However, existing methods for flare removal mainly restricted to the problems of inadequate simulation and real-world capture, where the categories of scattered flares are singular and the reflected ghosts are unavailable. Therefore, a comprehensive deterioration procedure is crucial for constructing the dataset of flare removal. Based on the theoretical analysis and real-world evaluation, we propose a well-developed methodology for generating the data-pairs with flare deterioration. The procedure is comprehensive, where the similarity of scattered flares and the symmetric effect of reflected ghosts are realized. Moreover, we also construct a real-shot pipeline that respectively processes the effects of scattering and reflective flares, aiming to directly generate the data for end-to-end methods. Experimental results show that the proposed methodology add diversity to the existing flare datasets and construct a comprehensive mapping procedure for flare data pairs. And our method facilities the data-driven model to realize better restoration in flare images and proposes a better evaluation system based on real shots, resulting promote progress in the area of real flare removal.",
+  "category": "vision",
+  "domain": "vision (image restoration)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_restoration",
+    "flare_removal",
+    "low_light_enhancement"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS (image quality and perceptual metrics)",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "25–35 dB (PSNR)",
+  "year_of_publish": 2023,
+  "reputation": "A targeted dataset for flare removal research with some adoption in the image restoration community but not yet widely used compared to larger denoising/low-light benchmarks.",
+  "notes": "Contains both simulated and real-shot pipelines; potential domain gap between synthetic and real examples. Small-to-moderate size compared to large restoration datasets; non-LLM benchmark focused on image restoration metrics.",
+  "creators": {
+    "scientists": [
+      "Zheyan Jin",
+      "Shiqi Chen",
+      "Huajun Feng",
+      "Zhihai Xu",
+      "Yueting Chen"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2306.15884",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

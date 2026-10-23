@@ -1,0 +1,38 @@
+{
+  "name": "Beyond Dents and Scratches dataset",
+  "description": "Abstract The unsupervised detection and localization of anomalies in natural images is an intriguing and challenging problem. Anomalies manifest themselves in very different ways and an ideal benchmark dataset for this task should contain representative examples for all of them. We find that existing datasets are biased towards local structural anomalies such as scratches, dents, or contaminations. In particular, they lack anomalies in the form of violations of logical constraints, e.g., permissible objects occurring in invalid locations. We contribute a new dataset based on industrial inspection scenarios that evenly covers both types of anomalies. We provide pixel-precise ground truth data for each anomalous region and define a generalized evaluation metric that addresses localization ambiguities that can arise for logical anomalies. Furthermore, we propose a novel algorithm that improves over the state of the art in the joint detection of structural and logical anomalies. It consists of a local and a global network branch. The first one inspects confined regions independent of their spatial locations in the input image and is primarily responsible for the detection of entirely new local structures. The second one learns a globally consistent representation of the training data through a bottleneck that enables the detection of violations of long-range dependencies, a key characteristic of many logical anomalies. We perform extensive evaluations on our new dataset to corroborate our claims.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "anomaly_detection",
+    "pixel_segmentation",
+    "localization",
+    "unsupervised"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Image- and pixel-level AUROC / AUPR; mean IoU for localization; plus the paper's generalized localization-aware metric to handle logical anomalies",
+  "general_score_metric": "Image- and pixel-level AUROC (primary), AUPR and localization IoU as secondary",
+  "typical_sota_score": "80–95% (varies strongly by anomaly type and metric; structural anomalies typically score higher than logical anomalies)",
+  "year_of_publish": 2022,
+  "reputation": "196 citations",
+  "notes": "Non-LLM vision benchmark that includes both local (structural) and global (logical) anomalies with pixel-precise masks; moderate dataset size and class imbalance across anomaly types; uses a specialized metric to address localization ambiguities for logical anomalies.",
+  "creators": {
+    "scientists": [
+      "Paul Bergmann",
+      "Kilian Batzner",
+      "Michael Fauser",
+      "David Sattlegger",
+      "Carsten Steger"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://doi.org/10.1007/s11263-022-01578-9",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

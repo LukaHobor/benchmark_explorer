@@ -1,0 +1,32 @@
+{
+  "name": "Smiles2Dock",
+  "description": "Docking is a crucial component in drug discovery aimed at predicting the binding conformation and affinity between small molecules and target proteins. ML-based docking has recently emerged as a prominent approach, outpacing traditional methods like DOCK and AutoDock Vina in handling the growing scale and complexity of molecular libraries. However, the availability of comprehensive and user-friendly datasets for training and benchmarking ML-based docking algorithms remains limited. We introduce Smiles2Dock, an open large-scale multi-task dataset for molecular docking. We created a framework combining P2Rank and AutoDock Vina to dock 1.7 million ligands from the ChEMBL database against 15 AlphaFold proteins, giving us more than 25 million protein-ligand binding scores. The dataset leverages a wide range of high-accuracy AlphaFold protein models, encompasses a diverse set of biologically relevant compounds and enables researchers to benchmark all major approaches for ML-based docking suc",
+  "category": "mixed",
+  "domain": "drug discovery",
+  "task_types": [
+    "molecular_docking",
+    "binding_affinity_prediction",
+    "pose_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "regression_error",
+  "general_score_metric": "regression_error",
+  "year_of_publish": 2024,
+  "reputation": "A new large-scale docking dataset/benchmark that is promising for ML docking research but is not yet a standard community benchmark.",
+  "notes": "Non-LLM benchmark; large-scale generated labels from P2Rank + AutoDock Vina on AlphaFold proteins, so results reflect the quality of the docking pipeline and may inherit its biases.",
+  "creators": {
+    "scientists": [
+      "Thomas Le Menestrel",
+      "Manuel Rivas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2406.05738",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

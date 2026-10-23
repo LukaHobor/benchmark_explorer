@@ -1,0 +1,35 @@
+{
+  "name": "Open Link Prediction (OLP) Benchmark",
+  "description": "Open Information Extraction systems extract (“subject text”, “relation text”, “object text”) triples from raw text. Some triples are textual versions of facts, i.e., non-canonicalized mentions of entities and relations. In this paper, we investigate whether it is possible to infer new facts directly from the open knowledge graph without any canonicalization or any supervision from curated knowledge. For this purpose, we propose the open link prediction task,i.e., predicting test facts by completing (“subject text”, “relation text”, ?) questions. An evaluation in such a setup raises the question if a correct prediction is actually a new fact that was induced by reasoning over the open knowledge graph or if it can be trivially explained. For example, facts can appear in different paraphrased textual variants, which can lead to test leakage. To this end, we propose an evaluation protocol and a methodology for creating the open link prediction benchmark OlpBench. We performed experiments with a prototypical knowledge graph embedding model for openlink prediction. While the task is very challenging, our results suggests that it is possible to predict genuinely new facts, which can not be trivially explained.",
+  "category": "mixed",
+  "domain": "knowledge graphs / graph learning",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "link_prediction",
+    "knowledge_graph_completion",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ranking_metrics (MRR, Hits@k)",
+  "general_score_metric": "MRR (Mean Reciprocal Rank)",
+  "year_of_publish": 2020,
+  "reputation": "Used in the KG/graph-learning community for evaluating models on prediction in incomplete/evolving graphs; less ubiquitous than standard closed-world KG benchmarks but cited in open-KG research.",
+  "notes": "Non-LLM benchmark focused on knowledge-graph embeddings; evaluation is sensitive to graph incompleteness and temporal/evolving facts, making direct comparison across methods difficult. Potential for evaluation instability due to open-world nature.",
+  "creators": {
+    "scientists": [
+      "Samuel Broscheit",
+      "Kiril Gashteovski",
+      "Yanjie Wang",
+      "Rainer Gemulla"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.18653/v1/2020.acl-main.209",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

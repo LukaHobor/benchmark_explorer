@@ -1,0 +1,37 @@
+{
+  "name": "Single-cell trajectory inference benchmark",
+  "description": "Trajectory inference approaches analyze genome-wide omics data from thousands of single cells and computationally infer the order of these cells along developmental trajectories. Although more than 70 trajectory inference tools have already been developed, it is challenging to compare their performance because the input they require and output models they produce vary substantially. Here, we benchmark 45 of these methods on 110 real and 229 synthetic datasets for cellular ordering, topology, scalability and usability. Our results highlight the complementarity of existing tools, and that the choice of method should depend mostly on the dataset dimensions and trajectory topology. Based on these results, we develop a set of guidelines to help users select the best method for their dataset. Our freely available data and evaluation pipeline ( https://benchmark.dynverse.org ) will aid in the development of improved tools designed to analyze increasingly large and complex single-cell datasets.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ordering",
+    "topology_inference",
+    "scalability_benchmark",
+    "usability_assessment"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score (Kendall rank correlation for cell ordering; topology F1 / graph similarity for topology; runtime/memory for scalability; usability qualitative scoring)",
+  "general_score_metric": "composite_score",
+  "typical_sota_score": "0.6–0.9 (Kendall tau; dataset-dependent)",
+  "year_of_publish": 2019,
+  "reputation": "1677 citations",
+  "notes": "Non-LLM benchmark for single-cell trajectory inference. Uses both real and synthetic data; evaluation depends on mapping method outputs to reference topologies (can bias some methods). Performance varies strongly with dataset size and trajectory complexity; scalability and topology sensitivity are key caveats.",
+  "creators": {
+    "scientists": [
+      "Wouter Saelens",
+      "Robrecht Cannoodt",
+      "Helena Todorov",
+      "Yvan Saeys"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1038/s41587-019-0071-9",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

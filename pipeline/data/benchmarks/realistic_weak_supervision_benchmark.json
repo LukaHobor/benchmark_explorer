@@ -1,0 +1,36 @@
+{
+  "name": "Realistic Weak Supervision Benchmark",
+  "description": "Weak supervision (WS) is a popular approach for label-efficient learning, leveraging diverse sources of noisy but inexpensive weak labels to automatically annotate training data. Despite its wide usage, WS and its practical value are challenging to benchmark due to the many knobs in its setup, including: data sources, labeling functions (LFs), aggregation techniques (called label models), and end model pipelines. Existing evaluation suites tend to be limited, focusing on particular components or specialized use cases. Moreover, they often involve simplistic benchmark tasks or de-facto LF sets that are suboptimally written, producing insights that may not generalize to real-world settings. We address these limitations by introducing a new benchmark, BOXWRENCH, designed to more accurately reflect real-world usages of WS. This benchmark features tasks with (1) higher class cardinality and imbalance, (2) notable domain expertise requirements, and (3) opportunities to re-use LFs across parallel multilingual corpora. For all tasks, LFs are written using a careful procedure aimed at mimicking real-world settings. In contrast to existing WS benchmarks, we show that supervised learning requires substantial amounts (1000+) of labeled examples to match WS in many settings.",
+  "category": "mixed",
+  "domain": "machine learning / weak supervision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "macro-F1",
+  "general_score_metric": "macro-F1",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, more realistic benchmark for weak supervision that is gaining attention among researchers focused on label-efficient and weakly supervised learning.",
+  "notes": "Designed to mimic real-world labeling-function workflows; not an LLM benchmark. Contains class imbalance and higher cardinality tasks; results depend strongly on LF quality and aggregation choices. Possible risk of LF overlap with test distributions and limited generalization if LFs are dataset-specific.",
+  "creators": {
+    "scientists": [
+      "Tianyi Zhang",
+      "Linrong Cai",
+      "Jeffrey Li",
+      "Nicholas Roberts",
+      "Neel Guha",
+      "Jinoh Lee",
+      "Frederic Sala"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2501.07727",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "rainymotion v0.1",
+  "description": "Abstract. Quantitative precipitation nowcasting (QPN) has become an essential technique in various application contexts, such as early warning or urban sewage control. A common heuristic prediction approach is to track the motion of precipitation features from a sequence of weather radar images, and then to extrapolate that motion to the imminent future (minutes to hours), assuming that the intensity of the features remains constant (Lagrangian persistence). In that context, optical flow has become one of the most popular tracking techniques. Yet, the present landscape of computational QPN models still struggles with producing open software implementations. Focusing on this gap, we have developed and extensively benchmarked a stack of models based on different optical flow algorithms for the tracking step, and a set of parsimonious extrapolation procedures based on image warping and advection. We demonstrate that these models provide skillful predictions comparable with or even superior to state-of-the-art operational software. Our software library (rainymotion) for precipitation nowcasting is written in Python programming language, and openly available at GitHub (https://github.com/hydrogo/rainymotion). That way, the library may serve as a tool for providing fast, free and transparent solutions that could serve as a benchmark for further model development and hypothesis testing – a benchmark that is far more advanced than the conventional benchmark of Eulerian persistence commonly used in QPN verification experiments.",
+  "category": "vision",
+  "domain": "climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "spatiotemporal_forecasting",
+    "video_prediction"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "RMSE / CSI (Critical Success Index)",
+  "general_score_metric": "RMSE",
+  "year_of_publish": 2018,
+  "reputation": "Open-source, peer-reviewed library used as a baseline in precipitation nowcasting research with modest adoption in the climate-science community.",
+  "notes": "Non-LLM benchmark focused on radar-based precipitation nowcasting; evaluation commonly reports RMSE, CSI and related precipitation-verification scores. Implementation and results are dependent on radar preprocessing and geographic coverage; not a large standardized leaderboard.",
+  "creators": {
+    "scientists": [
+      "Georgy Ayzel",
+      "Maik Heistermann",
+      "Tanja Winterrath"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.5194/gmd-2018-166",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

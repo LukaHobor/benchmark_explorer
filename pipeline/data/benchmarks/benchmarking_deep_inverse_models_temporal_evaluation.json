@@ -1,0 +1,34 @@
+{
+  "name": "Benchmarking Deep Inverse Models (Temporal Evaluation)",
+  "description": "We consider the task of solving generic inverse problems, where one wishes to determine the hidden parameters of a natural system that will give rise to a particular set of measurements. Recently many new approaches based upon deep learning have arisen generating impressive results. We conceptualize these models as different schemes for efficiently, but randomly, exploring the space of possible inverse solutions. As a result, the accuracy of each approach should be evaluated as a function of time rather than a single estimated solution, as is often done now. Using this metric, we compare several state-of-the-art inverse modeling approaches on four benchmark tasks: two existing tasks, one simple task for visualization and one new task from metamaterial design. Finally, inspired by our conception of the inverse problem, we explore a solution that uses a deep learning model to approximate the forward model, and then uses backpropagation to search for good inverse solutions. This approach, termed the neural-adjoint, achieves the best performance in many scenarios.",
+  "category": "mixed",
+  "domain": "computational inverse problems / scientific computing",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "optimization",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "error_over_time",
+  "general_score_metric": "error_over_time (e.g., MSE vs. runtime)",
+  "year_of_publish": 2020,
+  "reputation": "Well-regarded within the inverse problems and scientific computing communities as a useful temporal benchmark for comparing deep inverse modeling approaches.",
+  "notes": "Non-LLM benchmark focused on scientific inverse problems; emphasizes runtime–accuracy tradeoffs (temporal evaluation). Datasets are task-specific (including metamaterial design) and relatively small; contamination of LLM pretraining corpora is unlikely.",
+  "creators": {
+    "scientists": [
+      "Simiao Ren",
+      "Willie Padilla",
+      "Jordan Malof"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2009.12919",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

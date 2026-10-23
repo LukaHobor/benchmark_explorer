@@ -1,0 +1,48 @@
+{
+  "name": "BenchMD",
+  "description": "Medical data poses a daunting challenge for AI algorithms: it exists in many different modalities, experiences frequent distribution shifts, and suffers from a scarcity of examples and labels. Recent advances, including transformers and self-supervised learning, promise a more universal approach that can be applied flexibly across these diverse conditions. To measure and drive progress in this direction, we present BenchMD: a benchmark that tests how well unified, modality-agnostic methods, including architectures and training techniques (e.g. self-supervised learning, ImageNet pretraining),perform on a diverse array of clinically-relevant medical tasks. BenchMD combines 19 publicly available datasets for 7 medical modalities, including 1D sensor data, 2D images, and 3D volumetric scans. Our benchmark reflects real-world data constraints by evaluating methods across a range of dataset sizes, including challenging few-shot settings that incentivize the use of pretraining. Finally, we evaluate performance on out-of-distribution data collected at different hospitals than the training data, representing naturally-occurring distribution shifts that frequently degrade the performance of medical AI models. Our baseline results demonstrate that no unified learning technique achieves strong performance across all modalities, leaving ample room for improvement on the benchmark. Code is released at https://github.com/rajpurkarlab/BenchMD.",
+  "category": "multimodal",
+  "domain": "medical imaging / healthcare",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "segmentation",
+    "regression",
+    "detection"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Dataset-specific metrics (e.g., AUC, accuracy, F1, Dice) depending on task",
+  "general_score_metric": "No single metric — uses dataset/task-specific primary metrics (AUC for some tasks, Dice for segmentation, accuracy/F1 for classification)",
+  "typical_sota_score": "varies widely by task and modality; no single consolidated SOTA range",
+  "year_of_publish": 2023,
+  "reputation": "An emerging unified benchmark for modality-agnostic methods in medical ML; of growing interest but not yet widely adopted across all subcommunities.",
+  "notes": "Combines many small public medical datasets across modalities and few-shot/OOD settings; intended to stress pretraining and robustness. Privacy, distribution shift, and small-sample limitations apply; not a single-metric benchmark.",
+  "creators": {
+    "scientists": [
+      "Kathryn Wantlin",
+      "Chenwei Wu",
+      "Shih-Cheng Huang",
+      "Oishi Banerjee",
+      "Farah Dadabhoy",
+      "Veeral Vipin Mehta",
+      "Ryan Wonhee Han",
+      "Fang Cao",
+      "Raja R. Narayan",
+      "Errol Colak",
+      "Adewole Adamson",
+      "Laura Heacock",
+      "Geoffrey H. Tison",
+      "Alex Tamkin",
+      "Pranav Rajpurkar"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2304.08486",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

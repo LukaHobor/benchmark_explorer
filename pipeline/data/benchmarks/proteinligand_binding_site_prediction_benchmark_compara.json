@@ -1,0 +1,33 @@
+{
+  "name": "Protein–ligand binding site prediction benchmark (comparative evaluation)",
+  "description": "The accurate identification of protein–ligand binding sites is of critical importance in understanding and modulating protein function. Accordingly, ligand binding site prediction has remained a research focus for over three decades with over 50 methods developed and a change of paradigm from geometry-based to machine learning. In this work, we collate 13 ligand binding site predictors, spanning 30 years, focusing on the latest machine learning-based methods such as VN-EGNN, IF-SitePred, GrASP, PUResNet, and DeepPocket and compare them to the established P2Rank, PRANK and fpocket and earlier methods like PocketFinder, Ligsite and Surfnet. We benchmark the methods against the human subset of our new curated reference dataset, LIGYSIS. LIGYSIS is a comprehensive protein–ligand complex dataset comprising 30,000 proteins with bound ligands which aggregates biologically relevant unique protein–ligand interfaces across biological units of multiple structures from the same protein. LIGYSIS is an improvement for testing methods over earlier datasets like sc-PDB, PDBbind, binding MOAD, COACH420 and HOLO4K which either include 1:1 protein–ligand complexes or consider asymmetric units. Re-scoring of fpocket predictions by PRANK and DeepPocket display the highest recall (60%) whilst IF-SitePred presents the lowest recall (39%). We demonstrate the detrimental effect that redundant prediction of binding sites has on performance as well as the beneficial impact of stronger pocket scoring schemes, with improvements up to 14% in recall (IF-SitePred) and 30% in precision (Surfnet). Finally, we propose top-N+2 recall as the universal benchmark metric for ligand binding site prediction and urge authors to share not only the source code of their methods, but also of their benchmark. Scientific contributions This study conducts the largest benchmark of ligand binding site prediction methods to date, comparing 13 original methods and 15 variants using 10 informative metrics. The LIGYSIS dataset is introduced, which aggregates biologically relevant protein–ligand interfaces across multiple structures of the same protein. The study highlights the detrimental effect of redundant binding site prediction and demonstrates significant improvement in recall and precision through stronger scoring schemes. Finally, top-N+2 recall is proposed as a universal benchmark metric for ligand binding site prediction, with a recommendation for open-source sharing of both methods and benchmarks.",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binding_site_prediction",
+    "ranking",
+    "localization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "top-N+2 recall (primary), with precision, recall and other auxiliary metrics reported",
+  "general_score_metric": "top-N+2 recall",
+  "typical_sota_score": "≈60% recall",
+  "year_of_publish": 2024,
+  "reputation": "26 citations",
+  "notes": "Large curated dataset (LIGYSIS) reduces some redundancy issues from prior sets, but performance is sensitive to redundant predictions and pocket-scoring schemes; non-LLM benchmark spanning geometry-based and ML methods — reproducibility depends on code availability.",
+  "creators": {
+    "scientists": [
+      "Javier S. Utgés",
+      "Geoffrey J. Barton"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "BrokenVideos",
+  "description": "Recent advances in deep generative models have led to significant progress in video generation, yet the fidelity of AI-generated videos remains limited. Synthesized content often exhibits visual artifacts such as temporally inconsistent motion, physically implausible trajectories, unnatural object deformations, and local blurring that undermine realism and user trust. Accurate detection and spatial localization of these artifacts are crucial for both automated quality control and for guiding the development of improved generative models. However, the research community currently lacks a comprehensive benchmark specifically designed for artifact localization in AI generated videos. Existing datasets either restrict themselves to video or frame level detection or lack the fine-grained spatial annotations necessary for evaluating localization methods. To address this gap, we introduce BrokenVideos, a benchmark dataset of 3,254 AI-generated videos with meticulously annotated, pixel-level masks highlighting regions of visual corruption. Each annotation is validated through detailed human inspection to ensure high quality ground truth. Our experiments show that training state of the art artifact detection models and multi modal large language models (MLLMs) on BrokenVideos significantly improves their ability to localize corrupted regions. Through extensive evaluation, we demonstrate that BrokenVideos establishes a critical foundation for benchmarking and advancing research on artifact localization in generative video models. The dataset is available at: https://broken-video-detection-datetsets.github.io/Broken-Video-Detection-Datasets.github.io/.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "segmentation",
+    "localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mIoU (mean Intersection over Union) / pixel-wise F1",
+  "general_score_metric": "mIoU",
+  "year_of_publish": 2025,
+  "reputation": "New, focused benchmark for artifact localization in AI-generated video with growing interest in the generative-video research community.",
+  "notes": "Moderate-sized (3,254 videos) dataset with human-validated pixel masks; primarily a non-LLM, vision segmentation/localization benchmark. May exhibit class imbalance, temporal diversity challenges, and limited scale for very large models.",
+  "creators": {
+    "scientists": [
+      "Jiahao Lin",
+      "Weixuan Peng",
+      "Bojia Zi",
+      "Yifeng Gao",
+      "Xianbiao Qi",
+      "Xingjun Ma",
+      "Yu-Gang Jiang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.20103",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

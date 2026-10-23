@@ -1,0 +1,36 @@
+{
+  "name": "protein interaction benchmark splits",
+  "description": "In recent years, there has been remarkable progress in machine learning for protein-protein interactions. However, prior work has predominantly focused on improving learning algorithms, with less attention paid to evaluation strategies and data preparation. Here, we demonstrate that further development of machine learning methods may be hindered by the quality of existing train-test splits. Specifically, we find that commonly used splitting strategies for protein complexes, based on protein sequence or metadata similarity, introduce major data leakage. This may result in overoptimistic evaluation of generalization, as well as unfair benchmarking of the models, biased towards assessing their overfitting capacity rather than practical utility. To overcome the data leakage, we recommend constructing data splits based on 3D structural similarity of protein-protein interfaces and suggest corresponding algorithms. We believe that addressing the data leakage problem is critical for further pr",
+  "category": "mixed",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "binary_classification",
+    "ranking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
+  "year_of_publish": 2024,
+  "reputation": "A research benchmark on protein-protein interaction split quality that is influential for highlighting data leakage and evaluation bias in bioinformatics.",
+  "notes": "Primarily about evaluation protocol rather than a fixed model leaderboard; scores can be misleading under sequence-similarity splits due to leakage, and structural splits are more realistic.",
+  "creators": {
+    "scientists": [
+      "Anton Bushuiev",
+      "Roman Bushuiev",
+      "Jiri Sedlar",
+      "Tomas Pluskal",
+      "Jiri Damborsky",
+      "Stanislav Mazurenko"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2404.10457",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Swords",
+  "description": "We release a new benchmark for lexical substitution, the task of finding appropriate substitutes for a target word in a context. To assist humans with writing, lexical substitution systems can suggest words that humans cannot easily think of. However, existing benchmarks depend on human recall as the only source of data, and therefore lack coverage of the substitutes that would be most helpful to humans. Furthermore, annotators often provide substitutes of low quality, which are not actually appropriate in the given context. We collect higher-coverage and higher-quality data by framing lexical substitution as a classification problem, guided by the intuition that it is easier for humans to judge the appropriateness of candidate substitutes than conjure them from memory. To this end, we use a context-free thesaurus to produce candidates and rely on human judgement to determine contextual appropriateness. Compared to the previous largest benchmark, our Swords benchmark has 4.1x more substitutes per target word for the same level of quality, and its substitutes are 1.5x more appropriate (based on human judgement) for the same number of substitutes.",
+  "category": "text",
+  "domain": "natural language processing / lexical semantics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "ranking"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "precision@k (commonly P@1), mean average precision (MAP), and F1 depending on setup",
+  "general_score_metric": "Precision@1 (P@1) or MAP (task-dependent)",
+  "year_of_publish": 2021,
+  "reputation": "Presented as a higher-coverage, higher-quality lexical substitution benchmark that addresses limitations of prior datasets and is of interest to lexical semantics and NLP researchers.",
+  "notes": "Candidate generation is based on a context-free thesaurus so results depend heavily on candidate coverage; framed as classification (not free-form generation), sensitive to candidate set and domain; larger and higher-quality than prior sets but still task-specific and not an LLM-native generative benchmark.",
+  "creators": {
+    "scientists": [
+      "Mina Lee",
+      "Chris Donahue",
+      "Robin Jia",
+      "Alexander Iyabor",
+      "Percy Liang"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2106.04102",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

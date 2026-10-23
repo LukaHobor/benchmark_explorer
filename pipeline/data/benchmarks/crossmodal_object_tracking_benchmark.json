@@ -1,0 +1,38 @@
+{
+  "name": "Cross-Modal Object Tracking benchmark",
+  "description": "In many visual systems, visual tracking often bases on RGB image sequences, in which some targets are invalid in low-light conditions, and tracking performance is thus affected significantly. Introducing other modalities such as depth and infrared data is an effective way to handle imaging limitations of individual sources, but multi-modal imaging platforms usually require elaborate designs and cannot be applied in many real-world applications at present. Near-infrared (NIR) imaging becomes an essential part of many surveillance cameras, whose imaging is switchable between RGB and NIR based on the light intensity. These two modalities are heterogeneous with very different visual properties and thus bring big challenges for visual tracking. However, existing works have not studied this challenging problem. In this work, we address the cross-modal object tracking problem and contribute a new video dataset, including 654 cross-modal image sequences with over 481K frames in total, and the average video length is more than 735 frames. To promote the research and development of cross-modal object tracking, we propose a new algorithm, which learns the modality-aware target representation to mitigate the appearance gap between RGB and NIR modalities in the tracking process. It is plug-and-play and could thus be flexibly embedded into different tracking frameworks. Extensive experiments on the dataset are conducted, and we demonstrate the effectiveness of the proposed algorithm in two representative tracking frameworks against 17 state-of-the-art tracking methods. We will release the dataset for free academic usage, dataset download link and code will be released soon.",
+  "category": "vision",
+  "domain": "computer vision (surveillance / tracking)",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "object_tracking",
+    "video_tracking",
+    "sequence_prediction"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "standard tracking metrics: success (IoU AUC) and precision (center-location error / precision plot)",
+  "general_score_metric": "success (IoU AUC)",
+  "typical_sota_score": "Approximately 45–65% AUC (method- and setting-dependent)",
+  "year_of_publish": 2021,
+  "reputation": "A 2021 arXiv dataset addressing RGB–NIR cross-modal tracking; of interest to the tracking community but not yet a broadly established benchmark.",
+  "notes": "Large-scale and long sequences (computationally demanding); specialized RGB↔NIR domain limits transfer from standard trackers; annotations and modality-switch scenarios can introduce evaluation variability; dataset released for academic use only.",
+  "creators": {
+    "scientists": [
+      "Chenglong Li",
+      "Tianhao Zhu",
+      "Lei Liu",
+      "Xiaonan Si",
+      "Zilin Fan",
+      "Sulan Zhai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2111.04264",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

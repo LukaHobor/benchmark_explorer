@@ -1,0 +1,35 @@
+{
+  "name": "Point Cloud Objective Quality",
+  "description": "Full-reference point cloud objective metrics are currently providing very accurate representations of perceptual quality. These metrics are usually composed of a set of features that are somehow combined, resulting in a final quality value. In this study, the different features of the best-performing metrics are analyzed. For that, different objective quality metrics are compared between them, and the differences in their quality representation are studied. This provided a selection of the set of metrics used in this study, namely the point-to-plane, point-to-attribute, Point Cloud Structural Similarity, Point Cloud Quality Metric and Multiscale Graph Similarity. The features defined in those metrics are examined based on their contribution to the objective estimation using recursive feature elimination. To employ the recursive feature selection algorithm, both the support vector regression and the ridge regression algorithms were employed. For this study, the Broad Quality Assessment of Static Point Clouds in Compression Scenario database was used for both training and validation of the models. According to the recursive feature elimination, several features were selected and then combined using the regression method used to select those features. The best combination models were then evaluated across five different publicly available subjective quality assessment datasets, targeting different point cloud characteristics and distortions. It was concluded that a combination of features selected from the Point Cloud Quality Metric, Multiscale Graph Similarity and PSNR MSE D2, combined with Ridge Regression, results in the best performance. This model leads to the definition of the Feature Selection Model.",
+  "category": "vision",
+  "domain": "3D vision / point clouds",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "quality_prediction",
+    "full_reference_quality_assessment"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "correlation metrics (Spearman/Pearson) and RMSE",
+  "general_score_metric": "Spearman rank correlation coefficient (SRCC)",
+  "year_of_publish": 2025,
+  "reputation": "A specialized benchmark used in the 3D vision and point-cloud quality-assessment community for evaluating objective metrics against human subjective scores.",
+  "notes": "Relies on subjective human quality scores from a limited set of point-cloud datasets; evaluations are full-reference and focus on correlation with perceptual judgments. Not applicable to LLMs and may be sensitive to the specific distortions and datasets used.",
+  "creators": {
+    "scientists": [
+      "Joao Prazeres",
+      "Rafael Rodrigues",
+      "Manuela Pereira",
+      "Antonio M. G. Pinheiro"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2504.03381",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Benchmarking Algorithmic Bias in Face Recognition",
+  "description": "We propose an experimental method for measuring bias in face recognition systems. Existing methods to measure bias depend on benchmark datasets that are collected in the wild and annotated for protected (e.g., race, gender) and non-protected (e.g., pose, lighting) attributes. Such observational datasets only permit correlational conclusions, e.g., \"Algorithm A's accuracy is different on female and male faces in dataset X.\". By contrast, experimental methods manipulate attributes individually and thus permit causal conclusions, e.g., \"Algorithm A's accuracy is affected by gender and skin color.\" Our method is based on generating synthetic faces using a neural face generator, where each attribute of interest is modified independently while leaving all other attributes constant. Human observers crucially provide the ground truth on perceptual identity similarity between synthetic image pairs. We validate our method quantitatively by evaluating race and gender biases of three research-grad",
+  "category": "vision",
+  "domain": "face recognition",
+  "task_types": [
+    "open_ended",
+    "pairwise_comparison"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "bias gap / accuracy disparity",
+  "year_of_publish": 2023,
+  "reputation": "A specialized research benchmark with limited adoption, mainly used in academic studies of fairness and causal bias in face recognition.",
+  "notes": "Non-LLM vision fairness benchmark; relies on synthetic face generation and human judgments of identity similarity, so results are not directly comparable to standard accuracy benchmarks.",
+  "creators": {
+    "scientists": [
+      "Hao Liang",
+      "Pietro Perona",
+      "Guha Balakrishnan"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.05441",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-18",
+    "origin": "cynefin@d486fafa9"
+  }
+}

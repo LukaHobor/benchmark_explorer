@@ -1,0 +1,37 @@
+{
+  "name": "Full Adult Fly Brain Soma Segmentation Benchmark",
+  "description": "Neuron reconstruction in a full adult fly brain from high-resolution electron microscopy (EM) data is regarded as a cornerstone for neuroscientists to explore how neurons inspire intelligence. As the central part of neurons, somas in the full brain indicate the origin of neurogenesis and neural functions. However, due to the absence of EM datasets specifically annotated for somas, existing deep learning-based neuron reconstruction methods cannot directly provide accurate soma distribution and morphology. Moreover, full brain neuron reconstruction remains extremely time-consuming due to the unprecedentedly large size of EM data. In this paper, we develop an efficient soma reconstruction method for obtaining accurate soma distribution and morphology information in a full adult fly brain. To this end, we first make a high-resolution EM dataset with fine-grained 3D manual annotations on somas. Relying on this dataset, we propose an efficient, two-stage deep learning algorithm for predicting accurate locations and boundaries of 3D soma instances. Further, we deploy a parallelized, high-throughput data processing pipeline for executing the above algorithm on the full brain. Finally, we provide quantitative and qualitative benchmark comparisons on the testset to validate the superiority of the proposed method, as well as preliminary statistics of the reconstructed somas in the full adult fly brain from the biological perspective. We release our code and dataset at https://github.com/liuxy1103/EMADS.",
+  "category": "vision",
+  "domain": "neuroscience / connectomics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "3D_instance_segmentation",
+    "soma_detection",
+    "boundary_segmentation",
+    "morphological_analysis"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "mean Dice coefficient (F1) / IoU and object-level precision/recall (average precision, AP)",
+  "general_score_metric": "mean Dice coefficient (primary)",
+  "year_of_publish": 2022,
+  "reputation": "New, high-resolution 3D EM soma dataset with growing interest in the connectomics community but not yet a widely standardized benchmark.",
+  "notes": "Non-LLM, domain-specific EM benchmark requiring large compute; dataset provides fine-grained 3D manual annotations but may be limited to lab-specific imaging conditions and at risk of overfitting to those protocols.",
+  "creators": {
+    "scientists": [
+      "Xiaoyu Liu",
+      "Bo Hu",
+      "Mingxing Li",
+      "Wei Huang",
+      "Yueyi Zhang",
+      "Zhiwei Xiong"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

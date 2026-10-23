@@ -1,0 +1,37 @@
+{
+  "name": "V2I HD Mapping Benchmark",
+  "description": "Autonomous driving faces safety challenges due to a lack of global perspective and the semantic information of vectorized high-definition (HD) maps. Information from roadside cameras can greatly expand the map perception range through vehicle-to-infrastructure (V2I) communications. However, there is still no dataset from the real world available for the study on map vectorization onboard under the scenario of vehicle-infrastructure cooperation. To prosper the research on online HD mapping for Vehicle-Infrastructure Cooperative Autonomous Driving (VICAD), we release a real-world dataset, which contains collaborative camera frames from both vehicles and roadside infrastructures, and provides human annotations of HD map elements. We also present an end-to-end neural framework (i.e., V2I-HD) leveraging vision-centric V2I systems to construct vectorized maps. To reduce computation costs and further deploy V2I-HD on autonomous vehicles, we introduce a directionally decoupled self-attention mechanism to V2I-HD. Extensive experiments show that V2I-HD has superior performance in real-time inference speed, as tested by our real-world dataset. Abundant qualitative results also demonstrate stable and robust map construction quality with low cost in complex and various driving scenes. As a benchmark, both source codes and the dataset have been released at OneDrive for the purpose of further study.",
+  "category": "vision",
+  "domain": "autonomous driving / vehicle-infrastructure cooperation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "map_vectorization",
+    "semantic_segmentation",
+    "end_to_end_mapping"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1 score",
+  "year_of_publish": 2025,
+  "reputation": "Emerging dataset for V2I research with growing interest in the autonomous-driving community but limited adoption outside specialized research groups.",
+  "notes": "Non-LLM, vision-centric benchmark; real-world but likely geographically and sensor-setup limited, potential class imbalance and dataset-size constraints; requires domain-specific evaluation (e.g., vector-quality metrics) and possible hardware/simulation for full validation.",
+  "creators": {
+    "scientists": [
+      "Miao Fan",
+      "Shanshan Yu",
+      "Shengtong Xu",
+      "Kun Jiang",
+      "Haoyi Xiong",
+      "Xiangzeng Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Robotics & Embodied Control",
+  "source": "https://arxiv.org/abs/2503.23963",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

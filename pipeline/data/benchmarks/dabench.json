@@ -1,0 +1,39 @@
+{
+  "name": "DABench",
+  "description": "Recent advancements in Artificial Intelligence (AI) have led to the development of several Large Weather Models (LWMs) that rival State-Of-The-Art (SOTA) Numerical Weather Prediction (NWP) systems. Until now, these models have still relied on traditional NWP-generated analysis fields as input and are far from autonomous. Currently, scientists are increasingly focusing on developing data-driven data assimilation (DA) models for LWMs. To expedite advancements in this field and facilitate the operationalization of data-driven end-to-end weather forecasting systems, we propose DABench, a benchmark constructed by simulated observations, real-world observations, and ERA5 reanalysis. DABench contributes four standard features: (1) sparse and noisy observations provided for both simulated and real-world experiments; (2) a Skillful pre-trained Transformer-based weather prediction model, Sformer, designed to generate background fields while rigorously assessing the impact of assimilation outcomes on predictions; (3) standardized evaluation metrics for the model comparison; (4) a strong DA baseline, 4DVarFormerV2. Our experimental results demonstrate that the end-to-end weather forecasting system, integrating 4DVarFormerV2 and Sformer, can assimilate real-world observations, thereby facilitating a stable DA cycle lasting one year and achieving a skillful forecasting lead time of up to 7 days. The proposed DABench will significantly advance research in AI-based DA, AI-based weather forecasting, and related domains.",
+  "category": "mixed",
+  "domain": "weather / climate science",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "data_assimilation",
+    "time_series_forecasting",
+    "sequence_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "RMSE / MAE / forecast skill scores (e.g., anomaly correlation coefficient, CRPS)",
+  "general_score_metric": "forecast skill score (primary metrics reported include RMSE and anomaly correlation coefficient)",
+  "year_of_publish": 2024,
+  "reputation": "New benchmark aimed at the weather/climate ML community; gaining attention among researchers working on data‑driven assimilation and forecasting but not yet widely adopted.",
+  "notes": "Large-scale spatiotemporal dataset requiring substantial compute; mixes simulated and real observations (distribution shift risk); specialized domain metrics and models required; not intended for general LLM evaluation; possible licensing/usage constraints for ERA5 and observational data.",
+  "creators": {
+    "scientists": [
+      "Wuxin Wang",
+      "Weicheng Ni",
+      "Tao Han",
+      "Taikang Yuan",
+      "Xiaoyong Li",
+      "Lei Bai",
+      "Boheng Duan",
+      "Kaijun Ren"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2408.11438",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

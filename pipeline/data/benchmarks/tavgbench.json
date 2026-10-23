@@ -1,0 +1,39 @@
+{
+  "name": "TAVGBench",
+  "description": "The Text to Audible-Video Generation (TAVG) task involves generating videos with accompanying audio based on text descriptions. Achieving this requires skillful alignment of both audio and video elements. To support research in this field, we have developed a comprehensive Text to Audible-Video Generation Benchmark (TAVGBench), which contains over 1.7 million clips with a total duration of 11.8 thousand hours. We propose an automatic annotation pipeline to ensure each audible video has detailed descriptions for both its audio and video contents. We also introduce the Audio-Visual Harmoni score (AVHScore) to provide a quantitative measure of the alignment between the generated audio and video modalities. Additionally, we present a baseline model for TAVG called TAVDiffusion, which uses a two-stream latent diffusion model to provide a fundamental starting point for further research in this area. We achieve the alignment of audio and video by employing cross-attention and contrastive learning. Through extensive experiments and evaluations on TAVGBench, we demonstrate the effectiveness of our proposed model under both conventional metrics and our proposed metrics.",
+  "category": "multimodal",
+  "domain": "audio-visual multimodal generation",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_to_audio_video_generation",
+    "multimodal_generation",
+    "conditional_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AVHScore (automatic audio-visual harmony) and human_eval (also FID and conventional generative metrics)",
+  "general_score_metric": "AVHScore",
+  "year_of_publish": 2024,
+  "reputation": "A very large, recently introduced benchmark (2024) for text-to-audible-video; adoption is still limited but it fills an important gap for audio-visual generation research.",
+  "notes": "Extremely large-scale (≈1.7M clips) with automatic annotations that may introduce noise; potential copyright/contamination concerns; evaluation relies on a novel automatic metric (AVHScore) which is not yet standardized and is typically complemented by human evaluation.",
+  "creators": {
+    "scientists": [
+      "Yuxin Mao",
+      "Xuyang Shen",
+      "Jing Zhang",
+      "Zhen Qin",
+      "Jinxing Zhou",
+      "Mochu Xiang",
+      "Yiran Zhong",
+      "Yuchao Dai"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2404.14381",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

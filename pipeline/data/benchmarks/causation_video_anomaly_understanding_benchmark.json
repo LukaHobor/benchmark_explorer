@@ -1,0 +1,41 @@
+{
+  "name": "Causation Video Anomaly Understanding Benchmark",
+  "description": "Recent advancements in video anomaly understanding (VAU) have opened the door to groundbreaking applications in various fields, such as traffic monitoring and industrial automation. While the current benchmarks in VAU predominantly emphasize the detection and localization of anomalies. Here, we endeavor to delve deeper into the practical aspects of VAU by addressing the essential questions: \"what anomaly occurred?\", \"why did it happen?\", and \"how severe is this abnormal event?\". In pursuit of these answers, we introduce a comprehensive benchmark for Exploring the Causation of Video Anomalies (ECVA). Our benchmark is meticulously designed, with each video accompanied by detailed human annotations. Specifically, each instance of our ECVA involves three sets of human annotations to indicate \"what\", \"why\" and \"how\" of an anomaly, including 1) anomaly type, start and end times, and event descriptions, 2) natural language explanations for the cause of an anomaly, and 3) free text reflecting the effect of the abnormality. Building upon this foundation, we propose a novel prompt-based methodology that serves as a baseline for tackling the intricate challenges posed by ECVA. We utilize \"hard prompt\" to guide the model to focus on the critical parts related to video anomaly segments, and \"soft prompt\" to establish temporal and spatial relationships within these anomaly segments. Furthermore, we propose AnomEval, a specialized evaluation metric crafted to align closely with human judgment criteria for ECVA. This metric leverages the unique features of the ECVA dataset to provide a more comprehensive and reliable assessment of various video large language models. We demonstrate the efficacy of our approach through rigorous experimental analysis and delineate possible avenues for further investigation into the comprehension of video anomaly causation.",
+  "category": "vision",
+  "domain": "vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "video_question_answering",
+    "open_ended",
+    "explanation_generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AnomEval (custom evaluation metric aligned with human judgement), supplemented by human_eval for explanations",
+  "general_score_metric": "AnomEval score",
+  "year_of_publish": 2024,
+  "reputation": "New, specialized benchmark for video anomaly causation understanding; early-stage adoption within the video-anomaly and multimodal reasoning communities.",
+  "notes": "Rich human annotations (what/why/how) but subjectivity in causal explanations; requires video-language multimodal models; uses a custom metric (AnomEval) that is not yet standard—comparability to other benchmarks is limited. Potential class imbalance and annotation variability across annotators.",
+  "creators": {
+    "scientists": [
+      "Hang Du",
+      "Guoshun Nan",
+      "Jiawen Qian",
+      "Wangchenhui Wu",
+      "Wendi Deng",
+      "Hanqing Mu",
+      "Zhenyan Chen",
+      "Pengxuan Mao",
+      "Xiaofeng Tao",
+      "Jun Liu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2412.07183",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

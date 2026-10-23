@@ -1,0 +1,36 @@
+{
+  "name": "AC Surrogate Benchmarks",
+  "description": "The optimization of algorithm (hyper-)parameters is crucial for achieving\npeak performance across a wide range of domains, ranging from deep neural\nnetworks to solvers for hard combinatorial problems. The resulting algorithm\nconfiguration (AC) problem has attracted much attention from the machine\nlearning community. However, the proper evaluation of new AC procedures is\nhindered by two key hurdles. First, AC benchmarks are hard to set up. Second\nand even more significantly, they are computationally expensive: a single run\nof an AC procedure involves many costly runs of the target algorithm whose\nperformance is to be optimized in a given AC benchmark scenario. One common\nworkaround is to optimize cheap-to-evaluate artificial benchmark functions\n(e.g., Branin) instead of actual algorithms; however, these have different\nproperties than realistic AC problems. Here, we propose an alternative\nbenchmarking approach that is similarly cheap to evaluate but much closer to\nthe original AC problem: replacing expensive benchmarks by surrogate benchmarks\nconstructed from AC benchmarks. These surrogate benchmarks approximate the\nresponse surface corresponding to true target algorithm performance using a\nregression model, and the original and surrogate benchmark share the same\n(hyper-)parameter space. In our experiments, we construct and evaluate\nsurrogate benchmarks for hyperparameter optimization as well as for AC problems\nthat involve performance optimization of solvers for hard combinatorial\nproblems, drawing training data from the runs of existing AC procedures. We\nshow that our surrogate benchmarks capture overall important characteristics of\nthe AC scenarios, such as high- and low-performing regions, from which they\nwere derived, while being much easier to use and orders of magnitude cheaper to\nevaluate.",
+  "category": "mixed",
+  "domain": "algorithms / optimization",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "optimization",
+    "benchmarking",
+    "surrogate_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "regret (or performance gap vs. true benchmark)",
+  "general_score_metric": "normalized_regret / objective_value",
+  "year_of_publish": 2017,
+  "reputation": "Well-regarded in the algorithm configuration and hyperparameter optimization community as a practical, lower-cost alternative to running full expensive benchmarks; cited in research on surrogate-based evaluation.",
+  "notes": "Surrogate benchmarks approximate expensive target algorithm performance and thus can misrepresent rare behaviors; results depend on surrogate fidelity and training data coverage. Not an LLM benchmark; intended for HPO/AC research and significantly cheaper but may overfit to training runs.",
+  "creators": {
+    "scientists": [
+      "Katharina Eggensperger",
+      "Marius Lindauer",
+      "Holger H. Hoos",
+      "Frank Hutter",
+      "Kevin Leyton-Brown"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/1703.10342",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

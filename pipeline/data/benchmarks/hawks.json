@@ -1,0 +1,36 @@
+{
+  "name": "HAWKS",
+  "description": "Comprehensive benchmarking of clustering algorithms is rendered difficult by two key factors: (i)~the elusiveness of a unique mathematical definition of this unsupervised learning approach and (ii)~dependencies between the generating models or clustering criteria adopted by some clustering algorithms and indices for internal cluster validation. Consequently, there is no consensus regarding the best practice for rigorous benchmarking, and whether this is possible at all outside the context of a given application. Here, we argue that synthetic datasets must continue to play an important role in the evaluation of clustering algorithms, but that this necessitates constructing benchmarks that appropriately cover the diverse set of properties that impact clustering algorithm performance. Through our framework, HAWKS, we demonstrate the important role evolutionary algorithms play to support flexible generation of such benchmarks, allowing simple modification and extension. We illustrate two possible uses of our framework: (i)~the evolution of benchmark data consistent with a set of hand-derived properties and (ii)~the generation of datasets that tease out performance differences between a given pair of algorithms. Our work has implications for the design of clustering benchmarks that sufficiently challenge a broad range of algorithms, and for furthering insight into the strengths and weaknesses of specific approaches.",
+  "category": "mixed",
+  "domain": "unsupervised learning / clustering",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "clustering",
+    "synthetic_data_generation",
+    "benchmark_generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "external clustering metrics (Adjusted Rand Index, Normalized Mutual Information) and internal cluster validity indices; also runtime/robustness comparisons",
+  "general_score_metric": "Adjusted Rand Index (ARI)",
+  "year_of_publish": 2021,
+  "reputation": "A research-oriented framework for generating challenging synthetic clustering benchmarks; cited in clustering evaluation work but not a broadly used standard dataset like UCI/KEEL.",
+  "notes": "Generates synthetic datasets via evolutionary algorithms to probe algorithm behavior; benchmark outcomes depend strongly on chosen generation properties (risk of overfitting to synthetic assumptions); not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Cameron Shand",
+      "Richard Allmendinger",
+      "Julia Handl",
+      "Andrew Webb",
+      "John Keane"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2102.06940",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

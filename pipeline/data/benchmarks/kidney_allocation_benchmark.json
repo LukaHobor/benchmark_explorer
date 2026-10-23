@@ -1,0 +1,36 @@
+{
+  "name": "Kidney Allocation Benchmark",
+  "description": "Medical institutions are considering the use of LLMs in high-stakes clinical decision-making, such as organ allocation. In such sensitive use cases, evaluating fairness is imperative. However, existing evaluation methods often fall short; benchmarks are too simplistic to capture real-world complexity, and accuracy-based metrics fail to address the absence of a clear ground truth. To realistically and fairly model organ allocation, specifically kidney allocation, we begin by testing the medical knowledge of LLMs to determine whether they understand the clinical factors required to make sound allocation decisions. Building on this foundation, we design two tasks: (1) Choose-One and (2) Rank-All. In Choose-One, LLMs select a single candidate from a list of potential candidates to receive a kidney. In this scenario, we assess fairness across demographics using traditional fairness metrics, such as proportional parity. In Rank-All, LLMs rank all candidates waiting for a kidney, reflecting r",
+  "category": "text",
+  "domain": "medical",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "ranking",
+    "multiple_choice"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "fairness metrics and ranking quality metrics",
+  "general_score_metric": "composite fairness score",
+  "year_of_publish": 2025,
+  "reputation": "2 citations",
+  "notes": "High-stakes clinical decision-making benchmark with no single ground-truth answer; results depend on fairness definitions and candidate set composition. Not a standard accuracy benchmark and likely small, domain-specific, and sensitive to prompt framing.",
+  "creators": {
+    "scientists": [
+      "Brian Kim",
+      "H. Murray",
+      "Isabelle G. Lee",
+      "J. Byun",
+      "Joshua Lum",
+      "Dani Yogatama"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2504.03716",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-19",
+    "origin": "cynefin@d486fafa9"
+  }
+}

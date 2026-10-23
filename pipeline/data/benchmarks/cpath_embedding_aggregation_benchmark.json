@@ -1,0 +1,44 @@
+{
+  "name": "CPath Embedding Aggregation Benchmark",
+  "description": "Recent advances in artificial intelligence (AI), in particular self-supervised learning of foundation models (FMs), are revolutionizing medical imaging and computational pathology (CPath). A constant challenge in the analysis of digital Whole Slide Images (WSIs) is the problem of aggregating tens of thousands of tile-level image embeddings to a slide-level representation. Due to the prevalent use of datasets created for genomic research, such as TCGA, for method development, the performance of these techniques on diagnostic slides from clinical practice has been inadequately explored. This study conducts a thorough benchmarking analysis of ten slide-level aggregation techniques across nine clinically relevant tasks, including diagnostic assessment, biomarker classification, and outcome prediction. The results yield following key insights: (1) Embeddings derived from domain-specific (histological images) FMs outperform those from generic ImageNet-based models across aggregation methods. (2) Spatial-aware aggregators enhance the performance significantly when using ImageNet pre-trained models but not when using FMs. (3) No single model excels in all tasks and spatially-aware models do not show general superiority as it would be expected. These findings underscore the need for more adaptable and universally applicable aggregation techniques, guiding future research towards tools that better meet the evolving needs of clinical-AI in pathology. The code used in this work is available at \\url{https://github.com/fuchs-lab-public/CPath_SABenchmark}.",
+  "category": "vision",
+  "domain": "computational pathology / medical imaging",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "survival_analysis",
+    "prognosis_prediction",
+    "representation_learning"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC (task-dependent; some tasks also report accuracy and concordance index)",
+  "typical_sota_score": "0.70–0.95",
+  "year_of_publish": 2024,
+  "reputation": "New preprint benchmark gaining attention in the computational pathology community but not yet widely adopted in clinical-AI evaluation suites.",
+  "notes": "Non‑LLM medical imaging benchmark; heterogeneous tasks and metrics across diagnostic, biomarker and outcome prediction tasks; potential domain shift between research datasets (e.g., TCGA) and clinical slides; moderate per-task dataset sizes; code available.",
+  "creators": {
+    "scientists": [
+      "Shengjia Chen",
+      "Gabriele Campanella",
+      "Abdulkadir Elmas",
+      "Aryeh Stock",
+      "Jennifer Zeng",
+      "Alexandros D. Polydorides",
+      "Adam J. Schoenfeld",
+      "Kuan-lin Huang",
+      "Jane Houldsworth",
+      "Chad Vanderbilt",
+      "Thomas J. Fuchs"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2407.07841",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

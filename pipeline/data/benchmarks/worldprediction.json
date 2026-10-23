@@ -1,0 +1,38 @@
+{
+  "name": "WorldPrediction",
+  "description": "Humans are known to have an internal \"world model\" that enables us to carry out action planning based on world states. AI agents need to have such a world model for action planning as well. It is not clear how current AI models, especially generative models, are able to learn such world models and carry out procedural planning in diverse environments. We introduce WorldPrediction, a video-based benchmark for evaluating world modeling and procedural planning capabilities of different AI models. In contrast to prior benchmarks that focus primarily on low-level world modeling and robotic motion planning, WorldPrediction is the first benchmark that emphasizes actions with temporal and semantic abstraction. Given initial and final world states, the task is to distinguish the proper action (WorldPrediction-WM) or the properly ordered sequence of actions (WorldPrediction-PP) from a set of counterfactual distractors. This discriminative task setup enable us to evaluate different types of world models and planners and realize a thorough comparison across different hypothesis. The benchmark represents states and actions using visual observations. In order to prevent models from exploiting low-level continuity cues in background scenes, we provide \"action equivalents\" - identical actions observed in different contexts - as candidates for selection. This benchmark is grounded in a formal framework of partially observable semi-MDP, ensuring better reliability and robustness of the evaluation. We conduct extensive human filtering and validation on our benchmark and show that current frontier models barely achieve 57% accuracy on WorldPrediction-WM and 38% on WorldPrediction-PP whereas humans are able to solve both tasks perfectly.",
+  "category": "vision",
+  "domain": "world modeling / robotics / embodied AI",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "multiple_choice",
+    "video_understanding",
+    "visual_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "38–57%",
+  "year_of_publish": 2025,
+  "reputation": "An emerging, well-documented benchmark for video-based world modeling and procedural planning that has gained attention in embodied-AI and robotics research.",
+  "notes": "Video-based benchmark (not solvable by text-only LLMs); includes action-equivalent distractors to reduce low-level cue exploitation; potential pretraining/contamination risk unclear due to novelty.",
+  "creators": {
+    "scientists": [
+      "Delong Chen",
+      "Willy Chung",
+      "Yejin Bang",
+      "Ziwei Ji",
+      "Pascale Fung"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2506.04363",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

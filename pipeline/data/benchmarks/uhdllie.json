@@ -1,0 +1,39 @@
+{
+  "name": "UHD-LLIE",
+  "description": "As the quality of optical sensors improves, there is a need for processing large-scale images. In particular, the ability of devices to capture ultra-high definition (UHD) images and video places new demands on the image processing pipeline. In this paper, we consider the task of low-light image enhancement (LLIE) and introduce a large-scale database consisting of images at 4K and 8K resolution. We conduct systematic benchmarking studies and provide a comparison of current LLIE algorithms. As a second contribution, we introduce LLFormer, a transformer-based low-light enhancement method. The core components of LLFormer are the axis-based multi-head self-attention and cross-layer attention fusion block, which significantly reduces the linear complexity. Extensive experiments on the new dataset and existing public datasets show that LLFormer outperforms state-of-the-art methods. We also show that employing existing LLIE methods trained on our benchmark as a pre-processing step significantly improves the performance of downstream tasks, e.g., face detection in low-light conditions. The source code and pre-trained models are available at https://github.com/TaoWangzj/LLFormer.",
+  "category": "vision",
+  "domain": "computer vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_enhancement",
+    "low_light_enhancement",
+    "benchmarking"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "PSNR / SSIM / LPIPS (and downstream task performance such as face-detection accuracy)",
+  "general_score_metric": "PSNR",
+  "typical_sota_score": "22–35 dB (PSNR)",
+  "year_of_publish": 2022,
+  "year_of_last_update": 2023,
+  "reputation": "Adopted by researchers working on low-light and high-resolution image enhancement as a reference UHD benchmark; code and pre-trained models are publicly available.",
+  "notes": "Images are ultra-high-resolution (4K/8K), necessitating substantial compute and memory; many methods are trained on synthetic or downsampled data which can affect generalization; not an LLM benchmark.",
+  "creators": {
+    "scientists": [
+      "Tao Wang",
+      "Kaihao Zhang",
+      "Tianrun Shen",
+      "Wenhan Luo",
+      "Bjorn Stenger",
+      "Tong Lu"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2212.11548",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Data & Compute Efficiency Benchmark for Temporal Action Localization",
+  "description": "In temporal action localization, given an input video, the goal is to predict which actions it contains, where they begin, and where they end. Training and testing current state-of-the-art deep learning models requires access to large amounts of data and computational power. However, gathering such data is challenging and computational resources might be limited. This work explores and measures how current deep temporal action localization models perform in settings constrained by the amount of data or computational power. We measure data efficiency by training each model on a subset of the training set. We find that TemporalMaxer outperforms other models in data-limited settings. Furthermore, we recommend TriDet when training time is limited. To test the efficiency of the models during inference, we pass videos of different lengths through each model. We find that TemporalMaxer requires the least computational resources, likely due to its simple architecture.",
+  "category": "vision",
+  "domain": "vision (video)",
+  "benchmark_type": "dynamic evaluation",
+  "task_types": [
+    "detection",
+    "localization"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mean_average_precision (mAP) at temporal IoU thresholds; plus compute/latency measurements (inference time, FLOPs)",
+  "general_score_metric": "mean_average_precision (mAP)",
+  "typical_sota_score": "30–60%",
+  "year_of_publish": 2023,
+  "reputation": "A targeted research benchmark recognized by the temporal action localization community for studying data and compute efficiency, though not a broadly used general benchmark.",
+  "notes": "Non-LLM, video-based benchmark that reports both accuracy (mAP) and efficiency (inference time / compute). Results are dataset- and implementation-dependent; measures data- and compute-efficiency rather than raw peak performance.",
+  "creators": {
+    "scientists": [
+      "Jan Warchocki",
+      "Teodor Oprescu",
+      "Yunhan Wang",
+      "Alexandru Damacus",
+      "Paul Misterka",
+      "Robert-Jan Bruintjes",
+      "Attila Lengyel",
+      "Ombretta Strafforello",
+      "Jan van Gemert"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2308.13082",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

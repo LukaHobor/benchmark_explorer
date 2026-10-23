@@ -1,0 +1,33 @@
+{
+  "name": "GUANinE",
+  "description": "Computational genomics increasingly relies on machine learning methods for genome interpretation, and the recent adoption of neural sequence-to-function models highlights the need for rigorous model specification and controlled evaluation, problems familiar to other fields of AI. Research strategies that have greatly benefited other fields -- including benchmarking, auditing, and algorithmic fairness --- are also needed to advance the field of genomic AI and to facilitate model development. Here we propose a genomic AI benchmark, GUANinE, for evaluating model generalization across a number of distinct genomic tasks. Compared to existing task formulations in computational genomics, GUANinE is large-scale, de-noised, and suitable for evaluating pretrained models. GUANinE v1.0 primarily focuses on functional genomics tasks such as functional element annotation and gene expression prediction, and it also draws upon connections to evolutionary biology through sequence conservation tasks. The current GUANinE tasks provide insight into the performance of existing genomic AI models and non-neural baselines, with opportunities to be refined, revisited, and broadened as the field matures. Finally, the GUANinE benchmark allows us to evaluate new self-supervised T5 models and explore the tradeoffs between tokenization and model performance, while showcasing the potential for self-supervision to complement existing pretraining procedures.",
+  "category": "text",
+  "domain": "bioinformatics",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "classification",
+    "regression",
+    "sequence_labeling"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "task-dependent (AUROC for classification tasks; Pearson/Spearman correlation for regression/expression tasks)",
+  "general_score_metric": "task-specific (AUROC for classification; Pearson/Spearman for regression)",
+  "year_of_publish": 2023,
+  "reputation": "An emerging, research-oriented genomic-AI benchmark with interest among computational genomics groups for evaluating pretrained sequence models, but not yet a broadly established community standard.",
+  "notes": "Designed for genomic sequence tasks (de-noised and large-scale) and suitable for pretrained models; potential for data overlap with public genomic resources (contamination risk); performance varies substantially across tasks and depends on tokenization/model architecture choices.",
+  "creators": {
+    "scientists": [
+      "Eyes S Robson",
+      "Nilah M. Ioannidis"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://doi.org/10.1101/2023.10.12.562113",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

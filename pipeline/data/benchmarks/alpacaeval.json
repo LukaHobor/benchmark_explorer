@@ -1,0 +1,42 @@
+{
+  "name": "AlpacaEval",
+  "description": "AlpacaEval is an automatic evaluation benchmark for instruction-following LLMs using LLM-based win rate comparison against a reference model. Given 805 instructions from diverse datasets, model outputs are compared pairwise against a reference model (originally text-davinci-003) by an LLM judge. Win rate measures instruction-following quality.",
+  "category": "text",
+  "domain": "instruction following",
+  "task_types": [
+    "instruction_following",
+    "open_ended_generation"
+  ],
+  "difficulty_level": "medium",
+  "number_of_questions": 805,
+  "evaluation_method": "Win rate (LLM-based pairwise comparison)",
+  "general_score_metric": "Win rate / Length-controlled win rate",
+  "typical_sota_score": "~50-70% win rate (GPT-4 class models; varies by version)",
+  "year_of_publish": 2023,
+  "year_of_last_update": 2024,
+  "reputation": "Widely used LLM evaluation framework; strong correlation with ChatBot Arena human preferences; AlpacaEval 2.0 with length-controlled win rates is a standard benchmark",
+  "notes": "Original version (2023) uses text-davinci-003 as reference. AlpacaEval 2.0 uses GPT-4 Turbo as judge with length-controlled win rate metric to reduce verbosity bias. Note: alpacaeval2.json and alpacaeval_2_0.json already exist in the benchmark list. This entry covers the original AlpacaEval v1 framing. Widely used across model evaluations.",
+  "creators": {
+    "scientists": [
+      "Xuechen Li",
+      "Tianyi Zhang",
+      "Yann Dubois",
+      "Rohan Taori",
+      "Ishaan Gulrajani",
+      "Carlos Guestrin",
+      "Percy Liang",
+      "Tatsunori B. Hashimoto"
+    ],
+    "institutions": [
+      "Stanford University"
+    ],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2404.04475",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-12",
+    "origin": "cynefin@d486fafa9"
+  }
+}

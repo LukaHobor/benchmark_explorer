@@ -1,0 +1,37 @@
+{
+  "name": "Visuelle 2.0",
+  "description": "We present Visuelle 2.0, the first dataset useful for facing diverse prediction problems that a fast-fashion company has to manage routinely. Furthermore, we demonstrate how the use of computer vision is substantial in this scenario. Visuelle 2.0 contains data for 6 seasons / 5355 clothing products of Nuna Lie, a famous Italian company with hundreds of shops located in different areas within the country. In particular, we focus on a specific prediction problem, namely short-observation new product sale forecasting (SO-fore). SO-fore assumes that the season has started and a set of new products is on the shelves of the different stores. The goal is to forecast the sales for a particular horizon, given a short, available past (few weeks), since no earlier statistics are available. To be successful, SO-fore approaches should capture this short past and exploit other modalities or exogenous data. To these aims, Visuelle 2.0 is equipped with disaggregated data at the item-shop level and multi-modal information for each clothing item, allowing computer vision approaches to come into play. The main message that we deliver is that the use of image data with deep networks boosts performances obtained when using the time series in long-term forecasting scenarios, ameliorating the WAPE and MAE by up to 5.48% and 7% respectively compared to competitive baseline methods. The dataset is available at https://humaticslab.github.io/forecasting/visuelle",
+  "category": "multimodal",
+  "domain": "retail/commerce",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "image_based_forecasting",
+    "regression",
+    "sales_forecasting"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "WAPE/MAE",
+  "general_score_metric": "WAPE",
+  "year_of_publish": 2022,
+  "reputation": "Niche but well-regarded in the retail-forecasting community for providing a multimodal, item-shop-level dataset tied to real fast-fashion sales.",
+  "notes": "Non-LLM benchmark focused on retail forecasting; relatively small (≈5k products) and company-specific which may limit generalization. Strong seasonality and store-specific biases; potential contamination if models are pretrained on public retail data.",
+  "creators": {
+    "scientists": [
+      "Geri Skenderi",
+      "Christian Joppi",
+      "Matteo Denitto",
+      "Berniero Scarpa",
+      "Marco Cristani"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://arxiv.org/abs/2204.06972",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

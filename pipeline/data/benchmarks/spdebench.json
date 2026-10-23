@@ -1,0 +1,36 @@
+{
+  "name": "SPDEBench",
+  "description": "Stochastic Partial Differential Equations (SPDEs) driven by random noise play a central role in modelling physical processes whose spatio-temporal dynamics can be rough, such as turbulence flows, superconductors, and quantum dynamics. To efficiently model these processes and make predictions, machine learning (ML)-based surrogate models are proposed, with their network architectures incorporating the spatio-temporal roughness in their design. However, it lacks an extensive and unified datasets for SPDE learning; especially, existing datasets do not account for the computational error introduced by noise sampling and the necessary renormalization required for handling singular SPDEs. We thus introduce SPDEBench, which is designed to solve typical SPDEs of physical significance (e.g., the $\\Phi^4_d$, wave, incompressible Navier--Stokes, and KdV equations) on 1D or 2D tori driven by white noise via ML methods. New datasets for singular SPDEs based on the renormalization process have been constructed, and novel ML models achieving the best results to date have been proposed. In particular, we investigate the impact of computational error introduced by noise sampling and renormalization on the performance comparison of ML models and highlight the importance of selecting high-quality test data for accurate evaluation. Results are benchmarked with traditional numerical solvers and ML-based models, including FNO, NSPDE and DLR-Net, etc. It is shown that, for singular SPDEs, naively applying ML models on data without specifying the numerical schemes can lead to significant errors and misleading conclusions. Our SPDEBench provides an open-source codebase that ensures full reproducibility of benchmarking across a variety of SPDE datasets while offering the flexibility to incorporate new datasets and machine learning baselines, making it a valuable resource for the community.",
+  "category": "mixed",
+  "domain": "scientific computing / mathematical modeling",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "regression",
+    "simulation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "continuous error metrics (RMSE, relative L2 error); occasionally spectral or energy-norm errors for field comparisons",
+  "general_score_metric": "relative L2 error (and RMSE)",
+  "year_of_publish": 2025,
+  "reputation": "A specialized, recently-introduced benchmark gaining attention in the ML-for-physics / numerical-analysis communities for SPDE surrogate modelling.",
+  "notes": "Highly sensitive to numerical scheme, noise sampling, and renormalization choices; reproducibility requires careful specification of solvers and discretization; non-LLM benchmark focused on scientific computing.",
+  "creators": {
+    "scientists": [
+      "Zheyan Li",
+      "Yuantu Zhu",
+      "Hao Ni",
+      "Siran Li",
+      "Bingguang Chen",
+      "Qi Meng"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Physical Sciences & Engineering",
+  "source": "https://arxiv.org/abs/2505.18511",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

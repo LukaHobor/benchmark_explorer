@@ -1,0 +1,33 @@
+{
+  "name": "LGPD Benchmark",
+  "description": "Abstract\n                Compliance with data protection laws, such as Brazil's General Data Protection Law (LGPD), requires automated tools capable of identifying and processing personal information in legal texts. However, there are still no public benchmarks designed for the systematic evaluation of such solutions in the Brazilian context. This work introduces the LGPD Benchmark, the first foundational corpus for evaluating textual pseudonymization techniques in Portuguese legal language. The benchmark consists of 120 synthetic documents covering nine areas of law, annotated according to LGPD-based guidelines. We evaluate large language models (LLMs), such as GPT, Gemini, Claude, and the Brazilian model Sabiá, on tasks involving the recognition of personal and sensitive entities, using classical NER metrics with an emphasis on Recall as a measure of privacy protection. The results indicate that international models achieve higher overall coverage, while the Brazilian model demonstrates competitiveness in formal and structured domains. The LGPD Benchmark provides a public and reproducible baseline for research on text anonymization and regulatory compliance, fostering the development of ethical and transparent solutions aligned with the LGPD.",
+  "category": "text",
+  "domain": "legal NLP",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "named_entity_recognition",
+    "text_anonymization",
+    "de-identification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Precision / Recall / F1 (NER metrics), with emphasis on Recall for privacy",
+  "general_score_metric": "F1 (with emphasis on Recall as a privacy-oriented metric)",
+  "year_of_publish": 2025,
+  "reputation": "Introduces the first public LGPD-focused Portuguese benchmark for pseudonymization; valuable for Brazilian legal NLP but currently has limited adoption outside that niche.",
+  "notes": "Small corpus (120 synthetic documents) and synthetic data may not fully reflect real-world legal texts; privacy-critical task emphasizes high recall which can trade off precision; potential overfitting risk due to dataset size.",
+  "creators": {
+    "scientists": [
+      "Marcelo Anselmo de Souza Filho",
+      "Bruno César Ribas"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Social Measurement & Professional Domains",
+  "source": "https://doi.org/10.21203/rs.3.rs-8309951/v1",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

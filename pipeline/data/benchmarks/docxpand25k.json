@@ -1,0 +1,39 @@
+{
+  "name": "DocXPand-25k",
+  "description": "Identity document (ID) image analysis has become essential for many online services, like bank account opening or insurance subscription. In recent years, much research has been conducted on subjects like document localization, text recognition and fraud detection, to achieve a level of accuracy reliable enough to automatize identity verification. However, there are only a few available datasets to benchmark ID analysis methods, mainly because of privacy restrictions, security requirements and legal reasons. In this paper, we present the DocXPand-25k dataset, which consists of 24,994 richly labeled IDs images, generated using custom-made vectorial templates representing nine fictitious ID designs, including four identity cards, two residence permits and three passports designs. These synthetic IDs feature artificially generated personal information (names, dates, identifiers, faces, barcodes, ...), and present a rich diversity in the visual layouts and textual contents. We collected about 5.8k diverse backgrounds coming from real-world photos, scans and screenshots of IDs to guarantee the variety of the backgrounds. The software we wrote to generate these images has been published (https://github.com/QuickSign/docxpand/) under the terms of the MIT license, and our dataset has been published (https://github.com/QuickSign/docxpand/releases/tag/v1.0.0) under the terms of the CC-BY-NC-SA 4.0 License.",
+  "category": "vision",
+  "domain": "document analysis / identity verification",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "text_recognition",
+    "text_localization",
+    "layout_analysis",
+    "entity_extraction"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Character Error Rate (CER) / Word Error Rate (WER) for OCR; F1 / IoU for text detection/localization",
+  "general_score_metric": "Character Error Rate (CER) (and WER / detection F1 for respective tasks)",
+  "typical_sota_score": "90–99% (accuracy) / CER ~1–5% (task-dependent)",
+  "year_of_publish": 2024,
+  "reputation": "Well-regarded as one of the larger synthetic ID image datasets for document analysis research, though adoption is limited by its synthetic nature.",
+  "notes": "Synthetic dataset — realistic diversity but domain gap to real IDs; released under CC-BY-NC-SA; useful for pretraining/benchmarking but may not reflect production performance on real identity documents.",
+  "creators": {
+    "scientists": [
+      "Julien Lerouge",
+      "Guillaume Betmont",
+      "Thomas Bres",
+      "Evgeny Stepankevich",
+      "Alexis Bergès"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.20662",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

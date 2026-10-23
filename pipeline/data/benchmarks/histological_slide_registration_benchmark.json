@@ -1,0 +1,30 @@
+{
+  "name": "Histological Slide Registration Benchmark",
+  "description": "Image registration is a common task for many biomedical analysis applications. The present work focuses on the benchmarking of registration methods on differently stained histological slides. This is a challenging task due to the differences in the appearance model, the repetitive texture of the details and the large image size, between other issues. Our benchmarking data is composed of 616 image pairs at two different scales — average image diagonal 2.4k and 5k pixels. We compare eleven fully automatic registration methods covering the widely used similarity measures. For each method, the best parameter configuration is found and subsequently applied to all the image pairs. The performance of the algorithms is evaluated from several perspectives — the registrations (in)accuracy on manually annotated landmarks, the method robustness and its computation time.",
+  "category": "vision",
+  "domain": "medical imaging / histopathology",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "image_registration"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "registration_error (landmark distance in pixels)",
+  "general_score_metric": "mean_landmark_error (pixels)",
+  "reputation": "A niche academic benchmark used in digital pathology and registration research but not broadly adopted outside that subcommunity.",
+  "notes": "Non-LLM benchmark; moderate dataset size (616 image pairs) with two scales; evaluation relies on manually annotated landmarks (possible annotation variability); large image sizes increase compute and memory requirements; stain and appearance variation make generalization challenging.",
+  "creators": {
+    "scientists": [
+      "Jiří Borovec",
+      "Arrate Muñoz-Barrutia",
+      "Jan Kybic"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

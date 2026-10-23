@@ -1,0 +1,38 @@
+{
+  "name": "dksplit-benchmark",
+  "description": "# DKSplit Benchmark\n\n5,000 hand-audited real-world newly registered .com domains for evaluating domain name segmentation models.\n\n## Data Source\n\nAll domains come from the [Newly Registered Domain Database (NRDS)](https://domainkits.com/download/nrds), a daily feed of new gTLD registrations worldwide, processed by [ABTdomain](https://abtdomain.com/) as part of its domain intelligence pipeline.\n\nDomains are drawn from the April 2026 .com feed:\n\n1. Stripped `.com` suffix\n2. Excluded hyphenated domains and pure numeric strings\n3. Excluded domains shorter than 3 characters\n4. Randomly sampled (no cherry-picking on segmentation difficulty)\n\nThe result is a representative cross-section of real registration behavior: business names, brand combinations, multilingual phrases, abbreviations, and opaque strings.\n\n## Ground Truth\n\nGround truth was established through a multi-stage process:\n\n1. **Initial segmentation**: BiLSTM-CRF model (9.47M parameters) segmented all domains\n2. **Cross-validation**: Results compared against Qwen 3.5 9B (LoRA fine-tuned), Gemma 31B (zero-shot), WordSegment, and WordNinja\n3. **Human audit**: All disagreements between models were manually reviewed\n4. **Ambiguity marking**: Domains with multiple valid segmentations are identified (~5% of samples). The `might_right` column provides an alternative valid answer where applicable\n\n## Format\n\nCSV with columns:\n- `prefix` - domain prefix (lowercase, no TLD)\n- `truth` - reference segmentation (space-separated words)\n- `might_right` - alternative valid segmentation (if applicable, otherwise empty)\n\n## Example\n\n| prefix | truth | might_right |\n|---|---|---|\n| chatgptprompts | chatgpt prompts | |\n| seasidemiamitours | seaside miami tours | |\n| tiantian5 | tiantian 5 | tian tian 5 |\n| noranite | nora nite | noranite |\n| pikahug | pikahug | pika hug |\n\n## Benchmark Results\n\n| Model | Strict EM | Lenient EM |\n|---|---|---|\n| **DKSplit v1.0.0** | **86.9%** | **90.4%** |\n| Qwen 3.5 9B LoRA r128 | 84.96% | 88.82%",
+  "category": "text",
+  "domain": "general knowledge",
+  "tags": [
+    "license:mit",
+    "size_categories:1K<n<10K",
+    "modality:text"
+  ],
+  "task_types": [
+    "multiple_choice",
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "year_of_publish": 2026,
+  "year_of_last_update": 2026,
+  "reputation": "A small Hugging Face-hosted benchmark with limited community visibility and adoption to date.",
+  "downloads": 11,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "ABTdomain"
+    ]
+  },
+  "capability_category": "Reasoning & Problem Solving",
+  "source": "https://huggingface.co/datasets/ABTdomain/dksplit-benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

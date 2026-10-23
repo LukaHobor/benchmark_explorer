@@ -1,0 +1,36 @@
+{
+  "name": "Drug Molecule Design Benchmark (COVID-19)",
+  "description": "Design of new drug compounds with target properties is a key area of research in generative modeling. We present a small drug molecule design pipeline based on graph-generative models and a comparison study of two state-of-the-art graph generative models for designing COVID-19 targeted drug candidates: 1) a variational autoencoder-based approach (VAE) that uses prior knowledge of molecules that have been shown to be effective for earlier coronavirus treatments and 2) a deep Q-learning method (DQN) that generates optimized molecules without any proximity constraints. We evaluate the novelty of the automated molecule generation approaches by validating the candidate molecules with drug-protein binding affinity models. The VAE method produced two novel molecules with similar structures to the antiretroviral protease inhibitor Indinavir that show potential binding affinity for the SARS-CoV-2 protein target 3-chymotrypsin-like protease (3CL-protease).",
+  "category": "mixed",
+  "domain": "bioinformatics / drug discovery",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "open_ended",
+    "molecule_generation",
+    "optimization"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "computational drug-design metrics (predicted binding affinity / docking score) plus validity, novelty, and drug-likeness checks",
+  "general_score_metric": "predicted binding affinity / docking score (augmented by novelty/validity metrics)",
+  "year_of_publish": 2021,
+  "reputation": "An early, domain-specific benchmark for COVID-19-targeted molecule generation; cited for comparative studies but limited in broad adoption.",
+  "notes": "Small, domain-specific benchmark; non-LLM. Evaluations rely on in-silico binding predictions rather than experimental validation, so false positives / lack of wet-lab confirmation are important caveats.",
+  "creators": {
+    "scientists": [
+      "Logan Ward",
+      "Jenna A. Bilbrey",
+      "Sutanay Choudhury",
+      "Neeraj Kumar",
+      "Ganesh Sivaraman"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Biomedical & Life Sciences",
+  "source": "https://arxiv.org/abs/2102.04977",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

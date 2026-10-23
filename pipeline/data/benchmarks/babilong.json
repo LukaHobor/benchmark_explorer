@@ -1,0 +1,41 @@
+{
+  "name": "BABILong",
+  "description": "Tests reasoning across facts distributed throughout extremely long documents, extending from 1K to over 10 million tokens. Built on the bAbI reasoning tasks embedded within naturalistic long-form text (PG-19 books), BABILong covers 20 diverse reasoning task types. Research showed that popular LLMs effectively utilize only 10–20% of their claimed context window when facts must be integrated across very long spans.",
+  "category": "text",
+  "domain": "reasoning",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "number_of_questions": 20,
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
+  "typical_sota_score": "~90% at 1K tokens; drops to ~5–40% at 1M+ tokens depending on task and model",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "NeurIPS 2024 Spotlight; revealed that GPT-4 and Gemini 1.5 Pro use only 5–25% of context; widely integrated into long-context evaluation suites for recurrent memory transformers and RAG systems",
+  "notes": "NeurIPS 2024 Spotlight paper. Key finding: even models claiming 128K+ context windows show dramatic accuracy drops beyond 16K tokens when reasoning requires integrating multiple distributed facts. Supports context lengths up to 10M+ tokens. Benchmarks recurrent architectures (Mamba, RWKV) alongside transformer-based models. From AIRI Moscow.",
+  "creators": {
+    "scientists": [
+      "Yuri Kuratov",
+      "Aydar Bulatov",
+      "Petr Anokhin",
+      "Ivan Rodkin",
+      "Dmitry Sorokin",
+      "Artyom Sorokin",
+      "Mikhail Burtsev"
+    ],
+    "institutions": [
+      "AIRI Moscow",
+      "Skoltech"
+    ],
+    "companies": []
+  },
+  "capability_category": "Natural Language Understanding & Generation",
+  "source": "https://arxiv.org/abs/2406.10149",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-11",
+    "origin": "cynefin@d486fafa9"
+  }
+}

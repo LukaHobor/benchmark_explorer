@@ -1,0 +1,38 @@
+{
+  "name": "es_indexing_benchmark",
+  "description": "Dataset Card for \"es_indexing_benchmark\"\n\t\n\nHere is a code on how to pull and index this dataset to elasticsearch:\nimport datasets\nfrom tqdm import tqdm\n\nfrom src.store.es.search import ESBaseClient\nfrom src.store.es.model import ESNode\n\nds = datasets.load_dataset('stellia/es_indexing_benchmark', split='train', ignore_verifications=True)\nclient = ESBaseClient()\n\n\nindex_name = \"tmp_es_index\"\nnodes = []\nfor row in tqdm(ds):\n    esnode = ESNode(**row)\n    esnode.meta.id = esnode.block.id… See the full description on the dataset page: https://huggingface.co/datasets/stellia/es_indexing_benchmark.",
+  "category": "text",
+  "domain": "information_retrieval / general knowledge",
+  "tags": [
+    "size_categories:100K<n<1M",
+    "modality:text"
+  ],
+  "task_types": [
+    "indexing",
+    "retrieval",
+    "benchmarking"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "Indexing and search metrics: indexing throughput / latency and retrieval quality (precision@k, recall@k, MAP)",
+  "general_score_metric": "Indexing throughput (documents/sec) and retrieval metrics (precision@k / recall@k / MAP)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2024,
+  "reputation": "A practical dataset provided on Hugging Face for benchmarking Elasticsearch indexing and search pipelines; modest community use in IR/engineering contexts.",
+  "downloads": 10,
+  "likes": 0,
+  "creators": {
+    "scientists": [],
+    "institutions": [],
+    "companies": [
+      "stellia"
+    ]
+  },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
+  "source": "https://huggingface.co/datasets/stellia/es_indexing_benchmark",
+  "provenance": {
+    "added_by": "huggingface-import",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "RadarNowcast-IT",
+  "description": "Prediction of extreme precipitation with high spatial resolution on short time scales (i.e., nowcasting) is still challenging, and data-driven approaches such as artificial intelligence tools are increasingly being used. In this respect, two factors are undoubtedly important: i) the need of robust databases of temporal and spatial evolution of rain precipitation patterns to train new nowcasting routines and ii) the establishment of an exhaustive benchmark to evaluate the improvements brought by new prediction algorithms. This paper aims to contribute to the two points just mentioned by describing a novel practical-to-use radar data screening method and by analyzing the performance of nine existing radar nowcasting techniques to establish a minimum acceptable performance (MAP) level. The radar dataset used consists of 111955 frames (1.5 year of data) at 1 × 1 <inline-formula xmlns:mml=\"http://www.w3.org/1998/Math/MathML\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><tex-math notation=\"LaTeX\">$km^{2}$</tex-math></inline-formula> resolution sampled 5 min apart over Italy, a country scarcely investigated so far in terms of radar nowcasting compared to other areas, and that may be considered a climate change hot-spot. The results reveal a large variability in the performance of each tested nowcasting method, an aspect often not considered in similar studies but that evidences as the differences among the skills of various nowcasting methods can be systematically masked by the natural variability of each prediction outcome. The seasonal dependence of the nowcasting capacity is also shown and linked to the presence of orographic convective precipitation that occurs in Italy during the summer season. This last point also suggests for the future the need to implement convection-specific nowcasting modules, possibly optimized on local areas to improve the forecasting skills in case of atmospheric instability.",
+  "category": "mixed",
+  "domain": "climate science",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "spatiotemporal_forecasting",
+    "regression",
+    "time_series_prediction"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "FSS/CSI (nowcasting verification scores, e.g., Fractions Skill Score and Critical Success Index)",
+  "general_score_metric": "Critical Success Index (CSI)",
+  "typical_sota_score": "0.2–0.6",
+  "year_of_publish": 2025,
+  "reputation": "A notable, Italy-specific radar nowcasting benchmark with a large high-resolution dataset; recognized in the nowcasting research community but with specialized uptake.",
+  "notes": "Non-LLM benchmark; large 1.5‑year radar time series but geographically limited to Italy (orographic/seasonal biases); performance varies strongly with season and convective regimes; standard nowcasting metrics (FSS/CSI) used rather than simple accuracy.",
+  "creators": {
+    "scientists": [
+      "Clizia Annella",
+      "Edoardo Raparelli",
+      "Gianfranco Vulpiani",
+      "Vincenzo Capozzi",
+      "Elisa Adirosi",
+      "Luca Baldini"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/jstars.2025.3568185",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}

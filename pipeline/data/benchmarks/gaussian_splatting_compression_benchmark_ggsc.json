@@ -1,0 +1,37 @@
+{
+  "name": "Gaussian Splatting Compression Benchmark (GGSC)",
+  "description": "To fill the gap of traditional GS compression method, in this paper, we first propose a simple and effective GS data compression anchor called Graph-based GS Compression (GGSC). GGSC is inspired by graph signal processing theory and uses two branches to compress the primitive center and attributes. We split the whole GS sample via KDTree and clip the high-frequency components after the graph Fourier transform. Followed by quantization, G-PCC and adaptive arithmetic coding are used to compress the primitive center and attribute residual matrix to generate the bitrate file. GGSS is the first work to explore traditional GS compression, with advantages that can reveal the GS distortion characteristics corresponding to typical compression operation, such as high-frequency clipping and quantization. Second, based on GGSC, we create a GS Quality Assessment dataset (GSQA) with 120 samples. A subjective experiment is conducted in a laboratory environment to collect subjective scores after rendering GS into Processed Video Sequences (PVS). We analyze the characteristics of different GS distortions based on Mean Opinion Scores (MOS), demonstrating the sensitivity of different attributes distortion to visual quality. The GGSC code and the dataset, including GS samples, MOS, and PVS, are made publicly available at https://github.com/Qi-Yangsjtu/GGSC.",
+  "category": "vision",
+  "domain": "computer graphics / 3D vision",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "quality_assessment",
+    "regression",
+    "compression_evaluation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "MOS (Mean Opinion Score)",
+  "year_of_publish": 2024,
+  "year_of_last_update": 2025,
+  "reputation": "New, specialized benchmark introduced in a single research paper with limited adoption outside the 3D vision/compression research community.",
+  "notes": "Small dataset (120 samples); subjective MOS-based evaluation and render-dependent biases; non-LLM benchmark focused on Gaussian Splatting compression, so results may not generalize to other 3D representations.",
+  "creators": {
+    "scientists": [
+      "Qi Yang",
+      "Kaifa Yang",
+      "Yuke Xing",
+      "Yiling Xu",
+      "Zhu Li"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Vision & Multimodal Perception",
+  "source": "https://arxiv.org/abs/2407.14197",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9"
+  }
+}

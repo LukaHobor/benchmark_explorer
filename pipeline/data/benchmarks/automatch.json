@@ -1,0 +1,36 @@
+{
+  "name": "AutoMatch",
+  "description": "The explosion of short videos has dramatically reshaped the manners people socialize, yielding a new trend for daily sharing and access to the latest information. These rich video resources, on the one hand, benefited from the popularization of portable devices with cameras, but on the other, they can not be independent of the valuable editing work contributed by numerous video creators. In this paper, we investigate a novel and practical problem, namely audio beat matching (ABM), which aims to recommend the proper transition time stamps based on the background music. This technique helps to ease the labor-intensive work during video editing, saving energy for creators so that they can focus more on the creativity of video content. We formally define the ABM problem and its evaluation protocol. Meanwhile, a large-scale audio dataset, i.e., the AutoMatch with over 87k finely annotated background music, is presented to facilitate this newly opened research direction. To further lay solid foundations for the following study, we also propose a novel model termed BeatX to tackle this challenging task. Alongside, we creatively present the concept of label scope, which eliminates the data imbalance issues and assigns adaptive weights for the ground truth during the training procedure in one stop. Though plentiful short video platforms have flourished for a long time, the relevant research concerning this scenario is not sufficient, and to the best of our knowledge, AutoMatch is the first large-scale dataset to tackle the audio beat matching problem. We hope the released dataset and our competitive baseline can encourage more attention to this line of research. The dataset and codes will be made publicly available.",
+  "category": "audio",
+  "domain": "video editing",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "temporal_localization",
+    "regression",
+    "sequence_labeling"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1 (beat-detection F‑measure computed with a fixed tolerance window around ground-truth timestamps)",
+  "general_score_metric": "F1 (tolerance-window beat detection)",
+  "year_of_publish": 2023,
+  "reputation": "Introduced in 2023 as the first large-scale dataset for audio beat matching; gaining attention but not yet widely adopted outside multimedia research.",
+  "notes": "Large-scale (≈87k annotated tracks) and non-LLM; labels may have temporal ambiguity and annotation noise; evaluation depends on tolerance window choice; possible class/tempo imbalance and dataset bias toward particular music styles.",
+  "creators": {
+    "scientists": [
+      "Sen Pei",
+      "Jingya Yu",
+      "Qi Chen",
+      "Wozhou He"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Speech & Audio",
+  "source": "https://arxiv.org/abs/2303.01884",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-25",
+    "origin": "cynefin@d486fafa9",
+    "filled_by": "gpt-5-mini-2025-08-07"
+  }
+}

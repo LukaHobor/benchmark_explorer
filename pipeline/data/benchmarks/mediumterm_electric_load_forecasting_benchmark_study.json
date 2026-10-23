@@ -1,0 +1,36 @@
+{
+  "name": "Medium-Term Electric Load Forecasting Benchmark Study",
+  "description": "Accurate electric load forecasting is essential to support the stable operation of power systems in the face of growing system complexities. Current studies on load forecasting mainly focus on short-term load forecasting. However, mediumterm forecasting, which plays a key role in efficient operation planning, is underexplored. In this work, we develop a comprehensive empirical study for medium-term load forecasting on linear models and transformer-based models. The results indicate that model performance varies with the data characteristics: linear models perform well on data sets with clear seasonal trends, while transformer-based models show advantages in more complex patterns. We evaluate a compound data augmentation strategy and find that augmentation yields limited improvements on large datasets with stable periodicity, but enhances robustness on smaller datasets with less regular trends by increasing data variability. Finally, the computational complexity of the six forecasting models is analyzed both theoretically and empirically. Linear models are preferable in resource-constrained environments, whereas with sufficient resources, model selection should be guided primarily by the complexity and structure of the data. This work reveals the strengths and limitations of each model in medium-term forecasting scenarios, providing valuable insights for future research and real-world applications.",
+  "category": "mixed",
+  "domain": "energy / time series",
+  "benchmark_type": "static dataset",
+  "task_types": [
+    "time_series_forecasting",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAPE and RMSE",
+  "general_score_metric": "MAPE",
+  "typical_sota_score": "5–15% (MAPE)",
+  "year_of_publish": 2025,
+  "reputation": "A domain-specific benchmark cited within the energy forecasting community for comparing transformer vs linear methods under a common protocol; moderate adoption in academic energy forecasting work.",
+  "notes": "Non-LLM time-series benchmark focused on medium-term regional load forecasting; results are region- and season-dependent, dataset sizes and preprocessing choices can materially affect comparability; contamination risk limited but model selection may overfit to seasonal patterns.",
+  "creators": {
+    "scientists": [
+      "Yuran Li",
+      "Di Wu",
+      "Michael Jenkin",
+      "Arnaud Zinflou",
+      "Benoit Boulet"
+    ],
+    "institutions": [],
+    "companies": []
+  },
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
+  "source": "https://doi.org/10.1109/epec65543.2025.11230388",
+  "provenance": {
+    "added_by": "legacy-catalogue",
+    "added_at": "2026-03-24",
+    "origin": "cynefin@d486fafa9"
+  }
+}
