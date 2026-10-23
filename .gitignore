@@ -1,0 +1,23 @@
+# secrets
+.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# pipeline scratch: batch payloads and raw candidates are large and re-creatable;
+# verdicts.csv and scan.json in each run are the record and are committed
+pipeline/data/runs/*/candidates.jsonl
+pipeline/data/runs/*/*.input.*.jsonl
+pipeline/data/runs/*/*.output.*.jsonl
+pipeline/data/runs/*/*.batch*.json
+pipeline/data/runs/*/verdicts_dryrun.csv
+pipeline/data/runs/*-dryrun/
+*.tmp
