@@ -1,0 +1,12 @@
+{
+  "name": "TileBench",
+  "description": "Tile-based programming models, such as Triton and cuTile, aim to simplify high-performance kernel development, but their practical performance, tuning behavior, and usability remain difficult to compare systematically. We present TileBench, a controlled benchmark for evaluating Triton and cuTile on NVIDIA B200 GPUs under matched operator semantics and comparable implementation structures. TileBench contains 45 operators covering diverse AI-kernel patterns and memory/computation behaviors. Each task provides a PyTorch reference, verified Triton and cuTile implementations, standardized data-types (dtype) and input-size sweeps, default and autotuned configurations, roofline-based metrics, and profiling-guided diagnosis. Our evaluation shows that performance gaps are workload-dependent: cuTile excels on a small cluster of Tensor-Core/TMA-friendly kernels, while Triton is stronger on many irregular, streaming, and bandwidth-bound operators. We further evaluate LLM-generated cuTile and Triton kernels and find that Triton is consistently more token-efficient than cuTile under the same iterative refinement protocol. TileBench is publicly available at https://github.com/Deep-Learning-Profiling-Tools/Tilebench.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2609.29067",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

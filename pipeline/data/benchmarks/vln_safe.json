@@ -1,0 +1,12 @@
+{
+  "name": "VLN-Safe",
+  "description": "Vision-and-language navigation (VLN) agents are typically evaluated by whether they reach a target and how efficiently they follow an instructed route, yet these metrics provide little information about collision behavior. Moreover, continuous VLN evaluation commonly uses a sliding regime, where an agent can slide along obstacles after a collision, potentially masking the effect of unsafe actions on navigation performance. We introduce VLN-Safe, a benchmark for analyzing collision safety under two complementary evaluation regimes: sliding, reflecting common VLN evaluation practice, and blocking, where collision-inducing actions prevent forward motion and more directly expose their consequences. Across six published agents on R2R-CE, 38.5-56.8% of successful episodes contain contact under sliding, while switching to blocking decreases success rate by 11.7-36.1 percentage points. We further analyze signals for anticipating imminent collisions and find that depth geometry and recent movement history are more informative than policy-derived signals, while safe alternatives near the policy's preferred action are rarely available. Motivated by these findings, we introduce a training-free collision guard that vetoes risky forward actions, executes an escape maneuver, and returns control to the original policy.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2610.14682",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

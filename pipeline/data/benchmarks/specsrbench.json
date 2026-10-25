@@ -1,0 +1,12 @@
+{
+  "name": "specsrbench",
+  "description": "First public release of specsrbench — the classical-deconvolution half of \"Sharper at What Cost?\", the companion benchmark to specsr (arXiv:2603.18357). Seven classical methods — cubic interpolation, Wiener, Tikhonov, Wiener + total variation, Richardson–Lucy, wavelet-sparse FISTA and a redshift-informed matched filter — scored against the SR2 deep-learning pipeline on 572 held-out JWST/NIRSpec prism spectra from JADES. Install Not on PyPI yet — install the attached wheel: pip install https://github.com/aryana-haghjoo/specsr-benchmark/releases/download/v0.1.0/specsrbench-0.1.0-py3-none-any.whl or from source: git clone https://github.com/aryana-haghjoo/specsr-benchmark cd specsr-benchmark pip install -e . # the baselines and the figures pip install -e '.[all]' # + the ML arm and the LSF derivation Quick start specsrbench paths # where it will look for inputs specsrbench figures all # the six paper figures specsrbench build all # the cache they read, from JADES DR4 + the Hub The result, stated plainly At the pixel level, no method beats cubic interpolation. SR2 leads the raw mean-absolute-error table by 30%, and does it by producing a spectrum at 0.54 of the reference's amplitude — absolute error against a noisy reference falls when you shrink toward zero, whatever the reconstruction quality. On a scale-free metric all nine methods land within 1.2% of each other and SR2 ranks eighth of nine, behind interpolation.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2603.18357",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

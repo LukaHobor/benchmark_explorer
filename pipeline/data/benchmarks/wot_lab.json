@@ -1,0 +1,12 @@
+{
+  "name": "WoT Lab",
+  "description": "First release of WoT Lab, a Bun/TypeScript framework for prototyping virtual W3C Web of Things devices and running reproducible benchmark scenarios against them. Thing Models A Thing is built from a directory: a Thing Description ( .td.json) and an initial state (state.json). Behaviour is optional and comes from either or both of logic.js — imperative handlers with thing, state (a Valtio proxy), http and logging injected; vre:effects annotations on action affordances — declarative effects in the VRE language, compiled into action handlers with snapshot-then-apply semantics, pre/post-state references, action outputs and cross-Thing writes. Without either, property read and write handlers are generated from the TD, so a Thing declared as TD + state is readable, writable and observable over WoT with no code. Every Thing is served by @node-wot/binding-http (default port 8081), with the TD id, the URL path and the internal state key kept identical. Environments and benchmark tasks An environment is a JSON manifest that brings a fixed set of Things online with pinned ids, state overrides, per-instance links and TD annotations. Starts are all-or-nothing, and POST /_lab/reset and POST /_lab/state give between-run reset and initial-condition injection.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22898473",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

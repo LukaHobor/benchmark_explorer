@@ -1,0 +1,12 @@
+{
+  "name": "ACGB",
+  "description": "Latent world models trained only on normal gameplay are an appealing, label-free source of \"surprise\" for glitch detection. This article extends our conference diagnostic study, which found that a LeWorldModel-style JEPA trained from scratch on TempGlitch collapses to effective rank ≈ 1 and reaches AUROC 0.579–0.588, clearly below a kNN detector on frozen VideoMAE features (0.6895). We add three pieces of evidence. (i) Frozen V-JEPA 2 latents. A kNN detector on frozen V-JEPA 2 features reaches 0.6592, and a normal-only next-latent predictor on its 0.4 s temporal tokens reaches 0.665–0.669, a statistical tie with, but not above, VideoMAE kNN; a causal transformer predictor on the same tokens is worse (0.598–0.599). (ii) Collapse remedies. In a pre-specified six-arm sweep (SIGReg weight, batch size, VICReg terms, longer training; one seed), the LeWM encoder's effective rank rises from 1.13 to 21.3, but AUROC does not follow: the best arm (batch 32) reaches 0.6264 (+0.0427 over the reproduced anchor, p = 0.00076), whereas the least-collapsed arm reaches 0.5954 (arm-level Spearman ρ = 0.37, n = 6). (iii) An action-conditioned benchmark. We build ACGB, five headless games with recorded per-frame actions, eight programmatic glitch types at three severities, and a counterfactual clean twin per glitched episode. On its development split, action conditioning does not help the JEPA (macro AUROC 0.605 with actions vs. 0.625 without) but does help a small pixel predictor (0.888 vs.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23449951",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

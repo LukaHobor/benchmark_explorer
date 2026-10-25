@@ -1,0 +1,12 @@
+{
+  "name": "Five-Gate Benchmark",
+  "description": "Twenty neural audio decoders measured under one frozen five-gate protocol on identical audio, each gate pre-registered before measurement and each instrument attacked before it was trusted. Only three of twenty arms truly stream. An arm counts as incremental only if stateful chunked decode reproduces full-context output (max|err| ≤ 1e-3) and state is load-bearing (stateless error ≥ 10× stateful). Three explicitly causal FocalCodec configurations pass, with C2 ratios of 3,530-36,740 against a threshold of 10; fifteen arms use stateless chunking. Non-causal configurations driven through the identical stateful code path give a ratio of exactly 1 - the negative control. The sole pre-registered cross-arm ranking metric failed its own validity instrument. Griffin-Lim, a zero-parameter phase-retrieval algorithm, scores best on the mel-cepstral distance in six states of six. The pre-registration declared in advance what that would mean, so it is reported as a property of the metric rather than a decoder ranking; a proposed explanation was tested and refuted. A second measurement sharing no implementation found the same three survivors. Speaker-embedding retention across three separately calibrated encoders: the causal configurations show no measured loss when streamed (offline-vs-streamed cosine 0.9999) while thirteen others lose -0.078 to -0.742. The two measurements are independent in construction but not in data - both run on the same reconstructions.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22798415",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

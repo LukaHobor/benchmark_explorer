@@ -90,6 +90,16 @@ def gate_request(cid: str, c: dict) -> dict:
     return batch.request(cid, prompts.REPO_SYSTEM, prompts.repo_user(c), prompts.REPO_SCHEMA, "RepoVerdict")
 
 
+def free_slug(name: str, c: dict, corpus) -> str:
+    """Slug for a new card. A name with no Latin letters (黑水渡) slugifies to nothing: use the
+    source id instead. Never reuse a taken slug, since saving there would overwrite a card."""
+    base = cards.slugify(name) or cards.slugify(c["key"].split(":", 1)[-1])
+    slug, n = base, 2
+    while slug.lower() in corpus.slugs:
+        slug, n = f"{base}_{n}", n + 1
+    return slug
+
+
 def stub(c: dict, name: str, run: str) -> dict:
     year = int(c["date"][:4]) if (c.get("date") or "")[:4].isdigit() else None
     card = {"name": name, "year_of_publish": year, "source": c["url"],
@@ -170,7 +180,7 @@ def cmd_run(args):
         if dup_of:
             record(c, kind, why, name=name, dup_of=dup_of)
             continue
-        slug = cards.slugify(name)
+        slug = free_slug(name, c, corpus)
         card = stub(c, name, args.run)
         if not args.dry_run:
             cards.save(slug, card)

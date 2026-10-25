@@ -1,0 +1,12 @@
+{
+  "name": "ContentionBench",
+  "description": "Replication package for the CASCON 2026 paper \"ContentionBench: A Runtime-Validated Benchmark and Repair Taxonomy for LLM-Based Java Lock Contention Repair\". ContentionBench is a benchmark of 147 developer-authored Java lock-contention fixes, mined from 236 pull requests across 64 open-source repositories. Each fix was confirmed under the Java Lock Monitor (JLM) to reduce measured contention, and each is labeled with an empirically derived taxonomy of eight repair idioms plus a residual structural class. Contents:- data/ – the ContentionBench corpus (lock_contention_dataset.csv), 5-fold repository-grouped cross-validation folds (cv_folds.json) and the dataset audit report- prompts/ – the exact system persona, few-shot, and Taxonomy-Grounded RAG (TG-RAG) prompt templates.- scripts/ – pipelines for dataset construction and taxonomy labeling, CV fold generation, dataset auditing, static smell extraction on DaCapo, LLM repair runs, and JLM runtime-validation analysis (parsing, aggregation, paired Wilcoxon with Holm correction).- setup/ – environment, pinned dependencies, model versions, and all hyperparameters. Start with README.md, then setup/SETUP.md, prompts/PROMPTS.md, and data/README.md. Licensing note: the code snippets in the dataset come from third-party open-source projects under mixed licenses (mainly Apache-2.0 and MIT) and keep their original licenses.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23065259",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

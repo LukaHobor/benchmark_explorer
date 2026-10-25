@@ -1,0 +1,12 @@
+{
+  "name": "Longitudinal Clinical State Corruption (LCSC)",
+  "description": "Healthcare AI is moving toward persistent agents that carry a patient’s state across encounters. Safety evaluations usually score the final answer, but an earlier decision matters just as much: when a record holds conflicting entries, which version does the agent keep? I introduce the Longitudinal Clinical State Corruption (LCSC) taxonomy, ten non-adversarial mechanisms through which routine documentation degrades stored clinical state, and a 150-case synthetic benchmark pairing an annotated anchor entry with a later conflicting corruption. Five state-update policies are evaluated from case text alone, with the scoring annotations hidden from the policy. Source Weighted Updating (SWU) preserved safety in 88.7% of cases, a Hybrid policy in 94.7%, Contradiction Gate (CG) in 68.0%, Provenance Preserving Reconstruction (PPR) in 8.7%, and Latest Note Wins in none, since every corruption is placed after its anchor. That construction also fixes a ceiling: an unconditional rule that always kept the earlier entry would score 100%, so the benchmark measures how closely text-driven rules approach a target the design already determines rather than showing that any policy beats unconditional retention. Eight of the ten McNemar comparisons follow from the policy definitions; SWU versus CG is the one two-sided result, with discordant cases favoring SWU 40 to 9.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23303808",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

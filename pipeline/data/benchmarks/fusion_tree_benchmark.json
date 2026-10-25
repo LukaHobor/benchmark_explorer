@@ -1,0 +1,12 @@
+{
+  "name": "fusion-tree-benchmark",
+  "description": "First complete release: implementation, test suite, measurement harness, and all four experiments. Finding. A correctly implemented fusion tree never beats a cache-conscious B-tree on a 2025 laptop CPU, at any size from 2^8 to 2^25 keys, with either compiler, in either timing mode. At 2^25 keys it costs 579 ns per query against the B-tree's 186 ns (throughput). Its absolute deficit grows with n (18 ns at 2^8, 102 ns at 2^25), so no crossover exists at any input size. Mechanism, measured four ways. Hardware counters: 441 instructions per query against 200, and 730 cycles against 291. Single-node timing: a ~60-cycle dependency chain against ~28 for a vectorised B-tree scan. At identical node size and identical cache-line traffic the fusion tree is still 2.8x slower, so the cause is computation, not memory. Ablations isolate branches, node size and word width. Structural result. The 1993 multiplication sketch does not fit a 64-bit word beyond K = 4 keys per node (0% of random key sets at K = 8), and a 256-bit word only reaches K = 6. The implementations here are viable only because of the PEXT instruction (BMI2, 2013). Scale. 20.5 million correctness checks against brute force and std::lower_bound, zero failures under g++ 16.1 and clang 22.1. 48,600 timings across 10 structures, 3 sessions, 2 compilers, 2 modes, 2 run orders. Limitation. One machine (Intel Core Ultra 7 255HX, Arrow Lake). Static structures only: no insertion or deletion. More machines coming.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22718523",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

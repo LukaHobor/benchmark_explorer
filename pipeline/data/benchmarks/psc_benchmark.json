@@ -1,0 +1,12 @@
+{
+  "name": "psc-benchmark",
+  "description": "Shading-pattern library, evaluation protocol, and reference pipeline for benchmarking maximum power point tracking (MPPT) algorithms on photovoltaic arrays under partial shading conditions. The package ships a three-tier pattern library, six baseline algorithms (perturb-and-observe, incremental conductance, particle swarm optimization, grey wolf optimization, a hybrid, and a trained deep Q-network), a pvlib-backed total-cross-tied array simulator, and an evaluation protocol that mandates repeated runs, fifty seeds for each stochastic baseline, with distributional reporting. This release 0.2.0 snapshot accompanies the article \"A reproducible benchmark and reference pipeline for maximum-power-point tracking under partial shading\". The protocol fixes four mandatory metrics, reported for every algorithm on every pattern: Tracking efficiency: the ratio of captured energy to the energy available at the reference-optimum power over the whole run. Sustained near-GMPP power flag: true when every sample in the final 30 ms (30 decisions) of the run lies within 5 percent of the reference-optimum power. It certifies sustained near-optimal power delivery rather than localisation of the exact global peak. Settling time: the earliest time from which the trajectory stays inside the 5 percent band for the rest of the run, null with a non-convergence flag when the sustained-power flag is false. Final steady-state power: the average captured power over the final 30 ms of the run.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.21382269",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

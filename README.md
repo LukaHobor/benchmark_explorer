@@ -2,7 +2,7 @@
 
 New AI benchmarks appear faster than anyone can keep track of, and they are
 scattered across preprints, repositories and dataset hubs. This is a searchable
-index of **<!-- stats:count -->33,282<!-- /stats:count -->** of them — one card per benchmark, describing what it
+index of **<!-- stats:count -->43,439<!-- /stats:count -->** of them — one card per benchmark, describing what it
 measures, how it is scored, how big it is and who built it.
 
 **→ <https://lukahobor.github.io/benchmark_explorer/>**
@@ -23,15 +23,15 @@ at runtime that is not in this repository.
 ## The corpus
 
 <!-- stats:corpus -->
-33,282 cards, spanning **1884 to 2026**. (The 19th-century tail is real: the
+43,439 cards, spanning **1884 to 2026**. (The 19th-century tail is real: the
 oldest entries are psychometric instruments that later became evaluation
-material.) 33,126 carry a publication year, and 2026 is a partial year.
+material.) 43,283 carry a publication year, and 2026 is a partial year.
 
 | | |
 |---|---|
-| Modality | text 10,069 · mixed 5,328 · vision 5,054 · multimodal 4,341 · code 2,170 · audio 976 · unlabelled 5,329 |
+| Modality | text 10,069 · mixed 5,328 · vision 5,054 · multimodal 4,341 · code 2,170 · audio 976 · unlabelled 15,486 |
 | Capability | 13 categories, led by Vision & Multimodal Perception (6,317), Safety, Robustness & Evaluation (3,504) and Natural Language Understanding & Generation (3,209) |
-| Sourced | 31,920 of 33,282 cards link back to where they came from |
+| Sourced | 42,077 of 43,439 cards link back to where they came from |
 <!-- /stats:corpus -->
 
 ### Where they were collected from
@@ -43,11 +43,11 @@ into a single common card format so they can be compared side by side.
 <!-- stats:sources -->
 | Source | Cards |
 |---|---|
-| arXiv | 15,097 |
-| GitHub | 11,035 |
+| arXiv | 16,720 |
+| GitHub | 18,348 |
 | Hugging Face | 3,600 |
-| Publisher DOIs | 1,858 |
-| 202 other hosts — institutional pages, standards bodies, survey papers | 330 |
+| Publisher DOIs | 3,063 |
+| 211 other hosts — institutional pages, standards bodies, survey papers | 346 |
 <!-- /stats:sources -->
 
 Only publicly available information is recorded: what a benchmark's authors,
@@ -77,8 +77,8 @@ styles.css                light theme, centred column
 fer-logo.svg              faculty mark in the masthead
 vendor/apexcharts.min.js  charting, vendored
 data/                     what the site loads — built, never edited by hand
-  index.json              <!-- stats:index_mb -->12.7 MB<!-- /stats:index_mb --> — one lean row per card
-  cards/000…127.json      <!-- stats:shard_kb -->~307 KB<!-- /stats:shard_kb --> each — the full cards, sharded
+  index.json              <!-- stats:index_mb -->15.2 MB<!-- /stats:index_mb --> — one lean row per card
+  cards/000…127.json      <!-- stats:shard_kb -->~356 KB<!-- /stats:shard_kb --> each — the full cards, sharded
   meta.json               field groups, labels, build stamp
 pipeline/                 how the corpus is collected and kept up to date
   data/benchmarks/        the corpus: one JSON card per benchmark, the source of truth

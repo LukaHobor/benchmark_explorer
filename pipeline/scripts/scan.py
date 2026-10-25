@@ -107,6 +107,10 @@ def scan_arxiv(d0, d1, cap):
 def scan_semanticscholar(d0, d1, cap):
     token, n = None, 0
     headers = {"x-api-key": os.environ["S2_API_KEY"]} if os.environ.get("S2_API_KEY") else {}
+    if headers and requests.get("https://api.semanticscholar.org/graph/v1/paper/search/bulk", headers=headers,
+                                params={"query": "benchmark", "fields": "title"}, timeout=TIMEOUT).status_code == 403:
+        print("      ! S2_API_KEY rejected (403): continuing without it", file=sys.stderr)
+        headers = {}
     while n < cap:
         params = {"query": "benchmark | dataset | leaderboard | testbed", "publicationDateOrYear": f"{d0}:{d1}",
                   "fields": "title,abstract,url,externalIds,publicationDate", "fieldsOfStudy": "Computer Science"}
@@ -303,7 +307,8 @@ def scan_github(d0, d1, cap):
         print(f"      {key:<26} +{len(found) - n0}")
     if stats["failed_windows"] or gh.throttles:
         print(f"      ! github: {stats['failed_windows']} failed windows, {gh.throttles} throttles", file=sys.stderr)
-    for c in list(found.values())[:cap]:
+    # no cap here: the windows are already paid for, and a truncated list would drop repos silently
+    for c in found.values():
         c["date"] = (c["created_at"] or "")[:10]
         yield c
     if token:

@@ -1,0 +1,12 @@
+{
+  "name": "Multi-Turn Voice Agent Benchmark (MTVA-Bench)",
+  "description": "Generally, most voice agents are cascaded systems, i.e., an ASR model transcribes the caller's audio, a language model reads the transcript and decides what to say and which backend tools to call, and a TTS model speaks the reply. Nearly all of the decision making happens in the language model, but existing evaluations measure it either too broadly or too narrowly. End-to-end voice benchmarks score the full pipeline, so recognition errors and model errors mix into a single number. LLM benchmarks isolate the model but they do not evaluate what makes real phone calls hard, such as transcription issues, caller's voice being split across messages and the requirement that replies follow the language and script specified. We introduce the Multi-Turn Voice Agent Benchmark (MTVA-Bench), which evaluates the language model on the same conditions it faces inside a cascaded system. The caller is played by an LLM following a set of rubrics and tool calls are answered by a mock backend which responds to the arguments the model actually sent. The benchmark contains 49 agents working across 490 reviewed scenarios and supports 7 languages. Scoring is a combination of deterministic checks on tool calls with two LLM judges, one that scores scenario specific rules and one that grades conversation quality without access to the task. Both judges must cite specific messages from the transcript.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2609.20152",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

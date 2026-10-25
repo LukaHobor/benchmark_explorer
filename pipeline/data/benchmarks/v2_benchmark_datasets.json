@@ -1,0 +1,12 @@
+{
+  "name": "V2 benchmark datasets",
+  "description": "Open-source data generator for joint Air Traffic Flow and Capacity Management (ATFCM) benchmark instances, version 2.0.0. From a real flight list of the OpenSky Network it generates solver-ready instances in which flights can be delayed or rerouted and airspace sectors reconfigured so that no sector exceeds its capacity: a navigation graph, sectors with capacities and their allocation, airports, aircraft and filed flights for one 24-hour day. The pipeline has six stages: the demand model (per-airport departure profiles, an origin- and time-conditional destination model, flight durations and turnaround times, estimated from the flight list), the flight schedule, the navigation graph (a Gabriel graph on real waypoints or a rectangular grid of synthetic navpoints), the sector and capacity step, the trajectory generator (routed, time-stamped flight plans that keep every aircraft's legs in sequence inside the 24-hour window) and the solver transform. Each stage can be replaced by an own implementation through a common interface. A region is described by one configuration file (polygon, airports, time zone, time granularity, demand levels, seeds, capacities).",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23136726",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

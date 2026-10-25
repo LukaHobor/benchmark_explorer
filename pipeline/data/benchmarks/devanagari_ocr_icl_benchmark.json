@@ -1,0 +1,12 @@
+{
+  "name": "Devanagari-OCR-ICL-Benchmark",
+  "description": "In-context learning using Large Language Models (LLMs) offers a compelling path to training-free post-OCR correction, yet its effectiveness for Devanagari script remains entirely unexplored. We present the first systematic evaluation of LLMs (3B-32B) for post-OCR correction in Hindi and Marathi, comparing three in-context example retrieval strategies: domain-random selection, dense semantic retrieval, and our proposed CharBM25, which retrieves examples by character n-gram BM25 similarity over OCR inputs to target shared error patterns with the test sentence. Across a 20,000-sentence benchmark spanning five news domains, retrieval strategy is the decisive factor in correction quality: CharBM25 outperforms domain-random selection by 2.8-4.0pp absolute WER on Hindi and 2.9-3.8pp on Marathi, using character trigrams, which consistently outperform bigrams and unigrams. Scale dominates performance: Gemma-3-27B achieves WER reductions of 55.0% for Hindi and 33.3% for Marathi under CharBM25-5. Few-shot gains are capacity-gated: models below 8B do not reliably improve over the OCR baseline, and on Marathi the smallest models (3B) degrade more sentences than they improve. Marathi is persistently harder to correct than Hindi across all scales, reflecting its greater morphological complexity.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2609.21595",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

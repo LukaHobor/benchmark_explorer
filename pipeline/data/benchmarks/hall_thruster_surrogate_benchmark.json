@@ -1,0 +1,12 @@
+{
+  "name": "Hall thruster surrogate benchmark",
+  "description": "# Hall thruster surrogate benchmark This repository holds the code that generated a dataset of 16,800 Hall thrusterplasma simulations (a 12,000-run core set plus two 2,400-run extrapolationpools), and the evaluation protocol that turns that dataset into a benchmark. AHall thruster is an electric rocket engine used on spacecraft, andsimulating one takes about twenty seconds per operating point, which is fast forplasma physics and far too slow for anything that needs thousands of evaluations.The usual answer is to train a machine learning model that imitates thesimulator. The hard question is not whether such a model fits its training data,but how it behaves away from it, and that question is normally answered with asingle random train/test split that hides the answer. This benchmark replacesthat with seven splits of the same data, each one asking a different andgenerally harder version of \"what happens away from the training points\":ordinary interpolation, interpolation with less training data, extrapolation pastthe edge of the sampled range in two different directions, and holes cut out ofthe middle of it. The splits are fixed and published as data files, and thescoring rule is one short function, so two people evaluating two models aremeasuring the same thing. Companion dataset: https://doi.org/10.5281/zenodo.21986782 Source snapshot of release v1.0.0 of the GitHub repository.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22758005",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

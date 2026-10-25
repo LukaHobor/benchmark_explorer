@@ -1,0 +1,12 @@
+{
+  "name": "gr-ntnisac",
+  "description": "A passive receiver can sense nearby objects from the echoes of a 5G downlink. When the transmitter is a low-Earth-orbit (LEO) satellite, one transmitter covers a wide area, but the receiver must handle tens of kHz of Doppler and a direct-path delay that changes within every observation interval. Such a receiver should be tested where the correct answer is known before it is tried on a satellite. This paper presents gr-ntnisac, an open GNU Radio testbed that applies an emulated LEO channel to a standard 5G New Radio downlink, sends it through two cabled USRPs, and scores the receiver against the delay and Doppler commanded for every path. The same receiver code runs in simulation, on recorded captures, and on hardware. As a first use, we measure cancellation of the direct path, the strong satellite signal that masks weak echoes. Depth is 34.8 dB on hardware and 37.6 dB in a matched simulation without radios, so the radios are not the main limit. Controlled simulation shows that the emulator's 8-tap fractional-delay filter and a simulated rotating blade at almost the direct path's delay each limit depth to about 40 dB; without either, depth reaches 71.0 dB. A diagnostic canceller that also removes the per-subcarrier response and per-symbol phase reaches 72.7 dB on the same captures. On a conducted capture, a payload-aided receiver detects a -25 dB moving path in 76.9 percent of dwells.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2610.11307",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

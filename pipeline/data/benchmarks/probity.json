@@ -1,0 +1,12 @@
+{
+  "name": "Probity",
+  "description": "Ask a language model the same question about the same document twenty times, and it sometimes returns two different answers. We built Probity, a benchmark of 60 tasks and 470 items from real venture-financing filings, to measure how often this happens. Then we audited our own corpus and found a defect any excerpt-built benchmark can carry: items whose evidence is missing from the window of text the model is shown. The audit flags 36 items and separates two failures a single flag would conflate: evidence genuinely absent from the window and answers that must be computed from numbers the window does supply. Flagged items change their answers far more often, wobbling at 0.255 against 0.087 on the 427 clean items, and excluding them cuts apparent cross-model agreement by about a fifth. Before testing whether the missing evidence explains the instability, we registered a prediction: re-cut each window to hold its evidence, and instability should fall below a set threshold. It failed: the repair moved wobble by 0.058, with an interval containing zero. We report the association as correlational. Almost all measurements sit where instability cannot show, which bounds what a corpus built for accuracy can say about stability. We release the corpus, all 112,800 raw responses, and the audit as a runnable check for any document benchmark.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2609.06147",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

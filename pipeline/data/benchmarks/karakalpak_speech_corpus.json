@@ -1,0 +1,12 @@
+{
+  "name": "Karakalpak Speech Corpus",
+  "description": "Karakalpak is a Turkic language spoken by roughly 0.8–0.9 million people, chiefly in the Republic of Karakalpakstan (Uzbekistan), and has almost no open speech technology. We release the Karakalpak Speech Corpus, 106.9 hours (21,702 utterances) of read speech contributed by more than 200 volunteers, with speaker-disjoint train / validation / test splits. Fine-tuning Whisper-Medium on the training split alone yields 10.66% word error rate (WER) on the held-out test set with greedy decoding, and 9.47% with beam search and a 4-gram language model trained on the training transcripts, against 50.4% for the best publicly available system (MMS-1B with its Karakalpak adapter). We then distil the fine-tuned model into smaller students and compare them with students of the same size fine-tuned directly on the human transcripts: distillation lowers test WER by 0.75 points for Whisper-Small (to 11.52%) and by 2.52 points for Whisper-Base (to 15.54%), both statistically significant, and the distilled Whisper-Small runs faster than real time on a 4-core CPU. A Distil-Whisper-style student with a 2-layer decoder is under-trained at this data and compute budget and falls behind both, and replacing the Uzbek proxy language token with Kazakh (with Cyrillic targets) gives no significant difference. All data, models and code are released under open licences.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23291729",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

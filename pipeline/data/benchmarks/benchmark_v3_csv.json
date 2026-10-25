@@ -1,0 +1,12 @@
+{
+  "name": "benchmark_v3.csv",
+  "description": "TargetShift AI is a computational pipeline that predicts which organ(s) will be affected by on-target drug toxicity, given a drug-target pair. The pipeline uses tissue-expression scores derived from the TRACE/TRACEvar framework as input features to a meta-learner (HistGradientBoostingClassifier). This pre-registration documents the benchmark dataset, evaluation design, and success thresholds for TargetShift AI. BENCHMARK DATASET: benchmark_v3.csv — 312 total labeled drug-target-tissue pairs. Sources: FDA Black Box Warnings and ChEMBL drug_warning table only. Labels were assigned prior to model training and will not be modified. The primary eval cohort is the subset of 157 rows where outcome == \"organ_toxicity\" AND on_target_confidence == \"high\". EVALUATION DESIGN: Due to dataset size constraints, evaluation uses 5-fold grouped cross-validation (StratifiedGroupKFold, grouped by Open Targets paralog clusters) rather than a held-out test set. The training label file (cohort_expanded.csv, 1,213 rows) contains the benchmark entries as a prefix; each eval row is scored only by the fold that excluded it from training (out-of-fold predictions only). The reported AUROC reflects out-of-fold performance, not independent validation. A fully independent hold-out evaluation is planned as the dataset grows. A train/val gap of 0.167-0.238 across folds is documented and disclosed (META_LEARNER_DISCLAIMER). TWO CLAIMS BEING TESTED: 1.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.17605/osf.io/k9rhj",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

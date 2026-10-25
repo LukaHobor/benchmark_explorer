@@ -1,0 +1,12 @@
+{
+  "name": "ICS Research Studio: Local RTX 4060 Ti regular-simplex GPU dimensional and display benchmark (up to 23,169D)",
+  "description": "Results-only local NVIDIA RTX 4060 Ti WebGPU coordinate-construction and Studio WebGL display benchmark. Completed sampled targets reach 23,169 dimensions, 23,170 vertices and 536,825,730 Float32 coordinates. Every coordinate was compared with the CPU Float64 reference formula using streaming readback; all-row norm and centroid checks and selected pairwise checks passed at absolute tolerance 2e-6. Saved sampled GPU rows independently passed NumPy Gram/rank checks; no full high-dimensional eigenspectrum or full pairwise certificate is claimed. At 23,169D, median host submission-to-GPU-completion was 9.80 ms, readback 554.40 ms and CPU validation 6958.40 ms. These are not kernel-only timestamps. The next dimension exceeds the exposed single-buffer storage-binding limit; this is a representation/API boundary, not a mathematical ceiling or exhaustion of 16 GB VRAM. Earlier mapping and host-array allocation failures are preserved. Shared Studio display modules were measured through 128D; CPU scene construction and GPU rendering are reported separately. This workload differs from the full archived CICS-04S determinant/scale/recovery campaign, so no direct CPU/GPU speedup ratio is claimed. The deposit includes raw results, timing series, actual sampled GPU arrays, independent checks, hardware identification, source hashes and limitations. Related public reference: https://doi.org/10.5281/zenodo.23286174.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23286238",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

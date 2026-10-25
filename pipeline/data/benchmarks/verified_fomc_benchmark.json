@@ -1,0 +1,12 @@
+{
+  "name": "Verified FOMC Benchmark",
+  "description": "Harness-side learning methods such as reflection and prompt evolution let an LLM agent improve from outcome feedback without updating its weights. In finance the natural feedback is a market or policy outcome, and such an outcome is a useful reward only when the documents the agent reads carry learnable information about it. We report a verified benchmark for outcome-guided reading of Federal Open Market Committee (FOMC) minutes, built on Cieslak and Vissing-Jorgensen's study of the \"Fed put,\" the Federal Reserve's tendency to ease policy after poor stock-market performance. The benchmark contains 1,197 equity-market passages from the minutes of 200 meetings (2000-2024), fixed chronological splits, an audited reconstruction of the authors' automated phrase-and-direction method, and the authors' human-coded tone counts, which we recover from their published figures. Screening two candidate rewards with frozen readers (fixed models and instructions) gives opposite answers. The equity return that preceded a meeting is learnable from the minutes. A frozen embedding recovers it with an out-of-sample R^2 of 0.50, and tone labels from a frozen LLM reach 0.49, against 0.32 for a linear readout of the reconstructed phrase-and-direction counts. The next change in the policy rate shows no detectable signal. In a test specified before estimation, no text representation beats a baseline without text. A pilot with a frozen LLM reader exposes a credit-assignment problem.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23478592",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

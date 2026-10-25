@@ -1,0 +1,12 @@
+{
+  "name": "LIBERO-Dynamic",
+  "description": "Most simulation benchmarks for robotic manipulation keep target objects static and treat policy inference as instantaneous. These assumptions simplify evaluation but hide how a moving target evolves during computation and how stale an observation is when an action is executed. We introduce LIBERO-Dynamic, a dynamic extension of all 40 LIBERO tasks. It drives objects through contact friction along three trajectory families and speed tiers, while advancing the physical world according to calibrated, model-specific inference latency. The same mechanism supports training by replaying verified static demonstrations and compensating robot actions online for target displacement, producing 9,000 quality-filtered dynamic trajectories. We evaluate six pretrained policies on 1,800 dynamic conditions per configuration, compare execution strategies and action horizons with fixed checkpoints, and fine-tune three architectures using dynamic and mixed data. Faster motion degrades every policy but not uniformly; execution timing and horizon can change the behavior of the same policy; and asynchronous replanning benefits from frequent feedback only when the action queue avoids underflow. Dynamic demonstrations improve each architecture under at least one recipe, with gains varying by temporal conditioning, data composition, and training budget. A small-scale physical study shows task-dependent execution-strategy differences consistent with simulation.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2610.24579",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

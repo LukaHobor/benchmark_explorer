@@ -1,0 +1,12 @@
+{
+  "name": "RoboBugBench",
+  "description": "Language agents increasingly modify robot software, but whether they can repair it is unmeasured, because the domain supplies no oracle to inherit: a robot bug manifests as behavior, and robot repositories ship almost no tests that capture it. We present RoboBugBench, a benchmark of 33 real, execution-validated defects in a pinned ROS 2 navigation stack, in which a candidate patch is graded by compiling it and driving the robot through a physics simulation rather than by running a unit test. Three frontier models, each given 1 attempt per instance, repair 24.2%-36.4%, with no pairwise difference significant; difficulty tracks the oracle rather than the domain, at 66.7% on instances graded by process survival against 22.2% on those graded by what the robot did (instance-level p = 0.0027). Because the oracle is constructed rather than inherited we audit it adversarially, and report the decomposition that audit yields: counterfeit patches which suppress a failure without repairing the defect are accepted by the shipped rule 11/11, while a distributional rule over the same data rejects 4 at no cost in false rejects. The residual is an observability bound (what the observation channel discards, no predicate over it can recover), so discrimination must be bought with instrumentation rather than stricter criteria, and our repair rates are bounds: inflated by what the oracle cannot distinguish, deflated by unanimity's rejection of correct fixes under run-to-run noise.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2610.16369",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

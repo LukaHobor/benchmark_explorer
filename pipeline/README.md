@@ -23,15 +23,36 @@ git status                              # review data/runs/<run>/verdicts.csv, t
 | 3 | `scripts/fill.py` | One LLM call per card with empty fields: modality, domain, task types, evaluation method, score metric, difficulty, capability category (picked via a sub-capability from `config/capability_taxonomy.json`). Never overwrites a value. |
 | 4 | `scripts/build_site.py` | Rebuilds `../data/` and the numbers in `../README.md`. `--check` reports what would change. |
 
-A run that stops part-way is resumed by the next `update.py`. LLM work goes through the
-OpenAI Batch API (`lib/batch.py`); a submitted batch is recorded in
+A run that stops part-way is resumed by the next `update.py`. LLM work always goes
+through a Batch API (`lib/batch.py`); a submitted batch is recorded in
 `data/runs/<run>/*.batch.json` and resumed, never resubmitted, so an interrupted run is
-not paid for twice. Chunks are submitted one at a time to stay under the organisation's
-enqueued-token limit.
+not paid for twice.
 
-**Cadence.** Weekly is a good fit: about 10k gate requests a week, one batch, roughly
-$3 at gpt-5-mini batch prices. A monthly run works too (≈40k requests, several
-sequential batches).
+### LLM backend
+
+`LLM_BACKEND` in `.env` picks it:
+
+- `openai` — OpenAI Batch API, `OPENAI_MODEL` (default gpt-5-mini). Chunks are submitted one
+  at a time to stay under the organisation's enqueued-token limit.
+- `openrouter` — OpenRouter Batch API, `OPENROUTER_MODEL` (default `openai/gpt-6-luna`), pinned
+  to one provider (`OPENROUTER_PROVIDER`, default `openai`) with fallbacks off. Guarded:
+  - **spend cap** `LLM_MAX_USD` per job (default $10). A chunk is submitted only if what is
+    already spent plus the estimate for running and new chunks stays under the cap; otherwise
+    the job waits for running chunks, saves its state and exits with nothing applied. Raise
+    the cap and re-run to continue. Estimates use the batch price from OpenRouter's model list.
+  - each request capped at `LLM_MAX_OUTPUT_TOKENS` (default 2048)
+  - failed requests and failed or expired chunks are resubmitted, up to `LLM_MAX_ATTEMPTS`
+    (default 3); a chunk that keeps failing stops the job before anything is applied
+  - results are saved locally as soon as a chunk finishes (OpenRouter deletes them after 30 days)
+  - every step goes to `data/runs/<run>/<tag>.log`, every chunk's real cost to
+    `data/state/llm_spend.csv` (both gitignored)
+
+`--dry-run` writes the batch inputs and, on OpenRouter, prints the estimated cost.
+
+**Cadence and cost.** Without a star floor, GitHub search returns about 900 new repos a day,
+so the gate sees about 10k requests a week (papers and repos). Measured on gpt-6-luna:
+~780 input and ~220 output tokens per gate request, about **$1 per 10k requests** at
+OpenRouter batch prices ($0.05 / $0.25 per M tokens). A weekly run is a good fit.
 
 ### GitHub repos that were empty when first seen
 
@@ -92,7 +113,7 @@ UTF-8, field order) and drops anything outside the schema.
 ```
 update.py                  the periodic cycle
 lib/cards.py               schema, card I/O, dedup index
-lib/batch.py               OpenAI Batch API, resumable
+lib/batch.py               OpenAI / OpenRouter Batch API, resumable, spend-capped
 lib/prompts.py             gate and fill prompts
 lib/env.py                 reads ../.env
 config/capability_taxonomy.json

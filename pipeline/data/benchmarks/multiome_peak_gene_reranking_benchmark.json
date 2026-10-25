@@ -1,0 +1,12 @@
+{
+  "name": "Multiome Peak-Gene Reranking Benchmark",
+  "description": "First public release. A benchmark and diagnostic study, not a peak–gene linking method. Reranks a fixed set of 5,000 Signac::LinkPeaks() candidate peak–gene pairs from 10x PBMC multiome data (pbmc_unsorted_10k) under 11 interpretable score modes, and evaluates them against SCENT across 22 autosomes with explicit controls for promoter-proximity confounding. Main result. Within distance bins SCENT could test (0–100 kb), the reranking scores concentrate SCENT-supported links in their top decile roughly twice as strongly as the LinkPeaks ordering (odds ratio 5.06 vs 2.60 at 0–10 kb), while a distance-only control sits at 1.59 and below 1 in the 10–50 kb bin. Main caveat. Raw top-N metrics over the unrestricted 500 kb universe reward promoter collapse: the distance-only control wins at top-50 with a median distance of 3.5 bp. SCENT tested only ±100 kb, so this benchmark says nothing about distal enhancer–gene links. Gene-level ORA favours the LinkPeaks baseline. Reproducibility. Re-run end to end from a clean clone using ghcr.io/inkasimo/multiome-link-ranking:v0.1.0 (sha256:43216d1e5e8f196672f4423ccf4e88c4bab1137ba25c479ef3b1cbb1c1c10d18). LinkPeaks output, the SCENT tested set and every top-N supported fraction reproduced exactly. SCENT's bootstrap p-values are stochastic, so support calls vary by ~0.3% between runs; no conclusion depends on that. Full analysis and limitations: docs/results_report.md.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22032459",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

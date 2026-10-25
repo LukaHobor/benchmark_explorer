@@ -1,0 +1,12 @@
+{
+  "name": "Per-link verification benchmark for a lineage-carrying offline CBDC token",
+  "description": "Supplement to the manuscript “When the Secure Element Fails: A Post-Compromise Security Architecture for Offline CBDC Payment Services” (under review) A micro-benchmark of the cryptographic operations that determine the per-link verification cost of a lineage-carrying offline payment token, together with the composition that turns them into a per-link figure. What it measures. In the architecture the script accompanies, each transfer of a token appends a link carrying a threshold-encrypted identity record and a non-interactive proof that the record encrypts the identity certified for the key that signs the transfer. Verifying one link means two Ed25519 signature verifications, one SHA-256 digest, one two-term pairing check for the credential component, and one multi-scalar multiplication for the plaintext-equality and linking relations. The script times each of these on BLS12-381 and reports the composition. Because every aggregate cost in the architecture - sustained verifier load, recipient verification time, the practical bound on transfer depth - scales in this single quantity, it is the figure most worth measuring before an implementation exists. Method. BLS12-381 operations use the arkworks backend through its Python bindings; Ed25519 verification uses the OpenSSL implementation exposed by the cryptography package. Each operation is timed over a warmed loop and reported as the median with tenth and ninetieth percentiles.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22271363",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

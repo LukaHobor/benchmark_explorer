@@ -1,0 +1,12 @@
+{
+  "name": "PAA-Bench",
+  "description": "Visual token pruning aims to reduce inference cost while preserving the capabilities of the original VLM. Yet existing evaluations rely on aggregate task accuracy and retained token count as proxies for pruning quality and actual efficiency. We reveal two limitations: 1) Aggregate accuracy can obscure whether a pruning method truly identifies critical visual tokens; many examples remain solvable under arbitrary token removal and models can exploit textual shortcuts when visual evidence is degraded. 2) Retained token count is an unreliable proxy for efficiency, as identical token budgets can incur different end-to-end costs depending on where and how pruning is performed. Consequently, comparisons based on aggregate accuracy and retained token counts fail to recover the global performance-efficiency Pareto frontier across methods. We introduce PAA-Bench, a plug-and-play evaluation framework for existing benchmarks, to evaluate whether pruning succeeds through meaningful token selection and whether this success translates into real speedup. To determine when token choice actually matters, we propose Random-Pass@k to measure how often an example remains correct under random pruning, enabling comprehensive evaluation across different levels of selection difficulty. To compare efficiency fairly, we introduce Preservation-Constrained Speedup (PCS) to report the maximum end-to-end speedup each method achieves under a shared preservation target.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2610.24740",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

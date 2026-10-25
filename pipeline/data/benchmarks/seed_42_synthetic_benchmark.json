@@ -1,0 +1,12 @@
+{
+  "name": "seed-42 synthetic benchmark",
+  "description": "OES-512 = 16 × OES-32 residual blocks: a reference implementation of the OES-512 layout, 512 channels arranged as 16 blocks of 32, each block scored with the weighted latch S = 0.45·Peak + 0.35·RMS + 0.20·MeanAbs on the absolute residual, latched at τ = 0.50. Includes a seed-42 synthetic benchmark (Stable, Noisy, Localized Burst, Global Shock; 1,000 trials each), a pytest suite, and a self-contained browser avatar. New in 0.3.0: educational demo. sparky-oes512-demo.html is a separate, self-contained bilingual (English / Canadian French) page with the Sparky avatar. It scores synthetic scenarios or a loaded 512-value CSV against a built-in synthetic reference band, shows blocks with missing channels as a separate “missing data” state rather than as anomalies, and displays an experimental, not validated parity-asymmetry signal (A = |mean(r)| / (mean|r| + ε)) that does not trigger alerts by default. It uses the same block formula and default τ = 0.50 as the reference, but it is an educational demo, not the normative reference. A Node self-test (tests/sparky-demo.test.mjs) runs in CI. Not a medical device; SYNTHETIC data only. Evidence tags. OES-512 block layout (16 × 32 channels): implemented as a reference. Weighted latch, τ = 0.50: implemented as a reference. Seed-42 benchmark: SYNTHETIC. Operational, field, flight or medical performance: UNRUN (not claimed). Relationship to ADR-001. The normative per-block residual is defined in oes32-residual@b77b612. Scope and limits.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22985532",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

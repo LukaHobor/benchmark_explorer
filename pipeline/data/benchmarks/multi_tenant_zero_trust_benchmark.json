@@ -1,0 +1,12 @@
+{
+  "name": "Multi-tenant Zero-Trust benchmark",
+  "description": "This release contains the reproducibility artifact accompanying the manuscript: \"Evaluating Zero-Trust Security and Database Isolation Patterns in Multi-Tenant Cloud Architectures: A Reproducible, Containerized Performance Framework\" Authors: Dušan Rajčević and Vladimir Šimović. It includes: the final containerized benchmark implementation; the complete formal experiment dataset (150 measured runs); telemetry and randomized run metadata; the ten-rate pilot used to select the 500 requests/s offered load; environment and dependency capture; processed result tables; corrected repetition-paired authorization-placement analysis; analysis scripts; Figures 1–3 used in the manuscript. The formal experiment evaluates three PostgreSQL multi-tenant database-isolation patterns—logical database-per-tenant, schema-per-tenant, and shared-table—combined with two token-validation placements: Envoy gateway and downstream application service. The v1.0-paper tag identifies the exact repository state corresponding to the reported study. Important interpretation note: 500 requests/s is the configured offered load. Schema-per-tenant and shared-table sustained approximately that rate, while the tested logical database-per-tenant implementation became connection-pool constrained and achieved lower throughput. Latency results for that condition should therefore be interpreted together with achieved request rate and pool-wait metrics. Source code is licensed under the MIT License.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22074801",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

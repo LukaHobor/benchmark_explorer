@@ -1,0 +1,12 @@
+{
+  "name": "OREVID-bench",
+  "description": "Background. Knowledge-graph models can rank existing drugs for a disease, but their benchmarks mostly reward rediscovering known treatments, and their scores rarely come with evidence a researcher can check. We built OREVID, an open tool that shows a ranked candidate only when an evidence line supports it and reports how often each line was right on held-out data, and compared it with TxGNN on identical data. Methods. The graph combines PrimeKG, Open Targets, STRING and PubTator3 (157,822 nodes, 9.46 million edges). For each disease, 22 degree-weighted metapath features feed a LightGBM LambdaRank model trained with masked neighbourhoods. A candidate is shown only if it is indicated for an ontology-neighbour disease or for a disease sharing at least 3 associated genes (hypergeometric p < 10⁻⁵ over the genes with at least one associated disease). The acceptance criteria for these rules were set in advance; the rules were revised on the hidden-treatment benchmarks and then measured on an external set of approvals not used to choose them. TxGNN was retrained with its official code on the same PrimeKG splits, and all tasks and predictions are released as OREVID-bench. Results. Zero-shot Recall@100 (mean ± SD over five splits) was 0.811 ± 0.042 for OREVID, 0.412 ± 0.042 for TxGNN and 0.358 ± 0.040 for a popularity baseline, with OREVID ahead on every split (paired difference with TxGNN 0.399, 95% CI 0.352–0.443, resampling diseases).",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.20944/preprints202610.1918.v1",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

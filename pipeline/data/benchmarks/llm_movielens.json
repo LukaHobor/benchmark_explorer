@@ -1,0 +1,12 @@
+{
+  "name": "LLM-MovieLens",
+  "description": "LLM-MovieLens is a portable pipeline that turns a catalogue's structured metadata into LLM-synthesized item features, together with the evaluation harness needed to find out whether those features help a recommender. A language model reads an item's metadata and writes an 80–120 word profile, a ten-axis mood vector and 3–5 key themes; the harness encodes that text once, offline, and evaluates it under a temporal split, five seeds and full ranking. This record archives the exact bytes the accompanying paper's numbers were computed on. How the files fit together The code surface is one archive. The data surface is split into parts, because most of its weight is the embedding arrays and a single large file is a poor thing to download over a slow connection. Every part unpacks to the same hf/ or github/ root: extract them all into one directory and you have the released tree exactly. shasum -a256 -c SHA256SUMS, run from inside github/ and from inside hf/, then verifies all 248 and 55 files — the README.md in this record gives the exact commands and says what a partial download looks like. Each part is independently useful too — take data-core alone for the dataset card, licence, datasheet, Croissant record, prompt manifest and the complete human-evaluation study, then add only the catalogue and encoder you need.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22766653",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

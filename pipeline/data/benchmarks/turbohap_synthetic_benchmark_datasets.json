@@ -1,0 +1,12 @@
+{
+  "name": "TurboHap synthetic benchmark datasets",
+  "description": "Seven independently simulated livestock genotype datasets used to benchmark TurboHap v1.0.0, TurboHap LM and the original FindHap v3 Fortran baseline. Six datasets combine 10,000 or 100,000 genotyped animals with 1,000, 10,000 or 100,000 markers; the seventh contains 1,000,000 genotyped animals and 10,000 markers. Each includes four additional ungenotyped founder females. Each ZIP contains the exact four benchmark inputs (pedigree.file, chromosome.data, genotypes.txt and findhap.options), full-panel genotype truth, phased haplotype truth, the simulation option files, a dataset manifest, a README and SHA-256 checksums. Shared documentation provides the data dictionary, generation recipe, source fingerprints and verification instructions. All seven ZIP64 archives use parallel pigz with 20 threads at Deflate level 9 for large data members; truth files are stored directly, without nested gzip compression. Data were generated with USDA genosimV4 on Linux ARM64 using GNU Fortran 13.3.0. Floating-point contraction was disabled in markersim and genosim to align marker placement; parental sex labels were made consistent with sire/dam roles before genotype and truth simulation. The archived corrected datasets passed marker coverage, phase/genotype, parental-role and male X-chromosome consistency checks. These are wholly synthetic workloads, not samples from a real herd.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23566925",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

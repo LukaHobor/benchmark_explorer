@@ -1,0 +1,12 @@
+{
+  "name": "LateIntent-Bench",
+  "description": "Native full-duplex speech models can respond before a user finishes speaking, making the behavior of the model depend on both the final utterance and when intent-defining information arrives. Existing benchmarks primarily evaluate turn-taking mechanics, whereas safety evaluations typically assume that the complete request is observed prior to response generation. We introduce LateIntent-Bench, a matched-pair benchmark for delayed intent revelation. A shared ambiguous prefix precedes either a benign or a harmful continuation, using a controlled pause to delay when the branches become distinguishable. We define the Premature Response Rate (PRR) to measure whether response onset precedes the revelation of intent. Joint evaluation of harmful and benign engagement distinguishes changes in safety selectivity from general losses in responsiveness. Across 3,136 sessions, four native full-duplex models exhibit distinct response-timing patterns under delayed intent. Three models show increased harmful engagement while maintaining benign responsiveness, whereas one loses engagement with both branches. Inserting a 1.5s silence after intent revelation keeps PRR near the no-pause baseline and substantially reduces changes in harmful engagement. These results demonstrate that evaluating fully specified requests alone fails to capture emerging timing patterns, highlighting the necessity of assessing delayed intent revelation in full-duplex models. The code will be publicly released soon.",
+  "year_of_publish": 2026,
+  "source": "https://arxiv.org/abs/2610.00272",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

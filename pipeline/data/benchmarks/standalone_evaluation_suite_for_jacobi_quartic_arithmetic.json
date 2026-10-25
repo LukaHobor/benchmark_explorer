@@ -1,0 +1,12 @@
+{
+  "name": "Standalone Evaluation Suite for Jacobi Quartic Arithmetic",
+  "description": "🚀 What's Changed in v1.3.0 This release introduces a comprehensive suite of standalone benchmarking scripts to rigorously evaluate and isolate the performance of the Extended Jacobi Quartic obfuscation pipeline. By separating the cryptographic mappings from the pure algebraic scalar multiplication loops, this suite allows researchers to directly observe the cycle-count impact of our Z=1 table normalization and asymmetric wNAF strategies. 📂 New Benchmark Scripts Included benchmarks+.m (Full Pipeline with Z=1 Normalization):The complete end-to-end obfuscation and deobfuscation benchmark. It features strictly normalized precomputation tables (Z=1), allowing the main wNAF loop to exclusively utilize the ultra-fast dedicated addition formula (9M+5S). Includes exact BLS12-479+ and BLS12-539+ isogeny mappings and round-trip verification. benchmarks++.m (Pure Algebraic Cycle Counter):A stripped-down, raw arithmetic benchmark. It removes the overhead of Magma's internal scheme checks and isogeny mappings to measure only the raw Jacobi wNAF scalar multiplication loops. Perfect for isolating the exact CPU cycle cost of the core arithmetic engine. microbenchmark.m (Native vs. Interpreted Microtest):A highly targeted script designed to compare Magma's native, C-compiled Weierstrass scalar multiplication intrinsic (k * P) directly against our interpreted Jacobi wNAF pipeline.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23560794",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

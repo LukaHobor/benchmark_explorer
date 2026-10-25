@@ -1,0 +1,12 @@
+{
+  "name": "Leave-One-Attack-Out Benchmark",
+  "description": "Physical Unclonable Functions (PUFs) authenticate a device by its manufacturing variation. However, the cryptographic layer only verifies that a reading matches the enrolled fingerprint. It does not confirm that a live, honest device produced that reading. As a result, replayed readings, cloned silicon, and fault injection can all pass verification. We benchmarked our deployed machine-learning detector, UnifiedPUFNet, against six established architectures on 1~Mbit readings from 24 static random-access memory (SRAM) PUF tokens, withholding one attack family from training at a time. Six of the seven architectures reached an area under the receiver operating characteristic curve (AUC) of at least 0.999 in distribution, yet all of them degraded on attack families absent from training, and UnifiedPUFNet at one seed ranked replays above genuine readings. Replays disturbed few features, whereas clones shifted most features in magnitude. A dual-signal UnifiedPUFNet that adds a raw-magnitude input kept a mean held-out AUC above 0.99 on every family, although the clone test vectors differ from what a deployed verifier computes. Calibration and attack attribution failed on most held-out folds. These findings indicate that a raw-magnitude-aware detector is a practical candidate for PUF liveness checking, if validated on held-out attack families and thresholded at genuine-score quantiles.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.20944/preprints202610.1975.v1",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

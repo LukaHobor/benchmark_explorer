@@ -1,0 +1,12 @@
+{
+  "name": "Page-Anchored Retrieval Benchmark of the Indonesian Hajj and Umrah Guidebooks",
+  "description": "Page-anchored retrieval benchmark built from the two 2026 (1447 AH) guidebooks of the Ministry of Hajj and Umrah of the Republic of Indonesia, Tuntunan Manasik Haji dan Umrah (510 pages) and Doa & Zikir Haji dan Umrah (244 pages). The package contains (1) Markdown transcriptions in which every page carries its PDF and printed page numbers, (2) three curated question-answer documents for the tawaf and sa'i prayers, (3) 150 Indonesian test questions with reference answers, (4) 425 graded page-level relevance labels, (5) evaluation code for four chunking configurations and four BGE-M3 retrieval modes (dense, sparse, RRF hybrid, DBSF hybrid) with Qdrant, and (6) per-query results, summary tables, and figures of the reported run. Because relevance labels attach to pages rather than chunks, chunking strategies with different boundaries are scored against the same judgments. In the reported run, splitting at headings alone lowered dense MRR@10 from 0.862 to 0.760, while prepending the heading path to the embedded text gave the best result (MRR@10 = 0.936, nDCG@10 = 0.555). The book pages were transcribed with the vision LLM Claude Opus 5. Questions Q17 to Q150 were drafted with LLM assistance and validated by the authors with a Hajj jurisprudence expert and a certified pilgrim guide. The benchmark is a research resource, not a religious authority. Licenses: code MIT. Questions, answers, labels, results, and figures CC BY 4.0.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22970730",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

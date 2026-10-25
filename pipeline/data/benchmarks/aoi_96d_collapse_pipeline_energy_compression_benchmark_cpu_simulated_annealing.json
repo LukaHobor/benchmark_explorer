@@ -1,0 +1,12 @@
+{
+  "name": "AOI 96D Collapse Pipeline — Energy/Compression Benchmark (CPU Simulated Annealing)",
+  "description": "Energy/compression benchmark for the AOI 96D octonion collapse pipeline. All numbers are SIGNAL measures on the 96-dimensional state vector (L2 norm compression), NOT electric power meter readings. No power meter was attached to any run. Two benchmark scripts compare the D-Wave QUBO feature gate against entropy, random, and magnitude baselines on 100 synthetic mixed signals (structured J-invariant, market-like, noise), both running SimulatedAnnealingSampler on CPU with SA_READS=10 and SA_READS=200. Key results: Full pipeline total compression 75.0-76.2% (QUBO + carbon filter combined); QUBO gate alone retains 32.7% of signal energy vs entropy 7.2%, random 49.8%, magnitude 93.0%; the 93-94% entropy compression figure matches the standalone entropy gate, not the QUBO gate; the QUBO gate does NOT outperform baselines on energy retention or discrimination. Carbon credit values are modeled estimates from signal compression, not measured kWh. Known unreliabilities stated in the README: entropy baseline differs 23x between the two scripts (different pipeline stages, not comparable); SA_READS=10 is noisy vs SA_READS=200; no D-Wave hardware was used; the 94% figure cited in earlier materials matches the entropy component alone, not the pipeline as a whole. This deposit supersedes the February 2026 carbon-credit claims (DOI 10.5281/zenodo.18763165/18763166) which asserted 88% GPU cycle reduction and carbon credit generation.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.22849143",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "ITS-core",
+  "description": "Abstract Learned sequence embeddings are increasingly proposed for fungal ITS classification and novelty detection, but are usually evaluated against weaker versions of themselves or default-configured alignment, by AUROC alone, and with queries treated as independent. We asked whether a purpose-trained encoder outperforms percent identity when both score identical queries under a firewalled open-world design, and which evaluation choices decide the answer. From the UNITE release of 19 February 2025 we built ITS-core, ITS1 and ITS2 views and a genus-separated split with sealed calibration and test partitions. A convolutional encoder trained with genus-proxy, cross-view, hierarchical and episodic objectives was frozen and hash-sealed before test data were opened. We compared it with exhaustive, coverage-filtered VSEARCH identity on the same queries and references using genus-clustered paired intervals, and logged every post-opening correction before computing corrected metrics. Three evaluation choices changed the comparison. Default VSEARCH heuristics returned a lower-identity hit than exhaustive search for 48.3% of benchmark queries; without a coverage filter, identity placed only 64.9% of novel ITS-core queries in the correct class, against 98.7% with it, because the conserved 5.8S let partial alignments win; and the encoder’s embeddings depended on inference batching.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.64898/2026.09.17.752437",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Protein-failure benchmark",
+  "description": "Data, frozen splits and evaluation artifacts for the preprint \"Label artifacts in public protein-failure data originate from laboratory identity, and are removed by neither tag stripping nor adversarial debiasing\" (Ganggang Liu, bioRxiv 2026). Contents. Six-stage experimental-failure labels (clone / express / soluble / purify / stable / bind) unified from four public sources into a three-state schema (1 = success, 0 = observed failure, −1 = unobserved and excluded from loss), together with four leakage-verified frozen splits, the center folds used for held-out-center evaluation, and the provenance files (.prov.json) recording sha256, byte count and row count for every artifact and for all of its upstream inputs. Scale caveat — read this before counting records. 2,380,297 records collapse to 98,617 clusters at 30% sequence identity; by source the shrinkage ranges from ÷1.6 to ÷6,661. This measures effective diversity for cross-protein generalization, not data quality. Count clusters, not records. Why the splits matter. On an identical set of test items, a model trained within the held-out center reaches PR-AUC/base 1.85, while the same model trained across centers reaches 1.01 against a measured random control of 1.03 — despite the cross-center training set being 4.0–17.7 times larger. Homology-based redundancy reduction, the standard precaution in this literature, does not separate these two cases. Licensing. This deposit is released as a single work under CC BY-SA 4.0.",
+  "year_of_publish": 2026,
+  "source": "https://doi.org/10.5281/zenodo.23189682",
+  "provenance": {
+    "added_by": "scan",
+    "added_at": "2026-10-25",
+    "run": "2026-08-20_2026-10-23",
+    "gated": true
+  }
+}
