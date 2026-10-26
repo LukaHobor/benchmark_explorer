@@ -1,12 +1,26 @@
 {
   "name": "ManiUnit",
   "description": "Long-horizon mobile manipulation requires a robot to navigate multi-room environments and execute a sequence of manipulation skills under a single natural language instruction. Learning and evaluating these skills present three challenges: similar observations under a fixed task instruction may make skill selection ambiguous; even when a preceding skill succeeds, the robot state inherited by the next skill may deviate from its demonstrated starting states and affect execution; and task-level metrics hinder skill-specific diagnosis, while early failures leave later skills untested. We therefore introduce ManiUnit, a manipulation skill dataset and benchmark built from 50 BEHAVIOR-1K activities. Its dataset contains 137,899 segments across 21 skill types and 417 subtasks, and its benchmark contains 1,260 test instances. Correspondingly, ManiUnit pairs each segment with an explicit subtask instruction; measures sensitivity to perturbations of the robot's starting base position or joint configuration; and restores intermediate simulator states and defines local success conditions so that each skill can be evaluated without executing preceding stages. Evaluations of representative vision-language-action (VLA) policies show that similar aggregate scores can hide substantial per-skill differences.",
+  "category": "multimodal",
+  "domain": "robotics manipulation",
+  "task_types": [
+    "planning",
+    "instruction_following",
+    "agentic",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2610.12089",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

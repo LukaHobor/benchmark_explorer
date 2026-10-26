@@ -1,12 +1,25 @@
 {
   "name": "GPAgentBench-2K",
   "description": "Large Language Models (LLMs) show great potential as clinical agents, yet existing benchmarks reduce clinical workflows to static predictions or unconstrained Markov Decision Processes (MDPs) with coarse action sets. To address this, we introduce GPAgentBench-2K, the first Constrained MDP (CMDP) LLM-agent benchmark for primary-care clinical decision-making, constructed from expert-validated records of real-world GP encounters. Our environment models a full spectrum of six foundational clinical actions, imposes a topological workflow prior over the action space, and operationalizes safety-informed abstention as a first-class outcome. Evaluating 16 state-of-the-art LLMs reveals a significant performance degradation as the action space scales. Crucially, we uncover a clinical quality-safety gap: even frontier models with the highest diagnosis accuracy violate safety constraints in over half of high-risk cases. Finally, we establish a reference point using Constrained Group Relative Policy Optimization (C-GRPO), and show that while explicitly modeling constraints improves performance over unconstrained RL methods, it remains far from clinically acceptable safety.",
+  "category": "text",
+  "domain": "primary care clinical decision-making",
+  "task_types": [
+    "agentic",
+    "planning",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2608.30188",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

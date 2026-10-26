@@ -1,12 +1,25 @@
 {
   "name": "RealityBench",
   "description": "Augmenting worker capabilities in the physical world through guidance has been a decades-long goal for AI agents. One key supporting capability is to understand what the worker is doing, seeing through the human's camera or smart glasses, and assist them in documentation. Despite advances in vision language models, their capabilities in these settings remain uncertain and are challenging to benchmark because most physical work data is proprietary, and involves too much variability to study in a principled manner. Unlike structured settings such as kitchens and warehouses that have predictable lighting, geometry, and objects, field-facing tasks such as rooftop solar installation and vehicle repair are unconstrained and high variance. Here, we model real-world physical work in Blender across eleven environments, incorporating variants in both image acceptability and documentation. The acceptability task asks whether a particular view would be suitable proof-of-work and documentation asks whether an agent can understand the task-relevant state of the environment from that view. Across 26 vision-language models, we find that top models largely solve documentation when the answer is text in frame, but are weak at reading measurements and at judging small parts and spatial relations, such as whether a tape measure leans. Acceptability is harder to pin down because human raters disagree with each other.",
+  "category": "multimodal",
+  "domain": "physical work documentation",
+  "task_types": [
+    "classification",
+    "visual_reasoning",
+    "qa"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.14397",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

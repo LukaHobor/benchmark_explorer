@@ -1,12 +1,26 @@
 {
   "name": "MolDesignBench",
   "description": "Real-world molecular design remains challenging for large language model (LLM)-based agents. It requires them to interpret design contexts, satisfy multiple constraints, identify infeasible specifications, and reason over multi-step tool outputs. Existing benchmarks do not capture this complexity, focusing instead on explicit and narrow constraints, only feasible problems, and single-path solutions. To address this gap, we propose MolDesignBench, a scenario-grounded benchmark that more closely reflects real-world molecular design for evaluating tool-augmented LLM agents. MolDesignBench comprises 2K generation and optimization instances that combine implicit requirements embedded in design narratives with explicit property and functional-group constraints, including infeasible cases, and require the effective use of 17 specialized chemistry tools. Experiments across diverse frontier LLMs reveal low success rates--with the best achieving only $\\sim43$\\%--and frequent failures in implicit-constraint reasoning, infeasibility detection, and tool reasoning. The corresponding fine-grained failure-mode analysis identifies implicit constraint interpretation and infeasibility detection as the primary bottlenecks, establishing MolDesignBench as a rigorous testbed to guide future research on chemical agents. The benchmark, tool interface, and evaluation code are publicly available.",
+  "category": "mixed",
+  "domain": "molecular design",
+  "task_types": [
+    "generation",
+    "agentic",
+    "planning",
+    "instruction_following"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://arxiv.org/abs/2609.27349",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

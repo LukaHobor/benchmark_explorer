@@ -1,12 +1,25 @@
 {
   "name": "PDEU-Bench",
   "description": "Large language model (LLM) agents are evolving from tool-calling systems that execute isolated instructions into task-oriented agents that pursue user goals through sustained, multi-step interactions. However, existing benchmarks for personalized tool use largely assess isolated calls or reactive execution, leaving unclear whether agents can formulate, execute, and revise an explicit plan while preserving user preferences throughout long-term interaction. To address this gap, we introduce PDEU-Bench (Personalized plan Definition, plan Execution, and plan Update Benchmark), a benchmark for evaluating the complete planning lifecycle of personalized tool-using agents. PDEU-Bench comprises 214 long-horizon interaction tasks spanning 12 everyday domains and 94 tools, with stage-specific assessments of preference adherence and plan quality. Extensive evaluations of 15 representative open-source and closed-source LLMs reveal a pronounced gap between local tool execution and dynamic planning: LLMs can often instantiate preferences in individual calls, yet struggle to construct coherent plan definition and plan update. We further evaluate mainstream personalization and memory-augmentation methods. Although these methods improve particular stages, none of the evaluated methods reliably propagates user preferences throughout the complete lifecycle, and their gains frequently fail to transfer to subsequent execution.",
+  "category": "text",
+  "domain": "personalized agent planning",
+  "task_types": [
+    "agentic",
+    "planning",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2609.34930",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

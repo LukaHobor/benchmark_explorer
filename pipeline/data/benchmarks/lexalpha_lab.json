@@ -1,12 +1,25 @@
 {
   "name": "LexAlpha Lab",
   "description": "Legal benchmarks of large language models (LLMs) commonly report a \"hallucination rate\". The most influential operationalisation, by Magesh et al. (2025), decomposes factual hallucination into correctness and groundedness and labels a response as hallucinated when it is incorrect or misgrounded. This paper argues, on the basis of a working benchmark of LLMs on Polish civil procedure (LexAlpha Lab), that the framework does not transfer one-to-one to civil-law systems. Three observations support the claim: (1) the two dimensions overlap on the error types that matter most in statute-based law; (2) a wrong case citation and a wrong statutory content do not carry the same weight where the statute, not the judgment, is the source of law; (3) the currency of the provision's wording, which Polish official sources (ISAP) date precisely, is not measured by any published benchmark with numbers. I propose to replace the binary question \"did the model hallucinate?\" with \"is the answer correctly grounded?\", defined as: the cited designation exists, the content attributed to it is really there, and the wording was in force on the date of the question. Preliminary results from 65 answers (10 models without tools, 3 systems with search; 4 model judges, Cohen's κ 0.81–0.93 against the cards before the author's review) are reported, together with the limitations of the pilot and the reasons for keeping the criteria simple enough to re-run on every monthly model release.",
+  "category": "text",
+  "domain": "legal reasoning",
+  "task_types": [
+    "qa",
+    "open_ended",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Social Measurement & Professional Domains",
   "source": "https://doi.org/10.5281/zenodo.23438195",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

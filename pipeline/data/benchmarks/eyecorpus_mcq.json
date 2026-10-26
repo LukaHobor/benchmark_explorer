@@ -1,12 +1,25 @@
 {
   "name": "EyeCorpus-MCQ",
   "description": "EyeCorpus v1 is an openly licensed ophthalmology knowledge corpus for retrieval-augmented language models: 107,967 retrieval passages from 3,560 CC BY or CC0 ophthalmology review articles (Europe PMC, 2015–2026) and 564 eye-disease definitions from the Human Disease Ontology, each with source identifier, section, year, licence and citation. EyeCorpus-MCQ provides 5,610 de-duplicated ophthalmology multiple-choice questions derived from MedMCQA (Apache-2.0) with fixed development (200), test (1,000) and pool (4,410) splits, subspecialty labels, near-duplicate and corpus-overlap flags. Reference baselines include BM25, MedCPT and BGE indexes, retrieval runs and per-question outputs of four local language models. Files. The three folders described in README.md (corpus/, questions/, baselines/) are provided as zip archives; unzip all three into one folder. checksums.txt verifies every unzipped file (sha256sum -c checksums.txt); zenodo_checksums.txt verifies the archives as downloaded. Licences. Passage text keeps the licence of its source article (CC BY 4.0 or CC0, recorded per passage); questions keep the MedMCQA Apache-2.0 licence (see questions/NOTICE.txt); all other files are CC BY 4.0.",
+  "category": "text",
+  "domain": "ophthalmology",
+  "task_types": [
+    "multiple_choice",
+    "qa",
+    "retrieval"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.23451075",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

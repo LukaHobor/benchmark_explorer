@@ -1,6 +1,8 @@
 {
   "name": "FP Corpus",
   "description": "A false-positive corpus for secret scanners: 109 formats of ordinary log and build output containing zero credentials, plus a recall half of 42 formats with 81 planted synthetic credentials and an answer key. Ships as a GitHub Action that gates the build.",
+  "category": "text",
+  "domain": "cybersecurity",
   "tags": [
     "benchmark",
     "continuous-integration",
@@ -17,13 +19,22 @@
     "security",
     "test-corpus"
   ],
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
   "year_of_last_update": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://github.com/levainbot/fp-corpus",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

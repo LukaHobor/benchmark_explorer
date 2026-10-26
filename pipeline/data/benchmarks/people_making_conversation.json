@@ -1,12 +1,26 @@
 {
   "name": "People Making Conversation",
   "description": "A conversational speech model has to decide, at every pause, whether to speak. Existing evaluations test boundary detection, policy adherence, or aggregate statistics, not this decision. We place real-time speech systems at 427 pauses and 482 turn ends from 176 unscripted conversations in Seamless Interaction, give each the conversation so far, and score what it generates against what the person did: whether and how soon it speaks at a pause; its latency, length, and wording at a turn end; and whether it can answer a question about the preceding 30 to 120 seconds. Across six systems, the hosted APIs (GPT Realtime, Gemini 3.1 Flash Live, Grok Voice) respond at almost every pause whichever endpointer they use; only their latency, about 1 to 4 s with silence-based endpointers and about 8 s with semantic turn detection, decides whether the words land inside the pause. The full-duplex models (PersonaPlex, Moshi) are the only systems that regularly stay silent and the only ones that interrupt within a human reaction time. Hosted systems reply longer than the person. Given the history as text, hosted systems recall 41 to 60% of conversation facts under a Claude Opus 5.5 judge and 19 to 26% under a strict word matcher; hearing it as audio, full-duplex models recall 17 to 22% and 12 to 15%. We release the labels, points, harness, and every output.",
+  "category": "audio",
+  "domain": "conversational speech",
+  "task_types": [
+    "audio_understanding",
+    "dialogue",
+    "generation",
+    "agentic"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://arxiv.org/abs/2610.12802",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,23 @@
 {
   "name": "VANTAGE-NIDS",
   "description": "VANTAGE-NIDS (Verified Attack Network Traffic with Auditable Ground-truth for Evaluation) is a labeled network intrusion detection flow dataset generated in an isolated, on-premise cyber range. A single attacker host executed 67 attack scenarios across two phases. The first phase covered 47 scenarios spanning reconnaissance through LLM prompt injection. The second added 20 scenarios on modern API-security and fintech business-logic attack surfaces, including BOLA, mass assignment, SSRF, JWT algorithm confusion, payment race conditions, and further botnet and brute-force volume. Targets were six vulnerable-application hosts, one SSH-only host, and a shared processing host. A scripted generator produced continuous benign background traffic throughout. Traffic was captured on the attacker's monitored interface, transferred to the processing host, and converted into per-flow feature records with CICFlowMeter v4.0. Each flow received one of nine taxonomy labels (benign, dos, ddos, exploit, reconnaissance, web_attack, bruteforce, botnet, ai_attack). Labels were assigned by matching a flow's capture timestamp against a JSONL orchestration manifest recording the exact start and end time of every scenario execution, then verifying the flow's destination address against that scenario's recorded victim.",
+  "category": "mixed",
+  "domain": "cybersecurity",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.22121598",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

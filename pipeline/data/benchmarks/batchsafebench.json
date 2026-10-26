@@ -1,6 +1,15 @@
 {
   "name": "BATCHSAFEBENCH",
   "description": "Batch prompting, which combines a batch of multiple queries sharing the same context in one inference, has emerged as a promising solution to reduce inference costs. However, our study reveals a significant security vulnerability in batch prompting: malicious users can inject attack instructions into a batch, leading to unwanted interference across all queries, which can result in the inclusion of harmful content, such as phishing links, or the disruption of logical reasoning.",
+  "category": "text",
+  "domain": "prompt injection security",
+  "task_types": [
+    "safety_redteam",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "attack_success_rate",
+  "general_score_metric": "attack_success_rate",
   "year_of_publish": 2025,
   "creators": {
     "scientists": [
@@ -10,11 +19,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2503.15551",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

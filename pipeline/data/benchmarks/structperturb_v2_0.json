@@ -1,12 +1,24 @@
 {
   "name": "StructPerturb v2.0",
   "description": "Handwritten mathematical expression recognition (HMER) is conventionally scored by exact-match rates and string-similarity metrics that are blind to where an error occurs: two predictions with identical token-error counts receive identical scores whether they misplace a subscript or swap the operands of a fraction. Render-based character detection matching (CDM) aligns glyphs robustly but remains position-blind---on controlled fraction-operand swaps it scores 0.8595 where position-aware scoring yields 0.6253. Tree-edit metrics exhibit a complementary blind spot: rewrites outside the parser's normalization coverage are penalized as structural errors (0.8552 where render-based metrics score 1.0). We propose PA-CDM, a position-aware metric that couples character detection matching with position-forest encoding and divergence-level weighting; StructPerturb v2.0, a frozen benchmark of 1,340 controlled perturbation pairs across 15 type--intensity cells; and a cross-metric consistency protocol combining a sensitivity matrix, a human study, and LLM-judge calibration. In a six-annotator study, PA-CDM attains the highest correlation with human judgments among seven automatic metrics (Spearman rho=0.9535, n=990). A frontier LLM judge correlates slightly higher (rho=0.9613) but is costly, nondeterministic, and API-dependent; PA-CDM approaches it at zero marginal cost with deterministic, diagnosable behavior.",
+  "category": "vision",
+  "domain": "handwritten mathematical expression recognition",
+  "task_types": [
+    "perception",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human_eval",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.12917",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

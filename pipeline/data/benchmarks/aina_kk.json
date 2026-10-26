@@ -1,12 +1,23 @@
 {
   "name": "AINA-KK",
   "description": "AI-text detectors are already applied to Kazakh writing, yet no study reports how often publicly available detectors flag Kazakh text whose human authorship is dated before ChatGPT. We present AINA-KK: 3,811 human passages from encyclopedic, news, web and educational pages that provably existed before ChatGPT, and 5,597 machine and gray-zone passages from 9 generators, including the Kazakh-built KazLLM and Sherkala, with script and length stress tests. Five English-trained detectors from the Hugging Face Hub flag up to 81.4% of human passages and 79.6% of published student essays; recalibrated, they catch at most 1.3% of machine text. Calibrated zero-shot detectors catch at most 50.3% of machine text from in-distribution generators. Fine-tuned encoders rank text almost perfectly, but mDeBERTa at its default threshold flags 24.4% of 50-word human excerpts, partly because machine outputs are shorter than human text; calibrated, it catches only 47.1% of KazLLM and 62.7% of Sherkala passages. Without script handling, machine-transliterated Latin-2021 text defeats every detector. Fixes that need no new data (calibration, script canonicalization, script-augmented and length-matched training, and an OR with a zero-shot scorer) form AINA-KK-Det.",
+  "category": "text",
+  "domain": "kazakh ai-text detection",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://arxiv.org/abs/2610.15870",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,24 @@
 {
   "name": "MM-FinEval",
   "description": "Financial forecasting from earnings conference calls requires models to reason over complex corporate disclosures, market expectations, and subtle communication signals. However, existing financial benchmarks are often limited to unimodal inputs or single-task settings, making it difficult to evaluate whether multimodal large language models (LLMs) can support real-world financial analysis. In this paper, we introduce MM-FinEval, a novel benchmark designed to evaluate multimodal LLMs across multiple financial tasks. MM-FinEval spans a diverse timeline from 2019 to 2022. The entire proposed dataset contains 2,045 S\\&P 500 conference earning calls as inputs and 12 financial task labels as outputs. Each input contains three modalities: a word-to-word text transcript of the earning call, the corresponding presentation slides used during the call, and the entire audio recording. To establish a rigorous evaluation framework, we analyze 19 baseline models across three distinct model categories: Image-Text, Audio-Text, and Any-to-Any configurations. We observe that small-size Any-to-Any models processing all three modalities achieve strong performance, even when compared against larger proprietary models restricted to two-modality inputs. This indicates that our tri-modal dataset design introduces useful, non-redundant information.",
+  "category": "multimodal",
+  "domain": "financial forecasting",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.38523",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

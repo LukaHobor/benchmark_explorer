@@ -1,12 +1,25 @@
 {
   "name": "AI4Fire",
   "description": "Large language models (LLMs) are entering wildfire management, where overstated evaluations can cost property and lives. How do they perform on wildfire tasks, with and without grounding? Bare means a model receives the task input alone. Grounded means it also receives one task-specific addition: for smoke detection, a smoke-free reference frame from the same camera. AI4Fire runs six core models bare and grounded on five wildfire tasks, zero-shot; a sweep adds 29 more. Our literature search on fire tasks found 138 works; none combines this roster, task coverage, and paired bare and grounded runs. We report three findings. (1) Grounding helped most where the addition carried the answer: a read-only SQL tool lifted every core model's database accuracy from at most 16 to at least 88 percent. (2) Simple rules were hard to beat: no core model outperformed repeating today's staffing count, and two open-weight models mostly copied the median of similar earlier fire-days, a worse forecast. (3) Public releases carry hazards: a fire-danger column separates the holdout perfectly, and 67 aerial fire frames carry smoldering or fire-free labels read from a clipped thermal maximum. We release prompts, responses, scores, code, and the survey record.",
+  "category": "mixed",
+  "domain": "wildfire management",
+  "task_types": [
+    "classification",
+    "regression",
+    "qa"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Reasoning & Problem Solving",
   "source": "https://arxiv.org/abs/2610.10946",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

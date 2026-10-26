@@ -1,12 +1,24 @@
 {
   "name": "MODA General Attribute Suite",
   "description": "Fashion attribute extraction is evaluated inconsistently: results are reported as single aggregate numbers across image types that pose different problems, fields that are not visible in an image are scored as ordinary negatives, and the effect of vocabulary mismatch between datasets is acknowledged but not measured. We release the MODA General Attribute Suite, a four-track benchmark that keeps these problems separate by construction. Each track (localized garment crops, catalogue product images, applicability-aware full-body photographs, and product text) carries its own frozen test set, input contract, metric, and leakage unit, and the tracks are never averaged. The protocol requires label-blind prediction, SHA-256 commitment of prediction files before any label is opened, a fail-closed scorer, and a 10,000-sample paired cluster bootstrap at each track's natural leakage unit; promotion requires a positive interval on every track rather than a favourable mean. We release the scorers, the split builders, our own prediction files with their hashes for every image-track system in the main results and for runs we lose, and the MODA_NER(V) model checkpoints for three of the four tracks. The text model is not distributed; its benchmark is. We report baseline results, six interventions that did not improve them, and the limitations of the evidence.",
+  "category": "multimodal",
+  "domain": "fashion attributes",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.13279",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

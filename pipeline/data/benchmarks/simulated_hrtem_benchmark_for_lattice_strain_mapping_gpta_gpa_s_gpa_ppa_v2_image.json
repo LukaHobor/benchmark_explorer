@@ -1,12 +1,24 @@
 {
   "name": "Simulated HRTEM benchmark for lattice strain mapping (GPTA / GPA / S-GPA / PPA): v2 image set",
   "description": "Simulated benchmark underlying Table 1 and Figs. 4–6 of Han & Tian, \"From phase analysis to phase tracking: closed-loop strain mapping at atomic resolution\" (2026). The v2 image set contains 10 248 simulated HRTEM/STEM scenes of 256² px in ten physical families (smooth elastic fields, thickness and foil geometry, dislocations and dipoles, planar defects, grain boundaries and mosaics, heterointerfaces and crack tips, continuous rotation and kink bands, lattice modulations, real crystal structures, mixed/masked images) at doses from 1 to 500 electrons per pixel and under sixteen degradation axes. Each scene carries the benchmark image, the noise-free image, the ground-truth displacement and deformation-gradient fields F, validity and domain masks, the local reciprocal basis, imaging metadata, and the projected atom positions of the source structure. Also included: per-scene, per-method results (GPA, S-GPA, PPA, GPTA) for this set and for the v3 set (3 547 scenes of 1024² px), the scene index, manifests, exclusion lists used in the Supplementary tables, and the experimental HAADF-STEM same-field stacks of Fig. 6 (Pt polycrystal, Pt bicrystal, dislocation region). The v3 images (~100 GB) are available from the corresponding author on request. Generator, evaluation protocol and scoring code: https://github.com/YTianUCI/LatticeStudio. README.md documents the layout and the scene-family key; md5sums.txt lists checksums.",
+  "category": "vision",
+  "domain": "materials microscopy",
+  "task_types": [
+    "perception",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.57760/sciencedb.010xy",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

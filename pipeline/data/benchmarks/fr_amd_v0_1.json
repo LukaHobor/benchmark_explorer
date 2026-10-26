@@ -1,12 +1,24 @@
 {
   "name": "FR-AMD v0.1",
   "description": "FR-AMD v0.1: a reproducible dataset and benchmark-in-progress for extracting amendatory instructions from final U.S. federal rules. 4,540 final rules (2024-01-01 to 2026-08-24, documented eligibility predicate with exclusion counts); 26,824 SILVER-tier rows (20,054 verified instructions, 6,770 recorded abstentions with reasons), every row hash-tied to official Federal Register XML; deterministic document-level train/dev/test splits; a 700-item gold-tier sampling frame (GOLD_PENDING_HUMAN) under a pre-registered two-coder blind protocol; a seeded-error judge-calibration suite with two model-family runs; a one-to-one reference scorer; and two zero-shot frontier-model baselines scored as agreement-with-silver (not accuracy). SILVER means produced by FRTracker's deterministic parser: benchmarking against it measures agreement with that parser. Known issues are disclosed in the data card, including the contested chapeau-operativity convention. Underlying Federal Register text is a U.S. Government work (public domain); this compilation, labels, documentation and tooling are CC-BY-4.0. Maintained at https://frtracker.app; release-candidate status: schema may change before v1.0 (which requires the populated gold tier).",
+  "category": "text",
+  "domain": "legal regulatory text",
+  "task_types": [
+    "classification",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match",
   "year_of_publish": 2026,
+  "capability_category": "Social Measurement & Professional Domains",
   "source": "https://doi.org/10.5281/zenodo.22096638",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

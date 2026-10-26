@@ -1,12 +1,23 @@
 {
   "name": "AI Humanizer Benchmark",
   "description": "The complete published data of the AI Humanizer Benchmark, a monthly measured benchmark of AI humanizers: tools that rewrite AI-generated text so that it reads as human. Each release archives one published cycle alongside every cycle published before it. Method. Within a cycle, every humanizer is run automatically on its default settings over an identical set of freshly generated AI-written texts spanning a fixed set of writing categories. Every output is then submitted to a panel of commercial AI detectors. Per test, the bypass score is the median verdict across the panel, so no single lenient detector can carry a tool. Each output is also scored for meaning preservation, measured as embedding similarity to the input, and for readability. The published composite weights detector bypass 42 percent, meaning preservation 32 percent, readability 16 percent and consistency across writing categories 10 percent, less penalties for quality failures including severe meaning drift, length inflation or deflation, refusals, and output returned unchanged. A tool that fails to return output on at least half its attempts is marked unavailable and excluded rather than scored. Prompt commitment. Each cycle's prompt set is fixed by a commit-reveal scheme. A random 32-byte nonce is generated before the cycle runs and only its SHA-256 is published; the nonce seeds which values fill the prompt templates.",
+  "category": "text",
+  "domain": "text rewriting and ai detection evasion",
+  "task_types": [
+    "generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://doi.org/10.5281/zenodo.22966275",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

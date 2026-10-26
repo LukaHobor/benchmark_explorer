@@ -1,12 +1,26 @@
 {
   "name": "MatToolBench",
   "description": "Multimodal GUI agents have achieved impressive results on general software benchmarks, yet their ability to operate professional scientific software remains largely unexplored. In materials science, sparse domain-specific web data, specialized interfaces, and tacit workflow conventions create blind spots that general-purpose pretraining cannot readily bridge. We present MatToolBench, the first real-environment benchmark for evaluating multimodal GUI agents on professional materials science software, comprising 204 tasks across 10 tools in three modalities: GUI operation, OriginPro scripting, and code-based database queries, all executed inside a Windows 11 VM. Each task is decomposed into fine-grained sub-criteria by domain experts, enabling interpretable partial-credit scoring; the GUI component of our multi-level evaluation pipeline achieves an average F1 of 0.98. For OriginPro figure-generation tasks, we further conduct a human-LLM agreement study to validate the use of a multimodal judge for secondary aesthetic assessment. Our experiments show that strong performance on general benchmarks does not transfer to professional scientific workflows, and that this gap is not a visual-grounding problem alone: failures arise from domain-specific operational knowledge, sparse pretraining coverage of scientific software, weak cross-tool artifact handoff, and critical states exposed only visually. Even the best model reaches only 25% success rate on GUI tasks and 45% on code tasks.",
+  "category": "mixed",
+  "domain": "materials science software",
+  "task_types": [
+    "agentic",
+    "planning",
+    "code_generation",
+    "perception"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2609.37053",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

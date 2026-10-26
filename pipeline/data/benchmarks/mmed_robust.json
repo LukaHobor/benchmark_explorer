@@ -1,12 +1,24 @@
 {
   "name": "MMED-Robust",
   "description": "MMED-Robust adalah benchmark steganalisis berpasangan dan terpisah sumber yang terdiri dari 13.000 file yang dibangun dari 2.500 sumber BOSSbase 1.01 (1.600/400/500 data latih/validasi/uji) dengan Adaptive LSB-MMED pada 0,2 bpp di bawah sembilan kondisi (C0-C8: kompresi JPEG tunggal dan berantai serta noise Gaussian). Rekaman ini menyertai artikel \"Memulihkan Reproduksibilitas Bit-Eksak pada Benchmark Steganalisis di bawah Kompresi JPEG Berantai dan Derau Gauss melalui Pemulihan Salt Kondisi dan Audit Artefak Pelatihan\" (Jurnal Teknik Elektro). Rekaman ini berisi: (1) manifest SHA-256, metadata Croissant 1.0 dan tabel enam salt kondisi 16-bit yang dipulihkan yang membuat kondisi noise Gaussian beregenerasi secara identik byte; (2) kode pembangkitan, pelatihan, evaluasi dan audit, termasuk perbaikan kompatibel mundur dari seed noise; (3) titik pemeriksaan, riwayat pelatihan, metadata, dan prediksi uji per gambar dari sembilan percobaan dasar (SRNet, WSERNet, HSMNet; seed 42, 43, 44); dan (4) keluaran audit artefak pelatihan dan perhitungan ulang metrik. Gambar BOSSbase dan file PNG yang dihasilkan TIDAK disertakan karena lisensi BOSSbase; README.md menjelaskan cara membangun kembali dan memeriksa setiap file terhadap manifest.csv. Titik pemeriksaan adalah file pickle: verifikasi SHA256SUMS.txt sebelum memuatnya. Regenerasi bit-tepat hanya diklaim untuk lingkungan audit yang dijelaskan dalam README.md.",
+  "category": "vision",
+  "domain": "image steganalysis",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.5281/zenodo.23524042",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

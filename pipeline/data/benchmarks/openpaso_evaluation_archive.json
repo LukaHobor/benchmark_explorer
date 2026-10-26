@@ -1,12 +1,25 @@
 {
   "name": "openPASO evaluation archive",
   "description": "Data and code behind \"openPASO: an agentic open-source multi-physics and multi-code framework for verifiable computer simulations\" (Hermann, Shojaei, Scheider, Cyron). The archive holds what the paper's numbers rest on: the source of the evaluated openPASO, the 22 evaluation instances, their manufactured solutions (released after grading), the fingerprints recorded before the runs, every run with its grade, and the analysis. The evaluation in brief Three openly downloadable AI models (Qwen3.5-27B, Qwen3.5-122B-A10B, Qwen3.5-397B-A17B) solved 16 single-code and 6 coupled finite-element problems, each with and without openPASO, with three seeds per problem. Every instance's manufactured solution was drawn fresh and kept sealed (stored encrypted) until grading; the agent received only the data derived from it and reported its computed values at a fixed grid of points. The single-code runs used openPASO at commit ec8db887, the coupled runs at commit f1787b80; every run's ledger records its commit. A small out-of-family test, made after the evaluation under the same protocol, ran two instances of families never used in development; its runs used commit df984f6f, identical to f1787b80 in every archived file (out_of_family.tar.gz).",
+  "category": "code",
+  "domain": "physics simulation",
+  "task_types": [
+    "agentic",
+    "code_generation",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://doi.org/10.5281/zenodo.23246701",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

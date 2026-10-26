@@ -1,12 +1,25 @@
 {
   "name": "R-GroundBench",
   "description": "Recent advances in AI for scientific discovery enable molecular understandingand design, yet reasoning over incomplete chemical representations remainsunclear.Markush structures, which encode molecular families through variable R-groupplaceholders (\\textit{R1}, \\textit{R2}, X, etc.), are ubiquitous in pharmaceutical patents and requiregrounding across molecular, textual, and chemical information.However, existing molecule-language benchmarks focus on fully specifiedmolecules, leaving R-group grounding largely unevaluated.We introduce R-GroundBench:, a diagnostic benchmark built from real patent Markushstructures, featuring a Multiple-Choice (VQA) track with controlled difficultyand modality splits, and an open-ended Generation track.Our results reveal a substantial gap between recognition andmolecular grounding.While models achieve over 90\\% accuracy on Easy VQA, performance drops to56--66\\% on Hard VQA when shortcuts are controlled.Chemical-domain VLMs also remain unreliable, achieving only 25.7--46.2\\% on HardVQA despite domain-specific pretraining.Moreover, Generation Exact Match remains below 20\\% for most models and below8\\% when visual input is required.These findings reveal that current AI systems lack reliable grounding andexecution for Markush editing, highlighting challenges for AI-drivenscientific discovery.",
+  "category": "multimodal",
+  "domain": "chemistry",
+  "task_types": [
+    "multiple_choice",
+    "generation",
+    "visual_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy, exact_match",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.00700",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

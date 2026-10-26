@@ -1,12 +1,23 @@
 {
   "name": "RXSynth",
   "description": "Existing Java bug benchmarks offer limited method-level data for studying runtime-exception detection. Filtering Defects4J, Bugs.jar, Bears, and BugSwarm yields only 170 real buggy/fixed method pairs across seven unchecked exception types. We introduce RXSynth, a corpus of 4,275 synthetic Java method pairs generated from real bug/fix exemplars. We select the generator using structural alignment with real seeds and validate pairs using a two-stage patch-anchored procedure that identifies the labelled exception risk and checks whether the repair removes it. Independent JVM execution confirms patch-local validity for 84.2% of a stratified sample of 500 pairs. Provenance records enable evaluation without overlap between generation exemplars and test bugs. Structural analyses show good alignment within the represented size range, but compression of larger methods. We use RXSynth to compare isolated-method detection with pair discrimination when the repair is visible. Under provenance-controlled evaluation, supervised isolated-method ROC-AUC is about 0.55-0.64. Stronger zero-shot models reach about 69% accuracy but identify only 41.2% of repaired methods correctly. In contrast, fine-tuned encoders achieve 70.4-74.8% accuracy with both versions available. However, a simple token-growth rule achieves 84.7% expected accuracy, highlighting repair-direction cues.",
+  "category": "code",
+  "domain": "software bug detection",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://arxiv.org/abs/2610.24902",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

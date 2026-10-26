@@ -1,12 +1,24 @@
 {
   "name": "variant-fm-benchmark",
   "description": "Ranking is saturated, calibration is not, and neither changes the evidence strength — code and frozen analysis set Software and frozen data underlying the manuscript \"Ranking is saturated, calibration is not, and neither changes the evidence strength: an independent benchmark of splice-region variant effect predictors against a functional standard\" (N. Zhang). WHAT CHANGED IN THIS VERSIONThis release adopts frozen-matrix-v2 as the analysis set. The SpliceAI, Pangolin and Nucleotide Transformer columns of the published frozen-matrix-v1 are replaced by the output of pinned scorers — Pangolin at git commit 5cf94b8 and SpliceAI at full floating-point precision, both reproducing the v1 columns exactly when re-rounded to the printed precision; Nucleotide Transformer re-scored under a pinned environment (rank correlation with the original column ρ = 0.9997) — and nothing else in the matrix is changed. The external TP53 validation now uses all ten predictors. Positive likelihood ratios are reported on two bases: at the scanned observed threshold and interpolated to exactly 95% specificity. The v1 result tables are retained beside the v2 tables, with a listing of every quantity that moved between them.",
+  "category": "mixed",
+  "domain": "genomics",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "likelihood_ratio",
+  "general_score_metric": "likelihood_ratio",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.22674887",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

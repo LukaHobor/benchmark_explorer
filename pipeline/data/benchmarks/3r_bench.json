@@ -1,12 +1,25 @@
 {
   "name": "3R-Bench",
   "description": "Cybersecurity assistance is dual use, requiring decisions about when to answer, limit, or refuse a request. Prior work studies refusal evaluation and conversational jailbreaking, but how conversational histories shift assistance boundaries in both directions for identical cybersecurity requests remains underexplored. We introduce 3R-Bench, a benchmark of 150 real-world cybersecurity requests evaluated across eight LLMs under direct prompting and two predefined conversational settings. We separately code refusal, bounded assistance, compliance, and provider blocking to characterize delivered assistance. On 400 matched ambiguous request-model pairs, compliance is 75.3% directly, 57.8% after refused precedent, and 81.0% after accepted precedent. A smaller repeated-generation panel reproduces the refusal-acceptance gap. On a balanced 75-request panel reusing the direct baseline, compliance decreases from 74.2% directly to 57.2% after neutral task-decomposition dialogue and 60.3% after failure-ended dialogue. These findings show that cybersecurity assistance varies with conversational history and model deployment, motivating evaluation beyond direct-request refusal rates.",
+  "category": "text",
+  "domain": "cybersecurity safety",
+  "task_types": [
+    "classification",
+    "safety_redteam",
+    "dialogue"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.00578",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

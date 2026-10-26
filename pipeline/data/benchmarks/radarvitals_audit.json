@@ -1,12 +1,24 @@
 {
   "name": "radarvitals-audit",
   "description": "On the public clinical radar dataset of Schellenberger et al. (24 GHz radar, 30 adults, ECG and continuous finger pressure), the within-subject evaluation protocols used by learned heart-rate and blood-pressure estimators are matched by a lookup of each subject's resting value, and a generic network that reaches the same errors identifies the subject from a radar window with 99% accuracy. On held-out subjects the network falls to the population median at rest, while the dataset authors' own classical pipeline scores 0.6 beats per minute. Pooling the five recording scenarios makes subject-disjoint heart rate learnable. radarvitals-audit holds the window and label derivation, every estimator and protocol, the released split files, and tests that pin every number the paper reports.",
+  "category": "mixed",
+  "domain": "biomedical radar vital-sign estimation",
+  "task_types": [
+    "regression",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MAE",
+  "general_score_metric": "MAE",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.23321445",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

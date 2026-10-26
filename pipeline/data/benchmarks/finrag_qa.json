@@ -1,12 +1,25 @@
 {
   "name": "FinRAG-QA",
   "description": "The comparative analysis of banks' financial statements poses significant challenges for automated question answering systems due to their complexity, substantial length, technical language, and inhomogeneity of both textual and numerical content across different jurisdictions and institutions. We introduce FinRAG-QA, a novel benchmark dataset for financial question answering, which comprises 999 practitioner-curated questions on 10 standardised indicators, grounded in 209 annual and Pillar 3 reports from 24 major European and U.S. banks spanning 2019-2023. Unlike prior financial QA benchmarks, which centre on U.S. filings and single-institution analysis, FinRAG-QA targets cross-institutional retrieval over documents averaging 198k words, longer than any existing financial QA resource. On this benchmark we evaluate a multi-stage RAG pipeline and isolate the contribution of each component. Contextual chunk enrichment combined with a retrieval-optimised embedding model raises NDCG@10 from 0.322 to 0.710; conditional on the ground truth being retrieved, a reasoning-optimised generator raises answer accuracy from 44.6% to 79.0% (+34.4 percentage points), at roughly 20x the generation latency. We further show that cross-encoder reranking degrades retrieval when the first-stage ranking is already strong, and that a single top-ranked chunk outperforms larger contexts at generation time. Experiments were run in late 2024-early 2025 with the models available at that time.",
+  "category": "text",
+  "domain": "financial question answering",
+  "task_types": [
+    "retrieval",
+    "qa",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "NDCG@10, accuracy",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://arxiv.org/abs/2609.03654",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

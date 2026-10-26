@@ -1,12 +1,23 @@
 {
   "name": "OpenStack-RCA-Bench",
   "description": "We present OpenStack-RCA-Bench, an open dataset of 64 chaos-engineering incidents for benchmarking RCA methods in OpenStack IaaS. It features a 9-phase pipeline integrating four fault injection methods (service stop, port block, process kill, config corruption), automated log collection via Loki, and ground truth defined by programmatic injection metadata. The benchmark comprises 64 validated incidents across 37 services and 46 fault scenarios spanning controller, compute, network, storage, and critical infrastructure—totalling 145,133 log lines (8.4 MB). A rule-based baseline achieves 92% F1 overall, with 100% on controller-backend and OVN-network categories and 84% on extended fault types. We additionally evaluate state-of-the-art LLMs using zero-shot prompting: Top-1 accuracy reaches 10–16% across models, highlighting the difficulty of log-based RCA. The benchmark and framework are publicly available. The artifact ships as a Docker Compose setup enabling one-click deployment and dry-run validation without external dependencies.",
+  "category": "text",
+  "domain": "cloud infrastructure root cause analysis",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.1145/3832783.3834650",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

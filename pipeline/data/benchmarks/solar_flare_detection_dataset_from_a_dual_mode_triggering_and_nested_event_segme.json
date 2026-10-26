@@ -1,12 +1,24 @@
 {
   "name": "Solar Flare Detection Dataset from a Dual-Mode Triggering and Nested Event Segmentation Algorithm Based on GOES 1–8 Å X-ray Flux",
   "description": "This dataset is a solar flare detection dataset based on dual-mode triggering and nested event segmentation algorithm. The original observations were obtained from the NOAA GOES series satellite X-ray sensor (XRS) secondary scientific data product (1-8 Å channels, 1-minute resolution), https://services.swpc.noaa.gov/json/goes/ ）The true value list of flares is sourced from the official event catalog of NOAA/SWPC（ https://www.swpc.noaa.gov/products/goes-x-ray-flux ）. This dataset is based on the publicly available data mentioned above, which has been time cropped and formatted uniformly. The flare detection algorithm proposed in the article has been run to generate flare detection result data. Furthermore, the grading performance indicators are calculated by time matching with SWPC truth values. Data processing is completed using Python (NumPy, Pandas). The time span of the dataset corresponds to the maximum period of the 25th solar activity cycle, and is strictly divided into a calibration set (May 2024) and an independent test set (the entire year of 2025) according to time segmentation. The calibration set directory calibration_202405 contains three files: goes_xray_202405_1min.txt for GOES X-ray flux (44618 records, listed as timestamp, 1-8 Å flux, 0.5-4 Å flux, in W/m ²); Swpc_flare_list_202405. csv is the official SWPC flare list (378 records, including start and end time, peak time, flare classification, and other fields); AlgorithmDetection_202405.",
+  "category": "mixed",
+  "domain": "solar physics",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.57760/sciencedb.space.0030g",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,24 @@
 {
   "name": "SlugTrails",
   "description": "Floor-plan-based indoor visual localization enables infrastructure-free positioning, but most methods are developed and evaluated in small residential environments unlike the large public buildings of real deployment. We introduce SlugTrails, a floor plan localization benchmark for large indoor spaces under realistic egocentric sensing: $30$ Hz Aria glasses recordings across three campus buildings and six floors ($22089$ m$^2$ of floor plan outline), CAD-derived floor plans with semantic classes and circulation space masks, and trajectories aligned into the floor plan frame using laser-surveyed anchors. One protocol covers three practical ways of gathering geometry under a limited field of view -- a single walking frame, a stationary multi-view sweep, and a walking stream with odometry -- so methods designed for different regimes are compared on the same buildings and ground truth. Evaluating five representative geometric and learned systems under their native sensing configurations, we find that stock checkpoints (official released weights) are near zero on SlugTrails (at most $0.004$ R@1m30$^{\\circ}$ on walking single frames), while fine-tuning on SlugTrails improves every trainable family on all three tasks (e.g., F$^3$Loc $0.0 \\rightarrow 0.141$ single-frame and $0.03 \\rightarrow 0.66$ sequential), with gains compounding as observations accumulate.",
+  "category": "vision",
+  "domain": "indoor localization",
+  "task_types": [
+    "perception",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "recall@1m30°",
+  "general_score_metric": "recall@1m30°",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.19876",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

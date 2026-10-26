@@ -1,12 +1,25 @@
 {
   "name": "NavSafe-$\\infty$",
   "description": "End-to-end (E2E) driving policies have advanced rapidly on open-loop (OL) benchmarks, yet OL evaluation cannot reveal whether a policy can withstand compounding errors, recover from failures, or interact safely with surrounding actors. We introduce NavSafe-$\\infty$, a photorealistic closed-loop (CL) benchmark comprising 280 scenarios spanning 28 event types, each with success and failure criteria defined within a structured traffic-safety taxonomy, yielding category-level capability scores for Traffic Crashes, Vulnerable Road User Crashes, Traffic Violations, and Traffic Incidents. After evaluating 20 E2E policies, we find that OL gains do not reliably transfer to CL safety. Analysis of two common remedies reveals that (1) passive demonstration perturbation helps mainly when CL rollouts stay near their perturbed training states, and (2) OL reinforcement-learning fine-tuning exhibits reward hacking by trading safety margin for ego progress, which CL feedback amplifies into compounding safety-critical errors. Together, these results demonstrate the blind spot of OL benchmarks indicating CL safety success. The benchmark and an extensible toolbox for customizable event curation and policy diagnosis will be open-sourced to facilitate future research.",
+  "category": "vision",
+  "domain": "autonomous driving safety",
+  "task_types": [
+    "planning",
+    "agentic",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2609.26618",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

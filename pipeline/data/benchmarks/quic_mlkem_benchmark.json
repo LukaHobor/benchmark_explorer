@@ -1,12 +1,23 @@
 {
   "name": "quic-mlkem-benchmark",
   "description": "Release Overview Initial release of the empirical testbed, telemetry datasets, and replication artifacts for evaluating NIST FIPS 203 (ML-KEM) key encapsulation in QUIC (RFC 9000 / RFC 9001). Key Contents Network Namespace Automation: Bare-metal isolation scripts (netns_setup.sh, netns_cleanup.sh, apply_netem.sh) for reproducible network impairment injection. Emulation Engine & Orchestration: aioquic-based wire-format cryptographic emulation (quic_engine.py, orchestrator.py) supporting X25519, ML-KEM-512, ML-KEM-768, and hybrid X25519-ML-KEM-768. Empirical Telemetry: Aggregated 2,400-run benchmark matrix (benchmark_results.csv) across varying RTTs (20ms, 80ms, 160ms) and loss rates (0%, 1%, 3%, 5%). Sample Traces: Curated PCAP and TLS key files (sample_pcaps/) validating datagram fragmentation and anti-amplification credit behavior. Analysis Routines: Plot generation and metric extraction pipeline (analyze_proofs.py, generate_summary.py). Archival & Citation This release serves as the persistent artifact package for Zenodo DOI minting and reproducibility verification.",
+  "category": "mixed",
+  "domain": "network performance and post-quantum cryptography",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.22879417",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

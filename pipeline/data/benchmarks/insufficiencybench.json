@@ -1,12 +1,25 @@
 {
   "name": "InsufficiencyBench",
   "description": "Legal AI systems are increasingly used to answer legal questions, yet existing benchmarks assume queries arrive fully specified. In practice, users omit facts that materially determine the legal outcome. We introduce InsufficiencyBench, the first legal benchmark targeting query-side insufficiency: whether a model recognizes when a query lacks legally material information, identifies what is missing, and refrains from premature conclusions. We formalize a taxonomy of eight canonical missing-element categories across three structural failure modes---switch, gating, and fatal prerequisite--- and construct 202 benchmark items (58 base queries, 144 deficient variants) spanning six legal domains and 24 US jurisdictions and annotated by practising attorneys. Evaluating ten frontier models, we find that no model exceeds F2 = 0.46 on missing-element identification and that the median recall is 0.44. Models either hedge indiscriminately or answer silently under fabricated presumptions. No model both identifies and qualifies responses to deficient queries while directly addressing complete ones.",
+  "category": "text",
+  "domain": "legal",
+  "task_types": [
+    "classification",
+    "qa",
+    "open_ended"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "F2",
+  "general_score_metric": "F2",
   "year_of_publish": 2026,
+  "capability_category": "Social Measurement & Professional Domains",
   "source": "https://arxiv.org/abs/2608.20220",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

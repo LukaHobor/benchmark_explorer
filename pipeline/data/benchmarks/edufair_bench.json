@@ -1,12 +1,24 @@
 {
   "name": "EduFair-Bench",
   "description": "Large language models (LLMs) are increasingly deployed as tutors, but it is unclear whether they support all students equally well. We introduce EduFair-Bench, a benchmark for auditing the pedagogical fairness of LLM tutors---whether tutoring quality varies systematically with student demographics. EduFair-Bench pairs a multi-domain question bank (mathematics, physics, chemistry) with a controlled simulation in which a fixed LLM student interacts with each tutor across nine demographic levels spanning four dimensions: gender, immigration background, first language, and socioeconomic status (SES). Tutoring quality is scored on five turn-level pedagogical metrics and four conversation-level dimensions, using an LLM judge validated against three-annotator consensus on 180 tutor turns. Bias is measured via paired Wilcoxon signed-rank tests and bootstrap effect-size confidence intervals. Two ablations (demographic cues conveyed through names; conflicting demographic information between tutor and student) disentangle tutor-driven from student-driven bias. Across five tutors, we find that model capability and demographic fairness are largely orthogonal: the smallest model is the most consistent while the four more capable tutors all exhibit wide demographic gaps with no clear capability-to-fairness ordering, pedagogy-specific RL training redistributes rather than removes bias, and language- and immigration-related cues produce larger gaps than gender- and SES-related cues.",
+  "category": "text",
+  "domain": "educational fairness",
+  "task_types": [
+    "dialogue",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.12949",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

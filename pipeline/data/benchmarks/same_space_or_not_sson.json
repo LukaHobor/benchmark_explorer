@@ -1,12 +1,25 @@
 {
   "name": "Same Space or Not (SSoN)",
   "description": "Spatial intelligence, the capacity to represent and reason about physical space, underlies embodied perception and real-world visual understanding. Existing benchmarks probe it through spatial relations, perspective-taking, and mental modeling. What remains underexamined is whether a model can maintain a coherent scene representation across views, since pairwise comparison alone cannot reveal which view departs from the truth. We thus introduce Same Space or Not (SSoN), a benchmark of cross-view contradiction resolution comprising 1,000 questions from seven indoor scene sources and six categories of controlled 3D edits. Each question presents three views of an unchanged scene and one view of an edited variant. Models must identify the inconsistent view and explain the contradiction without a designated trusted reference or a marked target. Our pipeline iteratively translates human review into generation constraints. Automated checks and exhaustive human validation screen out both trivial visual shortcuts and questions lacking sufficient evidence for a unique answer. Humans achieve 83.3% accuracy, compared with 39.7% for the strongest vision-language models (VLMs), falling to 34.9% when a valid visual explanation is also required. We investigate prompting, camera information, and 3D reconstruction as interventions.",
+  "category": "multimodal",
+  "domain": "spatial reasoning",
+  "task_types": [
+    "visual_reasoning",
+    "classification",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.23959",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

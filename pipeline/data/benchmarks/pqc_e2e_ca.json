@@ -1,12 +1,23 @@
 {
   "name": "PQC-E2E-CA",
   "description": "The migration of remote-access and industrial communication systems from classical public-key cryptography to post-quantum cryptography (PQC) requires careful evaluation at both the protocol and system levels. This paper presents PQC-E2E-CA, a system-level evaluation framework for reviewing post-quantum and hybrid cryptographic configurations in Secure Shell (SSH). The framework integrates OQS-enabled OpenSSH and OpenSSL with Linux netem network emulation, automated experiment execution, SCP integrity verification, and statistical post-processing. The evaluation separates key exchange behavior from host key authentication. Specifically, it measures ML-KEM and hybrid ML-KEM as SSH key exchange mechanisms, and ML-DSA as a host-key signature mechanism. Experiments are conducted under controlled RTT and packet-loss conditions using a gateway virtualised client-server testbed. The results show that ML-KEM and hybrid ML-KEM can be integrated into SSH without prohibitive application-level session setup overhead in the evaluated environment. Among the evaluated configurations, ML-KEM-768 demonstrates comparatively lower SSH session establishment latency at 50 ms RTT with 0% packet loss. ML-DSA-44 achieves the lowest host-key authentication latency under the same conditions and maintains relatively stable performance at 150 ms RTT with 5% packet loss.",
+  "category": "code",
+  "domain": "post-quantum cryptography and system performance",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "latency",
+  "general_score_metric": "latency",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.3389/fcomp.2026.1844445",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

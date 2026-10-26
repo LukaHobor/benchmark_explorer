@@ -1,12 +1,24 @@
 {
   "name": "QueryRoute",
   "description": "LLM-based query reformulation can improve retrieval, but no single reformulation strategy is consistently optimal across queries, domains, retrievers, or model backbones. This creates an inference-time decision problem: ``Given an original query and a pool of candidate reformulations, which one should be issued to the retriever?''. Existing studies are hard to compare because they use different reformulator pools, retrievers, relevance signals, training labels, and evaluation metrics. We introduce QueryRoute, a benchmark that freezes the expensive artifacts needed to study this decision reproducibly: original queries, generated variants, ranked lists under multiple retrievers, retrieval scores, and per-query oracle labels. The benchmark contains 3,757 queries, 11 candidate systems, five reformulator backbones, and three retrievers across TREC DL, BEIR, and BRIGHT, yielding 619,905 retrieval outcomes. We benchmark supervised classification, routing, QPP, and LLM-as-judge selectors. Results show substantial oracle headroom over fixed reformulators, but current selectors recover only part of it; selector rankings change across retrievers, and similar mean effectiveness can hide different query-level behavior. The released artifacts and evaluation harness allow future selectors to be compared without regenerating variants, rerunning retrieval, or rebuilding judge pipelines. Code and data are available at https://github.com/haisonle001/QueryRoute",
+  "category": "text",
+  "domain": "information retrieval",
+  "task_types": [
+    "classification",
+    "retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://arxiv.org/abs/2609.14885",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

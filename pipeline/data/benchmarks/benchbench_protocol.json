@@ -1,12 +1,24 @@
 {
   "name": "BenchBench-Protocol",
   "description": "We introduce BenchBench-Protocol, a benchmark for large language models of 149 protocol-modification tasks recovered from modifications that scientists made to published protocols during real experimental work. Adapting a published protocol to a new experiment is a routine task for a wet-lab scientist, and a correct modification requires accounting for prior choices and downstream steps. Recent life-science benchmarks have moved toward open-ended, rubric-graded tasks, but tasks are typically elicited from experts rather than reconstructed from real-world modifications. BenchBench-Protocol tasks are derived from differences between a published protocol and a version a scientist modified, which provides the basis for the query and the weighted rubric elements for a correct response. The benchmark draws from 96 source protocols across nine domains of wet-lab biology and only includes tasks rated highly after review by domain experts. We evaluate nine closed and open models; Claude Opus 5 scores highest at 59.2% normalized rubric score, with other models between 34.1% and 47.1%, and the benchmark remains unsaturated when taking the best of ten attempts. As models are increasingly helpful in life-sciences research, evaluating them on routine wet-lab tasks becomes correspondingly important. We present BenchBench-Protocol as both a grounded assessment of wet-lab reasoning and evidence for the utility of real-world experiments to construct benchmark tasks.",
+  "category": "text",
+  "domain": "wet-lab biology",
+  "task_types": [
+    "open_ended",
+    "generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Reasoning & Problem Solving",
   "source": "https://arxiv.org/abs/2608.23898",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

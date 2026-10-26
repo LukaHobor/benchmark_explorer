@@ -1,12 +1,25 @@
 {
   "name": "RGB-P Wild",
   "description": "Reflections, glare, transparent structures, and material-dependent appearance variations can introduce ambiguity into RGB-based visual perception in vehicle-relevant environments. Polarization provides complementary reflection- and material-sensitive information, but its acquisition requires dedicated sensing hardware. This paper presents RGB-P Wild, a real-world dataset containing 10,000 paired RGB and four-angle linear-polarization image sets, together with PolarVis, a diffusion-based framework for recovering polarization representations from a single RGB image. PolarVis combines hierarchical RGB feature extraction, diffusion-based feature refinement, four angle-specific decoders, and multi-scale attention recalibration to reconstruct polarization intensity images at $0^\\circ$, $45^\\circ$, $90^\\circ$, and $135^\\circ$. On RGB-P Wild, PolarVis achieves a normalized-domain MSE of 0.0465, a PSNR of 27.83 dB, and an SSIM of 0.8597. Compared with the released PolarAnything model under the adopted evaluation protocol, PolarVis obtains an AoLP error of $25.66^\\circ$ and a DoLP MAE of 0.0404, compared with $46.03^\\circ$ and 0.1084, respectively. Cross-dataset evaluation on vehicle-mounted imagery further examines transfer beyond the training domain. In downstream evaluation, a frozen PCDNet achieves AP50/AP50:95 of 86.3%/59.1% on 990 RGBP-Car test images using PolarVis-generated polarization, compared with 87.0%/59.8% using measured polarization.",
+  "category": "vision",
+  "domain": "polarization imaging",
+  "task_types": [
+    "generation",
+    "regression",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.25396",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

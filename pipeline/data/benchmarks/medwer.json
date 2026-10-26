@@ -1,12 +1,24 @@
 {
   "name": "MedWER",
   "description": "Overall word error rate hides clinically critical errors: a transcript can be 95% correct and still swap one drug for another. The usual fix weights errors on medical entities, and almost always depends on an evaluation-time named-entity recognition (NER) model or cloud API, which makes the metric's denominator a versioned black box. We present MedWER, an evaluation protocol and open-source tool for medical ASR whose denominator is a fixed, license-clean term list: 19,373 drug, diagnosis, symptom, and injury-mechanism entries projected from public sources. The protocol couples a pinned text normalizer with a phrase-aware term-restricted WER, the MedWER, so the only versioned component is a normalizer dependency held at an exact release and checked against committed golden fixtures. Coverage is validated against an independent provincial drug-benefit file the list was not built from; the matching heuristic is calibrated against ground-truth entity spans. Baselines for Moonshine~base, Whisper~base.en, and MedASR on two open benchmarks are scored with the released tool and reported with 95% confidence intervals from resampled per-utterance scores.",
+  "category": "audio",
+  "domain": "medical asr",
+  "task_types": [
+    "audio_understanding",
+    "generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://arxiv.org/abs/2609.05728",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

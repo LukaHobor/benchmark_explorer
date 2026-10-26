@@ -1,12 +1,24 @@
 {
   "name": "STRIDE",
   "description": "Motion-language models are typically scored by motion-language evaluators, but how well these evaluators ground language structure remains unclear. Here, we introduce the Structure grounding via Temporal-order, Reflection, and Identity Diagnostic Evaluation (STRIDE) benchmark to systematically evaluate the ability of evaluators to track temporal order, mirror reflection, and action identity. STRIDE comprises $5{,}869$ triples, each consisting of a motion, its original caption, and a perturbed caption, spanning both short and long descriptions. We likelihood-balance caption pairs to reduce text-only bias and estimate each evaluator's caption preference under unrelated motions to measure the discrimination gain from matched motions relative to this baseline. Our experiments reveal weak structural grounding and severe deficits in mirror sensitivity among the audited evaluators, which commonly used evaluation protocols fail to expose. To understand why these limitations go undetected in standard tests, we examine the evaluators more closely. We find that text-only priors alone can solve naive perturbation tests on existing datasets, while common retrieval and distributional metrics barely respond to structural corruption introduced by mirroring ground-truth motions. These findings suggest a natural intervention: structural hard negatives.",
+  "category": "multimodal",
+  "domain": "motion-language evaluation",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.32462",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

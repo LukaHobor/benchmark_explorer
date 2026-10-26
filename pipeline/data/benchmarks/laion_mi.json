@@ -1,12 +1,24 @@
 {
   "name": "LAION-mi",
   "description": "LAION-mi is a benchmark dataset for evaluating membership inference attacks against Stable Diffusion. It contains metadata (image URL and caption) of 13,396 member samples drawn from the Stable Diffusion training data (LAION) and 26,874 non-member samples. Files: laion_mi_members_metadata.parquet (columns: url, caption, idx) and laion_mi_non_members_metadata.parquet (columns: url, caption). Images are not included; they can be downloaded from the provided URLs. Described in: J. Dubiński et al., \"Towards More Realistic Membership Inference Attacks on Large Diffusion Models\", WACV 2024.",
+  "category": "multimodal",
+  "domain": "privacy and membership inference",
+  "task_types": [
+    "classification",
+    "safety_redteam"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22910383",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

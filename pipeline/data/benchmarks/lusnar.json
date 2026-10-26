@@ -1,12 +1,24 @@
 {
   "name": "LuSNAR",
   "description": "The LuSNAR dataset is a lunar simulation multi-sensor benchmark dataset built based on Unreal Engine 4 and the AirSim plugin. Its generation process is as follows: first, nine lunar simulation scenes were constructed in Unreal Engine 4. The scene design adopted a \\(3 \\times 3\\) orthogonal combination of two dimensions, “topographic relief” and “object distribution,” with each dimension divided into three levels: low, medium, and high. This resulted in nine scenes with gradually increasing complexity. In the scenes, elements such as lunar regolith, rocks, impact craters, mountains, and sky were set with reference to real lunar data including Apollo, Yutu-2, Chang'e-5, and LRO NAC. The rock diameters cover approximately 0.1–0.3 m, and the crater diameter, depth, and d/D ratio refer to statistics from the Chang'e-5 landing area. Subsequently, a stereo camera, LiDAR, and IMU were configured in AirSim. After launching Unreal Engine and AirSim, the lunar rover was manually controlled to move along a predefined path, with motion modes including straight-line movement, turning, climbing, descending, obstacle avoidance, and circumnavigation. The AirSim API was used to record the rover's 6D pose ground truth and IMU data in real time. Then, using the recorded poses and sensor extrinsics, stereo images, depth maps, and semantic images were rendered offline, and LiDAR point clouds were generated. Finally, all data were saved by timestamp.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "task_types": [
+    "perception",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.57760/sciencedb.012q9",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

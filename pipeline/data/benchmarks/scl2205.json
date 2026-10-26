@@ -1,12 +1,23 @@
 {
   "name": "SCL2205",
   "description": "MOTIVATION: Deep learning (DL) has substantially advanced protein subcellular localization (SCL) prediction, yet its potential remains constrained by suboptimal input preparation and limited high-quality reference data. Furthermore, existing state-of-the-art (SoTA) predictors suffer from performance metric inflation due to unmitigated training-to-testing data leakage during homology augmentation. We address these challenges by introducing SCL2205, a leak-minimized benchmark dataset and pipeline curated specifically to support trustworthy, scalable, and reproducible DL-based SCL modelling. RESULTS: SCL2205 was constructed from the universal protein knowledgebase (UniProtKB) using rigorous preprocessing, manual label mapping, and stringent partitioning. When evaluated on independent test sets, SCL2205 yielded up to a 10.8 percentage point improvement in macro area under the precision-recall curve (PR-AUC) over SoTA baselines (mean Δ 95% CI = 0.07-0.12), with maximum benefits observed when paired with modern protein language models (PLMs). Crucially, we quantify for the first time a systemic 5.2%±0.32 data leakage rate in conventional homology augmentation workflows-even when restricting sequence similarity searches to just 10% of the training set. AVAILABILITY AND IMPLEMENTATION: The dataset is openly available on Dryad under a CC0 1.0 Universal licence (https://doi.org/10.5061/dryad.2ngf1vj1t).",
+  "category": "text",
+  "domain": "protein bioinformatics",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "PR-AUC",
+  "general_score_metric": "PR-AUC",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.1093/bioinformatics/btag666",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

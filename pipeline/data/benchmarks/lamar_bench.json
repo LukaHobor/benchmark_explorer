@@ -1,12 +1,25 @@
 {
   "name": "LAMAR-Bench",
   "description": "Audio-language models increasingly process long recordings and multiple audio inputs, requiring fine-grained acoustic understanding, cross-audio reasoning, and decisions under goals and constraints. Existing benchmarks cover these requirements unevenly, while answer accuracy can obscure failures in evidence localization and decision reliability. We introduce LAMAR-Bench, a diagnostic benchmark with 1,597 questions across three capability families: fine-grained understanding, cross-audio relation reasoning, and decisions under goals and constraints. A shared-fact pipeline derives tasks with traceable supervision from podcast recordings. Across the dataset, input counts range from 1 to 19 audio clips per question, with total input duration reaching 59.9 minutes. The evaluation combines task-level metrics, textual reference baselines, and paired diagnostics of answer format, presentation order, and requested goals. Experiments with 14 audio-language and omni-modal systems reveal persistent limitations: the highest paralinguistic-analysis and acoustic-localization accuracies are only 51.09% and 54.38%, respectively, while audio difference analysis remains challenging. A matched answer-format diagnostic reveals substantial gaps between answer recognition and direct evidence localization.",
+  "category": "audio",
+  "domain": "audio understanding",
+  "task_types": [
+    "audio_understanding",
+    "qa",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://doi.org/10.5281/zenodo.22857937",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "SPBench",
   "description": "Exploration seismic processing underpins subsurface imaging and resource exploration, but learning-based methods remain difficult to compare across studies. Our survey of 368 papers finds widespread reliance on private or difficult-to-reproduce datasets, with only 25 providing public code. This obscures whether reported gains arise from model design or experimental settings. We introduce the Seismic Processing Benchmark (SPBench), covering six tasks: random noise attenuation, trace interpolation, ground-roll suppression, multiple suppression, deblending, and first-arrival picking. We reproduce 24 supervised methods on 10 datasets under 43 standardized settings and release datasets, implementations, configurations, evaluation scripts, and results. To complement global scores and per-trace pick errors, we introduce signal-component-resolved evaluation (SCoRE) for reconstruction and a reference-free ridge-curvature score (RC_norm) for first-arrival picking. Our analyses show that synthetic rankings do not reliably predict field rankings, with task-dependent agreement when models train within each setting. As degradation strengthens, rankings reorder more under coherent ground roll than under random-like interference. The ridge score agrees with MAE-based model rankings in the evaluated settings, with a mean Kendall correlation of 0.881 across three field surveys, while SCoRE reveals frequency- and energy-dependent differences hidden by global scores.",
+  "category": "mixed",
+  "domain": "geophysics",
+  "task_types": [
+    "generation",
+    "regression",
+    "perception"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://arxiv.org/abs/2609.28925",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

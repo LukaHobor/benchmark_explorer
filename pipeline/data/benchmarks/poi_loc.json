@@ -1,12 +1,24 @@
 {
   "name": "POI-Loc",
   "description": "Point-of-interest (POI) localization matches user-provided storefront close-ups to the same shops in wide, geo-tagged vehicle-mounted street views. POIs may change while the surrounding scene stays similar, so scene-level recognition alone cannot establish POI identity. Differences in target scale and capture domains further challenge matching. We introduce POI-Loc, to our knowledge the first benchmark dedicated to this asymmetric, fine-grained POI localization task. Many visual place recognition methods represent each image with a single global vector, which tends to dilute fine-grained features of small storefronts amid background clutter. We propose GLAM (Global-to-Local Asymmetric Matching) to combine global and local evidence. In stage one, a single attention-pooled query probe is matched against compact reference region tokens via learnable soft top-k interaction, with the resulting local similarity fused with global similarity for retrieval. Stage two reuses query region tokens before attention pooling and stored reference tokens for mutual-nearest-neighbor re-ranking. GLAM surpasses both global and two-stage baselines on Recall@1/5/10 and mAP, with about $5\\times$ smaller re-ranking features and $280\\times$ lower per-pair matching cost than FoL. The benchmark and code will be released at https://github.com/roadhan/glam.",
+  "category": "vision",
+  "domain": "visual place recognition",
+  "task_types": [
+    "retrieval",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "Recall@k",
+  "general_score_metric": "mAP",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.02012",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

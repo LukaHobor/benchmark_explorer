@@ -1,12 +1,23 @@
 {
   "name": "Jev RAG Chinese Benchmark (S1)",
   "description": "First reproducible Chinese-language reranking benchmark for Jev (TypeSafe System One), over hard negatives from C-MTEB/T2Reranking (T2Ranking lineage): 100 queries, pinned model typesafe/jev-1.13-20260917, every API call logged. Results (n=100, single run): Jev Score nDCG@5 0.546 [95% CI 0.481–0.611] vs BM25 0.413 [0.353–0.477]; paired delta +0.133 [95% CI +0.051, +0.232], CI excludes zero; Recall@1 2.4× BM25. Score vs Noul question forms nearly tie for ranking. Total API cost $0.07. Package: technical note (arXiv-ready draft), frozen protocol, results report with bootstrap CIs, full repository snapshot (scripts + per-call JSONL logs). Code: github.com/vicfei/jev-rag-zh-benchmark · Mirrors: HuggingFace / ModelScope · Pattern library: awesome-jev-prompts. Independent community research; not affiliated with TypeSafe AI.",
+  "category": "text",
+  "domain": "Chinese information retrieval",
+  "task_types": [
+    "retrieval"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://doi.org/10.5281/zenodo.23322276",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

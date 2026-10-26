@@ -1,12 +1,23 @@
 {
   "name": "SCRIPTIOC-BENCH",
   "description": "Script-based malware remains a prevalent attack technique. These scripts often contain indicators of compromise (IOCs) that provide actionable threat intelligence. However, statically recovering such indicators is challenging, as relevant values may be dispersed or transformed within code. Although large language models (LLMs) have shown promise in security analysis, their ability to recover IOCs from malicious scripts remains underexplored. We present SCRIPTIOC-BENCH, a benchmark for measuring static IOC extraction capability on real-world malicious scripts. The benchmark comprises 634 manually verified JavaScript, PowerShell, and VBScript malware samples covering four IOC types (URLs, domains, IP addresses, and filesystem artifacts). We further stratify ground-truth IOCs by recovery level, distinguishing directly exposed indicators from those requiring decoding or reconstruction. Using this benchmark, we evaluate a broad range of proprietary and open-weight LLMs and show that IOC recovery without execution remains challenging across model scales: the strongest model reaches only 65.4 F1. To characterize how recovery fails, we introduce a false-positive taxonomy and use it to compare the error profiles of the evaluated models. We further study two mitigations on a small open-weight model, deterministic string utilities and task-specific adaptation, finding that they provide complementary recovery gains, raise precision, and shift errors toward sample-grounded mismatches.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "task_types": [
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.06149",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

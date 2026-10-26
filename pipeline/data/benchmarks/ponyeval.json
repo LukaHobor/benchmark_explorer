@@ -1,12 +1,24 @@
 {
   "name": "PonyEval",
   "description": "Repository-level issue-resolution benchmarks have made executable evaluation central to software-engineering agents, but their language coverage remains concentrated in mainstream ecosystems. Pony presents a different regime: it combines actors, reference capabilities, ahead-of-time compilation, and a rapidly evolving historical toolchain, making both patch generation and faithful replay difficult. We introduce PonyEval, a SWE-bench-style benchmark of 291 real GitHub issue-pull-request pairs from 15 Pony repositories. Every instance binds an issue statement, a historical base commit, a developer gold patch, a black-box test patch, and a reproducible runtime mapping. The frozen release passes an offline audit requiring the issue-specific test to fail on the base state and pass after the gold patch; it contains no duplicate instance identifiers or canonical repository-PR pairs. In a separate full-set semantic selection audit, three isolated machine reviewers label all 291 instances as include or exclude; their Fleiss' kappa is 0.8968, with 249 unanimous inclusions and 32 unanimous exclusions. To replay eleven years of repository history, we reconstruct 72 runtime images covering 289 unique base commits and verify their availability on five heterogeneous compute nodes. We define a matched evaluation with mini-SWE-agent 2.4.6 for GPT-5.6-sol, DeepSeek-V4-Pro, GLM-5.2, MiniMax-M3, and Kimi-K3, followed by strict patch application, compilation, and hidden-test validation.",
+  "category": "code",
+  "domain": "software engineering",
+  "task_types": [
+    "code_generation",
+    "agentic"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pass@k",
+  "general_score_metric": "pass@k",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2609.27832",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

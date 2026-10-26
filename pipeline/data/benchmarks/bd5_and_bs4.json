@@ -1,12 +1,24 @@
 {
   "name": "BD5 and BS4",
   "description": "Supplementary data and code for the manuscript Coarse-to-fine dual-branch inspection of bridge component defects using YOLO26 and DINOv3. Contents: (1) BD5, a five-class bridge-defect detection benchmark (crack, exposed rebar, spalling, rust, efflorescence/weathering; 7,910 images; train 6,000 / val 935 / test 975; YOLO format) and BS4, a four-class segmentation benchmark (background, crack, concrete damage, exposed rebar; 11,500 native-resolution 512x512 tiles), both derived from the public dacl10k dataset (CC BY 4.0); (2) conversion scripts, training and evaluation code of YOLO26-BD (strip-aware multi-scale attention, aspect-bounded Shape-IoU) and DV3-DRSeg (DINOv3 ViT-S/16 encoder with a dual-resolution decoder and decoupled dual gate) and of all baselines; (3) the records of all 88 training runs reported in the paper (metrics, curves, confusion matrices, gate statistics), latency/WCET/SAHI/area evaluations and the paper figures; (4) selected trained weights. DeepCrack is not redistributed (see README for the download link and split). The data zips are split by subset and merge into one folder when unzipped; see README.md.",
+  "category": "vision",
+  "domain": "bridge defect inspection",
+  "task_types": [
+    "perception",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mAP, IoU",
+  "general_score_metric": "mAP, IoU",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.5281/zenodo.22929276",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

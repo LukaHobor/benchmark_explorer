@@ -1,12 +1,25 @@
 {
   "name": "REBOOT (Recovery Episode Benchmark for Off-nominal Trajectories)",
   "description": "Robot learning policies fail in characteristic ways: they stall in uncertain states, drift during contact-rich alignment, and miss targets by millimetres in precision tasks. Yet training datasets consist largely of successful demonstrations, while real-world benchmarks often reduce performance to binary success. This limits both supervision for recovery and analysis of where failures occur. We introduce REBOOT (Recovery Episode Benchmark for Off-nominal Trajectories), the first robot manipulation benchmark designed around failure as a first-class signal. REBOOT contains 2,160 demonstrations across 18 precision assembly tasks, each decomposed into five shared phases: Align(pick), Engage(pick), Transport, Align(place), and Engage(place), enabling phase-level evaluation beyond terminal success. Failures are introduced across phases and paired with expert recovery trajectories that return the system to a valid continuation state. Tasks are annotated with rotational symmetry, engagement-clearance precision tier, and assembly direction through matched install-remove pairs. Failure episodes are labeled by phase and categorical failure mode, enabling attribution to kinematic stage and tolerance violation. Data includes synchronized RGB-D observations from four viewpoints and grounded natural-language descriptions of phase-level success and failure conditions.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "task_types": [
+    "agentic",
+    "planning",
+    "perception"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2609.22591",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,24 @@
 {
   "name": "BunchCount",
   "description": "Visual counting is commonly formulated at the instance level, aiming to estimate how many objects of a queried category appear in an image. However, real-world counting often involves higher-level semantic units formed by multiple instances, such as a bunch of grapes, a stack of plates, or a pair of shoes. This exposes a key limitation of existing counting formulations, which mainly focus on what to count, while largely overlooking at which semantic unit to count. We introduce Group-Individual Object Counting (GIC), a new setting that requires models to count both individual objects and semantic groups within a unified framework. To support this new task, we present BunchCount, a real-world benchmark with 1,330 images, 89,254 individual annotations, and 11,065 group annotations. BunchCount provides paired individual-group annotations within the same image and explicitly records containment relations between each group and its constituent individuals. Experiments on BunchCount show that current advanced counting models perform well on individual instances but fail to count semantic groups more accurately. To mitigate semantic granularity conflict, we propose a counting-unit guided relational counting framework, which exploits group-individual containment relations to regularize cross-granularity representations during training.",
+  "category": "vision",
+  "domain": "visual counting",
+  "task_types": [
+    "perception",
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.04716",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

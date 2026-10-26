@@ -1,12 +1,24 @@
 {
   "name": "REALHOP",
   "description": "Complex questions often require multi-hop reasoning that connects facts distributed across sources or distant regions of a long context through intermediate steps. Benchmarks commonly evaluate this ability with questions built around predefined reasoning chains, treating a correct answer as evidence that the intended composition was used. Yet answer correctness alone leaves open whether success depends on the evidence associated with each intended step: models may instead rely on memorized associations, shorter paths, or partial evidence. We examine this dependence using the Behavioral Necessity Rate (BNR), which measures how often targeted evidence removal prevents answer recovery on initially correct instances. Across five existing benchmarks, panel-mean BNR ranges from 16.6% to 48.9%, exposing a substantial gap between annotated structure and observed dependence. Guided by this diagnosis, we introduce REALHOP, a diagnose-construct-verify framework that rebinds entities, factorizes selected relations, adds complete competing paths, and places evidence at traceable locations. Structural and semantic checks precede freezing; behavioral interventions follow. On 790 paired MuSiQue questions, REALHOP raises panel-mean BNR from 27.4% to 94.4% while retaining high Full accuracy. It also yields high BNR on REALHOP-FRAMES and REALHOP-LONGBENCH.",
+  "category": "text",
+  "domain": "multi-hop question answering",
+  "task_types": [
+    "qa",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://arxiv.org/abs/2609.36984",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

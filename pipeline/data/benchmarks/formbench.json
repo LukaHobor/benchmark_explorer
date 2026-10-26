@@ -1,12 +1,23 @@
 {
   "name": "FormBench",
   "description": "We introduce FormBench, a platform for testing the ability of models to retrieve precise chemical information from technical documents. FormBench contains 55,352 queries and two retrieval corpus variants each with ~1M passages: FormBench-Random (C0), with randomly sampled distractors, and FormBench-Structured (C1), with structurally proximate distractors. Each query is paired with an anchor passage, a hard negative, and a soft negative - derived from a materials ontology through entity overlap scoring, providing a deeper graded signal on a model's discriminatory power. We evaluate 10 model configurations spanning commercial API encoders (OpenAI, Voyage), open-source encoders (Nomic, GTE-large, Qwen3-Embed), and their task-adaptive fine-tuned (TAPT) variants. We find: (1) commercial APIs score very poorly across all configurations (OpenAI-3-large: 0.009 on C1, 0.213 on C0); (2) TAPT on FormBench triplets lifts Qwen3-Embed to 0.4085 on C1, 0.4835 on C0; (3) BM25 remains competitive (0.375 on C1, 0.467 on C0), exceeded only by TAPT-Qwen3; (4) corpus size has a significant impact on retrieval behavior, as demonstrated through a corpus-size ablation; (5) the API failure traces to within-domain geometric collapse; (6) APIs outperform even the TAPT variants on classification and clustering tasks. FormBench is released in BEIR-compatible format at huggingface.co/datasets/vinven7/FormBench under CC-BY-4.0.",
+  "category": "text",
+  "domain": "materials science retrieval",
+  "task_types": [
+    "retrieval"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://arxiv.org/abs/2610.30175",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

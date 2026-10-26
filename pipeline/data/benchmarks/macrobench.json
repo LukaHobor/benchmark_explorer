@@ -1,6 +1,17 @@
 {
   "name": "MacroBench",
   "description": "We introduce MacroBench, a code-first benchmark that evaluates whether LLMs can synthesize reusable browser-automation programs (macros) from natural-language goals by reading HTML/DOM and emitting Selenium. MacroBench instantiates seven self-hosted sites covering 681 tasks across interaction complexity and targeting difficulty. Our end-to-end protocol validates generated code via static checks, sandboxed execution, and outcome verification (DOM assertions, database snapshots), and includes a safety suite for scraping, spam/abuse, and credential/privacy prompts.",
+  "category": "code",
+  "domain": "browser automation",
+  "task_types": [
+    "code_generation",
+    "agentic",
+    "instruction_following",
+    "safety_redteam"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pass@k",
+  "general_score_metric": "pass@k",
   "year_of_publish": 2025,
   "creators": {
     "scientists": [
@@ -10,11 +21,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Code & Developer Tasks",
   "source": "https://arxiv.org/abs/2510.04363",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

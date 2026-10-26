@@ -1,12 +1,24 @@
 {
   "name": "BRSR Dataset",
   "description": "The BRSR dataset (Blind Radar Signal Restoration dataset) is a benchmark for blind restoration of radar signals corrupted by unknown blends of artifacts. It contains 85,800 paired clean/corrupted complex radar signals (2 × 1024 I/Q samples at 100 MHz) from 12 modulation classes (LFM, Costas, BPSK, Frank, P1–P4, T1–T4). Each signal is corrupted by one of seven combinations of additive white Gaussian noise, echo and co-channel interference, with random blend weights and an input SNR drawn uniformly from [−14, 10] dB. The release also includes the AWGN-Baseline dataset (AWGN only at 13 discrete SNR levels, −14 to 10 dB in 2-dB steps). Both datasets use fixed splits of 49,920 training, 12,480 validation and 23,400 test signals. These are the exact data used in BRSR-OpGAN (Neural Networks, 2025), CoRe-Net and XCoRe-Net. The generator was not seeded, so these files are the benchmark and cannot be regenerated exactly. The record contains:- HDF5 files per split with clean, corrupted and per-artifact component signals;- per-sample metadata (class, target and measured SNR, SNR bin, artifact composition and weights, echo delay, interference ID);- the interference signal bank used to generate co-channel interference. Code, pre-trained BRSR-OpGAN and CNN-GAN models, the evaluation protocol and reference results are available at https://github.com/MUzairZahid/BRSR-OpGAN. See README.md for the file layout and known characteristics of the data.",
+  "category": "audio",
+  "domain": "radar signal processing",
+  "task_types": [
+    "regression",
+    "generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://doi.org/10.5281/zenodo.23010394",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

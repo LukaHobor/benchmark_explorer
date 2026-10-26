@@ -1,12 +1,24 @@
 {
   "name": "Hardware Tools Complete Dataset",
   "description": "This repository provides a comprehensive, multi-device image dataset covering 24 fine-grained workshop hardware and hand tool categories. Images were captured directly in practical, uncontrolled workshop environments using three distinct smartphone camera modules (OnePlus Nord CE 4, Nothing CMF Phone 2 Pro, and Nothing Phone 2) to capture natural variations in viewpoint, background clutter, ambient/artificial lighting, and optical response. All target objects are annotated with precise 2D bounding boxes in standard COCO JSON format. The master archive (ML_Hardware_Tools_Complete_Dataset.zip) contains: 1. ML_Hardware_Tools_Raw_COCO/: The 4,633 original, unaugmented workshop images partitioned into train, validation, and test splits for custom preprocessing, domain adaptation, and few-shot or self-supervised learning. 2. ML_Hardware_Tools_Augmented_COCO/: The standardized 12,481-image benchmark dataset (10,464 train, 1,004 validation, 1,013 test) containing 14,161 annotated instances used to establish object detection baselines (YOLO variants and RF-DETR). 3. DATASET_DESCRIPTION_VERSION_2.txt: Complete documentation detailing class taxonomy (24 classes), folder organization, annotation schemas, and citation instructions. Source code and benchmark training pipelines are publicly available at: https://github.com/mark-0polo/ML-CODES.git Version 2 Update: The dataset has been refined through duplicate image removal to reduce potential data leakage across dataset splits.",
+  "category": "vision",
+  "domain": "workshop tool detection",
+  "task_types": [
+    "perception",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "mAP",
+  "general_score_metric": "mAP",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.17632/gmjkzdxhc6",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

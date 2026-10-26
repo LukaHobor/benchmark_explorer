@@ -1,6 +1,15 @@
 {
   "name": "AGENTREDBENCH",
   "description": "Indirect prompt injection in tool-use agents is a concrete production threat: LLM agents read from integrations (third-party services such as Gmail, Salesforce, or Jira accessed through tool calls) whose response content the user neither writes nor controls. Existing benchmarks under-measure the threat: most cover only a handful of integrations with the same attack payload replayed across runs, and open-source guards are trained on chat-style data rather than tool-response content.",
+  "category": "text",
+  "domain": "agent security",
+  "task_types": [
+    "safety_redteam",
+    "agentic"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
   "creators": {
     "scientists": [
@@ -10,11 +19,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2606.02240",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

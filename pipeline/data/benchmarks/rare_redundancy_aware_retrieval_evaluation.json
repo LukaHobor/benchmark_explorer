@@ -1,6 +1,14 @@
 {
   "name": "RARE (Redundancy-Aware Retrieval Evaluation)",
   "description": "Existing QA benchmarks typically assume distinct documents with minimal overlap, yet real-world retrieval-augmented generation (RAG) systems operate on corpora such as financial reports, legal codes, and patents, where information is highly redundant and documents exhibit strong inter-document similarity. This mismatch undermines evaluation validity: retrievers can be unfairly undervalued even when they retrieve documents that provide sufficient evidence, because redundancy across documents is not accounted for in evaluation.",
+  "category": "text",
+  "domain": "rag retrieval",
+  "task_types": [
+    "retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
   "creators": {
     "scientists": [
@@ -10,11 +18,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://arxiv.org/abs/2604.19047",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

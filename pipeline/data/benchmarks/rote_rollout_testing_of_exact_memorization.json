@@ -1,12 +1,24 @@
 {
   "name": "ROTE (RollOut Testing of Exact memorization)",
   "description": "We introduce ROTE (RollOut Testing of Exact memorization), a benchmarking protocol for evaluating symbolic memorization of neural architectures. We study memorization and the extension of symbolic rules in neural sequence models by using sequences whose complexity is regulated by Lempel--Ziv--Welch (LZW) compression. Under ROTE, each architecture is trained as the same finite-context conditional predictor and is evaluated using teacher-forced one-step prediction as well as closed-loop rollout on the withheld symbols. Following a shared prediction-and-rollout evaluation routine, the benchmark evaluates gated recurrent, minimal recurrent, attention-based, and hybrid recurrent-attention models with their native computational characteristics preserved. Beyond standard predictive metrics, the benchmark reports normalized string distances, training time, memory usage, and parameter count across an LZW-complexity sweep. The study establishes a connection between the complexity of algorithmic sequences and the memorization capacity of neural architectures, revealing the trade-offs involving memorization quality, rollout stability, and computational expense. Our software and reproducible experimental code can be obtained from https://github.com/nla-group/rote.",
+  "category": "text",
+  "domain": "algorithmic sequence modeling",
+  "task_types": [
+    "generation",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://arxiv.org/abs/2609.31918",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

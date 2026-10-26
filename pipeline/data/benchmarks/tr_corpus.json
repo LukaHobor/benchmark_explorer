@@ -1,12 +1,24 @@
 {
   "name": "tr-corpus",
   "description": "Harmonized analysis corpus for the manuscript Conditions for comparable thermal-runaway early-warning claims: a common evaluation framework on public abuse-test data. Six open abuse-test datasets (343 experiments; external heating, overcharge, mechanical indentation, and accelerating-rate calorimetry; CC BY 4.0 / CC0) are rebuilt from their raw records onto a 1 s causal time axis with a fixed channel taxonomy, six computable reference events (thermal-rate onset at three thresholds, main pressure release, voltage collapse, and a 25 mV post-trigger drop), experiment-level split assignments, and build manifests. A seventh numerically simulated dataset is harmonized to the same schema for pretraining only. This deposit contains the complete data package: the registry, labels, splits, and provenance; derived per-experiment Parquet records; the two canonical window builds (`W60_native` and `W60_native_v2`); fitted scalers; registries and checksums for the external cases; and the build pipeline that regenerates the package from the cited sources. A SHA-256 manifest covers every file. The analysis code—including the evaluator, claim-assessment procedures, figure and table scripts, and stored per-window risks for every run reported in the paper—is available in the GitHub repository (URL). The raw source datasets are not redistributed. They are cited by DOI through the related identifiers and can be re-downloaded using `trbench/build_corpus.py`.",
+  "category": "mixed",
+  "domain": "battery safety",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.22908327",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

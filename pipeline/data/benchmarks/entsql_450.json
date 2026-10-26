@@ -1,12 +1,25 @@
 {
   "name": "EntSQL-450",
   "description": "Enterprises piloting LLM-based text-to-SQL keep discovering the same thing: a model that clears 85% execution accuracy on Spider can still be rejected by the security reviewer, the auditor and the risk committee -and rightly so.In the pilots and post-mortems that motivated this work, generated queries ignored row-level access policies, exposed masked columns, broke silently under schema change, ran unbounded scans, and left no evidence trail.Building a prototype to close these gaps taught us that the problem is architectural rather than linguistic: what was missing was not a better model but a system around the model, one in which vocabulary, policies and budgets are machine-readable and enforcement is deterministic.ERF-SQL is that system, together with a way to measure whether it is working.A versioned semantic contract becomes the sole interface between schema and model; a Policy-Aware Query Guard rewrites the abstract syntax tree of every candidate query before execution; uncertain answers are routed to clarification or human review; and behaviour is scored on six readiness dimensions aggregated into a gated Enterprise Readiness Index.On EntSQL-450, an evaluation suite with live role policies and masking rules built for this study, four production LLMs lost 19 to 23 accuracy points relative to Spider under a naive baseline; the implemented pipeline recovered 13 to 16 of those points, blocked 97% of unsafe generations before execution, and raised drift resilience from 0.55…",
+  "category": "code",
+  "domain": "enterprise text-to-sql",
+  "task_types": [
+    "code_generation",
+    "safety_redteam",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://doi.org/10.17148/ijarcce.2026.15842",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

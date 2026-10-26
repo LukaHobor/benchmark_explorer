@@ -1,12 +1,23 @@
 {
   "name": "NL2VBench",
   "description": "Large language models (LLMs) have shown promise in code generation, but generating formally verifiable Rust programs from natural-language descriptions remains highly challenging. We present a benchmark called NL2VBench for generating verifiable Rust programs from natural-language descriptions using Verus.NL2VBench contains 762 verifier-checked tasks derived from five public sources and curated through filtering, deduplication, canonicalization, LLM-assisted drafting, and human revision. Each task provides a natural-language description, task-defining interface information, and a verifier-checked reference solution. To demonstrate its utility, we evaluate five representative LLMs on a direct NL-to-Verus baseline. The results show that current LLMs achieve low verification success and even lower strict semantic correctness, demonstrating that NL2VBench is a challenging and reusable benchmark for future research on LLM-based verified code generation. A demonstration video of NL2VBench is available at https://youtu.be/CNOXHejni1c.",
+  "category": "code",
+  "domain": "verified rust code generation",
+  "task_types": [
+    "code_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pass@k",
+  "general_score_metric": "pass@k",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://doi.org/10.1145/3832783.3834619",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

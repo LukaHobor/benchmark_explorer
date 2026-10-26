@@ -1,12 +1,24 @@
 {
   "name": "MM-ContextASR Bench",
   "description": "Conversational context provides semantic and acoustic cues across turns for automatic speech recognition (ASR), but relying on historical transcripts can propagate recognition errors and discard pronunciation and speaker information. We present a multimodal conversational-context framework for LLM-based ASR that integrates a scenario-controlled data pipeline, scalable multimodal context training, and systematic evaluation. We construct dialogues around entities and their confusable forms and interleave historical user speech with assistant text responses for supervised fine-tuning. We also introduce MM-ContextASR Bench, which evaluates contextual understanding and entity error correction across five scenarios. Experiments with Qwen3-Omni and Step-Audio-2-mini reveal limitations in handling irrelevant and erroneous history and show that our data construction and training improve context utilization, with multimodal context achieving the highest overall entity recall on both models. Further experiments on accent, dialect, and target-speaker ASR demonstrate the value of historical speech. The benchmark data and evaluation code are publicly available at https://github.com/llh666521/MM-ContextASR.",
+  "category": "audio",
+  "domain": "speech recognition",
+  "task_types": [
+    "audio_understanding",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "entity_recall",
+  "general_score_metric": "entity_recall",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://arxiv.org/abs/2609.19765",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

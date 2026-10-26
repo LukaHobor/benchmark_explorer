@@ -1,12 +1,26 @@
 {
   "name": "Blockchain-Enabled Building-Damage Testbed",
   "description": "Description / Abstract This software package implements a laboratory testbed for rapid damage assessment of a small energy-facility building. It produces verifiable multisensor evidence and turns it into rescue recommendations that a human must approve before they take effect. Integrity protection starts on the sensor node. A permissioned-ledger registry anchors cryptographic commitments to the raw evidence, to the processing version and to every automated and human decision. The release contains three components and a demonstration notebook: P1 SensorNode-FW is C/C++ firmware for eight Arduino Nano ESP32 (ESP32-S3) acquisition nodes. It records 48 kHz I²S audio and 800 Hz IMU data. Data are sent in 50 ms SDP v1 frames, each with a SHA-256 hash chain and CRC-32. Every 20-frame batch carries a deterministic ECDSA P-256 signature (RFC 6979), and a shared 10 Hz marker line synchronises the nodes. P2 FusionLab is a Python toolkit for the rest of the pipeline. It provides multi-node recording and four integrity-verification layers (CRC, sequence, hash chain, signature). It also covers marker-based clock alignment, acoustic and inertial feature extraction, and session-blocked classification with calibration and node-dropout analysis. Three agents (data quality, damage interpretation, and MILP-based rescue planning) work behind a human decision gate. The toolkit also generates a randomised 480-run experimental schedule and the report tables.",
+  "category": "multimodal",
+  "domain": "building damage assessment",
+  "task_types": [
+    "classification",
+    "planning",
+    "agentic",
+    "audio_understanding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://doi.org/10.5281/zenodo.23402781",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

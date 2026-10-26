@@ -1,12 +1,24 @@
 {
   "name": "PDE-OBS",
   "description": "Physical-field reconstruction and forecasting depend on both measurement density and spatial layout, yet evaluation under a single observation pattern does not characterize performance when that pattern changes. We introduce PDE-OBS, an integrated benchmarking platform spanning numerical data generation, model training, and inference and evaluation under varying observation conditions. It combines 560,000 fields and trajectories from seven partial differential equation families with configurable observation operators and seven adapted baseline methods for stationary reconstruction and short-horizon forecasting. Separating observation construction from physical records allows users to specify parameterized patterns and deterministic mixtures for training and testing while preserving prediction targets and data splits. The evaluation protocol uses references trained for each test pattern to compare models on identical test observations and targets, alongside equal-count groups for spatial-layout comparisons. On a 14,000-record subset, we evaluate 441 trained models under nine test patterns, yielding 3,969 evaluations. Mean cross-pattern error exceeds mean matched-pattern error in all 49 PDE-method pairs, and this finding persists in a configuration-matched subset of 117 models. Denser test observations do not consistently reduce error for a fixed model.",
+  "category": "mixed",
+  "domain": "physics simulation",
+  "task_types": [
+    "regression",
+    "generation"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://arxiv.org/abs/2609.36521",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

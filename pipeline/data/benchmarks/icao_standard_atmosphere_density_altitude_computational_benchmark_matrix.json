@@ -1,12 +1,24 @@
 {
   "name": "ICAO Standard Atmosphere & Density Altitude Computational Benchmark Matrix",
   "description": "### SummaryThis open dataset provides a high-resolution computational benchmark of 6,885 discrete thermodynamic atmospheric calculation vectors spanning geopotential altitudes from −1,000 ft to +20,000 ft MSL and ambient temperatures from −30°C to +50°C. Governed by ICAO Doc 7488/3 (*Manual of the ICAO Standard Atmosphere*) and the U.S. Standard Atmosphere (1976), this dataset evaluates non-linear atmospheric density ratio (σ) degradation and quantifies the divergence error of classical flight-training linear heuristics (such as the 120 ft/°C rule) against closed-form thermodynamic models. ### Dataset Variables (11 Columns)1. `Elevation_ft`: Geopotential pressure altitude (−1,000 ft to +20,000 ft).2. `Temperature_C`: Ambient static air temperature (−30°C to +50°C).3. `ISA_Temperature_C`: Standard atmosphere temperature at elevation.4. `ISA_Deviation_C`: Temperature delta from standard atmosphere.5. `Pressure_Pa`: Static barometric air pressure in Pascals.6. `Density_kg_m3`: Air mass density in kilograms per cubic meter.7. `Density_Ratio_sigma`: Non-dimensional air density ratio (ρ / ρ₀).8. `Exact_Density_Altitude_ft`: Closed-form thermodynamic density altitude.9. `Heuristic_Density_Altitude_ft`: Linear 120-ft cockpit approximation.10. `DA_Error_ft`: Heuristic divergence error vector in feet.11. `TAS_Multiplier`: True airspeed correction multiplier (1 / √σ).",
+  "category": "mixed",
+  "domain": "atmospheric physics",
+  "task_types": [
+    "regression",
+    "math_problem_solving"
+  ],
+  "difficulty_level": "undergraduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://doi.org/10.6084/m9.figshare.34059369",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,23 @@
 {
   "name": "PL–ClinDis",
   "description": "Clinical sentence classification is commonly benchmarked by collapsing expert disagreement into a single majority label and evaluating on sentence-level splits that can leak local context across folds. We revisit this setup for Polish clinical natural language processing (NLP) through PL–ClinDis, a pilot corpus of 100 de-identified discharge-style sentences annotated independently by 20 physicians (2,000 judgments). We evaluate lexical, neural, and lexical–neural hybrid models using grouped three-fold cross-validation across 46 sentence-context groups, thereby preventing local leakage. Term frequency–inverse document frequency (TF–IDF) with logistic regression remains strong on discrimination (0.363 pooled macro-F1), whereas neural models improve probabilistic behaviour: the item-level soft-label domain-adaptive pretraining (DAPT) model achieves the best soft negative log-likelihood (1.232) and Brier score (0.178) in the study and improves expected calibration error over TF–IDF (0.274 to 0.195), although the lowest expected calibration error is obtained by a context-aware neural variant (0.177). A nested hybrid achieves the best macro-F1 (0.439) and shows a paired-bootstrap improvement over TF–IDF, but it worsens calibration. Per-class and significance analyses show that the score ceiling is driven by three minority classes and by genuine, structured annotator disagreement.",
+  "category": "text",
+  "domain": "clinical NLP",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.62036/isd.2026.50",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

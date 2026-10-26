@@ -1,12 +1,24 @@
 {
   "name": "Rad-R",
   "description": "Automotive mmWave radar can develop vibration, antenna misalignment, radome blockage, and receive-channel degradation that corrupt the signal before perception begins. Data for these faults are scarce because each condition must be induced and measured on physical hardware. We introduce Rad-R, a raw-ADC dataset captured with a 4-chip 77GHz TI MMWCAS-RF-EVM cascade (192 virtual channels). Unlike existing raw-radar datasets, Rad-R pairs each recording with a controlled hardware fault at a calibrated severity, an independent physical severity measurement, and frame-synchronised IMU, temperature, GPS, and camera streams. Rad-R is a single-session dataset, so our generalisation claims are confined to a controlled cross-severity protocol in which train and test use physically distinct captures. A reproducible benchmark evaluates seven representative vision backbones and the proposed raw-IQ Mamba SSM (RadrNet) under within-clip, chirp-wise anytime, few-shot cross-capture, and controlled cross-severity protocols. Within-clip performance is near-saturated ($>0.98$ macro-F1), whereas cross-severity generalisation remains difficult: the absolute-phase RadrNet-DS falls to $0.49$ macro-F1. RadrNet-DS-CI replaces absolute phase with per-frame-standardised magnitude and relative chirp-to-chirp phase and ranks first on the controlled benchmark ($0.663$ vs. $0.628$ for the strongest RD-CNN; three seeds); the RadrNet family also leads on the anytime and few-shot budgets.",
+  "category": "multimodal",
+  "domain": "automotive radar fault detection",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "macro-F1",
+  "general_score_metric": "macro-F1",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://arxiv.org/abs/2608.30896",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "MORSE-STEM",
   "description": "Abstract Automated scanning transmission electron microscopy (STEM) increasingly requires a controller to choose not only where to measure, but also which measurement mode to use under a limited electron budget. This choice is objective-dependent: a policy that is effective for intensity-centred sampling may be poorly matched to a task that values detector-specific or modality-specific information. We present MORSE-STEM, a multimodal routing and scoring scheme that represents acquisition as a budgeted sequence of location–modality decisions. The approach is evaluated in an offline replay benchmark built from public UiO-66 sparse 4D-STEM scans paired with external high-angle annular dark-field scout images, giving 69 matched real scans with modality-dependent action costs. On this benchmark, controller rankings change when the reward objective is changed. Under an intensity-centred scalar reward, the myopic scalar controller gives the highest mean reward. Under a multimodal-discovery reward, the budgeted hierarchical controller gives the highest mean reward, increasing the score from 3.54 for the myopic scalar baseline to 20.27. Held-out detector analyses show that the two reward modes correspond to different endpoint families: scalar rewards track intensity-like proxies, whereas the multimodal reward emphasizes dark high-angle and imbalance-rich regions reconstructed from raw sparse event streams.",
+  "category": "multimodal",
+  "domain": "electron microscopy",
+  "task_types": [
+    "planning",
+    "agentic",
+    "perception"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://doi.org/10.1088/2632-2153/aea7f7",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

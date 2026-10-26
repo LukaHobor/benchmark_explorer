@@ -1,12 +1,24 @@
 {
   "name": "Pardis UAV Dataset",
   "description": "Five monocular flights recorded from a hexarotor over unstructured terrain near Pardis, Iran, at peak altitudes of 107 to 190 m above ground level. The dataset contains 54,661 frames across five flights, in the ASL layout used by the EuRoC MAV dataset, so existing SLAM tooling reads it without modification. Each flight ships two image streams: the 8-bit grayscale frames the benchmarked systems consumed, and the original camera frames for the same window. The reference is built from raw GNSS receiver fixes alone, converted to a local east-north-up tangent plane. One flight uses a fisheye lens under a Kannala-Brandt model; the other four use a rectilinear lens under a Brown-Conrady pinhole model. The deposit also contains the per-run estimated trajectories of five monocular SLAM and visual odometry systems — DSO, SVO, DSM, ORB-SLAM3 and MuST-VSLAM — across ten independent runs per sequence on three datasets, 1,368 trajectories in total, together with the reference trajectories they were scored against and a script that recomputes every result table from them using numpy alone. All five flights were recorded with one KS2A543 global-shutter USB camera module (Shenzhen Jinqianxiang Technology), a 1/2.6 inch two-megapixel global-shutter CMOS sensor behind an interchangeable M12 lens mount, at 640x480 or 480x640 pixels and a nominal 30 frames per second. Only the lens changed between flights.",
+  "category": "vision",
+  "domain": "visual odometry",
+  "task_types": [
+    "perception",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.5281/zenodo.22712201",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

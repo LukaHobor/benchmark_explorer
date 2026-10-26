@@ -1,12 +1,25 @@
 {
   "name": "RegLLM",
   "description": "We propose RegLLM, a diagnostic harness for bounded autonomy in regulated agentic workflows. It instruments six trustworthiness signals: citation validity, source grounding, schema compliance, escalation correctness, constitutional alignment, and unsafe-action rate. Signals are distinguished by their source of supervision: programmatic verifiers, task-level escalation labels, or AI-judge scores. A deterministic runtime supervisor blocks ungrounded answers and forces escalation, logging interventions. The same domain constitution informs evaluation, training rewards, and serving guardrails. Task-level should-escalate labels make the act-versus-defer decision a measurable training signal. We demonstrate the harness at smoke scale. An offline reference run (n=12) lifts escalation recall from 0 to 0.67 and reduces unsafe-action rate from 0.33 to 0.08 when governance is enabled. Two single-GPU Qwen2.5-3B LoRA/DPO pilots (n=8, same seed and evaluation split) expose substantial variation: nominally identical RL-base configurations yield task success of 0.25 versus 0.12 and escalation recall of 1.0 versus 0.5. An answer-quality adapter changes recall from 1.0 to 0.5 in Run A, but from 0.5 to 1.0 in Run B. An escalation-aware variant produces no measurable change in Run B. These small pilots do not establish reliable adapter effects or production readiness.",
+  "category": "text",
+  "domain": "regulated agent safety",
+  "task_types": [
+    "agentic",
+    "classification",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.37501",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

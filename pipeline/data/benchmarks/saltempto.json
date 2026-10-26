@@ -1,12 +1,24 @@
 {
   "name": "SalTempto",
   "description": "Video saliency prediction is inherently harder to model than static image saliency due to the additional temporal dimension. Video saliency benchmarks rest on the premise that predicting gaze on video requires utilizing temporal activity distributed across frames. Prior work has challenged this, showing that static baselines recover a significant fraction of the explainable gaze information on LEDOV, a popular video saliency dataset, and that video saliency models fail in the same places as this static baseline. We verify that this diagnosis still stands: under a more capable gold standard than the original analysis, and an updated panel of recent architectures, the strongest temporal architecture in the panel still does not substantially improve over a fine-tuned static baseline. However, it remains unclear whether the marginal gain reflects limitations of current temporal architectures or a lack of temporal patterns in the benchmark itself. We introduce SalTempto, a video saliency benchmark with greater dynamism: 224 clips of highly dynamic content, sourced from the HACS-Segments dataset so that each clip contains an event together with its lead-up and aftermath, with gaze recordings from up to 16 subjects and a training split for adapting pretrained models. On SalTempto, the static baseline recovers only about 13\\% of the headroom above the centerbias, against more than half on LEDOV.",
+  "category": "vision",
+  "domain": "video saliency",
+  "task_types": [
+    "perception",
+    "generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.03276",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

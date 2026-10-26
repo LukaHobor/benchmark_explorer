@@ -1,12 +1,24 @@
 {
   "name": "Dancing Stick Figures",
   "description": "Training a video-generation model from scratch is hard for reasons that precede model design. The feedback loop is long: a failure that appears only after a training run can make each attempted fix another run. The data are hard to reach: the corpora and recipes behind strong models are large, heterogeneous, and often unreleased. And scoring is blunt: open-ended generation has no single correct output, and an aggregate score does not by itself establish whether a sample succeeds or which property failed. Dancing Stick Figures is a synthetic video dataset built against these three obstacles. For iteration speed, its 64x64, 64-frame reference task is sized for practical repeated training on a single workstation GPU. For accessibility, the release is a 0.79-GB training tier of 4,020 video clips--1,340 six-second source motions, each rendered from three cameras by a deterministic dataset-generation harness--with checkpoints and a Colab workflow that reruns the reference training pipeline at reduced budget on a 16 GB Tesla T4. For scoring, every frame retains its generating state (ARDY cskel27 joint positions, camera, body parameters, and source motion) and per-pixel depth, surface normals, and part labels. These annotations support dataset-specific metrics for visible topology and part-wise motion; corruptions expose their sensitivities and blind spots.",
+  "category": "vision",
+  "domain": "video generation",
+  "task_types": [
+    "generation",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2608.29123",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

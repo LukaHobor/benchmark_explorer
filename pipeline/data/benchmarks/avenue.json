@@ -1,12 +1,24 @@
 {
   "name": "AVENUE",
   "description": "Audio-video (AV) editing aims to modify audio and video content according to a target prompt. Unlike single-modality editing, AV editing requires models to infer a modality-selective edit scope from the prompt alone: determining not only what should change, but also which modality should be preserved. Faithfully evaluating such models therefore requires both (i) benchmarks that span diverse edit types and modality categories, and (ii) evaluation that is itself modality-aware and sample-specific. However, existing AV editing benchmarks provide limited coverage of edit types and modality combinations, while current evaluation systems are often modality-blind and sample-agnostic, making it difficult to assess whether models faithfully preserve the unintended modality. To address these gaps, we introduce AVENUE, Audio-Video EditiNg Understanding and Evaluation, comprising two contributions: (1) a benchmark of 1,291 source clips and 7,957 editing instructions across audio-targeted, video-targeted, and AV-coupled edit types, curated and human-verified from VGGSound; and (2) a sample-specific, modality-aware evaluation framework that specifies, for each sample, both the intended change and the content that must remain intact. We evaluate representative AV editing models spanning three editing paradigms : joint, sequential, and separate, providing the first systematic analysis of modality-selectivity across paradigms.",
+  "category": "multimodal",
+  "domain": "audio-video editing",
+  "task_types": [
+    "generation",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.04253",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

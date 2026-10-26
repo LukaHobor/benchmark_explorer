@@ -1,12 +1,24 @@
 {
   "name": "GaussianBench",
   "description": "3D Gaussian Splatting has evolved from static reconstruction toward physics-integrated representations meant to predict how scenes change under interaction. This creates an evaluation problem: a rollout can look plausible while relying on incorrect internal mechanics, and visual agreement with observed motion does not establish a correct response to a new force, material edit, contact, or thermal intervention. We introduce GaussianBench, a physics-fidelity evaluation suite for physics-integrated Gaussian scene representations. It uses frozen file-based scenes, simulator-independent scorers, and analytical or measured references. The benchmark tests conservation, continuum response, heterogeneous-material coupling, Gaussian covariance transport and rendering, thermal phase change, and counterfactual response. Each reference declares its regime of validity, and outcomes distinguish PASS, FAIL, NA, and INVALID, separating physical failures from unsupported capabilities and invalid comparisons. We also provide GaussianFlesh, a thermomechanical reference entrant in which persistent 3D Gaussians act as both rendering primitives and continuum material points, advanced by a shared-grid MPM solver with per-particle constitutive dispatch and persistent thermal and phase state. We evaluate six released external systems: PhysGaussian, GaussianFluent, OmniPhysGS, PhysDreamer, Physics3D, and GASP.",
+  "category": "mixed",
+  "domain": "physics simulation",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://arxiv.org/abs/2610.10554",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

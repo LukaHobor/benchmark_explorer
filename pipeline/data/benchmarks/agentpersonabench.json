@@ -1,12 +1,25 @@
 {
   "name": "AgentPersonaBench",
   "description": "We introduce AgentPersonaBench (APB), a benchmark evaluating whether persona conditioning faithfully steers downstream agent behavior. While language models are increasingly deployed for persona-driven user simulation, existing benchmarks primarily evaluate conversational styling or self-reports rather than authentic behavioral fidelity. APB evaluates latent persona adherence one trait at a time, embedding each target trait within a complete synthetic profile without explicitly naming the trait or disclosing the test. Ground-truth adherence is verified strictly from observable actions across four interaction surfaces of increasing realism: survey, chat, web (interactive web environments), and app (desktop software environments). APB comprises 2,460 tasks spanning 867 traits, verified through automated audits and expert review. Our evaluation of 20 frontier model arms demonstrates that high-fidelity user simulation is already attainable: leading models achieve up to 84.7% full-pass adherence under unprompted conditions. At the same time, APB identifies clear behavioral boundaries: adherence drops across interaction modalities (only 37.9-64.3% pass all four surfaces), multi-attribute demands degrade retention, and competing model families exhibit pronounced behavioral divergence.",
+  "category": "mixed",
+  "domain": "agent simulation",
+  "task_types": [
+    "agentic",
+    "instruction_following",
+    "planning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2610.04379",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

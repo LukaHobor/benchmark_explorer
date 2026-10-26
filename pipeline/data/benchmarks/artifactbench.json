@@ -1,12 +1,24 @@
 {
   "name": "ArtifactBench",
   "description": "AI-generated music detectors are commonly compared using aggregate scores on benchmarks whose training overlap, generator lineage, source provenance, and audio-transformation history are only partially observable. This paper introduces ArtifactBench, a lineage-aware evaluation suite for measuring detector behavior across generator families and versions, real-music domains, collection-cohort shift, and inference coverage. The benchmark groups source recordings and their derived variants by content identity, separates calibration from final testing, records inference failures independently from classification errors, and reports source-level performance with uncertainty in addition to aggregate metrics. We evaluate multiple publicly available detectors under a version-pinned common protocol and examine how leakage control, cohort availability, threshold policy, and model-specific missingness alter measured performance and model ranking. On the 562-track common-success test intersection, ArtifactNet obtains 0.982 AUROC and 0.918 balanced accuracy, compared with 0.761/0.776 for the public Deezer detector; SpecTTTra and CLAM fall below 0.30 AUROC under this shifted cohort. These results also expose substantial generator- and real-domain shifts that aggregate scores alone conceal.",
+  "category": "audio",
+  "domain": "synthetic music detection",
+  "task_types": [
+    "classification",
+    "audio_understanding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.23550",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

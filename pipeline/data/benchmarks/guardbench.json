@@ -1,12 +1,24 @@
 {
   "name": "GuardBench",
   "description": "Large language models (LLMs) face a growing spectrum of adversarial jailbreak inputs that bypass safety training and elicit harmful outputs. Existing red-teaming efforts are ad hoc, using incompatible metrics and omitting guardrail-layer evaluation. We introduce GuardBench, a pre-deployment evaluation framework comprising 4,200 jailbreak prompts across seven attack categories, a four-stage automated pipeline, and a multi-metric scoring protocol covering Attack Success Rate (ASR), False Positive Rate (FPR), and P95 latency with 95% confidence intervals. We evaluate two guardrail configurations against GPT-4o-mini: a rule-based keyword filter (G1) and Llama Guard 2, an 8B-parameter LLM classifier (G3). Evaluated via static replay of archival 2023-era prompts, the undefended baseline achieves 5.8% ASR—far below prior-work rates of 60–80% obtained with live adaptive generation; the gap reflects prompt staleness, alignment generalisation, or both. Against this baseline, G1 reduces ASR by 0.32 pp with negligible latency; G3 achieves a 2.4 pp reduction but scores below the unguarded baseline on the Composite Safety Score due to 5,799 ms P95 latency under our evaluation hardware (Apple M3 Pro, llama.cpp, Q4_K_M quantisation). Token Manipulation attacks carry a 38.8% residual ASR under both configurations—the dominant open problem for next-generation guardrail design. GuardBench includes a CI/CD gate with configurable thresholds for evidence-based guardrail selection.",
+  "category": "text",
+  "domain": "llm safety",
+  "task_types": [
+    "safety_redteam",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.20944/preprints202609.0270.v1",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

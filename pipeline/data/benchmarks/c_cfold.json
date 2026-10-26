@@ -1,12 +1,24 @@
 {
   "name": "C-Cfold",
   "description": "Benchmark data for AFsample3, a method for generating multiple conformational states with AlphaFold3. This record holds the measurements underlying the benchmark and the structures needed to reproduce them. model_quality_data.zip — a per-target summary (2,704 rows: one row per target per method, with TM-score and RMSD to both reference states, the derived best-preferred and best-alternate values, model confidence, fill-ratio, and the TM-score between the two references) together with per-model tables giving one row per generated model, one file per method, for all four benchmarks. best_models.zip — 4,252 structures: for every target and method, the model that achieves the reported TM-score to each of the two reference states, with manifests. These are the models the reported numbers were computed from, so every value in the summary can be recomputed rather than taken on trust. Benchmarks: C-Cfold (238 two-state targets), fold-switches (92), OC23 (23) and TP16 (16). Methods: AF2vanilla, AF3vanilla, AFsample2, AFsample3, the four MSA-subsampling variants, and BioEmu. The C-Cfold benchmark itself — sequences, reference structures, MSAs and the alignments documenting the sequence correction — is deposited separately: https://doi.org/10.5281/zenodo.20667500 Complete ensembles, 1,000 models per target for the four main methods on C-Cfold, will be added in a later version of this record. See README.txt for column definitions and method nomenclature.",
+  "category": "mixed",
+  "domain": "protein structure",
+  "task_types": [
+    "generation",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "TM-score, RMSD",
+  "general_score_metric": "TM-score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.22669616",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

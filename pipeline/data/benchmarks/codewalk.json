@@ -1,12 +1,24 @@
 {
   "name": "CodeWalk",
   "description": "High-quality coding problems are expensive to collect. Benchmarks such as SWE-bench rely on substantial human curation, while synthetic alternatives typically rely on costly model generation and validation. In this work, we show that new coding problems can be created at almost no cost by composing existing ones. We formulate problem generation as code composition: verified atomic problems are combined into level-$N$ tasks, and a task is kept only if every atomic problem remains unsolved and a joint reference solution passes the same check used at evaluation time. The entire task-construction process is programmatic and requires no language-model generation or validation. We instantiate this approach in four coding settings: multi-bug repair, proof completion, complexity analysis, and clone equivalence. The generated tasks are challenging for frontier models, which all degrade as compositional depth increases. The generated tasks are also useful as training data: rejection-sampling fine-tuning on them improves Qwen3.5-9B at every composition level.",
+  "category": "code",
+  "domain": "coding",
+  "task_types": [
+    "code_generation",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pass@k",
+  "general_score_metric": "pass@k",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://arxiv.org/abs/2610.15345",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

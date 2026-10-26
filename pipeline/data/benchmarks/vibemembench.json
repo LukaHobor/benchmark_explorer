@@ -1,12 +1,25 @@
 {
   "name": "VibeMemBench",
   "description": "Coding agents operate on real repository coding tasks, and persistent memory systems promise to reuse experience across tasks. Yet existing evaluations do not show whether those systems improve executable repository work. Repository benchmarks test code changes but do not isolate memory, while memory benchmarks score recall without measuring downstream coding outcomes. We introduce VibeMemBench, a benchmark for evaluating memory systems on 111 coding targets from 90 SWE-rebench V2 repositories and 3,634 history trajectories from the target repositories. The targets follow the SWE benchmark style and cover bug fixes, feature requests, interface changes, and configuration work. An agent edits each target codebase under a declared memory condition. Executable tests decide task resolution. Each target is retained only when injected history experience improves its executable outcome in a reference setting, so every target carries a prior experience whose usefulness is verified by execution in that setting. The frozen verified experience is then transferred to five held-out solvers. Direct injection raises observed task resolution on four of them by 1.1 to 4.5 percentage points while lowering agent steps on all five. Yet when four existing memory systems must construct and retrieve experience from the same history, eleven of twelve solver and system pairings fail to exceed the matched memory-off baseline.",
+  "category": "code",
+  "domain": "coding agents",
+  "task_types": [
+    "code_generation",
+    "agentic",
+    "planning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2609.23570",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

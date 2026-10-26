@@ -1,12 +1,24 @@
 {
   "name": "RNA3D-Decoy",
   "description": "Recent advances in AI-based RNA structure prediction have increased the availability of candidate models, but their accuracy remains variable. Developing reliable quality assessment (QA) methods requires datasets that represent contemporary prediction errors across diverse targets and molecular contexts. Here, we present RNA3D-Decoy, a large-scale bench-mark dataset comprising 103,549 decoys for 677 experimentally determined targets, including 416 RNA-only structures, 117 RNA structures with metal ions, and 144 RNA-protein complexes. Decoys were generated using five biomolecular predictors: AlphaFold 3, ESMFold2, Protenix, Chai-1, and Boltz-2. Each decoy is evaluated against its experimental reference using TM-score, lDDT, and RMSD, with global and local quality annotations where applicable. DockQ scores additionally characterize RNA-protein interface quality. Target grouping incorporates both RNA and protein sequence relationships to support dataset partitioning. Analyses reveal distinct quality distributions across dataset levels and target-dependent differences among predictors, with each predictor contributing the highest-TM-score model for a subset of targets. Broad pooled score distributions also coexist with limited within-target score variation, particularly for RNA-protein complexes, emphasizing the importance of target-level characterization.",
+  "category": "mixed",
+  "domain": "rna structural biology",
+  "task_types": [
+    "regression",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.64898/2026.10.07.757332",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

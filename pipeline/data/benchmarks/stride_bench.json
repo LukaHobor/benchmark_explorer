@@ -1,12 +1,25 @@
 {
   "name": "STRIDE-Bench",
   "description": "Language-conditioned trajectory generation is here, but its evaluation has not kept pace. Existing pedestrian trajectory metrics compare trajectories with real-world human data. This does not scale to text-to-trajectory generation across diverse contexts, as collecting human trajectories for every scenario is costly and infeasible. Moreover, pedestrian behavior is heterogeneous and context-dependent, with no single metric as the correct answer, and current evaluation frameworks are not transferable to this domain. These challenges make scalable, reliable evaluation difficult. We introduce STRIDE, the first framework for evaluating context alignment between scenario descriptions and pedestrian trajectories. STRIDE addresses these challenges through three design choices. First, we derive our VRDST evaluation protocol from sociological theories to define a complete evaluation space. Second, it decomposes high-level context into scenario-adaptive behavioral questions. Third, every question is resolved against a deterministic measurement tool library that yields reproducible answers. Together, STRIDE enables complete, verifiable, automated, and scalable evaluation across diverse contexts without requiring human trajectory data. We instantiate STRIDE in the crowd domain as STRIDE-Bench, comprising 1K scenarios, 6K behavioral questions, and 11K measurements with calibrated expected answers across 30 real-world maps.",
+  "category": "multimodal",
+  "domain": "pedestrian trajectory generation",
+  "task_types": [
+    "generation",
+    "visual_reasoning",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.34799",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

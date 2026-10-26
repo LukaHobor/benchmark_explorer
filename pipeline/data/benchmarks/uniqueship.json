@@ -1,12 +1,24 @@
 {
   "name": "UniqueShip",
   "description": "Underwater Acoustic Target Recognition (UATR) of ships is well-suited for machine learning, yet its progress is hindered by the lack of large, diverse, and publicly available labeled datasets. In this work, we introduce UniqueShip, a machine learning-ready benchmark dataset for UATR applications sourced from the open Ocean Networks Canada (ONC) repository. Unlike previous datasets, we explicitly control for \"data leakage\" between the training and evaluation sets to ensure more reliable and generalizable model evaluation that does not encourage the model to memorize individual ships. We demonstrate that typical, random data partitioning in two prominent UATR datasets leads to falsely optimistic test performance, increasing accuracy by 10-48 percentage points compared to our more careful partitioning. Ablations on UniqueShip further show that doubling the number of unique vessels improves accuracy by 2.4-2.6 percentage points, while doubling total audio duration improves only by 0.8-1.3 points, indicating that vessel diversity should drive dataset curation more than total hours. We provide baselines with convolutional and transformer backbones, and analyze how ship metadata correlates with classification performance, finding that individual vessel characteristics predict classification difficulty far better than distance to the hydrophone alone. Overall, UniqueShip contains 2,460 hours of ship-radiated audio from 4,218 unique vessels (3,437 hours including background).",
+  "category": "audio",
+  "domain": "underwater acoustics",
+  "task_types": [
+    "classification",
+    "audio_understanding"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://arxiv.org/abs/2609.13659",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,24 @@
 {
   "name": "AnesLLM — Anesthesia Decision Dataset",
   "description": "AnesLLM is a clinical decision-support benchmark for anesthesia. It contains intraoperative decision windows derived from VitalDB(https://vitaldb.net) from Seoul National University Hospital: everything observable before a decision, plus the action the clinician actually took and two consensus alternatives estimated from the actions of all clinicians in the cohort (supervised LightGBM, case-grouped out-of-fold predictions). - 3,168 cases · 84,813 decision windows - Splits: dev.zip (25) · train_*.zip (2,994) · test.zip (149) - 5 action classes: `increase_hypnotic`, `reduce_hypnotic`, `increase_opioid`, `reduce_opioid`, `no_action` (+ `vasopressor` as an option, never ground truth) Each window contains 280 variables(patient and surgery, preoperative laboratory tests, 10 min of vital signs, effect-site concentrations and a 20-min action history) preceding the decision, the action actually taken (five hypnotic and opioid titration classes) and two consensus actions reflecting what the cohort's anaesthetists usually do in similar clinical states. The dataset includes case-level partitions, a difficulty-stratified test partition, a data dictionary and audit reports on integrity, information leakage, plausibility, drift, missingness and privacy. It is designed to evaluate the ability of any artificial intelligence system to choose the next action in a real case, and its construction method can be applied to other automated anaesthesia records.",
+  "category": "mixed",
+  "domain": "anesthesia",
+  "task_types": [
+    "classification",
+    "planning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.23330474",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

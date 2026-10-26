@@ -1,12 +1,24 @@
 {
   "name": "VALCON",
   "description": "Current value alignment evaluations for large language models (LLMs) heavily rely on output compliance, overlooking whether LLMs maintain value consistency when alternating between generator and evaluator roles. Such consistency is increasingly important because modern LLM agents and alignment pipelines often rely on the same LLM to both generate actions and evaluate their acceptability. To mitigate this limitation, we propose VALCON, a role-driven data construction framework that operationalizes value consistency into three benchmark suites (VAB-Consistency, VAB-Boundary, VAB-Challenge) via dual-role variation. By systematically pairing an LLM's generative behavior with its evaluative judgments under identical principles, VALCON synthesizes target evaluation data that exposes hidden value discrepancies. Experiments on 28 LLMs reveal pervasive cross-role inconsistency: models with highly compliant outputs frequently fail to align their judgments with their own generations. To understand and address this gap, we perform mechanistic probing that uncovers a role-dependent representational decoupling associated with this behavioral asymmetry. Guided by these insights, we propose a representation-directed intervention that effectively mitigates consistency failures. Our work establishes value consistency as a distinct alignment dimension and provides a complete evaluation-analysis-mitigation pipeline. Code and data are available at https://github.com/tjunlp-lab/VALCON.",
+  "category": "text",
+  "domain": "value alignment",
+  "task_types": [
+    "classification",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2610.21304",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

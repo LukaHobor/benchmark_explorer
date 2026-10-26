@@ -1,12 +1,23 @@
 {
   "name": "MixBench-TS",
   "description": "Multivariate Time Series Forecasting (MTSF) models that mix information across channels assume that the past of one channel carries information about the future of another. Yet they are evaluated on a small fixed set of standard datasets whose cross-channel structure is rarely examined. We ask two questions: \"How can we reliably measure lagged, non-linear, and joint coupling in MTSF datasets?\" and \"Do the standard datasets actually have such coupling?\" To answer the first, we test four candidate measures on synthetic datasets with planted ground-truth coupling: Granger Causality (GC), Transfer Entropy (TE), lagged Mutual Information (MI), and the CD gain, a model-based measure we introduce that compares a channel-dependent (CD) model to its channel-independent (CI) variant. Only lagged MI and the CD gain recover every planted coupling. For the second question, the answer is a definite no, as the standard datasets have a median of only 23% lagged-coupled channel pairs and a median CD gain of -4.9%, compared to 78% and +4.6% on chaotic ODE systems. We therefore propose MixBench-TS, a benchmark of 10 real-world datasets with a median of 55.5% lagged-coupled pairs and a median CD gain of +1.7%. Across six state-of-the-art models tuned under one protocol, CI models win on 10/10 (MSE) and 8/10 (MAE) standard datasets, but on only 3/10 and 2/10 MixBench-TS datasets. We recommend using our benchmark for evaluating new CD models.",
+  "category": "mixed",
+  "domain": "time series forecasting",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "MSE",
+  "general_score_metric": "MSE",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://arxiv.org/abs/2609.32656",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

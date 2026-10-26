@@ -1,12 +1,24 @@
 {
   "name": "IoMT-SecAlarmBench",
   "description": "The Internet of Medical Things (IoMT) combines clinical physiological data with cyber-system information, creating challenges in determining whether an abnormal reading reflects a genuine physiological event, a device fault, or a cyber-attack within the expected physiological range. Answering this requires counterfactual ground truth, which no existing dataset provides. We present IoMT-SecAlarmBench, a semi-synthetic benchmark that injects controlled integrity attacks into genuine coupled ECG+PPG recordings using a structured experimental design combining four attack morphologies, four severity levels, two physiological plausibility conditions, and replay attacks. Each injected window retains its cause, attack subtype, and the clean signal that would have been observed without the attack. We evaluate six detectors from five method families using threshold-independent measures and a matched false-alarm budget. Results show no method consistently detects the most difficult cases: replay attacks and low-amplitude transient spikes remain close to chance-level performance across detectors. Results also reveal a trade-off between detecting attacks and distinguishing them from sensor faults: the best-performing detector on hard cases flags fault/artifact windows at 5.3 times its false-alarm rate on normal data.",
+  "category": "mixed",
+  "domain": "iot security",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://arxiv.org/abs/2608.26416",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

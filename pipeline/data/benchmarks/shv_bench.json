@@ -1,12 +1,25 @@
 {
   "name": "SHV-Bench",
   "description": "SHV-Bench specifies a two-sided benchmark for evaluating whether BSSG containment (DOI 10.5281/zenodo.21713180) changes the measurable outcomes of an AI cybersecurity agent. The contained agent must produce fewer unauthorized effects (Side 1) while maintaining noninferiority on within-scope vulnerability-discovery performance (Side 2, fixed delta = 0.05). Both sides must pass; failure of either is a negative result. This paper does not report results. This paper is a successor protocol to the SHVVP Phase B design (DOI 10.5281/zenodo.21583202), departing on testbed, estimands, tests, multiplicity, canary design, analysis populations, and sample size (each departure enumerated in a 10-row table). The task corpus (1,673 CISA KEV entries, snapshot 2026-08-20, SHA-256 bound) is the normative universe. The evaluation protocol (paired Condition A/B, counterbalanced order, permutation-based conditional Wilcoxon signed-rank, simulation-based joint power >= 80% at fixed N = 800, 8-rule precedence decision mapping with 5 primary labels + UNSCORABLE + RUN-INVALID + UNDERPOWERED), 7 metrics with directionally conservative imputation, and 12 falsification conditions are frozen before any empirical run. Pre-run companion artifacts (ground-truth manifest, scope checker, power simulation, fault classifier, oracle harness, primary analysis code, eligibility manifests, environment images) are governed by F-SB12: no run is valid without a complete hash-bound manifest.",
+  "category": "mixed",
+  "domain": "cybersecurity",
+  "task_types": [
+    "agentic",
+    "safety_redteam",
+    "classification"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22062096",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

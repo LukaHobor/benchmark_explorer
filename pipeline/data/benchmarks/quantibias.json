@@ -1,6 +1,16 @@
 {
   "name": "QuantiBias",
   "description": "Almost every large language model that reaches a broad audience is quantized: trained in full precision, then compressed for efficiency. This step is assumed harmless and its safety is rarely re-checked. We find its principal side effect is increased bias that standard safety evaluation misses. Holding the model, its training, and the prompts fixed, a quantized model still refuses harmful requests, still avoids over-refusing benign prompts, and still selects the unbiased multiple-choice answer.",
+  "category": "text",
+  "domain": "llm bias and safety",
+  "task_types": [
+    "multiple_choice",
+    "classification",
+    "safety_redteam"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
   "creators": {
     "scientists": [
@@ -9,11 +19,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2607.21063",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

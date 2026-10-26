@@ -1,12 +1,24 @@
 {
   "name": "PatTransBench",
   "description": "We present PatTransBench, a 12,000-item Chinese-English/Japanese/Korean patent machine translation (PatMT) benchmark with a four-dimensional evaluation protocol. The benchmark comprises 6,000 short-text (sentence/claim) and 6,000 long-text (paragraph) pairs, evenly split across three language pairs and both translation directions, built via IPC-section-stratified sampling and dualthreshold quality gating from upstream patent-family parallel corpora. The evaluation protocol spans literal n-gram overlap (BLEU, ROUGE-L, chrF), cross-lingual semantic textual similarity (CLSTS), 38-probe-language consistency testing, and serving performance under concurrency. A case study on PatMT2-7B and its fp8/AWQ4/AutoRound-4bit variants reveals direction-dependent quantization effects masked by aggregate scores and non-monotonic language-failure patterns across quantization schemes that are invisible to single-metric evaluation. We plan to release the benchmark, protocol, and case-study results upon publication to support reproducible PatMT evaluation.",
+  "category": "text",
+  "domain": "patent machine translation",
+  "task_types": [
+    "translation",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://arxiv.org/abs/2610.16538",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "Multi2AV-Safety",
   "description": "Recent audio-video generators increasingly support joint conditioning on text, images, audio, and video. These capabilities also enable attacks that exploit cross-modal interactions or obscure harmful intent to bypass safeguards and induce harmful audio-video outputs. However, existing generation-safety benchmarks have not kept pace with these advances, providing limited coverage of multimodal input combinations and obscured attack intents. To address these gaps, we introduce Multi2AV-Safety, the first full-coverage red-team benchmark for multimodal-to-audio-video generation, comprising 11,024 attack instances across all 11 non-singleton T/I/A/V conditioning configurations, 4 attack-intent categories, and 5 harm categories. Our evaluation of recent state-of-the-art models, including four multimodal-conditioned audio-video generators and eight safety guards, reveals substantial vulnerabilities in both generation and safeguarding, with multimodal compositional risk and obscured attack-intent risk emerging as two complementary challenges. Guided by these findings, we introduce PerceptGuard, an omni-modal guard integrating compositional-risk and attack-intent supervision through structured risk perception learning. By jointly training rationale generation and safety classification, it learns shared risk representations that enable a safety head to make efficient predictions at inference without rationale decoding, while retaining the ability to generate explanations on demand.",
+  "category": "multimodal",
+  "domain": "multimodal generation safety",
+  "task_types": [
+    "safety_redteam",
+    "classification",
+    "generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2608.26535",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

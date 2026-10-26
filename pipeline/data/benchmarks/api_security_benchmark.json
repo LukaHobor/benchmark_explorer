@@ -1,12 +1,23 @@
 {
   "name": "API Security Benchmark",
   "description": "This artifact provides a fully reproducible, Docker-based benchmark for evaluating security testing tools against the OWASP API Security Top 10 (2023). Overview: The artifact accompanies the paper \"Benchmarking API Security Testing Tools Against the OWASP API Security Top 10 (2023): Coverage, Gaps, and Reproducibility\". It evaluates four security testing tools (Burp Suite Professional, OWASP ZAP, JWT Tool, Nessus Professional) against two complementary testbeds: a custom Node.js API and OWASP crAPI. Contents: Custom Node.js API with 32 planted vulnerabilities covering all 10 OWASP API categories Docker Compose configuration for one-command deployment (API + MongoDB) Tool configurations for Burp Suite, OWASP ZAP, JWT Tool, and Nessus Ground truth inventory with CVSS v3.1 scores and validation log Automation scripts for running all four tools 6 Jupyter notebooks reproducing all paper analyses Statistical analysis code (McNemar's test, bootstrap CIs) Figure generation scripts (radar chart, bar chart, heatmap) Raw results and computed metrics Requirements: Docker Desktop, 4 GB RAM, 10 GB disk space, Python 3.10+ (for analysis). Quick Start: docker-compose up -d ./scripts/run-all.sh jupyter lab notebooks/ Reproducibility: All results in the paper can be reproduced in approximately 1 hour. Run notebooks/06_master_integration.ipynb for a complete verification.",
+  "category": "code",
+  "domain": "api security",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22867221",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,23 @@
 {
   "name": "FakePhotoCard-BD",
   "description": "FakePhotoCard-BD is a binary-class image dataset for detecting fabricated Bengali news photocards scraped from public Facebook pages. It supports two classification labels: Authentic (Real News) and Fabricated (False News). Dataset composition (raw originals): - 970 Authentic (RealNews/) + 1,077 Fabricated (FakeNews/) = 2,047 images total - Formats: JPEG and PNG Data sources — Authentic (970 images) from 17 verified Bengali TV broadcaster Facebook pages: News24 (95), Somoy TV (92), Ekushey TV (73), Independent TV (60), NTV (59), Jamuna (57), Boishakhi (54), Banglavision (52), Channel i (51), Maasranga (50), SA TV (50), Ekattor (50), DBC (48), RTV (47), GTV (47), BTV (43), ATN News (41). Filenames carry the source page handle as a prefix. Data sources — Fabricated (1,077 images) from pseudo-broadcaster pages and anonymous profiles: Gupto TV (267), three anonymous numeric Facebook profiles (408 combined), Achuda TV (170), Jawra TV (113), Chalooo TV (34), C16archive (20), broadcast groups (17), Anwar TV (16), Somoyer Khobor (9), The Delhi Star parody account (8), Kamla TV (4), Chodon TV (4), newsbanglabdpage (1), and unattributed saves (6). The top three fabricated sources account for approximately 87% of the Fabricated class. Benchmark results (leakage-free stratified group 5-fold CV, seed 123): ANN Baseline ~52% (constant-output collapse); Pure CNN 87.45% ± 0.53%; Transfer CNN (MobileNetV2) 88.75% ± 1.55%; YOLOv8n-cls (ImageNet-pretrained) 97.36% ± 0.42%.",
+  "category": "vision",
+  "domain": "news image authenticity",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.17632/yf5fj3gm3y",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

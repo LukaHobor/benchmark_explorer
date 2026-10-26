@@ -1,12 +1,24 @@
 {
   "name": "TeleTwin",
   "description": "Large language models make it cheap to run influence operations whose messages never repeat, yet real platforms offer almost no ground truth for testing whether coordination detectors can find them. The problem is sharpest on Telegram, which moderates little and spreads content through broadcast channels and forwarding rather than a follow graph. We introduce TeleTwin, an LLM-powered digital twin of a Telegram crisis-discourse ecosystem in which channels are agents, each instantiated from the history of a real channel, calibrated on 1.07 million messages from 195 public channels on the Israel-Gaza and Iran-Israel conflict (March-August 2025). On a held-out period containing the June 2025 Iran-Israel war, the twin tracks daily dynamics better than statistical baselines (correlation 0.86 against 0.64) and reacts to the war unprompted, but it over-focuses on the conflict, over-amplifies forwarding cascades, underestimates the shock and writes recognisably LLM-like text. We then inject LLM-written campaigns with known membership into the real data and into the twin. In real data, identical-text, co-URL and synchrony detectors fail once a campaign rewords, staggers or drops links; multilingual semantic similarity recovers loud campaigns, including cross-lingual ones, but not quiet ones, and its false positives fall unevenly across political perspectives.",
+  "category": "text",
+  "domain": "social media coordination detection",
+  "task_types": [
+    "classification",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://arxiv.org/abs/2610.23944",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

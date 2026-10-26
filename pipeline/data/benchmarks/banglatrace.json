@@ -1,12 +1,24 @@
 {
   "name": "BanglaTrace",
   "description": "This dataset is a cross-stage benchmark for the front end of Bangla text-to-speech. It follows the outputs of text normalization (TN) through grapheme-to-phoneme (G2P) conversion and speech synthesis, so that errors can be located and measured at each stage. It contains 485 author-written Bangla sentences in 40 categories (numbers, dates and times, money and measurements, acronyms, code-mixed and romanized text, identifiers, and plain-text controls) across 12 application domains. The sentences have 548 annotated non-standard-word spans and 2,181 accepted sentence readings at three levels (PRIMARY, STRICT, FULL), and are split into 93 development and 392 test sentences. The record also includes: saved outputs of six TN conditions: raw text, bnNumerizer, NumericContext, PyBangla, Google's public WFST grammars, and an adapted Kingfisher with GPT-OSS 120B; TN-to-G2P interface results for Epitran and eSpeak NG; speech results for two synthesizers with different input representations, the character-input MMS-TTS and the subword-input Indic Parler-TTS, each recognized by MMS-ASR and Whisper large-v3; error-source and failure-type analyses; G2P agreement with the Google Bengali pronunciation lexicon; the systematic-review appraisal records; the code that regenerates every table and figure. It accompanies the article \"Tracing Errors from Text to Speech: A Systematic Review and Cross-Stage Benchmark of Bangla Text Normalization and Pronunciation\" (submitted to ACM TALLIP).",
+  "category": "audio",
+  "domain": "bangla text-to-speech",
+  "task_types": [
+    "generation",
+    "audio_understanding"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://doi.org/10.5281/zenodo.23357304",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

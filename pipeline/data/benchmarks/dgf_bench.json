@@ -1,12 +1,26 @@
 {
   "name": "DGF-Bench",
   "description": "Tool-using language-model agents can review enterprise projects as governance boards do: they read the evidence, apply written rules and decide whether the project may proceed. Part of that evidence comes from suppliers and project members with a stake in the decision. DGF-Bench is a benchmark in which a board of agents (specialist gates and a General gate that consolidates their decisions) reviews synthetic dossiers while an attacker plants deceptive content in evidence the organization does not vouch for. Dossiers are generated from canonical facts under 61 executable rules, with 42 authoritative records and 32 narrative documents; every gate is certified decidable from those records. Attacks never change an authoritative value, so an attacked dossier keeps the reference decisions of its clean copy. A success is attributable only when the agent receives the injection and takes the exact injected action, which it does not take on the paired clean dossier; the DGF score is the share of applicable fixed attacks a model blocks. Reading documents and records themselves, five of six models were outcome-strict (disposition, findings, actions and authorization all correct) on 82 to 85 of 85 gates.",
+  "category": "text",
+  "domain": "governance security",
+  "task_types": [
+    "agentic",
+    "classification",
+    "safety_redteam",
+    "instruction_following"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.34913",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

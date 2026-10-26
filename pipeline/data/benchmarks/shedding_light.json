@@ -1,12 +1,24 @@
 {
   "name": "Shedding Light",
   "description": "Accurate modelling of illumination is central to realistic image synthesis and scene understanding. Yet, there is little exploration into whether image generative models are good at this task or whether physical plausibility remains a key challenge for them. Clearly, significant progress has been made in realistic image synthesis, but do models truly understand lighting in a physically accurate manner? To answer this question, this work proposes a benchmark to assess the lighting understanding and harmonisation capabilities of generative models. Our key insight is that evaluating lighting understanding for such models only requires testing how well they insert novel objects into real photographs whilst maintaining consistent illumination. To do so, we use a multi-illumination dataset with images containing simple objects serving as ``light probes'', and prompt models to inpaint the same object onto the original image, then compare the generated results against the ground-truth light probes. We then estimate the lighting direction, colour and radiance distribution from the inpainted probes, providing a quantitative measure of illumination accuracy and photometric realism. Our work establishes a scalable evaluation protocol to systematically assess how well generative models capture and reproduce real-world lighting, offering a foundation for benchmarking the photometric accuracy of any future models. All code and data are available at https://lvsn.github.io/SheddingLight/ .",
+  "category": "vision",
+  "domain": "image synthesis and illumination",
+  "task_types": [
+    "generation",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.10787",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

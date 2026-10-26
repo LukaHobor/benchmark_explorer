@@ -1,12 +1,23 @@
 {
   "name": "AquaSense-ICS",
   "description": "AquaSense-ICS: a hybrid real-simulated cyber-physical dataset and leakage-aware benchmark for smart water quality monitoring and attack detection Machine-learning research on water cyber-physical systems is constrained by datasets that are either real but chemically poor, or simulated but free of sensing noise and attacks. AquaSense-ICS co-registers, on a common elapsed-time axis: Real edge recording: a 25.4 h window (8.0 h of recorded data, 31.5% coverage, 23 gaps longer than 60 s) from a Raspberry Pi 5 node with a TDS probe and a Bosch BME680 ambient sensor (temperature, relative humidity, gas resistance), sampled every 1-2 s (23,688 records). EPANET-MSX simulation: a looped network of 13 nodes (10 junctions, 2 reservoirs, 1 tank) simulated for 24 h, with six water-quality species (chlorine, pH, turbidity, dissolved oxygen, conductivity, trihalomethanes) and one wall species, plus two pulse injections (chlorine at J3, turbidity at J7). Attack and fault library: a seeded generator of five cyber-attack types (false data injection, stealthy FDI, replay, denial of service, drift) and three unintentional sensor faults (white noise, spikes, extreme values), with sample-level ground truth. Augmented and TimeGAN-generated sequences, released in separate files and flagged by the origin column in the fused table. They are intended for training only.",
+  "category": "mixed",
+  "domain": "water quality cyber-physical security",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.23390540",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "FIE-sLLM Benchmark v1.0",
   "description": "Companion material for the article Ontology-Constrained Decoding for Small Open Language Models: Structural Gains, Content Trade-offs, and Silent Omission in Clinical Nutrition Abstract Extraction (submitted to IEEE Access, 2026). Six open small language models (Granite-4.0-1B, Qwen3-1.7B, Qwen3-4B-Instruct-2507, Phi-4-mini-instruct, Kanana-1.5-8B, Granite-4.1-8B) were run under four conditions (C0 free generation; C1 schema in prompt; C2 structure-constrained decoding; C3 ontology-constrained decoding with controlled vocabulary) and a rule baseline on 1,658 frozen PubMed abstracts on vitamin D and probiotics. Records were validated in two stages (JSON Schema, closed-world ontology rules) before knowledge-graph insertion and evaluated with gold-free structural metrics, agreement with 386 linked ClinicalTrials.gov registrations, and blinded two-judge human assessment of 360 records. The record contains three archives: (1) code, ontology v1.1 (OWL), extraction profile, controlled vocabulary, derived JSON Schemas, prompts, freeze manifests and corpus manifest (PMIDs and hashes; abstract text is not redistributed); (2) all result tables, paired statistics, per-run metrics, and the human-judgment analysis tables with reproducible code; (3) per-abstract raw model outputs and validation results for every run, KG exports, and ClinicalTrials.gov snapshots. See README.md inside each archive.",
+  "category": "text",
+  "domain": "clinical nutrition information extraction",
+  "task_types": [
+    "generation",
+    "classification",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.22911104",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

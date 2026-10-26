@@ -1,12 +1,23 @@
 {
   "name": "Swarmbly AI v2.0.0",
   "description": "Peer-to-peer language-model inference today splits the model: layers or tensors are spread across machines and activations cross the public internet on every generated token. Swarmbly distributes the problem instead: a client-side orchestrator decomposes a request into semantic sub-tasks, each dispatched once to a volunteer node running a complete small model, and the returned fragments are verified and assembled locally, so the network is crossed once per unit of work rather than once per token. What version 2 adds: a theory of the fragment. Version 1.4 knew that it had to fragment but not into what. Version 2 derives it: the fragment is a task domain cut at interfaces of weak coupling; its size L is a measured property of the node class and the fragment count is derived from it; its overlap is the maximum of two observable quantities (longest repeat, longest dependency crossing a boundary), which saves 29 % of network compute; and the context budget is derived rather than swept, formalised as an indirect rate–distortion problem with a second axis δ. Five falsifiable models (M1–M5) accompany the theory, each with its death condition written before measurement, and Section 3 turns the genomics analogy into an explicit method for accepting or discarding a homology. Measured, with a published harness.",
+  "category": "text",
+  "domain": "distributed llm inference",
+  "task_types": [
+    "generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.23034237",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

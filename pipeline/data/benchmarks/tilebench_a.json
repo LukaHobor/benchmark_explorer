@@ -1,12 +1,23 @@
 {
   "name": "TileBench-A",
   "description": "\"TileBench-A is a controlled synthetic aerial benchmark for tiny-object detection, built to make adjustable the one nuisance factor no real dataset lets you touch: annotation noise. Real benchmarks bake their label error in, so the quality of a detector and the quality of the protocol scoring it cannot be separated. Here the ground truth is exact by construction and annotation jitter is a free parameter, which makes it possible to measure how much of a reported AP difference is attributable to the labels rather than to the detector.The release contains 30 scenes at 1024\\u00d71024 with 4,500 annotated instances. Object sides span 3\\u201364 px with an AI-TOD-like distribution \\u2014 30 % very tiny (2\\u20138 px), 43 % tiny (8\\u201316 px), 23 % small (16\\u201332 px) and 4.4 % medium (32\\u201364 px), giving 72 % of instances below 16 px against AI-TOD's 86 %. Each scene places isotropic Gaussian targets on band-limited fractal terrain with distractor clutter; target contrast, clutter density and terrain roughness are swept parameters rather than fixed properties.Alongside the rendered scenes and annotations, the deposit includes the scene generator, the detection and tiled-inference pipeline, eight assignment-criterion implementations (IoU, GIoU, DIoU, NWD, DotD, RFD, SNWD, SANWD), the statistical routines and the full results tree, so every scene regenerates from its seed and every published number re-derives.",
+  "category": "vision",
+  "domain": "aerial object detection",
+  "task_types": [
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.21227/bxh7-1b73",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,24 @@
 {
   "name": "CTE-Bench",
   "description": "Coding agents change running software: they patch a service's code or overwrite its stored state, and then act on their own expectation of how the service will respond afterwards. A wrong expectation may surface only several calls later. Function-level code-execution benchmarks omit persistent service state, and agent benchmarks score the actions an agent takes or the final state it reaches. We introduce CTE-Bench, which measures whether a model can predict how an intervention changes a stateful service's future behavior, without asking it to choose actions. Each scenario gives the model Python service code, the calls and responses observed before the intervention, the intervention itself (a source edit or a state overwrite), and 40 fixed future calls; the model predicts every future response, and predictions are checked by executing the service. Three memory protocols control whether the model sees the correct earlier responses, none of them, or its own earlier predictions. CTE-Bench-Core-v1 contains 255 scenarios over six deterministic Python services, giving 10,200 predictions per model. The main score is effect-step value match (VM): exact response equality on the 2,476 future calls whose response the intervention changes. With correct earlier responses revealed, four API-hosted models (DeepSeek V4-Flash, Kimi K2.5, Qwen3.6-35B-A3B, and Claude Sonnet 4.6) reach 54.3%-61.5% effect-step VM.",
+  "category": "code",
+  "domain": "stateful software behavior",
+  "task_types": [
+    "open_ended",
+    "qa"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://arxiv.org/abs/2609.36647",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

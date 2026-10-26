@@ -1,12 +1,26 @@
 {
   "name": "MemoryMate-TA",
   "description": "\"MemoryMate-TA is a synthetic, fictional dataset for building and evaluating the language components of a voice-first memory companion for people living with dementia, in English, Tamil and Tanglish (Tamil written in Latin letters and mixed with English). It has six parts: (A) 2,138 patient utterances labelled with 11 intents (726 English, 720 Tamil, 692 Tanglish; train\\/val\\/test 1,396\\/377\\/365); (B) the same utterances with BIO entity tags for eight labels (PERSON, RELATION, MEDICINE, TIME, DATE, PLACE, OBJECT, EVENT); (C) memory profiles of four fictional patients, 411 facts about family, medicines and schedules, appointments, routines, object locations and recent events, each with a caregiver; (D) 304 questions against the profiles with gold fact ids and gold answers, including unanswerable questions for refusal testing; (F) 301 sentences with ambiguous words (tablet, glass, pressure, check, ...) and sense labels; (G) 308 caregiver notes with gold relation triples. Rows come from templates and from paraphrasing with Gemma models; every row records its source, generator, language and split, and paraphrases of one seed stay in one split. The dataset was used to train and benchmark MuRIL, XLM-R, mBERT and TF-IDF intent classifiers, CRF and MuRIL+CRF entity taggers, BM25 \\/ dense \\/ hybrid retrievers and grounded answer generation with Gemma 4 and Qwen 2.5. No real patient, caregiver or medical record was used.\"",
+  "category": "text",
+  "domain": "multilingual dementia care",
+  "task_types": [
+    "classification",
+    "retrieval",
+    "qa",
+    "generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.21227/mm12-hg42",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

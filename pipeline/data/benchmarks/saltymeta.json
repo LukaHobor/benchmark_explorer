@@ -1,12 +1,23 @@
 {
   "name": "SaltyMeta",
   "description": "Excess sodium intake remains a major public health challenge, while salty and saltiness-enhancing peptides offer a potential route to preserve sensory saltiness in reduced-sodium foods. Machine-learning studies of salty peptides, however, are constrained by small datasets, heterogeneous evidence standards, uncertain negative labels, and sequence similarity leakage. Here we present SaltyMeta, a curated benchmark and web-accessible screening framework for salty or saltiness-enhancing short peptides. The benchmark contains 580 peptides, including 280 positive peptides and 300 negative peptides, all standardized to 2-15 residue one-letter amino-acid sequences. Quality control found no non-standard residues, exact duplicates, or positive-negative overlaps. A similarity-grouped split retained 456 peptides for training and 124 for held-out testing. We evaluated 548 interpretable peptide descriptors, frozen ESM2 embeddings at 8M, 35M, and 150M parameter scales, and descriptor-embedding fusion models under grouped cross-validation. The traditional ExtraTrees baseline selected by training-set grouped cross-validation achieved ROC-AUC=0.693 in cross-validation and ROC-AUC=0.704, PR-AUC=0.702, F1=0.626, and MCC=0.304 on the held-out test set. The best initial protein-language-model fusion was traditional descriptors plus ESM2-8M embeddings, with grouped CV ROC-AUC=0.696 and test ROC-AUC=0.700.",
+  "category": "text",
+  "domain": "bioinformatics",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "ROC-AUC",
+  "general_score_metric": "ROC-AUC",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://arxiv.org/abs/2609.16809",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

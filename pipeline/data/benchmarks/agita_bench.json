@@ -1,12 +1,24 @@
 {
   "name": "AGITA-Bench",
   "description": "Current image-text evaluation often relies on a global score, which gives limited insight into which semantic details are supported by the image. Explainable metrics provide rationales, but the visual evidence supporting those rationales can still be difficult to verify. We introduce VisExMEM, a reference-free evaluator that decomposes captions into atomic claims, localizes visual evidence, verifies each claim, and averages claim-level support into a global score. Explanations use the same evidence and decisions. We train Qwen3.5-based 4B and 9B models on 100K samples with multi-task SFT, counterfactual refinement, and evidence-aware GDPO. Across eight benchmarks, VisExMEM-9B achieves the highest descriptive composite among open-source evaluators in our comparison, exceeding VQAScore by 11.7 points while remaining competitive with GPT-5.6 Sol. We also introduce AGITA-Bench, containing 600 human-annotated image-text pairs and 8.7K atomic claims for global and claim-level evaluation. For untuned Qwen3.5 and GPT-5.6 Sol controls, decomposed prompting raises the same composite by 3.6-5.1 points relative to holistic prompting. Human evaluation shows that VisExMEM explanations outperform prior explainable metrics and approach GPT-5.6 Sol.",
+  "category": "multimodal",
+  "domain": "image-text evaluation",
+  "task_types": [
+    "classification",
+    "visual_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.16441",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

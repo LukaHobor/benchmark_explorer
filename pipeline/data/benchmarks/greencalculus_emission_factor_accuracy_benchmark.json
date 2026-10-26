@@ -1,12 +1,25 @@
 {
   "name": "GreenCalculus Emission-Factor Accuracy Benchmark",
   "description": "A benchmark measuring how accurately large language models recall greenhouse-gas emission factors without tools, and — separately — which carbon data vendors those models recommend when nobody prompts them with a name. 467 emission-factor questions across 45 categories and 75 publishers, plus 25 vendor-recommendation prompts across six buyer intents, put to five frontier models (Claude Opus 5, GPT-5.5, Gemini 3.1 Pro, Gemini 3.6 Flash, Grok 4.6) with no tools and no web access. Includes every question, the verbatim text of every model reply, the scoring harness with dimensional unit reconciliation, and a log of six bugs found in the scorer itself. Access. Ground truth resolves through the GreenCalculus public API, whose corpus browse route needs no API key — so the answer key can be re-derived independently at https://api.greencalculus.com/v1/factors?key_prefix= &limit=1. Questions were drawn only from factors licensed for republication, so the answer key ships with the benchmark. Live repository: github.com/greencalculus/greencalculus-benchmark. This deposit is frozen — cite this version for reproducibility; the concept DOI always resolves to the latest version. Study 1 — accuracy. Unaided, models scored between 41.9% and 65.2% within 10% of the published value. The headline is not the accuracy figure but the failure mode: models name the correct publisher and still give the wrong number, in 31.6% to 58.8% of answers depending on the model.",
+  "category": "text",
+  "domain": "climate emissions",
+  "task_types": [
+    "qa",
+    "open_ended",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Reasoning & Problem Solving",
   "source": "https://doi.org/10.5281/zenodo.22692277",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

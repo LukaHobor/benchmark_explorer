@@ -1,12 +1,26 @@
 {
   "name": "DuplexSpeechBench-Document Grounding (DSB-DG)",
   "description": "Voice agents enable low-latency, natural interaction, yet their ability to faithfully ground responses in external documents remains underexplored. We introduce DuplexSpeechBench-Document Grounding (DSB-DG), a benchmark for evaluating document grounding in voice agents across five professional domains. DSB-DG targets three failure modes: Context Saturation, which measures grounding under increasing document length; Grounding Decay, which measures retention of document facts across multi-turn dialogue; and Proactive Grounding, which evaluates whether context re-injection mitigates conversational drift. The benchmark contains 1,636 adversarially verified QA pairs from 50 documents covering five professional domains, and supports fully automatic evaluation of grounding accuracy, hallucination, and response latency. Across systems spanning cascaded, proprietary full-duplex and real-time, and open-weight speech2speech architectures, we find substantial differences in effective grounding capacity. While cascaded pipeline (ASR-LLM-TTS) achieves the highest grounding accuracy, Gemini-Live and GPT-Realtime closely trail behind. Open-weight systems exhibit distinct failure modes, most notably an abrupt context-capacity collapse and multi-turn grounding decay. More broadly, grounding fidelity degrades with context and conversational load, and failures frequently manifest as unsupported generations rather than abstention.",
+  "category": "multimodal",
+  "domain": "voice-agent document grounding",
+  "task_types": [
+    "qa",
+    "dialogue",
+    "retrieval",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://arxiv.org/abs/2610.00316",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

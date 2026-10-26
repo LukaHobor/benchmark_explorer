@@ -1,12 +1,25 @@
 {
   "name": "DF-Core v1.3",
   "description": "Summary Benchmarks for policy-adherent language agents typically split tasks into those where the agent must refuse and those where it must act, and report accuracy on each. Such designs measure the joint effect of task difficulty and of whatever conversational dynamics the benchmark contains, without separating them. DF-Core is a stipulated-rule benchmark in which the same 56 decision families are evaluated both without conversational pressure and under a fixed three-turn pressure sequence, in each of two directions: pressure to act despite a blocking condition, and pressure to withhold a required action. Because the oracle is a deterministic function of an explicitly stated rule and an explicitly stated variable state, correctness is decidable without human annotation or an LLM judge. Main finding Across 4 models and 3 independent replication runs (4,704 scored responses), we find a small baseline directional asymmetry (14.6 percentage points on the unperturbed condition) and a much larger pressure-induced one. Measured within the same multi-turn conversations, on the same tasks: accuracy falls 57.2 pp under pressure toward inaction, versus 6.7 pp under pressure toward action (92.96% vs 28.47% pooled across pressure turns, two-proportion z = 29.6). Errors run 4.8:1 toward false blocking — the model refuses an action the stated rule requires. The effect appears in all four models and all three runs, but its magnitude varies substantially by model (gap 42.5 pp to 92.9 pp).",
+  "category": "text",
+  "domain": "policy adherence",
+  "task_types": [
+    "classification",
+    "instruction_following",
+    "dialogue"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22648736",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

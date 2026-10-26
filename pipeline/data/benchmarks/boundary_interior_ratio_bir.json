@@ -1,12 +1,23 @@
 {
   "name": "Boundary-Interior Ratio (BIR)",
   "description": "Breast tumour segmentation in ultrasound imaging requires both fine boundary delineation and global contextual understanding. Existing evaluation metrics such as the Dice Similarity Coefficient provide aggregate performance estimates but do not distinguish segmentation behaviour between boundary and interior tumour regions. This study presents a hypothesis-driven comparative evaluation examining whether CNN, pure SSM, and hybrid SSM-CNN architectures exhibit distinct boundary-interior segmentation profiles. U-Net (ResNet-34 encoder), Vision Mamba (pure SSM), and VM-UNet (hybrid SSM-CNN) were trained on 3,333 breast ultrasound images (BUSI, BUS-BRA, BUS-UC) and externally validated on three independent sites (BrEaST, BLUI, BUS-UCLM; n = 748). We introduce the Boundary-Interior Ratio (BIR), a spatially decomposed metric quantifying relative segmentation performance between boundary and interior regions, together with a Grad-CAM-based Boundary-Interior Activation Ratio (BIAR) for mechanistic analysis. A structured four-variant ablation study examines the contributions of skip connections, VSS blocks, and hierarchical encoding. U-Net achieves the highest internal Dice (0.874) and strongest external generalisation (mean Dice = 0.771). Both SSM-based architectures exhibit higher BIR than U-Net (VM-UNet: 0.707; Vision Mamba: 0.722 vs. U-Net: 0.683), indicating distinct relative boundary-interior performance profiles.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "task_types": [
+    "perception"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.1038/s41598-026-68828-5",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

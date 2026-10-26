@@ -1,12 +1,24 @@
 {
   "name": "AD-ImageBench",
   "description": "생성형 AI가 광고사진 제작에 활용되면서, 생성 결과물을 사실성이나 미적 완성도만이 아니라 광고사진의 시각적 설득 구조 안에서 평가해야 할 필요가 커지고 있다. 그러나 LPIPS와 CLIPScore 같은 범용 지표는 자연 이미지를 기반으로 학습되어 광고사진의 표현 관습과 도메인 특수성을 직접 반영하지 못한다. 광고 이미지의 우수성을 규정하는 준거는 사례 빈도가 아니라 광고학 ∙ 기호학 ∙ 시각이론의 학문적 축적에서 도출된다. 본 연구는 이러한 관점에서 검증된 표현 형식 분류 체계를 평가 준거로 삼아 생성형 AI 광고 이미지 평가를 위한 초기 벤치마크 데이터셋 AD-ImageBench 를 구축하고자 하였다. 본 연구는 원본 광고 도메인과 생성 이미지의 분포 차이, 곧 도메인 쉬프트를 평가의 장애물이 아니라 측정 대상으로 다루고자 하였다. AD-ImageBench는 광고사진을 여섯 표현 형식으로 분류하고 두 상용 생성 모델의 결과를 동일 조건의 비교 세트로 묶었으며, 여기에 전문가의 쌍대 비교 판단과 다차원 품질 평정을 결합하여 생성 이미지의 광고적 적합성을 원본 도메인의 준거에 비추어 비교하는 자료 구조로 설계되었다. 표현 형식 분류는 분류자 사이에서 일관되게 식별되었고 전문가에게도 적합한 라벨로 인식되었으며, 전문가 판단 자료는 자동 평가 지표의 학습 자료로 쓰일 수 있는 안정적 신뢰도를 확보하였다. 이는 표현 형식이 광고의 주제를 나누는 명목적 구분이 아니라 광고사진의 시각적 관습과 품질 판단 기준을 구분하는 조형적 단위로 기능함을 보여준다. AD-ImageBench는 완성된 평가 표준이 아니라, 동일 조건에서의 모델 비교와 표현 형식별 생성 난이도의 진단, 전문가 판단을 반영한 자동 평가 지표의 학습을 가능하게 하는 초기 자료 구조이다.",
+  "category": "vision",
+  "domain": "advertising images",
+  "task_types": [
+    "generation",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human_eval",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.47294/ksbda.27.4.24",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

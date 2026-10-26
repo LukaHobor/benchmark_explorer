@@ -1,12 +1,26 @@
 {
   "name": "MRMAD",
   "description": "Large audio-language models (LALMs) have shown promising progress in understanding speech, music, and general sound events, yet their ability to reason about how audio signals are degraded remains underexplored. Existing benchmarks primarily evaluate semantic understanding, event recognition, or high-level audio reasoning, leaving a basic question unanswered: Do LALMs understand the differences in audio quality? We introduce MRMAD, a Multi-Round Multi-Audio Degradation benchmark for evaluating audio degradation perception and understanding in LALMs. MRMAD spans speech, music, and sound, and frames evaluation as multi-turn dialogues across multiple audio inputs, requiring models to identify types of degradation, compare severity, and perceive corruption changes across turns. Unlike current single-turn audio-language benchmarks, MRMAD evaluates whether LALMs can maintain consistent degradation hypotheses with new evidence and comprehend low-level acoustic phenomena over multi-turn dialogues. Through a systematic evaluation of 18 representative LALMs from non-thinking to reasoning and Omni models, we find that current models often recognize coarse content while failing to diagnose, compare, or reason about degradations reliably. Human evaluations further reveal a significant perception gap between LALMs and human listeners.",
+  "category": "audio",
+  "domain": "audio degradation perception",
+  "task_types": [
+    "audio_understanding",
+    "dialogue",
+    "perception",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://arxiv.org/abs/2608.22236",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

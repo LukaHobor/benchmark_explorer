@@ -1,12 +1,26 @@
 {
   "name": "CausalDriveBench",
   "description": "Vision-Language-Action (VLA) models for autonomous driving produce natural-language reasoning alongside predicted trajectories, but whether this reasoning reflects the causal structure of the scene remains untested. We introduce CausalDriveBench, an evaluation framework grounded in Pearl's Causal Hierarchy (PCH) that tests causal reasoning in driving-specific VLAs through structured visual question answering (QA) and alternative-trajectory prediction. To this end, we construct causal scene graphs over nuScenes that distinguish causally active, dormant, and distractor entities, separating perceptual salience from causal relevance. The benchmark spans all four rungs of PCH (association, intervention, and counterfactual along with causal discovery) for QA generation. For the higher rungs, we additionally provide reference trajectories under specified scene modifications, enabling action-level verification that complements reasoning-level evaluation. In total, the benchmark contains 7,285 verified causal QA pairs and 1,000 counterfactual trajectories derived from nuScenes. We evaluate 10 driving-specific VLAs and 3 general-purpose VLMs, and report three findings. First, the best model reaches only 70.6% QA accuracy, and 4 of 13 models score below random chance.",
+  "category": "multimodal",
+  "domain": "autonomous driving causal reasoning",
+  "task_types": [
+    "visual_reasoning",
+    "qa",
+    "planning",
+    "generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.32157",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

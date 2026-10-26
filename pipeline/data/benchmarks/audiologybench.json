@@ -1,12 +1,26 @@
 {
   "name": "AUDIOLOGYBENCH",
   "description": "Background: Large language models (LLMs) are increasingly being explored for clinical decision support, but their performance in audiology has not been systematically benchmarked using clinically grounded case materials and rubric-based safety evaluations. Objective: This study aimed to develop and evaluate AUDIOLOGYBENCH, a 3-tier benchmark for characterizing frontier LLM capability in clinical audiology along (1) curated domain knowledge, (2) literature-derived evidence, and (3) clinical reasoning under multimodal case input, with an explicit human audit of the automated adjudicator on the primary end point. Methods: The benchmark comprises 3139 objective items from educational resources, 3175 research article-derived items from peer-reviewed articles published between 2015 and 2025, and 67 multimodal clinical case studies graded against a standardized A-F rubric with 6 prespecified critical-error types that cap scores at D or F. Eight models were evaluated on the educational objective items: 4 frontier multimodal models (Gemini 2.5 Pro, Grok 4, OpenAI O3, and Claude Sonnet 4 Thinking) were evaluated on the research article-derived items, and on 804 case study evaluations. Adjudication used Gemini 2.5 Pro (objective and research-derived items) and Claude Opus 4.5 (case studies). The case study adjudicator was independently audited against PhD-level audiologist consensus on blinded subsamples, supplemented by a post-stratified human-calibrated sensitivity analysis.",
+  "category": "multimodal",
+  "domain": "clinical audiology",
+  "task_types": [
+    "qa",
+    "multiple_choice",
+    "open_ended",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.2196/94755",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

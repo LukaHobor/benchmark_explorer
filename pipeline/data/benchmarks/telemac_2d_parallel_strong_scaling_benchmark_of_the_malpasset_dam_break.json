@@ -1,12 +1,23 @@
 {
   "name": "TELEMAC-2D parallel strong-scaling benchmark of the Malpasset dam-break",
   "description": "Data and scripts to reproduce the TELEMAC-2D parallel strong-scaling benchmark of the Malpasset dam-break, accompanying the paper \"Parallel Scaling of the Malpasset Dam-Break Benchmark in TELEMAC-2D\", submitted to the 32nd TELEMAC User Conference (Toulouse, 14–16 October 2026). The benchmark measures wall-clock time, speedup and parallel efficiency of TELEMAC-2D (v9.1.0) on the Malpasset dam-break across five mesh refinement levels (26,000 to 6.66 million elements) and MPI process counts from 4 to 256. This archive contains everything needed to run the benchmark in place: The TELEMAC-2D case file and the STBTEL mesh-refinement configuration. The user Fortran subroutines (initial water depth, distance, wall-clock timing). The pre-built refined meshes and boundary-condition files for levels x1, x4, x16, x64 and x256 (higher levels are reproducible from the recipe in REGENERATE.md). The orchestration script driving the runs through the TELEMAC validation framework (vvytel). See README.md for full instructions and the numerical configuration.",
+  "category": "mixed",
+  "domain": "parallel computing",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "wall_clock_time",
+  "general_score_metric": "parallel_efficiency",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.23163486",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

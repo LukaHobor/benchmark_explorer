@@ -1,12 +1,25 @@
 {
   "name": "SynDORBench",
   "description": "Large vision-language models (LVLMs) have demonstrated remarkable performance on multimodal reasoning benchmarks, yet their perceptual reliability under physically constrained imaging conditions remains poorly understood. Existing evaluations predominantly assume ideal visual inputs and therefore fail to characterize how camera distance, illumination, viewpoint, and pixel density fundamentally affect semantic recoverability. We introduce SynDORBench, the first physically grounded benchmark for evaluating LVLM perceptual robustness under DORI-calibrated conditions aligned with human visual capability standards. SynDORBench comprises over 54k question--answer pairs generated through a controllable synthetic pipeline that systematically varies viewing distance, lighting, camera geometry, and action pose according to physically interpretable pixel-density regimes. To support scalable low-visibility supervision, we further propose a discernibility annotation framework that propagates human perceptual labels using mask-conditioned statistical features and ensemble learning. We evaluate 16 open-source LVLMs, a commercial LVLM baseline, and YOLO11x across human-presence classification and action recognition tasks under progressively degraded visibility conditions. Our results reveal that perceptual failure in LVLMs is strongly governed by pixel density and physical imaging constraints rather than model scale alone.",
+  "category": "vision",
+  "domain": "vision-language perceptual robustness",
+  "task_types": [
+    "classification",
+    "qa",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.31823",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

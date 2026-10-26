@@ -1,12 +1,24 @@
 {
   "name": "UniPDE-Bench",
   "description": "When reconstructing the hidden state of a partial differential equation (PDE) system from partial observations, aggregate prediction error measures performance on a given data distribution but does not reveal how strongly the observations constrain each predicted direction. We introduce UniPDE-Bench, a direction-wise evaluation protocol that incorporates local observation geometry into state-estimation assessment, providing a reference for prediction recovery and confidence-based selection that is independent of the estimator. The protocol whitens the joint observation Jacobian by the noise covariance and normalizes it by a state metric. Its complete right singular basis represents joint variations of the state, which a relative sensitivity threshold partitions into retained and below-threshold directions. In this common basis, the protocol evaluates recovery and the agreement between prediction claims and the geometric partition, while recovery and abstention curves describe confidence-based selection at different claim coverages. In the simulated tasks and observation configurations studied here, confidence rules whose overall ranking exceeds chance can still exhibit below-random abstention on below-threshold directions at some high claim coverages.",
+  "category": "mixed",
+  "domain": "pde state estimation",
+  "task_types": [
+    "regression",
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://arxiv.org/abs/2609.12493",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

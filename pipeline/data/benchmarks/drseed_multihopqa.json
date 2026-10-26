@@ -1,12 +1,26 @@
 {
   "name": "DrSeed-MultihopQA",
   "description": "Drseed_qa_dataset.json is a Chinese Multi-hop Question Answering (QA) dataset tailored for crop breeding knowledge. It is designed for evaluating Retrieval-Augmented Generation (RAG)-based knowledge service systems in the breeding domain. The data uses variety approval and promotion documents as its knowledge source and is hierarchically constructed by hop counts (hops). Each sample provides all standard supporting paragraphs required to answer the question, requiring cross-paragraph information aggregation. The corpus covers five major crop categories: maize, rice, wheat, soybean, and cotton. The content encompasses core breeding business information including variety origin & pedigree, agronomic traits, disease resistance & quality, yield performance, approval & suitable planting regions, and cultivation techniques. The questions mainly focus on numerical attribute queries, listing/aggregation, comparisons, and calculations. Evaluation Positioning The dataset provides standard supporting paragraphs and reference answers for each question, supporting two evaluation modes for RAG knowledge service systems: End-to-End QA Evaluation: Input the question into the complete system (self-built breeding knowledge base retrieval + generation). Use answer to evaluate the accuracy of the final output, and use paragraph titles in paragraphs as ground truth to verify whether retrieved knowledge chunks match.",
+  "category": "text",
+  "domain": "crop breeding",
+  "task_types": [
+    "qa",
+    "retrieval",
+    "open_ended",
+    "math_problem_solving"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://doi.org/10.5281/zenodo.22309273",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

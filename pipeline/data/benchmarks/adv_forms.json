@@ -1,12 +1,25 @@
 {
   "name": "ADV-FORMS",
   "description": "Automated information extraction from form-based historical records presents unique challenges, including highly variable page layouts, obsolete typefaces, and diverse handwriting styles. We introduce ADV-FORMS, a particularly complex, openly available dataset of form-based historical documents with benchmarks for layout analysis, handwritten text recognition (HTR), and optical character recognition (OCR). ADV-FORMS comprises 1,200 questionnaires in multiple layout templates, collected in the early 1930s, which are filled in with handwritten, typewritten and stamped content, as well as non-textual elements like underscores, drawings, and selection marks. Handwritten text occurs as German Kurrent and Latin script. ADV-FORMS contains manual annotations using bounding boxes capturing 17 recurrent, visually distinct layout categories as well as manual transcriptions of handwritings and all other typewritten or stamped texts. Baseline evaluations using fine-tuned YOLOv11 for layout detection and out-of-the-box TrOCR for HTR/OCR provide valuable insights, with layout detection achieving good precision/recall (>0.9) for most categories. HTR/OCR performance showed high word error rates, which can be addressed with post-filtering, as evidenced by high BERT scores (>0.8). In summary, our dataset provides benchmarks for further model development with each improvement directly bringing benefit to the analysis of historians and research in the Digital Humanities.",
+  "category": "vision",
+  "domain": "historical document ocr",
+  "task_types": [
+    "perception",
+    "classification",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision_recall, word_error_rate, BERTScore",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.1007/978-3-032-36023-6_14",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

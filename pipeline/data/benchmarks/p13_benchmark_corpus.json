@@ -1,12 +1,24 @@
 {
   "name": "p13 benchmark corpus",
   "description": "PAIRWISE: Deep Learning-based Prediction of Effective Personalized Drug Combinations in CancerPAIRWISE predicts whether a drug pair acts synergistically in a specific tumour sample. It fuses three modalities — molecular graphs of the two compounds, theirdrug–target interaction profiles propagated over a protein–protein interactionnetwork, and the sample transcriptome — through an attention encoder into a singlesynergy probability. This repository contains the model, the seven benchmarked baselines, and the code that reproduces figure and table in the manuscript. Also you can refer to the code repo in the GitHub repository. Interactive predictions: synergy explorer and BTKi explorer Contents of this depositdata/ — the p13 benchmark corpus (~30K drug–drug–cell-line records, 1,275 drugs × 163 cell lines across 15 lineages, harmonised from 13 public screens with Loewe/Bliss/ZIP/HSA scores recomputed in SynergyFinder v3.0), plus chemical, drug–target and transcriptome feature banks, the STRING PPI network, and gene sets.weights/ — trained checkpoints for PAIRWISE and eleven baselines (seven published deep-learning methods and four classical ML models).",
+  "category": "multimodal",
+  "domain": "cancer drug synergy",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC",
+  "general_score_metric": "AUROC",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.6084/m9.figshare.33950731",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "STEMBench",
   "description": "A benchmark harness for evaluating LLM agents on research-grade STEM tasks, built on Inspect AI. Each task is a self-contained contract folder that the harness loads, stages into a sandbox, runs through an agent, and scores without task-specific harness code. WHAT THIS ARCHIVE CONTAINS Harness source code: task loading, Inspect task/solver construction, tool surface (bash, python, data exploration, literature search, document reading, submission validation), Docker and local sandbox backends, scorers, and the CLI entry points for running, grading, and aggregating. The complete contract for 12 tasks across three domains — astrophysics (simulated and real Stokes inversion, PLAsTiCC light-curve classification), high-energy physics (top-quark tagging, HiggsML uncertainty quantification, LHC Olympics anomaly detection, DarkMachines anomaly detection), and neuroscience (ABIDE multi-site diagnosis and age prediction, resting-state BOLD HRF deconvolution, neural-mass model family classification, parameter recovery, and digital twins). Per task: the agent-facing task statement, the scoring definition, the grader, per-file SHA-256 checksums, a literature index citing sources by DOI, baseline and expert reference solutions, and dataset-generation code where the payload is synthetic. Leaderboards and the per-run report used for the reported results, plus the campaign script that records the exact model, agent, sandbox, reasoning effort, and budget limits behind them.",
+  "category": "mixed",
+  "domain": "scientific STEM",
+  "task_types": [
+    "agentic",
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Reasoning & Problem Solving",
   "source": "https://doi.org/10.5281/zenodo.22959833",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

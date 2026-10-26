@@ -1,12 +1,25 @@
 {
   "name": "VulContextBench",
   "description": "Vulnerability-detection benchmarks score the verdict an agent reaches, not the evidence it gathered. A model that recalls a CVE from pretraining therefore scores the same as one that traced the data flow. We study a task where this difference matters, deciding whether a commit introduces a vulnerability. Instead of scoring the verdict, we score whether the agent retrieved the code its conclusion depends on. We present VulContextBench, a benchmark of 111 vulnerability-introducing commits (VICs) across 83 repositories, 63 CWEs, and five languages. Existing datasets label such commits by tracing a fix back through the version history, which often points to the wrong commit. We therefore audit every case by hand against an explicit four-criterion definition of a VIC, so the benchmark does not inherit that label noise. Each case is annotated with gold context, 464 code blocks in total, each tagged by its role in the evidence for the vulnerability. We evaluate seven frontier models with precision, recall and F1 at three granularities (file, block, and line), scored separately on the context an agent viewed while exploring and on the context it finally declared as evidence. The gap between the two is the main finding. Every model opens most of the gold context while exploring, but reports only part of it as evidence. At the level of code blocks, the share of the gold context a model reports is 37 to 73 percentage points below the share it viewed.",
+  "category": "code",
+  "domain": "software security",
+  "task_types": [
+    "retrieval",
+    "classification",
+    "agentic"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.32601",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,24 @@
 {
   "name": "KEX-bench",
   "description": "Coding agents now find real vulnerabilities in production software. However, bug discovery results do not measure whether agents can construct exploit primitives. We introduce KEX-bench, a benchmark for evaluating coding agents on exploit primitive generation against real operating-system kernels. KEX-bench contains 45 task instances across 40 Linux and Windows CVEs, covering kernel address leak, instruction-pointer control, heap read, heap write, and arbitrary address write. Each task runs in an isolated virtual machine, exposes controlled tools, and uses a deterministic verifier to check primitive-specific success. We evaluate state-of-the-art coding agents paired with frontier and open-weight models under fixed tool-call budgets. Without a reference proof of concept (PoC), the strongest configuration solves 1 of 20 Windows tasks (5.0%) and 14 of 25 Linux tasks (56.0%). With a reference PoC, the strongest configuration solves 31 of 45 tasks (68.9%). This highlights the gap where agents reach kernel crashes but fail to shape kernel state into exploit primitives. We release KEX-bench for reproducible research on AI-assisted exploitation at https://kex-bench.github.io.",
+  "category": "code",
+  "domain": "kernel exploit development",
+  "task_types": [
+    "code_generation",
+    "agentic"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.25591",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

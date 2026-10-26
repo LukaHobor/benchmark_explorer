@@ -1,12 +1,24 @@
 {
   "name": "LMOB Benchmark - Local Multi-model Orchestration Benchmark",
   "description": "This work presents the LMOB (Local Multi-model Orchestration Benchmark), an experimental study quantifying the trade-off between energy efficiency, latency, and reliability in LLM inference on edge hardware. We compare two inference architecturesfor decomposable tasks: (A) a monolithic 7B-parameter model (Qwen2.5-7B-Instruct) executing the full task, and (B) an orchestrated system composed of a 1.5B router model (Qwen2.5-1.5B-Instruct) and a 3B specialist model (Qwen2.5-3B-Instruct). We executed 50 synthetic system log analysis tasks on an NVIDIA RTX 3060 GPU (12GB VRAM), instrumenting energy via nvidia-smi with trapezoidal integration. Results demonstrate that orchestration reduces energy consumption by 32.7% (276.20 J vs. 410.30 J, 𝑝 < 10−19), but imposes a 31.7% latency penalty (4.800 s vs. 3.644 s, 𝑝 < 10−9) and a 32 percentage point drop in accuracy (Exact Match 68% vs. 100%), due to a phenomenon we term the \"Cascading Effect\". We project carbon savings of 0.74 grams of CO₂ for the 50-task set, extrapolable to ~5.5 tons/year at data center scale. This work provides the first empirical evidence of an optimization trilemma in local LLM orchestration, offering quantitative parameters for Edge-Cloud system developers (e.g., NVIDIA RTX Spark, Apple Silicon, Windows AI PCs). This work presented the LMOB Benchmark, the first experimental study to quantify the trade-off between energy, latency, and reliability in local orchestration of multiple LLMs on edge hardware.",
+  "category": "mixed",
+  "domain": "llm inference systems",
+  "task_types": [
+    "generation",
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.22071396",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

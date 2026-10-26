@@ -1,12 +1,25 @@
 {
   "name": "MinCU",
   "description": "Localizing and describing fine-grained differences between near-identical images is a critical yet underexplored capability for multimodal large language models (MLLMs). Existing benchmarks largely assess semantic comparison or single-image grounding in isolation, without jointly requiring faithful description and physical localization. To bridge this gap, we introduce MinCU, a benchmark for grounded minimal-change understanding, where each sample consists of an image pair differing by a single atomic variation in object category, attribute, count, or spatial position, and models are evaluated on their ability to describe the change, localize the changed regions, and identify the changed entity. We further propose Semantic-Guided Implicit Spatial Anchors (SG-ISA), a structured autoregressive method that decomposes prediction into a Think-Locate-Describe sequence. SG-ISA first predicts a semantic cue for the changed concept, then uses discrete spatial anchors as an implicit localization scaffold, and finally generates the change description together with the grounding box. Experiments reveal that even the strongest closed-source MLLMs and recent R1-style reasoning models struggle on MinCU, with most failing to jointly produce accurate descriptions and grounding boxes.",
+  "category": "multimodal",
+  "domain": "visual change understanding",
+  "task_types": [
+    "visual_reasoning",
+    "perception",
+    "generation"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.23336",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

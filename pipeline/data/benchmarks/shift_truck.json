@@ -1,12 +1,23 @@
 {
   "name": "SHIFT-Truck",
   "description": "Pickup trucks account for 14% of new light-duty vehicles produced in the United States, yet are among the least aerodynamic. Their open cargo bed adds a flow absent from existing automotive aerodynamics datasets such as DrivAerML and SHIFT-SUV: the shear layer leaving the cab roof passes over a recirculating bed flow before separating again at the tailgate. The resulting drag lowers fuel efficiency, raises emissions and limits the range of electric trucks. Scale-resolved Computational Fluid Dynamics (CFD) is too costly for broad design exploration; neural surrogates can predict flow features at a fraction of that cost, provided they are trained on large-scale, high-fidelity, domain-specific data. We introduce SHIFT-Truck, the first such dataset for pickup trucks. It comprises 1,000 Spalart-Allmaras delayed detached-eddy simulations (SA-DDES) of a reference pickup geometry morphed across 17 shape parameters. Each case is run on a mesh of about 100 million cells at a Reynolds number of $1.4 \\times 10^7$ and released with time-averaged surface pressure, wall shear stress, volumetric pressure and velocity. The setup is verified by grid refinement and repeated runs, and checked against wind-tunnel measurements. We define geometry-grouped splits and benchmark four neural surrogates, DoMINO, GeoTransolver, AB-UPT and SMART, on surface and volume tracks.",
+  "category": "mixed",
+  "domain": "computational fluid dynamics",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "relative_l2_error",
+  "general_score_metric": "relative_l2_error",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://arxiv.org/abs/2609.38638",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

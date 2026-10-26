@@ -1,12 +1,24 @@
 {
   "name": "MCP security benchmark",
   "description": "MCP security benchmark v0.1. A dependency-free harness that probes MCP servers over stdio and scores them against a fixed corpus of security-relevant cases: read-only contract violations, dangerous tools registered by default, SQL whitelist bypasses, credential exposure, prompt-injection surface, and unredacted output. It exists because \"our MCP server is read-only and safe\" is a claim, not evidence. The claim becomes evidence when a fixed corpus runs against the server, produces a scorecard, and the harness has been shown to fail a deliberately broken server. Results (2026-09-28, one machine) | target | what it is | verdict | score | tools | findings | | --- | --- | --- | --- | --- | --- | | vulnerable-demo | bundled canary target, insecure on purpose | critical | 4.8 | 6 | 12 | | everything-public | npm @modelcontextprotocol/server-everything | elevated | 88.0 | 13 | 1 | | mysql-ops-mcp-reference | read-only-first MySQL ops server (reference implementation) | no findings | 100.0 | 17 | 0 (+2 advisories) | | filesystem-public | npm @modelcontextprotocol/server-filesystem | no findings | 100.0 | 14 | 0 | | memory-public | npm @modelcontextprotocol/server-memory | no findings | 100.0 | 9 | 0 | The one high finding: server-everything exposes a get-env tool that returns the process environment; the probe recovered both canary secrets the harness injected. For an agent host, any API key in the server's environment is one tool call away.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "task_types": [
+    "classification",
+    "safety_redteam"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.23003715",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

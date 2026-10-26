@@ -1,12 +1,23 @@
 {
   "name": "BanglaEval",
   "description": "We present a recipe for adapting English-pretrained autoregressive TTS foundation models to underrepresented languages, demonstrated on Bangladeshi Bangla. Existing Bangla TTS corpora are small and single-speaker, and to our knowledge no open zero-shot voice-cloning system is available for the Bangladeshi register. We contribute a phonetically- and gender-balanced two-tier Bangladeshi Bangla corpus balanced via a tiered Jensen-Shannon divergence objective over conjunct clusters (juktakkhor), together with three fine-tuning changes: a merge-consistent tokenizer extension, Bangla text normalization, and a prompt-masked dual-loss objective. These changes preserve zero-shot cloning across the language switch. Our BanglaEval protocol applies Wilcoxon signed-rank tests with Bonferroni correction over native-speaker ratings. BanglaBox attains near-natural Naturalness, outperforms commercial and open-source baselines on Naturalness, Speaker Similarity, and Clarity, and reaches speaker similarity comparable to prior few-shot results while using approximately 7x less Bangla fine-tuning audio. We further validate the recipe beyond our own test split using a seven-category stress set of difficult real-world text, the public BnTTS evaluation benchmarks, and naturally occurring Bangla that no language model wrote. All artifacts, including the corpus, weights, code, and complete evaluation materials, are released publicly and unconditionally.",
+  "category": "audio",
+  "domain": "speech synthesis",
+  "task_types": [
+    "generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human_eval",
   "year_of_publish": 2026,
+  "capability_category": "Speech & Audio",
   "source": "https://arxiv.org/abs/2610.09211",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

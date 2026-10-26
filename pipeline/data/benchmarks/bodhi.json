@@ -1,6 +1,14 @@
 {
   "name": "BODHI",
   "description": "Ask a pretrained biomedical language model whether \"cortisol 28 ug/dL\" and \"stock-market volatility\" are related, and it returns a cosine similarity of 0.83 on a scale where 1.0 means identical. The two share no mechanism. This is not a corner case: every off-the-shelf biomedical encoder we tested (BioBERT, PubMedBERT, BioM-ELECTRA) scores unrelated cross-domain pairs between 0.76 and 0.92 when the answer should be near zero. Accuracy on cross-domain discrimination is 0%. Retrieval systems survive this, because a language model downstream filters the noise.",
+  "category": "text",
+  "domain": "biomedical",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
   "creators": {
     "scientists": [
@@ -11,11 +19,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://arxiv.org/abs/2606.09672",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

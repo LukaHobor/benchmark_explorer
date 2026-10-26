@@ -1,12 +1,24 @@
 {
   "name": "Physibench",
   "description": "We introduce Physibench, a 300-item benchmark testing whether vision-language models can judge the physical plausibility of projectile motion from static images. Each item shows an object's position at six sampled moments in time, labeled as either physically valid or invalid (one of five distinct, labeled physics violations). We evaluate Gemini 3.6 Flash on a 45-item held-out test set and find an overall accuracy of 86.7% (39/45) — with a striking pattern: 100% accuracy on four of five violation categories, but 0% on gravity-direction violations, where the model consistently misjudges inverted-gravity trajectories as standard projectile motion despite articulating correct gravitational reasoning in its explanation.",
+  "category": "multimodal",
+  "domain": "physics",
+  "task_types": [
+    "visual_reasoning",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.5281/zenodo.22230946",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

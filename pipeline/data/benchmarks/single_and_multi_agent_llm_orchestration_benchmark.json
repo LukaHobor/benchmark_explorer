@@ -1,12 +1,26 @@
 {
   "name": "Single and Multi-Agent LLM Orchestration Benchmark",
   "description": "This dataset contains the complete experimental record of a controlled comparison of single-agent and multi-agent orchestration of a small open-weight LLM running locally on consumer laptops. It includes 600 execution records from 132 complexity-stratified tasks run under four conditions, the benchmark, the 50-document corpus the agents searched, all scored outputs, all statistics reported in the accompanying article, and each machine's original result archive. All four conditions share the same model (Llama 3.1 8B, Q4_0, served via Ollama; temperature 0.0, seed 42), tools, tasks and decoding settings: (A) single-agent ReAct in LangGraph; (B) Best-of-N single agent matched to Condition D on tokens and LLM calls; (C) a Planner–Researcher–Writer pipeline in LangGraph; (D) the same pipeline in CrewAI. D − B isolates collaboration at equal compute, C − A architecture overhead, and D − C framework overhead. Tasks are divided into three tiers (44 each) by a pre-registered structural complexity score. Execution was distributed across four Windows laptops (16 GB RAM; two with MX550 2 GB, two with RTX 3050 6 GB), sharded by task so every paired contrast stays within one machine. Six calibration tasks ran on every machine. The configuration hash e4da2c9abab2 is recorded in every record.",
+  "category": "text",
+  "domain": "agent orchestration",
+  "task_types": [
+    "agentic",
+    "planning",
+    "retrieval",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://doi.org/10.17632/pmfmnj8rn4",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

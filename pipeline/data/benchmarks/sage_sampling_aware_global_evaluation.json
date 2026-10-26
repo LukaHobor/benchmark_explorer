@@ -1,12 +1,23 @@
 {
   "name": "SAGE (Sampling-Aware Global Evaluation)",
   "description": "Trained models, per-plot test predictions, and per-species evaluation metrics for the main-table models of the SAGE (Sampling-Aware Global Evaluation) benchmark. SAGE evaluates species distribution models (SDMs) across 5,771 non-anonymized plant species by relating performance to the data conditions under which each species is observed. This record accompanies, and is a supplement to, the SAGE data record and the code repository. Use it to reproduce the paper's main results without retraining, or to load a trained deep model directly. The record covers the main-table models only; ablation runs are reproducible from the code, configs, and seeds in the repository. Artifacts are bundled by type into four tarballs, each expanding to per-run folders named _s : - predictions.tar — per-plot test predictions (probabilities, 42,268 plots × 5,771 species) for all 50 main-table runs: 25 deep-model and 25 single-species runs, 5 seeds each.- checkpoints.tar — one trained PyTorch Lightning checkpoint per deep-model run (the best-validation-AUROC checkpoint, i.e. the one used to produce the reported predictions), 25 runs.- configs.tar — the resolved run configuration for each deep-model run, 25 runs. Required alongside a checkpoint: the checkpoint stores weights, and config.yaml is what rebuilds the network around them.- metrics.tar — per-species test AUROC and AUPRG for all 50 runs (25 deep and 25 traditional single-species models: MaxEnt, Random Forest, BRT, GLM, GAM).",
+  "category": "mixed",
+  "domain": "ecology",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.21335337",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

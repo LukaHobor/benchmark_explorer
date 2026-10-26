@@ -1,12 +1,23 @@
 {
   "name": "TRiSCA",
   "description": "Replication package for the paper \"TRiSCA: A Framework for Line-Level Evaluation of Static Code Analyzers on Real-World Defects\" (FSE 2027 submission). The package contains: (1) the full analysis pipeline (Src/); (2) the evaluation dataset for 19 open-source Java projects — 15,918 fix commits, 31,779 traced defect lines, JIRA/GitHub issue data, issue-to-commit links, and SpotBugs/PMD/CheckStyle/SonarQube tool reports (Data/); (3) the tool binaries used for re-running the analyzers (tools/); (4) the precomputed analysis outputs (outputs/); and (5) the LaTeX sources of the manuscript (paper/). Quick start: pip install -r requirements.txt && ./run_analysis.sh — regenerates all paper tables/figures from Data/ and finishes with a regression gate (check_paper_numbers.py) that verifies every paper-cited number. Note on frozen numbers: the pooled 19-project consensus headline (83.07% blind-spot, 15.26% unique detection, 5,381 union yield) was computed on the final data state after a SonarQube re-scan; this snapshot predates that re-scan and reproduces all other reported numbers exactly. See README.md in the package for details. License: CC BY 4.0 for data and code; tool binaries retain their upstream licenses (SpotBugs LGPL-2.1, PMD BSD-style, CheckStyle LGPL-2.1, SonarScanner LGPL-3.0).",
+  "category": "code",
+  "domain": "static code analysis",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.23118312",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

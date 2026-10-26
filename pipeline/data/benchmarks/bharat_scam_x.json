@@ -1,12 +1,24 @@
 {
   "name": "Bharat-Scam-X",
   "description": "Scam-message classifiers are typically evaluated on held-out samples drawn from the same distribution as their training data, where high scores are easy to obtain and reveal little about whether a model has learned the structure of an attack or merely its vocabulary. We argue that the right unit of analysis is the Attack Signature: a typed tuple recording who the sender is impersonating, what pretext is deployed, which asset is sought, what the recipient is asked to do, and which persuasion levers are pulled. A signature should be invariant to surface realisation—the same fraud written in English, Hindi, Telugu, Tamil, Kannada, romanised transliteration or code-mixed script is one attack—and sensitive to security semantics, so that inverting a single clause (“share your OTP” → “never share your OTP”) changes it. We formalise this notion, define four diagnostic measures over it, and release Bharat-Scam-X, a constructed probe corpus of 1,823 labelled messages spanning nine Indian language varieties, twelve attack families and five evaluation conditions, including 143 minimal-edit contrast pairs whose members share 55.2% of their tokens but carry opposite security meaning. Evaluating four baselines, we find the gap we predicted. A character n-gram classifier reaches 0.942 macro-F1 in-distribution but only 0.700 on semantic flips, and marks 50.7% of genuine security advisories as attacks.",
+  "category": "text",
+  "domain": "scam detection",
+  "task_types": [
+    "classification",
+    "safety_redteam"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22867073",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

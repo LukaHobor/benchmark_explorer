@@ -1,12 +1,24 @@
 {
   "name": "HiveBlot blind extraction benchmark (October 2026)",
   "description": "A pre-registered blind test of HiveBlot, a tool that extracts structured Western blot evidence (target protein, modification, sample, treatment, and band presence per lane) from figures in published papers. Design: three unseen open-access papers were drawn at random under a pre-registered eligibility rule. A wet-lab annotator labeled the Western blot panels from the paper PDFs alone, without seeing any system output. HiveBlot's outputs were generated with frozen code and sealed with a SHA-256 manifest before any labels were received. Results (notation-adjudicated tier): 92% of the 553 values HiveBlot asserted matched the annotator's labels (precision of assertions, 512/553). HiveBlot filled 57% of the labeled values (coverage, 512/895). The full automated run took about 20 minutes, versus about 2 hours of manual labeling for the annotated panels. The pre-registered raw score before post-hoc matching corrections was 78%. All deviations (A1-A8), the raw pre-registered results, an independent audit and the claim caveats are included. Contents: pre-registration and deviation log, annotator guide and templates, human annotations (including errata and the annotator's confirmation answers), sealed system outputs, scoring code, speed analysis, and results. Limitations: three papers, eight labeled panels, one annotator; matching corrections applied after unsealing are documented and reported alongside the raw score.",
+  "category": "vision",
+  "domain": "biomedical western blot analysis",
+  "task_types": [
+    "perception",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "precision",
+  "general_score_metric": "precision",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.23524345",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

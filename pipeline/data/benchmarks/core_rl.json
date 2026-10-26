@@ -1,12 +1,25 @@
 {
   "name": "CORE-RL",
   "description": "The deployment of Reinforcement Learning (RL) agents in critical domains must be preceded with a pipeline to evaluate the alignment of the RL agent with complex multi-objective specifications and robustness under real-world environmental drift. However, to protect intellectual property, the RL agent may be delivered for evaluation as opaque executable or remote API, which makes traditional evaluation techniques based on the internals of the policies infeasible. To address this gap, CORE-RL: Confidence-Oriented Reliability Evaluation of black box RL policy is proposed in this paper. The CORE-RL pipeline introduces a Unified Reliability Metric that formally integrates early task termination and safety constraint violations, preventing unsafe policies from masking failures through premature episode halts. By subjecting the policy to a noise certification envelope of perceptual noise, actuation noise and change in environment dynamics, the pipeline computes the finite-sample Clopper-Pearson bounds on unified reliability metric and Hoeffdings' lower bound on reward and safety cost. The pipeline then defines safe operational design domain to report high-confidence certificates for safety and expected performance. Experiments on continuous control tasks demonstrate the CORE-RL pipeline's ability to automatically reject non-compliant policies and map the safe Operational Design Domain (ODD) of safety-aware policies.",
+  "category": "mixed",
+  "domain": "reinforcement learning safety",
+  "task_types": [
+    "agentic",
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2610.04418",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "RoboRecover",
   "description": "Robot-policy benchmarks increasingly cover diverse tasks and preset out-of-distribution conditions, but typically evaluate complete trajectories from predefined initial states. These evaluations often focus on the initialized scene and the final outcome, while paying less attention to the dynamic interaction process. During closed-loop execution, actions and contacts can alter object relations and task progress, producing off-nominal intermediate states that need recovery. Recovery requires a policy to infer how task progress has changed, correct the relevant relations, and continue the original goal. We introduce RoboRecover, a benchmark for robot policy recovery under execution deviations. RoboRecover selects deviation states from trajectories, reconstructs them by replaying action prefixes, and evaluates policies on the original task. RoboRecover contains 2,000 scenarios across RoboTwin and LIBERO, with 1,000 scenarios and a fixed 800/200 train/test split on each platform. Results show that initial-state performance does not determine recovery performance and policies exhibit different recovery strengths across scenarios. Using its training split, RoboRecover further supports study on recovery interventions. RoboRecover establishes recovery from execution-induced intermediate states as a distinct dimension of robot policy evaluation.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "task_types": [
+    "agentic",
+    "planning",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2609.28952",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,23 @@
 {
   "name": "IND-Eval",
   "description": "We introduce IND-Eval, a public benchmark that organizes industrial time series across domains into source-specific forecasting tasks. Relative to established benchmarks such as GIFT-Eval, it emphasizes finer sampling resolutions and a greater prevalence of multivariate forecasting. Evaluating Chronos-2, TiRex-2, and TimesFM-3, we find that TimesFM-3 achieves the lowest source-balanced aggregate nMASE and nCRPS and leads seven of nine sources under each metric; source-specific exceptions reinforce the need for domain-representative evaluation for model selection. These findings also motivate improving domain alignment during pretraining, where real industrial data are often too scarce to close domain-specific gaps directly; we therefore investigate whether a domain's statistical structure can guide simulator design. In a case study on two offshore well-monitoring regimes, we improve a general simulator's coverage using an oscillator-augmented simulation pipeline. This lowers forecasting error in the target domain but reduces performance on the subset of GIFT-Eval with natively univariate targets. A 50/50 mixture of the general and augmented simulation recipes achieves the lowest error among the three training recipes for all four event-metric pairs in the case study while recovering most of the lost GIFT-Eval performance.",
+  "category": "mixed",
+  "domain": "industrial time series forecasting",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://arxiv.org/abs/2610.16652",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,23 @@
 {
   "name": "AcetylBench",
   "description": "Lysine acetylation is a pervasive post-translational modification with critical regulatory roles, yet computational prediction of acetylation sites remains hampered by unreliable benchmarking practices including dataset redundancy and non-independent test set evaluation. We report a systematic investigation demonstrating that three independent sources of metric inflation, including near-ubiquitous sequence redundancy, non-independent test sets, and distribution-locked dimensionality reduction collectively reduced an apparent accuracy of 99.38% to a true cross-database AUC of 0.523, indistinguishable from random classification. Applying CD-HIT at 40% pairwise sequence identity to a dbPTM-derived acetylation dataset, we found that 62.7% of positive and 90.3% of negative sequences are redundant, a level not previously quantified for this task. A comprehensive cross-database benchmark evaluating seven representation strategies (CKSAAP, BLOSUM62, one-hot, ESM-2, ProtBERT, ESM-1v mean-pool, and ESM-1v lysine-position) across two training databases reveals a consistent generalisation failure: within-database cross-validation AUC values of 0.815–0.867 collapse to 0.582–0.607 on a truly independent benchmark. Logistic regression, random forest, and neural network classifiers achieve statistically indistinguishable cross-database performance on identical features, establishing that this failure is driven by feature representations rather than classifier architecture.",
+  "category": "text",
+  "domain": "protein bioinformatics",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUC",
+  "general_score_metric": "AUC",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.1186/s12859-026-06593-y",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

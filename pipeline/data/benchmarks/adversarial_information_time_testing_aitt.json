@@ -1,12 +1,23 @@
 {
   "name": "Adversarial Information-Time Testing (AITT)",
   "description": "Financial machine-learning pipelines can leak future information even when validation splits are chronological. This preprint develops Adversarial Information-Time Testing (AITT), a mutation-based falsification framework built on explicit information-time semantics. For a cutoff T, AITT preserves the authorized information set, mutates only information that should be unavailable at T, reruns the pipeline, and tests whether authorized historical artifacts remain invariant. The controlled benchmark contains six clean/leaky fixture pairs covering rolling features, normalization, feature selection, label maturity, completed-bar availability, and execution timing. Across 600 trials per fixture, the six causal controls produced 0/3600 violations. Five targeted leakage classes were detected in 3000/3000 trials. For same-open execution leakage, a random unavailable-close mutation detected 286/600 planted faults, while a targeted sign-flip adversary detected 600/600. This difference highlights a central limitation: a causality test can only reveal dependencies that its mutation family excites. Passing a finite mutation suite does not prove global causality. Public preprint; not peer reviewed. Canonical page: https://alphaquantpro.com/research/adversarial-information-time-testing . Reproducibility code and results: https://github.com/AlphaQuantPro/research .",
+  "category": "mixed",
+  "domain": "financial machine learning",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.22049284",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

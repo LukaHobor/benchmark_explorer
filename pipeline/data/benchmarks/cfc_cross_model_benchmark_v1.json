@@ -1,12 +1,25 @@
 {
   "name": "CFC Cross-Model Benchmark v1",
   "description": "I’m sharing the frozen CFC Cross-Model Benchmark v1 evaluation covering 600 primary runs: 300 Claude runs and 300 Gemini runs across the same 100 decision-closure variants. Both model environments achieved the same strict semantic PASS rate: 296/300 (98.67%). However, the observed semantic anomalies occurred on different variants and through different mechanisms. Claude’s failures included reasoning attribution, stale-state carryover, instruction-recognition failure, and false closure from duplicate priority coverage. Gemini’s failures were dominated by state/layer binding errors. The anomaly variants did not overlap in these frozen runs. I treat that as a descriptive observation, not as evidence of systematic model complementarity. The package also preserves the provenance limitation for Gemini CM-V002 and CM-V003. Excluding all six associated runs gives 290/294 semantic PASS (98.64%), so the aggregate conclusion is materially unchanged. The narrow conclusion is that a near-99% semantic PASS rate on this benchmark does not eliminate rare state-transition, state-binding, instruction-following, and decision-closure failures. This does not demonstrate that CFC prevents these errors. That requires a separate controlled comparison using the same frozen benchmark with and without the CFC/controller layer. I’m sharing the package as a baseline reliability record and as groundwork for that next intervention study.",
+  "category": "text",
+  "domain": "decision-making reliability",
+  "task_types": [
+    "classification",
+    "instruction_following",
+    "planning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22117670",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

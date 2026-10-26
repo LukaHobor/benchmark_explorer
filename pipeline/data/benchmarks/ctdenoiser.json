@@ -1,12 +1,24 @@
 {
   "name": "CTDenoiser",
   "description": "Iterative and generative denoisers are increasingly used under the assumption that multi-step refinement outperforms a single regression pass. We show the opposite for label-free denoising. An unconditional rectified flow trained on two noisy observations of the same signal, as in Noise2Noise, has a minimiser whose one-step readout is exactly the MMSE denoiser without requiring clean targets. In contrast, multi-step integration provably departs from the MMSE solution because the flow terminates at the noisy data distribution rather than the clean-signal distribution. This departure is exact in a tractable Gaussian model and is confirmed experimentally: one-step flow matches a direct regressor, whereas multi-step Euler integration progressively reduces fidelity. Counterintuitively, the degradation increases with training quality, as a better velocity field more faithfully transports samples toward the noisy terminal law. The key ingredient is therefore the decorrelated pairing, not the flow machinery: a one-step regressor trained on matched noisy pairs gives our best label-free result ($+1.99$,dB). We evaluate these findings on CTDenoiser, a controlled low-dose CT benchmark spanning five architectures and supervised, similarity-based, blind-spot, and per-image methods. Among label-free approaches, only correlated-noise-aware Noise2Sim improves over the noisy baseline, while Noise2Void is flat-to-negative because CT noise violates its pixel-independence assumption.",
+  "category": "vision",
+  "domain": "medical imaging",
+  "task_types": [
+    "regression",
+    "generation"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "PSNR",
+  "general_score_metric": "PSNR",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://arxiv.org/abs/2609.31670",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

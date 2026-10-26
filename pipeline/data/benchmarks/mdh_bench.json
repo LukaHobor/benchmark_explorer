@@ -1,12 +1,26 @@
 {
   "name": "MDH-Bench",
   "description": "Abstract Large Language Models which consist of models like GPT5 from OpenAI, Claude Sonnet from Anthropic, Google’s Gemini are known for their reasoning capability, ability to summarize, cybersecurity analysis and other features. However, their reliability could be an issue particularly when dealing with ambiguous or hostile user input prompts. These kinds of attacks could lead to soft failures like false citations, hallucinations, and problematic suggestions. Current benchmarks (eg: TruthfulQA, AdvGLUE, and JailbreakBench) assess discrete aspects of robustness but are unable to identify multi-domain, conversational vulnerabilities that come up in practical applications. This paper introduces a novel dataset called MDH-Bench, a benchmark comprising 400 prompts that were specifically created to assess how reliably Large Language Models perform when they are provided with adversarial but natural and even tricky real-world queries. The benchmark covers eight types of challenges. They are numerical reasoning traps, security-sensitive defaults, historical and temporal inconsistencies, fictional research scenarios, contradictory context mixing, ethical provocations, and prompt-injection attempts. To monitor reliability in a holistic way, we present a Unified Multi-Domain Reliability Evaluation Framework that brings together several key metrics like accuracy, hallucination rate, hallucination degree (HD), unsafe output rate, and contradiction rate.",
+  "category": "text",
+  "domain": "llm reliability and safety",
+  "task_types": [
+    "open_ended",
+    "qa",
+    "safety_redteam",
+    "math_problem_solving"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.1038/s41598-026-76014-w",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

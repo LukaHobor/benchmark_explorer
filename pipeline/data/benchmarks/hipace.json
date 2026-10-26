@@ -1,12 +1,23 @@
 {
   "name": "HiPACE",
   "description": "Sparse autoencoders (SAEs) decompose LLM activations into sparse dictionary atoms, so that each distinct concept gets its own feature. One recurring behavior complicates this premise: feature absorption, in which a parent concept and its children--fruit and {apple, banana, pear}, say--collapse into a shared family direction. Prior work documents absorption empirically; missing is a closed-form prediction of when the shared direction is the cost-optimal representation of an active semantic family. This paper closes that gap. For a hierarchical Bernoulli generator with $k$ active children and residual scale $α$, the $L_0$-penalized reconstruction objective admits a closed-form phase boundary $λ_c(k,α)=α^2 k/(k-1)$: above it, pure parent absorption is strictly cheaper than pure child coding. Building on this boundary, we introduce HiPACE, an evaluation protocol that tests the boundary's structural consequence in real SAE dictionaries--measuring parent--child decoder structure over WordNet families, freezing the discovery-selected statistic before testing on unseen families, and contrasting genuine families against randomized sibling nulls. The boundary proves sharp in its native regime, predicting the synthetic transition within $\\pm15%$ on all 30 tested cells. In Pythia-160m SAEs, the parent--child decoder gap recovers the predicted ordering with partial correlations up to $-0.93$ that sustain on the locked holdout and exclude sibling nulls ($p=0.002$).",
+  "category": "text",
+  "domain": "llm interpretability",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.29551",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

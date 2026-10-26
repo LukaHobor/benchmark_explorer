@@ -1,12 +1,24 @@
 {
   "name": "DMDBench",
   "description": "Although advancements in Large Vision-Language Models (LVLMs) have demonstrated impressive capabilities across various multimodal tasks, they still struggle with simple scenarios such as reading values from Digital Measurement Devices (DMDs), particularly in real-world conditions involving clutter, occlusions, extreme viewpoints, and motion blur. These conditions are common in head-mounted cameras and Augmented Reality (AR) applications used in industrial settings. While Optical Character Recognition (OCR) models differ from LVLMs in architecture and modality integration, they exhibit similar challenges when confronted with these visually complex real-world conditions. Motivated by these limitations, this work introduces CAD2DMD-SET, a tool that leverages 3D CAD models, advanced rendering, and high-fidelity image composition to produce diverse OCR and VQA-labelled synthetic DMD datasets, suitable for fine-tuning OCR models and LVLMs, respectively. Additionally, we present DMDBench, a curated validation set of 1000 annotated real-world images designed to evaluate model performance under practical constraints. Benchmarking four state-of-the-art LVLMs using Average Normalised Levenshtein Similarity (ANLS), with LoRA fine-tuning applied to three, yielded substantial VQA improvements. Qwen2.5-VL-7B reached 98.17% ANLS on DMDBench while broadly retaining public-benchmark performance.",
+  "category": "multimodal",
+  "domain": "industrial visual OCR",
+  "task_types": [
+    "qa",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "ANLS",
+  "general_score_metric": "ANLS",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.1016/j.array.2026.101251",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

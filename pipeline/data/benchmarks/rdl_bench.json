@@ -1,12 +1,25 @@
 {
   "name": "RDL-Bench",
   "description": "Relational databases (RDBs) remain the primary infrastructure for storing and managing structured data across enterprise and scientific domains. Natural-language (NL) interfaces to RDBs aim to let users ask questions without writing SQL, but real user needs go beyond SQL-style lookup: some questions require reasoning over the observable database state, while others require predictive inference from historical relational records under temporal constraints. Existing benchmarks address these goals in isolation. To address this gap, we introduce RDL-Bench, a benchmark for task-aware question answering (QA) over real RDBs. RDL-Bench organizes diverse user questions into reasoning-oriented questions, whose answers are determined by the current database state, and prediction-oriented questions, whose answers depend on future outcomes under temporal constraints. Each instance contains an NL question, task metadata, schema information, temporal context, either executable evidence or target-construction logic, and denotation-level ground truth. RDL-Bench supports two evaluation settings: native solvers under their intended capabilities, and task-aware modular systems where a router dispatches each question to an appropriate execution module.",
+  "category": "text",
+  "domain": "relational databases",
+  "task_types": [
+    "qa",
+    "open_ended",
+    "retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "exact_match",
+  "general_score_metric": "exact_match",
   "year_of_publish": 2026,
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://arxiv.org/abs/2610.21382",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

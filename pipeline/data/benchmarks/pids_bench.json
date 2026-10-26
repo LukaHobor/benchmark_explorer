@@ -1,12 +1,24 @@
 {
   "name": "PIDS-Bench",
   "description": "Prompt-injection detectors are typically evaluated using aggregate F1 on in-distribution test data, which offers limited insight into behavior under distribution shift, particularly on the benign side of the decision boundary, where false positives impose direct operational cost yet are seldom measured. We present PIDS-Bench, a frozen multi-axis benchmark that jointly evaluates attack detection and benign false-positive behavior at fixed thresholds, spanning in-distribution inputs, hard-benign prompts that mimic injection structure without malicious intent, obfuscated attacks, and domain and structural distribution shifts. We evaluate seven detectors (learned baselines, external prompt-injection classifiers, and broad-safety comparators) alongside a rule-based lower-bound reference. Multi-axis evaluation exposes a failure mode that aggregate F1 conceals. A detector exceeding F1 = 0.98 on the held-out split still misclassifies roughly one-third of an externally-sourced benign subset drawn from public corpora and restricted to security-adjacent content. Across a full threshold sweep and five training seeds, no internal detector reaches an operating point satisfying F1 >= 0.95 and hard-benign FPR <= 0.10 together on this stress distribution.",
+  "category": "text",
+  "domain": "prompt injection security",
+  "task_types": [
+    "classification",
+    "safety_redteam"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.15017",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

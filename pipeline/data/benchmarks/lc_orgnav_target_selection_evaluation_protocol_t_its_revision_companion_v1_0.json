@@ -1,12 +1,25 @@
 {
   "name": "LC-ORGNav Target-Selection Evaluation Protocol (T-ITS revision companion), v1.0",
   "description": "Companion software for the IEEE Transactions on Intelligent Transportation Systems revision (round 3) of the LC-ORGNav manuscript on query-conditioned semantic target selection for autonomous driving. The release provides an auditable evaluation protocol: matched inputs with persistent candidate IDs, shared-command execution, freeze-before-test with hash-before-scoring, and dual-track abstention gates on CARLA Town10HD (correct-rejection rate >= 90%, false-rejection rate <= 2%; hard-confusable and scale-300 test tracks). It contains the protocol and selector code, the frozen split manifests and candidate lists with SHA-256 manifests, the P3/P14/P15/P16 scoring scripts with their frozen thresholds and result files, and the P16 diagnostics (tie-aware marginal AUCs; scene-grouped cross-validation). Checkpoints, prediction files and third-party data (nuScenes, Talk2Car) are not included; they are referenced by SHA-256. Local absolute path prefixes were removed from 24 manifest/list files before release; protocol_freeze/RELEASE_PATH_SANITIZATION.json gives the frozen and released hashes. This archive is the git tree of tag v1.0-tits-r3 (commit 86cdab230c24bdbad6c4ef8a9df8ad5b0aa0aa9d).",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "task_types": [
+    "classification",
+    "visual_reasoning",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://doi.org/10.5281/zenodo.23395286",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

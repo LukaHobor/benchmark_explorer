@@ -1,12 +1,24 @@
 {
   "name": "TRUST-BC",
   "description": "BACKGROUND: Machine learning models for breast cancer prediction frequently report accuracies above 97%, yet preprocessing leakage, miscalibration, and mishandled censoring can distort these estimates and impede clinical translation. METHODS: We developed TRUST-BC, an open-source benchmark applied to three public cohorts: the Wisconsin Diagnostic Breast Cancer dataset (n = 569), the Coimbra biomarker cohort (n = 116), and a SEER registry extraction (N = 4,024; 3,270 patients with 458 deaths in the 5-year classification cohort). The framework combines leakage-free repeated nested cross-validation, an architecture-matched leaky comparator, Nadeau–Bengio corrected inference with equivalence testing, calibration and decision curve analysis, split conformal prediction, subgroup analysis, and a penalised Weibull survival model. Models were evaluated once on a 15% held-out partition. RESULTS: Cross-validated accuracy was 97.08% (95% CI 95.34–98.82) for WBCD and 71.35% (62.27–80.43) for Coimbra, and the SEER AUROC was 0.739 (0.709–0.769). Global scaling and PCA leakage changed performance by at most 0.52 percentage points or 0.001 AUROC. SEER probabilities were systematically overestimated (calibration-in-the-large −1.00), and conformal coverage was 95.26% overall but 69.9% among patients who died. The survival model achieved a C-index of 0.722 (95% CI 0.675–0.771).",
+  "category": "mixed",
+  "domain": "biomedical",
+  "task_types": [
+    "classification",
+    "regression"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.22926050",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

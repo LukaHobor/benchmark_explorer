@@ -1,12 +1,23 @@
 {
   "name": "FPGA - CPU whole-system benchmark dataset: AMD Alveo U50 vs. dual Intel Xeon Gold 5318Y (per-rail power traces, run metadata, code and analysis for six workloads)",
   "description": "Raw measurements, code and analysis behind the paper \"Slower can be greener: predicting when a PCIe FPGA card beats its host server in time and energy\" (submitted to the Journal of Systems Architecture). 3,011 measured runs on an AMD Alveo U50 card and its dual-socket Intel Xeon Gold 5318Y host. They cover six workloads (AES-256-CTR, 3x3 convolution, Monte Carlo Heston option pricing, a two-stage Monte Carlo portfolio valuation, and two live-video pipelines) and two kernels written later to test the paper's time-energy model (a FIR filter and a Monte Carlo Asian option, including a 16-step sweep through break-even). Each run has its metadata, a 10 Hz per-rail power trace (both CPU packages, both DRAM domains and the FPGA card) and the program output. The record also contains the HLS kernels, host programs, optimised CPU baselines, the measurement harness, Vivado reports, the analysis scripts that reproduce every number and figure of the paper, and Supplementary File S1 (a methodology audit of 30 FPGA-vs-CPU papers). Version 2.0 adds the replication sessions, wall-power runs, the out-of-sample test and the break-even sweep with their hashed predictions and audit trail, and the CPU-native baselines. Unzip all parts into one folder; see README.md for the file list and how to reproduce the results. Code: https://github.com/randikat33/u50-fpga-cpu-benchmark",
+  "category": "mixed",
+  "domain": "systems performance and energy efficiency",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.22986813",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

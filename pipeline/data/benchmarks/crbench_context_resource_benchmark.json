@@ -1,12 +1,24 @@
 {
   "name": "CRBench (Context Resource Benchmark)",
   "description": "CRBench (Context Resource Benchmark) is a method-agnostic, query-level evaluation framework for long-context large language models that measures contextual capability retention relative to the memory and system resources consumed. CRBench evaluates candidate context-memory representations pairwise against the same model's uncompressed FP16/BF16 dense reference on identical queries. It defines a reference-anchored quality retention metric Q, explicit analytical and physical memory accounting, a resource-aware Part 1 utility score, and a decoupled Part 2 system track incorporating TTFT, prefill latency, and decode throughput. Version 0.2.0 provides the formal benchmark specification, modular software architecture, query-level evaluation pipeline, custom adapter interface, reproducible scoring and raw-result infrastructure, and preliminary empirical validation on Qwen2.5-1.5B across five contextual tasks at 2K and 4K context lengths. This research preview precedes planned validation across larger model families and extended context horizons up to 128K tokens.",
+  "category": "text",
+  "domain": "long-context language models",
+  "task_types": [
+    "qa",
+    "open_ended"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://doi.org/10.5281/zenodo.22085119",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "SciFigure2Code",
   "description": "Scientific figures are the interface through which research claims are inspected and reused, but final published panels rarely expose the data or plotting code that produced them. Recovering this hidden provenance from pixels is therefore underdetermined. We introduce SciFigure2Code, an AI-reconstructed benchmark that instead evaluates presentation recovery: generating editable Python programs that preserve how a scientific panel is arranged and read. Role-specialized Codex agents generate, execute, visually refine, and audit silver-standard presentation programs that capture geometry, visual hierarchy, encodings, annotations, and typography without claiming to recover original measurements or author source code. This reconstruction-and-audit protocol turns final published panels into auditable reference packages; the resulting resource contains 6,740 reviewed panels and SciFigureBench, a balanced 337-panel test set across 31 chart subtypes, five domains, and three complexity levels. Across 14 zero-shot models in image-only and caption-assisted settings, execution, multi-component layouts, axes, legends, and scientific labels remain weak. Claude Opus 4.7 achieves the highest image-only Overall score, Claude Opus 4.6 leads caption-assisted reconstruction, and two-stage plan-then-code prompting improves Overall for all four tested models. SciFigure2Code provides an auditable testbed for agents that construct editable, visually faithful scientific figure presentations.",
+  "category": "multimodal",
+  "domain": "scientific visualization",
+  "task_types": [
+    "code_generation",
+    "visual_reasoning",
+    "generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://arxiv.org/abs/2609.08155",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

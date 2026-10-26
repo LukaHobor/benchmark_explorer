@@ -1,12 +1,25 @@
 {
   "name": "Melange",
   "description": "Multi-modal Large Language Models (MLLMs) have seen broad adoption, but their biases are still far less examined than those of standard LLMs, creating possible social harms when deployed in real-world settings. Prior efforts to extend bias analyses from LLMs into the multi-modal space either cover only a few bias categories or do not ensure that the groups being compared are clearly addressed by visual cues in the images. To overcome these limitations, we introduce Melange, a wide-ranging synthetic visual benchmark covering seven categories for assessing social biases in MLLMs. It is grounded in the widely used language-only BBQ dataset (Bias Benchmark for Question Answering) from BigBench, carefully extending its constructed contexts via controlled generation of visual scenarios so the target attributes appear visually and clearly. To maximize reliability, our generated images pass through two stages of validation: automated screening using visual question answering (VQA) and subsequent manual inspection by human annotators. By systematically evaluating 23 open-source MLLMs across three matched evaluation settings---text-only, image-only, and image-with-context---Melange isolates the fairness effect of the input modality. Switching from text to vision reduces fairness by 0.291 on average, a gap that varies by model family rather than by scale alone.",
+  "category": "multimodal",
+  "domain": "social bias",
+  "task_types": [
+    "multiple_choice",
+    "qa",
+    "visual_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.29537",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

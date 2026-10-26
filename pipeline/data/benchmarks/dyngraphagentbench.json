@@ -1,12 +1,25 @@
 {
   "name": "DynGraphAgentBench",
   "description": "Dynamic graph anomaly detection requires repeated decisions as graph structure and class prevalence drift, yet detector benchmarks usually score a fixed pipeline after current labels are known. We introduce DynGraphAgentBench, an executable benchmark for agentic lifecycle control under delayed feedback. It comprises seven temporal graph datasets with node- and edge-level anomaly tasks, eleven selectable detectors, and eight chronological deployment windows per dataset. In each window, a controller sees only time-causal aggregate context, registered model cards, and its own matured history. It must choose a detector before current-window training or candidate scores exist. A sandboxed executor trains the chosen architecture on mature data, scores a hidden deployment window, and releases the outcome after a one-window delay. A deterministic verifier checks decision timing, leakage guards, legal actions, training scope, and persisted artifacts. We measure detection utility with average precision and capture at fixed review depth, and characterize adaptation through model switches and compute. Complete eight-window trajectories from two primary controllers and a no-memory reference on four datasets, together with three additional controllers on three datasets, expose useful, costly, and ineffective reactions to delayed evidence without granting an exhaustive current-window oracle.",
+  "category": "mixed",
+  "domain": "graph anomaly detection",
+  "task_types": [
+    "classification",
+    "agentic",
+    "planning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2609.33980",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

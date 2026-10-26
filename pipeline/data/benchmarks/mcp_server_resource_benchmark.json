@@ -1,12 +1,23 @@
 {
   "name": "MCP Server Resource Benchmark",
   "description": "Measured resident memory, startup time and tool counts for 11 widely used Model Context Protocol (MCP) servers on Windows 11, together with a concurrent five-server stack. Results. 178-422 MB resident per server (median 188 MB); 0.5-1.9 s warm startup; five-server stack totalling 961.6 MB, cross-checked by two independent measurement paths (psutil and PowerShell WorkingSet64) that agreed exactly. Runtime floors for context: 52 MB bare Node, 15 MB bare Python. Measurement note. npx and uvx are launchers: the parent process holds almost nothing while a child holds the real footprint. Measured directly, the npx parent alone reports 10.3 MB while its full descendant tree holds 189.3 MB, an 18-fold undercount. All RSS figures here are descendant-tree sums sampled 0.4 s after tools/list returned, over 5 iterations per server (3 for two late additions, marked in the data). Canonical page, full method and change log: https://techfuelhq.com/data/mcp-server-bench/",
+  "category": "code",
+  "domain": "systems performance",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.22169540",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

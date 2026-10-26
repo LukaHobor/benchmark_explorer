@@ -1,12 +1,26 @@
 {
   "name": "EngIntervene",
   "description": "Multimodal engineering benchmarks largely evaluate static understanding, such as recognizing components, interpreting diagrams, or answering technical questions. This leaves a missing middle between engineering perception and full design generation: whether a model can use an understood system state to reason about relations, constraints, and the consequences of design changes. We introduce EngIntervene, a benchmark for this capability. It contains 3,229 questions across seven engineering domains and organizes evaluation into four levels: state grounding (T1), relational and mechanistic reasoning (T2), constraint-aware diagnosis (T3), and intervention reasoning (T4), which asks whether a proposed modification achieves its target while preserving required constraints. The tasks instantiate a unified engineering state representation spanning objects, relations, constraints, and design objectives, and T2--T4 are scored against structured reference answers with atomic criteria. Across open- and closed-weight multimodal models, stronger grounding does not reliably translate into better diagnosis or intervention, and the best open-weight model trails the best closed model by 14.7 percentage points on the T2--T4 average. Removing or shuffling visual evidence consistently degrades performance, while benchmark-specific supervised fine-tuning improves T1 but not T2--T4.",
+  "category": "multimodal",
+  "domain": "engineering",
+  "task_types": [
+    "visual_reasoning",
+    "open_ended",
+    "qa",
+    "planning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.33261",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,24 @@
 {
   "name": "ConCI",
   "description": "Contextual integrity (CI) holds that the appropriateness of sharing personal information depends on the context of the information flow, not on the information alone. However, existing CI benchmarks often use independent scenarios that vary multiple CI parameters simultaneously and are dominated by inappropriate flows, making it unclear whether correct predictions reflect sensitivity to context or a general refusal tendency. We present ConCI, a controlled-counterfactual benchmark in which an anchor flow is paired with two counterfactuals that each modify a single CI parameter. The resulting triplet is scored jointly, with credit given only when all three flows are judged correctly. Built from six existing benchmarks, ConCI contains 1,592 flows in 556 triplets, is approximately label-balanced, and is validated by seven human annotators per flow. Across seven LLMs, many correct anchor predictions fail on at least one counterfactual, and even the strongest model errs on about a fifth of triplets. Furthermore, models perform near ceiling on inappropriate flows but weaker on appropriate ones, often continuing to judge a flow inappropriate even when a contextual change should make it appropriate. Larger models narrow this bias toward non-disclosure but do not eliminate it, and reasoning yields only modest gains.",
+  "category": "text",
+  "domain": "privacy",
+  "task_types": [
+    "classification",
+    "reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Reasoning & Problem Solving",
   "source": "https://arxiv.org/abs/2610.24494",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

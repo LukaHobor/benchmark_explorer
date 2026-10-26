@@ -1,12 +1,24 @@
 {
   "name": "LOCUS",
   "description": "LOCUS asks which paper belongs at a given citation location rather than ina given paper. Given a citation context, the task is to pick the citedpaper from a pool whose distractors are drawn from other locations in thesame citing paper. This record is the core artefact bundle — 9 files, 144.0 MB, covering thevalidation and test splits. locus_rank_{test,val}.jsonl — 55,488 / 49,559 ranking pools of 10 locus_swap_{test,val}.jsonl — 27,905 / 33,203 swap pairs locus_anchors_{test,val}.jsonl — 104,401 / 112,779 contexts with anchor evidence locus_manifest_{test,val}.json — declared floors, counts and per-file SHA-256 cocitation_train.npz — co-citation graph built from the training splitonly (496,008 vocabulary entries, 3,436,198 non-zeros) bundle_manifest.json — SHA-256 and byte count for every file above Test split: 9,208 citing papers, 104,401 contexts, 55,488 pools, of which35,701 are the headline set and 43,372 are hard. No upstream text. Every string field in this record is an identifier.Titles, abstracts and citation windows appear nowhere in it and must beobtained from the upstream dataset: the arXiv split of Local CitationRecommendation (Gu, Gao and Hahnloser, ECIR 2022,doi:10.1007/978-3-030-99736-6_19). pip install locus locus fetch work/release --manifest-url https://zenodo.org/records/22260046/files/bundle_manifest.json",
+  "category": "text",
+  "domain": "academic literature retrieval",
+  "task_types": [
+    "retrieval",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://doi.org/10.5281/zenodo.22260045",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

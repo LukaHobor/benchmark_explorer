@@ -1,12 +1,24 @@
 {
   "name": "AptMQL-Bench",
   "description": "Document databases such as MongoDB are core infrastructure for modern applications, and natural-language interfaces to them---text-to-MQL---would let non-experts query complex, semi-structured data without mastering the query language. Progress on this task depends on high-quality benchmarks, which are most practically obtained by converting an existing text-to-SQL benchmark to the document setting. Unfortunately, existing efforts rely on heuristics for mechanical conversion: the document schema mirrors the relational foreign-key graph, and each query mirrors its source SQL. As a result in our experiments, these approaches fail to migrate 6 of 21 BIRD databases outright, silently drop up to 25.9\\% of rows on others, and yield schemas whose ground-truth queries run over an order of magnitude slower as the data scales. We instead propose a conversion pipeline, driven by coding agents with human-in-the-loop verification, that designs each document schema from expected access patterns and rewrites queries to be MongoDB-native. Applying it to BIRD, we build an access-pattern-based text-to-MQL benchmark (AptMQL-Bench). It includes 21 document-oriented databases, 3,186 natural-language requests, and their associated MQL queries---whose databases are migrated from SQLite without data loss and scale efficiently. The strongest model, Claude Opus 4.5, achieves only 57.38\\% accuracy without external knowledge evidence and 70.34\\% with it.",
+  "category": "code",
+  "domain": "database querying",
+  "task_types": [
+    "code_generation",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://arxiv.org/abs/2610.02770",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

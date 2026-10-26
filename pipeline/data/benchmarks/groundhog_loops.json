@@ -1,12 +1,25 @@
 {
   "name": "Groundhog Loops",
   "description": "The project defines a test environment inspired by the time-loop mechanism featured in the film Groundhog Day. An agent attempts to complete a task; if it makes an error classified as fatal (or exhausts its step budget), the environment is restored to a previously saved checkpoint, while the agent retains a complete, structured memory of all previous loops: the loop counter, cumulative time, summaries of failed attempts, and its own hypotheses. Unlike a conventional episode reset in reinforcement learning (RL), failure information is not lost—it becomes a persistent part of the agent's observations. Additionally, after a reset, the environment may slightly mutate the task conditions, but only when necessary to force the agent to change its strategy (the minimal-intervention principle). These mutations are observable to the agent but are never explicitly signaled. Project objectives: - C1. Build a measurable benchmark for agents' ability to perform within-episode meta-learning (in-context adaptation across resets): the agent should learn from failures without updating its weights. - C2. Investigate whether explicit loop memory reduces time to success compared with an agent without memory (control-group experiments). - C3. Investigate whether minimal changes to task conditions disrupt strategy lock-in, i.e., a situation in which an agent repeatedly attempts variations of the same flawed strategy despite having complete memory of its failures. - C4.",
+  "category": "mixed",
+  "domain": "agentic decision-making",
+  "task_types": [
+    "agentic",
+    "planning",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://doi.org/10.17605/osf.io/hnswr",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "SERA (Suite of Evaluation metrics for Retail Agents)",
   "description": "Retail agentic shopping assistants pose evaluation challenges that existing conversational recommender system (CRS) frameworks do not address: they must maintain constraint context across turns, refuse adversarial requests, protect privacy-sensitive information, and recover when users correct preferences mid-conversation. Recent work in adversarial LLM safety has shown that safety behaviours validated at the single-turn level degrade under multi-turn pressure [4, 5], yet no integrated evaluation framework combines safety, compliance, and recommendation quality assessment at the conversation level. We propose SERA (Suite of Evaluation metrics for Retail Agents), a three-dimensional metrics taxonomy, derived from practitioner requirements, of 21 LLM-as-judge metrics spanning Safety, Compliance, and Agent Quality, each with single-turn and multi-turn variants. A risk-proportional aggregation design applies worst-case scoring for safety and compliance metrics, and mean scoring for quality metrics. We describe a persona-driven conversation simulator for offline stress testing and report preliminary reliability analysis on ≈ 650 seed queries across three categories, simulated into multi-turn conversations with a retail agent under development. Early deployment as a CI/CD gate has produced actionable feedback for agent development; full ablation studies and formal human-annotation campaigns remain future work.",
+  "category": "text",
+  "domain": "retail agents",
+  "task_types": [
+    "dialogue",
+    "safety_redteam",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.1145/3773078.3841258",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

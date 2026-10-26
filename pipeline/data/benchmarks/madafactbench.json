@@ -1,12 +1,24 @@
 {
   "name": "MadaFactBench",
   "description": "MadaFactBench is a benchmark designed to evaluate the factual reliability and hallucination behavior of Large Language Models (LLMs) when answering factual questions in Malagasy. The benchmark contains 500 factual questions written in Malagasy, comprising 175 general-knowledge questions (35%) and 325 questions focusing on Madagascar-specific knowledge (65%). Questions cover multiple domains and difficulty levels and are accompanied by reference answers, accepted answer variants where applicable, and supporting sources. Five publicly accessible conversational AI systems were evaluated on the complete benchmark: GPT-5.6 Luna (ChatGPT), Gemini, Claude Sonnet 5, Meta AI powered by Muse Spark 1.1, and Mistral Large 2 (Le Chat). The experiment produced 2,500 model responses, which were manually evaluated using four behavioral categories: Correct (C), Partially Correct (PC), Hallucination/Factual Error (H), and Abstention (A). The dataset also uses NA for rare technical missing responses caused by collection or alignment issues; these cases are not considered model behavior. The repository provides both the reusable benchmark dataset and the corresponding model responses with their human evaluation labels. MadaFactBench is intended to support research on factuality, hallucination, multilingual LLM evaluation, low-resource languages, and Malagasy Natural Language Processing.",
+  "category": "text",
+  "domain": "Malagasy factuality",
+  "task_types": [
+    "qa",
+    "open_ended"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human_eval",
   "year_of_publish": 2026,
+  "capability_category": "Natural Language Understanding & Generation",
   "source": "https://doi.org/10.5281/zenodo.22675397",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

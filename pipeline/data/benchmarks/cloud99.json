@@ -1,12 +1,24 @@
 {
   "name": "CLOUD99",
   "description": "Ground-based whole-sky imagers provide cloud cover data to determine solar observing conditions. Deep segmentation models exceed 0.87 mean intersection-over-union (IoU, shared area over union) on public benchmarks, but need not transfer to an operating site. We release CLOUD99, a dataset of 99 annotated whole-sky images from the Ganyu Solar Observation Station, a humid coastal site, with an evaluation protocol that excludes invalid and saturated pixels. A U-Net reaches 0.933 cloud IoU on the WSISEG benchmark, against 0.873 for a normalized red–blue ratio threshold. At Ganyu, the same network reaches 0.557 and the same threshold 0.632, so the ranking of the two methods inverts. Self-calibrating the fisheye projection localizes the error near the Sun. The region within 30° of the Sun holds 14.6% of the valid field but 34.8% of the threshold’s false alarms and 49.7% of the network’s misses. They fail in opposite directions, and the difference matters operationally: the threshold detects all 70 annotated solar obscurations, whereas the zero-shot network misses 48. Ten to twenty labelled frames from the site bring the network to parity with the threshold. Benchmark accuracy alone is therefore not a sufficient basis for choosing a cloud segmentation method for automated solar observing.",
+  "category": "vision",
+  "domain": "cloud segmentation",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.3390/universe12100291",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

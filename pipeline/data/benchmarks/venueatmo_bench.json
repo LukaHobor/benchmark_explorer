@@ -1,12 +1,25 @@
 {
   "name": "VenueAtmo-Bench",
   "description": "VenueAtmo-Bench v28.0.0 — release accompanying \"Measurement collapse in rubric-prompted vision–language scoring: Four silent failure modes and a label-free audit protocol\". Contents: the measurement instrument and prompts, the annotator codebook, the annotation protocols, identifier-level venue data for both arms (100 Yelp venues, 94 Google Places venues), the 244-unit evaluation set, per-model attribute scores for every condition reported in the paper, the rating matrices of all five annotators (E1 as the primary reading, E2 as the reliability check), and the scripts that regenerate the paper's tables and figures. One command re-derives the paper's model-side numbers: from the archive root, `python reproduce/src/run_all_analyses.py`. 77 of 80 steps pass; two report themselves unavailable because the archive ships no live endpoint credential and no built release/ directory; one fails because the archive ships no compiled PDF for the traceability gate to read. The run reports an outcome for every step rather than aborting. NOT included: platform photographs. Yelp, Google and TripAdvisor terms of service forbid redistribution, so this release contains identifiers and derived measurements only. Licence: labels, scores and derived tables CC-BY-4.0; code, prompts and protocols MIT; the underlying photographs remain the property of their platforms.",
+  "category": "multimodal",
+  "domain": "venue atmosphere",
+  "task_types": [
+    "regression",
+    "perception",
+    "visual_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.5281/zenodo.23114885",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

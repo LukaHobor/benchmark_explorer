@@ -29,8 +29,8 @@ material.) 43,283 carry a publication year, and 2026 is a partial year.
 
 | | |
 |---|---|
-| Modality | text 10,069 · mixed 5,328 · vision 5,054 · multimodal 4,341 · code 2,170 · audio 976 · unlabelled 15,486 |
-| Capability | 13 categories, led by Vision & Multimodal Perception (6,317), Safety, Robustness & Evaluation (3,504) and Natural Language Understanding & Generation (3,209) |
+| Modality | text 15,881 · mixed 8,715 · multimodal 7,024 · vision 6,464 · code 3,964 · audio 1,376 |
+| Capability | 13 categories, led by Vision & Multimodal Perception (9,085), Safety, Robustness & Evaluation (5,455) and Autonomous Agents & Multi-Agent Systems (5,367) |
 | Sourced | 42,077 of 43,439 cards link back to where they came from |
 <!-- /stats:corpus -->
 
@@ -77,8 +77,8 @@ styles.css                light theme, centred column
 fer-logo.svg              faculty mark in the masthead
 vendor/apexcharts.min.js  charting, vendored
 data/                     what the site loads — built, never edited by hand
-  index.json              <!-- stats:index_mb -->15.2 MB<!-- /stats:index_mb --> — one lean row per card
-  cards/000…127.json      <!-- stats:shard_kb -->~356 KB<!-- /stats:shard_kb --> each — the full cards, sharded
+  index.json              <!-- stats:index_mb -->17.3 MB<!-- /stats:index_mb --> — one lean row per card
+  cards/000…127.json      <!-- stats:shard_kb -->~387 KB<!-- /stats:shard_kb --> each — the full cards, sharded
   meta.json               field groups, labels, build stamp
 pipeline/                 how the corpus is collected and kept up to date
   data/benchmarks/        the corpus: one JSON card per benchmark, the source of truth

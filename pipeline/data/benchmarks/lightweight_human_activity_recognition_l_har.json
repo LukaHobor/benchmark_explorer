@@ -1,12 +1,23 @@
 {
   "name": "Lightweight Human Activity Recognition (L-HAR)",
   "description": "On-device Human Activity Recognition (HAR) requires balancing accuracy and deployment efficiency on constrained hardware. We present Lightweight Human Activity Recognition (L-HAR), a controlled comparison of Baseline and Lightweight Temporal Convolutional Network (TCN), Transformer, and Long Short-Term Memory (LSTM) models using data sampled at 100Hz from three inertial measurement units (IMUs) worn by one participant. Evaluations covered classification, model footprint, multiply-accumulate operations (MACs), offline CPU latency, Desktop/Raspberry Pi streaming, 8-bit integer (INT8) quantization, and software-estimated Raspberry Pi energy efficiency. Lightweighting reduced parameters by up to 95.5%, model size by 94.0%, and MACs by 87.6-95.5%, with accuracy reductions of 0.8-2.2 percentage points (pp) and sub-millisecond offline latency for all Lightweight models. Baseline and Lightweight models sustained approximately 100Hz message/inference rates on Desktop, whereas no Raspberry Pi configuration reached 100Hz inference. Among Lightweight models, Transformer achieved 9.381ms End-to-End (E2E) latency and 66.925Hz inference. INT8 quantization changed accuracy and F1-score by less than 0.13 pp; Quantized TCN achieved the best Raspberry Pi streaming result (9.066ms E2E; 69.928Hz) with an estimated 49.933mJ per inference. These results demonstrate architecture- and backend-dependent deployment behavior and the need for direct target-platform evaluation.",
+  "category": "mixed",
+  "domain": "human activity recognition",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.3390/s26175678",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

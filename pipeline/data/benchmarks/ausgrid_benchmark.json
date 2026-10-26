@@ -1,12 +1,23 @@
 {
   "name": "Ausgrid benchmark",
   "description": "Residential load forecasting underpins demand response and local energy trading, yet privacy regulations such as the EU GDPR prevent service providers from collecting fine-grained household consumption data. Federated learning (FL) enables collaborative training without raw data exchange, and client clustering widely mitigates accuracy degradation caused by non-IID residential load distributions. However, existing clustering benchmarks only compare grouped schemes against a single global FL model, ignoring household-specific fine-tuning as a strong personalized baseline. This work constructs a personalization-fair benchmark to quantify the true value of client clustering for residential load forecasting. Six FL strategies are evaluated across three data heterogeneity regimes built on two real-world smart meter datasets. Results show clustering reduces forecasting errors by up to 26% at the cluster-model stage, yet after household fine-tuning all methods land within 2% of the global model and deliver nearly identical performance; adaptive re-clustering brings no accuracy improvement over static grouping. The primary merit of clustering lies in communication efficiency, as clustered frameworks converge within one-third of the communication rounds required by the standard global model under highly heterogeneous PV prosumer portfolios.",
+  "category": "mixed",
+  "domain": "energy forecasting",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.1016/j.egyr.2026.109681",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

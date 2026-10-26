@@ -1,12 +1,24 @@
 {
   "name": "SAFER-Activities",
   "description": "Smart healthcare monitoring systems require precise action recognition to ensure well-being and timely intervention in critical situations such as falls, particularly for mobility-challenged individuals. Existing datasets are often clip-based, lacking the frame-level detail needed to recognize actions online, as they unfold. To address this, we introduce SAFER-Activities, a dataset for fall detection and physical activity monitoring, with a dedicated subset for wheelchair use scenarios. It comprises over 66 hours of video data captured by multiple cameras, with 85,310 action instances and frame-level annotations for 30 action classes. We benchmark action recognition on SAFER-Activities with 2D and 3D skeleton models, RGB models with frozen backbones, and multimodal fusion strategies, and evaluate on in-lab, out-of-distribution, and cross-dataset test sets. Skeleton-based models generalize best under domain shift; fusing frozen RGB features with the skeleton stream improves in-domain recognition over the baseline CNN1D, most clearly on the wheelchair subset, but degrades out of distribution. Cross-dataset and qualitative evaluations confirm that models trained on SAFER-Activities transfer well to unseen environments and external fall data. To support research on robust fall detection and activity monitoring, we release the dataset and code at https://safer-activities.github.io/.",
+  "category": "multimodal",
+  "domain": "healthcare activity recognition",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.08038",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

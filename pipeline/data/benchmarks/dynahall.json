@@ -1,12 +1,25 @@
 {
   "name": "DynaHall",
   "description": "Multimodal diffusion language models generate responses by iteratively unmasking tokens, making each answer the endpoint of a multi-step trajectory rather than an immediate commitment. Hallucination benchmarks built for autoregressive models evaluate only the final output, and therefore cannot determine whether an unsupported claim in diffusion VLMs appears late or has already stabilized before any answer token is revealed. We introduce DynaHall, a trajectory-level benchmark of annotation-backed binary visual propositions covering object existence, counting, attributes, and relations, with controlled hard negatives graded by visual prior. DynaHall is paired with a commitment-aware protocol that records the intermediate answer tendency at every unmasking step alongside the committed output. Across five diffusion VLMs from three architecture families, visual hallucination is settled before commitment: an unsupported answer is already the preferred state while the answer position is still masked, and later unmasking steps rarely reverse it, so the failure is not introduced at the write step. This holds across decoding schedules, answer formats, and open-ended generation. DynaHall also exposes failures hidden by final-output metrics, including counting and relation collapse, prior-driven false positives, and attribute errors whose direction changes by type.",
+  "category": "multimodal",
+  "domain": "visual hallucination",
+  "task_types": [
+    "classification",
+    "visual_reasoning",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.34772",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

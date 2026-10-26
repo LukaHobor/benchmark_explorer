@@ -1,12 +1,27 @@
 {
   "name": "DriveHierarchy",
   "description": "Evaluating VLM-based autonomous driving remains difficult because driving competence is composite, where a capable system must ground traffic participants and hazards, integrate context across views and time, reason about future evolution, and act appropriately under closed-loop interaction. Existing benchmarks usually assess either open-loop understanding or closed-loop driving but provide limited structure for explaining how these abilities are organized, how they relate, and how they may inform model diagnosis and improvement. We present DriveHierarchy, a hierarchical benchmark that organizes VLM-based autonomous driving into four ranks, spanning perceptual grounding, contextual memory, mental reasoning, and closed-loop execution. To instantiate this hierarchy, we integrate multiple open-source autonomous-driving datasets into a unified open-loop benchmark with 76,798 question-answer pairs over 84,279 frames and develop a closed-loop simulation platform with interactive scenario construction on a real-world road network, from which 100 driving scenarios are curated for embodied evaluation. Experiments on 15 VLMs show that DriveHierarchy captures structured but non-redundant capability variation, relates open-loop understanding to closed-loop driving, and provides a practical basis for diagnosis and benchmark-guided optimization. DriveHierarchy therefore serves as a unified framework for evaluating and improving VLM-based autonomous driving systems.",
+  "category": "multimodal",
+  "domain": "autonomous driving",
+  "task_types": [
+    "perception",
+    "visual_reasoning",
+    "qa",
+    "planning",
+    "agentic"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2609.31814",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

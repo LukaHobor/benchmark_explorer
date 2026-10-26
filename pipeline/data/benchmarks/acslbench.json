@@ -1,12 +1,23 @@
 {
   "name": "ACSLBench",
   "description": "Formal specification synthesis for C programs is a key step toward scalable deductive verification, yet current learning-based approaches lack large verified C/ACSL data and evaluation tasks that exercise reasoning across function calls. We present ACSLBench, a reusable dataset artifact for training and evaluating C/ACSL specification synthesis models. ACSLBench contains two resources: a corpus of 504,587 formally verified C/ACSL programs, and a curated benchmark of 495 tasks designed around function-call composition. The corpus is built by translating verified Rust/Verus seeds into C/ACSL via an LLM-guided semantic mapping loop, in which Frama-C/WP feedback repairs failed candidates. The benchmark is synthesized from verified components by constructing caller functions whose specifications depend on multiple callee contracts. Experiments with six LLMs show that performance drops as the number of function calls increases. The dataset is available at https://huggingface.co/datasets/noBuggie/AcslBench, and the video is available at https://youtu.be/kgvvTajX2Mk.",
+  "category": "code",
+  "domain": "formal verification",
+  "task_types": [
+    "code_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "pass@k",
+  "general_score_metric": "pass@k",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://doi.org/10.1145/3832783.3834628",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "OIP-Bench v0.2.0",
   "description": "Frozen replies of eleven vision-language models (three frontier APIs, six Ollama cloud models, two local models) to the OIP-Bench understanding tasks on 100 VinDr-CXR radiographs, 50 NIH ChestX-ray14 radiographs and 40 whole-body bone scans, collected 8–22 September 2026: 41 run directories with results.jsonl and tasks.json (67,092 rows), plus one run excluded under the no-leakage rule. Benchmark packages: full OIP packages for NIH ChestX-ray14 and the Paraguay bone scans; for VinDr-CXR (Kaggle competition data, not redistributable) the manifests, reference files and measurements only, with sha256 hashes of every file so a rebuild can be verified. MANIFEST.json lists every bundled file with sha256 and size. Rows carry the scorer-0.3 result in score and the scorer-0.2 result used in the paper in score_prev. How to reproduce the paper's tables from these files: REPRODUCE.md in the repository, level B.",
+  "category": "multimodal",
+  "domain": "medical imaging",
+  "task_types": [
+    "visual_reasoning",
+    "qa",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.23040046",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

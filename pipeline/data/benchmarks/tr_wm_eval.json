@@ -1,12 +1,24 @@
 {
   "name": "TR-WM-EVAL",
   "description": "Archived snapshot of the repository behind the study Watermarking Turkish LLM Output: Detector Calibration, Scheme Fragility, and a Released Evaluation Benchmark. It contains the analysis code, the corpora, the detector scores and the judge annotations from which every number in that paper is regenerated. TR-WM-EVAL, the released benchmark, consists of 4,000 human text windows (1,500 Turkish Wikipedia, 1,500 word-matched English Wikipedia, 1,000 Turkish Wikisource), 384 generated Turkish texts, 3,840 attacked texts across ten removal attacks, 58,161 detector scores including a length-controlled rescoring and an eight-key sweep, and 788 pairwise LLM-judge verdicts. Its known limitations are stated up front in BENCHMARK.md: one generator, one watermark key on the attack axis, EXP's structurally fixed-length texts, judge verdicts covering only the KGW arm, and windows matched on words rather than tokens. Read DATA_LICENSE.md before reuse; the licence field of this record is a floor, not a description. Components carry different terms: Wikimedia-derived text is CC BY-SA with a ShareAlike obligation that propagates to adaptations, round-trip translations are labelled CC BY-NC under a deliberately restrictive reading, generated and laundered texts and judge verdicts are CC BY 4.0, scores and metrics are CC0, and code is Apache-2.0.",
+  "category": "text",
+  "domain": "text watermarking",
+  "task_types": [
+    "classification",
+    "safety_redteam"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22168552",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

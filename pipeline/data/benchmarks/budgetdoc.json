@@ -1,6 +1,15 @@
 {
   "name": "BudgetDoc",
   "description": "Uniformly allocating inference reasoning budgets to LLMs is expensive and prone to over-thinking penalties; especially in document tasks where visual layouts drive complexity. To address this, we introduce BudgetDoc, the first multimodal benchmark providing explicit supervision for model-budget-performance trade-offs across three document tasks. Using BudgetDoc, we train DRB (Document-Reasoning Balancer), an approx. 1B-parameter pre-flight estimator (SigLIP-2 + Qwen3-0.6B) that predicts ordinal model performance across budget levels, achieving a 0.753 weighted F1.",
+  "category": "multimodal",
+  "domain": "document understanding",
+  "task_types": [
+    "classification",
+    "visual_reasoning"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "weighted F1",
+  "general_score_metric": "weighted F1",
   "year_of_publish": 2026,
   "creators": {
     "scientists": [
@@ -10,11 +19,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2608.18591",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

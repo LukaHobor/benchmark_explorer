@@ -1,12 +1,24 @@
 {
   "name": "US-HealthBench",
   "description": "An open evaluation framework for LLM-based systems answering consumer-facing U.S. public-health questions (CDC, NIH, FDA, CMS) in English and Spanish: a pre-registered protocol, a five-dimension scoring rubric, an error taxonomy for consumer health AI, and a scoring implementation. Released alongside a post-freeze defect audit of the 2,020-item benchmark the framework produced, which passed 2,020/2,020 schema and source validation yet contains template collisions with contradicting gold answers (28.0% of items), encoding corruption (17.1% overall, 74.9% of Spanish items), splice contamination and source pollution. Re-scoring under two matching rules shows the resulting score distortion has no fixed direction: its sign is set by the scorer's matching rule rather than by the defect. The item set is released as provisional and is not fit for scoring systems; the transferable contribution is the defect taxonomy, the detection procedures, and the audit code.",
+  "category": "text",
+  "domain": "public health",
+  "task_types": [
+    "qa",
+    "open_ended"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.5281/zenodo.22086136",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

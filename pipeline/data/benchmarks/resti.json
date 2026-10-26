@@ -1,12 +1,25 @@
 {
   "name": "ReSTI",
   "description": "Spatial--temporal benchmarks are valid only when their questions, source annotations, and answer options identify the same physical quantity. We audit STI-Bench against the official ScanNet, Waymo, and Omni6DPose sources and find systematic coordinate-system and timestamp errors, under-specified targets and times, and disagreements between keyed options and answer details. We introduce ReSTI, a source-backed revision that reconstructs every recoverable answer under an explicit target, time, coordinate system, physical quantity, and unit. Source reconstruction reveals task-level geometric failures: ScanNet Grounding omits the required alignment between annotation and raw camera coordinate systems, while Orientation measures camera rotation on the wrong plane. ReSTI replaces these labels with explicit, source-consistent geometric definitions and corrects other source-verifiable defects, including Waymo poses evaluated at the wrong timestamp. Across 2,064 legacy questions, ReSTI retains 1,782 questions and records 282 evidence-backed exclusions. ReSTI therefore provides a conservative and source-traceable basis for evaluating precise video spatial--temporal reasoning. Project page: https://github.com/pengzhansun/ReSTI.",
+  "category": "multimodal",
+  "domain": "video spatial-temporal reasoning",
+  "task_types": [
+    "visual_reasoning",
+    "qa",
+    "multiple_choice"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2609.24727",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

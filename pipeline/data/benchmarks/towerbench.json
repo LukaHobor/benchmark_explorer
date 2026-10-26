@@ -1,12 +1,23 @@
 {
   "name": "towerbench",
   "description": "We present towerbench , an open-source Python/PyTorch harness that benchmarks two-tower retrieval models against linear and variational autoencoders, sequential and graph recommenders under a frozen evaluation protocol. Every experiment ranks the full catalogue, the test split is read exactly once and logged, and model differences are reported as paired per-user bootstrap intervals across seeds and rolling-origin temporal windows rather than as single point estimates. Each industrial two-tower technique (logQ-corrected in-batch softmax, mixed negative sampling, MixGCF hard negatives, DCN-v2 cross layers, frozen sentence-transformer item text, geo/price side features) is one configuration switch. Seven datasets from five public sources (MovieLens, Amazon Reviews 2023, Gowalla, Inside Airbnb, Steam) ship with reproducible loaders, a full sweep of 1974 experiments runs unattended on two GPUs in about a day, and a configuration-sensitivity check shows which of its verdicts survive retuning.",
+  "category": "text",
+  "domain": "recommender systems",
+  "task_types": [
+    "retrieval"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Retrieval, Search & Retrieval-Augmented Generation (RAG)",
   "source": "https://doi.org/10.1016/j.softx.2026.103129",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

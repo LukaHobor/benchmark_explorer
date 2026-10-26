@@ -1,12 +1,23 @@
 {
   "name": "CipherBench-PQC",
   "description": "The dataset for CipherBench-PQC: Quantifying Representation-Level Leakage of Post-Quantum Cryptographic Objects. Contents of pqc_dataset_v1.0.tar.gz (unpacks to cipherbench-pqc/): - Dataset: 34 classes x 300 objects = 10,200 objects (16 primitives + 18 containers), generated from FIPS 203/204/205 implementations (ML-KEM, ML-DSA, SLH-DSA) and OpenSSL; CC BY 4.0.- Transfer set: 900-object cross-implementation test set (native OpenSSL 3.5, test-only).- Code (MIT): generator, training, evaluation and audit scripts.- Frozen results: per-seed / summary JSONs with environment fields and seed records.- Audit log: 51 numbered cases (Chinese / English). SHA-256 of the archive: 69fde5a58fb2a93b93661b4653bdc2e81b3d7458a73f2ffccb0bb02c452e6f7a Cryptographic objects draw fresh per-object keys from the system entropy source, so a regenerated dataset reproduces the same distribution, not the same bytes; this archive is the canonical dataset behind the paper's numbers.Evaluation protocol: 5-fold stratified CV x 5 seeds [7, 42, 99, 123, 2024]; the beta(G) ladder uses 50 Monte-Carlo draws, seed 2025. Reproduction steps and environment dependencies are documented in the companion code repository.",
+  "category": "mixed",
+  "domain": "cryptography and security",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://doi.org/10.5281/zenodo.22950764",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

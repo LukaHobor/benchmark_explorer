@@ -1,12 +1,24 @@
 {
   "name": "IRON dataset",
   "description": "Off-road nighttime autonomous driving suffers from unreliable visible-light perception, making infrared modality crucial for accurate freespace detection. However, progress remains limited due to the scarcity of annotated infrared off-road datasets and the inter-frame inconsistencies inherent to current single-frame methods. To address these gaps, we present the IRON dataset, which, to our knowledge, is the first large-scale infrared dataset for off-road temporal freespace detection under all-day conditions, with strong support for nighttime perception. The dataset comprises 24,314 densely annotated infrared images with synchronized RGB images in diverse scenes and different light conditions. Building upon this dataset, we propose IRONet, a novel flow-free framework for temporal freespace detection that addresses inter-frame inconsistencies by aggregating historical context via a memory-attention mechanism and a carefully designed mask decoder. On our IRON dataset, IRONet achieves state-of-the-art performance, reaching 82.93%(+1.19%) IoU and 90.66%(+0.71%) F1 score at real-time inference. Remarkably, IRONet also exhibits robust generalization to RGB modalities on ORFD and Rellis datasets. Overall, our work establishes a foundation for reliable all-day off-road autonomous driving and future research in infrared temporal perception. The code and IRON dataset are available at https://github.com/wsnbws/IRON.",
+  "category": "multimodal",
+  "domain": "autonomous driving perception",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "IoU, F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2604.27499",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

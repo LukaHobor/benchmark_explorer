@@ -1,12 +1,24 @@
 {
   "name": "Nine Trials to Recover",
   "description": "We present a repertoire-free benchmark for soft-robot damage recovery under nine online trials. The protocol pairs damage masks within each morphology, retains a measured nominal fallback, and separates method development from evaluation on new bodies. A Gaussian-process expected-improvement (GP-EI) reference controller adapts actuator phases using three initialization probes and six feedback-selected rollouts. Across two disjoint 75-body cohorts, it outperforms random search, Sobol, CEM, and CMA-ES under equal budgets. GP-EI improves the worst-mask gain on 69/75 confirmation bodies and exceeds these four baselines by 0.235-0.310 mean worst-mask reward. A TuRBO-style local GP is the closest comparator; the paired confidence interval includes zero. Post-confirmation fixed-controller replay finds 5.06 voxel widths of mean recovery together with a 0.0031 increase in worst-mask p99 geometric edge strain; a strict no-added-demand deployment gate retains 48.7% of mean gain. In a frozen development stress test that physically removes 10% of occupied voxels, GP-EI improves 71/75 bodies and exceeds official BoTorch TuRBO by 0.356 mean worst-mask gain. Together, the replayable controllers, body-level inference, and frozen-cohort evaluation provide a reference for measuring the added value of learned damage priors and future adaptation methods.",
+  "category": "mixed",
+  "domain": "robotics",
+  "task_types": [
+    "agentic",
+    "planning"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2610.07616",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

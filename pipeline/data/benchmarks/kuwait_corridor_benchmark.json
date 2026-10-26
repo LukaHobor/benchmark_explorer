@@ -1,12 +1,23 @@
 {
   "name": "Kuwait Corridor Benchmark",
   "description": "Anomaly detection in vehicular networks focuses on cybersecurity, leaving physical traffic-flow anomalies at urban intersections underserved by IoT sensing. This paper benchmarks anomaly detection on five days of hourly vehicle counts from four consecutive signalized intersections in Kuwait City, with a vehicle-to-infrastructure (V2I) latency feasibility analysis. Anomalies are synthetically injected because verified incident labels are unavailable; scores reflect detectability under the injection protocol rather than validated incident detection. Across ten injection seeds, CUSUM is the most accurate (mean F1 0.945, perfect precision on every seed), Isolation Forest attains the highest recall (0.955), and the LSTM-AE reaches F1 0.347; on misaligned anomaly classes, the margin narrows, and the LSTM-AE matches CUSUM on gradual drift. A corridor rule localizes detected corridor anomalies (9/9, conditional on detection). Hourly aggregation alone imposes an expected 1800 s detection delay, over 130 times the 13.5 s V2I budget at 80 km/h. A sub-second Tier-1 edge detector, evaluated in traffic-calibrated simulation, detects surges within budget (median 6.8 to 9.1 s, robust to signal-cycle platooning), whereas flow-cutoff detection requires roughly 21 s and overnight hours remain a blind spot. Results support a two-tier edge-cloud design and provide, to our knowledge, the first such benchmark on real Gulf-region corridor count data.",
+  "category": "mixed",
+  "domain": "traffic anomaly detection",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.3390/s26175368",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

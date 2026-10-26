@@ -1,12 +1,24 @@
 {
   "name": "MedSNIP-Bench",
   "description": "A medical claim's correctness often depends not on the claim alone, but on the clinical structure around it. A claim may require a lab reference range, a causal or conditional link, or patient-specific details to be judged correctly, and atom-level decomposition can fragment these dependencies, leaving the verifier with clinically incomplete claims. We reformulate medical fact-checking around snippet-level verification, where clause-grouped units preserve local clinical structure. We introduce MedSNIP-Bench, a human-annotated benchmark for snippet-level medical fact verification, and MedSNIP, an automatic snippet-generation pipeline. MedSNIP-Bench covers 276 consumer-health and clinical-vignette responses, segmented into 2,524 snippets with dual in-general and in-patient-context labels and six structural pattern codes. MedSNIP is evaluated against human snippet boundaries on MedSNIP-Bench and then used to generate snippet-level units for external corpora. Across MedSNIP-Bench, HealthFC, and MedHallu, snippet-level verification preserves or improves false-class F1, with gains concentrated where answers are long enough to fragment and where the verifier is strong enough to exploit the recovered structure. The largest merge-pattern gain is on causal-conditional clinical chains. It also reduces verifier calls by 24-73%, though the saving survives end-to-end only when decomposition is cheap, which an open-weight decomposer makes possible at no loss of chunking fidelity.",
+  "category": "text",
+  "domain": "biomedical fact verification",
+  "task_types": [
+    "classification",
+    "qa"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://arxiv.org/abs/2609.12884",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

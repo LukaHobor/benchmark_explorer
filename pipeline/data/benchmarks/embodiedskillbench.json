@@ -1,12 +1,25 @@
 {
   "name": "EmbodiedSkillBench",
   "description": "LLM agents increasingly control robots using VLA policies, perception models, and procedural knowledge. These modules are difficult to reuse because their interfaces, embodiment assumptions, and conditions of use differ, and their benefits on physical tasks remain unclear. We package them as embodied skills that extend agent skills with explicit embodiment assumptions and conditions of use, building 250 action, perception, and experience skills from 1,052 resources. On this basis we introduce EmbodiedSkillBench, which runs an agent in a closed observation-action loop and records success, actions, tokens, and wall-clock time. It supports three modes: native control, skill-only execution, and Agent-Directed Reuse (ADR), a mode we propose in which the agent keeps its native controls and decides for each skill whether to invoke, modify, or ignore it. Across four agents on 100 perturbed LIBERO-Pro tasks, we find that skills help an agent only as far as they exceed what it can already do. Skill-only execution lifts GPT-5.6-Sol from 11% to 63% and Kimi-K3 and Claude-Opus-5 by about 20 points, while cutting their token usage by 58% to 85%. Yet all four agents then end up between 61% and 64%, and GPT-6-Astra falls from 92% under native control to 61%.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "task_types": [
+    "agentic",
+    "planning",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2610.16238",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

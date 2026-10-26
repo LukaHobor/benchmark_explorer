@@ -1,12 +1,23 @@
 {
   "name": "StoryLayoutQA",
   "description": "This repository contains the complete, runnable research code and benchmark data for the manuscript \"Deep Metric Learning and Feature Selection for Automatic Quality Assessment of Interactive Story Layouts in Early Childhood Education\". The repository provides end-to-end reproducibility for all empirical components of the study: 1. Multimodal Alignment: Ingestion and alignment of 1,000 UICrit UI design ratings with RICO layout vectors (64-d), CLIP visual embeddings (512-d), and handcrafted visual-layout descriptors (73-d). 2. Grouped Cross-Validation: Exact sample and package partition indices across five folds (exact_grouped_cv_splits.json), strictly grouped by application package name to prevent intra-app data leakage. 3. Model Suite: Baseline estimators (Ridge, ElasticNet, SVR, k-NN, Random Forest, ExtraTrees, Gradient Boosting) and PairRankNet (Deep Metric Learning pairwise ranking model with joint margin and calibration losses). 4. Synthetic Stress Testing: Generation pipeline for 1,080 original-vs-degraded Book Dash children's story page pairs across five controlled layout perturbation operators. 5. Evaluation & Diagnostics: Scripts for repeated cross-validation sensitivity analysis (25 folds) and publication figure rendering. Refer to the included README.md for installation, quick-start commands, and reproduction instructions.",
+  "category": "vision",
+  "domain": "visual layout quality",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.17632/6yf8p4bk6d",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

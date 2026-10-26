@@ -1,12 +1,24 @@
 {
   "name": "ToxiCompass",
   "description": "Binary peptide-toxicity predictors support early screening but do not indicate which assays should follow a toxin-like prediction. We present ToxiCompass, an evidence-tracked benchmark and two-stage protocol for short-peptide toxicity screening and assay-family prioritization. The benchmark contains 6114 peptides reconstructed from online database of biotoxins and reviewed Universal Protein Knowledgebase records, including curated toxin-positive peptides and length-matched operational comparators. Among 2866 Stage 2 candidate toxin-positive peptides, 2858 retained at least one observed-positive target/effect-family label after evidence review. Exact-sequence merging, provenance tracking, Many-against-Many sequence searching 2 clustering at 90% sequence identity (MMSeqs90) cluster-level splitting, and explicit evidence rules define the evaluation. Stage 1 assigns a toxin-like score relative to the operational-comparator population, whereas Stage 2 ranks 13 broad target/effect families to prioritize follow-up assays for toxin-positive peptides with retained evidence. On the primary MMSeqs90 cluster split, Stage 1 achieved an area under the receiver operating characteristic curve of 0.9871 and an area under the precision-recall curve of 0.9867, while Stage 2 achieved a Hit@3 of 0.8955. In a more conservative grouped-split sensitivity analysis, Stage 2 Hit@3 was 0.6506.",
+  "category": "text",
+  "domain": "peptide toxicology",
+  "task_types": [
+    "classification",
+    "retrieval"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "AUROC, AUPRC, Hit@3",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Biomedical & Life Sciences",
   "source": "https://doi.org/10.1093/bib/bbag526",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

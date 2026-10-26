@@ -1,12 +1,24 @@
 {
   "name": "CQBench",
   "description": "AI coding assistants are becoming co-authors of production software, yet their evaluation centers on functional correctness, leaving open whether their code differs from human code in the quality dimensions dominating lifecycle cost. We compare human-written and AI-generated code at scale: 787,562 function pairs across Python, Java, and C, each human function mined from open-source repositories paired with implementations generated from its docstring by three AI assistants (OpenAI GPT models, DeepSeek-Coder, Qwen2.5-Coder). We characterize structural complexity and statistical naturalness, and map static-analysis findings onto Orthogonal Defect Classification for defects and the Common Weakness Enumeration for vulnerabilities, making authors and languages directly comparable. AI-generated code is structurally compressed and stylistically templated: roughly half the size and branching of human code, clustering apart at the style level. Defect profiles differ in kind: human code concentrates issues of mature codebases, AI code repetitive boilerplate; security is language-dependent, with LLMs producing more, and more severe, findings in Python and Java but fewer high-severity memory-safety findings than humans in C. Once size is controlled for, complexity metrics carry little signal, while naturalness separates authors. Finally, we release CQBench, a benchmark of 27,346 issue-prone tasks with baselines and an evaluation pipeline for quality assurance and security testing.",
+  "category": "code",
+  "domain": "software quality and security",
+  "task_types": [
+    "code_generation",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Code & Developer Tasks",
   "source": "https://arxiv.org/abs/2609.12708",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

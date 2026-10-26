@@ -1,12 +1,24 @@
 {
   "name": "WitnessGym",
   "description": "Bug validation asks a coding agent to produce an executable witness for a reported bug. The witness combines a concrete input with a testing harness and exposes faulty behavior during execution. Such evidence makes audit findings actionable, yet benchmark evaluation is difficult when cases reuse public historical bugs and witnesses or require manual construction. We present WitnessGym, an automated framework for constructing bug-validation benchmarks through bug injection. It injects bugs into test-reached paths of real projects, rebuilds each project, and retains cases exposed by a construction-time witness. Bug specifications and execution adapters allow extension to additional bug types and languages. Bug-preserving transformations vary the surrounding structure while preserving the witness behavior. Based on real-world Java projects with test suites, WitnessGym automatically constructs 1,300 benchmark cases. The injected patches resemble historical bug patches and are difficult for the two evaluated models to distinguish in blinded comparisons. We evaluate four coding agent frameworks in six framework/model pairings across bug types, execution contexts, and transformation depths. Witness construction remains difficult even when the bug pattern is known. Our framework, benchmark cases, and evaluation scripts are available.",
+  "category": "code",
+  "domain": "software bug validation",
+  "task_types": [
+    "code_generation",
+    "agentic"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "pass@k",
+  "general_score_metric": "pass@k",
   "year_of_publish": 2026,
+  "capability_category": "Autonomous Agents & Multi-Agent Systems",
   "source": "https://arxiv.org/abs/2609.36635",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

@@ -1,12 +1,25 @@
 {
   "name": "AURA-Eval",
   "description": "LLM agents are increasingly taking actions with real consequences, yet safety evaluations often reduce their behavior to a final safe/unsafe outcome, obscuring whether the agent recognized the risk and how it responded. We introduce AURA-Eval, a framework for evaluating whether agents recognize contextual risk and adapt their behavior accordingly. AURA-Eval truncates tool-use trajectories at safety-critical decision points and asks the evaluated model to generate the next thought and action. It creates controlled scenario variations along six risk mechanisms: harm intensity, scale, target susceptibility, system dependency, oversight, and reversibility. It also creates paired scenarios that preserve the underlying goal but differ in whether safe fulfillment is available, allowing unsafe compliance and over-refusal to be evaluated together. An LLM-judge panel, validated against human annotations, evaluates each continuation along three axes: risk detection from the reasoning trace, and action type and safety from the action. From 157 R-Judge seed trajectories, we construct 1,249 evaluation items and evaluate 20 frontier, open-weight, and safety-tuned models. Across all 20 models, unsafe-action rates are higher when no safe path for request fulfillment is available than when one is; for frontier models, the rates are 27-40% versus 5-7%. When a safe path exists, frontier models rarely refuse; when none exists, they most often propose an alternative.",
+  "category": "text",
+  "domain": "agent safety",
+  "task_types": [
+    "agentic",
+    "safety_redteam",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.06783",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

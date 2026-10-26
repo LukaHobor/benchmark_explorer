@@ -1,12 +1,25 @@
 {
   "name": "DroneCATS",
   "description": "Multimodal large language models (MLLMs) are increasingly used to make decisions for drones, but existing evaluations are mostly limited to simulation, to a single drone, and to targets that are visible from the start and do not move. We present DroneCATS, a benchmark in which the MLLM alone controls the drone through four actions, and evaluate ten MLLMs from frontier models to small open models. The benchmark varies target visibility, target motion, scene and simulator, and extends to real drones. Beyond a single drone, it adds a multi-drone suite, where one model drives multiple drones, and a commander + sub-agents suite, where a commander model directs one sub-agent for each of the drones. Across these settings, we find that frontier models achieve the highest success rates, but their latency causes them to lose moving targets, while small open models often do not declare arrival even when they reach the target. Guided by this failure analysis, we fine-tune a 2B model on drone action data synthesized from public RGB-D images; its success rate rises from 0% to 31% in simulation and outperforms the frontier models in real flight. With multiple drones, we find that every zero-shot model succeeds more often as the commander of one sub-agent per drone than when it drives all of them from one context, and that commanding success follows general VLM ability.",
+  "category": "multimodal",
+  "domain": "robotics",
+  "task_types": [
+    "agentic",
+    "planning",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Robotics & Embodied Control",
   "source": "https://arxiv.org/abs/2609.01404",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

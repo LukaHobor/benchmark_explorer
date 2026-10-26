@@ -1,12 +1,24 @@
 {
   "name": "RobustSeiz",
   "description": "Despite strong performance on held-out electroencephalography (EEG) data, seizure detectors may fail under real-world acquisition variability, artifacts, and adversarial inputs. We introduce RobustSeiz, an open-source, model-agnostic framework that provides a standardized, reproducible protocol for stress-testing and comparing seizure detectors under controlled, clinically motivated distribution shifts before deployment. We standardize four public scalp-EEG corpora (CHB-MIT, TUSZ, Siena, and SeizeIT1) into BIDS-EEG trees and evaluate subject-independent detectors on held-out splits. Environment, noise, and adversarial transforms are swept over predefined hyperparameter grids. Each run reports sample- and event-level sensitivity, precision, F1, false positives per 24 h, Lead and Lag onset timing, and Monte Carlo dropout predictive agreement. RobustSeiz includes a Dockerized GPU pipeline, experiment registry, and full-evaluation and research-subset modes. We demonstrate the framework with a contemporary seizure detector on TUSZ across the complete implemented shift grid; an AWGN analysis illustrates how perturbation severity changes detection quality, onset timing, and predictive agreement. RobustSeiz provides a shared benchmarking standard for evaluating seizure-detector robustness under realistic clinical stressors, extending pre-deployment assessment beyond clean-data accuracy.",
+  "category": "mixed",
+  "domain": "clinical eeg",
+  "task_types": [
+    "classification",
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "F1",
+  "general_score_metric": "F1",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2609.04007",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

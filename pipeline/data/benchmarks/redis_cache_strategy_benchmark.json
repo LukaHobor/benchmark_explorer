@@ -1,12 +1,23 @@
 {
   "name": "Redis Cache Strategy Benchmark",
   "description": "A controlled benchmark dataset comparing two server-side caching strategies in a Spring Boot application backed by Redis and MySQL: explicit Cache-Aside, where the application performs GET/SET operations directly, and framework-managed Read-Through, where Spring Cache handles caching through @Cacheable. Both strategies run in the same application process with an identical repository layer, SQL, Redis key format, TTL, JSON serialization, and request sequence, so that measured differences reflect the caching access pattern rather than incidental implementation drift. Design: 2 strategies x 3 concurrency levels (25, 50, 100) x 5 repetitions = 30 independent runs. Each run consists of a 15 s warm-up followed by a 60 s measurement window. Measurements were taken in a verified Hot Cache steady state, with zero database loads and zero cache misses during every measurement window. Contents: the complete request-level data (30 files, 11,325,558 request records), the analysis-ready run-level table (30 rows), per-run application probe snapshots, the complete statistical analysis (model coefficients with heteroskedasticity-robust standard errors, effect sizes with bootstrap confidence intervals, assumption tests, leave-one-out robustness checks), the JMeter test plan, and full documentation. All 30 runs passed seven automated validity gates; zero runs were invalidated and zero request errors were recorded.",
+  "category": "code",
+  "domain": "systems performance",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "medium",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Algorithms, Machine Learning Methods & Systems",
   "source": "https://doi.org/10.5281/zenodo.23011849",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

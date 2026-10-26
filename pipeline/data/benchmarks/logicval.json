@@ -1,12 +1,25 @@
 {
   "name": "LogicVal",
   "description": "Text-to-Image (T2I) generative models have made significant progress in producing high-fidelity images from natural-language prompts. Alongside this progress, numerous benchmarks have been developed to evaluate capabilities such as attribute binding, numeracy, spatial reasoning, and commonsense reasoning. In this work, we propose a new perspective on T2I evaluation by casting it as a constraint-satisfaction problem. We introduce a logical framework that formally specifies the benchmark domain, including objects, attributes, and relations, alongside the constraints that generated images must satisfy. We evaluated four state-of-the-art T2I models across 9 classes of constraints ranging from a single-object-attribute to multi-object relationships constraints involving logical operators ($\\forall, \\exists, count, \\rightarrow$). Our results reveal a substantial gap between single-object and complex conditional multi-object relationship constraint classes, with the best-performing model achieving 98% accuracy on the former and just 53% on the latter. We assess compositional generalisation, finding that the best-performing model`s accuracy drops from 84% on single-constraint prompts to 20% when satisfying multiple constraints simultaneously. Identifying unsatisfiable constraints is also challenging, with the best model correctly recognizing only 23% of such prompts.",
+  "category": "multimodal",
+  "domain": "text-to-image generation",
+  "task_types": [
+    "generation",
+    "visual_reasoning",
+    "classification"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2610.24051",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

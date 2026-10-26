@@ -1,12 +1,23 @@
 {
   "name": "pH 7.3 major-microspecies benchmark for ChEBI",
   "description": "A benchmark for predicting the major protonation state of ChEBI compounds at pH 7.3. It pairs 113,385 ChEBI entities with Rhea's chebi_pH7_3_mapping.tsv (8,402 of which map to a different protonation form) and adds predictions from open, RDKit-only rules (chemrof.converter.protonation). Version 2026-10-14: the default predictions now come from clean-room rules derived only from measured pKa values (raw ChEMBL25/DataWarrior extracts, CC BY 4.0, doi:10.5281/zenodo.7884512) and textbook group pKas, never from Rhea's mapping, whose changed rows are computed (reportedly by ChemAxon). Predictions from the earlier Rhea-fitted rules are included for comparison. Against measured pKa on 2,152 held-out IUPAC molecules the clean-room rules score 89.5% (Rhea-fitted 89.4%); on the 217 that Rhea covers, 95.9% vs 94.5% for ChemAxon. Agreement with Rhea's changed rows is 90.2% (Rhea-fitted 91.6%). Files: benchmark.parquet (mapping rows with structures, split and predictions from three rule sets); disagreements.parquet; chebi_structures.parquet (ChEBI SMILES used, with structures whose ChEBI SMILES fail to parse rebuilt from molfiles); chebi_unparseable_smiles.parquet (13,171 ChEBI SMILES that RDKit cannot parse, mostly a missing H on aromatic N-H); the exact Rhea file used; a data card and SHA256 checksums. Derived from ChEBI and Rhea (both CC BY 4.0); please cite them when using this dataset.",
+  "category": "text",
+  "domain": "chemistry",
+  "task_types": [
+    "classification"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "accuracy",
+  "general_score_metric": "accuracy",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://doi.org/10.5281/zenodo.23324328",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

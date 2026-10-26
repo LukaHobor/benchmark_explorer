@@ -1,6 +1,15 @@
 {
   "name": "MMLongBench-Write",
   "description": "Existing Large Vision-Language Models (LVLMs) can process inputs with context lengths up to 128k visual and text tokens, yet they struggle to generate coherent outputs beyond 1,000 words. We find that the primary limitation is the absence of long output examples during supervised fine-tuning (SFT). To tackle this issue, we introduce LongWriter-V-22k, a SFT dataset comprising 22,158 examples, each with multiple input images, an instruction, and corresponding outputs ranging from 0 to 10,000 words.",
+  "category": "multimodal",
+  "domain": "multimodal long-form writing",
+  "task_types": [
+    "generation",
+    "instruction_following"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "human_eval",
+  "general_score_metric": "human_eval",
   "year_of_publish": 2025,
   "creators": {
     "scientists": [
@@ -16,11 +25,14 @@
     "institutions": [],
     "companies": []
   },
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://arxiv.org/abs/2502.14834",
   "provenance": {
     "added_by": "arxiv-rescan-2024-2026",
     "added_at": "2026-08-21",
     "origin": "cynefin@d486fafa9",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

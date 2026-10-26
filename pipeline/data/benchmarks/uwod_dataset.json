@@ -1,12 +1,23 @@
 {
   "name": "UWOD dataset",
   "description": "Underwater object detection faces significant challenges including uneven lighting, low contrast, and scattering-induced distortions. Existing underwater datasets are limited in scale, class diversity, and annotation consistency, which hinders robust model development. This work addresses these limitations by creating the UWOD dataset through the integration of seven publicly available underwater datasets, comprising over 107 K images with approximately 374 K annotations across 39 classes. We employ a semi-automatic annotation pipeline that combines manual labeling with iterative model-in-the-loop training to ensure high-quality ground truth, As a final verification step, all auto-generated labels were manually inspected and corrected as needed. We benchmark state-of-the-art object detectors—including YOLOv8, YOLOv7, YOLOv5, FCOS, EfficientDet, YOLOX, RT-DETR, SSD, and Faster R-CNN—establishing comprehensive performance baselines; YOLOv8 and YOLOv7 achieve the best accuracy–efficiency trade-off. Our transfer learning analysis shows that domain-specific pretraining substantially often outperforms pretraining on general-purpose datasets, yielding up to more than 50% improvement in low-data regimes versus training from scratch, with markedly lower seed-to-seed variance than scratch training. Sequential pretraining on COCO followed by UWOD achieves the strongest results on our most challenging dataset.",
+  "category": "vision",
+  "domain": "underwater object detection",
+  "task_types": [
+    "perception"
+  ],
+  "difficulty_level": "hard",
+  "evaluation_method": "mAP",
+  "general_score_metric": "mAP",
   "year_of_publish": 2026,
+  "capability_category": "Vision & Multimodal Perception",
   "source": "https://doi.org/10.3390/data11090236",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

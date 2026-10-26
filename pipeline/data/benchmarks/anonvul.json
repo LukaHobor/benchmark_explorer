@@ -1,12 +1,25 @@
 {
   "name": "AnonVul",
   "description": "The rapid advancement of cybersecurity agents in vulnerability discovery has increased the need for benchmarks that evaluate their capabilities accurately. However, synthetic benchmarks lack realism, real-life benchmarks are prone to contamination, and many existing benchmarks have already been saturated by current models. We therefore set out to develop a benchmark that is realistic, reproducible, resistant to contamination, and challenging. Our key insight is that real-life business-logic vulnerabilities are subtle and exercise complex application interactions, making them naturally demanding. The difficulty lies in specifying evaluation criteria precise enough to faithfully measure model capabilities while keeping the tasks free of data-leakage. We introduce AnonVul, a cross-language benchmark of 132 application-level business-logic vulnerabilities, built by a semi-automated pipeline that anonymizes each task, injects oracles from expert-written specifications, and differentially verifies proof-of-concept exploits. The benchmark spans nine languages, with two evaluation tracks on black-box and grey-box settings, where each task runs in a sandbox with specialized oracles embedded in key exploitation steps. We evaluate six state-of-the-art vulnerability-discovery agents on the AnonVul benchmark, measuring discovery success, cost-effectiveness, anonymization sensitivity, oracle validity, and failure modes.",
+  "category": "code",
+  "domain": "cybersecurity",
+  "task_types": [
+    "agentic",
+    "safety_redteam",
+    "code_generation"
+  ],
+  "difficulty_level": "expert",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Safety, Robustness & Evaluation",
   "source": "https://arxiv.org/abs/2610.17542",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }

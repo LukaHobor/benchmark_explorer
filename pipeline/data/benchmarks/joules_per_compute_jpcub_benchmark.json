@@ -1,12 +1,23 @@
 {
   "name": "Joules-per-Compute (JPCUB) Benchmark",
   "description": "Current joules-per-compute (JPCUB) benchmarks normalize energy consumption per physical gate, conflating logical operations with error-correction overhead. This obscures trade-offs between qubit connectivity, gate fidelity, and fault-tolerant design, hindering equitable comparisons of quantum processors. We propose a revised JPCUB metric that normalizes energy use per logical-qubit operation, isolating logical computation from error-correction infrastructure. The protocol involves executing standardized logical circuits (e.g., Clifford operations) on surface-code qubits, measuring total energy, and decomposing it into logical gate costs and error-correction overhead. By standardizing benchmark circuits and energy measurement techniques, this approach enables reproducible evaluations of quantum architectures. Simulations suggest [to verify] a 2–5× reduction in JPCUB for fault-tolerant systems compared to uncorrected benchmarks, highlighting the interplay between logical efficiency and error-correction demands. ## 1. Introduction Quantum computing architectures face escalating energy demands as they scale, necessitating rigorous metrics to evaluate efficiency. The existing JPCUB benchmark, which quantifies energy per physical gate [arXiv:2006.07065], fails to distinguish between the energy required for logical operations and that consumed by error correction.",
+  "category": "mixed",
+  "domain": "quantum computing",
+  "task_types": [
+    "regression"
+  ],
+  "difficulty_level": "graduate",
+  "evaluation_method": "composite_score",
+  "general_score_metric": "composite_score",
   "year_of_publish": 2026,
+  "capability_category": "Physical Sciences & Engineering",
   "source": "https://doi.org/10.5281/zenodo.22280744",
   "provenance": {
     "added_by": "scan",
     "added_at": "2026-10-25",
     "run": "2026-08-20_2026-10-23",
-    "gated": true
+    "gated": true,
+    "filled_by": "openai/gpt-6-luna",
+    "filled_at": "2026-10-26"
   }
 }
